@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages } from 'lucide-react';
-import { getTribeBySlug, getAllTribes, getNameDatabase } from '@/lib/tribeDetection';
+import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2 } from 'lucide-react';
+import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
 import { TribeMap } from '@/components/TribeMap';
 import { ImageGallery } from '@/components/ImageGallery';
@@ -52,7 +52,20 @@ const TribePage = () => {
           
           <div className="bg-card rounded-2xl border border-border overflow-hidden">
             <header className="gradient-gold p-4 sm:p-6 text-primary-foreground">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-2">{tribe.name}</h1>
+              <div className="flex items-center gap-2 mb-2">
+                {/* Country Flags */}
+                {(tribe as any).countries && (tribe as any).countries.length > 0 && (
+                  <div className="flex gap-1">
+                    {(tribe as any).countries.map((code: string) => {
+                      const country = getCountries().find(c => c.code === code);
+                      return country ? (
+                        <span key={code} className="text-lg" title={country.name}>{country.flag}</span>
+                      ) : null;
+                    })}
+                  </div>
+                )}
+                <h1 className="text-2xl sm:text-3xl font-bold">{tribe.name}</h1>
+              </div>
               <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm opacity-90">
                 <div className="flex items-center gap-1">
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
@@ -230,6 +243,88 @@ const TribePage = () => {
                   ))}
                 </ul>
               </section>
+              
+              {/* Gender Stereotypes & Roles Section */}
+              {((tribe as any).genderStereotypes || (tribe as any).genderRoles) && (
+                <section className="border-t border-border pt-6">
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
+                    <UsersRound className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
+                    Gender Perspectives
+                  </h2>
+                  
+                  {/* Gender Stereotypes */}
+                  {(tribe as any).genderStereotypes && (
+                    <div className="grid md:grid-cols-2 gap-4 mb-4">
+                      <div className="p-4 bg-blue-50 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-800">
+                        <div className="flex items-center gap-2 mb-3">
+                          <UserCircle className="w-5 h-5 text-blue-600" />
+                          <h3 className="font-semibold text-blue-900 dark:text-blue-100">Male Stereotypes</h3>
+                        </div>
+                        <ul className="space-y-2">
+                          {(tribe as any).genderStereotypes.male?.map((stereotype: string, i: number) => (
+                            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-blue-800 dark:text-blue-200">
+                              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0" />
+                              {stereotype}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="p-4 bg-pink-50 dark:bg-pink-950/30 rounded-xl border border-pink-200 dark:border-pink-800">
+                        <div className="flex items-center gap-2 mb-3">
+                          <UserCircle2 className="w-5 h-5 text-pink-600" />
+                          <h3 className="font-semibold text-pink-900 dark:text-pink-100">Female Stereotypes</h3>
+                        </div>
+                        <ul className="space-y-2">
+                          {(tribe as any).genderStereotypes.female?.map((stereotype: string, i: number) => (
+                            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-pink-800 dark:text-pink-200">
+                              <span className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-1.5 flex-shrink-0" />
+                              {stereotype}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Gender Roles */}
+                  {(tribe as any).genderRoles && (
+                    <div className="space-y-4">
+                      {(tribe as any).genderRoles.traditional && (
+                        <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-800">
+                          <h3 className="font-semibold text-amber-900 dark:text-amber-100 mb-3">Traditional Roles</h3>
+                          <div className="grid md:grid-cols-2 gap-3">
+                            <div>
+                              <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-1">👨 Men</p>
+                              <p className="text-xs sm:text-sm text-amber-800 dark:text-amber-200">{(tribe as any).genderRoles.traditional.male}</p>
+                            </div>
+                            <div>
+                              <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-1">👩 Women</p>
+                              <p className="text-xs sm:text-sm text-amber-800 dark:text-amber-200">{(tribe as any).genderRoles.traditional.female}</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {(tribe as any).genderRoles.modern && (
+                        <div className="p-4 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800">
+                          <h3 className="font-semibold text-emerald-900 dark:text-emerald-100 mb-3">Modern Roles</h3>
+                          <div className="grid md:grid-cols-2 gap-3">
+                            <div>
+                              <p className="text-xs font-medium text-emerald-700 dark:text-emerald-300 mb-1">👨 Men</p>
+                              <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-200">{(tribe as any).genderRoles.modern.male}</p>
+                            </div>
+                            <div>
+                              <p className="text-xs font-medium text-emerald-700 dark:text-emerald-300 mb-1">👩 Women</p>
+                              <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-200">{(tribe as any).genderRoles.modern.female}</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </section>
+              )}
               
               <NameSearch
                 femaleNames={tribe.commonNames.female}

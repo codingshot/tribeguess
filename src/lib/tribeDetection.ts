@@ -8,6 +8,12 @@ export interface TribeResult {
   nameMeaning?: string;
 }
 
+export interface Country {
+  code: string;
+  name: string;
+  flag: string;
+}
+
 export interface DetectionResult {
   predictions: TribeResult[];
   inputName: string;
@@ -726,6 +732,12 @@ export function getTribeById(id: string) {
 
 export function getTribeBySlug(slug: string) {
   return tribesData.tribes.find(t => t.slug === slug || t.id === slug);
+}
+
+export function getCountries(): Country[] {
+  return (tribesData as any).countries || [
+    { code: 'KE', name: 'Kenya', flag: '🇰🇪' }
+  ];
 }
 
 export function getNameDatabase(): Record<string, { meaning: string; gender: 'male' | 'female' }> {

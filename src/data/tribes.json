@@ -1,9 +1,27 @@
 {
+  "countries": [
+    { "code": "KE", "name": "Kenya", "flag": "🇰🇪" },
+    { "code": "TZ", "name": "Tanzania", "flag": "🇹🇿" },
+    { "code": "UG", "name": "Uganda", "flag": "🇺🇬" },
+    { "code": "ET", "name": "Ethiopia", "flag": "🇪🇹" },
+    { "code": "SS", "name": "South Sudan", "flag": "🇸🇸" },
+    { "code": "SO", "name": "Somalia", "flag": "🇸🇴" },
+    { "code": "RW", "name": "Rwanda", "flag": "🇷🇼" },
+    { "code": "BI", "name": "Burundi", "flag": "🇧🇮" },
+    { "code": "CD", "name": "DR Congo", "flag": "🇨🇩" },
+    { "code": "MW", "name": "Malawi", "flag": "🇲🇼" },
+    { "code": "ZM", "name": "Zambia", "flag": "🇿🇲" },
+    { "code": "ZW", "name": "Zimbabwe", "flag": "🇿🇼" },
+    { "code": "ZA", "name": "South Africa", "flag": "🇿🇦" },
+    { "code": "NG", "name": "Nigeria", "flag": "🇳🇬" },
+    { "code": "GH", "name": "Ghana", "flag": "🇬🇭" }
+  ],
   "tribes": [
     {
       "id": "kikuyu",
       "name": "Kikuyu",
       "slug": "kikuyu",
+      "countries": ["KE"],
       "region": "Central Kenya",
       "population": "~8.1 million",
       "populationPercent": "17%",
@@ -29,6 +47,30 @@
         "Strong family values",
         "Education-focused"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be providers and business leaders",
+          "Strong negotiation skills passed down",
+          "Decision makers in family matters",
+          "Land ownership traditionally through men"
+        ],
+        "female": [
+          "Traditionally manage household finances",
+          "Known for 'behind-the-scenes' business acumen",
+          "Strong influence in family decisions",
+          "Historically owned property (pre-colonial)"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men traditionally handled livestock, land matters, and external trade. Elders (Athamaki) made community decisions.",
+          "female": "Women managed farms, household, and were key in food production. They had significant economic power and could own property."
+        },
+        "modern": {
+          "male": "Modern Kikuyu men are heavily involved in business, politics, and professions. Education is highly emphasized.",
+          "female": "Kikuyu women are prominent in business, education, and politics. Many are successful entrepreneurs and professionals."
+        }
+      },
       "culturalTraits": [
         "Traditional circumcision ceremonies (Irua)",
         "Strong agricultural heritage - maize, coffee, tea",
@@ -103,6 +145,7 @@
       "id": "luo",
       "name": "Luo",
       "slug": "luo",
+      "countries": ["KE", "TZ", "UG", "SS"],
       "region": "Western Kenya (Lake Victoria)",
       "population": "~5.1 million",
       "populationPercent": "11%",
@@ -128,6 +171,30 @@
         "Fish lovers (tilapia and omena)",
         "Fashion-conscious"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Known for eloquent speech and political activism",
+          "Strong sense of pride and dignity",
+          "Expected to be providers and protectors",
+          "Fashion-conscious and well-groomed"
+        ],
+        "female": [
+          "Independent and outspoken",
+          "Strong business acumen (fish trade)",
+          "Known for beauty and elegance",
+          "Active in community leadership"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men traditionally handled fishing, cattle, and clan matters. They were orators and decision-makers in community gatherings.",
+          "female": "Women managed households, traded fish in markets, and had significant economic independence through trade."
+        },
+        "modern": {
+          "male": "Modern Luo men are prominent in politics, law, music, and sports. Education and professional success are highly valued.",
+          "female": "Luo women are influential in business, academia, and arts. Many are successful professionals and community leaders."
+        }
+      },
       "culturalTraits": [
         "Non-circumcising community (unique in Kenya)",
         "Rich musical heritage (Benga music originated here)",
@@ -222,6 +289,7 @@
         "harvest": ["Wekesa", "Nekesa"],
         "rainy": ["Wafula", "Nafula"]
       },
+      "countries": ["KE", "UG"],
       "stereotypes": [
         "Hardworking and industrious",
         "Excellent farmers",
@@ -230,6 +298,30 @@
         "Strong community bonds",
         "Enjoy celebrations and festivals"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Known for physical strength and hard work",
+          "Expected to build homes and provide",
+          "Active in community defense",
+          "Competitive in bullfighting traditions"
+        ],
+        "female": [
+          "Excellent cooks (famous for ugali and chicken)",
+          "Manage large households efficiently",
+          "Active in farming and trade",
+          "Strong in community organizations"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men traditionally built homes, cleared land, and participated in circumcision ceremonies. Bullfighting was a male prestige activity.",
+          "female": "Women managed households, farmed, and were central to food preparation. They organized community celebrations and weddings."
+        },
+        "modern": {
+          "male": "Modern Luhya men are prominent in sports (football), business, and government. Education is highly prioritized.",
+          "female": "Luhya women are successful in business, education, and healthcare. Many are community leaders and entrepreneurs."
+        }
+      },
       "culturalTraits": [
         "18 sub-tribes with unique dialects (Bukusu, Maragoli, Wanga, etc.)",
         "Traditional bullfighting (Khulanga) - major cultural festival",
@@ -321,6 +413,7 @@
         "rainy": ["Mumbua", "Wambua"],
         "market": ["Musyoka", "Syokau"]
       },
+      "countries": ["KE"],
       "stereotypes": [
         "Skilled craftsmen and wood carvers",
         "Excellent long-distance traders",
@@ -329,6 +422,30 @@
         "Traditional medicine experts",
         "Entrepreneurial spirit"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Skilled wood carvers and craftsmen",
+          "Known for long-distance trading",
+          "Traditional medicine practitioners",
+          "Strong work ethic and resilience"
+        ],
+        "female": [
+          "Excellent basket weavers",
+          "Known for singing and dancing (Kilumi)",
+          "Strong traders in local markets",
+          "Skilled in traditional medicine"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men handled wood carving, hunting, and long-distance trade. They were also traditional healers and honey hunters.",
+          "female": "Women excelled in basket weaving, pottery, and farming. They participated actively in traditional dances and ceremonies."
+        },
+        "modern": {
+          "male": "Modern Kamba men are found in military, police, arts, and business. Wood carving remains a significant craft industry.",
+          "female": "Kamba women are prominent in music, dance, education, and business. Many continue traditional crafts alongside modern careers."
+        }
+      },
       "culturalTraits": [
         "Famous wood carving tradition (Wamunyu village)",
         "Rich dance heritage (Kilumi and Mwali dances)",
@@ -405,6 +522,7 @@
       "id": "kalenjin",
       "name": "Kalenjin",
       "slug": "kalenjin",
+      "countries": ["KE", "UG"],
       "region": "Rift Valley",
       "population": "~6.4 million",
       "populationPercent": "13%",
@@ -431,6 +549,30 @@
         "Reserved and humble",
         "Strong athletic heritage"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Born athletes with running in their DNA",
+          "Strong, silent, and disciplined",
+          "Cattle keepers and warriors",
+          "Reserved but fiercely competitive"
+        ],
+        "female": [
+          "World-class distance runners (many Olympic champions)",
+          "Hardworking in farms and households",
+          "Modest and reserved demeanor",
+          "Strong athletes breaking gender barriers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men handled cattle herding, honey harvesting, and warrior duties. Age-set systems organized male responsibilities.",
+          "female": "Women managed farms, households, and child-rearing. They prepared the famous Mursik (fermented milk)."
+        },
+        "modern": {
+          "male": "Modern Kalenjin men dominate athletics globally. Many are also in politics, military, and farming.",
+          "female": "Kalenjin women have become world-famous athletes. Faith Kipyegon, Brigid Kosgei, and many others are global icons."
+        }
+      },
       "culturalTraits": [
         "Running excellence - over 100 Olympic medals",
         "Age-set systems (Ipinda) for social organization",
@@ -523,6 +665,7 @@
         "harvest": ["Nyaboke"],
         "rainy": ["Moraa", "Mokaya"]
       },
+      "countries": ["KE"],
       "stereotypes": [
         "Hardworking farmers",
         "Passionate temperament",
@@ -531,6 +674,30 @@
         "Enterprising business people",
         "Community-oriented"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Hardworking and ambitious",
+          "Strong protectors of family",
+          "Known for 'hot temper' stereotype",
+          "Business-oriented and enterprising"
+        ],
+        "female": [
+          "Strong-willed and outspoken",
+          "Excellent farmers and traders",
+          "Manage households with authority",
+          "Known for cooking skills"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men handled heavy farming, clan leadership, and were the primary decision-makers in family matters.",
+          "female": "Women managed households, farmed, and were central to clan ceremonies. They had significant influence in family decisions."
+        },
+        "modern": {
+          "male": "Modern Kisii men are prominent in education, business, and professions. Many are in urban areas.",
+          "female": "Kisii women are successful in business, education, and healthcare. They balance traditional roles with modern careers."
+        }
+      },
       "culturalTraits": [
         "Soapstone carving (Kisii/Tabaka stone) - exported worldwide",
         "Highland farming (tea, bananas, coffee)",
@@ -700,6 +867,7 @@
       "id": "maasai",
       "name": "Maasai",
       "slug": "maasai",
+      "countries": ["KE", "TZ"],
       "region": "Rift Valley & Southern Kenya",
       "population": "~1.2 million",
       "populationPercent": "2.5%",
@@ -724,6 +892,30 @@
         "Nomadic pastoralists",
         "Proud cultural preservationists"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Fierce and brave warriors (Morans)",
+          "Cattle keepers and protectors",
+          "Tall, athletic, and fearless",
+          "Skilled in traditional fighting and hunting"
+        ],
+        "female": [
+          "Skilled beadwork artisans",
+          "Build and maintain manyattas (homes)",
+          "Strong community leaders",
+          "Guardians of cultural traditions"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Young men become Moran (warriors) protecting cattle and community. Elders make decisions and lead ceremonies.",
+          "female": "Women build homes, manage households, raise children, and create the famous beadwork jewelry. They have influence through their own social structures."
+        },
+        "modern": {
+          "male": "Modern Maasai men balance herding with education and tourism. Many are guides, conservationists, and businessmen.",
+          "female": "Maasai women are increasingly educated. Their beadwork has become a global industry. Many advocate for girls' education and against FGM."
+        }
+      },
       "culturalTraits": [
         "Semi-nomadic cattle herding lifestyle",
         "Famous jumping dance (adumu) performed by warriors",
@@ -798,6 +990,7 @@
       "id": "turkana",
       "name": "Turkana",
       "slug": "turkana",
+      "countries": ["KE", "UG", "ET", "SS"],
       "region": "Northwestern Kenya",
       "population": "~1.2 million",
       "populationPercent": "2.5%",
@@ -817,6 +1010,30 @@
         "Traditional fishing in Lake Turkana",
         "Colorful beaded jewelry"
       ],
+      "genderStereotypes": {
+        "male": [
+          "Fierce warriors and raiders",
+          "Expert survival skills in harsh desert",
+          "Known for distinctive mud-pack hairstyles",
+          "Skilled cattle herders and defenders"
+        ],
+        "female": [
+          "Known for elaborate beaded jewelry",
+          "Skilled at household management in harsh conditions",
+          "Traditional lip plugs as cultural markers",
+          "Strong and resilient desert survivors"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herd cattle and camels, protect the community, and raid neighboring tribes for cattle.",
+          "female": "Women build homes, manage households, create beadwork, and care for children. They also fish in Lake Turkana."
+        },
+        "modern": {
+          "male": "Modern Turkana men balance herding with education and employment. Some work in oil exploration.",
+          "female": "Turkana women are involved in fishing cooperatives, beadwork sales, and community development."
+        }
+      },
       "culturalTraits": [
         "Nomadic pastoralism in harsh desert conditions",
         "Distinctive mud-pack hairstyles (men)",
@@ -1061,6 +1278,7 @@
       "id": "somali",
       "name": "Kenyan Somali",
       "slug": "somali",
+      "countries": ["KE", "SO", "ET"],
       "region": "North-Eastern Kenya",
       "population": "~2.8 million",
       "populationPercent": "6%",
