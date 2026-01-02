@@ -18,10 +18,27 @@ const Learn = () => {
   
   const totalPopulation = useMemo(() => {
     return tribes.reduce((acc, t) => {
-      const pop = parseFloat(t.population.replace(/[^0-9.]/g, ''));
-      return acc + pop;
+      // Extract number and check for "million" or "thousand"
+      const numMatch = t.population.match(/[\d.]+/);
+      if (!numMatch) return acc;
+      const num = parseFloat(numMatch[0]);
+      if (t.population.toLowerCase().includes('million')) {
+        return acc + num * 1000000;
+      } else if (t.population.toLowerCase().includes('thousand') || t.population.toLowerCase().includes(',000')) {
+        return acc + num * 1000;
+      }
+      return acc + num;
     }, 0);
   }, [tribes]);
+
+  const formatPopulation = (pop: number) => {
+    if (pop >= 1000000) {
+      return `${(pop / 1000000).toFixed(1)}M`;
+    } else if (pop >= 1000) {
+      return `${(pop / 1000).toFixed(0)}K`;
+    }
+    return pop.toString();
+  };
   
   const regions = useMemo(() => {
     const uniqueRegions = [...new Set(tribes.map(t => t.region))];
@@ -101,7 +118,7 @@ const Learn = () => {
             </div>
             <div className="text-center p-3 bg-secondary rounded-lg">
               <TrendingUp className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">~{totalPopulation.toFixed(0)}M</p>
+              <p className="text-lg sm:text-2xl font-bold text-primary">~{formatPopulation(totalPopulation)}</p>
               <p className="text-xs text-muted-foreground">Total Population</p>
             </div>
             <div className="text-center p-3 bg-secondary rounded-lg">
@@ -121,12 +138,13 @@ const Learn = () => {
             <div className="flex items-start gap-3">
               <Globe className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-foreground text-sm mb-1">Did You Know?</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Kenya is home to over 40 ethnic groups, each with unique languages, traditions, and naming customs. 
-                  The largest 8 tribes make up about 82% of the population. Many Kenyan names reveal not just tribal 
-                  identity but also birth circumstances, like time of day, weather, or birth order!
-                </p>
+                <h3 className="font-semibold text-foreground text-sm mb-2">🎓 Did You Know?</h3>
+                <ul className="text-xs text-muted-foreground leading-relaxed space-y-1.5">
+                  <li>• <strong>42+ ethnic groups</strong> call Kenya home, each with unique languages and naming traditions</li>
+                  <li>• <strong>Names reveal birth circumstances</strong> — time of day (Otieno = night), weather (Wafula = rain), or season (Wekesa = harvest)</li>
+                  <li>• <strong>Kenya has 68 languages</strong> — Swahili and English are official, but each tribe preserves its mother tongue</li>
+                  <li>• <strong>The Maasai</strong> measure wealth in cattle, while the <strong>Luo</strong> are the only major tribe that doesn't practice circumcision</li>
+                </ul>
               </div>
             </div>
           </div>
