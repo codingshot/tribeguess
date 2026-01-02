@@ -49,12 +49,20 @@ const Learn = () => {
   
   const filteredTribes = useMemo(() => {
     return tribes.filter(tribe => {
+      const searchLower = searchQuery.toLowerCase();
+      
+      // Enhanced search - check more fields
       const matchesSearch = !searchQuery || 
-        tribe.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tribe.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tribe.stereotypes.some(s => s.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        tribe.commonNames.female.some(n => n.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        tribe.commonNames.male.some(n => n.toLowerCase().includes(searchQuery.toLowerCase()));
+        tribe.name.toLowerCase().includes(searchLower) ||
+        tribe.description.toLowerCase().includes(searchLower) ||
+        tribe.region.toLowerCase().includes(searchLower) ||
+        tribe.stereotypes.some(s => s.toLowerCase().includes(searchLower)) ||
+        tribe.commonNames.female.some(n => n.toLowerCase().includes(searchLower)) ||
+        tribe.commonNames.male.some(n => n.toLowerCase().includes(searchLower)) ||
+        (tribe.language?.name?.toLowerCase().includes(searchLower)) ||
+        (tribe.funFacts?.some(f => f.toLowerCase().includes(searchLower))) ||
+        (tribe.culturalTraits?.some(t => t.toLowerCase().includes(searchLower))) ||
+        (tribe.famousPeople?.some(p => p.name.toLowerCase().includes(searchLower)));
       
       const matchesRegion = !regionFilter || tribe.region === regionFilter;
       
@@ -134,7 +142,7 @@ const Learn = () => {
                 Country:
               </span>
               <div className="flex flex-wrap gap-1.5">
-                {countries.slice(0, 8).map(country => (
+                {countries.slice(0, 10).map(country => (
                   <button
                     key={country.code}
                     onClick={() => handleCountryChange(country.code)}
