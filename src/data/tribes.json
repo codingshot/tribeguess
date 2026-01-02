@@ -43,7 +43,12 @@
         "Names like Wanjiku and Wambui refer to the 9 daughters of Mumbi, the mythical mother",
         "Githeri (maize and beans dish) is a staple that originated from Kikuyu cuisine"
       ],
-      "traditionalFood": ["Mũkimo (mashed potatoes with greens)", "Githeri (maize and beans)", "Mũtura (blood sausage)", "Irio"],
+      "traditionalFood": {
+        "staples": ["Mũkimo (mashed potatoes with greens, peas, maize)", "Githeri (boiled maize and beans)", "Irio (mashed peas, potatoes, maize)", "Mũtura (blood sausage)"],
+        "beverages": ["Mũratina (fermented honey/sugarcane beer)", "Ũcũrũ (fermented porridge)", "Njahi soup"],
+        "specialDishes": ["Nyama Choma (roasted meat)", "Matoke (cooked bananas)", "Mutura with Kachumbari"],
+        "description": "Kikuyu cuisine revolves around agricultural produce from the fertile Central Highlands. Mũkimo, made by mashing potatoes, pumpkin leaves, green peas, and maize, is the signature dish often served at celebrations."
+      },
       "traditionalDance": "Mũgithi - a lively dance with accordion music",
       "religion": "Traditional belief in Ngai (God) who dwells on Mt. Kenya; now predominantly Christian",
       "history": {
@@ -55,17 +60,43 @@
       "language": {
         "name": "Gĩkũyũ",
         "speakers": "~8 million",
-        "greeting": "Wĩmwega (Hello)",
-        "family": "Bantu (Niger-Congo)"
+        "greeting": "Wĩmwega",
+        "greetingMeaning": "How are you? / Hello",
+        "additionalGreetings": [
+          { "phrase": "Nĩ wega", "meaning": "I'm fine / Good" },
+          { "phrase": "Nĩ ũhoro", "meaning": "How is it? / What's news?" },
+          { "phrase": "Ũhoro waku?", "meaning": "How are you?" },
+          { "phrase": "Tigwo na wega", "meaning": "Stay well (goodbye)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nĩ ngũcamũkia", "meaning": "I greet you" },
+          { "phrase": "Thaai", "meaning": "Peace (traditional blessing)" },
+          { "phrase": "Ngai baba", "meaning": "God father (exclamation)" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet with special characters"
       },
-      "famousPeople": ["Jomo Kenyatta (First President)", "Wangari Maathai (Nobel Laureate)", "Ngugi wa Thiong'o (Author)", "Mwai Kibaki (Third President)"],
+      "famousPeople": [
+        { "name": "Jomo Kenyatta", "role": "First President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Jomo_Kenyatta" },
+        { "name": "Wangari Maathai", "role": "Nobel Peace Prize Laureate 2004", "wikipedia": "https://en.wikipedia.org/wiki/Wangari_Maathai" },
+        { "name": "Ngũgĩ wa Thiong'o", "role": "Author & Playwright", "wikipedia": "https://en.wikipedia.org/wiki/Ng%C5%A9g%C4%A9_wa_Thiong%27o" },
+        { "name": "Mwai Kibaki", "role": "Third President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki" },
+        { "name": "Dedan Kimathi", "role": "Mau Mau Leader", "wikipedia": "https://en.wikipedia.org/wiki/Dedan_Kimathi" }
+      ],
       "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise.",
       "relatedTribes": ["meru", "embu"],
       "diaspora": {
         "globalPopulation": "~200,000",
         "majorCountries": ["USA", "UK", "Canada", "Australia", "South Africa"],
-        "communities": ["Large community in Dallas, Texas", "Significant presence in London", "Growing population in Toronto"],
-        "associations": ["Kikuyu Community Association of America", "UK Kenya Diaspora Alliance"]
+        "breakdown": [
+          { "country": "United States", "population": "~80,000", "cities": ["Dallas", "Houston", "Atlanta", "Boston"] },
+          { "country": "United Kingdom", "population": "~50,000", "cities": ["London", "Manchester", "Birmingham"] },
+          { "country": "Canada", "population": "~25,000", "cities": ["Toronto", "Calgary", "Vancouver"] },
+          { "country": "Australia", "population": "~20,000", "cities": ["Melbourne", "Sydney", "Perth"] },
+          { "country": "South Africa", "population": "~15,000", "cities": ["Johannesburg", "Cape Town"] }
+        ],
+        "communities": ["Large community in Dallas, Texas with annual cultural festivals", "Significant presence in London with multiple associations", "Growing population in Toronto with weekend Kiswahili schools"],
+        "associations": ["Kikuyu Community Association of America", "UK Kenya Diaspora Alliance", "Toronto Gikuyu Association"]
       }
     },
     {
@@ -112,7 +143,12 @@
         "The Luo are the only major Kenyan tribe that doesn't practice circumcision",
         "Fish, especially tilapia and omena, is central to Luo cuisine and identity"
       ],
-      "traditionalFood": ["Tilapia (Ngege)", "Omena (sardines)", "Kuon (ugali)", "Nyoyo (beans and maize)"],
+      "traditionalFood": {
+        "staples": ["Tilapia (Ngege) - fried, smoked, or stewed", "Omena (silver cyprinid sardines)", "Kuon (ugali made from maize/millet)", "Nyoyo (boiled beans and maize)"],
+        "beverages": ["Busaa (fermented millet beer)", "Kong'o (distilled spirit)", "Fresh lake water fish soup"],
+        "specialDishes": ["Aliya (stewed fish with greens)", "Apoth (smoked fish)", "Fish wrapped in banana leaves", "Osuga (bitter vegetable stew)"],
+        "description": "Luo cuisine is dominated by fish from Lake Victoria. Tilapia and omena are prepared in numerous ways - fried, smoked, sun-dried, or stewed with vegetables. Ugali (kuon) is the staple accompaniment."
+      },
       "traditionalDance": "Ohangla and Benga - energetic dances with nyatiti lyre",
       "religion": "Traditional belief in Nyasaye (God); now mix of Christianity and traditional beliefs",
       "history": {
@@ -124,17 +160,44 @@
       "language": {
         "name": "Dholuo",
         "speakers": "~5 million",
-        "greeting": "Misawa (Hello)",
-        "family": "Nilotic (Nilo-Saharan)"
+        "greeting": "Misawa",
+        "greetingMeaning": "Hello / Good day",
+        "additionalGreetings": [
+          { "phrase": "Oyawore", "meaning": "Good morning" },
+          { "phrase": "Oimore", "meaning": "Good afternoon" },
+          { "phrase": "Oyimore", "meaning": "Good evening" },
+          { "phrase": "Nind maber", "meaning": "Sleep well (goodbye at night)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Idhi nade?", "meaning": "How are you?" },
+          { "phrase": "Adhi maber", "meaning": "I'm fine" },
+          { "phrase": "Erokamano", "meaning": "Thank you" },
+          { "phrase": "Oriti", "meaning": "Goodbye" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
       },
-      "famousPeople": ["Barack Obama Sr. (Father of US President)", "Raila Odinga (Political Leader)", "Lupita Nyong'o (Oscar-winning Actress)", "Jaramogi Oginga Odinga (First VP)"],
+      "famousPeople": [
+        { "name": "Barack Obama Sr.", "role": "Father of 44th US President", "wikipedia": "https://en.wikipedia.org/wiki/Barack_Obama_Sr." },
+        { "name": "Raila Odinga", "role": "Former Prime Minister & Political Leader", "wikipedia": "https://en.wikipedia.org/wiki/Raila_Odinga" },
+        { "name": "Lupita Nyong'o", "role": "Oscar-winning Actress", "wikipedia": "https://en.wikipedia.org/wiki/Lupita_Nyong%27o" },
+        { "name": "Jaramogi Oginga Odinga", "role": "First Vice President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Jaramogi_Oginga_Odinga" },
+        { "name": "Tom Mboya", "role": "Independence Hero & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya" }
+      ],
       "description": "The Luo (Joluo) are the fourth-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region.",
       "relatedTribes": ["luhya", "kisii"],
       "diaspora": {
         "globalPopulation": "~150,000",
         "majorCountries": ["USA", "UK", "Tanzania", "Uganda", "Australia"],
-        "communities": ["Strong presence in Chicago area", "Notable community in Atlanta", "Growing numbers in Melbourne"],
-        "associations": ["Luo Council of Elders Diaspora", "Luo Union USA"]
+        "breakdown": [
+          { "country": "United States", "population": "~60,000", "cities": ["Chicago", "Atlanta", "Minneapolis", "Dallas"] },
+          { "country": "United Kingdom", "population": "~35,000", "cities": ["London", "Birmingham", "Leeds"] },
+          { "country": "Tanzania", "population": "~25,000", "cities": ["Mwanza", "Dar es Salaam"] },
+          { "country": "Uganda", "population": "~15,000", "cities": ["Kampala"] },
+          { "country": "Australia", "population": "~10,000", "cities": ["Melbourne", "Sydney"] }
+        ],
+        "communities": ["Strong presence in Chicago area with cultural associations", "Notable community in Atlanta with annual festivals", "Growing numbers in Melbourne with active youth groups"],
+        "associations": ["Luo Council of Elders Diaspora", "Luo Union USA", "Joluo UK Association"]
       }
     },
     {
@@ -181,7 +244,12 @@
         "The 18 Luhya sub-tribes have distinct dialects but share common ancestry",
         "Traditional Luhya weddings can last several days with elaborate ceremonies"
       ],
-      "traditionalFood": ["Ingokho (chicken)", "Tsisaka (spider plant)", "Obusuma (ugali)", "Likhubi (fermented milk)"],
+      "traditionalFood": {
+        "staples": ["Ingokho (traditional roasted chicken)", "Obusuma (ugali from maize/millet)", "Tsisaka (spider plant)", "Likhubi (fermented milk)"],
+        "beverages": ["Busaa (traditional millet beer)", "Muramba (porridge)", "Chang'aa (distilled spirit - ceremonial)"],
+        "specialDishes": ["Chicken with greens and ugali", "Mursik (fermented milk)", "Managu (African nightshade)", "Isombe (cassava leaves)"],
+        "description": "Luhya cuisine is famous for generous portions. The iconic 'chicken and ugali' is a cultural symbol. Celebrations feature specially prepared free-range chicken (ingokho) with traditional vegetables."
+      },
       "traditionalDance": "Sikuti - drum-based dance performed during celebrations",
       "religion": "Traditional beliefs with Wele Khakaba (God); now predominantly Christian",
       "history": {
@@ -193,17 +261,42 @@
       "language": {
         "name": "Luhya (18 dialects)",
         "speakers": "~6.8 million",
-        "greeting": "Muriwe (Hello)",
-        "family": "Bantu (Niger-Congo)"
+        "greeting": "Muriwe",
+        "greetingMeaning": "Hello / How are you?",
+        "additionalGreetings": [
+          { "phrase": "Bulikhana", "meaning": "Good morning (Bukusu)" },
+          { "phrase": "Uhee", "meaning": "Hello (Maragoli)" },
+          { "phrase": "Waremwa", "meaning": "How are you? (Isukha)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Khwenya khuhira", "meaning": "We want to eat (Bukusu)" },
+          { "phrase": "Orio mono", "meaning": "Thank you very much" },
+          { "phrase": "Shiakhala shilai", "meaning": "Things are good" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
       },
-      "famousPeople": ["Masinde Muliro (Political Leader)", "Michael Olunga (Footballer)", "Victor Wanyama (Footballer)", "Michael Kijana Wamalwa (VP)"],
+      "famousPeople": [
+        { "name": "Masinde Muliro", "role": "Independence Hero & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Masinde_Muliro" },
+        { "name": "Victor Wanyama", "role": "Football Star (Spurs, Montreal)", "wikipedia": "https://en.wikipedia.org/wiki/Victor_Wanyama" },
+        { "name": "Michael Olunga", "role": "Footballer (Kenya Top Scorer)", "wikipedia": "https://en.wikipedia.org/wiki/Michael_Olunga" },
+        { "name": "Michael Kijana Wamalwa", "role": "8th Vice President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Michael_Kijana_Wamalwa" },
+        { "name": "Musalia Mudavadi", "role": "Prime Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Musalia_Mudavadi" }
+      ],
       "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality.",
       "relatedTribes": ["luo", "kisii"],
       "diaspora": {
         "globalPopulation": "~120,000",
         "majorCountries": ["USA", "UK", "Canada", "South Africa", "UAE"],
-        "communities": ["Presence in Houston area", "Community in Manchester, UK", "Growing numbers in Dubai"],
-        "associations": ["Luhya Community USA", "Bukusu Diaspora Network"]
+        "breakdown": [
+          { "country": "United States", "population": "~45,000", "cities": ["Houston", "Dallas", "Phoenix", "Minneapolis"] },
+          { "country": "United Kingdom", "population": "~30,000", "cities": ["London", "Manchester", "Birmingham"] },
+          { "country": "Canada", "population": "~15,000", "cities": ["Toronto", "Edmonton", "Calgary"] },
+          { "country": "South Africa", "population": "~12,000", "cities": ["Johannesburg", "Pretoria"] },
+          { "country": "UAE", "population": "~10,000", "cities": ["Dubai", "Abu Dhabi"] }
+        ],
+        "communities": ["Presence in Houston area with annual Luhya festivals", "Community in Manchester, UK with cultural programs", "Growing numbers in Dubai working in hospitality"],
+        "associations": ["Luhya Community USA", "Bukusu Diaspora Network", "Abaluyia UK"]
       }
     },
     {
@@ -250,7 +343,12 @@
         "The Akamba Museum in Machakos preserves centuries of Kamba history",
         "Kamba traditional dancers are renowned for their acrobatic performances"
       ],
-      "traditionalFood": ["Muthokoi (de-husked maize)", "Kilulu (wild vegetables)", "Nzuki (honey)", "Mboka (dried meat)"],
+      "traditionalFood": {
+        "staples": ["Muthokoi (de-husked maize boiled with beans)", "Kitawa (roasted/boiled maize)", "Mboka (sun-dried meat)", "Nyama ya mbuzi (goat meat)"],
+        "beverages": ["Uki (honey beer)", "Kaluvu (palm wine)", "Ngwa (millet porridge)"],
+        "specialDishes": ["Nzuki (honey - used in many dishes)", "Kilulu (wild vegetables)", "Kyondo (dried vegetables)", "Managu (African nightshade)"],
+        "description": "Kamba cuisine reflects the semi-arid environment. Honey (nzuki) is a prized product used in beverages and cooking. Dried foods like mboka (dried meat) were essential for traders on long journeys."
+      },
       "traditionalDance": "Kilumi - acrobatic dance with drums and whistles",
       "religion": "Traditional belief in Ngai Mulungu; now predominantly Christian",
       "history": {
@@ -262,17 +360,44 @@
       "language": {
         "name": "Kikamba",
         "speakers": "~4.7 million",
-        "greeting": "Wakia (Hello)",
-        "family": "Bantu (Niger-Congo)"
+        "greeting": "Wakia",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Uvoo?", "meaning": "How are you?" },
+          { "phrase": "Muvoo?", "meaning": "How are you (plural)?" },
+          { "phrase": "Nivo mwanya", "meaning": "I'm fine" },
+          { "phrase": "Wenda kwi?", "meaning": "Where are you going?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nitenda nesa", "meaning": "Thank you" },
+          { "phrase": "Toa mwai", "meaning": "Goodbye" },
+          { "phrase": "Ngoka", "meaning": "I'm coming" },
+          { "phrase": "Ni mwaki?", "meaning": "What's your name?" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
       },
-      "famousPeople": ["Kalonzo Musyoka (Political Leader)", "Charity Ngilu (Political Leader)", "Paul Ngei (Independence Hero)", "Kivutha Kibwana (Governor)"],
+      "famousPeople": [
+        { "name": "Kalonzo Musyoka", "role": "Former Vice President & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Kalonzo_Musyoka" },
+        { "name": "Charity Ngilu", "role": "Former Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Charity_Ngilu" },
+        { "name": "Paul Ngei", "role": "Independence Hero (Kapenguria Six)", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Ngei" },
+        { "name": "Kivutha Kibwana", "role": "Former Governor & Activist", "wikipedia": "https://en.wikipedia.org/wiki/Kivutha_Kibwana" },
+        { "name": "Kakai Kilonzo", "role": "Legendary Musician", "wikipedia": "https://en.wikipedia.org/wiki/Kakai_Kilonzo" }
+      ],
       "description": "The Kamba (Akamba) people are known for their exceptional craftsmanship, particularly wood carving in Wamunyu, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya.",
       "relatedTribes": ["kikuyu", "meru"],
       "diaspora": {
         "globalPopulation": "~80,000",
         "majorCountries": ["USA", "UK", "UAE", "Qatar", "South Africa"],
-        "communities": ["Notable presence in Phoenix, Arizona", "Community in Birmingham, UK", "Significant in Gulf countries"],
-        "associations": ["Akamba Community USA", "Kamba Welfare Association UK"]
+        "breakdown": [
+          { "country": "United States", "population": "~30,000", "cities": ["Phoenix", "Denver", "Dallas", "Boston"] },
+          { "country": "United Kingdom", "population": "~20,000", "cities": ["London", "Birmingham", "Leeds"] },
+          { "country": "UAE", "population": "~12,000", "cities": ["Dubai", "Abu Dhabi", "Sharjah"] },
+          { "country": "Qatar", "population": "~8,000", "cities": ["Doha"] },
+          { "country": "South Africa", "population": "~5,000", "cities": ["Johannesburg"] }
+        ],
+        "communities": ["Notable presence in Phoenix, Arizona with cultural events", "Community in Birmingham, UK with Kamba associations", "Significant in Gulf countries working in various sectors"],
+        "associations": ["Akamba Community USA", "Kamba Welfare Association UK", "Akamba Gulf Diaspora"]
       }
     },
     {
@@ -306,7 +431,6 @@
       ],
       "culturalTraits": [
         "Running excellence - over 100 Olympic medals",
-        "Traditional cattle herding (Chemiroilet)",
         "Age-set systems (Ipinda) for social organization",
         "Circumcision rites of passage (Tumdo)",
         "Mursik (fermented milk) tradition",
@@ -319,7 +443,12 @@
         "Iten town is called 'The Home of Champions' with over 1,000 world-class athletes",
         "Kip/Chep prefixes mean 'of' - Kipchoge means 'born near the grain storage'"
       ],
-      "traditionalFood": ["Mursik (fermented milk in gourd)", "Kimyet (blood and milk)", "Roasted maize", "Millet porridge"],
+      "traditionalFood": {
+        "staples": ["Mursik (fermented milk in a gourd)", "Kimyet (blood and milk mixture)", "Ugali (maize flour dish)", "Roasted maize"],
+        "beverages": ["Mursik (served cold)", "Maiywet (honey beer)", "Millet porridge"],
+        "specialDishes": ["Roasted meat (celebration dish)", "Milk with blood (for strength)", "Moktet (boiled meat)", "Green vegetables with mursik"],
+        "description": "Mursik is the iconic Kalenjin drink - fermented milk stored in a gourd lined with burnt wood ash (sot), giving it a smoky flavor. Athletes credit it for their running success."
+      },
       "traditionalDance": "Chemirocha - jumping dance performed during celebrations",
       "religion": "Traditional belief in Asis (Sun god); now predominantly Christian",
       "history": {
@@ -331,17 +460,44 @@
       "language": {
         "name": "Kalenjin (8 dialects)",
         "speakers": "~6 million",
-        "greeting": "Chamge (Hello)",
-        "family": "Nilotic (Nilo-Saharan)"
+        "greeting": "Chamge",
+        "greetingMeaning": "Hello / How are you?",
+        "additionalGreetings": [
+          { "phrase": "Chamge ingee", "meaning": "Hello to you" },
+          { "phrase": "Supa", "meaning": "Hi (informal, from Swahili)" },
+          { "phrase": "Kongoi", "meaning": "Thank you" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Chamge mising", "meaning": "Good morning" },
+          { "phrase": "Kongoi mising", "meaning": "Thank you very much" },
+          { "phrase": "Olen kabisa", "meaning": "I'm very fine" },
+          { "phrase": "Saitik", "meaning": "Goodbye" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
       },
-      "famousPeople": ["Eliud Kipchoge (Marathon Legend)", "William Ruto (President)", "David Rudisha (800m World Record)", "Daniel arap Moi (Former President)", "Faith Kipyegon (Olympic Champion)"],
+      "famousPeople": [
+        { "name": "Eliud Kipchoge", "role": "Greatest Marathon Runner Ever", "wikipedia": "https://en.wikipedia.org/wiki/Eliud_Kipchoge" },
+        { "name": "William Ruto", "role": "5th President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/William_Ruto" },
+        { "name": "David Rudisha", "role": "800m World Record Holder", "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha" },
+        { "name": "Daniel arap Moi", "role": "2nd President of Kenya (1978-2002)", "wikipedia": "https://en.wikipedia.org/wiki/Daniel_arap_Moi" },
+        { "name": "Faith Kipyegon", "role": "1500m World Record Holder", "wikipedia": "https://en.wikipedia.org/wiki/Faith_Kipyegon" },
+        { "name": "Koitalel Arap Samoei", "role": "Nandi Resistance Leader", "wikipedia": "https://en.wikipedia.org/wiki/Koitalel_arap_Samoei" }
+      ],
       "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, and Tugen, traditionally residing in the Rift Valley highlands.",
       "relatedTribes": ["maasai", "turkana"],
       "diaspora": {
         "globalPopulation": "~60,000",
         "majorCountries": ["USA", "UK", "Australia", "Japan", "Germany"],
-        "communities": ["Many athletes in Boulder, Colorado", "Running communities in Eugene, Oregon", "Presence in London"],
-        "associations": ["Kalenjin Diaspora USA", "Athletics Kenya Diaspora"]
+        "breakdown": [
+          { "country": "United States", "population": "~25,000", "cities": ["Boulder (CO)", "Eugene (OR)", "Flagstaff (AZ)", "Albuquerque"] },
+          { "country": "United Kingdom", "population": "~12,000", "cities": ["London", "Manchester", "Teddington"] },
+          { "country": "Australia", "population": "~8,000", "cities": ["Melbourne", "Perth", "Brisbane"] },
+          { "country": "Japan", "population": "~6,000", "cities": ["Tokyo", "Osaka"] },
+          { "country": "Germany", "population": "~5,000", "cities": ["Berlin", "Munich"] }
+        ],
+        "communities": ["Many athletes training in Boulder, Colorado", "Running communities in Eugene, Oregon (Track Town USA)", "Professional athletes in London and Europe"],
+        "associations": ["Kalenjin Diaspora USA", "Athletics Kenya Diaspora", "Rift Valley Sports Foundation"]
       }
     },
     {
@@ -386,7 +542,12 @@
         "Nyashinski (musician) brought Gusii language into mainstream Kenyan music",
         "Kisii County has one of Kenya's highest rates of university enrollment"
       ],
-      "traditionalFood": ["Obokima (finger millet ugali)", "Chinsaga (spider plant)", "Ematoke (bananas)", "Rinagu (pumpkin leaves)"],
+      "traditionalFood": {
+        "staples": ["Obokima (finger millet ugali)", "Chinsaga (spider plant)", "Ematoke (green bananas - boiled/mashed)", "Rinagu (pumpkin leaves)"],
+        "beverages": ["Busaa (fermented millet beer)", "Amarua (banana beer)", "Ekegoro (millet porridge)"],
+        "specialDishes": ["Matoke with groundnut sauce", "Ensinia (cowpeas)", "Engare (amaranth leaves)", "Chimbera (roast meat)"],
+        "description": "Gusii cuisine features bananas (ematoke) prominently, prepared in various ways. The fertile highlands produce abundant vegetables, with finger millet being the traditional grain for ugali."
+      },
       "traditionalDance": "Ekerongo - performed with Obokano lyre during celebrations",
       "religion": "Traditional beliefs; now predominantly Christian (Seventh-day Adventist influence)",
       "history": {
@@ -398,17 +559,43 @@
       "language": {
         "name": "Ekegusii",
         "speakers": "~2.7 million",
-        "greeting": "Naki ogosika (Hello)",
-        "family": "Bantu (Niger-Congo)"
+        "greeting": "Naki ogosika",
+        "greetingMeaning": "How are you? (lit. 'how do you wake')",
+        "additionalGreetings": [
+          { "phrase": "Bwakire", "meaning": "Good morning" },
+          { "phrase": "Oire otiang'eni", "meaning": "Good afternoon" },
+          { "phrase": "Oire bweri", "meaning": "Good evening" },
+          { "phrase": "Tinde kogenda", "meaning": "Goodbye (I'm leaving)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nario nkogenda", "meaning": "I'm fine" },
+          { "phrase": "Naibora", "meaning": "Thank you" },
+          { "phrase": "Eee", "meaning": "Yes" },
+          { "phrase": "Yaya", "meaning": "No" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
       },
-      "famousPeople": ["Simeon Nyachae (Political Leader)", "Nyashinski (Musician)", "Ongeri Sam (Politician)", "Dr. Zachary Onyonka (Economist)"],
+      "famousPeople": [
+        { "name": "Simeon Nyachae", "role": "Former Powerful Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Simeon_Nyachae" },
+        { "name": "Nyashinski", "role": "Award-winning Musician", "wikipedia": "https://en.wikipedia.org/wiki/Nyashinski" },
+        { "name": "Sam Ongeri", "role": "Former Cabinet Secretary for Education", "wikipedia": "https://en.wikipedia.org/wiki/Sam_Ongeri" },
+        { "name": "Zachary Onyonka", "role": "Former Finance Minister & Economist", "wikipedia": "https://en.wikipedia.org/wiki/Zachary_Onyonka" },
+        { "name": "James Ongwae", "role": "Former Governor of Kisii County", "wikipedia": "https://en.wikipedia.org/wiki/James_Ongwae" }
+      ],
       "description": "The Kisii (Abagusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a strong emphasis on education.",
       "relatedTribes": ["luo", "luhya"],
       "diaspora": {
         "globalPopulation": "~50,000",
         "majorCountries": ["USA", "UK", "Canada", "Australia"],
-        "communities": ["Growing community in Minneapolis", "Presence in Charlotte, NC", "UK community in Midlands"],
-        "associations": ["Kisii Community USA", "Gusii Diaspora Association"]
+        "breakdown": [
+          { "country": "United States", "population": "~20,000", "cities": ["Minneapolis", "Charlotte", "Dallas", "Seattle"] },
+          { "country": "United Kingdom", "population": "~15,000", "cities": ["London", "Birmingham", "Midlands"] },
+          { "country": "Canada", "population": "~8,000", "cities": ["Toronto", "Calgary", "Vancouver"] },
+          { "country": "Australia", "population": "~5,000", "cities": ["Melbourne", "Sydney"] }
+        ],
+        "communities": ["Growing community in Minneapolis with cultural associations", "Presence in Charlotte, NC with annual gatherings", "UK community in Midlands with family networks"],
+        "associations": ["Kisii Community USA", "Gusii Diaspora Association", "Abagusii UK"]
       }
     },
     {
@@ -441,11 +628,26 @@
         "Agricultural experts"
       ],
       "culturalTraits": [
-        "Njuri Ncheke council of elders",
-        "Miraa cultivation and trade",
+        "Njuri Ncheke council of elders - one of Kenya's most powerful",
+        "Miraa (khat) cultivation and trade",
         "Similar to Kikuyu traditions",
-        "Strong agricultural roots around Mt. Kenya"
+        "Strong agricultural roots around Mt. Kenya",
+        "Traditional age-set systems"
       ],
+      "funFacts": [
+        "The Njuri Ncheke is one of Africa's oldest and most powerful councils of elders",
+        "Meru is the largest producer of miraa (khat) in Kenya",
+        "The Meru have a legend of escaping from slavery ('Mbwa' - possibly Arab slavers)",
+        "Meru women traditionally had significant power in household economics"
+      ],
+      "traditionalFood": {
+        "staples": ["Mukimo (mashed potatoes with greens)", "Githeri (maize and beans)", "Mukio (mashed bananas with milk)", "Nthugo (peas and maize)"],
+        "beverages": ["Muratina (honey beer)", "Miraa tea (khat leaves brewed)", "Fermented porridge"],
+        "specialDishes": ["Mburi (goat meat)", "Miraa (khat - chewed socially)", "Muthokoi", "Traditional vegetables with beans"],
+        "description": "Meru cuisine shares similarities with Kikuyu but includes unique dishes. Miraa (khat) plays a significant cultural and economic role, chewed during social gatherings and exported widely."
+      },
+      "traditionalDance": "Ntore - performed during celebrations and rites of passage",
+      "religion": "Traditional belief in Murungu (God); now predominantly Christian",
       "history": {
         "origin": "The Ameru are Bantu people with origins linked to the Mwene (Coastal) region. According to their oral history, they escaped from 'Mbwa' (possibly a reference to Arab slavers) and migrated inland, settling on the eastern slopes of Mt. Kenya.",
         "colonialEra": "The Meru, like their Kikuyu neighbors, participated in the Mau Mau uprising. The Njuri Ncheke council of elders maintained authority even during colonization, secretly supporting resistance efforts.",
@@ -455,17 +657,42 @@
       "language": {
         "name": "Kimeru",
         "speakers": "~1.9 million",
-        "greeting": "Muga (Hello)",
-        "family": "Bantu (Niger-Congo)"
+        "greeting": "Muga",
+        "greetingMeaning": "Hello / How are you?",
+        "additionalGreetings": [
+          { "phrase": "Muga muno", "meaning": "Hello very much (enthusiastic)" },
+          { "phrase": "Uri mwega?", "meaning": "Are you well?" },
+          { "phrase": "Ni mwega", "meaning": "I'm well" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ndiuri mwega", "meaning": "Goodbye (stay well)" },
+          { "phrase": "Ninkenda", "meaning": "Thank you" },
+          { "phrase": "Nchi yetu", "meaning": "Our land" },
+          { "phrase": "Muthuri", "meaning": "Elder (respected man)" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
       },
-      "famousPeople": ["Kiraitu Murungi (Political Leader)", "Peter Kenneth (Political Leader)", "Anne Waiguru (Governor)", "M'maitsi M'Inoti (Judge)"],
+      "famousPeople": [
+        { "name": "Kiraitu Murungi", "role": "Former Governor & Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Kiraitu_Murungi" },
+        { "name": "Peter Kenneth", "role": "Former Gatanga MP & Presidential Candidate", "wikipedia": "https://en.wikipedia.org/wiki/Peter_Kenneth" },
+        { "name": "Anne Waiguru", "role": "Governor of Kirinyaga", "wikipedia": "https://en.wikipedia.org/wiki/Anne_Waiguru" },
+        { "name": "Kabando wa Kabando", "role": "Former MP & Political Analyst", "wikipedia": "https://en.wikipedia.org/wiki/Kabando_wa_Kabando" },
+        { "name": "M'Maitsi M'Inoti", "role": "Prominent Judge", "wikipedia": "https://en.wikipedia.org/wiki/M%27Inoti_M%27Maitsi" }
+      ],
       "description": "The Meru (Ameru) people inhabit the eastern slopes of Mount Kenya. They are known for their powerful council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat) in Kenya.",
       "relatedTribes": ["kikuyu", "embu"],
       "diaspora": {
         "globalPopulation": "~40,000",
         "majorCountries": ["USA", "UK", "UAE", "South Africa"],
-        "communities": ["Community in Washington DC area", "Presence in Texas", "Growing UK community"],
-        "associations": ["Meru Community USA", "Njuri Ncheke Diaspora"]
+        "breakdown": [
+          { "country": "United States", "population": "~15,000", "cities": ["Washington DC", "Houston", "Dallas", "Boston"] },
+          { "country": "United Kingdom", "population": "~12,000", "cities": ["London", "Manchester", "Birmingham"] },
+          { "country": "UAE", "population": "~8,000", "cities": ["Dubai", "Abu Dhabi"] },
+          { "country": "South Africa", "population": "~4,000", "cities": ["Johannesburg", "Cape Town"] }
+        ],
+        "communities": ["Community in Washington DC area with cultural activities", "Presence in Texas with family associations", "Growing UK community with youth programs"],
+        "associations": ["Meru Community USA", "Njuri Ncheke Diaspora", "Ameru UK Association"]
       }
     },
     {
@@ -489,7 +716,7 @@
         "newyear": ["Mwaka"]
       },
       "stereotypes": [
-        "Laid-back and relaxed lifestyle",
+        "Laid-back and relaxed lifestyle (pole pole)",
         "Hospitable to visitors",
         "Swahili language experts",
         "Beach and tourism culture",
@@ -497,11 +724,27 @@
         "Rich culinary traditions"
       ],
       "culturalTraits": [
-        "Swahili language and culture",
+        "Swahili language and culture - lingua franca of East Africa",
         "Islamic and traditional influences",
         "Maritime and trading heritage",
-        "Day-of-week naming tradition"
+        "Day-of-week naming tradition",
+        "Elaborate wedding ceremonies (Swahili weddings)",
+        "Unique architecture (Swahili houses, coral stone buildings)"
       ],
+      "funFacts": [
+        "Swahili (born on this coast) is now spoken by over 100 million people across Africa",
+        "Lamu Old Town is a UNESCO World Heritage Site dating back to the 12th century",
+        "Coastal cuisine blends African, Arab, Indian, and Portuguese influences",
+        "The Mijikenda's sacred Kaya forests are UNESCO-protected spiritual sites"
+      ],
+      "traditionalFood": {
+        "staples": ["Wali (coconut rice)", "Pilau (spiced rice)", "Biriani (layered rice dish)", "Chapati"],
+        "beverages": ["Madafu (coconut water)", "Kahawa (Swahili coffee with spices)", "Tamarind juice"],
+        "specialDishes": ["Samaki wa kupaka (fish in coconut sauce)", "Mahamri (sweet fried bread)", "Mishkaki (grilled meat skewers)", "Mbaazi (pigeon peas in coconut)", "Viazi karai (spiced potato fritters)"],
+        "description": "Coastal cuisine is a fusion of African, Arab, Indian, and Portuguese influences. Coconut is central to most dishes. The biryani, pilau, and seafood dishes reflect centuries of Indian Ocean trade."
+      },
+      "traditionalDance": "Chakacha - hip-focused dance performed at weddings and celebrations",
+      "religion": "Predominantly Islam (Sunni); with traditional African beliefs among some Mijikenda",
       "history": {
         "origin": "The Coastal peoples include the Mijikenda (9 tribes), Swahili, Taita, and others. The Swahili culture emerged from intermarriage between Bantu peoples and Arab/Persian traders from around 800 AD, creating a unique maritime civilization.",
         "colonialEra": "The Coast was the first point of contact with foreign powers. Mombasa changed hands between Portuguese, Omani Arabs, and eventually British. The Mazrui rebellion and other resistances marked the colonial period.",
@@ -510,18 +753,48 @@
       },
       "language": {
         "name": "Swahili (Kiswahili)",
-        "speakers": "~100 million (regional)",
-        "greeting": "Jambo / Habari (Hello)",
-        "family": "Bantu (Niger-Congo) with Arabic influence"
+        "speakers": "~100 million (regional lingua franca)",
+        "greeting": "Jambo",
+        "greetingMeaning": "Hello (tourist greeting) / Habari? (How are you?)",
+        "additionalGreetings": [
+          { "phrase": "Habari yako?", "meaning": "How are you?" },
+          { "phrase": "Habari za asubuhi", "meaning": "Good morning" },
+          { "phrase": "Habari za mchana", "meaning": "Good afternoon" },
+          { "phrase": "Habari za jioni", "meaning": "Good evening" },
+          { "phrase": "Shikamoo", "meaning": "Respectful greeting to elders" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nzuri sana", "meaning": "Very fine/good" },
+          { "phrase": "Asante sana", "meaning": "Thank you very much" },
+          { "phrase": "Pole pole", "meaning": "Slowly slowly / Take it easy" },
+          { "phrase": "Hakuna matata", "meaning": "No worries" },
+          { "phrase": "Karibu", "meaning": "Welcome" },
+          { "phrase": "Kwaheri", "meaning": "Goodbye" }
+        ],
+        "family": "Bantu (Niger-Congo) with Arabic, Persian, Portuguese influences",
+        "writingSystem": "Latin alphabet (formerly Arabic script)"
       },
-      "famousPeople": ["Najib Balala (Tourism CS)", "Amina Mohamed (Diplomat)", "Ali Kiba (Musician)", "Mzee Abdulrahman Kinana (Politician)"],
+      "famousPeople": [
+        { "name": "Najib Balala", "role": "Former Tourism Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Najib_Balala" },
+        { "name": "Amina Mohamed", "role": "WTO Director-General Candidate & Diplomat", "wikipedia": "https://en.wikipedia.org/wiki/Amina_J._Mohamed" },
+        { "name": "Diamond Platnumz", "role": "Bongo Flava Superstar (Tanzanian Swahili)", "wikipedia": "https://en.wikipedia.org/wiki/Diamond_Platnumz" },
+        { "name": "Ali Kiba", "role": "Bongo Flava Musician", "wikipedia": "https://en.wikipedia.org/wiki/Alikiba" },
+        { "name": "Sheikh Abdulrahman Wandati", "role": "Islamic Scholar", "wikipedia": null }
+      ],
       "description": "Coastal tribes include the Mijikenda (9 tribes including Giriama, Digo, Duruma) and Swahili people. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine.",
       "relatedTribes": [],
       "diaspora": {
         "globalPopulation": "~100,000",
         "majorCountries": ["UAE", "Oman", "USA", "UK", "Saudi Arabia"],
-        "communities": ["Strong presence in Gulf states", "Historic ties to Oman", "Community in New York area"],
-        "associations": ["Swahili Cultural Society", "Mijikenda Diaspora Network"]
+        "breakdown": [
+          { "country": "UAE", "population": "~35,000", "cities": ["Dubai", "Abu Dhabi", "Sharjah"] },
+          { "country": "Oman", "population": "~20,000", "cities": ["Muscat", "Salalah"] },
+          { "country": "United States", "population": "~18,000", "cities": ["New York", "Washington DC", "Houston"] },
+          { "country": "United Kingdom", "population": "~15,000", "cities": ["London", "Birmingham"] },
+          { "country": "Saudi Arabia", "population": "~10,000", "cities": ["Jeddah", "Riyadh"] }
+        ],
+        "communities": ["Strong presence in Gulf states with historic trade ties", "Historic ties to Oman dating back centuries", "Community in New York area with Swahili cultural centers"],
+        "associations": ["Swahili Cultural Society", "Mijikenda Diaspora Network", "Kenya Coast Diaspora UK"]
       }
     }
   ]
