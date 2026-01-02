@@ -94,7 +94,7 @@ const Index = () => {
             {results.predictions.length > 0 && (
               <nav className="mt-6 sm:mt-8 text-center">
                 <a 
-                  href={`/learn?tribe=${results.predictions[0].tribe.id}`}
+                  href={`/learn/${results.predictions[0].tribe.slug || results.predictions[0].tribe.id}`}
                   className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-sm sm:text-base touch-manipulation p-2"
                 >
                   Learn more about the {results.predictions[0].tribe.name} tribe →

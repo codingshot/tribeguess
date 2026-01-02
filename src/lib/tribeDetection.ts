@@ -4,6 +4,7 @@ export interface TribeResult {
   tribe: typeof tribesData.tribes[0];
   confidence: number;
   matchReason: string;
+  matchDetails?: string[];
   nameMeaning?: string;
 }
 
@@ -423,6 +424,11 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
         tribe,
         confidence: 95,
         matchReason: 'Exact name match in database',
+        matchDetails: [
+          `"${name}" is a verified ${tribe.name} name`,
+          `This name is commonly used among the ${tribe.name} people`,
+          directMatch.meaning ? `The name carries cultural significance in ${tribe.name} tradition` : '',
+        ].filter(Boolean),
         nameMeaning: directMatch.meaning,
       });
     }
@@ -445,7 +451,11 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
         const newScore = match.weight * 100 + prefixBonus;
         if (newScore > currentScore) {
           tribeScores[match.tribe].score = newScore;
-          tribeScores[match.tribe].reasons.push(`Name prefix "${prefix}" is characteristic of ${match.tribe} names`);
+          const tribeName = tribesData.tribes.find(t => t.id === match.tribe)?.name || match.tribe;
+          tribeScores[match.tribe].reasons = [
+            `Name starts with "${prefix.toUpperCase()}" - a characteristic ${tribeName} prefix`,
+            `${Math.round(match.weight * 100)}% of names with this prefix are ${tribeName}`,
+          ];
         }
       }
       break; // Only use longest matching prefix
@@ -463,7 +473,10 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
         }
         const suffixBonus = suffix.length * 5;
         tribeScores[match.tribe].score += match.weight * 30 + suffixBonus;
-        tribeScores[match.tribe].reasons.push(`Name ending "${suffix}" is common in ${match.tribe} names`);
+        const tribeName = tribesData.tribes.find(t => t.id === match.tribe)?.name || match.tribe;
+        tribeScores[match.tribe].reasons.push(
+          `Name ending "-${suffix}" is common in ${tribeName} names`
+        );
       }
       break;
     }
@@ -489,8 +502,10 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
             if (!tribeScores[tribe.id]) {
               tribeScores[tribe.id] = { score: 0, reasons: [] };
             }
-            tribeScores[tribe.id].score += 20;
-            tribeScores[tribe.id].reasons.push(`Time of birth matches ${tribe.name} naming pattern for ${timeKey}`);
+            tribeScores[tribe.id].score += 25;
+            tribeScores[tribe.id].reasons.push(
+              `Born in the ${timeOfBirth} - matches ${tribe.name} naming tradition for ${timeKey}-born children`
+            );
           }
         }
       }
@@ -506,7 +521,10 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
           tribeScores[tribe.id] = { score: 0, reasons: [] };
         }
         tribeScores[tribe.id].score = Math.max(tribeScores[tribe.id].score, 88);
-        tribeScores[tribe.id].reasons.push(`"${name}" is a common ${tribe.name} name`);
+        tribeScores[tribe.id].reasons = [
+          `"${name}" is a well-known ${tribe.name} name`,
+          `Found in our database of common ${tribe.name} names`,
+        ];
       } else if (tribeName.startsWith(normalizedName) || normalizedName.startsWith(tribeName)) {
         if (!tribeScores[tribe.id]) {
           tribeScores[tribe.id] = { score: 0, reasons: [] };
@@ -515,7 +533,9 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
         const partialScore = 50 * similarity;
         if (partialScore > tribeScores[tribe.id].score * 0.5) {
           tribeScores[tribe.id].score += partialScore;
-          tribeScores[tribe.id].reasons.push(`Similar to ${tribe.name} name "${tribeName}"`);
+          tribeScores[tribe.id].reasons.push(
+            `Similar to ${tribe.name} name "${tribeName}"`
+          );
         }
       }
     }
@@ -530,6 +550,7 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
           tribe,
           confidence: Math.min(Math.round(data.score), 92),
           matchReason: data.reasons[0] || 'Pattern matching based on name characteristics',
+          matchDetails: data.reasons.slice(0, 3),
         });
       }
     }
@@ -545,7 +566,12 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
       predictions.push({
         tribe,
         confidence: 15,
-        matchReason: 'Unable to determine tribe from name - showing most common tribes in Kenya',
+        matchReason: 'Unable to determine tribe from name',
+        matchDetails: [
+          'This name doesn\'t match known patterns in our database',
+          `Showing ${tribe.name} as one of Kenya's largest tribes`,
+          'Try adding time of birth for better accuracy',
+        ],
       });
     }
   }

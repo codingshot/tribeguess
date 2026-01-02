@@ -1,5 +1,5 @@
 import { TribeResult } from '@/lib/tribeDetection';
-import { MapPin, Users, Star, Lightbulb, User, Info } from 'lucide-react';
+import { MapPin, Users, Star, Lightbulb, User, ChevronRight, Brain, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface TribeResultCardProps {
@@ -9,10 +9,15 @@ interface TribeResultCardProps {
 }
 
 export function TribeResultCard({ result, rank, inputName }: TribeResultCardProps) {
-  const { tribe, confidence, matchReason, nameMeaning } = result;
+  const { tribe, confidence, matchReason, nameMeaning, matchDetails } = result;
   const isPrimary = rank === 1;
   
   const confidenceLabel = confidence >= 80 ? 'High confidence' : confidence >= 50 ? 'Medium confidence' : 'Low confidence';
+  const confidenceColor = confidence >= 80 
+    ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' 
+    : confidence >= 50 
+      ? 'bg-primary/10 text-primary' 
+      : 'bg-secondary text-secondary-foreground';
   
   return (
     <article 
@@ -28,9 +33,12 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
             </div>
           )}
           <div className="min-w-0">
-            <h2 className="font-serif text-lg sm:text-xl font-bold text-foreground truncate">
+            <Link 
+              to={`/learn/${tribe.slug || tribe.id}`}
+              className="font-display text-lg sm:text-xl font-bold text-foreground hover:text-primary transition-colors truncate block"
+            >
               {tribe.name}
-            </h2>
+            </Link>
             <div className="flex items-center gap-1 text-muted-foreground text-xs sm:text-sm">
               <MapPin className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
               <span className="truncate">{tribe.region}</span>
@@ -38,13 +46,7 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
           </div>
         </div>
         <div 
-          className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold flex-shrink-0 ${
-            confidence >= 80 
-              ? 'bg-green-100 text-green-700' 
-              : confidence >= 50 
-                ? 'bg-primary/10 text-primary' 
-                : 'bg-secondary text-secondary-foreground'
-          }`}
+          className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold flex-shrink-0 ${confidenceColor}`}
           role="status"
           aria-label={`${confidenceLabel}: ${confidence}% match`}
         >
@@ -52,14 +54,30 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
         </div>
       </header>
       
+      {/* Reasoning Section */}
+      <div className="mb-3 sm:mb-4 p-3 bg-secondary/50 rounded-lg border border-border">
+        <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-foreground mb-2">
+          <Brain className="w-4 h-4 text-primary" aria-hidden="true" />
+          <span>Why we think this</span>
+        </div>
+        <ul className="space-y-1.5">
+          {(matchDetails || [matchReason]).map((reason, i) => (
+            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
+              <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+              <span>{reason}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
       {nameMeaning && (
-        <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-secondary rounded-lg">
-          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted-foreground mb-1">
+        <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-primary/5 rounded-lg border border-primary/20">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-primary mb-1">
             <Lightbulb className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
-            <span>Name meaning</span>
+            <span className="font-medium">Name meaning</span>
           </div>
-          <p className="text-foreground font-medium text-sm sm:text-base">
-            "{inputName}" means: {nameMeaning}
+          <p className="text-foreground text-sm sm:text-base">
+            <strong>"{inputName}"</strong> means: {nameMeaning}
           </p>
         </div>
       )}
@@ -81,20 +99,24 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
       </div>
       
       {isPrimary && tribe.famousPeople && (
-        <div className="pt-3 sm:pt-4 border-t border-border">
+        <div className="pt-3 sm:pt-4 border-t border-border mb-3">
           <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-foreground mb-2">
             <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" aria-hidden="true" />
             <span>Famous {tribe.name} people</span>
           </div>
           <p className="text-xs sm:text-sm text-muted-foreground">
-            {tribe.famousPeople.join(', ')}
+            {tribe.famousPeople.slice(0, 3).join(' • ')}
           </p>
         </div>
       )}
       
-      <p className="text-xs text-muted-foreground mt-3 sm:mt-4 italic">
-        {matchReason}
-      </p>
+      <Link 
+        to={`/learn/${tribe.slug || tribe.id}`}
+        className="inline-flex items-center gap-1 text-primary hover:underline text-xs sm:text-sm font-medium touch-manipulation"
+      >
+        Learn more about {tribe.name}
+        <ChevronRight className="w-3.5 h-3.5" />
+      </Link>
     </article>
   );
 }
