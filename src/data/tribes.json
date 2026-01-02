@@ -211,6 +211,7 @@
       "mapCoordinates": { "lat": 0.45, "lng": 34.61 },
       "counties": ["Kakamega", "Bungoma", "Busia", "Vihiga", "Trans Nzoia"],
       "namePrefixes": ["Wa", "We", "Na", "Ne", "Kha", "Li", "Ma"],
+      "subTribes": ["Bukusu", "Maragoli", "Wanga", "Banyore", "Idakho", "Isukha", "Tiriki", "Kabras", "Marachi", "Marama", "Kisa", "Samia", "Tachoni", "Batsotso", "Bakhayo", "Tura", "Banyala"],
       "commonNames": {
         "female": ["Nafula", "Nekesa", "Naliaka", "Nasimiyu", "Nabwire", "Khisa", "Nanjala", "Nangila", "Namachanja", "Nambubi", "Wekesa", "Namalwa", "Nanyama", "Nelima", "Nasambu"],
         "male": ["Wafula", "Wekesa", "Barasa", "Simiyu", "Shikuku", "Mukhwana", "Muliro", "Waswa", "Wanyonyi", "Makokha", "Wanjala", "Wamalwa", "Oduya", "Masinde", "Wanyama"]
@@ -284,7 +285,7 @@
         { "name": "Musalia Mudavadi", "role": "Prime Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Musalia_Mudavadi" }
       ],
       "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality.",
-      "relatedTribes": ["luo", "kisii"],
+      "relatedTribes": ["luo", "kisii", "teso"],
       "diaspora": {
         "globalPopulation": "~120,000",
         "majorCountries": ["USA", "UK", "Canada", "South Africa", "UAE"],
@@ -385,7 +386,7 @@
         { "name": "Kakai Kilonzo", "role": "Legendary Musician", "wikipedia": "https://en.wikipedia.org/wiki/Kakai_Kilonzo" }
       ],
       "description": "The Kamba (Akamba) people are known for their exceptional craftsmanship, particularly wood carving in Wamunyu, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya.",
-      "relatedTribes": ["kikuyu", "meru"],
+      "relatedTribes": ["kikuyu", "meru", "embu"],
       "diaspora": {
         "globalPopulation": "~80,000",
         "majorCountries": ["USA", "UK", "UAE", "Qatar", "South Africa"],
@@ -410,6 +411,7 @@
       "genderRatio": { "male": 49, "female": 51 },
       "mapCoordinates": { "lat": 0.52, "lng": 35.29 },
       "counties": ["Uasin Gishu", "Nandi", "Elgeyo-Marakwet", "Baringo", "Kericho", "Bomet"],
+      "subTribes": ["Nandi", "Kipsigis", "Keiyo", "Tugen", "Pokot", "Marakwet", "Sabaot", "Terik", "Ogiek", "Sengwer", "Endorois", "Cherangany"],
       "namePrefixes": ["Ki", "Kip", "Che", "Kib", "Ro", "Jep", "Jer"],
       "commonNames": {
         "female": ["Chemutai", "Chepkoech", "Chepkorir", "Jepkosgei", "Jepchirchir", "Chebet", "Chepngetich", "Jebet", "Chepkemoi", "Jeruto", "Jepkemboi", "Chepkwony", "Jepleting", "Cheptoo", "Jelagat"],
@@ -485,7 +487,7 @@
         { "name": "Koitalel Arap Samoei", "role": "Nandi Resistance Leader", "wikipedia": "https://en.wikipedia.org/wiki/Koitalel_arap_Samoei" }
       ],
       "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, and Tugen, traditionally residing in the Rift Valley highlands.",
-      "relatedTribes": ["maasai", "turkana"],
+      "relatedTribes": ["maasai", "turkana", "samburu"],
       "diaspora": {
         "globalPopulation": "~60,000",
         "majorCountries": ["USA", "UK", "Australia", "Japan", "Germany"],
@@ -584,7 +586,7 @@
         { "name": "James Ongwae", "role": "Former Governor of Kisii County", "wikipedia": "https://en.wikipedia.org/wiki/James_Ongwae" }
       ],
       "description": "The Kisii (Abagusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a strong emphasis on education.",
-      "relatedTribes": ["luo", "luhya"],
+      "relatedTribes": ["luo", "luhya", "kuria"],
       "diaspora": {
         "globalPopulation": "~50,000",
         "majorCountries": ["USA", "UK", "Canada", "Australia"],
@@ -677,11 +679,10 @@
         { "name": "Kiraitu Murungi", "role": "Former Governor & Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Kiraitu_Murungi" },
         { "name": "Peter Kenneth", "role": "Former Gatanga MP & Presidential Candidate", "wikipedia": "https://en.wikipedia.org/wiki/Peter_Kenneth" },
         { "name": "Anne Waiguru", "role": "Governor of Kirinyaga", "wikipedia": "https://en.wikipedia.org/wiki/Anne_Waiguru" },
-        { "name": "Kabando wa Kabando", "role": "Former MP & Political Analyst", "wikipedia": "https://en.wikipedia.org/wiki/Kabando_wa_Kabando" },
-        { "name": "M'Maitsi M'Inoti", "role": "Prominent Judge", "wikipedia": "https://en.wikipedia.org/wiki/M%27Inoti_M%27Maitsi" }
+        { "name": "Kabando wa Kabando", "role": "Former MP & Political Analyst", "wikipedia": "https://en.wikipedia.org/wiki/Kabando_wa_Kabando" }
       ],
       "description": "The Meru (Ameru) people inhabit the eastern slopes of Mount Kenya. They are known for their powerful council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat) in Kenya.",
-      "relatedTribes": ["kikuyu", "embu"],
+      "relatedTribes": ["kikuyu", "embu", "tharaka"],
       "diaspora": {
         "globalPopulation": "~40,000",
         "majorCountries": ["USA", "UK", "UAE", "South Africa"],
@@ -696,19 +697,809 @@
       }
     },
     {
-      "id": "coastal",
-      "name": "Coastal (Mijikenda/Swahili)",
-      "slug": "coastal",
+      "id": "maasai",
+      "name": "Maasai",
+      "slug": "maasai",
+      "region": "Rift Valley & Southern Kenya",
+      "population": "~1.2 million",
+      "populationPercent": "2.5%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -1.85, "lng": 36.08 },
+      "counties": ["Narok", "Kajiado", "Samburu", "Laikipia"],
+      "namePrefixes": ["Ole", "Nai", "Le", "En", "Ol", "Na"],
+      "commonNames": {
+        "female": ["Nashipae", "Naisiae", "Namelok", "Naserian", "Naisula", "Nteiya", "Naini", "Nalotuesha", "Namnyak", "Nkoiseyio"],
+        "male": ["Ole Lenku", "Ole Ntutu", "Ole Sapit", "Parsitau", "Saitoti", "Ntimama", "Konchellah", "Ole Naiyomah", "Lemayian", "Sankok"]
+      },
+      "timeBasedNames": {
+        "rains": ["Naserian"],
+        "dry": ["Namelok"],
+        "morning": ["Naisula"]
+      },
+      "stereotypes": [
+        "Fierce warriors and cattle keepers",
+        "Tall and slender physique",
+        "Traditional dress (shuka) and beaded jewelry",
+        "Jumping dance (adumu)",
+        "Nomadic pastoralists",
+        "Proud cultural preservationists"
+      ],
+      "culturalTraits": [
+        "Semi-nomadic cattle herding lifestyle",
+        "Famous jumping dance (adumu) performed by warriors",
+        "Distinctive red shuka (cloth) and intricate beadwork",
+        "Age-set system (Moran warriors, elders)",
+        "Traditional mud and dung houses (manyattas)",
+        "Cattle are central to economy, culture, and identity"
+      ],
+      "funFacts": [
+        "The Maasai believe all cattle on Earth belong to them, given by their god Enkai",
+        "Maasai warriors traditionally drink a mixture of cattle blood and milk for strength",
+        "Despite living among dangerous wildlife, Maasai rarely harm animals except lions for ritual",
+        "The iconic jumping dance (adumu) determines the highest jumper who gets first choice of bride",
+        "Maasai red shukas are visible from miles away in the savanna"
+      ],
+      "traditionalFood": {
+        "staples": ["Cattle milk (fresh and curdled)", "Cattle blood (mixed with milk)", "Beef and goat meat", "Ugali (during famine)"],
+        "beverages": ["Fresh milk", "Blood and milk mixture", "Fermented milk"],
+        "specialDishes": ["Roasted meat during ceremonies", "Olpul (meat soup)", "Warrior's blood drink (ceremonial)"],
+        "description": "Traditional Maasai diet consisted almost entirely of milk, meat, and blood from their cattle. Today, they have incorporated grains and vegetables, but cattle products remain culturally central."
+      },
+      "traditionalDance": "Adumu - competitive jumping dance by Moran warriors",
+      "religion": "Traditional belief in Enkai (God) - both benevolent (black) and vengeful (red); Christianity growing",
+      "history": {
+        "origin": "The Maasai are Nilotic people who migrated from the Nile Valley (Sudan) around the 15th century. They moved southward and by the 17th-18th century dominated the East African Rift Valley region.",
+        "colonialEra": "The Maasai lost vast territories to British colonial agreements, particularly the Maasai Treaties of 1904 and 1911 which moved them from fertile lands to reserves. They resisted but were eventually confined.",
+        "independence": "Post-independence, Maasai land rights have been contested. Tourism has brought income but also challenges. They remain one of Kenya's most culturally intact communities.",
+        "keyEvents": ["Migration from Nile Valley (1500s)", "Height of Maasai territorial control (1800s)", "Maasai Treaties (1904, 1911)", "Maasai Mara established (1961)"]
+      },
+      "language": {
+        "name": "Maa (Ol Maa)",
+        "speakers": "~1.5 million (Kenya & Tanzania)",
+        "greeting": "Supai (Sopa)",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Ero supai", "meaning": "Hello (response)" },
+          { "phrase": "Takwenya?", "meaning": "How are you?" },
+          { "phrase": "Serian", "meaning": "Peace" },
+          { "phrase": "Ashe oleng", "meaning": "Thank you very much" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Enkai ai", "meaning": "My God" },
+          { "phrase": "Sere", "meaning": "Goodbye" },
+          { "phrase": "Ipa", "meaning": "Yes" },
+          { "phrase": "Mme", "meaning": "No" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "George Saitoti", "role": "Former Vice President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/George_Saitoti" },
+        { "name": "William ole Ntimama", "role": "Prominent Politician & Maasai Leader", "wikipedia": "https://en.wikipedia.org/wiki/William_ole_Ntimama" },
+        { "name": "David Rudisha", "role": "800m World Record (Maasai heritage)", "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha" },
+        { "name": "Edward Lowassa", "role": "Former Tanzania PM (Tanzanian Maasai)", "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa" }
+      ],
+      "description": "The Maasai are one of the most internationally recognized African tribes, known for their distinctive customs, dress, and residence in wildlife-rich areas. They are semi-nomadic pastoralists who have maintained their traditions despite modernization.",
+      "relatedTribes": ["samburu", "kalenjin", "turkana"],
+      "diaspora": {
+        "globalPopulation": "~30,000",
+        "majorCountries": ["USA", "UK", "Germany", "Tanzania"],
+        "breakdown": [
+          { "country": "Tanzania", "population": "~800,000", "cities": ["Arusha", "Manyara", "Serengeti region"] },
+          { "country": "United States", "population": "~8,000", "cities": ["New York", "Los Angeles", "Denver"] },
+          { "country": "United Kingdom", "population": "~5,000", "cities": ["London"] },
+          { "country": "Germany", "population": "~3,000", "cities": ["Berlin", "Munich"] }
+        ],
+        "communities": ["Cultural ambassadors in tourism worldwide", "Students in US universities", "NGO workers in Europe"],
+        "associations": ["Maasai Association", "Maasai Education Discovery", "Maasai Heritage Foundation"]
+      }
+    },
+    {
+      "id": "turkana",
+      "name": "Turkana",
+      "slug": "turkana",
+      "region": "Northwestern Kenya",
+      "population": "~1.2 million",
+      "populationPercent": "2.5%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 3.12, "lng": 35.59 },
+      "counties": ["Turkana"],
+      "namePrefixes": ["E", "Lo", "Na", "Ng", "Ak", "A"],
+      "commonNames": {
+        "female": ["Akiru", "Nakiru", "Apuu", "Akuom", "Ngikario", "Natoo", "Achuka", "Arupe", "Esinyen", "Lokwii"],
+        "male": ["Ekiru", "Lotodo", "Ekal", "Ewoi", "Lobur", "Arot", "Napari", "Lokir", "Ewoton", "Lomada"]
+      },
+      "stereotypes": [
+        "Resilient desert survivors",
+        "Fierce warriors",
+        "Unique hairstyles and body adornment",
+        "Skilled pastoralists in arid land",
+        "Traditional fishing in Lake Turkana",
+        "Colorful beaded jewelry"
+      ],
+      "culturalTraits": [
+        "Nomadic pastoralism in harsh desert conditions",
+        "Distinctive mud-pack hairstyles (men)",
+        "Elaborate beaded jewelry and lip plugs (women)",
+        "Fishing culture around Lake Turkana",
+        "Traditional dance ceremonies (edonga)",
+        "Cattle raiding traditions with neighboring tribes"
+      ],
+      "funFacts": [
+        "Lake Turkana is the world's largest desert lake and a UNESCO World Heritage Site",
+        "Turkana County is where the 'Turkana Boy' fossil was found - one of the most complete early human skeletons",
+        "The Turkana are one of the few Kenyan tribes that practice fishing alongside pastoralism",
+        "Turkana women's beaded necklaces can weigh several kilograms",
+        "Oil was discovered in Turkana County in 2012"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel and goat milk", "Goat and camel meat", "Tilapia from Lake Turkana", "Sorghum (when available)"],
+        "beverages": ["Camel milk", "Goat milk", "Blood and milk mixture"],
+        "specialDishes": ["Roasted goat", "Sun-dried fish", "Akutang (blood and fat mixture)", "Wild fruits (desert fruits)"],
+        "description": "Turkana cuisine is adapted to the harsh desert environment. Camel milk and goat products are staples, supplemented by fish from Lake Turkana. During droughts, wild fruits and berries become essential."
+      },
+      "traditionalDance": "Edonga - ceremonial dance performed during festivals and rituals",
+      "religion": "Traditional belief in Akuj (God/Sky); Christianity and Islam growing",
+      "history": {
+        "origin": "The Turkana are Eastern Nilotic people who migrated from the Karamoja region of Uganda around 300-400 years ago. They are closely related to the Karamojong, Jie, and Teso peoples.",
+        "colonialEra": "The British had difficulty controlling Turkana due to the harsh terrain. The Turkana resisted colonial rule and maintained relative independence. They continued cattle raiding despite British attempts to stop it.",
+        "independence": "Post-independence, Turkana remained one of Kenya's least developed regions until oil discovery in 2012. Conflicts with neighboring tribes over cattle and resources continue.",
+        "keyEvents": ["Migration from Karamoja (1600s-1700s)", "British pacification attempts (1900s)", "Discovery of Turkana Boy fossil (1984)", "Oil discovery (2012)"]
+      },
+      "language": {
+        "name": "Turkana (Ng'aturkana)",
+        "speakers": "~1 million",
+        "greeting": "Ejoka",
+        "greetingMeaning": "Hello / Welcome",
+        "additionalGreetings": [
+          { "phrase": "Ejokait?", "meaning": "How are you?" },
+          { "phrase": "Akiyai", "meaning": "I'm fine" },
+          { "phrase": "Ayenia", "meaning": "Come" },
+          { "phrase": "Epedori", "meaning": "Thank you" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Erai", "meaning": "Yes" },
+          { "phrase": "Mam", "meaning": "No" },
+          { "phrase": "Akilip", "meaning": "Goodbye" },
+          { "phrase": "Akuj", "meaning": "God" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Josphat Nanok", "role": "Former Governor of Turkana", "wikipedia": "https://en.wikipedia.org/wiki/Josphat_Nanok" },
+        { "name": "John Munyes", "role": "Former Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/John_Munyes" },
+        { "name": "Ekuru Aukot", "role": "Constitutional Lawyer & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Ekuru_Aukot" },
+        { "name": "Richard Leakey", "role": "Paleontologist (discovered fossils in Turkana)", "wikipedia": "https://en.wikipedia.org/wiki/Richard_Leakey" }
+      ],
+      "description": "The Turkana are nomadic pastoralists living in the harsh desert environment of northwestern Kenya. They are known for their resilience, distinctive adornments, and rich cultural traditions despite living in one of Kenya's most challenging regions.",
+      "relatedTribes": ["kalenjin", "samburu", "teso"],
+      "diaspora": {
+        "globalPopulation": "~15,000",
+        "majorCountries": ["USA", "UK", "Uganda"],
+        "breakdown": [
+          { "country": "Uganda", "population": "~50,000", "cities": ["Karamoja region"] },
+          { "country": "United States", "population": "~5,000", "cities": ["Phoenix", "Dallas"] },
+          { "country": "United Kingdom", "population": "~3,000", "cities": ["London"] }
+        ],
+        "communities": ["Cross-border communities with Uganda's Karamojong", "Growing student population abroad"],
+        "associations": ["Turkana Diaspora Association", "Friends of Turkana"]
+      }
+    },
+    {
+      "id": "samburu",
+      "name": "Samburu",
+      "slug": "samburu",
+      "region": "Northern Kenya",
+      "population": "~310,000",
+      "populationPercent": "0.7%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 1.22, "lng": 37.02 },
+      "counties": ["Samburu", "Isiolo", "Marsabit"],
+      "namePrefixes": ["Le", "Lol", "Lo", "Na", "Nk"],
+      "commonNames": {
+        "female": ["Naserian", "Nashipae", "Naisula", "Namunyak", "Nkoiseyio", "Ntimama", "Ntipilit", "Nolsopon"],
+        "male": ["Lekakeny", "Leshan", "Lenaiyarra", "Lemasulani", "Loldepe", "Lesirma", "Lenkosim", "Letipila"]
+      },
+      "stereotypes": [
+        "The 'Butterfly People' for colorful attire",
+        "Fierce warriors like their Maasai cousins",
+        "Proud cultural preservationists",
+        "Semi-nomadic cattle herders",
+        "Distinctive beaded jewelry",
+        "Close relationship with wildlife"
+      ],
+      "culturalTraits": [
+        "Close cultural ties with Maasai (speak similar language)",
+        "Distinctive beadwork (more colorful than Maasai)",
+        "Warrior culture with age-set systems",
+        "Semi-nomadic pastoralism",
+        "Traditional dances and ceremonies",
+        "Conservation partnerships with wildlife reserves"
+      ],
+      "funFacts": [
+        "Samburu warriors are known to have killed lions with spears to prove their bravery",
+        "The Samburu are called 'Butterfly People' due to their colorful traditional dress",
+        "Samburu beadwork tells stories - each color has specific meaning",
+        "Unlike Maasai, Samburu allow warriors to marry before becoming elders",
+        "Samburu National Reserve is home to the 'Samburu Special Five' unique animals"
+      ],
+      "traditionalFood": {
+        "staples": ["Cattle and goat milk", "Beef and goat meat", "Camel milk", "Blood and milk mixture"],
+        "beverages": ["Fresh milk", "Fermented milk", "Blood (ceremonial)"],
+        "specialDishes": ["Roasted meat during ceremonies", "Nyama choma", "Soup from bones"],
+        "description": "Samburu diet is very similar to Maasai, centered on cattle products. They rely heavily on milk, meat, and occasionally blood. During dry seasons, they may consume wild fruits and roots."
+      },
+      "traditionalDance": "Similar to Maasai jumping dance, performed during ceremonies",
+      "religion": "Traditional belief in Nkai (God); Christianity growing",
+      "history": {
+        "origin": "The Samburu are closely related to the Maasai, sharing common Nilotic origins from the Nile Valley. They separated from the Maasai around 500 years ago and moved to the northern regions of Kenya.",
+        "colonialEra": "The Samburu, like the Maasai, were confined to reserves by the British. They maintained their pastoral lifestyle and resisted colonial interference in their culture.",
+        "independence": "Post-independence, Samburu have faced challenges including droughts, cattle rustling, and land pressures. They have become partners in conservation efforts.",
+        "keyEvents": ["Separation from Maasai (1500s)", "Colonial period confinement", "Samburu National Reserve established (1962)", "Conservation partnerships (2000s)"]
+      },
+      "language": {
+        "name": "Samburu (Nkutuk)",
+        "speakers": "~310,000",
+        "greeting": "Supai",
+        "greetingMeaning": "Hello (same as Maasai)",
+        "additionalGreetings": [
+          { "phrase": "Keiyo", "meaning": "How are you?" },
+          { "phrase": "Sere", "meaning": "Goodbye" },
+          { "phrase": "Ashe", "meaning": "Thank you" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nkai", "meaning": "God" },
+          { "phrase": "Lmuran", "meaning": "Warriors" },
+          { "phrase": "Manyatta", "meaning": "Village/homestead" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Lenana", "role": "Historical Laibon (leader)", "wikipedia": "https://en.wikipedia.org/wiki/Lenana" },
+        { "name": "Leakey Family", "role": "Paleontologists (worked with Samburu)", "wikipedia": "https://en.wikipedia.org/wiki/Leakey_family" }
+      ],
+      "description": "The Samburu are semi-nomadic pastoralists closely related to the Maasai. Known as the 'Butterfly People' for their colorful dress, they inhabit the rugged northern Kenya region and maintain strong cultural traditions.",
+      "relatedTribes": ["maasai", "turkana", "rendille"],
+      "diaspora": {
+        "globalPopulation": "~10,000",
+        "majorCountries": ["USA", "UK"],
+        "breakdown": [
+          { "country": "United States", "population": "~3,000", "cities": ["Various"] },
+          { "country": "United Kingdom", "population": "~2,000", "cities": ["London"] }
+        ],
+        "communities": ["Small diaspora, mainly students and cultural ambassadors"],
+        "associations": ["Samburu Community Conservation", "Samburu Youth Education Fund"]
+      }
+    },
+    {
+      "id": "embu",
+      "name": "Embu",
+      "slug": "embu",
+      "region": "Eastern (Mt. Kenya region)",
+      "population": "~600,000",
+      "populationPercent": "1.3%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -0.54, "lng": 37.46 },
+      "counties": ["Embu"],
+      "namePrefixes": ["Mu", "Nj", "Ki", "Wa", "Ngo"],
+      "commonNames": {
+        "female": ["Wanjiru", "Njeri", "Muthoni", "Nyawira", "Wangeci", "Kagendo", "Igoki", "Cianjoka"],
+        "male": ["Njeru", "Njagi", "Mugo", "Ireri", "Kinyua", "Kithinji", "Mwenda", "Munyi"]
+      },
+      "stereotypes": [
+        "Hardworking farmers",
+        "Peaceful and welcoming",
+        "Close ties to Kikuyu and Meru",
+        "Agricultural experts",
+        "Traditional values",
+        "Community-oriented"
+      ],
+      "culturalTraits": [
+        "Close cultural ties to Kikuyu and Meru",
+        "Traditional circumcision ceremonies",
+        "Agricultural expertise (tea, coffee, bananas)",
+        "Naming children after grandparents",
+        "Strong clan systems",
+        "Mount Kenya reverence"
+      ],
+      "funFacts": [
+        "The Embu, Meru, and Kikuyu are collectively called the GEMA communities",
+        "Embu County produces some of Kenya's finest coffee and tea",
+        "The Embu participated actively in the Mau Mau uprising",
+        "Mount Kenya is sacred to the Embu people"
+      ],
+      "traditionalFood": {
+        "staples": ["Mukimo (mashed potatoes, peas, maize)", "Githeri", "Njahi (black beans)", "Green bananas"],
+        "beverages": ["Muratina (honey beer)", "Porridge"],
+        "specialDishes": ["Matura (blood sausage)", "Nyama choma", "Traditional vegetables"],
+        "description": "Embu cuisine is very similar to Kikuyu, emphasizing agricultural products from the fertile Mt. Kenya slopes. Mukimo and githeri are staples."
+      },
+      "traditionalDance": "Traditional dances similar to Kikuyu, performed during ceremonies",
+      "religion": "Traditional belief in Ngai; now predominantly Christian",
+      "history": {
+        "origin": "The Embu are Bantu people closely related to the Kikuyu and Meru. They settled on the southeastern slopes of Mount Kenya, possibly migrating from the coast like other GEMA communities.",
+        "colonialEra": "The Embu participated in the Mau Mau uprising alongside the Kikuyu and Meru. Many Embu fighters were detained during the Emergency period.",
+        "independence": "The Embu have been part of the Mt. Kenya political bloc and have produced notable politicians and administrators.",
+        "keyEvents": ["Settlement on Mt. Kenya", "Mau Mau participation (1952-1960)", "Independence and political integration"]
+      },
+      "language": {
+        "name": "Kiembu",
+        "speakers": "~600,000",
+        "greeting": "Muga",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Wi mwega?", "meaning": "Are you well?" },
+          { "phrase": "Ni mwega", "meaning": "I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Thayu", "meaning": "Peace" },
+          { "phrase": "Nindakena", "meaning": "Thank you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Martin Wambora", "role": "Governor of Embu County", "wikipedia": "https://en.wikipedia.org/wiki/Martin_Wambora" },
+        { "name": "Emilio Mwai Kibaki", "role": "Third President (Embu-Kikuyu heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki" }
+      ],
+      "description": "The Embu people are Bantu farmers living on the southeastern slopes of Mount Kenya. They are closely related to the Kikuyu and Meru, sharing similar cultural practices and language roots.",
+      "relatedTribes": ["kikuyu", "meru", "mbeere"],
+      "diaspora": {
+        "globalPopulation": "~15,000",
+        "majorCountries": ["USA", "UK"],
+        "breakdown": [
+          { "country": "United States", "population": "~6,000", "cities": ["Various"] },
+          { "country": "United Kingdom", "population": "~4,000", "cities": ["London"] }
+        ],
+        "communities": ["Often grouped with broader Mt. Kenya diaspora"],
+        "associations": ["GEMA Diaspora associations"]
+      }
+    },
+    {
+      "id": "somali",
+      "name": "Kenyan Somali",
+      "slug": "somali",
+      "region": "North-Eastern Kenya",
+      "population": "~2.8 million",
+      "populationPercent": "6%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 1.27, "lng": 40.00 },
+      "counties": ["Garissa", "Wajir", "Mandera", "Isiolo", "Marsabit"],
+      "subTribes": ["Ogaden", "Degodia", "Ajuran", "Gurreh", "Hawiyah", "Murile"],
+      "namePrefixes": ["Ab", "Mo", "Fa", "Ha", "Is", "Ali"],
+      "commonNames": {
+        "female": ["Halima", "Fatuma", "Amina", "Asha", "Maryam", "Khadija", "Safia", "Zainab", "Habiba", "Nimo"],
+        "male": ["Mohammed", "Ali", "Ahmed", "Abdi", "Hassan", "Ibrahim", "Ismail", "Omar", "Yusuf", "Abdullahi"]
+      },
+      "stereotypes": [
+        "Successful business people",
+        "Strong Islamic faith",
+        "Resilient and hardworking",
+        "Nomadic pastoralists",
+        "Tight-knit community bonds",
+        "Poets and orators"
+      ],
+      "culturalTraits": [
+        "Strong Islamic faith and traditions",
+        "Clan-based social organization",
+        "Nomadic pastoralism (camels, goats, cattle)",
+        "Rich oral poetry tradition",
+        "Distinctive dress (women: hijab/niqab, men: macawiis)",
+        "Henna decoration for celebrations"
+      ],
+      "funFacts": [
+        "Kenyan Somalis are Kenya's sixth largest ethnic group",
+        "Eastleigh in Nairobi is called 'Little Mogadishu' - a major commercial hub",
+        "Somali tea (shaah) is famous for its spices",
+        "The Somali language has one of Africa's richest poetic traditions",
+        "Camels are prized possessions and form the backbone of the pastoral economy"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel milk and meat", "Goat meat", "Rice (bariis)", "Anjera (flatbread similar to injera)"],
+        "beverages": ["Shaah (spiced tea)", "Camel milk"],
+        "specialDishes": ["Bariis iskukaris (spiced rice with meat)", "Suqaar (cubed meat)", "Sambusa (samosas)", "Canjeero (pancakes)"],
+        "description": "Somali cuisine is influenced by Arab, Indian, and East African flavors. Spiced rice dishes, meat, and camel products are central. Shaah (Somali tea) with cardamom is a cultural staple."
+      },
+      "traditionalDance": "Dhaanto - traditional dance performed at celebrations",
+      "religion": "Sunni Islam (predominantly)",
+      "history": {
+        "origin": "Kenyan Somalis are part of the larger Somali ethnic group inhabiting the Horn of Africa. They have lived in present-day Kenya's North Eastern region for centuries as nomadic pastoralists.",
+        "colonialEra": "The British drew arbitrary borders separating Somali-inhabited regions between Kenya, Ethiopia, and Italian Somaliland. The NFD (Northern Frontier District) was administered separately.",
+        "independence": "At independence, Somalis in Kenya agitated to join Somalia (Shifta War, 1963-1967). The region remained marginalized for decades, improving only recently with devolution.",
+        "keyEvents": ["Colonial border demarcation", "Shifta War (1963-1967)", "Wagalla Massacre (1984)", "Devolution improvements (2010s)"]
+      },
+      "language": {
+        "name": "Somali (Af-Soomaali)",
+        "speakers": "~20 million globally",
+        "greeting": "Assalamu Alaikum",
+        "greetingMeaning": "Peace be upon you (Islamic greeting)",
+        "additionalGreetings": [
+          { "phrase": "Wa alaykumu s-salam", "meaning": "And upon you peace (response)" },
+          { "phrase": "Iska warran?", "meaning": "How are you? (informal)" },
+          { "phrase": "Nabad miyaa?", "meaning": "Are you at peace?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Mahadsanid", "meaning": "Thank you" },
+          { "phrase": "Haa", "meaning": "Yes" },
+          { "phrase": "Maya", "meaning": "No" },
+          { "phrase": "Nabad gelyo", "meaning": "Goodbye (go in peace)" }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet (since 1972)"
+      },
+      "famousPeople": [
+        { "name": "Adan Mohamed", "role": "Former Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Adan_Mohamed" },
+        { "name": "Farah Maalim", "role": "Former Deputy Speaker of Parliament", "wikipedia": "https://en.wikipedia.org/wiki/Farah_Maalim" },
+        { "name": "Ahmed Issack Hassan", "role": "Former IEBC Chairman", "wikipedia": "https://en.wikipedia.org/wiki/Ahmed_Issack_Hassan" },
+        { "name": "Mo Farah", "role": "Olympic Champion (British-Somali)", "wikipedia": "https://en.wikipedia.org/wiki/Mo_Farah" }
+      ],
+      "description": "Kenyan Somalis are a Cushitic people living in North-Eastern Kenya. They are predominantly Muslim, practice pastoralism, and have strong clan-based social structures. They have a rich tradition of poetry and trade.",
+      "relatedTribes": ["borana", "orma", "rendille"],
+      "diaspora": {
+        "globalPopulation": "~2 million (global Somali diaspora)",
+        "majorCountries": ["USA", "UK", "Canada", "Sweden", "Norway"],
+        "breakdown": [
+          { "country": "United States", "population": "~150,000", "cities": ["Minneapolis", "Columbus", "Seattle", "San Diego"] },
+          { "country": "United Kingdom", "population": "~100,000", "cities": ["London", "Bristol", "Birmingham"] },
+          { "country": "Canada", "population": "~50,000", "cities": ["Toronto", "Ottawa", "Edmonton"] },
+          { "country": "Sweden", "population": "~40,000", "cities": ["Stockholm", "Malmö"] }
+        ],
+        "communities": ["Minneapolis has largest Somali population outside Africa", "Eastleigh, Nairobi is major Somali business hub"],
+        "associations": ["Somali Community Organizations", "Various clan-based associations"]
+      }
+    },
+    {
+      "id": "kuria",
+      "name": "Kuria",
+      "slug": "kuria",
+      "region": "South Nyanza (Kenya-Tanzania border)",
+      "population": "~400,000",
+      "populationPercent": "0.9%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -1.15, "lng": 34.52 },
+      "counties": ["Migori"],
+      "namePrefixes": ["Ma", "Mo", "Cha", "Ncha", "Ro"],
+      "commonNames": {
+        "female": ["Robi", "Bhoke", "Ghati", "Mwita", "Chacha", "Gati", "Nyanchama", "Boke"],
+        "male": ["Chacha", "Mwita", "Maroa", "Matiko", "Mturi", "Magige", "Wambura", "Robi"]
+      },
+      "stereotypes": [
+        "Strong warriors",
+        "Cattle keepers",
+        "Cross-border traders",
+        "Unique traditional practices",
+        "Proud cultural identity",
+        "Female genital mutilation controversy"
+      ],
+      "culturalTraits": [
+        "Strong cattle culture",
+        "Traditional circumcision for both genders (controversial)",
+        "Cross-border ties with Tanzanian Kuria",
+        "Age-set systems",
+        "Traditional medicine practices",
+        "Distinctive music and dance"
+      ],
+      "funFacts": [
+        "The Kuria live on both sides of the Kenya-Tanzania border",
+        "Kuria are among the few Kenyan tribes that traditionally circumcised women",
+        "Tobacco farming is a major economic activity",
+        "The Kuria speak a Bantu language similar to Gusii"
+      ],
+      "traditionalFood": {
+        "staples": ["Ugali", "Beef and goat meat", "Milk", "Green bananas"],
+        "beverages": ["Traditional beer", "Milk"],
+        "specialDishes": ["Roasted meat", "Traditional vegetables"],
+        "description": "Kuria cuisine is similar to other Lake Victoria region communities, with ugali and meat being staples. Cattle provide milk and meat."
+      },
+      "traditionalDance": "Traditional warrior dances during ceremonies",
+      "religion": "Traditional beliefs; now predominantly Christian",
+      "history": {
+        "origin": "The Kuria are a Bantu people who settled in the Lake Victoria region, straddling the Kenya-Tanzania border. They share cultural links with the Gusii and other Bantu communities.",
+        "colonialEra": "The arbitrary colonial border separated Kuria communities between British Kenya and German/British Tanganyika.",
+        "independence": "Post-independence, the Kuria in Kenya have faced marginalization but maintain strong cross-border ties with Tanzanian Kuria.",
+        "keyEvents": ["Settlement in Lake Victoria region", "Colonial border division", "Cross-border identity maintenance"]
+      },
+      "language": {
+        "name": "Igikuria (Kuria)",
+        "speakers": "~700,000 (Kenya and Tanzania)",
+        "greeting": "Bwakire",
+        "greetingMeaning": "Good morning",
+        "additionalGreetings": [
+          { "phrase": "Ooire?", "meaning": "How are you?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nario", "meaning": "I'm fine" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "John Okello", "role": "Zanzibar Revolutionary (Ugandan-Kuria)", "wikipedia": "https://en.wikipedia.org/wiki/John_Okello" },
+        { "name": "Mwita Chacha", "role": "Political leader", "wikipedia": null }
+      ],
+      "description": "The Kuria are a Bantu community living along the Kenya-Tanzania border in Migori County. They have unique cultural practices and maintain strong cross-border ties with Tanzanian Kuria.",
+      "relatedTribes": ["kisii", "luo"],
+      "diaspora": {
+        "globalPopulation": "~20,000",
+        "majorCountries": ["Tanzania", "USA"],
+        "breakdown": [
+          { "country": "Tanzania", "population": "~300,000", "cities": ["Tarime", "Mara region"] }
+        ],
+        "communities": ["Cross-border communities with Tanzania"],
+        "associations": ["Kuria Cultural Association"]
+      }
+    },
+    {
+      "id": "taita",
+      "name": "Taita",
+      "slug": "taita",
+      "region": "Coastal Highlands",
+      "population": "~450,000",
+      "populationPercent": "0.9%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -3.40, "lng": 38.35 },
+      "counties": ["Taita-Taveta"],
+      "subTribes": ["Dawida", "Sagalla", "Kasighau"],
+      "namePrefixes": ["Mw", "Nj", "Ki", "Wa"],
+      "commonNames": {
+        "female": ["Mwanaisha", "Mwatunge", "Mwadamu", "Mwanyazi", "Mwalembe", "Mwatasa", "Ndeyasa"],
+        "male": ["Mwaniki", "Mwandawiro", "Mwaita", "Mwakio", "Kishamba", "Nyange", "Mwachofi"]
+      },
+      "stereotypes": [
+        "Skilled farmers in highlands",
+        "Guardians of sacred forests (Mbololo)",
+        "Strong cultural identity",
+        "Wrestlers and strong people",
+        "Traditional skull preservation",
+        "Music and dance lovers"
+      ],
+      "culturalTraits": [
+        "Sacred Mbololo forest preservation",
+        "Traditional skull houses (vigango)",
+        "Highland agriculture (coffee, vegetables)",
+        "Unique traditional wrestling",
+        "Strong connection to land and ancestors",
+        "Traditional music with fiddles (chivoti)"
+      ],
+      "funFacts": [
+        "Taita Hills are home to unique endemic species found nowhere else on Earth",
+        "Traditional Taita skull houses preserve ancestors' remains",
+        "The Taita were known for iron smelting and trade",
+        "Taita-Taveta is home to Lake Jipe and Tsavo National Parks",
+        "The Taita sacred forests are among Kenya's last indigenous forests"
+      ],
+      "traditionalFood": {
+        "staples": ["Ugali from millet/maize", "Sweet potatoes", "Vegetables from highland gardens", "Chicken"],
+        "beverages": ["Traditional beer", "Sugarcane juice"],
+        "specialDishes": ["Roasted chicken", "Traditional vegetable stews", "Wild honey"],
+        "description": "Taita cuisine benefits from the fertile highland climate, producing excellent vegetables, coffee, and fruits. Traditional dishes emphasize locally grown produce."
+      },
+      "traditionalDance": "Mwazindika - traditional dance with drums and whistles",
+      "religion": "Traditional beliefs in ancestral spirits; now predominantly Christian",
+      "history": {
+        "origin": "The Taita are Bantu people who migrated to the Taita Hills between 1000-1300 CE, likely from the Congo Basin or Tanzania. They developed a distinct highland culture.",
+        "colonialEra": "The British recognized the Taita as skilled agriculturalists and workers. Many Taita men worked on the Uganda Railway construction. The Taita resisted land alienation.",
+        "independence": "Post-independence, the Taita have faced land pressures from wildlife conservation (Tsavo) and mining. They continue to advocate for land rights.",
+        "keyEvents": ["Migration to Taita Hills (1000-1300 CE)", "Iron trade with coast", "Uganda Railway labor", "Land rights struggles"]
+      },
+      "language": {
+        "name": "Kidawida (Taita)",
+        "speakers": "~300,000",
+        "greeting": "Mbuya",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Urio?", "meaning": "How are you?" },
+          { "phrase": "Mbuya sana", "meaning": "Hello very much" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ni wasio", "meaning": "I'm fine" },
+          { "phrase": "Asante", "meaning": "Thank you (from Swahili)" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Dawson Mwanyumba", "role": "Politician & Former Minister", "wikipedia": "https://en.wikipedia.org/wiki/Dawson_Mwanyumba" },
+        { "name": "Basil Criticos", "role": "Conservationist & Businessman", "wikipedia": "https://en.wikipedia.org/wiki/Basil_Criticos" }
+      ],
+      "description": "The Taita are Bantu people living in the Taita Hills of southeastern Kenya. They are known for their highland agriculture, sacred forests, and rich cultural traditions including the preservation of ancestral skulls.",
+      "relatedTribes": ["taveta", "mijikenda"],
+      "diaspora": {
+        "globalPopulation": "~15,000",
+        "majorCountries": ["USA", "UK"],
+        "breakdown": [
+          { "country": "United States", "population": "~5,000", "cities": ["Various"] }
+        ],
+        "communities": ["Small diaspora focused on education"],
+        "associations": ["Taita Development Association"]
+      }
+    },
+    {
+      "id": "teso",
+      "name": "Teso (Iteso)",
+      "slug": "teso",
+      "region": "Western Kenya",
+      "population": "~450,000",
+      "populationPercent": "0.9%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 0.58, "lng": 34.11 },
+      "counties": ["Busia"],
+      "namePrefixes": ["O", "E", "A", "I"],
+      "commonNames": {
+        "female": ["Akello", "Ajambo", "Atieno", "Akullu", "Among", "Amulen"],
+        "male": ["Okello", "Ouma", "Odongo", "Ekidor", "Okiring", "Ewoi"]
+      },
+      "stereotypes": [
+        "Skilled farmers",
+        "Peaceful community",
+        "Cross-border ties with Uganda",
+        "Millet farming experts",
+        "Traditional values",
+        "Communal living"
+      ],
+      "culturalTraits": [
+        "Close ties to Ugandan Iteso",
+        "Agricultural expertise (finger millet, cotton)",
+        "Traditional age-set systems",
+        "Distinctive naming traditions",
+        "Traditional music and dance",
+        "Communal work parties"
+      ],
+      "funFacts": [
+        "The Kenyan Teso are an extension of the larger Iteso community in Uganda",
+        "Finger millet is a staple crop and cultural symbol",
+        "The Teso were separated from Uganda Iteso by colonial borders",
+        "They are related to Turkana and Karamojong linguistically"
+      ],
+      "traditionalFood": {
+        "staples": ["Atap (finger millet bread)", "Sorghum ugali", "Beans", "Groundnuts"],
+        "beverages": ["Ajono (finger millet beer)", "Sorghum porridge"],
+        "specialDishes": ["Smoked fish", "Chicken stew", "Groundnut sauce"],
+        "description": "Teso cuisine centers on finger millet (atap), which is made into bread or porridge. Ajono, a fermented millet drink, is culturally important for ceremonies."
+      },
+      "traditionalDance": "Akogo - traditional dance with drums",
+      "religion": "Traditional beliefs; now predominantly Christian",
+      "history": {
+        "origin": "The Teso are Nilotic people related to the Karamojong cluster. They migrated to their current location from Uganda, separated by colonial borders from the larger Ugandan Iteso population.",
+        "colonialEra": "The British separated the Teso between Uganda and Kenya. Kenyan Teso became part of Western Province and faced marginalization.",
+        "independence": "Post-independence, the Teso in Kenya have maintained cultural ties with Uganda. Busia County serves as their homeland.",
+        "keyEvents": ["Migration from Uganda", "Colonial border division", "Integration into Western Kenya"]
+      },
+      "language": {
+        "name": "Ateso (Teso)",
+        "speakers": "~2.7 million (Kenya and Uganda)",
+        "greeting": "Yoga",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Iyalama?", "meaning": "How are you?" },
+          { "phrase": "Ejoka", "meaning": "Welcome" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Eyalama", "meaning": "I'm fine" },
+          { "phrase": "Alakara", "meaning": "Thank you" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Agnes Odhiambo", "role": "Politician (Teso heritage)", "wikipedia": null }
+      ],
+      "description": "The Teso (Iteso) are a Nilotic community living in Busia County, Kenya. They are an extension of the larger Iteso community in Uganda, known for finger millet farming and their rich cultural traditions.",
+      "relatedTribes": ["luhya", "turkana"],
+      "diaspora": {
+        "globalPopulation": "~10,000",
+        "majorCountries": ["Uganda", "USA"],
+        "breakdown": [
+          { "country": "Uganda", "population": "~2.4 million", "cities": ["Soroti", "Teso region"] }
+        ],
+        "communities": ["Cross-border communities with Uganda"],
+        "associations": ["Iteso Cultural Union"]
+      }
+    },
+    {
+      "id": "mijikenda",
+      "name": "Mijikenda",
+      "slug": "mijikenda",
       "region": "Coastal Kenya",
-      "population": "~3.3 million",
-      "populationPercent": "7%",
+      "population": "~2.5 million",
+      "populationPercent": "5%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -3.80, "lng": 39.70 },
+      "counties": ["Kilifi", "Kwale", "Mombasa", "Tana River"],
+      "subTribes": ["Giriama", "Digo", "Duruma", "Chonyi", "Kambe", "Ribe", "Rabai", "Jibana", "Kauma"],
+      "namePrefixes": ["Ka", "Mw", "Ts", "Ch", "Ku"],
+      "commonNames": {
+        "female": ["Kadzo", "Jumwa", "Dzombo", "Karisa", "Kache", "Sidi", "Mwanaisha", "Kibibi"],
+        "male": ["Kazungu", "Karisa", "Katana", "Kenga", "Tsuma", "Chai", "Charo", "Chengo"]
+      },
+      "stereotypes": [
+        "Laid-back coastal lifestyle",
+        "Palm wine (mnazi) culture",
+        "Skilled coconut farmers",
+        "Rich traditional medicine",
+        "Sacred Kaya forest guardians",
+        "Excellent dancers"
+      ],
+      "culturalTraits": [
+        "Sacred Kaya forests (UNESCO World Heritage)",
+        "Nine distinct sub-tribes with shared culture",
+        "Palm wine (mnazi) production and culture",
+        "Traditional medicine (uganga)",
+        "Vigango (wooden memorial statues)",
+        "Distinctive music and dance traditions"
+      ],
+      "funFacts": [
+        "Mijikenda means 'Nine Towns' referring to nine original settlements (Kayas)",
+        "The sacred Kaya forests are UNESCO World Heritage Sites",
+        "Vigango memorial statues were stolen and are in Western museums",
+        "The Giriama are the largest Mijikenda sub-tribe",
+        "Coconuts and palm wine are central to Mijikenda economy"
+      ],
+      "traditionalFood": {
+        "staples": ["Ugali from maize", "Coconut rice", "Cassava", "Fish from ocean"],
+        "beverages": ["Mnazi (palm wine)", "Madafu (coconut water)"],
+        "specialDishes": ["Wali wa nazi (coconut rice)", "Mbaazi (pigeon peas in coconut)", "Grilled fish", "Viazi (potatoes in coconut)"],
+        "description": "Mijikenda cuisine is characterized by coconut, which is used in most dishes. Palm wine (mnazi) is culturally significant and consumed at social gatherings."
+      },
+      "traditionalDance": "Sengenya and Gonda - energetic dances performed at celebrations",
+      "religion": "Traditional beliefs in ancestors and spirits; Islam and Christianity growing",
+      "history": {
+        "origin": "The Mijikenda migrated from Shungwaya (possibly Somalia) around the 16th century. They settled in fortified villages (Kayas) in the coastal hinterland to protect against raids.",
+        "colonialEra": "The Mijikenda resisted both Arab and British control. Mekatilili wa Menza led a famous resistance against British rule in 1913-1914.",
+        "independence": "Post-independence, the Mijikenda have faced land pressures from tourism and conservation. They continue to advocate for Kaya forest protection.",
+        "keyEvents": ["Migration from Shungwaya (1500s)", "Settlement in Kayas", "Mekatilili wa Menza resistance (1913-1914)", "Kaya UNESCO recognition (2008)"]
+      },
+      "language": {
+        "name": "Mijikenda languages (9 dialects)",
+        "speakers": "~2.5 million",
+        "greeting": "Mudzuwa (Giriama)",
+        "greetingMeaning": "Hello / How are you?",
+        "additionalGreetings": [
+          { "phrase": "Niwe?", "meaning": "How are you?" },
+          { "phrase": "Siri", "meaning": "Fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Siri tsanga", "meaning": "I'm very fine" },
+          { "phrase": "Marahaba", "meaning": "Thank you (Digo/Swahili)" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Mekatilili wa Menza", "role": "Giriama Freedom Fighter", "wikipedia": "https://en.wikipedia.org/wiki/Mekatilili_wa_Menza" },
+        { "name": "Ronald Ngala", "role": "Independence Leader & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Ronald_Ngala" },
+        { "name": "Katana Ngala", "role": "Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Katana_Ngala" }
+      ],
+      "description": "The Mijikenda ('Nine Towns') are a group of nine related Bantu communities on Kenya's coast. They share cultural traditions including sacred Kaya forests, palm wine culture, and distinctive music and dance.",
+      "relatedTribes": ["swahili", "taita"],
+      "diaspora": {
+        "globalPopulation": "~40,000",
+        "majorCountries": ["UAE", "USA", "UK"],
+        "breakdown": [
+          { "country": "UAE", "population": "~15,000", "cities": ["Dubai"] },
+          { "country": "United States", "population": "~10,000", "cities": ["Various"] }
+        ],
+        "communities": ["Workers in Gulf states", "Students abroad"],
+        "associations": ["Mijikenda Cultural Association"]
+      }
+    },
+    {
+      "id": "swahili",
+      "name": "Swahili",
+      "slug": "swahili",
+      "region": "Coastal Kenya",
+      "population": "~800,000",
+      "populationPercent": "1.7%",
       "genderRatio": { "male": 48, "female": 52 },
       "mapCoordinates": { "lat": -4.05, "lng": 39.67 },
-      "counties": ["Mombasa", "Kilifi", "Kwale", "Tana River", "Lamu", "Taita-Taveta"],
+      "counties": ["Mombasa", "Lamu", "Kilifi"],
+      "subTribes": ["Amu", "Bajuni", "Mvita", "Pate", "Siyu", "Vumba"],
       "namePrefixes": ["Ha", "Ju", "Fa", "Za", "Ab", "Ka", "Mw"],
       "commonNames": {
         "female": ["Mwanaisha", "Fatuma", "Zainab", "Mwanajuma", "Khadija", "Amina", "Halima", "Rehema", "Salma", "Bahati", "Mwanakombo", "Riziki", "Mariam", "Sifa", "Zawadi"],
-        "male": ["Hamisi", "Jumaa", "Salim", "Rashid", "Abdalla", "Kazungu", "Karisa", "Katana", "Omar", "Hassan", "Bakari", "Mwandawiro", "Chai", "Tsuma", "Kenga"]
+        "male": ["Hamisi", "Jumaa", "Salim", "Rashid", "Abdalla", "Omar", "Hassan", "Bakari", "Mwandawiro", "Chai"]
       },
       "timeBasedNames": {
         "friday": ["Jumaa", "Mwanajuma"],
@@ -718,38 +1509,39 @@
       "stereotypes": [
         "Laid-back and relaxed lifestyle (pole pole)",
         "Hospitable to visitors",
-        "Swahili language experts",
-        "Beach and tourism culture",
-        "Culturally diverse",
+        "Swahili language creators",
+        "Maritime traders",
+        "Culturally refined",
         "Rich culinary traditions"
       ],
       "culturalTraits": [
-        "Swahili language and culture - lingua franca of East Africa",
-        "Islamic and traditional influences",
-        "Maritime and trading heritage",
+        "Creators and custodians of Swahili language",
+        "Islamic and traditional influences blend",
+        "Maritime and trading heritage over centuries",
         "Day-of-week naming tradition",
-        "Elaborate wedding ceremonies (Swahili weddings)",
-        "Unique architecture (Swahili houses, coral stone buildings)"
+        "Elaborate wedding ceremonies",
+        "Unique coral stone architecture"
       ],
       "funFacts": [
-        "Swahili (born on this coast) is now spoken by over 100 million people across Africa",
-        "Lamu Old Town is a UNESCO World Heritage Site dating back to the 12th century",
-        "Coastal cuisine blends African, Arab, Indian, and Portuguese influences",
-        "The Mijikenda's sacred Kaya forests are UNESCO-protected spiritual sites"
+        "Swahili is now spoken by over 100 million people across Africa",
+        "Lamu Old Town is a UNESCO World Heritage Site dating back to 1370",
+        "Swahili cuisine blends African, Arab, Indian, and Portuguese influences",
+        "The Swahili civilization was one of the wealthiest in medieval Africa",
+        "Swahili poetry (Utenzi) is a sophisticated literary tradition"
       ],
       "traditionalFood": {
         "staples": ["Wali (coconut rice)", "Pilau (spiced rice)", "Biriani (layered rice dish)", "Chapati"],
         "beverages": ["Madafu (coconut water)", "Kahawa (Swahili coffee with spices)", "Tamarind juice"],
         "specialDishes": ["Samaki wa kupaka (fish in coconut sauce)", "Mahamri (sweet fried bread)", "Mishkaki (grilled meat skewers)", "Mbaazi (pigeon peas in coconut)", "Viazi karai (spiced potato fritters)"],
-        "description": "Coastal cuisine is a fusion of African, Arab, Indian, and Portuguese influences. Coconut is central to most dishes. The biryani, pilau, and seafood dishes reflect centuries of Indian Ocean trade."
+        "description": "Swahili cuisine is a fusion of African, Arab, Indian, and Portuguese influences. Coconut is central to most dishes. The biryani, pilau, and seafood dishes reflect centuries of Indian Ocean trade."
       },
       "traditionalDance": "Chakacha - hip-focused dance performed at weddings and celebrations",
-      "religion": "Predominantly Islam (Sunni); with traditional African beliefs among some Mijikenda",
+      "religion": "Predominantly Islam (Sunni)",
       "history": {
-        "origin": "The Coastal peoples include the Mijikenda (9 tribes), Swahili, Taita, and others. The Swahili culture emerged from intermarriage between Bantu peoples and Arab/Persian traders from around 800 AD, creating a unique maritime civilization.",
-        "colonialEra": "The Coast was the first point of contact with foreign powers. Mombasa changed hands between Portuguese, Omani Arabs, and eventually British. The Mazrui rebellion and other resistances marked the colonial period.",
-        "independence": "The Coast has seen debates about autonomy (Mwambao movement) and land rights. The Swahili language, born on this coast, became Kenya's national language and East Africa's lingua franca.",
-        "keyEvents": ["Swahili civilization emergence (800 AD)", "Portuguese arrival (1498)", "Omani rule (1698-1895)", "British protectorate (1895)", "Mwambao movement (1960s)"]
+        "origin": "The Swahili culture emerged from intermarriage between Bantu peoples and Arab/Persian traders from around 800 AD, creating a unique maritime civilization along the East African coast.",
+        "colonialEra": "Mombasa and other Swahili city-states were colonized by Portuguese (1498-1698), then Omanis, and finally British. The Swahili maintained their culture through these transitions.",
+        "independence": "The Swahili language, born on this coast, became Kenya's national language. Swahili culture continues to influence East African identity.",
+        "keyEvents": ["Swahili civilization emergence (800 AD)", "Portuguese arrival (1498)", "Omani rule (1698-1895)", "Swahili as national language (1964)"]
       },
       "language": {
         "name": "Swahili (Kiswahili)",
@@ -777,12 +1569,10 @@
       "famousPeople": [
         { "name": "Najib Balala", "role": "Former Tourism Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Najib_Balala" },
         { "name": "Amina Mohamed", "role": "WTO Director-General Candidate & Diplomat", "wikipedia": "https://en.wikipedia.org/wiki/Amina_J._Mohamed" },
-        { "name": "Diamond Platnumz", "role": "Bongo Flava Superstar (Tanzanian Swahili)", "wikipedia": "https://en.wikipedia.org/wiki/Diamond_Platnumz" },
-        { "name": "Ali Kiba", "role": "Bongo Flava Musician", "wikipedia": "https://en.wikipedia.org/wiki/Alikiba" },
-        { "name": "Sheikh Abdulrahman Wandati", "role": "Islamic Scholar", "wikipedia": null }
+        { "name": "Ali Mazrui", "role": "Renowned Scholar & Political Scientist", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Mazrui" }
       ],
-      "description": "Coastal tribes include the Mijikenda (9 tribes including Giriama, Digo, Duruma) and Swahili people. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine.",
-      "relatedTribes": [],
+      "description": "The Swahili people are the creators of Swahili language and culture. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine along Kenya's coast.",
+      "relatedTribes": ["mijikenda"],
       "diaspora": {
         "globalPopulation": "~100,000",
         "majorCountries": ["UAE", "Oman", "USA", "UK", "Saudi Arabia"],
@@ -794,7 +1584,169 @@
           { "country": "Saudi Arabia", "population": "~10,000", "cities": ["Jeddah", "Riyadh"] }
         ],
         "communities": ["Strong presence in Gulf states with historic trade ties", "Historic ties to Oman dating back centuries", "Community in New York area with Swahili cultural centers"],
-        "associations": ["Swahili Cultural Society", "Mijikenda Diaspora Network", "Kenya Coast Diaspora UK"]
+        "associations": ["Swahili Cultural Society", "Kenya Coast Diaspora UK"]
+      }
+    },
+    {
+      "id": "borana",
+      "name": "Borana",
+      "slug": "borana",
+      "region": "Northern Kenya",
+      "population": "~300,000",
+      "populationPercent": "0.6%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 2.83, "lng": 38.00 },
+      "counties": ["Marsabit", "Isiolo"],
+      "namePrefixes": ["Gu", "Da", "Ha", "Ja", "Bo"],
+      "commonNames": {
+        "female": ["Halake", "Jarso", "Duba", "Galgalo", "Guyo", "Boru", "Wario"],
+        "male": ["Guyo", "Boru", "Dida", "Galgalo", "Wako", "Jaldesa", "Adi"]
+      },
+      "stereotypes": [
+        "Expert cattle herders",
+        "Resilient desert dwellers",
+        "Traditional Gada system practitioners",
+        "Peaceful pastoralists",
+        "Strong Muslim faith",
+        "Camel keepers"
+      ],
+      "culturalTraits": [
+        "Gada system - democratic age-set governance (UNESCO heritage)",
+        "Camel and cattle pastoralism",
+        "Traditional water management (tulas/wells)",
+        "Strong Islamic faith",
+        "Cross-border ties with Ethiopian Oromo",
+        "Distinctive traditional dress"
+      ],
+      "funFacts": [
+        "The Borana Gada system is recognized by UNESCO as Intangible Cultural Heritage",
+        "Borana are part of the larger Oromo ethnic group of Ethiopia",
+        "Traditional Borana wells (tulas) are passed down through generations",
+        "The Borana calculate time using an indigenous calendar based on the moon and stars"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel milk", "Cattle milk", "Goat meat", "Sorghum"],
+        "beverages": ["Camel milk (fresh and fermented)", "Tea with milk"],
+        "specialDishes": ["Roasted meat", "Milk-based dishes", "Wild honey"],
+        "description": "Borana diet is primarily pastoral, centered on milk and meat from their herds. Camel milk is especially prized for its nutritional value in the arid environment."
+      },
+      "traditionalDance": "Traditional Borana dances during Gada ceremonies",
+      "religion": "Predominantly Islam; traditional Waaq beliefs among some",
+      "history": {
+        "origin": "The Borana are Cushitic people, part of the larger Oromo ethnic group. They migrated to their current location in northern Kenya from Ethiopia over several centuries.",
+        "colonialEra": "The British divided Borana territory between Kenya and Ethiopia. The Kenyan Borana became part of the Northern Frontier District, administered separately.",
+        "independence": "Post-independence, the Borana have faced conflicts with neighboring communities over pasture and water. They maintain strong cross-border ties with Ethiopian Borana.",
+        "keyEvents": ["Migration from Ethiopia", "Colonial border division", "NFD administration", "Cross-border identity"]
+      },
+      "language": {
+        "name": "Borana (Afaan Oromo dialect)",
+        "speakers": "~500,000 (Kenya)",
+        "greeting": "Akkam",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Nagaa?", "meaning": "Are you at peace?" },
+          { "phrase": "Nagaa dha", "meaning": "I'm at peace" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Galatoomaa", "meaning": "Thank you" },
+          { "phrase": "Eeyyee", "meaning": "Yes" },
+          { "phrase": "Lakki", "meaning": "No" }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Bonaya Godana", "role": "Former Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Bonaya_Godana" },
+        { "name": "Adan Keynan", "role": "MP for Wajir South", "wikipedia": "https://en.wikipedia.org/wiki/Adan_Keynan" }
+      ],
+      "description": "The Borana are Cushitic pastoralists in northern Kenya, part of the larger Oromo ethnic group. They practice the Gada democratic system and are known for their cattle and camel herding in arid lands.",
+      "relatedTribes": ["somali", "rendille", "gabra"],
+      "diaspora": {
+        "globalPopulation": "~20,000",
+        "majorCountries": ["Ethiopia", "USA"],
+        "breakdown": [
+          { "country": "Ethiopia", "population": "~5 million", "cities": ["Oromia region"] }
+        ],
+        "communities": ["Cross-border with Ethiopian Oromo"],
+        "associations": ["Borana Community Development Association"]
+      }
+    },
+    {
+      "id": "rendille",
+      "name": "Rendille",
+      "slug": "rendille",
+      "region": "Northern Kenya",
+      "population": "~100,000",
+      "populationPercent": "0.2%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 2.27, "lng": 37.35 },
+      "counties": ["Marsabit"],
+      "namePrefixes": ["Go", "Gu", "Le", "Ha"],
+      "commonNames": {
+        "female": ["Galgalo", "Hawo", "Leyyan", "Dalacha", "Boru"],
+        "male": ["Golicha", "Godana", "Guyo", "Halake", "Boru"]
+      },
+      "stereotypes": [
+        "Camel herders supreme",
+        "Desert survival experts",
+        "Distinctive hairstyles",
+        "Related to Somali",
+        "Warrior culture",
+        "Remote and isolated"
+      ],
+      "culturalTraits": [
+        "Camel pastoralism in desert environment",
+        "Distinctive hairstyles with ochre clay (women)",
+        "Age-set systems",
+        "Unique blend of Cushitic and Nilotic cultures",
+        "Alliance with Samburu (ceremonial)",
+        "Desert navigation skills"
+      ],
+      "funFacts": [
+        "The Rendille are among the world's premier camel herders",
+        "Rendille women's distinctive mohawk hairstyles use ochre clay",
+        "The Rendille and Samburu have a traditional alliance called 'Ariaal'",
+        "Rendille language is related to Somali but unique"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel milk (primary food source)", "Camel meat", "Goat meat"],
+        "beverages": ["Fresh and fermented camel milk"],
+        "specialDishes": ["Camel meat stew", "Blood and milk mixture"],
+        "description": "Rendille diet is almost entirely dependent on their camels. Camel milk is the staple food, consumed fresh or fermented. Meat is reserved for ceremonies."
+      },
+      "traditionalDance": "Traditional warrior dances with jumping",
+      "religion": "Traditional beliefs; Islam and Christianity growing",
+      "history": {
+        "origin": "The Rendille are Cushitic people with possible Somali origins. They adapted to the Kaisut Desert environment, developing a camel-based economy unique in East Africa.",
+        "colonialEra": "The British had minimal contact with the remote Rendille. They maintained their pastoral lifestyle relatively undisturbed.",
+        "independence": "Post-independence, the Rendille have faced pressures from drought, development, and conflicts. They remain one of Kenya's most traditional communities.",
+        "keyEvents": ["Adaptation to desert life", "Colonial isolation", "Modern development challenges"]
+      },
+      "language": {
+        "name": "Rendille",
+        "speakers": "~60,000",
+        "greeting": "Sopa",
+        "greetingMeaning": "Hello (shared with Samburu)",
+        "additionalGreetings": [
+          { "phrase": "Nagha?", "meaning": "How are you?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nagha", "meaning": "Peace" }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "No widely known national figures", "role": "Community leaders are locally prominent", "wikipedia": null }
+      ],
+      "description": "The Rendille are Cushitic camel pastoralists living in the Kaisut Desert of northern Kenya. They are closely allied with the Samburu and known for their distinctive culture centered on camel herding.",
+      "relatedTribes": ["samburu", "borana", "gabra"],
+      "diaspora": {
+        "globalPopulation": "~5,000",
+        "majorCountries": ["Kenya (primarily)"],
+        "breakdown": [],
+        "communities": ["Minimal diaspora - mainly within Kenya"],
+        "associations": ["Rendille Community Development"]
       }
     }
   ]
