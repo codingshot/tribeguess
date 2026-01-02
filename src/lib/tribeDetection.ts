@@ -727,3 +727,7 @@ export function getTribeById(id: string) {
 export function getTribeBySlug(slug: string) {
   return tribesData.tribes.find(t => t.slug === slug || t.id === slug);
 }
+
+export function getNameDatabase(): Record<string, { meaning: string; gender: 'male' | 'female' }> {
+  return nameDatabase;
+}
