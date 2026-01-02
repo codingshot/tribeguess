@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Users, ChevronRight } from 'lucide-react';
+import { getCountries } from '@/lib/tribeDetection';
 
 interface TribeCardProps {
   tribe: {
@@ -10,6 +11,7 @@ interface TribeCardProps {
     population: string;
     description: string;
     stereotypes: string[];
+    countries?: string[];
   };
 }
 
@@ -22,9 +24,25 @@ export function TribeCard({ tribe }: TribeCardProps) {
     >
       <header className="flex items-start justify-between mb-2 sm:mb-3 gap-2">
         <div className="min-w-0">
-          <h2 className="font-serif text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors truncate">
-            {tribe.name}
-          </h2>
+          <div className="flex items-center gap-1.5 mb-0.5">
+            {/* Country Flags */}
+            {tribe.countries && tribe.countries.length > 0 && (
+              <div className="flex -space-x-1">
+                {tribe.countries.slice(0, 3).map(code => {
+                  const country = getCountries().find(c => c.code === code);
+                  return country ? (
+                    <span key={code} className="text-sm" title={country.name}>{country.flag}</span>
+                  ) : null;
+                })}
+                {tribe.countries.length > 3 && (
+                  <span className="text-xs text-muted-foreground">+{tribe.countries.length - 3}</span>
+                )}
+              </div>
+            )}
+            <h2 className="font-serif text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors truncate">
+              {tribe.name}
+            </h2>
+          </div>
           <div className="flex items-center gap-1 text-muted-foreground text-xs sm:text-sm">
             <MapPin className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
             <span className="truncate">{tribe.region}</span>

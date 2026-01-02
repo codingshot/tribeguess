@@ -1,20 +1,22 @@
 import { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages } from 'lucide-react';
+import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
 import { KenyaMapView } from '@/components/KenyaMapView';
-import { getAllTribes } from '@/lib/tribeDetection';
+import { getAllTribes, getCountries } from '@/lib/tribeDetection';
 
 const Learn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const regionFilter = searchParams.get('region') || '';
+  const countryFilter = searchParams.get('country') || 'KE'; // Default to Kenya
   const viewMode = searchParams.get('view') || 'grid';
   
   const [localSearch, setLocalSearch] = useState(searchQuery);
   
   const tribes = getAllTribes();
+  const countries = getCountries();
   
   const totalPopulation = useMemo(() => {
     return tribes.reduce((acc, t) => {
@@ -56,9 +58,13 @@ const Learn = () => {
       
       const matchesRegion = !regionFilter || tribe.region === regionFilter;
       
-      return matchesSearch && matchesRegion;
+      // Filter by country - check if tribe has countries array and includes selected country
+      const tribeCountries = (tribe as any).countries || ['KE']; // Default to Kenya if not specified
+      const matchesCountry = !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
+      
+      return matchesSearch && matchesRegion && matchesCountry;
     });
-  }, [tribes, searchQuery, regionFilter]);
+  }, [tribes, searchQuery, regionFilter, countryFilter]);
   
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,6 +86,18 @@ const Learn = () => {
     }
     setSearchParams(params);
   };
+
+  const handleCountryChange = (country: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (country && country !== 'ALL') {
+      params.set('country', country);
+    } else {
+      params.delete('country');
+    }
+    // Clear region filter when changing country
+    params.delete('region');
+    setSearchParams(params);
+  };
   
   const toggleViewMode = (mode: string) => {
     const params = new URLSearchParams(searchParams);
@@ -92,7 +110,9 @@ const Learn = () => {
     setSearchParams({});
   };
   
-  const hasFilters = searchQuery || regionFilter;
+  const hasFilters = searchQuery || regionFilter || (countryFilter && countryFilter !== 'KE');
+
+  const selectedCountry = countries.find(c => c.code === countryFilter) || countries.find(c => c.code === 'KE');
 
   return (
     <div className="min-h-screen bg-background">
@@ -102,11 +122,44 @@ const Learn = () => {
         <div className="animate-fade-in">
           <header className="text-center mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 sm:mb-3">
-              Learn About <span className="gradient-gold-text">Kenyan Tribes</span>
+              Learn About <span className="gradient-gold-text">African Tribes</span>
             </h1>
             <p className="text-muted-foreground max-w-lg mx-auto text-sm sm:text-base px-2">
-              Explore the rich cultural diversity of Kenya's ethnic groups, their naming traditions, and cultural characteristics.
+              Explore the rich cultural diversity of African ethnic groups, their naming traditions, and cultural characteristics.
             </p>
+            {/* Country Selector */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+              <span className="text-sm text-muted-foreground flex items-center gap-1">
+                <Flag className="w-4 h-4" />
+                Country:
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {countries.slice(0, 8).map(country => (
+                  <button
+                    key={country.code}
+                    onClick={() => handleCountryChange(country.code)}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
+                      countryFilter === country.code || (!countryFilter && country.code === 'KE')
+                        ? 'bg-primary text-primary-foreground' 
+                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                    }`}
+                  >
+                    <span>{country.flag}</span>
+                    <span className="hidden sm:inline">{country.name}</span>
+                  </button>
+                ))}
+                <button
+                  onClick={() => handleCountryChange('ALL')}
+                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                    countryFilter === 'ALL'
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                >
+                  🌍 All
+                </button>
+              </div>
+            </div>
           </header>
           
           {/* Quick Stats */}
