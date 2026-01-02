@@ -1,20 +1,60 @@
 {
+  "regions": [
+    { "id": "east", "name": "East Africa" },
+    { "id": "west", "name": "West Africa" },
+    { "id": "southern", "name": "Southern Africa" },
+    { "id": "central", "name": "Central Africa" },
+    { "id": "north", "name": "North Africa" },
+    { "id": "horn", "name": "Horn of Africa" }
+  ],
   "countries": [
-    { "code": "KE", "name": "Kenya", "flag": "🇰🇪" },
-    { "code": "TZ", "name": "Tanzania", "flag": "🇹🇿" },
-    { "code": "UG", "name": "Uganda", "flag": "🇺🇬" },
-    { "code": "ET", "name": "Ethiopia", "flag": "🇪🇹" },
-    { "code": "SS", "name": "South Sudan", "flag": "🇸🇸" },
-    { "code": "SO", "name": "Somalia", "flag": "🇸🇴" },
-    { "code": "RW", "name": "Rwanda", "flag": "🇷🇼" },
-    { "code": "BI", "name": "Burundi", "flag": "🇧🇮" },
-    { "code": "CD", "name": "DR Congo", "flag": "🇨🇩" },
-    { "code": "MW", "name": "Malawi", "flag": "🇲🇼" },
-    { "code": "ZM", "name": "Zambia", "flag": "🇿🇲" },
-    { "code": "ZW", "name": "Zimbabwe", "flag": "🇿🇼" },
-    { "code": "ZA", "name": "South Africa", "flag": "🇿🇦" },
-    { "code": "NG", "name": "Nigeria", "flag": "🇳🇬" },
-    { "code": "GH", "name": "Ghana", "flag": "🇬🇭" }
+    { "code": "KE", "name": "Kenya", "flag": "🇰🇪", "region": "east" },
+    { "code": "TZ", "name": "Tanzania", "flag": "🇹🇿", "region": "east" },
+    { "code": "UG", "name": "Uganda", "flag": "🇺🇬", "region": "east" },
+    { "code": "RW", "name": "Rwanda", "flag": "🇷🇼", "region": "east" },
+    { "code": "BI", "name": "Burundi", "flag": "🇧🇮", "region": "east" },
+    { "code": "ET", "name": "Ethiopia", "flag": "🇪🇹", "region": "horn" },
+    { "code": "ER", "name": "Eritrea", "flag": "🇪🇷", "region": "horn" },
+    { "code": "SO", "name": "Somalia", "flag": "🇸🇴", "region": "horn" },
+    { "code": "DJ", "name": "Djibouti", "flag": "🇩🇯", "region": "horn" },
+    { "code": "SS", "name": "South Sudan", "flag": "🇸🇸", "region": "east" },
+    { "code": "SD", "name": "Sudan", "flag": "🇸🇩", "region": "north" },
+    { "code": "NG", "name": "Nigeria", "flag": "🇳🇬", "region": "west" },
+    { "code": "GH", "name": "Ghana", "flag": "🇬🇭", "region": "west" },
+    { "code": "SN", "name": "Senegal", "flag": "🇸🇳", "region": "west" },
+    { "code": "ML", "name": "Mali", "flag": "🇲🇱", "region": "west" },
+    { "code": "BF", "name": "Burkina Faso", "flag": "🇧🇫", "region": "west" },
+    { "code": "CI", "name": "Côte d'Ivoire", "flag": "🇨🇮", "region": "west" },
+    { "code": "GN", "name": "Guinea", "flag": "🇬🇳", "region": "west" },
+    { "code": "GM", "name": "Gambia", "flag": "🇬🇲", "region": "west" },
+    { "code": "BJ", "name": "Benin", "flag": "🇧🇯", "region": "west" },
+    { "code": "TG", "name": "Togo", "flag": "🇹🇬", "region": "west" },
+    { "code": "NE", "name": "Niger", "flag": "🇳🇪", "region": "west" },
+    { "code": "LR", "name": "Liberia", "flag": "🇱🇷", "region": "west" },
+    { "code": "SL", "name": "Sierra Leone", "flag": "🇸🇱", "region": "west" },
+    { "code": "CD", "name": "DR Congo", "flag": "🇨🇩", "region": "central" },
+    { "code": "CG", "name": "Congo", "flag": "🇨🇬", "region": "central" },
+    { "code": "CM", "name": "Cameroon", "flag": "🇨🇲", "region": "central" },
+    { "code": "CF", "name": "Central African Republic", "flag": "🇨🇫", "region": "central" },
+    { "code": "TD", "name": "Chad", "flag": "🇹🇩", "region": "central" },
+    { "code": "GA", "name": "Gabon", "flag": "🇬🇦", "region": "central" },
+    { "code": "GQ", "name": "Equatorial Guinea", "flag": "🇬🇶", "region": "central" },
+    { "code": "ZA", "name": "South Africa", "flag": "🇿🇦", "region": "southern" },
+    { "code": "ZW", "name": "Zimbabwe", "flag": "🇿🇼", "region": "southern" },
+    { "code": "ZM", "name": "Zambia", "flag": "🇿🇲", "region": "southern" },
+    { "code": "MW", "name": "Malawi", "flag": "🇲🇼", "region": "southern" },
+    { "code": "MZ", "name": "Mozambique", "flag": "🇲🇿", "region": "southern" },
+    { "code": "BW", "name": "Botswana", "flag": "🇧🇼", "region": "southern" },
+    { "code": "NA", "name": "Namibia", "flag": "🇳🇦", "region": "southern" },
+    { "code": "AO", "name": "Angola", "flag": "🇦🇴", "region": "southern" },
+    { "code": "SZ", "name": "Eswatini", "flag": "🇸🇿", "region": "southern" },
+    { "code": "LS", "name": "Lesotho", "flag": "🇱🇸", "region": "southern" },
+    { "code": "MG", "name": "Madagascar", "flag": "🇲🇬", "region": "southern" },
+    { "code": "EG", "name": "Egypt", "flag": "🇪🇬", "region": "north" },
+    { "code": "MA", "name": "Morocco", "flag": "🇲🇦", "region": "north" },
+    { "code": "DZ", "name": "Algeria", "flag": "🇩🇿", "region": "north" },
+    { "code": "TN", "name": "Tunisia", "flag": "🇹🇳", "region": "north" },
+    { "code": "LY", "name": "Libya", "flag": "🇱🇾", "region": "north" }
   ],
   "tribes": [
     {
@@ -3103,6 +3143,1845 @@
         ],
         "communities": ["Large community in Leicester, UK with strong Kenyan Asian identity", "Active community organizations in North America"],
         "associations": ["Kenya Asian Heritage Society", "East African Asian Archives"]
+      }
+    },
+
+    {
+      "id": "yoruba",
+      "name": "Yoruba",
+      "slug": "yoruba",
+      "countries": ["NG", "BJ", "TG", "GH"],
+      "region": "Southwestern Nigeria",
+      "population": "~44 million",
+      "populationPercent": "21% (Nigeria)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 7.38, "lng": 3.93 },
+      "counties": ["Lagos", "Oyo", "Ogun", "Ondo", "Ekiti", "Osun", "Kwara"],
+      "namePrefixes": ["Ade", "Ola", "Olu", "Ayo", "Bam", "Ife", "Ore"],
+      "commonNames": {
+        "female": ["Adebimpe", "Olayinka", "Ayomide", "Titilayo", "Folake", "Yetunde", "Temitope", "Adeola", "Oluwaseun", "Abiodun"],
+        "male": ["Adebayo", "Oluwaseun", "Babatunde", "Olamide", "Ayodeji", "Olumide", "Adewale", "Kayode", "Tunde", "Femi"]
+      },
+      "stereotypes": [
+        "Highly entrepreneurial",
+        "Culturally proud",
+        "Love parties and celebrations",
+        "Well-educated",
+        "Fashionable dressers",
+        "Strong family bonds"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be providers and successful",
+          "Strong sense of family responsibility",
+          "Business-minded and ambitious",
+          "Respected as family heads"
+        ],
+        "female": [
+          "Known for business acumen (market women)",
+          "Strong presence in trade",
+          "Fashion-conscious",
+          "Key family decision influencers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were farmers, craftsmen, and traders. Chiefs and Obas (kings) led communities. Men made major family decisions.",
+          "female": "Women dominated market trade and had significant economic power. Some women held chieftaincy titles."
+        },
+        "modern": {
+          "male": "Modern Yoruba men excel in professions, business, and politics. Education is highly valued.",
+          "female": "Yoruba women are prominent in business, academia, and professions. Many are successful entrepreneurs."
+        }
+      },
+      "culturalTraits": [
+        "Rich mythology with Orishas (deities)",
+        "Famous for Aso Oke fabric",
+        "Elaborate naming ceremonies (Oruko)",
+        "Strong oral traditions (Ifa divination)",
+        "Unique tonal language",
+        "Famous Owambe parties"
+      ],
+      "funFacts": [
+        "Yoruba mythology and Orisha worship spread to the Americas through the slave trade (Santeria, Candomblé)",
+        "Lagos, the Yoruba heartland, is Africa's largest city",
+        "The Yoruba have one of the highest twin birth rates in the world",
+        "Ife is considered the spiritual homeland and birthplace of humanity in Yoruba mythology",
+        "Yoruba bronze and terracotta artwork dates back to the 12th century"
+      ],
+      "traditionalFood": {
+        "staples": ["Amala (yam flour)", "Ewedu (jute leaves soup)", "Gbegiri (beans soup)", "Eba (garri)", "Pounded yam"],
+        "beverages": ["Palm wine", "Zobo (hibiscus drink)", "Kunu"],
+        "specialDishes": ["Efo riro (vegetable stew)", "Moin moin (bean pudding)", "Akara (bean cakes)", "Asun (peppered goat meat)"],
+        "description": "Yoruba cuisine is rich and varied, known for soups like Ewedu and Gbegiri served with Amala. Peppered meat dishes and bean preparations are staples."
+      },
+      "traditionalDance": "Bata dance performed with Bata drums for Shango worship",
+      "religion": "Traditional Yoruba religion (Ifa/Orisha), Christianity, Islam",
+      "history": {
+        "origin": "Yoruba civilization dates back over 2,000 years. According to legend, Oduduwa descended from heaven to create earth at Ile-Ife, founding the Yoruba people.",
+        "colonialEra": "The British colonized Yorubaland in the late 19th century. Yoruba resisted, but eventually formed part of colonial Nigeria. Many Yoruba were enslaved to the Americas.",
+        "independence": "At Nigerian independence (1960), Yoruba leaders like Obafemi Awolowo played key roles. The Yoruba remain influential in Nigerian politics and economy.",
+        "keyEvents": ["Oyo Empire peak (17th-18th century)", "Yoruba Civil Wars (1789-1893)", "British colonization (1893)", "Nigerian independence (1960)"]
+      },
+      "language": {
+        "name": "Yorùbá",
+        "speakers": "~44 million",
+        "greeting": "Ẹ kú àárọ̀ / Ẹ kú ọjọ́",
+        "greetingMeaning": "Good morning / Good day",
+        "additionalGreetings": [
+          { "phrase": "Báwo ni?", "meaning": "How are you?" },
+          { "phrase": "Ó dàbọ̀", "meaning": "Goodbye" },
+          { "phrase": "Ẹ ṣé", "meaning": "Thank you" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Mo wá láti...", "meaning": "I come from..." },
+          { "phrase": "Orúkọ mi ni...", "meaning": "My name is..." }
+        ],
+        "family": "Niger-Congo (Volta-Niger)",
+        "writingSystem": "Latin alphabet with diacritics"
+      },
+      "famousPeople": [
+        { "name": "Wole Soyinka", "role": "Nobel Literature Laureate 1986", "wikipedia": "https://en.wikipedia.org/wiki/Wole_Soyinka" },
+        { "name": "Fela Kuti", "role": "Afrobeat Pioneer", "wikipedia": "https://en.wikipedia.org/wiki/Fela_Kuti" },
+        { "name": "Obafemi Awolowo", "role": "Nigerian Statesman", "wikipedia": "https://en.wikipedia.org/wiki/Obafemi_Awolowo" },
+        { "name": "King Sunny Ade", "role": "Jùjú Music Legend", "wikipedia": "https://en.wikipedia.org/wiki/King_Sunny_Ade" },
+        { "name": "Chimamanda Ngozi Adichie", "role": "Author", "wikipedia": "https://en.wikipedia.org/wiki/Chimamanda_Ngozi_Adichie" }
+      ],
+      "description": "The Yoruba are one of Africa's largest ethnic groups, known for rich culture, art, mythology, and a sophisticated pre-colonial civilization centered at Ile-Ife.",
+      "relatedTribes": ["igbo", "hausa"],
+      "diaspora": {
+        "globalPopulation": "~5 million",
+        "majorCountries": ["USA", "UK", "Brazil", "Cuba"],
+        "breakdown": [
+          { "country": "United States", "population": "~500,000", "cities": ["Houston", "Atlanta", "New York", "Chicago"] },
+          { "country": "United Kingdom", "population": "~400,000", "cities": ["London", "Manchester", "Birmingham"] },
+          { "country": "Brazil", "population": "~100,000", "cities": ["Salvador", "Rio de Janeiro"] }
+        ],
+        "communities": ["Large Yoruba population in Bahia, Brazil with preserved cultural traditions", "Strong community in Houston, Texas"],
+        "associations": ["Egbe Omo Yoruba (Yoruba descendants)", "Yoruba One"]
+      }
+    },
+
+    {
+      "id": "igbo",
+      "name": "Igbo",
+      "slug": "igbo",
+      "countries": ["NG", "GQ"],
+      "region": "Southeastern Nigeria",
+      "population": "~44 million",
+      "populationPercent": "18% (Nigeria)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.44, "lng": 7.50 },
+      "counties": ["Anambra", "Imo", "Enugu", "Ebonyi", "Abia"],
+      "namePrefixes": ["Chi", "Nna", "Nneka", "Obi", "Uche", "Eze", "Ife"],
+      "commonNames": {
+        "female": ["Adaeze", "Chidinma", "Nneka", "Obiageli", "Ifeoma", "Adaobi", "Chiamaka", "Uchechi", "Amaka", "Ngozi"],
+        "male": ["Chukwuemeka", "Obinna", "Ikechukwu", "Nnamdi", "Uchenna", "Chinedu", "Emeka", "Kelechi", "Obiora", "Chidi"]
+      },
+      "stereotypes": [
+        "Extremely entrepreneurial",
+        "Highly industrious",
+        "Travel widely for business",
+        "Strong community bonds",
+        "Love celebrations",
+        "Education-focused"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Known for business success",
+          "Expected to build wealth",
+          "Family providers and decision makers",
+          "Strong trading networks"
+        ],
+        "female": [
+          "Strong market women tradition",
+          "Influential in family matters",
+          "Education is highly valued",
+          "Known for being supportive partners"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were traders, farmers, and craftsmen. Age-grade systems governed communities without centralized kings.",
+          "female": "Women had significant economic power, controlled markets, and had their own organizations (Umuada, Inyemedi)."
+        },
+        "modern": {
+          "male": "Modern Igbo men are prominent in business, medicine, engineering, and academia. Success is highly valued.",
+          "female": "Igbo women excel in business, professions, and education. Many are successful entrepreneurs and professionals."
+        }
+      },
+      "culturalTraits": [
+        "Decentralized political structure historically",
+        "Strong age-grade system (Ozo, Nze)",
+        "Famous for masquerade traditions (Mmanwu)",
+        "New Yam Festival (Iri Ji)",
+        "Strong trading culture",
+        "Kola nut ceremony for hospitality"
+      ],
+      "funFacts": [
+        "The Igbo had no kings - they were one of Africa's largest stateless societies, governed by councils",
+        "Kola nut blessing is central to Igbo hospitality - 'he who brings kola brings life'",
+        "Chinua Achebe's 'Things Fall Apart' is set in Igboland and is Africa's most widely read novel",
+        "The Igbo Apprentice System has produced countless successful entrepreneurs",
+        "Igbo women's protests (Aba Women's Riots of 1929) were one of the first anti-colonial movements"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu (cassava/yam)", "Ofe Oha (oha soup)", "Ofe Nsala (white soup)", "Egusi soup", "Garri"],
+        "beverages": ["Palm wine (Nkwu)", "Burukutu"],
+        "specialDishes": ["Abacha (African salad)", "Nkwobi (spiced cow feet)", "Ugba (oil bean salad)", "Pepper soup"],
+        "description": "Igbo cuisine features diverse soups like Oha, Egusi, and Nsala, served with fufu or garri. Palm oil is central to most dishes."
+      },
+      "traditionalDance": "Atilogwu - acrobatic dance from Achalla/Nkwerre",
+      "religion": "Traditional Igbo religion (Odinani), Christianity",
+      "history": {
+        "origin": "Archaeological evidence shows Igbo civilization dates back to at least 900 AD. The Nri Kingdom is considered the oldest Igbo kingdom, founded around 900 AD.",
+        "colonialEra": "The British conquered Igboland in the early 1900s (Arochukwu Expedition). Many Igbo embraced Western education and Christianity.",
+        "independence": "The Igbo played key roles in Nigerian independence. The Biafran War (1967-1970), following a secession attempt, devastated Igboland.",
+        "keyEvents": ["Nri Kingdom founding (~900 AD)", "British conquest (1901-1902)", "Nigerian independence (1960)", "Biafran War (1967-1970)"]
+      },
+      "language": {
+        "name": "Ìgbò",
+        "speakers": "~44 million",
+        "greeting": "Nnọọ",
+        "greetingMeaning": "Welcome / Hello",
+        "additionalGreetings": [
+          { "phrase": "Kèdú?", "meaning": "How are you?" },
+          { "phrase": "Ó dị mma", "meaning": "It is well / I'm fine" },
+          { "phrase": "Ka ọ dị", "meaning": "Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Daalụ", "meaning": "Thank you" },
+          { "phrase": "Aha m bụ...", "meaning": "My name is..." }
+        ],
+        "family": "Niger-Congo (Volta-Niger)",
+        "writingSystem": "Latin alphabet (Önwu alphabet)"
+      },
+      "famousPeople": [
+        { "name": "Chinua Achebe", "role": "Father of African Literature", "wikipedia": "https://en.wikipedia.org/wiki/Chinua_Achebe" },
+        { "name": "Nnamdi Azikiwe", "role": "First President of Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Nnamdi_Azikiwe" },
+        { "name": "Chukwuemeka Ojukwu", "role": "Biafran Leader", "wikipedia": "https://en.wikipedia.org/wiki/Chukwuemeka_Odumegwu_Ojukwu" },
+        { "name": "Philip Emeagwali", "role": "Computer Scientist", "wikipedia": "https://en.wikipedia.org/wiki/Philip_Emeagwali" },
+        { "name": "Ngozi Okonjo-Iweala", "role": "WTO Director-General", "wikipedia": "https://en.wikipedia.org/wiki/Ngozi_Okonjo-Iweala" }
+      ],
+      "description": "The Igbo are a major Nigerian ethnic group known for entrepreneurship, decentralized governance, and rich cultural traditions including masquerades and the kola nut ceremony.",
+      "relatedTribes": ["yoruba", "ibibio"],
+      "diaspora": {
+        "globalPopulation": "~3 million",
+        "majorCountries": ["USA", "UK", "Canada", "Germany"],
+        "breakdown": [
+          { "country": "United States", "population": "~400,000", "cities": ["Houston", "Dallas", "Atlanta", "New York"] },
+          { "country": "United Kingdom", "population": "~300,000", "cities": ["London", "Manchester"] }
+        ],
+        "communities": ["Strong community in Houston, Texas with cultural organizations", "Active community in London"],
+        "associations": ["Igbo World Assembly", "Ndi Igbo Congress"]
+      }
+    },
+
+    {
+      "id": "hausa",
+      "name": "Hausa",
+      "slug": "hausa",
+      "countries": ["NG", "NE", "GH", "CM", "TD", "BF", "BJ", "TG", "CI"],
+      "region": "Northern Nigeria / Niger",
+      "population": "~80 million",
+      "populationPercent": "30% (Nigeria)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 12.00, "lng": 8.52 },
+      "counties": ["Kano", "Kaduna", "Sokoto", "Katsina", "Zaria", "Zamfara"],
+      "namePrefixes": ["Aba", "Bala", "Ibrahim", "Aminu", "Musa", "Yusuf"],
+      "commonNames": {
+        "female": ["Aisha", "Fatima", "Zainab", "Hadiza", "Hauwa", "Halima", "Bilkisu", "Maryam", "Sadiya", "Amina"],
+        "male": ["Ibrahim", "Muhammed", "Aliyu", "Abdullahi", "Musa", "Usman", "Sani", "Bala", "Shehu", "Garba"]
+      },
+      "stereotypes": [
+        "Strong Islamic faith",
+        "Hospitable",
+        "Trading culture",
+        "Traditional values",
+        "Political influence",
+        "Agricultural"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be providers",
+          "Religious leaders",
+          "Political participation",
+          "Merchants and traders"
+        ],
+        "female": [
+          "Strong domestic roles",
+          "Home-based businesses (Kulle system)",
+          "Respected as mothers",
+          "Education in Islamic studies"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were traders, farmers, Islamic scholars, and political leaders. The Emirate system put men in governance.",
+          "female": "Women practiced seclusion (Kulle) in many areas but had economic power through home-based businesses."
+        },
+        "modern": {
+          "male": "Modern Hausa men are in business, politics, academia, and professions. Islamic values remain central.",
+          "female": "Hausa women are increasingly educated and in professions, while maintaining cultural traditions."
+        }
+      },
+      "culturalTraits": [
+        "Strong Islamic traditions",
+        "Famous Durbar festival",
+        "Hausa architecture (mud buildings)",
+        "Leather and textile crafts",
+        "Oral tradition and proverbs",
+        "Henna art traditions"
+      ],
+      "funFacts": [
+        "Hausa is one of Africa's most widely spoken languages, used as a lingua franca across West Africa",
+        "The Hausa Durbar festival features thousands of horsemen in elaborate costumes",
+        "Hausa traders historically controlled trans-Saharan trade routes",
+        "Kano, the Hausa heartland, has been a major trading center for over 1,000 years",
+        "Hausa cuisine has influenced food across West Africa"
+      ],
+      "traditionalFood": {
+        "staples": ["Tuwo (thick porridge)", "Miyan kuka (baobab soup)", "Fura da nono (millet balls with yogurt)", "Suya (spiced meat skewers)"],
+        "beverages": ["Kunun zaki (millet drink)", "Fura da nono", "Zobo"],
+        "specialDishes": ["Kilishi (dried spiced meat)", "Masa (rice cakes)", "Dambu (dried shredded meat)", "Danwake (bean dumplings)"],
+        "description": "Hausa cuisine features grains, legumes, and meat. Suya and Kilishi are famous across Nigeria. Fura da nono is a beloved traditional drink."
+      },
+      "traditionalDance": "Koroso - traditional wedding dance",
+      "religion": "Islam (predominantly Sunni)",
+      "history": {
+        "origin": "The Hausa city-states emerged around 1000 AD. According to legend, Bayajidda founded the seven Hausa states (Hausa Bakwai).",
+        "colonialEra": "The British conquered the Sokoto Caliphate in 1903 through indirect rule, using existing Emirate structures.",
+        "independence": "At independence, Northern leaders including Hausa-Fulani were politically dominant. This influenced Nigerian politics for decades.",
+        "keyEvents": ["Hausa city-states founding (~1000 AD)", "Sokoto Caliphate (1804)", "British conquest (1903)", "Nigerian independence (1960)"]
+      },
+      "language": {
+        "name": "Hausa",
+        "speakers": "~80 million (including second language)",
+        "greeting": "Sannu",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Ina kwana?", "meaning": "How did you sleep? (morning)" },
+          { "phrase": "Lafiya lau", "meaning": "I'm well" },
+          { "phrase": "Sai anjima", "meaning": "See you later" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Na gode", "meaning": "Thank you" },
+          { "phrase": "Sunana...", "meaning": "My name is..." }
+        ],
+        "family": "Afro-Asiatic (Chadic)",
+        "writingSystem": "Latin alphabet (Boko), Arabic script (Ajami)"
+      },
+      "famousPeople": [
+        { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio" },
+        { "name": "Ahmadu Bello", "role": "Premier of Northern Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello" },
+        { "name": "Aminu Kano", "role": "Politician & Reformer", "wikipedia": "https://en.wikipedia.org/wiki/Aminu_Kano" },
+        { "name": "Sani Abacha", "role": "Military Head of State", "wikipedia": "https://en.wikipedia.org/wiki/Sani_Abacha" },
+        { "name": "Nana Asma'u", "role": "Scholar & Poet", "wikipedia": "https://en.wikipedia.org/wiki/Nana_Asma%27u" }
+      ],
+      "description": "The Hausa are one of Africa's largest ethnic groups, known for trade, Islamic scholarship, and city-state civilization. Their language serves as a lingua franca across West Africa.",
+      "relatedTribes": ["fulani", "kanuri"],
+      "diaspora": {
+        "globalPopulation": "~2 million",
+        "majorCountries": ["Sudan", "Saudi Arabia", "UK", "USA"],
+        "breakdown": [
+          { "country": "Sudan", "population": "~500,000", "cities": ["Khartoum"] },
+          { "country": "Saudi Arabia", "population": "~200,000", "cities": ["Mecca", "Medina", "Jeddah"] }
+        ],
+        "communities": ["Historic communities in Sudan from trade and pilgrimage", "Growing community in UK and USA"],
+        "associations": ["Hausa Foundation", "Arewa House"]
+      }
+    },
+
+    {
+      "id": "fulani",
+      "name": "Fulani",
+      "slug": "fulani",
+      "countries": ["NG", "SN", "ML", "GN", "GH", "CM", "BF", "NE", "GM", "CI"],
+      "region": "West & Central Africa (Sahel)",
+      "population": "~40 million",
+      "populationPercent": "Dispersed across 18+ countries",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 12.65, "lng": -7.99 },
+      "counties": ["Sahel Belt", "Fouta Djallon", "Adamawa", "Macina"],
+      "namePrefixes": ["Bah", "Ba", "Diallo", "Sow", "Ka", "Jal"],
+      "commonNames": {
+        "female": ["Aissatou", "Mariama", "Fatimata", "Kadiatou", "Djeneba", "Hapsatou", "Fatoumata", "Binta", "Fanta", "Adama"],
+        "male": ["Amadou", "Ibrahima", "Ousmane", "Mamadou", "Saidou", "Boubacar", "Abdoulaye", "Moussa", "Demba", "Thierno"]
+      },
+      "stereotypes": [
+        "Cattle herders",
+        "Nomadic lifestyle",
+        "Beautiful features",
+        "Proud heritage",
+        "Islamic scholars",
+        "Graceful and elegant"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Cattle herders and guardians",
+          "Expected to show pulaaku (self-control)",
+          "Protectors of family honor",
+          "Islamic scholars and teachers"
+        ],
+        "female": [
+          "Known for beauty and elegance",
+          "Milk and dairy production",
+          "Maintain household",
+          "Known for grace and dignity"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herded cattle, the central cultural asset. They were expected to embody pulaaku - reserve, wisdom, and self-control.",
+          "female": "Women managed milk production and dairy sales. They had significant economic independence through dairy trade."
+        },
+        "modern": {
+          "male": "Modern Fulani men are in politics, business, and professions while many continue pastoral traditions.",
+          "female": "Fulani women are increasingly educated while many continue traditional dairy practices."
+        }
+      },
+      "culturalTraits": [
+        "Pulaaku code of conduct (modesty, patience, fortitude)",
+        "Cattle are central to identity and wealth",
+        "Beautiful facial tattoos and jewelry",
+        "Gerewol male beauty contest (Wodaabe)",
+        "Nomadic and semi-nomadic traditions",
+        "Islamic scholarship tradition"
+      ],
+      "funFacts": [
+        "The Fulani are the world's largest nomadic ethnic group",
+        "Wodaabe Fulani men compete in beauty contests (Gerewol) to attract wives",
+        "The Fulani founded several West African Islamic states through jihads",
+        "They speak Fulfulde, with over 20 dialects across Africa",
+        "Fulani golden earrings (Kwotenai) are famous cultural symbols"
+      ],
+      "traditionalFood": {
+        "staples": ["Nyiri (millet porridge)", "Kossam (fresh milk)", "Nono (sour milk/yogurt)", "Cattle meat"],
+        "beverages": ["Fresh cow's milk", "Nono (fermented milk)", "Fura da nono"],
+        "specialDishes": ["Fura (millet balls with milk)", "Lahal (milk with millet)", "Beef stews"],
+        "description": "Fulani diet centers on dairy products - milk, butter, and yogurt. As pastoralists, cattle provide both sustenance and wealth."
+      },
+      "traditionalDance": "Gerewol - male beauty dance competition (Wodaabe)",
+      "religion": "Islam (predominantly), Traditional beliefs in some groups",
+      "history": {
+        "origin": "The Fulani origin is debated - possibly from Senegambia or the Middle East. They spread across the Sahel over centuries as cattle herders.",
+        "colonialEra": "The Fulani resisted colonial rule in many regions. Their Islamic states (Sokoto, Macina, Fouta Djallon) were conquered by European powers.",
+        "independence": "Post-independence, Fulani have been politically influential in several countries including Nigeria, Guinea, and Senegal.",
+        "keyEvents": ["Spread across Sahel (1000-1500 AD)", "Fulani jihads (18th-19th century)", "Sokoto Caliphate founded (1804)", "Colonial conquest (late 1800s)"]
+      },
+      "language": {
+        "name": "Fulfulde (Fula, Pulaar)",
+        "speakers": "~40 million",
+        "greeting": "No mbadda / Jam waali",
+        "greetingMeaning": "Hello / Peace be with you",
+        "additionalGreetings": [
+          { "phrase": "Jam tam?", "meaning": "How are you?" },
+          { "phrase": "Jam tan", "meaning": "I'm at peace" },
+          { "phrase": "Sey jamma", "meaning": "Until evening/Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "A jaraama", "meaning": "Thank you" },
+          { "phrase": "Innde am ko...", "meaning": "My name is..." }
+        ],
+        "family": "Niger-Congo (Atlantic)",
+        "writingSystem": "Latin alphabet, Arabic script (Ajami)"
+      },
+      "famousPeople": [
+        { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio" },
+        { "name": "Ahmadou Bello", "role": "Premier of Northern Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello" },
+        { "name": "Macky Sall", "role": "President of Senegal", "wikipedia": "https://en.wikipedia.org/wiki/Macky_Sall" },
+        { "name": "Alpha Condé", "role": "Former President of Guinea", "wikipedia": "https://en.wikipedia.org/wiki/Alpha_Cond%C3%A9" },
+        { "name": "Muhammadu Buhari", "role": "President of Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Muhammadu_Buhari" }
+      ],
+      "description": "The Fulani (Fula, Peul) are a vast nomadic people spread across the Sahel, known for cattle herding, beauty traditions, and founding several Islamic states.",
+      "relatedTribes": ["hausa", "wolof", "bambara"],
+      "diaspora": {
+        "globalPopulation": "~1 million",
+        "majorCountries": ["USA", "France", "UK", "Saudi Arabia"],
+        "breakdown": [
+          { "country": "France", "population": "~200,000", "cities": ["Paris"] },
+          { "country": "United States", "population": "~100,000", "cities": ["New York", "Washington DC"] }
+        ],
+        "communities": ["Large Fulani community in France from former French colonies"],
+        "associations": ["Tabital Pulaaku International"]
+      }
+    },
+
+    {
+      "id": "ashanti",
+      "name": "Ashanti (Asante)",
+      "slug": "ashanti",
+      "countries": ["GH", "CI"],
+      "region": "Central Ghana",
+      "population": "~11 million",
+      "populationPercent": "15% (Ghana)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 6.69, "lng": -1.62 },
+      "counties": ["Ashanti Region", "Kumasi"],
+      "namePrefixes": ["Kwa", "Ama", "Ko", "Akua", "Yaw", "Kof"],
+      "commonNames": {
+        "female": ["Akosua", "Ama", "Afia", "Akua", "Yaa", "Adwoa", "Afua", "Abena", "Efua", "Adjoa"],
+        "male": ["Kwame", "Kofi", "Kwesi", "Yaw", "Kwabena", "Kojo", "Kwaku", "Ekow", "Fiifi", "Papa"]
+      },
+      "stereotypes": [
+        "Proud warrior heritage",
+        "Business savvy",
+        "Strong cultural traditions",
+        "Matrilineal society",
+        "Gold and kente fabric",
+        "Royal heritage"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Warriors and protectors",
+          "Expected to provide for family",
+          "Carry family name through mother's line",
+          "Business leaders"
+        ],
+        "female": [
+          "Central to family lineage (matrilineal)",
+          "Queen mothers have significant power",
+          "Strong traders and business women",
+          "Keepers of family traditions"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, farmers, and craftsmen. While the Asantehene (king) ruled, lineage passed through mothers.",
+          "female": "Women held power through matrilineal succession. Queen Mothers (Ohemaa) had political power and chose successors."
+        },
+        "modern": {
+          "male": "Modern Ashanti men are in business, professions, and continue traditional crafts like kente weaving.",
+          "female": "Ashanti women are powerful in business and maintain influential roles. Queen Mothers remain important."
+        }
+      },
+      "culturalTraits": [
+        "Famous Kente cloth weaving",
+        "Golden Stool (Sika Dwa Kofi) as national symbol",
+        "Adinkra symbols with meanings",
+        "Matrilineal succession",
+        "Day-naming tradition (names by day of birth)",
+        "Akwasidae and Odwira festivals"
+      ],
+      "funFacts": [
+        "Ashanti names are based on the day of birth - Kofi means Friday-born, Kwame means Saturday-born",
+        "The Golden Stool is believed to contain the soul of the Ashanti nation - it never touches the ground",
+        "The Ashanti Empire defeated the British in several wars and was never truly conquered",
+        "Kente cloth patterns have specific meanings and some are reserved for royalty",
+        "The Ashanti were one of the few African states to use a form of writing (Adinkra symbols)"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu (pounded cassava and plantain)", "Kontomire (cocoyam leaves)", "Palm soup", "Groundnut soup"],
+        "beverages": ["Palm wine (Nsafufuo)", "Pito (millet beer)"],
+        "specialDishes": ["Kelewele (spiced plantain)", "Ampesi", "Abenkwan (palm nut soup)", "Waakye"],
+        "description": "Ashanti cuisine features soups with fufu. Palm nut soup and groundnut soup are staples. Fufu is pounded until smooth and stretchy."
+      },
+      "traditionalDance": "Adowa - graceful hand and foot movements dance",
+      "religion": "Traditional Ashanti religion, Christianity",
+      "history": {
+        "origin": "The Ashanti Empire was founded in 1701 when Osei Tutu united several clans. The Golden Stool, said to have descended from heaven, became the symbol of national unity.",
+        "colonialEra": "The Ashanti fought four major wars against the British (1824-1900). They were eventually colonized in 1900 but the Golden Stool was never captured.",
+        "independence": "At Ghana's independence (1957), the Ashanti region was integrated into the new nation. Traditional structures including the Asantehene (king) continue.",
+        "keyEvents": ["Empire founding (1701)", "Anglo-Ashanti Wars (1824-1900)", "British colonization (1900)", "Ghana independence (1957)"]
+      },
+      "language": {
+        "name": "Twi (Asante Twi)",
+        "speakers": "~11 million",
+        "greeting": "Ɛte sɛn?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Maakye", "meaning": "Good morning" },
+          { "phrase": "Maaha", "meaning": "Good afternoon" },
+          { "phrase": "Nante yie", "meaning": "Walk well / Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Me da wo ase", "meaning": "Thank you" },
+          { "phrase": "Me din de...", "meaning": "My name is..." }
+        ],
+        "family": "Niger-Congo (Kwa)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Osei Tutu I", "role": "Founder of Ashanti Empire", "wikipedia": "https://en.wikipedia.org/wiki/Osei_Tutu_I" },
+        { "name": "Yaa Asantewaa", "role": "Queen Mother & War Leader", "wikipedia": "https://en.wikipedia.org/wiki/Yaa_Asantewaa" },
+        { "name": "Kofi Annan", "role": "UN Secretary-General", "wikipedia": "https://en.wikipedia.org/wiki/Kofi_Annan" },
+        { "name": "Kwame Nkrumah", "role": "First President of Ghana", "wikipedia": "https://en.wikipedia.org/wiki/Kwame_Nkrumah" },
+        { "name": "Otumfuo Osei Tutu II", "role": "Current Asantehene (King)", "wikipedia": "https://en.wikipedia.org/wiki/Otumfuo_Nana_Osei_Tutu_II" }
+      ],
+      "description": "The Ashanti (Asante) built one of Africa's most powerful empires, known for kente cloth, gold craftsmanship, the Golden Stool, and matrilineal traditions.",
+      "relatedTribes": ["fante", "ewe", "ga"],
+      "diaspora": {
+        "globalPopulation": "~1 million",
+        "majorCountries": ["USA", "UK", "Canada", "Germany"],
+        "breakdown": [
+          { "country": "United States", "population": "~200,000", "cities": ["New York", "Washington DC", "Chicago"] },
+          { "country": "United Kingdom", "population": "~150,000", "cities": ["London"] }
+        ],
+        "communities": ["Strong Ghanaian community in New York and London"],
+        "associations": ["Asanteman Association of North America"]
+      }
+    },
+
+    {
+      "id": "zulu",
+      "name": "Zulu",
+      "slug": "zulu",
+      "countries": ["ZA", "LS", "SZ", "MW", "MZ"],
+      "region": "KwaZulu-Natal, South Africa",
+      "population": "~14 million",
+      "populationPercent": "22% (South Africa)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -28.53, "lng": 30.89 },
+      "counties": ["KwaZulu-Natal", "Gauteng", "Mpumalanga"],
+      "namePrefixes": ["Tha", "Nko", "Si", "Mbu", "Zi", "Lun"],
+      "commonNames": {
+        "female": ["Thando", "Nomzamo", "Nkosazana", "Lindiwe", "Sibongile", "Zinhle", "Nosipho", "Ayanda", "Ntokozo", "Mbali"],
+        "male": ["Sipho", "Thabo", "Mandla", "Bongani", "Siyabonga", "Nkosi", "Mthunzi", "Themba", "Bheki", "Lungelo"]
+      },
+      "stereotypes": [
+        "Warrior pride",
+        "Strong cultural identity",
+        "Royal heritage",
+        "Respect for elders",
+        "Traditional values",
+        "Music and dance"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Warriors and protectors",
+          "Expected to pay lobola (bride price)",
+          "Providers for the family",
+          "Hunters and cattle herders"
+        ],
+        "female": [
+          "Homemakers and mothers",
+          "Carry family traditions",
+          "Beadwork and crafts",
+          "Strong influence on family decisions"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors organized into regiments (amabutho). They herded cattle and protected the nation.",
+          "female": "Women managed homesteads, farmed, and raised children. They had specific dress codes based on marital status."
+        },
+        "modern": {
+          "male": "Modern Zulu men are in all professions while maintaining cultural pride. Traditional ceremonies remain important.",
+          "female": "Zulu women are in professions while many maintain traditional practices. Reed Dance (Umkhosi Womhlanga) continues."
+        }
+      },
+      "culturalTraits": [
+        "Powerful warrior tradition under Shaka Zulu",
+        "Umhlanga (Reed Dance) ceremony",
+        "Isicathamiya music (Ladysmith Black Mambazo)",
+        "Distinctive beehive huts",
+        "Colorful beadwork with meanings",
+        "Ubuntu philosophy"
+      ],
+      "funFacts": [
+        "Shaka Zulu revolutionized warfare in Southern Africa and built a vast empire in the early 1800s",
+        "The Zulu defeated the British at the Battle of Isandlwana (1879) - one of Britain's worst colonial defeats",
+        "Zulu beadwork colors have meanings - white for purity, black for marriage, blue for faithfulness",
+        "Ladysmith Black Mambazo, the Grammy-winning group, performs traditional Isicathamiya",
+        "The Zulu language uses click consonants borrowed from Khoisan languages"
+      ],
+      "traditionalFood": {
+        "staples": ["Phutu (crumbly maize porridge)", "Isijingi (maize porridge with pumpkin)", "Amadumbe (taro)", "Umfino (wild spinach)"],
+        "beverages": ["Umqombothi (traditional beer)", "Amasi (fermented milk)"],
+        "specialDishes": ["Inkobe (samp and beans)", "Uphuthu namasi (phutu with amasi)", "Braai (grilled meat)"],
+        "description": "Zulu cuisine centers on maize and cattle products. Phutu (crumbly porridge) with amasi (sour milk) is a staple. Meat is eaten at celebrations."
+      },
+      "traditionalDance": "Indlamu - powerful war dance with high kicks",
+      "religion": "Traditional Zulu religion (ancestor worship), Christianity",
+      "history": {
+        "origin": "The Zulu were a small clan until Shaka kaSenzangakhona unified neighboring clans into the powerful Zulu Kingdom (1816-1828) through military innovation.",
+        "colonialEra": "The Zulu fought the British in the Anglo-Zulu War (1879). Despite winning at Isandlwana, they were eventually defeated at Ulundi and colonized.",
+        "independence": "During apartheid, the Zulu homeland was KwaZulu. Post-apartheid, the Zulu are the largest ethnic group in South Africa and politically influential.",
+        "keyEvents": ["Shaka unites Zulu clans (1816)", "Mfecane period of wars", "Anglo-Zulu War (1879)", "End of apartheid (1994)"]
+      },
+      "language": {
+        "name": "isiZulu",
+        "speakers": "~14 million",
+        "greeting": "Sawubona",
+        "greetingMeaning": "Hello (I see you)",
+        "additionalGreetings": [
+          { "phrase": "Unjani?", "meaning": "How are you?" },
+          { "phrase": "Ngiyaphila", "meaning": "I am well" },
+          { "phrase": "Sala kahle / Hamba kahle", "meaning": "Stay well / Go well (Goodbye)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ngiyabonga", "meaning": "Thank you" },
+          { "phrase": "Igama lami ngu...", "meaning": "My name is..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Shaka Zulu", "role": "Founder of Zulu Kingdom", "wikipedia": "https://en.wikipedia.org/wiki/Shaka" },
+        { "name": "Mangosuthu Buthelezi", "role": "Political Leader & Prince", "wikipedia": "https://en.wikipedia.org/wiki/Mangosuthu_Buthelezi" },
+        { "name": "Ladysmith Black Mambazo", "role": "Grammy-Winning Choir", "wikipedia": "https://en.wikipedia.org/wiki/Ladysmith_Black_Mambazo" },
+        { "name": "Jacob Zuma", "role": "Former President of South Africa", "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Zuma" },
+        { "name": "Misuzulu kaZwelithini", "role": "Current Zulu King", "wikipedia": "https://en.wikipedia.org/wiki/Misuzulu_kaZwelithini" }
+      ],
+      "description": "The Zulu are South Africa's largest ethnic group, known for Shaka's warrior kingdom, distinctive culture, and isicathamiya music tradition.",
+      "relatedTribes": ["xhosa", "swazi", "ndebele"],
+      "diaspora": {
+        "globalPopulation": "~500,000",
+        "majorCountries": ["UK", "USA", "Australia", "Mozambique"],
+        "breakdown": [
+          { "country": "United Kingdom", "population": "~100,000", "cities": ["London"] },
+          { "country": "United States", "population": "~50,000", "cities": ["New York", "Chicago"] }
+        ],
+        "communities": ["Growing South African diaspora in UK and USA"],
+        "associations": ["Zulu Cultural Association"]
+      }
+    },
+
+    {
+      "id": "xhosa",
+      "name": "Xhosa",
+      "slug": "xhosa",
+      "countries": ["ZA", "LS", "ZW"],
+      "region": "Eastern Cape, South Africa",
+      "population": "~9 million",
+      "populationPercent": "16% (South Africa)",
+      "genderRatio": { "male": 47, "female": 53 },
+      "mapCoordinates": { "lat": -32.35, "lng": 27.41 },
+      "counties": ["Eastern Cape", "Western Cape"],
+      "namePrefixes": ["No", "Tha", "Si", "Lu", "Ma", "Zi"],
+      "commonNames": {
+        "female": ["Nomvula", "Thandiwe", "Nosizwe", "Zoleka", "Pumla", "Nomalanga", "Sindiswa", "Noxolo", "Zukiswa", "Fundiswa"],
+        "male": ["Mandela", "Thabo", "Siyanda", "Vuyani", "Mzwandile", "Xolani", "Sivuyile", "Luthando", "Anele", "Asanda"]
+      },
+      "stereotypes": [
+        "Intellectual tradition",
+        "Political activism",
+        "Strong oral traditions",
+        "Initiation ceremonies",
+        "Ubuntu philosophy",
+        "Click consonants"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Must undergo initiation (ulwaluko)",
+          "Expected to be responsible after initiation",
+          "Protectors and providers",
+          "Political leaders"
+        ],
+        "female": [
+          "Keepers of tradition",
+          "Strong domestic roles",
+          "Respected as mothers",
+          "Umakoti (bride) traditions"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men went through initiation (ulwaluko) to become men. They herded cattle and protected the community.",
+          "female": "Women farmed, raised children, and maintained households. Married women wore distinctive head coverings."
+        },
+        "modern": {
+          "male": "Modern Xhosa men are in professions and politics while initiation remains crucial to identity.",
+          "female": "Xhosa women are prominent in all fields. Traditional ceremonies like umakoti are still practiced."
+        }
+      },
+      "culturalTraits": [
+        "Ulwaluko initiation ceremonies",
+        "Famous click consonants in language",
+        "Strong oral tradition (imbongi praise poetry)",
+        "Distinctive beaded dress and blankets",
+        "Umqombothi brewing tradition",
+        "Anti-apartheid political tradition"
+      ],
+      "funFacts": [
+        "Nelson Mandela was Xhosa - from the Thembu royal family",
+        "Xhosa has three click consonants borrowed from Khoisan languages",
+        "The Xhosa were the first Bantu group to encounter European settlers at the Great Fish River",
+        "Miriam Makeba, 'Mama Africa,' popularized the Xhosa 'click song' globally",
+        "Xhosa initiation is a crucial rite of passage - uninitiated men are considered boys regardless of age"
+      ],
+      "traditionalFood": {
+        "staples": ["Umngqusho (samp and beans)", "Umfino (wild spinach)", "Umphokoqo (crumbly porridge)", "Isijeza (mealie meal)"],
+        "beverages": ["Umqombothi (traditional beer)", "Amasi (fermented milk)"],
+        "specialDishes": ["Umleqwa (free-range chicken)", "Ulusu (tripe)", "Imifino (African greens)"],
+        "description": "Xhosa cuisine features maize and beans. Umngqusho (samp and beans) is a staple. Traditional beer (umqombothi) is brewed for ceremonies."
+      },
+      "traditionalDance": "Umxhentso - energetic dance with stomping and singing",
+      "religion": "Traditional Xhosa religion (ancestor worship), Christianity",
+      "history": {
+        "origin": "The Xhosa are Nguni people who migrated south over centuries. They were among the earliest Bantu groups to encounter European settlers in the Cape.",
+        "colonialEra": "The Xhosa fought nine Frontier Wars against British settlers (1779-1879). The tragic Cattle Killing of 1856-57 devastated the nation.",
+        "independence": "The Xhosa produced key anti-apartheid leaders including Nelson Mandela, Oliver Tambo, and Thabo Mbeki.",
+        "keyEvents": ["Migration to Eastern Cape (pre-1600)", "Frontier Wars (1779-1879)", "Cattle Killing tragedy (1856-57)", "Anti-apartheid movement"]
+      },
+      "language": {
+        "name": "isiXhosa",
+        "speakers": "~9 million",
+        "greeting": "Molo",
+        "greetingMeaning": "Hello (to one person)",
+        "additionalGreetings": [
+          { "phrase": "Molweni", "meaning": "Hello (to many)" },
+          { "phrase": "Unjani?", "meaning": "How are you?" },
+          { "phrase": "Sala kakuhle", "meaning": "Stay well (Goodbye)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Enkosi", "meaning": "Thank you" },
+          { "phrase": "Ndingu...", "meaning": "I am..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Nelson Mandela", "role": "Anti-Apartheid Leader & President", "wikipedia": "https://en.wikipedia.org/wiki/Nelson_Mandela" },
+        { "name": "Miriam Makeba", "role": "'Mama Africa' Singer", "wikipedia": "https://en.wikipedia.org/wiki/Miriam_Makeba" },
+        { "name": "Thabo Mbeki", "role": "Second President of South Africa", "wikipedia": "https://en.wikipedia.org/wiki/Thabo_Mbeki" },
+        { "name": "Oliver Tambo", "role": "ANC Leader", "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Tambo" },
+        { "name": "Winnie Madikizela-Mandela", "role": "Anti-Apartheid Activist", "wikipedia": "https://en.wikipedia.org/wiki/Winnie_Madikizela-Mandela" }
+      ],
+      "description": "The Xhosa are a major South African group known for click consonants, initiation traditions, and producing many anti-apartheid leaders including Nelson Mandela.",
+      "relatedTribes": ["zulu", "ndebele", "swazi"],
+      "diaspora": {
+        "globalPopulation": "~300,000",
+        "majorCountries": ["UK", "USA", "Australia"],
+        "breakdown": [
+          { "country": "United Kingdom", "population": "~80,000", "cities": ["London"] },
+          { "country": "United States", "population": "~30,000", "cities": ["New York", "Atlanta"] }
+        ],
+        "communities": ["Part of broader South African diaspora"],
+        "associations": ["Xhosa Community UK"]
+      }
+    },
+
+    {
+      "id": "shona",
+      "name": "Shona",
+      "slug": "shona",
+      "countries": ["ZW", "MZ", "ZM", "BW"],
+      "region": "Zimbabwe",
+      "population": "~14 million",
+      "populationPercent": "70% (Zimbabwe)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -17.82, "lng": 31.04 },
+      "counties": ["Mashonaland", "Manicaland", "Midlands"],
+      "namePrefixes": ["Ta", "Chi", "Ru", "Ti", "Sha", "Mu"],
+      "commonNames": {
+        "female": ["Tariro", "Chiedza", "Rudo", "Tendai", "Shuvai", "Fadzai", "Nyasha", "Tsitsi", "Rumbidzai", "Tapiwa"],
+        "male": ["Tatenda", "Tapiwa", "Takudzwa", "Tanaka", "Tinashe", "Tendai", "Simba", "Tawanda", "Kudakwashe", "Farai"]
+      },
+      "stereotypes": [
+        "Hardworking farmers",
+        "Musical traditions",
+        "Stone sculpture art",
+        "Resilient people",
+        "Strong family values",
+        "Spiritual traditions"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Providers and protectors",
+          "Agricultural work",
+          "Hunters traditionally",
+          "Family decision makers"
+        ],
+        "female": [
+          "Homemakers and mothers",
+          "Agricultural work",
+          "Brewing traditional beer",
+          "Strong family influence"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were farmers, hunters, and warriors. They paid lobola (bride price) and led families.",
+          "female": "Women farmed, raised children, and brewed beer for ceremonies. They had specific domestic responsibilities."
+        },
+        "modern": {
+          "male": "Modern Shona men are in professions while maintaining cultural values. Education is emphasized.",
+          "female": "Shona women are increasingly educated and in professions while maintaining traditional roles."
+        }
+      },
+      "culturalTraits": [
+        "Great Zimbabwe ancient civilization",
+        "Famous stone sculpture tradition",
+        "Mbira music tradition (thumb piano)",
+        "Bira spirit possession ceremonies",
+        "Strong ancestor worship",
+        "Totemic clan system (mitupo)"
+      ],
+      "funFacts": [
+        "The Shona built Great Zimbabwe, one of Africa's most impressive ancient cities, without mortar",
+        "Shona stone sculpture is internationally renowned and collected by major museums",
+        "The mbira (thumb piano) is central to Shona spiritual ceremonies and was called 'the devil's instrument' by missionaries",
+        "Each Shona clan has a totem (mutupo) - members of the same totem cannot marry",
+        "Zimbabwe is named after Great Zimbabwe ('stone houses' in Shona)"
+      ],
+      "traditionalFood": {
+        "staples": ["Sadza (maize porridge)", "Muriwo (vegetables)", "Nyama (meat)", "Matemba (kapenta fish)"],
+        "beverages": ["Maheu (fermented maize drink)", "Seven Days (traditional beer)"],
+        "specialDishes": ["Madora (mopane worms)", "Nhopi (pumpkin mash)", "Sadza ne nyama", "Rupiza (wild fruit)"],
+        "description": "Shona cuisine centers on sadza (thick maize porridge) eaten with relishes of vegetables, meat, or fish. Mopane worms are a delicacy."
+      },
+      "traditionalDance": "Jerusarema - energetic harvest dance",
+      "religion": "Traditional religion (Mwari, ancestor worship), Christianity",
+      "history": {
+        "origin": "The Shona have lived in Zimbabwe for over 1,000 years. They built the Great Zimbabwe civilization (11th-15th century) and later the Mutapa and Rozvi empires.",
+        "colonialEra": "Cecil Rhodes's British South Africa Company colonized the region (1890), naming it Rhodesia. The Shona fought in the First Chimurenga (1896-97).",
+        "independence": "The Shona led the liberation war (Second Chimurenga, 1964-1979). Robert Mugabe, a Shona, became the first Prime Minister of Zimbabwe (1980).",
+        "keyEvents": ["Great Zimbabwe civilization (1100-1450)", "Mutapa Empire (1430-1760)", "British colonization (1890)", "Independence (1980)"]
+      },
+      "language": {
+        "name": "ChiShona",
+        "speakers": "~14 million",
+        "greeting": "Mhoro",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Mangwanani", "meaning": "Good morning" },
+          { "phrase": "Makadii?", "meaning": "How are you?" },
+          { "phrase": "Chisarai zvakanaka", "meaning": "Goodbye (stay well)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Maita basa", "meaning": "Thank you (for work done)" },
+          { "phrase": "Ndinonzi...", "meaning": "I am called..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Robert Mugabe", "role": "First Prime Minister/President of Zimbabwe", "wikipedia": "https://en.wikipedia.org/wiki/Robert_Mugabe" },
+        { "name": "Thomas Mapfumo", "role": "'Lion of Zimbabwe' Musician", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mapfumo" },
+        { "name": "Stella Chiweshe", "role": "Mbira Queen", "wikipedia": "https://en.wikipedia.org/wiki/Stella_Chiweshe" },
+        { "name": "Herbert Chitepo", "role": "Liberation War Hero", "wikipedia": "https://en.wikipedia.org/wiki/Herbert_Chitepo" },
+        { "name": "Tendai Biti", "role": "Political Leader", "wikipedia": "https://en.wikipedia.org/wiki/Tendai_Biti" }
+      ],
+      "description": "The Shona are Zimbabwe's largest ethnic group, builders of Great Zimbabwe, and known for stone sculpture, mbira music, and agricultural traditions.",
+      "relatedTribes": ["ndebele", "tonga", "kalanga"],
+      "diaspora": {
+        "globalPopulation": "~2 million",
+        "majorCountries": ["South Africa", "UK", "USA", "Botswana"],
+        "breakdown": [
+          { "country": "South Africa", "population": "~1 million", "cities": ["Johannesburg", "Cape Town"] },
+          { "country": "United Kingdom", "population": "~200,000", "cities": ["London", "Manchester"] }
+        ],
+        "communities": ["Large Zimbabwean diaspora in South Africa and UK due to economic migration"],
+        "associations": ["Zimbabwe Association UK"]
+      }
+    },
+
+    {
+      "id": "oromo",
+      "name": "Oromo",
+      "slug": "oromo",
+      "countries": ["ET", "KE", "SO"],
+      "region": "Ethiopia (Oromia)",
+      "population": "~40 million",
+      "populationPercent": "35% (Ethiopia)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 8.05, "lng": 39.00 },
+      "counties": ["Oromia Region"],
+      "namePrefixes": ["Ob", "Ad", "Gal", "Fay", "Gum", "Ab"],
+      "commonNames": {
+        "female": ["Obse", "Adanech", "Galane", "Fayisa", "Gemechu", "Ayantu", "Biftu", "Hawii", "Odaa", "Lelise"],
+        "male": ["Abebe", "Bekele", "Kebede", "Haile", "Tolosa", "Gurmessa", "Chala", "Daba", "Gemechu", "Fayisa"]
+      },
+      "stereotypes": [
+        "Distance runners",
+        "Democratic traditions (Gadaa)",
+        "Horse culture",
+        "Coffee origin",
+        "Strong oral traditions",
+        "Pastoral and agricultural"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Warriors and herders",
+          "Participate in Gadaa governance",
+          "Providers and protectors",
+          "Horsemen"
+        ],
+        "female": [
+          "Homemakers and mothers",
+          "Agricultural work",
+          "Coffee ceremony hosts",
+          "Respected as Hadha (mothers)"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men participated in the Gadaa system of age-grade governance. They were warriors, herders, and farmers.",
+          "female": "Women managed households and farming. The Siqqee institution gave women specific rights and protections."
+        },
+        "modern": {
+          "male": "Modern Oromo men are in professions while Gadaa principles continue. Many are world-class athletes.",
+          "female": "Oromo women are increasingly in professions while maintaining cultural practices like coffee ceremonies."
+        }
+      },
+      "culturalTraits": [
+        "Gadaa democratic governance system (UNESCO heritage)",
+        "Irreecha thanksgiving festival",
+        "Birthplace of coffee culture",
+        "Famous long-distance runners",
+        "Horse culture (Fardaa)",
+        "Strong oral tradition and poetry (Geerarsa)"
+      ],
+      "funFacts": [
+        "The Oromo Gadaa system is a sophisticated democratic governance system recognized by UNESCO",
+        "Coffee was discovered in the Oromia region - the Oromo have been drinking it for over 1,000 years",
+        "Oromo athletes have won numerous Olympic medals in distance running - including Abebe Bikila and Haile Gebrselassie",
+        "The Oromo are the largest Cushitic-speaking people in Africa",
+        "The Irreecha festival at Lake Hora attracts millions of Oromo each year"
+      ],
+      "traditionalFood": {
+        "staples": ["Injera (sourdough flatbread)", "Marqaa (porridge)", "Chechebsa (flatbread with butter)", "Genfo (thick porridge)"],
+        "beverages": ["Buna (coffee)", "Farsoo (honey wine)"],
+        "specialDishes": ["Anchote (root vegetable)", "Qoocoo (butter and barley)", "Kurkufa (flour balls in sauce)"],
+        "description": "Oromo cuisine features grain-based dishes and the famous coffee ceremony. Coffee (buna) is central to social and spiritual life."
+      },
+      "traditionalDance": "Dhichisaa - energetic group dance with singing",
+      "religion": "Waaqeffanna (traditional religion), Islam, Christianity",
+      "history": {
+        "origin": "The Oromo are Cushitic people who have lived in the Horn of Africa for millennia. They expanded significantly in the 16th century across what is now Ethiopia.",
+        "colonialEra": "The Oromo were never colonized by Europeans, but were incorporated into the Ethiopian Empire under Menelik II in the late 1800s.",
+        "independence": "The Oromo have led protests for greater autonomy within Ethiopia. In 2018, Abiy Ahmed, of Oromo heritage, became Prime Minister.",
+        "keyEvents": ["Oromo expansion (1500s)", "Incorporation into Ethiopia (1880s)", "Oromo protests (2014-2018)", "Abiy Ahmed as PM (2018)"]
+      },
+      "language": {
+        "name": "Afaan Oromoo (Oromo)",
+        "speakers": "~40 million",
+        "greeting": "Akkam",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Fayyaadha?", "meaning": "Are you well?" },
+          { "phrase": "Nagaatti", "meaning": "Goodbye (in peace)" },
+          { "phrase": "Baga nagaan dhufte", "meaning": "Welcome (in peace)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Galatoomaa", "meaning": "Thank you" },
+          { "phrase": "Maqaan koo...", "meaning": "My name is..." }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet (Qubee)"
+      },
+      "famousPeople": [
+        { "name": "Abebe Bikila", "role": "Olympic Marathon Legend", "wikipedia": "https://en.wikipedia.org/wiki/Abebe_Bikila" },
+        { "name": "Haile Gebrselassie", "role": "Distance Running Legend", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie" },
+        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Laureate", "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed" },
+        { "name": "Tirunesh Dibaba", "role": "Olympic Champion Runner", "wikipedia": "https://en.wikipedia.org/wiki/Tirunesh_Dibaba" },
+        { "name": "Kenenisa Bekele", "role": "Distance Running Champion", "wikipedia": "https://en.wikipedia.org/wiki/Kenenisa_Bekele" }
+      ],
+      "description": "The Oromo are Ethiopia's largest ethnic group, known for the Gadaa democratic system, coffee culture, and producing world-class distance runners.",
+      "relatedTribes": ["amhara", "somali", "afar"],
+      "diaspora": {
+        "globalPopulation": "~1 million",
+        "majorCountries": ["USA", "Norway", "UK", "Germany"],
+        "breakdown": [
+          { "country": "United States", "population": "~300,000", "cities": ["Minneapolis", "Washington DC", "Seattle"] },
+          { "country": "Norway", "population": "~20,000", "cities": ["Oslo"] }
+        ],
+        "communities": ["Large Oromo community in Minneapolis area"],
+        "associations": ["Oromo Studies Association", "Oromo Community of Minnesota"]
+      }
+    },
+
+    {
+      "id": "amhara",
+      "name": "Amhara",
+      "slug": "amhara",
+      "countries": ["ET", "ER"],
+      "region": "Amhara Region, Ethiopia",
+      "population": "~32 million",
+      "populationPercent": "27% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 11.59, "lng": 37.39 },
+      "counties": ["Amhara Region", "Addis Ababa"],
+      "namePrefixes": ["Ab", "Ge", "Te", "Me", "Ha", "Be"],
+      "commonNames": {
+        "female": ["Abeba", "Tigist", "Meseret", "Hiwot", "Bethlehem", "Selamawit", "Meron", "Kidist", "Helen", "Tsehay"],
+        "male": ["Abebe", "Getachew", "Tekle", "Mekonnen", "Haile", "Bekele", "Tesfahun", "Alemayehu", "Dawit", "Yohannes"]
+      },
+      "stereotypes": [
+        "Proud imperial heritage",
+        "Orthodox Christian tradition",
+        "Political dominance historically",
+        "Intellectual tradition",
+        "Strong coffee culture",
+        "Highland culture"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traditionally warriors and leaders",
+          "Providers for family",
+          "Religious participation (priests)",
+          "Landowners historically"
+        ],
+        "female": [
+          "Strong domestic roles",
+          "Coffee ceremony hosts",
+          "Religious devotion",
+          "Respected as mothers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, priests, farmers, and nobles. The Ethiopian Orthodox Church was central to male roles.",
+          "female": "Women managed households, prepared elaborate foods and coffee ceremonies. Church schools educated some women."
+        },
+        "modern": {
+          "male": "Modern Amhara men are in professions while maintaining Orthodox traditions and cultural values.",
+          "female": "Amhara women are increasingly in professions while maintaining religious and cultural practices."
+        }
+      },
+      "culturalTraits": [
+        "Ethiopian Orthodox Christianity",
+        "Ancient Ge'ez script tradition",
+        "Elaborate coffee ceremony",
+        "Imperial heritage (Solomonic dynasty)",
+        "Timkat (Epiphany) festival",
+        "Distinctive cuisine and dress"
+      ],
+      "funFacts": [
+        "Amharic is the official language of Ethiopia and uses the ancient Ge'ez script (one of Africa's oldest writing systems)",
+        "The Amhara claim descent from King Solomon and the Queen of Sheba through the Solomonic dynasty",
+        "Ethiopian Orthodox Christianity dates to the 4th century - one of the world's oldest Christian traditions",
+        "The Ethiopian coffee ceremony is a sophisticated ritual that can take hours",
+        "Lalibela's rock-hewn churches are UNESCO sites built in the Amhara highlands"
+      ],
+      "traditionalFood": {
+        "staples": ["Injera (sourdough flatbread)", "Doro wot (chicken stew)", "Tibs (sautéed meat)", "Kitfo (raw minced beef)"],
+        "beverages": ["Buna (coffee)", "Tej (honey wine)", "Tella (traditional beer)"],
+        "specialDishes": ["Shiro (chickpea stew)", "Gomen (collard greens)", "Beyaynetu (vegetarian platter for fasting)"],
+        "description": "Amhara cuisine features injera with various wots (stews). Ethiopian Orthodox fasting traditions have created extensive vegetarian dishes."
+      },
+      "traditionalDance": "Eskista - shoulder-shaking dance",
+      "religion": "Ethiopian Orthodox Christianity (predominantly)",
+      "history": {
+        "origin": "The Amhara have been central to Ethiopian civilization for over 2,000 years. The Solomonic dynasty, claiming descent from Solomon and Sheba, ruled Ethiopia until 1974.",
+        "colonialEra": "Ethiopia was never colonized (except briefly by Italy, 1936-1941). Amhara emperors like Menelik II and Haile Selassie maintained independence.",
+        "independence": "The 1974 revolution ended the monarchy. The Amhara have remained politically influential though competing with other groups.",
+        "keyEvents": ["Aksumite Empire (1st-7th century)", "Solomonic restoration (1270)", "Menelik II expansion (1880s)", "1974 Revolution", "Current tensions"]
+      },
+      "language": {
+        "name": "Amharic (Amarigna)",
+        "speakers": "~32 million",
+        "greeting": "Selam",
+        "greetingMeaning": "Peace / Hello",
+        "additionalGreetings": [
+          { "phrase": "Endemin neh/nesh?", "meaning": "How are you? (m/f)" },
+          { "phrase": "Dehna negn", "meaning": "I am fine" },
+          { "phrase": "Ciao", "meaning": "Goodbye (informal)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ameseginalehu", "meaning": "Thank you" },
+          { "phrase": "Sime... nebegn", "meaning": "My name is..." }
+        ],
+        "family": "Semitic (Afro-Asiatic)",
+        "writingSystem": "Ge'ez script (Ethiopic)"
+      },
+      "famousPeople": [
+        { "name": "Haile Selassie", "role": "Last Emperor of Ethiopia", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie" },
+        { "name": "Menelik II", "role": "Emperor who defeated Italy at Adwa", "wikipedia": "https://en.wikipedia.org/wiki/Menelik_II" },
+        { "name": "Tedros Adhanom", "role": "WHO Director-General", "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom" },
+        { "name": "Tewodros II", "role": "Emperor & Unifier", "wikipedia": "https://en.wikipedia.org/wiki/Tewodros_II" },
+        { "name": "Mengistu Haile Mariam", "role": "Former Head of State", "wikipedia": "https://en.wikipedia.org/wiki/Mengistu_Haile_Mariam" }
+      ],
+      "description": "The Amhara are a major Ethiopian ethnic group known for Orthodox Christianity, the ancient Ge'ez script, imperial heritage, and elaborate coffee ceremony tradition.",
+      "relatedTribes": ["tigray", "oromo", "gurage"],
+      "diaspora": {
+        "globalPopulation": "~1 million",
+        "majorCountries": ["USA", "Israel", "UK", "Germany"],
+        "breakdown": [
+          { "country": "United States", "population": "~250,000", "cities": ["Washington DC", "Los Angeles", "Seattle"] },
+          { "country": "Israel", "population": "~150,000", "cities": ["Tel Aviv", "Jerusalem"] }
+        ],
+        "communities": ["Large Ethiopian community in Washington DC area", "Beta Israel (Ethiopian Jews) in Israel"],
+        "associations": ["Ethiopian Community Association of Greater Washington"]
+      }
+    },
+
+    {
+      "id": "wolof",
+      "name": "Wolof",
+      "slug": "wolof",
+      "countries": ["SN", "GM", "MR"],
+      "region": "Senegal & Gambia",
+      "population": "~6 million",
+      "populationPercent": "43% (Senegal)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 14.69, "lng": -17.44 },
+      "counties": ["Dakar", "Thies", "Saint-Louis", "Kaolack"],
+      "namePrefixes": ["Am", "Fat", "Ous", "Modou", "Ma", "Ab"],
+      "commonNames": {
+        "female": ["Fatou", "Aminata", "Aissatou", "Mariama", "Ndèye", "Awa", "Khady", "Astou", "Mame", "Coumba"],
+        "male": ["Amadou", "Ousmane", "Modou", "Ibrahima", "Moussa", "Cheikh", "Mamadou", "Abdoulaye", "Pape", "Babacar"]
+      },
+      "stereotypes": [
+        "Stylish dressers",
+        "Teranga hospitality",
+        "Tea ceremony culture",
+        "Sufi Muslim traditions",
+        "Wrestling enthusiasts",
+        "Urban sophisticates"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Provide for family",
+          "Wrestling fans and participants",
+          "Business and trade",
+          "Religious followers (marabouts)"
+        ],
+        "female": [
+          "Fashion-forward dressers",
+          "Strong business women",
+          "Hospitality experts",
+          "Family managers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were farmers, fishermen, traders, and griots (oral historians). The caste system defined roles.",
+          "female": "Women managed households and were central to family. Signares (wealthy mixed-race women) were historically influential."
+        },
+        "modern": {
+          "male": "Modern Wolof men are in business, arts, and professions. Many follow Sufi brotherhoods.",
+          "female": "Wolof women are prominent in business, fashion, and hospitality. Teranga remains central to identity."
+        }
+      },
+      "culturalTraits": [
+        "Teranga (legendary hospitality)",
+        "Ataya tea ceremony",
+        "Colorful fashion and boubous",
+        "Senegalese wrestling (Laamb)",
+        "Sufi Muslim brotherhoods (Mourides, Tijanes)",
+        "Sabar drum traditions"
+      ],
+      "funFacts": [
+        "Wolof is the lingua franca of Senegal - spoken by over 90% of the population",
+        "Teranga (hospitality) is so central to Wolof culture that Senegal is called the 'Country of Teranga'",
+        "Senegalese wrestling (Laamb) is the national sport - wrestlers are major celebrities",
+        "The Grand Magal of Touba attracts millions of Mouride Sufi followers annually",
+        "Ataya (tea ceremony) involves three rounds of increasingly sweet tea"
+      ],
+      "traditionalFood": {
+        "staples": ["Thiéboudienne (fish and rice - national dish)", "Mafé (peanut stew)", "Yassa (onion sauce with meat)", "Ceebu jën"],
+        "beverages": ["Ataya (mint tea)", "Bissap (hibiscus drink)", "Bouye (baobab juice)"],
+        "specialDishes": ["Thiéré (couscous)", "Lakh (millet porridge)", "Pastels (fried pastries)"],
+        "description": "Wolof cuisine is flavorful with rice as the staple. Thiéboudienne (fish and rice) is the national dish. Peanuts are used extensively."
+      },
+      "traditionalDance": "Sabar - energetic drum and dance tradition",
+      "religion": "Islam (predominantly Sufi - Mouride, Tijane brotherhoods)",
+      "history": {
+        "origin": "The Wolof established powerful kingdoms including the Jolof Empire (1360-1549) that dominated Senegambia before Portuguese arrival.",
+        "colonialEra": "The French colonized Senegal extensively. Wolof became the urban lingua franca. The Four Communes had French citizenship from 1848.",
+        "independence": "At independence (1960), Léopold Sédar Senghor, though not Wolof, led Senegal. The Wolof dominate urban and political life.",
+        "keyEvents": ["Jolof Empire (1360-1549)", "French colonization (1659+)", "Independence (1960)"]
+      },
+      "language": {
+        "name": "Wolof",
+        "speakers": "~6 million native, ~10 million total",
+        "greeting": "Nanga def?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Mangi fi rekk", "meaning": "I'm fine (just here)" },
+          { "phrase": "Jaam ngaam?", "meaning": "Are you at peace?" },
+          { "phrase": "Mangi dem", "meaning": "I'm going / Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Jërëjëf", "meaning": "Thank you" },
+          { "phrase": "Maa ngi tudd...", "meaning": "My name is..." }
+        ],
+        "family": "Niger-Congo (Atlantic)",
+        "writingSystem": "Latin alphabet, Arabic script (Wolofal)"
+      },
+      "famousPeople": [
+        { "name": "Youssou N'Dour", "role": "Grammy-Winning Musician", "wikipedia": "https://en.wikipedia.org/wiki/Youssou_N%27Dour" },
+        { "name": "Akon", "role": "International Music Star", "wikipedia": "https://en.wikipedia.org/wiki/Akon" },
+        { "name": "Amadou Bamba", "role": "Founder of Mouride Brotherhood", "wikipedia": "https://en.wikipedia.org/wiki/Amadou_Bamba" },
+        { "name": "Sadio Mané", "role": "Football Star", "wikipedia": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9" },
+        { "name": "Léopold Sédar Senghor", "role": "First President of Senegal", "wikipedia": "https://en.wikipedia.org/wiki/L%C3%A9opold_S%C3%A9dar_Senghor" }
+      ],
+      "description": "The Wolof are Senegal's largest ethnic group, known for teranga hospitality, colorful fashion, wrestling tradition, and Sufi Islamic brotherhoods.",
+      "relatedTribes": ["serer", "fulani", "mandinka"],
+      "diaspora": {
+        "globalPopulation": "~500,000",
+        "majorCountries": ["France", "USA", "Italy", "Spain"],
+        "breakdown": [
+          { "country": "France", "population": "~200,000", "cities": ["Paris", "Marseille"] },
+          { "country": "United States", "population": "~50,000", "cities": ["New York", "Atlanta"] }
+        ],
+        "communities": ["Large Senegalese community in Paris area", "Harlem has historic Senegalese community"],
+        "associations": ["Senegalese Association in America"]
+      }
+    },
+
+    {
+      "id": "baganda",
+      "name": "Baganda",
+      "slug": "baganda",
+      "countries": ["UG"],
+      "region": "Central Uganda (Buganda)",
+      "population": "~6 million",
+      "populationPercent": "17% (Uganda)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 0.35, "lng": 32.58 },
+      "counties": ["Central Region", "Kampala", "Wakiso", "Mukono"],
+      "namePrefixes": ["Na", "Ba", "Mu", "Wa", "Ka", "Ss"],
+      "commonNames": {
+        "female": ["Nakato", "Nabirye", "Nalubega", "Namukwaya", "Nakimera", "Namutebi", "Nabatanzi", "Nanyonjo", "Nalweyiso", "Nakaweesa"],
+        "male": ["Ssekandi", "Mukasa", "Wasswa", "Kato", "Mulumba", "Muwanga", "Ssempala", "Kiggundu", "Lubega", "Namugera"]
+      },
+      "stereotypes": [
+        "Culturally sophisticated",
+        "Political influence",
+        "Business-minded",
+        "Strong monarchy tradition",
+        "Educated class",
+        "Proud heritage"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Providers and leaders",
+          "Expected to build homes",
+          "Clan responsibilities",
+          "Political participation"
+        ],
+        "female": [
+          "Homemakers and mothers",
+          "Carry clan traditions",
+          "Expected to kneel when greeting elders",
+          "Strong family influence"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were farmers, craftsmen, and warriors. The Kabaka (king) led a sophisticated hierarchical society.",
+          "female": "Women farmed and managed households. Royal women (Namasole - queen mother) had significant power."
+        },
+        "modern": {
+          "male": "Modern Baganda men are in professions while maintaining cultural practices. Clan meetings remain important.",
+          "female": "Baganda women are in professions while many maintain traditional greeting customs and clan connections."
+        }
+      },
+      "culturalTraits": [
+        "Powerful Kabaka monarchy (restored 1993)",
+        "52 clans with distinct totems",
+        "Elaborate funeral and coronation ceremonies",
+        "Distinctive bark cloth tradition",
+        "Twins have special cultural significance",
+        "Sophisticated pre-colonial bureaucracy"
+      ],
+      "funFacts": [
+        "The Buganda kingdom was one of Africa's most sophisticated pre-colonial states with a parliamentary system (Lukiiko)",
+        "Twins (Balongo) are celebrated with special ceremonies and naming traditions",
+        "Every Muganda belongs to one of 52 clans, each with a totem animal",
+        "Bark cloth making was invented by the Baganda and is UNESCO-recognized",
+        "The Kabaka's palace at Mengo was one of Africa's largest pre-colonial structures"
+      ],
+      "traditionalFood": {
+        "staples": ["Matooke (steamed plantain)", "Luwombo (steamed banana-leaf parcels)", "Groundnut sauce", "Posho (maize meal)"],
+        "beverages": ["Mwenge (banana beer)", "Waragi (local gin)"],
+        "specialDishes": ["Nsenene (grasshoppers)", "Emmere (rice with groundnuts)", "Chicken luwombo"],
+        "description": "Baganda cuisine centers on matooke (plantain) steamed in banana leaves. Luwombo, meat or chicken steamed in banana leaves with groundnut sauce, is served at ceremonies."
+      },
+      "traditionalDance": "Bakisimba - graceful dance with waist movements",
+      "religion": "Christianity (Catholic, Anglican), Islam, Traditional beliefs",
+      "history": {
+        "origin": "The Buganda kingdom was founded around the 14th century on the northern shores of Lake Victoria. It grew into one of East Africa's most powerful kingdoms.",
+        "colonialEra": "The British made Buganda a protectorate in 1894, using indirect rule through the Kabaka. Buganda maintained significant autonomy.",
+        "independence": "At independence (1962), the Kabaka became Uganda's first president. Milton Obote abolished kingdoms in 1967; they were restored in 1993.",
+        "keyEvents": ["Kingdom founding (1300s)", "British protectorate (1894)", "Independence & monarchy (1962)", "Abolition (1967)", "Restoration (1993)"]
+      },
+      "language": {
+        "name": "Luganda",
+        "speakers": "~6 million",
+        "greeting": "Oli otya?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Wasuze otya?", "meaning": "Good morning (How did you wake?)" },
+          { "phrase": "Gyendi", "meaning": "I'm fine" },
+          { "phrase": "Weeraba", "meaning": "Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Webale", "meaning": "Thank you" },
+          { "phrase": "Nze ndi...", "meaning": "I am..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Kabaka Mutebi II", "role": "Current King of Buganda", "wikipedia": "https://en.wikipedia.org/wiki/Mutebi_II_of_Buganda" },
+        { "name": "Apollo Milton Obote", "role": "First PM & President of Uganda", "wikipedia": "https://en.wikipedia.org/wiki/Milton_Obote" },
+        { "name": "Philly Lutaaya", "role": "Musician & AIDS Activist", "wikipedia": "https://en.wikipedia.org/wiki/Philly_Lutaaya" },
+        { "name": "Mutesa I", "role": "Kabaka who met Stanley", "wikipedia": "https://en.wikipedia.org/wiki/Mutesa_I_of_Buganda" },
+        { "name": "Bobi Wine", "role": "Politician & Musician", "wikipedia": "https://en.wikipedia.org/wiki/Bobi_Wine" }
+      ],
+      "description": "The Baganda are Uganda's largest ethnic group, known for their sophisticated kingdom, clan system, bark cloth tradition, and matooke cuisine.",
+      "relatedTribes": ["banyankole", "basoga", "banyoro"],
+      "diaspora": {
+        "globalPopulation": "~200,000",
+        "majorCountries": ["UK", "USA", "South Africa", "Kenya"],
+        "breakdown": [
+          { "country": "United Kingdom", "population": "~50,000", "cities": ["London"] },
+          { "country": "United States", "population": "~30,000", "cities": ["Boston", "Washington DC"] }
+        ],
+        "communities": ["Ugandan community in UK is largely Baganda"],
+        "associations": ["Buganda Society UK", "Ugandan North American Association"]
+      }
+    },
+
+    {
+      "id": "hutu_tutsi",
+      "name": "Banyarwanda (Hutu, Tutsi, Twa)",
+      "slug": "banyarwanda",
+      "countries": ["RW", "BI", "UG", "CD"],
+      "region": "Rwanda & Burundi",
+      "population": "~20 million",
+      "populationPercent": "99% (Rwanda)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -1.94, "lng": 29.87 },
+      "counties": ["Rwanda", "Burundi"],
+      "namePrefixes": ["Mu", "Nta", "Uwa", "Ha", "Ny"],
+      "commonNames": {
+        "female": ["Uwimana", "Mukamana", "Nyiramana", "Ineza", "Divine", "Vestine", "Sonia", "Claudette", "Odette", "Amahoro"],
+        "male": ["Habimana", "Ntawukuliryayo", "Ndayisaba", "Mugabo", "Hirwa", "Kalisa", "Nshimiyimana", "Nkurunziza", "Kagame", "Rukundo"]
+      },
+      "stereotypes": [
+        "Resilient and hardworking",
+        "Reconciliation efforts",
+        "Clean and organized",
+        "Development-focused",
+        "Coffee producers",
+        "Strong leadership"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traditionally cattle herders",
+          "Providers and protectors",
+          "Political leaders",
+          "Warriors historically"
+        ],
+        "female": [
+          "Homemakers and mothers",
+          "Agricultural work",
+          "Increasingly in leadership",
+          "Strong family managers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herded cattle, governed, and protected. The Mwami (king) led a hierarchical society.",
+          "female": "Women farmed and managed households. Royal women had specific ceremonial roles."
+        },
+        "modern": {
+          "male": "Modern Rwandan men are in professions and business. Post-genocide reconciliation emphasizes unity over ethnic division.",
+          "female": "Rwanda has the world's highest percentage of women in parliament. Women are prominent in all sectors."
+        }
+      },
+      "culturalTraits": [
+        "Umuganda (community work days)",
+        "Intore warrior dance tradition",
+        "Reconciliation through Gacaca courts",
+        "Imigongo cow dung art",
+        "Coffee and tea culture",
+        "Unity policy (no ethnic labels)"
+      ],
+      "funFacts": [
+        "Rwanda has the highest percentage of women in parliament (61%) in the world",
+        "Umuganda - mandatory monthly community service - keeps Rwanda remarkably clean",
+        "Rwanda is called the 'Land of a Thousand Hills' for its mountainous terrain",
+        "Plastic bags are banned in Rwanda since 2008 - one of the world's strictest bans",
+        "The Gacaca community courts processed over 1.9 million genocide cases"
+      ],
+      "traditionalFood": {
+        "staples": ["Isombe (cassava leaves)", "Ugali (maize porridge)", "Ikinyiga (beans)", "Ubugari (cassava flour porridge)"],
+        "beverages": ["Ikivuguto (fermented milk)", "Urwagwa (banana beer)", "Ikigage (sorghum beer)"],
+        "specialDishes": ["Mizuzu (fried plantains)", "Ibihaza (pumpkin)", "Brochettes (grilled meat skewers)"],
+        "description": "Rwandan cuisine features beans, plantains, and cassava. Brochettes (grilled meat skewers) are popular. Meals are typically simple and communal."
+      },
+      "traditionalDance": "Intore - warrior dance with dramatic leaps",
+      "religion": "Christianity (Catholic majority), Traditional beliefs",
+      "history": {
+        "origin": "The Banyarwanda have lived in the Great Lakes region for centuries. The Rwandan kingdom was established by the 15th century under the Tutsi-led Nyiginya dynasty.",
+        "colonialEra": "Germany (1884-1916) and Belgium (1916-1962) colonized Rwanda-Burundi. Belgium institutionalized ethnic ID cards, hardening divisions.",
+        "independence": "Independence in 1962 was followed by Hutu-Tutsi conflicts. The 1994 genocide killed ~800,000, mostly Tutsi. Post-genocide Rwanda emphasizes unity.",
+        "keyEvents": ["Kingdom established (1400s)", "Colonial ethnic policies", "1994 Genocide", "Reconciliation and rebuilding"]
+      },
+      "language": {
+        "name": "Kinyarwanda",
+        "speakers": "~12 million",
+        "greeting": "Muraho",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Amakuru?", "meaning": "How are you? (What news?)" },
+          { "phrase": "Ni meza", "meaning": "I'm fine (It's good)" },
+          { "phrase": "Murabeho", "meaning": "Goodbye (Stay well)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Murakoze", "meaning": "Thank you" },
+          { "phrase": "Nitwa...", "meaning": "My name is..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Paul Kagame", "role": "President of Rwanda", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Kagame" },
+        { "name": "Immaculée Ilibagiza", "role": "Genocide Survivor & Author", "wikipedia": "https://en.wikipedia.org/wiki/Immacul%C3%A9e_Ilibagiza" },
+        { "name": "Paul Rusesabagina", "role": "Hotel Rwanda Hero", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Rusesabagina" },
+        { "name": "King Mutara III Rudahigwa", "role": "Last Traditional King", "wikipedia": "https://en.wikipedia.org/wiki/Mutara_III_Rudahigwa" }
+      ],
+      "description": "The Banyarwanda (Rwandans) share language and culture despite historical Hutu-Tutsi-Twa divisions. Post-genocide Rwanda emphasizes national unity and reconciliation.",
+      "relatedTribes": ["barundi", "baganda", "banyankole"],
+      "diaspora": {
+        "globalPopulation": "~1 million",
+        "majorCountries": ["DR Congo", "Uganda", "Belgium", "USA"],
+        "breakdown": [
+          { "country": "DR Congo", "population": "~500,000", "cities": ["Goma", "Bukavu"] },
+          { "country": "Belgium", "population": "~30,000", "cities": ["Brussels"] }
+        ],
+        "communities": ["Historical refugee communities in neighboring countries", "Growing diaspora in Europe and North America"],
+        "associations": ["Rwandan Diaspora Global Network"]
+      }
+    },
+
+    {
+      "id": "luba",
+      "name": "Luba",
+      "slug": "luba",
+      "countries": ["CD", "ZM"],
+      "region": "Central DR Congo",
+      "population": "~18 million",
+      "populationPercent": "18% (DR Congo)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -6.12, "lng": 23.58 },
+      "counties": ["Kasai", "Katanga", "Maniema"],
+      "namePrefixes": ["Mu", "Tshi", "Ka", "Ngu", "Lua"],
+      "commonNames": {
+        "female": ["Mbuyi", "Tshiela", "Kabongo", "Nseka", "Mujinga", "Kapinga", "Ngalula", "Mulumba", "Cibangu", "Kalala"],
+        "male": ["Kabila", "Tshisekedi", "Ilunga", "Kalala", "Kongolo", "Mulumba", "Kasongo", "Mukendi", "Kabuya", "Lunda"]
+      },
+      "stereotypes": [
+        "Skilled artists and craftspeople",
+        "Political influence",
+        "Strong oral traditions",
+        "Intellectual heritage",
+        "Proud history",
+        "Resilient people"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traditionally hunters and warriors",
+          "Craftsmen (iron, wood)",
+          "Political leaders",
+          "Providers"
+        ],
+        "female": [
+          "Agricultural work",
+          "Pottery and crafts",
+          "Homemakers",
+          "Market traders"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were hunters, warriors, and craftsmen. The Mulopwe (king) led a sophisticated kingdom.",
+          "female": "Women farmed, made pottery, and raised families. Some royal women held political power."
+        },
+        "modern": {
+          "male": "Modern Luba men are in professions and politics. The region has produced major Congolese leaders.",
+          "female": "Luba women are increasingly in professions while maintaining cultural practices."
+        }
+      },
+      "culturalTraits": [
+        "Famous Luba Kingdom (1585-1889)",
+        "Memory boards (Lukasa) for recording history",
+        "Sophisticated religious system",
+        "Master wood carvers and metalworkers",
+        "Bulopo philosophy of harmony",
+        "Distinctive mask traditions"
+      ],
+      "funFacts": [
+        "The Luba Kingdom was one of Central Africa's most sophisticated states with a complex bureaucracy",
+        "Lukasa memory boards were used to record royal histories and are now prized museum pieces",
+        "Luba art, especially stools and sculptures, is highly valued in world museums",
+        "The Luba influenced many neighboring peoples including the Lunda and Kuba",
+        "Two recent Congolese presidents (Laurent-Désiré Kabila, Felix Tshisekedi) have Luba heritage"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu (cassava)", "Sombe (cassava leaves)", "Bitoyo (beans)", "Ugali"],
+        "beverages": ["Palm wine", "Maize beer"],
+        "specialDishes": ["Liboke (fish in banana leaves)", "Moambe (palm nut sauce)", "Grilled fish"],
+        "description": "Luba cuisine features cassava as the staple. Fufu is eaten with various sauces including sombe (cassava leaf stew) and moambe (palm nut chicken)."
+      },
+      "traditionalDance": "Traditional dances with masks for ceremonies",
+      "religion": "Traditional beliefs, Christianity",
+      "history": {
+        "origin": "The Luba Kingdom emerged around 1585 near Lake Upemba. It grew into one of Central Africa's most powerful states, influencing neighboring peoples.",
+        "colonialEra": "Belgian colonization (1885-1960) disrupted the kingdom. The Luba worked in the colonial administration and mining industries.",
+        "independence": "At independence (1960), the Luba played key roles. The Kasai region briefly seceded. The Luba remain politically influential.",
+        "keyEvents": ["Kingdom founding (1585)", "Kingdom peak (1700s)", "Belgian colonization", "Independence (1960)"]
+      },
+      "language": {
+        "name": "Kiluba (Luba-Kasai, Luba-Katanga)",
+        "speakers": "~18 million",
+        "greeting": "Muoyo",
+        "greetingMeaning": "Hello / Life",
+        "additionalGreetings": [
+          { "phrase": "Wê?", "meaning": "How are you?" },
+          { "phrase": "Enu", "meaning": "Fine / Good" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Twa sema", "meaning": "Thank you" },
+          { "phrase": "Dîna dyanyi...", "meaning": "My name is..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Laurent-Désiré Kabila", "role": "Former President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/Laurent-D%C3%A9sir%C3%A9_Kabila" },
+        { "name": "Félix Tshisekedi", "role": "Current President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi" },
+        { "name": "Étienne Tshisekedi", "role": "Opposition Leader", "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi" },
+        { "name": "Mobutu Sese Seko", "role": "Former President (partial Luba heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Mobutu_Sese_Seko" }
+      ],
+      "description": "The Luba are a major Congolese ethnic group known for their sophisticated pre-colonial kingdom, remarkable art tradition, and political influence in modern DRC.",
+      "relatedTribes": ["lunda", "kuba", "kongo"],
+      "diaspora": {
+        "globalPopulation": "~200,000",
+        "majorCountries": ["Belgium", "France", "USA", "South Africa"],
+        "breakdown": [
+          { "country": "Belgium", "population": "~80,000", "cities": ["Brussels", "Liège"] },
+          { "country": "France", "population": "~40,000", "cities": ["Paris"] }
+        ],
+        "communities": ["Large Congolese diaspora in Belgium from colonial ties"],
+        "associations": ["Congolese diaspora associations"]
+      }
+    },
+
+    {
+      "id": "somali",
+      "name": "Somali",
+      "slug": "somali",
+      "countries": ["SO", "ET", "KE", "DJ"],
+      "region": "Horn of Africa",
+      "population": "~22 million",
+      "populationPercent": "85% (Somalia)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 2.03, "lng": 45.34 },
+      "counties": ["Somalia", "Ogaden (Ethiopia)", "North Eastern (Kenya)"],
+      "namePrefixes": ["Ab", "Mo", "Ha", "Fa", "Ay", "Ish"],
+      "commonNames": {
+        "female": ["Asha", "Fadumo", "Halimo", "Hawa", "Sahra", "Amina", "Hodan", "Sagal", "Nimco", "Ugbad"],
+        "male": ["Mohamed", "Abdi", "Hassan", "Ahmed", "Omar", "Yusuf", "Ismail", "Ali", "Mahad", "Abdullahi"]
+      },
+      "stereotypes": [
+        "Pastoral nomads",
+        "Strong clan identity",
+        "Poetic tradition",
+        "Resilient survivors",
+        "Business-minded",
+        "Strong Islamic faith"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Camel and cattle herders",
+          "Protectors of family honor",
+          "Poets and orators",
+          "Clan representatives"
+        ],
+        "female": [
+          "Homemakers",
+          "Traders in markets",
+          "Strong family managers",
+          "Poets (in some traditions)"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herded camels, cattle, and defended the clan. Poetry was a prized male skill for expressing history and disputes.",
+          "female": "Women managed households, herded smaller animals, and traded. They built and dismantled portable aqal (huts) during migrations."
+        },
+        "modern": {
+          "male": "Modern Somali men are in business, academia, and diaspora professions. Clan identity remains important.",
+          "female": "Somali women are increasingly educated and in professions, especially in diaspora communities."
+        }
+      },
+      "culturalTraits": [
+        "Strong clan-based social structure",
+        "Rich oral poetry tradition (gabay)",
+        "Pastoral nomadic heritage",
+        "Islamic faith central to identity",
+        "Frankincense and myrrh trade historically",
+        "Distinctive architecture in Mogadishu"
+      ],
+      "funFacts": [
+        "Somali is called a 'nation of poets' - poetry is used to settle disputes and record history",
+        "Somalis have herded camels for over 4,000 years and have one of the world's largest camel populations",
+        "The ancient Land of Punt, famous for frankincense trade with Egypt, was likely in Somali territory",
+        "Mogadishu was once one of the wealthiest cities in the medieval world",
+        "Somali has only been written in Latin script since 1972"
+      ],
+      "traditionalFood": {
+        "staples": ["Canjeero (fermented flatbread)", "Bariis (spiced rice)", "Hilib ari (goat meat)", "Camel meat"],
+        "beverages": ["Shaah (spiced tea)", "Camel milk"],
+        "specialDishes": ["Suqaar (diced meat)", "Sambusa (fried pastries)", "Muufo (bread)", "Malawax (sweet pancakes)"],
+        "description": "Somali cuisine features meat (especially goat and camel), rice, and flatbreads. Spiced tea with cardamom is essential. Food is often eaten communally."
+      },
+      "traditionalDance": "Dhaanto - traditional dance with singing",
+      "religion": "Islam (Sunni, predominantly Shafi'i)",
+      "history": {
+        "origin": "The Somali people have lived in the Horn of Africa for millennia. Medieval Somali sultanates like Ajuran and Adal were powerful trading states.",
+        "colonialEra": "The Somali lands were divided between Britain, Italy, France, and Ethiopia in the colonial scramble. This 'partition' remains controversial.",
+        "independence": "British and Italian Somaliland united at independence (1960). Civil war since 1991 has fragmented the country.",
+        "keyEvents": ["Ajuran Sultanate (1300s-1700s)", "Colonial partition (1880s)", "Independence (1960)", "Civil war (1991-present)"]
+      },
+      "language": {
+        "name": "Somali (Af Soomaali)",
+        "speakers": "~22 million",
+        "greeting": "Is ka warran",
+        "greetingMeaning": "How are you? / What's the news?",
+        "additionalGreetings": [
+          { "phrase": "Nabad", "meaning": "Peace (Hello)" },
+          { "phrase": "Waan fiicanahay", "meaning": "I'm fine" },
+          { "phrase": "Nabad gelyo", "meaning": "Goodbye (Go in peace)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Mahadsanid", "meaning": "Thank you" },
+          { "phrase": "Magacaygu waa...", "meaning": "My name is..." }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet (since 1972)"
+      },
+      "famousPeople": [
+        { "name": "Mo Farah", "role": "Olympic Champion Runner", "wikipedia": "https://en.wikipedia.org/wiki/Mo_Farah" },
+        { "name": "Ilhan Omar", "role": "US Congresswoman", "wikipedia": "https://en.wikipedia.org/wiki/Ilhan_Omar" },
+        { "name": "Nuruddin Farah", "role": "Novelist", "wikipedia": "https://en.wikipedia.org/wiki/Nuruddin_Farah" },
+        { "name": "Iman", "role": "Supermodel & Entrepreneur", "wikipedia": "https://en.wikipedia.org/wiki/Iman_(model)" },
+        { "name": "K'naan", "role": "Musician", "wikipedia": "https://en.wikipedia.org/wiki/K%27naan" }
+      ],
+      "description": "The Somali are a Cushitic people of the Horn of Africa known for pastoral nomadism, rich poetic tradition, strong clan identity, and Islamic faith.",
+      "relatedTribes": ["oromo", "afar", "borana"],
+      "diaspora": {
+        "globalPopulation": "~2 million",
+        "majorCountries": ["Kenya", "Ethiopia", "UK", "USA", "Norway"],
+        "breakdown": [
+          { "country": "Kenya", "population": "~500,000", "cities": ["Nairobi (Eastleigh)", "Garissa"] },
+          { "country": "USA", "population": "~200,000", "cities": ["Minneapolis", "Columbus", "Seattle"] },
+          { "country": "UK", "population": "~100,000", "cities": ["London", "Bristol"] }
+        ],
+        "communities": ["Large community in Minneapolis ('Little Mogadishu')", "Eastleigh in Nairobi is a major Somali business hub"],
+        "associations": ["Somali Community Association"]
+      }
+    },
+
+    {
+      "id": "berber",
+      "name": "Berber (Amazigh)",
+      "slug": "berber",
+      "countries": ["MA", "DZ", "TN", "LY", "NE", "ML", "EG"],
+      "region": "North Africa (Maghreb)",
+      "population": "~40 million",
+      "populationPercent": "40% (Morocco)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 31.79, "lng": -7.09 },
+      "counties": ["Atlas Mountains", "Kabylie", "Rif", "Sahara"],
+      "namePrefixes": ["Am", "Mo", "Ai", "Ta", "Fa"],
+      "commonNames": {
+        "female": ["Aicha", "Fatima", "Zineb", "Malika", "Yamina", "Dihya", "Tiziri", "Taninna", "Titrit", "Tafsut"],
+        "male": ["Mohamed", "Amazigh", "Massinissa", "Yidir", "Amayas", "Jugurtha", "Aksil", "Amnay", "Idir", "Masinissa"]
+      },
+      "stereotypes": [
+        "Mountain dwellers",
+        "Hospitality culture",
+        "Colorful textiles and jewelry",
+        "Ancient traditions",
+        "Resilient and independent",
+        "Skilled artisans"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Farmers and herders",
+          "Protectors of family",
+          "Craftsmen",
+          "Warriors historically"
+        ],
+        "female": [
+          "Weavers and artisans",
+          "Pottery makers",
+          "Strong family role",
+          "Manage households"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men farmed, herded, and protected communities. Some groups were matrilineal despite men's public roles.",
+          "female": "Women wove famous Berber carpets, made pottery, and managed households. Tuareg women have more public freedom."
+        },
+        "modern": {
+          "male": "Modern Amazigh men are in professions while maintaining cultural identity. Language rights activism is growing.",
+          "female": "Amazigh women are increasingly educated and in professions while many continue traditional crafts."
+        }
+      },
+      "culturalTraits": [
+        "Ancient Tifinagh script",
+        "Famous carpet weaving traditions",
+        "Amazigh New Year (Yennayer)",
+        "Distinctive silver jewelry",
+        "Mountain and desert adaptation",
+        "Matrilineal traditions in some groups"
+      ],
+      "funFacts": [
+        "The Amazigh are North Africa's indigenous people, predating Arab arrival by millennia",
+        "Tifinagh script is one of Africa's oldest writing systems, dating back 3,000+ years",
+        "The Tuareg ('Blue People') are Amazigh known for indigo-dyed clothing",
+        "Queen Dihya (Kahina) led Amazigh resistance to Arab conquest in the 7th century",
+        "Amazigh carpets are famous worldwide for their geometric patterns and symbolism"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous", "Tagine (slow-cooked stew)", "Trid (layered bread)", "Rfissa"],
+        "beverages": ["Mint tea", "Buttermilk (leben)"],
+        "specialDishes": ["Mechoui (roasted lamb)", "Berkoukes (grain stew)", "Aghroum (bread)", "Baghrir (pancakes)"],
+        "description": "Amazigh cuisine features couscous and tagines. Couscous with seven vegetables is traditional for Fridays. Mint tea is essential for hospitality."
+      },
+      "traditionalDance": "Ahidous - collective dance in the Atlas",
+      "religion": "Islam (predominantly), some traditional practices",
+      "history": {
+        "origin": "The Amazigh are North Africa's indigenous people, with presence documented for over 10,000 years. They built kingdoms like Numidia and Mauretania.",
+        "colonialEra": "European colonization (French, Spanish, Italian) from the 1800s suppressed Amazigh identity. Independence movements often marginalized Amazigh culture.",
+        "independence": "Post-independence, Amazigh faced cultural suppression. Recent decades have seen recognition - Morocco recognized Tamazight as official in 2011.",
+        "keyEvents": ["Ancient Berber kingdoms", "Arab conquest (7th century)", "Colonial era", "Cultural revival (2000s)"]
+      },
+      "language": {
+        "name": "Tamazight (multiple varieties)",
+        "speakers": "~40 million",
+        "greeting": "Azul",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Manzakin?", "meaning": "How are you?" },
+          { "phrase": "Labas", "meaning": "I'm fine" },
+          { "phrase": "Ar tufat", "meaning": "Goodbye (Until tomorrow)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Tanmirt", "meaning": "Thank you" },
+          { "phrase": "Ism inu...", "meaning": "My name is..." }
+        ],
+        "family": "Afro-Asiatic (Berber)",
+        "writingSystem": "Tifinagh, Latin, Arabic scripts"
+      },
+      "famousPeople": [
+        { "name": "Zinedine Zidane", "role": "Football Legend", "wikipedia": "https://en.wikipedia.org/wiki/Zinedine_Zidane" },
+        { "name": "Ibn Battuta", "role": "Greatest Medieval Traveler", "wikipedia": "https://en.wikipedia.org/wiki/Ibn_Battuta" },
+        { "name": "Queen Dihya (Kahina)", "role": "Warrior Queen", "wikipedia": "https://en.wikipedia.org/wiki/Kahina" },
+        { "name": "Massinissa", "role": "Numidian King", "wikipedia": "https://en.wikipedia.org/wiki/Masinissa" },
+        { "name": "Matoub Lounès", "role": "Amazigh Singer & Activist", "wikipedia": "https://en.wikipedia.org/wiki/Matoub_Loun%C3%A8s" }
+      ],
+      "description": "The Amazigh (Berber) are North Africa's indigenous people, known for Tifinagh script, colorful textiles, mountain resilience, and ongoing cultural revival.",
+      "relatedTribes": ["tuareg", "kabyle", "riffian"],
+      "diaspora": {
+        "globalPopulation": "~3 million",
+        "majorCountries": ["France", "Netherlands", "Belgium", "Spain"],
+        "breakdown": [
+          { "country": "France", "population": "~2 million", "cities": ["Paris", "Marseille", "Lyon"] },
+          { "country": "Netherlands", "population": "~400,000", "cities": ["Amsterdam", "Rotterdam"] }
+        ],
+        "communities": ["Large Amazigh/Moroccan community in France and Netherlands"],
+        "associations": ["World Amazigh Congress", "Amazigh Cultural Association"]
       }
     }
   ]
