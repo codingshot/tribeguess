@@ -411,7 +411,95 @@ const timeMapping: Record<string, string[]> = {
   'newyear': ['newyear', 'new year'],
 };
 
-export function detectTribe(name: string, timeOfBirth?: string): DetectionResult {
+// Region to tribe mapping with weights
+const regionTribeMapping: Record<string, { tribe: string; weight: number }[]> = {
+  'central': [
+    { tribe: 'kikuyu', weight: 0.85 },
+    { tribe: 'meru', weight: 0.1 },
+  ],
+  'western': [
+    { tribe: 'luhya', weight: 0.7 },
+    { tribe: 'luo', weight: 0.25 },
+  ],
+  'rift-valley': [
+    { tribe: 'kalenjin', weight: 0.75 },
+    { tribe: 'kikuyu', weight: 0.15 },
+  ],
+  'eastern': [
+    { tribe: 'kamba', weight: 0.7 },
+    { tribe: 'meru', weight: 0.25 },
+  ],
+  'coast': [
+    { tribe: 'coastal', weight: 0.9 },
+  ],
+  'nyanza': [
+    { tribe: 'luo', weight: 0.5 },
+    { tribe: 'kisii', weight: 0.45 },
+  ],
+};
+
+// Build stereotypes (based on common perceptions - for entertainment only)
+const buildTribeMapping: Record<string, { tribe: string; weight: number }[]> = {
+  'tall-slender': [
+    { tribe: 'luo', weight: 0.3 },
+    { tribe: 'kalenjin', weight: 0.35 },
+    { tribe: 'coastal', weight: 0.2 },
+  ],
+  'athletic': [
+    { tribe: 'kalenjin', weight: 0.45 },
+    { tribe: 'kikuyu', weight: 0.2 },
+  ],
+  'petite': [
+    { tribe: 'kikuyu', weight: 0.25 },
+    { tribe: 'kisii', weight: 0.2 },
+  ],
+  'curvy': [
+    { tribe: 'luhya', weight: 0.3 },
+    { tribe: 'kisii', weight: 0.25 },
+    { tribe: 'kamba', weight: 0.2 },
+  ],
+  'average': [],
+};
+
+// Personality stereotypes (for entertainment only)
+const personalityTribeMapping: Record<string, { tribe: string; weight: number }[]> = {
+  'business-minded': [
+    { tribe: 'kikuyu', weight: 0.4 },
+    { tribe: 'coastal', weight: 0.15 },
+  ],
+  'outgoing': [
+    { tribe: 'luo', weight: 0.35 },
+    { tribe: 'luhya', weight: 0.25 },
+  ],
+  'reserved': [
+    { tribe: 'kamba', weight: 0.25 },
+    { tribe: 'meru', weight: 0.2 },
+  ],
+  'artistic': [
+    { tribe: 'luo', weight: 0.3 },
+    { tribe: 'coastal', weight: 0.25 },
+  ],
+  'nurturing': [
+    { tribe: 'luhya', weight: 0.3 },
+    { tribe: 'kisii', weight: 0.25 },
+  ],
+};
+
+interface DetectionOptions {
+  timeOfBirth?: string;
+  region?: string;
+  build?: string;
+  personality?: string;
+}
+
+export function detectTribe(name: string, options?: DetectionOptions | string): DetectionResult {
+  // Handle legacy single argument
+  const opts: DetectionOptions = typeof options === 'string' 
+    ? { timeOfBirth: options } 
+    : options || {};
+  
+  const { timeOfBirth, region, build, personality } = opts;
+  
   const normalizedName = name.toLowerCase().trim().replace(/\s+/g, '');
   const predictions: TribeResult[] = [];
   
@@ -482,7 +570,52 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
     }
   }
   
-  // 4. Time of birth matching
+  // 4. Region matching (new!)
+  if (region && regionTribeMapping[region]) {
+    for (const match of regionTribeMapping[region]) {
+      if (!tribeScores[match.tribe]) {
+        tribeScores[match.tribe] = { score: 0, reasons: [] };
+      }
+      const regionBonus = match.weight * 35;
+      tribeScores[match.tribe].score += regionBonus;
+      const tribeName = tribesData.tribes.find(t => t.id === match.tribe)?.name || match.tribe;
+      tribeScores[match.tribe].reasons.push(
+        `From ${region.replace('-', ' ')} region - predominantly ${tribeName} area`
+      );
+    }
+  }
+  
+  // 5. Build matching (new!)
+  if (build && buildTribeMapping[build]) {
+    for (const match of buildTribeMapping[build]) {
+      if (!tribeScores[match.tribe]) {
+        tribeScores[match.tribe] = { score: 0, reasons: [] };
+      }
+      const buildBonus = match.weight * 15;
+      tribeScores[match.tribe].score += buildBonus;
+      const tribeName = tribesData.tribes.find(t => t.id === match.tribe)?.name || match.tribe;
+      tribeScores[match.tribe].reasons.push(
+        `${build.replace('-', ' ')} build - common stereotype for ${tribeName}`
+      );
+    }
+  }
+  
+  // 6. Personality matching (new!)
+  if (personality && personalityTribeMapping[personality]) {
+    for (const match of personalityTribeMapping[personality]) {
+      if (!tribeScores[match.tribe]) {
+        tribeScores[match.tribe] = { score: 0, reasons: [] };
+      }
+      const personalityBonus = match.weight * 12;
+      tribeScores[match.tribe].score += personalityBonus;
+      const tribeName = tribesData.tribes.find(t => t.id === match.tribe)?.name || match.tribe;
+      tribeScores[match.tribe].reasons.push(
+        `"${personality.replace('-', ' ')}" personality - associated with ${tribeName} stereotypes`
+      );
+    }
+  }
+  
+  // 7. Time of birth matching
   if (timeOfBirth) {
     const normalizedTime = timeOfBirth.toLowerCase().trim();
     for (const tribe of tribesData.tribes) {
@@ -512,7 +645,7 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
     }
   }
   
-  // 5. Check common names in tribes
+  // 8. Check common names in tribes
   for (const tribe of tribesData.tribes) {
     const allNames = [...tribe.commonNames.female, ...tribe.commonNames.male].map(n => n.toLowerCase());
     for (const tribeName of allNames) {
@@ -550,7 +683,7 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
           tribe,
           confidence: Math.min(Math.round(data.score), 92),
           matchReason: data.reasons[0] || 'Pattern matching based on name characteristics',
-          matchDetails: data.reasons.slice(0, 3),
+          matchDetails: data.reasons.slice(0, 4),
         });
       }
     }
@@ -570,7 +703,7 @@ export function detectTribe(name: string, timeOfBirth?: string): DetectionResult
         matchDetails: [
           'This name doesn\'t match known patterns in our database',
           `Showing ${tribe.name} as one of Kenya's largest tribes`,
-          'Try adding time of birth for better accuracy',
+          'Try adding more clues (region, build, personality) for better accuracy',
         ],
       });
     }

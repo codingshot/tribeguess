@@ -21,7 +21,7 @@ export function Header() {
               width={40}
               height={40}
             />
-            <span className="font-serif text-lg sm:text-xl font-bold text-foreground">
+            <span className="text-lg sm:text-xl font-bold text-foreground" style={{ fontFamily: "'Bubblegum Sans', cursive" }}>
               Tribe<span className="text-primary">Guess</span>
             </span>
           </Link>

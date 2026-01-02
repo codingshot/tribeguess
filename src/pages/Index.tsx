@@ -9,8 +9,16 @@ const Index = () => {
   const [searchParams] = useSearchParams();
   const nameQuery = searchParams.get('name') || '';
   const timeQuery = searchParams.get('time') || '';
+  const regionQuery = searchParams.get('region') || '';
+  const buildQuery = searchParams.get('build') || '';
+  const personalityQuery = searchParams.get('personality') || '';
   
-  const results = nameQuery ? detectTribe(nameQuery, timeQuery || undefined) : null;
+  const results = nameQuery ? detectTribe(nameQuery, {
+    timeOfBirth: timeQuery || undefined,
+    region: regionQuery || undefined,
+    build: buildQuery || undefined,
+    personality: personalityQuery || undefined,
+  }) : null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -36,7 +44,7 @@ const Index = () => {
               </p>
             </div>
             
-            <GuessForm initialName={nameQuery} initialTime={timeQuery} />
+            <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} />
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
@@ -77,7 +85,7 @@ const Index = () => {
             </header>
             
             <div className="mb-6 sm:mb-8">
-              <GuessForm initialName={nameQuery} initialTime={timeQuery} />
+              <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} />
             </div>
             
             <div className="space-y-3 sm:space-y-4">
