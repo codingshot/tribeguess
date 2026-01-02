@@ -1,5 +1,6 @@
 import { TribeResult } from '@/lib/tribeDetection';
-import { MapPin, Users, Star, Lightbulb, User } from 'lucide-react';
+import { MapPin, Users, Star, Lightbulb, User, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface TribeResultCardProps {
   result: TribeResult;

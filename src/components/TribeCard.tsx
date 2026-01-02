@@ -4,6 +4,7 @@ import { MapPin, Users, ChevronRight } from 'lucide-react';
 interface TribeCardProps {
   tribe: {
     id: string;
+    slug: string;
     name: string;
     region: string;
     population: string;
@@ -15,7 +16,7 @@ interface TribeCardProps {
 export function TribeCard({ tribe }: TribeCardProps) {
   return (
     <Link
-      to={`/learn?tribe=${tribe.id}`}
+      to={`/learn/${tribe.slug}`}
       className="card-tribe p-4 sm:p-5 group cursor-pointer block touch-manipulation"
       aria-label={`Learn about the ${tribe.name} tribe from ${tribe.region}`}
     >

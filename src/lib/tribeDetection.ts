@@ -564,3 +564,7 @@ export function getAllTribes() {
 export function getTribeById(id: string) {
   return tribesData.tribes.find(t => t.id === id);
 }
+
+export function getTribeBySlug(slug: string) {
+  return tribesData.tribes.find(t => t.slug === slug || t.id === slug);
+}
