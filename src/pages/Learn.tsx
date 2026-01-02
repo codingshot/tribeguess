@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { Search, X, Filter, Users, MapPin } from 'lucide-react';
+import { useSearchParams, Link } from 'react-router-dom';
+import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
 import { getAllTribes } from '@/lib/tribeDetection';
@@ -9,12 +9,12 @@ const Learn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const regionFilter = searchParams.get('region') || '';
+  const viewMode = searchParams.get('view') || 'grid';
   
   const [localSearch, setLocalSearch] = useState(searchQuery);
   
   const tribes = getAllTribes();
   
-  // Calculate total population
   const totalPopulation = useMemo(() => {
     return tribes.reduce((acc, t) => {
       const pop = parseFloat(t.population.replace(/[^0-9.]/g, ''));
@@ -63,6 +63,12 @@ const Learn = () => {
     setSearchParams(params);
   };
   
+  const toggleViewMode = (mode: string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('view', mode);
+    setSearchParams(params);
+  };
+  
   const clearFilters = () => {
     setLocalSearch('');
     setSearchParams({});
@@ -77,7 +83,7 @@ const Learn = () => {
       <main className="container mx-auto px-4 py-6 sm:py-8">
         <div className="animate-fade-in">
           <header className="text-center mb-6 sm:mb-8">
-            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 sm:mb-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 sm:mb-3">
               Learn About <span className="gradient-gold-text">Kenyan Tribes</span>
             </h1>
             <p className="text-muted-foreground max-w-lg mx-auto text-sm sm:text-base px-2">
@@ -99,6 +105,32 @@ const Learn = () => {
               <p className="text-lg sm:text-2xl font-bold text-primary">{regions.length}</p>
               <p className="text-xs text-muted-foreground">Regions</p>
             </div>
+          </div>
+          
+          {/* View Toggle */}
+          <div className="flex justify-center gap-2 mb-4 sm:mb-6">
+            <button
+              onClick={() => toggleViewMode('grid')}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                viewMode === 'grid'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+              }`}
+            >
+              <LayoutGrid className="w-4 h-4" />
+              Grid View
+            </button>
+            <button
+              onClick={() => toggleViewMode('map')}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                viewMode === 'map'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+              }`}
+            >
+              <MapIcon className="w-4 h-4" />
+              Map View
+            </button>
           </div>
           
           {/* Search and Filters */}
@@ -178,18 +210,130 @@ const Learn = () => {
             )}
           </section>
           
-          {/* Tribe Grid */}
-          <section aria-label="List of Kenyan tribes" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-            {filteredTribes.map((tribe, index) => (
-              <article 
-                key={tribe.id}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <TribeCard tribe={tribe} />
-              </article>
-            ))}
-          </section>
+          {/* Map View */}
+          {viewMode === 'map' && (
+            <section className="mb-8 animate-fade-in" aria-label="Kenya tribes map">
+              <div className="bg-card rounded-2xl border border-border overflow-hidden">
+                <div className="relative w-full" style={{ paddingBottom: '80%' }}>
+                  {/* SVG Map of Kenya */}
+                  <svg
+                    viewBox="0 0 400 450"
+                    className="absolute inset-0 w-full h-full"
+                    style={{ background: 'linear-gradient(180deg, hsl(200, 60%, 95%) 0%, hsl(200, 50%, 90%) 100%)' }}
+                  >
+                    {/* Kenya country shape (simplified) */}
+                    <path
+                      d="M200 30 L320 80 L350 150 L380 200 L360 280 L320 350 L280 400 L200 420 L120 400 L80 350 L60 280 L50 200 L70 120 L120 60 Z"
+                      fill="hsl(35, 60%, 85%)"
+                      stroke="hsl(35, 40%, 60%)"
+                      strokeWidth="2"
+                    />
+                    
+                    {/* Lake Victoria */}
+                    <ellipse cx="80" cy="260" rx="40" ry="50" fill="hsl(200, 60%, 70%)" opacity="0.8" />
+                    
+                    {/* Mt. Kenya */}
+                    <polygon points="230,160 250,130 270,160" fill="hsl(120, 30%, 50%)" />
+                    <polygon points="240,145 250,130 260,145" fill="white" />
+                    
+                    {/* Indian Ocean */}
+                    <rect x="340" y="250" width="60" height="200" fill="hsl(200, 60%, 70%)" opacity="0.5" />
+                    
+                    {/* Tribe markers */}
+                    {filteredTribes.map((tribe) => {
+                      // Convert lat/lng to SVG coordinates
+                      const x = ((tribe.mapCoordinates.lng - 34) / 8) * 300 + 50;
+                      const y = ((-tribe.mapCoordinates.lat + 4) / 9) * 400 + 30;
+                      
+                      return (
+                        <Link key={tribe.id} to={`/learn/${tribe.slug}`}>
+                          <g className="cursor-pointer group">
+                            <circle
+                              cx={x}
+                              cy={y}
+                              r="18"
+                              fill="hsl(var(--primary))"
+                              opacity="0.3"
+                              className="group-hover:opacity-50 transition-opacity"
+                            />
+                            <circle
+                              cx={x}
+                              cy={y}
+                              r="10"
+                              fill="hsl(var(--primary))"
+                              stroke="white"
+                              strokeWidth="2"
+                              className="group-hover:r-12 transition-all"
+                            />
+                            <text
+                              x={x}
+                              y={y + 28}
+                              textAnchor="middle"
+                              fontSize="11"
+                              fontWeight="600"
+                              fill="hsl(var(--foreground))"
+                              className="pointer-events-none"
+                            >
+                              {tribe.name.split(' ')[0]}
+                            </text>
+                            <text
+                              x={x}
+                              y={y + 40}
+                              textAnchor="middle"
+                              fontSize="9"
+                              fill="hsl(var(--muted-foreground))"
+                              className="pointer-events-none"
+                            >
+                              {tribe.populationPercent}
+                            </text>
+                          </g>
+                        </Link>
+                      );
+                    })}
+                    
+                    {/* Legend */}
+                    <text x="20" y="30" fontSize="14" fontWeight="bold" fill="hsl(var(--foreground))">
+                      Kenya Tribes Map
+                    </text>
+                    <text x="20" y="45" fontSize="10" fill="hsl(var(--muted-foreground))">
+                      Click on a tribe to learn more
+                    </text>
+                  </svg>
+                </div>
+                
+                {/* Map Legend */}
+                <div className="p-4 bg-secondary/50 border-t border-border">
+                  <div className="flex flex-wrap gap-3 justify-center">
+                    {filteredTribes.map((tribe) => (
+                      <Link
+                        key={tribe.id}
+                        to={`/learn/${tribe.slug}`}
+                        className="flex items-center gap-2 px-3 py-1.5 bg-background rounded-full hover:bg-primary hover:text-primary-foreground transition-colors text-xs"
+                      >
+                        <span className="w-2 h-2 rounded-full bg-primary" />
+                        {tribe.name.split(' ')[0]}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+          
+          {/* Grid View */}
+          {viewMode === 'grid' && (
+            <section aria-label="List of Kenyan tribes" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+              {filteredTribes.map((tribe, index) => (
+                <article 
+                  key={tribe.id}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <TribeCard tribe={tribe} />
+                </article>
+              ))}
+            </section>
+          )}
           
           {filteredTribes.length === 0 && (
             <div className="text-center py-8 sm:py-12">
