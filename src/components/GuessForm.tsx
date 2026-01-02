@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Clock, Sparkles } from 'lucide-react';
+import { Search, Clock, Sparkles, HelpCircle } from 'lucide-react';
 
 interface GuessFormProps {
   initialName?: string;
@@ -8,7 +8,7 @@ interface GuessFormProps {
 }
 
 const timeOptions = [
-  { value: '', label: 'When was she born? (optional)' },
+  { value: '', label: 'Unknown / Skip' },
   { value: 'morning', label: '🌅 Morning (6am - 12pm)' },
   { value: 'day', label: '☀️ Afternoon (12pm - 5pm)' },
   { value: 'evening', label: '🌆 Evening (5pm - 8pm)' },
@@ -18,6 +18,7 @@ const timeOptions = [
 export function GuessForm({ initialName = '', initialTime = '' }: GuessFormProps) {
   const [name, setName] = useState(initialName);
   const [timeOfBirth, setTimeOfBirth] = useState(initialTime);
+  const [showTimeHelp, setShowTimeHelp] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -30,18 +31,23 @@ export function GuessForm({ initialName = '', initialTime = '' }: GuessFormProps
     if (!namePattern.test(trimmedName)) return;
     
     const params = new URLSearchParams();
-    params.set('name', trimmedName.slice(0, 50)); // Limit to 50 chars
-    if (timeOfBirth) params.set('time', timeOfBirth);
+    params.set('name', trimmedName.slice(0, 50));
+    if (timeOfBirth && timeOfBirth !== '') {
+      params.set('time', timeOfBirth);
+    }
     
     navigate(`/?${params.toString()}`);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-3 sm:space-y-4" role="search">
+    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4" role="search">
       <div>
         <label htmlFor="name-input" className="block text-sm font-medium text-foreground mb-1.5">
-          Her Name <span className="text-muted-foreground font-normal">(first name)</span>
+          Enter Her Name
         </label>
+        <p className="text-xs text-muted-foreground mb-2">
+          First name works best - we'll analyze the naming patterns
+        </p>
         <div className="relative">
           <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
           <input
@@ -61,12 +67,26 @@ export function GuessForm({ initialName = '', initialTime = '' }: GuessFormProps
       </div>
       
       <div>
-        <label htmlFor="time-select" className="block text-sm font-medium text-foreground mb-1.5">
-          Time of Birth <span className="text-muted-foreground font-normal">(improves accuracy)</span>
-        </label>
-        <p className="text-xs text-muted-foreground mb-1.5">
-          Many Kenyan names reflect the time of day when a person was born
-        </p>
+        <div className="flex items-center justify-between mb-1.5">
+          <label htmlFor="time-select" className="block text-sm font-medium text-foreground">
+            Time of Birth <span className="text-muted-foreground font-normal">(optional)</span>
+          </label>
+          <button
+            type="button"
+            onClick={() => setShowTimeHelp(!showTimeHelp)}
+            className="text-muted-foreground hover:text-primary p-1 touch-manipulation"
+            aria-label="Why does time matter?"
+          >
+            <HelpCircle className="w-4 h-4" />
+          </button>
+        </div>
+        {showTimeHelp && (
+          <div className="text-xs text-muted-foreground mb-2 p-2 bg-secondary rounded-lg animate-fade-in">
+            💡 <strong>Why time matters:</strong> Many Kenyan tribes name children based on when they were born. 
+            For example, "Otieno" (Luo) means born at night, while "Kipkoech" (Kalenjin) means born in the morning. 
+            Adding this can improve accuracy!
+          </div>
+        )}
         <div className="relative">
           <Clock className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground pointer-events-none" />
           <select
