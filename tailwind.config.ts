@@ -20,6 +20,8 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
+        tribal: ['Rye', 'Bubblegum Sans', 'cursive'],
+        heading: ['Rye', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
