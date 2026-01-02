@@ -122,9 +122,9 @@ const TribePage = () => {
                 <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-4">
                   <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     <Languages className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
-                    Language
+                    Language & Greetings
                   </h2>
-                  <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="grid sm:grid-cols-2 gap-3 mb-4">
                     <div>
                       <p className="text-sm text-muted-foreground">Language Name</p>
                       <p className="font-semibold text-foreground">{language.name}</p>
@@ -134,14 +134,47 @@ const TribePage = () => {
                       <p className="font-semibold text-foreground">{language.speakers}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">Greeting</p>
+                      <p className="text-sm text-muted-foreground">Main Greeting</p>
                       <p className="font-semibold text-primary text-lg">"{language.greeting}"</p>
+                      {language.greetingMeaning && (
+                        <p className="text-xs text-muted-foreground">({language.greetingMeaning})</p>
+                      )}
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Language Family</p>
                       <p className="font-semibold text-foreground">{language.family}</p>
                     </div>
                   </div>
+                  
+                  {/* Additional Greetings */}
+                  {language.additionalGreetings && language.additionalGreetings.length > 0 && (
+                    <div className="mb-4">
+                      <h3 className="text-sm font-medium text-foreground mb-2">More Greetings</h3>
+                      <div className="grid sm:grid-cols-2 gap-2">
+                        {language.additionalGreetings.map((g: { phrase: string; meaning: string }, i: number) => (
+                          <div key={i} className="p-2 bg-background/50 rounded-lg">
+                            <p className="font-medium text-primary text-sm">"{g.phrase}"</p>
+                            <p className="text-xs text-muted-foreground">{g.meaning}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Common Phrases */}
+                  {language.commonPhrases && language.commonPhrases.length > 0 && (
+                    <div>
+                      <h3 className="text-sm font-medium text-foreground mb-2">Common Phrases</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {language.commonPhrases.map((p: { phrase: string; meaning: string }, i: number) => (
+                          <span key={i} className="px-3 py-1.5 bg-background/50 rounded-full text-xs">
+                            <span className="font-medium text-primary">{p.phrase}</span>
+                            <span className="text-muted-foreground"> - {p.meaning}</span>
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </section>
               )}
               
@@ -268,16 +301,71 @@ const TribePage = () => {
                 </section>
               )}
               
-              {tribe.famousPeople && (
+              {tribe.famousPeople && tribe.famousPeople.length > 0 && (
                 <section>
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Notable People</h2>
-                  <ul className="flex flex-wrap gap-1.5 sm:gap-2">
-                    {tribe.famousPeople.map((person, i) => (
-                      <li key={i} className="badge-tribe text-xs sm:text-sm">
-                        {person}
-                      </li>
+                  <div className="grid sm:grid-cols-2 gap-2">
+                    {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia: string | null }>).map((person, i) => (
+                      <div key={i} className="p-3 bg-secondary rounded-lg">
+                        {person.wikipedia ? (
+                          <a 
+                            href={person.wikipedia} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="font-medium text-primary hover:underline flex items-center gap-1"
+                          >
+                            {person.name}
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        ) : (
+                          <p className="font-medium text-foreground">{person.name}</p>
+                        )}
+                        <p className="text-xs text-muted-foreground">{person.role}</p>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+                </section>
+              )}
+              
+              {/* Traditional Food Section */}
+              {(tribe as any).traditionalFood && typeof (tribe as any).traditionalFood === 'object' && (
+                <section className="border-t border-border pt-6">
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                    🍲 Traditional Cuisine
+                  </h2>
+                  <p className="text-sm text-muted-foreground mb-4">{(tribe as any).traditionalFood.description}</p>
+                  <div className="grid sm:grid-cols-3 gap-4">
+                    <div className="p-3 bg-secondary rounded-lg">
+                      <h3 className="text-sm font-medium text-foreground mb-2">Staple Foods</h3>
+                      <ul className="space-y-1">
+                        {(tribe as any).traditionalFood.staples?.map((food: string, i: number) => (
+                          <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                            <span className="text-primary">•</span> {food}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-secondary rounded-lg">
+                      <h3 className="text-sm font-medium text-foreground mb-2">Beverages</h3>
+                      <ul className="space-y-1">
+                        {(tribe as any).traditionalFood.beverages?.map((drink: string, i: number) => (
+                          <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                            <span className="text-primary">•</span> {drink}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-secondary rounded-lg">
+                      <h3 className="text-sm font-medium text-foreground mb-2">Special Dishes</h3>
+                      <ul className="space-y-1">
+                        {(tribe as any).traditionalFood.specialDishes?.map((dish: string, i: number) => (
+                          <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                            <span className="text-primary">•</span> {dish}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </section>
               )}
               
@@ -288,23 +376,32 @@ const TribePage = () => {
                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                     Global Diaspora
                   </h2>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="p-4 bg-secondary rounded-lg">
-                      <p className="text-2xl font-bold text-primary mb-1">{tribe.diaspora.globalPopulation}</p>
-                      <p className="text-sm text-muted-foreground">Estimated global diaspora</p>
-                    </div>
-                    <div className="p-4 bg-secondary rounded-lg">
-                      <p className="text-sm font-medium text-foreground mb-2">Major Countries</p>
-                      <div className="flex flex-wrap gap-1">
-                        {tribe.diaspora.majorCountries.map((country, i) => (
-                          <span key={i} className="px-2 py-0.5 bg-background rounded text-xs">
-                            {country}
-                          </span>
+                  <div className="p-4 bg-secondary rounded-lg mb-4">
+                    <p className="text-2xl font-bold text-primary mb-1">{tribe.diaspora.globalPopulation}</p>
+                    <p className="text-sm text-muted-foreground">Estimated global diaspora population</p>
+                  </div>
+                  
+                  {/* Country Breakdown */}
+                  {(tribe.diaspora as any).breakdown && (
+                    <div className="mb-4">
+                      <h3 className="text-sm font-medium text-foreground mb-3">Population by Country</h3>
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {(tribe.diaspora as any).breakdown.map((country: { country: string; population: string; cities: string[] }, i: number) => (
+                          <div key={i} className="p-3 bg-secondary rounded-lg">
+                            <div className="flex items-center justify-between mb-1">
+                              <p className="font-medium text-foreground text-sm">{country.country}</p>
+                              <p className="text-xs font-semibold text-primary">{country.population}</p>
+                            </div>
+                            <p className="text-xs text-muted-foreground">
+                              {country.cities.join(', ')}
+                            </p>
+                          </div>
                         ))}
                       </div>
                     </div>
-                  </div>
-                  <div className="mt-4 space-y-3">
+                  )}
+                  
+                  <div className="space-y-3">
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Notable Communities</h3>
                       <ul className="space-y-1">
