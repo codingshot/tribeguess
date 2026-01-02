@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Users, Star, Book, User, Clock, Globe, UsersRound, Map, ExternalLink } from 'lucide-react';
+import { ArrowLeft, MapPin, Users, Star, Book, User, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages } from 'lucide-react';
 import { getTribeBySlug, getAllTribes } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
 import { TribeMap } from '@/components/TribeMap';
@@ -27,6 +27,10 @@ const TribePage = () => {
   const relatedTribesData = tribe.relatedTribes?.map(id => 
     allTribes.find(t => t.id === id)
   ).filter(Boolean) || [];
+  
+  // Type assertion for history and language
+  const history = (tribe as any).history;
+  const language = (tribe as any).language;
 
   return (
     <div className="min-h-screen bg-background">
@@ -46,7 +50,7 @@ const TribePage = () => {
           
           <div className="bg-card rounded-2xl border border-border overflow-hidden">
             <header className="gradient-gold p-4 sm:p-6 text-primary-foreground">
-              <h1 className="font-display text-2xl sm:text-3xl font-bold mb-2">{tribe.name}</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-2">{tribe.name}</h1>
               <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm opacity-90">
                 <div className="flex items-center gap-1">
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
@@ -62,7 +66,7 @@ const TribePage = () => {
             <div className="p-4 sm:p-6 space-y-6 sm:space-y-8">
               {/* Map Section */}
               <section>
-                <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                   <Map className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   Location in Kenya
                 </h2>
@@ -76,7 +80,7 @@ const TribePage = () => {
               
               {/* Population Stats */}
               <section>
-                <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                   <UsersRound className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   Population Statistics
                 </h2>
@@ -106,12 +110,76 @@ const TribePage = () => {
               </section>
               
               <section>
-                <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 flex items-center gap-2">
+                <h2 className="text-lg sm:text-xl font-semibold mb-2 flex items-center gap-2">
                   <Book className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   About
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{tribe.description}</p>
               </section>
+              
+              {/* Language Section */}
+              {language && (
+                <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-4">
+                  <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                    <Languages className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
+                    Language
+                  </h2>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <div>
+                      <p className="text-sm text-muted-foreground">Language Name</p>
+                      <p className="font-semibold text-foreground">{language.name}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Speakers</p>
+                      <p className="font-semibold text-foreground">{language.speakers}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Greeting</p>
+                      <p className="font-semibold text-primary text-lg">"{language.greeting}"</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Language Family</p>
+                      <p className="font-semibold text-foreground">{language.family}</p>
+                    </div>
+                  </div>
+                </section>
+              )}
+              
+              {/* History Section */}
+              {history && (
+                <section className="border-t border-border pt-6">
+                  <h2 className="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
+                    <History className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
+                    History & Origins
+                  </h2>
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">Origins</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{history.origin}</p>
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">Colonial Era</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{history.colonialEra}</p>
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">Independence & Modern Era</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{history.independence}</p>
+                    </div>
+                    {history.keyEvents && history.keyEvents.length > 0 && (
+                      <div>
+                        <h3 className="font-medium text-foreground mb-2">Key Historical Events</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {history.keyEvents.map((event: string, i: number) => (
+                            <span key={i} className="px-3 py-1 bg-secondary rounded-full text-xs text-secondary-foreground">
+                              {event}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </section>
+              )}
               
               <section>
                 <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">

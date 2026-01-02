@@ -8,7 +8,7 @@
       "population": "~8.1 million",
       "populationPercent": "17%",
       "genderRatio": { "male": 49, "female": 51 },
-      "mapCoordinates": { "lat": -0.95, "lng": 37.08 },
+      "mapCoordinates": { "lat": -1.05, "lng": 37.08 },
       "counties": ["Kiambu", "Murang'a", "Nyeri", "Kirinyaga", "Nyandarua"],
       "namePrefixes": ["Wa", "Njo", "Ngo", "Mu", "Ka", "Nj", "Ng"],
       "commonNames": {
@@ -35,7 +35,19 @@
         "Deep respect for elders",
         "Naming children after grandparents (lineage-based naming)"
       ],
-      "famousPeople": ["Jomo Kenyatta (First President)", "Wangari Maathai (Nobel Laureate)", "Ngugi wa Thiong'o (Author)"],
+      "history": {
+        "origin": "The Kikuyu are Bantu people who migrated from West Africa around 1000 AD. According to oral tradition, their ancestor Gikuyu was given land near Mount Kenya by Ngai (God). He married Mumbi, and they had nine daughters who became the ancestors of the nine Kikuyu clans.",
+        "colonialEra": "The Kikuyu were heavily impacted by British colonization, losing significant land to white settlers in the 'White Highlands'. This led to the Mau Mau uprising (1952-1960), a major rebellion against colonial rule led primarily by Kikuyu fighters.",
+        "independence": "Jomo Kenyatta, a Kikuyu, became Kenya's first President in 1963. The Kikuyu have remained politically and economically influential since independence.",
+        "keyEvents": ["Migration to Mt. Kenya region (1000 AD)", "British colonial land seizures (1900s)", "Mau Mau Uprising (1952-1960)", "Independence under Kenyatta (1963)"]
+      },
+      "language": {
+        "name": "Gĩkũyũ",
+        "speakers": "~8 million",
+        "greeting": "Wĩmwega (Hello)",
+        "family": "Bantu (Niger-Congo)"
+      },
+      "famousPeople": ["Jomo Kenyatta (First President)", "Wangari Maathai (Nobel Laureate)", "Ngugi wa Thiong'o (Author)", "Mwai Kibaki (Third President)"],
       "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise.",
       "relatedTribes": ["meru", "embu"],
       "diaspora": {
@@ -80,7 +92,19 @@
         "Strong oral traditions and storytelling",
         "Fishing and farming culture"
       ],
-      "famousPeople": ["Barack Obama Sr. (Father of US President)", "Raila Odinga (Political Leader)", "Lupita Nyong'o (Actress)"],
+      "history": {
+        "origin": "The Luo are Nilotic people who migrated from the Bahr el Ghazal region in South Sudan between the 15th and 17th centuries. They followed the Nile River southward and eventually settled around Lake Victoria.",
+        "colonialEra": "The Luo resisted British colonial rule, with leaders like Odera Akang'o and Gor Mahia becoming legendary for their resistance. The community also embraced Western education early, producing many of Kenya's first professionals.",
+        "independence": "Jaramogi Oginga Odinga, a Luo leader, was Kenya's first Vice President but later formed an opposition party. The Luo have historically been in political opposition, advocating for democratic reforms.",
+        "keyEvents": ["Migration from South Sudan (1500s)", "Settlement at Lake Victoria (1600s)", "Colonial resistance movements", "Formation of FORD-K opposition (1991)"]
+      },
+      "language": {
+        "name": "Dholuo",
+        "speakers": "~5 million",
+        "greeting": "Misawa (Hello)",
+        "family": "Nilotic (Nilo-Saharan)"
+      },
+      "famousPeople": ["Barack Obama Sr. (Father of US President)", "Raila Odinga (Political Leader)", "Lupita Nyong'o (Oscar-winning Actress)", "Jaramogi Oginga Odinga (First VP)"],
       "description": "The Luo (Joluo) are the fourth-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region.",
       "relatedTribes": ["luhya", "kisii"],
       "diaspora": {
@@ -125,7 +149,19 @@
         "Agricultural expertise (sugarcane, maize)",
         "Strong communal living traditions"
       ],
-      "famousPeople": ["Masinde Muliro (Political Leader)", "Michael Olunga (Footballer)", "Victor Wanyama (Footballer)"],
+      "history": {
+        "origin": "The Luhya are Bantu people comprising 18 sub-tribes who migrated to Western Kenya from various directions between the 14th and 16th centuries. The name 'Luhya' (meaning 'people of the same fire') was adopted in the 1930s to unify the sub-tribes.",
+        "colonialEra": "Western Kenya became a labor reserve during colonization, with many Luhya men working on British farms and building the Uganda Railway. Elijah Masinde led the Dini ya Msambwa movement against colonial rule.",
+        "independence": "The Luhya have produced notable political leaders including Masinde Muliro and Michael Kijana Wamalwa (VP). The community has been a key swing vote in Kenyan politics.",
+        "keyEvents": ["Migration to Western Kenya (1400s-1600s)", "Formation of Luhya identity (1930s)", "Dini ya Msambwa resistance (1940s)", "Independence activism"]
+      },
+      "language": {
+        "name": "Luhya (18 dialects)",
+        "speakers": "~6.8 million",
+        "greeting": "Muriwe (Hello)",
+        "family": "Bantu (Niger-Congo)"
+      },
+      "famousPeople": ["Masinde Muliro (Political Leader)", "Michael Olunga (Footballer)", "Victor Wanyama (Footballer)", "Michael Kijana Wamalwa (VP)"],
       "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality.",
       "relatedTribes": ["luo", "kisii"],
       "diaspora": {
@@ -170,7 +206,19 @@
         "Traditional medicine knowledge",
         "Historic long-distance trading routes"
       ],
-      "famousPeople": ["Kalonzo Musyoka (Political Leader)", "Charity Ngilu (Political Leader)", "Paul Ngei (Independence Leader)"],
+      "history": {
+        "origin": "The Kamba (Akamba) are Bantu people who migrated from the Congo Basin region and settled in Eastern Kenya around the 16th century. They originally settled on the slopes of Mount Kilimanjaro before moving to their current homeland.",
+        "colonialEra": "The Kamba were famous long-distance traders, establishing trade routes from the coast to the interior. They traded ivory, honey, and iron tools with Arab and Swahili merchants. They resisted colonial taxation and forced labor.",
+        "independence": "Paul Ngei was a key Kamba leader in the independence movement and was detained with Kenyatta. The community has produced notable politicians including Kalonzo Musyoka.",
+        "keyEvents": ["Migration from Congo Basin (1500s)", "Establishment of trade routes (1700s)", "Akamba Destocking Resistance (1938)", "Independence activism"]
+      },
+      "language": {
+        "name": "Kikamba",
+        "speakers": "~4.7 million",
+        "greeting": "Wakia (Hello)",
+        "family": "Bantu (Niger-Congo)"
+      },
+      "famousPeople": ["Kalonzo Musyoka (Political Leader)", "Charity Ngilu (Political Leader)", "Paul Ngei (Independence Hero)", "Kivutha Kibwana (Governor)"],
       "description": "The Kamba (Akamba) people are known for their exceptional craftsmanship, particularly wood carving in Wamunyu, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya.",
       "relatedTribes": ["kikuyu", "meru"],
       "diaspora": {
@@ -188,7 +236,7 @@
       "population": "~6.4 million",
       "populationPercent": "13%",
       "genderRatio": { "male": 49, "female": 51 },
-      "mapCoordinates": { "lat": 0.36, "lng": 35.29 },
+      "mapCoordinates": { "lat": 0.52, "lng": 35.29 },
       "counties": ["Uasin Gishu", "Nandi", "Elgeyo-Marakwet", "Baringo", "Kericho", "Bomet"],
       "namePrefixes": ["Ki", "Kip", "Che", "Kib", "Ro", "Jep", "Jer"],
       "commonNames": {
@@ -215,7 +263,19 @@
         "Age-set systems (Ipinda)",
         "Circumcision rites of passage"
       ],
-      "famousPeople": ["Eliud Kipchoge (Marathon Legend)", "William Ruto (President)", "David Rudisha (Olympic Champion)"],
+      "history": {
+        "origin": "The Kalenjin are Nilotic people who migrated from the Ethiopian highlands around 2000 years ago. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, Marakwet, Tugen, Pokot, and Sabaot. The name 'Kalenjin' (meaning 'I say to you') was adopted in the 1940s.",
+        "colonialEra": "The Nandi Resistance (1890-1906) was one of the longest resistances against British colonization in Africa. Orkoiyot Koitalel Arap Samoei led the resistance until he was killed by the British in 1905.",
+        "independence": "Daniel arap Moi, a Kalenjin, served as Kenya's second President for 24 years (1978-2002). William Ruto became Kenya's fifth President in 2022.",
+        "keyEvents": ["Migration from Ethiopia (200 BC)", "Nandi Resistance (1890-1906)", "Death of Koitalel Arap Samoei (1905)", "Moi Presidency (1978-2002)", "Ruto Presidency (2022)"]
+      },
+      "language": {
+        "name": "Kalenjin (8 dialects)",
+        "speakers": "~6 million",
+        "greeting": "Chamge (Hello)",
+        "family": "Nilotic (Nilo-Saharan)"
+      },
+      "famousPeople": ["Eliud Kipchoge (Marathon Legend)", "William Ruto (President)", "David Rudisha (800m World Record)", "Daniel arap Moi (Former President)", "Faith Kipyegon (Olympic Champion)"],
       "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, and Tugen, traditionally residing in the Rift Valley highlands.",
       "relatedTribes": ["maasai", "turkana"],
       "diaspora": {
@@ -260,7 +320,19 @@
         "Strong clan systems",
         "Traditional circumcision ceremonies"
       ],
-      "famousPeople": ["Simeon Nyachae (Political Leader)", "Zahara Bosire (Actress)", "Nyashinski (Musician)"],
+      "history": {
+        "origin": "The Gusii (Kisii) are Bantu people who migrated from the Mt. Elgon region in the 16th century. They settled in the fertile highlands of South Nyanza, an area surrounded by Nilotic communities (Luo, Kipsigis, Maasai).",
+        "colonialEra": "The Gusii fiercely resisted British colonization. In 1908, the British launched a punitive expedition that resulted in significant loss of life and cattle. Despite this, the Gusii maintained their cultural practices.",
+        "independence": "The Gusii have been active in national politics. Simeon Nyachae served as a powerful Cabinet Minister and later formed his own political party (FORD-People).",
+        "keyEvents": ["Migration from Mt. Elgon (1500s)", "British Punitive Expedition (1908)", "Colonial resistance", "Political activism post-independence"]
+      },
+      "language": {
+        "name": "Ekegusii",
+        "speakers": "~2.7 million",
+        "greeting": "Naki ogosika (Hello)",
+        "family": "Bantu (Niger-Congo)"
+      },
+      "famousPeople": ["Simeon Nyachae (Political Leader)", "Nyashinski (Musician)", "Ongeri Sam (Politician)", "Dr. Zachary Onyonka (Economist)"],
       "description": "The Kisii (Abagusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a strong emphasis on education.",
       "relatedTribes": ["luo", "luhya"],
       "diaspora": {
@@ -305,7 +377,19 @@
         "Similar to Kikuyu traditions",
         "Strong agricultural roots around Mt. Kenya"
       ],
-      "famousPeople": ["Kiraitu Murungi (Political Leader)", "Peter Kenneth (Political Leader)", "Anne Waiguru (Governor)"],
+      "history": {
+        "origin": "The Ameru are Bantu people with origins linked to the Mwene (Coastal) region. According to their oral history, they escaped from 'Mbwa' (possibly a reference to Arab slavers) and migrated inland, settling on the eastern slopes of Mt. Kenya.",
+        "colonialEra": "The Meru, like their Kikuyu neighbors, participated in the Mau Mau uprising. The Njuri Ncheke council of elders maintained authority even during colonization, secretly supporting resistance efforts.",
+        "independence": "The Meru have produced notable leaders in post-independence Kenya. The Njuri Ncheke remains one of the most powerful traditional institutions in Kenya today.",
+        "keyEvents": ["Escape from 'Mbwa' (origin myth)", "Settlement on Mt. Kenya (1600s)", "Mau Mau participation (1952-1960)", "Njuri Ncheke preservation"]
+      },
+      "language": {
+        "name": "Kimeru",
+        "speakers": "~1.9 million",
+        "greeting": "Muga (Hello)",
+        "family": "Bantu (Niger-Congo)"
+      },
+      "famousPeople": ["Kiraitu Murungi (Political Leader)", "Peter Kenneth (Political Leader)", "Anne Waiguru (Governor)", "M'maitsi M'Inoti (Judge)"],
       "description": "The Meru (Ameru) people inhabit the eastern slopes of Mount Kenya. They are known for their powerful council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat) in Kenya.",
       "relatedTribes": ["kikuyu", "embu"],
       "diaspora": {
@@ -349,7 +433,19 @@
         "Maritime and trading heritage",
         "Day-of-week naming tradition"
       ],
-      "famousPeople": ["Najib Balala (Tourism CS)", "Amina Mohamed (Diplomat)", "Ali Kiba (Musician)"],
+      "history": {
+        "origin": "The Coastal peoples include the Mijikenda (9 tribes), Swahili, Taita, and others. The Swahili culture emerged from intermarriage between Bantu peoples and Arab/Persian traders from around 800 AD, creating a unique maritime civilization.",
+        "colonialEra": "The Coast was the first point of contact with foreign powers. Mombasa changed hands between Portuguese, Omani Arabs, and eventually British. The Mazrui rebellion and other resistances marked the colonial period.",
+        "independence": "The Coast has seen debates about autonomy (Mwambao movement) and land rights. The Swahili language, born on this coast, became Kenya's national language and East Africa's lingua franca.",
+        "keyEvents": ["Swahili civilization emergence (800 AD)", "Portuguese arrival (1498)", "Omani rule (1698-1895)", "British protectorate (1895)", "Mwambao movement (1960s)"]
+      },
+      "language": {
+        "name": "Swahili (Kiswahili)",
+        "speakers": "~100 million (regional)",
+        "greeting": "Jambo / Habari (Hello)",
+        "family": "Bantu (Niger-Congo) with Arabic influence"
+      },
+      "famousPeople": ["Najib Balala (Tourism CS)", "Amina Mohamed (Diplomat)", "Ali Kiba (Musician)", "Mzee Abdulrahman Kinana (Politician)"],
       "description": "Coastal tribes include the Mijikenda (9 tribes including Giriama, Digo, Duruma) and Swahili people. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine.",
       "relatedTribes": [],
       "diaspora": {
