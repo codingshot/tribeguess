@@ -1,9 +1,11 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Users, Star, Book, User, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages } from 'lucide-react';
-import { getTribeBySlug, getAllTribes } from '@/lib/tribeDetection';
+import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages } from 'lucide-react';
+import { getTribeBySlug, getAllTribes, getNameDatabase } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
 import { TribeMap } from '@/components/TribeMap';
-
+import { ImageGallery } from '@/components/ImageGallery';
+import { PersonCard } from '@/components/PersonCard';
+import { NameSearch } from '@/components/NameSearch';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -229,44 +231,12 @@ const TribePage = () => {
                 </ul>
               </section>
               
-              <section>
-                <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
-                  <User className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
-                  Common Names
-                </h2>
-                <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
-                  <div>
-                    <h3 className="text-xs sm:text-sm font-medium text-muted-foreground mb-2">Female Names</h3>
-                    <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Female names">
-                      {tribe.commonNames.female.slice(0, 10).map((name, i) => (
-                        <li key={i}>
-                          <Link 
-                            to={`/?name=${name}`}
-                            className="badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer touch-manipulation text-xs sm:text-sm"
-                          >
-                            {name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xs sm:text-sm font-medium text-muted-foreground mb-2">Male Names</h3>
-                    <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Male names">
-                      {tribe.commonNames.male.slice(0, 10).map((name, i) => (
-                        <li key={i}>
-                          <Link 
-                            to={`/?name=${name}`}
-                            className="badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer touch-manipulation text-xs sm:text-sm"
-                          >
-                            {name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </section>
+              <NameSearch
+                femaleNames={tribe.commonNames.female}
+                maleNames={tribe.commonNames.male}
+                tribeName={tribe.name}
+                nameDatabase={getNameDatabase()}
+              />
               
               {tribe.timeBasedNames && Object.keys(tribe.timeBasedNames).length > 0 && (
                 <section>
@@ -303,28 +273,23 @@ const TribePage = () => {
               
               {tribe.famousPeople && tribe.famousPeople.length > 0 && (
                 <section>
-                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Notable People</h2>
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
+                    👤 Notable People
+                  </h2>
                   <div className="grid sm:grid-cols-2 gap-2">
-                    {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia: string | null }>).map((person, i) => (
-                      <div key={i} className="p-3 bg-secondary rounded-lg">
-                        {person.wikipedia ? (
-                          <a 
-                            href={person.wikipedia} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="font-medium text-primary hover:underline flex items-center gap-1"
-                          >
-                            {person.name}
-                            <ExternalLink className="w-3 h-3" />
-                          </a>
-                        ) : (
-                          <p className="font-medium text-foreground">{person.name}</p>
-                        )}
-                        <p className="text-xs text-muted-foreground">{person.role}</p>
-                      </div>
+                    {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia?: string | null; image?: string }>).map((person, i) => (
+                      <PersonCard key={i} person={person} />
                     ))}
                   </div>
                 </section>
+              )}
+
+              {/* Tribe Gallery - only show if images exist */}
+              {(tribe as any).gallery && (tribe as any).gallery.length > 0 && (
+                <ImageGallery 
+                  images={(tribe as any).gallery} 
+                  title={`${tribe.name} Culture & Heritage`}
+                />
               )}
               
               {/* Traditional Food Section */}
