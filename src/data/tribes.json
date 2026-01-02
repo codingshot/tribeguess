@@ -5,21 +5,21 @@
       "name": "Kikuyu",
       "region": "Central Kenya",
       "population": "~8 million",
-      "namePrefixes": ["Wa", "Njo", "Ngo", "Mu", "Ka"],
+      "namePrefixes": ["Wa", "Njo", "Ngo", "Mu", "Ka", "Nj", "Ng"],
       "commonNames": {
-        "female": ["Wanjiku", "Wangari", "Njeri", "Wambui", "Muthoni", "Nyambura", "Wairimu", "Wanjiru", "Njoki", "Mumbi"],
-        "male": ["Njoroge", "Ngugi", "Kamau", "Mwangi", "Kariuki", "Githinji", "Waweru", "Kimani", "Kinyanjui", "Mburu"]
+        "female": ["Wanjiku", "Wangari", "Njeri", "Wambui", "Muthoni", "Nyambura", "Wairimu", "Wanjiru", "Njoki", "Mumbi", "Wangui", "Nyokabi", "Wacera", "Wangeci", "Wanja"],
+        "male": ["Njoroge", "Ngugi", "Kamau", "Mwangi", "Kariuki", "Githinji", "Waweru", "Kimani", "Kinyanjui", "Mburu", "Muriuki", "Gichuki", "Njenga", "Karanja", "Macharia"]
       },
       "timeBasedNames": {
-        "night": ["Wanjiru", "Njiru"],
-        "morning": ["Wangari"],
+        "night": ["Wanjiru", "Njiru", "Wacu"],
+        "morning": ["Wangari", "Waceera"],
         "day": ["Kamau"],
         "evening": ["Njoki"]
       },
       "stereotypes": [
         "Business-minded and entrepreneurial",
         "Shrewd negotiators",
-        "Economically dominant",
+        "Economically influential",
         "Ambitious and hardworking",
         "Strong family values",
         "Education-focused"
@@ -27,25 +27,25 @@
       "culturalTraits": [
         "Traditional circumcision ceremonies",
         "Strong agricultural heritage",
-        "Respect for elders",
-        "Naming children after grandparents"
+        "Deep respect for elders",
+        "Naming children after grandparents (lineage-based naming)"
       ],
-      "famousPeople": ["Jomo Kenyatta", "Wangari Maathai", "Ngugi wa Thiong'o"],
-      "description": "The Kikuyu are the largest ethnic group in Kenya, known for their business acumen and agricultural expertise. They traditionally inhabit the fertile Central Highlands around Mount Kenya."
+      "famousPeople": ["Jomo Kenyatta (First President)", "Wangari Maathai (Nobel Laureate)", "Ngugi wa Thiong'o (Author)"],
+      "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise."
     },
     {
       "id": "luo",
       "name": "Luo",
       "region": "Western Kenya (Lake Victoria)",
       "population": "~6 million",
-      "namePrefixes": ["O", "A", "Ot", "Od", "Ow"],
+      "namePrefixes": ["O", "A", "Ot", "Od", "Ow", "Ok", "Og"],
       "commonNames": {
-        "female": ["Achieng", "Adhiambo", "Awino", "Auma", "Apiyo", "Atieno", "Anyango", "Akoth", "Aoko", "Aluoch"],
-        "male": ["Odhiambo", "Otieno", "Ouma", "Onyango", "Omondi", "Okoth", "Ogola", "Odongo", "Owino", "Ochieng"]
+        "female": ["Achieng", "Adhiambo", "Awino", "Auma", "Apiyo", "Atieno", "Anyango", "Akoth", "Aoko", "Aluoch", "Akinyi", "Awuor", "Akeyo", "Amolo", "Apondi"],
+        "male": ["Odhiambo", "Otieno", "Ouma", "Onyango", "Omondi", "Okoth", "Ogola", "Odongo", "Owino", "Ochieng", "Oluoch", "Owuor", "Odoyo", "Ojwang", "Opondo"]
       },
       "timeBasedNames": {
         "night": ["Otieno", "Atieno"],
-        "morning": ["Ochieng", "Achieng"],
+        "morning": ["Omondi", "Amondi"],
         "day": ["Ochieng", "Achieng"],
         "evening": ["Odhiambo", "Adhiambo"]
       },
@@ -53,32 +53,32 @@
         "Politically active and vocal",
         "Eloquent public speakers",
         "Musically talented",
-        "Proud of their culture",
-        "Fish lovers (tilapia)",
-        "Stylish dressers"
+        "Proud of their heritage",
+        "Fish lovers (tilapia and omena)",
+        "Fashion-conscious"
       ],
       "culturalTraits": [
         "Non-circumcising community",
-        "Rich musical heritage",
-        "Strong oral traditions",
+        "Rich musical heritage (benga music)",
+        "Strong oral traditions and storytelling",
         "Fishing and farming culture"
       ],
-      "famousPeople": ["Barack Obama Sr.", "Raila Odinga", "Lupita Nyong'o"],
-      "description": "The Luo are the third-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria."
+      "famousPeople": ["Barack Obama Sr. (Father of US President)", "Raila Odinga (Political Leader)", "Lupita Nyong'o (Actress)"],
+      "description": "The Luo (Joluo) are the third-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region."
     },
     {
       "id": "luhya",
       "name": "Luhya",
       "region": "Western Kenya",
       "population": "~7 million",
-      "namePrefixes": ["Wa", "We", "Na", "Ne", "Kha", "Li"],
+      "namePrefixes": ["Wa", "We", "Na", "Ne", "Kha", "Li", "Ma"],
       "commonNames": {
-        "female": ["Nafula", "Nekesa", "Naliaka", "Nasimiyu", "Nabwire", "Khisa", "Nekesa", "Nanjala", "Nangila", "Namachanja"],
-        "male": ["Wafula", "Wekesa", "Barasa", "Simiyu", "Shikuku", "Mukhwana", "Muliro", "Waswa", "Wanyonyi", "Makokha"]
+        "female": ["Nafula", "Nekesa", "Naliaka", "Nasimiyu", "Nabwire", "Khisa", "Nanjala", "Nangila", "Namachanja", "Nambubi", "Wekesa", "Namalwa", "Nanyama", "Nelima", "Nasambu"],
+        "male": ["Wafula", "Wekesa", "Barasa", "Simiyu", "Shikuku", "Mukhwana", "Muliro", "Waswa", "Wanyonyi", "Makokha", "Wanjala", "Wamalwa", "Oduya", "Masinde", "Wanyama"]
       },
       "timeBasedNames": {
-        "night": ["Nabwire"],
-        "morning": ["Naliaka"],
+        "night": ["Nabwire", "Wabwire"],
+        "morning": ["Naliaka", "Waliaka"],
         "harvest": ["Wekesa", "Nekesa"],
         "rainy": ["Wafula", "Nafula"]
       },
@@ -88,65 +88,65 @@
         "Love ugali and chicken",
         "Hospitable and friendly",
         "Strong community bonds",
-        "Enjoy celebrations"
+        "Enjoy celebrations and festivals"
       ],
       "culturalTraits": [
         "18 sub-tribes with unique dialects",
-        "Traditional bull-fighting",
-        "Agricultural expertise",
-        "Strong communal living"
+        "Traditional bullfighting (Likhoni)",
+        "Agricultural expertise (sugarcane, maize)",
+        "Strong communal living traditions"
       ],
-      "famousPeople": ["Masinde Muliro", "Musikari Kombo", "Ferdinand Waititu"],
-      "description": "The Luhya are the second-largest ethnic group in Kenya, comprising 18 sub-tribes. They are known for their agricultural prowess, hospitality, and love for celebrations."
+      "famousPeople": ["Masinde Muliro (Political Leader)", "Michael Olunga (Footballer)", "Victor Wanyama (Footballer)"],
+      "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality."
     },
     {
       "id": "kamba",
       "name": "Kamba",
       "region": "Eastern Kenya",
       "population": "~4.5 million",
-      "namePrefixes": ["M", "Mu", "Nz", "Ky", "Ki", "Nd"],
+      "namePrefixes": ["M", "Mu", "Nz", "Ky", "Ki", "Nd", "Ka"],
       "commonNames": {
-        "female": ["Mwikali", "Nduku", "Mueni", "Mumbua", "Syokau", "Kavata", "Mwende", "Kaluki", "Mutanu", "Nthenya"],
-        "male": ["Mutua", "Musyoka", "Kioko", "Nzomo", "Mutinda", "Malonza", "Munyao", "Kyalo", "Maingi", "Mulwa"]
+        "female": ["Mwikali", "Nduku", "Mueni", "Mumbua", "Syokau", "Kavata", "Mwende", "Kaluki", "Mutanu", "Nthenya", "Wayua", "Mbithe", "Kanini", "Ndinda", "Makau"],
+        "male": ["Mutua", "Musyoka", "Kioko", "Nzomo", "Mutinda", "Malonza", "Munyao", "Kyalo", "Maingi", "Mulwa", "Mutunga", "Muthama", "Wambua", "Kitonga", "Kilonzo"]
       },
       "timeBasedNames": {
-        "night": ["Nduku"],
-        "morning": ["Kioko"],
-        "rainy": ["Mumbua"],
-        "market": ["Musyoka"]
+        "night": ["Nduku", "Mutuku"],
+        "morning": ["Kioko", "Mwiitu"],
+        "rainy": ["Mumbua", "Wambua"],
+        "market": ["Musyoka", "Syokau"]
       },
       "stereotypes": [
-        "Skilled craftsmen and carvers",
+        "Skilled craftsmen and wood carvers",
         "Excellent long-distance traders",
         "Resilient and adaptable",
-        "Musical and dance-loving",
+        "Musical and love dancing",
         "Traditional medicine experts",
         "Entrepreneurial spirit"
       ],
       "culturalTraits": [
-        "Famous wood carving tradition",
-        "Rich dance heritage",
+        "Famous wood carving tradition (Wamunyu)",
+        "Rich dance heritage (Kilumi)",
         "Traditional medicine knowledge",
-        "Strong trading history"
+        "Historic long-distance trading routes"
       ],
-      "famousPeople": ["Kalonzo Musyoka", "Charity Ngilu", "Paul Ngei"],
-      "description": "The Kamba people are known for their exceptional craftsmanship, particularly wood carving, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya."
+      "famousPeople": ["Kalonzo Musyoka (Political Leader)", "Charity Ngilu (Political Leader)", "Paul Ngei (Independence Leader)"],
+      "description": "The Kamba (Akamba) people are known for their exceptional craftsmanship, particularly wood carving in Wamunyu, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya."
     },
     {
       "id": "kalenjin",
       "name": "Kalenjin",
       "region": "Rift Valley",
       "population": "~6 million",
-      "namePrefixes": ["Ki", "Kip", "Che", "Kib", "Kip", "Ro"],
+      "namePrefixes": ["Ki", "Kip", "Che", "Kib", "Ro", "Jep", "Jer"],
       "commonNames": {
-        "female": ["Chemutai", "Chepkoech", "Chepkorir", "Jepkosgei", "Jepchirchir", "Chebet", "Chepng'etich", "Jebet", "Chepkemoi", "Jeruto"],
-        "male": ["Kipchoge", "Kibet", "Cheruiyot", "Rotich", "Kiptoo", "Kiplagat", "Sang", "Kosgei", "Biwott", "Lagat"]
+        "female": ["Chemutai", "Chepkoech", "Chepkorir", "Jepkosgei", "Jepchirchir", "Chebet", "Chepngetich", "Jebet", "Chepkemoi", "Jeruto", "Jepkemboi", "Chepkwony", "Jepleting", "Cheptoo", "Jelagat"],
+        "male": ["Kipchoge", "Kibet", "Cheruiyot", "Rotich", "Kiptoo", "Kiplagat", "Sang", "Kosgei", "Biwott", "Lagat", "Kiprono", "Kiprop", "Kipruto", "Kipsang", "Keter"]
       },
       "timeBasedNames": {
-        "night": ["Kiptoo", "Jeptoo"],
+        "night": ["Kiptoo", "Cheptoo", "Jeptoo"],
         "morning": ["Kipkoech", "Chepkoech"],
-        "day": ["Kibet", "Chebet"],
-        "lunch": ["Kiplagat"]
+        "day": ["Kibet", "Chebet", "Jebet"],
+        "lunch": ["Kiplagat", "Chelagat", "Jelagat"]
       },
       "stereotypes": [
         "World-class long-distance runners",
@@ -154,63 +154,63 @@
         "Pastoralists and cattle keepers",
         "Politically united",
         "Reserved and humble",
-        "Strong athletic genes"
+        "Strong athletic heritage"
       ],
       "culturalTraits": [
-        "Running excellence",
+        "Running excellence (Olympic champions)",
         "Traditional cattle herding",
-        "Age-set systems",
+        "Age-set systems (Ipinda)",
         "Circumcision rites of passage"
       ],
-      "famousPeople": ["Eliud Kipchoge", "William Ruto", "Daniel arap Moi"],
-      "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, and Keiyo, traditionally residing in the Rift Valley."
+      "famousPeople": ["Eliud Kipchoge (Marathon Legend)", "William Ruto (President)", "David Rudisha (Olympic Champion)"],
+      "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, and Tugen, traditionally residing in the Rift Valley highlands."
     },
     {
       "id": "kisii",
       "name": "Kisii (Gusii)",
       "region": "South Nyanza",
       "population": "~2.5 million",
-      "namePrefixes": ["Nya", "Ong", "Mo", "Ke", "Bo", "O"],
+      "namePrefixes": ["Nya", "Ong", "Mo", "Ke", "Bo", "O", "Ma"],
       "commonNames": {
-        "female": ["Nyaboke", "Kemunto", "Kerubo", "Moraa", "Nyanchama", "Kwamboka", "Gesare", "Bochaberi", "Momanyi", "Nyakerario"],
-        "male": ["Ongeri", "Momanyi", "Bosire", "Nyachae", "Obure", "Makori", "Okioma", "Mogaka", "Omari", "Onchari"]
+        "female": ["Nyaboke", "Kemunto", "Kerubo", "Moraa", "Nyanchama", "Kwamboka", "Gesare", "Bochaberi", "Nyakerario", "Bosibori", "Kemuma", "Nyamwamu", "Mokeira", "Obure", "Mongina"],
+        "male": ["Ongeri", "Momanyi", "Bosire", "Nyachae", "Obure", "Makori", "Okioma", "Mogaka", "Omari", "Onchari", "Nyakundi", "Araka", "Maobe", "Ombati", "Obare"]
       },
       "timeBasedNames": {
-        "night": ["Gekara"],
+        "night": ["Gekara", "Nyabincha"],
         "morning": ["Moraa"],
         "harvest": ["Nyaboke"],
-        "rainy": ["Moraa"]
+        "rainy": ["Moraa", "Mokaya"]
       },
       "stereotypes": [
         "Hardworking farmers",
-        "Hot-tempered (stereotype)",
+        "Passionate temperament",
         "Educationally ambitious",
         "Strong family ties",
-        "Aggressive business people",
+        "Enterprising business people",
         "Community-oriented"
       ],
       "culturalTraits": [
-        "Soapstone carving",
-        "Highland farming",
+        "Soapstone carving (Kisii stone)",
+        "Highland farming (tea, bananas)",
         "Strong clan systems",
-        "Traditional circumcision"
+        "Traditional circumcision ceremonies"
       ],
-      "famousPeople": ["Simeon Nyachae", "Chris Obure", "Zachary Onyonka"],
-      "description": "The Kisii (Gusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a reputation for educational achievement."
+      "famousPeople": ["Simeon Nyachae (Political Leader)", "Zahara Bosire (Actress)", "Nyashinski (Musician)"],
+      "description": "The Kisii (Abagusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a strong emphasis on education."
     },
     {
       "id": "meru",
       "name": "Meru",
       "region": "Eastern (Mt. Kenya region)",
       "population": "~2 million",
-      "namePrefixes": ["Ka", "Mu", "Ki", "Ga", "Nj"],
+      "namePrefixes": ["Ka", "Mu", "Ki", "Ga", "Nj", "M", "Nk"],
       "commonNames": {
-        "female": ["Kagwiria", "Kawira", "Gacheri", "Kanini", "Karambu", "Ciamwari", "Gatwiri", "Mwari", "Nkirote", "Karimi"],
-        "male": ["Kirimi", "Mukiri", "Muthomi", "Njeru", "Mugambi", "Murungi", "Kobia", "Mutembei", "Mwiti", "Muthuri"]
+        "female": ["Kagwiria", "Kawira", "Gacheri", "Kanini", "Karambu", "Ciamwari", "Gatwiri", "Mwari", "Nkirote", "Karimi", "Makena", "Kendi", "Nkatha", "Gaicuru", "Kaari"],
+        "male": ["Kirimi", "Mukiri", "Muthomi", "Njeru", "Mugambi", "Murungi", "Kobia", "Mutembei", "Mwiti", "Muthuri", "Kiogora", "Muriungi", "Mwenda", "Mwirichia", "Kaberia"]
       },
       "timeBasedNames": {
         "night": ["Njiru", "Njeru"],
-        "morning": ["Kawira"],
+        "morning": ["Kawira", "Kagwiria"],
         "afternoon": ["Kagwiria"],
         "day": ["Kirimi"]
       },
@@ -224,44 +224,44 @@
       ],
       "culturalTraits": [
         "Njuri Ncheke council of elders",
-        "Miraa cultivation",
+        "Miraa cultivation and trade",
         "Similar to Kikuyu traditions",
-        "Strong agricultural roots"
+        "Strong agricultural roots around Mt. Kenya"
       ],
-      "famousPeople": ["Kiraitu Murungi", "M'Mithiaru", "Gitobu Imanyara"],
-      "description": "The Meru people inhabit the eastern slopes of Mount Kenya. They are known for their strong council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat)."
+      "famousPeople": ["Kiraitu Murungi (Political Leader)", "Peter Kenneth (Political Leader)", "Anne Waiguru (Governor)"],
+      "description": "The Meru (Ameru) people inhabit the eastern slopes of Mount Kenya. They are known for their powerful council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat) in Kenya."
     },
     {
       "id": "coastal",
       "name": "Coastal (Mijikenda/Swahili)",
       "region": "Coastal Kenya",
       "population": "~3 million",
-      "namePrefixes": ["Ha", "Ju", "Fa", "Za", "Ab", "Ka"],
+      "namePrefixes": ["Ha", "Ju", "Fa", "Za", "Ab", "Ka", "Mw"],
       "commonNames": {
-        "female": ["Mwanaisha", "Fatuma", "Zainab", "Mwanajuma", "Khadija", "Amina", "Halima", "Rehema", "Salma", "Bahati"],
-        "male": ["Hamisi", "Jumaa", "Salim", "Rashid", "Abdalla", "Kazungu", "Karisa", "Katana", "Omar", "Hassan"]
+        "female": ["Mwanaisha", "Fatuma", "Zainab", "Mwanajuma", "Khadija", "Amina", "Halima", "Rehema", "Salma", "Bahati", "Mwanakombo", "Riziki", "Mariam", "Sifa", "Zawadi"],
+        "male": ["Hamisi", "Jumaa", "Salim", "Rashid", "Abdalla", "Kazungu", "Karisa", "Katana", "Omar", "Hassan", "Bakari", "Mwandawiro", "Chai", "Tsuma", "Kenga"]
       },
       "timeBasedNames": {
         "friday": ["Jumaa", "Mwanajuma"],
-        "thursday": ["Hamisi"],
+        "thursday": ["Hamisi", "Khamisi"],
         "newyear": ["Mwaka"]
       },
       "stereotypes": [
-        "Laid-back and relaxed",
+        "Laid-back and relaxed lifestyle",
         "Hospitable to visitors",
         "Swahili language experts",
         "Beach and tourism culture",
-        "Islamic influence",
-        "Culturally diverse"
+        "Culturally diverse",
+        "Rich culinary traditions"
       ],
       "culturalTraits": [
         "Swahili language and culture",
-        "Islamic traditions",
-        "Maritime heritage",
-        "Day-of-week naming"
+        "Islamic and traditional influences",
+        "Maritime and trading heritage",
+        "Day-of-week naming tradition"
       ],
-      "famousPeople": ["Najib Balala", "Amina Mohamed", "Hassan Joho"],
-      "description": "Coastal tribes include the Mijikenda (9 tribes) and Swahili people. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine."
+      "famousPeople": ["Najib Balala (Tourism CS)", "Amina Mohamed (Diplomat)", "Ali Kiba (Musician)"],
+      "description": "Coastal tribes include the Mijikenda (9 tribes including Giriama, Digo, Duruma) and Swahili people. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine."
     }
   ]
 }
