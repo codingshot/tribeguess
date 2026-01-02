@@ -54,33 +54,50 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
   const activeId = hoveredTribe || selectedTribe;
   const activeTribe = tribes.find(t => t.slug === activeId);
 
+  // Region colors for visual distinction
+  const regionColors: Record<string, string> = {
+    'Central Kenya': 'hsl(120 40% 50%)',
+    'Western Kenya': 'hsl(45 70% 55%)',
+    'Western Kenya (Lake Victoria)': 'hsl(200 60% 50%)',
+    'Rift Valley': 'hsl(30 60% 55%)',
+    'Eastern Kenya': 'hsl(280 40% 55%)',
+    'Coast': 'hsl(180 50% 50%)',
+    'Northern Kenya': 'hsl(15 60% 55%)',
+    'Nationwide': 'hsl(340 50% 55%)',
+  };
+
+  const getRegionColor = (region: string) => regionColors[region] || 'hsl(var(--primary))';
+
   return (
     <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-lg">
       {/* Map Header */}
       <div className="bg-gradient-to-r from-primary/20 to-primary/10 px-4 py-3 border-b border-border">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-2">
             <Compass className="w-5 h-5 text-primary" />
-            <h3 className="font-heading font-semibold text-foreground">Kenya Tribal Map</h3>
+            <h3 className="font-heading font-semibold text-foreground">Interactive Kenya Map</h3>
           </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setZoom(z => Math.max(0.8, z - 0.2))}
-              className="p-1.5 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
-              aria-label="Zoom out"
-            >
-              <ZoomOut className="w-4 h-4" />
-            </button>
-            <span className="text-xs text-muted-foreground min-w-[3rem] text-center">
-              {Math.round(zoom * 100)}%
-            </span>
-            <button
-              onClick={() => setZoom(z => Math.min(1.5, z + 0.2))}
-              className="p-1.5 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
-              aria-label="Zoom in"
-            >
-              <ZoomIn className="w-4 h-4" />
-            </button>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-muted-foreground">{tribes.length} tribes shown</span>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setZoom(z => Math.max(0.8, z - 0.2))}
+                className="p-1.5 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
+                aria-label="Zoom out"
+              >
+                <ZoomOut className="w-4 h-4" />
+              </button>
+              <span className="text-xs text-muted-foreground min-w-[3rem] text-center">
+                {Math.round(zoom * 100)}%
+              </span>
+              <button
+                onClick={() => setZoom(z => Math.min(1.5, z + 0.2))}
+                className="p-1.5 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
+                aria-label="Zoom in"
+              >
+                <ZoomIn className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -210,7 +227,8 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
             const { x, y } = coordToSvg(tribe.mapCoordinates.lat, tribe.mapCoordinates.lng);
             const isActive = tribe.slug === activeId;
             const popPercent = parseInt(tribe.populationPercent);
-            const radius = Math.max(10, Math.min(22, popPercent * 1.2));
+            const radius = Math.max(8, Math.min(20, popPercent * 1.1));
+            const color = getRegionColor(tribe.region);
             
             return (
               <Link key={tribe.id} to={`/learn/${tribe.slug}`}>
@@ -220,14 +238,27 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
                   onMouseLeave={() => setHoveredTribe(null)}
                   onClick={() => onTribeSelect?.(tribe.slug)}
                 >
+                  {/* Outer pulse ring when active */}
+                  {isActive && (
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r={radius + 12}
+                      fill="none"
+                      stroke={color}
+                      strokeWidth="2"
+                      opacity="0.5"
+                      className="animate-pulse"
+                    />
+                  )}
+                  
                   {/* Outer glow ring */}
                   <circle
                     cx={x}
                     cy={y}
-                    r={radius + 8}
-                    fill="hsl(var(--primary))"
-                    opacity={isActive ? 0.4 : 0.15}
-                    className={isActive ? 'animate-pulse' : ''}
+                    r={radius + 5}
+                    fill={color}
+                    opacity={isActive ? 0.35 : 0.12}
                   />
                   
                   {/* Main marker */}
@@ -235,7 +266,7 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
                     cx={x}
                     cy={y}
                     r={radius}
-                    fill={isActive ? 'hsl(var(--primary))' : 'hsl(var(--primary) / 0.85)'}
+                    fill={color}
                     stroke="white"
                     strokeWidth={isActive ? 3 : 2}
                     filter={isActive ? 'url(#glow)' : undefined}
@@ -247,7 +278,7 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
                     x={x}
                     y={y + 3}
                     textAnchor="middle"
-                    fontSize="9"
+                    fontSize={radius > 12 ? "9" : "7"}
                     fontWeight="bold"
                     fill="white"
                     className="pointer-events-none"
@@ -257,26 +288,26 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
                   
                   {/* Tribe name label */}
                   <rect
-                    x={x - 28}
-                    y={y + radius + 4}
-                    width="56"
-                    height="14"
-                    rx="3"
-                    fill={isActive ? 'hsl(var(--primary))' : 'hsl(var(--card))'}
+                    x={x - 30}
+                    y={y + radius + 3}
+                    width="60"
+                    height="15"
+                    rx="4"
+                    fill={isActive ? color : 'hsl(var(--card))'}
                     stroke={isActive ? 'white' : 'hsl(var(--border))'}
                     strokeWidth="1"
                     opacity="0.95"
                   />
                   <text
                     x={x}
-                    y={y + radius + 14}
+                    y={y + radius + 13}
                     textAnchor="middle"
                     fontSize="8"
                     fontWeight="600"
                     fill={isActive ? 'white' : 'hsl(var(--foreground))'}
                     className="pointer-events-none"
                   >
-                    {tribe.name.split(' ')[0].substring(0, 10)}
+                    {tribe.name.length > 10 ? tribe.name.substring(0, 9) + '…' : tribe.name}
                   </text>
                 </g>
               </Link>
@@ -341,13 +372,11 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
       <div className="p-4 bg-secondary/30 border-t border-border">
         <div className="flex items-center gap-2 mb-3">
           <Info className="w-4 h-4 text-muted-foreground" />
-          <span className="text-xs font-medium text-foreground">Legend</span>
+          <span className="text-xs font-medium text-foreground">Map Legend</span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-primary" />
-            <span className="text-xs text-muted-foreground">Tribe Location</span>
-          </div>
+        
+        {/* Geographic Features */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{ background: 'hsl(210 80% 70%)' }} />
             <span className="text-xs text-muted-foreground">Water Body</span>
@@ -360,25 +389,41 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
             <div className="w-0 h-0 border-l-[4px] border-r-[4px] border-b-[6px] border-l-transparent border-r-transparent" style={{ borderBottomColor: 'hsl(120 25% 45%)' }} />
             <span className="text-xs text-muted-foreground">Mountain</span>
           </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-bold bg-primary text-primary-foreground px-1.5 rounded">17%</span>
+            <span className="text-xs text-muted-foreground">% of Kenya</span>
+          </div>
+        </div>
+
+        {/* Region Colors */}
+        <div className="mb-3">
+          <p className="text-xs text-muted-foreground mb-2">Regions:</p>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(regionColors).slice(0, 6).map(([region, color]) => (
+              <div key={region} className="flex items-center gap-1.5">
+                <div className="w-2.5 h-2.5 rounded-full" style={{ background: color }} />
+                <span className="text-[10px] text-muted-foreground">{region.replace(' Kenya', '').replace(' (Lake Victoria)', '')}</span>
+              </div>
+            ))}
+          </div>
         </div>
         
         {/* Tribe Quick Links */}
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5">
           {tribes.map((tribe) => (
             <Link
               key={tribe.id}
               to={`/learn/${tribe.slug}`}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs transition-all ${
+              className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] transition-all ${
                 tribe.slug === activeId
                   ? 'bg-primary text-primary-foreground'
-                  : 'bg-background hover:bg-primary/20 text-foreground'
+                  : 'bg-background hover:bg-primary/20 text-foreground border border-border'
               }`}
               onMouseEnter={() => setHoveredTribe(tribe.slug)}
               onMouseLeave={() => setHoveredTribe(null)}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-current opacity-60" />
-              {tribe.name.split(' ')[0]}
-              <span className="text-[10px] opacity-70">{tribe.populationPercent}</span>
+              <span className="w-1.5 h-1.5 rounded-full" style={{ background: getRegionColor(tribe.region) }} />
+              {tribe.name.length > 12 ? tribe.name.substring(0, 10) + '…' : tribe.name}
             </Link>
           ))}
         </div>
