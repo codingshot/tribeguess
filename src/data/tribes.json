@@ -3,8 +3,13 @@
     {
       "id": "kikuyu",
       "name": "Kikuyu",
+      "slug": "kikuyu",
       "region": "Central Kenya",
-      "population": "~8 million",
+      "population": "~8.1 million",
+      "populationPercent": "17%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -0.95, "lng": 37.08 },
+      "counties": ["Kiambu", "Murang'a", "Nyeri", "Kirinyaga", "Nyandarua"],
       "namePrefixes": ["Wa", "Njo", "Ngo", "Mu", "Ka", "Nj", "Ng"],
       "commonNames": {
         "female": ["Wanjiku", "Wangari", "Njeri", "Wambui", "Muthoni", "Nyambura", "Wairimu", "Wanjiru", "Njoki", "Mumbi", "Wangui", "Nyokabi", "Wacera", "Wangeci", "Wanja"],
@@ -31,13 +36,25 @@
         "Naming children after grandparents (lineage-based naming)"
       ],
       "famousPeople": ["Jomo Kenyatta (First President)", "Wangari Maathai (Nobel Laureate)", "Ngugi wa Thiong'o (Author)"],
-      "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise."
+      "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise.",
+      "relatedTribes": ["meru", "embu"],
+      "diaspora": {
+        "globalPopulation": "~200,000",
+        "majorCountries": ["USA", "UK", "Canada", "Australia", "South Africa"],
+        "communities": ["Large community in Dallas, Texas", "Significant presence in London", "Growing population in Toronto"],
+        "associations": ["Kikuyu Community Association of America", "UK Kenya Diaspora Alliance"]
+      }
     },
     {
       "id": "luo",
       "name": "Luo",
+      "slug": "luo",
       "region": "Western Kenya (Lake Victoria)",
-      "population": "~6 million",
+      "population": "~5.1 million",
+      "populationPercent": "11%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -0.1, "lng": 34.76 },
+      "counties": ["Kisumu", "Siaya", "Homa Bay", "Migori"],
       "namePrefixes": ["O", "A", "Ot", "Od", "Ow", "Ok", "Og"],
       "commonNames": {
         "female": ["Achieng", "Adhiambo", "Awino", "Auma", "Apiyo", "Atieno", "Anyango", "Akoth", "Aoko", "Aluoch", "Akinyi", "Awuor", "Akeyo", "Amolo", "Apondi"],
@@ -64,13 +81,25 @@
         "Fishing and farming culture"
       ],
       "famousPeople": ["Barack Obama Sr. (Father of US President)", "Raila Odinga (Political Leader)", "Lupita Nyong'o (Actress)"],
-      "description": "The Luo (Joluo) are the third-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region."
+      "description": "The Luo (Joluo) are the fourth-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region.",
+      "relatedTribes": ["luhya", "kisii"],
+      "diaspora": {
+        "globalPopulation": "~150,000",
+        "majorCountries": ["USA", "UK", "Tanzania", "Uganda", "Australia"],
+        "communities": ["Strong presence in Chicago area", "Notable community in Atlanta", "Growing numbers in Melbourne"],
+        "associations": ["Luo Council of Elders Diaspora", "Luo Union USA"]
+      }
     },
     {
       "id": "luhya",
       "name": "Luhya",
+      "slug": "luhya",
       "region": "Western Kenya",
-      "population": "~7 million",
+      "population": "~6.8 million",
+      "populationPercent": "14%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 0.45, "lng": 34.61 },
+      "counties": ["Kakamega", "Bungoma", "Busia", "Vihiga", "Trans Nzoia"],
       "namePrefixes": ["Wa", "We", "Na", "Ne", "Kha", "Li", "Ma"],
       "commonNames": {
         "female": ["Nafula", "Nekesa", "Naliaka", "Nasimiyu", "Nabwire", "Khisa", "Nanjala", "Nangila", "Namachanja", "Nambubi", "Wekesa", "Namalwa", "Nanyama", "Nelima", "Nasambu"],
@@ -97,13 +126,25 @@
         "Strong communal living traditions"
       ],
       "famousPeople": ["Masinde Muliro (Political Leader)", "Michael Olunga (Footballer)", "Victor Wanyama (Footballer)"],
-      "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality."
+      "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality.",
+      "relatedTribes": ["luo", "kisii"],
+      "diaspora": {
+        "globalPopulation": "~120,000",
+        "majorCountries": ["USA", "UK", "Canada", "South Africa", "UAE"],
+        "communities": ["Presence in Houston area", "Community in Manchester, UK", "Growing numbers in Dubai"],
+        "associations": ["Luhya Community USA", "Bukusu Diaspora Network"]
+      }
     },
     {
       "id": "kamba",
       "name": "Kamba",
+      "slug": "kamba",
       "region": "Eastern Kenya",
-      "population": "~4.5 million",
+      "population": "~4.7 million",
+      "populationPercent": "10%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -1.52, "lng": 37.27 },
+      "counties": ["Machakos", "Makueni", "Kitui"],
       "namePrefixes": ["M", "Mu", "Nz", "Ky", "Ki", "Nd", "Ka"],
       "commonNames": {
         "female": ["Mwikali", "Nduku", "Mueni", "Mumbua", "Syokau", "Kavata", "Mwende", "Kaluki", "Mutanu", "Nthenya", "Wayua", "Mbithe", "Kanini", "Ndinda", "Makau"],
@@ -130,13 +171,25 @@
         "Historic long-distance trading routes"
       ],
       "famousPeople": ["Kalonzo Musyoka (Political Leader)", "Charity Ngilu (Political Leader)", "Paul Ngei (Independence Leader)"],
-      "description": "The Kamba (Akamba) people are known for their exceptional craftsmanship, particularly wood carving in Wamunyu, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya."
+      "description": "The Kamba (Akamba) people are known for their exceptional craftsmanship, particularly wood carving in Wamunyu, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya.",
+      "relatedTribes": ["kikuyu", "meru"],
+      "diaspora": {
+        "globalPopulation": "~80,000",
+        "majorCountries": ["USA", "UK", "UAE", "Qatar", "South Africa"],
+        "communities": ["Notable presence in Phoenix, Arizona", "Community in Birmingham, UK", "Significant in Gulf countries"],
+        "associations": ["Akamba Community USA", "Kamba Welfare Association UK"]
+      }
     },
     {
       "id": "kalenjin",
       "name": "Kalenjin",
+      "slug": "kalenjin",
       "region": "Rift Valley",
-      "population": "~6 million",
+      "population": "~6.4 million",
+      "populationPercent": "13%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 0.36, "lng": 35.29 },
+      "counties": ["Uasin Gishu", "Nandi", "Elgeyo-Marakwet", "Baringo", "Kericho", "Bomet"],
       "namePrefixes": ["Ki", "Kip", "Che", "Kib", "Ro", "Jep", "Jer"],
       "commonNames": {
         "female": ["Chemutai", "Chepkoech", "Chepkorir", "Jepkosgei", "Jepchirchir", "Chebet", "Chepngetich", "Jebet", "Chepkemoi", "Jeruto", "Jepkemboi", "Chepkwony", "Jepleting", "Cheptoo", "Jelagat"],
@@ -163,13 +216,25 @@
         "Circumcision rites of passage"
       ],
       "famousPeople": ["Eliud Kipchoge (Marathon Legend)", "William Ruto (President)", "David Rudisha (Olympic Champion)"],
-      "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, and Tugen, traditionally residing in the Rift Valley highlands."
+      "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, and Tugen, traditionally residing in the Rift Valley highlands.",
+      "relatedTribes": ["maasai", "turkana"],
+      "diaspora": {
+        "globalPopulation": "~60,000",
+        "majorCountries": ["USA", "UK", "Australia", "Japan", "Germany"],
+        "communities": ["Many athletes in Boulder, Colorado", "Running communities in Eugene, Oregon", "Presence in London"],
+        "associations": ["Kalenjin Diaspora USA", "Athletics Kenya Diaspora"]
+      }
     },
     {
       "id": "kisii",
       "name": "Kisii (Gusii)",
+      "slug": "kisii",
       "region": "South Nyanza",
-      "population": "~2.5 million",
+      "population": "~2.7 million",
+      "populationPercent": "6%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -0.68, "lng": 34.77 },
+      "counties": ["Kisii", "Nyamira"],
       "namePrefixes": ["Nya", "Ong", "Mo", "Ke", "Bo", "O", "Ma"],
       "commonNames": {
         "female": ["Nyaboke", "Kemunto", "Kerubo", "Moraa", "Nyanchama", "Kwamboka", "Gesare", "Bochaberi", "Nyakerario", "Bosibori", "Kemuma", "Nyamwamu", "Mokeira", "Obure", "Mongina"],
@@ -196,13 +261,25 @@
         "Traditional circumcision ceremonies"
       ],
       "famousPeople": ["Simeon Nyachae (Political Leader)", "Zahara Bosire (Actress)", "Nyashinski (Musician)"],
-      "description": "The Kisii (Abagusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a strong emphasis on education."
+      "description": "The Kisii (Abagusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a strong emphasis on education.",
+      "relatedTribes": ["luo", "luhya"],
+      "diaspora": {
+        "globalPopulation": "~50,000",
+        "majorCountries": ["USA", "UK", "Canada", "Australia"],
+        "communities": ["Growing community in Minneapolis", "Presence in Charlotte, NC", "UK community in Midlands"],
+        "associations": ["Kisii Community USA", "Gusii Diaspora Association"]
+      }
     },
     {
       "id": "meru",
       "name": "Meru",
+      "slug": "meru",
       "region": "Eastern (Mt. Kenya region)",
-      "population": "~2 million",
+      "population": "~1.9 million",
+      "populationPercent": "4%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 0.05, "lng": 37.65 },
+      "counties": ["Meru", "Tharaka-Nithi"],
       "namePrefixes": ["Ka", "Mu", "Ki", "Ga", "Nj", "M", "Nk"],
       "commonNames": {
         "female": ["Kagwiria", "Kawira", "Gacheri", "Kanini", "Karambu", "Ciamwari", "Gatwiri", "Mwari", "Nkirote", "Karimi", "Makena", "Kendi", "Nkatha", "Gaicuru", "Kaari"],
@@ -229,13 +306,25 @@
         "Strong agricultural roots around Mt. Kenya"
       ],
       "famousPeople": ["Kiraitu Murungi (Political Leader)", "Peter Kenneth (Political Leader)", "Anne Waiguru (Governor)"],
-      "description": "The Meru (Ameru) people inhabit the eastern slopes of Mount Kenya. They are known for their powerful council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat) in Kenya."
+      "description": "The Meru (Ameru) people inhabit the eastern slopes of Mount Kenya. They are known for their powerful council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat) in Kenya.",
+      "relatedTribes": ["kikuyu", "embu"],
+      "diaspora": {
+        "globalPopulation": "~40,000",
+        "majorCountries": ["USA", "UK", "UAE", "South Africa"],
+        "communities": ["Community in Washington DC area", "Presence in Texas", "Growing UK community"],
+        "associations": ["Meru Community USA", "Njuri Ncheke Diaspora"]
+      }
     },
     {
       "id": "coastal",
       "name": "Coastal (Mijikenda/Swahili)",
+      "slug": "coastal",
       "region": "Coastal Kenya",
-      "population": "~3 million",
+      "population": "~3.3 million",
+      "populationPercent": "7%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -4.05, "lng": 39.67 },
+      "counties": ["Mombasa", "Kilifi", "Kwale", "Tana River", "Lamu", "Taita-Taveta"],
       "namePrefixes": ["Ha", "Ju", "Fa", "Za", "Ab", "Ka", "Mw"],
       "commonNames": {
         "female": ["Mwanaisha", "Fatuma", "Zainab", "Mwanajuma", "Khadija", "Amina", "Halima", "Rehema", "Salma", "Bahati", "Mwanakombo", "Riziki", "Mariam", "Sifa", "Zawadi"],
@@ -261,7 +350,14 @@
         "Day-of-week naming tradition"
       ],
       "famousPeople": ["Najib Balala (Tourism CS)", "Amina Mohamed (Diplomat)", "Ali Kiba (Musician)"],
-      "description": "Coastal tribes include the Mijikenda (9 tribes including Giriama, Digo, Duruma) and Swahili people. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine."
+      "description": "Coastal tribes include the Mijikenda (9 tribes including Giriama, Digo, Duruma) and Swahili people. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine.",
+      "relatedTribes": [],
+      "diaspora": {
+        "globalPopulation": "~100,000",
+        "majorCountries": ["UAE", "Oman", "USA", "UK", "Saudi Arabia"],
+        "communities": ["Strong presence in Gulf states", "Historic ties to Oman", "Community in New York area"],
+        "associations": ["Swahili Cultural Society", "Mijikenda Diaspora Network"]
+      }
     }
   ]
 }
