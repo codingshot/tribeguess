@@ -1748,6 +1748,733 @@
         "communities": ["Minimal diaspora - mainly within Kenya"],
         "associations": ["Rendille Community Development"]
       }
+    },
+    {
+      "id": "suba",
+      "name": "Suba",
+      "slug": "suba",
+      "region": "Lake Victoria Islands",
+      "population": "~200,000",
+      "populationPercent": "0.4%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -0.48, "lng": 34.08 },
+      "counties": ["Homa Bay", "Migori"],
+      "namePrefixes": ["O", "A", "Ot", "Ok", "Og"],
+      "commonNames": {
+        "female": ["Achieng", "Adhiambo", "Awino", "Anyango", "Atieno", "Akoth", "Aoko", "Aluoch"],
+        "male": ["Odhiambo", "Otieno", "Ouma", "Onyango", "Omondi", "Okoth", "Ogola", "Owino"]
+      },
+      "timeBasedNames": {
+        "night": ["Otieno", "Atieno"],
+        "morning": ["Omondi", "Amondi"],
+        "day": ["Ochieng", "Achieng"],
+        "evening": ["Odhiambo", "Adhiambo"]
+      },
+      "stereotypes": [
+        "Skilled fishermen",
+        "Peaceful island dwellers",
+        "Culturally absorbed by Luo",
+        "Traditional basket weavers",
+        "Lake Victoria experts",
+        "Quiet and hardworking"
+      ],
+      "culturalTraits": [
+        "Originally Bantu, now heavily Luo-influenced",
+        "Fishing culture on Lake Victoria islands",
+        "Traditional boat-making skills",
+        "Basket weaving and pottery",
+        "Rain-making ceremonies",
+        "Unique blend of Bantu-Nilotic culture"
+      ],
+      "funFacts": [
+        "The Suba are originally Bantu but have adopted Luo language and many customs",
+        "They inhabit islands in Lake Victoria including Mfangano and Rusinga",
+        "Rusinga Island is where Mary Leakey discovered the Proconsul fossil",
+        "The Suba language is critically endangered with fewer than 100 fluent speakers",
+        "Traditional Suba were known for their rain-making rituals"
+      ],
+      "traditionalFood": {
+        "staples": ["Tilapia and omena (fish)", "Ugali", "Cassava", "Sweet potatoes"],
+        "beverages": ["Busaa (millet beer)", "Fresh lake fish soup"],
+        "specialDishes": ["Smoked fish", "Fish stew with vegetables", "Fried omena"],
+        "description": "Suba cuisine is centered on fish from Lake Victoria, similar to the Luo. Tilapia and omena are prepared in various ways, complemented by ugali and vegetables."
+      },
+      "traditionalDance": "Traditional dances similar to Luo with fishing themes",
+      "religion": "Traditional beliefs; now predominantly Christian",
+      "history": {
+        "origin": "The Suba are Bantu people who migrated from Uganda's Buganda region to the Lake Victoria islands between the 16th and 18th centuries. They settled on Mfangano, Rusinga, and nearby islands.",
+        "colonialEra": "During colonial times, the Suba were administratively grouped with the Luo. They increasingly adopted Luo language and customs for social and economic reasons.",
+        "independence": "The Suba have sought recognition as a distinct ethnic group. In 2009, they were officially recognized as Kenya's 43rd tribe, distinct from the Luo.",
+        "keyEvents": ["Migration from Uganda (1500s-1700s)", "Settlement on Lake Victoria islands", "Cultural assimilation with Luo", "Official recognition as distinct tribe (2009)"]
+      },
+      "language": {
+        "name": "Olusuba (Suba)",
+        "speakers": "~100 fluent speakers remaining",
+        "greeting": "Olembe",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Omusango?", "meaning": "How are you?" },
+          { "phrase": "Mbuya", "meaning": "I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Webare", "meaning": "Thank you" },
+          { "phrase": "Osire", "meaning": "Goodbye" }
+        ],
+        "family": "Bantu (Niger-Congo) - critically endangered",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Tom Mboya", "role": "Independence Hero (born on Rusinga Island)", "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya" },
+        { "name": "Ochola Ogaye", "role": "Suba cultural preservation activist", "wikipedia": null }
+      ],
+      "description": "The Suba are a Bantu people living on Lake Victoria islands in Kenya. Though largely assimilated into Luo culture, they maintain a distinct identity and were recognized as Kenya's 43rd tribe in 2009.",
+      "relatedTribes": ["luo", "kisii"],
+      "diaspora": {
+        "globalPopulation": "~10,000",
+        "majorCountries": ["USA", "UK"],
+        "breakdown": [
+          { "country": "United States", "population": "~3,000", "cities": ["Various"] }
+        ],
+        "communities": ["Often grouped with Luo diaspora"],
+        "associations": ["Suba Cultural Association"]
+      }
+    },
+    {
+      "id": "mbeere",
+      "name": "Mbeere",
+      "slug": "mbeere",
+      "region": "Eastern Kenya",
+      "population": "~200,000",
+      "populationPercent": "0.4%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -0.70, "lng": 37.65 },
+      "counties": ["Embu"],
+      "namePrefixes": ["Mu", "Nj", "Ki", "Wa", "Ngo"],
+      "commonNames": {
+        "female": ["Wanjiru", "Njeri", "Wangari", "Muthoni", "Nyawira", "Kagendo", "Cianjoka"],
+        "male": ["Njeru", "Njagi", "Mugo", "Ireri", "Kinyua", "Kithinji", "Mwenda", "Munyi"]
+      },
+      "stereotypes": [
+        "Resilient farmers in semi-arid areas",
+        "Related to Embu and Kikuyu",
+        "Traditional beekeepers",
+        "Strong community bonds",
+        "Hardworking people",
+        "Drought-resistant farming experts"
+      ],
+      "culturalTraits": [
+        "Close cultural ties to Embu and Kikuyu",
+        "Traditional beekeeping (honey production)",
+        "Drought-resistant farming techniques",
+        "Traditional circumcision ceremonies",
+        "Naming children after grandparents",
+        "Strong clan systems"
+      ],
+      "funFacts": [
+        "The Mbeere are closely related to the Embu, often considered a sub-group",
+        "They inhabit the drier, lower regions below Mt. Kenya",
+        "Traditional Mbeere are expert beekeepers, producing high-quality honey",
+        "The Mbeere participated in the Mau Mau uprising alongside other Mt. Kenya communities"
+      ],
+      "traditionalFood": {
+        "staples": ["Muthokoi (de-husked maize)", "Githeri", "Sweet potatoes", "Cassava"],
+        "beverages": ["Muratina (honey beer)", "Uki (honey wine)", "Fermented porridge"],
+        "specialDishes": ["Honey-based dishes", "Nyama choma", "Traditional vegetables", "Mbugi (dried meat)"],
+        "description": "Mbeere cuisine adapts to the semi-arid environment with drought-resistant crops. Honey is a prized product used in beverages and ceremonies."
+      },
+      "traditionalDance": "Traditional dances similar to Embu and Kikuyu",
+      "religion": "Traditional belief in Ngai; now predominantly Christian",
+      "history": {
+        "origin": "The Mbeere are Bantu people closely related to the Embu. They settled in the drier lowlands east of Mt. Kenya, developing farming techniques suited to semi-arid conditions.",
+        "colonialEra": "The Mbeere participated in the Mau Mau uprising. They were affected by colonial policies but maintained their agricultural practices.",
+        "independence": "Post-independence, the Mbeere have been part of Embu County. The Kiambere and Masinga dams were built in Mbeere territory, bringing both opportunities and displacement.",
+        "keyEvents": ["Settlement in Mt. Kenya lowlands", "Mau Mau participation (1952-1960)", "Dam construction projects (1980s)"]
+      },
+      "language": {
+        "name": "Kimbeere",
+        "speakers": "~200,000",
+        "greeting": "Muga",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Wi mwega?", "meaning": "Are you well?" },
+          { "phrase": "Ni mwega", "meaning": "I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Thayu", "meaning": "Peace" },
+          { "phrase": "Nindakena", "meaning": "Thank you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Emilio Stanley Mwai Kibaki", "role": "Third President (partial Mbeere heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki" }
+      ],
+      "description": "The Mbeere are Bantu people living in the semi-arid lowlands east of Mt. Kenya in Embu County. They are closely related to the Embu and known for their beekeeping traditions and drought-resistant farming.",
+      "relatedTribes": ["embu", "kikuyu", "kamba"],
+      "diaspora": {
+        "globalPopulation": "~8,000",
+        "majorCountries": ["USA", "UK"],
+        "breakdown": [
+          { "country": "United States", "population": "~3,000", "cities": ["Various"] }
+        ],
+        "communities": ["Often grouped with Mt. Kenya diaspora"],
+        "associations": ["GEMA Diaspora associations"]
+      }
+    },
+    {
+      "id": "taveta",
+      "name": "Taveta",
+      "slug": "taveta",
+      "region": "Coastal Highlands (Kenya-Tanzania border)",
+      "population": "~50,000",
+      "populationPercent": "0.1%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -3.40, "lng": 37.68 },
+      "counties": ["Taita-Taveta"],
+      "namePrefixes": ["Mw", "Ki", "Ng"],
+      "commonNames": {
+        "female": ["Mwanaisha", "Mwatunge", "Mwadamu", "Zawadi", "Pili", "Siti"],
+        "male": ["Mwacharo", "Mwashote", "Mwakio", "Kishamba", "Mwaita", "Bakari"]
+      },
+      "stereotypes": [
+        "Border traders",
+        "Irrigation farming experts",
+        "Peaceful community",
+        "Swahili influence",
+        "Traditional dancers",
+        "Skilled farmers"
+      ],
+      "culturalTraits": [
+        "Traditional irrigation farming (using Lake Jipe water)",
+        "Cross-border ties with Tanzanian communities",
+        "Blend of Bantu and Swahili influences",
+        "Traditional blacksmithing",
+        "Distinctive dance traditions",
+        "Agricultural innovation"
+      ],
+      "funFacts": [
+        "Taveta developed sophisticated traditional irrigation systems using Lake Jipe",
+        "They were important traders between the coast and interior",
+        "The Taveta language is related to Taita but distinct",
+        "Lake Jipe straddles the Kenya-Tanzania border in Taveta territory"
+      ],
+      "traditionalFood": {
+        "staples": ["Rice (irrigated)", "Bananas", "Vegetables from irrigated farms", "Fish from Lake Jipe"],
+        "beverages": ["Traditional beer", "Fresh fruit juices"],
+        "specialDishes": ["Fish stew", "Banana dishes", "Irrigated vegetable stews"],
+        "description": "Taveta cuisine benefits from irrigation agriculture, featuring rice, bananas, and vegetables. Fish from Lake Jipe supplements the diet."
+      },
+      "traditionalDance": "Traditional Taveta dances with drums and singing",
+      "religion": "Traditional beliefs; Islam and Christianity growing",
+      "history": {
+        "origin": "The Taveta are Bantu people related to the Taita. They settled near Lake Jipe and developed irrigation agriculture, becoming important traders between the coast and interior.",
+        "colonialEra": "Taveta was a refuge for escaped slaves and a trading center. The British recognized their irrigation skills and agricultural productivity.",
+        "independence": "Post-independence, Taveta has been part of Taita-Taveta County. Cross-border trade with Tanzania remains important.",
+        "keyEvents": ["Settlement near Lake Jipe", "Development of irrigation", "Role in trade routes", "Cross-border identity"]
+      },
+      "language": {
+        "name": "Kitaveta",
+        "speakers": "~50,000",
+        "greeting": "Mbuya",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Orie?", "meaning": "How are you?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nasema", "meaning": "I'm fine" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Local community leaders", "role": "Elders and agricultural innovators", "wikipedia": null }
+      ],
+      "description": "The Taveta are a small Bantu community living near Lake Jipe on the Kenya-Tanzania border. They are known for their traditional irrigation farming and trading heritage.",
+      "relatedTribes": ["taita", "mijikenda"],
+      "diaspora": {
+        "globalPopulation": "~3,000",
+        "majorCountries": ["Tanzania", "Kenya (primarily)"],
+        "breakdown": [],
+        "communities": ["Cross-border with Tanzania"],
+        "associations": ["Taveta Community Development"]
+      }
+    },
+    {
+      "id": "tharaka",
+      "name": "Tharaka",
+      "slug": "tharaka",
+      "region": "Eastern Kenya",
+      "population": "~175,000",
+      "populationPercent": "0.4%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -0.20, "lng": 37.90 },
+      "counties": ["Tharaka-Nithi"],
+      "namePrefixes": ["Mu", "Ki", "Nj", "Ka"],
+      "commonNames": {
+        "female": ["Kagwiria", "Kawira", "Kanini", "Ciamwari", "Gacheri", "Gatwiri", "Karimi"],
+        "male": ["Kirimi", "Mugambi", "Murungi", "Muthomi", "Mwiti", "Mutembei", "Kaberia"]
+      },
+      "stereotypes": [
+        "Drought-resistant farmers",
+        "Millet and sorghum experts",
+        "Traditional brewers",
+        "Related to Meru",
+        "Semi-arid land specialists",
+        "Resilient community"
+      ],
+      "culturalTraits": [
+        "Expertise in semi-arid agriculture",
+        "Traditional millet and sorghum farming",
+        "Honey production and trade",
+        "Close ties to Meru culture",
+        "Traditional iron smelting history",
+        "Age-set systems"
+      ],
+      "funFacts": [
+        "The Tharaka are masters of farming in semi-arid conditions",
+        "They were historically known for iron smelting and tool-making",
+        "Tharaka honey is prized and traded widely",
+        "The community has preserved traditional drought-coping mechanisms"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet ugali", "Sorghum", "Cassava", "Sweet potatoes", "Green grams"],
+        "beverages": ["Muratina (honey beer)", "Millet porridge"],
+        "specialDishes": ["Mbugi (dried meat)", "Wild honey", "Traditional vegetables"],
+        "description": "Tharaka cuisine features drought-resistant crops like millet, sorghum, and green grams. Honey is an important product used in beverages and ceremonies."
+      },
+      "traditionalDance": "Traditional dances similar to Meru community",
+      "religion": "Traditional beliefs; now predominantly Christian",
+      "history": {
+        "origin": "The Tharaka are Bantu people closely related to the Meru. They settled in the semi-arid lowlands east of Mt. Kenya, developing unique adaptations to the harsh environment.",
+        "colonialEra": "The Tharaka were involved in the Mau Mau uprising. Colonial policies affected their land and livelihood.",
+        "independence": "Post-independence, the Tharaka gained their own constituency and later a county (Tharaka-Nithi, shared with Meru). They continue to practice traditional farming.",
+        "keyEvents": ["Settlement in lowlands", "Development of drought-resistant farming", "Mau Mau participation", "Tharaka-Nithi County formation"]
+      },
+      "language": {
+        "name": "Kitharaka",
+        "speakers": "~175,000",
+        "greeting": "Muga",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Uri mwega?", "meaning": "Are you well?" },
+          { "phrase": "Ni mwega", "meaning": "I'm well" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ninkenda", "meaning": "Thank you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Ragwa Njue", "role": "Bishop and religious leader", "wikipedia": null }
+      ],
+      "description": "The Tharaka are Bantu people living in the semi-arid lowlands of Tharaka-Nithi County. They are related to the Meru and known for their expertise in drought-resistant agriculture and honey production.",
+      "relatedTribes": ["meru", "embu", "kikuyu"],
+      "diaspora": {
+        "globalPopulation": "~8,000",
+        "majorCountries": ["USA", "UK"],
+        "breakdown": [],
+        "communities": ["Often grouped with Meru diaspora"],
+        "associations": ["Tharaka Community Association"]
+      }
+    },
+    {
+      "id": "nubi",
+      "name": "Nubi (Nubians)",
+      "slug": "nubi",
+      "region": "Urban Kenya (Nairobi, Eldoret, Kisumu)",
+      "population": "~100,000",
+      "populationPercent": "0.2%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -1.28, "lng": 36.82 },
+      "counties": ["Nairobi", "Uasin Gishu", "Kisumu"],
+      "namePrefixes": ["Ab", "Ha", "Mu", "Ali"],
+      "commonNames": {
+        "female": ["Fatuma", "Amina", "Zainab", "Halima", "Mariam", "Khadija", "Rukia", "Salama"],
+        "male": ["Abdalla", "Hassan", "Omar", "Salim", "Rashid", "Ibrahim", "Bakari", "Hamisi"]
+      },
+      "stereotypes": [
+        "Descendants of Sudanese soldiers",
+        "Strong Muslim identity",
+        "Urban community",
+        "Military heritage",
+        "Tight-knit community",
+        "Land rights activists"
+      ],
+      "culturalTraits": [
+        "Descendants of Sudanese soldiers in British colonial army",
+        "Strong Islamic traditions",
+        "Unique blend of East African and Sudanese culture",
+        "Urban settlement patterns",
+        "Traditional music and dance",
+        "Close community bonds"
+      ],
+      "funFacts": [
+        "Kenyan Nubians are descendants of Sudanese soldiers brought by the British in the 1890s",
+        "Kibera, Africa's largest slum, was originally a Nubian soldiers' settlement called 'Kibra' (forest)",
+        "Nubians fought for decades to gain recognition as Kenyan citizens",
+        "They speak Ki-Nubi, a creole Arabic language",
+        "The Nubian community was finally recognized with full citizenship rights in 2017"
+      ],
+      "traditionalFood": {
+        "staples": ["Kisra (Sudanese flatbread)", "Ful (fava bean stew)", "Rice dishes", "Goat meat"],
+        "beverages": ["Sudanese coffee", "Hibiscus tea (karkade)"],
+        "specialDishes": ["Shorbat (meat soup)", "Asida (porridge)", "Tamiya (falafel)", "Gurassa (thick pancakes)"],
+        "description": "Nubian cuisine blends Sudanese traditions with East African influences. Kisra (fermented flatbread) and ful (fava beans) reflect their Sudanese origins."
+      },
+      "traditionalDance": "Traditional Nubian dances with drums and singing",
+      "religion": "Predominantly Sunni Islam",
+      "history": {
+        "origin": "Kenyan Nubians descend from Sudanese soldiers recruited into the British King's African Rifles in the 1890s. After their service, they were settled in areas like Kibra (Kibera) in Nairobi.",
+        "colonialEra": "Nubians served in colonial campaigns across East Africa. They were promised land but received only temporary permits. Kibera was their main settlement in Nairobi.",
+        "independence": "After independence, Nubians faced citizenship challenges as they had no traditional homeland. They fought for decades for recognition, finally gaining full citizenship rights in 2017.",
+        "keyEvents": ["Recruitment by British (1890s)", "Settlement in Kibera (1904)", "Post-independence citizenship struggles", "Recognition as Kenyans (2017)"]
+      },
+      "language": {
+        "name": "Ki-Nubi (Nubi Arabic)",
+        "speakers": "~100,000",
+        "greeting": "Salam Aleykum",
+        "greetingMeaning": "Peace be upon you",
+        "additionalGreetings": [
+          { "phrase": "Aleykum Salam", "meaning": "And upon you peace" },
+          { "phrase": "Inta kweis?", "meaning": "Are you well?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Shukran", "meaning": "Thank you" },
+          { "phrase": "Aiwa", "meaning": "Yes" },
+          { "phrase": "La", "meaning": "No" }
+        ],
+        "family": "Arabic-based creole",
+        "writingSystem": "Latin and Arabic scripts"
+      },
+      "famousPeople": [
+        { "name": "Adam Musa Kisiangani", "role": "Nubian rights activist", "wikipedia": null },
+        { "name": "Shafi Adam", "role": "Community leader", "wikipedia": null }
+      ],
+      "description": "The Nubi (Nubians) are descendants of Sudanese soldiers settled in Kenya by the British. They have a unique Sudanese-East African culture, speak Ki-Nubi, and are predominantly Muslim. They gained full citizenship in 2017.",
+      "relatedTribes": ["swahili", "somali"],
+      "diaspora": {
+        "globalPopulation": "~20,000",
+        "majorCountries": ["UK", "USA", "Sudan"],
+        "breakdown": [
+          { "country": "United Kingdom", "population": "~8,000", "cities": ["London"] },
+          { "country": "United States", "population": "~5,000", "cities": ["Various"] }
+        ],
+        "communities": ["UK Nubian community", "Connected to Sudanese diaspora"],
+        "associations": ["Nubian Rights Forum", "Kenya Nubian Community"]
+      }
+    },
+    {
+      "id": "gabra",
+      "name": "Gabra",
+      "slug": "gabra",
+      "region": "Northern Kenya",
+      "population": "~90,000",
+      "populationPercent": "0.2%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 3.50, "lng": 37.50 },
+      "counties": ["Marsabit"],
+      "namePrefixes": ["Gu", "Da", "Ha", "Bo"],
+      "commonNames": {
+        "female": ["Galgalo", "Duba", "Halima", "Boru", "Jarso"],
+        "male": ["Guyo", "Dida", "Wario", "Boru", "Godana", "Golicha"]
+      },
+      "stereotypes": [
+        "Expert camel herders",
+        "Desert survivors",
+        "Strong traditional beliefs",
+        "Related to Borana",
+        "Peaceful community",
+        "Traditional lifestyle"
+      ],
+      "culturalTraits": [
+        "Camel pastoralism in Chalbi Desert",
+        "Strong traditional beliefs (Waaq worship)",
+        "Age-set systems",
+        "Distinctive traditional dress",
+        "Oral poetry and storytelling",
+        "Desert navigation expertise"
+      ],
+      "funFacts": [
+        "The Gabra survive in one of Africa's harshest environments - the Chalbi Desert",
+        "They practice the ancient Waaq religion alongside Islam",
+        "Gabra camels are specially adapted to desert conditions",
+        "The community migrates up to 100km following pasture and water"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel milk", "Goat meat", "Sorghum (when available)"],
+        "beverages": ["Camel milk (fresh and fermented)"],
+        "specialDishes": ["Roasted meat", "Blood and milk mixture"],
+        "description": "Gabra diet is almost entirely dependent on their livestock, primarily camels. Camel milk is the staple, supplemented by meat during ceremonies."
+      },
+      "traditionalDance": "Traditional dances during ceremonies and celebrations",
+      "religion": "Traditional Waaq beliefs; Islam growing",
+      "history": {
+        "origin": "The Gabra are Cushitic people related to the Borana. They adapted to the extreme Chalbi Desert environment, developing a unique camel-based pastoral economy.",
+        "colonialEra": "The British had minimal contact with the remote Gabra. They maintained their traditional lifestyle largely undisturbed.",
+        "independence": "Post-independence, the Gabra have faced challenges from droughts and conflicts. They remain one of Kenya's most traditional communities.",
+        "keyEvents": ["Adaptation to Chalbi Desert", "Preservation of Waaq beliefs", "Modern development challenges"]
+      },
+      "language": {
+        "name": "Gabra (Borana dialect)",
+        "speakers": "~90,000",
+        "greeting": "Akkam",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Nagaa?", "meaning": "Are you at peace?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Galatoomaa", "meaning": "Thank you" }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Local community elders", "role": "Traditional leaders", "wikipedia": null }
+      ],
+      "description": "The Gabra are Cushitic camel pastoralists living in the Chalbi Desert of northern Kenya. Related to the Borana, they maintain traditional practices including Waaq worship.",
+      "relatedTribes": ["borana", "rendille", "somali"],
+      "diaspora": {
+        "globalPopulation": "~3,000",
+        "majorCountries": ["Kenya (primarily)"],
+        "breakdown": [],
+        "communities": ["Minimal diaspora"],
+        "associations": ["Gabra Community Development"]
+      }
+    },
+    {
+      "id": "pokomo",
+      "name": "Pokomo",
+      "slug": "pokomo",
+      "region": "Tana River",
+      "population": "~100,000",
+      "populationPercent": "0.2%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -2.00, "lng": 40.00 },
+      "counties": ["Tana River"],
+      "namePrefixes": ["Wa", "Mw", "Ki"],
+      "commonNames": {
+        "female": ["Mwanaisha", "Zahra", "Fatuma", "Halima", "Amina"],
+        "male": ["Hassan", "Omar", "Bakari", "Salim", "Mwalimu"]
+      },
+      "stereotypes": [
+        "River farmers",
+        "Skilled irrigators",
+        "Fishing experts",
+        "Peaceful agriculturalists",
+        "Tana River guardians",
+        "Traditional boat makers"
+      ],
+      "culturalTraits": [
+        "Flood recession agriculture along Tana River",
+        "Traditional fishing and boat-making",
+        "Rice and banana cultivation",
+        "River-based lifestyle",
+        "Traditional music and dance",
+        "Blend of Bantu and Swahili influences"
+      ],
+      "funFacts": [
+        "The Pokomo practice unique flood recession agriculture, farming as river waters recede",
+        "They are divided into Upper Pokomo (farmers) and Lower Pokomo (more fishing-oriented)",
+        "Tana River is the longest river in Kenya, and Pokomo have lived along it for centuries",
+        "They have historically had conflicts with the pastoral Orma over resources"
+      ],
+      "traditionalFood": {
+        "staples": ["Rice", "Bananas", "Fish from Tana River", "Cassava"],
+        "beverages": ["Palm wine", "Fresh fruit juices"],
+        "specialDishes": ["Fish stew", "Rice dishes", "Banana preparations"],
+        "description": "Pokomo cuisine features crops grown along the Tana River floodplains - rice, bananas, and vegetables, supplemented by fish from the river."
+      },
+      "traditionalDance": "Traditional river dances during festivals",
+      "religion": "Islam and Christianity; some traditional beliefs",
+      "history": {
+        "origin": "The Pokomo are Bantu people who settled along the Tana River centuries ago, developing sophisticated flood recession agriculture techniques.",
+        "colonialEra": "The British recognized the Pokomo as skilled farmers. They were relatively peaceful and cooperative with colonial administration.",
+        "independence": "Post-independence, the Pokomo have faced land and resource conflicts with pastoral communities. They continue their agricultural traditions.",
+        "keyEvents": ["Settlement along Tana River", "Development of irrigation farming", "Resource conflicts with pastoralists"]
+      },
+      "language": {
+        "name": "Kipokomo",
+        "speakers": "~100,000",
+        "greeting": "Habari",
+        "greetingMeaning": "Hello (influenced by Swahili)",
+        "additionalGreetings": [
+          { "phrase": "Mzuri", "meaning": "Fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Asante", "meaning": "Thank you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Local agricultural leaders", "role": "Community elders", "wikipedia": null }
+      ],
+      "description": "The Pokomo are Bantu farmers living along the Tana River in Kenya. They are known for their flood recession agriculture and fishing traditions.",
+      "relatedTribes": ["mijikenda", "swahili"],
+      "diaspora": {
+        "globalPopulation": "~5,000",
+        "majorCountries": ["Kenya (primarily)"],
+        "breakdown": [],
+        "communities": ["Minimal diaspora"],
+        "associations": ["Pokomo Community Development"]
+      }
+    },
+    {
+      "id": "orma",
+      "name": "Orma",
+      "slug": "orma",
+      "region": "Tana River",
+      "population": "~100,000",
+      "populationPercent": "0.2%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -1.50, "lng": 40.05 },
+      "counties": ["Tana River", "Garissa"],
+      "namePrefixes": ["Ha", "Gu", "Da", "Bo"],
+      "commonNames": {
+        "female": ["Halima", "Fatuma", "Amina", "Deka", "Boru"],
+        "male": ["Hassan", "Guyo", "Dida", "Boru", "Godana"]
+      },
+      "stereotypes": [
+        "Cattle herders",
+        "Pastoral nomads",
+        "Related to Borana",
+        "River corridor pastoralists",
+        "Strong clan bonds",
+        "Muslim community"
+      ],
+      "culturalTraits": [
+        "Cattle pastoralism along Tana River corridor",
+        "Part of the larger Oromo ethnic group",
+        "Strong Islamic traditions",
+        "Age-set systems",
+        "Traditional cattle songs",
+        "Seasonal migration patterns"
+      ],
+      "funFacts": [
+        "The Orma are part of the larger Oromo people who span Ethiopia and Kenya",
+        "They are the only pastoral community living along the Tana River",
+        "The Orma have historically competed with Pokomo farmers for resources",
+        "They converted to Islam relatively recently compared to coastal communities"
+      ],
+      "traditionalFood": {
+        "staples": ["Cattle milk", "Beef", "Goat meat", "Maize (traded)"],
+        "beverages": ["Fresh and fermented milk"],
+        "specialDishes": ["Roasted meat", "Milk dishes"],
+        "description": "Orma diet centers on their cattle, with milk and meat being staples. They trade with agricultural communities for grains."
+      },
+      "traditionalDance": "Traditional cattle herders' dances",
+      "religion": "Predominantly Islam",
+      "history": {
+        "origin": "The Orma are Cushitic pastoralists, part of the Oromo ethnic family. They migrated to the Tana River region from Ethiopia centuries ago.",
+        "colonialEra": "The British administered the Orma as part of the Northern Frontier District. They maintained their pastoral lifestyle.",
+        "independence": "Post-independence, the Orma have faced conflicts with Pokomo farmers over land and water. Climate change has intensified resource competition.",
+        "keyEvents": ["Migration from Ethiopia", "Settlement in Tana River region", "Resource conflicts with farmers"]
+      },
+      "language": {
+        "name": "Orma (Oromo dialect)",
+        "speakers": "~100,000",
+        "greeting": "Akkam",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Nagaa?", "meaning": "Are you at peace?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Galatoomaa", "meaning": "Thank you" }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Local community leaders", "role": "Elders", "wikipedia": null }
+      ],
+      "description": "The Orma are Cushitic cattle pastoralists living along the Tana River in Kenya. They are part of the larger Oromo ethnic group and practice Islam.",
+      "relatedTribes": ["borana", "somali", "pokomo"],
+      "diaspora": {
+        "globalPopulation": "~5,000",
+        "majorCountries": ["Kenya (primarily)"],
+        "breakdown": [],
+        "communities": ["Minimal diaspora"],
+        "associations": ["Orma Community Development"]
+      }
+    },
+    {
+      "id": "ilchamus",
+      "name": "Ilchamus (Njemps)",
+      "slug": "ilchamus",
+      "region": "Baringo",
+      "population": "~35,000",
+      "populationPercent": "0.07%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 0.60, "lng": 36.05 },
+      "counties": ["Baringo"],
+      "namePrefixes": ["Le", "Na", "Ole"],
+      "commonNames": {
+        "female": ["Naserian", "Nashipae", "Naisula", "Namelok"],
+        "male": ["Lekakeny", "Leshan", "Lenaiyarra", "Parsitau"]
+      },
+      "stereotypes": [
+        "Lake Baringo fishermen",
+        "Irrigation farmers",
+        "Related to Maasai and Samburu",
+        "Unique Maa dialect",
+        "Blend of pastoral and farming",
+        "Peaceful community"
+      ],
+      "culturalTraits": [
+        "Unique blend of pastoralism and irrigation farming",
+        "Fishing in Lake Baringo",
+        "Speak Maa language variant",
+        "Traditional beekeeping",
+        "Age-set systems like Maasai",
+        "Distinctive from other Maa speakers due to farming"
+      ],
+      "funFacts": [
+        "The Ilchamus are unique among Maa-speakers as they practice fishing and irrigation",
+        "They are also called Njemps, named after Lake Baringo's Njemps Islands",
+        "They developed sophisticated irrigation along rivers near Lake Baringo",
+        "Despite small numbers, they have a distinct identity from Maasai and Samburu"
+      ],
+      "traditionalFood": {
+        "staples": ["Fish from Lake Baringo", "Irrigated crops (maize, vegetables)", "Milk", "Meat"],
+        "beverages": ["Fresh milk", "Traditional honey beer"],
+        "specialDishes": ["Fish stew", "Vegetables from irrigation", "Roasted meat"],
+        "description": "Ilchamus diet uniquely combines pastoral products (milk, meat) with fish from Lake Baringo and crops from their irrigation systems."
+      },
+      "traditionalDance": "Similar to Maasai and Samburu dances",
+      "religion": "Traditional beliefs; Christianity growing",
+      "history": {
+        "origin": "The Ilchamus are Maa-speaking people related to Maasai and Samburu. They settled around Lake Baringo and uniquely developed fishing and irrigation agriculture.",
+        "colonialEra": "The British recognized the Ilchamus' agricultural skills. They remained relatively peaceful and focused on their farming and fishing.",
+        "independence": "Post-independence, the Ilchamus have faced land pressures. They continue to practice their unique blend of pastoralism, farming, and fishing.",
+        "keyEvents": ["Settlement around Lake Baringo", "Development of irrigation", "Adaptation to farming while maintaining Maa identity"]
+      },
+      "language": {
+        "name": "Ilchamus (Maa dialect)",
+        "speakers": "~35,000",
+        "greeting": "Supai",
+        "greetingMeaning": "Hello (Maa greeting)",
+        "additionalGreetings": [
+          { "phrase": "Keiyo?", "meaning": "How are you?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ashe", "meaning": "Thank you" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Local community leaders", "role": "Elders", "wikipedia": null }
+      ],
+      "description": "The Ilchamus (also called Njemps) are Maa-speaking people around Lake Baringo. Unique among Maa speakers, they practice fishing and irrigation agriculture alongside pastoralism.",
+      "relatedTribes": ["maasai", "samburu", "kalenjin"],
+      "diaspora": {
+        "globalPopulation": "~2,000",
+        "majorCountries": ["Kenya (primarily)"],
+        "breakdown": [],
+        "communities": ["Minimal diaspora"],
+        "associations": ["Ilchamus Community"]
+      }
     }
   ]
 }
