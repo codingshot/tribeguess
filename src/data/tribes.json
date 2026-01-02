@@ -2473,7 +2473,418 @@
         "majorCountries": ["Kenya (primarily)"],
         "breakdown": [],
         "communities": ["Minimal diaspora"],
-        "associations": ["Ilchamus Community"]
+      "associations": ["Ilchamus Community"]
+      }
+    },
+    {
+      "id": "rendille",
+      "name": "Rendille",
+      "slug": "rendille",
+      "region": "Northern Kenya (Marsabit)",
+      "population": "~100,000",
+      "populationPercent": "0.2%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 2.30, "lng": 37.15 },
+      "counties": ["Marsabit"],
+      "namePrefixes": ["Go", "Ha", "Da", "Dh"],
+      "commonNames": {
+        "female": ["Galmo", "Dube", "Habiba", "Galgalo", "Fatuma", "Hadho", "Nachure", "Lokho", "Nuria"],
+        "male": ["Golicha", "Halakhe", "Dhadho", "Guyo", "Leparsanti", "Gollo", "Hirbo", "Godana", "Adano", "Dabasso"]
+      },
+      "stereotypes": [
+        "Expert camel herders",
+        "Desert survivors",
+        "Distinctive hairstyles",
+        "Related to Samburu",
+        "Traditional lifestyle preservers",
+        "Resilient pastoralists"
+      ],
+      "culturalTraits": [
+        "Camel-based pastoralism in harsh desert",
+        "Age-set systems similar to Samburu",
+        "Traditional Waaq religion alongside Islam",
+        "Distinctive traditional dress and jewelry",
+        "Cross-marriages with Samburu community",
+        "Expert desert navigation"
+      ],
+      "funFacts": [
+        "The Rendille are expert camel herders in one of Kenya's harshest regions - the Kaisut Desert",
+        "They have close cultural ties with Samburu through intermarriage traditions",
+        "Camels are central to their economy, culture, and social structure",
+        "Ukur Yatani, Kenya's former Treasury Cabinet Secretary, is Rendille"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel milk", "Goat meat", "Camel meat (ceremonial)", "Sorghum when available"],
+        "beverages": ["Fresh camel milk", "Fermented camel milk"],
+        "specialDishes": ["Roasted camel/goat meat", "Blood and milk mixture"],
+        "description": "Rendille diet depends almost entirely on their camels. Camel milk is the staple food, and meat is consumed during ceremonies and celebrations."
+      },
+      "traditionalDance": "Traditional camel herders' dances during ceremonies",
+      "religion": "Traditional Waaq beliefs; Islam and Christianity growing",
+      "history": {
+        "origin": "The Rendille are Cushitic people who speak a language related to Somali. They have lived in the Kaisut Desert region for centuries, developing expertise in camel pastoralism.",
+        "colonialEra": "The British had minimal contact with the remote Rendille. They maintained their traditional lifestyle largely undisturbed in the Northern Frontier District.",
+        "independence": "Post-independence, the Rendille have remained relatively isolated. They face challenges from droughts and modernization pressures.",
+        "keyEvents": ["Settlement in Kaisut Desert", "Intermarriage traditions with Samburu", "Modern development challenges", "Political representation improvements"]
+      },
+      "language": {
+        "name": "Rendille",
+        "speakers": "~100,000",
+        "greeting": "Na'am",
+        "greetingMeaning": "Hello / Yes",
+        "additionalGreetings": [
+          { "phrase": "Ma fidin?", "meaning": "How are you?" },
+          { "phrase": "Fiidhan", "meaning": "I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Gargaara", "meaning": "Thank you" },
+          { "phrase": "Waaq si haa gargaaro", "meaning": "May God help you" }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Ukur Yatani", "role": "Former Cabinet Secretary for Treasury", "wikipedia": "https://en.wikipedia.org/wiki/Ukur_Yatani" },
+        { "name": "Mohamud Ali", "role": "Former Governor of Marsabit", "wikipedia": "https://en.wikipedia.org/wiki/Mohamud_Ali" }
+      ],
+      "description": "The Rendille are Cushitic camel pastoralists living in the Kaisut Desert of Marsabit County. They have close ties with Samburu through intermarriage and are known for their resilience in one of Kenya's harshest environments.",
+      "relatedTribes": ["samburu", "gabra", "borana"],
+      "diaspora": {
+        "globalPopulation": "~8,000",
+        "majorCountries": ["Ethiopia", "USA"],
+        "breakdown": [
+          { "country": "Ethiopia", "population": "~5,000", "cities": ["Moyale region"] },
+          { "country": "United States", "population": "~1,500", "cities": ["Minneapolis", "Phoenix"] }
+        ],
+        "communities": ["Cross-border communities in Ethiopia", "Growing diaspora in North America"],
+        "associations": ["Rendille Community Association"]
+      }
+    },
+    {
+      "id": "kuria",
+      "name": "Kuria",
+      "slug": "kuria",
+      "region": "South Nyanza (Kenya-Tanzania border)",
+      "population": "~420,000",
+      "populationPercent": "0.9%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -1.08, "lng": 34.45 },
+      "counties": ["Migori"],
+      "namePrefixes": ["Ma", "Cha", "Mo", "Ro", "Wa"],
+      "commonNames": {
+        "female": ["Robi", "Bhoke", "Gati", "Nyaboke", "Kemunto", "Boke", "Moraa", "Gesare", "Nyanchama", "Mogire"],
+        "male": ["Chacha", "Marwa", "Mwita", "Robi", "Matongo", "Wambura", "Nyabohanse", "Machage", "Nyangi", "Mgeni"]
+      },
+      "stereotypes": [
+        "Elaborate circumcision ceremonies",
+        "Cross-border community",
+        "Gold mining expertise",
+        "Strong cultural identity",
+        "Tobacco farmers",
+        "Traditional values keepers"
+      ],
+      "culturalTraits": [
+        "Elaborate male and female circumcision ceremonies",
+        "Cross-border ties with Tanzanian Kuria",
+        "Artisanal gold mining tradition",
+        "Tobacco cultivation",
+        "Strong clan systems",
+        "Traditional music and dance during initiation"
+      ],
+      "funFacts": [
+        "The Kuria live on both sides of the Kenya-Tanzania border, sharing culture across nations",
+        "They are known for gold mining in the Migori region, one of Kenya's gold-rich areas",
+        "Circumcision ceremonies are elaborate multi-day events with special songs and dances",
+        "The Kuria have maintained strong cultural practices despite being a relatively small community"
+      ],
+      "traditionalFood": {
+        "staples": ["Ugali", "Fish from Lake Victoria", "Vegetables", "Bananas", "Sweet potatoes"],
+        "beverages": ["Traditional beer (busaa)", "Fermented milk"],
+        "specialDishes": ["Goat meat for ceremonies", "Fish stew", "Traditional vegetable dishes"],
+        "description": "Kuria cuisine is influenced by their proximity to Lake Victoria and agricultural practices. Fish, vegetables, and grains form the staple diet."
+      },
+      "traditionalDance": "Iritongo - circumcision ceremony dance with drums and singing",
+      "religion": "Traditional beliefs; now predominantly Christian (Catholic, Seventh-day Adventist)",
+      "history": {
+        "origin": "The Kuria are Bantu people closely related to the Gusii. They settled in the Lake Victoria region, straddling what became the Kenya-Tanzania border.",
+        "colonialEra": "Colonial borders divided the Kuria between British Kenya and German/British Tanganyika. They maintained cultural unity despite the division.",
+        "independence": "Post-independence, the Kuria in Kenya have been part of Migori County. Cross-border family and cultural ties with Tanzania remain strong.",
+        "keyEvents": ["Settlement in Lake Victoria region", "Colonial border division", "Gold discovery in Migori", "Cross-border cultural preservation"]
+      },
+      "language": {
+        "name": "Kuria (Igikuria)",
+        "speakers": "~900,000 (Kenya and Tanzania)",
+        "greeting": "Hoora",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Wamuhoo?", "meaning": "How are you?" },
+          { "phrase": "Nimuhoo", "meaning": "I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Urare gaki", "meaning": "Goodbye" },
+          { "phrase": "Nkogotamba", "meaning": "I love you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Wilfred Machage", "role": "Former Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Wilfred_Machage" },
+        { "name": "Shadrack Mose", "role": "Politician", "wikipedia": "https://en.wikipedia.org/wiki/Shadrack_Mose" },
+        { "name": "Edna Moi", "role": "Politician (partial heritage)", "wikipedia": null }
+      ],
+      "description": "The Kuria are Bantu people living on the Kenya-Tanzania border in Migori County. They are known for their elaborate initiation ceremonies, gold mining, and strong cultural identity maintained across international borders.",
+      "relatedTribes": ["kisii", "luo"],
+      "diaspora": {
+        "globalPopulation": "~520,000",
+        "majorCountries": ["Tanzania", "USA", "UK"],
+        "breakdown": [
+          { "country": "Tanzania", "population": "~500,000", "cities": ["Tarime", "Musoma", "Mwanza"] },
+          { "country": "United States", "population": "~8,000", "cities": ["Houston", "Dallas", "Minneapolis"] },
+          { "country": "United Kingdom", "population": "~5,000", "cities": ["London", "Manchester"] }
+        ],
+        "communities": ["Large population in Tanzania's Mara Region", "Cross-border families maintaining cultural ties"],
+        "associations": ["Kuria Cultural Association", "Abakuria Development Forum"]
+      }
+    },
+    {
+      "id": "elmologo",
+      "name": "El Molo",
+      "slug": "elmologo",
+      "region": "Lake Turkana",
+      "population": "~3,000",
+      "populationPercent": "0.006%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 2.85, "lng": 36.70 },
+      "counties": ["Marsabit"],
+      "namePrefixes": ["Lo", "La"],
+      "commonNames": {
+        "female": ["Namurei", "Napeyon", "Lokwii"],
+        "male": ["Loiyanae", "Lokotor", "Lobongoro", "Lomodei"]
+      },
+      "stereotypes": [
+        "Kenya's smallest tribe",
+        "Expert fishermen",
+        "Lake Turkana guardians",
+        "Endangered community",
+        "Unique fishing culture",
+        "Resilient survivors"
+      ],
+      "culturalTraits": [
+        "Traditional fishing in Lake Turkana",
+        "One of Africa's smallest ethnic groups",
+        "Distinctive fishing techniques and boats",
+        "Oral traditions about their origins",
+        "Close ties with Samburu and Turkana",
+        "Efforts to preserve language and culture"
+      ],
+      "funFacts": [
+        "The El Molo are considered Kenya's smallest ethnic group with only about 3,000 members",
+        "Their name means 'those who make their living from other than cattle' - they are fishermen, not herders",
+        "They live on small islands and the shores of Lake Turkana near Loiyangalani",
+        "Intermarriage with Samburu and Turkana threatens their distinct identity",
+        "Their language is critically endangered with fewer than 50 fluent speakers remaining"
+      ],
+      "traditionalFood": {
+        "staples": ["Nile perch from Lake Turkana", "Tilapia", "Crocodile meat", "Turtle meat"],
+        "beverages": ["Lake water", "Fish soup"],
+        "specialDishes": ["Sun-dried fish", "Smoked fish", "Crocodile (ceremonial)"],
+        "description": "El Molo diet is almost entirely fish-based. Nile perch and tilapia from Lake Turkana are staples. Historically, they also hunted crocodiles and hippos."
+      },
+      "traditionalDance": "Traditional fishing celebration dances",
+      "religion": "Traditional beliefs; Christianity growing",
+      "history": {
+        "origin": "The El Molo are believed to be one of Kenya's oldest inhabitants. Their Cushitic origins suggest they migrated from the north, settling on Lake Turkana's shores.",
+        "colonialEra": "The remote El Molo had minimal contact with colonial administration. They continued their fishing lifestyle undisturbed.",
+        "independence": "Post-independence, the El Molo face existential threats from assimilation. Conservation and cultural preservation efforts are ongoing.",
+        "keyEvents": ["Ancient settlement on Lake Turkana", "Near-extinction in mid-20th century", "Recovery and cultural preservation efforts", "UNESCO endangered languages recognition"]
+      },
+      "language": {
+        "name": "El Molo (critically endangered)",
+        "speakers": "~50 fluent speakers",
+        "greeting": "Similar to Samburu/Turkana greetings (language largely lost)",
+        "greetingMeaning": "Traditional greetings being documented",
+        "additionalGreetings": [],
+        "commonPhrases": [],
+        "family": "Cushitic (Afro-Asiatic) - nearly extinct",
+        "writingSystem": "Oral tradition primarily"
+      },
+      "famousPeople": [
+        { "name": "Community elders", "role": "Language and culture preservers", "wikipedia": null }
+      ],
+      "description": "The El Molo are Kenya's smallest ethnic group, living on Lake Turkana's shores. They are traditional fishermen whose language and culture are critically endangered. Preservation efforts are underway.",
+      "relatedTribes": ["turkana", "samburu", "rendille"],
+      "diaspora": {
+        "globalPopulation": "~50",
+        "majorCountries": ["Kenya (exclusively)"],
+        "breakdown": [],
+        "communities": ["Concentrated around Loiyangalani on Lake Turkana"],
+        "associations": ["El Molo Cultural Preservation Society"]
+      }
+    },
+    {
+      "id": "ogiek",
+      "name": "Ogiek",
+      "slug": "ogiek",
+      "region": "Mau Forest Complex",
+      "population": "~35,000",
+      "populationPercent": "0.07%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -0.50, "lng": 35.60 },
+      "counties": ["Nakuru", "Narok", "Kericho", "Bomet"],
+      "namePrefixes": ["Ki", "Kip", "Che"],
+      "commonNames": {
+        "female": ["Chebet", "Chepkoech", "Jepkosgei", "Cherono"],
+        "male": ["Kiprotich", "Kiplagat", "Rotich", "Koech"]
+      },
+      "stereotypes": [
+        "Forest dwellers",
+        "Honey gatherers",
+        "Indigenous rights activists",
+        "Environmentalists",
+        "Marginalized community",
+        "Cultural preservers"
+      ],
+      "culturalTraits": [
+        "Traditional forest-dwelling lifestyle",
+        "Expert beekeeping and honey gathering",
+        "Hunting and gathering traditions",
+        "Deep knowledge of forest ecology",
+        "Distinctive language and customs",
+        "Legal battles for land rights"
+      ],
+      "funFacts": [
+        "The Ogiek won a landmark case at the African Court of Human Rights in 2017 for their forest land rights",
+        "They are expert beekeepers, with honey being central to their economy and ceremonies",
+        "The Ogiek are one of Kenya's most marginalized indigenous groups",
+        "They have detailed knowledge of Mau Forest medicinal plants",
+        "Honey hunting involves climbing tall forest trees using traditional vines"
+      ],
+      "traditionalFood": {
+        "staples": ["Wild honey", "Forest fruits and berries", "Wild game (historically)", "Roots and tubers"],
+        "beverages": ["Honey-based drinks", "Forest fruit juices"],
+        "specialDishes": ["Honey with various preparations", "Roasted game meat (traditionally)"],
+        "description": "Ogiek traditional diet centered on honey gathering, hunting, and forest foraging. Honey remains culturally and economically central to their identity."
+      },
+      "traditionalDance": "Traditional forest celebration dances",
+      "religion": "Traditional beliefs centered on forest spirits; Christianity growing",
+      "history": {
+        "origin": "The Ogiek are believed to be among Kenya's earliest inhabitants. They traditionally lived in the Mau Forest Complex as hunter-gatherers and beekeepers.",
+        "colonialEra": "The British began evicting Ogiek from forests, a practice continued post-independence. They were classified as 'Dorobo' (people without cattle) and marginalized.",
+        "independence": "Post-independence evictions continued. The Ogiek filed cases for land rights, winning at the African Court in 2017, though implementation remains challenging.",
+        "keyEvents": ["Ancient forest dwelling", "Colonial era evictions", "Post-independence marginalization", "African Court victory (2017)"]
+      },
+      "language": {
+        "name": "Ogiek (endangered)",
+        "speakers": "~15,000",
+        "greeting": "Similar to Kalenjin greetings",
+        "greetingMeaning": "Shared linguistic roots with Kalenjin",
+        "additionalGreetings": [],
+        "commonPhrases": [],
+        "family": "Nilotic (related to Kalenjin)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Daniel Kobei", "role": "Ogiek Rights Activist", "wikipedia": null },
+        { "name": "Joseph Towett", "role": "Ogiek Peoples Development Program founder", "wikipedia": null }
+      ],
+      "description": "The Ogiek are indigenous forest-dwelling people of the Mau Forest Complex. They are expert beekeepers who won a landmark human rights case for their ancestral lands in 2017.",
+      "relatedTribes": ["kalenjin", "maasai"],
+      "diaspora": {
+        "globalPopulation": "~500",
+        "majorCountries": ["Kenya (exclusively)"],
+        "breakdown": [],
+        "communities": ["Concentrated in Mau Forest areas of Nakuru, Narok, Kericho, Bomet counties"],
+        "associations": ["Ogiek Peoples Development Program", "Chepkitale Indigenous People Development Project"]
+      }
+    },
+    {
+      "id": "kenyanasians",
+      "name": "Kenyan Asians",
+      "slug": "kenyan-asians",
+      "region": "Urban Kenya (Nationwide)",
+      "population": "~100,000",
+      "populationPercent": "0.2%",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": -1.29, "lng": 36.82 },
+      "counties": ["Nairobi", "Mombasa", "Kisumu", "Nakuru", "Eldoret"],
+      "namePrefixes": ["Pat", "Ra", "Su", "Ami", "Ha"],
+      "commonNames": {
+        "female": ["Priya", "Anita", "Sunita", "Rashida", "Fatima", "Kiran", "Meena", "Sheela"],
+        "male": ["Raj", "Amit", "Sanjay", "Hasnain", "Yusuf", "Vijay", "Nitin", "Mahesh"]
+      },
+      "stereotypes": [
+        "Successful business owners",
+        "Educational excellence",
+        "Close-knit community",
+        "Multi-generational Kenyans",
+        "Diverse religious traditions",
+        "Cultural bridge-builders"
+      ],
+      "culturalTraits": [
+        "Arrived during colonial railway construction",
+        "Strong entrepreneurial traditions",
+        "Diverse religious practices (Hindu, Sikh, Muslim, Jain, Christian)",
+        "Maintained distinct cultural identity while integrating",
+        "Significant contributions to Kenya's economy",
+        "Rich culinary traditions influencing Kenyan cuisine"
+      ],
+      "funFacts": [
+        "Kenyan Asians arrived primarily to build the Uganda Railway (1896-1901)",
+        "They control a significant portion of Kenya's manufacturing and retail sectors",
+        "Samosas, chapati, and pilau are Asian contributions now integral to Kenyan cuisine",
+        "Many Kenyan Asian families have been in Kenya for 4-5 generations",
+        "The community was targeted during the 1972 expulsion from Uganda, with many settling in Kenya"
+      ],
+      "traditionalFood": {
+        "staples": ["Chapati", "Rice", "Dal (lentils)", "Vegetables", "Paneer"],
+        "beverages": ["Chai (spiced tea)", "Lassi", "Masala chai"],
+        "specialDishes": ["Samosas", "Bhajias", "Biryani", "Gujarati dishes", "Punjabi dishes", "Ismaili dishes"],
+        "description": "Kenyan Asian cuisine reflects diverse Indian subcontinent origins - Gujarati, Punjabi, Ismaili, Goan, and Pakistani traditions. Many dishes like samosas and chapati are now Kenyan staples."
+      },
+      "traditionalDance": "Garba, Bhangra, and other Indian classical and folk dances performed at festivals",
+      "religion": "Diverse: Hindu, Sikh, Ismaili Muslim, Sunni Muslim, Jain, Christian (Goan Catholics)",
+      "history": {
+        "origin": "Kenyan Asians are descendants of indentured laborers who built the Kenya-Uganda Railway (1896-1901) and traders who followed. Most came from Gujarat, Punjab, and Goa in India.",
+        "colonialEra": "Asians occupied a middle position in colonial society - between Europeans and Africans. They developed businesses and contributed to urban development.",
+        "independence": "At independence, many Asians faced uncertainty about citizenship. Some emigrated to UK, Canada, and USA, while others committed to Kenya and obtained citizenship.",
+        "keyEvents": ["Railway construction (1896-1901)", "Business establishment in colonial period", "Post-independence citizenship debates", "Aga Khan's community development contributions"]
+      },
+      "language": {
+        "name": "Multiple: Gujarati, Hindi, Punjabi, Kutchi, Swahili, English",
+        "speakers": "Various",
+        "greeting": "Namaste / Sat Sri Akal / Salaam",
+        "greetingMeaning": "Hello (varies by community)",
+        "additionalGreetings": [
+          { "phrase": "Kem cho?", "meaning": "How are you? (Gujarati)" },
+          { "phrase": "Kaise ho?", "meaning": "How are you? (Hindi)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Dhanyavaad", "meaning": "Thank you (Hindi)" },
+          { "phrase": "Aavjo", "meaning": "Goodbye (Gujarati)" }
+        ],
+        "family": "Indo-European (Indo-Aryan)",
+        "writingSystem": "Latin, Devanagari, Gurmukhi scripts"
+      },
+      "famousPeople": [
+        { "name": "Pio Gama Pinto", "role": "Independence Hero (assassinated 1965)", "wikipedia": "https://en.wikipedia.org/wiki/Pio_Gama_Pinto" },
+        { "name": "Makhan Singh", "role": "Labor Movement Pioneer", "wikipedia": "https://en.wikipedia.org/wiki/Makhan_Singh" },
+        { "name": "Manu Chandaria", "role": "Industrialist & Philanthropist", "wikipedia": "https://en.wikipedia.org/wiki/Manu_Chandaria" },
+        { "name": "Bhimji Depar Shah", "role": "Founder of BIDCO", "wikipedia": "https://en.wikipedia.org/wiki/Bhimji_Depar_Shah" },
+        { "name": "Aga Khan IV", "role": "Spiritual Leader (Ismaili community)", "wikipedia": "https://en.wikipedia.org/wiki/Aga_Khan_IV" }
+      ],
+      "description": "Kenyan Asians are descendants of South Asian immigrants who arrived during colonial times. They have significantly contributed to Kenya's commerce, industry, and culture while maintaining distinct religious and cultural traditions.",
+      "relatedTribes": ["swahili", "nubi"],
+      "diaspora": {
+        "globalPopulation": "~400,000",
+        "majorCountries": ["UK", "USA", "Canada", "India"],
+        "breakdown": [
+          { "country": "United Kingdom", "population": "~200,000", "cities": ["London", "Leicester", "Birmingham"] },
+          { "country": "United States", "population": "~50,000", "cities": ["New York", "Los Angeles", "Houston"] },
+          { "country": "Canada", "population": "~40,000", "cities": ["Toronto", "Vancouver"] },
+          { "country": "India", "population": "~20,000", "cities": ["Mumbai", "Ahmedabad"] }
+        ],
+        "communities": ["Large community in Leicester, UK with strong Kenyan Asian identity", "Active community organizations in North America"],
+        "associations": ["Kenya Asian Heritage Society", "East African Asian Archives"]
       }
     }
   ]
