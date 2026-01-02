@@ -30,11 +30,22 @@
         "Education-focused"
       ],
       "culturalTraits": [
-        "Traditional circumcision ceremonies",
-        "Strong agricultural heritage",
-        "Deep respect for elders",
-        "Naming children after grandparents (lineage-based naming)"
+        "Traditional circumcision ceremonies (Irua)",
+        "Strong agricultural heritage - maize, coffee, tea",
+        "Deep respect for elders (Athamaki)",
+        "Naming children after grandparents (lineage-based naming)",
+        "Traditional Mũgithi music and dance",
+        "Brewing of traditional Mũratina beer"
       ],
+      "funFacts": [
+        "Kikuyu women traditionally owned property and had significant economic power",
+        "The Kikuyu had no centralized leadership - decisions were made by councils of elders",
+        "Names like Wanjiku and Wambui refer to the 9 daughters of Mumbi, the mythical mother",
+        "Githeri (maize and beans dish) is a staple that originated from Kikuyu cuisine"
+      ],
+      "traditionalFood": ["Mũkimo (mashed potatoes with greens)", "Githeri (maize and beans)", "Mũtura (blood sausage)", "Irio"],
+      "traditionalDance": "Mũgithi - a lively dance with accordion music",
+      "religion": "Traditional belief in Ngai (God) who dwells on Mt. Kenya; now predominantly Christian",
       "history": {
         "origin": "The Kikuyu are Bantu people who migrated from West Africa around 1000 AD. According to oral tradition, their ancestor Gikuyu was given land near Mount Kenya by Ngai (God). He married Mumbi, and they had nine daughters who became the ancestors of the nine Kikuyu clans.",
         "colonialEra": "The Kikuyu were heavily impacted by British colonization, losing significant land to white settlers in the 'White Highlands'. This led to the Mau Mau uprising (1952-1960), a major rebellion against colonial rule led primarily by Kikuyu fighters.",
@@ -87,11 +98,23 @@
         "Fashion-conscious"
       ],
       "culturalTraits": [
-        "Non-circumcising community",
-        "Rich musical heritage (benga music)",
-        "Strong oral traditions and storytelling",
-        "Fishing and farming culture"
+        "Non-circumcising community (unique in Kenya)",
+        "Rich musical heritage (Benga music originated here)",
+        "Strong oral traditions and storytelling (Sigendini)",
+        "Fishing and farming culture around Lake Victoria",
+        "Elaborate funeral ceremonies (Tero Buru)",
+        "Traditional bride price (Ayie) negotiations"
       ],
+      "funFacts": [
+        "Barack Obama Sr., father of the 44th US President, was a Luo from Kogelo village",
+        "Benga music, Kenya's most popular genre, originated from Luo musicians",
+        "Luo names often reveal the time of birth - Otieno means 'born at night'",
+        "The Luo are the only major Kenyan tribe that doesn't practice circumcision",
+        "Fish, especially tilapia and omena, is central to Luo cuisine and identity"
+      ],
+      "traditionalFood": ["Tilapia (Ngege)", "Omena (sardines)", "Kuon (ugali)", "Nyoyo (beans and maize)"],
+      "traditionalDance": "Ohangla and Benga - energetic dances with nyatiti lyre",
+      "religion": "Traditional belief in Nyasaye (God); now mix of Christianity and traditional beliefs",
       "history": {
         "origin": "The Luo are Nilotic people who migrated from the Bahr el Ghazal region in South Sudan between the 15th and 17th centuries. They followed the Nile River southward and eventually settled around Lake Victoria.",
         "colonialEra": "The Luo resisted British colonial rule, with leaders like Odera Akang'o and Gor Mahia becoming legendary for their resistance. The community also embraced Western education early, producing many of Kenya's first professionals.",
@@ -144,11 +167,23 @@
         "Enjoy celebrations and festivals"
       ],
       "culturalTraits": [
-        "18 sub-tribes with unique dialects",
-        "Traditional bullfighting (Likhoni)",
-        "Agricultural expertise (sugarcane, maize)",
-        "Strong communal living traditions"
+        "18 sub-tribes with unique dialects (Bukusu, Maragoli, Wanga, etc.)",
+        "Traditional bullfighting (Khulanga) - major cultural festival",
+        "Agricultural expertise (sugarcane, maize, millet)",
+        "Strong communal living traditions (Oluyia)",
+        "Circumcision ceremonies with traditional songs",
+        "Traditional brewing of Busaa (millet beer)"
       ],
+      "funFacts": [
+        "The Luhya have produced some of Kenya's best footballers including Victor Wanyama and Michael Olunga",
+        "Bullfighting festivals attract thousands of spectators during December holidays",
+        "Luhya names often indicate birth order - Wekesa/Nekesa means 'born during harvest'",
+        "The 18 Luhya sub-tribes have distinct dialects but share common ancestry",
+        "Traditional Luhya weddings can last several days with elaborate ceremonies"
+      ],
+      "traditionalFood": ["Ingokho (chicken)", "Tsisaka (spider plant)", "Obusuma (ugali)", "Likhubi (fermented milk)"],
+      "traditionalDance": "Sikuti - drum-based dance performed during celebrations",
+      "religion": "Traditional beliefs with Wele Khakaba (God); now predominantly Christian",
       "history": {
         "origin": "The Luhya are Bantu people comprising 18 sub-tribes who migrated to Western Kenya from various directions between the 14th and 16th centuries. The name 'Luhya' (meaning 'people of the same fire') was adopted in the 1930s to unify the sub-tribes.",
         "colonialEra": "Western Kenya became a labor reserve during colonization, with many Luhya men working on British farms and building the Uganda Railway. Elijah Masinde led the Dini ya Msambwa movement against colonial rule.",
@@ -201,11 +236,23 @@
         "Entrepreneurial spirit"
       ],
       "culturalTraits": [
-        "Famous wood carving tradition (Wamunyu)",
-        "Rich dance heritage (Kilumi)",
-        "Traditional medicine knowledge",
-        "Historic long-distance trading routes"
+        "Famous wood carving tradition (Wamunyu village)",
+        "Rich dance heritage (Kilumi and Mwali dances)",
+        "Traditional medicine knowledge (Mundu Mue)",
+        "Historic long-distance trading routes to the coast",
+        "Skilled bow and arrow hunters",
+        "Traditional beekeeping and honey production"
       ],
+      "funFacts": [
+        "Kamba wood carvings from Wamunyu are sold worldwide as African souvenirs",
+        "The Kamba were the first long-distance traders in East Africa, reaching Mombasa by 1800",
+        "Mumbua/Wambua means 'born during the rains' - showing weather-based naming",
+        "The Akamba Museum in Machakos preserves centuries of Kamba history",
+        "Kamba traditional dancers are renowned for their acrobatic performances"
+      ],
+      "traditionalFood": ["Muthokoi (de-husked maize)", "Kilulu (wild vegetables)", "Nzuki (honey)", "Mboka (dried meat)"],
+      "traditionalDance": "Kilumi - acrobatic dance with drums and whistles",
+      "religion": "Traditional belief in Ngai Mulungu; now predominantly Christian",
       "history": {
         "origin": "The Kamba (Akamba) are Bantu people who migrated from the Congo Basin region and settled in Eastern Kenya around the 16th century. They originally settled on the slopes of Mount Kilimanjaro before moving to their current homeland.",
         "colonialEra": "The Kamba were famous long-distance traders, establishing trade routes from the coast to the interior. They traded ivory, honey, and iron tools with Arab and Swahili merchants. They resisted colonial taxation and forced labor.",
@@ -258,11 +305,23 @@
         "Strong athletic heritage"
       ],
       "culturalTraits": [
-        "Running excellence (Olympic champions)",
-        "Traditional cattle herding",
-        "Age-set systems (Ipinda)",
-        "Circumcision rites of passage"
+        "Running excellence - over 100 Olympic medals",
+        "Traditional cattle herding (Chemiroilet)",
+        "Age-set systems (Ipinda) for social organization",
+        "Circumcision rites of passage (Tumdo)",
+        "Mursik (fermented milk) tradition",
+        "Traditional honey harvesting in highlands"
       ],
+      "funFacts": [
+        "Kalenjin runners have won over 75% of major international distance running medals",
+        "Eliud Kipchoge broke the 2-hour marathon barrier - first human ever",
+        "Scientists study 'Kalenjin running genes' - thin ankles, long legs, high-altitude adaptation",
+        "Iten town is called 'The Home of Champions' with over 1,000 world-class athletes",
+        "Kip/Chep prefixes mean 'of' - Kipchoge means 'born near the grain storage'"
+      ],
+      "traditionalFood": ["Mursik (fermented milk in gourd)", "Kimyet (blood and milk)", "Roasted maize", "Millet porridge"],
+      "traditionalDance": "Chemirocha - jumping dance performed during celebrations",
+      "religion": "Traditional belief in Asis (Sun god); now predominantly Christian",
       "history": {
         "origin": "The Kalenjin are Nilotic people who migrated from the Ethiopian highlands around 2000 years ago. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, Marakwet, Tugen, Pokot, and Sabaot. The name 'Kalenjin' (meaning 'I say to you') was adopted in the 1940s.",
         "colonialEra": "The Nandi Resistance (1890-1906) was one of the longest resistances against British colonization in Africa. Orkoiyot Koitalel Arap Samoei led the resistance until he was killed by the British in 1905.",
@@ -315,11 +374,21 @@
         "Community-oriented"
       ],
       "culturalTraits": [
-        "Soapstone carving (Kisii stone)",
-        "Highland farming (tea, bananas)",
-        "Strong clan systems",
-        "Traditional circumcision ceremonies"
+        "Soapstone carving (Kisii/Tabaka stone) - exported worldwide",
+        "Highland farming (tea, bananas, coffee)",
+        "Strong clan systems (Egesaku)",
+        "Traditional circumcision ceremonies",
+        "Obokano (8-stringed lyre) music tradition"
       ],
+      "funFacts": [
+        "Kisii soapstone carvings are Kenya's most famous export handicraft",
+        "The Gusii have one of Kenya's highest population densities",
+        "Nyashinski (musician) brought Gusii language into mainstream Kenyan music",
+        "Kisii County has one of Kenya's highest rates of university enrollment"
+      ],
+      "traditionalFood": ["Obokima (finger millet ugali)", "Chinsaga (spider plant)", "Ematoke (bananas)", "Rinagu (pumpkin leaves)"],
+      "traditionalDance": "Ekerongo - performed with Obokano lyre during celebrations",
+      "religion": "Traditional beliefs; now predominantly Christian (Seventh-day Adventist influence)",
       "history": {
         "origin": "The Gusii (Kisii) are Bantu people who migrated from the Mt. Elgon region in the 16th century. They settled in the fertile highlands of South Nyanza, an area surrounded by Nilotic communities (Luo, Kipsigis, Maasai).",
         "colonialEra": "The Gusii fiercely resisted British colonization. In 1908, the British launched a punitive expedition that resulted in significant loss of life and cattle. Despite this, the Gusii maintained their cultural practices.",
