@@ -44,6 +44,23 @@ const Index = () => {
     CD: 'Congolese',
     SN: 'Senegalese',
     ER: 'Eritrean',
+    RW: 'Rwandan',
+    BI: 'Burundian',
+    SO: 'Somali',
+    CM: 'Cameroonian',
+    ZW: 'Zimbabwean',
+    ZM: 'Zambian',
+    MW: 'Malawian',
+    AO: 'Angolan',
+    MZ: 'Mozambican',
+    BW: 'Botswanan',
+    NA: 'Namibian',
+    SS: 'South Sudanese',
+    SD: 'Sudanese',
+    ML: 'Malian',
+    BF: 'Burkinabè',
+    CI: 'Ivorian',
+    GN: 'Guinean',
   };
 
   const countryLabel =
