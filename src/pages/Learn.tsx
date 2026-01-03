@@ -3,7 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
-import { KenyaMapView } from '@/components/KenyaMapView';
+import { DynamicMapView } from '@/components/DynamicMapView';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
 import tribesData from '@/data/tribes.json';
 import {
@@ -406,8 +406,11 @@ const Learn = () => {
           
           {/* Map View */}
           {viewMode === 'map' && (
-            <section className="mb-8 animate-fade-in" aria-label="Kenya tribes map">
-              <KenyaMapView tribes={filteredTribes} />
+            <section className="mb-8 animate-fade-in" aria-label="Tribes map">
+              <DynamicMapView 
+                tribes={filteredTribes} 
+                countryFilter={countryFilter || 'KE'}
+              />
             </section>
           )}
           
