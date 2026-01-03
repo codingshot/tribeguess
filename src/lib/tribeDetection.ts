@@ -1000,20 +1000,79 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
 }
 
 export function getAllTribes() {
-  return tribesData.tribes;
+  const tribes = (tribesData as any).tribes || [];
+
+  const mergeArrays = <T,>(a: T[] = [], b: T[] = []) => {
+    return Array.from(new Set([...a, ...b].filter(Boolean as any)));
+  };
+
+  const mergeByKey = <T extends Record<string, any>>(a: T[] = [], b: T[] = [], key: keyof T) => {
+    const map = new Map<string, T>();
+    for (const item of [...a, ...b]) {
+      const k = String(item?.[key] ?? '');
+      if (!k) continue;
+      map.set(k, item);
+    }
+    return Array.from(map.values());
+  };
+
+  const mergeTribes = (a: any, b: any) => {
+    const merged: any = { ...b, ...a };
+
+    merged.countries = mergeArrays(a?.countries, b?.countries);
+    merged.counties = mergeArrays(a?.counties, b?.counties);
+    merged.namePrefixes = mergeArrays(a?.namePrefixes, b?.namePrefixes);
+    merged.stereotypes = mergeArrays(a?.stereotypes, b?.stereotypes);
+    merged.culturalTraits = mergeArrays(a?.culturalTraits, b?.culturalTraits);
+    merged.funFacts = mergeArrays(a?.funFacts, b?.funFacts);
+
+    merged.commonNames = {
+      female: mergeArrays(a?.commonNames?.female, b?.commonNames?.female),
+      male: mergeArrays(a?.commonNames?.male, b?.commonNames?.male),
+    };
+
+    merged.timeBasedNames = { ...(b?.timeBasedNames || {}) };
+    for (const k of Object.keys(a?.timeBasedNames || {})) {
+      merged.timeBasedNames[k] = mergeArrays(a.timeBasedNames?.[k], b.timeBasedNames?.[k]);
+    }
+
+    merged.greetings = mergeArrays(a?.greetings, b?.greetings);
+    merged.famousPeople = mergeByKey(a?.famousPeople, b?.famousPeople, 'name');
+    merged.gallery = mergeByKey(a?.gallery, b?.gallery, 'src');
+
+    return merged;
+  };
+
+  const byKey = new Map<string, any>();
+  for (const tribe of tribes) {
+    const keyRaw = tribe?.id || tribe?.slug || tribe?.name;
+    const key = String(keyRaw || '').toLowerCase().trim();
+    if (!key) continue;
+
+    const existing = byKey.get(key);
+    if (!existing) {
+      byKey.set(key, tribe);
+      continue;
+    }
+
+    byKey.set(key, mergeTribes(existing, tribe));
+  }
+
+  return Array.from(byKey.values());
 }
 
 export function getTribesByCountry(countryCode: string) {
-  if (!countryCode || countryCode === 'ALL') return tribesData.tribes;
-  return tribesData.tribes.filter(t => (t.countries as string[] | undefined)?.includes(countryCode));
+  const tribes = getAllTribes();
+  if (!countryCode || countryCode === 'ALL') return tribes;
+  return tribes.filter(t => (t.countries as string[] | undefined)?.includes(countryCode));
 }
 
 export function getTribeById(id: string) {
-  return tribesData.tribes.find(t => t.id === id);
+  return getAllTribes().find(t => t.id === id);
 }
 
 export function getTribeBySlug(slug: string) {
-  return tribesData.tribes.find(t => t.slug === slug || t.id === slug);
+  return getAllTribes().find(t => t.slug === slug || t.id === slug);
 }
 
 export function getCountries(): Country[] {

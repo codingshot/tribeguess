@@ -2,8 +2,9 @@ import { useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { GuessForm } from '@/components/GuessForm';
 import { TribeResultCard } from '@/components/TribeResultCard';
-import { detectTribe } from '@/lib/tribeDetection';
+import { detectTribe, getCountries, getTribesByCountry } from '@/lib/tribeDetection';
 import logo from '@/assets/logo.png';
+
 const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const nameQuery = searchParams.get('name') || '';
@@ -23,57 +24,49 @@ const Index = () => {
     setSearchParams(newParams);
   };
 
-  // Country data with adjectives and flags
-  const countryData: Record<string, {
-    adjective: string;
-    flag: string;
-  }> = {
-    'KE': {
-      adjective: 'Kenyan',
-      flag: '🇰🇪'
-    },
-    'NG': {
-      adjective: 'Nigerian',
-      flag: '🇳🇬'
-    },
-    'GH': {
-      adjective: 'Ghanaian',
-      flag: '🇬🇭'
-    },
-    'ZA': {
-      adjective: 'South African',
-      flag: '🇿🇦'
-    },
-    'ET': {
-      adjective: 'Ethiopian',
-      flag: '🇪🇹'
-    },
-    'TZ': {
-      adjective: 'Tanzanian',
-      flag: '🇹🇿'
-    },
-    'UG': {
-      adjective: 'Ugandan',
-      flag: '🇺🇬'
-    },
-    'CD': {
-      adjective: 'Congolese',
-      flag: '🇨🇩'
-    },
-    'SN': {
-      adjective: 'Senegalese',
-      flag: '🇸🇳'
-    },
-    'ER': {
-      adjective: 'Eritrean',
-      flag: '🇪🇷'
-    }
-  };
   // Use selectedCountry directly - it's always synced with form
   const activeCountry = selectedCountry;
-  const countryInfo = countryData[activeCountry] || countryData['KE'];
-  const countryAdjective = countryInfo.adjective;
-  const countryFlag = countryInfo.flag;
+
+  const countries = getCountries();
+  const activeCountryInfo =
+    countries.find(c => c.code === activeCountry) ||
+    countries.find(c => c.code === 'KE');
+
+  // Best-effort adjective; fallback to country name (prevents "Kenyan" always showing)
+  const countryAdjectives: Record<string, string> = {
+    KE: 'Kenyan',
+    NG: 'Nigerian',
+    GH: 'Ghanaian',
+    ZA: 'South African',
+    ET: 'Ethiopian',
+    TZ: 'Tanzanian',
+    UG: 'Ugandan',
+    CD: 'Congolese',
+    SN: 'Senegalese',
+    ER: 'Eritrean',
+  };
+
+  const countryLabel =
+    countryAdjectives[activeCountry] || activeCountryInfo?.name || 'Kenyan';
+  const countryFlag = activeCountryInfo?.flag || '🇰🇪';
+
+  const popularNames = (() => {
+    const tribes = getTribesByCountry(activeCountry);
+    const all: string[] = [];
+
+    // Prefer female names first (app copy is "Guess Her") then add male names
+    for (const t of tribes) {
+      all.push(...(t as any)?.commonNames?.female || []);
+    }
+    for (const t of tribes) {
+      all.push(...(t as any)?.commonNames?.male || []);
+    }
+
+    const unique = Array.from(new Set(all.map(n => String(n).trim()).filter(Boolean)));
+
+    // Safety fallback if a country's tribes are missing names
+    return (unique.length ? unique : ['Wanjiku', 'Odhiambo', 'Cheruiyot', 'Nafula', 'Mutua', 'Moraa', 'Kipchoge', 'Fatuma']).slice(0, 8);
+  })();
   let results = null;
   try {
     results = nameQuery ? detectTribe(nameQuery, {
@@ -125,27 +118,18 @@ const Index = () => {
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
-                Try some popular {countryFlag} {countryAdjective} names:
+                Try some popular {countryFlag} {countryLabel} names:
               </p>
               <nav aria-label="Example names" className="flex flex-wrap justify-center gap-2">
-                {(() => {
-              const popularNames: Record<string, string[]> = {
-                'KE': ['Wanjiku', 'Odhiambo', 'Cheruiyot', 'Nafula', 'Mutua', 'Moraa', 'Kipchoge', 'Fatuma'],
-                'NG': ['Adaeze', 'Chidi', 'Ngozi', 'Oluwaseun', 'Amaka', 'Emeka', 'Funke', 'Tunde'],
-                'GH': ['Akosua', 'Kofi', 'Abena', 'Kwame', 'Yaa', 'Ama', 'Nana', 'Adjoa'],
-                'ZA': ['Thandiwe', 'Sipho', 'Nomvula', 'Thabo', 'Lindiwe', 'Mandla', 'Zinhle', 'Bongani'],
-                'ET': ['Tigist', 'Abebe', 'Meron', 'Haile', 'Bethlehem', 'Yohannes', 'Selamawit', 'Dawit'],
-                'TZ': ['Neema', 'Juma', 'Zawadi', 'Bakari', 'Hadija', 'Rajabu', 'Amina', 'Hamisi'],
-                'UG': ['Nakato', 'Mukasa', 'Nabirye', 'Wasswa', 'Auma', 'Okello', 'Nambi', 'Kato'],
-                'CD': ['Mamadou', 'Fatou', 'Kabongo', 'Mwamba', 'Ngalula', 'Lukusa', 'Mutombo', 'Kasongo'],
-                'SN': ['Aminata', 'Ousmane', 'Fatou', 'Ibrahima', 'Aissatou', 'Moussa', 'Mariama', 'Cheikh'],
-                'ER': ['Feven', 'Yonas', 'Selam', 'Bereket', 'Merhawi', 'Hirut', 'Samuel', 'Eden']
-              };
-              const names = popularNames[activeCountry] || popularNames['KE'];
-              return names.map(name => <a key={name} href={`/?name=${name}&country=${activeCountry}`} className="badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 touch-manipulation">
-                      {name}
-                    </a>);
-            })()}
+                {popularNames.map((name) => (
+                  <a
+                    key={name}
+                    href={`/?name=${encodeURIComponent(name)}&country=${activeCountry}`}
+                    className="badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 touch-manipulation"
+                  >
+                    {name}
+                  </a>
+                ))}
               </nav>
             </div>
             

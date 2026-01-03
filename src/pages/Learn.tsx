@@ -179,9 +179,18 @@ const Learn = () => {
     });
 
     // Apply sorting
+    const isDefaultAllAfrica =
+      countryFilter === 'ALL' &&
+      !macroRegionFilter &&
+      selectedCountries.length === 0 &&
+      !regionFilter &&
+      !languageFamilyFilter &&
+      !searchQuery &&
+      !sortOrder;
+
     if (sortOrder === 'pop-asc') {
       result = [...result].sort((a, b) => parsePopulation(a.population) - parsePopulation(b.population));
-    } else if (sortOrder === 'pop-desc') {
+    } else if (sortOrder === 'pop-desc' || isDefaultAllAfrica) {
       result = [...result].sort((a, b) => parsePopulation(b.population) - parsePopulation(a.population));
     } else if (sortOrder === 'name-asc') {
       result = [...result].sort((a, b) => a.name.localeCompare(b.name));
