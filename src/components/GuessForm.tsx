@@ -93,7 +93,22 @@ export function GuessForm({
   const hasAdvancedClues = region || build || personality;
 
   const selectedCountry = countries.find(c => c.code === country);
-  const countryName = selectedCountry?.name || 'Kenyan';
+  
+  // Adjective forms for grammatically correct display
+  const countryAdjectives: Record<string, string> = {
+    'KE': 'Kenyan',
+    'NG': 'Nigerian',
+    'GH': 'Ghanaian',
+    'ZA': 'South African',
+    'ET': 'Ethiopian',
+    'TZ': 'Tanzanian',
+    'UG': 'Ugandan',
+    'CD': 'Congolese',
+    'SN': 'Senegalese',
+    'ER': 'Eritrean',
+  };
+  const countryAdjective = countryAdjectives[country] || selectedCountry?.name || 'Kenyan';
+  
   const placeholderExamples: Record<string, string> = {
     'KE': 'e.g. Wanjiku, Achieng, Nafula...',
     'NG': 'e.g. Adaeze, Chiamaka, Ngozi...',
@@ -105,55 +120,54 @@ export function GuessForm({
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4" role="search">
-      {/* Country Selector */}
-      <div>
-        <label htmlFor="country-select" className="block text-sm font-medium text-foreground mb-1.5">
-          <Globe className="w-4 h-4 inline mr-1" />
-          Country
-        </label>
-        <div className="relative">
-          <select
-            id="country-select"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            className="input-tribal appearance-none cursor-pointer text-sm sm:text-base"
-          >
-            {countries.map(c => (
-              <option key={c.code} value={c.code}>
-                {c.flag} {c.name}
-              </option>
-            ))}
-          </select>
-          <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-            <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
+      {/* Country + Name Row */}
       <div>
         <label htmlFor="name-input" className="block text-sm font-medium text-foreground mb-1.5">
-          Enter a {countryName} Name
+          Enter a {countryAdjective} Name
         </label>
         <p className="text-xs text-muted-foreground mb-2">
           First name works best - we'll analyze the naming patterns
         </p>
-        <div className="relative">
-          <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
-          <input
-            id="name-input"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder={placeholderExamples[country] || `Enter a ${countryName} name...`}
-            className="input-tribal pl-10 sm:pl-12 text-base sm:text-lg"
-            autoFocus
-            maxLength={50}
-            autoComplete="off"
-            autoCapitalize="words"
-            spellCheck="false"
-          />
+        <div className="flex gap-2">
+          {/* Country Selector - Compact */}
+          <div className="relative shrink-0">
+            <select
+              id="country-select"
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-8 w-auto"
+              aria-label="Select country"
+            >
+              {countries.map(c => (
+                <option key={c.code} value={c.code}>
+                  {c.flag} {c.code}
+                </option>
+              ))}
+            </select>
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg className="w-3 h-3 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Name Input */}
+          <div className="relative flex-1">
+            <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
+            <input
+              id="name-input"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
+              className="input-tribal pl-10 sm:pl-12 text-base sm:text-lg w-full"
+              autoFocus
+              maxLength={50}
+              autoComplete="off"
+              autoCapitalize="words"
+              spellCheck="false"
+            />
+          </div>
         </div>
       </div>
       

@@ -2,7 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { GuessForm } from '@/components/GuessForm';
 import { TribeResultCard } from '@/components/TribeResultCard';
-import { detectTribe, getCountries } from '@/lib/tribeDetection';
+import { detectTribe } from '@/lib/tribeDetection';
 import logo from '@/assets/logo.png';
 
 const Index = () => {
@@ -14,9 +14,20 @@ const Index = () => {
   const personalityQuery = searchParams.get('personality') || '';
   const countryQuery = searchParams.get('country') || 'KE';
   
-  const countries = getCountries();
-  const selectedCountry = countries.find(c => c.code === countryQuery) || countries.find(c => c.code === 'KE');
-  const countryName = selectedCountry?.name || 'Kenyan';
+  // Adjective forms for grammatically correct display
+  const countryAdjectives: Record<string, string> = {
+    'KE': 'Kenyan',
+    'NG': 'Nigerian',
+    'GH': 'Ghanaian',
+    'ZA': 'South African',
+    'ET': 'Ethiopian',
+    'TZ': 'Tanzanian',
+    'UG': 'Ugandan',
+    'CD': 'Congolese',
+    'SN': 'Senegalese',
+    'ER': 'Eritrean',
+  };
+  const countryAdjective = countryAdjectives[countryQuery] || 'Kenyan';
   
   const results = nameQuery ? detectTribe(nameQuery, {
     timeOfBirth: timeQuery || undefined,
@@ -45,7 +56,7 @@ const Index = () => {
                 Guess Her <span className="gradient-gold-text">Tribe</span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto px-2">
-                Enter a {countryName} name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
+                Enter a {countryAdjective} name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
               </p>
             </div>
             
