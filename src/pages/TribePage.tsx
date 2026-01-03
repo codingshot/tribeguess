@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church } from 'lucide-react';
+import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play } from 'lucide-react';
 import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
 import { TribeMap } from '@/components/TribeMap';
@@ -91,6 +91,31 @@ const TribePage = () => {
             </header>
             
             <div className="p-4 sm:p-6 space-y-6 sm:space-y-8">
+              {/* YouTube Culture Video Section */}
+              {(tribe as any).youtubeVideoId && (
+                <section className="bg-gradient-to-r from-red-500/10 to-red-600/5 dark:from-red-900/20 dark:to-red-950/10 rounded-xl p-4 border border-red-200 dark:border-red-800">
+                  <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                    <Play className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" aria-hidden="true" />
+                    Culture Documentary
+                  </h2>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Discover the rich cultural heritage of the {tribe.name} people through this documentary video.
+                  </p>
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${(tribe as any).youtubeVideoId}?rel=0`}
+                      title={`${tribe.name} Culture Documentary`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-2 italic">
+                    📺 Video content is sourced from YouTube for educational purposes.
+                  </p>
+                </section>
+              )}
+
               {/* Map Section */}
               <section>
                 {(() => {
