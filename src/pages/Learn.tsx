@@ -36,7 +36,7 @@ const Learn = () => {
   const searchQuery = searchParams.get('search') || '';
   const regionFilter = searchParams.get('region') || '';
   const macroRegionFilter = searchParams.get('macroRegion') || '';
-  const countryFilter = searchParams.get('country') || (macroRegionFilter ? 'ALL' : 'KE'); // Default to Kenya unless viewing a macro-region
+  const countryFilter = searchParams.get('country') || 'ALL'; // Default to all countries
   const viewMode = searchParams.get('view') || 'grid';
   const languageFamilyFilter = searchParams.get('languageFamily') || '';
   
@@ -248,7 +248,7 @@ const Learn = () => {
     setSearchParams({});
   };
   
-  const hasFilters = searchQuery || regionFilter || macroRegionFilter || sortOrder || selectedCountries.length > 0 || languageFamilyFilter || (countryFilter && countryFilter !== 'KE');
+  const hasFilters = searchQuery || regionFilter || macroRegionFilter || sortOrder || selectedCountries.length > 0 || languageFamilyFilter || (countryFilter && countryFilter !== 'ALL');
 
   const hasAdvancedFilters = sortOrder || selectedCountries.length > 0 || languageFamilyFilter;
 
@@ -536,7 +536,7 @@ const Learn = () => {
                         <button
                           onClick={() => handleCountryChange(country.code)}
                           className={`px-1.5 py-0.5 rounded text-sm font-medium transition-all flex items-center gap-0.5 ${
-                            countryFilter === country.code || (!countryFilter && !macroRegionFilter && country.code === 'KE')
+                            countryFilter === country.code
                               ? 'bg-primary text-primary-foreground ring-2 ring-primary/30' 
                               : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                           }`}
@@ -560,7 +560,7 @@ const Learn = () => {
                               : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                           }`}
                         >
-                          🌍
+                          <Globe className="w-4 h-4" />
                         </button>
                       </TooltipTrigger>
                       <TooltipContent side="bottom" className="text-xs">
@@ -609,12 +609,12 @@ const Learn = () => {
                       </button>
                     </span>
                   )}
-                  {countryFilter && countryFilter !== 'KE' && (
+                  {countryFilter && countryFilter !== 'ALL' && (
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
                       <Flag className="w-3 h-3" />
                       {countries.find(c => c.code === countryFilter)?.name || countryFilter}
                       <button 
-                        onClick={() => handleCountryChange('KE')}
+                        onClick={() => handleCountryChange('ALL')}
                         className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
                       >
                         <X className="w-2.5 h-2.5" />
