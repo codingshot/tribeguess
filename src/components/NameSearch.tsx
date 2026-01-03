@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, forwardRef } from 'react';
 import { Search, X, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ interface NameSearchProps {
   nameDatabase?: Record<string, { meaning: string; gender: 'male' | 'female' }>;
 }
 
-export function NameSearch({ femaleNames, maleNames, tribeName, nameDatabase = {} }: NameSearchProps) {
+export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function NameSearch({ femaleNames, maleNames, tribeName, nameDatabase = {} }, ref) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedName, setSelectedName] = useState<NameInfo | null>(null);
 
@@ -194,4 +194,4 @@ export function NameSearch({ femaleNames, maleNames, tribeName, nameDatabase = {
       </p>
     </section>
   );
-}
+});

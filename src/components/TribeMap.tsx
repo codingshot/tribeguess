@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { MapPin, ExternalLink } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';
 
@@ -43,7 +44,7 @@ const getTerritorySizeForTribe = (tribeName: string, counties: string[]): { latS
   return { latSpan: 1.0, lngSpan: 1.0 };
 };
 
-export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: TribeMapProps) {
+export const TribeMap = forwardRef<HTMLDivElement, TribeMapProps>(function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }, ref) {
   const allCountries = getCountries();
   const primaryCountryCode = countries[0] || 'KE';
   const primaryCountry = allCountries.find(c => c.code === primaryCountryCode);
@@ -249,4 +250,4 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
       </div>
     </div>
   );
-}
+});
