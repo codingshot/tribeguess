@@ -1,10 +1,17 @@
 import { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag } from 'lucide-react';
+import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, ChevronDown } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
 import { KenyaMapView } from '@/components/KenyaMapView';
-import { getAllTribes, getCountries } from '@/lib/tribeDetection';
+import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Learn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -17,21 +24,6 @@ const Learn = () => {
   
   const tribes = getAllTribes();
   const countries = getCountries();
-  
-  const totalPopulation = useMemo(() => {
-    return tribes.reduce((acc, t) => {
-      // Extract number and check for "million" or "thousand"
-      const numMatch = t.population.match(/[\d.]+/);
-      if (!numMatch) return acc;
-      const num = parseFloat(numMatch[0]);
-      if (t.population.toLowerCase().includes('million')) {
-        return acc + num * 1000000;
-      } else if (t.population.toLowerCase().includes('thousand') || t.population.toLowerCase().includes(',000')) {
-        return acc + num * 1000;
-      }
-      return acc + num;
-    }, 0);
-  }, [tribes]);
 
   const formatPopulation = (pop: number) => {
     if (pop >= 1000000) {
@@ -42,10 +34,49 @@ const Learn = () => {
     return pop.toString();
   };
   
+  // Filter regions based on selected country's tribes
   const regions = useMemo(() => {
-    const uniqueRegions = [...new Set(tribes.map(t => t.region))];
+    const countryTribes = tribes.filter(t => {
+      const tribeCountries = (t as any).countries || ['KE'];
+      return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
+    });
+    const uniqueRegions = [...new Set(countryTribes.map(t => t.region))];
     return uniqueRegions.sort();
-  }, [tribes]);
+  }, [tribes, countryFilter]);
+
+  // Country-specific stats
+  const countryStats = useMemo(() => {
+    const countryTribes = tribes.filter(t => {
+      const tribeCountries = (t as any).countries || ['KE'];
+      return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
+    });
+    
+    const population = countryTribes.reduce((acc, t) => {
+      const numMatch = t.population.match(/[\d.]+/);
+      if (!numMatch) return acc;
+      const num = parseFloat(numMatch[0]);
+      if (t.population.toLowerCase().includes('million')) {
+        return acc + num * 1000000;
+      } else if (t.population.toLowerCase().includes('thousand') || t.population.toLowerCase().includes(',000')) {
+        return acc + num * 1000;
+      }
+      return acc + num;
+    }, 0);
+
+    const uniqueLanguages = new Set(countryTribes.map(t => t.language?.name).filter(Boolean));
+    
+    return {
+      tribeCount: countryTribes.length,
+      population,
+      regionCount: [...new Set(countryTribes.map(t => t.region))].length,
+      languageCount: uniqueLanguages.size
+    };
+  }, [tribes, countryFilter]);
+
+  // Get country-specific facts
+  const countryFacts = useMemo(() => {
+    return getCountryFacts(countryFilter || 'KE');
+  }, [countryFilter]);
   
   const filteredTribes = useMemo(() => {
     return tribes.filter(tribe => {
@@ -170,45 +201,48 @@ const Learn = () => {
             </div>
           </header>
           
-          {/* Quick Stats */}
+          {/* Quick Stats - Dynamic based on country */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto mb-6 sm:mb-8">
             <div className="text-center p-3 bg-secondary rounded-lg">
               <Users className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">{tribes.length}</p>
+              <p className="text-lg sm:text-2xl font-bold text-primary">{countryStats.tribeCount}</p>
               <p className="text-xs text-muted-foreground">Major Tribes</p>
             </div>
             <div className="text-center p-3 bg-secondary rounded-lg">
               <TrendingUp className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">~{formatPopulation(totalPopulation)}</p>
+              <p className="text-lg sm:text-2xl font-bold text-primary">~{formatPopulation(countryStats.population)}</p>
               <p className="text-xs text-muted-foreground">Total Population</p>
             </div>
             <div className="text-center p-3 bg-secondary rounded-lg">
               <MapPin className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">{regions.length}</p>
+              <p className="text-lg sm:text-2xl font-bold text-primary">{countryStats.regionCount}</p>
               <p className="text-xs text-muted-foreground">Regions</p>
             </div>
             <div className="text-center p-3 bg-secondary rounded-lg">
               <Languages className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">68+</p>
+              <p className="text-lg sm:text-2xl font-bold text-primary">{countryStats.languageCount || '?'}</p>
               <p className="text-xs text-muted-foreground">Languages</p>
             </div>
           </div>
           
-          {/* Fun Facts Banner */}
-          <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-xl p-4 mb-6 max-w-3xl mx-auto">
-            <div className="flex items-start gap-3">
-              <Globe className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-semibold text-foreground text-sm mb-2">🎓 Did You Know?</h3>
-                <ul className="text-xs text-muted-foreground leading-relaxed space-y-1.5">
-                  <li>• <strong>42+ ethnic groups</strong> call Kenya home, each with unique languages and naming traditions</li>
-                  <li>• <strong>Names reveal birth circumstances</strong> — time of day (Otieno = night), weather (Wafula = rain), or season (Wekesa = harvest)</li>
-                  <li>• <strong>Kenya has 68 languages</strong> — Swahili and English are official, but each tribe preserves its mother tongue</li>
-                  <li>• <strong>The Maasai</strong> measure wealth in cattle, while the <strong>Luo</strong> are the only major tribe that doesn't practice circumcision</li>
-                </ul>
+          {/* Fun Facts Banner - Dynamic based on country */}
+          {countryFacts.length > 0 && (
+            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-xl p-4 mb-6 max-w-3xl mx-auto">
+              <div className="flex items-start gap-3">
+                <Globe className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-foreground text-sm mb-2">
+                    🎓 Did You Know? {selectedCountry && `(${selectedCountry.flag} ${selectedCountry.name})`}
+                  </h3>
+                  <ul className="text-xs text-muted-foreground leading-relaxed space-y-1.5">
+                    {countryFacts.map((fact, index) => (
+                      <li key={index}>• {fact}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          )}
           
           {/* View Toggle */}
           <div className="flex justify-center gap-2 mb-4 sm:mb-6">
@@ -266,36 +300,22 @@ const Learn = () => {
               )}
             </form>
             
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted-foreground">
                 <Filter className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>Region:</span>
               </div>
-              <nav className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Filter by region">
-                <button
-                  onClick={() => handleRegionChange('')}
-                  className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all touch-manipulation ${
-                    !regionFilter 
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                  }`}
-                >
-                  All
-                </button>
-                {regions.map(region => (
-                  <button
-                    key={region}
-                    onClick={() => handleRegionChange(region)}
-                    className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all touch-manipulation ${
-                      regionFilter === region 
-                        ? 'bg-primary text-primary-foreground' 
-                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                    }`}
-                  >
-                    {region}
-                  </button>
-                ))}
-              </nav>
+              <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
+                <SelectTrigger className="w-[180px] sm:w-[220px] h-9 text-xs sm:text-sm bg-background">
+                  <SelectValue placeholder="All Regions" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border border-border z-50">
+                  <SelectItem value="all">All Regions</SelectItem>
+                  {regions.map(region => (
+                    <SelectItem key={region} value={region}>{region}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             
             {hasFilters && (
