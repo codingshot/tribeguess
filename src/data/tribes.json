@@ -7,6 +7,74 @@
     { "id": "north", "name": "North Africa" },
     { "id": "horn", "name": "Horn of Africa" }
   ],
+  "countryFacts": {
+    "KE": [
+      "42+ ethnic groups call Kenya home, each with unique languages and naming traditions",
+      "Names reveal birth circumstances — time of day (Otieno = night), weather (Wafula = rain), or season (Wekesa = harvest)",
+      "Kenya has 68 languages — Swahili and English are official, but each tribe preserves its mother tongue",
+      "The Maasai measure wealth in cattle, while the Luo are the only major tribe that doesn't practice circumcision"
+    ],
+    "NG": [
+      "Nigeria has over 250 ethnic groups, making it Africa's most ethnically diverse nation",
+      "The Yoruba have one of the highest twin birth rates in the world",
+      "Igbo names often reflect life circumstances — 'Chukwuemeka' means 'God has done great things'",
+      "The Hausa-Fulani dominate Northern Nigeria and have a rich tradition of Islamic scholarship"
+    ],
+    "GH": [
+      "Ghana has over 100 ethnic groups speaking 80+ languages",
+      "The Ashanti Kingdom was one of Africa's most powerful empires, famous for gold and kente cloth",
+      "Akan day names (like Kofi for Friday-born males) are still widely used today",
+      "The Ewe people span Ghana and Togo, known for their drumming and dance traditions"
+    ],
+    "ZA": [
+      "South Africa has 11 official languages, reflecting its ethnic diversity",
+      "The Zulu nation is the largest ethnic group, with over 10 million people",
+      "Xhosa click consonants were borrowed from the Khoisan languages",
+      "The Ndebele are famous for their geometric house paintings and beadwork"
+    ],
+    "ET": [
+      "Ethiopia has over 80 ethnic groups and is the only African country never colonized",
+      "The Oromo are the largest ethnic group, making up about 35% of the population",
+      "Amharic uses its own unique alphabet with 231 characters",
+      "Ethiopian names often include the father's first name as a surname"
+    ],
+    "TZ": [
+      "Tanzania has 120+ ethnic groups, yet Swahili unifies them as a national language",
+      "The Chagga live on Mount Kilimanjaro and are known for their coffee farming",
+      "The Sukuma are Tanzania's largest tribe, famous for traditional dance competitions",
+      "Maasai traditions of cattle herding span both Tanzania and Kenya"
+    ],
+    "UG": [
+      "Uganda has over 56 ethnic groups across four major linguistic families",
+      "The Baganda are the largest group, with a powerful historical kingdom",
+      "Ugandan names often reflect circumstances of birth or family wishes",
+      "The Karamojong in northeast Uganda maintain a traditional pastoralist lifestyle"
+    ],
+    "CD": [
+      "DR Congo has over 200 ethnic groups speaking 700+ local languages",
+      "The Luba Empire was one of Central Africa's greatest pre-colonial states",
+      "Congolese names often carry deep spiritual and ancestral meanings",
+      "The Mongo people are the largest ethnic group in the Congo Basin"
+    ],
+    "SN": [
+      "Senegal's Wolof culture dominates, with 40% of the population",
+      "Teranga (hospitality) is a core Senegalese value across all ethnic groups",
+      "The Serer people have ancient astronomical and agricultural traditions",
+      "Senegalese surnames often indicate caste and family lineage"
+    ],
+    "ER": [
+      "Eritrea has 9 recognized ethnic groups, each with distinct languages",
+      "The Tigrinya people make up about 55% of the population",
+      "Eritrean naming traditions reflect religious and cultural heritage",
+      "The Afar people are known for their salt trading traditions in the Danakil Depression"
+    ],
+    "ALL": [
+      "Africa has over 3,000 distinct ethnic groups speaking 2,000+ languages",
+      "Many African naming systems encode birth order, time, circumstances, and family history",
+      "Ethnic identities often transcend modern national borders drawn by colonial powers",
+      "Africa's linguistic diversity is the highest of any continent"
+    ]
+  },
   "countries": [
     { "code": "KE", "name": "Kenya", "flag": "🇰🇪", "region": "east" },
     { "code": "TZ", "name": "Tanzania", "flag": "🇹🇿", "region": "east" },

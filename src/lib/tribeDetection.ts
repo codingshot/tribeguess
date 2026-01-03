@@ -740,6 +740,11 @@ export function getCountries(): Country[] {
   ];
 }
 
+export function getCountryFacts(countryCode: string): string[] {
+  const facts = (tribesData as any).countryFacts || {};
+  return facts[countryCode] || facts['ALL'] || [];
+}
+
 export function getNameDatabase(): Record<string, { meaning: string; gender: 'male' | 'female' }> {
   return nameDatabase;
 }
