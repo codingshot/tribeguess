@@ -45,7 +45,7 @@ const Index = () => {
           // Landing view
           <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in">
             <div className="mb-6 sm:mb-8">
-              {/* Hero with orbiting flag based on selected country */}
+              {/* Hero with orbiting flags - all supported countries */}
               <div className="relative inline-block">
                 {/* Orbiting flags behind logo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -55,26 +55,18 @@ const Index = () => {
                       to { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
                     }
                   `}</style>
-                  {(() => {
-                    const countryFlags: Record<string, string> = {
-                      'KE': '🇰🇪', 'NG': '🇳🇬', 'GH': '🇬🇭', 'ZA': '🇿🇦', 'ET': '🇪🇹',
-                      'TZ': '🇹🇿', 'UG': '🇺🇬', 'CD': '🇨🇩', 'SN': '🇸🇳', 'ER': '🇪🇷',
-                      'RW': '🇷🇼', 'SD': '🇸🇩', 'CM': '🇨🇲', 'CI': '🇨🇮', 'ML': '🇲🇱'
-                    };
-                    const selectedFlag = countryFlags[countryQuery] || '🇰🇪';
-                    return Array.from({ length: 6 }).map((_, i) => (
-                      <span
-                        key={i}
-                        className="absolute text-2xl sm:text-3xl opacity-40"
-                        style={{
-                          animation: `orbit 12s linear infinite`,
-                          animationDelay: `${-i * 2}s`,
-                        }}
-                      >
-                        {selectedFlag}
-                      </span>
-                    ));
-                  })()}
+                  {['🇰🇪', '🇳🇬', '🇬🇭', '🇿🇦', '🇪🇹', '🇹🇿', '🇺🇬', '🇨🇩', '🇸🇳', '🇪🇷'].map((flag, i) => (
+                    <span
+                      key={flag}
+                      className="absolute text-xl sm:text-2xl opacity-35"
+                      style={{
+                        animation: `orbit 15s linear infinite`,
+                        animationDelay: `${-i * 1.5}s`,
+                      }}
+                    >
+                      {flag}
+                    </span>
+                  ))}
                 </div>
                 <img 
                   src={logo} 

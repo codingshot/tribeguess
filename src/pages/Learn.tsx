@@ -208,14 +208,11 @@ const Learn = () => {
             <p className="text-muted-foreground max-w-lg mx-auto text-sm sm:text-base px-2">
               Explore the rich cultural diversity of African ethnic groups, their naming traditions, and cultural characteristics.
             </p>
-            {/* Macro Region Selector - Dropdown */}
-            <div className="flex items-center justify-center gap-2 mt-4">
-              <span className="text-sm text-muted-foreground flex items-center gap-1">
-                <Layers className="w-4 h-4" />
-              </span>
+            {/* Macro Region + Country Selector - Inline */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
               <Select value={macroRegionFilter || 'all'} onValueChange={(value) => handleMacroRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-48 h-9 text-sm bg-primary/10 border-primary/20 hover:bg-primary/20">
-                  <Globe className="w-4 h-4 mr-2 text-primary" />
+                <SelectTrigger className="w-36 h-8 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20">
+                  <Globe className="w-3 h-3 mr-1 text-primary" />
                   <SelectValue placeholder="All Africa" />
                 </SelectTrigger>
                 <SelectContent className="bg-background border border-border z-50">
@@ -227,68 +224,36 @@ const Learn = () => {
                   ))}
                 </SelectContent>
               </Select>
-            </div>
-
-            {/* Country Selector */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-3">
-              <span className="text-sm text-muted-foreground flex items-center gap-1">
-                <Flag className="w-4 h-4" />
-                Country:
-              </span>
-              <div className="flex flex-wrap gap-1.5 justify-center">
-                {(macroRegionFilter ? filteredCountries : countries.slice(0, 12)).map(country => (
+              
+              <div className="flex flex-wrap gap-1 justify-center">
+                {(macroRegionFilter ? filteredCountries : countries.slice(0, 8)).map(country => (
                   <button
                     key={country.code}
                     onClick={() => handleCountryChange(country.code)}
-                    className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center gap-1 ${
+                    className={`px-1.5 py-0.5 rounded text-xs font-medium transition-all flex items-center gap-0.5 ${
                       countryFilter === country.code || (!countryFilter && !macroRegionFilter && country.code === 'KE')
                         ? 'bg-primary text-primary-foreground' 
                         : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                     }`}
                   >
                     <span>{country.flag}</span>
-                    <span className="hidden sm:inline">{country.name}</span>
                   </button>
                 ))}
                 {!macroRegionFilter && (
                   <button
                     onClick={() => handleCountryChange('ALL')}
-                    className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                    className={`px-1.5 py-0.5 rounded text-xs font-medium transition-all ${
                       countryFilter === 'ALL'
                         ? 'bg-primary text-primary-foreground' 
                         : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                     }`}
                   >
-                    🌍 All
+                    🌍
                   </button>
                 )}
               </div>
             </div>
           </header>
-          
-          {/* Quick Stats - Dynamic based on country */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto mb-6 sm:mb-8">
-            <div className="text-center p-3 bg-secondary rounded-lg">
-              <Users className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">{countryStats.tribeCount}</p>
-              <p className="text-xs text-muted-foreground">Major Tribes</p>
-            </div>
-            <div className="text-center p-3 bg-secondary rounded-lg">
-              <TrendingUp className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">~{formatPopulation(countryStats.population)}</p>
-              <p className="text-xs text-muted-foreground">Total Population</p>
-            </div>
-            <div className="text-center p-3 bg-secondary rounded-lg">
-              <MapPin className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">{countryStats.regionCount}</p>
-              <p className="text-xs text-muted-foreground">Regions</p>
-            </div>
-            <div className="text-center p-3 bg-secondary rounded-lg">
-              <Languages className="w-5 h-5 text-primary mx-auto mb-1" />
-              <p className="text-lg sm:text-2xl font-bold text-primary">{countryStats.languageCount || '?'}</p>
-              <p className="text-xs text-muted-foreground">Languages</p>
-            </div>
-          </div>
           
           
           {/* View Toggle */}
@@ -318,7 +283,7 @@ const Learn = () => {
           </div>
           
           {/* Search and Filters - Inline Layout */}
-          <section className="max-w-3xl mx-auto mb-6 sm:mb-8" aria-label="Search and filters">
+          <section className="max-w-3xl mx-auto mb-4" aria-label="Search and filters">
             {/* Search + Region + Info Tooltip - All inline */}
             <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
               {/* Search Bar */}
@@ -331,7 +296,7 @@ const Learn = () => {
                   value={localSearch}
                   onChange={(e) => setLocalSearch(e.target.value)}
                   placeholder="Search tribes, names..."
-                  className="input-tribal pl-9 pr-9 text-sm h-10 w-full"
+                  className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
                 />
                 {localSearch && (
                   <button
@@ -351,29 +316,25 @@ const Learn = () => {
               </form>
               
               {/* Region Filter - Compact */}
-              <div className="flex items-center gap-2">
-                <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0 hidden sm:block" />
-                <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
-                  <SelectTrigger className="w-full sm:w-40 h-10 text-xs sm:text-sm bg-background">
-                    <SelectValue placeholder="All Regions" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-background border border-border z-50">
-                    <SelectItem value="all">All Regions</SelectItem>
-                    {regions.map(region => (
-                      <SelectItem key={region} value={region}>{region}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
+              <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
+                <SelectTrigger className="w-full sm:w-32 h-9 text-xs bg-background">
+                  <SelectValue placeholder="Region" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border border-border z-50">
+                  <SelectItem value="all">All Regions</SelectItem>
+                  {regions.map(region => (
+                    <SelectItem key={region} value={region}>{region}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
 
               {/* Did You Know - Info Tooltip */}
               {countryFacts.length > 0 && (
                 <TooltipProvider>
                   <Tooltip delayDuration={100}>
                     <TooltipTrigger asChild>
-                      <button className="flex items-center justify-center gap-1.5 px-3 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0">
+                      <button className="flex items-center justify-center gap-1.5 px-2 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0">
                         <Info className="w-4 h-4" />
-                        <span className="text-xs font-medium hidden sm:inline">Did you know?</span>
                       </button>
                     </TooltipTrigger>
                     <TooltipContent side="bottom" align="end" className="max-w-xs sm:max-w-sm p-4">
@@ -392,6 +353,26 @@ const Learn = () => {
                   </Tooltip>
                 </TooltipProvider>
               )}
+            </div>
+            
+            {/* Quick Stats - Compact inline below search */}
+            <div className="flex items-center justify-center gap-4 mt-3 text-xs text-muted-foreground">
+              <span className="flex items-center gap-1">
+                <Users className="w-3 h-3 text-primary" />
+                <strong className="text-foreground">{countryStats.tribeCount}</strong> tribes
+              </span>
+              <span className="flex items-center gap-1">
+                <TrendingUp className="w-3 h-3 text-primary" />
+                <strong className="text-foreground">~{formatPopulation(countryStats.population)}</strong>
+              </span>
+              <span className="flex items-center gap-1">
+                <MapPin className="w-3 h-3 text-primary" />
+                <strong className="text-foreground">{countryStats.regionCount}</strong> regions
+              </span>
+              <span className="flex items-center gap-1">
+                <Languages className="w-3 h-3 text-primary" />
+                <strong className="text-foreground">{countryStats.languageCount || '?'}</strong> languages
+              </span>
             </div>
             
             {/* Active Filters Summary */}
