@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Clock, Sparkles, HelpCircle, ChevronDown, ChevronUp, MapPin, Users, Heart } from 'lucide-react';
+import { Search, Clock, Sparkles, HelpCircle, ChevronDown, ChevronUp, MapPin, Users, Heart, Globe } from 'lucide-react';
+import { getCountries, Country } from '@/lib/tribeDetection';
 
 interface GuessFormProps {
   initialName?: string;
@@ -8,6 +9,7 @@ interface GuessFormProps {
   initialRegion?: string;
   initialBuild?: string;
   initialPersonality?: string;
+  initialCountry?: string;
 }
 
 const timeOptions = [
@@ -51,16 +53,23 @@ export function GuessForm({
   initialTime = '',
   initialRegion = '',
   initialBuild = '',
-  initialPersonality = ''
+  initialPersonality = '',
+  initialCountry = 'KE'
 }: GuessFormProps) {
   const [name, setName] = useState(initialName);
   const [timeOfBirth, setTimeOfBirth] = useState(initialTime);
   const [region, setRegion] = useState(initialRegion);
   const [build, setBuild] = useState(initialBuild);
   const [personality, setPersonality] = useState(initialPersonality);
+  const [country, setCountry] = useState(initialCountry);
+  const [countries, setCountries] = useState<Country[]>([]);
   const [showTimeHelp, setShowTimeHelp] = useState(false);
   const [advancedMode, setAdvancedMode] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setCountries(getCountries());
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,6 +81,7 @@ export function GuessForm({
     
     const params = new URLSearchParams();
     params.set('name', trimmedName.slice(0, 50));
+    if (country) params.set('country', country);
     if (timeOfBirth) params.set('time', timeOfBirth);
     if (region) params.set('region', region);
     if (build) params.set('build', build);
@@ -82,11 +92,49 @@ export function GuessForm({
 
   const hasAdvancedClues = region || build || personality;
 
+  const selectedCountry = countries.find(c => c.code === country);
+  const countryName = selectedCountry?.name || 'Kenyan';
+  const placeholderExamples: Record<string, string> = {
+    'KE': 'e.g. Wanjiku, Achieng, Nafula...',
+    'NG': 'e.g. Adaeze, Chiamaka, Ngozi...',
+    'GH': 'e.g. Akosua, Abena, Yaa...',
+    'ZA': 'e.g. Nomvula, Thandiwe, Lindiwe...',
+    'ET': 'e.g. Tigist, Meron, Bethlehem...',
+    'TZ': 'e.g. Neema, Zawadi, Hadija...',
+  };
+
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4" role="search">
+      {/* Country Selector */}
+      <div>
+        <label htmlFor="country-select" className="block text-sm font-medium text-foreground mb-1.5">
+          <Globe className="w-4 h-4 inline mr-1" />
+          Country
+        </label>
+        <div className="relative">
+          <select
+            id="country-select"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className="input-tribal appearance-none cursor-pointer text-sm sm:text-base"
+          >
+            {countries.map(c => (
+              <option key={c.code} value={c.code}>
+                {c.flag} {c.name}
+              </option>
+            ))}
+          </select>
+          <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
       <div>
         <label htmlFor="name-input" className="block text-sm font-medium text-foreground mb-1.5">
-          Enter Her Name
+          Enter a {countryName} Name
         </label>
         <p className="text-xs text-muted-foreground mb-2">
           First name works best - we'll analyze the naming patterns
@@ -98,7 +146,7 @@ export function GuessForm({
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="e.g. Wanjiku, Achieng, Nafula..."
+            placeholder={placeholderExamples[country] || `Enter a ${countryName} name...`}
             className="input-tribal pl-10 sm:pl-12 text-base sm:text-lg"
             autoFocus
             maxLength={50}
