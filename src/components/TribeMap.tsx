@@ -16,19 +16,20 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
   const primaryCountry = allCountries.find(c => c.code === primaryCountryCode);
   const countryName = primaryCountry?.name || 'Kenya';
   
-  // OpenStreetMap embed URL - shows actual geographic context
-  const osmEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - 2}%2C${lat - 2}%2C${lng + 2}%2C${lat + 2}&layer=mapnik&marker=${lat}%2C${lng}`;
+  // Zoomed in bounding box (smaller area = more zoom)
+  const zoomLevel = 0.5; // Smaller = more zoomed in
+  const osmEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - zoomLevel}%2C${lat - zoomLevel}%2C${lng + zoomLevel}%2C${lat + zoomLevel}&layer=mapnik&marker=${lat}%2C${lng}`;
   
   // Full map link for users who want to explore
-  const osmFullUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=8/${lat}/${lng}`;
+  const osmFullUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=10/${lat}/${lng}`;
   
   // Google Maps link as alternative
-  const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&z=8`;
+  const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&z=10`;
   
   return (
     <div className="bg-secondary rounded-lg overflow-hidden">
-      {/* Interactive Map Embed */}
-      <div className="relative aspect-video w-full">
+      {/* Interactive Map with Overlay */}
+      <div className="relative aspect-[16/10] sm:aspect-video w-full">
         <iframe
           src={osmEmbedUrl}
           className="absolute inset-0 w-full h-full border-0"
@@ -38,8 +39,38 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
           sandbox="allow-scripts allow-same-origin"
         />
         
+        {/* Highlighted Region Overlay */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Radial gradient overlay to highlight center region */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: `radial-gradient(ellipse 45% 40% at 50% 50%, 
+                hsla(var(--primary), 0.25) 0%, 
+                hsla(var(--primary), 0.15) 30%, 
+                hsla(var(--primary), 0.08) 50%, 
+                transparent 70%)`
+            }}
+          />
+          
+          {/* Pulsing center marker highlight */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="relative">
+              {/* Outer pulse ring */}
+              <div className="absolute -inset-6 rounded-full bg-primary/20 animate-ping" style={{ animationDuration: '2s' }} />
+              {/* Middle ring */}
+              <div className="absolute -inset-4 rounded-full bg-primary/30 animate-pulse" />
+              {/* Inner solid */}
+              <div className="w-4 h-4 rounded-full bg-primary shadow-lg shadow-primary/50" />
+            </div>
+          </div>
+          
+          {/* Border frame to show region bounds */}
+          <div className="absolute inset-[15%] border-2 border-primary/40 rounded-xl border-dashed" />
+        </div>
+        
         {/* Overlay with tribe name */}
-        <div className="absolute top-2 left-2 bg-background/90 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-lg border border-border">
+        <div className="absolute top-2 left-2 bg-background/95 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-lg border border-border z-10">
           <p className="text-sm font-semibold text-foreground flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5 text-primary" />
             {tribeName} Homeland
@@ -48,10 +79,15 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
         
         {/* Country flag badge */}
         {primaryCountry && (
-          <div className="absolute top-2 right-2 bg-background/90 backdrop-blur-sm rounded-lg px-2 py-1 shadow-lg border border-border">
+          <div className="absolute top-2 right-2 bg-background/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow-lg border border-border z-10">
             <span className="text-lg">{primaryCountry.flag}</span>
           </div>
         )}
+        
+        {/* Region label at bottom */}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10">
+          {tribeName} Traditional Territory
+        </div>
       </div>
       
       {/* Map Info & Links */}
@@ -63,7 +99,7 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
               <span className="font-medium">{tribeName} Region</span>
             </div>
             <p className="text-xs text-muted-foreground mt-0.5">
-              {countryName} • {lat.toFixed(2)}°{lat >= 0 ? 'N' : 'S'}, {lng.toFixed(2)}°E
+              {countryName} • {Math.abs(lat).toFixed(2)}°{lat >= 0 ? 'N' : 'S'}, {Math.abs(lng).toFixed(2)}°E
             </p>
           </div>
           
@@ -73,7 +109,7 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
               href={osmFullUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+              className="inline-flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium"
             >
               <span>OpenStreetMap</span>
               <ExternalLink className="w-3 h-3" />
@@ -82,7 +118,7 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
               href={googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+              className="inline-flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium"
             >
               <span>Google Maps</span>
               <ExternalLink className="w-3 h-3" />
