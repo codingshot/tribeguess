@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2 } from 'lucide-react';
-import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries } from '@/lib/tribeDetection';
+import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church } from 'lucide-react';
+import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
 import { TribeMap } from '@/components/TribeMap';
 import { ImageGallery } from '@/components/ImageGallery';
@@ -258,6 +258,74 @@ const TribePage = () => {
                   </div>
                 </section>
               )}
+              
+              {/* Religion Section */}
+              {(() => {
+                const religionInfo = getTribeReligiousInfo(tribe.id);
+                const tribeReligion = (tribe as any).religion as string | undefined;
+                
+                if (!religionInfo && !tribeReligion) return null;
+                
+                const getReligionEmoji = (religion: string) => {
+                  switch (religion.toLowerCase()) {
+                    case 'christian': return '✝️';
+                    case 'muslim': return '☪️';
+                    case 'traditional': return '🌍';
+                    case 'mixed': return '🕊️';
+                    case 'jewish': return '✡️';
+                    default: return '🙏';
+                  }
+                };
+                
+                const getReligionColor = (religion: string) => {
+                  switch (religion.toLowerCase()) {
+                    case 'christian': return 'bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-200';
+                    case 'muslim': return 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200';
+                    case 'traditional': return 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200';
+                    case 'mixed': return 'bg-purple-50 dark:bg-purple-950/30 border-purple-200 dark:border-purple-800 text-purple-800 dark:text-purple-200';
+                    default: return 'bg-secondary border-border text-foreground';
+                  }
+                };
+                
+                return (
+                  <section className="border-t border-border pt-6">
+                    <h2 className="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
+                      <Church className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
+                      Religious Influence
+                    </h2>
+                    
+                    {religionInfo && (
+                      <div className={`p-4 rounded-xl border mb-3 ${getReligionColor(religionInfo.primary)}`}>
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-2xl">{getReligionEmoji(religionInfo.primary)}</span>
+                          <div>
+                            <p className="font-semibold capitalize">
+                              {religionInfo.primary === 'mixed' ? 'Mixed Religious Heritage' : `Predominantly ${religionInfo.primary.charAt(0).toUpperCase() + religionInfo.primary.slice(1)}`}
+                            </p>
+                            {religionInfo.percentage && (
+                              <p className="text-xs opacity-75">~{religionInfo.percentage}% of population</p>
+                            )}
+                          </div>
+                        </div>
+                        <p className="text-sm leading-relaxed">{religionInfo.notes}</p>
+                        {religionInfo.secondary && (
+                          <p className="text-xs mt-2 opacity-75">
+                            Secondary influence: {getReligionEmoji(religionInfo.secondary)} {religionInfo.secondary.charAt(0).toUpperCase() + religionInfo.secondary.slice(1)}
+                          </p>
+                        )}
+                      </div>
+                    )}
+                    
+                    {tribeReligion && !religionInfo && (
+                      <p className="text-sm text-muted-foreground leading-relaxed">{tribeReligion}</p>
+                    )}
+                    
+                    <p className="text-xs text-muted-foreground mt-3 italic">
+                      💡 Religious heritage often influences naming traditions. Many {tribe.name} names reflect their religious background.
+                    </p>
+                  </section>
+                );
+              })()}
               
               <section>
                 <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
