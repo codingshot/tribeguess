@@ -208,83 +208,11 @@ const Learn = () => {
             <p className="text-muted-foreground max-w-lg mx-auto text-sm sm:text-base px-2">
               Explore the rich cultural diversity of African ethnic groups, their naming traditions, and cultural characteristics.
             </p>
-            {/* Macro Region + Country Selector - Inline */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
-              <Select value={macroRegionFilter || 'all'} onValueChange={(value) => handleMacroRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-36 h-8 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20">
-                  <Globe className="w-3 h-3 mr-1 text-primary" />
-                  <SelectValue placeholder="All Africa" />
-                </SelectTrigger>
-                <SelectContent className="bg-background border border-border z-50">
-                  <SelectItem value="all">🌍 All Africa</SelectItem>
-                  {macroRegions.map(region => (
-                    <SelectItem key={region.id} value={region.id}>
-                      {region.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              
-              <div className="flex flex-wrap gap-1 justify-center">
-                {(macroRegionFilter ? filteredCountries : countries.slice(0, 8)).map(country => (
-                  <button
-                    key={country.code}
-                    onClick={() => handleCountryChange(country.code)}
-                    className={`px-1.5 py-0.5 rounded text-xs font-medium transition-all flex items-center gap-0.5 ${
-                      countryFilter === country.code || (!countryFilter && !macroRegionFilter && country.code === 'KE')
-                        ? 'bg-primary text-primary-foreground' 
-                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                    }`}
-                  >
-                    <span>{country.flag}</span>
-                  </button>
-                ))}
-                {!macroRegionFilter && (
-                  <button
-                    onClick={() => handleCountryChange('ALL')}
-                    className={`px-1.5 py-0.5 rounded text-xs font-medium transition-all ${
-                      countryFilter === 'ALL'
-                        ? 'bg-primary text-primary-foreground' 
-                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                    }`}
-                  >
-                    🌍
-                  </button>
-                )}
-              </div>
-            </div>
           </header>
-          
-          
-          {/* View Toggle */}
-          <div className="flex justify-center gap-2 mb-4 sm:mb-6">
-            <button
-              onClick={() => toggleViewMode('grid')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                viewMode === 'grid'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-              }`}
-            >
-              <LayoutGrid className="w-4 h-4" />
-              Grid View
-            </button>
-            <button
-              onClick={() => toggleViewMode('map')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                viewMode === 'map'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-              }`}
-            >
-              <MapIcon className="w-4 h-4" />
-              Map View
-            </button>
-          </div>
           
           {/* Search and Filters - Inline Layout */}
           <section className="max-w-3xl mx-auto mb-4" aria-label="Search and filters">
-            {/* Search + Region + Info Tooltip - All inline */}
+            {/* Search Bar + View Toggle + Info - All inline */}
             <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
               {/* Search Bar */}
               <form onSubmit={handleSearch} className="relative flex-1">
@@ -315,18 +243,31 @@ const Learn = () => {
                 )}
               </form>
               
-              {/* Region Filter - Compact */}
-              <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-full sm:w-32 h-9 text-xs bg-background">
-                  <SelectValue placeholder="Region" />
-                </SelectTrigger>
-                <SelectContent className="bg-background border border-border z-50">
-                  <SelectItem value="all">All Regions</SelectItem>
-                  {regions.map(region => (
-                    <SelectItem key={region} value={region}>{region}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              {/* View Toggle - Inline with search */}
+              <div className="flex gap-1 flex-shrink-0">
+                <button
+                  onClick={() => toggleViewMode('grid')}
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
+                    viewMode === 'grid'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                >
+                  <LayoutGrid className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Grid</span>
+                </button>
+                <button
+                  onClick={() => toggleViewMode('map')}
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
+                    viewMode === 'map'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                >
+                  <MapIcon className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Map</span>
+                </button>
+              </div>
 
               {/* Did You Know - Info Tooltip */}
               {countryFacts.length > 0 && (
@@ -355,7 +296,84 @@ const Learn = () => {
               )}
             </div>
             
-            {/* Quick Stats - Compact inline below search */}
+            {/* Country Flags + Macro Region + Region Filter - Under search */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-3">
+              {/* Macro Region Dropdown */}
+              <Select value={macroRegionFilter || 'all'} onValueChange={(value) => handleMacroRegionChange(value === 'all' ? '' : value)}>
+                <SelectTrigger className="w-32 h-7 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20">
+                  <Globe className="w-3 h-3 mr-1 text-primary" />
+                  <SelectValue placeholder="All Africa" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border border-border z-50">
+                  <SelectItem value="all">🌍 All Africa</SelectItem>
+                  {macroRegions.map(region => (
+                    <SelectItem key={region.id} value={region.id}>
+                      {region.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+
+              {/* Region Filter Dropdown */}
+              <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
+                <SelectTrigger className="w-28 h-7 text-xs bg-background">
+                  <Layers className="w-3 h-3 mr-1 text-muted-foreground" />
+                  <SelectValue placeholder="Region" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border border-border z-50">
+                  <SelectItem value="all">All Regions</SelectItem>
+                  {regions.map(region => (
+                    <SelectItem key={region} value={region}>{region}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              
+              {/* Country Flags with Tooltips */}
+              <TooltipProvider>
+                <div className="flex flex-wrap gap-1 justify-center">
+                  {(macroRegionFilter ? filteredCountries : countries.slice(0, 8)).map(country => (
+                    <Tooltip key={country.code} delayDuration={200}>
+                      <TooltipTrigger asChild>
+                        <button
+                          onClick={() => handleCountryChange(country.code)}
+                          className={`px-1.5 py-0.5 rounded text-sm font-medium transition-all flex items-center gap-0.5 ${
+                            countryFilter === country.code || (!countryFilter && !macroRegionFilter && country.code === 'KE')
+                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/30' 
+                              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                          }`}
+                        >
+                          <span>{country.flag}</span>
+                        </button>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom" className="text-xs">
+                        {country.name}
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                  {!macroRegionFilter && (
+                    <Tooltip delayDuration={200}>
+                      <TooltipTrigger asChild>
+                        <button
+                          onClick={() => handleCountryChange('ALL')}
+                          className={`px-1.5 py-0.5 rounded text-sm font-medium transition-all ${
+                            countryFilter === 'ALL'
+                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/30' 
+                              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                          }`}
+                        >
+                          🌍
+                        </button>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom" className="text-xs">
+                        All Countries
+                      </TooltipContent>
+                    </Tooltip>
+                  )}
+                </div>
+              </TooltipProvider>
+            </div>
+            
+            {/* Quick Stats - Compact inline below filters */}
             <div className="flex items-center justify-center gap-4 mt-3 text-xs text-muted-foreground">
               <span className="flex items-center gap-1">
                 <Users className="w-3 h-3 text-primary" />
@@ -375,17 +393,74 @@ const Learn = () => {
               </span>
             </div>
             
-            {/* Active Filters Summary */}
+            {/* Active Filters + Clear Filters Row */}
             {hasFilters && (
-              <div className="flex items-center justify-between text-xs mt-2">
-                <p className="text-muted-foreground">
-                  {filteredTribes.length} of {tribes.length} tribes
-                </p>
+              <div className="flex flex-wrap items-center justify-between gap-2 mt-3 p-2 bg-secondary/50 rounded-lg">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className="text-xs text-muted-foreground mr-1">Active:</span>
+                  {macroRegionFilter && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                      <Globe className="w-3 h-3" />
+                      {macroRegions.find(r => r.id === macroRegionFilter)?.name || macroRegionFilter}
+                      <button 
+                        onClick={() => handleMacroRegionChange('')}
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                      >
+                        <X className="w-2.5 h-2.5" />
+                      </button>
+                    </span>
+                  )}
+                  {countryFilter && countryFilter !== 'KE' && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                      <Flag className="w-3 h-3" />
+                      {countries.find(c => c.code === countryFilter)?.name || countryFilter}
+                      <button 
+                        onClick={() => handleCountryChange('KE')}
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                      >
+                        <X className="w-2.5 h-2.5" />
+                      </button>
+                    </span>
+                  )}
+                  {regionFilter && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                      <Layers className="w-3 h-3" />
+                      {regionFilter}
+                      <button 
+                        onClick={() => handleRegionChange('')}
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                      >
+                        <X className="w-2.5 h-2.5" />
+                      </button>
+                    </span>
+                  )}
+                  {searchQuery && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                      <Search className="w-3 h-3" />
+                      "{searchQuery}"
+                      <button 
+                        onClick={() => {
+                          setLocalSearch('');
+                          const params = new URLSearchParams(searchParams);
+                          params.delete('search');
+                          setSearchParams(params);
+                        }}
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                      >
+                        <X className="w-2.5 h-2.5" />
+                      </button>
+                    </span>
+                  )}
+                  <span className="text-xs text-muted-foreground ml-2">
+                    ({filteredTribes.length} of {tribes.length})
+                  </span>
+                </div>
                 <button
                   onClick={clearFilters}
-                  className="text-primary hover:underline touch-manipulation py-1"
+                  className="text-xs text-primary hover:underline touch-manipulation py-1 flex items-center gap-1"
                 >
-                  Clear filters
+                  <X className="w-3 h-3" />
+                  Clear all
                 </button>
               </div>
             )}
