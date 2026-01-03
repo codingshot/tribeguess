@@ -38,6 +38,7 @@ const Learn = () => {
   const macroRegionFilter = searchParams.get('macroRegion') || '';
   const countryFilter = searchParams.get('country') || (macroRegionFilter ? 'ALL' : 'KE'); // Default to Kenya unless viewing a macro-region
   const viewMode = searchParams.get('view') || 'grid';
+  const languageFamilyFilter = searchParams.get('languageFamily') || '';
   
   const sortOrder = searchParams.get('sort') || '';
   const selectedCountries = searchParams.get('countries')?.split(',').filter(Boolean) || [];
@@ -155,6 +156,10 @@ const Learn = () => {
       
       const matchesRegion = !regionFilter || tribe.region === regionFilter;
       
+      // Filter by language family
+      const matchesLanguageFamily = !languageFamilyFilter || 
+        (tribe.language?.family?.toLowerCase().includes(languageFamilyFilter.toLowerCase()));
+      
       // Filter by country - check if tribe has countries array and includes selected country
       const tribeCountries = (tribe as any).countries || ['KE']; // Default to Kenya if not specified
       
@@ -170,7 +175,7 @@ const Learn = () => {
         matchesCountry = tribeCountries.some((code: string) => regionCountryCodes.includes(code));
       }
       
-      return matchesSearch && matchesRegion && matchesCountry;
+      return matchesSearch && matchesRegion && matchesCountry && matchesLanguageFamily;
     });
 
     // Apply sorting
@@ -185,8 +190,7 @@ const Learn = () => {
     }
 
     return result;
-  }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder]);
-  
+  }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder, languageFamilyFilter]);
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const params = new URLSearchParams(searchParams);
@@ -244,9 +248,9 @@ const Learn = () => {
     setSearchParams({});
   };
   
-  const hasFilters = searchQuery || regionFilter || macroRegionFilter || sortOrder || selectedCountries.length > 0 || (countryFilter && countryFilter !== 'KE');
+  const hasFilters = searchQuery || regionFilter || macroRegionFilter || sortOrder || selectedCountries.length > 0 || languageFamilyFilter || (countryFilter && countryFilter !== 'KE');
 
-  const hasAdvancedFilters = sortOrder || selectedCountries.length > 0;
+  const hasAdvancedFilters = sortOrder || selectedCountries.length > 0 || languageFamilyFilter;
 
   const applyAdvancedFilters = () => {
     const params = new URLSearchParams(searchParams);
@@ -670,6 +674,22 @@ const Learn = () => {
                         onClick={() => {
                           const params = new URLSearchParams(searchParams);
                           params.delete('countries');
+                          setSearchParams(params);
+                        }}
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                      >
+                        <X className="w-2.5 h-2.5" />
+                      </button>
+                    </span>
+                  )}
+                  {languageFamilyFilter && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                      <Languages className="w-3 h-3" />
+                      {languageFamilyFilter}
+                      <button 
+                        onClick={() => {
+                          const params = new URLSearchParams(searchParams);
+                          params.delete('languageFamily');
                           setSearchParams(params);
                         }}
                         className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"

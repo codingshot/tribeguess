@@ -70,11 +70,11 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
   
   return (
     <div className="bg-secondary rounded-lg overflow-hidden">
-      {/* Interactive Map with Overlay */}
+      {/* Map with Overlay - iframe is non-interactive to keep overlay aligned */}
       <div className="relative aspect-[16/10] sm:aspect-video w-full">
         <iframe
           src={osmEmbedUrl}
-          className="absolute inset-0 w-full h-full border-0"
+          className="absolute inset-0 w-full h-full border-0 pointer-events-none"
           title={`Map showing ${tribeName} homeland in ${countryName}`}
           loading="lazy"
           referrerPolicy="no-referrer"
