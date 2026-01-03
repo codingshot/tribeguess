@@ -68,6 +68,24 @@
       "Eritrean naming traditions reflect religious and cultural heritage",
       "The Afar people are known for their salt trading traditions in the Danakil Depression"
     ],
+    "RW": [
+      "Rwanda has 61% women in parliament - the highest percentage in the world",
+      "Rwandans share one language (Kinyarwanda) and culture despite historical divisions",
+      "Monthly Umuganda community service keeps Rwanda remarkably clean and organized",
+      "The Intore warrior dance is a UNESCO-recognized cultural tradition"
+    ],
+    "BI": [
+      "Burundi shares language and culture with Rwanda - both speak Kirundi/Kinyarwanda",
+      "The Royal Drummers of Burundi are UNESCO-protected cultural heritage",
+      "Burundian names often reflect family wishes - 'Niyonzima' means 'I have a good name'",
+      "Burundi has one of Africa's most homogeneous populations culturally"
+    ],
+    "SO": [
+      "Somalia is one of Africa's most ethnically homogeneous countries - 85%+ Somali",
+      "Somali clan lineages are memorized going back 20+ generations",
+      "Poetry is central to Somali culture - called 'a nation of poets'",
+      "Somali names often include 'Abdi' (servant) followed by a divine attribute"
+    ],
     "ALL": [
       "Africa has over 3,000 distinct ethnic groups speaking 2,000+ languages",
       "Many African naming systems encode birth order, time, circumstances, and family history",
@@ -1386,9 +1404,9 @@
       }
     },
     {
-      "id": "somali",
+      "id": "kenyan-somali",
       "name": "Kenyan Somali",
-      "slug": "somali",
+      "slug": "kenyan-somali",
       "countries": ["KE", "SO", "ET"],
       "region": "North-Eastern Kenya",
       "population": "~2.8 million",
@@ -2819,178 +2837,6 @@
         "breakdown": [],
         "communities": ["Minimal diaspora"],
       "associations": ["Ilchamus Community"]
-      }
-    },
-    {
-      "id": "rendille",
-      "name": "Rendille",
-      "slug": "rendille",
-      "countries": ["KE", "ET"],
-      "region": "Northern Kenya (Marsabit)",
-      "population": "~100,000",
-      "populationPercent": "0.2%",
-      "genderRatio": { "male": 48, "female": 52 },
-      "mapCoordinates": { "lat": 2.30, "lng": 37.15 },
-      "counties": ["Marsabit"],
-      "namePrefixes": ["Go", "Ha", "Da", "Dh"],
-      "commonNames": {
-        "female": ["Galmo", "Dube", "Habiba", "Galgalo", "Fatuma", "Hadho", "Nachure", "Lokho", "Nuria"],
-        "male": ["Golicha", "Halakhe", "Dhadho", "Guyo", "Leparsanti", "Gollo", "Hirbo", "Godana", "Adano", "Dabasso"]
-      },
-      "stereotypes": [
-        "Expert camel herders",
-        "Desert survivors",
-        "Distinctive hairstyles",
-        "Related to Samburu",
-        "Traditional lifestyle preservers",
-        "Resilient pastoralists"
-      ],
-      "culturalTraits": [
-        "Camel-based pastoralism in harsh desert",
-        "Age-set systems similar to Samburu",
-        "Traditional Waaq religion alongside Islam",
-        "Distinctive traditional dress and jewelry",
-        "Cross-marriages with Samburu community",
-        "Expert desert navigation"
-      ],
-      "funFacts": [
-        "The Rendille are expert camel herders in one of Kenya's harshest regions - the Kaisut Desert",
-        "They have close cultural ties with Samburu through intermarriage traditions",
-        "Camels are central to their economy, culture, and social structure",
-        "Ukur Yatani, Kenya's former Treasury Cabinet Secretary, is Rendille"
-      ],
-      "traditionalFood": {
-        "staples": ["Camel milk", "Goat meat", "Camel meat (ceremonial)", "Sorghum when available"],
-        "beverages": ["Fresh camel milk", "Fermented camel milk"],
-        "specialDishes": ["Roasted camel/goat meat", "Blood and milk mixture"],
-        "description": "Rendille diet depends almost entirely on their camels. Camel milk is the staple food, and meat is consumed during ceremonies and celebrations."
-      },
-      "traditionalDance": "Traditional camel herders' dances during ceremonies",
-      "religion": "Traditional Waaq beliefs; Islam and Christianity growing",
-      "history": {
-        "origin": "The Rendille are Cushitic people who speak a language related to Somali. They have lived in the Kaisut Desert region for centuries, developing expertise in camel pastoralism.",
-        "colonialEra": "The British had minimal contact with the remote Rendille. They maintained their traditional lifestyle largely undisturbed in the Northern Frontier District.",
-        "independence": "Post-independence, the Rendille have remained relatively isolated. They face challenges from droughts and modernization pressures.",
-        "keyEvents": ["Settlement in Kaisut Desert", "Intermarriage traditions with Samburu", "Modern development challenges", "Political representation improvements"]
-      },
-      "language": {
-        "name": "Rendille",
-        "speakers": "~100,000",
-        "greeting": "Na'am",
-        "greetingMeaning": "Hello / Yes",
-        "additionalGreetings": [
-          { "phrase": "Ma fidin?", "meaning": "How are you?" },
-          { "phrase": "Fiidhan", "meaning": "I'm fine" }
-        ],
-        "commonPhrases": [
-          { "phrase": "Gargaara", "meaning": "Thank you" },
-          { "phrase": "Waaq si haa gargaaro", "meaning": "May God help you" }
-        ],
-        "family": "Cushitic (Afro-Asiatic)",
-        "writingSystem": "Latin alphabet"
-      },
-      "famousPeople": [
-        { "name": "Ukur Yatani", "role": "Former Cabinet Secretary for Treasury", "wikipedia": "https://en.wikipedia.org/wiki/Ukur_Yatani" },
-        { "name": "Mohamud Ali", "role": "Former Governor of Marsabit", "wikipedia": "https://en.wikipedia.org/wiki/Mohamud_Ali" }
-      ],
-      "description": "The Rendille are Cushitic camel pastoralists living in the Kaisut Desert of Marsabit County. They have close ties with Samburu through intermarriage and are known for their resilience in one of Kenya's harshest environments.",
-      "relatedTribes": ["samburu", "gabra", "borana"],
-      "diaspora": {
-        "globalPopulation": "~8,000",
-        "majorCountries": ["Ethiopia", "USA"],
-        "breakdown": [
-          { "country": "Ethiopia", "population": "~5,000", "cities": ["Moyale region"] },
-          { "country": "United States", "population": "~1,500", "cities": ["Minneapolis", "Phoenix"] }
-        ],
-        "communities": ["Cross-border communities in Ethiopia", "Growing diaspora in North America"],
-        "associations": ["Rendille Community Association"]
-      }
-    },
-    {
-      "id": "kuria",
-      "name": "Kuria",
-      "slug": "kuria",
-      "countries": ["KE", "TZ"],
-      "region": "South Nyanza (Kenya-Tanzania border)",
-      "population": "~420,000",
-      "populationPercent": "0.9%",
-      "genderRatio": { "male": 48, "female": 52 },
-      "mapCoordinates": { "lat": -1.08, "lng": 34.45 },
-      "counties": ["Migori"],
-      "namePrefixes": ["Ma", "Cha", "Mo", "Ro", "Wa"],
-      "commonNames": {
-        "female": ["Robi", "Bhoke", "Gati", "Nyaboke", "Kemunto", "Boke", "Moraa", "Gesare", "Nyanchama", "Mogire"],
-        "male": ["Chacha", "Marwa", "Mwita", "Robi", "Matongo", "Wambura", "Nyabohanse", "Machage", "Nyangi", "Mgeni"]
-      },
-      "stereotypes": [
-        "Elaborate circumcision ceremonies",
-        "Cross-border community",
-        "Gold mining expertise",
-        "Strong cultural identity",
-        "Tobacco farmers",
-        "Traditional values keepers"
-      ],
-      "culturalTraits": [
-        "Elaborate male and female circumcision ceremonies",
-        "Cross-border ties with Tanzanian Kuria",
-        "Artisanal gold mining tradition",
-        "Tobacco cultivation",
-        "Strong clan systems",
-        "Traditional music and dance during initiation"
-      ],
-      "funFacts": [
-        "The Kuria live on both sides of the Kenya-Tanzania border, sharing culture across nations",
-        "They are known for gold mining in the Migori region, one of Kenya's gold-rich areas",
-        "Circumcision ceremonies are elaborate multi-day events with special songs and dances",
-        "The Kuria have maintained strong cultural practices despite being a relatively small community"
-      ],
-      "traditionalFood": {
-        "staples": ["Ugali", "Fish from Lake Victoria", "Vegetables", "Bananas", "Sweet potatoes"],
-        "beverages": ["Traditional beer (busaa)", "Fermented milk"],
-        "specialDishes": ["Goat meat for ceremonies", "Fish stew", "Traditional vegetable dishes"],
-        "description": "Kuria cuisine is influenced by their proximity to Lake Victoria and agricultural practices. Fish, vegetables, and grains form the staple diet."
-      },
-      "traditionalDance": "Iritongo - circumcision ceremony dance with drums and singing",
-      "religion": "Traditional beliefs; now predominantly Christian (Catholic, Seventh-day Adventist)",
-      "history": {
-        "origin": "The Kuria are Bantu people closely related to the Gusii. They settled in the Lake Victoria region, straddling what became the Kenya-Tanzania border.",
-        "colonialEra": "Colonial borders divided the Kuria between British Kenya and German/British Tanganyika. They maintained cultural unity despite the division.",
-        "independence": "Post-independence, the Kuria in Kenya have been part of Migori County. Cross-border family and cultural ties with Tanzania remain strong.",
-        "keyEvents": ["Settlement in Lake Victoria region", "Colonial border division", "Gold discovery in Migori", "Cross-border cultural preservation"]
-      },
-      "language": {
-        "name": "Kuria (Igikuria)",
-        "speakers": "~900,000 (Kenya and Tanzania)",
-        "greeting": "Hoora",
-        "greetingMeaning": "Hello / Greetings",
-        "additionalGreetings": [
-          { "phrase": "Wamuhoo?", "meaning": "How are you?" },
-          { "phrase": "Nimuhoo", "meaning": "I'm fine" }
-        ],
-        "commonPhrases": [
-          { "phrase": "Urare gaki", "meaning": "Goodbye" },
-          { "phrase": "Nkogotamba", "meaning": "I love you" }
-        ],
-        "family": "Bantu (Niger-Congo)",
-        "writingSystem": "Latin alphabet"
-      },
-      "famousPeople": [
-        { "name": "Wilfred Machage", "role": "Former Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Wilfred_Machage" },
-        { "name": "Shadrack Mose", "role": "Politician", "wikipedia": "https://en.wikipedia.org/wiki/Shadrack_Mose" },
-        { "name": "Edna Moi", "role": "Politician (partial heritage)", "wikipedia": null }
-      ],
-      "description": "The Kuria are Bantu people living on the Kenya-Tanzania border in Migori County. They are known for their elaborate initiation ceremonies, gold mining, and strong cultural identity maintained across international borders.",
-      "relatedTribes": ["kisii", "luo"],
-      "diaspora": {
-        "globalPopulation": "~520,000",
-        "majorCountries": ["Tanzania", "USA", "UK"],
-        "breakdown": [
-          { "country": "Tanzania", "population": "~500,000", "cities": ["Tarime", "Musoma", "Mwanza"] },
-          { "country": "United States", "population": "~8,000", "cities": ["Houston", "Dallas", "Minneapolis"] },
-          { "country": "United Kingdom", "population": "~5,000", "cities": ["London", "Manchester"] }
-        ],
-        "communities": ["Large population in Tanzania's Mara Region", "Cross-border families maintaining cultural ties"],
-        "associations": ["Kuria Cultural Association", "Abakuria Development Forum"]
       }
     },
     {
@@ -7547,6 +7393,338 @@
         ],
         "communities": ["Largest Malagasy community in France"],
         "associations": ["Malagasy Community Association of France"]
+      }
+    },
+
+    {
+      "id": "sukuma",
+      "name": "Sukuma",
+      "slug": "sukuma",
+      "countries": ["TZ"],
+      "region": "Tanzania (Lake Victoria)",
+      "population": "~10 million",
+      "populationPercent": "16% (Tanzania)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -2.52, "lng": 33.43 },
+      "counties": ["Mwanza", "Shinyanga", "Simiyu", "Geita"],
+      "namePrefixes": ["Ma", "Bu", "Ng", "Lu", "Ka", "Shi"],
+      "commonNames": {
+        "female": ["Magreth", "Bupe", "Ngasa", "Lucia", "Kabula", "Shija", "Ndauka", "Manka", "Nyagela", "Samwel"],
+        "male": ["Masanja", "Bugomola", "Ng'wana", "Lugembe", "Kabula", "Shija", "Mabula", "Makongoro", "Maganga", "Shilinde"]
+      },
+      "stereotypes": [
+        "Tanzania's largest tribe",
+        "Cotton farmers",
+        "Cattle wealth",
+        "Dance competitions",
+        "Hardworking farmers",
+        "Traditional healers"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Farmers and cattle owners",
+          "Dance competition leaders",
+          "Family providers",
+          "Traditional leaders"
+        ],
+        "female": [
+          "Agricultural workers",
+          "Homemakers",
+          "Market traders",
+          "Brewers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men owned cattle (central to wealth), farmed cotton, and led dance societies (Bugobogobo).",
+          "female": "Women farmed food crops, brewed beer, and managed households. Some were traditional healers."
+        },
+        "modern": {
+          "male": "Modern Sukuma men are in farming, business, and professions. Dance competitions remain popular.",
+          "female": "Sukuma women are in education, business, and maintain agricultural traditions."
+        }
+      },
+      "culturalTraits": [
+        "Bugobogobo/Bagika dance competitions",
+        "Cattle central to wealth and status",
+        "Cotton farming tradition",
+        "Traditional medicine (waganga)",
+        "Snake dance performances",
+        "Strong clan systems"
+      ],
+      "funFacts": [
+        "Sukuma dance competitions feature snake handling and dramatic performances",
+        "The name 'Sukuma' means 'people of the north' in their language",
+        "Sukuma traditional healers (waganga) are famous throughout Tanzania",
+        "They are Tanzania's largest ethnic group but maintain a low political profile",
+        "Cattle are so important that bride price is measured in cows"
+      ],
+      "traditionalFood": {
+        "staples": ["Ugali", "Dagaa (small fish)", "Vegetables", "Beans", "Sweet potatoes"],
+        "beverages": ["Pombe (local beer)", "Fermented milk"],
+        "specialDishes": ["Smoked fish", "Beef stews", "Cassava preparations"],
+        "description": "Sukuma cuisine features ugali with fish from Lake Victoria and locally grown vegetables."
+      },
+      "traditionalDance": "Bugobogobo - competitive dance with snake handling",
+      "religion": "Christianity, Traditional beliefs, Islam (minority)",
+      "history": {
+        "origin": "The Sukuma are Bantu people who settled around Lake Victoria, becoming Tanzania's largest ethnic group.",
+        "colonialEra": "German and British colonial rule introduced cotton as a cash crop, transforming Sukuma economy.",
+        "independence": "Post-independence, Sukuma have been economically important but politically less prominent than smaller groups.",
+        "keyEvents": ["Settlement around Lake Victoria", "Cotton introduction (colonial era)", "Dance society development", "Modern agricultural expansion"]
+      },
+      "language": {
+        "name": "Kisukuma",
+        "speakers": "~10 million",
+        "greeting": "Wamala",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "U muli?", "meaning": "How are you?" },
+          { "phrase": "Ndi muli", "meaning": "I am fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ahasante", "meaning": "Thank you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Edward Lowassa", "role": "Former Prime Minister", "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa" },
+        { "name": "Magufuli's ancestors", "role": "Late President had Sukuma heritage", "wikipedia": "https://en.wikipedia.org/wiki/John_Magufuli" }
+      ],
+      "description": "The Sukuma are Tanzania's largest ethnic group, known for cattle culture, competitive dancing, and cotton farming around Lake Victoria.",
+      "relatedTribes": ["nyamwezi", "haya", "zinza"],
+      "diaspora": {
+        "globalPopulation": "~50,000",
+        "majorCountries": ["Kenya", "Uganda"],
+        "breakdown": [
+          { "country": "Kenya", "population": "~20,000", "cities": ["Nairobi"] }
+        ],
+        "communities": ["Limited international diaspora"],
+        "associations": ["Sukuma Cultural Association"]
+      }
+    },
+
+    {
+      "id": "dinka",
+      "name": "Dinka",
+      "slug": "dinka",
+      "countries": ["SS", "SD"],
+      "region": "South Sudan",
+      "population": "~4.5 million",
+      "populationPercent": "35% (South Sudan)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 7.86, "lng": 29.69 },
+      "counties": ["Bahr el Ghazal", "Upper Nile", "Jonglei"],
+      "namePrefixes": ["Bol", "Deng", "Ma", "Acien", "Alek", "Awut"],
+      "commonNames": {
+        "female": ["Akol", "Alek", "Awut", "Achol", "Adut", "Acien", "Ajok", "Atong", "Agot", "Ayak"],
+        "male": ["Deng", "Bol", "Makuei", "Kuol", "Majok", "Garang", "Mayom", "Mading", "Jok", "Atem"]
+      },
+      "stereotypes": [
+        "Tallest people in the world",
+        "Cattle central to life",
+        "Warrior traditions",
+        "Facial scarification",
+        "South Sudan's largest group",
+        "Wrestling culture"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Cattle herders",
+          "Warriors",
+          "Wrestlers",
+          "Clan leaders"
+        ],
+        "female": [
+          "Milk and dairy duties",
+          "Agricultural work",
+          "Homemakers",
+          "Decorative scarification"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herded cattle, were warriors, and participated in wrestling matches. Cattle raids were part of traditional life.",
+          "female": "Women milked cows, grew crops, and managed households. Marriage involved significant bride wealth in cattle."
+        },
+        "modern": {
+          "male": "Modern Dinka men are in politics, military, and professions. Cattle remain important culturally.",
+          "female": "Dinka women are increasingly in education and professions while maintaining family roles."
+        }
+      },
+      "culturalTraits": [
+        "Cattle are wealth, identity, and religion",
+        "V-shaped forehead scarification",
+        "Traditional wrestling competitions",
+        "Age-set organization",
+        "Tall stature (genetic)",
+        "Nhialic (sky god) beliefs"
+      ],
+      "funFacts": [
+        "The Dinka are among the tallest people in the world, with average male height around 6 feet",
+        "A wealthy man might own thousands of cattle - each with a personal name",
+        "Dinka have over 400 words for cattle, describing colors and horn shapes",
+        "V-shaped forehead scars identify someone as Dinka immediately",
+        "NBA player Manute Bol (7'7\") was Dinka, as is Luol Deng"
+      ],
+      "traditionalFood": {
+        "staples": ["Milk (raw and fermented)", "Sorghum porridge", "Fish (along rivers)", "Beef (ceremonial)"],
+        "beverages": ["Fresh milk", "Fermented milk", "Sorghum beer"],
+        "specialDishes": ["Roasted meat", "Blood and milk mixture", "Dried fish"],
+        "description": "Dinka diet centers on dairy from their beloved cattle. Milk is drunk fresh, fermented, or mixed with blood."
+      },
+      "traditionalDance": "Wrestling (traditional sport) and ceremonial dances",
+      "religion": "Traditional (Nhialic sky god), Christianity growing",
+      "history": {
+        "origin": "The Dinka are Nilotic people who have lived along the Nile for millennia, developing a cattle-centric culture.",
+        "colonialEra": "Anglo-Egyptian Sudan had limited impact on Dinka traditional life. Slave raids from the north caused conflicts.",
+        "independence": "South Sudan's independence (2011) after decades of civil war. Dinka are politically dominant in the new nation.",
+        "keyEvents": ["Settlement along Nile", "First Sudanese Civil War (1955-1972)", "Second Civil War (1983-2005)", "South Sudan independence (2011)"]
+      },
+      "language": {
+        "name": "Dinka (Thuɔŋjäŋ)",
+        "speakers": "~4.5 million",
+        "greeting": "Kudual",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Ci bɛ̈ŋ?", "meaning": "How are you?" },
+          { "phrase": "A bɛ̈ŋ", "meaning": "I am fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "A luel piɔ̈ɔ̈c", "meaning": "Thank you" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "John Garang", "role": "SPLA Leader & Independence Hero", "wikipedia": "https://en.wikipedia.org/wiki/John_Garang" },
+        { "name": "Manute Bol", "role": "NBA Player & Humanitarian", "wikipedia": "https://en.wikipedia.org/wiki/Manute_Bol" },
+        { "name": "Luol Deng", "role": "NBA All-Star", "wikipedia": "https://en.wikipedia.org/wiki/Luol_Deng" },
+        { "name": "Alek Wek", "role": "Supermodel", "wikipedia": "https://en.wikipedia.org/wiki/Alek_Wek" }
+      ],
+      "description": "The Dinka are South Sudan's largest ethnic group, known for their tall stature, cattle-centric culture, and distinctive facial scarification.",
+      "relatedTribes": ["nuer", "shilluk", "luo"],
+      "diaspora": {
+        "globalPopulation": "~500,000",
+        "majorCountries": ["USA", "Australia", "UK", "Kenya", "Uganda"],
+        "breakdown": [
+          { "country": "USA", "population": "~50,000", "cities": ["Omaha", "Phoenix", "Dallas"] },
+          { "country": "Australia", "population": "~30,000", "cities": ["Melbourne", "Sydney"] }
+        ],
+        "communities": ["Large refugee communities from civil war"],
+        "associations": ["Dinka Community Association"]
+      }
+    },
+
+    {
+      "id": "barundi",
+      "name": "Barundi",
+      "slug": "barundi",
+      "countries": ["BI", "RW", "CD", "TZ"],
+      "region": "Burundi",
+      "population": "~12 million",
+      "populationPercent": "99% (Burundi)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -3.38, "lng": 29.36 },
+      "counties": ["Bujumbura", "Gitega", "Ngozi"],
+      "namePrefixes": ["Ni", "Nda", "Bu", "Ha", "Mu"],
+      "commonNames": {
+        "female": ["Nizigama", "Ndayisaba", "Bukuru", "Habonimana", "Mukeshimana", "Nahayo", "Inamahoro", "Bigirimana"],
+        "male": ["Niyonzima", "Ndayisaba", "Bucumi", "Habimana", "Nkurunziza", "Sindimwo", "Hakizimana", "Niyongabo"]
+      },
+      "stereotypes": [
+        "Royal drummers",
+        "Resilient people",
+        "Coffee producers",
+        "Strong oral traditions",
+        "Cow-centric culture",
+        "Hospitality"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Farmers",
+          "Royal drummers (traditionally male)",
+          "Cattle owners",
+          "Family heads"
+        ],
+        "female": [
+          "Agricultural workers",
+          "Homemakers",
+          "Market traders",
+          "Beer brewers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed cattle, performed royal drumming, and led families. The Mwami (king) was male.",
+          "female": "Women farmed food crops, brewed beer (important culturally), and managed households."
+        },
+        "modern": {
+          "male": "Modern Barundi men are in professions and agriculture. Some traditional roles persist.",
+          "female": "Burundian women are increasingly in education, politics, and business."
+        }
+      },
+      "culturalTraits": [
+        "Royal Drummers of Burundi (UNESCO heritage)",
+        "Cattle central to culture",
+        "Coffee cultivation",
+        "Kirundi language unity",
+        "Oral traditions and proverbs",
+        "Traditional beer culture"
+      ],
+      "funFacts": [
+        "The Royal Drummers of Burundi are UNESCO-recognized and have performed worldwide",
+        "Karyenda (sacred drum) was the symbol of royal power",
+        "Burundians share language and culture despite historical Hutu-Tutsi-Twa divisions",
+        "Urwarwa (banana beer) is central to social occasions",
+        "Burundi is one of the world's most densely populated countries"
+      ],
+      "traditionalFood": {
+        "staples": ["Beans (isombe)", "Bananas", "Sweet potatoes", "Cassava", "Maize"],
+        "beverages": ["Urwarwa (banana beer)", "Ikigage (sorghum beer)"],
+        "specialDishes": ["Mukeke (Lake Tanganyika fish)", "Brochettes (grilled meat)", "Ubugari (cassava porridge)"],
+        "description": "Burundian cuisine features beans, bananas, and root vegetables. Lake Tanganyika fish is a delicacy."
+      },
+      "traditionalDance": "Karyenda - royal drum performance",
+      "religion": "Christianity (Catholic majority), Traditional beliefs",
+      "history": {
+        "origin": "The Barundi have lived in the Great Lakes region for centuries. The Kingdom of Burundi was established by the 17th century.",
+        "colonialEra": "Germany then Belgium ruled Burundi (with Rwanda as Ruanda-Urundi). Colonial policies hardened ethnic divisions.",
+        "independence": "Independence in 1962. Ethnic conflicts and civil war marked subsequent decades.",
+        "keyEvents": ["Kingdom established (1600s)", "Colonial rule", "Independence (1962)", "Civil war (1993-2005)", "Peace process"]
+      },
+      "language": {
+        "name": "Kirundi",
+        "speakers": "~12 million",
+        "greeting": "Amahoro",
+        "greetingMeaning": "Peace / Hello",
+        "additionalGreetings": [
+          { "phrase": "Bite?", "meaning": "How is it?" },
+          { "phrase": "Ni meza", "meaning": "It's good / I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Urakoze", "meaning": "Thank you" },
+          { "phrase": "Nitwa...", "meaning": "My name is..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Royal Drummers of Burundi", "role": "UNESCO-recognized Performance Group", "wikipedia": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi" },
+        { "name": "Pierre Nkurunziza", "role": "Former President", "wikipedia": "https://en.wikipedia.org/wiki/Pierre_Nkurunziza" }
+      ],
+      "description": "The Barundi are the people of Burundi, known for the Royal Drummers, coffee production, and shared culture with neighboring Rwanda.",
+      "relatedTribes": ["banyarwanda", "baganda", "banyankole"],
+      "diaspora": {
+        "globalPopulation": "~500,000",
+        "majorCountries": ["Tanzania", "Rwanda", "DR Congo", "Belgium"],
+        "breakdown": [
+          { "country": "Tanzania", "population": "~200,000", "cities": ["Kigoma"] },
+          { "country": "Belgium", "population": "~20,000", "cities": ["Brussels"] }
+        ],
+        "communities": ["Refugee communities from conflict periods"],
+        "associations": ["Burundian Diaspora Association"]
       }
     }
   ]
