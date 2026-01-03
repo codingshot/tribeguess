@@ -45,13 +45,37 @@ const Index = () => {
           // Landing view
           <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in">
             <div className="mb-6 sm:mb-8">
-              <img 
-                src={logo} 
-                alt="TribeGuess - Kenyan Tribe Guesser Logo" 
-                className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle"
-                width={128}
-                height={128}
-              />
+              {/* Hero with floating flags */}
+              <div className="relative inline-block">
+                {/* Floating country flags behind logo */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  {['🇰🇪', '🇳🇬', '🇬🇭', '🇿🇦', '🇪🇹', '🇹🇿', '🇺🇬', '🇨🇩', '🇸🇳', '🇪🇷'].map((flag, i) => {
+                    const angle = (i / 10) * 2 * Math.PI;
+                    const radius = 70;
+                    const x = Math.cos(angle) * radius;
+                    const y = Math.sin(angle) * radius;
+                    return (
+                      <span
+                        key={flag}
+                        className="absolute text-2xl sm:text-3xl opacity-40 animate-pulse"
+                        style={{
+                          transform: `translate(${x}px, ${y}px)`,
+                          animationDelay: `${i * 0.2}s`,
+                        }}
+                      >
+                        {flag}
+                      </span>
+                    );
+                  })}
+                </div>
+                <img 
+                  src={logo} 
+                  alt="TribeGuess - Kenyan Tribe Guesser Logo" 
+                  className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle"
+                  width={128}
+                  height={128}
+                />
+              </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
                 Guess Her <span className="gradient-gold-text">Tribe</span>
               </h1>
