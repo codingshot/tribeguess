@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers } from 'lucide-react';
+import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers, Info } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
@@ -13,6 +13,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Learn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -296,24 +302,6 @@ const Learn = () => {
             </div>
           </div>
           
-          {/* Fun Facts Banner - Dynamic based on country */}
-          {countryFacts.length > 0 && (
-            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-xl p-4 mb-6 max-w-3xl mx-auto">
-              <div className="flex items-start gap-3">
-                <Globe className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-foreground text-sm mb-2">
-                    🎓 Did You Know? {selectedCountry && `(${selectedCountry.flag} ${selectedCountry.name})`}
-                  </h3>
-                  <ul className="text-xs text-muted-foreground leading-relaxed space-y-1.5">
-                    {countryFacts.map((fact, index) => (
-                      <li key={index}>• {fact}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
           
           {/* View Toggle */}
           <div className="flex justify-center gap-2 mb-4 sm:mb-6">
@@ -341,56 +329,86 @@ const Learn = () => {
             </button>
           </div>
           
-          {/* Search and Filters - Mobile Optimized */}
-          <section className="max-w-2xl mx-auto mb-6 sm:mb-8 space-y-3" aria-label="Search and filters">
-            {/* Search Bar - Compact on mobile */}
-            <form onSubmit={handleSearch} className="relative">
-              <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-              <input
-                id="tribe-search"
-                type="text"
-                value={localSearch}
-                onChange={(e) => setLocalSearch(e.target.value)}
-                placeholder="Search tribes, names..."
-                className="input-tribal pl-9 pr-9 text-sm h-10"
-              />
-              {localSearch && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setLocalSearch('');
-                    const params = new URLSearchParams(searchParams);
-                    params.delete('search');
-                    setSearchParams(params);
-                  }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
-                  aria-label="Clear search"
-                >
-                  <X className="w-4 h-4" />
-                </button>
+          {/* Search and Filters - Inline Layout */}
+          <section className="max-w-3xl mx-auto mb-6 sm:mb-8" aria-label="Search and filters">
+            {/* Search + Region + Info Tooltip - All inline */}
+            <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+              {/* Search Bar */}
+              <form onSubmit={handleSearch} className="relative flex-1">
+                <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <input
+                  id="tribe-search"
+                  type="text"
+                  value={localSearch}
+                  onChange={(e) => setLocalSearch(e.target.value)}
+                  placeholder="Search tribes, names..."
+                  className="input-tribal pl-9 pr-9 text-sm h-10 w-full"
+                />
+                {localSearch && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLocalSearch('');
+                      const params = new URLSearchParams(searchParams);
+                      params.delete('search');
+                      setSearchParams(params);
+                    }}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </form>
+              
+              {/* Region Filter - Compact */}
+              <div className="flex items-center gap-2">
+                <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0 hidden sm:block" />
+                <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
+                  <SelectTrigger className="w-full sm:w-40 h-10 text-xs sm:text-sm bg-background">
+                    <SelectValue placeholder="All Regions" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-background border border-border z-50">
+                    <SelectItem value="all">All Regions</SelectItem>
+                    {regions.map(region => (
+                      <SelectItem key={region} value={region}>{region}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Did You Know - Info Tooltip */}
+              {countryFacts.length > 0 && (
+                <TooltipProvider>
+                  <Tooltip delayDuration={100}>
+                    <TooltipTrigger asChild>
+                      <button className="flex items-center justify-center gap-1.5 px-3 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0">
+                        <Info className="w-4 h-4" />
+                        <span className="text-xs font-medium hidden sm:inline">Did you know?</span>
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" align="end" className="max-w-xs sm:max-w-sm p-4">
+                      <div className="space-y-2">
+                        <p className="font-semibold text-sm flex items-center gap-2">
+                          <Globe className="w-4 h-4 text-primary" />
+                          {selectedCountry && `${selectedCountry.flag} ${selectedCountry.name}`}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1.5">
+                          {countryFacts.slice(0, 3).map((fact, index) => (
+                            <li key={index}>• {fact}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               )}
-            </form>
-            
-            {/* Region Filter - Inline on mobile */}
-            <div className="flex items-center gap-2">
-              <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-              <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="flex-1 h-9 text-xs sm:text-sm bg-background">
-                  <SelectValue placeholder="All Regions" />
-                </SelectTrigger>
-                <SelectContent className="bg-background border border-border z-50">
-                  <SelectItem value="all">All Regions</SelectItem>
-                  {regions.map(region => (
-                    <SelectItem key={region} value={region}>{region}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
             </div>
             
             {/* Active Filters Summary */}
             {hasFilters && (
-              <div className="flex items-center justify-between text-xs">
+              <div className="flex items-center justify-between text-xs mt-2">
                 <p className="text-muted-foreground">
                   {filteredTribes.length} of {tribes.length} tribes
                 </p>
