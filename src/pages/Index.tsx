@@ -8,13 +8,15 @@ import logo from '@/assets/logo.png';
 
 const Index = () => {
   const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const nameQuery = searchParams.get('name') || '';
   const timeQuery = searchParams.get('time') || '';
   const regionQuery = searchParams.get('region') || '';
   const buildQuery = searchParams.get('build') || '';
   const personalityQuery = searchParams.get('personality') || '';
   const countryQuery = searchParams.get('country') || 'KE';
+  
+  // Track selected country from form - initialize with URL param or default
+  const [selectedCountry, setSelectedCountry] = useState<string>(countryQuery);
   
   // Adjective forms for grammatically correct display
   const countryAdjectives: Record<string, string> = {
@@ -29,8 +31,8 @@ const Index = () => {
     'SN': 'Senegalese',
     'ER': 'Eritrean',
   };
-  // Use selectedCountry from dropdown if set, otherwise fall back to URL param
-  const activeCountry = selectedCountry ?? countryQuery;
+  // Use selectedCountry directly - it's always synced with form
+  const activeCountry = selectedCountry;
   const countryAdjective = countryAdjectives[activeCountry] || 'Kenyan';
   
   let results = null;
