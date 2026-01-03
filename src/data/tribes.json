@@ -6567,6 +6567,18 @@
       ],
       "description": "The Himba are semi-nomadic pastoralists of Namibia famous for ochre-covered skin, elaborate hairstyles, and preserved traditions.",
       "relatedTribes": ["herero", "nama", "tjimba"],
+      "gallery": [
+        {
+          "url": "/tribes/himba/himba-woman.png",
+          "caption": "Himba woman with traditional ochre-covered hair and skin",
+          "credit": "Traditional Himba attire"
+        },
+        {
+          "url": "/tribes/himba/himba-ceremony.png",
+          "caption": "Himba women during a traditional ceremony",
+          "credit": "Traditional Himba gathering"
+        }
+      ],
       "diaspora": {
         "globalPopulation": "~5,000",
         "majorCountries": ["Angola"],
@@ -8138,114 +8150,6 @@
         ],
         "communities": ["Growing diaspora communities"],
         "associations": ["Zambia Association"]
-      }
-    },
-
-    {
-      "id": "himba",
-      "name": "Himba",
-      "slug": "himba",
-      "countries": ["NA", "AO"],
-      "region": "Namibia (Kunene)",
-      "population": "~50,000",
-      "populationPercent": "2% (Namibia)",
-      "genderRatio": { "male": 48, "female": 52 },
-      "mapCoordinates": { "lat": -18.05, "lng": 13.83 },
-      "counties": ["Kunene Region", "Southern Angola"],
-      "namePrefixes": ["Ka", "Mu", "Vi", "Ua", "Tji"],
-      "commonNames": {
-        "female": ["Kavari", "Muharukua", "Vistorina", "Uahimisa", "Tjiposa", "Katjira", "Muhimbua", "Venoo", "Kahepupa", "Nguzu"],
-        "male": ["Katjimune", "Muhimba", "Vekuii", "Uarihapa", "Tjikuua", "Muharukua", "Kapika", "Ndunge", "Vikuii", "Muhepuira"]
-      },
-      "stereotypes": [
-        "Red ochre people",
-        "Traditional pastoralists",
-        "Unique beauty standards",
-        "Semi-nomadic herders",
-        "Preserved traditions",
-        "Cattle wealth"
-      ],
-      "genderStereotypes": {
-        "male": [
-          "Cattle herders",
-          "Away from home often (herding)",
-          "Decision makers",
-          "External relations"
-        ],
-        "female": [
-          "Red ochre body covering",
-          "Elaborate hairstyles",
-          "Village life managers",
-          "Milk and food processing"
-        ]
-      },
-      "genderRoles": {
-        "traditional": {
-          "male": "Men spend most time away herding cattle. They handle external relations and major decisions.",
-          "female": "Women manage village life, apply the distinctive red ochre paste, and maintain elaborate hairstyles indicating status."
-        },
-        "modern": {
-          "male": "Many Himba men maintain traditional herding while some engage with tourism and modern economy.",
-          "female": "Himba women preserve traditions but face pressures from modernization. Some access education."
-        }
-      },
-      "culturalTraits": [
-        "Red ochre (otjize) body covering",
-        "Elaborate women's hairstyles indicating life stage",
-        "Holy fire (okuruuo) sacred tradition",
-        "Cattle central to life",
-        "Bilateral descent system",
-        "Preserved traditions despite modernity"
-      ],
-      "funFacts": [
-        "Himba women apply red ochre paste (otjize) daily - it protects skin and is considered beautiful",
-        "They rarely use water for bathing - instead using smoke baths and the ochre paste",
-        "Hairstyles indicate a woman's life stage - from childhood to married with children",
-        "The holy fire must never go out - it connects the living to ancestors",
-        "Despite tourism, many Himba maintain traditional semi-nomadic life"
-      ],
-      "traditionalFood": {
-        "staples": ["Sour milk (omaere)", "Maize porridge", "Goat meat", "Beef (ceremonial)"],
-        "beverages": ["Sour milk", "Otombo (butter-fat drink)"],
-        "specialDishes": ["Blood mixed with milk", "Fermented butter"],
-        "description": "Himba diet is primarily milk-based from their cattle. Meat is eaten on special occasions."
-      },
-      "traditionalDance": "Traditional dances around the holy fire",
-      "religion": "Traditional beliefs (ancestor worship, holy fire)",
-      "history": {
-        "origin": "The Himba split from the Herero in the 19th century, moving to remote Kunene and maintaining traditional ways.",
-        "colonialEra": "German and South African colonial rule had limited impact on remote Himba areas.",
-        "independence": "Post-independence Namibia has struggled to balance development with Himba cultural preservation.",
-        "keyEvents": ["Split from Herero (1800s)", "Isolation in Kunene", "Namibia independence (1990)", "Tourism development"]
-      },
-      "language": {
-        "name": "OtjiHimba",
-        "speakers": "~50,000",
-        "greeting": "Moro",
-        "greetingMeaning": "Hello",
-        "additionalGreetings": [
-          { "phrase": "Wa penduka nawa?", "meaning": "Did you sleep well?" },
-          { "phrase": "Nda penduka nawa", "meaning": "I slept well" }
-        ],
-        "commonPhrases": [
-          { "phrase": "Okuhepa", "meaning": "Thank you" }
-        ],
-        "family": "Bantu (Herero subgroup)",
-        "writingSystem": "Latin alphabet"
-      },
-      "famousPeople": [
-        { "name": "Vekuii Rukoro", "role": "Herero/Himba Chief", "wikipedia": "https://en.wikipedia.org/wiki/Vekuii_Rukoro" }
-      ],
-      "description": "The Himba are semi-nomadic pastoralists famous for their distinctive red ochre-covered skin and hair, maintaining one of Africa's most visually striking traditional cultures.",
-      "relatedTribes": ["herero", "ovambo", "san"],
-      "diaspora": {
-        "globalPopulation": "~5,000",
-        "majorCountries": ["Angola", "Namibia cities"],
-        "breakdown": [
-          { "country": "Namibia (urban)", "population": "~3,000", "cities": ["Windhoek", "Opuwo"] }
-        ],
-        "communities": ["Minimal diaspora - most remain in traditional areas"],
-        "associations": ["Himba Cultural Association"]
       }
     },
 
