@@ -195,7 +195,7 @@ const Index = () => {
       
       <footer className="container mx-auto px-4 py-6 border-t border-border mt-8">
         <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TribeGuess. Educational entertainment about Kenyan tribes.
+          © {new Date().getFullYear()} TribeGuess. Educational entertainment about African tribes and ethnic groups.
         </p>
       </footer>
     </div>

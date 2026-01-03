@@ -635,6 +635,59 @@ const TribePage = () => {
                   </div>
                 </section>
               )}
+              
+              {/* Sources & References Section */}
+              <section className="border-t border-border pt-6">
+                <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                  📚 Sources & References
+                </h2>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Information compiled from academic sources, ethnographic research, and verified references.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <a 
+                    href={`https://en.wikipedia.org/wiki/${encodeURIComponent(tribe.name)}_people`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary/80 rounded-lg text-xs text-foreground transition-colors"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    Wikipedia: {tribe.name} people
+                  </a>
+                  <a 
+                    href={`https://www.ethnologue.com/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary/80 rounded-lg text-xs text-foreground transition-colors"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    Ethnologue (Languages)
+                  </a>
+                  <a 
+                    href={`https://joshuaproject.net/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary/80 rounded-lg text-xs text-foreground transition-colors"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    Joshua Project (Demographics)
+                  </a>
+                  {(tribe as any).youtubeVideoId && (
+                    <a 
+                      href={`https://www.youtube.com/watch?v=${(tribe as any).youtubeVideoId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-50 dark:bg-red-950/30 hover:bg-red-100 dark:hover:bg-red-950/50 border border-red-200 dark:border-red-800 rounded-lg text-xs text-red-700 dark:text-red-300 transition-colors"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      YouTube Documentary
+                    </a>
+                  )}
+                </div>
+                <p className="text-xs text-muted-foreground mt-3 italic">
+                  ⚠️ Disclaimer: This content is for educational and entertainment purposes. Cultural representations are generalized and may not reflect individual experiences.
+                </p>
+              </section>
             </div>
           </div>
         </article>
@@ -642,7 +695,7 @@ const TribePage = () => {
       
       <footer className="container mx-auto px-4 py-6 border-t border-border mt-8">
         <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TribeGuess. Educational entertainment about Kenyan tribes.
+          © {new Date().getFullYear()} TribeGuess. Educational entertainment about African tribes and ethnic groups.
         </p>
       </footer>
     </div>
