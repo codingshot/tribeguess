@@ -19,7 +19,7 @@ const Learn = () => {
   const searchQuery = searchParams.get('search') || '';
   const regionFilter = searchParams.get('region') || '';
   const macroRegionFilter = searchParams.get('macroRegion') || '';
-  const countryFilter = searchParams.get('country') || 'KE'; // Default to Kenya
+  const countryFilter = searchParams.get('country') || (macroRegionFilter ? 'ALL' : 'KE'); // Default to Kenya unless viewing a macro-region
   const viewMode = searchParams.get('view') || 'grid';
   
   const [localSearch, setLocalSearch] = useState(searchQuery);
