@@ -208,37 +208,25 @@ const Learn = () => {
             <p className="text-muted-foreground max-w-lg mx-auto text-sm sm:text-base px-2">
               Explore the rich cultural diversity of African ethnic groups, their naming traditions, and cultural characteristics.
             </p>
-            {/* Macro Region Selector */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+            {/* Macro Region Selector - Dropdown */}
+            <div className="flex items-center justify-center gap-2 mt-4">
               <span className="text-sm text-muted-foreground flex items-center gap-1">
                 <Layers className="w-4 h-4" />
-                Region:
               </span>
-              <div className="flex flex-wrap gap-1.5 justify-center">
-                <button
-                  onClick={() => handleMacroRegionChange('')}
-                  className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
-                    !macroRegionFilter
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                  }`}
-                >
-                  All Africa
-                </button>
-                {macroRegions.map(region => (
-                  <button
-                    key={region.id}
-                    onClick={() => handleMacroRegionChange(region.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
-                      macroRegionFilter === region.id
-                        ? 'bg-primary text-primary-foreground' 
-                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                    }`}
-                  >
-                    {region.name}
-                  </button>
-                ))}
-              </div>
+              <Select value={macroRegionFilter || 'all'} onValueChange={(value) => handleMacroRegionChange(value === 'all' ? '' : value)}>
+                <SelectTrigger className="w-48 h-9 text-sm bg-primary/10 border-primary/20 hover:bg-primary/20">
+                  <Globe className="w-4 h-4 mr-2 text-primary" />
+                  <SelectValue placeholder="All Africa" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border border-border z-50">
+                  <SelectItem value="all">🌍 All Africa</SelectItem>
+                  {macroRegions.map(region => (
+                    <SelectItem key={region.id} value={region.id}>
+                      {region.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             {/* Country Selector */}
