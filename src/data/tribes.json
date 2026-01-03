@@ -8374,9 +8374,9 @@
     },
 
     {
-      "id": "fula",
-      "name": "Fula (Fulani)",
-      "slug": "fula",
+      "id": "fulani",
+      "name": "Fulani",
+      "slug": "fulani",
       "countries": ["NG", "GN", "SN", "ML", "CM", "NE", "BF", "GM", "GH"],
       "region": "West Africa (Sahel)",
       "population": "~40 million",
