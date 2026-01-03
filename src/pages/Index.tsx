@@ -56,7 +56,7 @@ const Index = () => {
                 Guess Her <span className="gradient-gold-text">Tribe</span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto px-2">
-                Enter a {countryAdjective} name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
+                Enter a name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
               </p>
             </div>
             
