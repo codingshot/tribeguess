@@ -11,7 +11,6 @@ interface TribeMapProps {
 
 // Approximate territory sizes based on population and region type (in degrees)
 const getTerritorySizeForTribe = (tribeName: string, counties: string[]): { latSpan: number; lngSpan: number } => {
-  // Larger tribes with wide distribution
   const largeTerritories: Record<string, { latSpan: number; lngSpan: number }> = {
     'Kikuyu': { latSpan: 1.8, lngSpan: 1.5 },
     'Luhya': { latSpan: 1.5, lngSpan: 1.2 },
@@ -38,7 +37,6 @@ const getTerritorySizeForTribe = (tribeName: string, counties: string[]): { latS
     return largeTerritories[tribeName];
   }
   
-  // Default size based on number of counties/regions
   const countyCount = counties.length;
   if (countyCount >= 5) return { latSpan: 2.0, lngSpan: 1.8 };
   if (countyCount >= 3) return { latSpan: 1.5, lngSpan: 1.3 };
@@ -46,29 +44,29 @@ const getTerritorySizeForTribe = (tribeName: string, counties: string[]): { latS
 };
 
 export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: TribeMapProps) {
-  // Get primary country info
   const allCountries = getCountries();
   const primaryCountryCode = countries[0] || 'KE';
   const primaryCountry = allCountries.find(c => c.code === primaryCountryCode);
   const countryName = primaryCountry?.name || 'Kenya';
   
-  // Get territory size for this tribe
   const territorySize = getTerritorySizeForTribe(tribeName, counties);
   
-  // Calculate bounding box that shows the full territory
-  const padding = 0.3; // Extra padding around territory
+  // Calculate bounding box
+  const padding = 0.3;
   const minLat = lat - territorySize.latSpan / 2 - padding;
   const maxLat = lat + territorySize.latSpan / 2 + padding;
   const minLng = lng - territorySize.lngSpan / 2 - padding;
   const maxLng = lng + territorySize.lngSpan / 2 + padding;
   
   const osmEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${minLng}%2C${minLat}%2C${maxLng}%2C${maxLat}&layer=mapnik`;
-  
-  // Full map link for users who want to explore
   const osmFullUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=9/${lat}/${lng}`;
-  
-  // Google Maps link as alternative
   const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&z=9`;
+  
+  // Calculate percentage widths for the overlay based on territory size vs visible area
+  const visibleLatRange = maxLat - minLat;
+  const visibleLngRange = maxLng - minLng;
+  const territoryWidthPercent = (territorySize.lngSpan / visibleLngRange) * 100;
+  const territoryHeightPercent = (territorySize.latSpan / visibleLatRange) * 100;
   
   return (
     <div className="bg-secondary rounded-lg overflow-hidden">
@@ -83,49 +81,52 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
           sandbox="allow-scripts allow-same-origin"
         />
         
-        {/* Territory Region Overlay - covers actual area */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Large elliptical territory overlay */}
+        {/* Territory Region Overlay - properly scaled to geographic extent */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Outer territory boundary - ellipse showing full extent */}
           <div 
             className="absolute"
             style={{
-              top: '15%',
-              left: '15%',
-              right: '15%',
-              bottom: '15%',
+              left: '50%',
+              top: '50%',
+              width: `${Math.min(territoryWidthPercent, 85)}%`,
+              height: `${Math.min(territoryHeightPercent, 85)}%`,
+              transform: 'translate(-50%, -50%)',
               background: `radial-gradient(ellipse 100% 100% at 50% 50%, 
-                hsla(var(--primary), 0.35) 0%, 
-                hsla(var(--primary), 0.25) 25%, 
-                hsla(var(--primary), 0.15) 50%, 
-                hsla(var(--primary), 0.08) 70%,
+                rgba(var(--primary-rgb, 234, 179, 8), 0.4) 0%, 
+                rgba(var(--primary-rgb, 234, 179, 8), 0.25) 35%, 
+                rgba(var(--primary-rgb, 234, 179, 8), 0.12) 60%,
                 transparent 100%)`,
-              borderRadius: '40%',
+              borderRadius: '45%',
             }}
           />
           
-          {/* Territory boundary indicator */}
+          {/* Territory boundary line */}
           <div 
-            className="absolute border-2 border-primary/50 rounded-[40%]"
+            className="absolute border-[3px] border-primary/60"
             style={{
-              top: '18%',
-              left: '18%',
-              right: '18%',
-              bottom: '18%',
+              left: '50%',
+              top: '50%',
+              width: `${Math.min(territoryWidthPercent * 0.9, 80)}%`,
+              height: `${Math.min(territoryHeightPercent * 0.9, 80)}%`,
+              transform: 'translate(-50%, -50%)',
+              borderRadius: '45%',
               borderStyle: 'dashed',
             }}
           />
           
-          {/* Secondary inner territory core */}
+          {/* Core territory - inner denser region */}
           <div 
             className="absolute"
             style={{
-              top: '30%',
-              left: '30%',
-              right: '30%',
-              bottom: '30%',
+              left: '50%',
+              top: '50%',
+              width: `${Math.min(territoryWidthPercent * 0.5, 45)}%`,
+              height: `${Math.min(territoryHeightPercent * 0.5, 45)}%`,
+              transform: 'translate(-50%, -50%)',
               background: `radial-gradient(ellipse 100% 100% at 50% 50%, 
-                hsla(var(--primary), 0.4) 0%, 
-                hsla(var(--primary), 0.2) 50%, 
+                rgba(var(--primary-rgb, 234, 179, 8), 0.55) 0%, 
+                rgba(var(--primary-rgb, 234, 179, 8), 0.3) 60%, 
                 transparent 100%)`,
               borderRadius: '50%',
             }}
@@ -134,21 +135,21 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
           {/* Pulsing center marker */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="relative">
-              <div className="absolute -inset-4 rounded-full bg-primary/25 animate-ping" style={{ animationDuration: '2s' }} />
-              <div className="absolute -inset-2 rounded-full bg-primary/35 animate-pulse" />
-              <div className="w-3 h-3 rounded-full bg-primary shadow-lg shadow-primary/50 border-2 border-white" />
+              <div className="absolute -inset-6 rounded-full bg-primary/20 animate-ping" style={{ animationDuration: '2s' }} />
+              <div className="absolute -inset-3 rounded-full bg-primary/30 animate-pulse" />
+              <div className="w-4 h-4 rounded-full bg-primary shadow-lg shadow-primary/50 border-2 border-white" />
             </div>
           </div>
         </div>
         
-        {/* Overlay with tribe name */}
-        <div className="absolute top-2 left-2 bg-background/95 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-lg border border-border z-10">
-          <p className="text-sm font-semibold text-foreground flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-primary" />
+        {/* Info Overlay - top left */}
+        <div className="absolute top-2 left-2 bg-background/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg border border-border z-10">
+          <p className="text-sm font-bold text-foreground flex items-center gap-1.5">
+            <MapPin className="w-4 h-4 text-primary" />
             {tribeName} Territory
           </p>
           <p className="text-[10px] text-muted-foreground">
-            ~{Math.round(territorySize.latSpan * territorySize.lngSpan * 111 * 111 * 0.7)} km² region
+            ~{Math.round(territorySize.latSpan * territorySize.lngSpan * 111 * 111 * 0.7).toLocaleString()} km² region
           </p>
         </div>
         
@@ -160,8 +161,8 @@ export function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }: 
         )}
         
         {/* Region label at bottom */}
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10">
-          {tribeName} Traditional Territory
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-bold shadow-lg z-10">
+          {tribeName} Homeland
         </div>
       </div>
       

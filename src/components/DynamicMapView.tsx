@@ -55,44 +55,74 @@ const countryBounds: Record<string, { minLat: number; maxLat: number; minLng: nu
   'ALL': { minLat: -35.0, maxLat: 37.0, minLng: -18.0, maxLng: 52.0, name: 'Africa' },
 };
 
-// Region colors for visual distinction
-const regionColors: Record<string, string> = {
-  'Central Kenya': 'hsl(120 40% 50%)',
-  'Western Kenya': 'hsl(45 70% 55%)',
-  'Western Kenya (Lake Victoria)': 'hsl(200 60% 50%)',
-  'Rift Valley': 'hsl(30 60% 55%)',
-  'Eastern Kenya': 'hsl(280 40% 55%)',
-  'Coast': 'hsl(180 50% 50%)',
-  'Northern Kenya': 'hsl(15 60% 55%)',
-  'Nationwide': 'hsl(340 50% 55%)',
-  'Southern Nigeria': 'hsl(160 50% 45%)',
-  'Northern Nigeria': 'hsl(40 60% 50%)',
-  'Southern Ghana': 'hsl(50 55% 50%)',
-  'Southern Africa': 'hsl(200 50% 45%)',
-  'Central Africa': 'hsl(100 45% 50%)',
-  'East Africa': 'hsl(25 60% 50%)',
-  'West Africa': 'hsl(320 45% 50%)',
+// Distinct color palette for tribes - using hue separation for clarity
+const tribeColorPalette = [
+  { bg: 'rgba(220, 38, 38, 0.45)', border: 'rgb(220, 38, 38)', label: 'Red' },      // Red
+  { bg: 'rgba(37, 99, 235, 0.45)', border: 'rgb(37, 99, 235)', label: 'Blue' },     // Blue
+  { bg: 'rgba(22, 163, 74, 0.45)', border: 'rgb(22, 163, 74)', label: 'Green' },    // Green
+  { bg: 'rgba(234, 88, 12, 0.45)', border: 'rgb(234, 88, 12)', label: 'Orange' },   // Orange
+  { bg: 'rgba(147, 51, 234, 0.45)', border: 'rgb(147, 51, 234)', label: 'Purple' }, // Purple
+  { bg: 'rgba(14, 165, 233, 0.45)', border: 'rgb(14, 165, 233)', label: 'Cyan' },   // Cyan
+  { bg: 'rgba(236, 72, 153, 0.45)', border: 'rgb(236, 72, 153)', label: 'Pink' },   // Pink
+  { bg: 'rgba(250, 204, 21, 0.45)', border: 'rgb(202, 138, 4)', label: 'Yellow' },  // Yellow
+  { bg: 'rgba(20, 184, 166, 0.45)', border: 'rgb(20, 184, 166)', label: 'Teal' },   // Teal
+  { bg: 'rgba(168, 85, 247, 0.45)', border: 'rgb(168, 85, 247)', label: 'Violet' }, // Violet
+  { bg: 'rgba(249, 115, 22, 0.45)', border: 'rgb(249, 115, 22)', label: 'Amber' },  // Amber
+  { bg: 'rgba(34, 197, 94, 0.45)', border: 'rgb(34, 197, 94)', label: 'Emerald' },  // Emerald
+  { bg: 'rgba(99, 102, 241, 0.45)', border: 'rgb(99, 102, 241)', label: 'Indigo' }, // Indigo
+  { bg: 'rgba(244, 63, 94, 0.45)', border: 'rgb(244, 63, 94)', label: 'Rose' },     // Rose
+  { bg: 'rgba(6, 182, 212, 0.45)', border: 'rgb(6, 182, 212)', label: 'Sky' },      // Sky
+];
+
+// Territory sizes in degrees for tribes
+const tribeTerritoryDegrees: Record<string, { latSpan: number; lngSpan: number }> = {
+  'Kikuyu': { latSpan: 1.8, lngSpan: 1.5 },
+  'Luhya': { latSpan: 1.5, lngSpan: 1.2 },
+  'Kalenjin': { latSpan: 2.5, lngSpan: 2.0 },
+  'Luo': { latSpan: 1.8, lngSpan: 1.5 },
+  'Kamba': { latSpan: 2.0, lngSpan: 1.8 },
+  'Maasai': { latSpan: 3.0, lngSpan: 2.5 },
+  'Yoruba': { latSpan: 3.5, lngSpan: 4.0 },
+  'Igbo': { latSpan: 2.5, lngSpan: 2.5 },
+  'Hausa': { latSpan: 5.0, lngSpan: 6.0 },
+  'Zulu': { latSpan: 3.0, lngSpan: 2.5 },
+  'Xhosa': { latSpan: 2.5, lngSpan: 2.0 },
+  'Ashanti': { latSpan: 2.0, lngSpan: 2.0 },
+  'Oromo': { latSpan: 4.0, lngSpan: 4.0 },
+  'Amhara': { latSpan: 3.5, lngSpan: 3.0 },
+  'Somali': { latSpan: 4.0, lngSpan: 5.0 },
+  'Tigrinya': { latSpan: 2.0, lngSpan: 1.5 },
+  'Baganda': { latSpan: 2.0, lngSpan: 2.0 },
+  'Sukuma': { latSpan: 2.5, lngSpan: 2.5 },
+  'Chagga': { latSpan: 1.0, lngSpan: 1.0 },
+  'Akan': { latSpan: 2.5, lngSpan: 2.5 },
+  'Ewe': { latSpan: 1.5, lngSpan: 2.0 },
+  'Wolof': { latSpan: 2.0, lngSpan: 2.5 },
+  'Fulani': { latSpan: 4.0, lngSpan: 8.0 },
+  'Shona': { latSpan: 3.0, lngSpan: 2.5 },
+  'Ndebele': { latSpan: 2.0, lngSpan: 2.0 },
+  'Tswana': { latSpan: 2.5, lngSpan: 2.5 },
+  'Sotho': { latSpan: 2.0, lngSpan: 2.0 },
 };
 
-const getRegionColor = (region: string) => {
-  if (regionColors[region]) return regionColors[region];
-  for (const [key, color] of Object.entries(regionColors)) {
-    if (region.toLowerCase().includes(key.toLowerCase().split(' ')[0])) {
-      return color;
-    }
+const getTerritoryDegrees = (tribeName: string, counties: string[]): { latSpan: number; lngSpan: number } => {
+  if (tribeTerritoryDegrees[tribeName]) {
+    return tribeTerritoryDegrees[tribeName];
   }
-  return 'hsl(var(--primary))';
+  const countyCount = counties.length;
+  if (countyCount >= 5) return { latSpan: 2.0, lngSpan: 1.8 };
+  if (countyCount >= 3) return { latSpan: 1.5, lngSpan: 1.3 };
+  return { latSpan: 1.2, lngSpan: 1.0 };
 };
 
 export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFilter = 'KE' }: DynamicMapViewProps) {
   const [hoveredTribe, setHoveredTribe] = useState<string | null>(null);
-  const [zoomLevel, setZoomLevel] = useState(1); // 1 = default, higher = zoomed in
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   const allCountries = getCountries();
   const baseBounds = countryBounds[countryFilter] || countryBounds['KE'];
   const countryInfo = allCountries.find(c => c.code === countryFilter);
 
-  // Reset zoom when country changes
   const handleZoomIn = () => setZoomLevel(prev => Math.min(prev * 1.5, 8));
   const handleZoomOut = () => setZoomLevel(prev => Math.max(prev / 1.5, 0.5));
   const handleResetZoom = () => setZoomLevel(1);
@@ -138,7 +168,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
     return { minLat: africa.minLat, maxLat: africa.maxLat, minLng: africa.minLng, maxLng: africa.maxLng };
   }, [tribes, countryFilter]);
 
-  // Apply zoom to bounds (zoom towards center)
+  // Apply zoom to bounds
   const osmBounds = useMemo(() => {
     const centerLat = (baseBoundsComputed.minLat + baseBoundsComputed.maxLat) / 2;
     const centerLng = (baseBoundsComputed.minLng + baseBoundsComputed.maxLng) / 2;
@@ -154,7 +184,6 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
     };
   }, [baseBoundsComputed, zoomLevel]);
 
-  // OpenStreetMap embed URL framed by bounds
   const osmEmbedUrl = useMemo(() => {
     return `https://www.openstreetmap.org/export/embed.html?bbox=${osmBounds.minLng}%2C${osmBounds.minLat}%2C${osmBounds.maxLng}%2C${osmBounds.maxLat}&layer=mapnik`;
   }, [osmBounds]);
@@ -164,13 +193,14 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
   const activeId = hoveredTribe || selectedTribe;
   const activeTribe = tribes.find(t => t.slug === activeId);
 
+  // Web Mercator projection functions
   const toWorldX = (lng: number) => (lng + 180) / 360;
   const toWorldY = (lat: number) => {
     const rad = (lat * Math.PI) / 180;
     return (1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2;
   };
 
-  // Convert coordinates to percentage position on the embedded map (Web Mercator like OSM)
+  // Convert geographic coordinates to percentage position on the map
   const coordToPercent = (lat: number, lng: number) => {
     const xMin = toWorldX(osmBounds.minLng);
     const xMax = toWorldX(osmBounds.maxLng);
@@ -183,6 +213,22 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
     return { left, top };
   };
 
+  // Convert degree span to percentage width/height on the map
+  const degreesToPercent = (latSpan: number, lngSpan: number, centerLat: number) => {
+    const visibleLatRange = osmBounds.maxLat - osmBounds.minLat;
+    const visibleLngRange = osmBounds.maxLng - osmBounds.minLng;
+    
+    const widthPercent = (lngSpan / visibleLngRange) * 100;
+    const heightPercent = (latSpan / visibleLatRange) * 100;
+    
+    return { widthPercent, heightPercent };
+  };
+
+  // Assign colors to tribes based on index for consistent coloring
+  const getTribeColor = (index: number) => {
+    return tribeColorPalette[index % tribeColorPalette.length];
+  };
+
   return (
     <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-lg">
       {/* Map Header */}
@@ -191,14 +237,14 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
           <div className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-primary" />
             <h3 className="font-heading font-semibold text-foreground">
-              {countryInfo?.flag} {baseBounds.name} Tribal Map
+              {countryInfo?.flag} {baseBounds.name} Tribal Territories
             </h3>
             {zoomLevel !== 1 && (
-              <span className="text-xs text-muted-foreground ml-2">({Math.round(zoomLevel * 100)}%)</span>
+              <span className="text-xs text-muted-foreground ml-2">({Math.round(zoomLevel * 100)}% zoom)</span>
             )}
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-xs text-muted-foreground">{tribes.length} tribes shown</span>
+            <span className="text-xs text-muted-foreground">{tribes.length} tribes</span>
             <a
               href={osmFullUrl}
               target="_blank"
@@ -212,119 +258,144 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
         </div>
       </div>
       
-      {/* Main Map Area with OSM */}
+      {/* Main Map Area */}
       <div className="relative" style={{ paddingBottom: '70%' }}>
-        {/* OpenStreetMap Background - pointer-events disabled to prevent iframe zoom */}
+        {/* OpenStreetMap Background */}
         <iframe
           src={osmEmbedUrl}
           className="absolute inset-0 w-full h-full border-0 pointer-events-none"
-          title={`Map of ${baseBounds.name} showing tribal distribution`}
+          title={`Map of ${baseBounds.name} showing tribal territories`}
           loading="lazy"
           referrerPolicy="no-referrer"
           sandbox="allow-scripts allow-same-origin"
         />
         
-        {/* Tribe Territory Overlays */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* Territory Region Overlays - drawn as percentage-based ellipses */}
+        <div className="absolute inset-0 overflow-hidden">
           {tribes.map((tribe, index) => {
             const { left, top } = coordToPercent(tribe.mapCoordinates.lat, tribe.mapCoordinates.lng);
             const isActive = tribe.slug === activeId;
-            const popPercent = parseInt(tribe.populationPercent) || 5;
+            const color = getTribeColor(index);
             
-            // Territory size based on population - larger tribes get bigger territories
-            const baseSize = Math.max(8, Math.min(25, popPercent * 1.5));
-            const territorySize = isActive ? baseSize * 1.3 : baseSize;
-            const color = getRegionColor(tribe.region);
+            // Get territory size in degrees
+            const territoryDegrees = getTerritoryDegrees(tribe.name, tribe.counties);
+            const { widthPercent, heightPercent } = degreesToPercent(
+              territoryDegrees.latSpan, 
+              territoryDegrees.lngSpan,
+              tribe.mapCoordinates.lat
+            );
             
-            // Skip if outside visible bounds
+            // Clamp sizes to reasonable values
+            const clampedWidth = Math.min(Math.max(widthPercent, 8), 60);
+            const clampedHeight = Math.min(Math.max(heightPercent, 6), 50);
+            
+            // Skip if center is outside visible area
+            if (left < -20 || left > 120 || top < -20 || top > 120) return null;
+            
+            return (
+              <div key={`territory-${tribe.id}-${index}`}>
+                {/* Territory region - ellipse sized by geographic extent */}
+                <div
+                  className={`absolute transition-all duration-300 pointer-events-none ${isActive ? 'z-10' : 'z-0'}`}
+                  style={{
+                    left: `${left}%`,
+                    top: `${top}%`,
+                    width: `${clampedWidth}%`,
+                    height: `${clampedHeight}%`,
+                    transform: 'translate(-50%, -50%)',
+                    background: `radial-gradient(ellipse 100% 100% at 50% 50%, 
+                      ${color.bg} 0%, 
+                      ${color.bg.replace('0.45', '0.3')} 40%, 
+                      ${color.bg.replace('0.45', '0.15')} 70%,
+                      transparent 100%)`,
+                    borderRadius: '50%',
+                    border: isActive ? `3px solid ${color.border}` : `2px dashed ${color.border}66`,
+                    opacity: isActive ? 1 : 0.85,
+                  }}
+                />
+                
+                {/* Inner core - shows population center */}
+                <div
+                  className={`absolute transition-all duration-200 pointer-events-none ${isActive ? 'z-11' : 'z-1'}`}
+                  style={{
+                    left: `${left}%`,
+                    top: `${top}%`,
+                    width: `${clampedWidth * 0.4}%`,
+                    height: `${clampedHeight * 0.4}%`,
+                    transform: 'translate(-50%, -50%)',
+                    background: `radial-gradient(ellipse 100% 100% at 50% 50%, 
+                      ${color.bg.replace('0.45', '0.6')} 0%, 
+                      ${color.bg.replace('0.45', '0.35')} 60%,
+                      transparent 100%)`,
+                    borderRadius: '50%',
+                  }}
+                />
+              </div>
+            );
+          })}
+          
+          {/* Interactive markers on top of territories */}
+          {tribes.map((tribe, index) => {
+            const { left, top } = coordToPercent(tribe.mapCoordinates.lat, tribe.mapCoordinates.lng);
+            const isActive = tribe.slug === activeId;
+            const color = getTribeColor(index);
+            
             if (left < -10 || left > 110 || top < -10 || top > 110) return null;
             
             return (
               <Link
-                key={`${tribe.id}-${index}`}
+                key={`marker-${tribe.id}-${index}`}
                 to={`/learn/${tribe.slug}`}
                 className="pointer-events-auto absolute cursor-pointer group"
                 style={{ 
                   left: `${left}%`, 
                   top: `${top}%`,
                   transform: 'translate(-50%, -50%)',
-                  zIndex: isActive ? 20 : 10,
+                  zIndex: isActive ? 30 : 20,
                 }}
                 onMouseEnter={() => setHoveredTribe(tribe.slug)}
                 onMouseLeave={() => setHoveredTribe(null)}
                 onClick={() => onTribeSelect?.(tribe.slug)}
               >
-                {/* Territory area - elliptical region */}
-                <div 
-                  className="absolute rounded-[50%] transition-all duration-300"
-                  style={{ 
-                    width: `${territorySize * 3}px`,
-                    height: `${territorySize * 2.5}px`,
-                    left: `${-territorySize * 1.5}px`,
-                    top: `${-territorySize * 1.25}px`,
-                    background: `radial-gradient(ellipse 100% 100% at 50% 50%, 
-                      ${color}${isActive ? '55' : '35'} 0%, 
-                      ${color}${isActive ? '35' : '20'} 40%, 
-                      ${color}${isActive ? '15' : '08'} 70%,
-                      transparent 100%)`,
-                    border: isActive ? `2px dashed ${color}88` : 'none',
-                  }}
-                />
-                
-                {/* Inner core territory */}
-                <div 
-                  className="absolute rounded-full transition-all duration-200"
-                  style={{ 
-                    width: `${territorySize * 1.5}px`,
-                    height: `${territorySize * 1.5}px`,
-                    left: `${-territorySize * 0.75}px`,
-                    top: `${-territorySize * 0.75}px`,
-                    background: `radial-gradient(circle at 50% 50%, 
-                      ${color}${isActive ? '60' : '45'} 0%, 
-                      ${color}${isActive ? '30' : '20'} 60%,
-                      transparent 100%)`,
-                  }}
-                />
-                
                 {/* Pulse animation when active */}
                 {isActive && (
                   <div 
                     className="absolute rounded-full animate-ping"
                     style={{ 
-                      width: `${territorySize * 2}px`,
-                      height: `${territorySize * 2}px`,
-                      left: `${-territorySize}px`,
-                      top: `${-territorySize}px`,
-                      background: `${color}30`,
+                      width: '40px',
+                      height: '40px',
+                      left: '-20px',
+                      top: '-20px',
+                      background: color.bg,
                     }}
                   />
                 )}
                 
-                {/* Center marker */}
+                {/* Center marker dot */}
                 <div 
-                  className="absolute rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-white transition-all duration-200 group-hover:scale-110"
+                  className="absolute rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-white transition-all duration-200 group-hover:scale-125"
                   style={{ 
-                    width: '20px', 
-                    height: '20px',
-                    left: '-10px',
-                    top: '-10px',
-                    background: color,
-                    fontSize: '8px',
+                    width: isActive ? '28px' : '22px', 
+                    height: isActive ? '28px' : '22px',
+                    left: isActive ? '-14px' : '-11px',
+                    top: isActive ? '-14px' : '-11px',
+                    background: color.border,
+                    fontSize: '9px',
                   }}
                 >
-                  {popPercent > 5 ? tribe.populationPercent : ''}
+                  {parseInt(tribe.populationPercent) > 5 ? tribe.populationPercent : ''}
                 </div>
                 
                 {/* Name label */}
                 <div 
-                  className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-0.5 rounded text-[10px] font-semibold shadow-md transition-all duration-200 ${
+                  className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap px-2.5 py-1 rounded-md text-[11px] font-bold shadow-lg transition-all duration-200 ${
                     isActive 
-                      ? 'bg-primary text-primary-foreground' 
+                      ? 'bg-foreground text-background scale-110' 
                       : 'bg-card/95 text-foreground border border-border'
                   }`}
-                  style={{ top: '14px' }}
+                  style={{ top: isActive ? '18px' : '14px' }}
                 >
-                  {tribe.name.length > 12 ? tribe.name.substring(0, 10) + '…' : tribe.name}
+                  {tribe.name}
                 </div>
               </Link>
             );
@@ -332,18 +403,18 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
         </div>
         
         {/* Country Label */}
-        <div className="absolute top-3 left-3 bg-background/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg border border-border z-20">
+        <div className="absolute top-3 left-3 bg-background/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg border border-border z-40">
           <div className="flex items-center gap-2">
             {countryInfo && <span className="text-xl">{countryInfo.flag}</span>}
             <div>
               <p className="text-sm font-bold text-foreground">{baseBounds.name}</p>
-              <p className="text-[10px] text-muted-foreground">Ethnic Distribution</p>
+              <p className="text-[10px] text-muted-foreground">Tribal Territories</p>
             </div>
           </div>
         </div>
         
         {/* Zoom Controls */}
-        <div className="absolute top-3 right-14 flex flex-col gap-1 z-20">
+        <div className="absolute top-3 right-14 flex flex-col gap-1 z-40">
           <button
             onClick={handleZoomIn}
             className="bg-background/95 backdrop-blur-sm rounded-lg w-8 h-8 flex items-center justify-center shadow-lg border border-border hover:bg-primary/10 transition-colors"
@@ -370,40 +441,40 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
         </div>
         
         {/* Compass */}
-        <div className="absolute top-3 right-3 bg-background/95 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg border border-border z-20">
+        <div className="absolute top-3 right-3 bg-background/95 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg border border-border z-40">
           <Compass className="w-5 h-5 text-primary" />
         </div>
         
         {/* Hover Info Card */}
         {activeTribe && (
-          <div className="absolute bottom-3 left-3 right-3 sm:left-auto sm:right-3 sm:w-72 bg-card/95 backdrop-blur-sm rounded-lg border border-border p-3 shadow-lg animate-fade-in z-20">
-            <div className="flex items-start gap-2">
+          <div className="absolute bottom-3 left-3 right-3 sm:left-auto sm:right-3 sm:w-80 bg-card/95 backdrop-blur-sm rounded-lg border border-border p-3 shadow-lg animate-fade-in z-40">
+            <div className="flex items-start gap-3">
               <div 
-                className="p-1.5 rounded-lg flex-shrink-0"
-                style={{ background: getRegionColor(activeTribe.region) + '33' }}
+                className="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center"
+                style={{ background: getTribeColor(tribes.findIndex(t => t.id === activeTribe.id)).bg }}
               >
-                <MapPin className="w-4 h-4" style={{ color: getRegionColor(activeTribe.region) }} />
+                <MapPin className="w-5 h-5" style={{ color: getTribeColor(tribes.findIndex(t => t.id === activeTribe.id)).border }} />
               </div>
               <div className="flex-1 min-w-0">
-                <h4 className="font-semibold text-foreground text-sm truncate">{activeTribe.name}</h4>
+                <h4 className="font-bold text-foreground text-base">{activeTribe.name}</h4>
                 <p className="text-xs text-muted-foreground">{activeTribe.region}</p>
-                <div className="flex items-center gap-3 mt-1.5">
+                <div className="flex items-center gap-3 mt-2">
                   <div className="flex items-center gap-1">
-                    <Users className="w-3 h-3 text-primary" />
-                    <span className="text-xs text-foreground">{activeTribe.population}</span>
+                    <Users className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-sm font-medium text-foreground">{activeTribe.population}</span>
                   </div>
                   <span 
-                    className="text-xs font-medium px-1.5 py-0.5 rounded"
+                    className="text-xs font-bold px-2 py-0.5 rounded-full"
                     style={{ 
-                      background: getRegionColor(activeTribe.region) + '22',
-                      color: getRegionColor(activeTribe.region)
+                      background: getTribeColor(tribes.findIndex(t => t.id === activeTribe.id)).bg,
+                      color: getTribeColor(tribes.findIndex(t => t.id === activeTribe.id)).border
                     }}
                   >
                     {activeTribe.populationPercent}
                   </span>
                 </div>
-                <p className="text-xs text-muted-foreground mt-1 truncate">
-                  📍 {activeTribe.counties.slice(0, 3).join(', ')}
+                <p className="text-xs text-muted-foreground mt-1.5">
+                  📍 {activeTribe.counties.slice(0, 3).join(', ')}{activeTribe.counties.length > 3 ? ` +${activeTribe.counties.length - 3} more` : ''}
                 </p>
               </div>
             </div>
@@ -411,34 +482,42 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
         )}
       </div>
       
-      {/* Legend & Quick Links */}
+      {/* Legend */}
       <div className="p-4 bg-secondary/30 border-t border-border">
         <div className="flex items-center gap-2 mb-3">
           <Info className="w-4 h-4 text-muted-foreground" />
           <span className="text-xs font-medium text-foreground">Tribes in {baseBounds.name}</span>
         </div>
         
-        {/* Tribe Quick Links */}
+        {/* Tribe Quick Links with color indicators */}
         <div className="flex flex-wrap gap-1.5">
-          {tribes.map((tribe, index) => (
-            <Link
-              key={`link-${tribe.id}-${index}`}
-              to={`/learn/${tribe.slug}`}
-              className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] transition-all ${
-                tribe.slug === activeId
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-background hover:bg-primary/20 text-foreground border border-border'
-              }`}
-              onMouseEnter={() => setHoveredTribe(tribe.slug)}
-              onMouseLeave={() => setHoveredTribe(null)}
-            >
-              <span 
-                className="w-1.5 h-1.5 rounded-full" 
-                style={{ background: getRegionColor(tribe.region) }} 
-              />
-              {tribe.name.length > 12 ? tribe.name.substring(0, 10) + '…' : tribe.name}
-            </Link>
-          ))}
+          {tribes.map((tribe, index) => {
+            const color = getTribeColor(index);
+            return (
+              <Link
+                key={`link-${tribe.id}-${index}`}
+                to={`/learn/${tribe.slug}`}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium transition-all ${
+                  tribe.slug === activeId
+                    ? 'ring-2 ring-offset-1 ring-foreground'
+                    : 'hover:scale-105'
+                }`}
+                style={{
+                  background: color.bg,
+                  color: color.border,
+                  borderColor: color.border,
+                }}
+                onMouseEnter={() => setHoveredTribe(tribe.slug)}
+                onMouseLeave={() => setHoveredTribe(null)}
+              >
+                <span 
+                  className="w-2 h-2 rounded-full border border-white" 
+                  style={{ background: color.border }} 
+                />
+                {tribe.name}
+              </Link>
+            );
+          })}
         </div>
         
         {tribes.length === 0 && (
