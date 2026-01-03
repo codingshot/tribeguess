@@ -98,14 +98,14 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
         </ul>
       </div>
       
-      {isPrimary && tribe.famousPeople && (
+      {isPrimary && tribe.famousPeople && tribe.famousPeople.length > 0 && (
         <div className="pt-3 sm:pt-4 border-t border-border mb-3">
           <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-foreground mb-2">
             <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" aria-hidden="true" />
             <span>Famous {tribe.name} people</span>
           </div>
           <p className="text-xs sm:text-sm text-muted-foreground">
-            {tribe.famousPeople.slice(0, 3).join(' • ')}
+            {tribe.famousPeople.slice(0, 3).map((p: any) => typeof p === 'string' ? p : p.name).join(' • ')}
           </p>
         </div>
       )}

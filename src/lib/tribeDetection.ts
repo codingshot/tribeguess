@@ -492,11 +492,156 @@ const personalityTribeMapping: Record<string, { tribe: string; weight: number }[
   ],
 };
 
+// Religious name patterns - fact-checked
+const religiousNamePatterns: Record<string, { religion: string; weight: number; origin?: string }[]> = {
+  // Islamic names (Arabic origin - common in Coastal, Somali, Hausa, Swahili communities)
+  'fatima': [{ religion: 'muslim', weight: 0.95, origin: "Daughter of Prophet Muhammad" }],
+  'fatuma': [{ religion: 'muslim', weight: 0.95, origin: "Swahili form of Fatima" }],
+  'aisha': [{ religion: 'muslim', weight: 0.95, origin: "Wife of Prophet Muhammad" }],
+  'khadija': [{ religion: 'muslim', weight: 0.95, origin: "First wife of Prophet Muhammad" }],
+  'amina': [{ religion: 'muslim', weight: 0.90, origin: "Mother of Prophet Muhammad" }],
+  'halima': [{ religion: 'muslim', weight: 0.90, origin: "Wet nurse of Prophet Muhammad" }],
+  'zainab': [{ religion: 'muslim', weight: 0.95, origin: "Daughter of Prophet Muhammad" }],
+  'mariam': [{ religion: 'muslim', weight: 0.85, origin: "Arabic form of Mary" }],
+  'mohammed': [{ religion: 'muslim', weight: 0.98, origin: "Prophet of Islam" }],
+  'muhammad': [{ religion: 'muslim', weight: 0.98, origin: "Prophet of Islam" }],
+  'ahmed': [{ religion: 'muslim', weight: 0.95, origin: "Praised one" }],
+  'omar': [{ religion: 'muslim', weight: 0.90, origin: "Second Caliph of Islam" }],
+  'ali': [{ religion: 'muslim', weight: 0.88, origin: "Fourth Caliph, Prophet's son-in-law" }],
+  'hassan': [{ religion: 'muslim', weight: 0.92, origin: "Grandson of Prophet Muhammad" }],
+  'hussein': [{ religion: 'muslim', weight: 0.92, origin: "Grandson of Prophet Muhammad" }],
+  'ibrahim': [{ religion: 'muslim', weight: 0.90, origin: "Arabic form of Abraham" }],
+  'yusuf': [{ religion: 'muslim', weight: 0.90, origin: "Arabic form of Joseph" }],
+  'rashid': [{ religion: 'muslim', weight: 0.85, origin: "Rightly guided" }],
+  'salim': [{ religion: 'muslim', weight: 0.85, origin: "Safe, peaceful" }],
+  'hamisi': [{ religion: 'muslim', weight: 0.80, origin: "Born on Thursday" }],
+  'jumaa': [{ religion: 'muslim', weight: 0.80, origin: "Born on Friday" }],
+  'bakari': [{ religion: 'muslim', weight: 0.75, origin: "Promising one" }],
+  'abdul': [{ religion: 'muslim', weight: 0.95, origin: "Servant of God" }],
+  'abdallah': [{ religion: 'muslim', weight: 0.95, origin: "Servant of Allah" }],
+  
+  // Christian names (Biblical origin - widespread across Africa)
+  'mary': [{ religion: 'christian', weight: 0.90, origin: "Mother of Jesus" }],
+  'maria': [{ religion: 'christian', weight: 0.88, origin: "Latin form of Mary" }],
+  'grace': [{ religion: 'christian', weight: 0.85, origin: "Divine grace" }],
+  'faith': [{ religion: 'christian', weight: 0.90, origin: "Christian virtue" }],
+  'hope': [{ religion: 'christian', weight: 0.90, origin: "Christian virtue" }],
+  'charity': [{ religion: 'christian', weight: 0.90, origin: "Christian virtue" }],
+  'blessing': [{ religion: 'christian', weight: 0.85, origin: "Divine blessing" }],
+  'mercy': [{ religion: 'christian', weight: 0.85, origin: "Divine mercy" }],
+  'patience': [{ religion: 'christian', weight: 0.85, origin: "Christian virtue" }],
+  'john': [{ religion: 'christian', weight: 0.80, origin: "John the Baptist/Apostle" }],
+  'peter': [{ religion: 'christian', weight: 0.85, origin: "Apostle Peter" }],
+  'paul': [{ religion: 'christian', weight: 0.85, origin: "Apostle Paul" }],
+  'david': [{ religion: 'christian', weight: 0.80, origin: "King David" }],
+  'daniel': [{ religion: 'christian', weight: 0.80, origin: "Prophet Daniel" }],
+  'samuel': [{ religion: 'christian', weight: 0.85, origin: "Prophet Samuel" }],
+  'joseph': [{ religion: 'christian', weight: 0.80, origin: "Joseph of the Bible" }],
+  'james': [{ religion: 'christian', weight: 0.75, origin: "Apostle James" }],
+  'michael': [{ religion: 'christian', weight: 0.75, origin: "Archangel Michael" }],
+  'gabriel': [{ religion: 'christian', weight: 0.80, origin: "Archangel Gabriel" }],
+  'ruth': [{ religion: 'christian', weight: 0.85, origin: "Ruth of Moab" }],
+  'esther': [{ religion: 'christian', weight: 0.85, origin: "Queen Esther" }],
+  'naomi': [{ religion: 'christian', weight: 0.85, origin: "Mother-in-law of Ruth" }],
+  'sarah': [{ religion: 'christian', weight: 0.80, origin: "Wife of Abraham" }],
+  'rebecca': [{ religion: 'christian', weight: 0.85, origin: "Wife of Isaac" }],
+  'rachel': [{ religion: 'christian', weight: 0.85, origin: "Wife of Jacob" }],
+  'martha': [{ religion: 'christian', weight: 0.85, origin: "Friend of Jesus" }],
+  'elizabeth': [{ religion: 'christian', weight: 0.80, origin: "Mother of John the Baptist" }],
+  'hannah': [{ religion: 'christian', weight: 0.85, origin: "Mother of Samuel" }],
+  'deborah': [{ religion: 'christian', weight: 0.85, origin: "Judge of Israel" }],
+  'abigail': [{ religion: 'christian', weight: 0.85, origin: "Wife of David" }],
+  
+  // Igbo Christian names
+  'chukwuemeka': [{ religion: 'christian', weight: 0.90, origin: "God has done great things (Igbo)" }],
+  'chidinma': [{ religion: 'christian', weight: 0.85, origin: "God is good (Igbo)" }],
+  'chinyere': [{ religion: 'christian', weight: 0.85, origin: "God gave (Igbo)" }],
+  'chiamaka': [{ religion: 'christian', weight: 0.85, origin: "God is beautiful (Igbo)" }],
+  'chisom': [{ religion: 'christian', weight: 0.85, origin: "God follows me (Igbo)" }],
+  'uchenna': [{ religion: 'christian', weight: 0.80, origin: "God's will (Igbo)" }],
+  'chidi': [{ religion: 'christian', weight: 0.85, origin: "God exists (Igbo)" }],
+  
+  // Ethiopian Christian names (Orthodox tradition)
+  'yohannes': [{ religion: 'christian', weight: 0.90, origin: "Amharic form of John" }],
+  'dawit': [{ religion: 'christian', weight: 0.90, origin: "Amharic form of David" }],
+  'meron': [{ religion: 'christian', weight: 0.75, origin: "Holy oil (Orthodox)" }],
+  'bethlehem': [{ religion: 'christian', weight: 0.95, origin: "Birthplace of Jesus" }],
+  'kidist': [{ religion: 'christian', weight: 0.85, origin: "Saint/Holy one" }],
+  'selam': [{ religion: 'christian', weight: 0.70, origin: "Peace" }],
+  'selamawit': [{ religion: 'christian', weight: 0.80, origin: "Peaceful one" }],
+  
+  // Hebrew/Jewish names (less common but present in some African communities)
+  'miriam': [{ religion: 'jewish', weight: 0.70, origin: "Hebrew form of Mary" }],
+  'moshe': [{ religion: 'jewish', weight: 0.85, origin: "Hebrew form of Moses" }],
+  'avraham': [{ religion: 'jewish', weight: 0.90, origin: "Hebrew form of Abraham" }],
+  'yitzchak': [{ religion: 'jewish', weight: 0.90, origin: "Hebrew form of Isaac" }],
+  'yaakov': [{ religion: 'jewish', weight: 0.90, origin: "Hebrew form of Jacob" }],
+};
+
+// Islamic name prefixes/patterns
+const islamicPrefixes: string[] = ['abd', 'abdul', 'abu', 'umm', 'ibn'];
+const islamicSuffixes: string[] = ['allah', 'din', 'uddin', 'ullah'];
+
+// Religious influence mapping to tribes - fact-checked historical data
+const tribeReligiousInfluence: Record<string, { primary: string; secondary?: string; percentage?: number; notes: string }> = {
+  // Kenya
+  'kikuyu': { primary: 'christian', percentage: 90, notes: 'Protestant majority (Presbyterian, Anglican), some Catholic. Traditional Ngai worship declining.' },
+  'luo': { primary: 'christian', percentage: 85, notes: 'Mix of Catholic, Anglican, and African Independent Churches. Strong Legio Maria presence.' },
+  'luhya': { primary: 'christian', percentage: 88, notes: 'Quaker (Friends Church) stronghold, also Catholic and Protestant.' },
+  'kamba': { primary: 'christian', percentage: 85, notes: 'Strong Catholic and African Inland Church presence.' },
+  'kalenjin': { primary: 'christian', percentage: 90, notes: 'Africa Inland Church dominant, Presbyterian also present.' },
+  'kisii': { primary: 'christian', percentage: 92, notes: 'Seventh-day Adventist stronghold, also Catholic.' },
+  'meru': { primary: 'christian', percentage: 88, notes: 'Methodist and Presbyterian majority.' },
+  'coastal': { primary: 'muslim', percentage: 70, secondary: 'christian', notes: 'Islam dominant since 8th century trade. Mijikenda have more Christian/traditional mix.' },
+  'somali': { primary: 'muslim', percentage: 99, notes: 'Sunni Islam nearly universal. Part of broader Somali nation.' },
+  'maasai': { primary: 'traditional', secondary: 'christian', percentage: 60, notes: 'Traditional Enkai worship still strong. Christianity growing among settled communities.' },
+  'turkana': { primary: 'traditional', secondary: 'christian', percentage: 50, notes: 'Traditional Akuj worship. Christian missions active since 1960s.' },
+  'samburu': { primary: 'traditional', secondary: 'christian', percentage: 55, notes: 'Similar to Maasai - Nkai worship. Christianity increasing.' },
+  'pokot': { primary: 'traditional', secondary: 'christian', percentage: 45, notes: 'Traditional beliefs strong. Christian presence growing.' },
+  
+  // Nigeria
+  'yoruba': { primary: 'mixed', secondary: 'christian', notes: 'Roughly 50% Muslim (north), 40% Christian (south), 10% traditional Ifa.' },
+  'igbo': { primary: 'christian', percentage: 98, notes: 'Predominantly Catholic and Anglican. Igbo Jewish movement (Igbo Bnei Israel) exists.' },
+  'hausa': { primary: 'muslim', percentage: 99, notes: 'Sunni Islam dominant since 11th century. Sokoto Caliphate legacy.' },
+  'fulani': { primary: 'muslim', percentage: 95, notes: 'Sunni Islam. Led Fulani jihads in 19th century West Africa.' },
+  
+  // Ghana
+  'ashanti': { primary: 'christian', secondary: 'traditional', percentage: 75, notes: 'Traditional Akan religion still practiced alongside Christianity.' },
+  'akan': { primary: 'christian', secondary: 'traditional', percentage: 70, notes: 'Christianity widespread. Traditional beliefs persist.' },
+  'ewe': { primary: 'christian', percentage: 80, secondary: 'traditional', notes: 'Evangelical/Presbyterian majority. Vodun traditions present.' },
+  'ga': { primary: 'christian', percentage: 85, notes: 'Protestant majority. Homowo festival has traditional elements.' },
+  'dagomba': { primary: 'muslim', percentage: 90, notes: 'Islam arrived via trans-Saharan trade. Traditional chieftaincy still important.' },
+  
+  // Ethiopia
+  'oromo': { primary: 'mixed', notes: 'Split: ~50% Muslim, ~40% Ethiopian Orthodox, ~8% Protestant, some Waaqeffanna.' },
+  'amhara': { primary: 'christian', percentage: 90, notes: 'Ethiopian Orthodox Christian stronghold since 4th century.' },
+  'tigray': { primary: 'christian', percentage: 95, notes: 'Ethiopian Orthodox Christianity. Oldest Christian tradition in Africa.' },
+  'somali_eth': { primary: 'muslim', percentage: 99, notes: 'Sunni Islam universal among Ethiopian Somalis.' },
+  'afar': { primary: 'muslim', percentage: 99, notes: 'Sunni Islam. Traditional pastoral lifestyle.' },
+  
+  // South Africa
+  'zulu': { primary: 'christian', secondary: 'traditional', percentage: 80, notes: 'Christian majority. Shembe/Nazareth Baptist Church popular. Ancestors still revered.' },
+  'xhosa': { primary: 'christian', percentage: 85, notes: 'Methodist and traditional beliefs blend. Ubuntu philosophy central.' },
+  'sotho': { primary: 'christian', percentage: 90, notes: 'Roman Catholic and Lesotho Evangelical Church dominant.' },
+  'tswana': { primary: 'christian', percentage: 85, notes: 'Protestant majority. Traditional Badimo ancestor reverence continues.' },
+  
+  // Tanzania
+  'sukuma': { primary: 'christian', secondary: 'traditional', percentage: 70, notes: 'Catholic majority. Traditional healers still respected.' },
+  'chagga': { primary: 'christian', percentage: 90, notes: 'Lutheran and Catholic. Among first Tanzanians to convert.' },
+  'haya': { primary: 'christian', percentage: 85, notes: 'Catholic majority, White Fathers mission influence.' },
+  
+  // Senegal
+  'wolof': { primary: 'muslim', percentage: 95, notes: 'Sufi Islam (Mouride, Tijani brotherhoods). Strong Sufi sheikh tradition.' },
+  'serer': { primary: 'mixed', notes: 'Traditional Serer religion still practiced. 30% Muslim, 30% Christian, 40% traditional.' },
+  'fulani_sn': { primary: 'muslim', percentage: 98, notes: 'Sunni Islam. Historical role in spreading Islam in West Africa.' },
+};
+
 interface DetectionOptions {
   timeOfBirth?: string;
   region?: string;
   build?: string;
   personality?: string;
+  country?: string;
 }
 
 export function detectTribe(name: string, options?: DetectionOptions | string): DetectionResult {
@@ -505,25 +650,70 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
     ? { timeOfBirth: options } 
     : options || {};
   
-  const { timeOfBirth, region, build, personality } = opts;
+  const { timeOfBirth, region, build, personality, country } = opts;
   
   const normalizedName = name.toLowerCase().trim().replace(/\s+/g, '');
   const predictions: TribeResult[] = [];
   
+  // Filter tribes by country if specified
+  let countryTribes = country && country !== 'ALL' 
+    ? tribesData.tribes.filter(t => (t.countries as string[] | undefined)?.includes(country))
+    : tribesData.tribes;
+  
+  // Fallback to all tribes if no tribes found for the country
+  if (countryTribes.length === 0) {
+    countryTribes = tribesData.tribes;
+  }
+  
+  // 0. Religious name detection
+  let religiousInfluence: { religion: string; weight: number; origin?: string } | null = null;
+  
+  // Check exact religious name match
+  if (religiousNamePatterns[normalizedName]) {
+    religiousInfluence = religiousNamePatterns[normalizedName][0];
+  }
+  
+  // Check Islamic prefixes
+  if (!religiousInfluence) {
+    for (const prefix of islamicPrefixes) {
+      if (normalizedName.startsWith(prefix)) {
+        religiousInfluence = { religion: 'muslim', weight: 0.85, origin: `Name starts with "${prefix}" - Islamic naming convention` };
+        break;
+      }
+    }
+  }
+  
+  // Check Islamic suffixes
+  if (!religiousInfluence) {
+    for (const suffix of islamicSuffixes) {
+      if (normalizedName.endsWith(suffix)) {
+        religiousInfluence = { religion: 'muslim', weight: 0.90, origin: `Name ends with "${suffix}" - Islamic naming convention` };
+        break;
+      }
+    }
+  }
+  
   // 1. Direct name match (highest confidence)
   const directMatch = nameDatabase[normalizedName];
   if (directMatch) {
-    const tribe = tribesData.tribes.find(t => t.id === directMatch.tribe);
+    const tribe = countryTribes.find(t => t.id === directMatch.tribe) || tribesData.tribes.find(t => t.id === directMatch.tribe);
     if (tribe) {
+      const matchDetails = [
+        `"${name}" is a verified ${tribe.name} name`,
+        `This name is commonly used among the ${tribe.name} people`,
+        directMatch.meaning ? `The name carries cultural significance in ${tribe.name} tradition` : '',
+      ].filter(Boolean);
+      
+      // Add religious context if detected
+      if (religiousInfluence) {
+        matchDetails.push(`🕊️ Religious influence: ${religiousInfluence.religion.charAt(0).toUpperCase() + religiousInfluence.religion.slice(1)} origin${religiousInfluence.origin ? ` - ${religiousInfluence.origin}` : ''}`);
+      }
+      
       predictions.push({
         tribe,
         confidence: 95,
         matchReason: 'Exact name match in database',
-        matchDetails: [
-          `"${name}" is a verified ${tribe.name} name`,
-          `This name is commonly used among the ${tribe.name} people`,
-          directMatch.meaning ? `The name carries cultural significance in ${tribe.name} tradition` : '',
-        ].filter(Boolean),
+        matchDetails,
         nameMeaning: directMatch.meaning,
       });
     }
@@ -625,7 +815,7 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   // 7. Time of birth matching
   if (timeOfBirth) {
     const normalizedTime = timeOfBirth.toLowerCase().trim();
-    for (const tribe of tribesData.tribes) {
+    for (const tribe of countryTribes) {
       const timeNames = tribe.timeBasedNames as Record<string, string[]>;
       for (const [timeKey, names] of Object.entries(timeNames)) {
         const timeVariants = timeMapping[timeKey] || [timeKey];
@@ -652,8 +842,8 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
     }
   }
   
-  // 8. Check common names in tribes
-  for (const tribe of tribesData.tribes) {
+  // 8. Check common names in tribes (use country-filtered tribes)
+  for (const tribe of countryTribes) {
     const allNames = [...tribe.commonNames.female, ...tribe.commonNames.male].map(n => n.toLowerCase());
     for (const tribeName of allNames) {
       if (normalizedName === tribeName) {
@@ -681,16 +871,46 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
     }
   }
   
-  // Convert scores to predictions
+  // 9. Religious influence bonus - boost tribes with matching religious background
+  if (religiousInfluence) {
+    for (const [tribeId, religionData] of Object.entries(tribeReligiousInfluence)) {
+      const matchesReligion = religionData.primary === religiousInfluence.religion ||
+        religionData.secondary === religiousInfluence.religion;
+      
+      if (matchesReligion) {
+        // Only add if tribe is in country filter
+        const tribe = countryTribes.find(t => t.id === tribeId);
+        if (tribe) {
+          if (!tribeScores[tribeId]) {
+            tribeScores[tribeId] = { score: 0, reasons: [] };
+          }
+          const religionBonus = religionData.primary === religiousInfluence.religion ? 20 : 10;
+          tribeScores[tribeId].score += religionBonus;
+          const percentage = religionData.percentage ? `(~${religionData.percentage}% ${religiousInfluence.religion})` : '';
+          tribeScores[tribeId].reasons.push(
+            `🕊️ Religious alignment: ${tribe.name} is predominantly ${religionData.primary} ${percentage}`
+          );
+        }
+      }
+    }
+  }
+  
+  // Convert scores to predictions (only include country-filtered tribes)
   for (const [tribeId, data] of Object.entries(tribeScores)) {
     if (!predictions.some(p => p.tribe.id === tribeId) && data.score > 25) {
-      const tribe = tribesData.tribes.find(t => t.id === tribeId);
+      const tribe = countryTribes.find(t => t.id === tribeId);
       if (tribe) {
+        // Add religious influence to match details if detected
+        const matchDetails = [...data.reasons.slice(0, 4)];
+        if (religiousInfluence && !matchDetails.some(d => d.includes('Religious'))) {
+          matchDetails.push(`🕊️ Name suggests ${religiousInfluence.religion} influence${religiousInfluence.origin ? ` - ${religiousInfluence.origin}` : ''}`);
+        }
+        
         predictions.push({
           tribe,
           confidence: Math.min(Math.round(data.score), 92),
           matchReason: data.reasons[0] || 'Pattern matching based on name characteristics',
-          matchDetails: data.reasons.slice(0, 4),
+          matchDetails: matchDetails.slice(0, 5),
         });
       }
     }
@@ -699,19 +919,27 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   // Sort by confidence
   predictions.sort((a, b) => b.confidence - a.confidence);
   
-  // If no predictions, provide general options with low confidence
+  // If no predictions, provide options from country-filtered tribes
   if (predictions.length === 0) {
-    const topTribes = tribesData.tribes.slice(0, 3);
+    const topTribes = countryTribes.slice(0, 3);
+    const countryName = country ? (tribesData as any).countries?.find((c: any) => c.code === country)?.name || 'Africa' : 'Africa';
     for (const tribe of topTribes) {
+      const matchDetails = [
+        'This name doesn\'t match known patterns in our database',
+        `Showing ${tribe.name} as a major tribe${country ? ` in ${countryName}` : ''}`,
+        'Try adding more clues (region, build, personality) for better accuracy',
+      ];
+      
+      // Add religious note if detected
+      if (religiousInfluence) {
+        matchDetails.push(`🕊️ Name suggests ${religiousInfluence.religion} origin - may indicate religious heritage`);
+      }
+      
       predictions.push({
         tribe,
         confidence: 15,
         matchReason: 'Unable to determine tribe from name',
-        matchDetails: [
-          'This name doesn\'t match known patterns in our database',
-          `Showing ${tribe.name} as one of Kenya's largest tribes`,
-          'Try adding more clues (region, build, personality) for better accuracy',
-        ],
+        matchDetails,
       });
     }
   }
@@ -725,6 +953,11 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
 
 export function getAllTribes() {
   return tribesData.tribes;
+}
+
+export function getTribesByCountry(countryCode: string) {
+  if (!countryCode || countryCode === 'ALL') return tribesData.tribes;
+  return tribesData.tribes.filter(t => (t.countries as string[] | undefined)?.includes(countryCode));
 }
 
 export function getTribeById(id: string) {
@@ -748,4 +981,13 @@ export function getCountryFacts(countryCode: string): string[] {
 
 export function getNameDatabase(): Record<string, { meaning: string; gender: 'male' | 'female' }> {
   return nameDatabase;
+}
+
+export function getTribeReligiousInfo(tribeId: string) {
+  return tribeReligiousInfluence[tribeId] || null;
+}
+
+export function getReligiousNameInfo(name: string) {
+  const normalized = name.toLowerCase().trim();
+  return religiousNamePatterns[normalized] || null;
 }

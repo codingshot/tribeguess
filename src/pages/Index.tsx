@@ -29,12 +29,18 @@ const Index = () => {
   };
   const countryAdjective = countryAdjectives[countryQuery] || 'Kenyan';
   
-  const results = nameQuery ? detectTribe(nameQuery, {
-    timeOfBirth: timeQuery || undefined,
-    region: regionQuery || undefined,
-    build: buildQuery || undefined,
-    personality: personalityQuery || undefined,
-  }) : null;
+  let results = null;
+  try {
+    results = nameQuery ? detectTribe(nameQuery, {
+      timeOfBirth: timeQuery || undefined,
+      region: regionQuery || undefined,
+      build: buildQuery || undefined,
+      personality: personalityQuery || undefined,
+      country: countryQuery || undefined,
+    }) : null;
+  } catch (e) {
+    console.error('Detection error:', e);
+  }
 
   return (
     <div className="min-h-screen bg-background">
