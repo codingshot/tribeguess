@@ -93,16 +93,27 @@ const TribePage = () => {
             <div className="p-4 sm:p-6 space-y-6 sm:space-y-8">
               {/* Map Section */}
               <section>
-                <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
-                  <Map className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
-                  Location in Kenya
-                </h2>
-                <TribeMap 
-                  lat={tribe.mapCoordinates.lat} 
-                  lng={tribe.mapCoordinates.lng} 
-                  tribeName={tribe.name}
-                  counties={tribe.counties}
-                />
+                {(() => {
+                  const countries = (tribe as any).countries as string[] | undefined;
+                  const primaryCountry = countries?.[0] || 'KE';
+                  const countryObj = getCountries().find(c => c.code === primaryCountry);
+                  const countryName = countryObj?.name || 'Kenya';
+                  return (
+                    <>
+                      <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                        <Map className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
+                        Location in {countryName}
+                      </h2>
+                      <TribeMap 
+                        lat={tribe.mapCoordinates.lat} 
+                        lng={tribe.mapCoordinates.lng} 
+                        tribeName={tribe.name}
+                        counties={tribe.counties}
+                        countries={countries}
+                      />
+                    </>
+                  );
+                })()}
               </section>
               
               {/* Population Stats */}
@@ -118,7 +129,14 @@ const TribePage = () => {
                   </div>
                   <div className="p-3 bg-secondary rounded-lg text-center">
                     <p className="text-2xl sm:text-3xl font-bold text-primary">{tribe.populationPercent}</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">of Kenya</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      of {(() => {
+                        const countries = (tribe as any).countries as string[] | undefined;
+                        const primaryCountry = countries?.[0] || 'KE';
+                        const countryObj = getCountries().find(c => c.code === primaryCountry);
+                        return countryObj?.name || 'Kenya';
+                      })()}
+                    </p>
                   </div>
                   <div className="p-3 bg-secondary rounded-lg text-center">
                     <p className="text-2xl sm:text-3xl font-bold text-blue-600">{tribe.genderRatio.male}%</p>
