@@ -22,30 +22,37 @@ interface DynamicMapViewProps {
   countryFilter?: string;
 }
 
-// Country center coordinates and zoom levels
-const countryConfigs: Record<string, { lat: number; lng: number; zoom: number; name: string }> = {
-  'KE': { lat: 0.5, lng: 37.5, zoom: 1.5, name: 'Kenya' },
-  'TZ': { lat: -6.0, lng: 35.0, zoom: 2.0, name: 'Tanzania' },
-  'UG': { lat: 1.5, lng: 32.5, zoom: 1.2, name: 'Uganda' },
-  'RW': { lat: -2.0, lng: 29.8, zoom: 0.8, name: 'Rwanda' },
-  'BI': { lat: -3.3, lng: 29.9, zoom: 0.8, name: 'Burundi' },
-  'SS': { lat: 7.0, lng: 30.0, zoom: 2.5, name: 'South Sudan' },
-  'ET': { lat: 9.0, lng: 39.0, zoom: 3.0, name: 'Ethiopia' },
-  'SO': { lat: 5.0, lng: 46.0, zoom: 3.0, name: 'Somalia' },
-  'CD': { lat: -4.0, lng: 22.0, zoom: 4.0, name: 'DR Congo' },
-  'NG': { lat: 9.0, lng: 8.0, zoom: 3.0, name: 'Nigeria' },
-  'GH': { lat: 7.5, lng: -1.5, zoom: 1.5, name: 'Ghana' },
-  'SN': { lat: 14.5, lng: -14.5, zoom: 1.5, name: 'Senegal' },
-  'GM': { lat: 13.5, lng: -15.5, zoom: 0.8, name: 'Gambia' },
-  'ZA': { lat: -29.0, lng: 25.0, zoom: 3.5, name: 'South Africa' },
-  'ZW': { lat: -19.0, lng: 29.5, zoom: 2.0, name: 'Zimbabwe' },
-  'ZM': { lat: -15.0, lng: 28.0, zoom: 2.5, name: 'Zambia' },
-  'BW': { lat: -22.0, lng: 24.0, zoom: 2.0, name: 'Botswana' },
-  'NA': { lat: -22.0, lng: 17.0, zoom: 2.5, name: 'Namibia' },
-  'MW': { lat: -13.5, lng: 34.0, zoom: 1.5, name: 'Malawi' },
-  'CM': { lat: 6.0, lng: 12.5, zoom: 2.5, name: 'Cameroon' },
-  'BF': { lat: 12.5, lng: -1.5, zoom: 1.5, name: 'Burkina Faso' },
-  'ALL': { lat: 0, lng: 20.0, zoom: 15, name: 'Africa' },
+// Country bounding boxes for proper framing (minLat, maxLat, minLng, maxLng)
+const countryBounds: Record<string, { minLat: number; maxLat: number; minLng: number; maxLng: number; name: string }> = {
+  'KE': { minLat: -4.7, maxLat: 4.6, minLng: 33.9, maxLng: 41.9, name: 'Kenya' },
+  'TZ': { minLat: -11.7, maxLat: -1.0, minLng: 29.3, maxLng: 40.4, name: 'Tanzania' },
+  'UG': { minLat: -1.5, maxLat: 4.2, minLng: 29.5, maxLng: 35.0, name: 'Uganda' },
+  'RW': { minLat: -2.8, maxLat: -1.0, minLng: 28.8, maxLng: 30.9, name: 'Rwanda' },
+  'BI': { minLat: -4.5, maxLat: -2.3, minLng: 29.0, maxLng: 30.8, name: 'Burundi' },
+  'SS': { minLat: 3.5, maxLat: 12.2, minLng: 24.0, maxLng: 35.9, name: 'South Sudan' },
+  'ET': { minLat: 3.4, maxLat: 14.9, minLng: 33.0, maxLng: 48.0, name: 'Ethiopia' },
+  'SO': { minLat: -1.7, maxLat: 12.0, minLng: 40.9, maxLng: 51.4, name: 'Somalia' },
+  'ER': { minLat: 12.3, maxLat: 18.0, minLng: 36.4, maxLng: 43.1, name: 'Eritrea' },
+  'DJ': { minLat: 10.9, maxLat: 12.7, minLng: 41.7, maxLng: 43.4, name: 'Djibouti' },
+  'CD': { minLat: -13.5, maxLat: 5.4, minLng: 12.2, maxLng: 31.3, name: 'DR Congo' },
+  'NG': { minLat: 4.2, maxLat: 13.9, minLng: 2.7, maxLng: 14.7, name: 'Nigeria' },
+  'GH': { minLat: 4.7, maxLat: 11.2, minLng: -3.3, maxLng: 1.2, name: 'Ghana' },
+  'SN': { minLat: 12.3, maxLat: 16.7, minLng: -17.5, maxLng: -11.4, name: 'Senegal' },
+  'GM': { minLat: 13.0, maxLat: 13.8, minLng: -16.8, maxLng: -13.8, name: 'Gambia' },
+  'ZA': { minLat: -34.8, maxLat: -22.1, minLng: 16.5, maxLng: 32.9, name: 'South Africa' },
+  'ZW': { minLat: -22.4, maxLat: -15.6, minLng: 25.2, maxLng: 33.1, name: 'Zimbabwe' },
+  'ZM': { minLat: -18.1, maxLat: -8.2, minLng: 21.9, maxLng: 33.7, name: 'Zambia' },
+  'BW': { minLat: -26.9, maxLat: -17.8, minLng: 19.9, maxLng: 29.4, name: 'Botswana' },
+  'NA': { minLat: -28.9, maxLat: -17.0, minLng: 11.7, maxLng: 25.3, name: 'Namibia' },
+  'MW': { minLat: -17.1, maxLat: -9.4, minLng: 32.7, maxLng: 35.9, name: 'Malawi' },
+  'CM': { minLat: 1.6, maxLat: 13.1, minLng: 8.5, maxLng: 16.2, name: 'Cameroon' },
+  'BF': { minLat: 9.4, maxLat: 15.1, minLng: -5.5, maxLng: 2.4, name: 'Burkina Faso' },
+  'CI': { minLat: 4.3, maxLat: 10.7, minLng: -8.6, maxLng: -2.5, name: 'Côte d\'Ivoire' },
+  'ML': { minLat: 10.1, maxLat: 25.0, minLng: -12.2, maxLng: 4.2, name: 'Mali' },
+  'AO': { minLat: -18.0, maxLat: -4.4, minLng: 11.6, maxLng: 24.1, name: 'Angola' },
+  'MZ': { minLat: -26.9, maxLat: -10.5, minLng: 30.2, maxLng: 40.8, name: 'Mozambique' },
+  'MG': { minLat: -25.6, maxLat: -11.9, minLng: 43.2, maxLng: 50.5, name: 'Madagascar' },
+  'ALL': { minLat: -35.0, maxLat: 37.0, minLng: -18.0, maxLng: 52.0, name: 'Africa' },
 };
 
 // Region colors for visual distinction
@@ -83,24 +90,25 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
   const [hoveredTribe, setHoveredTribe] = useState<string | null>(null);
 
   const allCountries = getCountries();
-  const config = countryConfigs[countryFilter] || countryConfigs['KE'];
+  const bounds = countryBounds[countryFilter] || countryBounds['KE'];
   const countryInfo = allCountries.find(c => c.code === countryFilter);
 
   const osmBounds = useMemo(() => {
-    // When a specific country is selected, keep the map framed on that country.
-    // (Some tribes span multiple countries but only have one coordinate; framing to tribes
-    // can accidentally zoom out to Kenya even when Tanzania is selected.)
-    if (countryFilter && countryFilter !== 'ALL') {
-      const bbox = config.zoom * 0.9;
+    // When a specific country is selected, use predefined country bounds
+    if (countryFilter && countryFilter !== 'ALL' && countryBounds[countryFilter]) {
+      const b = countryBounds[countryFilter];
+      // Add small padding
+      const latPad = (b.maxLat - b.minLat) * 0.1;
+      const lngPad = (b.maxLng - b.minLng) * 0.1;
       return {
-        minLat: Math.max(-85, config.lat - bbox),
-        maxLat: Math.min(85, config.lat + bbox),
-        minLng: Math.max(-180, config.lng - bbox),
-        maxLng: Math.min(180, config.lng + bbox),
+        minLat: Math.max(-85, b.minLat - latPad),
+        maxLat: Math.min(85, b.maxLat + latPad),
+        minLng: Math.max(-180, b.minLng - lngPad),
+        maxLng: Math.min(180, b.maxLng + lngPad),
       };
     }
 
-    // For ALL (or no country), zoom to visible tribes so filter changes reframe the map.
+    // For ALL or unknown, compute from visible tribes
     if (tribes.length > 0) {
       const lats = tribes.map(t => t.mapCoordinates.lat);
       const lngs = tribes.map(t => t.mapCoordinates.lng);
@@ -110,11 +118,11 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       let minLng = Math.min(...lngs);
       let maxLng = Math.max(...lngs);
 
-      const latRange = Math.max(0.25, maxLat - minLat);
-      const lngRange = Math.max(0.25, maxLng - minLng);
+      const latRange = Math.max(2, maxLat - minLat);
+      const lngRange = Math.max(2, maxLng - minLng);
 
-      const padLat = latRange * 0.35;
-      const padLng = lngRange * 0.35;
+      const padLat = latRange * 0.2;
+      const padLng = lngRange * 0.2;
 
       minLat = Math.max(-85, minLat - padLat);
       maxLat = Math.min(85, maxLat + padLat);
@@ -124,14 +132,10 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       return { minLat, maxLat, minLng, maxLng };
     }
 
-    const bbox = config.zoom;
-    return {
-      minLat: Math.max(-85, config.lat - bbox),
-      maxLat: Math.min(85, config.lat + bbox),
-      minLng: Math.max(-180, config.lng - bbox),
-      maxLng: Math.min(180, config.lng + bbox),
-    };
-  }, [tribes, config, countryFilter]);
+    // Fallback to Africa view
+    const africa = countryBounds['ALL'];
+    return { minLat: africa.minLat, maxLat: africa.maxLat, minLng: africa.minLng, maxLng: africa.maxLng };
+  }, [tribes, countryFilter]);
 
   // OpenStreetMap embed URL framed by bounds
   const osmEmbedUrl = useMemo(() => {
@@ -170,7 +174,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
           <div className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-primary" />
             <h3 className="font-heading font-semibold text-foreground">
-              {countryInfo?.flag} {config.name} Tribal Map
+              {countryInfo?.flag} {bounds.name} Tribal Map
             </h3>
           </div>
           <div className="flex items-center gap-3">
@@ -194,7 +198,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
         <iframe
           src={osmEmbedUrl}
           className="absolute inset-0 w-full h-full border-0"
-          title={`Map of ${config.name} showing tribal distribution`}
+          title={`Map of ${bounds.name} showing tribal distribution`}
           loading="lazy"
           referrerPolicy="no-referrer"
           sandbox="allow-scripts allow-same-origin"
@@ -282,7 +286,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
           <div className="flex items-center gap-2">
             {countryInfo && <span className="text-xl">{countryInfo.flag}</span>}
             <div>
-              <p className="text-sm font-bold text-foreground">{config.name}</p>
+              <p className="text-sm font-bold text-foreground">{bounds.name}</p>
               <p className="text-[10px] text-muted-foreground">Ethnic Distribution</p>
             </div>
           </div>
@@ -334,7 +338,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       <div className="p-4 bg-secondary/30 border-t border-border">
         <div className="flex items-center gap-2 mb-3">
           <Info className="w-4 h-4 text-muted-foreground" />
-          <span className="text-xs font-medium text-foreground">Tribes in {config.name}</span>
+          <span className="text-xs font-medium text-foreground">Tribes in {bounds.name}</span>
         </div>
         
         {/* Tribe Quick Links */}

@@ -8796,6 +8796,414 @@
       ],
       "description": "The Mossi are Burkina Faso's dominant ethnic group, known for maintaining powerful kingdoms, elaborate mask traditions, and producing revolutionary leader Thomas Sankara.",
       "relatedTribes": ["dagomba", "mamprusi", "gurma"]
+    },
+
+    {
+      "id": "afar",
+      "name": "Afar",
+      "slug": "afar",
+      "countries": ["ET", "ER", "DJ"],
+      "region": "Afar Region (Ethiopia, Eritrea, Djibouti)",
+      "population": "~2.5 million",
+      "populationPercent": "2.5%",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 11.5, "lng": 41.4 },
+      "counties": ["Afar Region", "Djibouti", "Southern Eritrea"],
+      "namePrefixes": ["Ali", "Ahmed", "Mohamed", "Hassan"],
+      "commonNames": {
+        "female": ["Fatuma", "Halima", "Khadija", "Amina", "Zeinab", "Maryam"],
+        "male": ["Ali", "Ahmed", "Mohamed", "Hassan", "Ibrahim", "Osman", "Yusuf"]
+      },
+      "stereotypes": [
+        "Desert warriors",
+        "Salt traders",
+        "Extreme heat survivors",
+        "Nomadic lifestyle",
+        "Fierce independence"
+      ],
+      "culturalTraits": [
+        "Salt mining from Danakil Depression",
+        "Camel herding",
+        "Traditional curved knife (jile)",
+        "Nomadic pastoralism",
+        "Oral poetry traditions"
+      ],
+      "funFacts": [
+        "The Afar live in the Danakil Depression, one of the hottest places on Earth",
+        "They have mined salt from the desert for centuries, trading it across Ethiopia",
+        "The traditional Afar knife (jile) is a symbol of manhood"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel milk", "Goat meat", "Sorghum", "Dates"],
+        "beverages": ["Camel milk", "Coffee"],
+        "specialDishes": ["Roasted meat", "Dried meat"],
+        "description": "Afar cuisine centers on pastoral products from camels and goats, adapted to the harsh desert environment."
+      },
+      "traditionalDance": "Jenile - warrior dance",
+      "religion": "Islam (Sunni)",
+      "language": {
+        "name": "Afar",
+        "speakers": "~2.5 million",
+        "greeting": "Maalin wanaagsan",
+        "greetingMeaning": "Good day",
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Hanfare Ali Mirah", "role": "Sultan of Aussa", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Mirah_Hanfare" }
+      ],
+      "description": "The Afar are a nomadic people spanning Ethiopia, Eritrea, and Djibouti, known for surviving in one of Earth's harshest environments and their ancient salt trade.",
+      "relatedTribes": ["oromo", "somali", "issa"]
+    },
+
+    {
+      "id": "tigrinya",
+      "name": "Tigrinya",
+      "slug": "tigrinya",
+      "countries": ["ER", "ET"],
+      "region": "Eritrea & Tigray (Ethiopia)",
+      "population": "~9 million",
+      "populationPercent": "55% (Eritrea)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 15.3, "lng": 38.9 },
+      "counties": ["Asmara", "Tigray Region"],
+      "namePrefixes": ["Tes", "Bere", "Haile", "Gebre", "Welde"],
+      "commonNames": {
+        "female": ["Lemlem", "Senait", "Tirhas", "Hiwet", "Yordanos", "Sara", "Meron"],
+        "male": ["Tesfaye", "Berhane", "Haile", "Gebremedhin", "Yohannes", "Dawit", "Samuel"]
+      },
+      "stereotypes": [
+        "Strong Orthodox faith",
+        "Independence fighters",
+        "Hardworking",
+        "Coffee culture",
+        "Pride in heritage"
+      ],
+      "culturalTraits": [
+        "Orthodox Christianity traditions",
+        "Coffee ceremony (buna)",
+        "Independence struggle legacy",
+        "Ancient Ge'ez script",
+        "Strong family bonds"
+      ],
+      "funFacts": [
+        "Tigrinya and Tigray people share the same language but span two countries",
+        "The traditional coffee ceremony can last over an hour with three rounds",
+        "Asmara has UNESCO-listed Art Deco architecture from the Italian colonial period"
+      ],
+      "traditionalFood": {
+        "staples": ["Injera (sourdough flatbread)", "Tsebhi (stew)", "Shiro", "Lentils"],
+        "beverages": ["Suwa (traditional beer)", "Coffee (buna)", "Mes (honey wine)"],
+        "specialDishes": ["Zigni (spicy beef stew)", "Kitfo (raw meat)", "Ful (fava beans)"],
+        "description": "Tigrinya cuisine features injera served with spicy stews, with the coffee ceremony being a central social ritual."
+      },
+      "traditionalDance": "Guayla - celebratory dance",
+      "religion": "Orthodox Christianity (majority), Islam",
+      "language": {
+        "name": "Tigrinya",
+        "speakers": "~9 million",
+        "greeting": "Selam",
+        "greetingMeaning": "Peace/Hello",
+        "family": "Semitic (Afro-Asiatic)",
+        "writingSystem": "Ge'ez script"
+      },
+      "famousPeople": [
+        { "name": "Isaias Afwerki", "role": "President of Eritrea", "wikipedia": "https://en.wikipedia.org/wiki/Isaias_Afwerki" }
+      ],
+      "description": "The Tigrinya are the dominant ethnic group in Eritrea, known for Orthodox Christian traditions, the coffee ceremony, and leading Eritrea's independence struggle.",
+      "relatedTribes": ["amhara", "tigray", "bilen"]
+    },
+
+    {
+      "id": "berber",
+      "name": "Berber (Amazigh)",
+      "slug": "berber",
+      "countries": ["MA", "DZ", "TN", "LY"],
+      "region": "North Africa (Morocco, Algeria, Tunisia, Libya)",
+      "population": "~30 million",
+      "populationPercent": "35% (Morocco)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 31.8, "lng": -6.8 },
+      "counties": ["Atlas Mountains", "Kabylie", "Rif"],
+      "namePrefixes": ["Ait", "Ou", "Ben", "Bou"],
+      "commonNames": {
+        "female": ["Fatima", "Aicha", "Tiziri", "Tanina", "Dihya", "Malika"],
+        "male": ["Amazigh", "Idir", "Massinissa", "Yuba", "Jugurtha", "Aksil"]
+      },
+      "stereotypes": [
+        "Mountain dwellers",
+        "Fierce independence",
+        "Skilled craftspeople",
+        "Hospitality traditions",
+        "Ancient heritage"
+      ],
+      "culturalTraits": [
+        "Tifinagh alphabet",
+        "Carpet and jewelry making",
+        "Mountain agriculture",
+        "Oral poetry (Izlan)",
+        "Traditional tattoos (now rare)"
+      ],
+      "funFacts": [
+        "Berbers call themselves 'Amazigh' meaning 'free people'",
+        "The Berber calendar dates back to 950 BCE",
+        "Queen Dihya (Kahina) led resistance against Arab conquest in the 7th century"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous", "Tagine", "Bread", "Olive oil"],
+        "beverages": ["Mint tea", "Buttermilk"],
+        "specialDishes": ["Tajine (slow-cooked stew)", "Rfissa", "Harira soup"],
+        "description": "Berber cuisine features couscous and tagines cooked with vegetables, meat, and aromatic spices."
+      },
+      "traditionalDance": "Ahidous - collective dance",
+      "religion": "Islam (Sunni), Traditional beliefs survive in some practices",
+      "language": {
+        "name": "Tamazight",
+        "speakers": "~30 million",
+        "greeting": "Azul",
+        "greetingMeaning": "Hello",
+        "family": "Berber (Afro-Asiatic)",
+        "writingSystem": "Tifinagh and Latin scripts"
+      },
+      "famousPeople": [
+        { "name": "Zinedine Zidane", "role": "Football Legend", "wikipedia": "https://en.wikipedia.org/wiki/Zinedine_Zidane" },
+        { "name": "Ibn Battuta", "role": "Explorer", "wikipedia": "https://en.wikipedia.org/wiki/Ibn_Battuta" }
+      ],
+      "description": "The Amazigh (Berber) are North Africa's indigenous people, with ancient roots predating Arab conquest, known for distinctive language, crafts, and mountain traditions.",
+      "relatedTribes": ["tuareg", "kabyle", "riffian"]
+    },
+
+    {
+      "id": "mandinka",
+      "name": "Mandinka",
+      "slug": "mandinka",
+      "countries": ["GM", "SN", "GN", "ML"],
+      "region": "West Africa (Gambia, Senegal, Guinea, Mali)",
+      "population": "~11 million",
+      "populationPercent": "42% (Gambia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 13.4, "lng": -16.6 },
+      "counties": ["Gambia", "Casamance", "Upper Guinea"],
+      "namePrefixes": ["Ba", "Ja", "San", "Dram"],
+      "commonNames": {
+        "female": ["Fatou", "Mariama", "Aminata", "Isatou", "Binta", "Kadiatou"],
+        "male": ["Bakary", "Lamin", "Demba", "Ousman", "Modou", "Samba"]
+      },
+      "stereotypes": [
+        "Proud warriors",
+        "Griot storytellers",
+        "Kora musicians",
+        "Strong Islamic faith",
+        "Ancient empire heritage"
+      ],
+      "culturalTraits": [
+        "Griot oral tradition",
+        "Kora (21-string harp)",
+        "Islamic scholarship",
+        "Mali Empire heritage",
+        "Age-grade societies"
+      ],
+      "funFacts": [
+        "The Mandinka descend from the ancient Mali Empire of Sundiata Keita",
+        "Kunta Kinte from 'Roots' was Mandinka from Gambia",
+        "The kora instrument was invented by Mandinka griots"
+      ],
+      "traditionalFood": {
+        "staples": ["Rice", "Millet", "Groundnuts", "Fish"],
+        "beverages": ["Attaya (green tea)", "Baobab juice"],
+        "specialDishes": ["Domoda (groundnut stew)", "Benachin (jollof rice)", "Superkanja"],
+        "description": "Mandinka cuisine features rice-based dishes with groundnut sauces and fresh fish from the Gambia River."
+      },
+      "traditionalDance": "Sabar - drum and dance celebration",
+      "religion": "Islam (Sunni majority)",
+      "language": {
+        "name": "Mandinka",
+        "speakers": "~11 million",
+        "greeting": "I be di?",
+        "greetingMeaning": "How are you?",
+        "family": "Mande (Niger-Congo)",
+        "writingSystem": "Latin alphabet, N'Ko script"
+      },
+      "famousPeople": [
+        { "name": "Sundiata Keita", "role": "Founder of Mali Empire", "wikipedia": "https://en.wikipedia.org/wiki/Sundiata_Keita" },
+        { "name": "Toumani Diabaté", "role": "Kora Master", "wikipedia": "https://en.wikipedia.org/wiki/Toumani_Diabat%C3%A9" }
+      ],
+      "description": "The Mandinka are heirs to the mighty Mali Empire, known for griot storytellers, the kora instrument, and spreading Islam across West Africa.",
+      "relatedTribes": ["wolof", "fula", "bambara"]
+    },
+
+    {
+      "id": "banyankole",
+      "name": "Banyankole (Ankole)",
+      "slug": "banyankole",
+      "countries": ["UG"],
+      "region": "Western Uganda",
+      "population": "~2.5 million",
+      "populationPercent": "9.5%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -0.6, "lng": 30.6 },
+      "counties": ["Mbarara", "Bushenyi", "Ntungamo", "Kiruhura"],
+      "namePrefixes": ["Mu", "Ba", "Ka", "Ru"],
+      "commonNames": {
+        "female": ["Patience", "Noeline", "Justine", "Beatrice", "Grace", "Annet"],
+        "male": ["Museveni", "Kaguta", "Ruhakana", "Kahinda", "Mwesigye", "Tumwine"]
+      },
+      "stereotypes": [
+        "Cattle-loving",
+        "Tall and slender",
+        "Royal heritage",
+        "Milk-based diet",
+        "Political influence"
+      ],
+      "culturalTraits": [
+        "Long-horned Ankole cattle",
+        "Milk drinking culture",
+        "Omugabe (king) tradition",
+        "Cattle as wealth",
+        "Patrilineal succession"
+      ],
+      "funFacts": [
+        "Ankole cattle have the longest horns of any cattle breed in the world",
+        "President Museveni is from the Bahima subgroup of the Banyankole",
+        "Traditionally, a bride's family received cattle as dowry"
+      ],
+      "traditionalFood": {
+        "staples": ["Milk (fresh and fermented)", "Millet", "Beef", "Bananas"],
+        "beverages": ["Fresh milk", "Omuramba (sour milk)", "Banana beer"],
+        "specialDishes": ["Eshabwe (ghee sauce)", "Karo (millet bread)", "Roasted beef"],
+        "description": "Banyankole cuisine is dairy-focused, with fresh and fermented milk being staples alongside millet and beef."
+      },
+      "traditionalDance": "Ekitaguriro - graceful dance",
+      "religion": "Christianity (Catholic and Anglican majority)",
+      "language": {
+        "name": "Runyankole",
+        "speakers": "~2.5 million",
+        "greeting": "Agandi?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Yoweri Museveni", "role": "President of Uganda", "wikipedia": "https://en.wikipedia.org/wiki/Yoweri_Museveni" }
+      ],
+      "description": "The Banyankole of Western Uganda are known for their iconic long-horned Ankole cattle, dairy-centered culture, and political influence in modern Uganda.",
+      "relatedTribes": ["banyarwanda", "bakiga", "banyoro"]
+    },
+
+    {
+      "id": "sukuma",
+      "name": "Sukuma",
+      "slug": "sukuma",
+      "countries": ["TZ"],
+      "region": "Northwestern Tanzania",
+      "population": "~10 million",
+      "populationPercent": "16%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -3.4, "lng": 33.4 },
+      "counties": ["Mwanza", "Shinyanga", "Simiyu", "Geita"],
+      "namePrefixes": ["Ma", "Ng", "Bu", "Shi"],
+      "commonNames": {
+        "female": ["Nyamizi", "Magreth", "Stella", "Neema", "Salome", "Pendo"],
+        "male": ["Masanja", "Ngugi", "Buluda", "Shija", "Maganga", "Kisaka"]
+      },
+      "stereotypes": [
+        "Hardworking farmers",
+        "Cotton growers",
+        "Dance competitors",
+        "Traditional medicine",
+        "Cattle keepers"
+      ],
+      "culturalTraits": [
+        "Bugobogobo dance competitions",
+        "Cotton farming",
+        "Traditional healers (Bafumu)",
+        "Cattle as wealth",
+        "Secret societies"
+      ],
+      "funFacts": [
+        "The Sukuma are Tanzania's largest ethnic group",
+        "Bugobogobo snake dance competitions draw crowds from across the region",
+        "Diamond mining has transformed parts of Sukumaland"
+      ],
+      "traditionalFood": {
+        "staples": ["Ugali (stiff porridge)", "Sweet potatoes", "Beans", "Fish"],
+        "beverages": ["Togwa (fermented drink)", "Local beer"],
+        "specialDishes": ["Dried fish", "Dagaa (small fish)", "Nyama choma"],
+        "description": "Sukuma cuisine features ugali with fish from Lake Victoria, beans, and sweet potatoes."
+      },
+      "traditionalDance": "Bugobogobo - competitive snake dance",
+      "religion": "Christianity, Traditional beliefs, Islam",
+      "language": {
+        "name": "Kisukuma",
+        "speakers": "~10 million",
+        "greeting": "Mwabukile?",
+        "greetingMeaning": "Did you wake up well?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Diamond Platnumz", "role": "Music Superstar", "wikipedia": "https://en.wikipedia.org/wiki/Diamond_Platnumz" }
+      ],
+      "description": "The Sukuma are Tanzania's largest tribe, known for cotton farming, competitive traditional dances, and producing East Africa's biggest music stars.",
+      "relatedTribes": ["nyamwezi", "haya", "zinza"]
+    },
+
+    {
+      "id": "tuareg",
+      "name": "Tuareg",
+      "slug": "tuareg",
+      "countries": ["ML", "NE", "DZ", "LY", "BF"],
+      "region": "Sahara Desert",
+      "population": "~3 million",
+      "populationPercent": "~10% (Mali/Niger)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 18.0, "lng": 5.0 },
+      "counties": ["Timbuktu", "Agadez", "Tamanrasset"],
+      "namePrefixes": ["Ag", "Ult", "El", "Mohamed"],
+      "commonNames": {
+        "female": ["Tata", "Amayas", "Tahara", "Fatimata", "Mariama"],
+        "male": ["Ag Mohamed", "Ibrahim", "Moussa", "Mano", "Abdallah"]
+      },
+      "stereotypes": [
+        "Blue people (indigo clothing)",
+        "Desert nomads",
+        "Fierce warriors",
+        "Matrilineal culture",
+        "Camel caravans"
+      ],
+      "culturalTraits": [
+        "Indigo clothing (tagelmoust)",
+        "Tifinagh script",
+        "Men wear veils (not women)",
+        "Matrilineal inheritance",
+        "Salt trade caravans"
+      ],
+      "funFacts": [
+        "Tuareg men, not women, cover their faces with veils (tagelmust)",
+        "Women own property and tents, passing them to daughters",
+        "The 'Blue People' name comes from indigo dye that stains their skin"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Dates", "Camel milk", "Goat meat"],
+        "beverages": ["Sweet tea (atay)", "Camel milk"],
+        "specialDishes": ["Tagella (sand-baked bread)", "Taguella", "Dried meat"],
+        "description": "Tuareg cuisine is adapted to desert life, featuring sand-baked bread, dates, and camel milk."
+      },
+      "traditionalDance": "Tende - drum and dance circle",
+      "religion": "Islam (Sunni) with pre-Islamic traditions",
+      "language": {
+        "name": "Tamashek",
+        "speakers": "~3 million",
+        "greeting": "Aw d-tewet?",
+        "greetingMeaning": "How are you?",
+        "family": "Berber (Afro-Asiatic)",
+        "writingSystem": "Tifinagh script"
+      },
+      "famousPeople": [
+        { "name": "Tinariwen", "role": "Desert Blues Band", "wikipedia": "https://en.wikipedia.org/wiki/Tinariwen" }
+      ],
+      "description": "The Tuareg are Saharan nomads known for indigo clothing, men's veils, matrilineal culture, and navigating ancient caravan routes across the desert.",
+      "relatedTribes": ["berber", "fulani", "songhai"]
     }
   ]
 }
