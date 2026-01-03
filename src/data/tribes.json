@@ -91,6 +91,54 @@
       "Many African naming systems encode birth order, time, circumstances, and family history",
       "Ethnic identities often transcend modern national borders drawn by colonial powers",
       "Africa's linguistic diversity is the highest of any continent"
+    ],
+    "CM": [
+      "Cameroon is called 'Africa in miniature' for its geographic and cultural diversity",
+      "Over 250 ethnic groups speak 280+ languages in Cameroon",
+      "The Bamileke are known for elaborate beadwork and powerful chieftaincies",
+      "Cameroonian names often reflect birth circumstances and family hopes"
+    ],
+    "ZW": [
+      "Zimbabwe is named after Great Zimbabwe, the largest ancient stone structure in Africa south of the Sahara",
+      "The Shona make up 80% of Zimbabwe's population and are master stone sculptors",
+      "Shona names carry deep meanings - 'Tendai' means 'be thankful', 'Tatenda' means 'we are grateful'",
+      "The mbira (thumb piano) is sacred to the Shona for communicating with ancestors"
+    ],
+    "ZM": [
+      "Zambia has 73 ethnic groups speaking over 70 languages",
+      "The Bemba are the largest group, known for the Ukusefya Pa Ng'wena ceremony",
+      "Zambian names often reflect family history - 'Mwamba' means 'rock' (strength)",
+      "The Tonga people near Victoria Falls are famous for their rain-calling ceremonies"
+    ],
+    "MW": [
+      "Malawi is called 'The Warm Heart of Africa' for its friendly people",
+      "The Chewa are the largest ethnic group, known for the Gule Wamkulu secret society",
+      "Chichewa greetings vary by time of day and show deep respect for elders",
+      "Malawian names often reflect circumstances of birth or parents' emotions"
+    ],
+    "AO": [
+      "Angola has over 90 ethnic groups, with Ovimbundu and Mbundu being the largest",
+      "The Kongo Kingdom once stretched across Angola, Congo, and DRC",
+      "Angolan names often blend Portuguese and African traditions",
+      "Traditional masks from Chokwe people are world-renowned for their artistry"
+    ],
+    "MZ": [
+      "Mozambique has 40+ ethnic groups, with Makua being the largest (35%)",
+      "Portuguese names are common, often combined with traditional African names",
+      "The Makonde are famous for their intricate wood carvings and masks",
+      "Timbila xylophone music is UNESCO-protected Mozambican heritage"
+    ],
+    "BW": [
+      "Botswana's Tswana people make up 79% of the population",
+      "The San (Bushmen) are among the oldest human populations on Earth",
+      "Setswana names often describe character traits or birth circumstances",
+      "Botswana is home to the Okavango Delta, the world's largest inland delta"
+    ],
+    "NA": [
+      "The Himba of Namibia are known for their red ochre-covered skin and hair",
+      "Namibia has 13 ethnic groups including Ovambo (50%), Kavango, and Herero",
+      "German colonial influence left German as one of Namibia's recognized languages",
+      "The Herero women's Victorian-era dress style emerged as cultural resistance"
     ]
   },
   "countries": [
@@ -7725,6 +7773,667 @@
         ],
         "communities": ["Refugee communities from conflict periods"],
         "associations": ["Burundian Diaspora Association"]
+      }
+    },
+
+    {
+      "id": "shona",
+      "name": "Shona",
+      "slug": "shona",
+      "countries": ["ZW", "MZ"],
+      "region": "Zimbabwe",
+      "population": "~14 million",
+      "populationPercent": "80% (Zimbabwe)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -17.83, "lng": 31.05 },
+      "counties": ["Harare", "Mashonaland", "Manicaland"],
+      "namePrefixes": ["Ru", "Ta", "Chi", "Mu", "Ti", "Ku"],
+      "commonNames": {
+        "female": ["Rudo", "Tatenda", "Chiedza", "Munashe", "Tinotenda", "Kudakwashe", "Nyasha", "Tariro", "Rumbidzai", "Tendai"],
+        "male": ["Tapiwa", "Tinashe", "Kudakwashe", "Tendai", "Tatenda", "Takudzwa", "Tafadzwa", "Farai", "Rumbidzai", "Ngoni"]
+      },
+      "stereotypes": [
+        "Master stone sculptors",
+        "Great Zimbabwe builders",
+        "Mbira musicians",
+        "Spiritual traditions",
+        "Agricultural expertise",
+        "Entrepreneurial"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Stone sculptors and artists",
+          "Family providers",
+          "Spiritual leaders",
+          "Cattle owners"
+        ],
+        "female": [
+          "Agricultural workers",
+          "Pottery makers",
+          "Homemakers",
+          "Market traders"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed cattle, carved stone, and led spiritual ceremonies. Elders made community decisions.",
+          "female": "Women farmed, made pottery, and maintained households. Some were spirit mediums."
+        },
+        "modern": {
+          "male": "Modern Shona men are in all professions. Stone sculpture is internationally recognized.",
+          "female": "Shona women are in education, business, and politics while maintaining cultural traditions."
+        }
+      },
+      "culturalTraits": [
+        "Great Zimbabwe architecture",
+        "Shona sculpture (world-famous)",
+        "Mbira music for ancestor communication",
+        "Spirit possession (svikiro)",
+        "Totemic clan system (mitupo)",
+        "Bride wealth (roora/lobola)"
+      ],
+      "funFacts": [
+        "Great Zimbabwe was built without mortar - stones were precisely cut to fit together",
+        "Shona sculpture is sold in galleries worldwide and is Zimbabwe's top cultural export",
+        "The mbira has 22-28 metal keys and is used to call ancestral spirits",
+        "Shona totems (mitupo) prevent marriage between people of the same clan",
+        "The name Zimbabwe means 'house of stone' in Shona"
+      ],
+      "traditionalFood": {
+        "staples": ["Sadza (maize porridge)", "Vegetables (muriwo)", "Beef", "Chicken"],
+        "beverages": ["Maheu (fermented maize drink)", "Chibuku (sorghum beer)"],
+        "specialDishes": ["Nyama (meat stews)", "Matemba (dried fish)", "Maputi (popcorn)"],
+        "description": "Shona cuisine centers on sadza (thick maize porridge) eaten with vegetable relishes and meat."
+      },
+      "traditionalDance": "Mbira ceremonies with singing and dancing",
+      "religion": "Christianity, Traditional ancestor worship (Mwari)",
+      "history": {
+        "origin": "The Shona are Bantu people who built Great Zimbabwe (1100-1450 AD), one of Africa's greatest ancient civilizations.",
+        "colonialEra": "British colonization (Rhodesia) displaced Shona from fertile lands. Liberation wars followed.",
+        "independence": "Zimbabwe's independence (1980) brought majority Shona rule under Robert Mugabe.",
+        "keyEvents": ["Great Zimbabwe (1100-1450)", "Rozvi Empire (1684-1834)", "British colonization (1890)", "Liberation war (1964-1979)", "Independence (1980)"]
+      },
+      "language": {
+        "name": "Shona",
+        "speakers": "~14 million",
+        "greeting": "Mhoro",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Makadii?", "meaning": "How are you?" },
+          { "phrase": "Ndiripo", "meaning": "I am fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Maita basa", "meaning": "Thank you (for work)" },
+          { "phrase": "Ndinonzi...", "meaning": "My name is..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Joram Mariga", "role": "Father of Shona Sculpture", "wikipedia": "https://en.wikipedia.org/wiki/Joram_Mariga" },
+        { "name": "Thomas Mapfumo", "role": "Chimurenga Music Pioneer", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mapfumo" },
+        { "name": "Oliver Mtukudzi", "role": "Music Legend", "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Mtukudzi" }
+      ],
+      "description": "The Shona built Great Zimbabwe, one of Africa's greatest civilizations, and are known for stone sculpture, mbira music, and rich spiritual traditions.",
+      "relatedTribes": ["ndebele", "tswana", "venda"],
+      "diaspora": {
+        "globalPopulation": "~500,000",
+        "majorCountries": ["South Africa", "UK", "USA", "Australia"],
+        "breakdown": [
+          { "country": "South Africa", "population": "~200,000", "cities": ["Johannesburg"] },
+          { "country": "UK", "population": "~100,000", "cities": ["London", "Birmingham"] }
+        ],
+        "communities": ["Large diaspora due to economic migration"],
+        "associations": ["Zimbabwe Diaspora Network"]
+      }
+    },
+
+    {
+      "id": "ndebele",
+      "name": "Ndebele",
+      "slug": "ndebele",
+      "countries": ["ZW", "ZA"],
+      "region": "Zimbabwe, South Africa",
+      "population": "~3 million",
+      "populationPercent": "15% (Zimbabwe)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -20.15, "lng": 28.58 },
+      "counties": ["Matabeleland", "Bulawayo", "Limpopo (SA)"],
+      "namePrefixes": ["Si", "No", "Nku", "Tho", "Bu", "Ndo"],
+      "commonNames": {
+        "female": ["Sithembile", "Nokuthula", "Nkululeko", "Thobeka", "Busisiwe", "Nomusa", "Sibongile", "Nonhlanhla", "Zanele", "Lindiwe"],
+        "male": ["Sibusiso", "Ndaba", "Themba", "Bongani", "Siphiwe", "Nkosana", "Thabani", "Dumisani", "Mandla", "Lwazi"]
+      },
+      "stereotypes": [
+        "Geometric house painting",
+        "Colorful beadwork",
+        "Warrior heritage",
+        "Strong cultural identity",
+        "Proud history",
+        "Artistic excellence"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Warriors historically",
+          "Cattle owners",
+          "Family heads",
+          "Community leaders"
+        ],
+        "female": [
+          "House painters (famous art)",
+          "Beadwork masters",
+          "Homemakers",
+          "Cultural keepers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors and cattle herders under the Matabele kingdom. They protected the homestead.",
+          "female": "Women created the famous painted houses and beadwork. They were the artistic center of Ndebele culture."
+        },
+        "modern": {
+          "male": "Modern Ndebele men are in professions while maintaining cultural identity.",
+          "female": "Ndebele women's art is globally famous. Many are professional artists while others are in various careers."
+        }
+      },
+      "culturalTraits": [
+        "Geometric house murals (world-famous)",
+        "Neck rings and brass jewelry",
+        "Colorful beadwork with meaning",
+        "Strong clan identity",
+        "Izibongo (praise poetry)",
+        "Initiation ceremonies"
+      ],
+      "funFacts": [
+        "Ndebele house paintings were originally symbols of resistance against apartheid",
+        "The geometric patterns have specific meanings - some are maps, others tell stories",
+        "Ndebele beadwork colors indicate a woman's marital status and age",
+        "The Ndebele broke away from the Zulu under King Mzilikazi in the 1820s",
+        "Ndebele women can spend months painting a single house"
+      ],
+      "traditionalFood": {
+        "staples": ["Isitshwala (maize porridge)", "Umhluzi (meat gravy)", "Amasi (sour milk)"],
+        "beverages": ["Umqombothi (sorghum beer)", "Amasi"],
+        "specialDishes": ["Inkobe (maize and beans)", "Inyama yenhloko (head meat)"],
+        "description": "Ndebele cuisine is similar to Zulu food, centered on isitshwala (thick porridge) with meat and vegetables."
+      },
+      "traditionalDance": "Isitshikitsha - traditional dance with colorful regalia",
+      "religion": "Christianity, Traditional ancestor worship",
+      "history": {
+        "origin": "The Ndebele split from the Zulu Kingdom under Mzilikazi around 1820, migrating north to establish the Matabele Kingdom.",
+        "colonialEra": "Cecil Rhodes' British South Africa Company conquered the Ndebele in 1893-1896, ending the kingdom.",
+        "independence": "Post-independence Zimbabwe saw Gukurahundi massacres (1983-87) targeting Ndebele areas.",
+        "keyEvents": ["Split from Zulu (1820s)", "Matabele Kingdom established", "Colonial conquest (1893)", "Zimbabwe independence (1980)", "Gukurahundi (1983-87)"]
+      },
+      "language": {
+        "name": "isiNdebele",
+        "speakers": "~3 million",
+        "greeting": "Salibonani",
+        "greetingMeaning": "Hello (plural/respectful)",
+        "additionalGreetings": [
+          { "phrase": "Linjani?", "meaning": "How are you?" },
+          { "phrase": "Sikhona", "meaning": "We are fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ngiyabonga", "meaning": "Thank you" },
+          { "phrase": "Ibizo lami ngu...", "meaning": "My name is..." }
+        ],
+        "family": "Nguni (Bantu)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Esther Mahlangu", "role": "World-Famous Artist", "wikipedia": "https://en.wikipedia.org/wiki/Esther_Mahlangu" },
+        { "name": "King Mzilikazi", "role": "Founder of Matabele Kingdom", "wikipedia": "https://en.wikipedia.org/wiki/Mzilikazi" },
+        { "name": "Joshua Nkomo", "role": "Father of Zimbabwe", "wikipedia": "https://en.wikipedia.org/wiki/Joshua_Nkomo" }
+      ],
+      "description": "The Ndebele are known worldwide for their stunning geometric house paintings and beadwork, with a proud warrior heritage from the Matabele Kingdom.",
+      "relatedTribes": ["zulu", "shona", "swazi"],
+      "diaspora": {
+        "globalPopulation": "~200,000",
+        "majorCountries": ["South Africa", "UK", "Botswana"],
+        "breakdown": [
+          { "country": "South Africa", "population": "~1 million", "cities": ["Pretoria", "Johannesburg"] }
+        ],
+        "communities": ["Significant South African Ndebele population"],
+        "associations": ["Ndebele Cultural Association"]
+      }
+    },
+
+    {
+      "id": "bemba",
+      "name": "Bemba",
+      "slug": "bemba",
+      "countries": ["ZM", "CD", "TZ"],
+      "region": "Zambia (Northern)",
+      "population": "~6 million",
+      "populationPercent": "21% (Zambia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -10.45, "lng": 31.41 },
+      "counties": ["Northern Province", "Luapula", "Copperbelt"],
+      "namePrefixes": ["Chi", "Mu", "Bu", "Ka", "Ng", "Cha"],
+      "commonNames": {
+        "female": ["Chilufya", "Mutale", "Bwalya", "Kabwe", "Ng'andu", "Chabala", "Chanda", "Mulenga", "Nsama", "Chishimba"],
+        "male": ["Chilufya", "Mutale", "Bwalya", "Kabwe", "Ng'andu", "Chanda", "Mulenga", "Nsama", "Chishimba", "Kasonde"]
+      },
+      "stereotypes": [
+        "Zambia's most influential tribe",
+        "Political power",
+        "Matrilineal society",
+        "Agricultural skills",
+        "Strong cultural identity",
+        "Hospitality"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Political leaders",
+          "Chiefs",
+          "Hunters historically",
+          "Urban workers"
+        ],
+        "female": [
+          "Land inheritors (matrilineal)",
+          "Farmers",
+          "Traders",
+          "Family decision-makers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors and hunters. However, inheritance and succession passed through the mother's line.",
+          "female": "Women held land rights and children belonged to the mother's clan. They farmed and had significant family authority."
+        },
+        "modern": {
+          "male": "Modern Bemba men are in all professions, with strong presence in politics and business.",
+          "female": "Bemba women maintain matrilineal traditions while being active in professions and politics."
+        }
+      },
+      "culturalTraits": [
+        "Matrilineal inheritance",
+        "Ukusefya Pa Ng'wena ceremony",
+        "Strong chieftaincy (Paramount Chief Chitimukulu)",
+        "Slash-and-burn farming (chitemene)",
+        "Fish smoking tradition",
+        "Drumming and dance"
+      ],
+      "funFacts": [
+        "Bemba is Zambia's most widely spoken local language",
+        "The Ukusefya Pa Ng'wena ceremony celebrates the Bemba migration and is a major tourist attraction",
+        "Children belong to their mother's clan and inherit from maternal uncles",
+        "The Chitimukulu is one of Africa's most powerful traditional rulers",
+        "Bemba people originally migrated from the Luba Kingdom in present-day DRC"
+      ],
+      "traditionalFood": {
+        "staples": ["Nshima (maize porridge)", "Kapenta (dried fish)", "Vegetables (ifisashi)", "Beans"],
+        "beverages": ["Munkoyo (fermented root drink)", "Chibwantu (maize drink)"],
+        "specialDishes": ["Ifisashi (vegetables in peanut sauce)", "Chikanda (African polony)", "Inswa (flying ants)"],
+        "description": "Bemba cuisine features nshima with relishes including fish from lakes and ifisashi (greens in groundnut)."
+      },
+      "traditionalDance": "Kalela - social dance with drums",
+      "religion": "Christianity (Catholic, Protestant), Traditional beliefs",
+      "history": {
+        "origin": "The Bemba migrated from the Luba-Lunda empires in the DRC around the 17th century, establishing the Bemba Kingdom.",
+        "colonialEra": "British Northern Rhodesia incorporated Bemba territory. Many Bemba worked in the Copperbelt mines.",
+        "independence": "Post-independence, Bemba people have been politically dominant in Zambia.",
+        "keyEvents": ["Migration from Luba-Lunda (1600s)", "Bemba Kingdom established", "Colonial era mining", "Zambia independence (1964)"]
+      },
+      "language": {
+        "name": "Chibemba",
+        "speakers": "~6 million",
+        "greeting": "Muli shani",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Ndifye bwino", "meaning": "I am fine" },
+          { "phrase": "Shani mukwai?", "meaning": "How are you (respectful)?" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Natotela", "meaning": "Thank you" },
+          { "phrase": "Ine nine...", "meaning": "My name is..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Kenneth Kaunda", "role": "First President of Zambia", "wikipedia": "https://en.wikipedia.org/wiki/Kenneth_Kaunda" },
+        { "name": "Michael Sata", "role": "5th President of Zambia", "wikipedia": "https://en.wikipedia.org/wiki/Michael_Sata" }
+      ],
+      "description": "The Bemba are Zambia's largest and most politically influential ethnic group, known for their matrilineal society and the vibrant Ukusefya Pa Ng'wena ceremony.",
+      "relatedTribes": ["luba", "lunda", "tonga"],
+      "diaspora": {
+        "globalPopulation": "~100,000",
+        "majorCountries": ["South Africa", "UK", "USA"],
+        "breakdown": [
+          { "country": "South Africa", "population": "~30,000", "cities": ["Johannesburg"] }
+        ],
+        "communities": ["Growing diaspora communities"],
+        "associations": ["Zambia Association"]
+      }
+    },
+
+    {
+      "id": "himba",
+      "name": "Himba",
+      "slug": "himba",
+      "countries": ["NA", "AO"],
+      "region": "Namibia (Kunene)",
+      "population": "~50,000",
+      "populationPercent": "2% (Namibia)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -18.05, "lng": 13.83 },
+      "counties": ["Kunene Region", "Southern Angola"],
+      "namePrefixes": ["Ka", "Mu", "Vi", "Ua", "Tji"],
+      "commonNames": {
+        "female": ["Kavari", "Muharukua", "Vistorina", "Uahimisa", "Tjiposa", "Katjira", "Muhimbua", "Venoo", "Kahepupa", "Nguzu"],
+        "male": ["Katjimune", "Muhimba", "Vekuii", "Uarihapa", "Tjikuua", "Muharukua", "Kapika", "Ndunge", "Vikuii", "Muhepuira"]
+      },
+      "stereotypes": [
+        "Red ochre people",
+        "Traditional pastoralists",
+        "Unique beauty standards",
+        "Semi-nomadic herders",
+        "Preserved traditions",
+        "Cattle wealth"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Cattle herders",
+          "Away from home often (herding)",
+          "Decision makers",
+          "External relations"
+        ],
+        "female": [
+          "Red ochre body covering",
+          "Elaborate hairstyles",
+          "Village life managers",
+          "Milk and food processing"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men spend most time away herding cattle. They handle external relations and major decisions.",
+          "female": "Women manage village life, apply the distinctive red ochre paste, and maintain elaborate hairstyles indicating status."
+        },
+        "modern": {
+          "male": "Many Himba men maintain traditional herding while some engage with tourism and modern economy.",
+          "female": "Himba women preserve traditions but face pressures from modernization. Some access education."
+        }
+      },
+      "culturalTraits": [
+        "Red ochre (otjize) body covering",
+        "Elaborate women's hairstyles indicating life stage",
+        "Holy fire (okuruuo) sacred tradition",
+        "Cattle central to life",
+        "Bilateral descent system",
+        "Preserved traditions despite modernity"
+      ],
+      "funFacts": [
+        "Himba women apply red ochre paste (otjize) daily - it protects skin and is considered beautiful",
+        "They rarely use water for bathing - instead using smoke baths and the ochre paste",
+        "Hairstyles indicate a woman's life stage - from childhood to married with children",
+        "The holy fire must never go out - it connects the living to ancestors",
+        "Despite tourism, many Himba maintain traditional semi-nomadic life"
+      ],
+      "traditionalFood": {
+        "staples": ["Sour milk (omaere)", "Maize porridge", "Goat meat", "Beef (ceremonial)"],
+        "beverages": ["Sour milk", "Otombo (butter-fat drink)"],
+        "specialDishes": ["Blood mixed with milk", "Fermented butter"],
+        "description": "Himba diet is primarily milk-based from their cattle. Meat is eaten on special occasions."
+      },
+      "traditionalDance": "Traditional dances around the holy fire",
+      "religion": "Traditional beliefs (ancestor worship, holy fire)",
+      "history": {
+        "origin": "The Himba split from the Herero in the 19th century, moving to remote Kunene and maintaining traditional ways.",
+        "colonialEra": "German and South African colonial rule had limited impact on remote Himba areas.",
+        "independence": "Post-independence Namibia has struggled to balance development with Himba cultural preservation.",
+        "keyEvents": ["Split from Herero (1800s)", "Isolation in Kunene", "Namibia independence (1990)", "Tourism development"]
+      },
+      "language": {
+        "name": "OtjiHimba",
+        "speakers": "~50,000",
+        "greeting": "Moro",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Wa penduka nawa?", "meaning": "Did you sleep well?" },
+          { "phrase": "Nda penduka nawa", "meaning": "I slept well" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Okuhepa", "meaning": "Thank you" }
+        ],
+        "family": "Bantu (Herero subgroup)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Vekuii Rukoro", "role": "Herero/Himba Chief", "wikipedia": "https://en.wikipedia.org/wiki/Vekuii_Rukoro" }
+      ],
+      "description": "The Himba are semi-nomadic pastoralists famous for their distinctive red ochre-covered skin and hair, maintaining one of Africa's most visually striking traditional cultures.",
+      "relatedTribes": ["herero", "ovambo", "san"],
+      "diaspora": {
+        "globalPopulation": "~5,000",
+        "majorCountries": ["Angola", "Namibia cities"],
+        "breakdown": [
+          { "country": "Namibia (urban)", "population": "~3,000", "cities": ["Windhoek", "Opuwo"] }
+        ],
+        "communities": ["Minimal diaspora - most remain in traditional areas"],
+        "associations": ["Himba Cultural Association"]
+      }
+    },
+
+    {
+      "id": "bamileke",
+      "name": "Bamileke",
+      "slug": "bamileke",
+      "countries": ["CM"],
+      "region": "Cameroon (Western Highlands)",
+      "population": "~8 million",
+      "populationPercent": "24% (Cameroon)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.48, "lng": 10.42 },
+      "counties": ["West Region", "Ouest", "Dschang", "Bafoussam"],
+      "namePrefixes": ["Fo", "Ngu", "Tchi", "Mba", "Kam", "Djo"],
+      "commonNames": {
+        "female": ["Nguemaleu", "Tchinda", "Djomou", "Kamdem", "Ngueguim", "Fokam", "Noubissi", "Kengne", "Momo", "Djukem"],
+        "male": ["Fotso", "Nganou", "Tchana", "Kamga", "Djomou", "Nguemo", "Tchouamo", "Kenfack", "Momo", "Djoumessi"]
+      },
+      "stereotypes": [
+        "Business acumen",
+        "Entrepreneurial",
+        "Strong community",
+        "Elaborate beadwork",
+        "Powerful chieftaincies",
+        "Hard workers"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Business leaders",
+          "Community chiefs",
+          "Farm owners",
+          "Family heads"
+        ],
+        "female": [
+          "Market traders",
+          "Agricultural workers",
+          "Homemakers",
+          "Craftswomen"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men led chieftaincies (fondoms), controlled land, and managed external relations. Chiefs could have many wives.",
+          "female": "Women farmed, traded in markets, and produced crafts. Some queen mothers had significant power."
+        },
+        "modern": {
+          "male": "Modern Bamileke men are prominent in business across Cameroon and Africa.",
+          "female": "Bamileke women are strong market traders and increasingly in professions and education."
+        }
+      },
+      "culturalTraits": [
+        "Fondom (chieftaincy) system",
+        "Elaborate beaded thrones and masks",
+        "Tontines (rotating savings groups)",
+        "Strong community solidarity",
+        "Ancestor veneration",
+        "Entrepreneurial culture"
+      ],
+      "funFacts": [
+        "Bamileke are called 'the Jews of Africa' for their business success and community solidarity",
+        "Their beaded elephant masks sell for thousands of dollars at international auctions",
+        "Bamileke invented 'tontines' - rotating credit associations now used worldwide",
+        "A Bamileke chief may have dozens of wives, each with a specific role",
+        "They resisted French colonization fiercely in the 1950s-60s"
+      ],
+      "traditionalFood": {
+        "staples": ["Koki (bean pudding)", "Ndole (bitter leaf stew)", "Plantains", "Cocoyam"],
+        "beverages": ["Palm wine", "Raffia wine"],
+        "specialDishes": ["Nkui (yellow soup)", "Poulet DG (Director General chicken)", "Eru (vegetable dish)"],
+        "description": "Bamileke cuisine features koki (steamed bean cakes in banana leaves) and ndole, now popular across Cameroon."
+      },
+      "traditionalDance": "Royal dances with elaborate masks and costumes",
+      "religion": "Christianity (Catholic, Protestant), Traditional beliefs",
+      "history": {
+        "origin": "The Bamileke have lived in the Western Highlands for centuries, developing powerful chieftaincies (fondoms).",
+        "colonialEra": "Fierce resistance to French rule in the UPC rebellion (1955-1971) led to brutal suppression.",
+        "independence": "Post-independence, Bamileke have faced political marginalization despite economic success.",
+        "keyEvents": ["Fondom system development", "German colonial contact (1884)", "French rule", "UPC rebellion (1955-1971)", "Modern business expansion"]
+      },
+      "language": {
+        "name": "Bamileke languages (Ghomala, Yemba, Fe'fe')",
+        "speakers": "~8 million",
+        "greeting": "Mbongéh",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "O la'a?", "meaning": "How are you?" },
+          { "phrase": "Mə la'a", "meaning": "I am fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Aku mbwé", "meaning": "Thank you" }
+        ],
+        "family": "Grassfields Bantu",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Paul Biya", "role": "President of Cameroon (part Bamileke)", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Biya" },
+        { "name": "Manu Dibango", "role": "World-Famous Musician", "wikipedia": "https://en.wikipedia.org/wiki/Manu_Dibango" }
+      ],
+      "description": "The Bamileke of Cameroon are known for their powerful chieftaincies, elaborate beadwork, and exceptional business acumen across Africa.",
+      "relatedTribes": ["bamoun", "tikar", "widikum"],
+      "diaspora": {
+        "globalPopulation": "~500,000",
+        "majorCountries": ["France", "USA", "Belgium", "Germany"],
+        "breakdown": [
+          { "country": "France", "population": "~150,000", "cities": ["Paris", "Lyon"] },
+          { "country": "USA", "population": "~50,000", "cities": ["Washington DC", "New York"] }
+        ],
+        "communities": ["Strong business networks in diaspora"],
+        "associations": ["Bamileke Community Association"]
+      }
+    },
+
+    {
+      "id": "chewa",
+      "name": "Chewa",
+      "slug": "chewa",
+      "countries": ["MW", "ZM", "MZ"],
+      "region": "Malawi (Central)",
+      "population": "~11 million",
+      "populationPercent": "35% (Malawi)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -13.97, "lng": 33.79 },
+      "counties": ["Central Region", "Lilongwe", "Dowa", "Kasungu"],
+      "namePrefixes": ["Chi", "Mwa", "Ka", "Cha", "Ndo", "Nkha"],
+      "commonNames": {
+        "female": ["Chimwemwe", "Mwayi", "Kondwani", "Chisomo", "Ndoli", "Tawina", "Thoko", "Yasinta", "Loveness", "Tiyanjane"],
+        "male": ["Chimwemwe", "Mwawi", "Kondwani", "Chisomo", "Ndaona", "Khama", "Chikondi", "Dalitso", "Blessings", "Gift"]
+      },
+      "stereotypes": [
+        "Warm hospitality",
+        "Gule Wamkulu secret society",
+        "Agricultural expertise",
+        "Matrilineal society",
+        "Peaceful nature",
+        "Strong traditions"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Gule Wamkulu dancers",
+          "Village heads",
+          "Farmers",
+          "Migrants to cities"
+        ],
+        "female": [
+          "Land inheritors (matrilineal)",
+          "Farmers",
+          "Market traders",
+          "Family center"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men performed Gule Wamkulu dances and were village heads, but inheritance passed through women.",
+          "female": "Women owned land and children belonged to the mother's lineage. They were agricultural workers."
+        },
+        "modern": {
+          "male": "Modern Chewa men are in all professions while maintaining cultural practices.",
+          "female": "Chewa women maintain matrilineal traditions while engaging in education and professions."
+        }
+      },
+      "culturalTraits": [
+        "Gule Wamkulu (masked dance - UNESCO heritage)",
+        "Matrilineal inheritance",
+        "Paramount Chief Kalonga",
+        "Initiation ceremonies",
+        "Strong clan identity",
+        "Warm hospitality culture"
+      ],
+      "funFacts": [
+        "Gule Wamkulu is UNESCO Intangible Heritage - dancers wear elaborate masks representing spirits",
+        "The masks are secret and women traditionally cannot see them being made",
+        "Malawi is called 'The Warm Heart of Africa' largely due to Chewa hospitality",
+        "Children take their mother's clan name and inherit from maternal uncles",
+        "The Chewa Empire (Maravi) once stretched across Malawi, Zambia, and Mozambique"
+      ],
+      "traditionalFood": {
+        "staples": ["Nsima (maize porridge)", "Ndiwo (relish)", "Chambo (Lake Malawi fish)", "Beans"],
+        "beverages": ["Thobwa (fermented drink)", "Kachasu (local spirit)"],
+        "specialDishes": ["Chambo fish", "Ntochi (bananas)", "Mandasi (fried dough)", "Dried fish with vegetables"],
+        "description": "Chewa cuisine features nsima (thick maize porridge) with ndiwo relishes, often fish from Lake Malawi."
+      },
+      "traditionalDance": "Gule Wamkulu - UNESCO-protected masked dance",
+      "religion": "Christianity, Traditional beliefs (Gule Wamkulu)",
+      "history": {
+        "origin": "The Chewa are part of the Maravi people who established a vast empire in the 16th-17th centuries.",
+        "colonialEra": "British Nyasaland incorporated Chewa territories. Indirect rule through chiefs preserved some traditions.",
+        "independence": "Malawi independence (1964) under Hastings Banda, himself Chewa. Chewa remain politically important.",
+        "keyEvents": ["Maravi Empire (1500s-1700s)", "British colonial rule", "Malawi independence (1964)", "Cultural revival"]
+      },
+      "language": {
+        "name": "Chichewa (Chinyanja)",
+        "speakers": "~15 million",
+        "greeting": "Muli bwanji?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Ndili bwino", "meaning": "I am fine" },
+          { "phrase": "Zikomo", "meaning": "Thank you" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Zikomo kwambiri", "meaning": "Thank you very much" },
+          { "phrase": "Dzina langa ndi...", "meaning": "My name is..." }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Hastings Kamuzu Banda", "role": "First President of Malawi", "wikipedia": "https://en.wikipedia.org/wiki/Hastings_Kamuzu_Banda" },
+        { "name": "Joyce Banda", "role": "First Female African Union Chair", "wikipedia": "https://en.wikipedia.org/wiki/Joyce_Banda" }
+      ],
+      "description": "The Chewa are Malawi's largest ethnic group, known for the UNESCO-protected Gule Wamkulu masked dance and the warm hospitality that earned Malawi its nickname.",
+      "relatedTribes": ["nyanja", "tumbuka", "yao"],
+      "diaspora": {
+        "globalPopulation": "~200,000",
+        "majorCountries": ["South Africa", "UK", "USA"],
+        "breakdown": [
+          { "country": "South Africa", "population": "~100,000", "cities": ["Johannesburg"] }
+        ],
+        "communities": ["Growing diaspora from economic migration"],
+        "associations": ["Malawi Diaspora Association"]
       }
     }
   ]
