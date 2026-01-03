@@ -45,32 +45,40 @@ const Index = () => {
           // Landing view
           <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in">
             <div className="mb-6 sm:mb-8">
-              {/* Hero with floating flags */}
+              {/* Hero with floating flag based on selected country */}
               <div className="relative inline-block">
-                {/* Floating country flags behind logo */}
+                {/* Floating flags behind logo - shows selected country flag */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  {['🇰🇪', '🇳🇬', '🇬🇭', '🇿🇦', '🇪🇹', '🇹🇿', '🇺🇬', '🇨🇩', '🇸🇳', '🇪🇷'].map((flag, i) => {
-                    const angle = (i / 10) * 2 * Math.PI;
-                    const radius = 70;
-                    const x = Math.cos(angle) * radius;
-                    const y = Math.sin(angle) * radius;
-                    return (
-                      <span
-                        key={flag}
-                        className="absolute text-2xl sm:text-3xl opacity-40 animate-pulse"
-                        style={{
-                          transform: `translate(${x}px, ${y}px)`,
-                          animationDelay: `${i * 0.2}s`,
-                        }}
-                      >
-                        {flag}
-                      </span>
-                    );
-                  })}
+                  {(() => {
+                    const countryFlags: Record<string, string> = {
+                      'KE': '🇰🇪', 'NG': '🇳🇬', 'GH': '🇬🇭', 'ZA': '🇿🇦', 'ET': '🇪🇹',
+                      'TZ': '🇹🇿', 'UG': '🇺🇬', 'CD': '🇨🇩', 'SN': '🇸🇳', 'ER': '🇪🇷',
+                      'RW': '🇷🇼', 'SD': '🇸🇩', 'CM': '🇨🇲', 'CI': '🇨🇮', 'ML': '🇲🇱'
+                    };
+                    const selectedFlag = countryFlags[countryQuery] || '🇰🇪';
+                    return Array.from({ length: 8 }).map((_, i) => {
+                      const angle = (i / 8) * 2 * Math.PI;
+                      const radius = 70;
+                      const x = Math.cos(angle) * radius;
+                      const y = Math.sin(angle) * radius;
+                      return (
+                        <span
+                          key={i}
+                          className="absolute text-2xl sm:text-3xl opacity-30 animate-pulse"
+                          style={{
+                            transform: `translate(${x}px, ${y}px)`,
+                            animationDelay: `${i * 0.15}s`,
+                          }}
+                        >
+                          {selectedFlag}
+                        </span>
+                      );
+                    });
+                  })()}
                 </div>
                 <img 
                   src={logo} 
-                  alt="TribeGuess - Kenyan Tribe Guesser Logo" 
+                  alt="TribeGuess - Tribe Guesser Logo" 
                   className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle"
                   width={128}
                   height={128}
