@@ -615,23 +615,99 @@ const TribePage = () => {
                 <section className="border-t border-border pt-6">
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-3">Related Tribes</h2>
                   <div className="grid sm:grid-cols-2 gap-3">
-                    {relatedTribesData.map((related) => related && (
-                      <Link
-                        key={related.id}
-                        to={`/learn/${related.slug}`}
-                        className="p-4 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                              {related.name}
-                            </p>
-                            <p className="text-xs text-muted-foreground">{related.region}</p>
+                    {relatedTribesData.map((related) => {
+                      if (!related) return null;
+                      
+                      // Calculate similarities between current tribe and related tribe
+                      const similarities: string[] = [];
+                      
+                      // Check same country
+                      const currentCountries = (tribe as any).countries || [];
+                      const relatedCountries = (related as any).countries || [];
+                      const sharedCountries = currentCountries.filter((c: string) => relatedCountries.includes(c));
+                      if (sharedCountries.length > 0) {
+                        similarities.push('Same Region');
+                      }
+                      
+                      // Check language family
+                      const currentLang = (tribe as any).language?.family;
+                      const relatedLang = (related as any).language?.family;
+                      if (currentLang && relatedLang && currentLang === relatedLang) {
+                        similarities.push('Same Language Family');
+                      }
+                      
+                      // Check religion
+                      const currentReligion = (tribe as any).religion;
+                      const relatedReligion = (related as any).religion;
+                      if (currentReligion && relatedReligion) {
+                        const getReligionType = (r: string) => {
+                          if (r.toLowerCase().includes('islam') || r.toLowerCase().includes('muslim')) return 'islam';
+                          if (r.toLowerCase().includes('christian') || r.toLowerCase().includes('orthodox')) return 'christian';
+                          if (r.toLowerCase().includes('traditional')) return 'traditional';
+                          return null;
+                        };
+                        const currType = getReligionType(currentReligion);
+                        const relType = getReligionType(relatedReligion);
+                        if (currType && relType && currType === relType) {
+                          similarities.push('Similar Religion');
+                        }
+                      }
+                      
+                      // Check for shared stereotypes
+                      const currentStereotypes = tribe.stereotypes || [];
+                      const relatedStereotypes = related.stereotypes || [];
+                      const sharedStereotypes = currentStereotypes.filter((s: string) => 
+                        relatedStereotypes.some((rs: string) => 
+                          s.toLowerCase().includes(rs.toLowerCase().split(' ')[0]) ||
+                          rs.toLowerCase().includes(s.toLowerCase().split(' ')[0])
+                        )
+                      );
+                      if (sharedStereotypes.length > 0) {
+                        similarities.push('Cultural Ties');
+                      }
+                      
+                      // Check neighboring regions
+                      if (tribe.region && related.region) {
+                        const tribeRegionWords = tribe.region.toLowerCase().split(/[\s,()]+/);
+                        const relatedRegionWords = related.region.toLowerCase().split(/[\s,()]+/);
+                        const hasRegionOverlap = tribeRegionWords.some((w: string) => 
+                          w.length > 3 && relatedRegionWords.includes(w)
+                        );
+                        if (hasRegionOverlap && !similarities.includes('Same Region')) {
+                          similarities.push('Neighboring Peoples');
+                        }
+                      }
+                      
+                      return (
+                        <Link
+                          key={related.id}
+                          to={`/learn/${related.slug}`}
+                          className="p-4 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors group"
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <div>
+                              <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                                {related.name}
+                              </p>
+                              <p className="text-xs text-muted-foreground">{related.region}</p>
+                            </div>
+                            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
                           </div>
-                          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
-                        </div>
-                      </Link>
-                    ))}
+                          {similarities.length > 0 && (
+                            <div className="flex flex-wrap gap-1.5 mt-2">
+                              {similarities.slice(0, 3).map((sim, i) => (
+                                <span 
+                                  key={i} 
+                                  className="px-2 py-0.5 text-[10px] bg-primary/10 text-primary rounded-full font-medium"
+                                >
+                                  {sim}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </section>
               )}
