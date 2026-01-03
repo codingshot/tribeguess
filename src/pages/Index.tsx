@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { GuessForm } from '@/components/GuessForm';
@@ -6,7 +5,7 @@ import { TribeResultCard } from '@/components/TribeResultCard';
 import { detectTribe } from '@/lib/tribeDetection';
 import logo from '@/assets/logo.png';
 const Index = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const nameQuery = searchParams.get('name') || '';
   const timeQuery = searchParams.get('time') || '';
   const regionQuery = searchParams.get('region') || '';
@@ -14,8 +13,15 @@ const Index = () => {
   const personalityQuery = searchParams.get('personality') || '';
   const countryQuery = searchParams.get('country') || 'KE';
 
-  // Track selected country from form - initialize with URL param or default
-  const [selectedCountry, setSelectedCountry] = useState<string>(countryQuery);
+  // Use country from URL directly - no local state needed
+  const selectedCountry = countryQuery;
+
+  // Handler to update country in URL
+  const handleCountryChange = (newCountry: string) => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set('country', newCountry);
+    setSearchParams(newParams);
+  };
 
   // Country data with adjectives and flags
   const countryData: Record<string, {
@@ -115,7 +121,7 @@ const Index = () => {
               </p>
             </div>
             
-            <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} onCountryChange={setSelectedCountry} />
+            <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} onCountryChange={handleCountryChange} />
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
