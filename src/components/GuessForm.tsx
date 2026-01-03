@@ -10,6 +10,7 @@ interface GuessFormProps {
   initialBuild?: string;
   initialPersonality?: string;
   initialCountry?: string;
+  onCountryChange?: (country: string) => void;
 }
 
 const timeOptions = [
@@ -54,7 +55,8 @@ export function GuessForm({
   initialRegion = '',
   initialBuild = '',
   initialPersonality = '',
-  initialCountry = 'KE'
+  initialCountry = 'KE',
+  onCountryChange
 }: GuessFormProps) {
   const [name, setName] = useState(initialName);
   const [timeOfBirth, setTimeOfBirth] = useState(initialTime);
@@ -135,7 +137,10 @@ export function GuessForm({
             <select
               id="country-select"
               value={country}
-              onChange={(e) => setCountry(e.target.value)}
+              onChange={(e) => {
+                setCountry(e.target.value);
+                onCountryChange?.(e.target.value);
+              }}
               className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-7 pl-3"
               aria-label="Select country"
             >

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { GuessForm } from '@/components/GuessForm';
@@ -7,6 +8,7 @@ import logo from '@/assets/logo.png';
 
 const Index = () => {
   const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const nameQuery = searchParams.get('name') || '';
   const timeQuery = searchParams.get('time') || '';
   const regionQuery = searchParams.get('region') || '';
@@ -27,7 +29,9 @@ const Index = () => {
     'SN': 'Senegalese',
     'ER': 'Eritrean',
   };
-  const countryAdjective = countryAdjectives[countryQuery] || 'Kenyan';
+  // Use selectedCountry from dropdown if set, otherwise fall back to URL param
+  const activeCountry = selectedCountry ?? countryQuery;
+  const countryAdjective = countryAdjectives[activeCountry] || 'Kenyan';
   
   let results = null;
   try {
@@ -90,7 +94,15 @@ const Index = () => {
               </p>
             </div>
             
-            <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} />
+            <GuessForm 
+              initialName={nameQuery} 
+              initialTime={timeQuery} 
+              initialRegion={regionQuery} 
+              initialBuild={buildQuery} 
+              initialPersonality={personalityQuery} 
+              initialCountry={countryQuery}
+              onCountryChange={setSelectedCountry}
+            />
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
@@ -110,11 +122,11 @@ const Index = () => {
                     'SN': ['Aminata', 'Ousmane', 'Fatou', 'Ibrahima', 'Aissatou', 'Moussa', 'Mariama', 'Cheikh'],
                     'ER': ['Feven', 'Yonas', 'Selam', 'Bereket', 'Merhawi', 'Hirut', 'Samuel', 'Eden'],
                   };
-                  const names = popularNames[countryQuery] || popularNames['KE'];
+                  const names = popularNames[activeCountry] || popularNames['KE'];
                   return names.map(name => (
                     <a 
                       key={name}
-                      href={`/?name=${name}&country=${countryQuery}`}
+                      href={`/?name=${name}&country=${activeCountry}`}
                       className="badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 touch-manipulation"
                     >
                       {name}
