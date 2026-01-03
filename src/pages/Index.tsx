@@ -2,7 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { GuessForm } from '@/components/GuessForm';
 import { TribeResultCard } from '@/components/TribeResultCard';
-import { detectTribe } from '@/lib/tribeDetection';
+import { detectTribe, getCountries } from '@/lib/tribeDetection';
 import logo from '@/assets/logo.png';
 
 const Index = () => {
@@ -12,6 +12,11 @@ const Index = () => {
   const regionQuery = searchParams.get('region') || '';
   const buildQuery = searchParams.get('build') || '';
   const personalityQuery = searchParams.get('personality') || '';
+  const countryQuery = searchParams.get('country') || 'KE';
+  
+  const countries = getCountries();
+  const selectedCountry = countries.find(c => c.code === countryQuery) || countries.find(c => c.code === 'KE');
+  const countryName = selectedCountry?.name || 'Kenyan';
   
   const results = nameQuery ? detectTribe(nameQuery, {
     timeOfBirth: timeQuery || undefined,
@@ -40,11 +45,11 @@ const Index = () => {
                 Guess Her <span className="gradient-gold-text">Tribe</span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto px-2">
-                Enter a Kenyan name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
+                Enter a {countryName} name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
               </p>
             </div>
             
-            <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} />
+            <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} />
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
@@ -85,7 +90,7 @@ const Index = () => {
             </header>
             
             <div className="mb-6 sm:mb-8">
-              <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} />
+              <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} />
             </div>
             
             <div className="space-y-3 sm:space-y-4">
