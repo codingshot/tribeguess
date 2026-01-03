@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Users, Compass, Info, ExternalLink, Globe } from 'lucide-react';
+import { MapPin, Users, Compass, Info, ExternalLink, Globe, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';
 
 interface Tribe {
@@ -75,9 +75,7 @@ const regionColors: Record<string, string> = {
 };
 
 const getRegionColor = (region: string) => {
-  // Check for exact match first
   if (regionColors[region]) return regionColors[region];
-  // Check for partial matches
   for (const [key, color] of Object.entries(regionColors)) {
     if (region.toLowerCase().includes(key.toLowerCase().split(' ')[0])) {
       return color;
@@ -88,16 +86,21 @@ const getRegionColor = (region: string) => {
 
 export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFilter = 'KE' }: DynamicMapViewProps) {
   const [hoveredTribe, setHoveredTribe] = useState<string | null>(null);
+  const [zoomLevel, setZoomLevel] = useState(1); // 1 = default, higher = zoomed in
 
   const allCountries = getCountries();
-  const bounds = countryBounds[countryFilter] || countryBounds['KE'];
+  const baseBounds = countryBounds[countryFilter] || countryBounds['KE'];
   const countryInfo = allCountries.find(c => c.code === countryFilter);
 
-  const osmBounds = useMemo(() => {
-    // When a specific country is selected, use predefined country bounds
+  // Reset zoom when country changes
+  const handleZoomIn = () => setZoomLevel(prev => Math.min(prev * 1.5, 8));
+  const handleZoomOut = () => setZoomLevel(prev => Math.max(prev / 1.5, 0.5));
+  const handleResetZoom = () => setZoomLevel(1);
+
+  // Compute base bounds (before zoom)
+  const baseBoundsComputed = useMemo(() => {
     if (countryFilter && countryFilter !== 'ALL' && countryBounds[countryFilter]) {
       const b = countryBounds[countryFilter];
-      // Add small padding
       const latPad = (b.maxLat - b.minLat) * 0.1;
       const lngPad = (b.maxLng - b.minLng) * 0.1;
       return {
@@ -108,7 +111,6 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       };
     }
 
-    // For ALL or unknown, compute from visible tribes
     if (tribes.length > 0) {
       const lats = tribes.map(t => t.mapCoordinates.lat);
       const lngs = tribes.map(t => t.mapCoordinates.lng);
@@ -124,18 +126,33 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       const padLat = latRange * 0.2;
       const padLng = lngRange * 0.2;
 
-      minLat = Math.max(-85, minLat - padLat);
-      maxLat = Math.min(85, maxLat + padLat);
-      minLng = Math.max(-180, minLng - padLng);
-      maxLng = Math.min(180, maxLng + padLng);
-
-      return { minLat, maxLat, minLng, maxLng };
+      return {
+        minLat: Math.max(-85, minLat - padLat),
+        maxLat: Math.min(85, maxLat + padLat),
+        minLng: Math.max(-180, minLng - padLng),
+        maxLng: Math.min(180, maxLng + padLng),
+      };
     }
 
-    // Fallback to Africa view
     const africa = countryBounds['ALL'];
     return { minLat: africa.minLat, maxLat: africa.maxLat, minLng: africa.minLng, maxLng: africa.maxLng };
   }, [tribes, countryFilter]);
+
+  // Apply zoom to bounds (zoom towards center)
+  const osmBounds = useMemo(() => {
+    const centerLat = (baseBoundsComputed.minLat + baseBoundsComputed.maxLat) / 2;
+    const centerLng = (baseBoundsComputed.minLng + baseBoundsComputed.maxLng) / 2;
+    
+    const latHalf = (baseBoundsComputed.maxLat - baseBoundsComputed.minLat) / 2 / zoomLevel;
+    const lngHalf = (baseBoundsComputed.maxLng - baseBoundsComputed.minLng) / 2 / zoomLevel;
+
+    return {
+      minLat: Math.max(-85, centerLat - latHalf),
+      maxLat: Math.min(85, centerLat + latHalf),
+      minLng: Math.max(-180, centerLng - lngHalf),
+      maxLng: Math.min(180, centerLng + lngHalf),
+    };
+  }, [baseBoundsComputed, zoomLevel]);
 
   // OpenStreetMap embed URL framed by bounds
   const osmEmbedUrl = useMemo(() => {
@@ -174,8 +191,11 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
           <div className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-primary" />
             <h3 className="font-heading font-semibold text-foreground">
-              {countryInfo?.flag} {bounds.name} Tribal Map
+              {countryInfo?.flag} {baseBounds.name} Tribal Map
             </h3>
+            {zoomLevel !== 1 && (
+              <span className="text-xs text-muted-foreground ml-2">({Math.round(zoomLevel * 100)}%)</span>
+            )}
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xs text-muted-foreground">{tribes.length} tribes shown</span>
@@ -194,11 +214,11 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       
       {/* Main Map Area with OSM */}
       <div className="relative" style={{ paddingBottom: '70%' }}>
-        {/* OpenStreetMap Background */}
+        {/* OpenStreetMap Background - pointer-events disabled to prevent iframe zoom */}
         <iframe
           src={osmEmbedUrl}
-          className="absolute inset-0 w-full h-full border-0"
-          title={`Map of ${bounds.name} showing tribal distribution`}
+          className="absolute inset-0 w-full h-full border-0 pointer-events-none"
+          title={`Map of ${baseBounds.name} showing tribal distribution`}
           loading="lazy"
           referrerPolicy="no-referrer"
           sandbox="allow-scripts allow-same-origin"
@@ -286,10 +306,37 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
           <div className="flex items-center gap-2">
             {countryInfo && <span className="text-xl">{countryInfo.flag}</span>}
             <div>
-              <p className="text-sm font-bold text-foreground">{bounds.name}</p>
+              <p className="text-sm font-bold text-foreground">{baseBounds.name}</p>
               <p className="text-[10px] text-muted-foreground">Ethnic Distribution</p>
             </div>
           </div>
+        </div>
+        
+        {/* Zoom Controls */}
+        <div className="absolute top-3 right-14 flex flex-col gap-1 z-20">
+          <button
+            onClick={handleZoomIn}
+            className="bg-background/95 backdrop-blur-sm rounded-lg w-8 h-8 flex items-center justify-center shadow-lg border border-border hover:bg-primary/10 transition-colors"
+            title="Zoom in"
+          >
+            <ZoomIn className="w-4 h-4 text-foreground" />
+          </button>
+          <button
+            onClick={handleZoomOut}
+            className="bg-background/95 backdrop-blur-sm rounded-lg w-8 h-8 flex items-center justify-center shadow-lg border border-border hover:bg-primary/10 transition-colors"
+            title="Zoom out"
+          >
+            <ZoomOut className="w-4 h-4 text-foreground" />
+          </button>
+          {zoomLevel !== 1 && (
+            <button
+              onClick={handleResetZoom}
+              className="bg-background/95 backdrop-blur-sm rounded-lg w-8 h-8 flex items-center justify-center shadow-lg border border-border hover:bg-primary/10 transition-colors"
+              title="Reset zoom"
+            >
+              <RotateCcw className="w-4 h-4 text-foreground" />
+            </button>
+          )}
         </div>
         
         {/* Compass */}
@@ -338,7 +385,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       <div className="p-4 bg-secondary/30 border-t border-border">
         <div className="flex items-center gap-2 mb-3">
           <Info className="w-4 h-4 text-muted-foreground" />
-          <span className="text-xs font-medium text-foreground">Tribes in {bounds.name}</span>
+          <span className="text-xs font-medium text-foreground">Tribes in {baseBounds.name}</span>
         </div>
         
         {/* Tribe Quick Links */}
