@@ -242,20 +242,31 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'kim': [{ tribe: 'kikuyu', weight: 0.85 }],
   'mbu': [{ tribe: 'kikuyu', weight: 0.7 }],
   
-  // Luo prefixes
-  'o': [{ tribe: 'luo', weight: 0.7 }, { tribe: 'kisii', weight: 0.3 }],
-  'a': [{ tribe: 'luo', weight: 0.65 }],
+// Luo prefixes - more specific to avoid false positives with short prefixes
   'ot': [{ tribe: 'luo', weight: 0.95 }],
+  'oti': [{ tribe: 'luo', weight: 0.98 }],
   'od': [{ tribe: 'luo', weight: 0.95 }],
+  'odh': [{ tribe: 'luo', weight: 0.98 }],
   'ok': [{ tribe: 'luo', weight: 0.9 }],
+  'oko': [{ tribe: 'luo', weight: 0.95 }],
   'og': [{ tribe: 'luo', weight: 0.85 }],
+  'ogo': [{ tribe: 'luo', weight: 0.92 }],
   'om': [{ tribe: 'luo', weight: 0.9 }],
+  'omo': [{ tribe: 'luo', weight: 0.95 }],
   'ow': [{ tribe: 'luo', weight: 0.9 }],
+  'owi': [{ tribe: 'luo', weight: 0.95 }],
   'ach': [{ tribe: 'luo', weight: 0.95 }],
+  'achi': [{ tribe: 'luo', weight: 0.98 }],
   'adh': [{ tribe: 'luo', weight: 0.95 }],
   'ati': [{ tribe: 'luo', weight: 0.95 }],
   'api': [{ tribe: 'luo', weight: 0.95 }],
   'any': [{ tribe: 'luo', weight: 0.9 }],
+  'anya': [{ tribe: 'luo', weight: 0.95 }],
+  'awo': [{ tribe: 'luo', weight: 0.9 }],
+  'awu': [{ tribe: 'luo', weight: 0.9 }],
+  'alu': [{ tribe: 'luo', weight: 0.9 }],
+  'ojo': [{ tribe: 'luo', weight: 0.85 }],
+  'opo': [{ tribe: 'luo', weight: 0.9 }],
   
   // Luhya prefixes
   'na': [{ tribe: 'luhya', weight: 0.85 }],
@@ -652,7 +663,18 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   
   const { timeOfBirth, region, build, personality, country } = opts;
   
-  const normalizedName = name.toLowerCase().trim().replace(/\s+/g, '');
+  // Normalize name: lowercase, trim, remove extra spaces and special characters
+  const normalizedName = name.toLowerCase().trim().replace(/\s+/g, '').replace(/['-]/g, '');
+  
+  // Also check common spelling variations
+  const nameVariations = [
+    normalizedName,
+    normalizedName.replace(/ch/g, 'c'),  // Achieng -> Acieng
+    normalizedName.replace(/c([^h])/g, 'ch$1'), // Acieng -> Achieng
+    normalizedName.replace(/w/g, 'u'),   // Wanjiku -> Uanjiku (less common)
+    normalizedName.replace(/j/g, 'g'),   // Juma -> Guma
+    normalizedName.replace(/g/g, 'j'),   // Githinji -> Jithinji
+  ];
   const predictions: TribeResult[] = [];
   
   // Filter tribes by country if specified
@@ -693,8 +715,21 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
     }
   }
   
-  // 1. Direct name match (highest confidence)
-  const directMatch = nameDatabase[normalizedName];
+  // 1. Direct name match (highest confidence) - check all variations
+  let directMatch = nameDatabase[normalizedName];
+  let matchedVariation = normalizedName;
+  
+  // Try spelling variations if no exact match
+  if (!directMatch) {
+    for (const variation of nameVariations) {
+      if (nameDatabase[variation]) {
+        directMatch = nameDatabase[variation];
+        matchedVariation = variation;
+        break;
+      }
+    }
+  }
+  
   if (directMatch) {
     const tribe = countryTribes.find(t => t.id === directMatch.tribe) || tribesData.tribes.find(t => t.id === directMatch.tribe);
     if (tribe) {
@@ -709,10 +744,13 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
         matchDetails.push(`🕊️ Religious influence: ${religiousInfluence.religion.charAt(0).toUpperCase() + religiousInfluence.religion.slice(1)} origin${religiousInfluence.origin ? ` - ${religiousInfluence.origin}` : ''}`);
       }
       
+      // Slightly lower confidence if matched via variation
+      const confidence = matchedVariation === normalizedName ? 95 : 90;
+      
       predictions.push({
         tribe,
-        confidence: 95,
-        matchReason: 'Exact name match in database',
+        confidence,
+        matchReason: matchedVariation === normalizedName ? 'Exact name match in database' : 'Name match (spelling variation)',
         matchDetails,
         nameMeaning: directMatch.meaning,
       });
@@ -812,29 +850,39 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
     }
   }
   
-  // 7. Time of birth matching
+  // 7. Time of birth matching - improved with better time normalization
   if (timeOfBirth) {
     const normalizedTime = timeOfBirth.toLowerCase().trim();
     for (const tribe of countryTribes) {
       const timeNames = tribe.timeBasedNames as Record<string, string[]>;
+      if (!timeNames) continue;
+      
       for (const [timeKey, names] of Object.entries(timeNames)) {
+        if (!Array.isArray(names)) continue;
+        
         const timeVariants = timeMapping[timeKey] || [timeKey];
         const matchesTime = timeVariants.some(t => 
           normalizedTime.includes(t) || t.includes(normalizedTime)
         );
         
         if (matchesTime) {
-          const matchingName = names.find(n => 
-            normalizedName === n.toLowerCase() || 
-            normalizedName.includes(n.toLowerCase().slice(0, 3))
-          );
+          // Check if name matches any time-based names
+          const matchingName = names.find(n => {
+            const lowerN = n.toLowerCase();
+            // Exact match or significant prefix overlap (at least 4 chars)
+            return normalizedName === lowerN || 
+              (lowerN.length >= 4 && normalizedName.startsWith(lowerN.slice(0, 4))) ||
+              (normalizedName.length >= 4 && lowerN.startsWith(normalizedName.slice(0, 4)));
+          });
+          
           if (matchingName) {
             if (!tribeScores[tribe.id]) {
               tribeScores[tribe.id] = { score: 0, reasons: [] };
             }
-            tribeScores[tribe.id].score += 25;
+            // Boost score more significantly for time match
+            tribeScores[tribe.id].score += 35;
             tribeScores[tribe.id].reasons.push(
-              `Born in the ${timeOfBirth} - matches ${tribe.name} naming tradition for ${timeKey}-born children`
+              `Born in the ${timeOfBirth} - matches ${tribe.name} naming tradition for ${timeKey}-born children (e.g., "${matchingName}")`
             );
           }
         }
@@ -908,7 +956,7 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
         
         predictions.push({
           tribe,
-          confidence: Math.min(Math.round(data.score), 92),
+          confidence: Math.min(Math.round(data.score * 0.9), 92), // Scale down slightly for pattern matches
           matchReason: data.reasons[0] || 'Pattern matching based on name characteristics',
           matchDetails: matchDetails.slice(0, 5),
         });
