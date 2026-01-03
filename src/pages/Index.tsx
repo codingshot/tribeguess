@@ -18,22 +18,24 @@ const Index = () => {
   // Track selected country from form - initialize with URL param or default
   const [selectedCountry, setSelectedCountry] = useState<string>(countryQuery);
   
-  // Adjective forms for grammatically correct display
-  const countryAdjectives: Record<string, string> = {
-    'KE': 'Kenyan',
-    'NG': 'Nigerian',
-    'GH': 'Ghanaian',
-    'ZA': 'South African',
-    'ET': 'Ethiopian',
-    'TZ': 'Tanzanian',
-    'UG': 'Ugandan',
-    'CD': 'Congolese',
-    'SN': 'Senegalese',
-    'ER': 'Eritrean',
+  // Country data with adjectives and flags
+  const countryData: Record<string, { adjective: string; flag: string }> = {
+    'KE': { adjective: 'Kenyan', flag: '🇰🇪' },
+    'NG': { adjective: 'Nigerian', flag: '🇳🇬' },
+    'GH': { adjective: 'Ghanaian', flag: '🇬🇭' },
+    'ZA': { adjective: 'South African', flag: '🇿🇦' },
+    'ET': { adjective: 'Ethiopian', flag: '🇪🇹' },
+    'TZ': { adjective: 'Tanzanian', flag: '🇹🇿' },
+    'UG': { adjective: 'Ugandan', flag: '🇺🇬' },
+    'CD': { adjective: 'Congolese', flag: '🇨🇩' },
+    'SN': { adjective: 'Senegalese', flag: '🇸🇳' },
+    'ER': { adjective: 'Eritrean', flag: '🇪🇷' },
   };
   // Use selectedCountry directly - it's always synced with form
   const activeCountry = selectedCountry;
-  const countryAdjective = countryAdjectives[activeCountry] || 'Kenyan';
+  const countryInfo = countryData[activeCountry] || countryData['KE'];
+  const countryAdjective = countryInfo.adjective;
+  const countryFlag = countryInfo.flag;
   
   let results = null;
   try {
@@ -108,7 +110,7 @@ const Index = () => {
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
-                Try some popular {countryAdjective} names:
+                Try some popular {countryFlag} {countryAdjective} names:
               </p>
               <nav aria-label="Example names" className="flex flex-wrap justify-center gap-2">
                 {(() => {
