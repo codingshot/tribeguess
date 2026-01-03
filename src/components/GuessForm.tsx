@@ -90,7 +90,7 @@ export function GuessForm({
     navigate(`/?${params.toString()}`);
   };
 
-  const hasAdvancedClues = region || build || personality;
+  const hasAdvancedClues = region || build || personality || timeOfBirth;
 
   const selectedCountry = countries.find(c => c.code === country);
   
@@ -120,88 +120,49 @@ export function GuessForm({
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4" role="search">
-      {/* Country + Name Row */}
+      {/* Name Input */}
       <div>
         <label htmlFor="name-input" className="block text-sm font-medium text-foreground mb-1.5">
-          Enter a {countryAdjective} Name
+          Enter a Name
         </label>
         <p className="text-xs text-muted-foreground mb-2">
           First name works best - we'll analyze the naming patterns
         </p>
-        <div className="flex gap-2">
-          {/* Country Selector - Compact */}
-          <div className="relative shrink-0">
-            <select
-              id="country-select"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-8 w-auto"
-              aria-label="Select country"
-            >
-              {countries.map(c => (
-                <option key={c.code} value={c.code}>
-                  {c.flag} {c.code}
-                </option>
-              ))}
-            </select>
-            <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
-              <svg className="w-3 h-3 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </div>
-          
-          {/* Name Input */}
-          <div className="relative flex-1">
-            <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
-            <input
-              id="name-input"
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
-              className="input-tribal pl-10 sm:pl-12 text-base sm:text-lg w-full"
-              autoFocus
-              maxLength={50}
-              autoComplete="off"
-              autoCapitalize="words"
-              spellCheck="false"
-            />
-          </div>
+        <div className="relative">
+          <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
+          <input
+            id="name-input"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
+            className="input-tribal pl-10 sm:pl-12 text-base sm:text-lg w-full"
+            autoFocus
+            maxLength={50}
+            autoComplete="off"
+            autoCapitalize="words"
+            spellCheck="false"
+          />
         </div>
       </div>
       
+      {/* Country Selector - "Where is she from?" */}
       <div>
-        <div className="flex items-center justify-between mb-1.5">
-          <label htmlFor="time-select" className="block text-sm font-medium text-foreground">
-            Time of Birth <span className="text-muted-foreground font-normal">(optional)</span>
-          </label>
-          <button
-            type="button"
-            onClick={() => setShowTimeHelp(!showTimeHelp)}
-            className="text-muted-foreground hover:text-primary p-1 touch-manipulation"
-            aria-label="Why does time matter?"
-          >
-            <HelpCircle className="w-4 h-4" />
-          </button>
-        </div>
-        {showTimeHelp && (
-          <div className="text-xs text-muted-foreground mb-2 p-2 bg-secondary rounded-lg animate-fade-in">
-            💡 <strong>Why time matters:</strong> Many Kenyan tribes name children based on when they were born. 
-            For example, "Otieno" (Luo) means born at night, while "Kipkoech" (Kalenjin) means born in the morning.
-          </div>
-        )}
+        <label htmlFor="country-select" className="block text-sm font-medium text-foreground mb-1.5">
+          <Globe className="w-4 h-4 inline mr-1" />
+          Where is she from?
+        </label>
         <div className="relative">
-          <Clock className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground pointer-events-none" />
           <select
-            id="time-select"
-            value={timeOfBirth}
-            onChange={(e) => setTimeOfBirth(e.target.value)}
-            className="input-tribal pl-10 sm:pl-12 appearance-none cursor-pointer text-sm sm:text-base"
+            id="country-select"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className="input-tribal appearance-none cursor-pointer text-sm sm:text-base w-full"
+            aria-label="Select country"
           >
-            {timeOptions.map(option => (
-              <option key={option.value} value={option.value}>
-                {option.label}
+            {countries.map(c => (
+              <option key={c.code} value={c.code}>
+                {c.flag} {c.name}
               </option>
             ))}
           </select>
@@ -223,7 +184,7 @@ export function GuessForm({
         {advancedMode ? 'Hide' : 'Show'} Advanced Clues
         {hasAdvancedClues && !advancedMode && (
           <span className="bg-primary/20 text-primary text-xs px-2 py-0.5 rounded-full">
-            {[region, build, personality].filter(Boolean).length} added
+            {[region, build, personality, timeOfBirth].filter(Boolean).length} added
           </span>
         )}
       </button>
@@ -233,6 +194,49 @@ export function GuessForm({
           <p className="text-xs text-muted-foreground text-center">
             Add more clues to improve prediction accuracy
           </p>
+          
+          {/* Time of Birth */}
+          <div>
+            <div className="flex items-center justify-between mb-1.5">
+              <label htmlFor="time-select" className="block text-sm font-medium text-foreground">
+                <Clock className="w-4 h-4 inline mr-1" />
+                When was she born?
+              </label>
+              <button
+                type="button"
+                onClick={() => setShowTimeHelp(!showTimeHelp)}
+                className="text-muted-foreground hover:text-primary p-1 touch-manipulation"
+                aria-label="Why does time matter?"
+              >
+                <HelpCircle className="w-4 h-4" />
+              </button>
+            </div>
+            {showTimeHelp && (
+              <div className="text-xs text-muted-foreground mb-2 p-2 bg-secondary rounded-lg animate-fade-in">
+                💡 <strong>Why time matters:</strong> Many African tribes name children based on when they were born. 
+                For example, "Otieno" (Luo) means born at night, while "Kipkoech" (Kalenjin) means born in the morning.
+              </div>
+            )}
+            <div className="relative">
+              <select
+                id="time-select"
+                value={timeOfBirth}
+                onChange={(e) => setTimeOfBirth(e.target.value)}
+                className="input-tribal appearance-none cursor-pointer text-sm w-full"
+              >
+                {timeOptions.map(option => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
           
           {/* Region */}
           <div>
