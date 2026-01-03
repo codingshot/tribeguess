@@ -283,6 +283,76 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'hassan': { tribe: 'coastal', gender: 'male', meaning: 'Handsome/good (Arabic origin)' },
   'bakari': { tribe: 'coastal', gender: 'male', meaning: 'One who will succeed/promising' },
   'tsuma': { tribe: 'coastal', gender: 'male', meaning: 'Born during hard times (Mijikenda)' },
+
+  // ============ TANZANIA (Sukuma, Chagga, Haya) ============
+  // Sukuma names
+  'masanja': { tribe: 'sukuma', gender: 'male', meaning: 'Born during farming season' },
+  'shija': { tribe: 'sukuma', gender: 'male', meaning: 'One who is coming' },
+  'bugalama': { tribe: 'sukuma', gender: 'male', meaning: 'From Bugalama area' },
+  'nkuba': { tribe: 'sukuma', gender: 'male', meaning: 'Rain - life giver' },
+  'mayala': { tribe: 'sukuma', gender: 'male', meaning: 'Born during drought' },
+  'lyimo': { tribe: 'sukuma', gender: 'male', meaning: 'Family/clan name' },
+  'maganga': { tribe: 'sukuma', gender: 'male', meaning: 'Born during troubles' },
+  'malisa': { tribe: 'sukuma', gender: 'female', meaning: 'Sweet one' },
+  'nyangi': { tribe: 'sukuma', gender: 'female', meaning: 'Beautiful' },
+  'ndaki': { tribe: 'sukuma', gender: 'female', meaning: 'Born during hardship' },
+  
+  // Chagga names (Mt. Kilimanjaro)
+  'moshi': { tribe: 'chagga', gender: 'male', meaning: 'Smoke - from volcanic area' },
+  'lyatuu': { tribe: 'chagga', gender: 'male', meaning: 'Of the Lyatuu clan' },
+  'msando': { tribe: 'chagga', gender: 'male', meaning: 'Strong one' },
+  'ndesanjo': { tribe: 'chagga', gender: 'male', meaning: 'Victorious one' },
+  'minja': { tribe: 'chagga', gender: 'male', meaning: 'Born during brewing' },
+  'mringi': { tribe: 'chagga', gender: 'female', meaning: 'Beautiful woman' },
+  'nasari': { tribe: 'chagga', gender: 'female', meaning: 'Born during victory' },
+  'njau': { tribe: 'chagga', gender: 'male', meaning: 'Young bull - strength' },
+
+  // ============ SOMALIA (Somali) ============
+  'abdirahman': { tribe: 'somali', gender: 'male', meaning: 'Servant of the Merciful (Allah)' },
+  'abdullahi': { tribe: 'somali', gender: 'male', meaning: 'Servant of Allah' },
+  'abdinasir': { tribe: 'somali', gender: 'male', meaning: 'Servant of the Helper' },
+  'abdikadir': { tribe: 'somali', gender: 'male', meaning: 'Servant of the Capable' },
+  'cabdi': { tribe: 'somali', gender: 'male', meaning: 'Servant (Somali spelling of Abdi)' },
+  'maxamed': { tribe: 'somali', gender: 'male', meaning: 'Praised one (Somali spelling of Mohamed)' },
+  'cali': { tribe: 'somali', gender: 'male', meaning: 'High/Noble (Somali spelling of Ali)' },
+  'faarax': { tribe: 'somali', gender: 'male', meaning: 'Happiness (Somali spelling of Farah)' },
+  'guled': { tribe: 'somali', gender: 'male', meaning: 'Winner/Victor' },
+  'jaamac': { tribe: 'somali', gender: 'male', meaning: 'Gathering (Somali spelling of Jama)' },
+  'hodan': { tribe: 'somali', gender: 'female', meaning: 'Wealth/Abundance' },
+  'hamdi': { tribe: 'somali', gender: 'female', meaning: 'Praise' },
+  'hibo': { tribe: 'somali', gender: 'female', meaning: 'Gift' },
+  'sahra': { tribe: 'somali', gender: 'female', meaning: 'Desert flower' },
+  'hawo': { tribe: 'somali', gender: 'female', meaning: 'Eve (Somali form)' },
+  'nimco': { tribe: 'somali', gender: 'female', meaning: 'Blessing/Grace' },
+  'fardowsa': { tribe: 'somali', gender: 'female', meaning: 'Paradise' },
+  'ubah': { tribe: 'somali', gender: 'female', meaning: 'Flower' },
+
+  // ============ ETHIOPIA (Oromo, Amhara, Tigray) ============
+  // Amhara names
+  'abebe': { tribe: 'amhara', gender: 'male', meaning: 'He has flourished/grown' },
+  'kebede': { tribe: 'amhara', gender: 'male', meaning: 'Heavy/Important one' },
+  'tesfaye': { tribe: 'amhara', gender: 'male', meaning: 'My hope' },
+  'getachew': { tribe: 'amhara', gender: 'male', meaning: 'Their master' },
+  'tadesse': { tribe: 'amhara', gender: 'male', meaning: 'Renewal/Refreshment' },
+  'haile': { tribe: 'amhara', gender: 'male', meaning: 'Power/Force' },
+  'selassie': { tribe: 'amhara', gender: 'male', meaning: 'Trinity' },
+  'almaz': { tribe: 'amhara', gender: 'female', meaning: 'Diamond' },
+  'tigist': { tribe: 'amhara', gender: 'female', meaning: 'Patience' },
+  'mahlet': { tribe: 'amhara', gender: 'female', meaning: 'Song/Hymn' },
+  'meseret': { tribe: 'amhara', gender: 'female', meaning: 'Foundation' },
+  'yekatit': { tribe: 'amhara', gender: 'female', meaning: 'Born in February' },
+  
+  // Oromo names
+  'gammachuu': { tribe: 'oromo', gender: 'male', meaning: 'Happiness/Joy' },
+  'tolossa': { tribe: 'oromo', gender: 'male', meaning: 'First born/Pioneer' },
+  'leencoo': { tribe: 'oromo', gender: 'male', meaning: 'Lion' },
+  'caalaa': { tribe: 'oromo', gender: 'male', meaning: 'Great one' },
+  'hundee': { tribe: 'oromo', gender: 'male', meaning: 'Root/Origin' },
+  'bontu': { tribe: 'oromo', gender: 'female', meaning: 'Beautiful/Pride' },
+  'lalisaa': { tribe: 'oromo', gender: 'male', meaning: 'Winner' },
+  'obsi': { tribe: 'oromo', gender: 'male', meaning: 'Sunrise/Dawn' },
+  'caaltuu': { tribe: 'oromo', gender: 'female', meaning: 'Great woman' },
+  'halkano': { tribe: 'oromo', gender: 'female', meaning: 'Path/Direction' },
 };
 
 // More specific prefix patterns with weights
@@ -343,7 +413,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'was': [{ tribe: 'luhya', weight: 0.6 }, { tribe: 'baganda', weight: 0.4 }],
   'bar': [{ tribe: 'luhya', weight: 0.85 }],
   'sim': [{ tribe: 'luhya', weight: 0.9 }],
-  'shi': [{ tribe: 'luhya', weight: 0.85 }],
+  'shi': [{ tribe: 'luhya', weight: 0.6 }, { tribe: 'sukuma', weight: 0.4 }],
   'mak': [{ tribe: 'luhya', weight: 0.7 }, { tribe: 'kisii', weight: 0.3 }],
   
   // Kamba prefixes
@@ -413,7 +483,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   // Coastal prefixes
   'ham': [{ tribe: 'coastal', weight: 0.95 }],
   'has': [{ tribe: 'coastal', weight: 0.9 }],
-  'hal': [{ tribe: 'coastal', weight: 0.9 }],
+  'hal': [{ tribe: 'coastal', weight: 0.6 }, { tribe: 'oromo', weight: 0.4 }],
   'ju': [{ tribe: 'coastal', weight: 0.95 }],
   'jum': [{ tribe: 'coastal', weight: 0.98 }],
   'fa': [{ tribe: 'coastal', weight: 0.9 }],
@@ -421,7 +491,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'za': [{ tribe: 'coastal', weight: 0.9 }],
   'zai': [{ tribe: 'coastal', weight: 0.95 }],
   'ab': [{ tribe: 'coastal', weight: 0.85 }],
-  'abd': [{ tribe: 'coastal', weight: 0.95 }],
+  'abd': [{ tribe: 'coastal', weight: 0.5 }, { tribe: 'somali', weight: 0.5 }],
   'sal': [{ tribe: 'coastal', weight: 0.9 }],
   'ras': [{ tribe: 'coastal', weight: 0.9 }],
   'oma': [{ tribe: 'coastal', weight: 0.9 }],
@@ -442,7 +512,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'ndi': [{ tribe: 'hutu_tutsi', weight: 0.88 }],
   'nse': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
   'nsh': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
-  'nku': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'nku': [{ tribe: 'hutu_tutsi', weight: 0.7 }, { tribe: 'sukuma', weight: 0.3 }],
   'nyir': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
   'ha': [{ tribe: 'hutu_tutsi', weight: 0.6 }, { tribe: 'coastal', weight: 0.4 }],
   'hab': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
@@ -471,6 +541,53 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'naka': [{ tribe: 'baganda', weight: 0.9 }],
   'bab': [{ tribe: 'baganda', weight: 0.9 }],
   'kam': [{ tribe: 'baganda', weight: 0.75 }],
+
+  // ============ Tanzania (Sukuma, Chagga) prefixes ============
+  'mas': [{ tribe: 'sukuma', weight: 0.7 }],
+  'masa': [{ tribe: 'sukuma', weight: 0.85 }],
+  'shij': [{ tribe: 'sukuma', weight: 0.9 }],
+  'bug': [{ tribe: 'sukuma', weight: 0.85 }],
+  'lyi': [{ tribe: 'chagga', weight: 0.95 }],
+  'msa': [{ tribe: 'chagga', weight: 0.9 }],
+  'nde': [{ tribe: 'chagga', weight: 0.85 }],
+  'nja': [{ tribe: 'chagga', weight: 0.8 }],
+  'mri': [{ tribe: 'chagga', weight: 0.9 }],
+
+  // ============ Somalia (Somali) prefixes ============
+  'abdi': [{ tribe: 'somali', weight: 0.95 }],
+  'cab': [{ tribe: 'somali', weight: 0.95 }],
+  'max': [{ tribe: 'somali', weight: 0.9 }],
+  'faa': [{ tribe: 'somali', weight: 0.9 }],
+  'gul': [{ tribe: 'somali', weight: 0.85 }],
+  'jaa': [{ tribe: 'somali', weight: 0.9 }],
+  'hod': [{ tribe: 'somali', weight: 0.95 }],
+  'hib': [{ tribe: 'somali', weight: 0.95 }],
+  'nim': [{ tribe: 'somali', weight: 0.9 }],
+  'far': [{ tribe: 'somali', weight: 0.85 }],
+  'uba': [{ tribe: 'somali', weight: 0.9 }],
+  'sah': [{ tribe: 'somali', weight: 0.85 }],
+  'haw': [{ tribe: 'somali', weight: 0.9 }],
+
+  // ============ Ethiopia (Amhara, Oromo) prefixes ============
+  'abe': [{ tribe: 'amhara', weight: 0.9 }],
+  'keb': [{ tribe: 'amhara', weight: 0.95 }],
+  'tes': [{ tribe: 'amhara', weight: 0.9 }],
+  'get': [{ tribe: 'amhara', weight: 0.85 }],
+  'tad': [{ tribe: 'amhara', weight: 0.9 }],
+  'hai': [{ tribe: 'amhara', weight: 0.85 }],
+  'sel': [{ tribe: 'amhara', weight: 0.8 }],
+  'alm': [{ tribe: 'amhara', weight: 0.9 }],
+  'tig': [{ tribe: 'amhara', weight: 0.85 }],
+  'maho': [{ tribe: 'amhara', weight: 0.85 }],
+  'mes': [{ tribe: 'amhara', weight: 0.85 }],
+  'gam': [{ tribe: 'oromo', weight: 0.9 }],
+  'tol': [{ tribe: 'oromo', weight: 0.85 }],
+  'lee': [{ tribe: 'oromo', weight: 0.8 }],
+  'caa': [{ tribe: 'oromo', weight: 0.95 }],
+  'hun': [{ tribe: 'oromo', weight: 0.85 }],
+  'bon': [{ tribe: 'oromo', weight: 0.85 }],
+  'lal': [{ tribe: 'oromo', weight: 0.9 }],
+  'obs': [{ tribe: 'oromo', weight: 0.95 }],
 };
 
 // Suffix patterns for additional matching
