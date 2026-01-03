@@ -45,10 +45,16 @@ const Index = () => {
           // Landing view
           <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in">
             <div className="mb-6 sm:mb-8">
-              {/* Hero with floating flag based on selected country */}
+              {/* Hero with orbiting flag based on selected country */}
               <div className="relative inline-block">
-                {/* Floating flags behind logo - shows selected country flag */}
+                {/* Orbiting flags behind logo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <style>{`
+                    @keyframes orbit {
+                      from { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+                      to { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+                    }
+                  `}</style>
                   {(() => {
                     const countryFlags: Record<string, string> = {
                       'KE': '🇰🇪', 'NG': '🇳🇬', 'GH': '🇬🇭', 'ZA': '🇿🇦', 'ET': '🇪🇹',
@@ -56,24 +62,18 @@ const Index = () => {
                       'RW': '🇷🇼', 'SD': '🇸🇩', 'CM': '🇨🇲', 'CI': '🇨🇮', 'ML': '🇲🇱'
                     };
                     const selectedFlag = countryFlags[countryQuery] || '🇰🇪';
-                    return Array.from({ length: 8 }).map((_, i) => {
-                      const angle = (i / 8) * 2 * Math.PI;
-                      const radius = 70;
-                      const x = Math.cos(angle) * radius;
-                      const y = Math.sin(angle) * radius;
-                      return (
-                        <span
-                          key={i}
-                          className="absolute text-2xl sm:text-3xl opacity-30 animate-pulse"
-                          style={{
-                            transform: `translate(${x}px, ${y}px)`,
-                            animationDelay: `${i * 0.15}s`,
-                          }}
-                        >
-                          {selectedFlag}
-                        </span>
-                      );
-                    });
+                    return Array.from({ length: 6 }).map((_, i) => (
+                      <span
+                        key={i}
+                        className="absolute text-2xl sm:text-3xl opacity-40"
+                        style={{
+                          animation: `orbit 12s linear infinite`,
+                          animationDelay: `${-i * 2}s`,
+                        }}
+                      >
+                        {selectedFlag}
+                      </span>
+                    ));
                   })()}
                 </div>
                 <img 
@@ -96,18 +96,33 @@ const Index = () => {
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
-                Try some popular names:
+                Try some popular {countryAdjective} names:
               </p>
               <nav aria-label="Example names" className="flex flex-wrap justify-center gap-2">
-                {['Wanjiku', 'Odhiambo', 'Cheruiyot', 'Nafula', 'Mutua', 'Moraa', 'Kipchoge', 'Fatuma'].map(name => (
-                  <a 
-                    key={name}
-                    href={`/?name=${name}`}
-                    className="badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 touch-manipulation"
-                  >
-                    {name}
-                  </a>
-                ))}
+                {(() => {
+                  const popularNames: Record<string, string[]> = {
+                    'KE': ['Wanjiku', 'Odhiambo', 'Cheruiyot', 'Nafula', 'Mutua', 'Moraa', 'Kipchoge', 'Fatuma'],
+                    'NG': ['Adaeze', 'Chidi', 'Ngozi', 'Oluwaseun', 'Amaka', 'Emeka', 'Funke', 'Tunde'],
+                    'GH': ['Akosua', 'Kofi', 'Abena', 'Kwame', 'Yaa', 'Ama', 'Nana', 'Adjoa'],
+                    'ZA': ['Thandiwe', 'Sipho', 'Nomvula', 'Thabo', 'Lindiwe', 'Mandla', 'Zinhle', 'Bongani'],
+                    'ET': ['Tigist', 'Abebe', 'Meron', 'Haile', 'Bethlehem', 'Yohannes', 'Selamawit', 'Dawit'],
+                    'TZ': ['Neema', 'Juma', 'Zawadi', 'Bakari', 'Hadija', 'Rajabu', 'Amina', 'Hamisi'],
+                    'UG': ['Nakato', 'Mukasa', 'Nabirye', 'Wasswa', 'Auma', 'Okello', 'Nambi', 'Kato'],
+                    'CD': ['Mamadou', 'Fatou', 'Kabongo', 'Mwamba', 'Ngalula', 'Lukusa', 'Mutombo', 'Kasongo'],
+                    'SN': ['Aminata', 'Ousmane', 'Fatou', 'Ibrahima', 'Aissatou', 'Moussa', 'Mariama', 'Cheikh'],
+                    'ER': ['Feven', 'Yonas', 'Selam', 'Bereket', 'Merhawi', 'Hirut', 'Samuel', 'Eden'],
+                  };
+                  const names = popularNames[countryQuery] || popularNames['KE'];
+                  return names.map(name => (
+                    <a 
+                      key={name}
+                      href={`/?name=${name}&country=${countryQuery}`}
+                      className="badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 touch-manipulation"
+                    >
+                      {name}
+                    </a>
+                  ));
+                })()}
               </nav>
             </div>
             
