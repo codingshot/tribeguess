@@ -212,19 +212,69 @@ const TribePage = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Language Family</p>
-                      <p className="font-semibold text-foreground">{language.family}</p>
+                      <Link 
+                        to={`/learn?languageFamily=${encodeURIComponent(language.family)}`}
+                        className="font-semibold text-primary hover:underline flex items-center gap-1"
+                      >
+                        {language.family}
+                        <ExternalLink className="w-3 h-3" />
+                      </Link>
                     </div>
                   </div>
                   
-                  {/* Additional Greetings */}
+                  {/* Main Greeting with Audio */}
+                  <div className="mb-4 p-3 bg-background/50 rounded-lg">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm text-muted-foreground">Main Greeting</p>
+                        <p className="font-semibold text-primary text-xl">"{language.greeting}"</p>
+                        {language.greetingMeaning && (
+                          <p className="text-sm text-muted-foreground">({language.greetingMeaning})</p>
+                        )}
+                      </div>
+                      <button 
+                        onClick={() => {
+                          // Use Web Speech API for pronunciation hint
+                          if ('speechSynthesis' in window) {
+                            const utterance = new SpeechSynthesisUtterance(language.greeting);
+                            utterance.lang = 'sw-KE'; // Swahili as closest available
+                            utterance.rate = 0.8;
+                            window.speechSynthesis.speak(utterance);
+                          }
+                        }}
+                        className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+                        title="Listen to pronunciation (approximate)"
+                      >
+                        <Play className="w-5 h-5" />
+                      </button>
+                    </div>
+                  </div>
+                  
+                  {/* Additional Greetings with Audio */}
                   {language.additionalGreetings && language.additionalGreetings.length > 0 && (
                     <div className="mb-4">
                       <h3 className="text-sm font-medium text-foreground mb-2">More Greetings</h3>
                       <div className="grid sm:grid-cols-2 gap-2">
                         {language.additionalGreetings.map((g: { phrase: string; meaning: string }, i: number) => (
-                          <div key={i} className="p-2 bg-background/50 rounded-lg">
-                            <p className="font-medium text-primary text-sm">"{g.phrase}"</p>
-                            <p className="text-xs text-muted-foreground">{g.meaning}</p>
+                          <div key={i} className="p-2 bg-background/50 rounded-lg flex items-center justify-between gap-2">
+                            <div className="flex-1 min-w-0">
+                              <p className="font-medium text-primary text-sm truncate">"{g.phrase}"</p>
+                              <p className="text-xs text-muted-foreground truncate">{g.meaning}</p>
+                            </div>
+                            <button 
+                              onClick={() => {
+                                if ('speechSynthesis' in window) {
+                                  const utterance = new SpeechSynthesisUtterance(g.phrase);
+                                  utterance.lang = 'sw-KE';
+                                  utterance.rate = 0.8;
+                                  window.speechSynthesis.speak(utterance);
+                                }
+                              }}
+                              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0"
+                              title="Listen to pronunciation (approximate)"
+                            >
+                              <Play className="w-3.5 h-3.5" />
+                            </button>
                           </div>
                         ))}
                       </div>
