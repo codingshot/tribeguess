@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers, Info } from 'lucide-react';
+import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers, Info, SlidersHorizontal, ArrowUpDown, Check } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
@@ -19,6 +19,17 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
 
 const Learn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,16 +39,43 @@ const Learn = () => {
   const countryFilter = searchParams.get('country') || (macroRegionFilter ? 'ALL' : 'KE'); // Default to Kenya unless viewing a macro-region
   const viewMode = searchParams.get('view') || 'grid';
   
+  const sortOrder = searchParams.get('sort') || '';
+  const selectedCountries = searchParams.get('countries')?.split(',').filter(Boolean) || [];
+  
   const [localSearch, setLocalSearch] = useState(searchQuery);
+  const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
+  const [tempSort, setTempSort] = useState(sortOrder);
+  const [tempCountries, setTempCountries] = useState<string[]>(selectedCountries);
   
   // Sync localSearch with URL when searchQuery changes
   useEffect(() => {
     setLocalSearch(searchQuery);
   }, [searchQuery]);
+
+  // Sync temp states when dialog opens
+  useEffect(() => {
+    if (advancedFiltersOpen) {
+      setTempSort(sortOrder);
+      setTempCountries(selectedCountries.length > 0 ? selectedCountries : []);
+    }
+  }, [advancedFiltersOpen]);
   
   const tribes = getAllTribes();
   const countries = getCountries();
   const macroRegions = tribesData.regions || [];
+
+  // Parse population string to number
+  const parsePopulation = (pop: string): number => {
+    const numMatch = pop.match(/[\d.]+/);
+    if (!numMatch) return 0;
+    const num = parseFloat(numMatch[0]);
+    if (pop.toLowerCase().includes('million')) {
+      return num * 1000000;
+    } else if (pop.toLowerCase().includes('thousand') || pop.toLowerCase().includes(',000')) {
+      return num * 1000;
+    }
+    return num;
+  };
 
   const formatPopulation = (pop: number) => {
     if (pop >= 1000000) {
@@ -99,7 +137,7 @@ const Learn = () => {
   }, [countryFilter]);
   
   const filteredTribes = useMemo(() => {
-    return tribes.filter(tribe => {
+    let result = tribes.filter(tribe => {
       const searchLower = searchQuery.toLowerCase();
       
       // Enhanced search - check more fields
@@ -120,9 +158,11 @@ const Learn = () => {
       // Filter by country - check if tribe has countries array and includes selected country
       const tribeCountries = (tribe as any).countries || ['KE']; // Default to Kenya if not specified
       
-      // If macro region is set but no country, filter by any country in that macro region
+      // Multi-select countries from advanced filter
       let matchesCountry = true;
-      if (countryFilter && countryFilter !== 'ALL') {
+      if (selectedCountries.length > 0) {
+        matchesCountry = tribeCountries.some((code: string) => selectedCountries.includes(code));
+      } else if (countryFilter && countryFilter !== 'ALL') {
         matchesCountry = tribeCountries.includes(countryFilter);
       } else if (macroRegionFilter) {
         // When macro region is set, show tribes from any country in that region
@@ -132,7 +172,20 @@ const Learn = () => {
       
       return matchesSearch && matchesRegion && matchesCountry;
     });
-  }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries]);
+
+    // Apply sorting
+    if (sortOrder === 'pop-asc') {
+      result = [...result].sort((a, b) => parsePopulation(a.population) - parsePopulation(b.population));
+    } else if (sortOrder === 'pop-desc') {
+      result = [...result].sort((a, b) => parsePopulation(b.population) - parsePopulation(a.population));
+    } else if (sortOrder === 'name-asc') {
+      result = [...result].sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortOrder === 'name-desc') {
+      result = [...result].sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    return result;
+  }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder]);
   
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -191,7 +244,43 @@ const Learn = () => {
     setSearchParams({});
   };
   
-  const hasFilters = searchQuery || regionFilter || macroRegionFilter || (countryFilter && countryFilter !== 'KE');
+  const hasFilters = searchQuery || regionFilter || macroRegionFilter || sortOrder || selectedCountries.length > 0 || (countryFilter && countryFilter !== 'KE');
+
+  const hasAdvancedFilters = sortOrder || selectedCountries.length > 0;
+
+  const applyAdvancedFilters = () => {
+    const params = new URLSearchParams(searchParams);
+    
+    if (tempSort) {
+      params.set('sort', tempSort);
+    } else {
+      params.delete('sort');
+    }
+    
+    if (tempCountries.length > 0) {
+      params.set('countries', tempCountries.join(','));
+      // Clear single country filter when using multi-select
+      params.delete('country');
+    } else {
+      params.delete('countries');
+    }
+    
+    setSearchParams(params);
+    setAdvancedFiltersOpen(false);
+  };
+
+  const clearAdvancedFilters = () => {
+    setTempSort('');
+    setTempCountries([]);
+  };
+
+  const toggleTempCountry = (code: string) => {
+    setTempCountries(prev => 
+      prev.includes(code) 
+        ? prev.filter(c => c !== code)
+        : [...prev, code]
+    );
+  };
 
   const selectedCountry = countries.find(c => c.code === countryFilter) || countries.find(c => c.code === 'KE');
 
@@ -268,6 +357,112 @@ const Learn = () => {
                   <span className="hidden sm:inline">Map</span>
                 </button>
               </div>
+
+              {/* Advanced Filters Button */}
+              <Dialog open={advancedFiltersOpen} onOpenChange={setAdvancedFiltersOpen}>
+                <DialogTrigger asChild>
+                  <button className={`flex items-center justify-center gap-1.5 px-3 h-9 rounded-lg transition-colors flex-shrink-0 ${
+                    hasAdvancedFilters 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}>
+                    <SlidersHorizontal className="w-4 h-4" />
+                    <span className="text-xs font-medium hidden sm:inline">Advanced</span>
+                    {hasAdvancedFilters && (
+                      <span className="w-2 h-2 rounded-full bg-primary-foreground" />
+                    )}
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md bg-background border border-border">
+                  <DialogHeader>
+                    <DialogTitle className="flex items-center gap-2">
+                      <SlidersHorizontal className="w-5 h-5 text-primary" />
+                      Advanced Filters
+                    </DialogTitle>
+                  </DialogHeader>
+                  
+                  <div className="space-y-6 py-4">
+                    {/* Sort Order */}
+                    <div className="space-y-3">
+                      <label className="text-sm font-medium flex items-center gap-2">
+                        <ArrowUpDown className="w-4 h-4 text-muted-foreground" />
+                        Sort By
+                      </label>
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { value: '', label: 'Default' },
+                          { value: 'pop-desc', label: '👥 Population ↓' },
+                          { value: 'pop-asc', label: '👥 Population ↑' },
+                          { value: 'name-asc', label: '🔤 Name A-Z' },
+                          { value: 'name-desc', label: '🔤 Name Z-A' },
+                        ].map(option => (
+                          <button
+                            key={option.value}
+                            type="button"
+                            onClick={() => setTempSort(option.value)}
+                            className={`px-3 py-2 text-xs rounded-lg border transition-all ${
+                              tempSort === option.value
+                                ? 'border-primary bg-primary/10 text-primary'
+                                : 'border-border bg-secondary/50 text-foreground hover:bg-secondary'
+                            }`}
+                          >
+                            {option.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Multi-Select Countries */}
+                    <div className="space-y-3">
+                      <label className="text-sm font-medium flex items-center gap-2">
+                        <Flag className="w-4 h-4 text-muted-foreground" />
+                        Filter by Countries
+                        {tempCountries.length > 0 && (
+                          <span className="text-xs text-primary">({tempCountries.length} selected)</span>
+                        )}
+                      </label>
+                      <div className="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto pr-2">
+                        {countries.map(c => (
+                          <button
+                            key={c.code}
+                            type="button"
+                            onClick={() => toggleTempCountry(c.code)}
+                            className={`flex items-center gap-2 px-3 py-2 text-xs rounded-lg border transition-all text-left ${
+                              tempCountries.includes(c.code)
+                                ? 'border-primary bg-primary/10 text-primary'
+                                : 'border-border bg-secondary/50 text-foreground hover:bg-secondary'
+                            }`}
+                          >
+                            <span className="text-base">{c.flag}</span>
+                            <span className="truncate flex-1">{c.name}</span>
+                            {tempCountries.includes(c.code) && (
+                              <Check className="w-3 h-3 text-primary flex-shrink-0" />
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <DialogFooter className="flex gap-2 sm:gap-2">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={clearAdvancedFilters}
+                      className="flex-1"
+                    >
+                      Clear
+                    </Button>
+                    <Button
+                      type="button"
+                      onClick={applyAdvancedFilters}
+                      className="flex-1"
+                    >
+                      Apply Filters
+                    </Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
 
               {/* Did You Know - Info Tooltip */}
               {countryFacts.length > 0 && (
@@ -443,6 +638,38 @@ const Learn = () => {
                           setLocalSearch('');
                           const params = new URLSearchParams(searchParams);
                           params.delete('search');
+                          setSearchParams(params);
+                        }}
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                      >
+                        <X className="w-2.5 h-2.5" />
+                      </button>
+                    </span>
+                  )}
+                  {sortOrder && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                      <ArrowUpDown className="w-3 h-3" />
+                      {sortOrder === 'pop-asc' ? 'Pop ↑' : sortOrder === 'pop-desc' ? 'Pop ↓' : sortOrder === 'name-asc' ? 'A-Z' : 'Z-A'}
+                      <button 
+                        onClick={() => {
+                          const params = new URLSearchParams(searchParams);
+                          params.delete('sort');
+                          setSearchParams(params);
+                        }}
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                      >
+                        <X className="w-2.5 h-2.5" />
+                      </button>
+                    </span>
+                  )}
+                  {selectedCountries.length > 0 && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                      <Flag className="w-3 h-3" />
+                      {selectedCountries.length} countries
+                      <button 
+                        onClick={() => {
+                          const params = new URLSearchParams(searchParams);
+                          params.delete('countries');
                           setSearchParams(params);
                         }}
                         className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
