@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Users, Compass, Info, ZoomIn, ZoomOut, ExternalLink, Globe } from 'lucide-react';
+import { MapPin, Users, Compass, Info, ExternalLink, Globe } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';
 
 interface Tribe {
@@ -81,42 +81,85 @@ const getRegionColor = (region: string) => {
 
 export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFilter = 'KE' }: DynamicMapViewProps) {
   const [hoveredTribe, setHoveredTribe] = useState<string | null>(null);
-  const [zoom, setZoom] = useState(1);
-  
+
   const allCountries = getCountries();
   const config = countryConfigs[countryFilter] || countryConfigs['KE'];
   const countryInfo = allCountries.find(c => c.code === countryFilter);
-  
-  // OpenStreetMap embed URL centered on the selected country
-  const osmEmbedUrl = useMemo(() => {
+
+  const osmBounds = useMemo(() => {
+    // When a specific country is selected, keep the map framed on that country.
+    // (Some tribes span multiple countries but only have one coordinate; framing to tribes
+    // can accidentally zoom out to Kenya even when Tanzania is selected.)
+    if (countryFilter && countryFilter !== 'ALL') {
+      const bbox = config.zoom * 0.9;
+      return {
+        minLat: Math.max(-85, config.lat - bbox),
+        maxLat: Math.min(85, config.lat + bbox),
+        minLng: Math.max(-180, config.lng - bbox),
+        maxLng: Math.min(180, config.lng + bbox),
+      };
+    }
+
+    // For ALL (or no country), zoom to visible tribes so filter changes reframe the map.
+    if (tribes.length > 0) {
+      const lats = tribes.map(t => t.mapCoordinates.lat);
+      const lngs = tribes.map(t => t.mapCoordinates.lng);
+
+      let minLat = Math.min(...lats);
+      let maxLat = Math.max(...lats);
+      let minLng = Math.min(...lngs);
+      let maxLng = Math.max(...lngs);
+
+      const latRange = Math.max(0.25, maxLat - minLat);
+      const lngRange = Math.max(0.25, maxLng - minLng);
+
+      const padLat = latRange * 0.35;
+      const padLng = lngRange * 0.35;
+
+      minLat = Math.max(-85, minLat - padLat);
+      maxLat = Math.min(85, maxLat + padLat);
+      minLng = Math.max(-180, minLng - padLng);
+      maxLng = Math.min(180, maxLng + padLng);
+
+      return { minLat, maxLat, minLng, maxLng };
+    }
+
     const bbox = config.zoom;
-    return `https://www.openstreetmap.org/export/embed.html?bbox=${config.lng - bbox}%2C${config.lat - bbox}%2C${config.lng + bbox}%2C${config.lat + bbox}&layer=mapnik`;
-  }, [config]);
-  
-  const osmFullUrl = `https://www.openstreetmap.org/?mlat=${config.lat}&mlon=${config.lng}#map=6/${config.lat}/${config.lng}`;
-  
+    return {
+      minLat: Math.max(-85, config.lat - bbox),
+      maxLat: Math.min(85, config.lat + bbox),
+      minLng: Math.max(-180, config.lng - bbox),
+      maxLng: Math.min(180, config.lng + bbox),
+    };
+  }, [tribes, config, countryFilter]);
+
+  // OpenStreetMap embed URL framed by bounds
+  const osmEmbedUrl = useMemo(() => {
+    return `https://www.openstreetmap.org/export/embed.html?bbox=${osmBounds.minLng}%2C${osmBounds.minLat}%2C${osmBounds.maxLng}%2C${osmBounds.maxLat}&layer=mapnik`;
+  }, [osmBounds]);
+
+  const osmFullUrl = `https://www.openstreetmap.org/?bbox=${osmBounds.minLng}%2C${osmBounds.minLat}%2C${osmBounds.maxLng}%2C${osmBounds.maxLat}&layer=mapnik`;
+
   const activeId = hoveredTribe || selectedTribe;
   const activeTribe = tribes.find(t => t.slug === activeId);
 
-  // Calculate bounds for overlay positioning
-  const bounds = useMemo(() => {
-    if (tribes.length === 0) return null;
-    const lats = tribes.map(t => t.mapCoordinates.lat);
-    const lngs = tribes.map(t => t.mapCoordinates.lng);
-    return {
-      minLat: Math.min(...lats),
-      maxLat: Math.max(...lats),
-      minLng: Math.min(...lngs),
-      maxLng: Math.max(...lngs),
-    };
-  }, [tribes]);
+  const toWorldX = (lng: number) => (lng + 180) / 360;
+  const toWorldY = (lat: number) => {
+    const rad = (lat * Math.PI) / 180;
+    return (1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2;
+  };
 
-  // Convert coordinates to percentage position on map
+  // Convert coordinates to percentage position on the embedded map (Web Mercator like OSM)
   const coordToPercent = (lat: number, lng: number) => {
-    const bbox = config.zoom;
-    const left = ((lng - (config.lng - bbox)) / (bbox * 2)) * 100;
-    const top = (((config.lat + bbox) - lat) / (bbox * 2)) * 100;
-    return { left: Math.max(5, Math.min(95, left)), top: Math.max(5, Math.min(95, top)) };
+    const xMin = toWorldX(osmBounds.minLng);
+    const xMax = toWorldX(osmBounds.maxLng);
+    const yTop = toWorldY(osmBounds.maxLat);
+    const yBottom = toWorldY(osmBounds.minLat);
+
+    const left = ((toWorldX(lng) - xMin) / (xMax - xMin)) * 100;
+    const top = ((toWorldY(lat) - yTop) / (yBottom - yTop)) * 100;
+
+    return { left, top };
   };
 
   return (
@@ -167,7 +210,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
             const color = getRegionColor(tribe.region);
             
             // Skip if outside visible bounds
-            if (left < 2 || left > 98 || top < 2 || top > 98) return null;
+            if (left < 0 || left > 100 || top < 0 || top > 100) return null;
             
             return (
               <Link
