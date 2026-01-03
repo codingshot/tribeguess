@@ -12,6 +12,7 @@ export interface Country {
   code: string;
   name: string;
   flag: string;
+  region: string;
 }
 
 export interface DetectionResult {

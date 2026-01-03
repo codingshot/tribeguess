@@ -1,10 +1,11 @@
 import { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, ChevronDown } from 'lucide-react';
+import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
 import { KenyaMapView } from '@/components/KenyaMapView';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
+import tribesData from '@/data/tribes.json';
 import {
   Select,
   SelectContent,
@@ -17,6 +18,7 @@ const Learn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const regionFilter = searchParams.get('region') || '';
+  const macroRegionFilter = searchParams.get('macroRegion') || '';
   const countryFilter = searchParams.get('country') || 'KE'; // Default to Kenya
   const viewMode = searchParams.get('view') || 'grid';
   
@@ -24,6 +26,7 @@ const Learn = () => {
   
   const tribes = getAllTribes();
   const countries = getCountries();
+  const macroRegions = tribesData.regions || [];
 
   const formatPopulation = (pop: number) => {
     if (pop >= 1000000) {
@@ -34,6 +37,12 @@ const Learn = () => {
     return pop.toString();
   };
   
+  // Get countries filtered by macro region
+  const filteredCountries = useMemo(() => {
+    if (!macroRegionFilter) return countries;
+    return countries.filter(c => c.region === macroRegionFilter);
+  }, [countries, macroRegionFilter]);
+
   // Filter regions based on selected country's tribes
   const regions = useMemo(() => {
     const countryTribes = tribes.filter(t => {
@@ -99,11 +108,20 @@ const Learn = () => {
       
       // Filter by country - check if tribe has countries array and includes selected country
       const tribeCountries = (tribe as any).countries || ['KE']; // Default to Kenya if not specified
-      const matchesCountry = !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
+      
+      // If macro region is set but no country, filter by any country in that macro region
+      let matchesCountry = true;
+      if (countryFilter && countryFilter !== 'ALL') {
+        matchesCountry = tribeCountries.includes(countryFilter);
+      } else if (macroRegionFilter) {
+        // When macro region is set, show tribes from any country in that region
+        const regionCountryCodes = countries.filter(c => c.region === macroRegionFilter).map(c => c.code);
+        matchesCountry = tribeCountries.some((code: string) => regionCountryCodes.includes(code));
+      }
       
       return matchesSearch && matchesRegion && matchesCountry;
     });
-  }, [tribes, searchQuery, regionFilter, countryFilter]);
+  }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries]);
   
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -137,6 +155,19 @@ const Learn = () => {
     params.delete('region');
     setSearchParams(params);
   };
+
+  const handleMacroRegionChange = (region: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (region) {
+      params.set('macroRegion', region);
+      // When selecting a macro region, clear country filter to show all countries in that region
+      params.delete('country');
+      params.delete('region');
+    } else {
+      params.delete('macroRegion');
+    }
+    setSearchParams(params);
+  };
   
   const toggleViewMode = (mode: string) => {
     const params = new URLSearchParams(searchParams);
@@ -149,7 +180,7 @@ const Learn = () => {
     setSearchParams({});
   };
   
-  const hasFilters = searchQuery || regionFilter || (countryFilter && countryFilter !== 'KE');
+  const hasFilters = searchQuery || regionFilter || macroRegionFilter || (countryFilter && countryFilter !== 'KE');
 
   const selectedCountry = countries.find(c => c.code === countryFilter) || countries.find(c => c.code === 'KE');
 
@@ -166,19 +197,52 @@ const Learn = () => {
             <p className="text-muted-foreground max-w-lg mx-auto text-sm sm:text-base px-2">
               Explore the rich cultural diversity of African ethnic groups, their naming traditions, and cultural characteristics.
             </p>
-            {/* Country Selector */}
+            {/* Macro Region Selector */}
             <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+              <span className="text-sm text-muted-foreground flex items-center gap-1">
+                <Layers className="w-4 h-4" />
+                Region:
+              </span>
+              <div className="flex flex-wrap gap-1.5 justify-center">
+                <button
+                  onClick={() => handleMacroRegionChange('')}
+                  className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                    !macroRegionFilter
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                >
+                  All Africa
+                </button>
+                {macroRegions.map(region => (
+                  <button
+                    key={region.id}
+                    onClick={() => handleMacroRegionChange(region.id)}
+                    className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                      macroRegionFilter === region.id
+                        ? 'bg-primary text-primary-foreground' 
+                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                    }`}
+                  >
+                    {region.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Country Selector */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-3">
               <span className="text-sm text-muted-foreground flex items-center gap-1">
                 <Flag className="w-4 h-4" />
                 Country:
               </span>
-              <div className="flex flex-wrap gap-1.5">
-                {countries.slice(0, 10).map(country => (
+              <div className="flex flex-wrap gap-1.5 justify-center">
+                {(macroRegionFilter ? filteredCountries : countries.slice(0, 12)).map(country => (
                   <button
                     key={country.code}
                     onClick={() => handleCountryChange(country.code)}
-                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
-                      countryFilter === country.code || (!countryFilter && country.code === 'KE')
+                    className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center gap-1 ${
+                      countryFilter === country.code || (!countryFilter && !macroRegionFilter && country.code === 'KE')
                         ? 'bg-primary text-primary-foreground' 
                         : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                     }`}
@@ -187,16 +251,18 @@ const Learn = () => {
                     <span className="hidden sm:inline">{country.name}</span>
                   </button>
                 ))}
-                <button
-                  onClick={() => handleCountryChange('ALL')}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                    countryFilter === 'ALL'
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                  }`}
-                >
-                  🌍 All
-                </button>
+                {!macroRegionFilter && (
+                  <button
+                    onClick={() => handleCountryChange('ALL')}
+                    className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                      countryFilter === 'ALL'
+                        ? 'bg-primary text-primary-foreground' 
+                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                    }`}
+                  >
+                    🌍 All
+                  </button>
+                )}
               </div>
             </div>
           </header>
