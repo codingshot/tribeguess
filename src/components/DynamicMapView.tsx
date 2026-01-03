@@ -224,65 +224,95 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
           sandbox="allow-scripts allow-same-origin"
         />
         
-        {/* Tribe Markers Overlay */}
+        {/* Tribe Territory Overlays */}
         <div className="absolute inset-0 pointer-events-none">
           {tribes.map((tribe, index) => {
             const { left, top } = coordToPercent(tribe.mapCoordinates.lat, tribe.mapCoordinates.lng);
             const isActive = tribe.slug === activeId;
             const popPercent = parseInt(tribe.populationPercent) || 5;
-            const size = Math.max(24, Math.min(48, popPercent * 2));
+            
+            // Territory size based on population - larger tribes get bigger territories
+            const baseSize = Math.max(8, Math.min(25, popPercent * 1.5));
+            const territorySize = isActive ? baseSize * 1.3 : baseSize;
             const color = getRegionColor(tribe.region);
             
             // Skip if outside visible bounds
-            if (left < 0 || left > 100 || top < 0 || top > 100) return null;
+            if (left < -10 || left > 110 || top < -10 || top > 110) return null;
             
             return (
               <Link
                 key={`${tribe.id}-${index}`}
                 to={`/learn/${tribe.slug}`}
-                className="pointer-events-auto absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group z-10"
-                style={{ left: `${left}%`, top: `${top}%` }}
+                className="pointer-events-auto absolute cursor-pointer group"
+                style={{ 
+                  left: `${left}%`, 
+                  top: `${top}%`,
+                  transform: 'translate(-50%, -50%)',
+                  zIndex: isActive ? 20 : 10,
+                }}
                 onMouseEnter={() => setHoveredTribe(tribe.slug)}
                 onMouseLeave={() => setHoveredTribe(null)}
                 onClick={() => onTribeSelect?.(tribe.slug)}
               >
-                {/* Outer pulse ring when active */}
+                {/* Territory area - elliptical region */}
+                <div 
+                  className="absolute rounded-[50%] transition-all duration-300"
+                  style={{ 
+                    width: `${territorySize * 3}px`,
+                    height: `${territorySize * 2.5}px`,
+                    left: `${-territorySize * 1.5}px`,
+                    top: `${-territorySize * 1.25}px`,
+                    background: `radial-gradient(ellipse 100% 100% at 50% 50%, 
+                      ${color}${isActive ? '55' : '35'} 0%, 
+                      ${color}${isActive ? '35' : '20'} 40%, 
+                      ${color}${isActive ? '15' : '08'} 70%,
+                      transparent 100%)`,
+                    border: isActive ? `2px dashed ${color}88` : 'none',
+                  }}
+                />
+                
+                {/* Inner core territory */}
+                <div 
+                  className="absolute rounded-full transition-all duration-200"
+                  style={{ 
+                    width: `${territorySize * 1.5}px`,
+                    height: `${territorySize * 1.5}px`,
+                    left: `${-territorySize * 0.75}px`,
+                    top: `${-territorySize * 0.75}px`,
+                    background: `radial-gradient(circle at 50% 50%, 
+                      ${color}${isActive ? '60' : '45'} 0%, 
+                      ${color}${isActive ? '30' : '20'} 60%,
+                      transparent 100%)`,
+                  }}
+                />
+                
+                {/* Pulse animation when active */}
                 {isActive && (
                   <div 
-                    className="absolute rounded-full bg-primary/30 animate-ping"
+                    className="absolute rounded-full animate-ping"
                     style={{ 
-                      width: size + 16, 
-                      height: size + 16,
-                      left: -8,
-                      top: -8,
+                      width: `${territorySize * 2}px`,
+                      height: `${territorySize * 2}px`,
+                      left: `${-territorySize}px`,
+                      top: `${-territorySize}px`,
+                      background: `${color}30`,
                     }}
                   />
                 )}
                 
-                {/* Outer glow */}
+                {/* Center marker */}
                 <div 
-                  className="absolute rounded-full transition-all duration-200"
+                  className="absolute rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-white transition-all duration-200 group-hover:scale-110"
                   style={{ 
-                    width: size + 8, 
-                    height: size + 8,
-                    left: -4,
-                    top: -4,
+                    width: '20px', 
+                    height: '20px',
+                    left: '-10px',
+                    top: '-10px',
                     background: color,
-                    opacity: isActive ? 0.4 : 0.2,
-                  }}
-                />
-                
-                {/* Main marker */}
-                <div 
-                  className="rounded-full flex items-center justify-center text-white font-bold shadow-lg border-2 border-white transition-all duration-200 group-hover:scale-110"
-                  style={{ 
-                    width: size, 
-                    height: size,
-                    background: color,
-                    fontSize: size > 32 ? 11 : 9,
+                    fontSize: '8px',
                   }}
                 >
-                  {tribe.populationPercent}
+                  {popPercent > 5 ? tribe.populationPercent : ''}
                 </div>
                 
                 {/* Name label */}
@@ -292,7 +322,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
                       ? 'bg-primary text-primary-foreground' 
                       : 'bg-card/95 text-foreground border border-border'
                   }`}
-                  style={{ top: size + 4 }}
+                  style={{ top: '14px' }}
                 >
                   {tribe.name.length > 12 ? tribe.name.substring(0, 10) + '…' : tribe.name}
                 </div>
