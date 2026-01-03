@@ -8831,64 +8831,6 @@
     },
 
     {
-      "id": "afar",
-      "name": "Afar",
-      "slug": "afar",
-      "countries": ["ET", "ER", "DJ"],
-      "region": "Afar Region (Ethiopia, Eritrea, Djibouti)",
-      "population": "~2.5 million",
-      "populationPercent": "2.5%",
-      "genderRatio": { "male": 50, "female": 50 },
-      "mapCoordinates": { "lat": 11.5, "lng": 41.4 },
-      "counties": ["Afar Region", "Djibouti", "Southern Eritrea"],
-      "namePrefixes": ["Ali", "Ahmed", "Mohamed", "Hassan"],
-      "commonNames": {
-        "female": ["Fatuma", "Halima", "Khadija", "Amina", "Zeinab", "Maryam"],
-        "male": ["Ali", "Ahmed", "Mohamed", "Hassan", "Ibrahim", "Osman", "Yusuf"]
-      },
-      "stereotypes": [
-        "Desert warriors",
-        "Salt traders",
-        "Extreme heat survivors",
-        "Nomadic lifestyle",
-        "Fierce independence"
-      ],
-      "culturalTraits": [
-        "Salt mining from Danakil Depression",
-        "Camel herding",
-        "Traditional curved knife (jile)",
-        "Nomadic pastoralism",
-        "Oral poetry traditions"
-      ],
-      "funFacts": [
-        "The Afar live in the Danakil Depression, one of the hottest places on Earth",
-        "They have mined salt from the desert for centuries, trading it across Ethiopia",
-        "The traditional Afar knife (jile) is a symbol of manhood"
-      ],
-      "traditionalFood": {
-        "staples": ["Camel milk", "Goat meat", "Sorghum", "Dates"],
-        "beverages": ["Camel milk", "Coffee"],
-        "specialDishes": ["Roasted meat", "Dried meat"],
-        "description": "Afar cuisine centers on pastoral products from camels and goats, adapted to the harsh desert environment."
-      },
-      "traditionalDance": "Jenile - warrior dance",
-      "religion": "Islam (Sunni)",
-      "language": {
-        "name": "Afar",
-        "speakers": "~2.5 million",
-        "greeting": "Maalin wanaagsan",
-        "greetingMeaning": "Good day",
-        "family": "Cushitic (Afro-Asiatic)",
-        "writingSystem": "Latin alphabet"
-      },
-      "famousPeople": [
-        { "name": "Hanfare Ali Mirah", "role": "Sultan of Aussa", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Mirah_Hanfare" }
-      ],
-      "description": "The Afar are a nomadic people spanning Ethiopia, Eritrea, and Djibouti, known for surviving in one of Earth's harshest environments and their ancient salt trade.",
-      "relatedTribes": ["oromo", "somali", "issa"]
-    },
-
-    {
       "id": "tigrinya",
       "name": "Tigrinya",
       "slug": "tigrinya",
