@@ -51,29 +51,41 @@ const TribePage = () => {
           </nav>
           
           <div className="bg-card rounded-2xl border border-border overflow-hidden">
-            <header className="gradient-gold p-4 sm:p-6 text-primary-foreground">
+          <header className="gradient-gold p-4 sm:p-6 text-primary-foreground">
               <div className="flex items-center gap-2 mb-2">
-                {/* Country Flags */}
-                {(tribe as any).countries && (tribe as any).countries.length > 0 && (
-                  <div className="flex gap-1">
-                    {(tribe as any).countries.map((code: string) => {
-                      const country = getCountries().find(c => c.code === code);
-                      return country ? (
-                        <span key={code} className="text-lg" title={country.name}>{country.flag}</span>
-                      ) : null;
-                    })}
-                  </div>
-                )}
                 <h1 className="text-2xl sm:text-3xl font-bold">{tribe.name}</h1>
               </div>
+              
+              {/* Clickable Country & Region Tags */}
+              <div className="flex flex-wrap gap-2 mb-3">
+                {(tribe as any).countries && (tribe as any).countries.length > 0 && (
+                  (tribe as any).countries.map((code: string) => {
+                    const country = getCountries().find(c => c.code === code);
+                    return country ? (
+                      <Link 
+                        key={code} 
+                        to={`/learn?country=${code}`}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 hover:bg-white/30 transition-colors text-xs sm:text-sm font-medium"
+                      >
+                        <span>{country.flag}</span>
+                        <span>{country.name}</span>
+                      </Link>
+                    ) : null;
+                  })
+                )}
+                <Link 
+                  to={`/learn?region=${encodeURIComponent(tribe.region)}`}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 hover:bg-white/30 transition-colors text-xs sm:text-sm font-medium"
+                >
+                  <MapPin className="w-3 h-3" aria-hidden="true" />
+                  <span>{tribe.region}</span>
+                </Link>
+              </div>
+              
               <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm opacity-90">
                 <div className="flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
-                  <span>{tribe.region}</span>
-                </div>
-                <div className="flex items-center gap-1">
                   <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
-                  <span>{tribe.population} ({tribe.populationPercent} of Kenya)</span>
+                  <span>{tribe.population}</span>
                 </div>
               </div>
             </header>

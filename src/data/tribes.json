@@ -8435,6 +8435,367 @@
         "communities": ["Growing diaspora from economic migration"],
         "associations": ["Malawi Diaspora Association"]
       }
+    },
+
+    {
+      "id": "fula",
+      "name": "Fula (Fulani)",
+      "slug": "fula",
+      "countries": ["NG", "GN", "SN", "ML", "CM", "NE", "BF", "GM", "GH"],
+      "region": "West Africa (Sahel)",
+      "population": "~40 million",
+      "populationPercent": "Spread across 15+ countries",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 12.0, "lng": 4.0 },
+      "counties": ["Northern Nigeria", "Guinea", "Senegal", "Mali"],
+      "namePrefixes": ["Ba", "Sow", "Di", "Ka", "Usman", "Aisha"],
+      "commonNames": {
+        "female": ["Aissatou", "Mariama", "Fatoumata", "Aminata", "Kadiatou", "Hawa", "Adama", "Binta", "Djeneba"],
+        "male": ["Amadou", "Mamadou", "Ousmane", "Ibrahima", "Samba", "Boubacar", "Aliou", "Abdoulaye", "Thierno"]
+      },
+      "stereotypes": [
+        "Pastoral nomads",
+        "Cattle herders",
+        "Physical beauty idealized",
+        "Islamic scholars",
+        "Spread across Africa",
+        "Warrior traditions"
+      ],
+      "culturalTraits": [
+        "Transhumance (seasonal migration)",
+        "Cattle central to identity",
+        "Pulaaku code of conduct",
+        "Islamic scholarship",
+        "Elaborate hairstyles and jewelry",
+        "Gerewol beauty contest"
+      ],
+      "funFacts": [
+        "Fulani are the world's largest nomadic ethnic group, spread across 15+ African countries",
+        "The Gerewol beauty contest sees young men wear makeup to attract wives",
+        "Fulani jihads established major Islamic states across West Africa",
+        "Pulaaku (Fulani code) emphasizes patience, self-control, and wisdom"
+      ],
+      "traditionalFood": {
+        "staples": ["Dairy (milk, butter, cheese)", "Millet", "Rice", "Sorghum"],
+        "beverages": ["Fresh milk", "Fermented milk (nono)", "Fura (millet drink)"],
+        "specialDishes": ["Fura da nono (millet balls with milk)", "Nyiiri (millet couscous)", "Kosai (bean cakes)"],
+        "description": "Fulani diet centers on dairy from their beloved cattle, supplemented with millet and other grains."
+      },
+      "traditionalDance": "Gerewol - male beauty dance contest",
+      "religion": "Islam (predominant), Traditional beliefs (some)",
+      "language": {
+        "name": "Fulfulde (Pulaar)",
+        "speakers": "~40 million",
+        "greeting": "A jam waali?",
+        "greetingMeaning": "Did you spend the night in peace?",
+        "family": "Atlantic (Niger-Congo)",
+        "writingSystem": "Arabic script, Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio" },
+        { "name": "Muhammadu Buhari", "role": "President of Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Muhammadu_Buhari" }
+      ],
+      "description": "The Fulani are Africa's largest nomadic ethnic group, known for cattle herding, Islamic scholarship, and spreading across 15+ West African countries.",
+      "relatedTribes": ["hausa", "mandinka", "wolof", "tuareg"]
+    },
+
+    {
+      "id": "mandinka",
+      "name": "Mandinka",
+      "slug": "mandinka",
+      "countries": ["GM", "SN", "GN", "ML", "GW", "CI"],
+      "region": "West Africa (Senegambia)",
+      "population": "~11 million",
+      "populationPercent": "42% (Gambia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 13.45, "lng": -16.58 },
+      "counties": ["Gambia", "Casamance (Senegal)", "Guinea"],
+      "namePrefixes": ["Lam", "Bak", "Dram", "Jail", "Musa", "Fatou"],
+      "commonNames": {
+        "female": ["Fatou", "Mariama", "Aminata", "Binta", "Kadiatou", "Isatou", "Nyima", "Aja"],
+        "male": ["Lamin", "Bakary", "Ousmane", "Modou", "Ebrima", "Musa", "Demba", "Karamo"]
+      },
+      "stereotypes": [
+        "Kunta Kinte's people (Roots)",
+        "Griot tradition",
+        "Kora musicians",
+        "Warrior heritage",
+        "Hospitable",
+        "Skilled farmers"
+      ],
+      "culturalTraits": [
+        "Griot oral tradition",
+        "Kora (21-string harp)",
+        "Mali Empire heritage",
+        "Initiation ceremonies",
+        "Strong Islamic practice",
+        "Hospitality traditions"
+      ],
+      "funFacts": [
+        "Kunta Kinte from 'Roots' was Mandinka - bringing them worldwide recognition",
+        "The kora (21-string harp) is the iconic Mandinka instrument",
+        "Mandinka are descendants of the Mali Empire founded by Sundiata Keita"
+      ],
+      "traditionalFood": {
+        "staples": ["Rice", "Millet", "Groundnuts", "Fish"],
+        "beverages": ["Palm wine", "Wonjo (hibiscus drink)", "Attaya (green tea)"],
+        "specialDishes": ["Domoda (groundnut stew)", "Benachin (jollof rice)", "Superkanja (okra stew)"],
+        "description": "Mandinka cuisine features rice-based dishes with groundnut and palm oil sauces."
+      },
+      "traditionalDance": "Kora music and dance performances",
+      "religion": "Islam (predominant)",
+      "language": {
+        "name": "Mandinka",
+        "speakers": "~11 million",
+        "greeting": "I be ñaadi?",
+        "greetingMeaning": "How are you?",
+        "family": "Mande (Niger-Congo)",
+        "writingSystem": "Latin alphabet, Arabic script"
+      },
+      "famousPeople": [
+        { "name": "Sundiata Keita", "role": "Founder of Mali Empire", "wikipedia": "https://en.wikipedia.org/wiki/Sundiata_Keita" },
+        { "name": "Toumani Diabaté", "role": "World-Famous Kora Player", "wikipedia": "https://en.wikipedia.org/wiki/Toumani_Diabat%C3%A9" }
+      ],
+      "description": "The Mandinka are descendants of the Mali Empire, famous for the kora, griot tradition, and the 'Roots' story of Kunta Kinte.",
+      "relatedTribes": ["bambara", "soninke", "wolof", "jola"]
+    },
+
+    {
+      "id": "tswana",
+      "name": "Tswana",
+      "slug": "tswana",
+      "countries": ["BW", "ZA", "NA"],
+      "region": "Botswana & South Africa",
+      "population": "~8 million",
+      "populationPercent": "79% (Botswana)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -24.65, "lng": 25.91 },
+      "counties": ["Gaborone", "Francistown", "North West Province (SA)"],
+      "namePrefixes": ["Ke", "Mo", "Le", "Bo", "Tsa", "Ra"],
+      "commonNames": {
+        "female": ["Keitumetse", "Mpho", "Lesego", "Boitumelo", "Tshepo", "Kelebogile", "Bontle", "Naledi"],
+        "male": ["Kabelo", "Mothusi", "Letlhogonolo", "Boitumelo", "Tshepo", "Kgosi", "Thato", "Katlego"]
+      },
+      "stereotypes": [
+        "Peaceful nation",
+        "Diamond wealth",
+        "Cattle culture",
+        "Strong kgotla democracy",
+        "Well-educated",
+        "Hospitable"
+      ],
+      "culturalTraits": [
+        "Kgotla democratic system",
+        "Cattle as wealth",
+        "Rainmaking ceremonies",
+        "Strong chieftaincy",
+        "Botho (Ubuntu) philosophy",
+        "Traditional court system"
+      ],
+      "funFacts": [
+        "Botswana's kgotla system is a traditional democratic forum still used today",
+        "Botswana went from one of the poorest countries to upper-middle income through diamond wealth",
+        "Setswana proverb: 'Motho ke motho ka batho' (A person is a person through people)"
+      ],
+      "traditionalFood": {
+        "staples": ["Sorghum porridge (bogobe)", "Beef", "Morogo (wild spinach)", "Beans"],
+        "beverages": ["Traditional beer (bojalwa)", "Fermented milk (madila)"],
+        "specialDishes": ["Seswaa (pounded beef)", "Mogodu (tripe)", "Dikgobe (bean stew)"],
+        "description": "Tswana cuisine features beef dishes, sorghum porridge, and traditional vegetables."
+      },
+      "traditionalDance": "Setapa - traditional dance",
+      "religion": "Christianity (majority), Traditional beliefs",
+      "language": {
+        "name": "Setswana",
+        "speakers": "~8 million",
+        "greeting": "Dumela",
+        "greetingMeaning": "Hello",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Seretse Khama", "role": "First President of Botswana", "wikipedia": "https://en.wikipedia.org/wiki/Seretse_Khama" }
+      ],
+      "description": "The Tswana are the majority people of Botswana, known for the kgotla democratic system, cattle culture, and building one of Africa's most stable democracies.",
+      "relatedTribes": ["sotho", "pedi", "ndebele_south"]
+    },
+
+    {
+      "id": "nuer",
+      "name": "Nuer",
+      "slug": "nuer",
+      "countries": ["SS", "ET"],
+      "region": "South Sudan & Ethiopia",
+      "population": "~3.5 million",
+      "populationPercent": "16% (South Sudan)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 8.5, "lng": 32.0 },
+      "counties": ["Unity State", "Upper Nile", "Jonglei", "Gambela (Ethiopia)"],
+      "namePrefixes": ["Riek", "Gat", "Nyak", "Lual", "Puok", "Both"],
+      "commonNames": {
+        "female": ["Nyakong", "Nyalat", "Nyaluak", "Nyawich", "Nyagua", "Nyakuoth", "Nyaboth", "Nyakuma"],
+        "male": ["Riek", "Gatluak", "Lual", "Puok", "Both", "Thon", "Kuol", "Tut", "Gai"]
+      },
+      "stereotypes": [
+        "Very tall people",
+        "Cattle-centric culture",
+        "Warrior traditions",
+        "Facial scarification (gaar)",
+        "Fierce independence",
+        "River people"
+      ],
+      "culturalTraits": [
+        "Cattle as wealth and identity",
+        "Six forehead scars (gaar)",
+        "Age-set organization",
+        "Prophet/spiritual leaders",
+        "Nile River lifestyle"
+      ],
+      "funFacts": [
+        "Nuer men receive six horizontal forehead scars (gaar) as a rite of passage",
+        "Like the Dinka, Nuer are among the world's tallest people",
+        "Evans-Pritchard's classic anthropology study 'The Nuer' made them world-famous"
+      ],
+      "traditionalFood": {
+        "staples": ["Milk (fresh and fermented)", "Sorghum", "Fish", "Beef (ceremonial)"],
+        "beverages": ["Fresh milk", "Fermented milk", "Sorghum beer"],
+        "specialDishes": ["Blood and milk mixture", "Dried fish", "Roasted meat"],
+        "description": "Nuer diet centers on dairy products from cattle, supplemented with fish from the Nile and sorghum."
+      },
+      "traditionalDance": "Cattle camp songs and dances",
+      "religion": "Traditional (Kuoth - Spirit), Christianity growing",
+      "language": {
+        "name": "Nuer",
+        "speakers": "~3.5 million",
+        "greeting": "Malɛ̈",
+        "greetingMeaning": "Hello",
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Riek Machar", "role": "Vice President of South Sudan", "wikipedia": "https://en.wikipedia.org/wiki/Riek_Machar" }
+      ],
+      "description": "The Nuer are South Sudan's second-largest ethnic group, known for cattle culture, distinctive facial scarification, and tall stature.",
+      "relatedTribes": ["dinka", "shilluk", "anuak"]
+    },
+
+    {
+      "id": "ovambo",
+      "name": "Ovambo (Aawambo)",
+      "slug": "ovambo",
+      "countries": ["NA", "AO"],
+      "region": "Namibia (North)",
+      "population": "~2 million",
+      "populationPercent": "50% (Namibia)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -17.9, "lng": 15.9 },
+      "counties": ["Ohangwena", "Omusati", "Oshana", "Oshikoto"],
+      "namePrefixes": ["Na", "Shi", "Ka", "Ne", "Om"],
+      "commonNames": {
+        "female": ["Namibia", "Nangula", "Shilongo", "Ndapewa", "Loide", "Hilma", "Selma", "Helena"],
+        "male": ["Hifikepunye", "Nangolo", "Shapwa", "Immanuel", "Johannes", "Sakeus", "Samuel", "Leonard"]
+      },
+      "stereotypes": [
+        "Independence fighters",
+        "Political majority",
+        "Hardworking",
+        "Strong community bonds",
+        "Agricultural expertise",
+        "SWAPO supporters"
+      ],
+      "culturalTraits": [
+        "Matrilineal succession",
+        "Efundula initiation",
+        "Palm wine (omalunga)",
+        "Strong family compounds",
+        "Independence movement"
+      ],
+      "funFacts": [
+        "Ovambo make up half of Namibia's population and dominate politics",
+        "SWAPO, the independence movement, was largely Ovambo-led",
+        "Efundula is the traditional girls' initiation ceremony"
+      ],
+      "traditionalFood": {
+        "staples": ["Oshifima (maize/millet porridge)", "Omahangu (pearl millet)", "Beans", "Wild spinach"],
+        "beverages": ["Omalodu (palm wine)", "Ontaku (sorghum beer)", "Omagongo (marula fruit wine)"],
+        "specialDishes": ["Dried meat (oshiwambo)", "Wild greens", "Caterpillars (seasonal)"],
+        "description": "Ovambo cuisine features millet-based porridge with protein from beans, meat, or caterpillars."
+      },
+      "traditionalDance": "Ondjongo - celebratory dance",
+      "religion": "Christianity (Lutheran majority), Traditional beliefs",
+      "language": {
+        "name": "Oshiwambo",
+        "speakers": "~2 million",
+        "greeting": "Wa lalapo?",
+        "greetingMeaning": "Did you sleep well?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Sam Nujoma", "role": "Father of Namibian Nation", "wikipedia": "https://en.wikipedia.org/wiki/Sam_Nujoma" }
+      ],
+      "description": "The Ovambo are Namibia's largest ethnic group, known for leading the independence struggle and their agricultural traditions in the north.",
+      "relatedTribes": ["herero", "kavango", "himba"]
+    },
+
+    {
+      "id": "mossi",
+      "name": "Mossi",
+      "slug": "mossi",
+      "countries": ["BF", "GH", "CI"],
+      "region": "Burkina Faso",
+      "population": "~11 million",
+      "populationPercent": "52% (Burkina Faso)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 12.37, "lng": -1.52 },
+      "counties": ["Ouagadougou", "Central Plateau"],
+      "namePrefixes": ["Oue", "Zom", "Ka", "Sa", "Nab"],
+      "commonNames": {
+        "female": ["Salamata", "Rasmata", "Azeta", "Mariam", "Fatimata", "Aminata", "Kadidia"],
+        "male": ["Ouedraogo", "Zoungrana", "Kabore", "Sanou", "Naboho", "Compaoré", "Sawadogo"]
+      },
+      "stereotypes": [
+        "Strong traditional kingdoms",
+        "Mask traditions",
+        "Resilient farmers",
+        "Political dominance",
+        "Migrant workers",
+        "Horse warriors"
+      ],
+      "culturalTraits": [
+        "Mogho Naaba (emperor) still exists",
+        "Elaborate mask ceremonies",
+        "Strong agricultural society",
+        "Patrilineal succession",
+        "Friday emperor ceremonies"
+      ],
+      "funFacts": [
+        "The Mogho Naaba (Mossi emperor) still holds Friday ceremonies in Ouagadougou",
+        "Mossi kingdoms resisted French colonization until 1896",
+        "Mossi masks are UNESCO Intangible Heritage"
+      ],
+      "traditionalFood": {
+        "staples": ["Tô (sorghum/millet porridge)", "Rice", "Beans", "Peanuts"],
+        "beverages": ["Dolo (millet beer)", "Zoom-koom (millet drink)"],
+        "specialDishes": ["Riz gras (fatty rice)", "Sauce feuille", "Brochettes"],
+        "description": "Mossi cuisine centers on tô (thick porridge) with various sauces and vegetables."
+      },
+      "traditionalDance": "Mask dances for funerals and ceremonies",
+      "religion": "Islam (majority), Christianity, Traditional",
+      "language": {
+        "name": "Mooré",
+        "speakers": "~11 million",
+        "greeting": "Ne y yamba?",
+        "greetingMeaning": "How are you?",
+        "family": "Gur (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Thomas Sankara", "role": "Revolutionary Leader", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Sankara" },
+        { "name": "Blaise Compaoré", "role": "Former President", "wikipedia": "https://en.wikipedia.org/wiki/Blaise_Compaor%C3%A9" }
+      ],
+      "description": "The Mossi are Burkina Faso's dominant ethnic group, known for maintaining powerful kingdoms, elaborate mask traditions, and producing revolutionary leader Thomas Sankara.",
+      "relatedTribes": ["dagomba", "mamprusi", "gurma"]
     }
   ]
 }
