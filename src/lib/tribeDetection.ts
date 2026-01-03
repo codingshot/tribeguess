@@ -23,6 +23,66 @@ export interface DetectionResult {
 
 // Comprehensive name database with verified meanings
 const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; meaning: string }> = {
+  // ============ RWANDA & BURUNDI (Banyarwanda) ============
+  'uwimana': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'God knows - expressing faith' },
+  'mukamana': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Wife of Imana (God) - blessed one' },
+  'nyiramana': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Mother of God - blessed mother' },
+  'ineza': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Goodness, kindness' },
+  'divine': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Divine blessing - modern Christian name' },
+  'vestine': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Vestine - Christian name, blessed' },
+  'odette': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Wealth, fortune - French origin common in Rwanda/Burundi' },
+  'claudette': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Little Claude - French Christian name' },
+  'amahoro': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Peace - powerful post-genocide name' },
+  'mukeshimana': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'God sustains - faith in providence' },
+  'ingabire': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Gift - precious one' },
+  'nirere': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'I am good/beautiful' },
+  'uwera': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Beautiful one' },
+  'nyirarukundo': { tribe: 'hutu_tutsi', gender: 'female', meaning: 'Mother of love' },
+  'habimana': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'God exists - expression of faith' },
+  'ntawukuliryayo': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'No one can eat from it - protected by God' },
+  'ndayisaba': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I pray to God' },
+  'mugabo': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'Man, husband - strength' },
+  'hirwa': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'Lucky, blessed one' },
+  'kalisa': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'Guardian, protector' },
+  'nshimiyimana': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I thank God' },
+  'nkurunziza': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I announce good news - harbinger' },
+  'kagame': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'From Ka-gama - little house/enclosure' },
+  'rukundo': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'Love - beloved one' },
+  'bizimana': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'God knows' },
+  'hakizimana': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'God saves - salvation' },
+  'niyonzima': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I have a good name - well-named' },
+  'uwizeye': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'Trust, faith' },
+  'ndikumana': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I belong to God' },
+  'nsengiyumva': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I pray that God hears' },
+  'niyomugabo': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I am a man' },
+  'uwayezu': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'Of Jesus - Christian name' },
+  'niyongabo': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'I have value/worth' },
+  'manzi': { tribe: 'hutu_tutsi', gender: 'male', meaning: 'Water - life giver' },
+
+  // ============ UGANDA (Baganda) ============
+  'nakamya': { tribe: 'baganda', gender: 'female', meaning: 'Born during drought/dry season' },
+  'namubiru': { tribe: 'baganda', gender: 'female', meaning: 'Born during darkness/night' },
+  'namutebi': { tribe: 'baganda', gender: 'female', meaning: 'From the Ntebi clan' },
+  'nakyobe': { tribe: 'baganda', gender: 'female', meaning: 'Born during hard times' },
+  'nakato': { tribe: 'baganda', gender: 'female', meaning: 'Second-born of twins (female)' },
+  'babirye': { tribe: 'baganda', gender: 'female', meaning: 'First-born of twins (female)' },
+  'nassali': { tribe: 'baganda', gender: 'female', meaning: 'Born on the road/during journey' },
+  'nabukenya': { tribe: 'baganda', gender: 'female', meaning: 'Born during famine' },
+  'nanteza': { tribe: 'baganda', gender: 'female', meaning: 'One who brings blessings' },
+  'nalwanga': { tribe: 'baganda', gender: 'female', meaning: 'Warrior woman' },
+  'ssempijja': { tribe: 'baganda', gender: 'male', meaning: 'Born during rainy season' },
+  'kato': { tribe: 'baganda', gender: 'male', meaning: 'Second-born of twins (male)' },
+  // Note: 'waswa' is shared between Baganda and Luhya - keeping in Luhya section
+  'ssekabira': { tribe: 'baganda', gender: 'male', meaning: 'Father of twins' },
+  'mukasa': { tribe: 'baganda', gender: 'male', meaning: 'God of Lake Victoria - prosperity' },
+  'sserugo': { tribe: 'baganda', gender: 'male', meaning: 'One who brings peace' },
+  'lwanga': { tribe: 'baganda', gender: 'male', meaning: 'Of the Ngabi (bushbuck) clan' },
+  'musisi': { tribe: 'baganda', gender: 'male', meaning: 'Earthquake - born during tremor' },
+  'ssemakula': { tribe: 'baganda', gender: 'male', meaning: 'Born during difficult times' },
+  'ssekandi': { tribe: 'baganda', gender: 'male', meaning: 'Father\'s favorite' },
+  'kyagulanyi': { tribe: 'baganda', gender: 'male', meaning: 'Of the Kyagwe region' },
+  'museveni': { tribe: 'baganda', gender: 'male', meaning: 'Of the seventh (Bairu/Banyankole origin)' },
+
   // Kikuyu names
   'wanjiku': { tribe: 'kikuyu', gender: 'female', meaning: 'One of the nine daughters of Gikuyu and Mumbi, the Kikuyu ancestors' },
   'wangari': { tribe: 'kikuyu', gender: 'female', meaning: 'Leopard - symbolizing strength and grace' },
@@ -271,7 +331,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   // Luhya prefixes
   'na': [{ tribe: 'luhya', weight: 0.85 }],
   'naf': [{ tribe: 'luhya', weight: 0.95 }],
-  'nak': [{ tribe: 'luhya', weight: 0.9 }],
+  'nak': [{ tribe: 'luhya', weight: 0.5 }, { tribe: 'baganda', weight: 0.5 }],
   'nal': [{ tribe: 'luhya', weight: 0.9 }],
   'nas': [{ tribe: 'luhya', weight: 0.9 }],
   'ne': [{ tribe: 'luhya', weight: 0.9 }],
@@ -280,7 +340,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'we': [{ tribe: 'luhya', weight: 0.9 }],
   'waf': [{ tribe: 'luhya', weight: 0.95 }],
   'wek': [{ tribe: 'luhya', weight: 0.95 }],
-  'was': [{ tribe: 'luhya', weight: 0.9 }],
+  'was': [{ tribe: 'luhya', weight: 0.6 }, { tribe: 'baganda', weight: 0.4 }],
   'bar': [{ tribe: 'luhya', weight: 0.85 }],
   'sim': [{ tribe: 'luhya', weight: 0.9 }],
   'shi': [{ tribe: 'luhya', weight: 0.85 }],
@@ -305,7 +365,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   // Kalenjin prefixes
   'ki': [{ tribe: 'kalenjin', weight: 0.6 }, { tribe: 'kamba', weight: 0.3 }],
   'kip': [{ tribe: 'kalenjin', weight: 0.98 }],
-  'kib': [{ tribe: 'kalenjin', weight: 0.95 }],
+  'kib': [{ tribe: 'kalenjin', weight: 0.6 }, { tribe: 'baganda', weight: 0.4 }],
   'che': [{ tribe: 'kalenjin', weight: 0.95 }],
   'cher': [{ tribe: 'kalenjin', weight: 0.98 }],
   'chep': [{ tribe: 'kalenjin', weight: 0.98 }],
@@ -339,13 +399,11 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   
   // Meru prefixes
   'ka': [{ tribe: 'meru', weight: 0.5 }, { tribe: 'kikuyu', weight: 0.35 }, { tribe: 'kamba', weight: 0.15 }],
-  'kag': [{ tribe: 'meru', weight: 0.9 }],
   'kaw': [{ tribe: 'meru', weight: 0.9 }],
   'ga': [{ tribe: 'meru', weight: 0.8 }],
   'gac': [{ tribe: 'meru', weight: 0.95 }],
   'gat': [{ tribe: 'meru', weight: 0.95 }],
   'muk': [{ tribe: 'meru', weight: 0.7 }, { tribe: 'kikuyu', weight: 0.3 }],
-  'mug': [{ tribe: 'meru', weight: 0.8 }],
   'mur': [{ tribe: 'meru', weight: 0.75 }, { tribe: 'kikuyu', weight: 0.25 }],
   'kir': [{ tribe: 'meru', weight: 0.8 }],
   'kob': [{ tribe: 'meru', weight: 0.9 }],
@@ -353,7 +411,6 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'nka': [{ tribe: 'meru', weight: 0.9 }],
   
   // Coastal prefixes
-  'ha': [{ tribe: 'coastal', weight: 0.85 }],
   'ham': [{ tribe: 'coastal', weight: 0.95 }],
   'has': [{ tribe: 'coastal', weight: 0.9 }],
   'hal': [{ tribe: 'coastal', weight: 0.9 }],
@@ -375,6 +432,45 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'tsu': [{ tribe: 'coastal', weight: 0.95 }],
   'riz': [{ tribe: 'coastal', weight: 0.9 }],
   'reh': [{ tribe: 'coastal', weight: 0.9 }],
+
+  // ============ Rwanda/Burundi (Banyarwanda) prefixes ============
+  'uwi': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'uwa': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'uwe': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'nta': [{ tribe: 'hutu_tutsi', weight: 0.92 }],
+  'nda': [{ tribe: 'hutu_tutsi', weight: 0.88 }],
+  'ndi': [{ tribe: 'hutu_tutsi', weight: 0.88 }],
+  'nse': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'nsh': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'nku': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'nyir': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'ha': [{ tribe: 'hutu_tutsi', weight: 0.6 }, { tribe: 'coastal', weight: 0.4 }],
+  'hab': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'hak': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'habi': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'mug': [{ tribe: 'hutu_tutsi', weight: 0.5 }, { tribe: 'meru', weight: 0.5 }],
+  'muka': [{ tribe: 'hutu_tutsi', weight: 0.85 }],
+  'inga': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'biz': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'ruk': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'kag': [{ tribe: 'hutu_tutsi', weight: 0.5 }, { tribe: 'meru', weight: 0.5 }],
+  'kal': [{ tribe: 'hutu_tutsi', weight: 0.75 }],
+  'hir': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'manz': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+
+  // ============ Uganda (Baganda) prefixes ============
+  'sser': [{ tribe: 'baganda', weight: 0.95 }],
+  'sse': [{ tribe: 'baganda', weight: 0.9 }],
+  'nna': [{ tribe: 'baganda', weight: 0.9 }],
+  'nnak': [{ tribe: 'baganda', weight: 0.95 }],
+  'nnam': [{ tribe: 'baganda', weight: 0.95 }],
+  'lub': [{ tribe: 'baganda', weight: 0.9 }],
+  'luw': [{ tribe: 'baganda', weight: 0.95 }],
+  'mus': [{ tribe: 'baganda', weight: 0.85 }],
+  'muse': [{ tribe: 'baganda', weight: 0.95 }],
+  'naka': [{ tribe: 'baganda', weight: 0.9 }],
+  'bab': [{ tribe: 'baganda', weight: 0.9 }],
+  'kam': [{ tribe: 'baganda', weight: 0.75 }],
 };
 
 // Suffix patterns for additional matching
@@ -412,6 +508,26 @@ const suffixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'isi': [{ tribe: 'coastal', weight: 0.85 }],
   'uma': [{ tribe: 'coastal', weight: 0.8 }],
   'ima': [{ tribe: 'coastal', weight: 0.75 }],
+  
+  // ============ Rwanda/Burundi (Banyarwanda) suffixes ============
+  'mana': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'imana': [{ tribe: 'hutu_tutsi', weight: 0.98 }],
+  'zima': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'iza': [{ tribe: 'hutu_tutsi', weight: 0.85 }],
+  'abo': [{ tribe: 'hutu_tutsi', weight: 0.85 }],
+  'gabo': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'undo': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'kundo': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'yezu': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'horo': [{ tribe: 'hutu_tutsi', weight: 0.9 }],
+  'abire': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  'ere': [{ tribe: 'hutu_tutsi', weight: 0.7 }],
+  'nziza': [{ tribe: 'hutu_tutsi', weight: 0.95 }],
+  
+  // ============ Uganda (Baganda) suffixes ============
+  'anga': [{ tribe: 'baganda', weight: 0.8 }],
+  'enda': [{ tribe: 'baganda', weight: 0.75 }],
+  'wanga': [{ tribe: 'baganda', weight: 0.9 }],
 };
 
 // Time mapping for better matching
@@ -645,6 +761,12 @@ const tribeReligiousInfluence: Record<string, { primary: string; secondary?: str
   'wolof': { primary: 'muslim', percentage: 95, notes: 'Sufi Islam (Mouride, Tijani brotherhoods). Strong Sufi sheikh tradition.' },
   'serer': { primary: 'mixed', notes: 'Traditional Serer religion still practiced. 30% Muslim, 30% Christian, 40% traditional.' },
   'fulani_sn': { primary: 'muslim', percentage: 98, notes: 'Sunni Islam. Historical role in spreading Islam in West Africa.' },
+  
+  // Rwanda & Burundi
+  'hutu_tutsi': { primary: 'christian', percentage: 85, secondary: 'traditional', notes: 'Catholic majority (65%), Protestant (25%), some traditional beliefs. Post-genocide focus on national unity.' },
+  
+  // Uganda
+  'baganda': { primary: 'christian', percentage: 80, secondary: 'muslim', notes: 'Catholic and Anglican majority. Muslim minority (15%). Traditional Balubaale beliefs persist.' },
 };
 
 interface DetectionOptions {
