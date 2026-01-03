@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers } from 'lucide-react';
 import { Header } from '@/components/Header';
@@ -23,6 +23,11 @@ const Learn = () => {
   const viewMode = searchParams.get('view') || 'grid';
   
   const [localSearch, setLocalSearch] = useState(searchQuery);
+  
+  // Sync localSearch with URL when searchQuery changes
+  useEffect(() => {
+    setLocalSearch(searchQuery);
+  }, [searchQuery]);
   
   const tribes = getAllTribes();
   const countries = getCountries();
@@ -336,18 +341,19 @@ const Learn = () => {
             </button>
           </div>
           
-          {/* Search and Filters */}
-          <section className="max-w-2xl mx-auto mb-6 sm:mb-8 space-y-3 sm:space-y-4" aria-label="Search and filters">
+          {/* Search and Filters - Mobile Optimized */}
+          <section className="max-w-2xl mx-auto mb-6 sm:mb-8 space-y-3" aria-label="Search and filters">
+            {/* Search Bar - Compact on mobile */}
             <form onSubmit={handleSearch} className="relative">
               <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
-              <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <input
                 id="tribe-search"
                 type="text"
                 value={localSearch}
                 onChange={(e) => setLocalSearch(e.target.value)}
-                placeholder="Search tribes, names, or characteristics..."
-                className="input-tribal pl-10 sm:pl-12 pr-10 sm:pr-12 text-sm sm:text-base"
+                placeholder="Search tribes, names..."
+                className="input-tribal pl-9 pr-9 text-sm h-10"
               />
               {localSearch && (
                 <button
@@ -358,7 +364,7 @@ const Learn = () => {
                     params.delete('search');
                     setSearchParams(params);
                   }}
-                  className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
                   aria-label="Clear search"
                 >
                   <X className="w-4 h-4" />
@@ -366,13 +372,11 @@ const Learn = () => {
               )}
             </form>
             
-            <div className="flex items-center gap-2 sm:gap-3">
-              <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted-foreground">
-                <Filter className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>Region:</span>
-              </div>
+            {/* Region Filter - Inline on mobile */}
+            <div className="flex items-center gap-2">
+              <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0" />
               <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-[180px] sm:w-[220px] h-9 text-xs sm:text-sm bg-background">
+                <SelectTrigger className="flex-1 h-9 text-xs sm:text-sm bg-background">
                   <SelectValue placeholder="All Regions" />
                 </SelectTrigger>
                 <SelectContent className="bg-background border border-border z-50">
@@ -384,16 +388,17 @@ const Learn = () => {
               </Select>
             </div>
             
+            {/* Active Filters Summary */}
             {hasFilters && (
-              <div className="flex items-center justify-between text-xs sm:text-sm">
+              <div className="flex items-center justify-between text-xs">
                 <p className="text-muted-foreground">
-                  Showing {filteredTribes.length} of {tribes.length} tribes
+                  {filteredTribes.length} of {tribes.length} tribes
                 </p>
                 <button
                   onClick={clearFilters}
-                  className="text-primary hover:underline touch-manipulation p-1"
+                  className="text-primary hover:underline touch-manipulation py-1"
                 >
-                  Clear all filters
+                  Clear filters
                 </button>
               </div>
             )}
