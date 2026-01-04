@@ -1,9 +1,13 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Calendar, Clock, Tag, Globe, Share2, ExternalLink, BookOpen } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Tag, Globe, ExternalLink, BookOpen } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { blogPosts } from '@/data/blogPosts';
+import { BlogAudioPlayer } from '@/components/BlogAudioPlayer';
+import { ShareButton } from '@/components/ShareButton';
+import { RelatedBlogs } from '@/components/RelatedBlogs';
+import { processTextWithTribeLinks } from '@/lib/tribeLinks';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -58,9 +62,34 @@ const BlogPost = () => {
   const processTextWithFootnotes = (text: string) => {
     // Match [^1] style footnote references
     const footnoteRegex = /\[\^(\d+)\]/g;
-    return text.replace(footnoteRegex, (match, num) => {
+    let processed = text.replace(footnoteRegex, (match, num) => {
       return `<sup class="text-primary cursor-pointer hover:underline">[${num}]</sup>`;
     });
+    // Also process tribe name links
+    processed = processTextWithTribeLinks(processed);
+    return processed;
+  };
+
+  // Generate plain text for audio player
+  const generatePlainTextContent = (): string => {
+    return post.content
+      .map(section => {
+        let text = '';
+        if (section.heading) {
+          text += section.heading + '. ';
+        }
+        text += section.paragraphs.join(' ');
+        if (section.list) {
+          text += ' ' + section.list.join('. ');
+        }
+        if (section.highlight) {
+          text += ' ' + section.highlight;
+        }
+        return text;
+      })
+      .join(' ')
+      .replace(/\[\^\d+\]/g, '') // Remove footnote markers
+      .replace(/[*_#]/g, ''); // Remove markdown
   };
 
   return (
@@ -108,25 +137,32 @@ const BlogPost = () => {
               <span className="text-6xl sm:text-8xl">{post.emoji}</span>
             </div>
             
-            <div className="flex flex-wrap items-center gap-3 mb-4 text-sm text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5">
-                <Globe className="w-4 h-4" />
-                {post.region}
-              </span>
-              <span>•</span>
-              <span className="inline-flex items-center gap-1.5">
-                <Clock className="w-4 h-4" />
-                {post.readTime}
-              </span>
-              <span>•</span>
-              <span className="inline-flex items-center gap-1.5">
-                <Calendar className="w-4 h-4" />
-                {new Date(post.publishDate).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
-              </span>
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-1.5">
+                  <Globe className="w-4 h-4" />
+                  {post.region}
+                </span>
+                <span>•</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="w-4 h-4" />
+                  {post.readTime}
+                </span>
+                <span>•</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4" />
+                  {new Date(post.publishDate).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </span>
+              </div>
+              <ShareButton 
+                title={post.title}
+                url={`/blog/${post.slug}`}
+                description={post.excerpt}
+              />
             </div>
             
             <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -245,8 +281,20 @@ const BlogPost = () => {
               ))}
             </div>
           </section>
+
+          {/* Related Blogs */}
+          <RelatedBlogs currentPost={post} />
         </article>
       </main>
+
+      {/* Audio Player - Fixed at bottom */}
+      <BlogAudioPlayer 
+        title={post.title}
+        content={generatePlainTextContent()}
+      />
+      
+      {/* Add padding to account for fixed audio player */}
+      <div className="h-20" />
       
       <Footer />
     </div>
