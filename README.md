@@ -65,6 +65,7 @@ To celebrate and preserve African cultural diversity by making tribal heritage a
 | [`tribeguess.com/learn`](https://tribeguess.com/learn) | Encyclopedia - Browse all tribes |
 | [`tribeguess.com/learn/:slug`](https://tribeguess.com/learn/kikuyu) | Tribe Detail - Individual tribe page |
 | [`tribeguess.com/random`](https://tribeguess.com/random) | Random - Discover a random tribe |
+| [`tribeguess.com/blog`](https://tribeguess.com/blog) | Blog - Cultural articles and insights |
 | [`tribeguess.com/learn?country=NG`](https://tribeguess.com/learn?country=NG) | Filter by Country |
 | [`tribeguess.com/learn?macroRegion=West%20Africa`](https://tribeguess.com/learn?macroRegion=West%20Africa) | Filter by Region |
 | [`tribeguess.com/learn?languageFamily=Bantu`](https://tribeguess.com/learn?languageFamily=Bantu) | Filter by Language |
@@ -245,6 +246,10 @@ npm run preview
 
 | Improvement | Description | Status |
 |-------------|-------------|--------|
+| **SEO Blog System** | 8 cultural articles with SEO optimization, JSON-LD, hyperlinks to tribes | ✅ Done |
+| **XML Sitemap** | Added sitemap.xml for SEO crawling | ✅ Done |
+| **Full Country Dropdown** | "All Africa" option with full country names | ✅ Done |
+| **Population Pie Charts** | Interactive charts for multi-country tribes | ✅ Done |
 | **Precision Territory Mapping** | 100+ tribes with verified geographic coordinates and spans | ✅ Done |
 | **Multi-Region Territory Data** | Accurate lat/lng spans for Kenya, Nigeria, Ethiopia, SA, Ghana, etc. | ✅ Done |
 | **Live Search** | Filters as you type without pressing Enter | ✅ Done |
@@ -263,7 +268,6 @@ npm run preview
 
 | Improvement | Description | Impact |
 |-------------|-------------|--------|
-| **Add Sitemap.xml** | Generate sitemap for better SEO crawling | Discoverability |
 | **West African Phonetics** | Add phonetic mappings for Yoruba, Igbo, Hausa | Audio accuracy |
 | **Image Lazy Loading** | Lazy load tribe images in grid view | Speed |
 | **Pagination/Infinite Scroll** | Handle large tribe lists efficiently | UX |
