@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers, Info, SlidersHorizontal, ArrowUpDown, Check } from 'lucide-react';
+import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers, Info, SlidersHorizontal, ArrowUpDown, Check, List, ChevronRight } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
@@ -345,29 +345,40 @@ const Learn = () => {
                 )}
               </form>
               
-              {/* View Toggle - Inline with search */}
-              <div className="flex gap-1 flex-shrink-0">
+              {/* Compact View Toggle */}
+              <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0">
                 <button
                   onClick={() => toggleViewMode('grid')}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                    viewMode === 'grid'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  className={`p-1.5 rounded-md transition-colors ${
+                    viewMode === 'grid' 
+                      ? 'bg-background shadow-sm text-foreground' 
+                      : 'text-muted-foreground hover:text-foreground'
                   }`}
+                  title="Grid view"
                 >
-                  <LayoutGrid className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">Grid</span>
+                  <LayoutGrid className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => toggleViewMode('list')}
+                  className={`p-1.5 rounded-md transition-colors ${
+                    viewMode === 'list' 
+                      ? 'bg-background shadow-sm text-foreground' 
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                  title="List view"
+                >
+                  <List className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => toggleViewMode('map')}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                    viewMode === 'map'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  className={`p-1.5 rounded-md transition-colors ${
+                    viewMode === 'map' 
+                      ? 'bg-background shadow-sm text-foreground' 
+                      : 'text-muted-foreground hover:text-foreground'
                   }`}
+                  title="Map view"
                 >
-                  <MapIcon className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">Map</span>
+                  <MapIcon className="w-4 h-4" />
                 </button>
               </div>
 
@@ -739,16 +750,71 @@ const Learn = () => {
           
           {/* Grid View */}
           {viewMode === 'grid' && (
-            <section aria-label="List of Kenyan tribes" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            <section aria-label="List of African tribes" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {filteredTribes.map((tribe, index) => (
                 <article 
                   key={tribe.id}
                   className="animate-fade-in"
-                  style={{ animationDelay: `${index * 50}ms` }}
+                  style={{ animationDelay: `${Math.min(index, 12) * 30}ms` }}
                 >
                   <TribeCard tribe={tribe} />
                 </article>
               ))}
+            </section>
+          )}
+
+          {/* List View */}
+          {viewMode === 'list' && (
+            <section aria-label="List of African tribes" className="space-y-2">
+              {filteredTribes.map((tribe, index) => {
+                const tribeCountries = (tribe as any).countries || ['KE'];
+                return (
+                  <Link
+                    key={tribe.id}
+                    to={`/learn/${tribe.slug}`}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-md transition-all group"
+                  >
+                    {/* Flags */}
+                    <div className="flex -space-x-1 w-10 flex-shrink-0">
+                      {tribeCountries.slice(0, 2).map((code: string) => {
+                        const country = countries.find(c => c.code === code);
+                        return country ? (
+                          <span key={code} className="text-lg" title={country.name}>{country.flag}</span>
+                        ) : null;
+                      })}
+                      {tribeCountries.length > 2 && (
+                        <span className="text-xs text-muted-foreground">+{tribeCountries.length - 2}</span>
+                      )}
+                    </div>
+
+                    {/* Name & Region */}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-serif font-semibold text-foreground group-hover:text-primary transition-colors truncate">
+                        {tribe.name}
+                      </h3>
+                      <p className="text-xs text-muted-foreground flex items-center gap-1 truncate">
+                        <MapPin className="w-3 h-3 flex-shrink-0" />
+                        {tribe.region}
+                      </p>
+                    </div>
+
+                    {/* Population */}
+                    <div className="text-right hidden sm:block">
+                      <span className="text-sm font-medium text-foreground">{tribe.population}</span>
+                      <p className="text-xs text-muted-foreground">population</p>
+                    </div>
+
+                    {/* Badges */}
+                    <div className="hidden md:flex gap-1">
+                      {tribe.stereotypes.slice(0, 1).map((s, i) => (
+                        <span key={i} className="badge-tribe text-xs">{s}</span>
+                      ))}
+                    </div>
+
+                    <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                  </Link>
+                );
+              })}
             </section>
           )}
           
