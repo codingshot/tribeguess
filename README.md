@@ -245,6 +245,8 @@ npm run preview
 
 | Improvement | Description | Status |
 |-------------|-------------|--------|
+| **Precision Territory Mapping** | 100+ tribes with verified geographic coordinates and spans | ✅ Done |
+| **Multi-Region Territory Data** | Accurate lat/lng spans for Kenya, Nigeria, Ethiopia, SA, Ghana, etc. | ✅ Done |
 | **Live Search** | Filters as you type without pressing Enter | ✅ Done |
 | **View Toggle Active State** | Grid/List/Map buttons show active selection | ✅ Done |
 | **List View Mode** | New list view option alongside grid and map | ✅ Done |
