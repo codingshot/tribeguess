@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play } from 'lucide-react';
-import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo } from '@/lib/tribeDetection';
+import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo, getTribeLandmarks } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TribeMap } from '@/components/TribeMap';
@@ -11,6 +11,7 @@ import { NameSearch } from '@/components/NameSearch';
 import { AudioGreeting, MainGreeting } from '@/components/AudioGreeting';
 import { PopulationPieChart } from '@/components/PopulationPieChart';
 import { TribeFamilyTree } from '@/components/TribeFamilyTree';
+import { CulturalLandmarks } from '@/components/CulturalLandmarks';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -289,6 +290,18 @@ const TribePage = () => {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{tribe.description}</p>
               </section>
+              
+              {/* Cultural Landmarks Section */}
+              {(() => {
+                const landmarks = getTribeLandmarks(tribe.id);
+                if (landmarks.length === 0) return null;
+                return (
+                  <CulturalLandmarks 
+                    landmarks={landmarks}
+                    tribeName={tribe.name}
+                  />
+                );
+              })()}
               
               {/* Tribe Family Tree / Ethnic Components - for tribes like Banyarwanda */}
               {(language || (tribe as any).ethnicComponents) && (
