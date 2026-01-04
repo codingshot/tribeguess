@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-orange-400 to-amber-600",
     region: "Kenya",
     readTime: "5 min read",
-    publishDate: "2024-01-15",
+    publishDate: "2025-12-15",
     tags: ["Kenya", "naming traditions", "Luo names", "Luhya names", "African culture", "birth names"],
     relatedTribes: [
       { name: "Luo", slug: "luo" },
@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-green-500 to-green-700",
     region: "Nigeria",
     readTime: "6 min read",
-    publishDate: "2024-01-20",
+    publishDate: "2025-12-20",
     tags: ["Nigeria", "ethnic diversity", "Yoruba", "Igbo", "Hausa", "African tribes"],
     relatedTribes: [
       { name: "Yoruba", slug: "yoruba" },
@@ -132,12 +132,12 @@ export const blogPosts: BlogPost[] = [
         heading: "The Yoruba: Land of Twins and Kingdoms",
         icon: "👯",
         paragraphs: [
-          "The Yoruba people of Southwest Nigeria have one of the world's highest rates of twin births—a phenomenon scientists are still trying to fully understand. Some attribute it to the high consumption of yams, which contain phytoestrogens."
+          "The Yoruba people of Southwest Nigeria have one of the world's highest rates of twin births—a phenomenon scientists attribute to genetics, though some theories point to the high consumption of yams containing phytoestrogens."
         ],
         list: [
           "Famous for ancient city-states like Ile-Ife and the Oyo Empire",
-          "Rich tradition of Orisha worship that influenced religions worldwide",
-          "Names often carry deep meaning: 'Adaeze' means 'princess'"
+          "Rich tradition of Orisha worship that influenced religions worldwide (Candomblé in Brazil, Santería in Cuba)",
+          "Names carry deep meaning: 'Adeola' means 'crown of honor'"
         ],
         highlight: "The Yoruba city of Igbo-Ora is called the 'Twin Capital of the World' with twin birth rates four times the global average."
       },
@@ -185,7 +185,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-yellow-400 to-red-500",
     region: "Ghana",
     readTime: "4 min read",
-    publishDate: "2024-01-25",
+    publishDate: "2025-12-28",
     tags: ["Ghana", "Akan names", "day names", "Ashanti", "African naming traditions"],
     relatedTribes: [
       { name: "Ashanti", slug: "ashanti" },
@@ -246,7 +246,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-blue-500 via-yellow-400 to-green-500",
     region: "South Africa",
     readTime: "5 min read",
-    publishDate: "2024-02-01",
+    publishDate: "2026-01-02",
     tags: ["South Africa", "Zulu", "Xhosa", "African languages", "click consonants"],
     relatedTribes: [
       { name: "Zulu", slug: "zulu" },
@@ -315,7 +315,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-green-500 via-yellow-400 to-red-500",
     region: "Ethiopia",
     readTime: "5 min read",
-    publishDate: "2024-02-10",
+    publishDate: "2026-01-03",
     tags: ["Ethiopia", "Oromo", "Amhara", "African history", "Ge'ez script"],
     relatedTribes: [
       { name: "Oromo", slug: "oromo" },
@@ -364,7 +364,7 @@ export const blogPosts: BlogPost[] = [
         heading: "A Calendar All Its Own",
         icon: "📅",
         paragraphs: [
-          "Ethiopia follows its own calendar, which is about 7-8 years behind the Gregorian calendar. This is why you might see '2015' in Ethiopia when it's 2023 elsewhere. The Ethiopian calendar has 13 months—12 months of 30 days and a 13th month of 5 or 6 days."
+          "Ethiopia follows its own calendar, which is about 7-8 years behind the Gregorian calendar. This is why you might see '2018' in Ethiopia when it's 2026 elsewhere. The Ethiopian calendar has 13 months—12 months of 30 days and a 13th month of 5 or 6 days."
         ]
       }
     ]
@@ -379,7 +379,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-red-600 to-orange-500",
     region: "Namibia",
     readTime: "4 min read",
-    publishDate: "2024-02-15",
+    publishDate: "2025-12-10",
     tags: ["Namibia", "Himba", "African traditions", "beauty practices", "indigenous culture"],
     relatedTribes: [
       { name: "Himba", slug: "himba" },
@@ -445,7 +445,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-blue-500 to-yellow-400",
     region: "Rwanda",
     readTime: "4 min read",
-    publishDate: "2024-02-20",
+    publishDate: "2025-12-05",
     tags: ["Rwanda", "women's leadership", "African politics", "gender equality", "post-conflict"],
     relatedTribes: [
       { name: "Hutu", slug: "hutu" },
@@ -504,7 +504,7 @@ export const blogPosts: BlogPost[] = [
     gradient: "bg-gradient-to-br from-blue-400 to-blue-600",
     region: "Somalia",
     readTime: "5 min read",
-    publishDate: "2024-02-25",
+    publishDate: "2025-11-28",
     tags: ["Somalia", "Somali culture", "oral poetry", "clan system", "African traditions"],
     relatedTribes: [
       { name: "Somali", slug: "somali" }
