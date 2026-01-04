@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Learn from "./pages/Learn";
 import TribePage from "./pages/TribePage";
 import RandomTribe from "./pages/RandomTribe";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
             <Route path="/learn" element={<Learn />} />
             <Route path="/learn/:slug" element={<TribePage />} />
             <Route path="/random" element={<RandomTribe />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
