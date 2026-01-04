@@ -42,11 +42,11 @@ export function Header() {
             <Link
               to="/"
               className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 touch-manipulation ${
-                isActive('/') && !location.pathname.startsWith('/learn')
+                isActive('/') && !location.pathname.startsWith('/learn') && !location.pathname.startsWith('/blog')
                   ? 'bg-primary text-primary-foreground' 
                   : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
               }`}
-              aria-current={isActive('/') && !location.pathname.startsWith('/learn') ? 'page' : undefined}
+              aria-current={isActive('/') && !location.pathname.startsWith('/learn') && !location.pathname.startsWith('/blog') ? 'page' : undefined}
             >
               Guess
             </Link>
@@ -60,6 +60,17 @@ export function Header() {
               aria-current={isActive('/learn') ? 'page' : undefined}
             >
               Learn
+            </Link>
+            <Link
+              to="/blog"
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 touch-manipulation ${
+                isActive('/blog') 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+              }`}
+              aria-current={isActive('/blog') ? 'page' : undefined}
+            >
+              Blog
             </Link>
             <button
               onClick={handleRandomTribe}

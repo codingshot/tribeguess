@@ -6,6 +6,11 @@ export interface ContentSection {
   highlight?: string;
 }
 
+export interface Source {
+  title: string;
+  url?: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -20,6 +25,7 @@ export interface BlogPost {
   tags: string[];
   relatedTribes: { name: string; slug: string }[];
   content: ContentSection[];
+  sources?: Source[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -96,6 +102,11 @@ export const blogPosts: BlogPost[] = [
           "Understanding these patterns helps explain why certain names are so common in specific regions and why Kenyans take such pride in their names' meanings."
         ]
       }
+    ],
+    sources: [
+      { title: "Luo Naming Traditions - Wikipedia", url: "https://en.wikipedia.org/wiki/Luo_people_of_Kenya_and_Tanzania" },
+      { title: "Luhya Culture and Names - Ethnologue", url: "https://www.ethnologue.com/language/luy/" },
+      { title: "Kikuyu Naming Patterns - Kenya National Archives" }
     ]
   },
   {
@@ -173,6 +184,11 @@ export const blogPosts: BlogPost[] = [
           "This diversity is Nigeria's greatest strength and its greatest challenge—balancing unity with respect for each group's distinct identity."
         ]
       }
+    ],
+    sources: [
+      { title: "Nigeria Ethnic Groups - CIA World Factbook", url: "https://www.cia.gov/the-world-factbook/countries/nigeria/" },
+      { title: "Yoruba Twin Birth Rates Study - National Geographic", url: "https://www.nationalgeographic.com/" },
+      { title: "Igbo-Ora: Twin Capital of the World - BBC Africa" }
     ]
   },
   {
@@ -234,6 +250,11 @@ export const blogPosts: BlogPost[] = [
           "This tradition remains strong today. Even Ghanaians living abroad often maintain day-naming, ensuring their children carry this cultural legacy."
         ]
       }
+    ],
+    sources: [
+      { title: "Akan Names - Wikipedia", url: "https://en.wikipedia.org/wiki/Akan_names" },
+      { title: "Kofi Annan Biography - Nobel Prize", url: "https://www.nobelprize.org/prizes/peace/2001/annan/biographical/" },
+      { title: "Ghanaian Naming Conventions - Ghana Embassy" }
     ]
   },
   {
@@ -303,6 +324,11 @@ export const blogPosts: BlogPost[] = [
           "South Africa's linguistic diversity reflects its identity as the 'Rainbow Nation.' While English and Afrikaans dominated the apartheid era, the recognition of all 11 languages was a deliberate choice to honor every community's contribution to the nation."
         ]
       }
+    ],
+    sources: [
+      { title: "South African Languages - SA Government", url: "https://www.gov.za/about-sa/south-africas-people" },
+      { title: "Zulu Language - Ethnologue", url: "https://www.ethnologue.com/language/zul/" },
+      { title: "Xhosa Click Consonants - Linguistic Society of America" }
     ]
   },
   {
@@ -367,6 +393,12 @@ export const blogPosts: BlogPost[] = [
           "Ethiopia follows its own calendar, which is about 7-8 years behind the Gregorian calendar. This is why you might see '2018' in Ethiopia when it's 2026 elsewhere. The Ethiopian calendar has 13 months—12 months of 30 days and a 13th month of 5 or 6 days."
         ]
       }
+    ],
+    sources: [
+      { title: "Battle of Adwa - Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Adwa" },
+      { title: "Ethiopian Calendar - Britannica", url: "https://www.britannica.com/science/Ethiopian-calendar" },
+      { title: "Oromo People - Ethnologue", url: "https://www.ethnologue.com/language/orm/" },
+      { title: "Ge'ez Script History - UNESCO" }
     ]
   },
   {
@@ -433,6 +465,11 @@ export const blogPosts: BlogPost[] = [
           "Estimated at around 50,000 people, the Himba remain one of Africa's most traditional groups—a living connection to ancient practices that have sustained communities for thousands of years."
         ]
       }
+    ],
+    sources: [
+      { title: "Himba People - Wikipedia", url: "https://en.wikipedia.org/wiki/Himba_people" },
+      { title: "Otjize: The Himba Beauty Secret - National Geographic" },
+      { title: "Namibian Indigenous Communities - IWGIA" }
     ]
   },
   {
@@ -492,6 +529,11 @@ export const blogPosts: BlogPost[] = [
           "Rwanda's transformation offers a powerful lesson: from the depths of tragedy, societies can rebuild themselves in revolutionary ways."
         ]
       }
+    ],
+    sources: [
+      { title: "Women in Rwanda Parliament - IPU", url: "https://www.ipu.org/parliament/RW" },
+      { title: "Rwanda's Transformation - World Bank", url: "https://www.worldbank.org/en/country/rwanda" },
+      { title: "Umuganda Community Service - Rwanda Government" }
     ]
   },
   {
@@ -563,6 +605,11 @@ export const blogPosts: BlogPost[] = [
           "In an age of digital communication, the Somali tradition of oral poetry reminds us of the enduring power of human memory and the spoken word."
         ]
       }
+    ],
+    sources: [
+      { title: "Somali Poetry Tradition - Britannica", url: "https://www.britannica.com/art/Somali-literature" },
+      { title: "Somalia Demographics - CIA World Factbook", url: "https://www.cia.gov/the-world-factbook/countries/somalia/" },
+      { title: "Somali Clan System - Oxford Research Encyclopedia" }
     ]
   }
 ];

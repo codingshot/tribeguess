@@ -1,7 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Calendar, Clock, Tag, Globe, Share2, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Tag, Globe, Share2, ExternalLink, BookOpen } from 'lucide-react';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { blogPosts } from '@/data/blogPosts';
 
 const BlogPost = () => {
@@ -10,14 +11,15 @@ const BlogPost = () => {
   
   if (!post) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background flex flex-col">
         <Header />
-        <div className="container mx-auto px-4 py-12 text-center">
+        <div className="container mx-auto px-4 py-12 text-center flex-1">
           <p className="text-muted-foreground text-lg mb-4">Article not found</p>
           <Link to="/blog" className="text-primary hover:underline">
             ← Back to Blog
           </Link>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -49,8 +51,20 @@ const BlogPost = () => {
     "keywords": post.tags.join(", ")
   };
 
+  // Extract footnotes from content
+  const footnotes: { id: number; text: string }[] = [];
+  let footnoteIndex = 0;
+  
+  const processTextWithFootnotes = (text: string) => {
+    // Match [^1] style footnote references
+    const footnoteRegex = /\[\^(\d+)\]/g;
+    return text.replace(footnoteRegex, (match, num) => {
+      return `<sup class="text-primary cursor-pointer hover:underline">[${num}]</sup>`;
+    });
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
         <title>{post.seoTitle}</title>
         <meta name="description" content={post.seoDescription} />
@@ -76,7 +90,7 @@ const BlogPost = () => {
       
       <Header />
       
-      <main className="container mx-auto px-4 py-6 sm:py-8">
+      <main className="container mx-auto px-4 py-6 sm:py-8 flex-1">
         <nav className="mb-6">
           <Link 
             to="/blog"
@@ -136,9 +150,11 @@ const BlogPost = () => {
                 )}
                 
                 {section.paragraphs.map((paragraph, pIndex) => (
-                  <p key={pIndex} className="text-muted-foreground leading-relaxed mb-4">
-                    {paragraph}
-                  </p>
+                  <p 
+                    key={pIndex} 
+                    className="text-muted-foreground leading-relaxed mb-4"
+                    dangerouslySetInnerHTML={{ __html: processTextWithFootnotes(paragraph) }}
+                  />
                 ))}
                 
                 {section.list && (
@@ -146,7 +162,7 @@ const BlogPost = () => {
                     {section.list.map((item, lIndex) => (
                       <li key={lIndex} className="flex items-start gap-2 text-muted-foreground">
                         <span className="text-primary mt-1">•</span>
-                        <span>{item}</span>
+                        <span dangerouslySetInnerHTML={{ __html: processTextWithFootnotes(item) }} />
                       </li>
                     ))}
                   </ul>
@@ -154,12 +170,44 @@ const BlogPost = () => {
                 
                 {section.highlight && (
                   <blockquote className="border-l-4 border-primary bg-primary/5 p-4 rounded-r-lg my-4">
-                    <p className="text-foreground italic">{section.highlight}</p>
+                    <p 
+                      className="text-foreground italic"
+                      dangerouslySetInnerHTML={{ __html: processTextWithFootnotes(section.highlight) }}
+                    />
                   </blockquote>
                 )}
               </section>
             ))}
           </div>
+          
+          {/* Sources Section */}
+          {post.sources && post.sources.length > 0 && (
+            <section className="mt-8 pt-6 border-t border-border">
+              <h2 className="font-serif text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-primary" />
+                Sources & References
+              </h2>
+              <ol className="space-y-2 text-sm text-muted-foreground">
+                {post.sources.map((source, index) => (
+                  <li key={index} className="flex gap-2">
+                    <span className="text-primary font-medium">[{index + 1}]</span>
+                    {source.url ? (
+                      <a 
+                        href={source.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-foreground underline underline-offset-2"
+                      >
+                        {source.title}
+                      </a>
+                    ) : (
+                      <span>{source.title}</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
           
           {/* Related Tribes */}
           {post.relatedTribes && post.relatedTribes.length > 0 && (
@@ -186,24 +234,21 @@ const BlogPost = () => {
           <section className="mt-8 pt-6 border-t border-border">
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
-                <span 
+                <Link 
                   key={tag}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-sm text-secondary-foreground"
+                  to={`/blog?tags=${encodeURIComponent(tag)}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-sm text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Tag className="w-3 h-3" />
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
           </section>
         </article>
       </main>
       
-      <footer className="container mx-auto px-4 py-6 border-t border-border mt-8">
-        <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TribeGuess. Educational content about African tribes and ethnic groups.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 };

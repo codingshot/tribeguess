@@ -1,12 +1,97 @@
-import { Link } from 'react-router-dom';
+import { useState, useMemo, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Calendar, Clock, Tag, Globe } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Tag, Globe, Search, X, Filter } from 'lucide-react';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { blogPosts, BlogPost } from '@/data/blogPosts';
+import { getAllBlogTags, getAllBlogRegions } from '@/hooks/useGlobalSearch';
 
 const Blog = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchQuery = searchParams.get('search') || '';
+  const selectedTags = searchParams.get('tags')?.split(',').filter(Boolean) || [];
+  const selectedRegion = searchParams.get('region') || '';
+  
+  const [localSearch, setLocalSearch] = useState(searchQuery);
+  
+  const allTags = getAllBlogTags();
+  const allRegions = getAllBlogRegions();
+  
+  // Sync local search with URL
+  useEffect(() => {
+    setLocalSearch(searchQuery);
+  }, [searchQuery]);
+  
+  const filteredPosts = useMemo(() => {
+    return blogPosts.filter(post => {
+      const searchLower = searchQuery.toLowerCase();
+      
+      // Search filter
+      const matchesSearch = !searchQuery || 
+        post.title.toLowerCase().includes(searchLower) ||
+        post.excerpt.toLowerCase().includes(searchLower) ||
+        post.tags.some(t => t.toLowerCase().includes(searchLower)) ||
+        post.region.toLowerCase().includes(searchLower);
+      
+      // Tags filter
+      const matchesTags = selectedTags.length === 0 || 
+        selectedTags.some(tag => post.tags.includes(tag));
+      
+      // Region filter
+      const matchesRegion = !selectedRegion || post.region === selectedRegion;
+      
+      return matchesSearch && matchesTags && matchesRegion;
+    });
+  }, [searchQuery, selectedTags, selectedRegion]);
+  
+  const handleSearch = (value: string) => {
+    setLocalSearch(value);
+    const params = new URLSearchParams(searchParams);
+    if (value) {
+      params.set('search', value);
+    } else {
+      params.delete('search');
+    }
+    setSearchParams(params);
+  };
+  
+  const toggleTag = (tag: string) => {
+    const params = new URLSearchParams(searchParams);
+    const current = params.get('tags')?.split(',').filter(Boolean) || [];
+    
+    if (current.includes(tag)) {
+      const newTags = current.filter(t => t !== tag);
+      if (newTags.length > 0) {
+        params.set('tags', newTags.join(','));
+      } else {
+        params.delete('tags');
+      }
+    } else {
+      params.set('tags', [...current, tag].join(','));
+    }
+    setSearchParams(params);
+  };
+  
+  const handleRegionChange = (region: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (region) {
+      params.set('region', region);
+    } else {
+      params.delete('region');
+    }
+    setSearchParams(params);
+  };
+  
+  const clearFilters = () => {
+    setLocalSearch('');
+    setSearchParams({});
+  };
+  
+  const hasFilters = searchQuery || selectedTags.length > 0 || selectedRegion;
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
         <title>African Tribes & Culture Blog | TribeGuess</title>
         <meta name="description" content="Explore fascinating facts about African tribes, naming traditions, cultural heritage, and ethnic diversity across the continent." />
@@ -19,7 +104,7 @@ const Blog = () => {
       
       <Header />
       
-      <main className="container mx-auto px-4 py-6 sm:py-8">
+      <main className="container mx-auto px-4 py-6 sm:py-8 flex-1">
         <nav className="mb-6">
           <Link 
             to="/"
@@ -30,7 +115,7 @@ const Blog = () => {
           </Link>
         </nav>
         
-        <header className="text-center mb-8 sm:mb-12">
+        <header className="text-center mb-6 sm:mb-8">
           <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-3">
             African <span className="gradient-gold-text">Culture</span> Blog
           </h1>
@@ -39,18 +124,120 @@ const Blog = () => {
           </p>
         </header>
         
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-          {blogPosts.map((post) => (
-            <BlogPostCard key={post.slug} post={post} />
-          ))}
-        </div>
+        {/* Search and Filters */}
+        <section className="max-w-4xl mx-auto mb-6 space-y-4">
+          {/* Search Bar */}
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <input
+              type="text"
+              value={localSearch}
+              onChange={(e) => handleSearch(e.target.value)}
+              placeholder="Search articles by title, topic, or region..."
+              className="input-tribal pl-9 pr-9 text-sm h-10 w-full"
+            />
+            {localSearch && (
+              <button
+                onClick={() => handleSearch('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+          
+          {/* Region Filter */}
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-muted-foreground flex items-center gap-1.5">
+              <Globe className="w-4 h-4" />
+              Region:
+            </span>
+            <button
+              onClick={() => handleRegionChange('')}
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                !selectedRegion 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+              }`}
+            >
+              All Regions
+            </button>
+            {allRegions.map(region => (
+              <button
+                key={region}
+                onClick={() => handleRegionChange(region)}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  selectedRegion === region 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                }`}
+              >
+                {region}
+              </button>
+            ))}
+          </div>
+          
+          {/* Tag Filters */}
+          <div className="flex flex-wrap items-start gap-2">
+            <span className="text-sm text-muted-foreground flex items-center gap-1.5 py-1">
+              <Filter className="w-4 h-4" />
+              Topics:
+            </span>
+            <div className="flex flex-wrap gap-1.5">
+              {allTags.slice(0, 15).map(tag => (
+                <button
+                  key={tag}
+                  onClick={() => toggleTag(tag)}
+                  className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium transition-colors ${
+                    selectedTags.includes(tag)
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-secondary/50 text-secondary-foreground hover:bg-secondary'
+                  }`}
+                >
+                  <Tag className="w-2.5 h-2.5" />
+                  {tag}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          {/* Active Filters + Clear */}
+          {hasFilters && (
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs text-muted-foreground">
+                {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found
+              </span>
+              <button
+                onClick={clearFilters}
+                className="text-xs text-primary hover:underline"
+              >
+                Clear all filters
+              </button>
+            </div>
+          )}
+        </section>
+        
+        {/* Posts Grid */}
+        {filteredPosts.length > 0 ? (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+            {filteredPosts.map((post) => (
+              <BlogPostCard key={post.slug} post={post} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground mb-4">No articles found matching your filters.</p>
+            <button
+              onClick={clearFilters}
+              className="text-primary hover:underline"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
       </main>
       
-      <footer className="container mx-auto px-4 py-6 border-t border-border mt-8">
-        <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TribeGuess. Educational content about African tribes and ethnic groups.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 };
