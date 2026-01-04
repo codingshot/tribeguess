@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import { X, ChevronLeft, ChevronRight, ZoomIn, Images } from 'lucide-react';
 
 interface GalleryImage {
@@ -12,7 +12,7 @@ interface ImageGalleryProps {
   title?: string;
 }
 
-export function ImageGallery({ images, title = "Gallery" }: ImageGalleryProps) {
+export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images, title = "Gallery" }, ref) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isGridView, setIsGridView] = useState(true);
 
@@ -47,7 +47,7 @@ export function ImageGallery({ images, title = "Gallery" }: ImageGalleryProps) {
   };
 
   return (
-    <section className="mt-6">
+    <section className="mt-6" ref={ref}>
       <div className="flex items-center justify-between mb-3">
         <h2 className="font-display text-lg sm:text-xl font-semibold flex items-center gap-2">
           <Images className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
@@ -165,4 +165,6 @@ export function ImageGallery({ images, title = "Gallery" }: ImageGalleryProps) {
       )}
     </section>
   );
-}
+});
+
+ImageGallery.displayName = 'ImageGallery';

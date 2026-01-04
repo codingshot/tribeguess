@@ -43,7 +43,7 @@ To celebrate and preserve African cultural diversity by making tribal heritage a
 | **🗺️ Interactive Maps** | OpenStreetMap integration showing tribal territories with custom overlays |
 | **🎲 Random Tribe Explorer** | SEO-optimized random tribe discovery feature |
 | **🔊 Audio Greetings** | Web Speech API pronunciation for tribal greetings |
-| **📺 Culture Documentaries** | Verified YouTube embeds for 45+ tribes |
+| **📺 Culture Documentaries** | Verified YouTube embeds for 55+ tribes |
 | **🔍 Advanced Search & Filters** | Multi-country, language family, and region filtering |
 
 ### Advanced Features
@@ -245,7 +245,9 @@ npm run preview
 
 | Improvement | Description | Status |
 |-------------|-------------|--------|
-| **YouTube Videos for All Major Tribes** | Added verified YouTube documentaries to 45+ tribes | ✅ Done |
+| **YouTube Video Audit** | Verified all 50+ tribe videos, replaced 6 broken IDs (Taita, Fon, Sukuma, Tigrinya, Wolof, Afar) | ✅ Done |
+| **Missing Video Coverage** | Added verified documentaries to Herero, Banyarwanda, Tswana, Sotho, Nubian, Barundi, Malagasy | ✅ Done |
+| **YouTube Videos for All Major Tribes** | Now covering 55+ tribes with verified YouTube documentaries | ✅ Done |
 | **Comprehensive README** | Full documentation with user stories, folder structure | ✅ Done |
 | **West & Southern Africa Expansion** | Added Himba, San, Chagga, Dinka, Sukuma tribes | ✅ Done |
 | **Horn of Africa Data** | Tigrinya, Afar tribes with complete data | ✅ Done |
