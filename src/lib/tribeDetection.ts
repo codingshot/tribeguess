@@ -706,6 +706,61 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'fanta': { tribe: 'mandinka', gender: 'female', meaning: 'Beautiful day' },
   'kadiatou': { tribe: 'mandinka', gender: 'female', meaning: 'Khadija - premature child' },
   'hawa': { tribe: 'mandinka', gender: 'female', meaning: 'Eve - life giver' },
+  'jobarteh': { tribe: 'mandinka', gender: 'male', meaning: 'Griot family name - storytellers' },
+  'kouyate': { tribe: 'mandinka', gender: 'male', meaning: 'Ancient griot family' },
+  'diabate': { tribe: 'mandinka', gender: 'male', meaning: 'Praise singer family' },
+
+  // ============ GHANA - Additional Akan names not in Ashanti section ============
+  'kojo': { tribe: 'akan', gender: 'male', meaning: 'Born on Monday' },
+  'kwesi': { tribe: 'akan', gender: 'male', meaning: 'Born on Sunday' },
+  'kweku': { tribe: 'akan', gender: 'male', meaning: 'Born on Wednesday' },
+  'nana_ak': { tribe: 'akan', gender: 'male', meaning: 'King/Chief/Grandfather' },
+  'efua': { tribe: 'akan', gender: 'female', meaning: 'Born on Friday (Fante)' },
+  
+  // ============ GHANA/TOGO/BENIN - Ewe - FACT-CHECKED 2024 ============
+  'kofi_ewe': { tribe: 'ewe', gender: 'male', meaning: 'Born on Friday' },
+  'agbeko': { tribe: 'ewe', gender: 'male', meaning: 'Life is precious' },
+  'dzifa': { tribe: 'ewe', gender: 'female', meaning: 'Peace of mind' },
+  'esinam': { tribe: 'ewe', gender: 'female', meaning: 'God has heard me' },
+  'kafui': { tribe: 'ewe', gender: 'female', meaning: 'Praise him' },
+  'sena': { tribe: 'ewe', gender: 'female', meaning: 'This world' },
+  'yayra': { tribe: 'ewe', gender: 'female', meaning: 'Blessing' },
+  'ablavi': { tribe: 'ewe', gender: 'female', meaning: 'Good' },
+  'mawusi_e': { tribe: 'ewe', gender: 'female', meaning: 'In God\'s hands' },
+  'enam': { tribe: 'ewe', gender: 'female', meaning: 'Fourth born' },
+  'kodzo': { tribe: 'ewe', gender: 'male', meaning: 'Born on Monday' },
+  'senyo': { tribe: 'ewe', gender: 'male', meaning: 'World' },
+  'yao': { tribe: 'ewe', gender: 'male', meaning: 'Born on Thursday' },
+  'koku': { tribe: 'ewe', gender: 'male', meaning: 'Born on Wednesday' },
+  'mensah': { tribe: 'ewe', gender: 'male', meaning: 'Third born son' },
+  'foli': { tribe: 'ewe', gender: 'male', meaning: 'Title of respect' },
+  'dela': { tribe: 'ewe', gender: 'male', meaning: 'Savior' },
+  'etse': { tribe: 'ewe', gender: 'male', meaning: 'Third born' },
+
+  // ============ BENIN - Fon - FACT-CHECKED 2024 ============
+  'dossou': { tribe: 'fon', gender: 'male', meaning: 'First of twins' },
+  'dossa': { tribe: 'fon', gender: 'female', meaning: 'First of twins (female)' },
+  'zinsou': { tribe: 'fon', gender: 'male', meaning: 'Fire has come' },
+  'ahonou': { tribe: 'fon', gender: 'male', meaning: 'Born after many girls' },
+  'aguessy': { tribe: 'fon', gender: 'male', meaning: 'God of thunder' },
+  'tohonou': { tribe: 'fon', gender: 'male', meaning: 'Spirit child' },
+  'dahito': { tribe: 'fon', gender: 'male', meaning: 'First son after daughters' },
+  'hounou': { tribe: 'fon', gender: 'male', meaning: 'Born on market day' },
+  'atcha': { tribe: 'fon', gender: 'male', meaning: 'Strong one' },
+  'gbedema': { tribe: 'fon', gender: 'male', meaning: 'Life continues' },
+  
+  // ============ BURKINA FASO - Mossi - FACT-CHECKED 2024 ============
+  'ouedraogo': { tribe: 'mossi', gender: 'male', meaning: 'Horse stallion - founder name' },
+  'zoungrana': { tribe: 'mossi', gender: 'male', meaning: 'Traditional Mossi surname' },
+  'kabore': { tribe: 'mossi', gender: 'male', meaning: 'Male child born after females' },
+  'sanou': { tribe: 'mossi', gender: 'male', meaning: 'Common Mossi name' },
+  'naboho': { tribe: 'mossi', gender: 'male', meaning: 'Elephant' },
+  'compaore': { tribe: 'mossi', gender: 'male', meaning: 'Trust' },
+  'sawadogo': { tribe: 'mossi', gender: 'male', meaning: 'It is God\'s will' },
+  'salamata': { tribe: 'mossi', gender: 'female', meaning: 'Peace (from Salaam)' },
+  'rasmata': { tribe: 'mossi', gender: 'female', meaning: 'Head of fate' },
+  'azeta': { tribe: 'mossi', gender: 'female', meaning: 'Born after loss' },
+  'fatimata': { tribe: 'mossi', gender: 'female', meaning: 'Daughter of the Prophet' },
 
   // ============ SOMALIA/ETHIOPIA/DJIBOUTI - Somali - Source: Wikipedia ============
   'abdi': { tribe: 'somali', gender: 'male', meaning: 'Servant (of God)' },
@@ -1263,6 +1318,107 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'mawu': [{ tribe: 'ashanti', weight: 0.95 }],
   'dans': [{ tribe: 'ashanti', weight: 0.95 }],
   'agye': [{ tribe: 'ashanti', weight: 0.98 }],
+  
+  // ============ West Africa - Ewe prefixes (Ghana, Togo, Benin) ============
+  'afis': [{ tribe: 'ewe', weight: 0.98 }],
+  'dzif': [{ tribe: 'ewe', weight: 0.98 }],
+  'esin': [{ tribe: 'ewe', weight: 0.98 }],
+  'kafu': [{ tribe: 'ewe', weight: 0.98 }],
+  'mawu_e': [{ tribe: 'ewe', weight: 0.95 }, { tribe: 'fon', weight: 0.05 }],
+  'seny_e': [{ tribe: 'ewe', weight: 0.95 }],
+  'yayr': [{ tribe: 'ewe', weight: 0.98 }],
+  'abla': [{ tribe: 'ewe', weight: 0.98 }],
+  'koko_e': [{ tribe: 'ewe', weight: 0.9 }],
+  'foli': [{ tribe: 'ewe', weight: 0.95 }],
+  'kodz': [{ tribe: 'ewe', weight: 0.98 }],
+  'agbe': [{ tribe: 'ewe', weight: 0.98 }],
+  'dela': [{ tribe: 'ewe', weight: 0.95 }],
+  'etse': [{ tribe: 'ewe', weight: 0.98 }],
+  'enas': [{ tribe: 'ewe', weight: 0.95 }],
+  'kwas_e': [{ tribe: 'ewe', weight: 0.85 }, { tribe: 'akan', weight: 0.15 }],
+  
+  // ============ West Africa - Fon prefixes (Benin) ============
+  'doss': [{ tribe: 'fon', weight: 0.98 }],
+  'soss': [{ tribe: 'fon', weight: 0.95 }],
+  'ahou': [{ tribe: 'fon', weight: 0.98 }],
+  'ague': [{ tribe: 'fon', weight: 0.98 }],
+  'zins': [{ tribe: 'fon', weight: 0.98 }],
+  'toho': [{ tribe: 'fon', weight: 0.95 }],
+  'dahi': [{ tribe: 'fon', weight: 0.98 }],
+  'houn': [{ tribe: 'fon', weight: 0.98 }],
+  'atch': [{ tribe: 'fon', weight: 0.95 }],
+  'fafa': [{ tribe: 'fon', weight: 0.95 }],
+  'akpk': [{ tribe: 'fon', weight: 0.98 }],
+  'gbed': [{ tribe: 'fon', weight: 0.95 }],
+  
+  // ============ West Africa - Mossi prefixes (Burkina Faso) ============
+  'oued': [{ tribe: 'mossi', weight: 0.98 }],
+  'zoun': [{ tribe: 'mossi', weight: 0.98 }],
+  'kabo': [{ tribe: 'mossi', weight: 0.95 }],
+  'sano': [{ tribe: 'mossi', weight: 0.98 }],
+  'nabo': [{ tribe: 'mossi', weight: 0.98 }],
+  'comp': [{ tribe: 'mossi', weight: 0.95 }],
+  'sawa': [{ tribe: 'mossi', weight: 0.98 }],
+  'yame': [{ tribe: 'mossi', weight: 0.95 }],
+  'kona': [{ tribe: 'mossi', weight: 0.9 }],
+  'tien': [{ tribe: 'mossi', weight: 0.95 }],
+  
+  // ============ West Africa - Serer prefixes (Senegal) ============
+  'diou_s': [{ tribe: 'serer', weight: 0.98 }],
+  'ngom': [{ tribe: 'serer', weight: 0.98 }],
+  'faye': [{ tribe: 'serer', weight: 0.98 }],
+  'dien': [{ tribe: 'serer', weight: 0.95 }],
+  'ndon': [{ tribe: 'serer', weight: 0.95 }],
+  'sall': [{ tribe: 'serer', weight: 0.85 }, { tribe: 'wolof', weight: 0.15 }],
+  
+  // ============ West Africa - Bambara prefixes (Mali) ============
+  'trao': [{ tribe: 'bambara', weight: 0.98 }],
+  'diar': [{ tribe: 'bambara', weight: 0.95 }],
+  'coul': [{ tribe: 'bambara', weight: 0.95 }],
+  'kane': [{ tribe: 'bambara', weight: 0.9 }],
+  'kouy': [{ tribe: 'bambara', weight: 0.98 }],
+  'diab': [{ tribe: 'bambara', weight: 0.95 }],
+  'tour': [{ tribe: 'bambara', weight: 0.85 }, { tribe: 'mandinka', weight: 0.15 }],
+  'keit': [{ tribe: 'bambara', weight: 0.8 }, { tribe: 'mandinka', weight: 0.2 }],
+  
+  // ============ West Africa - Tuareg prefixes (Niger, Mali) ============
+  'ag_t': [{ tribe: 'tuareg', weight: 0.98 }],
+  'atta': [{ tribe: 'tuareg', weight: 0.95 }],
+  'inaw': [{ tribe: 'tuareg', weight: 0.98 }],
+  'amak': [{ tribe: 'tuareg', weight: 0.95 }],
+  'takm': [{ tribe: 'tuareg', weight: 0.98 }],
+  
+  // ============ Additional Wolof prefixes (Senegal) ============
+  'ndiy': [{ tribe: 'wolof', weight: 0.98 }],
+  'diom': [{ tribe: 'wolof', weight: 0.95 }],
+  'thia_w': [{ tribe: 'wolof', weight: 0.95 }],
+  'gaye': [{ tribe: 'wolof', weight: 0.98 }],
+  'fall_w': [{ tribe: 'wolof', weight: 0.95 }],
+  'badi_w': [{ tribe: 'wolof', weight: 0.9 }],
+  'mbay_w': [{ tribe: 'wolof', weight: 0.95 }],
+  'seck': [{ tribe: 'wolof', weight: 0.98 }],
+  'seny_w': [{ tribe: 'wolof', weight: 0.9 }],
+  'mbod': [{ tribe: 'wolof', weight: 0.95 }],
+  
+  // ============ Additional Mandinka prefixes ============
+  'jobe': [{ tribe: 'mandinka', weight: 0.98 }],
+  'jobb': [{ tribe: 'mandinka', weight: 0.98 }],
+  'siss_m': [{ tribe: 'mandinka', weight: 0.95 }],
+  'cham': [{ tribe: 'mandinka', weight: 0.95 }],
+  'keja': [{ tribe: 'mandinka', weight: 0.98 }],
+  'ceis': [{ tribe: 'mandinka', weight: 0.95 }],
+  'mbar': [{ tribe: 'mandinka', weight: 0.9 }],
+  'dram': [{ tribe: 'mandinka', weight: 0.95 }],
+  
+  // ============ Additional Fulani prefixes ============
+  'bald': [{ tribe: 'fulani', weight: 0.98 }],
+  'barr': [{ tribe: 'fulani', weight: 0.95 }],
+  'siss_f': [{ tribe: 'fulani', weight: 0.85 }],
+  'jall': [{ tribe: 'fulani', weight: 0.98 }],
+  'kann': [{ tribe: 'fulani', weight: 0.9 }],
+  'sowe': [{ tribe: 'fulani', weight: 0.95 }],
+  'dial': [{ tribe: 'fulani', weight: 0.98 }],
+  'bah_f': [{ tribe: 'fulani', weight: 0.95 }],
 
   // ============ South Africa - Xhosa prefixes ============
   'nolu': [{ tribe: 'xhosa', weight: 0.98 }],
@@ -1412,9 +1568,29 @@ const suffixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'asha': [{ tribe: 'shona', weight: 0.85 }],
   'arai': [{ tribe: 'shona', weight: 0.9 }],
 
+  // ============ West Africa - Ewe suffixes (Ghana, Togo, Benin) ============
+  'ifaa': [{ tribe: 'ewe', weight: 0.95 }],
+  'elom': [{ tribe: 'ewe', weight: 0.95 }],
+  'efia': [{ tribe: 'ewe', weight: 0.95 }],
+  'nsah': [{ tribe: 'ewe', weight: 0.95 }],
+  
+  // ============ West Africa - Fon suffixes (Benin) ============
+  'ssou': [{ tribe: 'fon', weight: 0.98 }],
+  'ssy': [{ tribe: 'fon', weight: 0.95 }],
+  'onou': [{ tribe: 'fon', weight: 0.95 }],
+  'ito': [{ tribe: 'fon', weight: 0.9 }],
+  
+  // ============ West Africa - Mossi suffixes (Burkina Faso) ============
+  'ogo': [{ tribe: 'mossi', weight: 0.95 }],
+  'ana': [{ tribe: 'mossi', weight: 0.8 }],
+  'ore': [{ tribe: 'mossi', weight: 0.9 }],
+  
+  // ============ West Africa - Mandinka/Mande suffixes ============
+  'bah': [{ tribe: 'mandinka', weight: 0.85 }, { tribe: 'fulani', weight: 0.15 }],
+  'teh': [{ tribe: 'mandinka', weight: 0.95 }],
+  'llo': [{ tribe: 'fulani', weight: 0.95 }],
+
   // ============ Senegal - Wolof suffixes ============
-  'mane': [{ tribe: 'wolof', weight: 0.85 }],
-  'atou': [{ tribe: 'wolof', weight: 0.9 }],
   'ndey': [{ tribe: 'wolof', weight: 0.95 }],
   'odou': [{ tribe: 'wolof', weight: 0.9 }],
 };

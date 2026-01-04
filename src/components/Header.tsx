@@ -1,12 +1,24 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Shuffle } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import { getAllTribes } from '@/lib/tribeDetection';
 
 export function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
   
   const isActive = (path: string) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
+  };
+
+  const handleRandomTribe = () => {
+    const tribes = getAllTribes();
+    if (tribes.length > 0) {
+      const randomIndex = Math.floor(Math.random() * tribes.length);
+      const randomTribe = tribes[randomIndex];
+      navigate(`/learn/${randomTribe.slug}`);
+    }
   };
   
   return (
@@ -49,6 +61,15 @@ export function Header() {
             >
               Learn
             </Link>
+            <button
+              onClick={handleRandomTribe}
+              className="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 touch-manipulation bg-gradient-to-r from-primary/20 to-accent/20 text-primary hover:from-primary/30 hover:to-accent/30 border border-primary/20"
+              aria-label="Discover a random tribe"
+              title="Discover a random tribe"
+            >
+              <Shuffle className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Random</span>
+            </button>
           </div>
         </nav>
       </div>
