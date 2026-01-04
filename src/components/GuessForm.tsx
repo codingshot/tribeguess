@@ -98,6 +98,7 @@ export function GuessForm({
   
   // Adjective forms for grammatically correct display
   const countryAdjectives: Record<string, string> = {
+    'ALL': 'African',
     'KE': 'Kenyan',
     'NG': 'Nigerian',
     'GH': 'Ghanaian',
@@ -108,16 +109,29 @@ export function GuessForm({
     'CD': 'Congolese',
     'SN': 'Senegalese',
     'ER': 'Eritrean',
+    'RW': 'Rwandan',
+    'BI': 'Burundian',
+    'ZW': 'Zimbabwean',
+    'NA': 'Namibian',
+    'CM': 'Cameroonian',
+    'ML': 'Malian',
+    'NE': 'Nigerien',
+    'BF': 'Burkinabè',
+    'SO': 'Somali',
+    'DJ': 'Djiboutian',
   };
-  const countryAdjective = countryAdjectives[country] || selectedCountry?.name || 'Kenyan';
+  const countryAdjective = countryAdjectives[country] || selectedCountry?.name || 'African';
   
   const placeholderExamples: Record<string, string> = {
+    'ALL': 'e.g. Wanjiku, Adaeze, Amahoro...',
     'KE': 'e.g. Wanjiku, Achieng, Nafula...',
     'NG': 'e.g. Adaeze, Chiamaka, Ngozi...',
     'GH': 'e.g. Akosua, Abena, Yaa...',
     'ZA': 'e.g. Nomvula, Thandiwe, Lindiwe...',
     'ET': 'e.g. Tigist, Meron, Bethlehem...',
     'TZ': 'e.g. Neema, Zawadi, Hadija...',
+    'UG': 'e.g. Nakato, Babirye, Nassali...',
+    'RW': 'e.g. Uwimana, Amahoro, Ingabire...',
   };
 
   return (
@@ -132,7 +146,7 @@ export function GuessForm({
           First name works best - we'll analyze the naming patterns
         </p>
         <div className="flex gap-2">
-          {/* Country Dropdown - compact */}
+          {/* Country Dropdown */}
           <div className="relative shrink-0">
             <select
               id="country-select"
@@ -141,12 +155,13 @@ export function GuessForm({
                 setCountry(e.target.value);
                 onCountryChange?.(e.target.value);
               }}
-              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-7 pl-3"
+              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-8 pl-3 min-w-[140px]"
               aria-label="Select country"
             >
+              <option value="ALL">🌍 All Africa</option>
               {countries.map(c => (
                 <option key={c.code} value={c.code}>
-                  {c.flag} {c.code}
+                  {c.flag} {c.name}
                 </option>
               ))}
             </select>

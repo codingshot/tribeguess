@@ -34,6 +34,7 @@ const Index = () => {
 
   // Best-effort adjective; fallback to country name (prevents "Kenyan" always showing)
   const countryAdjectives: Record<string, string> = {
+    ALL: 'African',
     KE: 'Kenyan',
     NG: 'Nigerian',
     GH: 'Ghanaian',
@@ -64,8 +65,8 @@ const Index = () => {
   };
 
   const countryLabel =
-    countryAdjectives[activeCountry] || activeCountryInfo?.name || 'Kenyan';
-  const countryFlag = activeCountryInfo?.flag || '🇰🇪';
+    countryAdjectives[activeCountry] || activeCountryInfo?.name || 'African';
+  const countryFlag = activeCountry === 'ALL' ? '🌍' : (activeCountryInfo?.flag || '🇰🇪');
 
   const popularNames = (() => {
     const tribes = getTribesByCountry(activeCountry);
