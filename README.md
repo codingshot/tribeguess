@@ -248,6 +248,8 @@ npm run preview
 | **YouTube Video Audit** | Verified all 50+ tribe videos, replaced 7 broken IDs (Taita, Fon, Sukuma, Tigrinya, Wolof, Afar, Tuareg) | ✅ Done |
 | **Missing Video Coverage** | Added verified documentaries to Herero, Banyarwanda, Tswana, Sotho, Nubian, Barundi, Malagasy | ✅ Done |
 | **YouTube Videos for All Major Tribes** | Now covering 55+ tribes with verified YouTube documentaries | ✅ Done |
+| **Multi-Country Tribe Data** | Tuareg (7 countries), Maasai (2), Somali (5), Fulani (13+) with per-country population breakdowns | ✅ Done |
+| **Wikipedia-Verified Populations** | Updated all major tribe populations with 2024 Wikipedia citations | ✅ Done |
 | **Comprehensive README** | Full documentation with user stories, folder structure | ✅ Done |
 | **West & Southern Africa Expansion** | Added Himba, San, Chagga, Dinka, Sukuma tribes | ✅ Done |
 | **Horn of Africa Data** | Tigrinya, Afar tribes with complete data | ✅ Done |
