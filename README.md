@@ -245,14 +245,15 @@ npm run preview
 
 | Improvement | Description | Status |
 |-------------|-------------|--------|
-| **YouTube Video Audit** | Verified all 50+ tribe videos, replaced 7 broken IDs (Taita, Fon, Sukuma, Tigrinya, Wolof, Afar, Tuareg) | ✅ Done |
-| **Missing Video Coverage** | Added verified documentaries to Herero, Banyarwanda, Tswana, Sotho, Nubian, Barundi, Malagasy | ✅ Done |
-| **YouTube Videos for All Major Tribes** | Now covering 55+ tribes with verified YouTube documentaries | ✅ Done |
-| **Multi-Country Tribe Data** | Tuareg (7 countries), Maasai (2), Somali (5), Fulani (13+) with per-country population breakdowns | ✅ Done |
-| **Wikipedia-Verified Populations** | Updated all major tribe populations with 2024 Wikipedia citations | ✅ Done |
-| **Comprehensive README** | Full documentation with user stories, folder structure | ✅ Done |
-| **West & Southern Africa Expansion** | Added Himba, San, Chagga, Dinka, Sukuma tribes | ✅ Done |
-| **Horn of Africa Data** | Tigrinya, Afar tribes with complete data | ✅ Done |
+| **Live Search** | Filters as you type without pressing Enter | ✅ Done |
+| **View Toggle Active State** | Grid/List/Map buttons show active selection | ✅ Done |
+| **List View Mode** | New list view option alongside grid and map | ✅ Done |
+| **East African Voice Audio** | Audio greetings prefer Swahili/African voices | ✅ Done |
+| **Phonetic Breakdowns** | Pronunciation guides like [weem-WEH-gah] for greetings | ✅ Done |
+| **404/Terms/Privacy Pages** | Created legal and error pages with SEO | ✅ Done |
+| **SEO Optimization** | Meta tags, Open Graph, structured data added | ✅ Done |
+| **YouTube Video Audit** | Verified all 50+ tribe videos, replaced broken IDs | ✅ Done |
+| **Multi-Country Tribe Data** | Tuareg (7 countries), Maasai (2), Somali (5), Fulani (13+) | ✅ Done |
 | **URL State Sync** | All filters shareable via URL parameters | ✅ Done |
 | **Random Tribe Feature** | SEO-optimized /random route with navbar button | ✅ Done |
 
@@ -260,21 +261,23 @@ npm run preview
 
 | Improvement | Description | Impact |
 |-------------|-------------|--------|
-| **Central African Data** | Add DR Congo, Cameroon, CAR tribes with Bantu/Pygmy patterns | Data completeness |
-| **Data Validation Dashboard** | Show tribes missing YouTube, images, famous people | Quality control |
-| **Phonetic Fuzzy Matching** | Handle spelling variations and typos | Accuracy |
-| **Performance Optimization** | Lazy load tribe data, virtualize lists | Speed |
+| **Add Sitemap.xml** | Generate sitemap for better SEO crawling | Discoverability |
+| **West African Phonetics** | Add phonetic mappings for Yoruba, Igbo, Hausa | Audio accuracy |
+| **Image Lazy Loading** | Lazy load tribe images in grid view | Speed |
+| **Pagination/Infinite Scroll** | Handle large tribe lists efficiently | UX |
+| **Central African Data** | Add DR Congo, Cameroon, CAR tribes | Data completeness |
 | **PWA Support** | Add service worker for offline access | Accessibility |
 
 ### 🟡 Medium Priority
 
 | Improvement | Description | Impact |
 |-------------|-------------|--------|
-| **User Accounts** | Save favorite tribes, history | Engagement |
-| **Community Corrections** | Allow users to submit data fixes | Data quality |
-| **Multi-language Support** | Translate UI to French, Swahili, etc. | Reach |
-| **Advanced Analytics** | Track popular searches, tribe views | Insights |
-| **API Endpoint** | Public API for tribe data | Developer adoption |
+| **Keyboard Shortcuts** | G/L/M keys for view switching | Power users |
+| **Footer Component** | Links to Terms/Privacy pages | Navigation |
+| **Phonetic Guide Legend** | Explain symbols (caps = stress, hyphens = syllables) | Learning |
+| **Tribe Comparison** | Side-by-side culture comparison | Education |
+| **Favorites/Bookmarks** | Save favorite tribes locally | Engagement |
+| **Multi-language UI** | Translate to French, Swahili, etc. | Reach |
 
 ### 🟢 Future Ideas
 

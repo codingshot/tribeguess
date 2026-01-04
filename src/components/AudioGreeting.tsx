@@ -334,20 +334,29 @@ export function AudioGreeting({
       });
     }
 
-    // Find best matching voice
+    // Find best matching voice - prioritize African/non-Western voices
     const targetLocale = voiceLocale;
     const localeParts = targetLocale.split('-');
     
+    // Priority order: exact match > Swahili > African English > any African locale > non-US English > fallback
     let selectedVoice = 
       voices.find(v => v.lang === targetLocale) ||
       voices.find(v => v.lang.startsWith(localeParts[0])) ||
-      voices.find(v => v.lang.includes('sw')) ||
-      voices.find(v => v.lang.includes('en-')) ||
+      voices.find(v => v.lang === 'sw-KE' || v.lang === 'sw-TZ' || v.lang.startsWith('sw')) ||
+      voices.find(v => v.lang === 'en-KE' || v.lang === 'en-TZ' || v.lang === 'en-NG' || v.lang === 'en-ZA') ||
+      voices.find(v => ['zu-ZA', 'xh-ZA', 'af-ZA', 'yo-NG', 'ha-NG', 'ig-NG', 'am-ET'].includes(v.lang)) ||
+      voices.find(v => v.lang.startsWith('en-') && !v.lang.includes('en-US') && !v.lang.includes('en-GB')) ||
+      voices.find(v => v.lang.startsWith('en-')) ||
       voices[0];
+
+    // Log selected voice for debugging
+    console.log('Audio: Using voice', selectedVoice?.name, selectedVoice?.lang, 'for', phrase);
 
     const utterance = new SpeechSynthesisUtterance(phrase);
     utterance.voice = selectedVoice;
-    utterance.rate = 0.7; // Slower for clarity
+    utterance.rate = 0.65; // Slightly slower for better clarity
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
     utterance.pitch = 1.0;
     utterance.volume = 1.0;
 
