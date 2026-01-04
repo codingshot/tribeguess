@@ -97,6 +97,21 @@
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://tribeguess.com/blog/hutu-tutsi-twa-understanding-rwanda-burundi</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Banyarwanda (Hutu/Tutsi/Twa) Page -->
+  <url>
+    <loc>https://tribeguess.com/learn/banyarwanda</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Tribe Pages (Top 20) -->
   <url>
     <loc>https://tribeguess.com/learn/kikuyu</loc>

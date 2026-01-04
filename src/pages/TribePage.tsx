@@ -10,6 +10,7 @@ import { PersonCard } from '@/components/PersonCard';
 import { NameSearch } from '@/components/NameSearch';
 import { AudioGreeting, MainGreeting } from '@/components/AudioGreeting';
 import { PopulationPieChart } from '@/components/PopulationPieChart';
+import { TribeFamilyTree } from '@/components/TribeFamilyTree';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -288,6 +289,19 @@ const TribePage = () => {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{tribe.description}</p>
               </section>
+              
+              {/* Tribe Family Tree / Ethnic Components - for tribes like Banyarwanda */}
+              {(language || (tribe as any).ethnicComponents) && (
+                <TribeFamilyTree 
+                  currentTribe={{
+                    id: tribe.id,
+                    name: tribe.name,
+                    slug: tribe.slug,
+                    language: language
+                  }}
+                  ethnicComponents={(tribe as any).ethnicComponents}
+                />
+              )}
               
               {/* Language Section */}
               {language && (

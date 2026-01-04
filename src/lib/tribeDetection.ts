@@ -2351,7 +2351,21 @@ export function getTribeById(id: string) {
 }
 
 export function getTribeBySlug(slug: string) {
-  return getAllTribes().find(t => t.slug === slug || t.id === slug);
+  const tribes = getAllTribes();
+  const normalizedSlug = slug.toLowerCase();
+  
+  // First try exact slug or id match
+  const exactMatch = tribes.find(t => t.slug === normalizedSlug || t.id === normalizedSlug);
+  if (exactMatch) return exactMatch;
+  
+  // Then try slug aliases (for tribes like Banyarwanda with hutu/tutsi/twa aliases)
+  const aliasMatch = tribes.find(t => {
+    const aliases = (t as any).slugAliases as string[] | undefined;
+    return aliases?.some(alias => alias.toLowerCase() === normalizedSlug);
+  });
+  if (aliasMatch) return aliasMatch;
+  
+  return undefined;
 }
 
 export function getCountries(): Country[] {

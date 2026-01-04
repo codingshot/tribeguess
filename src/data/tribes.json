@@ -4560,6 +4560,27 @@
       "id": "hutu_tutsi",
       "name": "Banyarwanda (Hutu, Tutsi, Twa)",
       "slug": "banyarwanda",
+      "slugAliases": ["hutu", "tutsi", "twa", "rwandan", "burundian", "banyarwanda"],
+      "ethnicComponents": [
+        {
+          "name": "Hutu",
+          "population": "~85% (historical)",
+          "description": "The majority population historically associated with agriculture. The Hutu identity emerged from socioeconomic classifications during the pre-colonial era, later rigidified by Belgian colonial policies.",
+          "historicalRole": "Traditional agriculturalists and farmers. Colonial-era ethnic ID cards (1933) hardened these previously fluid social categories."
+        },
+        {
+          "name": "Tutsi",
+          "population": "~14% (historical)",
+          "description": "Historically associated with cattle ownership and aristocracy. The Tutsi-Hutu distinction was originally socioeconomic, not ethnic—one could become Tutsi by acquiring cattle (kwihutura).",
+          "historicalRole": "Traditionally pastoralists and rulers. The Rwandan kingdom was led by Tutsi mwamis (kings), but social mobility existed between categories."
+        },
+        {
+          "name": "Twa",
+          "population": "~1%",
+          "description": "The original forest-dwelling inhabitants, also known as Batwa or 'Pygmies.' One of Central Africa's oldest populations, traditionally hunter-gatherers and potters.",
+          "historicalRole": "Forest hunters, potters, and entertainers at royal courts. Often marginalized but held spiritual significance as original inhabitants."
+        }
+      ],
       "youtubeVideoId": "T9DOER8JmSc",
       "countries": ["RW", "BI", "UG", "CD"],
       "region": "Rwanda & Burundi",
