@@ -38,12 +38,12 @@ To celebrate and preserve African cultural diversity by making tribal heritage a
 
 | Feature | Description |
 |---------|-------------|
-| **🔮 Name-Based Tribe Detection** | AI-powered algorithm analyzing 500+ name patterns, prefixes, and suffixes |
-| **📚 Tribe Encyclopedia** | Detailed pages for 50+ tribes with history, culture, and traditions |
+| **🔮 Name-Based Tribe Detection** | AI-powered algorithm analyzing 600+ name patterns, prefixes, and suffixes |
+| **📚 Tribe Encyclopedia** | Detailed pages for 65+ tribes with history, culture, and traditions |
 | **🗺️ Interactive Maps** | OpenStreetMap integration showing tribal territories with custom overlays |
 | **🎲 Random Tribe Explorer** | SEO-optimized random tribe discovery feature |
 | **🔊 Audio Greetings** | Web Speech API pronunciation for tribal greetings |
-| **📺 Culture Documentaries** | Verified YouTube embeds for each tribe |
+| **📺 Culture Documentaries** | Verified YouTube embeds for 45+ tribes |
 | **🔍 Advanced Search & Filters** | Multi-country, language family, and region filtering |
 
 ### Advanced Features
@@ -241,6 +241,17 @@ npm run preview
 
 ## 📈 Improvements & Roadmap
 
+### ✅ Recently Completed
+
+| Improvement | Description | Status |
+|-------------|-------------|--------|
+| **YouTube Videos for All Major Tribes** | Added verified YouTube documentaries to 45+ tribes | ✅ Done |
+| **Comprehensive README** | Full documentation with user stories, folder structure | ✅ Done |
+| **West & Southern Africa Expansion** | Added Himba, San, Chagga, Dinka, Sukuma tribes | ✅ Done |
+| **Horn of Africa Data** | Tigrinya, Afar tribes with complete data | ✅ Done |
+| **URL State Sync** | All filters shareable via URL parameters | ✅ Done |
+| **Random Tribe Feature** | SEO-optimized /random route with navbar button | ✅ Done |
+
 ### 🔴 High Priority
 
 | Improvement | Description | Impact |
@@ -276,9 +287,9 @@ npm run preview
 
 | Issue | Status | Workaround |
 |-------|--------|------------|
-| Some map overlays in ocean | Investigating | Coordinates being verified |
+| Duplicate Sukuma entry in JSON | Low priority | De-duplication logic handles it |
 | Speech synthesis limited languages | Browser limitation | Falls back to closest locale |
-| Mobile keyboard covers input | CSS fix needed | Scroll up manually |
+| Some smaller tribes lack gallery images | In progress | Adding images progressively |
 
 ---
 
