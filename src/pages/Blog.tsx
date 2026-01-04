@@ -56,13 +56,32 @@ const Blog = () => {
 };
 
 function BlogPostCard({ post }: { post: BlogPost }) {
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffTime = now.getTime() - date.getTime();
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays < 0) return 'Coming soon';
+    if (diffDays === 0) return 'Today';
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays} days ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+    if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+    
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  };
+
   return (
     <Link 
       to={`/blog/${post.slug}`}
       className="group block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
     >
-      <div className={`h-32 ${post.gradient} flex items-center justify-center`}>
+      <div className={`h-32 ${post.gradient} flex items-center justify-center relative`}>
         <span className="text-4xl">{post.emoji}</span>
+        <span className="absolute top-2 right-2 px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-full text-xs text-white">
+          {formatDate(post.publishDate)}
+        </span>
       </div>
       
       <div className="p-4 sm:p-5">
@@ -78,7 +97,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
           </span>
         </div>
         
-        <h2 className="font-serif text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+        <h2 className="font-serif text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
           {post.title}
         </h2>
         
