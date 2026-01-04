@@ -171,22 +171,31 @@ export function GuessForm({
               </svg>
             </div>
           </div>
-          {/* Name Input */}
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <input
-              id="name-input"
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
-              className="input-tribal pl-9 text-base sm:text-lg w-full"
-              autoFocus
-              maxLength={50}
-              autoComplete="off"
-              autoCapitalize="words"
-              spellCheck="false"
-            />
+          {/* Name Input with Search Button */}
+          <div className="relative flex-1 flex gap-1.5">
+            <div className="relative flex-1">
+              <input
+                id="name-input"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
+                className="input-tribal text-base sm:text-lg w-full pr-3 pl-3"
+                autoFocus
+                maxLength={50}
+                autoComplete="off"
+                autoCapitalize="words"
+                spellCheck="false"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={!name.trim()}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-3 sm:px-4 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 touch-manipulation flex items-center justify-center shrink-0"
+              aria-label="Search for tribe"
+            >
+              <Search className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>
