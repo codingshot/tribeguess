@@ -611,5 +611,116 @@ export const blogPosts: BlogPost[] = [
       { title: "Somalia Demographics - CIA World Factbook", url: "https://www.cia.gov/the-world-factbook/countries/somalia/" },
       { title: "Somali Clan System - Oxford Research Encyclopedia" }
     ]
+  },
+  {
+    slug: "cameroon-250-ethnic-groups-africa-miniature",
+    title: "Cameroon: 250+ Tribes in 'Africa in Miniature'",
+    seoTitle: "Cameroon's 250+ Ethnic Groups: Bamileke, Duala, Fulani & More | TribeGuess",
+    seoDescription: "Discover Cameroon's incredible ethnic diversity with 250+ tribes speaking 280 languages. Learn about the Bamileke, Duala, Bamoun, and their unique cultural traditions.",
+    excerpt: "Called 'Africa in Miniature' for its geographic and cultural diversity, Cameroon is home to over 250 ethnic groups speaking 280 languages—from the business-savvy Bamileke to the coastal Duala and the Fulani herders.",
+    emoji: "🇨🇲",
+    gradient: "bg-gradient-to-br from-green-600 via-red-500 to-yellow-500",
+    region: "Cameroon",
+    readTime: "7 min read",
+    publishDate: "2026-01-03",
+    tags: ["Cameroon", "Bamileke", "Duala", "Bamoun", "African tribes", "Central Africa"],
+    relatedTribes: [
+      { name: "Bamileke", slug: "bamileke" },
+      { name: "Duala", slug: "duala" },
+      { name: "Bamoun", slug: "bamoun" },
+      { name: "Ewondo", slug: "ewondo" },
+      { name: "Nso (Banso)", slug: "nso" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "Cameroon is often called 'Africa in Miniature' because it contains nearly every climate, landscape, and cultural tradition found across the continent—all within a single country. From coastal mangroves to Sahel savannas, from tropical rainforests to volcanic highlands, Cameroon's geography has shaped an extraordinary tapestry of over 250 distinct ethnic groups speaking 280 languages.[^1]",
+          "This diversity isn't just geographic—it's deeply cultural. Each group has developed unique traditions, naming systems, governance structures, and artistic expressions that make Cameroon one of Africa's most fascinating cultural laboratories."
+        ]
+      },
+      {
+        heading: "The Bamileke: Business Empire Builders",
+        icon: "💼",
+        paragraphs: [
+          "The Bamileke people of Cameroon's Western Highlands are often called 'the Jews of Africa'—a comparison that speaks to their legendary business acumen, strong community bonds, and global diaspora networks. Making up approximately 30% of Cameroon's population, they are the country's largest ethnic group.[^2]"
+        ],
+        list: [
+          "Tontines (rotating credit associations) allow Bamileke to pool resources for major investments",
+          "Each Bamileke village is ruled by a Fon (chief) with semi-divine status",
+          "Elephant masks from Bamileke secret societies are iconic symbols of Cameroonian art",
+          "Famous Bamileke businessmen include billionaire Victor Fotso"
+        ],
+        highlight: "The Bamileke tontine system has been studied by economists worldwide as a model of community-based microfinance that predates modern banking."
+      },
+      {
+        heading: "The Duala: Gatekeepers of the Coast",
+        icon: "⚓",
+        paragraphs: [
+          "The Duala people gave their name to Cameroon's largest city and economic capital—Douala. As coastal traders who controlled commerce with European ships from the 17th century onward, they became wealthy intermediaries and early adopters of Western education.[^3]"
+        ],
+        list: [
+          "King Rudolf Duala Manga Bell was hanged by Germans in 1914 for resisting land seizures",
+          "The annual Ngondo festival involves communicating with Jengu water spirits",
+          "Legendary saxophonist Manu Dibango (Soul Makossa) was Duala",
+          "Duala language became a trade language along the Cameroon coast"
+        ]
+      },
+      {
+        heading: "The Bamoun: Inventors of a Writing System",
+        icon: "✍️",
+        paragraphs: [
+          "The Bamoun Kingdom holds a unique distinction: Sultan Ibrahim Njoya (1860-1933) invented a complete writing system called Shu-Mom, making the Bamoun one of only a handful of African peoples with an indigenous script.[^4]",
+          "The sultan didn't stop at writing—he also created a new religion blending Islam, Christianity, and traditional beliefs, and commissioned elaborate architecture for his palace in Foumban."
+        ],
+        list: [
+          "The Bamum Script (Shu-Mom) went through multiple revisions before being finalized",
+          "Sultan Njoya invented a printing press and a mill for his kingdom",
+          "The Royal Palace in Foumban is a major tourist attraction",
+          "Today's Bamoun Sultan still holds significant ceremonial power"
+        ],
+        highlight: "Sultan Njoya's inventiveness was so remarkable that UNESCO recognizes the Bamum Script as part of the world's documentary heritage."
+      },
+      {
+        heading: "The Grassfield Kingdoms: Nso, Bafut, and Beyond",
+        icon: "👑",
+        paragraphs: [
+          "The highlands of Northwest Cameroon are dotted with powerful traditional kingdoms that have maintained their structures for centuries. The Fon of Nso, the Fon of Bafut, and dozens of other traditional rulers continue to command significant respect and authority."
+        ],
+        list: [
+          "The Bafut Palace is a UNESCO-tentative World Heritage Site, made famous by Gerald Durrell's 'Bafut Beagles'",
+          "The Nso's sacred Afo-a-Kom statue was stolen and recovered in a famous 1973 case",
+          "Traditional councils function as parallel governance systems alongside modern government",
+          "Secret societies like Ngwerong enforce social order and preserve traditions"
+        ]
+      },
+      {
+        heading: "The Fulani: Lords of the North",
+        icon: "🐄",
+        paragraphs: [
+          "In Cameroon's northern savanna regions, the Fulani (Foulbé) established powerful Islamic chieftaincies called Lamidates in the 19th century. Cameroon's first president, Ahmadou Ahidjo, was Fulani, cementing northern political influence in the post-independence era.[^5]"
+        ],
+        list: [
+          "Fulani herders practice transhumance, moving cattle seasonally across vast distances",
+          "The Lamidos (traditional chiefs) still wield considerable local authority",
+          "Pulaaku—the Fulani code of conduct—emphasizes patience, self-control, and modesty",
+          "Fulfulde language is widely spoken across the northern regions"
+        ]
+      },
+      {
+        heading: "Unity in Diversity",
+        icon: "🤝",
+        paragraphs: [
+          "Despite its extraordinary diversity, Cameroon has maintained relative unity since independence in 1960. French and English serve as official languages (reflecting colonial history), while local languages preserve ethnic identities.",
+          "This cultural wealth continues to shape Cameroonian music (from makossa to bikutsi), art (from Bamileke masks to Bamoun bronze work), and society—making Cameroon truly 'Africa in Miniature.'"
+        ]
+      }
+    ],
+    sources: [
+      { title: "Cameroon Ethnic Groups - Ethnologue", url: "https://www.ethnologue.com/country/CM/" },
+      { title: "Bamileke Culture - Encyclopedia Britannica", url: "https://www.britannica.com/topic/Bamileke" },
+      { title: "Duala History - Wikipedia", url: "https://en.wikipedia.org/wiki/Duala_people" },
+      { title: "Bamum Script - UNESCO Memory of the World", url: "https://en.unesco.org/" },
+      { title: "Fulani in Cameroon - CIA World Factbook", url: "https://www.cia.gov/the-world-factbook/countries/cameroon/" }
+    ]
   }
 ];

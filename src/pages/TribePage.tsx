@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play } from 'lucide-react';
 import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo } from '@/lib/tribeDetection';
@@ -127,15 +128,66 @@ const TribePage = () => {
                   const primaryCountry = countries?.[0] || 'KE';
                   const countryObj = getCountries().find(c => c.code === primaryCountry);
                   const countryName = countryObj?.name || 'Kenya';
-                  const locationTitle = isMultiCountry 
-                    ? `Territory Across ${countries.length} Countries` 
-                    : `Location in ${countryName}`;
+                  const [showCountryList, setShowCountryList] = React.useState(false);
+                  
+                  const countryObjects = countries?.map(code => getCountries().find(c => c.code === code)).filter(Boolean) || [];
+                  
                   return (
                     <>
-                      <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                      <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2 flex-wrap">
                         <Map className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
-                        {locationTitle}
+                        {isMultiCountry ? (
+                          <span className="flex items-center gap-2 flex-wrap">
+                            <span>Territory Across</span>
+                            <span className="inline-flex items-center gap-1">
+                              {countryObjects.slice(0, 3).map((c: any) => (
+                                <span 
+                                  key={c.code} 
+                                  className="text-lg cursor-help" 
+                                  title={c.name}
+                                  aria-label={c.name}
+                                >
+                                  {c.flag}
+                                </span>
+                              ))}
+                              {countryObjects.length > 3 && (
+                                <span className="text-xs text-muted-foreground">+{countryObjects.length - 3}</span>
+                              )}
+                            </span>
+                            <button
+                              onClick={() => setShowCountryList(!showCountryList)}
+                              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors text-primary font-bold cursor-pointer border border-primary/30"
+                              aria-expanded={showCountryList}
+                              aria-label={`Show ${countries.length} countries`}
+                            >
+                              {countries.length}
+                              <span className="text-xs font-normal">Countries</span>
+                            </button>
+                          </span>
+                        ) : (
+                          <span>Location in {countryName}</span>
+                        )}
                       </h2>
+                      
+                      {/* Expandable country list */}
+                      {isMultiCountry && showCountryList && (
+                        <div className="mb-4 p-3 bg-secondary/50 rounded-lg border border-border animate-fade-in">
+                          <p className="text-sm text-muted-foreground mb-2">Countries where the {tribe.name} people live:</p>
+                          <div className="flex flex-wrap gap-2">
+                            {countryObjects.map((c: any) => (
+                              <Link
+                                key={c.code}
+                                to={`/learn?country=${c.code}`}
+                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background hover:bg-primary/10 transition-colors text-sm border border-border hover:border-primary/30"
+                              >
+                                <span className="text-lg">{c.flag}</span>
+                                <span className="font-medium">{c.name}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      
                       <TribeMap 
                         lat={tribe.mapCoordinates.lat} 
                         lng={tribe.mapCoordinates.lng} 
