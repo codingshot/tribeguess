@@ -9135,6 +9135,747 @@
       ],
       "description": "The Tuareg are Saharan nomads known for indigo clothing, men's veils, matrilineal culture, and navigating ancient caravan routes across the desert.",
       "relatedTribes": ["berber", "fulani", "songhai"]
+    },
+
+    {
+      "id": "bamileke",
+      "name": "Bamileke",
+      "slug": "bamileke",
+      "countries": ["CM"],
+      "region": "West Region, Cameroon",
+      "population": "~8 million",
+      "populationPercent": "~30%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.5, "lng": 10.4 },
+      "counties": ["West Region", "Menoua", "Mifi", "Bamboutos", "Haut-Nkam"],
+      "namePrefixes": ["Fo", "Nde", "Tchou", "Kam", "Tch"],
+      "commonNames": {
+        "female": ["Laetitia", "Bertine", "Chimène", "Nadège", "Sidonie", "Juliette", "Francine"],
+        "male": ["Fotso", "Talla", "Njoya", "Kamga", "Tchinda", "Nzukou", "Kenne", "Djoumessi"]
+      },
+      "stereotypes": [
+        "Business-minded entrepreneurs",
+        "Strong work ethic",
+        "United community",
+        "Respect for tradition",
+        "Political influence",
+        "Artistic heritage"
+      ],
+      "culturalTraits": [
+        "Elaborate chieftaincy system (Fon)",
+        "Tontine savings groups",
+        "Intricate beadwork and masks",
+        "Secret societies (Kemdjou)",
+        "Ancestral skull worship",
+        "Vibrant funeral ceremonies"
+      ],
+      "funFacts": [
+        "The Bamileke are called 'the Jews of Africa' for their business acumen",
+        "Each Bamileke kingdom has a Fon (chief) with semi-divine status",
+        "Bamileke elephant masks are iconic symbols of Cameroonian art",
+        "Tontines (rotating credit associations) originated from Bamileke culture"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu corn", "Ndolé (bitter leaf stew)", "Eru (vegetable dish)", "Plantains"],
+        "beverages": ["Palm wine (Mimbo)", "Corn beer", "Ginger juice"],
+        "specialDishes": ["Koki (bean pudding)", "Achu soup", "Mbongo Tchobi"],
+        "description": "Bamileke cuisine features corn-based fufu served with rich, leafy stews like ndolé and koki bean pudding."
+      },
+      "traditionalDance": "Makossa and Bikutsi influences; elephant mask dances",
+      "religion": "Christianity (majority), Traditional beliefs, Islam (minority)",
+      "history": {
+        "origin": "The Bamileke migrated to the Western Highlands around the 17th century, establishing powerful chieftaincies. Each village developed into a semi-independent kingdom ruled by a Fon.",
+        "colonialEra": "During German and French colonization, the Bamileke resisted foreign rule. The UPC (Union of Peoples of Cameroon) rebellion (1955-1971) was largely Bamileke-led.",
+        "independence": "Post-independence, the Bamileke faced persecution but became economically dominant through trade and business networks.",
+        "keyEvents": ["Migration to highlands (1600s)", "German colonization (1884)", "UPC Rebellion (1955-1971)", "Economic rise (1980s-present)"]
+      },
+      "language": {
+        "name": "Ghomálá' (and related dialects)",
+        "speakers": "~1.5 million",
+        "greeting": "Lah mbah?",
+        "greetingMeaning": "How are you?",
+        "family": "Grassfields Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Paul Biya", "role": "President of Cameroon (Bulu, but married to Bamileke)", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Biya" },
+        { "name": "Samuel Eto'o", "role": "Football Legend (partial heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Samuel_Eto%27o" },
+        { "name": "Victor Fotso", "role": "Billionaire Businessman", "wikipedia": "https://en.wikipedia.org/wiki/Victor_Fotso" }
+      ],
+      "description": "The Bamileke are Cameroon's largest ethnic group, renowned for elaborate chieftaincies, elephant masks, business networks, and powerful tontine savings systems.",
+      "relatedTribes": ["bamoun", "bafut", "nso"]
+    },
+
+    {
+      "id": "bassa_cameroon",
+      "name": "Bassa (Cameroon)",
+      "slug": "bassa-cameroon",
+      "countries": ["CM"],
+      "region": "Littoral & Centre Regions, Cameroon",
+      "population": "~3 million",
+      "populationPercent": "~12%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 3.9, "lng": 10.1 },
+      "counties": ["Littoral", "Centre", "Sanaga-Maritime", "Nyong-et-Kellé"],
+      "namePrefixes": ["Ma", "Ngo", "Di", "Log"],
+      "commonNames": {
+        "female": ["Mandeng", "Ngon", "Dikongue", "Ngoh", "Mbang", "Biloa"],
+        "male": ["Mpondo", "Dikongue", "Makon", "Lobe", "Njock", "Mbarga", "Ebode"]
+      },
+      "stereotypes": [
+        "Independence fighters",
+        "Strong cultural pride",
+        "Musical traditions",
+        "Resistance history",
+        "Forest people",
+        "Fierce warriors"
+      ],
+      "culturalTraits": [
+        "Strong anti-colonial history",
+        "Bikutsi music origins",
+        "Initiation ceremonies (Sso)",
+        "Palm wine culture",
+        "Mask traditions",
+        "Forest hunting expertise"
+      ],
+      "funFacts": [
+        "The Bassa led major resistance against French colonization",
+        "Ruben Um Nyobè, father of Cameroonian nationalism, was Bassa",
+        "The Bassa have their own writing system (Bassa Vah script)",
+        "Bikutsi dance originated from Bassa and Beti traditions"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Plantains", "Ndolé", "Bush meat"],
+        "beverages": ["Palm wine", "Raffia wine"],
+        "specialDishes": ["Mbongo Tchobi (black stew)", "Kondre", "Miondo (cassava sticks)"],
+        "description": "Bassa cuisine features cassava-based dishes, forest game, and the famous mbongo tchobi black stew."
+      },
+      "traditionalDance": "Bikutsi and Assiko",
+      "religion": "Christianity (majority), Traditional beliefs",
+      "language": {
+        "name": "Basaa",
+        "speakers": "~300,000 native speakers",
+        "greeting": "I yé?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet, Bassa Vah script (historical)"
+      },
+      "famousPeople": [
+        { "name": "Ruben Um Nyobè", "role": "Independence Hero", "wikipedia": "https://en.wikipedia.org/wiki/Ruben_Um_Nyob%C3%A8" },
+        { "name": "Félix Moumié", "role": "Pan-Africanist Leader", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix-Roland_Moumi%C3%A9" }
+      ],
+      "description": "The Bassa are a proud Cameroonian people known for fierce resistance to colonization, bikutsi music, and producing key independence leaders.",
+      "relatedTribes": ["beti", "duala", "ewondo"]
+    },
+
+    {
+      "id": "duala",
+      "name": "Duala",
+      "slug": "duala",
+      "countries": ["CM"],
+      "region": "Littoral Region, Cameroon",
+      "population": "~1.5 million",
+      "populationPercent": "~6%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 4.05, "lng": 9.7 },
+      "counties": ["Littoral Region", "Wouri", "Sanaga-Maritime"],
+      "namePrefixes": ["Eka", "Bell", "Din", "Manga"],
+      "commonNames": {
+        "female": ["Eyango", "Dina", "Muna", "Epée", "Ebélé", "Makembe"],
+        "male": ["Bell", "Ekwalla", "Manga", "Douala", "Priso", "Mandessi", "Epée"]
+      },
+      "stereotypes": [
+        "Coastal traders",
+        "Sophisticated culture",
+        "Education-focused",
+        "European influence",
+        "Business savvy",
+        "Urban elite"
+      ],
+      "culturalTraits": [
+        "Ngondo water festival",
+        "Canoe racing traditions",
+        "Jengu water spirit worship",
+        "Early contact with Europeans",
+        "Trading heritage",
+        "Elaborate naming ceremonies"
+      ],
+      "funFacts": [
+        "Cameroon's largest city (Douala) is named after the Duala people",
+        "The Ngondo festival involves communicating with water spirits (Jengu)",
+        "King Rudolf Duala Manga Bell was executed by Germans for resisting colonization in 1914",
+        "The Duala were among the first Africans to receive Western education"
+      ],
+      "traditionalFood": {
+        "staples": ["Fish", "Plantains", "Cassava", "Cocoyam"],
+        "beverages": ["Palm wine", "Ginger beer"],
+        "specialDishes": ["Mbanga soup (palm nut)", "Ndolé with fish", "Water fufu", "Grilled fish"],
+        "description": "Duala cuisine centers on seafood, with signature dishes like mbanga soup and fresh fish from the Wouri River."
+      },
+      "traditionalDance": "Esewé and Makossa",
+      "religion": "Christianity (predominantly)", 
+      "history": {
+        "origin": "The Duala migrated to the Cameroon coast around the 17th century, becoming dominant traders who controlled commerce with European ships.",
+        "colonialEra": "Duala kings signed treaties with Germany in 1884, making Cameroon a German protectorate. King Rudolf Duala Manga Bell was hanged in 1914 for opposing land seizures.",
+        "independence": "The Duala remained influential in post-colonial Cameroon, with Douala becoming the economic capital.",
+        "keyEvents": ["Migration to coast (1600s)", "German treaty (1884)", "Execution of Manga Bell (1914)", "Independence (1960)"]
+      },
+      "language": {
+        "name": "Duala",
+        "speakers": "~2 million (including L2)",
+        "greeting": "O bé?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Rudolf Duala Manga Bell", "role": "King & Resistance Hero", "wikipedia": "https://en.wikipedia.org/wiki/Rudolf_Duala_Manga_Bell" },
+        { "name": "Manu Dibango", "role": "Legendary Saxophonist", "wikipedia": "https://en.wikipedia.org/wiki/Manu_Dibango" },
+        { "name": "Francis Bebey", "role": "Musician & Writer", "wikipedia": "https://en.wikipedia.org/wiki/Francis_Bebey" }
+      ],
+      "description": "The Duala are a coastal Cameroonian people known for the Ngondo water festival, trading history, and giving their name to Cameroon's largest city.",
+      "relatedTribes": ["bassa_cameroon", "bakweri", "limba"]
+    },
+
+    {
+      "id": "nso",
+      "name": "Nso (Banso)",
+      "slug": "nso",
+      "countries": ["CM"],
+      "region": "Northwest Region, Cameroon",
+      "population": "~500,000",
+      "populationPercent": "~2%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.2, "lng": 10.7 },
+      "counties": ["Northwest Region", "Bui", "Kumbo"],
+      "namePrefixes": ["Shey", "Taa", "Ngong", "Fai"],
+      "commonNames": {
+        "female": ["Yenla", "Ngeh", "Shuwir", "Ngong", "Kiyen", "Wirba"],
+        "male": ["Shey", "Fai", "Tafon", "Wirba", "Ngwa", "Vernyuy", "Nfor"]
+      },
+      "stereotypes": [
+        "Proud highland people",
+        "Strong monarchy tradition",
+        "Agricultural expertise",
+        "Cultural preservation",
+        "Community-oriented",
+        "Warrior traditions"
+      ],
+      "culturalTraits": [
+        "Fon (King) of Nso has significant power",
+        "Ngwerong regulatory society",
+        "Lela masquerade tradition",
+        "Iron smelting history",
+        "Rich oral traditions",
+        "Vibrant mask culture"
+      ],
+      "funFacts": [
+        "The Fon of Nso is one of Cameroon's most powerful traditional rulers",
+        "The Afo-a-Kom statue, stolen and recovered in 1973, is a sacred Nso artifact",
+        "Nso people have a parliament-like traditional council",
+        "The Ngwerong society enforces laws and social order"
+      ],
+      "traditionalFood": {
+        "staples": ["Corn fufu", "Beans", "Vegetables", "Groundnuts"],
+        "beverages": ["Corn beer (Sha)", "Palm wine"],
+        "specialDishes": ["Achu soup", "Corn chaff", "Koki beans"],
+        "description": "Nso cuisine features corn-based dishes, hearty bean stews, and the ceremonial achu soup with yellow palm oil."
+      },
+      "traditionalDance": "Nso dances include Ngwerong and Manjong warrior dances",
+      "religion": "Christianity (majority), Traditional beliefs",
+      "language": {
+        "name": "Lamnso'",
+        "speakers": "~300,000",
+        "greeting": "E la ki vini?",
+        "greetingMeaning": "How are you?",
+        "family": "Grassfields Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Sehm Mbinglo", "role": "Current Fon of Nso", "wikipedia": "https://en.wikipedia.org/wiki/Fon_of_Nso" }
+      ],
+      "description": "The Nso (Banso) people of Cameroon's highlands are known for powerful chieftaincy traditions, the sacred Afo-a-Kom statue, and the influential Ngwerong society.",
+      "relatedTribes": ["bamileke", "bafut", "wimbum"]
+    },
+
+    {
+      "id": "bamoun",
+      "name": "Bamoun",
+      "slug": "bamoun",
+      "countries": ["CM"],
+      "region": "West Region, Cameroon",
+      "population": "~1 million",
+      "populationPercent": "~4%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.8, "lng": 10.9 },
+      "counties": ["West Region", "Noun Division", "Foumban"],
+      "namePrefixes": ["Njo", "Nji", "Ngou", "Mfo"],
+      "commonNames": {
+        "female": ["Njoya", "Nchare", "Ndam", "Nguimo", "Mamgue", "Mandeng"],
+        "male": ["Njoya", "Nchare", "Njimoluh", "Mbombo", "Moussa", "Ibrahim"]
+      },
+      "stereotypes": [
+        "Intellectual traditions",
+        "Islamic heritage",
+        "Artistic excellence",
+        "Royal legacy",
+        "Inventive spirit",
+        "Cultural pride"
+      ],
+      "culturalTraits": [
+        "Sultan tradition (still active)",
+        "Invented writing system (Shu-Mom)",
+        "Elaborate palace architecture",
+        "Bronze and brass casting",
+        "Mask-making traditions",
+        "Islamic-influenced culture"
+      ],
+      "funFacts": [
+        "Sultan Njoya invented a unique alphabet (Shu-Mom/Bamum Script) in 1896",
+        "The Bamoun have one of Africa's few indigenous writing systems",
+        "The Royal Palace in Foumban is a major tourist attraction",
+        "Sultan Njoya also invented a religion combining Islam, Christianity, and tradition"
+      ],
+      "traditionalFood": {
+        "staples": ["Corn fufu", "Rice", "Beans", "Meat"],
+        "beverages": ["Ginger drink", "Bissap (hibiscus)"],
+        "specialDishes": ["Koki", "Kilishi (dried meat)", "Yassa"],
+        "description": "Bamoun cuisine blends Grassfield and Islamic traditions, with corn fufu, spiced meats, and rich bean dishes."
+      },
+      "traditionalDance": "Nguon festival dances and royal court performances",
+      "religion": "Islam (majority), Christianity, Traditional beliefs",
+      "history": {
+        "origin": "The Bamoun Kingdom was founded around 1394 by Nchare Yen. The kingdom remained independent and powerful through strategic alliances.",
+        "colonialEra": "Sultan Ibrahim Njoya (1860-1933) modernized the kingdom, invented a writing system, and briefly adopted Islam. Germans and French controlled the region in succession.",
+        "independence": "The Bamoun Sultanate continues today with ceremonial power. Foumban hosts the famous Nguon festival.",
+        "keyEvents": ["Kingdom founded (1394)", "Sultan Njoya's inventions (1896-1920)", "French rule (1916-1960)", "Independence (1960)"]
+      },
+      "language": {
+        "name": "Shu-Mom / Bamum",
+        "speakers": "~400,000",
+        "greeting": "Yu lée?",
+        "greetingMeaning": "How are you?",
+        "family": "Grassfields Bantu (Niger-Congo)",
+        "writingSystem": "Bamum Script (Shu-Mom) and Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Sultan Ibrahim Njoya", "role": "Inventor of Bamum Script", "wikipedia": "https://en.wikipedia.org/wiki/Ibrahim_Njoya" },
+        { "name": "Sultan Ibrahim Mbombo Njoya", "role": "Current Sultan", "wikipedia": "https://en.wikipedia.org/wiki/Ibrahim_Mbombo_Njoya" }
+      ],
+      "description": "The Bamoun are renowned for Sultan Njoya's invented writing system (Shu-Mom), elaborate palace culture, and blending Islamic with traditional Cameroonian heritage.",
+      "relatedTribes": ["bamileke", "nso", "tikar"]
+    },
+
+    {
+      "id": "bafut",
+      "name": "Bafut",
+      "slug": "bafut",
+      "countries": ["CM"],
+      "region": "Northwest Region, Cameroon",
+      "population": "~100,000",
+      "populationPercent": "<1%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.1, "lng": 10.1 },
+      "counties": ["Northwest Region", "Mezam Division"],
+      "namePrefixes": ["Ndi", "Meh", "Nki", "Bi"],
+      "commonNames": {
+        "female": ["Vera", "Monica", "Patience", "Juliana", "Comfort"],
+        "male": ["Ndifor", "Meh", "Niba", "Achiri", "Abongwa", "Gwanvalla"]
+      },
+      "stereotypes": [
+        "Proud warriors",
+        "Strong monarchy",
+        "Agricultural people",
+        "Cultural preservation",
+        "Resistance history"
+      ],
+      "culturalTraits": [
+        "Fon (King) with palace compound",
+        "Gerald Durrell's Bafut Beagles connection",
+        "Elaborate masquerades",
+        "Palm wine culture",
+        "Strong age-grade system"
+      ],
+      "funFacts": [
+        "British naturalist Gerald Durrell wrote 'The Bafut Beagles' about his time there in the 1940s",
+        "The Bafut Palace is a UNESCO-tentative World Heritage Site",
+        "Bafut warriors resisted German colonization in 1901",
+        "The Fon of Bafut has over 100 wives traditionally"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu corn", "Cocoyams", "Vegetables", "Palm oil"],
+        "beverages": ["Palm wine (Mimbo)", "Corn beer"],
+        "specialDishes": ["Achu and yellow soup", "Koki", "Njama-Njama (huckleberry)"],
+        "description": "Bafut cuisine features corn fufu, achu soup, and abundant palm wine."
+      },
+      "traditionalDance": "Lela festival dances and warrior masquerades",
+      "religion": "Christianity, Traditional beliefs",
+      "language": {
+        "name": "Bafut (Fut)",
+        "speakers": "~70,000",
+        "greeting": "M'bah?",
+        "greetingMeaning": "How are you?",
+        "family": "Grassfields Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Abumbi II", "role": "Current Fon of Bafut", "wikipedia": "https://en.wikipedia.org/wiki/Fon_of_Bafut" }
+      ],
+      "description": "The Bafut Kingdom is famous for Gerald Durrell's 'Bafut Beagles', a powerful Fon (king), and a UNESCO-listed palace complex.",
+      "relatedTribes": ["nso", "bamileke", "wimbum"]
+    },
+
+    {
+      "id": "wimbum",
+      "name": "Wimbum",
+      "slug": "wimbum",
+      "countries": ["CM"],
+      "region": "Northwest Region, Cameroon",
+      "population": "~200,000",
+      "populationPercent": "<1%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.4, "lng": 10.7 },
+      "counties": ["Northwest Region", "Donga-Mantung Division", "Nkambe"],
+      "namePrefixes": ["Ta", "Wir", "Ndi", "Yem"],
+      "commonNames": {
+        "female": ["Lem", "Wir", "Ngeh", "Manka", "Yawa"],
+        "male": ["Tata", "Wirba", "Ndifon", "Yembe", "Shila"]
+      },
+      "stereotypes": [
+        "Highland farmers",
+        "Strong traditions",
+        "Community bonds",
+        "Cattle herders",
+        "Peaceful people"
+      ],
+      "culturalTraits": [
+        "Multiple chieftaincies",
+        "Cattle keeping (Fulani influence)",
+        "Iron smelting history",
+        "Marriage traditions",
+        "Ancestor veneration"
+      ],
+      "funFacts": [
+        "The Wimbum have over 20 independent chieftaincies",
+        "Traditional Wimbum homes have separate quarters for men and women",
+        "Cattle are central to wealth and bride price",
+        "The area was historically important for iron smelting"
+      ],
+      "traditionalFood": {
+        "staples": ["Corn fufu", "Beans", "Groundnuts", "Vegetables"],
+        "beverages": ["Corn beer", "Palm wine"],
+        "specialDishes": ["Achu", "Bean stew", "Roasted corn"],
+        "description": "Wimbum cuisine centers on corn and beans, with cattle providing meat for special occasions."
+      },
+      "traditionalDance": "Various masquerade and harvest dances",
+      "religion": "Christianity, Traditional beliefs",
+      "language": {
+        "name": "Wimbum (Kamkam)",
+        "speakers": "~100,000",
+        "greeting": "Wo nkari?",
+        "greetingMeaning": "How are you?",
+        "family": "Grassfields Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "description": "The Wimbum people of Cameroon's Donga-Mantung area are highland farmers and herders known for iron smelting traditions and numerous chieftaincies.",
+      "relatedTribes": ["nso", "bamileke", "bafut"]
+    },
+
+    {
+      "id": "bayangi",
+      "name": "Bayangi",
+      "slug": "bayangi",
+      "countries": ["CM"],
+      "region": "Southwest Region, Cameroon",
+      "population": "~100,000",
+      "populationPercent": "<1%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.5, "lng": 9.4 },
+      "counties": ["Southwest Region", "Manyu Division", "Mamfe"],
+      "namePrefixes": ["Aya", "Eka", "Egbe", "Obi"],
+      "commonNames": {
+        "female": ["Ayamba", "Ekwoge", "Egbe", "Emilia", "Agbor"],
+        "male": ["Ayuk", "Ekane", "Agbor", "Oben", "Enow", "Egbe"]
+      },
+      "stereotypes": [
+        "Forest people",
+        "Strong traditions",
+        "Community-oriented",
+        "Agricultural skills",
+        "Cultural preservation"
+      ],
+      "culturalTraits": [
+        "Ekpe secret society",
+        "Mask traditions",
+        "Palm oil production",
+        "Forest farming",
+        "Cross-border connections with Nigeria"
+      ],
+      "funFacts": [
+        "The Bayangi share the Ekpe secret society with Nigerian Efik people",
+        "Their region is rich in biodiversity including Cross River gorillas",
+        "Traditional marriage involves elaborate negotiation ceremonies",
+        "Bayangi territory spans the Cross River basin"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Plantains", "Cocoyam", "Bush meat"],
+        "beverages": ["Palm wine", "Raffia wine"],
+        "specialDishes": ["Afang soup", "Eru and water fufu", "Ekpang nkukwo"],
+        "description": "Bayangi cuisine features forest products, cassava, and rich vegetable soups like eru and afang."
+      },
+      "traditionalDance": "Ekpe masquerade performances",
+      "religion": "Christianity, Traditional beliefs",
+      "language": {
+        "name": "Kenyang",
+        "speakers": "~80,000",
+        "greeting": "Eshe?",
+        "greetingMeaning": "How are you?",
+        "family": "Ekoid Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "description": "The Bayangi are a forest-dwelling Cameroonian people known for the powerful Ekpe secret society and rich forest cuisine.",
+      "relatedTribes": ["ejagham", "efik", "ekoi"]
+    },
+
+    {
+      "id": "ewondo",
+      "name": "Ewondo (Beti)",
+      "slug": "ewondo",
+      "countries": ["CM"],
+      "region": "Centre Region, Cameroon",
+      "population": "~1.5 million",
+      "populationPercent": "~6%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 3.9, "lng": 11.5 },
+      "counties": ["Centre Region", "Yaoundé", "Mfoundi", "Lekié"],
+      "namePrefixes": ["Ond", "Ess", "Mba", "Ato"],
+      "commonNames": {
+        "female": ["Ondoua", "Essomba", "Biloa", "Mengue", "Atangana"],
+        "male": ["Essomba", "Atangana", "Ondoua", "Mbida", "Edzoa", "Mvondo"]
+      },
+      "stereotypes": [
+        "Political influence",
+        "Capital city dwellers",
+        "Education emphasis",
+        "Forest traditions",
+        "Strong clan bonds"
+      ],
+      "culturalTraits": [
+        "Bikutsi music and dance",
+        "Mevungu initiation rites",
+        "Elaborate funeral ceremonies",
+        "Forest hunting traditions",
+        "Extended family systems"
+      ],
+      "funFacts": [
+        "Yaoundé, Cameroon's capital, is in Ewondo territory",
+        "Bikutsi dance originated from Ewondo and Beti traditions",
+        "President Paul Biya is from the related Bulu subgroup",
+        "Ewondo language is used as a trade language in the region"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Plantains", "Groundnuts", "Forest products"],
+        "beverages": ["Palm wine", "Odontol (local spirit)"],
+        "specialDishes": ["Ndolé", "Manioc leaves", "Okok", "Sanga"],
+        "description": "Ewondo cuisine features cassava, forest game, and the famous ndolé bitter leaf stew."
+      },
+      "traditionalDance": "Bikutsi - energetic hip-shaking dance",
+      "religion": "Christianity (majority), Traditional beliefs",
+      "language": {
+        "name": "Ewondo",
+        "speakers": "~1 million",
+        "greeting": "Osoe?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Anne-Marie Nzié", "role": "Queen of Bikutsi Music", "wikipedia": "https://en.wikipedia.org/wiki/Anne-Marie_Nzi%C3%A9" },
+        { "name": "Paul Biya", "role": "President of Cameroon (Bulu)", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Biya" }
+      ],
+      "description": "The Ewondo (Beti) people dominate Cameroon's capital region, known for bikutsi music, elaborate clan systems, and political influence.",
+      "relatedTribes": ["bassa_cameroon", "fang", "bulu"]
+    },
+
+    {
+      "id": "fulani_cameroon",
+      "name": "Fulani (Cameroon)",
+      "slug": "fulani-cameroon",
+      "countries": ["CM", "NG", "NE", "ML", "GN", "SN", "BF"],
+      "region": "Adamawa & North Regions, Cameroon",
+      "population": "~2 million (Cameroon)",
+      "populationPercent": "~8%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 7.5, "lng": 13.5 },
+      "counties": ["Adamawa", "North Region", "Far North", "Ngaoundéré"],
+      "namePrefixes": ["Moha", "Adama", "Aissa", "Yaya"],
+      "commonNames": {
+        "female": ["Aissatou", "Fatoumata", "Mariama", "Adama", "Fanta"],
+        "male": ["Amadou", "Oumarou", "Moussa", "Adama", "Alhaji", "Ahmadou"]
+      },
+      "stereotypes": [
+        "Cattle herders",
+        "Islamic tradition",
+        "Nomadic lifestyle",
+        "Traditional dress",
+        "Political leadership",
+        "Reserved demeanor"
+      ],
+      "culturalTraits": [
+        "Transhumant cattle herding",
+        "Islamic scholarship (Lamido tradition)",
+        "Gerewol beauty contests (rare in Cameroon)",
+        "Pulaaku code of conduct",
+        "Elaborate jewelry and dress"
+      ],
+      "funFacts": [
+        "Cameroon's first president, Ahmadou Ahidjo, was Fulani",
+        "The Lamidos (chiefs) are powerful traditional rulers",
+        "Fulani cattle herding routes cross multiple countries",
+        "Pulaaku emphasizes patience, self-control, and modesty"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Rice", "Beef", "Milk products"],
+        "beverages": ["Fresh milk", "Sour milk (Kosam)", "Tea"],
+        "specialDishes": ["Nyiri (millet porridge)", "Kilishi (dried meat)", "Kossam (fermented milk)"],
+        "description": "Fulani cuisine in Cameroon features millet, beef, and abundant dairy products from their cattle."
+      },
+      "traditionalDance": "Yake dances and Gerewol celebrations",
+      "religion": "Islam (Sunni majority)",
+      "language": {
+        "name": "Fulfulde",
+        "speakers": "~2 million (Cameroon)",
+        "greeting": "No mbaɗaa?",
+        "greetingMeaning": "How did you spend the day?",
+        "family": "Atlantic (Niger-Congo)",
+        "writingSystem": "Arabic script (Ajami), Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Ahmadou Ahidjo", "role": "First President of Cameroon", "wikipedia": "https://en.wikipedia.org/wiki/Ahmadou_Ahidjo" },
+        { "name": "Bello Bouba Maigari", "role": "Politician", "wikipedia": "https://en.wikipedia.org/wiki/Bello_Bouba_Maigari" }
+      ],
+      "populationByCountry": [
+        { "country": "CM", "population": "~2M", "percent": "8%" },
+        { "country": "NG", "population": "~15M", "percent": "7%" },
+        { "country": "GN", "population": "~4M", "percent": "33%" }
+      ],
+      "description": "The Fulani in Cameroon are Muslim cattle herders who established powerful Lamidates and produced the country's first president, Ahmadou Ahidjo.",
+      "relatedTribes": ["hausa", "kanuri", "mandara"]
+    },
+
+    {
+      "id": "bakweri",
+      "name": "Bakweri",
+      "slug": "bakweri",
+      "countries": ["CM"],
+      "region": "Southwest Region, Cameroon",
+      "population": "~100,000",
+      "populationPercent": "<1%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 4.2, "lng": 9.2 },
+      "counties": ["Southwest Region", "Fako Division", "Buea", "Limbe"],
+      "namePrefixes": ["Epie", "Mol", "Lyonga", "End"],
+      "commonNames": {
+        "female": ["Ekinde", "Mesode", "Litumbe", "Efuetmonde"],
+        "male": ["Endeley", "Molindo", "Lyonga", "Epie", "Mbake", "Ekema"]
+      },
+      "stereotypes": [
+        "Mountain people",
+        "Cocoa farmers",
+        "Reserved character",
+        "Land consciousness",
+        "Strong traditions"
+      ],
+      "culturalTraits": [
+        "Mount Cameroon Race connection",
+        "Efik-influenced culture",
+        "Male secret society (Maale)",
+        "Ancestor veneration",
+        "Cocoa and palm agriculture"
+      ],
+      "funFacts": [
+        "The Bakweri live at the base of Mount Cameroon, Africa's most active volcano",
+        "The Mount Cameroon Race of Hope passes through Bakweri territory",
+        "German colonialists seized much Bakweri land for plantations",
+        "Traditional land cases remain a major issue today"
+      ],
+      "traditionalFood": {
+        "staples": ["Cocoyams", "Plantains", "Fish", "Palm oil"],
+        "beverages": ["Palm wine", "Corn beer"],
+        "specialDishes": ["Kwacoco (cocoyam pudding)", "Ekwang", "Roasted plantains"],
+        "description": "Bakweri cuisine features cocoyam dishes like kwacoco and fresh seafood from the coast."
+      },
+      "traditionalDance": "Male society dances and harvest celebrations",
+      "religion": "Christianity, Traditional beliefs",
+      "language": {
+        "name": "Mokpwe",
+        "speakers": "~50,000",
+        "greeting": "O wani?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Emmanuel Endeley", "role": "First PM of British Southern Cameroons", "wikipedia": "https://en.wikipedia.org/wiki/Emmanuel_Endeley" }
+      ],
+      "description": "The Bakweri live at the base of Mount Cameroon, known for cocoa farming, land rights activism, and the famous Mount Cameroon Race.",
+      "relatedTribes": ["duala", "limba", "isubu"]
+    },
+
+    {
+      "id": "tikar",
+      "name": "Tikar",
+      "slug": "tikar",
+      "countries": ["CM"],
+      "region": "Centre & Adamawa Regions, Cameroon",
+      "population": "~150,000",
+      "populationPercent": "<1%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.3, "lng": 11.3 },
+      "counties": ["Centre Region", "Adamawa", "Mbam-et-Kim"],
+      "namePrefixes": ["Mbim", "Ngu", "Ti"],
+      "commonNames": {
+        "female": ["Mbiya", "Ngum", "Siri", "Nguala"],
+        "male": ["Mbimenyuy", "Ngufor", "Tikari", "Fomban"]
+      },
+      "stereotypes": [
+        "Ancestral origins claimed by many",
+        "Cultural influence",
+        "Artistic traditions",
+        "Historical importance",
+        "Forest dwellers"
+      ],
+      "culturalTraits": [
+        "Claimed as ancestors by many Grassfield groups",
+        "Elaborate court culture",
+        "Bronze working",
+        "Rainforest adaptation",
+        "Origin myths across Cameroon"
+      ],
+      "funFacts": [
+        "Many Grassfield peoples claim Tikar ancestry, though this is debated",
+        "The Tikar are sometimes called 'the ancestors of Cameroon'",
+        "Their exact origins remain a subject of historical research",
+        "Some scholars consider 'Tikar' more a cultural identity than a single ethnic group"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Corn", "Cassava", "Forest products"],
+        "beverages": ["Palm wine", "Millet beer"],
+        "specialDishes": ["Bush meat stews", "Roasted fish"],
+        "description": "Tikar cuisine combines forest products with cultivated grains."
+      },
+      "traditionalDance": "Court dances and masquerades",
+      "religion": "Traditional beliefs, Christianity, Islam",
+      "language": {
+        "name": "Tikar",
+        "speakers": "~25,000",
+        "greeting": "Wo me?",
+        "greetingMeaning": "How are you?",
+        "family": "Tikar languages (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "description": "The Tikar are a historically significant Cameroonian people claimed as ancestors by many Grassfield groups, known for court culture and bronze work.",
+      "relatedTribes": ["bamoun", "bamileke", "nso"]
     }
   ]
 }
