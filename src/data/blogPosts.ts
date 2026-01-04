@@ -722,5 +722,120 @@ export const blogPosts: BlogPost[] = [
       { title: "Bamum Script - UNESCO Memory of the World", url: "https://en.unesco.org/" },
       { title: "Fulani in Cameroon - CIA World Factbook", url: "https://www.cia.gov/the-world-factbook/countries/cameroon/" }
     ]
+  },
+  {
+    slug: "hutu-tutsi-twa-understanding-rwanda-burundi",
+    title: "Hutu, Tutsi, and Twa: Understanding Rwanda's Complex History",
+    seoTitle: "Hutu vs Tutsi Explained: Rwanda & Burundi's Ethnic History & Reconciliation | TribeGuess",
+    seoDescription: "Learn the true history of Hutu, Tutsi, and Twa peoples in Rwanda and Burundi. Understand how colonial policies created divisions and how modern Rwanda emphasizes unity and reconciliation.",
+    excerpt: "The Hutu-Tutsi distinction wasn't always what it became. Discover how colonial policies transformed fluid social categories into rigid ethnic divisions—and how modern Rwanda is rebuilding national unity.",
+    emoji: "🇷🇼",
+    gradient: "bg-gradient-to-br from-green-600 via-yellow-500 to-blue-600",
+    region: "East Africa",
+    readTime: "8 min read",
+    publishDate: "2026-01-04",
+    tags: ["Rwanda", "Burundi", "Hutu", "Tutsi", "Twa", "African history", "reconciliation", "Great Lakes"],
+    relatedTribes: [
+      { name: "Banyarwanda", slug: "banyarwanda" },
+      { name: "Baganda", slug: "baganda" },
+      { name: "Banyankole", slug: "banyankole" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "Few ethnic distinctions in Africa have been as misunderstood—or as tragically manipulated—as the Hutu-Tutsi divide. The 1994 genocide that killed approximately 800,000 people in just 100 days brought these names to global attention, but the true history is far more complex than 'ancient tribal hatreds.'",
+          "In reality, Hutu, Tutsi, and Twa share the same language (Kinyarwanda/Kirundi), the same religion, the same culture, and have intermarried for centuries. Understanding their history helps explain both the tragedy and the remarkable reconciliation that followed."
+        ]
+      },
+      {
+        heading: "Before Colonialism: Fluid Social Categories",
+        icon: "📜",
+        paragraphs: [
+          "In pre-colonial Rwanda and Burundi, 'Hutu,' 'Tutsi,' and 'Twa' were primarily socioeconomic labels, not fixed ethnic identities.[^1]",
+          "The Tutsi were generally cattle owners and often held positions of power, while Hutu were primarily agriculturalists. The Twa were forest-dwelling hunter-gatherers and potters. Crucially, these categories were fluid—a Hutu who acquired cattle could become Tutsi through a process called 'kwihutura.'"
+        ],
+        list: [
+          "All three groups speak the same language: Kinyarwanda (Rwanda) / Kirundi (Burundi)",
+          "All share the same cultural practices, including the Intore warrior dance",
+          "All share traditional beliefs in Imana (God) and ancestor veneration",
+          "Intermarriage between groups was common"
+        ],
+        highlight: "A person could transition from Hutu to Tutsi by acquiring cattle and wealth—proof that these were social, not ethnic, categories."
+      },
+      {
+        heading: "Colonial Intervention: Creating 'Races'",
+        icon: "⚠️",
+        paragraphs: [
+          "German (1884-1916) and especially Belgian (1916-1962) colonial rulers transformed these flexible categories into rigid racial classifications.[^2]",
+          "The Belgians introduced ethnic identity cards in 1933, forcing every Rwandan to be permanently classified as Hutu, Tutsi, or Twa. These classifications were often arbitrary—based on cattle ownership, physical appearance, or even the administrator's whim."
+        ],
+        list: [
+          "1933: Belgium introduces mandatory ethnic ID cards",
+          "The 'Hamitic hypothesis' falsely claimed Tutsi were a 'superior race' from Ethiopia",
+          "Belgians favored Tutsi for education and administrative positions",
+          "This created resentment that was exploited after independence"
+        ],
+        highlight: "The ethnic ID cards that enabled the 1994 genocide were a Belgian colonial invention, not an African tradition."
+      },
+      {
+        heading: "The Twa: Africa's First Inhabitants",
+        icon: "🌳",
+        paragraphs: [
+          "The Twa (also called Batwa) represent approximately 1% of Rwanda's population but are among Central Africa's oldest inhabitants.[^3]",
+          "Traditionally forest-dwelling hunter-gatherers, the Twa were renowned potters and served as entertainers and ritualists in the royal courts. Today, many Twa face marginalization and poverty after being displaced from their forest homelands."
+        ],
+        list: [
+          "Related to other 'Pygmy' peoples across Central Africa",
+          "Master potters—Twa pottery is still prized today",
+          "Served important ceremonial roles in the royal court",
+          "Genetically distinct from both Hutu and Tutsi"
+        ]
+      },
+      {
+        heading: "The 1994 Genocide and Its Aftermath",
+        icon: "💔",
+        paragraphs: [
+          "The genocide of April-July 1994 killed approximately 800,000 people—predominantly Tutsi but also moderate Hutu—in just 100 days.[^4] It remains one of history's most rapid mass killings.",
+          "Following the genocide, Rwanda made a deliberate choice: rather than perpetuate division, the new government under Paul Kagame banned ethnic classifications entirely. Rwanda today emphasizes 'Ndi Umunyarwanda'—'I am Rwandan'—over ethnic identity."
+        ],
+        list: [
+          "Ethnic ID cards were abolished after 1994",
+          "Gacaca community courts processed 1.9 million genocide cases",
+          "Rwanda now has the world's highest percentage of women in parliament (61%)",
+          "The country has achieved remarkable economic growth and stability"
+        ],
+        highlight: "Rwanda processed 1.9 million genocide cases through community Gacaca courts, combining traditional justice with reconciliation."
+      },
+      {
+        heading: "Modern Rwanda: Unity Over Division",
+        icon: "🤝",
+        paragraphs: [
+          "Today, asking a Rwandan whether they are Hutu or Tutsi is considered offensive and can be illegal.[^5] The country has rebuilt itself around national identity rather than ethnic division.",
+          "Monthly Umuganda (community service) brings all Rwandans together. The Intore warrior dance—once performed by Tutsi warriors—is now a national symbol celebrated by all. The tragedy of 1994 has become a catalyst for building a genuinely united nation."
+        ]
+      },
+      {
+        heading: "Naming Traditions: Shared Heritage",
+        icon: "📛",
+        paragraphs: [
+          "Rwandan and Burundian names reflect shared linguistic and spiritual heritage across all groups. Names typically express gratitude to God (Imana), describe circumstances of birth, or convey parental wishes.",
+          "Names like 'Habimana' (God exists), 'Uwimana' (God knows), 'Amahoro' (Peace), and 'Hirwa' (Lucky) are used by all Banyarwanda regardless of historical ethnic category."
+        ],
+        list: [
+          "Habimana/Uwimana — 'God exists/knows'",
+          "Bizimana — 'God knows'",
+          "Nshimiyimana — 'I thank God'",
+          "Amahoro — 'Peace' (especially meaningful post-genocide)",
+          "Kagame — 'Little enclosure' (a humble name)"
+        ]
+      }
+    ],
+    sources: [
+      { title: "Hutu, Tutsi History - Encyclopedia Britannica", url: "https://www.britannica.com/topic/Hutu" },
+      { title: "Belgian Colonial Policy in Rwanda - Human Rights Watch", url: "https://www.hrw.org/" },
+      { title: "The Twa of Rwanda - Minority Rights Group", url: "https://minorityrights.org/communities/twa/" },
+      { title: "Rwanda Genocide - UN Documentation", url: "https://www.un.org/en/preventgenocide/rwanda" },
+      { title: "Post-Genocide Rwanda - World Bank Reports", url: "https://www.worldbank.org/en/country/rwanda" }
+    ]
   }
 ];
