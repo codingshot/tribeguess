@@ -9897,6 +9897,604 @@
       },
       "description": "The Tikar are a historically significant Cameroonian people claimed as ancestors by many Grassfield groups, known for court culture and bronze work.",
       "relatedTribes": ["bamoun", "bamileke", "nso"]
+    },
+
+    {
+      "id": "oromo",
+      "name": "Oromo",
+      "slug": "oromo",
+      "countries": ["ET", "KE"],
+      "region": "Ethiopia (Oromia Region)",
+      "population": "~45 million",
+      "populationPercent": "35% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 8.0, "lng": 38.5 },
+      "counties": ["Oromia", "Addis Ababa", "Dire Dawa", "Harari"],
+      "namePrefixes": ["Ob", "Gal", "Tol", "Fay", "Chal"],
+      "commonNames": {
+        "female": ["Biftu", "Chaltu", "Lelise", "Genet", "Bontu", "Darartu", "Toltu", "Gammachuu"],
+        "male": ["Obbo", "Galma", "Tolera", "Fayisa", "Bekele", "Gada", "Lemi", "Jaldessa", "Gutu"]
+      },
+      "stereotypes": [
+        "Largest Ethiopian ethnic group",
+        "Proud warriors",
+        "Cattle culture",
+        "Egalitarian Gada system",
+        "Strong regional identity",
+        "Agricultural expertise"
+      ],
+      "culturalTraits": [
+        "Gada democratic system (UNESCO heritage)",
+        "Irreecha thanksgiving festival",
+        "Pastoral and agricultural lifestyle",
+        "Waaqeffanna traditional religion",
+        "Coffee ceremony (Buna Qalaa)"
+      ],
+      "funFacts": [
+        "The Gada system is a traditional democratic governance that alternates power every 8 years",
+        "Oromo is the fourth most spoken language in Africa with 50+ million speakers",
+        "The Irreecha festival at Lake Hora attracts millions annually",
+        "Ethiopia's famous long-distance runners include many Oromo athletes"
+      ],
+      "traditionalFood": {
+        "staples": ["Injera (teff flatbread)", "Genfo (barley porridge)", "Anchote (root vegetable)", "Itoo (cheese)"],
+        "beverages": ["Buna (coffee)", "Farsoo (barley beer)", "Daadhii (honey wine)"],
+        "specialDishes": ["Marqa (meat stew)", "Caccabsaa (bread with butter)", "Qoocco (barley balls)"],
+        "description": "Oromo cuisine features unique dishes like anchote root and the elaborate coffee ceremony that can last hours."
+      },
+      "traditionalDance": "Dhiicha - celebratory dances with jumping and singing",
+      "religion": "Ethiopian Orthodox (40%), Islam (45%), Waaqeffanna (traditional), Protestant",
+      "language": {
+        "name": "Afaan Oromoo (Oromo)",
+        "speakers": "~50 million",
+        "greeting": "Akkam?",
+        "greetingMeaning": "How are you?",
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Qubee (Latin-based script, adopted 1991)"
+      },
+      "famousPeople": [
+        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia, Nobel Peace Prize 2019", "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed" },
+        { "name": "Haile Gebrselassie", "role": "Legendary Distance Runner", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie" },
+        { "name": "Tirunesh Dibaba", "role": "Three-time Olympic Gold Medalist", "wikipedia": "https://en.wikipedia.org/wiki/Tirunesh_Dibaba" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Oromo people", "url": "https://en.wikipedia.org/wiki/Oromo_people" },
+        { "name": "Ethnologue - Oromo", "url": "https://www.ethnologue.com/language/orm" },
+        { "name": "UNESCO - Gada System", "url": "https://ich.unesco.org/en/RL/gada-system-an-indigenous-democratic-socio-political-system-of-the-oromo-01164" }
+      ],
+      "description": "The Oromo are Ethiopia's largest ethnic group (35%), known for the UNESCO-recognized Gada democratic system, the Irreecha thanksgiving festival, and producing Olympic champion runners.",
+      "relatedTribes": ["amhara", "somali", "sidama", "afar"]
+    },
+
+    {
+      "id": "amhara",
+      "name": "Amhara",
+      "slug": "amhara",
+      "countries": ["ET"],
+      "region": "Ethiopia (Amhara Region)",
+      "population": "~35 million",
+      "populationPercent": "27% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 11.5, "lng": 37.5 },
+      "counties": ["Amhara Region", "Addis Ababa", "Gondar", "Bahir Dar", "Dessie"],
+      "namePrefixes": ["Haile", "Gebre", "Tesfaye", "Abebe", "Alem"],
+      "commonNames": {
+        "female": ["Almaz", "Tigist", "Meseret", "Hiwot", "Selamawit", "Bethlehem", "Rahel", "Meron"],
+        "male": ["Haile", "Tesfaye", "Abebe", "Getachew", "Mulugeta", "Yohannes", "Dawit", "Solomon"]
+      },
+      "stereotypes": [
+        "Imperial heritage",
+        "Orthodox Christian faith",
+        "Education focus",
+        "Political influence",
+        "Proud of history",
+        "Coffee culture"
+      ],
+      "culturalTraits": [
+        "Ethiopian Orthodox Christianity (Tewahedo)",
+        "Amharic as Ethiopia's national language",
+        "Timkat (Epiphany) celebrations",
+        "Coffee ceremony (Buna)",
+        "Imperial court traditions",
+        "Ge'ez liturgical traditions"
+      ],
+      "funFacts": [
+        "Amharic is written in Ge'ez script with 231 characters - one of Africa's oldest writing systems",
+        "The Amhara ruled the Ethiopian Empire for centuries through the Solomonic dynasty",
+        "Ethiopia is the only African country never colonized (except brief Italian occupation)",
+        "Lalibela's rock-hewn churches are UNESCO World Heritage Sites carved in the 12th century"
+      ],
+      "traditionalFood": {
+        "staples": ["Injera (teff flatbread)", "Doro Wot (chicken stew)", "Kitfo (raw beef)", "Tibs (sautéed meat)"],
+        "beverages": ["Buna (coffee)", "Tej (honey wine)", "Tella (barley beer)"],
+        "specialDishes": ["Doro Wot (spicy chicken)", "Shiro (chickpea stew)", "Gomen (collard greens)", "Ayib (cottage cheese)"],
+        "description": "Amhara cuisine centers on injera served with spicy wots (stews), with the coffee ceremony as a daily social ritual."
+      },
+      "traditionalDance": "Eskista - shoulder-shaking dance unique to Ethiopia",
+      "religion": "Ethiopian Orthodox Christianity (Tewahedo) - 82%",
+      "language": {
+        "name": "Amharic",
+        "speakers": "~35 million (native), 25 million (second language)",
+        "greeting": "Selam",
+        "greetingMeaning": "Peace/Hello",
+        "family": "Semitic (Afro-Asiatic)",
+        "writingSystem": "Ge'ez script (Fidel) - 231 characters"
+      },
+      "famousPeople": [
+        { "name": "Haile Selassie I", "role": "Last Emperor of Ethiopia", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie" },
+        { "name": "Tedros Adhanom", "role": "Director-General of WHO", "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom" },
+        { "name": "Mulatu Astatke", "role": "Father of Ethio-Jazz", "wikipedia": "https://en.wikipedia.org/wiki/Mulatu_Astatke" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Amhara people", "url": "https://en.wikipedia.org/wiki/Amhara_people" },
+        { "name": "Ethnologue - Amharic", "url": "https://www.ethnologue.com/language/amh" },
+        { "name": "Britannica - Amhara", "url": "https://www.britannica.com/topic/Amhara" }
+      ],
+      "description": "The Amhara are Ethiopia's second-largest ethnic group, historically dominant through the Solomonic dynasty, known for Orthodox Christianity, the Ge'ez script, and rich imperial heritage.",
+      "relatedTribes": ["tigrinya", "oromo", "gurage", "agaw"]
+    },
+
+    {
+      "id": "sukuma",
+      "name": "Sukuma",
+      "slug": "sukuma",
+      "countries": ["TZ"],
+      "region": "Tanzania (Lake Victoria Region)",
+      "population": "~10 million",
+      "populationPercent": "16% (Tanzania)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -3.0, "lng": 33.0 },
+      "counties": ["Mwanza", "Shinyanga", "Simiyu", "Geita", "Tabora"],
+      "namePrefixes": ["Ma", "Ng", "Bu", "Nha"],
+      "commonNames": {
+        "female": ["Mwanaisha", "Nyahabi", "Sukumawu", "Bulanganya", "Nhalwa"],
+        "male": ["Masanja", "Mhoja", "Ngassa", "Bukulu", "Ndiga", "Buluba", "Kishosha"]
+      },
+      "stereotypes": [
+        "Tanzania's largest tribe",
+        "Cattle herders",
+        "Skilled farmers",
+        "Dance competitions",
+        "Strong community bonds",
+        "Cotton farmers"
+      ],
+      "culturalTraits": [
+        "Bugobogobo traditional dance competitions",
+        "Cattle as primary wealth",
+        "Elaborate funeral ceremonies",
+        "Traditional medicine (Bugota)",
+        "Snake dance (Bugobogobo)",
+        "Strong chieftaincy system"
+      ],
+      "funFacts": [
+        "The Sukuma are Tanzania's largest ethnic group with over 10 million people",
+        "Traditional dance competitions (Bugobogobo) feature elaborate costumes and live python handling",
+        "The name 'Sukuma' means 'people of the north' in their language",
+        "Sukuma farmers are Tanzania's largest cotton producers"
+      ],
+      "traditionalFood": {
+        "staples": ["Ugali (maize porridge)", "Sorghum", "Millet", "Beef", "Milk"],
+        "beverages": ["Pombe (millet beer)", "Fresh milk", "Fermented milk (Maziwa lala)"],
+        "specialDishes": ["Nyama choma (roasted meat)", "Ugali with beef stew", "Dried fish"],
+        "description": "Sukuma diet centers on ugali, cattle products, and grains grown in the savanna region south of Lake Victoria."
+      },
+      "traditionalDance": "Bugobogobo - competitive snake dances with elaborate costumes",
+      "religion": "Christianity (majority), Traditional beliefs, Islam",
+      "language": {
+        "name": "Sukuma (Kisukuma)",
+        "speakers": "~10 million",
+        "greeting": "Wuzila?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "sources": [
+        { "name": "Wikipedia - Sukuma people", "url": "https://en.wikipedia.org/wiki/Sukuma_people" },
+        { "name": "Ethnologue - Sukuma", "url": "https://www.ethnologue.com/language/suk" },
+        { "name": "Sukuma Legacy Project", "url": "https://sukumalegacy.org/" }
+      ],
+      "description": "The Sukuma are Tanzania's largest ethnic group (16%), renowned for cattle herding, cotton farming, and spectacular traditional dance competitions featuring live pythons.",
+      "relatedTribes": ["nyamwezi", "haya", "zinza", "sumbwa"]
+    },
+
+    {
+      "id": "chagga",
+      "name": "Chagga (Wachagga)",
+      "slug": "chagga",
+      "countries": ["TZ"],
+      "region": "Tanzania (Kilimanjaro Region)",
+      "population": "~2.5 million",
+      "populationPercent": "~4% (Tanzania)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -3.3, "lng": 37.3 },
+      "counties": ["Kilimanjaro Region", "Moshi", "Hai", "Rombo", "Same"],
+      "namePrefixes": ["Ma", "Ki", "Nde"],
+      "commonNames": {
+        "female": ["Sia", "Mapenzi", "Neema", "Saumu", "Rehema", "Ashura"],
+        "male": ["Kimaro", "Massawe", "Shirima", "Swai", "Moshi", "Urassa", "Lyimo"]
+      },
+      "stereotypes": [
+        "Highly educated",
+        "Business-minded",
+        "Coffee farmers",
+        "Mountain people",
+        "Strong work ethic",
+        "Kilimanjaro guides"
+      ],
+      "culturalTraits": [
+        "Coffee cultivation on Mt. Kilimanjaro slopes",
+        "Kihamba agroforestry system",
+        "Strong education emphasis",
+        "Elaborate banana cultivation",
+        "Underground caves for defense",
+        "Strong clan (ukoo) system"
+      ],
+      "funFacts": [
+        "The Chagga were among the first Africans to grow coffee commercially",
+        "Traditional Chagga homes included underground tunnels for hiding during raids",
+        "Chagga have one of the highest education rates in Tanzania",
+        "They developed an irrigation system on Kilimanjaro centuries ago"
+      ],
+      "traditionalFood": {
+        "staples": ["Bananas (Ndizi)", "Meat (Nyama)", "Beans", "Maize"],
+        "beverages": ["Mbege (banana beer)", "Coffee", "Milk"],
+        "specialDishes": ["Machalari (banana and meat stew)", "Kisusio (blood sausage)", "Roasted bananas"],
+        "description": "Chagga cuisine revolves around bananas (over 20 varieties) and the traditional mbege banana beer brewed for ceremonies."
+      },
+      "traditionalDance": "Ngomasero - celebratory dances with drums",
+      "religion": "Christianity (Lutheran and Catholic majority)",
+      "language": {
+        "name": "Kichagga",
+        "speakers": "~2 million",
+        "greeting": "Yiole?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Mangi Meli", "role": "Chief who resisted German colonization", "wikipedia": "https://en.wikipedia.org/wiki/Mangi_Meli" },
+        { "name": "Joseph Sinde Warioba", "role": "Former Prime Minister of Tanzania", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Sinde_Warioba" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Chaga people", "url": "https://en.wikipedia.org/wiki/Chaga_people" },
+        { "name": "Ethnologue - Chagga languages", "url": "https://www.ethnologue.com/language/kde" }
+      ],
+      "description": "The Chagga (Wachagga) live on the slopes of Mount Kilimanjaro, renowned for coffee farming, high education rates, and entrepreneurial spirit.",
+      "relatedTribes": ["pare", "meru", "sukuma", "haya"]
+    },
+
+    {
+      "id": "fante",
+      "name": "Fante",
+      "slug": "fante",
+      "countries": ["GH"],
+      "region": "Ghana (Central Region)",
+      "population": "~3 million",
+      "populationPercent": "~10% (Ghana)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.1, "lng": -1.2 },
+      "counties": ["Central Region", "Cape Coast", "Elmina", "Saltpond", "Winneba"],
+      "namePrefixes": ["Ko", "Ama", "Aba", "Ek"],
+      "commonNames": {
+        "female": ["Efua", "Araba", "Esi", "Ama", "Adwoa", "Akua", "Yaa", "Afua"],
+        "male": ["Kofi", "Kweku", "Kobina", "Kwame", "Kwesi", "Yaw", "Kojo"]
+      },
+      "stereotypes": [
+        "Coastal traders",
+        "Educated elite",
+        "First contact with Europeans",
+        "Castle heritage",
+        "Fishing culture",
+        "Strong Christianity"
+      ],
+      "culturalTraits": [
+        "Akan day-naming system",
+        "Asafo warrior companies",
+        "Elaborate festivals (Oguaa Fetu, Bakatue)",
+        "European castle history",
+        "Fishing traditions",
+        "Methodist/Christian influence"
+      ],
+      "funFacts": [
+        "Cape Coast Castle, a UNESCO site, is in Fante territory and was central to the slave trade",
+        "The Fante Confederacy (1868-1873) was an early African attempt at democratic self-governance",
+        "Kofi Annan, UN Secretary-General, was of Fante descent",
+        "The Fante asafo military companies created elaborate flags and posuban (shrines)"
+      ],
+      "traditionalFood": {
+        "staples": ["Fante Fante (fried fish with kenkey)", "Kenkey (fermented corn dough)", "Fish", "Palm nut soup"],
+        "beverages": ["Palm wine", "Sobolo (hibiscus drink)", "Pito"],
+        "specialDishes": ["Fante Fante", "Aprapransa (palm nut soup with fufu)", "Oto (mashed yam)", "Abenkwan (palm soup)"],
+        "description": "Fante cuisine is coastal and fish-heavy, with kenkey and fried fish being the signature dish of the Central Region."
+      },
+      "traditionalDance": "Adzewa and Asafo dances",
+      "religion": "Christianity (Methodist, Catholic), Traditional beliefs",
+      "language": {
+        "name": "Fante (Mfantse)",
+        "speakers": "~2 million",
+        "greeting": "Ɛte sɛn?",
+        "greetingMeaning": "How are you?",
+        "family": "Kwa (Niger-Congo) - Akan branch",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Kofi Annan", "role": "UN Secretary-General, Nobel Peace Prize", "wikipedia": "https://en.wikipedia.org/wiki/Kofi_Annan" },
+        { "name": "John Atta Mills", "role": "President of Ghana", "wikipedia": "https://en.wikipedia.org/wiki/John_Atta_Mills" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Fante people", "url": "https://en.wikipedia.org/wiki/Fante_people" },
+        { "name": "Ethnologue - Fante", "url": "https://www.ethnologue.com/language/fat" }
+      ],
+      "description": "The Fante are a coastal Akan people of Ghana's Central Region, known for their early European contact, castle heritage, and producing global figures like Kofi Annan.",
+      "relatedTribes": ["ashanti", "akan", "ewe", "ga"]
+    },
+
+    {
+      "id": "ga_adangbe",
+      "name": "Ga-Adangbe",
+      "slug": "ga-adangbe",
+      "countries": ["GH"],
+      "region": "Ghana (Greater Accra Region)",
+      "population": "~3.5 million",
+      "populationPercent": "~7% (Ghana)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.6, "lng": -0.2 },
+      "counties": ["Greater Accra", "Accra", "Tema", "Ada", "Krobo"],
+      "namePrefixes": ["Nii", "Naa", "Oky", "Tett", "Ama"],
+      "commonNames": {
+        "female": ["Naa", "Ama", "Kai", "Ashiley", "Dede", "Koshie"],
+        "male": ["Nii", "Tetteh", "Okyne", "Odartey", "Nortey", "Quartey", "Amarteifio"]
+      },
+      "stereotypes": [
+        "Capital city natives",
+        "Fishing traditions",
+        "Homowo festival",
+        "Bead culture (Krobo)",
+        "Distinctive cuisine",
+        "Proud heritage"
+      ],
+      "culturalTraits": [
+        "Homowo festival (hooting at hunger)",
+        "Traditional Ga chieftaincy",
+        "Fishing and trading heritage",
+        "Krobo bead-making (Adangbe)",
+        "Dipo initiation for girls (Krobo)",
+        "Kpele religious traditions"
+      ],
+      "funFacts": [
+        "Accra, Ghana's capital, is the traditional home of the Ga people",
+        "Homowo festival commemorates a great famine and involves sprinkling kpokpoi (corn dough) on ancestors",
+        "Krobo beads are famous worldwide and worn during the Dipo ceremony",
+        "The Ga mantse (king) still plays an important traditional role"
+      ],
+      "traditionalFood": {
+        "staples": ["Kpokpoi (steamed corn dough)", "Kenkey", "Fish", "Palm nut soup"],
+        "beverages": ["Palm wine", "Asaana (fermented corn drink)"],
+        "specialDishes": ["Kpokpoi with palm nut soup (Homowo dish)", "Kelewele (spicy fried plantain)", "Banku with okra soup"],
+        "description": "Ga cuisine features the ceremonial kpokpoi served at Homowo, alongside fresh seafood from the Atlantic coast."
+      },
+      "traditionalDance": "Kpanlogo - hip-shaking dance from Accra",
+      "religion": "Christianity, Traditional Ga religion (Kpele)",
+      "language": {
+        "name": "Ga",
+        "speakers": "~3 million (Ga and Adangbe)",
+        "greeting": "Ote sɛn?",
+        "greetingMeaning": "How are you?",
+        "family": "Kwa (Niger-Congo) - Ga-Dangme branch",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Kwame Nkrumah", "role": "Ghana's First President (raised in Ga area)", "wikipedia": "https://en.wikipedia.org/wiki/Kwame_Nkrumah" },
+        { "name": "E.T. Mensah", "role": "Father of Highlife Music", "wikipedia": "https://en.wikipedia.org/wiki/E.T._Mensah" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Ga people", "url": "https://en.wikipedia.org/wiki/Ga_people" },
+        { "name": "Ethnologue - Ga", "url": "https://www.ethnologue.com/language/gaa" }
+      ],
+      "description": "The Ga-Adangbe are the indigenous people of Ghana's capital Accra, known for the Homowo festival, Kpanlogo dance, and Krobo bead traditions.",
+      "relatedTribes": ["akan", "ewe", "fante", "ashanti"]
+    },
+
+    {
+      "id": "luba",
+      "name": "Luba",
+      "slug": "luba",
+      "countries": ["CD"],
+      "region": "DR Congo (Kasai & Katanga)",
+      "population": "~18 million",
+      "populationPercent": "~18% (DR Congo)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -6.0, "lng": 23.5 },
+      "counties": ["Kasai-Oriental", "Kasai-Central", "Haut-Katanga", "Lomami"],
+      "namePrefixes": ["Mu", "Ka", "Ts", "Nk"],
+      "commonNames": {
+        "female": ["Mujinga", "Kabongo", "Ngoyi", "Kayembe", "Mutombo"],
+        "male": ["Tshisekedi", "Kabila", "Mbuji", "Kabeya", "Ilunga", "Nkongolo", "Kalala"]
+      },
+      "stereotypes": [
+        "Empire builders",
+        "Political influence",
+        "Skilled craftspeople",
+        "Strong education focus",
+        "Mining region",
+        "Proud heritage"
+      ],
+      "culturalTraits": [
+        "Luba Empire heritage (1585-1889)",
+        "Memory boards (Lukasa)",
+        "Elaborate wood carving",
+        "Bambudye secret society",
+        "Divine kingship (Mulopwe)",
+        "Rich oral traditions"
+      ],
+      "funFacts": [
+        "The Luba Empire was one of Africa's greatest pre-colonial states, lasting 300+ years",
+        "Lukasa memory boards encoded history and were 'read' by trained experts",
+        "Former President Félix Tshisekedi is of Luba origin",
+        "The Luba influenced many Central African cultures including the Lunda"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu (cassava)", "Bukari (corn porridge)", "Saka-Saka (cassava leaves)", "Fish"],
+        "beverages": ["Palm wine", "Lotoko (local spirit)", "Kasiksi (fermented drink)"],
+        "specialDishes": ["Moambe chicken (palm nut)", "Liboke (fish in banana leaves)", "Mikate (fried dough)"],
+        "description": "Luba cuisine features cassava-based dishes, moambe palm nut sauce, and river fish from the Kasai and Lualaba."
+      },
+      "traditionalDance": "Maskanda and ritual dances with carved figures",
+      "religion": "Christianity (Catholic majority), Traditional beliefs",
+      "language": {
+        "name": "Tshiluba (Luba-Kasai)",
+        "speakers": "~18 million",
+        "greeting": "Moyo?",
+        "greetingMeaning": "How are you?",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Félix Tshisekedi", "role": "President of DR Congo", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi" },
+        { "name": "Étienne Tshisekedi", "role": "Opposition Leader", "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Luba people", "url": "https://en.wikipedia.org/wiki/Luba_people" },
+        { "name": "Ethnologue - Luba-Kasai", "url": "https://www.ethnologue.com/language/lua" },
+        { "name": "Metropolitan Museum - Luba", "url": "https://www.metmuseum.org/toah/hd/luba/hd_luba.htm" }
+      ],
+      "description": "The Luba are one of DR Congo's largest ethnic groups, descendants of the powerful Luba Empire (1585-1889), known for memory boards, woodcarving, and political influence.",
+      "relatedTribes": ["lunda", "songye", "hemba", "kongo"]
+    },
+
+    {
+      "id": "kongo",
+      "name": "Kongo (Bakongo)",
+      "slug": "kongo",
+      "countries": ["CD", "CG", "AO"],
+      "region": "Congo Basin (DRC, Congo, Angola)",
+      "population": "~12 million",
+      "populationPercent": "~12% (DR Congo)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -5.5, "lng": 14.0 },
+      "counties": ["Kongo Central (DRC)", "Brazzaville (Congo)", "Cabinda (Angola)"],
+      "namePrefixes": ["Nz", "Ma", "Ki", "Lu"],
+      "commonNames": {
+        "female": ["Nlandu", "Nzuzi", "Kimpa", "Mafuta", "Lukeni"],
+        "male": ["Nzinga", "Kimbangu", "Lumumba", "Mvemba", "Kasavubu", "Lukeni"]
+      },
+      "stereotypes": [
+        "Kingdom builders",
+        "Catholic converts",
+        "Diaspora influence",
+        "Trade networks",
+        "Political leaders",
+        "Religious movements"
+      ],
+      "culturalTraits": [
+        "Kingdom of Kongo (1390-1914)",
+        "Early Christianity adoption (1491)",
+        "Nkisi power figures",
+        "Kimbanguist church (founded 1921)",
+        "Elaborate textile traditions",
+        "Cosmological philosophy (Kalunga)"
+      ],
+      "funFacts": [
+        "The Kingdom of Kongo had diplomatic relations with Portugal and the Vatican in the 1500s",
+        "Afonso I (Mvemba a Nzinga) wrote letters to the Pope denouncing the slave trade",
+        "Kimbanguism, founded by Simon Kimbangu, has 17+ million followers today",
+        "Many African Americans descend from Kongo people taken during the slave trade"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu", "Saka-saka (cassava leaves)", "Fish", "Palm oil"],
+        "beverages": ["Palm wine (Nsamba)", "Malavu (raffia wine)"],
+        "specialDishes": ["Moambe", "Madesu (beans)", "Makayabu (salted fish)"],
+        "description": "Kongo cuisine is centered on cassava in various forms, river fish, and the signature moambe palm nut sauce."
+      },
+      "traditionalDance": "N'goma drumming and ancestral dances",
+      "religion": "Christianity (Catholic, Kimbanguist), Traditional beliefs",
+      "language": {
+        "name": "Kikongo",
+        "speakers": "~7 million",
+        "greeting": "Mbote",
+        "greetingMeaning": "Hello/Good",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Patrice Lumumba", "role": "First PM of Democratic Republic of Congo", "wikipedia": "https://en.wikipedia.org/wiki/Patrice_Lumumba" },
+        { "name": "Simon Kimbangu", "role": "Founder of Kimbanguism", "wikipedia": "https://en.wikipedia.org/wiki/Simon_Kimbangu" },
+        { "name": "Joseph Kasavubu", "role": "First President of DR Congo", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Kasavubu" }
+      ],
+      "populationByCountry": [
+        { "country": "CD", "population": "~6M", "percent": "6%" },
+        { "country": "CG", "population": "~3M", "percent": "48%" },
+        { "country": "AO", "population": "~3M", "percent": "13%" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Kongo people", "url": "https://en.wikipedia.org/wiki/Kongo_people" },
+        { "name": "Ethnologue - Kikongo", "url": "https://www.ethnologue.com/language/ktu" },
+        { "name": "Britannica - Kingdom of Kongo", "url": "https://www.britannica.com/place/Kongo-historical-kingdom-Africa" }
+      ],
+      "description": "The Kongo (Bakongo) are descendants of the mighty Kingdom of Kongo, spanning three countries, known for early Christianity, the Kimbanguist church, and shaping African diaspora culture.",
+      "relatedTribes": ["luba", "yombe", "teke", "mbundu"]
+    },
+
+    {
+      "id": "mongo",
+      "name": "Mongo",
+      "slug": "mongo",
+      "countries": ["CD"],
+      "region": "DR Congo (Équateur Province)",
+      "population": "~12 million",
+      "populationPercent": "~12% (DR Congo)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -0.5, "lng": 21.0 },
+      "counties": ["Équateur", "Tshuapa", "Mongala", "Sankuru"],
+      "namePrefixes": ["Bo", "Ilo", "Lon", "Nje"],
+      "commonNames": {
+        "female": ["Bolingo", "Bokanga", "Elonga", "Ikenge", "Monama"],
+        "male": ["Bokasa", "Ilonga", "Lonkama", "Ndjoku", "Boende", "Mbandaka"]
+      },
+      "stereotypes": [
+        "Forest people",
+        "River traders",
+        "Palm culture",
+        "Fishing expertise",
+        "Rainforest knowledge",
+        "Boat builders"
+      ],
+      "culturalTraits": [
+        "Congo rainforest dwelling",
+        "Elaborate canoe building",
+        "Fishing and trading networks",
+        "Lianja epic (creation story)",
+        "Forest resource management",
+        "Decentralized chieftaincies"
+      ],
+      "funFacts": [
+        "The Mongo are the largest ethnic group in the Congo Basin rainforest",
+        "The Lianja epic is one of Africa's longest oral traditions",
+        "Mongo territory includes some of the world's least explored rainforest",
+        "The Congo River is their highway - elaborate canoe cultures developed here"
+      ],
+      "traditionalFood": {
+        "staples": ["Fish", "Cassava", "Plantains", "Forest game", "Insects (caterpillars)"],
+        "beverages": ["Palm wine", "Fermented cassava drink"],
+        "specialDishes": ["Liboke (fish in leaves)", "Caterpillars (mbinzo)", "Smoked monkey meat", "Fufu with river fish"],
+        "description": "Mongo cuisine is rich in river fish, forest game, and the famous edible caterpillars harvested seasonally."
+      },
+      "traditionalDance": "Likundu ancestral dances",
+      "religion": "Christianity, Traditional beliefs",
+      "language": {
+        "name": "Lomongo",
+        "speakers": "~3 million (with dialects ~12 million)",
+        "greeting": "Mbote",
+        "greetingMeaning": "Hello/Good",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "sources": [
+        { "name": "Wikipedia - Mongo people", "url": "https://en.wikipedia.org/wiki/Mongo_people" },
+        { "name": "Ethnologue - Mongo", "url": "https://www.ethnologue.com/language/lol" }
+      ],
+      "description": "The Mongo are the largest ethnic group of the Congo Basin rainforest, master fishers and traders known for elaborate canoe culture and the epic Lianja creation story.",
+      "relatedTribes": ["ngombe", "bolia", "ekonda", "tetela"]
     }
   ]
 }
