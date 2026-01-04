@@ -120,14 +120,18 @@ const TribePage = () => {
               <section>
                 {(() => {
                   const countries = (tribe as any).countries as string[] | undefined;
+                  const isMultiCountry = countries && countries.length > 1;
                   const primaryCountry = countries?.[0] || 'KE';
                   const countryObj = getCountries().find(c => c.code === primaryCountry);
                   const countryName = countryObj?.name || 'Kenya';
+                  const locationTitle = isMultiCountry 
+                    ? `Territory Across ${countries.length} Countries` 
+                    : `Location in ${countryName}`;
                   return (
                     <>
                       <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                         <Map className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
-                        Location in {countryName}
+                        {locationTitle}
                       </h2>
                       <TribeMap 
                         lat={tribe.mapCoordinates.lat} 
@@ -147,36 +151,79 @@ const TribePage = () => {
                   <UsersRound className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   Population Statistics
                 </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  <div className="p-3 bg-secondary rounded-lg text-center">
-                    <p className="text-2xl sm:text-3xl font-bold text-primary">{tribe.population}</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Total Population</p>
-                  </div>
-                  <div className="p-3 bg-secondary rounded-lg text-center">
-                    <p className="text-2xl sm:text-3xl font-bold text-primary">{tribe.populationPercent}</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      of {(() => {
-                        const countries = (tribe as any).countries as string[] | undefined;
-                        const primaryCountry = countries?.[0] || 'KE';
-                        const countryObj = getCountries().find(c => c.code === primaryCountry);
-                        return countryObj?.name || 'Kenya';
-                      })()}
-                    </p>
-                  </div>
-                  <div className="p-3 bg-secondary rounded-lg text-center">
-                    <p className="text-2xl sm:text-3xl font-bold text-blue-600">{tribe.genderRatio.male}%</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Male</p>
-                  </div>
-                  <div className="p-3 bg-secondary rounded-lg text-center">
-                    <p className="text-2xl sm:text-3xl font-bold text-pink-600">{tribe.genderRatio.female}%</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Female</p>
-                  </div>
-                </div>
-                <div className="mt-3">
-                  <p className="text-sm text-muted-foreground">
-                    <strong>Main Counties:</strong> {tribe.counties.join(', ')}
-                  </p>
-                </div>
+                {(() => {
+                  const countries = (tribe as any).countries as string[] | undefined;
+                  const populationByCountry = (tribe as any).populationByCountry as { country: string; population: string; percent: string }[] | undefined;
+                  const isMultiCountry = countries && countries.length > 1;
+                  
+                  return (
+                    <>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div className="p-3 bg-secondary rounded-lg text-center">
+                          <p className="text-2xl sm:text-3xl font-bold text-primary">{tribe.population}</p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">Total Population</p>
+                        </div>
+                        {!isMultiCountry && (
+                          <div className="p-3 bg-secondary rounded-lg text-center">
+                            <p className="text-2xl sm:text-3xl font-bold text-primary">{tribe.populationPercent}</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground">
+                              of {(() => {
+                                const primaryCountry = countries?.[0] || 'KE';
+                                const countryObj = getCountries().find(c => c.code === primaryCountry);
+                                return countryObj?.name || 'Kenya';
+                              })()}
+                            </p>
+                          </div>
+                        )}
+                        {isMultiCountry && (
+                          <div className="p-3 bg-secondary rounded-lg text-center">
+                            <p className="text-2xl sm:text-3xl font-bold text-primary">{countries.length}</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground">Countries</p>
+                          </div>
+                        )}
+                        <div className="p-3 bg-secondary rounded-lg text-center">
+                          <p className="text-xl sm:text-2xl font-bold">
+                            <span className="text-blue-600">{tribe.genderRatio.male}%</span>
+                            <span className="text-muted-foreground mx-1">/</span>
+                            <span className="text-pink-600">{tribe.genderRatio.female}%</span>
+                          </p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">Male / Female</p>
+                        </div>
+                      </div>
+                      
+                      {/* Multi-country population breakdown */}
+                      {isMultiCountry && populationByCountry && populationByCountry.length > 0 && (
+                        <div className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
+                          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+                            <Globe className="w-4 h-4 text-primary" />
+                            Population by Country
+                          </h3>
+                          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                            {populationByCountry.map((item) => {
+                              const countryObj = getCountries().find(c => c.code === item.country);
+                              return (
+                                <div key={item.country} className="p-2 bg-background/60 rounded-lg text-center">
+                                  <div className="flex items-center justify-center gap-1 mb-1">
+                                    <span className="text-lg">{countryObj?.flag || '🌍'}</span>
+                                    <span className="text-xs font-medium">{countryObj?.name || item.country}</span>
+                                  </div>
+                                  <p className="text-sm font-bold text-primary">{item.population}</p>
+                                  <p className="text-xs text-muted-foreground">{item.percent} of country</p>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                      
+                      <div className="mt-3">
+                        <p className="text-sm text-muted-foreground">
+                          <strong>Main Regions:</strong> {tribe.counties.join(', ')}
+                        </p>
+                      </div>
+                    </>
+                  );
+                })()}
               </section>
               
               <section>
