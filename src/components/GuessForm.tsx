@@ -155,7 +155,7 @@ export function GuessForm({
                 setCountry(e.target.value);
                 onCountryChange?.(e.target.value);
               }}
-              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-8 pl-3 min-w-[140px]"
+              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-7 pl-2.5 w-auto"
               aria-label="Select country"
             >
               <option value="ALL">🌍 All Africa</option>

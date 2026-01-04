@@ -7,6 +7,7 @@ import { ImageGallery } from '@/components/ImageGallery';
 import { PersonCard } from '@/components/PersonCard';
 import { NameSearch } from '@/components/NameSearch';
 import { AudioGreeting, MainGreeting } from '@/components/AudioGreeting';
+import { PopulationPieChart } from '@/components/PopulationPieChart';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -192,18 +193,18 @@ const TribePage = () => {
                         </div>
                       </div>
                       
-                      {/* Multi-country population breakdown */}
+                      {/* Multi-country population breakdown with pie chart */}
                       {isMultiCountry && populationByCountry && populationByCountry.length > 0 && (
-                        <div className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
-                          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-                            <Globe className="w-4 h-4 text-primary" />
-                            Population by Country
-                          </h3>
-                          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                        <>
+                          <PopulationPieChart 
+                            populationByCountry={populationByCountry}
+                            tribeName={tribe.name}
+                          />
+                          <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                             {populationByCountry.map((item) => {
                               const countryObj = getCountries().find(c => c.code === item.country);
                               return (
-                                <div key={item.country} className="p-2 bg-background/60 rounded-lg text-center">
+                                <div key={item.country} className="p-2 bg-background/60 rounded-lg text-center border border-border hover:border-primary/30 transition-colors">
                                   <div className="flex items-center justify-center gap-1 mb-1">
                                     <span className="text-lg">{countryObj?.flag || '🌍'}</span>
                                     <span className="text-xs font-medium">{countryObj?.name || item.country}</span>
@@ -214,7 +215,7 @@ const TribePage = () => {
                               );
                             })}
                           </div>
-                        </div>
+                        </>
                       )}
                       
                       <div className="mt-3">
@@ -637,19 +638,28 @@ const TribePage = () => {
                     <p className="text-sm text-muted-foreground">Estimated global diaspora population</p>
                   </div>
                   
-                  {/* Country Breakdown */}
+                  {/* Diaspora Pie Chart */}
+                  {(tribe.diaspora as any).breakdown && (tribe.diaspora as any).breakdown.length >= 2 && (
+                    <PopulationPieChart 
+                      diaspora={(tribe.diaspora as any).breakdown}
+                      tribeName={tribe.name}
+                      type="diaspora"
+                    />
+                  )}
+                  
+                  {/* Country Breakdown Cards */}
                   {(tribe.diaspora as any).breakdown && (
-                    <div className="mb-4">
+                    <div className="mb-4 mt-4">
                       <h3 className="text-sm font-medium text-foreground mb-3">Population by Country</h3>
                       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                         {(tribe.diaspora as any).breakdown.map((country: { country: string; population: string; cities: string[] }, i: number) => (
-                          <div key={i} className="p-3 bg-secondary rounded-lg">
+                          <div key={i} className="p-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors">
                             <div className="flex items-center justify-between mb-1">
                               <p className="font-medium text-foreground text-sm">{country.country}</p>
                               <p className="text-xs font-semibold text-primary">{country.population}</p>
                             </div>
                             <p className="text-xs text-muted-foreground">
-                              {country.cities.join(', ')}
+                              📍 {country.cities.join(', ')}
                             </p>
                           </div>
                         ))}
