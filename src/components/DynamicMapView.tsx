@@ -74,35 +74,49 @@ const tribeColorPalette = [
   { bg: 'rgba(6, 182, 212, 0.45)', border: 'rgb(6, 182, 212)', label: 'Sky' },      // Sky
 ];
 
-// Territory sizes in degrees for tribes
+// Territory sizes in degrees for tribes - verified against actual geographic data
 const tribeTerritoryDegrees: Record<string, { latSpan: number; lngSpan: number }> = {
-  'Kikuyu': { latSpan: 1.8, lngSpan: 1.5 },
-  'Luhya': { latSpan: 1.5, lngSpan: 1.2 },
-  'Kalenjin': { latSpan: 2.5, lngSpan: 2.0 },
-  'Luo': { latSpan: 1.8, lngSpan: 1.5 },
-  'Kamba': { latSpan: 2.0, lngSpan: 1.8 },
-  'Maasai': { latSpan: 3.0, lngSpan: 2.5 },
-  'Yoruba': { latSpan: 3.5, lngSpan: 4.0 },
-  'Igbo': { latSpan: 2.5, lngSpan: 2.5 },
-  'Hausa': { latSpan: 5.0, lngSpan: 6.0 },
-  'Zulu': { latSpan: 3.0, lngSpan: 2.5 },
-  'Xhosa': { latSpan: 2.5, lngSpan: 2.0 },
-  'Ashanti': { latSpan: 2.0, lngSpan: 2.0 },
-  'Oromo': { latSpan: 4.0, lngSpan: 4.0 },
-  'Amhara': { latSpan: 3.5, lngSpan: 3.0 },
-  'Somali': { latSpan: 4.0, lngSpan: 5.0 },
-  'Tigrinya': { latSpan: 2.0, lngSpan: 1.5 },
-  'Baganda': { latSpan: 2.0, lngSpan: 2.0 },
-  'Sukuma': { latSpan: 2.5, lngSpan: 2.5 },
-  'Chagga': { latSpan: 1.0, lngSpan: 1.0 },
-  'Akan': { latSpan: 2.5, lngSpan: 2.5 },
-  'Ewe': { latSpan: 1.5, lngSpan: 2.0 },
-  'Wolof': { latSpan: 2.0, lngSpan: 2.5 },
-  'Fulani': { latSpan: 4.0, lngSpan: 8.0 },
-  'Shona': { latSpan: 3.0, lngSpan: 2.5 },
-  'Ndebele': { latSpan: 2.0, lngSpan: 2.0 },
-  'Tswana': { latSpan: 2.5, lngSpan: 2.5 },
-  'Sotho': { latSpan: 2.0, lngSpan: 2.0 },
+  // Kenya - based on actual county coverage
+  'Kikuyu': { latSpan: 1.2, lngSpan: 1.0 }, // Central Province - Kiambu, Murang'a, Nyeri
+  'Luhya': { latSpan: 1.0, lngSpan: 0.8 }, // Western Kenya - Kakamega, Bungoma
+  'Kalenjin': { latSpan: 2.2, lngSpan: 1.5 }, // Rift Valley highlands
+  'Luo': { latSpan: 1.2, lngSpan: 1.0 }, // Nyanza - around Lake Victoria
+  'Kamba': { latSpan: 1.5, lngSpan: 1.2 }, // Machakos, Kitui, Makueni
+  'Maasai': { latSpan: 2.5, lngSpan: 1.8 }, // Southern Kenya/Northern Tanzania
+  'Meru': { latSpan: 0.9, lngSpan: 0.8 }, // Eastern slopes of Mt. Kenya
+  'Kisii': { latSpan: 0.8, lngSpan: 0.7 }, // Kisii highlands
+  'Mijikenda': { latSpan: 1.2, lngSpan: 0.8 }, // Coastal strip
+  'Turkana': { latSpan: 2.5, lngSpan: 2.0 }, // Northwestern Kenya
+  'Samburu': { latSpan: 1.5, lngSpan: 1.2 }, // North-central Kenya
+  // Nigeria - based on state coverage
+  'Yoruba': { latSpan: 2.5, lngSpan: 3.0 }, // Southwest Nigeria
+  'Igbo': { latSpan: 2.0, lngSpan: 1.8 }, // Southeast Nigeria
+  'Hausa': { latSpan: 4.0, lngSpan: 5.0 }, // Northern Nigeria - very large
+  'Fulani': { latSpan: 3.0, lngSpan: 6.0 }, // Trans-Sahel spread
+  // South Africa
+  'Zulu': { latSpan: 2.5, lngSpan: 2.0 }, // KwaZulu-Natal
+  'Xhosa': { latSpan: 2.0, lngSpan: 1.8 }, // Eastern Cape
+  // Ghana
+  'Ashanti': { latSpan: 1.5, lngSpan: 1.5 }, // Ashanti Region
+  'Akan': { latSpan: 2.0, lngSpan: 2.0 }, // Central/Southern Ghana
+  'Ewe': { latSpan: 1.2, lngSpan: 1.5 }, // Volta Region + Togo
+  // Ethiopia
+  'Oromo': { latSpan: 4.0, lngSpan: 3.5 }, // Central/Southern Ethiopia
+  'Amhara': { latSpan: 3.0, lngSpan: 2.5 }, // Northern Ethiopia highlands
+  'Tigrinya': { latSpan: 1.8, lngSpan: 1.5 }, // Tigray + Eritrea
+  'Somali': { latSpan: 4.0, lngSpan: 4.5 }, // Horn of Africa
+  // Uganda
+  'Baganda': { latSpan: 1.5, lngSpan: 1.5 }, // Central Uganda
+  // Tanzania
+  'Sukuma': { latSpan: 2.0, lngSpan: 2.0 }, // Lake Victoria region
+  'Chagga': { latSpan: 0.7, lngSpan: 0.7 }, // Mt. Kilimanjaro slopes
+  // Senegal
+  'Wolof': { latSpan: 1.8, lngSpan: 2.0 }, // Western Senegal
+  // Southern Africa
+  'Shona': { latSpan: 2.5, lngSpan: 2.0 }, // Zimbabwe
+  'Ndebele': { latSpan: 1.5, lngSpan: 1.5 }, // Matabeleland
+  'Tswana': { latSpan: 2.0, lngSpan: 2.0 }, // Botswana
+  'Sotho': { latSpan: 1.5, lngSpan: 1.5 }, // Lesotho + Free State
 };
 
 const getTerritoryDegrees = (tribeName: string, counties: string[]): { latSpan: number; lngSpan: number } => {
@@ -213,13 +227,21 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
     return { left, top };
   };
 
-  // Convert degree span to percentage width/height on the map
+  // Convert degree span to percentage width/height on the map using proper Mercator projection
   const degreesToPercent = (latSpan: number, lngSpan: number, centerLat: number) => {
-    const visibleLatRange = osmBounds.maxLat - osmBounds.minLat;
-    const visibleLngRange = osmBounds.maxLng - osmBounds.minLng;
+    // Use Web Mercator projection for accurate sizing
+    const xMin = toWorldX(osmBounds.minLng);
+    const xMax = toWorldX(osmBounds.maxLng);
+    const yTop = toWorldY(osmBounds.maxLat);
+    const yBottom = toWorldY(osmBounds.minLat);
     
-    const widthPercent = (lngSpan / visibleLngRange) * 100;
-    const heightPercent = (latSpan / visibleLatRange) * 100;
+    // Calculate width in Mercator coordinates
+    const widthPercent = (lngSpan / 360) / (xMax - xMin) * 100;
+    
+    // Calculate height using Mercator Y difference at center latitude
+    const topY = toWorldY(centerLat + latSpan / 2);
+    const bottomY = toWorldY(centerLat - latSpan / 2);
+    const heightPercent = Math.abs(bottomY - topY) / Math.abs(yBottom - yTop) * 100;
     
     return { widthPercent, heightPercent };
   };

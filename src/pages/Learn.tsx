@@ -620,7 +620,7 @@ const Learn = () => {
                   )}
                   {countryFilter && countryFilter !== 'ALL' && (
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Flag className="w-3 h-3" />
+                      <span className="text-sm">{countries.find(c => c.code === countryFilter)?.flag}</span>
                       {countries.find(c => c.code === countryFilter)?.name || countryFilter}
                       <button 
                         onClick={() => handleCountryChange('ALL')}
@@ -677,7 +677,12 @@ const Learn = () => {
                   )}
                   {selectedCountries.length > 0 && (
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Flag className="w-3 h-3" />
+                      <span className="flex items-center gap-0.5">
+                        {selectedCountries.slice(0, 3).map(code => (
+                          <span key={code} className="text-sm">{countries.find(c => c.code === code)?.flag}</span>
+                        ))}
+                        {selectedCountries.length > 3 && <span className="text-xs">+{selectedCountries.length - 3}</span>}
+                      </span>
                       {selectedCountries.length} countries
                       <button 
                         onClick={() => {
