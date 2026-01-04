@@ -200,16 +200,7 @@ const Learn = () => {
 
     return result;
   }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder, languageFamilyFilter]);
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const params = new URLSearchParams(searchParams);
-    if (localSearch) {
-      params.set('search', localSearch);
-    } else {
-      params.delete('search');
-    }
-    setSearchParams(params);
-  };
+  // handleSearch removed - now using live search
   
   const handleRegionChange = (region: string) => {
     const params = new URLSearchParams(searchParams);
@@ -316,15 +307,26 @@ const Learn = () => {
           <section className="max-w-3xl mx-auto mb-4" aria-label="Search and filters">
             {/* Search Bar + View Toggle + Info - All inline */}
             <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
-              {/* Search Bar */}
-              <form onSubmit={handleSearch} className="relative flex-1">
+              {/* Search Bar - Live search as you type */}
+              <div className="relative flex-1">
                 <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   id="tribe-search"
                   type="text"
                   value={localSearch}
-                  onChange={(e) => setLocalSearch(e.target.value)}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setLocalSearch(value);
+                    // Live search - update URL as user types
+                    const params = new URLSearchParams(searchParams);
+                    if (value) {
+                      params.set('search', value);
+                    } else {
+                      params.delete('search');
+                    }
+                    setSearchParams(params);
+                  }}
                   placeholder="Search tribes, names..."
                   className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
                 />
@@ -343,40 +345,43 @@ const Learn = () => {
                     <X className="w-4 h-4" />
                   </button>
                 )}
-              </form>
+              </div>
               
-              {/* Compact View Toggle */}
+              {/* Compact View Toggle with Active State */}
               <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0">
                 <button
                   onClick={() => toggleViewMode('grid')}
-                  className={`p-1.5 rounded-md transition-colors ${
+                  className={`p-1.5 rounded-md transition-all ${
                     viewMode === 'grid' 
-                      ? 'bg-background shadow-sm text-foreground' 
-                      : 'text-muted-foreground hover:text-foreground'
+                      ? 'bg-primary text-primary-foreground shadow-sm' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
                   title="Grid view"
+                  aria-pressed={viewMode === 'grid'}
                 >
                   <LayoutGrid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => toggleViewMode('list')}
-                  className={`p-1.5 rounded-md transition-colors ${
+                  className={`p-1.5 rounded-md transition-all ${
                     viewMode === 'list' 
-                      ? 'bg-background shadow-sm text-foreground' 
-                      : 'text-muted-foreground hover:text-foreground'
+                      ? 'bg-primary text-primary-foreground shadow-sm' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
                   title="List view"
+                  aria-pressed={viewMode === 'list'}
                 >
                   <List className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => toggleViewMode('map')}
-                  className={`p-1.5 rounded-md transition-colors ${
+                  className={`p-1.5 rounded-md transition-all ${
                     viewMode === 'map' 
-                      ? 'bg-background shadow-sm text-foreground' 
-                      : 'text-muted-foreground hover:text-foreground'
+                      ? 'bg-primary text-primary-foreground shadow-sm' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
                   title="Map view"
+                  aria-pressed={viewMode === 'map'}
                 >
                   <MapIcon className="w-4 h-4" />
                 </button>
