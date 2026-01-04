@@ -1,4 +1,5 @@
 import tribesData from '@/data/tribes.json';
+import { tribeLandmarks, CulturalLandmark } from '@/data/tribeLandmarks';
 
 export interface TribeResult {
   tribe: typeof tribesData.tribes[0];
@@ -2465,3 +2466,9 @@ export function getReligiousNameInfo(name: string) {
   const normalized = name.toLowerCase().trim();
   return religiousNamePatterns[normalized] || null;
 }
+
+export function getTribeLandmarks(tribeId: string): CulturalLandmark[] {
+  return tribeLandmarks[tribeId] || [];
+}
+
+export type { CulturalLandmark };
