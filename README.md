@@ -245,7 +245,7 @@ npm run preview
 
 | Improvement | Description | Status |
 |-------------|-------------|--------|
-| **YouTube Video Audit** | Verified all 50+ tribe videos, replaced 6 broken IDs (Taita, Fon, Sukuma, Tigrinya, Wolof, Afar) | ✅ Done |
+| **YouTube Video Audit** | Verified all 50+ tribe videos, replaced 7 broken IDs (Taita, Fon, Sukuma, Tigrinya, Wolof, Afar, Tuareg) | ✅ Done |
 | **Missing Video Coverage** | Added verified documentaries to Herero, Banyarwanda, Tswana, Sotho, Nubian, Barundi, Malagasy | ✅ Done |
 | **YouTube Videos for All Major Tribes** | Now covering 55+ tribes with verified YouTube documentaries | ✅ Done |
 | **Comprehensive README** | Full documentation with user stories, folder structure | ✅ Done |
