@@ -85,6 +85,11 @@ tribeguess/
 │   └── robots.txt                 # SEO crawl rules
 │
 ├── src/
+│   ├── __tests__/                 # 🆕 Regression Test System
+│   │   ├── REGRESSION_TESTS.md    # Comprehensive test specification
+│   │   ├── CHANGE_CHECKLIST.md    # Pre/post change verification
+│   │   └── testUtils.ts           # Automated test utilities
+│   │
 │   ├── assets/
 │   │   └── logo.png               # Main application logo
 │   │
@@ -99,18 +104,21 @@ tribeguess/
 │   │   ├── NavLink.tsx            # Navigation link component
 │   │   ├── PersonCard.tsx         # Famous person profile card
 │   │   ├── TribeCard.tsx          # Tribe preview card for grid
+│   │   ├── TribeFamilyTree.tsx    # Ethnic lineage visualization
 │   │   ├── TribeMap.tsx           # Individual tribe territory map
 │   │   └── TribeResultCard.tsx    # Prediction result display
 │   │
 │   ├── data/
-│   │   └── tribes.json            # Master tribe database (50+ tribes)
+│   │   ├── tribes.json            # Master tribe database (65+ tribes)
+│   │   └── blogPosts.ts           # Cultural articles database
 │   │
 │   ├── hooks/
 │   │   ├── use-mobile.tsx         # Mobile detection hook
-│   │   └── use-toast.ts           # Toast notification hook
+│   │   ├── use-toast.ts           # Toast notification hook
+│   │   └── useGlobalSearch.ts     # Combined search hook
 │   │
 │   ├── lib/
-│   │   ├── tribeDetection.ts      # Core detection algorithm (2300+ lines)
+│   │   ├── tribeDetection.ts      # Core detection algorithm (2400+ lines)
 │   │   └── utils.ts               # Utility functions
 │   │
 │   ├── pages/
@@ -118,6 +126,8 @@ tribeguess/
 │   │   ├── Learn.tsx              # Encyclopedia page - grid/map view
 │   │   ├── TribePage.tsx          # Individual tribe detail page
 │   │   ├── RandomTribe.tsx        # SEO-optimized random redirect
+│   │   ├── Blog.tsx               # Cultural articles list
+│   │   ├── BlogPost.tsx           # Individual article page
 │   │   └── NotFound.tsx           # 404 page
 │   │
 │   ├── App.tsx                    # Root component with routing
@@ -246,6 +256,9 @@ npm run preview
 
 | Improvement | Description | Status |
 |-------------|-------------|--------|
+| **🆕 Regression Test System** | Comprehensive test documentation with automated utilities | ✅ Done |
+| **🆕 Mobile Search Button** | Touch-friendly search button for all devices | ✅ Done |
+| **🆕 Fact-Checked Tribe Expansion** | Added 10+ tribes (Oromo, Amhara, Sukuma, etc.) with sources | ✅ Done |
 | **Blog Search & Filtering** | Search, region, and tag filters with shareable URLs | ✅ Done |
 | **Footer Component** | Unified footer with navigation links across all pages | ✅ Done |
 | **Blog Sources/References** | Academic citations and source links on each article | ✅ Done |
