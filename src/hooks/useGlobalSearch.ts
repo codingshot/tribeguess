@@ -1,0 +1,88 @@
+import { useMemo } from 'react';
+import { getAllTribes } from '@/lib/tribeDetection';
+import { blogPosts, BlogPost } from '@/data/blogPosts';
+
+export interface SearchResult {
+  type: 'tribe' | 'blog';
+  title: string;
+  description: string;
+  slug: string;
+  tags: string[];
+  region?: string;
+  emoji?: string;
+}
+
+export function useGlobalSearch(query: string): SearchResult[] {
+  return useMemo(() => {
+    if (!query || query.length < 2) return [];
+    
+    const searchLower = query.toLowerCase();
+    const results: SearchResult[] = [];
+    
+    // Search tribes
+    const tribes = getAllTribes();
+    tribes.forEach(tribe => {
+      const matchesName = tribe.name.toLowerCase().includes(searchLower);
+      const matchesDescription = tribe.description.toLowerCase().includes(searchLower);
+      const matchesRegion = tribe.region.toLowerCase().includes(searchLower);
+      const matchesNames = [
+        ...tribe.commonNames.male,
+        ...tribe.commonNames.female
+      ].some(n => n.toLowerCase().includes(searchLower));
+      
+      if (matchesName || matchesDescription || matchesRegion || matchesNames) {
+        results.push({
+          type: 'tribe',
+          title: tribe.name,
+          description: tribe.description.slice(0, 100) + '...',
+          slug: `/learn/${tribe.slug}`,
+          tags: [tribe.region, tribe.language?.family || ''].filter(Boolean),
+          region: tribe.region,
+        });
+      }
+    });
+    
+    // Search blog posts
+    blogPosts.forEach(post => {
+      const matchesTitle = post.title.toLowerCase().includes(searchLower);
+      const matchesExcerpt = post.excerpt.toLowerCase().includes(searchLower);
+      const matchesTags = post.tags.some(t => t.toLowerCase().includes(searchLower));
+      const matchesRegion = post.region.toLowerCase().includes(searchLower);
+      
+      if (matchesTitle || matchesExcerpt || matchesTags || matchesRegion) {
+        results.push({
+          type: 'blog',
+          title: post.title,
+          description: post.excerpt.slice(0, 100) + '...',
+          slug: `/blog/${post.slug}`,
+          tags: post.tags.slice(0, 3),
+          region: post.region,
+          emoji: post.emoji,
+        });
+      }
+    });
+    
+    // Sort: prioritize exact matches
+    return results.sort((a, b) => {
+      const aExact = a.title.toLowerCase().includes(searchLower) ? 0 : 1;
+      const bExact = b.title.toLowerCase().includes(searchLower) ? 0 : 1;
+      return aExact - bExact;
+    }).slice(0, 20);
+  }, [query]);
+}
+
+export function getAllBlogTags(): string[] {
+  const tagSet = new Set<string>();
+  blogPosts.forEach(post => {
+    post.tags.forEach(tag => tagSet.add(tag));
+  });
+  return Array.from(tagSet).sort();
+}
+
+export function getAllBlogRegions(): string[] {
+  const regionSet = new Set<string>();
+  blogPosts.forEach(post => {
+    regionSet.add(post.region);
+  });
+  return Array.from(regionSet).sort();
+}

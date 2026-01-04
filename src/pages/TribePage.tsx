@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play } from 'lucide-react';
 import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { TribeMap } from '@/components/TribeMap';
 import { ImageGallery } from '@/components/ImageGallery';
 import { PersonCard } from '@/components/PersonCard';
@@ -852,11 +853,7 @@ const TribePage = () => {
         </article>
       </main>
       
-      <footer className="container mx-auto px-4 py-6 border-t border-border mt-8">
-        <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TribeGuess. Educational entertainment about African tribes and ethnic groups.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 };

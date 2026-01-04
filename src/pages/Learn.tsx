@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, X, Filter, Users, MapPin, LayoutGrid, Map as MapIcon, Globe, TrendingUp, Languages, Flag, Layers, Info, SlidersHorizontal, ArrowUpDown, Check, List, ChevronRight } from 'lucide-react';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
@@ -837,11 +838,7 @@ const Learn = () => {
         </div>
       </main>
       
-      <footer className="container mx-auto px-4 py-6 border-t border-border mt-8">
-        <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TribeGuess. Educational entertainment about Kenyan tribes.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 };

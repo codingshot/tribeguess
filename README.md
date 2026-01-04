@@ -246,6 +246,10 @@ npm run preview
 
 | Improvement | Description | Status |
 |-------------|-------------|--------|
+| **Blog Search & Filtering** | Search, region, and tag filters with shareable URLs | ✅ Done |
+| **Footer Component** | Unified footer with navigation links across all pages | ✅ Done |
+| **Blog Sources/References** | Academic citations and source links on each article | ✅ Done |
+| **Global Search Hook** | Combined search across tribes and blog articles | ✅ Done |
 | **SEO Blog System** | 8 cultural articles with SEO optimization, JSON-LD, hyperlinks to tribes | ✅ Done |
 | **XML Sitemap** | Added sitemap.xml for SEO crawling | ✅ Done |
 | **Full Country Dropdown** | "All Africa" option with full country names | ✅ Done |
@@ -279,7 +283,6 @@ npm run preview
 | Improvement | Description | Impact |
 |-------------|-------------|--------|
 | **Keyboard Shortcuts** | G/L/M keys for view switching | Power users |
-| **Footer Component** | Links to Terms/Privacy pages | Navigation |
 | **Phonetic Guide Legend** | Explain symbols (caps = stress, hyphens = syllables) | Learning |
 | **Tribe Comparison** | Side-by-side culture comparison | Education |
 | **Favorites/Bookmarks** | Save favorite tribes locally | Engagement |
