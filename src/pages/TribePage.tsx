@@ -6,6 +6,7 @@ import { TribeMap } from '@/components/TribeMap';
 import { ImageGallery } from '@/components/ImageGallery';
 import { PersonCard } from '@/components/PersonCard';
 import { NameSearch } from '@/components/NameSearch';
+import { AudioGreeting, MainGreeting } from '@/components/AudioGreeting';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -269,75 +270,50 @@ const TribePage = () => {
                     </div>
                   </div>
                   
-                  {/* Main Greeting with Audio */}
-                  <div className="mb-4 p-3 bg-background/50 rounded-lg">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-sm text-muted-foreground">Main Greeting</p>
-                        <p className="font-semibold text-primary text-xl">"{language.greeting}"</p>
-                        {language.greetingMeaning && (
-                          <p className="text-sm text-muted-foreground">({language.greetingMeaning})</p>
-                        )}
-                      </div>
-                      <button 
-                        onClick={() => {
-                          // Use Web Speech API for pronunciation hint
-                          if ('speechSynthesis' in window) {
-                            const utterance = new SpeechSynthesisUtterance(language.greeting);
-                            utterance.lang = 'sw-KE'; // Swahili as closest available
-                            utterance.rate = 0.8;
-                            window.speechSynthesis.speak(utterance);
-                          }
-                        }}
-                        className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-                        title="Listen to pronunciation (approximate)"
-                      >
-                        <Play className="w-5 h-5" />
-                      </button>
-                    </div>
+                  {/* Main Greeting with Audio & Phonetics */}
+                  <div className="mb-4">
+                    <p className="text-sm text-muted-foreground mb-2">Main Greeting</p>
+                    <MainGreeting 
+                      phrase={language.greeting}
+                      meaning={language.greetingMeaning || "Hello / Greeting"}
+                      languageName={language.name}
+                      languageFamily={language.family}
+                    />
                   </div>
                   
-                  {/* Additional Greetings with Audio */}
+                  {/* Additional Greetings with Audio & Phonetics */}
                   {language.additionalGreetings && language.additionalGreetings.length > 0 && (
                     <div className="mb-4">
                       <h3 className="text-sm font-medium text-foreground mb-2">More Greetings</h3>
                       <div className="grid sm:grid-cols-2 gap-2">
                         {language.additionalGreetings.map((g: { phrase: string; meaning: string }, i: number) => (
-                          <div key={i} className="p-2 bg-background/50 rounded-lg flex items-center justify-between gap-2">
-                            <div className="flex-1 min-w-0">
-                              <p className="font-medium text-primary text-sm truncate">"{g.phrase}"</p>
-                              <p className="text-xs text-muted-foreground truncate">{g.meaning}</p>
-                            </div>
-                            <button 
-                              onClick={() => {
-                                if ('speechSynthesis' in window) {
-                                  const utterance = new SpeechSynthesisUtterance(g.phrase);
-                                  utterance.lang = 'sw-KE';
-                                  utterance.rate = 0.8;
-                                  window.speechSynthesis.speak(utterance);
-                                }
-                              }}
-                              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0"
-                              title="Listen to pronunciation (approximate)"
-                            >
-                              <Play className="w-3.5 h-3.5" />
-                            </button>
-                          </div>
+                          <AudioGreeting 
+                            key={i}
+                            phrase={g.phrase}
+                            meaning={g.meaning}
+                            languageName={language.name}
+                            languageFamily={language.family}
+                            size="sm"
+                          />
                         ))}
                       </div>
                     </div>
                   )}
                   
-                  {/* Common Phrases */}
+                  {/* Common Phrases with Phonetics */}
                   {language.commonPhrases && language.commonPhrases.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Common Phrases</h3>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="grid sm:grid-cols-2 gap-2">
                         {language.commonPhrases.map((p: { phrase: string; meaning: string }, i: number) => (
-                          <span key={i} className="px-3 py-1.5 bg-background/50 rounded-full text-xs">
-                            <span className="font-medium text-primary">{p.phrase}</span>
-                            <span className="text-muted-foreground"> - {p.meaning}</span>
-                          </span>
+                          <AudioGreeting 
+                            key={i}
+                            phrase={p.phrase}
+                            meaning={p.meaning}
+                            languageName={language.name}
+                            languageFamily={language.family}
+                            size="sm"
+                          />
                         ))}
                       </div>
                     </div>
