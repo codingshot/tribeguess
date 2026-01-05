@@ -146,8 +146,8 @@ export function GuessForm({
           First name works best - we'll analyze the naming patterns
         </p>
         <div className="flex gap-2">
-          {/* Country Dropdown */}
-          <div className="relative shrink-0">
+          {/* Country Dropdown - hugs content width */}
+          <div className="relative shrink-0 inline-flex">
             <select
               id="country-select"
               value={country}
@@ -155,7 +155,8 @@ export function GuessForm({
                 setCountry(e.target.value);
                 onCountryChange?.(e.target.value);
               }}
-              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-7 pl-2.5 w-auto"
+              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-8 pl-3 py-2.5 min-w-0 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              style={{ width: 'auto', maxWidth: '200px' }}
               aria-label="Select country"
             >
               <option value="ALL">🌍 All Africa</option>
@@ -165,8 +166,8 @@ export function GuessForm({
                 </option>
               ))}
             </select>
-            <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
-              <svg className="w-3 h-3 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg className="w-3.5 h-3.5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>

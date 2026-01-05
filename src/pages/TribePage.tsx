@@ -351,6 +351,28 @@ const TribePage = () => {
                     </div>
                   </div>
                   
+                  {/* Language Learning Video */}
+                  {(tribe as any).languageVideoId && (
+                    <div className="mb-4 p-3 bg-background/50 rounded-lg border border-border">
+                      <h3 className="text-sm font-medium text-foreground mb-2 flex items-center gap-2">
+                        <Play className="w-4 h-4 text-red-500" />
+                        Learn {language.name} Pronunciation
+                      </h3>
+                      <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${(tribe as any).languageVideoId}?rel=0`}
+                          title={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="absolute inset-0 w-full h-full"
+                        />
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-2 italic">
+                        🎓 Educational video for learning {language.name} greetings and pronunciation.
+                      </p>
+                    </div>
+                  )}
+                  
                   {/* Main Greeting with Audio & Phonetics */}
                   <div className="mb-4">
                     <p className="text-sm text-muted-foreground mb-2">Main Greeting</p>
