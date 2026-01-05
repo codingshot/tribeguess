@@ -27,37 +27,110 @@ interface FamilyTreeProps {
   }[];
 }
 
-// Define major language family trees for African tribes
-const languageFamilyHierarchy: Record<string, { parent?: string; siblings: string[]; description: string }> = {
+// Comprehensive African language family hierarchy
+const languageFamilyHierarchy: Record<string, { parent?: string; siblings: string[]; description: string; speakersRange?: string }> = {
+  // Niger-Congo (largest family)
   'Bantu (Niger-Congo)': {
     parent: 'Niger-Congo',
-    siblings: ['Nguni', 'Great Lakes Bantu', 'Congo Basin Bantu', 'East African Bantu'],
-    description: 'Largest African language family, spoken across sub-Saharan Africa'
-  },
-  'Nilotic': {
-    parent: 'Nilo-Saharan',
-    siblings: ['Western Nilotic', 'Eastern Nilotic', 'Southern Nilotic'],
-    description: 'Spoken by pastoralist and agro-pastoralist communities in East Africa'
-  },
-  'Cushitic': {
-    parent: 'Afroasiatic',
-    siblings: ['Highland East Cushitic', 'Lowland East Cushitic', 'Central Cushitic'],
-    description: 'Major branch of Afroasiatic, spoken in the Horn of Africa'
-  },
-  'Semitic': {
-    parent: 'Afroasiatic',
-    siblings: ['Ethiopian Semitic', 'Arabic'],
-    description: 'Includes Amharic, Tigrinya, and Arabic-influenced languages'
+    siblings: ['Nguni', 'Great Lakes Bantu', 'Congo Basin Bantu', 'East African Bantu', 'Southern Bantu'],
+    description: 'Largest African language family with 500+ languages, spoken from Cameroon to South Africa',
+    speakersRange: '350+ million'
   },
   'Niger-Congo (Volta-Niger)': {
     parent: 'Niger-Congo',
-    siblings: ['Yoruboid', 'Igboid', 'Edo', 'Nupe'],
-    description: 'Major West African language grouping including Yoruba and Igbo'
+    siblings: ['Yoruboid', 'Igboid', 'Edoid', 'Nupe-Gbagyi'],
+    description: 'Major West African grouping including Yoruba (~45M) and Igbo (~45M) speakers',
+    speakersRange: '100+ million'
+  },
+  'Niger-Congo (Atlantic)': {
+    parent: 'Niger-Congo',
+    siblings: ['Wolof', 'Serer', 'Fula/Fulfulde'],
+    description: 'Spoken along the Atlantic coast of West Africa from Senegal to Guinea',
+    speakersRange: '50+ million'
+  },
+  'Niger-Congo (Mande)': {
+    parent: 'Niger-Congo',
+    siblings: ['Mandinka', 'Bambara', 'Dyula', 'Soninke'],
+    description: 'West African languages with rich oral traditions and historical empires',
+    speakersRange: '40+ million'
+  },
+  'Niger-Congo (Gur)': {
+    parent: 'Niger-Congo',
+    siblings: ['Mossi', 'Dagbani', 'Frafra'],
+    description: 'Spoken in the savanna regions of West Africa, especially Burkina Faso and Ghana',
+    speakersRange: '20+ million'
+  },
+  'Niger-Congo (Kwa)': {
+    parent: 'Niger-Congo',
+    siblings: ['Akan/Twi', 'Ewe', 'Ga', 'Fon'],
+    description: 'Coastal West African languages including Akan (~30M speakers)',
+    speakersRange: '40+ million'
+  },
+  
+  // Nilo-Saharan
+  'Nilotic': {
+    parent: 'Nilo-Saharan',
+    siblings: ['Western Nilotic (Luo, Dinka)', 'Eastern Nilotic (Maasai, Turkana)', 'Southern Nilotic (Kalenjin)'],
+    description: 'East African pastoralist languages spoken from South Sudan to Tanzania',
+    speakersRange: '30+ million'
+  },
+  'Western Nilotic': {
+    parent: 'Nilotic',
+    siblings: ['Luo languages', 'Dinka', 'Nuer', 'Shilluk'],
+    description: 'Includes the Luo cluster (Kenya, Tanzania) and Dinka/Nuer (South Sudan)',
+    speakersRange: '15+ million'
+  },
+  'Eastern Nilotic': {
+    parent: 'Nilotic',
+    siblings: ['Maa (Maasai)', 'Turkana', 'Samburu', 'Teso'],
+    description: 'Pastoralist languages of Kenya, Tanzania, and Uganda',
+    speakersRange: '5+ million'
+  },
+  'Southern Nilotic': {
+    parent: 'Nilotic',
+    siblings: ['Kalenjin languages', 'Datoga'],
+    description: 'Highland East African languages, home of world-famous long-distance runners',
+    speakersRange: '6+ million'
+  },
+  
+  // Afroasiatic
+  'Cushitic': {
+    parent: 'Afroasiatic',
+    siblings: ['Highland East Cushitic', 'Lowland East Cushitic (Oromo, Somali)', 'Central Cushitic'],
+    description: 'Major Horn of Africa family including Oromo (~40M) and Somali (~20M)',
+    speakersRange: '70+ million'
+  },
+  'Cushitic (Afro-Asiatic)': {
+    parent: 'Afroasiatic',
+    siblings: ['Oromo', 'Somali', 'Afar', 'Saho', 'Beja'],
+    description: 'Ancient language family of the Horn of Africa with diverse pastoralist cultures',
+    speakersRange: '70+ million'
+  },
+  'Semitic': {
+    parent: 'Afroasiatic',
+    siblings: ['Ethiopian Semitic (Amharic, Tigrinya)', 'Arabic dialects'],
+    description: 'Includes Amharic (~30M), Tigrinya (~7M), and North African Arabic varieties',
+    speakersRange: '200+ million'
+  },
+  'Ethiopian Semitic': {
+    parent: 'Semitic',
+    siblings: ['Amharic', 'Tigrinya', 'Tigre', 'Gurage languages'],
+    description: 'Unique African Semitic languages with the ancient Ge\'ez script tradition',
+    speakersRange: '40+ million'
   },
   'Afroasiatic (Chadic)': {
     parent: 'Afroasiatic',
-    siblings: ['Hausa', 'Other Chadic languages'],
-    description: 'Largest Chadic language is Hausa with 100+ million speakers'
+    siblings: ['Hausa', 'Ron', 'Bole', 'Masa'],
+    description: 'Largest is Hausa with 80M+ speakers, lingua franca of West African Sahel',
+    speakersRange: '100+ million'
+  },
+  
+  // Khoisan
+  'Khoisan': {
+    parent: undefined,
+    siblings: ['!Kung', 'Nama', 'Sandawe', 'Hadza'],
+    description: 'Ancient click languages of Southern Africa, among oldest human language families',
+    speakersRange: '~400,000'
   }
 };
 
@@ -149,18 +222,28 @@ export const TribeFamilyTree: React.FC<FamilyTreeProps> = ({ currentTribe, ethni
               
               {/* Current family */}
               <div className="ml-4 border-l-2 border-primary/30 pl-4">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
                   <span className="px-3 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded-full">
                     {languageFamily}
                   </span>
+                  {familyInfo?.speakersRange && (
+                    <span className="text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded">
+                      👥 {familyInfo.speakersRange} speakers
+                    </span>
+                  )}
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <button className="text-muted-foreground hover:text-primary transition-colors">
                         <Info className="w-4 h-4" />
                       </button>
                     </TooltipTrigger>
-                    <TooltipContent className="max-w-xs">
+                    <TooltipContent className="max-w-xs bg-popover text-popover-foreground border border-border shadow-md">
                       <p className="text-xs">{familyInfo?.description || `The ${languageFamily} language family.`}</p>
+                      {familyInfo?.siblings && familyInfo.siblings.length > 0 && (
+                        <p className="text-xs mt-1 text-muted-foreground">
+                          <strong>Sub-groups:</strong> {familyInfo.siblings.join(', ')}
+                        </p>
+                      )}
                     </TooltipContent>
                   </Tooltip>
                 </div>
