@@ -336,6 +336,7 @@
       "name": "Luo",
       "slug": "luo",
       "youtubeVideoId": "8yN643vymPg",
+      "languageVideoId": "qR5aQCq0khs",
       "countries": ["KE", "TZ", "UG", "SS"],
       "region": "Western Kenya (Lake Victoria)",
       "population": "~5.1 million",
@@ -1065,6 +1066,7 @@
       "name": "Maasai",
       "slug": "maasai",
       "youtubeVideoId": "GsDCFDLOQFo",
+      "languageVideoId": "lkDzRxVAMNk",
       "countries": ["KE", "TZ"],
       "region": "Rift Valley & Northern Tanzania",
       "population": "~2.1 million",
@@ -1175,6 +1177,11 @@
       ],
       "description": "The Maasai are one of the most internationally recognized African tribes, known for their distinctive customs, dress, and residence in wildlife-rich areas. They are semi-nomadic pastoralists who have maintained their traditions despite modernization.",
       "relatedTribes": ["samburu", "kalenjin", "turkana"],
+      "gallery": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Masai_Man.jpg/480px-Masai_Man.jpg", "caption": "Maasai warrior in traditional shuka and beadwork", "credit": "Wikimedia Commons" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Masai_women.jpg/640px-Masai_women.jpg", "caption": "Maasai women with elaborate beaded jewelry", "credit": "Wikimedia Commons" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Maasai_village.jpg/640px-Maasai_village.jpg", "caption": "Traditional Maasai manyatta (homestead)", "credit": "Wikimedia Commons" }
+      ],
       "diaspora": {
         "globalPopulation": "~30,000",
         "majorCountries": ["USA", "UK", "Germany", "Tanzania"],
@@ -3752,6 +3759,10 @@
       ],
       "description": "The Ashanti (Asante) built one of Africa's most powerful empires, known for kente cloth, gold craftsmanship, the Golden Stool, and matrilineal traditions.",
       "relatedTribes": ["fante", "ewe", "ga"],
+      "gallery": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Kente_cloth.jpg/640px-Kente_cloth.jpg", "caption": "Traditional Ashanti Kente cloth weaving", "credit": "Wikimedia Commons" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ashanti_King_parade.jpg/640px-Ashanti_King_parade.jpg", "caption": "Ashanti royal procession with golden regalia", "credit": "Wikimedia Commons" }
+      ],
       "diaspora": {
         "globalPopulation": "~1 million",
         "majorCountries": ["USA", "UK", "Canada", "Germany"],
@@ -3869,6 +3880,10 @@
       ],
       "description": "The Zulu are South Africa's largest ethnic group, known for Shaka's warrior kingdom, distinctive culture, and isicathamiya music tradition.",
       "relatedTribes": ["xhosa", "swazi", "ndebele"],
+      "gallery": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Zulu_dancers.jpg/640px-Zulu_dancers.jpg", "caption": "Zulu dancers in traditional regalia", "credit": "Wikimedia Commons" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Zulu_women_South_Africa.jpg/640px-Zulu_women_South_Africa.jpg", "caption": "Zulu women in colorful beadwork", "credit": "Wikimedia Commons" }
+      ],
       "diaspora": {
         "globalPopulation": "~500,000",
         "majorCountries": ["UK", "USA", "Australia", "Mozambique"],
@@ -4120,6 +4135,7 @@
       "name": "Oromo",
       "slug": "oromo",
       "youtubeVideoId": "Y4R98yWjCFg",
+      "languageVideoId": "fT_FmJzP8Os",
       "countries": ["ET", "KE", "SO"],
       "region": "Ethiopia (Oromia)",
       "population": "~40 million",
@@ -4470,6 +4486,7 @@
       "name": "Baganda",
       "slug": "baganda",
       "youtubeVideoId": "Oh0luxHS0Po",
+      "languageVideoId": "kCjN2c4WDPU",
       "countries": ["UG"],
       "region": "Central Uganda (Buganda)",
       "population": "~6 million",
@@ -6449,6 +6466,7 @@
       "name": "Herero (Ovaherero)",
       "slug": "herero",
       "youtubeVideoId": "MDADXW_MGKQ",
+      "languageVideoId": "Jhr4klGCRJA",
       "countries": ["NA", "BW", "AO"],
       "region": "Namibia, Botswana",
       "population": "~250,000",
@@ -6546,6 +6564,10 @@
       ],
       "description": "The Herero are Namibian pastoralists known for Victorian dress, the 1904 genocide, cattle culture, and ongoing reparations activism.",
       "relatedTribes": ["himba", "nama", "damara"],
+      "gallery": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Herero_women.jpg/640px-Herero_women.jpg", "caption": "Herero women in traditional Victorian-era dress", "credit": "Wikimedia Commons" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Herero_cattle.jpg/640px-Herero_cattle.jpg", "caption": "Herero cattle - central to identity and wealth", "credit": "Wikimedia Commons" }
+      ],
       "diaspora": {
         "globalPopulation": "~50,000",
         "majorCountries": ["Botswana", "South Africa", "Germany"],
@@ -9924,72 +9946,6 @@
       "relatedTribes": ["bamoun", "bamileke", "nso"]
     },
 
-    {
-      "id": "oromo",
-      "name": "Oromo",
-      "slug": "oromo",
-      "countries": ["ET", "KE"],
-      "region": "Ethiopia (Oromia Region)",
-      "population": "~45 million",
-      "populationPercent": "35% (Ethiopia)",
-      "genderRatio": { "male": 49, "female": 51 },
-      "mapCoordinates": { "lat": 8.0, "lng": 38.5 },
-      "counties": ["Oromia", "Addis Ababa", "Dire Dawa", "Harari"],
-      "namePrefixes": ["Ob", "Gal", "Tol", "Fay", "Chal"],
-      "commonNames": {
-        "female": ["Biftu", "Chaltu", "Lelise", "Genet", "Bontu", "Darartu", "Toltu", "Gammachuu"],
-        "male": ["Obbo", "Galma", "Tolera", "Fayisa", "Bekele", "Gada", "Lemi", "Jaldessa", "Gutu"]
-      },
-      "stereotypes": [
-        "Largest Ethiopian ethnic group",
-        "Proud warriors",
-        "Cattle culture",
-        "Egalitarian Gada system",
-        "Strong regional identity",
-        "Agricultural expertise"
-      ],
-      "culturalTraits": [
-        "Gada democratic system (UNESCO heritage)",
-        "Irreecha thanksgiving festival",
-        "Pastoral and agricultural lifestyle",
-        "Waaqeffanna traditional religion",
-        "Coffee ceremony (Buna Qalaa)"
-      ],
-      "funFacts": [
-        "The Gada system is a traditional democratic governance that alternates power every 8 years",
-        "Oromo is the fourth most spoken language in Africa with 50+ million speakers",
-        "The Irreecha festival at Lake Hora attracts millions annually",
-        "Ethiopia's famous long-distance runners include many Oromo athletes"
-      ],
-      "traditionalFood": {
-        "staples": ["Injera (teff flatbread)", "Genfo (barley porridge)", "Anchote (root vegetable)", "Itoo (cheese)"],
-        "beverages": ["Buna (coffee)", "Farsoo (barley beer)", "Daadhii (honey wine)"],
-        "specialDishes": ["Marqa (meat stew)", "Caccabsaa (bread with butter)", "Qoocco (barley balls)"],
-        "description": "Oromo cuisine features unique dishes like anchote root and the elaborate coffee ceremony that can last hours."
-      },
-      "traditionalDance": "Dhiicha - celebratory dances with jumping and singing",
-      "religion": "Ethiopian Orthodox (40%), Islam (45%), Waaqeffanna (traditional), Protestant",
-      "language": {
-        "name": "Afaan Oromoo (Oromo)",
-        "speakers": "~50 million",
-        "greeting": "Akkam?",
-        "greetingMeaning": "How are you?",
-        "family": "Cushitic (Afro-Asiatic)",
-        "writingSystem": "Qubee (Latin-based script, adopted 1991)"
-      },
-      "famousPeople": [
-        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia, Nobel Peace Prize 2019", "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed" },
-        { "name": "Haile Gebrselassie", "role": "Legendary Distance Runner", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie" },
-        { "name": "Tirunesh Dibaba", "role": "Three-time Olympic Gold Medalist", "wikipedia": "https://en.wikipedia.org/wiki/Tirunesh_Dibaba" }
-      ],
-      "sources": [
-        { "name": "Wikipedia - Oromo people", "url": "https://en.wikipedia.org/wiki/Oromo_people" },
-        { "name": "Ethnologue - Oromo", "url": "https://www.ethnologue.com/language/orm" },
-        { "name": "UNESCO - Gada System", "url": "https://ich.unesco.org/en/RL/gada-system-an-indigenous-democratic-socio-political-system-of-the-oromo-01164" }
-      ],
-      "description": "The Oromo are Ethiopia's largest ethnic group (35%), known for the UNESCO-recognized Gada democratic system, the Irreecha thanksgiving festival, and producing Olympic champion runners.",
-      "relatedTribes": ["amhara", "somali", "sidama", "afar"]
-    },
 
     {
       "id": "amhara",
@@ -11675,54 +11631,13 @@
       "relatedTribes": ["samburu", "borana", "gabra", "turkana"]
     },
 
-    {
-      "id": "herero",
-      "name": "Herero (Ovaherero)",
-      "slug": "herero",
-      "youtubeVideoId": "dNi5e7tJEKk",
-      "countries": ["NA", "BW", "AO"],
-      "region": "Namibia, Botswana, Angola",
-      "population": "~250,000",
-      "populationPercent": "~7% (Namibia)",
-      "genderRatio": { "male": 48, "female": 52 },
-      "mapCoordinates": { "lat": -21.5, "lng": 17.0 },
-      "counties": ["Kunene Region", "Omaheke Region"],
-      "namePrefixes": ["Ka", "Mu", "Tji"],
-      "commonNames": {
-        "female": ["Kaura", "Mukuatoora", "Tjiveze", "Uerieta"],
-        "male": ["Katjimune", "Muharukua", "Tjikuua", "Hosea"]
-      },
-      "stereotypes": ["Victorian dress tradition", "Cattle wealth", "German genocide survivors", "Proud heritage", "Distinctive women's dress"],
-      "culturalTraits": ["Women's elaborate Victorian-era dresses (otjikaiva) adopted as resistance symbol", "Cattle central to wealth, status, and identity", "Survivors of German colonial genocide (1904-1908)", "Patrilineal and matrilineal dual descent system", "Sacred fire (okuruwo) maintained in each homestead"],
-      "funFacts": ["Women's horn-shaped headdresses (otjikaiva) symbolize cattle - sacred animals", "The Victorian dress was adopted during colonial era and transformed into cultural identity", "Germany officially recognized the Herero genocide in 2021", "Up to 80% of Herero were killed by German colonial forces"],
-      "traditionalFood": {
-        "staples": ["Cattle milk", "Beef", "Maize porridge", "Wild melons"],
-        "beverages": ["Sour milk (omaere)", "Home-brewed beer"],
-        "specialDishes": ["Dried meat (ombidi)", "Milk and blood mixture"],
-        "description": "Herero cuisine centers on cattle products. Sour milk is a dietary staple, and cattle are slaughtered for important ceremonies."
-      },
-      "traditionalDance": "Otjiunda ancestral ceremonies",
-      "religion": "Christianity (Lutheran), Traditional ancestor veneration",
-      "language": { "name": "Otjiherero", "speakers": "~250,000", "greeting": "Wa penduka?", "greetingMeaning": "How did you wake up?", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
-      "populationByCountry": [
-        { "country": "NA", "population": "~180,000", "percent": "7%" },
-        { "country": "BW", "population": "~40,000", "percent": "2%" },
-        { "country": "AO", "population": "~30,000", "percent": "<1%" }
-      ],
-      "famousPeople": [
-        { "name": "Samuel Maharero", "role": "Chief who led resistance to genocide", "wikipedia": "https://en.wikipedia.org/wiki/Samuel_Maharero" },
-        { "name": "Vekuii Rukoro", "role": "Paramount Chief (2014-2021)", "wikipedia": "https://en.wikipedia.org/wiki/Vekuii_Rukoro" }
-      ],
-      "sources": [{ "name": "Wikipedia - Herero", "url": "https://en.wikipedia.org/wiki/Herero_people" }, { "name": "Britannica - Herero Genocide", "url": "https://www.britannica.com/event/Herero-and-Nama-genocide" }],
-      "description": "The Herero are cattle-herding people of Namibia known for women's distinctive Victorian-era dresses (adopted as cultural resistance) and as survivors of the first genocide of the 20th century.",
-      "relatedTribes": ["himba", "nama", "damara", "ovambo"]
-    },
 
     {
       "id": "merina",
       "name": "Merina (Ambaniandro)",
       "slug": "merina",
       "youtubeVideoId": "vc7LzV1VCmk",
+      "languageVideoId": "qVCk6jYUNMQ",
       "countries": ["MG"],
       "region": "Central Highlands, Madagascar",
       "population": "~5 million",
@@ -11763,7 +11678,11 @@
       ],
       "sources": [{ "name": "Wikipedia - Merina", "url": "https://en.wikipedia.org/wiki/Merina_people" }, { "name": "Britannica - Merina", "url": "https://www.britannica.com/topic/Merina" }],
       "description": "The Merina are Madagascar's largest ethnic group, descendants of Austronesian voyagers who built a powerful highland kingdom. Known for Famadihana ancestor ceremonies and fierce resistance to French colonization.",
-      "relatedTribes": ["betsileo", "sakalava", "betsimisaraka"]
+      "relatedTribes": ["betsileo", "sakalava", "betsimisaraka"],
+      "gallery": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Rova_of_Antananarivo.jpg/640px-Rova_of_Antananarivo.jpg", "caption": "Rova of Antananarivo - the historic Merina royal palace", "credit": "Wikimedia Commons" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Madagascar_Betafo_terraced_rice.jpg/640px-Madagascar_Betafo_terraced_rice.jpg", "caption": "Merina rice terraces in the Central Highlands", "credit": "Wikimedia Commons" }
+      ]
     },
 
     {
