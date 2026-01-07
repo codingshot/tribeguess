@@ -1123,19 +1123,32 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
   // ============ MALAGASY ============
   merina: [
     {
-      name: "Rova of Antananarivo",
+      name: "Rova of Antananarivo (Queen's Palace)",
       type: "historical",
-      description: "Royal palace complex of the Merina monarchs, overlooking Madagascar's capital. Burned in 1995 but remains a national symbol.",
+      description: "Royal palace complex of the Merina monarchy, perched on the highest hill of Madagascar's capital. Built for Queen Ranavalona I and destroyed by fire in 1995, now being restored.",
       coordinates: { lat: -18.9167, lng: 47.5333 },
       wikipediaUrl: "https://en.wikipedia.org/wiki/Rova_of_Antananarivo"
     },
     {
-      name: "Royal Hill of Ambohimanga",
+      name: "Ambohimanga (Royal Hill)",
       type: "sacred",
-      description: "Sacred hill and royal city of the Merina people, containing palaces, tombs, and sacred sites. UNESCO World Heritage Site.",
-      coordinates: { lat: -18.7600, lng: 47.5611 },
-      wikipediaUrl: "https://en.wikipedia.org/wiki/Royal_Hill_of_Ambohimanga",
+      description: "UNESCO World Heritage Site - the spiritual heart of the Merina monarchy. Contains royal tombs, sacred pools, and the original wooden palace of King Andrianampoinimerina.",
+      coordinates: { lat: -18.76, lng: 47.56 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Ambohimanga",
       unescoStatus: "world-heritage"
+    },
+    {
+      name: "Lake Anosy",
+      type: "historical",
+      description: "Heart-shaped lake in central Antananarivo, created by the Merina king Radama I. Site of the war memorial and jacaranda trees planted during French colonial era.",
+      coordinates: { lat: -18.91, lng: 47.53 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lake_Anosy"
+    },
+    {
+      name: "Antsahadinta Royal Hill",
+      type: "historical",
+      description: "One of the twelve sacred hills of Imerina (Merina kingdom). Site of a preserved traditional royal village showing pre-colonial highland architecture.",
+      coordinates: { lat: -18.98, lng: 47.41 }
     }
   ],
   
@@ -1450,6 +1463,101 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       type: "historical",
       description: "Major Rendille settlement in Marsabit County. Administrative center and market town for the Rendille community.",
       coordinates: { lat: 2.5, lng: 37.12 }
+    }
+  ],
+
+  // ============ MADAGASCAR - BETSILEO, SAKALAVA ============
+
+  betsileo: [
+    {
+      name: "Ambositra (City of Woodcarvers)",
+      type: "historical",
+      description: "Capital of Betsileo woodcarving traditions. The town is famous for intricate Zafimaniry-style carvings and produces aloalo funerary posts.",
+      coordinates: { lat: -20.52, lng: 47.24 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Ambositra"
+    },
+    {
+      name: "Betsileo Rice Terraces",
+      type: "natural",
+      description: "Spectacular irrigated rice terraces carved into hillsides around Fianarantsoa. Rival Southeast Asian terraces in sophistication and beauty.",
+      coordinates: { lat: -21.0, lng: 47.0 }
+    },
+    {
+      name: "Fianarantsoa Upper Town",
+      type: "historical",
+      description: "Historic highland town blending Merina and Betsileo architecture. Contains the oldest church in Madagascar and serves as cultural capital of Betsileo country.",
+      coordinates: { lat: -21.44, lng: 47.09 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Fianarantsoa"
+    }
+  ],
+
+  sakalava: [
+    {
+      name: "Mahajanga (Majunga)",
+      type: "historical",
+      description: "Historic Sakalava port city on Madagascar's northwest coast. Former capital of the Boina Sakalava kingdom with Arab, Indian, and African trading heritage.",
+      coordinates: { lat: -15.72, lng: 46.32 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mahajanga"
+    },
+    {
+      name: "Menabe Antimena Protected Area",
+      type: "natural",
+      description: "Western Madagascar dry forest home to the Sakalava people. Contains baobab trees, unique lemurs, and traditional Sakalava sacred sites.",
+      coordinates: { lat: -20.3, lng: 44.4 }
+    },
+    {
+      name: "Avenue of the Baobabs",
+      type: "natural",
+      description: "Iconic row of Grandidier's baobab trees in Sakalava territory. Located on an ancient forest edge sacred to local communities.",
+      coordinates: { lat: -20.25, lng: 44.42 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Avenue_of_the_Baobabs"
+    }
+  ],
+
+  // ============ CENTRAL AFRICAN REPUBLIC - BANDA, GBAYA ============
+  banda: [
+    {
+      name: "Bangui (Capital City)",
+      type: "historical",
+      description: "Capital of the Central African Republic, named from Banda word meaning 'the rapids.' Founded on Ubangi River, it serves as the political and cultural center.",
+      coordinates: { lat: 4.36, lng: 18.56 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bangui"
+    },
+    {
+      name: "Boganda Memorial",
+      type: "historical",
+      description: "Memorial to Barthélémy Boganda, Banda leader and 'Father of Central African Republic.' He led the independence movement but died in a 1959 plane crash.",
+      coordinates: { lat: 4.37, lng: 18.58 }
+    },
+    {
+      name: "Ubangi River",
+      type: "natural",
+      description: "Major river forming CAR's southern border with DR Congo. Central to Banda fishing, transport, and trade for centuries.",
+      coordinates: { lat: 4.0, lng: 19.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Ubangi_River"
+    }
+  ],
+
+  gbaya: [
+    {
+      name: "Bouar Megaliths",
+      type: "archaeological",
+      description: "Mysterious megalithic stone circles in Gbaya territory dating to 5500-450 BCE. UNESCO Tentative List site showing ancient Central African civilizations.",
+      coordinates: { lat: 5.93, lng: 15.6 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bouar_megaliths",
+      unescoStatus: "tentative"
+    },
+    {
+      name: "Nana-Mambéré Prefecture",
+      type: "historical",
+      description: "Heartland of Gbaya settlement in northwestern CAR. The region was center of the Kara War anti-colonial uprising (1928-1931).",
+      coordinates: { lat: 6.0, lng: 15.0 }
+    },
+    {
+      name: "Mbaïki Town",
+      type: "historical",
+      description: "Town in southwestern CAR with significant Gbaya population. Center of logging and coffee production, reflecting colonial economic legacies.",
+      coordinates: { lat: 3.87, lng: 18.0 }
     }
   ]
 };
