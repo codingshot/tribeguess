@@ -11294,6 +11294,66 @@
       ],
       "description": "The Karo are Ethiopia's smallest Omo Valley tribe (~1,500 people), world-renowned for their intricate body painting using natural pigments and elaborate headdresses.",
       "relatedTribes": ["hamar", "mursi", "banna", "dassanech"]
+    },
+
+    {
+      "id": "dinka",
+      "name": "Dinka",
+      "slug": "dinka",
+      "youtubeVideoId": "RLxUHxMhGnw",
+      "countries": ["SS", "SD"],
+      "region": "South Sudan",
+      "population": "~4.5 million",
+      "populationPercent": "~35% (South Sudan)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 8.0, "lng": 28.5 },
+      "counties": ["Bahr el Ghazal", "Upper Nile"],
+      "namePrefixes": ["Deng", "Mach", "Bol"],
+      "commonNames": {
+        "female": ["Achol", "Abuk", "Adut", "Akol"],
+        "male": ["Deng", "Mach", "Bol", "Garang", "Kuol", "Majok"]
+      },
+      "stereotypes": ["World's tallest people", "Cattle worship culture", "Scarification patterns", "Proud warrior tradition"],
+      "culturalTraits": ["Among the world's tallest populations - average male height 6'3\"", "Cattle are central to wealth, marriage, religion", "Distinctive V-shaped forehead scarification (gaar)"],
+      "funFacts": ["Dinka men may wash their hair in cow urine to dye it orange-gold", "Manute Bol (7'7\") and Luol Deng are famous Dinka NBA players"],
+      "traditionalDance": "Jumping dances celebrating cattle",
+      "religion": "Traditional belief in Nhialic (God); Christianity spreading",
+      "language": { "name": "Dinka", "speakers": "~4.5 million", "greeting": "Ciim", "greetingMeaning": "Greetings", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "John Garang", "role": "Independence leader", "wikipedia": "https://en.wikipedia.org/wiki/John_Garang" },
+        { "name": "Manute Bol", "role": "NBA player", "wikipedia": "https://en.wikipedia.org/wiki/Manute_Bol" }
+      ],
+      "sources": [{ "name": "Wikipedia - Dinka", "url": "https://en.wikipedia.org/wiki/Dinka_people" }],
+      "description": "The Dinka are South Sudan's largest ethnic group (~4.5M), famous for exceptional height, cattle-centered culture, and V-shaped forehead scarification.",
+      "relatedTribes": ["nuer", "shilluk"]
+    },
+
+    {
+      "id": "nuer",
+      "name": "Nuer",
+      "slug": "nuer",
+      "youtubeVideoId": "fHqL4-WXLOM",
+      "countries": ["SS", "ET"],
+      "region": "South Sudan & Ethiopia",
+      "population": "~3.5 million",
+      "populationPercent": "~15% (South Sudan)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 8.5, "lng": 31.0 },
+      "counties": ["Upper Nile", "Unity State"],
+      "namePrefixes": ["Gat", "Nyar", "Riek"],
+      "commonNames": {
+        "female": ["Nyaluak", "Nyakuoth", "Nyagua"],
+        "male": ["Gatluak", "Riek", "Gatkuoth", "Kueth"]
+      },
+      "stereotypes": ["Fierce warriors", "Tall cattle pastoralists", "Six-line forehead scars", "Swamp-land dwellers"],
+      "culturalTraits": ["Distinctive six horizontal lines scarified across forehead", "Cattle are life - used for marriage, rituals, identity", "Famous anthropological study by Evans-Pritchard"],
+      "funFacts": ["Evans-Pritchard's 'The Nuer' (1940) is foundational anthropology", "A man takes his favorite ox's name as his 'ox-name'"],
+      "traditionalDance": "Cattle-honoring dances with leaping",
+      "religion": "Traditional belief in Kuoth (Spirit); Christianity growing",
+      "language": { "name": "Nuer", "speakers": "~3 million", "greeting": "Maaleh?", "greetingMeaning": "How are you?", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Nuer", "url": "https://en.wikipedia.org/wiki/Nuer_people" }],
+      "description": "The Nuer are a major Nilotic people of South Sudan (~3.5M), renowned for cattle culture and distinctive six-line forehead scarification.",
+      "relatedTribes": ["dinka", "shilluk", "anuak"]
     }
   ]
 }
