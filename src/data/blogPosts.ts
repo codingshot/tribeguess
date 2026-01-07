@@ -837,5 +837,483 @@ export const blogPosts: BlogPost[] = [
       { title: "Rwanda Genocide - UN Documentation", url: "https://www.un.org/en/preventgenocide/rwanda" },
       { title: "Post-Genocide Rwanda - World Bank Reports", url: "https://www.worldbank.org/en/country/rwanda" }
     ]
+  },
+  {
+    slug: "hadza-last-hunter-gatherers-tanzania",
+    title: "The Hadza: Africa's Last True Hunter-Gatherers",
+    seoTitle: "Hadza Tribe: Tanzania's 50,000-Year-Old Hunter-Gatherer Society | TribeGuess",
+    seoDescription: "Discover the Hadza people of Tanzania, one of Earth's last remaining hunter-gatherer societies. Learn about their click language, egalitarian culture, and 50,000-year connection to Lake Eyasi.",
+    excerpt: "In the dry scrublands near Lake Eyasi, about 1,300 Hadza people maintain the oldest continuous way of life on Earth. No farming, no cattle, no permanent homes—just skills passed down for 50,000 years.",
+    emoji: "🏹",
+    gradient: "bg-gradient-to-br from-amber-600 to-orange-800",
+    region: "Tanzania",
+    readTime: "7 min read",
+    publishDate: "2026-01-05",
+    tags: ["Tanzania", "hunter-gatherers", "indigenous peoples", "click language", "Lake Eyasi", "Hadza"],
+    relatedTribes: [
+      { name: "Hadza", slug: "hadza" },
+      { name: "San", slug: "san" },
+      { name: "Maasai", slug: "maasai" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "While most of humanity transitioned to farming 10,000 years ago, the Hadza of Tanzania never did. These approximately 1,300 people living near Lake Eyasi represent one of the last genuine hunter-gatherer societies on Earth—a living window into how all our ancestors once lived.",
+          "Their way of life isn't a choice made in isolation, but a successful strategy refined over 50,000 years in this specific landscape. And remarkably, studies show they may be among the healthiest and happiest people on Earth."
+        ]
+      },
+      {
+        heading: "The Click Language Connection",
+        icon: "👅",
+        paragraphs: [
+          "Hadzane, the Hadza language, contains click consonants similar to those found in Southern African Khoisan languages—despite being separated by thousands of miles.[^1]",
+          "This linguistic connection suggests an ancient relationship between populations now living 3,000 kilometers apart, possibly dating back 50,000+ years before Bantu-speaking peoples spread across Africa."
+        ],
+        list: [
+          "Hadzane has dental, lateral, and alveolar clicks",
+          "It is a language isolate—unrelated to any other language family",
+          "About 1,000 fluent speakers remain",
+          "Children learn clicks naturally, but outsiders find them extremely difficult"
+        ],
+        highlight: "The Hadza click language may preserve sounds used by humanity's earliest ancestors in Africa—linguistic fossils from 50,000+ years ago."
+      },
+      {
+        heading: "A Day in Hadza Life",
+        icon: "🌅",
+        paragraphs: [
+          "Hadza men hunt with bows and arrows, targeting anything from birds to giraffes. Women gather tubers, berries, and baobab fruit. There are no chiefs, no formal leaders, no wealth accumulation—decisions are made collectively, and food is shared immediately.[^2]",
+          "Remarkably, the Hadza work only about 4-6 hours per day to meet all their needs. Anthropologists have noted they spend more time in leisure and socializing than people in modern industrial societies."
+        ],
+        list: [
+          "Men hunt with hand-forged arrows, often using poison from desert rose plants",
+          "Women's gathered foods provide 60-70% of the diet",
+          "Honey is the most prized food—Hadza will climb 30-meter trees to get it",
+          "No food is stored—everything is shared and consumed daily"
+        ]
+      },
+      {
+        heading: "Egalitarian by Design",
+        icon: "⚖️",
+        paragraphs: [
+          "The Hadza have no concept of wealth accumulation or social hierarchy. A successful hunter cannot keep his kill—custom demands he share with the entire camp. Attempts by individuals to dominate are met with ridicule or simply walking away.[^3]",
+          "This 'reverse dominance hierarchy' prevents any single person from gaining power over others. It's a social structure anthropologists believe characterized most of human history."
+        ],
+        list: [
+          "Camps of 20-30 people form and dissolve fluidly",
+          "Anyone can leave any camp at any time without explanation",
+          "Decisions are made by consensus, not authority",
+          "Even successful hunters gain no permanent status"
+        ]
+      },
+      {
+        heading: "Threats to Their Way of Life",
+        icon: "⚠️",
+        paragraphs: [
+          "The Hadza's traditional lands have shrunk by 90% over the past 50 years. Maasai cattle herders, commercial farming, and trophy hunting have all encroached on their territory.[^4]",
+          "Yet the Hadza have shown remarkable resilience. Those forced into settlement often return to the bush within months. Their identity is inseparable from their lifestyle—and they actively choose it."
+        ],
+        highlight: "Despite pressure to settle, many Hadza who try farming or wage labor eventually return to their traditional lifestyle—often describing it as 'going back to being human.'"
+      },
+      {
+        heading: "What the Hadza Teach Us",
+        icon: "💡",
+        paragraphs: [
+          "Studies of Hadza health reveal no obesity, very low rates of heart disease or diabetes, excellent fitness into old age, and low stress levels. Their diet and lifestyle offer clues about the conditions under which human biology evolved.",
+          "Beyond health, the Hadza challenge assumptions about human nature. Their egalitarianism, generosity, and leisure time suggest that competition and hierarchy aren't inevitable human conditions—they're products of specific social arrangements."
+        ]
+      }
+    ],
+    sources: [
+      { title: "Hadza Language - Ethnologue", url: "https://www.ethnologue.com/language/hts/" },
+      { title: "Hadza Hunter-Gatherers - Current Anthropology", url: "https://www.journals.uchicago.edu/doi/10.1086/204339" },
+      { title: "Egalitarian Societies - Cambridge University Press" },
+      { title: "Hadza Land Rights - Survival International", url: "https://www.survivalinternational.org/tribes/hadza" }
+    ]
+  },
+  {
+    slug: "wodaabe-gerewol-male-beauty-contest",
+    title: "The Wodaabe Gerewol: Where Men Compete in Beauty Contests",
+    seoTitle: "Wodaabe Gerewol Festival: Africa's Male Beauty Pageant Explained | TribeGuess",
+    seoDescription: "Discover the Wodaabe Gerewol, where elaborately decorated men dance and compete in beauty contests judged by women. Learn about this UNESCO-recognized tradition of Niger's nomadic cattle herders.",
+    excerpt: "In the Sahel desert, Wodaabe men spend hours applying makeup, practicing eye rolls, and perfecting their smiles. At the Gerewol festival, women judge these male beauty contestants—and can 'steal' the winner as a husband.",
+    emoji: "💄",
+    gradient: "bg-gradient-to-br from-pink-500 to-purple-700",
+    region: "West Africa",
+    readTime: "6 min read",
+    publishDate: "2026-01-05",
+    tags: ["Niger", "Wodaabe", "Gerewol", "male beauty", "Fulani", "nomadic peoples", "festivals"],
+    relatedTribes: [
+      { name: "Wodaabe", slug: "wodaabe" },
+      { name: "Fulani", slug: "fulani" },
+      { name: "Tuareg", slug: "tuareg" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "What if everything you knew about gender and beauty was reversed? For the Wodaabe people of Niger, Chad, and Northern Nigeria, it's the men who primp for hours, apply elaborate makeup, and compete for the attention of female judges.",
+          "The Gerewol festival, held at the end of the rainy season, is a celebration where male beauty, charm, and dancing skills are put on display—and the stakes are high. A winning dancer may be 'stolen' by an admiring woman, even if both are already married."
+        ]
+      },
+      {
+        heading: "Masters of Male Beauty",
+        icon: "✨",
+        paragraphs: [
+          "Wodaabe men are taught from childhood that physical beauty is a virtue. They consider themselves the most beautiful people in the world—and the Gerewol is where they prove it.[^1]",
+          "Preparation for the dance takes hours. Men shave their hairlines to elongate their foreheads, apply red ochre foundation, and paint intricate patterns in yellow and black around their eyes. They line their lips to make them appear thinner and darken their eyelids to make the whites of their eyes more striking."
+        ],
+        list: [
+          "Red ochre mixed with fat creates the base 'foundation'",
+          "Black kohl emphasizes eyes and creates dramatic lines",
+          "Yellow pigment is applied around eyes for contrast",
+          "Ostrich feathers, beads, and cowrie shells complete the look"
+        ],
+        highlight: "During the Yaake dance, men roll their eyes and bare their teeth to show the whiteness—features the Wodaabe consider most beautiful."
+      },
+      {
+        heading: "The Gerewol Competition",
+        icon: "💃",
+        paragraphs: [
+          "The Gerewol includes several distinct dances, but the Yaake is the centerpiece. Men stand in a line, rising on their toes, rolling their eyes, and baring their teeth while chanting. They may dance for hours under the harsh Sahel sun.[^2]",
+          "Three unmarried women serve as judges. They walk slowly past the line of dancers, eventually tapping their chosen winners. The selection brings honor to the winner's family—and potentially a new wife."
+        ],
+        list: [
+          "The Yaake dance emphasizes height, teeth, and eye-rolling ability",
+          "Dancers chant to hypnotic effect, swaying as a group",
+          "Female judges must appear uninterested while evaluating",
+          "Winners may be 'stolen' by admirers for marriage"
+        ]
+      },
+      {
+        heading: "Women's Power: The Right to Choose",
+        icon: "👸",
+        paragraphs: [
+          "Unlike many cultures where marriages are arranged, Wodaabe women have significant romantic freedom. A woman can leave her husband for a more beautiful man without stigma—a practice called 'teegal' or wife-stealing.[^3]",
+          "This happens most often at the Gerewol. If an unmarried woman taps a married man as her choice, and he accepts, they may simply leave together. The abandoned spouse accepts this without violence—beauty has triumphed."
+        ],
+        list: [
+          "Women can have multiple partners throughout life",
+          "Wife-stealing is socially accepted and expected",
+          "Men beautify themselves specifically to attract women",
+          "Children typically stay with the mother's lineage"
+        ],
+        highlight: "A Wodaabe proverb states: 'A woman may love a man, but she may only marry a beautiful one.'"
+      },
+      {
+        heading: "Beyond Beauty: The Pulaaku Code",
+        icon: "📜",
+        paragraphs: [
+          "Despite the focus on beauty, Wodaabe culture is grounded in Pulaaku—a code of conduct emphasizing patience (munyal), self-control (semteende), modesty (hakkiilo), and care for cattle (laawol pulaaku).[^4]",
+          "The Gerewol is not mere vanity—it's a demonstration of discipline. To dance for hours in extreme heat while maintaining perfect composure is itself an expression of Pulaaku virtues."
+        ]
+      },
+      {
+        heading: "Nomads of the Sahel",
+        icon: "🐄",
+        paragraphs: [
+          "The Wodaabe are a subgroup of the larger Fulani people, distinguished by their preservation of pre-Islamic traditions and nomadic cattle-herding lifestyle. They move constantly through Niger, Nigeria, Chad, Cameroon, and Central African Republic, following seasonal pastures.",
+          "Climate change and land pressures threaten this lifestyle. As the Sahel grows drier, the Wodaabe's traditional routes become harder to follow. Yet the Gerewol continues—a celebration of beauty, community, and a way of life that has endured for centuries."
+        ]
+      }
+    ],
+    sources: [
+      { title: "Wodaabe Culture - Encyclopedia Britannica", url: "https://www.britannica.com/topic/Wodaabe" },
+      { title: "Gerewol Festival - UNESCO Intangible Heritage", url: "https://ich.unesco.org/" },
+      { title: "Fulani Marriage Practices - Cambridge Anthropology" },
+      { title: "Pulaaku Ethics - African Studies Review" }
+    ]
+  },
+  {
+    slug: "omo-valley-tribes-ethiopia-body-art",
+    title: "Ethiopia's Omo Valley: Where Body Art Is a Living Tradition",
+    seoTitle: "Omo Valley Tribes: Mursi Lip Plates, Hamar Bull Jumping & Karo Body Paint | TribeGuess",
+    seoDescription: "Explore Ethiopia's Omo Valley, home to the Mursi, Hamar, and Karo peoples. Discover the world's most elaborate body modification and painting traditions, from lip plates to bull jumping ceremonies.",
+    excerpt: "In Ethiopia's remote Omo Valley, body modification is identity. Mursi women wear clay lip plates, Hamar men leap across cattle, and the tiny Karo tribe creates living art with natural pigments. These are Africa's most visually striking cultures.",
+    emoji: "🎨",
+    gradient: "bg-gradient-to-br from-amber-500 via-red-600 to-purple-700",
+    region: "Ethiopia",
+    readTime: "8 min read",
+    publishDate: "2026-01-06",
+    tags: ["Ethiopia", "Omo Valley", "Mursi", "Hamar", "Karo", "body modification", "lip plates", "body paint"],
+    relatedTribes: [
+      { name: "Mursi", slug: "mursi" },
+      { name: "Hamar", slug: "hamar" },
+      { name: "Karo", slug: "karo" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "In the remote southwestern corner of Ethiopia, where the Omo River cuts through volcanic landscapes, live some of the world's most visually distinctive peoples. The Mursi, Hamar, Karo, Suri, and Bodi have maintained traditions of body modification and decoration that exist nowhere else on Earth.",
+          "These practices aren't mere decoration—they encode identity, status, beauty ideals, and connections to the spiritual world. Each tribe has developed unique traditions that make them instantly recognizable."
+        ]
+      },
+      {
+        heading: "The Mursi: Masters of the Lip Plate",
+        icon: "👄",
+        paragraphs: [
+          "The Mursi are perhaps the Omo Valley's most photographed people, known for the clay lip plates (dhebi a tugoin) worn by women. At around 15-16 years old, a girl's lower lip is cut by her mother and a small clay disc inserted. Over months, progressively larger plates stretch the lip.[^1]",
+          "Contrary to popular myth, lip plate size does not determine bride price—it's a personal choice expressing beauty ideals. Many young Mursi women today choose not to wear plates, though the tradition remains valued."
+        ],
+        list: [
+          "Plates can reach 12cm in diameter",
+          "Women remove plates when eating or in private",
+          "Ear plates are also worn by both men and women",
+          "The practice is voluntary—not all women participate"
+        ],
+        highlight: "The Mursi are one of only three African groups practicing lip plate insertion—a tradition that may date back centuries."
+      },
+      {
+        heading: "Hamar Bull Jumping: A Boy Becomes a Man",
+        icon: "🐂",
+        paragraphs: [
+          "For Hamar young men, adulthood is earned in a single terrifying moment: running naked across the backs of 10-30 cattle lined up in a row—four times without falling.[^2]",
+          "This ukuli ceremony marks the transition from boy to man. Success means eligibility for marriage; failure brings shame and delay. Before the jump, female relatives demand to be whipped—their scars creating bonds of obligation with the jumper."
+        ],
+        list: [
+          "Cattle are held steady by other men while the jumper runs across",
+          "The jumper must make four successful passes",
+          "Falling means waiting another year to attempt again",
+          "Women's willing whipping creates scars showing devotion"
+        ]
+      },
+      {
+        heading: "Hamar Women's Red Ochre Beauty",
+        icon: "💇",
+        paragraphs: [
+          "Hamar women are instantly recognizable by their distinctive hairstyles: hair divided into thick coils covered in butter and red ochre. First wives wear a metal ornament called a bignere that marks their status.[^3]",
+          "These elaborate styles require hours to create and maintain. The red ochre—mixed with butter and animal fat—serves both aesthetic and practical purposes, protecting hair from the harsh sun and insects."
+        ],
+        list: [
+          "Red ochre comes from iron-rich earth deposits",
+          "Butter keeps hair pliable and fragrant",
+          "Metal necklaces indicate marriage status",
+          "Goatskin skirts are decorated with beads and shells"
+        ]
+      },
+      {
+        heading: "The Karo: Living Body Paint",
+        icon: "🖌️",
+        paragraphs: [
+          "With only about 1,500 members, the Karo (Kara) are one of Africa's smallest ethnic groups—but perhaps its most artistic. They have elevated body painting to an art form unmatched anywhere on Earth.[^4]",
+          "Using white chalk, yellow mineral, red ochre, and charcoal, Karo men and women create elaborate patterns on their bodies for ceremonies, dances, and daily life. The designs are never random—each pattern has meaning and is adapted to the occasion."
+        ],
+        list: [
+          "White chalk comes from riverside deposits",
+          "Designs mimic guinea fowl plumage and other natural patterns",
+          "Scarification indicates warrior status (men) or beauty (women)",
+          "Elaborate feathered headdresses complete ceremonial dress"
+        ],
+        highlight: "The Karo are so few in number that a single epidemic or conflict could end their culture. They represent one of Earth's most endangered human traditions."
+      },
+      {
+        heading: "Threats and Preservation",
+        icon: "⚠️",
+        paragraphs: [
+          "The Omo Valley peoples face mounting pressures. Ethiopia's Gibe III dam has altered the Omo River's seasonal flooding patterns essential for their agriculture. Meanwhile, tourism brings both income and cultural disruption.[^5]",
+          "Some young people are abandoning traditional practices; others fiercely maintain them. The coming decades will determine whether these remarkable cultures adapt and survive or become memories preserved only in photographs."
+        ]
+      }
+    ],
+    sources: [
+      { title: "Mursi Lip Plates - Mursi Online", url: "https://www.mursi.org/" },
+      { title: "Hamar Bull Jumping - Absolute Ethiopia", url: "https://absoluteethiopia.com/" },
+      { title: "Hamar Culture - Wikipedia", url: "https://en.wikipedia.org/wiki/Hamar_people" },
+      { title: "Karo People - Cultural Survival", url: "https://www.culturalsurvival.org/" },
+      { title: "Omo Valley Development - Human Rights Watch" }
+    ]
+  },
+  {
+    slug: "san-bushmen-oldest-human-culture",
+    title: "The San People: Keepers of Humanity's Oldest Culture",
+    seoTitle: "San Bushmen: The World's Oldest Continuous Culture & Click Languages | TribeGuess",
+    seoDescription: "Meet the San (Bushmen) of Southern Africa, whose genetic and cultural lineage stretches back 100,000+ years. Learn about their click languages, rock art, and the wisdom of Earth's oldest people.",
+    excerpt: "Genetic studies confirm what the San have always known: they are among humanity's oldest peoples, with a lineage stretching back 100,000+ years. Their click languages, rock art, and hunter-gatherer wisdom preserve knowledge from the dawn of our species.",
+    emoji: "🗿",
+    gradient: "bg-gradient-to-br from-yellow-600 via-orange-600 to-red-700",
+    region: "Southern Africa",
+    readTime: "7 min read",
+    publishDate: "2026-01-06",
+    tags: ["San", "Bushmen", "Khoisan", "click languages", "rock art", "hunter-gatherers", "Botswana", "Namibia"],
+    relatedTribes: [
+      { name: "San", slug: "san" },
+      { name: "Hadza", slug: "hadza" },
+      { name: "Himba", slug: "himba" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "When scientists mapped the human genome, they made a remarkable discovery: the San people of Southern Africa carry the oldest genetic lineage of any living population. Their ancestors were among the first modern humans, and their DNA preserves variations lost in all other human populations.",
+          "But the San are far more than genetic curiosities. Their rock art galleries—some 30,000 years old—represent the world's largest collection of prehistoric art. Their click languages may preserve sounds used by humanity's earliest speakers. They are living links to our deepest past."
+        ]
+      },
+      {
+        heading: "The Click Language Family",
+        icon: "👅",
+        paragraphs: [
+          "San languages contain more click consonants than any other language family—some have over 100 distinct click sounds. These include dental clicks (like 'tsk-tsk'), lateral clicks (like urging a horse), and palatal clicks.[^1]",
+          "For thousands of years, these clicks were dismissed by outsiders as 'primitive.' Today, linguists recognize them as among the most sophisticated speech sounds humans can produce—so difficult that most non-native speakers never master them."
+        ],
+        list: [
+          "The !Kung San language has 48 distinct click consonants",
+          "Clicks are represented in writing by symbols like !, ǂ, ǀ, and ǃ",
+          "Children learn clicks naturally; adults find them nearly impossible",
+          "Click languages may have influenced Zulu, Xhosa, and other Bantu languages"
+        ],
+        highlight: "San click languages may be humanity's original speech sounds—preserved through 100,000 years of continuous tradition."
+      },
+      {
+        heading: "The World's Greatest Rock Art",
+        icon: "🎨",
+        paragraphs: [
+          "Across Southern Africa, the San created an estimated 20,000+ rock art sites containing hundreds of thousands of images. The oldest confirmed paintings date to 30,000 years ago, making this the world's largest and oldest collection of human art.[^2]",
+          "These paintings aren't primitive scribbles—they're sophisticated works depicting animals, humans, hunting scenes, and spiritual experiences. The famous 'eland' antelope appears repeatedly, representing spiritual power accessed through trance dances."
+        ],
+        list: [
+          "Drakensberg Mountains alone contain 35,000+ images at 600 sites",
+          "Paints were made from ochre, charcoal, and animal fat",
+          "Many images depict 'therianthropes'—half-human, half-animal figures from trance visions",
+          "Some paintings show extinct animals like quaggas"
+        ]
+      },
+      {
+        heading: "Trance Dance and Healing",
+        icon: "🌀",
+        paragraphs: [
+          "At the heart of San spiritual life is the healing trance dance. Community members gather around a fire, clapping and singing, while healers dance themselves into altered states of consciousness.[^3]",
+          "In this trance state, healers believe they can draw sickness out of patients, travel to the spirit world, and make rain. The practice continues today among San communities, representing an unbroken spiritual tradition spanning millennia."
+        ],
+        list: [
+          "Dances can last 6+ hours through the night",
+          "Healers experience n|om—a supernatural energy—rising up their spines",
+          "About half the men and one-third of women become trained healers",
+          "Trance states are induced through rhythmic movement and hyperventilation"
+        ]
+      },
+      {
+        heading: "From Masters to Margins",
+        icon: "😢",
+        paragraphs: [
+          "The San once occupied all of Southern and Eastern Africa. The arrival of Bantu-speaking farmers 2,000 years ago, followed by European colonizers, pushed them to the margins—the Kalahari Desert and other harsh environments where no one else wanted to live.[^4]",
+          "Colonial authorities hunted the San like animals; their lands were seized for nature reserves. Today, about 100,000 San survive in Botswana, Namibia, South Africa, and Angola—fighting for land rights and cultural recognition."
+        ],
+        highlight: "The people who inhabited Southern Africa for 100,000 years are now among its most marginalized—pushed onto 'reservations' in their own ancient homeland."
+      },
+      {
+        heading: "Wisdom for the Modern World",
+        icon: "💡",
+        paragraphs: [
+          "San traditional knowledge includes detailed understanding of hundreds of plant species, animal behaviors, and ecological relationships. Their tracking skills are legendary—they can follow spoor invisible to untrained eyes across stone.",
+          "Today, San trackers work with wildlife researchers and anti-poaching units. Their knowledge of medicinal plants has contributed to pharmaceutical research. Perhaps most importantly, their egalitarian society offers a different model for human organization—one where sharing and equality are the foundation, not competition and hierarchy."
+        ]
+      }
+    ],
+    sources: [
+      { title: "San Genetics - Nature Journal", url: "https://www.nature.com/articles/nature08795" },
+      { title: "San Rock Art - South African Heritage", url: "https://www.sahra.org.za/rock-art/" },
+      { title: "San Trance Healing - Cambridge Anthropology" },
+      { title: "San Land Rights - Survival International", url: "https://www.survivalinternational.org/tribes/bushmen" }
+    ]
+  },
+  {
+    slug: "amazigh-berber-indigenous-north-africa",
+    title: "The Amazigh: Indigenous People of North Africa",
+    seoTitle: "Amazigh (Berber) People: North Africa's Indigenous Civilization & Tifinagh Script | TribeGuess",
+    seoDescription: "Discover the Amazigh (Berber) people, North Africa's indigenous inhabitants with their own Tifinagh alphabet, spanning Morocco, Algeria, and beyond. Learn about their 10,000-year history.",
+    excerpt: "Before Arabs, Romans, or Phoenicians, the Amazigh were North Africa. With 40+ million people across eight countries, their own ancient alphabet, and a 10,000-year history, they're one of Africa's largest indigenous groups.",
+    emoji: "ⵣ",
+    gradient: "bg-gradient-to-br from-blue-600 via-green-600 to-yellow-500",
+    region: "North Africa",
+    readTime: "7 min read",
+    publishDate: "2026-01-07",
+    tags: ["Amazigh", "Berber", "Morocco", "Algeria", "Tifinagh", "indigenous peoples", "North Africa"],
+    relatedTribes: [
+      { name: "Amazigh", slug: "amazigh" },
+      { name: "Tuareg", slug: "tuareg" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "When most people think of North Africa, they think of Arab culture. But long before Islam arrived in the 7th century, the Amazigh—often called Berbers—had inhabited this region for at least 10,000 years. Today, over 40 million Amazigh people maintain a distinct identity across Morocco, Algeria, Tunisia, Libya, Mali, Niger, Mauritania, and Egypt.",
+          "The word 'Berber' comes from the Greek 'barbaros' (foreigner). The Amazigh prefer their own name, which means 'free people'—a fitting description for a people who have resisted countless invasions while preserving their language, customs, and identity."
+        ]
+      },
+      {
+        heading: "Tifinagh: Africa's Ancient Alphabet",
+        icon: "ⵣ",
+        paragraphs: [
+          "The Amazigh are one of the few African peoples with their own indigenous alphabet. Tifinagh, dating back at least 2,500 years, evolved from ancient Libyan scripts and is still used today, especially among the Tuareg and in Moroccan schools since 2003.[^1]",
+          "The symbol ⵣ (yaz) represents a 'free man' and has become a pan-Amazigh identity symbol, appearing on jewelry, flags, and tattoos as a mark of cultural pride."
+        ],
+        list: [
+          "Tifinagh has 33 consonant symbols in its modern standardized form",
+          "Morocco recognized Tamazight as an official language in 2011",
+          "Algeria followed suit in 2016",
+          "UNESCO has recognized Tifinagh as cultural heritage"
+        ],
+        highlight: "Tifinagh is one of only a handful of African-origin alphabets still in use today—a living script with 2,500+ years of continuous history."
+      },
+      {
+        heading: "Famous Amazigh in History",
+        icon: "👑",
+        paragraphs: [
+          "Amazigh influence extends far beyond North Africa. Many figures central to Mediterranean history were of Amazigh origin.[^2]",
+          "Augustine of Hippo—one of Christianity's most influential theologians—was Amazigh. Tariq ibn Ziyad, the general who conquered Iberia and gave Gibraltar (Jabal Ṭāriq = Mount of Tariq) its name, was Amazigh. Zinedine Zidane, arguably the greatest footballer of his generation, is of Kabyle Amazigh heritage."
+        ],
+        list: [
+          "Massinissa unified Numidia and allied with Rome against Carthage",
+          "Dihya (Kahina) was a queen who resisted Arab conquest for years",
+          "The Almohad and Almoravid dynasties that ruled Spain were Amazigh",
+          "Hannibal's legendary cavalry was largely Amazigh (Numidian)"
+        ]
+      },
+      {
+        heading: "The Amazigh Cultural Revival",
+        icon: "🎵",
+        paragraphs: [
+          "After decades of Arabization policies, Amazigh culture is experiencing a renaissance. Music, from Kabyle folk songs to modern Amazigh rock, reaches millions. Literature, suppressed for generations, now flourishes.[^3]",
+          "The Arab Spring accelerated this revival. In Morocco and Algeria, Amazigh activists successfully lobbied for constitutional recognition of Tamazight. Schools now teach the language, and Tifinagh appears on public signs alongside Arabic and French."
+        ],
+        list: [
+          "Yennayer (Amazigh New Year) is an official holiday in Algeria",
+          "Amazigh music artists fill stadiums across North Africa",
+          "Traditional carpet and rug weaving generates significant income",
+          "Amazigh cinema and television production is growing rapidly"
+        ]
+      },
+      {
+        heading: "Regional Amazigh Groups",
+        icon: "🗺️",
+        paragraphs: [
+          "The Amazigh are not monolithic—they comprise numerous regional groups with distinct dialects and traditions. The Kabyle of Algeria's mountainous northeast, the Riffians of Morocco's north, the Shilha (Sous) of Morocco's south, and the Tuareg of the Sahara each have unique characteristics.[^4]",
+          "What unites them is language (various Tamazight dialects), cultural practices (hospitality, collective decision-making, geometric arts), and a shared identity as indigenous North Africans distinct from Arab populations."
+        ],
+        list: [
+          "Kabyle: Algeria's largest Amazigh group, politically active",
+          "Riffians: Northern Morocco, historically resistant to central authority",
+          "Shilha: Southern Morocco's Atlas Mountains and valleys",
+          "Tuareg: Saharan Amazigh known as 'Blue People' for their indigo veils"
+        ]
+      },
+      {
+        heading: "Amazigh Naming Traditions",
+        icon: "📛",
+        paragraphs: [
+          "Traditional Amazigh names reflect their pre-Islamic heritage and natural world. Names like Massinissa (prince), Tiziri (moonlight), Amazzal (guide), and Tinhinan (she of the tents) connect children to their indigenous identity.[^5]",
+          "After independence, many North African governments banned Amazigh names, requiring Arabic alternatives. This policy has since been reversed, and traditional names are now experiencing a revival alongside the broader cultural renaissance."
+        ],
+        list: [
+          "Amazigh/Mazigh: 'Free person' (the most symbolic name)",
+          "Tiziri: 'Moonlight' (popular girls' name)",
+          "Aksil: 'Leopard' (popular boys' name)",
+          "Dihya: Named after the warrior queen"
+        ]
+      }
+    ],
+    sources: [
+      { title: "Tifinagh Script - UNESCO", url: "https://ich.unesco.org/" },
+      { title: "Amazigh History - Encyclopedia Britannica", url: "https://www.britannica.com/topic/Berber" },
+      { title: "Amazigh Cultural Revival - Middle East Eye", url: "https://www.middleeasteye.net/" },
+      { title: "Amazigh Regional Groups - Ethnologue", url: "https://www.ethnologue.com/" },
+      { title: "Amazigh Naming Traditions - Academic Studies" }
+    ]
   }
 ];
