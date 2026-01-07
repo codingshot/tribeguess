@@ -11523,6 +11523,185 @@
       "sources": [{ "name": "Wikipedia - Mandinka", "url": "https://en.wikipedia.org/wiki/Mandinka_people" }, { "name": "Britannica - Mali Empire", "url": "https://www.britannica.com/place/Mali-historical-empire-Africa" }],
       "description": "The Malinke/Mandinka are the founding people of the great Mali Empire, known for the griot oral tradition, kora music, and producing Mansa Musa—history's richest person.",
       "relatedTribes": ["bambara", "soninke", "wolof", "fulani"]
+    },
+
+    {
+      "id": "ogiek",
+      "name": "Ogiek (Okiek)",
+      "slug": "ogiek",
+      "youtubeVideoId": "7C9Q5l_yDlE",
+      "countries": ["KE", "TZ"],
+      "region": "Mau Forest, Kenya",
+      "population": "~53,000",
+      "populationPercent": "<0.1% (Kenya)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": -0.5, "lng": 35.5 },
+      "counties": ["Nakuru", "Narok", "Kericho", "Bomet"],
+      "namePrefixes": ["Kip", "Che", "Ki"],
+      "commonNames": {
+        "female": ["Chepkorir", "Chebet", "Jerop", "Cherono"],
+        "male": ["Kipchirchir", "Kipruto", "Kipkemboi", "Kosgei"]
+      },
+      "stereotypes": ["Forest hunters", "Honey gatherers", "Mau Forest people", "Land rights activists", "Indigenous knowledge keepers"],
+      "culturalTraits": ["Traditional beekeeping - master honey hunters", "Hunter-gatherer lifestyle in Mau Forest", "Deep ecological knowledge of forest ecosystems", "Oral traditions of forest stewardship", "Fight for ancestral land rights"],
+      "funFacts": ["The word 'Ogiek' means 'caretaker of flora and fauna'", "They won a landmark African Court case for land rights in 2017", "Traditional Ogiek honey is prized across Kenya", "They were derogatorily called 'Dorobo' (poor people without cattle) by pastoralists"],
+      "traditionalFood": {
+        "staples": ["Wild honey", "Wild game", "Forest tubers", "Berries", "Traded grains"],
+        "beverages": ["Honey wine", "Forest herbal teas"],
+        "specialDishes": ["Roasted wild game", "Honey-based dishes"],
+        "description": "Ogiek diet traditionally centered on forest products - especially honey, wild game, and gathered plants. Trade with neighbors brought grains."
+      },
+      "traditionalDance": "Forest ritual dances for hunting success",
+      "religion": "Traditional forest spirituality, Christianity spreading",
+      "language": { "name": "Ogiek (Akiek)", "speakers": "~50,000", "greeting": "Chamge?", "greetingMeaning": "How are you?", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Oral tradition" },
+      "sources": [{ "name": "Wikipedia - Ogiek", "url": "https://en.wikipedia.org/wiki/Okiek_people" }, { "name": "Survival International - Ogiek", "url": "https://www.survivalinternational.org/peoples/ogiek" }],
+      "description": "The Ogiek are Kenya's indigenous forest hunter-gatherers, famous as honey hunters in the Mau Forest. They won a historic African Court ruling for their land rights in 2017.",
+      "relatedTribes": ["kalenjin", "maasai", "kipsigis"]
+    },
+
+    {
+      "id": "karamojong",
+      "name": "Karamojong",
+      "slug": "karamojong",
+      "youtubeVideoId": "8v8m_p3z6IM",
+      "countries": ["UG"],
+      "region": "Karamoja, Northeast Uganda",
+      "population": "~1.2 million",
+      "populationPercent": "~3% (Uganda)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 3.5, "lng": 34.5 },
+      "counties": ["Kaabong", "Kotido", "Moroto", "Napak", "Amudat"],
+      "namePrefixes": ["Lo", "Na", "Apa"],
+      "commonNames": {
+        "female": ["Nakiru", "Amulen", "Nachut", "Angella"],
+        "male": ["Lomongin", "Lotyang", "Napeyok", "Lokwii", "Apamarok"]
+      },
+      "stereotypes": ["Fierce cattle warriors", "Traditional pastoralists", "Cattle raiders", "Distinctive dress", "Marginalized region"],
+      "culturalTraits": ["Cattle are central to identity, wealth, and marriage", "Age-grade warrior system (ngikaukok)", "Distinctive minimal clothing and beaded jewelry", "Cattle raiding as traditional warrior practice (now reduced)", "Semi-arid land requires seasonal movement"],
+      "funFacts": ["Karamoja has the highest cattle population in Uganda", "Men traditionally wore blankets and carried spears", "Bride price is paid in cattle - often 50-100 head", "Recent peace initiatives have reduced cattle raiding significantly"],
+      "traditionalFood": {
+        "staples": ["Cattle blood and milk", "Sorghum", "Millet", "Goat meat"],
+        "beverages": ["Fresh and soured milk", "Sorghum beer"],
+        "specialDishes": ["Blood and milk mixture", "Roasted goat"],
+        "description": "Karamojong diet centers on cattle products. Blood is drawn from living cattle and mixed with milk for nutrition."
+      },
+      "traditionalDance": "Edonga warrior dances with jumping",
+      "religion": "Traditional beliefs (Akuj sky god), Christianity growing",
+      "language": { "name": "Karamojong (Ngakaramojong)", "speakers": "~1 million", "greeting": "Yoga?", "greetingMeaning": "How are you?", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Karamojong", "url": "https://en.wikipedia.org/wiki/Karamojong_people" }, { "name": "Minority Rights Group", "url": "https://minorityrights.org/communities/karamojong-and-related-groups/" }],
+      "description": "The Karamojong are cattle-centered pastoralists of northeastern Uganda, known for their warrior traditions, distinctive dress, and ongoing adaptation from raiding to peace.",
+      "relatedTribes": ["turkana", "jie", "dodoth", "pokot"]
+    },
+
+    {
+      "id": "ik",
+      "name": "Ik (Teuso)",
+      "slug": "ik",
+      "youtubeVideoId": "2RLsGFLhMzM",
+      "countries": ["UG"],
+      "region": "Mount Morungole, Northeast Uganda",
+      "population": "~10,000",
+      "populationPercent": "<0.1% (Uganda)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 3.8, "lng": 33.8 },
+      "counties": ["Kaabong District"],
+      "namePrefixes": ["Lo", "Na", "Ik"],
+      "commonNames": {
+        "female": ["Nachalo", "Lokiru", "Nakai"],
+        "male": ["Lokwii", "Lopore", "Loriang"]
+      },
+      "stereotypes": ["Mountain isolates", "Unique language", "Forced resettlement survivors", "Small population", "Misunderstood by anthropology"],
+      "culturalTraits": ["Mountain-dwelling cultivators on Morungole slopes", "Unique language isolate unrelated to neighbors", "Historically hunter-gatherers forced to farm", "Small, tight-knit community of ~10,000", "Twelve exogamous patriclans"],
+      "funFacts": ["Anthropologist Colin Turnbull's 'The Mountain People' (1972) controversially portrayed them as lacking compassion", "Later studies showed Turnbull's account was during famine and misrepresented normal life", "Their language 'Icetot' is unrelated to neighboring Nilotic languages", "They were displaced from their hunting grounds for national park creation"],
+      "traditionalFood": {
+        "staples": ["Sorghum", "Millet", "Wild honey", "Gathered plants"],
+        "beverages": ["Sorghum beer"],
+        "specialDishes": ["Mountain-foraged foods", "Honey"],
+        "description": "The Ik now farm sorghum and millet after being displaced from hunting grounds. Honey remains important."
+      },
+      "traditionalDance": "Community dances during harvests",
+      "religion": "Traditional beliefs, Christianity spreading",
+      "language": { "name": "Ik (Icetot)", "speakers": "~10,000", "greeting": "Ida?", "greetingMeaning": "How are you?", "family": "Kuliak (Nilo-Saharan - isolate)", "writingSystem": "Oral tradition" },
+      "sources": [{ "name": "Wikipedia - Ik people", "url": "https://en.wikipedia.org/wiki/Ik_people" }, { "name": "Joshua Project - Ik", "url": "https://joshuaproject.net/people_groups/15453/UG" }],
+      "description": "The Ik are a small mountain-dwelling people (~10,000) of northeast Uganda speaking a unique language isolate. They are noted for survival despite displacement and misrepresentation.",
+      "relatedTribes": ["karamojong", "dodoth", "so"]
+    },
+
+    {
+      "id": "rendille",
+      "name": "Rendille",
+      "slug": "rendille",
+      "youtubeVideoId": "gNJ9_F_KXsQ",
+      "countries": ["KE"],
+      "region": "Marsabit, Northern Kenya",
+      "population": "~100,000",
+      "populationPercent": "~0.2% (Kenya)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 2.3, "lng": 37.0 },
+      "counties": ["Marsabit County"],
+      "namePrefixes": ["Ga", "Le", "Ha"],
+      "commonNames": {
+        "female": ["Galgallo", "Lekinyi", "Harakhe"],
+        "male": ["Galma", "Lekupe", "Hasufa", "Boru"]
+      },
+      "stereotypes": ["Camel herders", "Desert survivors", "Cushitic-Nilotic blend", "Marriaagable age sets", "Preserved traditions"],
+      "culturalTraits": ["Camel-centered pastoralism in Kaisut Desert", "Blend of Cushitic and Nilotic cultural elements", "Complex age-grade and clan system", "Women's elaborate beaded hairstyles", "Strong alliance with neighboring Samburu"],
+      "funFacts": ["Camels are central - they drink camel milk and blood like cattle people use cows", "Rendille language is Cushitic (related to Somali) but culture resembles Nilotic neighbors", "Women's hairstyles indicate marriage status - married women wear elaborate beaded mohawks", "They practice a 7-year age-set cycle for organizing society"],
+      "traditionalFood": {
+        "staples": ["Camel milk", "Camel meat", "Goat meat", "Blood"],
+        "beverages": ["Camel milk (fresh and soured)"],
+        "specialDishes": ["Camel blood and milk mixture", "Roasted camel meat"],
+        "description": "Rendille survive on camel products in the harsh Kaisut Desert. Camels provide milk, meat, blood, and transport."
+      },
+      "traditionalDance": "Ceremonial dances during age-set transitions",
+      "religion": "Traditional beliefs, Islam and Christianity spreading",
+      "language": { "name": "Rendille", "speakers": "~100,000", "greeting": "Nagaya?", "greetingMeaning": "How are you? (Peace?)", "family": "Cushitic (Afro-Asiatic)", "writingSystem": "Oral tradition" },
+      "sources": [{ "name": "Wikipedia - Rendille", "url": "https://en.wikipedia.org/wiki/Rendille_people" }],
+      "description": "The Rendille are camel-herding pastoralists of Kenya's Kaisut Desert, blending Cushitic language with Nilotic-influenced culture and distinctive women's beaded hairstyles.",
+      "relatedTribes": ["samburu", "borana", "gabra", "turkana"]
+    },
+
+    {
+      "id": "herero",
+      "name": "Herero (Ovaherero)",
+      "slug": "herero",
+      "youtubeVideoId": "dNi5e7tJEKk",
+      "countries": ["NA", "BW", "AO"],
+      "region": "Namibia, Botswana, Angola",
+      "population": "~250,000",
+      "populationPercent": "~7% (Namibia)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -21.5, "lng": 17.0 },
+      "counties": ["Kunene Region", "Omaheke Region"],
+      "namePrefixes": ["Ka", "Mu", "Tji"],
+      "commonNames": {
+        "female": ["Kaura", "Mukuatoora", "Tjiveze", "Uerieta"],
+        "male": ["Katjimune", "Muharukua", "Tjikuua", "Hosea"]
+      },
+      "stereotypes": ["Victorian dress tradition", "Cattle wealth", "German genocide survivors", "Proud heritage", "Distinctive women's dress"],
+      "culturalTraits": ["Women's elaborate Victorian-era dresses (otjikaiva) adopted as resistance symbol", "Cattle central to wealth, status, and identity", "Survivors of German colonial genocide (1904-1908)", "Patrilineal and matrilineal dual descent system", "Sacred fire (okuruwo) maintained in each homestead"],
+      "funFacts": ["Women's horn-shaped headdresses (otjikaiva) symbolize cattle - sacred animals", "The Victorian dress was adopted during colonial era and transformed into cultural identity", "Germany officially recognized the Herero genocide in 2021", "Up to 80% of Herero were killed by German colonial forces"],
+      "traditionalFood": {
+        "staples": ["Cattle milk", "Beef", "Maize porridge", "Wild melons"],
+        "beverages": ["Sour milk (omaere)", "Home-brewed beer"],
+        "specialDishes": ["Dried meat (ombidi)", "Milk and blood mixture"],
+        "description": "Herero cuisine centers on cattle products. Sour milk is a dietary staple, and cattle are slaughtered for important ceremonies."
+      },
+      "traditionalDance": "Otjiunda ancestral ceremonies",
+      "religion": "Christianity (Lutheran), Traditional ancestor veneration",
+      "language": { "name": "Otjiherero", "speakers": "~250,000", "greeting": "Wa penduka?", "greetingMeaning": "How did you wake up?", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "populationByCountry": [
+        { "country": "NA", "population": "~180,000", "percent": "7%" },
+        { "country": "BW", "population": "~40,000", "percent": "2%" },
+        { "country": "AO", "population": "~30,000", "percent": "<1%" }
+      ],
+      "famousPeople": [
+        { "name": "Samuel Maharero", "role": "Chief who led resistance to genocide", "wikipedia": "https://en.wikipedia.org/wiki/Samuel_Maharero" },
+        { "name": "Vekuii Rukoro", "role": "Paramount Chief (2014-2021)", "wikipedia": "https://en.wikipedia.org/wiki/Vekuii_Rukoro" }
+      ],
+      "sources": [{ "name": "Wikipedia - Herero", "url": "https://en.wikipedia.org/wiki/Herero_people" }, { "name": "Britannica - Herero Genocide", "url": "https://www.britannica.com/event/Herero-and-Nama-genocide" }],
+      "description": "The Herero are cattle-herding people of Namibia known for women's distinctive Victorian-era dresses (adopted as cultural resistance) and as survivors of the first genocide of the 20th century.",
+      "relatedTribes": ["himba", "nama", "damara", "ovambo"]
     }
   ]
 }

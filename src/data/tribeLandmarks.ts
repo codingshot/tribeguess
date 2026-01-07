@@ -1391,6 +1391,66 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       wikipediaUrl: "https://en.wikipedia.org/wiki/Timbuktu",
       unescoStatus: "world-heritage"
     }
+  ],
+
+  // ============ KENYA - OGIEK ============
+  ogiek: [
+    {
+      name: "Mau Forest Complex",
+      type: "natural",
+      description: "The largest montane forest in East Africa and ancestral home of the Ogiek people. The Ogiek won a landmark African Court case for their land rights here in 2017.",
+      coordinates: { lat: -0.5, lng: 35.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mau_Forest"
+    },
+    {
+      name: "Nessuit Village",
+      type: "historical",
+      description: "Historic Ogiek settlement in the Mau Forest. Center of traditional beekeeping and honey-gathering culture.",
+      coordinates: { lat: -0.35, lng: 35.65 }
+    }
+  ],
+
+  // ============ UGANDA - KARAMOJONG & IK ============
+  karamojong: [
+    {
+      name: "Mount Moroto",
+      type: "sacred",
+      description: "Sacred mountain of the Karamojong, believed to be the source of their cattle. Traditional spiritual site for prayers and ceremonies.",
+      coordinates: { lat: 2.54, lng: 34.8 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mount_Moroto"
+    },
+    {
+      name: "Karamoja Cultural Festival Grounds",
+      type: "historical",
+      description: "Annual gathering site where Karamojong and related groups celebrate traditional culture, dance, and cattle competitions.",
+      coordinates: { lat: 2.3, lng: 34.63 }
+    }
+  ],
+
+  ik: [
+    {
+      name: "Mount Morungole",
+      type: "natural",
+      description: "Mountain home of the Ik people on the Uganda-Kenya border. The Ik were displaced from hunting grounds below and now farm the mountain slopes.",
+      coordinates: { lat: 3.8, lng: 33.8 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Morungole"
+    }
+  ],
+
+  // ============ KENYA - RENDILLE ============
+  rendille: [
+    {
+      name: "Kaisut Desert",
+      type: "natural",
+      description: "The semi-arid territory where Rendille camel herders have survived for centuries. Extreme conditions make camels essential for survival.",
+      coordinates: { lat: 2.3, lng: 37.2 }
+    },
+    {
+      name: "Korr",
+      type: "historical",
+      description: "Major Rendille settlement in Marsabit County. Administrative center and market town for the Rendille community.",
+      coordinates: { lat: 2.5, lng: 37.12 }
+    }
   ]
 };
 
