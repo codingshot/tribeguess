@@ -1312,6 +1312,85 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       coordinates: { lat: 5.2, lng: 35.95 },
       wikipediaUrl: "https://en.wikipedia.org/wiki/Omo_River"
     }
+  ],
+  
+  // ============ SOUTH SUDAN ============
+  shilluk: [
+    {
+      name: "Fashoda (Kodok)",
+      type: "historical",
+      description: "Traditional capital of the Shilluk Kingdom and seat of the Reth (divine king). Site of the famous 1898 Fashoda Incident between France and Britain.",
+      coordinates: { lat: 9.88, lng: 32.12 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Kodok"
+    },
+    {
+      name: "Malakal",
+      type: "historical",
+      description: "Largest city in Upper Nile State with significant Shilluk population. Important trading center on the White Nile.",
+      coordinates: { lat: 9.53, lng: 31.66 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Malakal"
+    }
+  ],
+
+  // ============ CENTRAL AFRICA ============
+  baka: [
+    {
+      name: "Dja Faunal Reserve",
+      type: "natural",
+      description: "UNESCO World Heritage rainforest site and traditional Baka hunting grounds. One of the largest and best-protected rainforests in Africa.",
+      coordinates: { lat: 3.0, lng: 13.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Dja_Faunal_Reserve",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Lobéké National Park",
+      type: "natural",
+      description: "Protected forest where Baka maintain traditional hunting and gathering rights. Famous for forest elephants and gorillas.",
+      coordinates: { lat: 2.3, lng: 15.6 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lobéké_National_Park"
+    }
+  ],
+
+  suri: [
+    {
+      name: "Kibish",
+      type: "historical",
+      description: "Main town and administrative center of the Suri. Remote location requires days of travel from major Ethiopian cities.",
+      coordinates: { lat: 5.3, lng: 35.5 }
+    },
+    {
+      name: "Omo National Park",
+      type: "natural",
+      description: "National park in Suri territory, though the tribe has limited access. Home to diverse wildlife and river ecosystems.",
+      coordinates: { lat: 5.7, lng: 36.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Omo_National_Park"
+    }
+  ],
+
+  // ============ WEST AFRICA ============
+  malinke: [
+    {
+      name: "Niani (Ancient Capital)",
+      type: "archaeological",
+      description: "Believed site of Niani, capital of the Mali Empire under Mansa Musa. Archaeological excavations continue to reveal the city's former glory.",
+      coordinates: { lat: 11.38, lng: -8.41 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Niani_(city)"
+    },
+    {
+      name: "Kangaba",
+      type: "sacred",
+      description: "Sacred town where the Kamabolon sanctuary stands—a thatched structure rebuilt every seven years in a ceremony preserving Mandinka oral traditions.",
+      coordinates: { lat: 11.93, lng: -8.42 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Kangaba"
+    },
+    {
+      name: "Timbuktu",
+      type: "historical",
+      description: "Legendary city of learning and trade, established by the Mali Empire. UNESCO World Heritage site with ancient mosques and libraries.",
+      coordinates: { lat: 16.77, lng: -3.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Timbuktu",
+      unescoStatus: "world-heritage"
+    }
   ]
 };
 
