@@ -1137,6 +1137,54 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       wikipediaUrl: "https://en.wikipedia.org/wiki/Royal_Hill_of_Ambohimanga",
       unescoStatus: "world-heritage"
     }
+  ],
+  
+  // ============ LESSER-KNOWN TRIBES ============
+  dogon: [
+    {
+      name: "Bandiagara Escarpment",
+      type: "natural",
+      description: "Dramatic 150km sandstone cliff with over 700 Dogon villages built into the rock face. UNESCO World Heritage Site since 1989, containing sacred shrines and ancient Tellem dwellings.",
+      coordinates: { lat: 14.3500, lng: -3.6167 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bandiagara_Escarpment",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Sangha Village Complex",
+      type: "sacred",
+      description: "One of the largest Dogon villages with elaborate toguna (men's meeting houses), granaries, and the Hogon's (spiritual leader) sacred compound.",
+      coordinates: { lat: 14.4667, lng: -3.3167 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Sangha,_Mali"
+    },
+    {
+      name: "Tellem Caves",
+      type: "archaeological",
+      description: "Ancient burial caves of the Tellem people who preceded the Dogon. Cliff burials date back to the 11th century and contain unique artifacts.",
+      coordinates: { lat: 14.3000, lng: -3.4833 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Tellem"
+    }
+  ],
+  
+  senufo: [
+    {
+      name: "Korhogo Sacred Grove",
+      type: "sacred",
+      description: "Sacred forest near Korhogo containing Poro society initiation sites, ancestral shrines, and secret ritual grounds. Center of Senufo spiritual life.",
+      coordinates: { lat: 9.4500, lng: -5.6333 }
+    },
+    {
+      name: "Fakaha Village",
+      type: "historical",
+      description: "Famous Senufo artisan village known for producing traditional mud cloth (korhogo cloth) paintings. Artists draw with fermented mud on cotton fabric.",
+      coordinates: { lat: 9.5667, lng: -5.8333 }
+    },
+    {
+      name: "Sikasso Fortress",
+      type: "historical",
+      description: "Ruins of the Tata fortress in Sikasso, Mali, where Senufo and Bambara peoples resisted French colonization until 1898. The king chose death over surrender.",
+      coordinates: { lat: 11.3167, lng: -5.6667 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Sikasso"
+    }
   ]
 };
 
