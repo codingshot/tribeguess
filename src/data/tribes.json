@@ -3278,6 +3278,7 @@
       "name": "Igbo",
       "slug": "igbo",
       "youtubeVideoId": "t9F3eIJgD2I",
+      "languageVideoId": "zbURysFQIOY",
       "countries": ["NG", "GQ"],
       "region": "Southeastern Nigeria",
       "population": "~44 million",
@@ -3394,6 +3395,7 @@
       "name": "Hausa",
       "slug": "hausa",
       "youtubeVideoId": "3bJjSz_vr9k",
+      "languageVideoId": "Imlzsn_4Srk",
       "countries": ["NG", "NE", "GH", "CM", "TD", "BF", "BJ", "TG", "CI"],
       "region": "Northern Nigeria / Niger",
       "population": "~80 million",
@@ -3636,6 +3638,7 @@
       "name": "Ashanti (Asante)",
       "slug": "ashanti",
       "youtubeVideoId": "0DIRMcpOtnc",
+      "languageVideoId": "sGWqt0EXtCo",
       "countries": ["GH", "CI"],
       "region": "Central Ghana",
       "population": "~11 million",
@@ -4219,6 +4222,7 @@
       "name": "Amhara",
       "slug": "amhara",
       "youtubeVideoId": "zuTu-SczETs",
+      "languageVideoId": "uMmQd11Ltqo",
       "countries": ["ET", "ER"],
       "region": "Amhara Region, Ethiopia",
       "population": "~32 million",
@@ -4335,6 +4339,7 @@
       "name": "Wolof",
       "slug": "wolof",
       "youtubeVideoId": "i8UdFepukRY",
+      "languageVideoId": "-L0UGjFR16o",
       "countries": ["SN", "GM", "MR"],
       "region": "Senegal & Gambia",
       "population": "~6 million",
@@ -10501,6 +10506,342 @@
       ],
       "description": "The Mongo are the largest ethnic group of the Congo Basin rainforest, master fishers and traders known for elaborate canoe culture and the epic Lianja creation story.",
       "relatedTribes": ["ngombe", "bolia", "ekonda", "tetela"]
+    },
+
+    {
+      "id": "dogon",
+      "name": "Dogon",
+      "slug": "dogon",
+      "youtubeVideoId": "bVKv8_RlZck",
+      "countries": ["ML", "BF"],
+      "region": "Bandiagara Escarpment, Mali",
+      "population": "~800,000",
+      "populationPercent": "~4% (Mali)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 14.35, "lng": -3.25 },
+      "counties": ["Mopti Region", "Bandiagara Circle", "Bandiagara Cliffs"],
+      "namePrefixes": ["Ogob", "Am", "An", "Dolo"],
+      "commonNames": {
+        "female": ["Yaguine", "Sata", "Pama", "Youmou", "Adama"],
+        "male": ["Ogobara", "Amadou", "Amatigui", "Dolo", "Ogotemmêli"]
+      },
+      "stereotypes": [
+        "Ancient astronomical knowledge",
+        "Cliff dwellers",
+        "Mask traditions",
+        "Secretive culture",
+        "Master sculptors",
+        "Grain farmers"
+      ],
+      "culturalTraits": [
+        "Cliff-side villages on Bandiagara Escarpment",
+        "Elaborate cosmology and astronomical knowledge",
+        "Sigui ceremony (every 60 years)",
+        "Masked dances (Dama, Sigui)",
+        "Wood and metal sculpture traditions",
+        "Hogon (spiritual leader) system"
+      ],
+      "funFacts": [
+        "Dogon astronomical knowledge of the Sirius star system predates modern telescopes",
+        "The Bandiagara Escarpment is a UNESCO World Heritage Site",
+        "Dogon masks can be over 10 meters tall (Sirige masks)",
+        "The Sigui ceremony occurs only once every 60 years"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Onions", "Tomatoes"],
+        "beverages": ["Millet beer (Dolo)", "Onion tea"],
+        "specialDishes": ["Millet porridge", "Onion sauce", "Dried fish stews"],
+        "description": "Dogon cuisine is based on millet and onions, grown on the escarpment terraces. Dolo (millet beer) is central to ceremonies."
+      },
+      "traditionalDance": "Masked dances (Dama funeral rites, Sigui initiation)",
+      "religion": "Traditional Dogon religion, Islam, Christianity",
+      "language": {
+        "name": "Dogon languages",
+        "speakers": "~600,000",
+        "greeting": "Seo?",
+        "greetingMeaning": "How are you?",
+        "family": "Dogon (Niger-Congo, isolate branch)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Ogotemmêli", "role": "Dogon sage who shared cosmology with Marcel Griaule", "wikipedia": "https://en.wikipedia.org/wiki/Ogotemmêli" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Dogon people", "url": "https://en.wikipedia.org/wiki/Dogon_people" },
+        { "name": "UNESCO - Bandiagara", "url": "https://whc.unesco.org/en/list/516" },
+        { "name": "Britannica - Dogon", "url": "https://www.britannica.com/topic/Dogon" }
+      ],
+      "description": "The Dogon are famous for their cliff dwellings on Mali's Bandiagara Escarpment, elaborate cosmology, dramatic masked ceremonies, and UNESCO World Heritage villages.",
+      "relatedTribes": ["bambara", "mossi", "fulani"]
+    },
+
+    {
+      "id": "san",
+      "name": "San (Bushmen)",
+      "slug": "san",
+      "youtubeVideoId": "Y1O3pj9rKUE",
+      "countries": ["BW", "NA", "ZA", "ZW", "AO", "ZM", "MZ"],
+      "region": "Kalahari Desert, Southern Africa",
+      "population": "~100,000",
+      "populationPercent": "<1% (across countries)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -23.5, "lng": 21.5 },
+      "counties": ["Central Kalahari (Botswana)", "Tsumkwe (Namibia)", "Northern Cape (South Africa)"],
+      "namePrefixes": ["N!", "!", "Xh", "G/"],
+      "commonNames": {
+        "female": ["N!aishe", "!Xoase", "Gao-n!a", "N!aisa"],
+        "male": ["!Xao", "N!xao", "Tsamkxao", "Gao"]
+      },
+      "stereotypes": [
+        "First peoples of Southern Africa",
+        "Hunter-gatherers",
+        "Tracking experts",
+        "Click language speakers",
+        "Spiritual healers",
+        "Rock art creators"
+      ],
+      "culturalTraits": [
+        "One of the oldest human populations on Earth (genetic evidence)",
+        "Hunter-gatherer lifestyle for 20,000+ years",
+        "Click consonants in language",
+        "Trance healing dances",
+        "Egalitarian social structure",
+        "Ancient rock art traditions"
+      ],
+      "funFacts": [
+        "San languages have up to 141 click sounds - the most complex sound systems in any language",
+        "Genetic studies show San lineages are among the oldest surviving human lineages",
+        "San rock paintings in Tsodilo Hills (Botswana) are UNESCO World Heritage",
+        "The San can track animals over vast distances reading minute signs"
+      ],
+      "traditionalFood": {
+        "staples": ["Wild game (antelope, porcupine)", "Mongongo nuts", "Tubers", "Berries"],
+        "beverages": ["Water stored in ostrich eggs", "Plant juices"],
+        "specialDishes": ["Roasted game", "Mongongo nut dishes", "Honey"],
+        "description": "San hunter-gatherer diet varies seasonally with wild game, mongongo nuts, tubers, and over 100 edible plant species from the Kalahari."
+      },
+      "traditionalDance": "Trance healing dance (medicine dance) with rhythmic clapping",
+      "religion": "Traditional San spirituality, trance states, ancestor spirits",
+      "language": {
+        "name": "Khoisan languages (multiple)",
+        "speakers": "~30,000 (various dialects)",
+        "greeting": "!Kung: Moro",
+        "greetingMeaning": "Hello/How are you?",
+        "family": "Khoisan (one of the world's oldest language families)",
+        "writingSystem": "Latin alphabet with click symbols (!, /, ≠, ||)"
+      },
+      "populationByCountry": [
+        { "country": "BW", "population": "~55,000", "percent": "2%" },
+        { "country": "NA", "population": "~27,000", "percent": "1%" },
+        { "country": "ZA", "population": "~8,000", "percent": "<0.1%" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - San people", "url": "https://en.wikipedia.org/wiki/San_people" },
+        { "name": "Britannica - San", "url": "https://www.britannica.com/topic/San" },
+        { "name": "South African History Online", "url": "https://sahistory.org.za/article/khoisan" }
+      ],
+      "description": "The San (Bushmen) are among Earth's oldest human populations, indigenous to the Kalahari Desert, renowned for click languages, tracking skills, and rich rock art heritage.",
+      "relatedTribes": ["khoi", "nama", "damara"]
+    },
+
+    {
+      "id": "himba",
+      "name": "Himba (OvaHimba)",
+      "slug": "himba",
+      "youtubeVideoId": "sA1YKiT0Oe8",
+      "countries": ["NA", "AO"],
+      "region": "Kunene Region, Namibia",
+      "population": "~50,000",
+      "populationPercent": "~2% (Namibia)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -18.0, "lng": 13.5 },
+      "counties": ["Kunene Region", "Kaokoland", "Opuwo"],
+      "namePrefixes": ["Mu", "Ova", "Ka", "Hi"],
+      "commonNames": {
+        "female": ["Muhimba", "Katjira", "Karipembe", "Mucuio"],
+        "male": ["Himba", "Kapika", "Mutjinde", "Kavari"]
+      },
+      "stereotypes": [
+        "Red ochre-covered skin and hair",
+        "Semi-nomadic herders",
+        "Traditional lifestyle preservers",
+        "Cattle-centered culture",
+        "Distinctive beauty standards",
+        "Resistant to modernization"
+      ],
+      "culturalTraits": [
+        "Otjize paste (red ochre and fat) on skin and hair",
+        "Cattle central to wealth, diet, and rituals",
+        "Distinctive hairstyles indicate age and status",
+        "Holy fire (Okuruwo) connects to ancestors",
+        "Polygynous society",
+        "Semi-nomadic pastoralism"
+      ],
+      "funFacts": [
+        "Himba women's red ochre paste (otjize) protects skin from sun and insects",
+        "A married Himba woman wears the Erembe headdress made from goatskin",
+        "The Himba calculate kinship through both mother (eanda) and father (oruzo)",
+        "Himba rarely use water for bathing, instead using smoke baths and otjize"
+      ],
+      "traditionalFood": {
+        "staples": ["Sour milk (omaze)", "Maize porridge", "Cattle meat", "Wild fruits"],
+        "beverages": ["Fermented sour milk", "Otjize (alcoholic)"],
+        "specialDishes": ["Omaere (sour milk porridge)", "Roasted meat"],
+        "description": "Himba diet centers on cattle products - sour milk is the staple, supplemented by maize and wild plants from the arid Kunene."
+      },
+      "traditionalDance": "Traditional dances around the holy fire during ceremonies",
+      "religion": "Traditional beliefs, ancestor worship via holy fire (Okuruwo)",
+      "language": {
+        "name": "OtjiHimba (Herero dialect)",
+        "speakers": "~50,000",
+        "greeting": "Moro",
+        "greetingMeaning": "Hello",
+        "family": "Bantu (Niger-Congo) - Herero branch",
+        "writingSystem": "Latin alphabet"
+      },
+      "sources": [
+        { "name": "Wikipedia - Himba people", "url": "https://en.wikipedia.org/wiki/Himba_people" },
+        { "name": "Jimmy Nelson - Himba", "url": "https://www.jimmynelson.com/stories/the-himba-people/" }
+      ],
+      "description": "The Himba are semi-nomadic herders in Namibia's Kunene region, famous for their red ochre skin and hair treatment, cattle-centered culture, and preservation of traditional lifestyle.",
+      "relatedTribes": ["herero", "ovambo", "damara"]
+    },
+
+    {
+      "id": "tuareg",
+      "name": "Tuareg",
+      "slug": "tuareg",
+      "youtubeVideoId": "xjFZ2HQZRXE",
+      "countries": ["ML", "NE", "DZ", "LY", "BF"],
+      "region": "Sahara Desert (Niger, Mali, Algeria, Libya)",
+      "population": "~4 million",
+      "populationPercent": "~10% (Niger)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 18.0, "lng": 5.0 },
+      "counties": ["Agadez (Niger)", "Timbuktu & Kidal (Mali)", "Tamanrasset (Algeria)"],
+      "namePrefixes": ["Mo", "Am", "Tin", "Ag"],
+      "commonNames": {
+        "female": ["Tinet", "Amayas", "Tamashek", "Fadimata", "Lalla"],
+        "male": ["Moussa", "Amayas", "Ag Mohamed", "Ibrahim", "Mano"]
+      },
+      "stereotypes": [
+        "Blue men of the Sahara",
+        "Camel nomads",
+        "Desert warriors",
+        "Indigo-dyed clothing",
+        "Matrilineal traditions",
+        "Fierce independence"
+      ],
+      "culturalTraits": [
+        "Indigo-dyed tagelmust (veil) - men cover faces, women do not",
+        "Tifinagh script (ancient Berber alphabet)",
+        "Camel caravan trading (salt routes)",
+        "Matrilineal society (property through women)",
+        "Guitar-based Tuareg blues music",
+        "Cross-Sahara trade networks"
+      ],
+      "funFacts": [
+        "Tuareg men wear veils (tagelmust) while women traditionally do not",
+        "The indigo dye rubs off on skin, giving them the name 'Blue Men of the Sahara'",
+        "Tuareg blues music (Tinariwen, Bombino) has global following",
+        "The Tifinagh alphabet is one of Africa's indigenous writing systems"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Dates", "Camel milk", "Goat meat"],
+        "beverages": ["Tea (three rounds ceremony)", "Camel milk", "Date palm wine"],
+        "specialDishes": ["Tagellit (millet with milk)", "Taguella (sand-baked bread)", "Roasted camel meat"],
+        "description": "Tuareg cuisine is adapted to desert life with millet, dates, and camel products. The elaborate tea ceremony is central to hospitality."
+      },
+      "traditionalDance": "Traditional camel festivals and Tendé drum ceremonies",
+      "religion": "Islam (Sunni with traditional practices)",
+      "language": {
+        "name": "Tamasheq (Tamashek)",
+        "speakers": "~2.5 million",
+        "greeting": "Mani?",
+        "greetingMeaning": "How are you?",
+        "family": "Berber (Afro-Asiatic)",
+        "writingSystem": "Tifinagh script, Arabic script, Latin alphabet"
+      },
+      "populationByCountry": [
+        { "country": "NE", "population": "~2M", "percent": "10%" },
+        { "country": "ML", "population": "~1.5M", "percent": "7%" },
+        { "country": "DZ", "population": "~500,000", "percent": "1%" }
+      ],
+      "famousPeople": [
+        { "name": "Ibrahim Ag Alhabib", "role": "Founder of Tinariwen band", "wikipedia": "https://en.wikipedia.org/wiki/Ibrahim_Ag_Alhabib" },
+        { "name": "Bombino", "role": "Grammy-nominated Tuareg guitarist", "wikipedia": "https://en.wikipedia.org/wiki/Bombino_(musician)" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Tuareg people", "url": "https://en.wikipedia.org/wiki/Tuareg_people" },
+        { "name": "Carnegie Endowment - Tuareg", "url": "https://carnegieendowment.org/sada/2022/12/the-tuareg-literature-language-and-culture" },
+        { "name": "Britannica - Tuareg", "url": "https://www.britannica.com/topic/Tuareg" }
+      ],
+      "description": "The Tuareg are Berber nomads of the Sahara Desert, famous for their indigo veils, camel caravans, ancient Tifinagh script, and modern Tuareg blues music.",
+      "relatedTribes": ["fulani", "hausa", "berber"]
+    },
+
+    {
+      "id": "senufo",
+      "name": "Senufo",
+      "slug": "senufo",
+      "youtubeVideoId": "5XrQDI0pRrE",
+      "countries": ["CI", "ML", "BF"],
+      "region": "Northern Côte d'Ivoire, Mali, Burkina Faso",
+      "population": "~3 million",
+      "populationPercent": "~10% (Côte d'Ivoire)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 9.5, "lng": -5.5 },
+      "counties": ["Korhogo Region (CI)", "Sikasso Region (ML)", "Banfora (BF)"],
+      "namePrefixes": ["Ko", "Ye", "Ta", "Naf"],
+      "commonNames": {
+        "female": ["Nafissatou", "Korotoum", "Yeo", "Mariam", "Teneba"],
+        "male": ["Koffi", "Yeo", "Tuo", "Silue", "Coulibaly"]
+      },
+      "stereotypes": [
+        "Master sculptors and artists",
+        "Secret society traditions",
+        "Skilled farmers",
+        "Rich masquerade traditions",
+        "Poro initiation",
+        "Peaceful people"
+      ],
+      "culturalTraits": [
+        "Poro secret society (male initiation over 7 years)",
+        "Sandogo society (female divination)",
+        "World-renowned wood sculpture",
+        "Intricate mask traditions",
+        "Cotton farming and weaving",
+        "Balafon (xylophone) music"
+      ],
+      "funFacts": [
+        "Senufo art inspired Pablo Picasso and other European modernists",
+        "The Poro initiation takes 7 years divided into three stages",
+        "Senufo funeral masks can dance for days during ceremonies",
+        "The Sandogo women's society provides divination and healing"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Rice", "Yams", "Maize"],
+        "beverages": ["Millet beer (Tchapalo)", "Palm wine"],
+        "specialDishes": ["Sauce Feuilles (leaf sauce)", "Foutou (yam fufu)", "Grilled fish"],
+        "description": "Senufo cuisine features millet, yams, and rice with rich sauces. Tchapalo (millet beer) is important for ceremonies."
+      },
+      "traditionalDance": "Poro masquerade dances, Balafon performances",
+      "religion": "Traditional beliefs (Poro), Islam, Christianity",
+      "language": {
+        "name": "Senufo languages (Senari, Supyire, etc.)",
+        "speakers": "~2.5 million",
+        "greeting": "N'ba!",
+        "greetingMeaning": "Hello!",
+        "family": "Gur (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "sources": [
+        { "name": "Wikipedia - Senufo people", "url": "https://en.wikipedia.org/wiki/Senufo_people" },
+        { "name": "Britannica - Senufo", "url": "https://www.britannica.com/topic/Senufo" },
+        { "name": "Spurlock Museum - Senufo", "url": "https://www.spurlock.illinois.edu/exhibits/online/senufo/introduction2.html" }
+      ],
+      "description": "The Senufo are master sculptors spanning Côte d'Ivoire, Mali, and Burkina Faso, famous for their Poro secret society, intricate masks that inspired Picasso, and balafon music.",
+      "relatedTribes": ["bambara", "malinke", "lobi"]
     }
   ]
 }
