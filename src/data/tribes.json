@@ -139,6 +139,20 @@
       "Namibia has 13 ethnic groups including Ovambo (50%), Kavango, and Herero",
       "German colonial influence left German as one of Namibia's recognized languages",
       "The Herero women's Victorian-era dress style emerged as cultural resistance"
+    ],
+    "MG": [
+      "Madagascar is home to 18 official ethnic groups with Austronesian and African roots",
+      "The Merina built a powerful kingdom that unified most of the island before French colonization",
+      "Famadihana (turning of bones) is a unique ancestor ceremony where families exhume and rewrap loved ones",
+      "Malagasy is an Austronesian language - the island's people have genetic links to Indonesia",
+      "Queen Ranavalona I fiercely resisted European colonization for 33 years"
+    ],
+    "CF": [
+      "The Central African Republic has over 80 ethnic groups, with Banda and Gbaya being largest",
+      "Barthélémy Boganda, 'Father of the Nation,' was Banda - he died before seeing independence",
+      "The Kara War (1928-1931) was one of Central Africa's largest anti-colonial uprisings, led by Gbaya",
+      "CAR sits at the crossroads of Bantu, Nilotic, and Ubangian language groups",
+      "Traditional societies often had no chiefs - governance was by village elder consensus"
     ]
   },
   "countries": [
@@ -11702,6 +11716,247 @@
       "sources": [{ "name": "Wikipedia - Herero", "url": "https://en.wikipedia.org/wiki/Herero_people" }, { "name": "Britannica - Herero Genocide", "url": "https://www.britannica.com/event/Herero-and-Nama-genocide" }],
       "description": "The Herero are cattle-herding people of Namibia known for women's distinctive Victorian-era dresses (adopted as cultural resistance) and as survivors of the first genocide of the 20th century.",
       "relatedTribes": ["himba", "nama", "damara", "ovambo"]
+    },
+
+    {
+      "id": "merina",
+      "name": "Merina (Ambaniandro)",
+      "slug": "merina",
+      "youtubeVideoId": "vc7LzV1VCmk",
+      "countries": ["MG"],
+      "region": "Central Highlands, Madagascar",
+      "population": "~5 million",
+      "populationPercent": "~26% (Madagascar)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -18.9, "lng": 47.5 },
+      "counties": ["Analamanga Region", "Vakinankaratra Region", "Itasy Region"],
+      "namePrefixes": ["Ra", "Andria", "Rabe"],
+      "commonNames": {
+        "female": ["Rasoa", "Ravao", "Rasoazanany", "Ralalaonirina", "Ratsimba"],
+        "male": ["Rakoto", "Andrianaivo", "Rabemananjara", "Rabemanantsoa", "Ratsimbazafy"]
+      },
+      "stereotypes": ["Highland aristocrats", "Kingdom builders", "Rice cultivation masters", "Austronesian origins", "Political elite"],
+      "culturalTraits": ["Famadihana bone-turning ceremony to honor ancestors", "Highly stratified caste system (Andriana nobles, Hova freemen, Andevo slaves)", "Master rice farmers with elaborate irrigation terraces", "Built unified Malagasy kingdom (1787-1897)", "Dual Austronesian-African heritage"],
+      "funFacts": ["Queen Ranavalona I fiercely resisted French colonization for 33 years (1828-1861)", "Merina have more genetic links to Indonesia than mainland Africa", "The royal palace Rova of Antananarivo was one of largest wooden structures ever built", "Famadihana (turning of bones) reunites the living with ancestors every few years"],
+      "tradeRelations": {
+        "historical": ["Traded slaves for European firearms and cloth (1700s-1800s)", "Controlled highland cattle and rice trade routes", "Established trade agreements with British Empire against French", "Exported rice, cattle hides, and later vanilla to global markets"],
+        "modern": ["Madagascar's vanilla exports (80% of world supply)", "Rice remains major internal trade commodity", "Tourism revenue from cultural heritage sites"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Queen Ranavalona I (r. 1828-1861) expelled all Europeans and resisted colonization. Franco-Malagasy Wars (1883-1885, 1895) ended with French conquest in 1896.",
+        "independenceMovement": "Malagasy Uprising of 1947 was brutally suppressed (tens of thousands killed). Independence achieved June 26, 1960 under President Philibert Tsiranana.",
+        "keyFigures": ["Queen Ranavalona I (resistance)", "Jean Ralaimongo (nationalist leader)", "Philibert Tsiranana (first president)"]
+      },
+      "traditionalFood": {
+        "staples": ["Rice (vary)", "Zebu meat", "Laoka (vegetable/meat side dishes)", "Cassava"],
+        "beverages": ["Ranon'ampango (rice water)", "Toaka gasy (rum)", "Betsa-betsa (fermented sugarcane)"],
+        "specialDishes": ["Romazava (beef and leafy green stew)", "Ravitoto (cassava leaves with pork)", "Henakisoa (pork stew)"],
+        "description": "Merina cuisine centers on rice, served with laoka (side dishes). Highland cattle (zebu) and pork are common proteins, reflecting mixed Austronesian-African heritage."
+      },
+      "traditionalDance": "Hiragasy - theatrical performance combining dance, music, and oratory",
+      "religion": "Christianity (Catholic/Protestant) syncretic with Razana (ancestor veneration)",
+      "language": { "name": "Merina Malagasy", "speakers": "~5 million", "greeting": "Manao ahoana!", "greetingMeaning": "Hello! How are you?", "family": "Austronesian (Malayo-Polynesian)", "writingSystem": "Latin alphabet (Sorabe Arabic historically)" },
+      "famousPeople": [
+        { "name": "Queen Ranavalona I", "role": "Fierce queen who resisted colonization", "wikipedia": "https://en.wikipedia.org/wiki/Ranavalona_I" },
+        { "name": "King Radama I", "role": "Unified Madagascar under Merina rule", "wikipedia": "https://en.wikipedia.org/wiki/Radama_I" },
+        { "name": "Jean-Joseph Rabearivelo", "role": "Father of Malagasy modern poetry", "wikipedia": "https://en.wikipedia.org/wiki/Jean-Joseph_Rabearivelo" }
+      ],
+      "sources": [{ "name": "Wikipedia - Merina", "url": "https://en.wikipedia.org/wiki/Merina_people" }, { "name": "Britannica - Merina", "url": "https://www.britannica.com/topic/Merina" }],
+      "description": "The Merina are Madagascar's largest ethnic group, descendants of Austronesian voyagers who built a powerful highland kingdom. Known for Famadihana ancestor ceremonies and fierce resistance to French colonization.",
+      "relatedTribes": ["betsileo", "sakalava", "betsimisaraka"]
+    },
+
+    {
+      "id": "betsileo",
+      "name": "Betsileo",
+      "slug": "betsileo",
+      "youtubeVideoId": "vc7LzV1VCmk",
+      "countries": ["MG"],
+      "region": "Southern Highlands, Madagascar",
+      "population": "~4.4 million",
+      "populationPercent": "~12% (Madagascar)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -20.5, "lng": 47.0 },
+      "counties": ["Haute Matsiatra Region", "Amoron'i Mania Region", "Vatovavy-Fitovinany Region"],
+      "namePrefixes": ["Ra", "Be", "Tsimi"],
+      "commonNames": {
+        "female": ["Berthine", "Razanamalala", "Ravaonirina", "Sahondra"],
+        "male": ["Randriamihaja", "Bemanana", "Tsimihaja", "Razafindrakoto"]
+      },
+      "stereotypes": ["Master rice terrace builders", "Highland farmers", "Related to Merina", "Skilled wood carvers", "Famadihana practitioners"],
+      "culturalTraits": ["Spectacular irrigated rice terraces carved into hillsides", "Expert woodcarving and sculpture traditions", "Famadihana bone-turning ceremonies (shared with Merina)", "Complex social hierarchies with noble/commoner divisions", "Skilled cattle herders alongside rice farming"],
+      "funFacts": ["Betsileo rice terraces rival those of Southeast Asia in sophistication", "The name means 'the many invincible ones'", "They maintain over 60% of Madagascar's rice production", "Their woodcarving tradition produces famous 'aloalo' funerary posts"],
+      "tradeRelations": {
+        "historical": ["Supplied rice to coastal peoples in exchange for cattle and goods", "Highland trade routes connected east and west coasts", "Craft goods (woodcarving, textiles) traded widely"],
+        "modern": ["Rice surplus feeds much of Madagascar", "Handicrafts sold to tourist markets", "Zebu cattle remain important trade commodity"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Betsileo participated in the 1947 Malagasy Uprising against French rule. Many fled to forests to join guerrilla resistance.",
+        "independenceMovement": "Supported national independence movement. Betsileo intellectuals contributed to nationalist writings and political organization.",
+        "keyFigures": ["Richard Andriamanjato (independence-era politician)", "Samuel Raharinaivo (nationalist leader)"]
+      },
+      "traditionalFood": {
+        "staples": ["Rice (vary)", "Zebu meat", "Beans", "Greens"],
+        "beverages": ["Rice water", "Toaka gasy rum"],
+        "specialDishes": ["Romazava", "Ravitoto", "Voanjobory (ground peas)"],
+        "description": "Betsileo cuisine is similar to Merina, centered on rice. Their rice terraces produce surplus that feeds much of Madagascar."
+      },
+      "traditionalDance": "Hiragasy and traditional harvest dances",
+      "religion": "Christianity syncretic with Razana (ancestor veneration)",
+      "language": { "name": "Betsileo Malagasy", "speakers": "~4 million", "greeting": "Manao ahoana!", "greetingMeaning": "Hello!", "family": "Austronesian (Malayo-Polynesian)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Betsileo", "url": "https://en.wikipedia.org/wiki/Betsileo_people" }],
+      "description": "The Betsileo are Madagascar's second-largest highland ethnic group, famous for spectacular rice terraces, skilled woodcarving, and the Famadihana ancestor ceremony.",
+      "relatedTribes": ["merina", "sakalava", "bara"]
+    },
+
+    {
+      "id": "banda",
+      "name": "Banda",
+      "slug": "banda",
+      "youtubeVideoId": "f2b4LYT0fXI",
+      "countries": ["CF", "CD", "CM", "SS"],
+      "region": "Central African Republic, DR Congo",
+      "population": "~1.3 million",
+      "populationPercent": "~27% (Central African Republic)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.5, "lng": 19.0 },
+      "counties": ["Ouaka Prefecture", "Kemo Prefecture", "Nana-Mambéré Prefecture"],
+      "namePrefixes": ["Ngo", "Ko", "Ba"],
+      "commonNames": {
+        "female": ["Ngondi", "Komba", "Adèle", "Bernadette"],
+        "male": ["Ngoupandé", "Kolingba", "Barthélémy", "Jean-Pierre"]
+      },
+      "stereotypes": ["Largest CAR ethnic group", "Agricultural people", "Decentralized society", "Rainforest dwellers", "Oral historians"],
+      "culturalTraits": ["Decentralized political organization (no paramount chiefs)", "Subsistence agriculture with cassava, yams, and millet", "Rich oral tradition and storytelling", "Traditional religious practices alongside Christianity", "Expert forest hunters and gatherers"],
+      "funFacts": ["The Banda have over 30 sub-groups speaking related dialects", "Barthélémy Boganda, father of CAR independence, was Banda", "Traditional Banda society was organized around village elders", "Their territory spans the transition zone between savanna and rainforest"],
+      "tradeRelations": {
+        "historical": ["Traded ivory, honey, and forest products", "Suffered heavily from 19th-century slave raids", "Exchanged goods with Azande and Sara peoples", "Iron smelting and tool production for regional trade"],
+        "modern": ["Agricultural products for local markets", "Diamond mining in Banda territories", "Coffee and cotton production under French colonial economy"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Banda territories saw significant resistance to French Equatorial Africa forced labor practices. The Kongo-Wara rebellion (1928-1931) involved Banda fighters.",
+        "independenceMovement": "Barthélémy Boganda (Banda) founded the first CAR political party (MESAN) and led the independence movement. He is called 'Father of the Nation' but died in 1959 plane crash, one year before independence.",
+        "keyFigures": ["Barthélémy Boganda (Father of CAR)", "David Dacko (first president, Boganda's nephew)", "André Kolingba (president 1981-1993)"]
+      },
+      "traditionalFood": {
+        "staples": ["Cassava (manioc)", "Yams", "Plantains", "Millet"],
+        "beverages": ["Palm wine", "Millet beer"],
+        "specialDishes": ["Gozo (cassava paste)", "Bush meat stews", "Grilled fish"],
+        "description": "Banda cuisine relies on cassava processed into gozo (a thick paste) and stews made from bush meat, fish, and local vegetables."
+      },
+      "traditionalDance": "Community dances for harvest and initiation ceremonies",
+      "religion": "Traditional beliefs, Christianity (Catholic/Protestant) widespread",
+      "language": { "name": "Banda (Ubangian)", "speakers": "~1.3 million", "greeting": "Mbote!", "greetingMeaning": "Hello!", "family": "Ubangian (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "populationByCountry": [
+        { "country": "CF", "population": "~1,000,000", "percent": "27%" },
+        { "country": "CD", "population": "~200,000", "percent": "<1%" },
+        { "country": "CM", "population": "~50,000", "percent": "<1%" },
+        { "country": "SS", "population": "~50,000", "percent": "<1%" }
+      ],
+      "famousPeople": [
+        { "name": "Barthélémy Boganda", "role": "Father of CAR independence", "wikipedia": "https://en.wikipedia.org/wiki/Barth%C3%A9lemy_Boganda" },
+        { "name": "André Kolingba", "role": "President of CAR (1981-1993)", "wikipedia": "https://en.wikipedia.org/wiki/Andr%C3%A9_Kolingba" }
+      ],
+      "sources": [{ "name": "Wikipedia - Banda people", "url": "https://en.wikipedia.org/wiki/Banda_people" }, { "name": "Minority Rights Group - CAR", "url": "https://minorityrights.org/country/central-african-republic/" }],
+      "description": "The Banda are the largest ethnic group in the Central African Republic, known for decentralized governance and producing Barthélémy Boganda, the 'Father of the Nation.'",
+      "relatedTribes": ["gbaya", "zande", "sara", "ngbaka"]
+    },
+
+    {
+      "id": "gbaya",
+      "name": "Gbaya (Baya)",
+      "slug": "gbaya",
+      "youtubeVideoId": "f2b4LYT0fXI",
+      "countries": ["CF", "CM", "CD", "CG"],
+      "region": "Central African Republic, Cameroon, Congo",
+      "population": "~1.5 million",
+      "populationPercent": "~33% (Central African Republic)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.0, "lng": 15.5 },
+      "counties": ["Mambéré-Kadéï Prefecture", "Nana-Mambéré Prefecture", "Ouham-Pendé Prefecture"],
+      "namePrefixes": ["Ga", "Bo", "Kpan"],
+      "commonNames": {
+        "female": ["Gabiela", "Awa", "Martine", "Pauline"],
+        "male": ["Bozizé", "Patassé", "Gaston", "Abel"]
+      },
+      "stereotypes": ["Largest CAR ethnic group", "Kara war against French", "Traditional hunters", "Egalitarian society", "Forest-savanna people"],
+      "culturalTraits": ["Egalitarian social structure without chiefs", "Expert hunters and gatherers in forest-savanna zone", "Labi initiation society for young men", "Rich musical traditions with xylophones", "Resistance to outside political control"],
+      "funFacts": ["The Kara War (1928-1931) was one of the largest anti-colonial uprisings in Central Africa", "Gbaya society traditionally had no chiefs - decisions made by consensus", "Labi initiation teaches boys forest knowledge and hunting skills", "Two CAR presidents (Patassé and Bozizé) were Gbaya"],
+      "tradeRelations": {
+        "historical": ["Traded ivory, animal skins, and honey", "Victim of slave raids by Fulani and Hausa merchants", "Exchanged iron goods and forest products with neighbors", "Resisted incorporation into colonial cash crop economy"],
+        "modern": ["Coffee and cotton farming (under colonial influence)", "Cattle herding in northern Gbaya areas", "Cross-border trade with Cameroon and Chad"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Led the massive Kara War (1928-1931) against French forced labor. The prophet Karnu led Gbaya fighters against French machine guns. Thousands died, but the rebellion shook French control.",
+        "independenceMovement": "Gbaya intellectuals and politicians led CAR independence. Ange-Félix Patassé (Gbaya) became president (1993-2003), followed by François Bozizé (2003-2013).",
+        "keyFigures": ["Karnu (Kara War prophet)", "Ange-Félix Patassé (president 1993-2003)", "François Bozizé (president 2003-2013)"]
+      },
+      "traditionalFood": {
+        "staples": ["Cassava", "Yams", "Plantains", "Sorghum"],
+        "beverages": ["Palm wine", "Millet beer", "Honey wine"],
+        "specialDishes": ["Grilled bush meat", "Caterpillar dishes", "Cassava leaves (saka saka)"],
+        "description": "Gbaya cuisine combines forest products (bush meat, caterpillars, honey) with cultivated crops like cassava and yams."
+      },
+      "traditionalDance": "Initiation dances, xylophone-accompanied celebrations",
+      "religion": "Traditional beliefs (Labi society), Christianity spreading",
+      "language": { "name": "Gbaya", "speakers": "~1.5 million", "greeting": "Laa dɔɔ?", "greetingMeaning": "How are you?", "family": "Ubangian (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "populationByCountry": [
+        { "country": "CF", "population": "~900,000", "percent": "33%" },
+        { "country": "CM", "population": "~400,000", "percent": "2%" },
+        { "country": "CD", "population": "~100,000", "percent": "<1%" },
+        { "country": "CG", "population": "~100,000", "percent": "2%" }
+      ],
+      "famousPeople": [
+        { "name": "Ange-Félix Patassé", "role": "President of CAR (1993-2003)", "wikipedia": "https://en.wikipedia.org/wiki/Ange-F%C3%A9lix_Patass%C3%A9" },
+        { "name": "François Bozizé", "role": "President of CAR (2003-2013)", "wikipedia": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Boziz%C3%A9" },
+        { "name": "Karnu", "role": "Prophet and leader of Kara War", "wikipedia": "https://en.wikipedia.org/wiki/Kongo_Wara" }
+      ],
+      "sources": [{ "name": "Wikipedia - Gbaya", "url": "https://en.wikipedia.org/wiki/Gbaya_people" }, { "name": "Britannica - Gbaya", "url": "https://www.britannica.com/topic/Gbaya" }],
+      "description": "The Gbaya are Central Africa's largest ethnic group, known for the heroic Kara War anti-colonial rebellion (1928-1931), egalitarian society, and producing multiple CAR presidents.",
+      "relatedTribes": ["banda", "zande", "ngbaka", "fulani"]
+    },
+
+    {
+      "id": "sakalava",
+      "name": "Sakalava",
+      "slug": "sakalava",
+      "youtubeVideoId": "vc7LzV1VCmk",
+      "countries": ["MG"],
+      "region": "Western Madagascar",
+      "population": "~2 million",
+      "populationPercent": "~6% (Madagascar)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -16.0, "lng": 45.0 },
+      "counties": ["Boeny Region", "Menabe Region", "Sofia Region"],
+      "namePrefixes": ["Andi", "Be", "Ra"],
+      "commonNames": {
+        "female": ["Andriamanalina", "Befotaka", "Rasoa"],
+        "male": ["Andrianaivo", "Bezara", "Rakoto"]
+      },
+      "stereotypes": ["Coastal people", "Zebu cattle herders", "Tromba possession rituals", "Powerful historical kingdoms", "Mixed African-Arab heritage"],
+      "culturalTraits": ["Powerful Sakalava kingdoms rivaled Merina for centuries", "Tromba spirit possession rituals central to culture", "Extensive zebu cattle herding on western plains", "Arab, African, and Austronesian ancestry mix", "Maritime trade connections to East African coast"],
+      "funFacts": ["Sakalava means 'people of the long valleys'", "Their kingdoms (Menabe and Boina) controlled western Madagascar", "Tromba mediums channel royal ancestors for guidance", "They maintained African cultural connections more than highland groups"],
+      "tradeRelations": {
+        "historical": ["Major slave-trading ports supplied East African markets", "Cattle and rice traded with coastal Arab merchants", "Controlled lucrative Indian Ocean trade routes", "Supplied Swahili coast with enslaved people and cattle"],
+        "modern": ["Fishing and zebu cattle remain economic mainstays", "Vanilla and coffee production for export", "Tourism to western Madagascar's beaches and reserves"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Sakalava kingdoms resisted Merina expansion, sometimes allying with French. After French colonization, they participated in 1947 uprising.",
+        "independenceMovement": "Western regions supported national independence. Sakalava royalty retained symbolic importance post-independence.",
+        "keyFigures": ["Andrianampoinimerina (rival to Sakalava)", "Queen Binao (Boina ruler)"]
+      },
+      "traditionalFood": {
+        "staples": ["Rice", "Zebu meat", "Seafood", "Cassava"],
+        "beverages": ["Toaka gasy rum", "Coconut water"],
+        "specialDishes": ["Grilled zebu", "Coastal fish dishes", "Romazava"],
+        "description": "Sakalava cuisine blends highland rice dishes with coastal seafood. Zebu cattle are central to diet and economy."
+      },
+      "traditionalDance": "Tromba possession dances connecting with royal ancestors",
+      "religion": "Traditional Tromba beliefs, Islam in coastal areas, Christianity",
+      "language": { "name": "Sakalava Malagasy", "speakers": "~2 million", "greeting": "Salama!", "greetingMeaning": "Peace! Hello!", "family": "Austronesian (Malayo-Polynesian)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Sakalava", "url": "https://en.wikipedia.org/wiki/Sakalava" }],
+      "description": "The Sakalava are western Madagascar's cattle-herding people, known for powerful historical kingdoms, Tromba spirit possession rituals, and coastal trade connections.",
+      "relatedTribes": ["merina", "betsileo", "vezo"]
     }
   ]
 }
