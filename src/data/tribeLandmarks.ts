@@ -1185,6 +1185,133 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       coordinates: { lat: 11.3167, lng: -5.6667 },
       wikipediaUrl: "https://en.wikipedia.org/wiki/Sikasso"
     }
+  ],
+  
+  hadza: [
+    {
+      name: "Lake Eyasi",
+      type: "natural",
+      description: "Seasonal salt lake in the Rift Valley and ancestral homeland of the Hadza hunter-gatherers for over 50,000 years. The lake basin provides their hunting and gathering territory.",
+      coordinates: { lat: -3.55, lng: 35.10 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lake_Eyasi"
+    },
+    {
+      name: "Mangola Village Area",
+      type: "historical",
+      description: "Main contact point for visitors to meet Hadza communities. Traditional camps are located in the surrounding bush and baobab forests.",
+      coordinates: { lat: -3.75, lng: 35.03 }
+    }
+  ],
+  
+  wodaabe: [
+    {
+      name: "Ingall (Cure Salée Festival)",
+      type: "sacred",
+      description: "Niger town hosting the annual Cure Salée festival where Wodaabe gather after rainy season. Site of famous Gerewol male beauty contests and tribal reunions.",
+      coordinates: { lat: 16.7833, lng: 6.9333 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Cur%C3%A9_sal%C3%A9e"
+    }
+  ],
+  
+  mursi: [
+    {
+      name: "Omo National Park",
+      type: "natural",
+      description: "Remote national park in the Omo Valley, traditional territory of the Mursi people. Contains their villages along the Omo River floodplains.",
+      coordinates: { lat: 5.5, lng: 35.9 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Omo_National_Park"
+    },
+    {
+      name: "Mago National Park",
+      type: "natural",
+      description: "Park bordering Mursi territory where many visitors encounter Mursi people. Named after the Mago River, a tributary of the Omo.",
+      coordinates: { lat: 5.7, lng: 36.1 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mago_National_Park"
+    }
+  ],
+  
+  mbuti: [
+    {
+      name: "Ituri Rainforest",
+      type: "natural",
+      description: "One of Africa's oldest and most biodiverse rainforests, home to the Mbuti Pygmy peoples for millennia. Contains the Okapi Wildlife Reserve (UNESCO World Heritage).",
+      coordinates: { lat: 1.5, lng: 28.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Ituri_Rainforest"
+    },
+    {
+      name: "Okapi Wildlife Reserve",
+      type: "natural",
+      description: "UNESCO World Heritage Site within Mbuti territory, home to the rare okapi and many Mbuti bands who serve as forest guides and conservation partners.",
+      coordinates: { lat: 1.9, lng: 28.8 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Okapi_Wildlife_Reserve",
+      unescoStatus: "world-heritage"
+    }
+  ],
+  
+  amazigh: [
+    {
+      name: "Ksar of Ait-Ben-Haddou",
+      type: "historical",
+      description: "Fortified Berber village (ksar) in Morocco, UNESCO World Heritage Site. Classic example of southern Moroccan Amazigh earthen architecture.",
+      coordinates: { lat: 31.0472, lng: -7.1289 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/A%C3%AFt_Benhaddou",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Djémila (Cuicul)",
+      type: "archaeological",
+      description: "Roman ruins in Algeria's Kabyle region, UNESCO World Heritage Site. Demonstrates Berber-Roman cultural synthesis.",
+      coordinates: { lat: 36.3167, lng: 5.7333 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Dj%C3%A9mila",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Medina of Fez",
+      type: "historical",
+      description: "World's largest car-free urban area and UNESCO World Heritage Site. Ancient Amazigh city that became a center of Islamic learning.",
+      coordinates: { lat: 34.0617, lng: -4.9775 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Fes_el_Bali",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Siwa Oasis",
+      type: "sacred",
+      description: "Remote Egyptian oasis with Berber-speaking population. Contains the Oracle of Amun temple consulted by Alexander the Great.",
+      coordinates: { lat: 29.2031, lng: 25.5194 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Siwa_Oasis"
+    }
+  ],
+  
+  hamar: [
+    {
+      name: "Turmi Village",
+      type: "historical",
+      description: "Main village and market center of the Hamar people. Famous for weekly markets where Hamar gather in traditional dress.",
+      coordinates: { lat: 4.95, lng: 36.45 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Turmi"
+    },
+    {
+      name: "Dimeka Village",
+      type: "historical",
+      description: "Second major Hamar settlement with important Saturday market. Site of many bull jumping ceremonies during the dry season.",
+      coordinates: { lat: 5.1, lng: 36.5 }
+    }
+  ],
+  
+  karo: [
+    {
+      name: "Korcho Village",
+      type: "historical",
+      description: "Main Karo village perched above the Omo River. Center of Karo body painting traditions and primary contact point for visitors.",
+      coordinates: { lat: 5.3, lng: 36.0 }
+    },
+    {
+      name: "Omo River Banks",
+      type: "natural",
+      description: "The Omo River provides the Karo with fish, water, and fertile flood-retreat farmland essential to their survival.",
+      coordinates: { lat: 5.2, lng: 35.95 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Omo_River"
+    }
   ]
 };
 

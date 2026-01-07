@@ -10842,6 +10842,458 @@
       ],
       "description": "The Senufo are master sculptors spanning Côte d'Ivoire, Mali, and Burkina Faso, famous for their Poro secret society, intricate masks that inspired Picasso, and balafon music.",
       "relatedTribes": ["bambara", "malinke", "lobi"]
+    },
+
+    {
+      "id": "hadza",
+      "name": "Hadza (Hadzabe)",
+      "slug": "hadza",
+      "youtubeVideoId": "D3vT7wF5rv0",
+      "countries": ["TZ"],
+      "region": "Lake Eyasi, Tanzania",
+      "population": "~1,300",
+      "populationPercent": "<0.01% (Tanzania)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": -3.8, "lng": 35.0 },
+      "counties": ["Arusha Region", "Lake Eyasi Basin"],
+      "namePrefixes": ["Ha", "Ka", "Na"],
+      "commonNames": {
+        "female": ["Nankwa", "Hashe", "Gamba"],
+        "male": ["Kaunda", "Gonga", "Shakwe", "Onwas"]
+      },
+      "stereotypes": [
+        "Last true hunter-gatherers",
+        "Ancient lifestyle preservers",
+        "Click language speakers",
+        "Expert trackers and archers",
+        "Egalitarian society",
+        "Living ancestors"
+      ],
+      "culturalTraits": [
+        "One of Earth's last hunter-gatherer societies",
+        "Click consonants in language (unrelated to Khoisan)",
+        "No formal leadership or social hierarchy",
+        "Immediate-return economy (no food storage)",
+        "Expert bow hunters and honey gatherers",
+        "Children learn survival skills from age 3"
+      ],
+      "funFacts": [
+        "The Hadza have lived in Tanzania for at least 50,000 years, possibly Earth's oldest continuous lineage",
+        "Their language has click sounds but is linguistically isolated - unrelated to any other language",
+        "The Hadza work only 4-6 hours a day to meet all their needs",
+        "They have no words for 'war', 'chief', or 'possession'"
+      ],
+      "traditionalFood": {
+        "staples": ["Wild honey", "Baobab fruit", "Wild tubers", "Game meat (dik-dik, warthog, baboon)"],
+        "beverages": ["Honey water", "Baobab juice"],
+        "specialDishes": ["Roasted game", "Raw honey with comb", "Baobab porridge"],
+        "description": "Hadza diet is entirely foraged: honey is prized (up to 15% of diet), supplemented by hunted game, tubers, and baobab fruit."
+      },
+      "traditionalDance": "Epeme nighttime dancing and singing ceremonies",
+      "religion": "Traditional animism, ancestor spirits, Ishoko (sun deity)",
+      "language": {
+        "name": "Hadzane",
+        "speakers": "~1,000",
+        "greeting": "Mtana oo?",
+        "greetingMeaning": "How are you?",
+        "family": "Language isolate (with click consonants)",
+        "writingSystem": "Oral tradition only"
+      },
+      "sources": [
+        { "name": "Wikipedia - Hadza people", "url": "https://en.wikipedia.org/wiki/Hadza_people" },
+        { "name": "National Geographic - Hadza", "url": "https://www.nationalgeographic.com/magazine/article/hadza" }
+      ],
+      "description": "The Hadza are one of Earth's last true hunter-gatherer peoples, living near Lake Eyasi in Tanzania for 50,000+ years with click language and egalitarian society.",
+      "relatedTribes": ["sandawe", "iraqw", "datoga"]
+    },
+
+    {
+      "id": "wodaabe",
+      "name": "Wodaabe",
+      "slug": "wodaabe",
+      "youtubeVideoId": "gEkK1r22uwM",
+      "countries": ["NE", "NG", "CM", "TD", "CF"],
+      "region": "Sahel (Niger, Nigeria, Cameroon, Chad)",
+      "population": "~100,000",
+      "populationPercent": "~0.5% (Niger)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 14.5, "lng": 8.5 },
+      "counties": ["Tahoua Region (NE)", "Agadez (NE)", "Northern Nigeria"],
+      "namePrefixes": ["Bo", "Dja", "Ou", "Am"],
+      "commonNames": {
+        "female": ["Djamila", "Aminata", "Fatima", "Hawa"],
+        "male": ["Boureima", "Oumarou", "Amadou", "Djibo", "Yaya"]
+      },
+      "stereotypes": [
+        "Male beauty culture",
+        "Gerewol festival dancers",
+        "Cattle nomads",
+        "Elaborate facial makeup",
+        "Women choose husbands",
+        "Most beautiful people"
+      ],
+      "culturalTraits": [
+        "Gerewol male beauty contest (UNESCO Intangible Heritage)",
+        "Men wear elaborate makeup and dance to attract wives",
+        "Women have freedom to choose and change husbands",
+        "Pulaaku code of conduct (patience, self-control)",
+        "Semi-nomadic cattle herders",
+        "Distinctive tall lean appearance"
+      ],
+      "funFacts": [
+        "In Gerewol, men compete in beauty contests judged by unmarried women who may 'steal' them as husbands",
+        "Wodaabe men can spend hours applying makeup and preparing for dances",
+        "White eyes and teeth are prized - men roll their eyes and bare teeth while dancing",
+        "A woman can leave her husband for a more beautiful man without stigma"
+      ],
+      "traditionalFood": {
+        "staples": ["Cattle milk", "Millet", "Wild grains", "Butter"],
+        "beverages": ["Fresh and fermented milk", "Millet porridge"],
+        "specialDishes": ["Nyiri (millet cream)", "Butter balls", "Fermented milk"],
+        "description": "Wodaabe diet centers on cattle products, especially milk in many forms. They rarely slaughter cattle except for ceremonies."
+      },
+      "traditionalDance": "Gerewol and Yaake competitive beauty dances",
+      "religion": "Islam with traditional practices",
+      "language": {
+        "name": "Fulfulde (Wodaabe dialect)",
+        "speakers": "~100,000",
+        "greeting": "No wala?",
+        "greetingMeaning": "How are you?",
+        "family": "Atlantic (Niger-Congo) - Fulani branch",
+        "writingSystem": "Latin alphabet, Ajami (Arabic)"
+      },
+      "sources": [
+        { "name": "Wikipedia - Wodaabe", "url": "https://en.wikipedia.org/wiki/Wodaabe" },
+        { "name": "Joshua Project - Wodaabe", "url": "https://joshuaproject.net/people_groups/20064" }
+      ],
+      "description": "The Wodaabe are Fulani cattle nomads famous for the Gerewol male beauty contest, where elaborately decorated men dance to attract wives who freely choose among them.",
+      "relatedTribes": ["fulani", "tuareg", "hausa"]
+    },
+
+    {
+      "id": "mursi",
+      "name": "Mursi",
+      "slug": "mursi",
+      "youtubeVideoId": "tYkeQyqz9Qw",
+      "countries": ["ET"],
+      "region": "Omo Valley, Ethiopia",
+      "population": "~11,500",
+      "populationPercent": "<0.01% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.7, "lng": 36.2 },
+      "counties": ["South Omo Zone", "Debub Omo"],
+      "namePrefixes": ["Kor", "Olo", "Na"],
+      "commonNames": {
+        "female": ["Korka", "Nere", "Olisarali"],
+        "male": ["Olikori", "Kormuzi", "Nagirot"]
+      },
+      "stereotypes": [
+        "Lip plate tradition",
+        "Warrior culture",
+        "Stick fighting (Donga)",
+        "Body scarification",
+        "Cattle wealth",
+        "Remote isolation"
+      ],
+      "culturalTraits": [
+        "Women's clay lip plates (dhebi a tugoin) - largest up to 12cm",
+        "Donga stick fighting tournaments for brides",
+        "Elaborate body scarification for beauty",
+        "Cattle central to wealth, marriage, and ritual",
+        "Flood-retreat agriculture along Omo River",
+        "Age-grade system for social organization"
+      ],
+      "funFacts": [
+        "Girls choose whether to wear lip plates - it's not mandatory but considered beautiful",
+        "A woman's lip plate size does not determine her bride price (contrary to popular myth)",
+        "Donga fights can be fatal but deaths are rare - the winner may claim any unmarried girl",
+        "Mursi count years by seasons and cattle cycles, not solar calendars"
+      ],
+      "traditionalFood": {
+        "staples": ["Sorghum", "Cattle blood and milk mixture", "Maize", "Wild fruits"],
+        "beverages": ["Sorghum beer", "Blood and milk blend"],
+        "specialDishes": ["Roasted sorghum", "Blood pudding", "Bush meat"],
+        "description": "Mursi diet combines pastoralism and flood-retreat farming, with sorghum as staple and cattle blood-milk mixture providing nutrition."
+      },
+      "traditionalDance": "Ceremonial dances during Donga season",
+      "religion": "Traditional animism, belief in Tumwi (sky god)",
+      "language": {
+        "name": "Mursi",
+        "speakers": "~10,000",
+        "greeting": "Assa?",
+        "greetingMeaning": "How are you?",
+        "family": "Surmic (Nilo-Saharan)",
+        "writingSystem": "Oral tradition"
+      },
+      "sources": [
+        { "name": "Wikipedia - Mursi people", "url": "https://en.wikipedia.org/wiki/Mursi_people" },
+        { "name": "Joshua Project - Mursi", "url": "https://joshuaproject.net/people_groups/13887" }
+      ],
+      "description": "The Mursi are an Omo Valley people famous for women's lip plates, men's Donga stick fighting, and elaborate body scarification.",
+      "relatedTribes": ["suri", "bodi", "hamar", "karo"]
+    },
+
+    {
+      "id": "mbuti",
+      "name": "Mbuti (Bambuti)",
+      "slug": "mbuti",
+      "youtubeVideoId": "mXqv1KLgw5I",
+      "countries": ["CD"],
+      "region": "Ituri Rainforest, DR Congo",
+      "population": "~40,000",
+      "populationPercent": "<0.1% (DR Congo)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 1.5, "lng": 28.5 },
+      "counties": ["Ituri Province", "Ituri Rainforest"],
+      "namePrefixes": ["Ke", "Ma", "Tu"],
+      "commonNames": {
+        "female": ["Mabu", "Kenge", "Sefu"],
+        "male": ["Kenge", "Cephu", "Moke", "Sau"]
+      },
+      "stereotypes": [
+        "Pygmy people of the forest",
+        "Net hunting tradition",
+        "Polyphonic singing",
+        "Forest spiritual connection",
+        "Short stature",
+        "Egalitarian lifestyle"
+      ],
+      "culturalTraits": [
+        "Average adult height of 150cm (4'11\") - genetic adaptation to forest life",
+        "Unique polyphonic singing (recognized by ethnomusicologists worldwide)",
+        "Communal net hunting where entire band participates",
+        "Deep spiritual connection to the forest (viewed as benevolent parent)",
+        "Band-level society with no formal chiefs",
+        "Molimo ceremony to 'wake the forest' during hardship"
+      ],
+      "funFacts": [
+        "Mbuti polyphonic music inspired Western classical composers including Colin Turnbull's famous ethnography",
+        "The Ituri forest is called their 'Father and Mother' - they sing to wake it during times of trouble",
+        "Net hunting requires entire band cooperation - women drive animals, men hold nets",
+        "Their short stature evolved to move easily through dense rainforest and regulate body heat"
+      ],
+      "traditionalFood": {
+        "staples": ["Wild honey", "Bush meat (antelope, monkey)", "Wild yams", "Caterpillars", "Forest fruits"],
+        "beverages": ["Honey water", "Palm wine (traded)"],
+        "specialDishes": ["Smoked meat", "Honey wrapped in leaves", "Roasted caterpillars"],
+        "description": "Mbuti are hunter-gatherers in the Ituri; honey is highly prized, supplemented by hunted game and traded agricultural products."
+      },
+      "traditionalDance": "Molimo ceremony with sacred forest music",
+      "religion": "Forest-centered spirituality, the forest is divine",
+      "language": {
+        "name": "Efe, Asua, and Kango (Mbuti languages)",
+        "speakers": "~40,000",
+        "greeting": "Nde apa?",
+        "greetingMeaning": "How are you?",
+        "family": "Central Sudanic / Bantu (adopted from neighbors)",
+        "writingSystem": "Oral tradition"
+      },
+      "sources": [
+        { "name": "Wikipedia - Mbuti people", "url": "https://en.wikipedia.org/wiki/Mbuti_people" },
+        { "name": "101 Last Tribes - Mbuti", "url": "https://www.101lasttribes.com/tribes/mbuti.html" }
+      ],
+      "description": "The Mbuti are rainforest-dwelling Pygmy people of Congo's Ituri Forest, known for polyphonic music, net hunting, and deep spiritual connection to the forest.",
+      "relatedTribes": ["twa", "baka", "aka", "mongo"]
+    },
+
+    {
+      "id": "amazigh",
+      "name": "Amazigh (Berber)",
+      "slug": "amazigh",
+      "slugAliases": ["berber"],
+      "youtubeVideoId": "YzVzEV8Yzlg",
+      "countries": ["MA", "DZ", "TN", "LY", "ML", "NE", "MR", "EG"],
+      "region": "North Africa (Morocco, Algeria, Tunisia, Libya)",
+      "population": "~40 million",
+      "populationPercent": "~40% (Morocco)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 31.5, "lng": -5.0 },
+      "counties": ["Atlas Mountains (MA)", "Kabylie (DZ)", "Siwa (EG)", "Nafusa (LY)"],
+      "namePrefixes": ["Am", "Mas", "Tin", "Ait"],
+      "commonNames": {
+        "female": ["Tiziri", "Tinhinan", "Dihya", "Lalla", "Tamimunt"],
+        "male": ["Massinissa", "Amazigh", "Aksil", "Matoub", "Sifax"]
+      },
+      "stereotypes": [
+        "Indigenous North Africans",
+        "Mountain dwellers",
+        "Tifinagh alphabet users",
+        "Resistant to Arabization",
+        "Hospitality culture",
+        "Rug and carpet weavers"
+      ],
+      "culturalTraits": [
+        "Indigenous people of North Africa predating Arab conquest",
+        "Tifinagh alphabet - one of Africa's indigenous scripts",
+        "Famous carpet and rug weaving traditions",
+        "Ahwash and Ahidous collective dances",
+        "Strong oral poetry tradition (Izlan)",
+        "Distinctive architecture (kasbahs, ksour)"
+      ],
+      "funFacts": [
+        "The word 'Amazigh' means 'free people' - they reject the term 'Berber'",
+        "Famous historical figures include Hannibal's cavalry, Augustine of Hippo, and Tarik ibn Ziyad (who gave Gibraltar its name)",
+        "Morocco officially recognized Tamazight as a national language in 2011",
+        "Dihya (Kahina) was a Berber queen who resisted Arab conquest in the 7th century"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous", "Tagine", "Bread", "Olive oil"],
+        "beverages": ["Mint tea", "Amlou (almond butter)", "Argan oil"],
+        "specialDishes": ["Couscous with seven vegetables", "Rfissa", "Harira soup", "Seffa (sweet couscous)"],
+        "description": "Amazigh cuisine is the foundation of North African food: couscous, tagine, and mint tea all have Berber origins."
+      },
+      "traditionalDance": "Ahwash and Ahidous collective dances",
+      "religion": "Islam (Sunni, often with Sufi traditions)",
+      "language": {
+        "name": "Tamazight (multiple varieties)",
+        "speakers": "~30 million",
+        "greeting": "Azul!",
+        "greetingMeaning": "Hello!",
+        "family": "Berber (Afro-Asiatic)",
+        "writingSystem": "Tifinagh script, Latin alphabet, Arabic script"
+      },
+      "populationByCountry": [
+        { "country": "MA", "population": "~15M", "percent": "40%" },
+        { "country": "DZ", "population": "~13M", "percent": "30%" },
+        { "country": "NE", "population": "~2M", "percent": "10%" },
+        { "country": "LY", "population": "~500K", "percent": "7%" }
+      ],
+      "famousPeople": [
+        { "name": "Zinedine Zidane", "role": "Football legend (Kabyle origin)", "wikipedia": "https://en.wikipedia.org/wiki/Zinedine_Zidane" },
+        { "name": "Matoub Lounes", "role": "Kabyle singer and activist", "wikipedia": "https://en.wikipedia.org/wiki/Matoub_Lounes" }
+      ],
+      "sources": [
+        { "name": "Wikipedia - Berbers", "url": "https://en.wikipedia.org/wiki/Berbers" },
+        { "name": "Britannica - Berber", "url": "https://www.britannica.com/topic/Berber" }
+      ],
+      "description": "The Amazigh (Berber) are the indigenous people of North Africa, predating Arab conquest, with their own Tifinagh script, rich traditions, and 40+ million speakers across 8 countries.",
+      "relatedTribes": ["tuareg", "kabyle", "riffian", "shilha"]
+    },
+
+    {
+      "id": "hamar",
+      "name": "Hamar (Hamer)",
+      "slug": "hamar",
+      "youtubeVideoId": "9DvQbJf9LuY",
+      "countries": ["ET"],
+      "region": "Omo Valley, Ethiopia",
+      "population": "~46,000",
+      "populationPercent": "<0.1% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.1, "lng": 36.5 },
+      "counties": ["South Omo Zone", "Turmi", "Dimeka"],
+      "namePrefixes": ["Ma", "Ba", "Ar"],
+      "commonNames": {
+        "female": ["Margo", "Banna", "Aro"],
+        "male": ["Mako", "Bala", "Korcho"]
+      },
+      "stereotypes": [
+        "Bull jumping ceremony",
+        "Red ochre hairstyles",
+        "Women willingly whipped",
+        "Body adornment",
+        "Cattle-centered culture",
+        "Remote Omo Valley people"
+      ],
+      "culturalTraits": [
+        "Ukuli (bull jumping) - boys run across cattle backs to become men",
+        "Women's butter-covered, red ochre hair in distinctive coils",
+        "Women request whipping at ceremonies to show devotion",
+        "Cattle are central to identity, wealth, and marriage",
+        "Evangadi night dancing ceremonies",
+        "Iron and bead jewelry making"
+      ],
+      "funFacts": [
+        "In bull jumping, a boy must run across 10-30 cattle backs 4 times without falling",
+        "Women's willing whipping creates scars that show their loyalty and can be called upon as debts later",
+        "The Hamar believe a man cannot marry until he successfully jumps the bulls",
+        "Hamar women's distinctive red ochre hairstyles can take hours to prepare"
+      ],
+      "traditionalFood": {
+        "staples": ["Sorghum", "Millet", "Cattle blood and milk", "Honey"],
+        "beverages": ["Sorghum beer", "Honey mead"],
+        "specialDishes": ["Blood and milk mixture", "Roasted sorghum", "Wild honey"],
+        "description": "Hamar diet combines pastoralism with sorghum farming; blood-milk mixtures provide nutrition during dry seasons."
+      },
+      "traditionalDance": "Evangadi nighttime jumping dances",
+      "religion": "Traditional animism, ancestor worship",
+      "language": {
+        "name": "Hamer",
+        "speakers": "~40,000",
+        "greeting": "Geza?",
+        "greetingMeaning": "How are you?",
+        "family": "Omotic (Afro-Asiatic)",
+        "writingSystem": "Oral tradition"
+      },
+      "sources": [
+        { "name": "Wikipedia - Hamar people", "url": "https://en.wikipedia.org/wiki/Hamar_people" },
+        { "name": "Absolute Ethiopia - Hamar", "url": "https://absoluteethiopia.com/the-culture-behind-the-bull-jumping-ceremony/" }
+      ],
+      "description": "The Hamar of Ethiopia's Omo Valley are famous for the bull jumping coming-of-age ceremony, women's red ochre hairstyles, and unique traditions of devotion through scarification.",
+      "relatedTribes": ["mursi", "karo", "banna", "bodi"]
+    },
+
+    {
+      "id": "karo",
+      "name": "Karo (Kara)",
+      "slug": "karo",
+      "youtubeVideoId": "kUPsklj3o3s",
+      "countries": ["ET"],
+      "region": "Omo Valley, Ethiopia",
+      "population": "~1,500",
+      "populationPercent": "<0.01% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.3, "lng": 36.0 },
+      "counties": ["South Omo Zone", "Korcho Village"],
+      "namePrefixes": ["Ka", "Lo", "Gi"],
+      "commonNames": {
+        "female": ["Karo", "Wotko", "Gira"],
+        "male": ["Lokel", "Karwo", "Girak"]
+      },
+      "stereotypes": [
+        "Master body painters",
+        "Smallest Omo Valley tribe",
+        "Living art",
+        "Elaborate headdresses",
+        "Endangered culture",
+        "Omo River farmers"
+      ],
+      "culturalTraits": [
+        "Extraordinary body and face painting with natural pigments",
+        "White chalk, yellow mineral, charcoal, and red ochre designs",
+        "Elaborate hairstyles with feathers, shells, and clay caps",
+        "Scarification patterns indicating kills (men) or beauty (women)",
+        "Flood-retreat farming along Omo River",
+        "Baz (clan leader) governing system"
+      ],
+      "funFacts": [
+        "Karo body paint designs change daily and can take hours to apply",
+        "With only ~1,500 people, the Karo are one of Africa's smallest and most endangered tribes",
+        "Men scar their chests to show enemies killed - each kill = one scar",
+        "The Karo use ashes, chalk, and iron ore to create white, yellow, and red paints"
+      ],
+      "traditionalFood": {
+        "staples": ["Sorghum", "Maize", "Fish (from Omo River)", "Cattle products"],
+        "beverages": ["Sorghum beer", "Honey wine"],
+        "specialDishes": ["Grilled fish", "Sorghum porridge", "Cattle blood drink"],
+        "description": "Karo practice flood-retreat farming and fishing along the Omo River, supplemented by cattle herding."
+      },
+      "traditionalDance": "Ceremonial dances with full body paint",
+      "religion": "Traditional animism, nature spirits",
+      "language": {
+        "name": "Karo",
+        "speakers": "~1,500",
+        "greeting": "Nome?",
+        "greetingMeaning": "How are you?",
+        "family": "Omotic (Afro-Asiatic)",
+        "writingSystem": "Oral tradition"
+      },
+      "sources": [
+        { "name": "Absolute Ethiopia - Karo", "url": "https://absoluteethiopia.com/a-look-at-the-kara-tribe-ethiopias-famous-body-painters/" },
+        { "name": "101 Last Tribes - Karo", "url": "https://www.101lasttribes.com/tribes/karo.html" }
+      ],
+      "description": "The Karo are Ethiopia's smallest Omo Valley tribe (~1,500 people), world-renowned for their intricate body painting using natural pigments and elaborate headdresses.",
+      "relatedTribes": ["hamar", "mursi", "banna", "dassanech"]
     }
   ]
 }
