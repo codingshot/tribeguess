@@ -145,9 +145,10 @@ export function GuessForm({
         <p className="text-xs text-muted-foreground mb-2">
           First name works best - we'll analyze the naming patterns
         </p>
-        <div className="flex gap-2">
-          {/* Country Dropdown - hugs content width */}
-          <div className="relative shrink-0 inline-flex">
+        {/* Mobile: Stack vertically, Desktop: Side by side */}
+        <div className="flex flex-col sm:flex-row gap-2">
+          {/* Country Dropdown */}
+          <div className="relative w-full sm:w-auto sm:shrink-0">
             <select
               id="country-select"
               value={country}
@@ -155,8 +156,7 @@ export function GuessForm({
                 setCountry(e.target.value);
                 onCountryChange?.(e.target.value);
               }}
-              className="input-tribal appearance-none cursor-pointer text-sm sm:text-base pr-8 pl-3 py-2.5 min-w-0 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
-              style={{ width: 'auto', maxWidth: '200px' }}
+              className="input-tribal appearance-none cursor-pointer text-base w-full sm:w-auto pr-8 pl-3 py-3 sm:py-2.5 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
               aria-label="Select country"
             >
               <option value="ALL">🌍 All Africa</option>
@@ -166,14 +166,14 @@ export function GuessForm({
                 </option>
               ))}
             </select>
-            <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">
-              <svg className="w-3.5 h-3.5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>
           </div>
           {/* Name Input with Search Button */}
-          <div className="relative flex-1 flex gap-1.5">
+          <div className="relative flex-1 flex gap-2">
             <div className="relative flex-1">
               <input
                 id="name-input"
@@ -181,7 +181,7 @@ export function GuessForm({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
-                className="input-tribal text-base sm:text-lg w-full pr-3 pl-3"
+                className="input-tribal text-base w-full py-3 sm:py-2.5 pr-3 pl-3"
                 autoFocus
                 maxLength={50}
                 autoComplete="off"
@@ -192,7 +192,7 @@ export function GuessForm({
             <button
               type="submit"
               disabled={!name.trim()}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-3 sm:px-4 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 touch-manipulation flex items-center justify-center shrink-0"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 sm:py-2.5 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 touch-manipulation flex items-center justify-center shrink-0 min-w-[48px]"
               aria-label="Search for tribe"
             >
               <Search className="w-5 h-5" />
