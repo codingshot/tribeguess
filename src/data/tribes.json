@@ -11354,6 +11354,175 @@
       "sources": [{ "name": "Wikipedia - Nuer", "url": "https://en.wikipedia.org/wiki/Nuer_people" }],
       "description": "The Nuer are a major Nilotic people of South Sudan (~3.5M), renowned for cattle culture and distinctive six-line forehead scarification.",
       "relatedTribes": ["dinka", "shilluk", "anuak"]
+    },
+
+    {
+      "id": "shilluk",
+      "name": "Shilluk (Chollo)",
+      "slug": "shilluk",
+      "youtubeVideoId": "Qm8bLXpNgHo",
+      "countries": ["SS"],
+      "region": "Upper Nile, South Sudan",
+      "population": "~175,000",
+      "populationPercent": "~2% (South Sudan)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 9.7, "lng": 32.0 },
+      "counties": ["Upper Nile State", "Fashoda", "Malakal"],
+      "namePrefixes": ["Dak", "Nyak", "Akol"],
+      "commonNames": {
+        "female": ["Nyakong", "Adut", "Ajok", "Nyaluak"],
+        "male": ["Dak", "Akol", "Kwol", "Obur", "Nyikwec"]
+      },
+      "stereotypes": ["Divine kingship (reth)", "Cattle herders", "Malakal capital", "Ancient kingdom", "Nile dwellers"],
+      "culturalTraits": ["Divine kingship - the Reth (king) embodies spiritual power of founding hero Nyikang", "One of Africa's oldest continuous monarchies", "Cattle and agriculture along the White Nile", "Elaborate installation and death rituals for kings"],
+      "funFacts": ["The Shilluk believe their first king Nyikang never died but ascended to heaven", "Each new Reth is 'possessed' by Nyikang's spirit during coronation", "Traditionally, a weakening king could be ritually killed to protect the nation"],
+      "traditionalDance": "Royal ceremonies honoring Nyikang and the Reth",
+      "religion": "Traditional belief in Juok (God) and Nyikang; Christianity growing",
+      "language": { "name": "Shilluk (Dhocolo)", "speakers": "~175,000", "greeting": "Imiit?", "greetingMeaning": "How are you?", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Shilluk", "url": "https://en.wikipedia.org/wiki/Shilluk_people" }],
+      "description": "The Shilluk are a Nilotic people of South Sudan known for their divine kingship (Reth), one of Africa's oldest continuous monarchies tracing to the legendary founder Nyikang.",
+      "relatedTribes": ["dinka", "nuer", "anuak"]
+    },
+
+    {
+      "id": "baka",
+      "name": "Baka (Pygmies)",
+      "slug": "baka",
+      "youtubeVideoId": "VbNJUJEQRx4",
+      "countries": ["CM", "CG", "GA", "CF"],
+      "region": "Congo Basin Rainforest",
+      "population": "~40,000",
+      "populationPercent": "<0.1% (Cameroon)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 3.0, "lng": 14.5 },
+      "counties": ["East Region (CM)", "Dja Biosphere Reserve"],
+      "namePrefixes": ["Mo", "Na", "Li"],
+      "commonNames": {
+        "female": ["Mokala", "Nali", "Bisa"],
+        "male": ["Moabi", "Likano", "Ndjambe"]
+      },
+      "stereotypes": ["Forest Pygmy people", "Master hunters", "Yelli polyphonic singing", "Short stature adaptation", "Traditional medicine experts"],
+      "culturalTraits": ["Average adult height ~150cm - genetic rainforest adaptation", "Yelli polyphonic singing (UNESCO heritage)", "Net hunting with entire community", "Deep botanical knowledge - 300+ medicinal plants"],
+      "funFacts": ["Baka know over 300 medicinal plants used by pharmaceutical companies", "Their polyphonic singing influenced Western classical music", "The forest is called 'the Father' - they sing to maintain relationship with it"],
+      "traditionalFood": {
+        "staples": ["Wild yams", "Bush meat", "Caterpillars", "Honey"],
+        "beverages": ["Palm wine", "Honey water"],
+        "specialDishes": ["Smoked monkey meat", "Roasted caterpillars"],
+        "description": "Baka diet combines hunting, gathering, and trade with farming neighbors."
+      },
+      "traditionalDance": "Jengi initiation ceremonies with forest spirit masks",
+      "religion": "Forest-based spirituality centered on Jengi spirit",
+      "language": { "name": "Baka", "speakers": "~40,000", "greeting": "Mbote?", "greetingMeaning": "Hello?", "family": "Ubangian (Niger-Congo)", "writingSystem": "Oral tradition" },
+      "sources": [{ "name": "Wikipedia - Baka", "url": "https://en.wikipedia.org/wiki/Baka_people_(Cameroon_and_Gabon)" }, { "name": "UNESCO - Baka Polyphony", "url": "https://ich.unesco.org/en/RL/oral-traditions-of-the-aka-pygmies-of-central-africa-00011" }],
+      "description": "The Baka are rainforest Pygmy people of Central Africa, known for polyphonic singing (UNESCO heritage), hunting expertise, and deep spiritual connection to the Congo Basin forest.",
+      "relatedTribes": ["mbuti", "aka", "twa"]
+    },
+
+    {
+      "id": "suri",
+      "name": "Suri (Surma)",
+      "slug": "suri",
+      "youtubeVideoId": "d-xj0jVdyG8",
+      "countries": ["ET"],
+      "region": "Omo Valley, Ethiopia",
+      "population": "~35,000",
+      "populationPercent": "<0.1% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.8, "lng": 35.5 },
+      "counties": ["South Omo Zone", "Bench Sheko Zone"],
+      "namePrefixes": ["Ko", "Na", "Ol"],
+      "commonNames": {
+        "female": ["Nogi", "Olare", "Koma"],
+        "male": ["Kormo", "Olibui", "Bargalu"]
+      },
+      "stereotypes": ["Lip plate wearers", "Fierce stick fighters", "Body scarification", "Gold mining warriors", "Remote isolation"],
+      "culturalTraits": ["Women's lip plates similar to Mursi", "Donga stick fighting for prestige and wives", "Elaborate body scarification", "Traditional gold panning"],
+      "funFacts": ["Suri lip plates can reach 15cm diameter - larger than Mursi", "Donga fights can be fatal - winner may claim any unmarried woman", "They historically defended gold deposits from raiders"],
+      "traditionalDance": "Donga ceremony stick fighting dances",
+      "religion": "Traditional animism, sky god (Tumu)",
+      "language": { "name": "Suri", "speakers": "~35,000", "greeting": "Tau?", "greetingMeaning": "How are you?", "family": "Surmic (Nilo-Saharan)", "writingSystem": "Oral tradition" },
+      "sources": [{ "name": "Wikipedia - Suri", "url": "https://en.wikipedia.org/wiki/Suri_people" }],
+      "description": "The Suri are an Omo Valley people closely related to the Mursi, known for women's lip plates, men's Donga stick fighting, and body scarification.",
+      "relatedTribes": ["mursi", "bodi", "karo"]
+    },
+
+    {
+      "id": "afar",
+      "name": "Afar (Danakil)",
+      "slug": "afar",
+      "youtubeVideoId": "E3jthFvE8BQ",
+      "countries": ["ET", "ER", "DJ"],
+      "region": "Horn of Africa (Danakil Desert)",
+      "population": "~2 million",
+      "populationPercent": "~4% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 12.0, "lng": 42.0 },
+      "counties": ["Afar Region (ET)", "Southern Red Sea (ER)", "Djibouti"],
+      "namePrefixes": ["Ali", "Mohamed", "Ahmed", "Hussein"],
+      "commonNames": {
+        "female": ["Fatima", "Amina", "Khadija", "Maryam"],
+        "male": ["Ali", "Mohamed", "Ahmed", "Hussein", "Ibrahim", "Yusuf"]
+      },
+      "stereotypes": ["Fierce desert warriors", "Salt traders", "Danakil Depression dwellers", "Hottest place on Earth", "Camel nomads"],
+      "culturalTraits": ["Living in Earth's hottest inhabited region (Danakil Depression)", "Traditional salt mining and camel caravan trading", "Pastoral nomads with cattle, goats, camels", "Curved jile knife as symbol of manhood", "Strong oral poetry tradition"],
+      "funFacts": ["The Danakil Depression reaches 125°F (52°C) in summer", "Afar salt bars were currency in Ethiopia for centuries", "Traditional law required killing to prove manhood (now largely abandoned)", "Lucy (Australopithecus) was discovered in Afar territory"],
+      "traditionalFood": {
+        "staples": ["Camel milk", "Goat meat", "Sorghum", "Dates"],
+        "beverages": ["Camel milk (fresh and soured)", "Strong tea"],
+        "specialDishes": ["Grilled goat", "Sorghum flatbread"],
+        "description": "Afar diet centers on livestock products supplemented by traded grains. Camel milk is essential for desert survival."
+      },
+      "traditionalDance": "Laale dance performed at weddings and celebrations",
+      "religion": "Islam (Sunni)",
+      "language": { "name": "Afar (Qafar af)", "speakers": "~2 million", "greeting": "Ma'a salama", "greetingMeaning": "Peace be with you", "family": "Cushitic (Afro-Asiatic)", "writingSystem": "Latin alphabet" },
+      "populationByCountry": [
+        { "country": "ET", "population": "~1.8M", "percent": "92%" },
+        { "country": "ER", "population": "~300K", "percent": "5%" },
+        { "country": "DJ", "population": "~300K", "percent": "35%" }
+      ],
+      "sources": [{ "name": "Wikipedia - Afar", "url": "https://en.wikipedia.org/wiki/Afar_people" }, { "name": "Britannica - Afar", "url": "https://www.britannica.com/topic/Afar-people" }],
+      "description": "The Afar are a Cushitic people inhabiting the Danakil Depression—Earth's hottest inhabited region—known for traditional salt mining, camel caravans, and fierce desert warrior culture.",
+      "relatedTribes": ["somali", "oromo", "tigray"]
+    },
+
+    {
+      "id": "malinke",
+      "name": "Malinke (Mandinka)",
+      "slug": "malinke",
+      "slugAliases": ["mandinka", "mandingo"],
+      "youtubeVideoId": "Yht7LXrZvgQ",
+      "countries": ["ML", "GN", "SN", "GM", "CI", "BF", "GW", "MR"],
+      "region": "West Africa (Sahel & Coast)",
+      "population": "~11 million",
+      "populationPercent": "~50% (Guinea)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 12.0, "lng": -8.0 },
+      "counties": ["Upper Guinea", "Gambia River", "Casamance"],
+      "namePrefixes": ["Bah", "Sow", "Diallo", "Keita"],
+      "commonNames": {
+        "female": ["Fatou", "Mariama", "Aminata", "Kadiatou", "Fanta"],
+        "male": ["Mamadou", "Ibrahima", "Ousmane", "Moussa", "Lamine", "Sekou"]
+      },
+      "stereotypes": ["Mali Empire founders", "Griots and storytellers", "Kora musicians", "Trading networks", "Islamic scholars"],
+      "culturalTraits": ["Founded the great Mali Empire (1235-1600)", "Griot tradition - oral historians and musicians", "Kora (21-string harp) and balafon mastery", "Powerful trading networks across West Africa", "Syncretic Islam with traditional practices"],
+      "funFacts": ["Mansa Musa, richest person in history, was Malinke/Mandinka", "The kora inspired the banjo brought to Americas by enslaved people", "Sundiata Keita is celebrated as the Lion King in griot epics", "Kunta Kinte from 'Roots' was Mandinka from Gambia"],
+      "traditionalFood": {
+        "staples": ["Rice", "Millet", "Groundnuts (peanuts)", "Fish"],
+        "beverages": ["Ginger juice", "Bissap (hibiscus)", "Green tea"],
+        "specialDishes": ["Domoda (groundnut stew)", "Benachin (Jollof rice)", "Maafe"],
+        "description": "Malinke cuisine features rice and groundnut-based stews, reflecting both Sahel and coastal influences."
+      },
+      "traditionalDance": "Djembe-accompanied dances for celebrations and rituals",
+      "religion": "Islam (Sunni) with traditional practices",
+      "language": { "name": "Mandinka/Malinke", "speakers": "~11 million", "greeting": "I be di?", "greetingMeaning": "How are you?", "family": "Mande (Niger-Congo)", "writingSystem": "Latin alphabet, N'Ko script" },
+      "famousPeople": [
+        { "name": "Mansa Musa", "role": "Richest person in history", "wikipedia": "https://en.wikipedia.org/wiki/Mansa_Musa" },
+        { "name": "Sundiata Keita", "role": "Founder of Mali Empire", "wikipedia": "https://en.wikipedia.org/wiki/Sundiata_Keita" },
+        { "name": "Toumani Diabaté", "role": "Kora master musician", "wikipedia": "https://en.wikipedia.org/wiki/Toumani_Diabaté" }
+      ],
+      "sources": [{ "name": "Wikipedia - Mandinka", "url": "https://en.wikipedia.org/wiki/Mandinka_people" }, { "name": "Britannica - Mali Empire", "url": "https://www.britannica.com/place/Mali-historical-empire-Africa" }],
+      "description": "The Malinke/Mandinka are the founding people of the great Mali Empire, known for the griot oral tradition, kora music, and producing Mansa Musa—history's richest person.",
+      "relatedTribes": ["bambara", "soninke", "wolof", "fulani"]
     }
   ]
 }
