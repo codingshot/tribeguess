@@ -11876,6 +11876,449 @@
       "sources": [{ "name": "Wikipedia - Sakalava", "url": "https://en.wikipedia.org/wiki/Sakalava" }],
       "description": "The Sakalava are western Madagascar's cattle-herding people, known for powerful historical kingdoms, Tromba spirit possession rituals, and coastal trade connections.",
       "relatedTribes": ["merina", "betsileo", "vezo"]
+    },
+
+    {
+      "id": "tigray",
+      "name": "Tigray (Tigrinya)",
+      "slug": "tigray",
+      "slugAliases": ["tigrinya", "tigrayan"],
+      "youtubeVideoId": "xeG18xdlYmc",
+      "languageVideoId": "JN5Aer8og4o",
+      "countries": ["ET", "ER"],
+      "region": "Tigray Region, Northern Ethiopia & Eritrea",
+      "population": "~9.5 million",
+      "populationPercent": "~6% (Ethiopia), ~55% (Eritrea)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 14.0, "lng": 38.5 },
+      "counties": ["Tigray Region", "Central Region (Eritrea)", "Southern Region (Eritrea)"],
+      "namePrefixes": ["Te", "Ge", "Ha", "Be"],
+      "commonNames": {
+        "female": ["Tigist", "Semhar", "Freweini", "Yordanos", "Rahel", "Feven", "Selam", "Hiwet", "Senait", "Elsa"],
+        "male": ["Tekle", "Gebremedhin", "Hagos", "Berhane", "Yohannes", "Kidane", "Amanuel", "Mesfin", "Haile", "Dawit"]
+      },
+      "stereotypes": ["Ancient Christian civilization", "Aksumite Empire descendants", "Fierce independence", "Strong identity", "Agricultural highlanders"],
+      "culturalTraits": ["One of Africa's earliest Christian civilizations (4th century)", "Aksumite Empire heritage with famous obelisks", "Ge'ez script - one of world's oldest alphabets still in use", "Traditional coffee ceremony origins", "Distinctive music with krar (lyre) and masenqo"],
+      "funFacts": ["Aksum was one of the four great powers of the ancient world", "The Ark of the Covenant is claimed to be in Aksum", "Tigrinya uses the ancient Ge'ez script with 231 characters", "Queen of Sheba is believed to be from this region"],
+      "tradeRelations": {
+        "historical": ["Aksumite Empire controlled Red Sea trade routes", "Minted own coins - first African kingdom to do so", "Traded ivory, gold, incense with Rome and India", "Coffee trade origins in highland regions"],
+        "modern": ["Coffee and sesame exports", "Cross-border trade with Eritrea", "Agricultural products to Ethiopian markets"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Tigrayans led resistance against Italian colonization at Battle of Adwa (1896). Emperor Yohannes IV (Tigrayan) died fighting Mahdist Sudan.",
+        "independenceMovement": "TPLF led 17-year guerrilla war against Derg (1974-1991). Formed core of EPRDF coalition that governed Ethiopia.",
+        "keyFigures": ["Emperor Yohannes IV", "Meles Zenawi (PM 1995-2012)", "Debretsion Gebremichael"]
+      },
+      "traditionalFood": {
+        "staples": ["Injera (teff flatbread)", "Tsebhi (stew)", "Shiro (chickpea stew)", "Hilbet (lentil paste)"],
+        "beverages": ["Suwa (honey mead)", "Buna (coffee)", "Mes (honey wine)"],
+        "specialDishes": ["Kitfo (raw beef)", "Gored gored (cubed raw beef)", "Silsi (tomato sauce)"],
+        "description": "Tigrayan cuisine features injera as base, with spiced stews and the elaborate coffee ceremony central to social life."
+      },
+      "traditionalDance": "Awris - energetic shoulder-shaking dance to krar music",
+      "religion": "Ethiopian Orthodox Christianity (majority), Islam, Traditional beliefs",
+      "language": { "name": "Tigrinya", "speakers": "~9.5 million", "greeting": "ሰላም (Selam)", "greetingMeaning": "Peace/Hello", "family": "Semitic (Afro-Asiatic)", "writingSystem": "Ge'ez (Ethiopic) script" },
+      "populationByCountry": [
+        { "country": "ET", "population": "~7,000,000", "percent": "6%" },
+        { "country": "ER", "population": "~2,500,000", "percent": "55%" }
+      ],
+      "famousPeople": [
+        { "name": "Emperor Yohannes IV", "role": "Ethiopian Emperor who united the nation", "wikipedia": "https://en.wikipedia.org/wiki/Yohannes_IV" },
+        { "name": "Meles Zenawi", "role": "Prime Minister of Ethiopia (1995-2012)", "wikipedia": "https://en.wikipedia.org/wiki/Meles_Zenawi" }
+      ],
+      "sources": [{ "name": "Wikipedia - Tigray-Tigrinya people", "url": "https://en.wikipedia.org/wiki/Tigray-Tigrinya_people" }, { "name": "CIA World Factbook", "url": "https://www.cia.gov/the-world-factbook/countries/ethiopia/" }],
+      "description": "The Tigray people are descendants of the ancient Aksumite Empire, one of Africa's earliest Christian civilizations, known for the Ge'ez script, obelisks at Aksum, and resistance at the Battle of Adwa.",
+      "relatedTribes": ["amhara", "oromo", "afar"]
+    },
+
+    {
+      "id": "sidama",
+      "name": "Sidama",
+      "slug": "sidama",
+      "youtubeVideoId": "tB8c8C3mJIY",
+      "countries": ["ET"],
+      "region": "Sidama Region, Southern Ethiopia",
+      "population": "~4.9 million",
+      "populationPercent": "~4% (Ethiopia)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.7, "lng": 38.5 },
+      "counties": ["Sidama Region (since 2020)"],
+      "namePrefixes": ["Le", "Ha", "Bo"],
+      "commonNames": {
+        "female": ["Almaz", "Aynalem", "Birtukan", "Fanaye", "Meseret", "Tigist"],
+        "male": ["Legesse", "Habtamu", "Berhanu", "Wondimu", "Girma", "Tesfaye"]
+      },
+      "stereotypes": ["Coffee growers", "Enset (false banana) farmers", "New regional state", "Strong cultural identity", "Highland agriculturalists"],
+      "culturalTraits": ["Enset (false banana) as staple crop - unique food security", "Major coffee producers (Sidama coffee is world-famous)", "Fichee-Chambalaalla New Year festival (UNESCO)", "Age-grade social organization system", "Distinctive beehive-shaped houses"],
+      "funFacts": ["Sidama voted for regional statehood in 2019 referendum", "Sidama coffee is globally renowned specialty grade", "Fichee-Chambalaalla is UNESCO Intangible Cultural Heritage", "They call enset 'the tree against hunger'"],
+      "tradeRelations": {
+        "historical": ["Traded coffee beans to highland markets", "Enset surplus traded within region", "Salt and cattle trade routes"],
+        "modern": ["Sidama specialty coffee exported worldwide", "Major supplier of Ethiopian coffee industry", "Enset products traded regionally"]
+      },
+      "traditionalFood": {
+        "staples": ["Kocho (enset bread)", "Wassa (fermented enset)", "Bula (enset starch)", "Coffee"],
+        "beverages": ["Buna (coffee)", "Borde (fermented grain drink)"],
+        "specialDishes": ["Kocho with kitfo", "Wassa with butter", "Coffee ceremony"],
+        "description": "Sidama cuisine revolves around enset (false banana), providing kocho bread, bula starch, and food security. Coffee is central to economy and culture."
+      },
+      "traditionalDance": "Fichee dances during New Year celebrations",
+      "religion": "Protestant Christianity (majority), Ethiopian Orthodox, Traditional beliefs",
+      "language": { "name": "Sidamo", "speakers": "~4.9 million", "greeting": "Hawaalcho!", "greetingMeaning": "Hello/Peace!", "family": "Cushitic (Afro-Asiatic)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Sidama people", "url": "https://en.wikipedia.org/wiki/Sidama_people" }, { "name": "UNESCO - Fichee-Chambalaalla", "url": "https://ich.unesco.org/en/RL/fichee-chambalaalla-new-year-festival-of-the-sidama-people-00935" }],
+      "description": "The Sidama are Ethiopia's fifth-largest ethnic group, known for world-famous coffee, enset cultivation, and the UNESCO-recognized Fichee-Chambalaalla New Year festival.",
+      "relatedTribes": ["oromo", "wolayta", "hadiya"]
+    },
+
+    {
+      "id": "pedi",
+      "name": "Pedi (Northern Sotho)",
+      "slug": "pedi",
+      "slugAliases": ["northern-sotho", "bapedi", "sepedi"],
+      "youtubeVideoId": "kQbq1dHLdvM",
+      "countries": ["ZA"],
+      "region": "Limpopo Province, South Africa",
+      "population": "~4.6 million",
+      "populationPercent": "~10% (South Africa)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -24.0, "lng": 29.5 },
+      "counties": ["Limpopo Province", "Gauteng Province", "Mpumalanga Province"],
+      "namePrefixes": ["Mo", "Ma", "Le"],
+      "commonNames": {
+        "female": ["Makoma", "Mmapula", "Mapaseka", "Lehlogonolo", "Mmathabo", "Kgomotso"],
+        "male": ["Mokgadi", "Lethabo", "Kgalema", "Thabo", "Mahlodi", "Phuti"]
+      },
+      "stereotypes": ["Rain-making rituals", "Traditional healers", "Mining labor history", "Strong cultural preservation", "Initiation school traditions"],
+      "culturalTraits": ["Famous rain-making (go fetola pula) ceremonies", "Male and female initiation schools (koma)", "Traditional healers (dingaka) highly respected", "Complex royal succession traditions", "Distinctive beadwork patterns"],
+      "funFacts": ["Bapedi Kingdom resisted British and Boer colonization for decades", "Sepedi is one of South Africa's 11 official languages", "Traditional rain-making ceremonies still practiced", "Bapedi gold mining predated European arrival"],
+      "tradeRelations": {
+        "historical": ["Traded iron tools and weapons regionally", "Gold and copper mining before colonization", "Cattle and grain trade with neighbors"],
+        "modern": ["Labor migration to Johannesburg mines", "Agricultural products from rural areas", "Cultural tourism to royal kraals"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Bapedi Kingdom under Sekwati and Sekhukhune I fiercely resisted Boer and British expansion (1876-1879). The Sekhukhune Wars required major British military campaigns.",
+        "independenceMovement": "Bapedi intellectuals contributed to ANC founding. Homeland of Lebowa opposed and eventually reintegrated at democracy.",
+        "keyFigures": ["Sekhukhune I (King who resisted colonization)", "Peter Mokaba (anti-apartheid activist)", "Cyril Ramaphosa (current President, Venda/Pedi heritage)"]
+      },
+      "traditionalFood": {
+        "staples": ["Bogobe (porridge)", "Morogo (wild spinach)", "Mopane worms", "Dikgobe (bean and maize mix)"],
+        "beverages": ["Maheu (fermented porridge drink)", "Traditional beer"],
+        "specialDishes": ["Pap and morogo", "Ting (sour porridge)", "Masonja (mopane worms)"],
+        "description": "Pedi cuisine features maize porridge with wild greens and protein from cattle, goats, and mopane worms - a local delicacy."
+      },
+      "traditionalDance": "Dinaka - traditional dance with drums and whistles",
+      "religion": "Christianity (majority), Traditional beliefs (Badimo ancestor worship)",
+      "language": { "name": "Sepedi (Northern Sotho)", "speakers": "~4.6 million", "greeting": "Thobela!", "greetingMeaning": "Hello! (with respect)", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "Sekhukhune I", "role": "King who resisted British colonization", "wikipedia": "https://en.wikipedia.org/wiki/Sekhukhune_I" },
+        { "name": "Peter Mokaba", "role": "Anti-apartheid activist", "wikipedia": "https://en.wikipedia.org/wiki/Peter_Mokaba" }
+      ],
+      "sources": [{ "name": "Wikipedia - Pedi people", "url": "https://en.wikipedia.org/wiki/Pedi_people" }, { "name": "South Africa Government", "url": "https://www.gov.za/about-sa/south-africas-people" }],
+      "description": "The Pedi (Bapedi) are a Northern Sotho people of South Africa known for rain-making ceremonies, fierce resistance to colonization under Sekhukhune I, and rich initiation traditions.",
+      "relatedTribes": ["tswana", "sotho", "venda", "ndebele"]
+    },
+
+    {
+      "id": "venda",
+      "name": "Venda (Vhavenḓa)",
+      "slug": "venda",
+      "slugAliases": ["vhavenda", "bavenda"],
+      "youtubeVideoId": "3y_kl4xN4hI",
+      "countries": ["ZA", "ZW"],
+      "region": "Limpopo Province, South Africa",
+      "population": "~1.5 million",
+      "populationPercent": "~2.5% (South Africa)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -22.9, "lng": 30.5 },
+      "counties": ["Limpopo Province (Vhembe District)"],
+      "namePrefixes": ["Mu", "Ma", "Tshi"],
+      "commonNames": {
+        "female": ["Mashudu", "Tendani", "Azwihangwisi", "Fhumulani", "Livhuwani", "Mulalo"],
+        "male": ["Tshilidzi", "Maanda", "Khathutshelo", "Avhashoni", "Muvhango", "Tshifhiwa"]
+      },
+      "stereotypes": ["Sacred lake traditions", "Domba initiation", "Python worship", "Rainmaking", "Mystical traditions"],
+      "culturalTraits": ["Lake Fundudzi - one of Africa's only freshwater crater lakes, sacred", "Domba initiation school with famous python dance", "Strong belief in water spirits and python cult", "Excellent wood carving and metalwork", "Close cultural ties to Zimbabwe's Shona"],
+      "funFacts": ["Lake Fundudzi is so sacred that visitors must approach backwards as a sign of respect", "The Domba dance mimics a python's movement", "Venda had a sacred royal drum (Ngoma Lungundu) like the Ark of the Covenant", "They arrived in South Africa from Great Zimbabwe area"],
+      "tradeRelations": {
+        "historical": ["Traded iron goods and copper", "Salt trade from local deposits", "Cross-Limpopo trade with Zimbabwe"],
+        "modern": ["Wood carvings sold to tourists", "Agricultural products from subtropical region", "Citrus and macadamia farming"]
+      },
+      "traditionalFood": {
+        "staples": ["Vhuswa (maize porridge)", "Mukhuvha (dried vegetables)", "Tshimbundwa (ground bean patties)"],
+        "beverages": ["Mahafhe (traditional beer)", "Mafhi (fermented porridge)"],
+        "specialDishes": ["Tshidzimba (bean and maize stew)", "Mukusule (grilled meat)"],
+        "description": "Venda cuisine features maize porridge with wild greens, beans, and subtropical fruits from the Limpopo valley."
+      },
+      "traditionalDance": "Domba - the python dance performed during female initiation",
+      "religion": "Traditional beliefs (water spirits, ancestors), Christianity",
+      "language": { "name": "Tshivenḓa", "speakers": "~1.5 million", "greeting": "Ndaa!", "greetingMeaning": "Hello! (to elders)", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Venda people", "url": "https://en.wikipedia.org/wiki/Venda_people" }],
+      "description": "The Venda are a mystical people of South Africa's Limpopo known for Lake Fundudzi's sacred waters, the python Domba dance, and cultural links to Great Zimbabwe.",
+      "relatedTribes": ["shona", "pedi", "tsonga"]
+    },
+
+    {
+      "id": "tsonga",
+      "name": "Tsonga (Shangaan)",
+      "slug": "tsonga",
+      "slugAliases": ["shangaan", "vatshonga", "xitsonga"],
+      "youtubeVideoId": "hJCz3nKZ9JY",
+      "countries": ["ZA", "MZ", "ZW"],
+      "region": "Limpopo, Mpumalanga, Mozambique",
+      "population": "~6 million",
+      "populationPercent": "~4.7% (South Africa)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -24.5, "lng": 31.5 },
+      "counties": ["Limpopo Province", "Mpumalanga Province", "Gaza Province (Mozambique)"],
+      "namePrefixes": ["Hi", "Xa", "Ri"],
+      "commonNames": {
+        "female": ["Nkateko", "Tsakani", "Hlamalani", "Rhulani", "Basani", "Xongile"],
+        "male": ["Risimati", "Xiluva", "Nhlanhla", "Khensani", "Musa", "Hlengani"]
+      },
+      "stereotypes": ["Oral poetry tradition", "Cross-border people", "Mine labor migrants", "Muchacho dance", "Gaza Empire descendants"],
+      "culturalTraits": ["Rich oral poetry (mhamba) and storytelling", "Spread across three countries by colonial borders", "Historical Gaza Empire (Soshangane)", "Distinctive muchongolo dance with shields", "Strong ancestral veneration traditions"],
+      "funFacts": ["Gaza Empire under Soshangane controlled large parts of Mozambique and Zimbabwe", "Tsonga oral poets (vutlhari) are master storytellers", "The Tsonga were split by colonial borders - same people in three countries", "Muchongolo dance originated as a warrior celebration"],
+      "tradeRelations": {
+        "historical": ["Gaza Empire controlled trade routes to coast", "Ivory and slave trade under Soshangane", "Gold mining labor in South Africa"],
+        "modern": ["Cross-border trade with Mozambique", "Labor migration to South African mines", "Agricultural products from lowveld region"]
+      },
+      "traditionalFood": {
+        "staples": ["Xigugu (maize porridge)", "Tihove (cowpea leaves)", "Marhewu (fermented drink)"],
+        "beverages": ["Vukanyi (marula beer)", "Marhewu"],
+        "specialDishes": ["Xigweje (peanut butter porridge)", "Tihovhe with groundnuts"],
+        "description": "Tsonga cuisine features maize staples with cowpea leaves and groundnuts. Marula fruit is used for beer and oil."
+      },
+      "traditionalDance": "Muchongolo - energetic warrior dance with spears and shields",
+      "religion": "Christianity, Traditional beliefs (ancestor veneration)",
+      "language": { "name": "Xitsonga", "speakers": "~6 million", "greeting": "Avuxeni!", "greetingMeaning": "Good morning!", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "populationByCountry": [
+        { "country": "ZA", "population": "~2,800,000", "percent": "4.7%" },
+        { "country": "MZ", "population": "~3,000,000", "percent": "10%" },
+        { "country": "ZW", "population": "~200,000", "percent": "<2%" }
+      ],
+      "sources": [{ "name": "Wikipedia - Tsonga people", "url": "https://en.wikipedia.org/wiki/Tsonga_people" }],
+      "description": "The Tsonga (Shangaan) are descendants of the Gaza Empire who span South Africa, Mozambique, and Zimbabwe, known for muchongolo warrior dance and rich oral poetry traditions.",
+      "relatedTribes": ["venda", "shona", "zulu", "swazi"]
+    },
+
+    {
+      "id": "tiv",
+      "name": "Tiv",
+      "slug": "tiv",
+      "youtubeVideoId": "tB8c8C3mJIY",
+      "countries": ["NG", "CM"],
+      "region": "Benue State, Nigeria",
+      "population": "~6.5 million",
+      "populationPercent": "~3% (Nigeria)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 7.5, "lng": 9.0 },
+      "counties": ["Benue State", "Taraba State", "Nasarawa State", "Plateau State"],
+      "namePrefixes": ["Ter", "Wua", "Mba", "Ior"],
+      "commonNames": {
+        "female": ["Mwuese", "Nguuma", "Dooshima", "Erdoo", "Mbaterngun", "Sewuese"],
+        "male": ["Terkimbi", "Iorwuese", "Aondowase", "Aondo", "Tyavkase", "Mzungwi"]
+      },
+      "stereotypes": ["Egalitarian society", "Agricultural masters", "No traditional kings", "Compound farming", "Strong ethnic identity"],
+      "culturalTraits": ["Famously egalitarian - no traditional kings or chiefs", "Master yam and millet farmers", "Complex system of age grades and lineage", "Rich theatrical traditions (kwagh-hir puppetry)", "Distinctive circular compound architecture"],
+      "funFacts": ["Tiv society traditionally had no kings - decisions made by elders", "Kwagh-hir puppetry is UNESCO intangible heritage candidate", "The Tiv are one of Nigeria's largest 'stateless' societies", "Benue State is called 'Food Basket of the Nation' due to Tiv farming"],
+      "tradeRelations": {
+        "historical": ["Yam and grain traded to northern markets", "Resisted slave trade more successfully than neighbors", "Salt and iron goods exchanged regionally"],
+        "modern": ["Major suppliers of yam to Nigerian markets", "Benue agriculture feeds much of Nigeria", "Cross-border trade with Cameroon"]
+      },
+      "traditionalFood": {
+        "staples": ["Ruam nahan (pounded yam)", "Ruam kumen (millet porridge)", "Sev (bean soup)"],
+        "beverages": ["Burukutu (sorghum beer)", "Palm wine"],
+        "specialDishes": ["Alibo (sesame stew)", "Jigelik (bean cakes)", "Kwahmor (millet dish)"],
+        "description": "Tiv cuisine centers on yam and millet, with groundnut and sesame-based soups. Benue's fertile lands make them major food producers."
+      },
+      "traditionalDance": "Swange - energetic group dance with synchronized movements",
+      "religion": "Christianity (majority), Traditional beliefs (Aondo - supreme being)",
+      "language": { "name": "Tiv", "speakers": "~6.5 million", "greeting": "Mough!", "greetingMeaning": "Welcome!", "family": "Bantu (Benue-Congo)", "writingSystem": "Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Tiv people", "url": "https://en.wikipedia.org/wiki/Tiv_people" }],
+      "description": "The Tiv are one of Nigeria's largest ethnic groups, known for egalitarian society without traditional kings, master farming in the 'Food Basket' Benue State, and kwagh-hir puppet theater.",
+      "relatedTribes": ["idoma", "igede", "jukun"]
+    },
+
+    {
+      "id": "ijaw",
+      "name": "Ijaw (Izon)",
+      "slug": "ijaw",
+      "slugAliases": ["izon", "ijo"],
+      "youtubeVideoId": "SB9VxHLHfQQ",
+      "countries": ["NG"],
+      "region": "Niger Delta, Nigeria",
+      "population": "~14 million",
+      "populationPercent": "~6% (Nigeria)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 4.8, "lng": 6.0 },
+      "counties": ["Bayelsa State", "Rivers State", "Delta State", "Ondo State"],
+      "namePrefixes": ["Ebi", "Ala", "Pere"],
+      "commonNames": {
+        "female": ["Ebiere", "Alayingi", "Ayibapreye", "Tare", "Perebibo", "Oronto"],
+        "male": ["Ebikabowei", "Alamieyeseigha", "Peretomode", "Tarila", "Oronto", "Diepriye"]
+      },
+      "stereotypes": ["Niger Delta fishermen", "Oil region inhabitants", "Water people", "Canoe builders", "Environmental activists"],
+      "culturalTraits": ["Expert fishermen and canoe builders for millennia", "Lived in Niger Delta waterways for 5,000+ years", "Egbesu warrior tradition and deity worship", "Elaborate masquerade festivals", "Front line of Nigeria's oil politics"],
+      "funFacts": ["Ijaw are the oldest inhabitants of the Niger Delta - possibly 5,000+ years", "They're Nigeria's fourth-largest ethnic group", "Their homeland produces most of Nigeria's oil wealth", "Canoe building is a highly specialized ancestral skill"],
+      "tradeRelations": {
+        "historical": ["Controlled Niger Delta waterways and trade", "Salt and fish traded to inland peoples", "Palm oil export during colonial era"],
+        "modern": ["Oil extraction on Ijaw lands (often disputed)", "Fishing remains major livelihood", "Activism for resource control and environment"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Ijaw kings resisted British Royal Niger Company. Isaac Boro led 12-day Niger Delta Republic revolt (1966).",
+        "independenceMovement": "Movement for the Emancipation of the Niger Delta (MEND) fought for resource control. Environmental activism continues.",
+        "keyFigures": ["Isaac Boro (revolutionary)", "Ken Saro-Wiwa (ally)", "Goodluck Jonathan (former President)"]
+      },
+      "traditionalFood": {
+        "staples": ["Fish (fresh and smoked)", "Plantain", "Starch (from cassava)", "Seafood"],
+        "beverages": ["Palm wine", "Ogogoro (local gin)"],
+        "specialDishes": ["Banga soup", "Kekefiyai (fisherman's soup)", "Polofiyai (groundnut soup)"],
+        "description": "Ijaw cuisine is seafood-centric, featuring fresh fish, periwinkles, crabs, and native soups served with starch or plantain."
+      },
+      "traditionalDance": "Egwu Okorobia - masquerade dance celebrating water spirits",
+      "religion": "Christianity, Traditional beliefs (Egbesu deity, water spirits)",
+      "language": { "name": "Izon (Ijaw)", "speakers": "~14 million", "greeting": "Barakiri-o!", "greetingMeaning": "How are you!", "family": "Ijoid (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "Goodluck Jonathan", "role": "President of Nigeria (2010-2015)", "wikipedia": "https://en.wikipedia.org/wiki/Goodluck_Jonathan" },
+        { "name": "Isaac Boro", "role": "Revolutionary and activist", "wikipedia": "https://en.wikipedia.org/wiki/Isaac_Adaka_Boro" }
+      ],
+      "sources": [{ "name": "Wikipedia - Ijaw people", "url": "https://en.wikipedia.org/wiki/Ijaw_people" }],
+      "description": "The Ijaw are Niger Delta's indigenous water people, expert fishermen for millennia, who inhabit Nigeria's oil-producing heartland and have a rich tradition of water masquerades and Egbesu spirituality.",
+      "relatedTribes": ["urhobo", "itsekiri", "yoruba", "igbo"]
+    },
+
+    {
+      "id": "kanuri",
+      "name": "Kanuri",
+      "slug": "kanuri",
+      "youtubeVideoId": "ROYDtM9XwCg",
+      "countries": ["NG", "NE", "TD", "CM"],
+      "region": "Borno State, Nigeria; Lake Chad Basin",
+      "population": "~10 million",
+      "populationPercent": "~4% (Nigeria)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 12.0, "lng": 13.0 },
+      "counties": ["Borno State", "Yobe State", "Diffa Region (Niger)", "Lac Region (Chad)"],
+      "namePrefixes": ["Ma", "Al", "Ba"],
+      "commonNames": {
+        "female": ["Fatima", "Aisha", "Hauwa", "Maryam", "Zainab", "Bintu"],
+        "male": ["Mala", "Bukar", "Shettima", "Goni", "Kyari", "Kashim"]
+      },
+      "stereotypes": ["Kanem-Bornu Empire heirs", "Lake Chad people", "Islamic scholars", "Livestock herders", "Trans-Saharan traders"],
+      "culturalTraits": ["Descendants of the 1000-year Kanem-Bornu Empire", "Deep Islamic scholarship tradition (since 11th century)", "Distinctive turbans and flowing robes", "Lake Chad fishing and farming communities", "Durbar (horse) festival traditions"],
+      "funFacts": ["Kanem-Bornu Empire lasted over 1000 years (c. 700-1900 CE)", "It was one of Africa's longest-lasting kingdoms", "The empire was larger than many European states", "Kanuri scholars corresponded with rulers across the Islamic world"],
+      "tradeRelations": {
+        "historical": ["Major Trans-Saharan trade route hub", "Controlled trade in slaves, salt, and goods to North Africa", "Exchanged goods with Hausa states and beyond", "Lake Chad provided fish for regional markets"],
+        "modern": ["Lake Chad fishing (threatened by shrinking lake)", "Livestock trade across Lake Chad Basin", "Cross-border trade with Niger and Chad"]
+      },
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Maize", "Fish from Lake Chad"],
+        "beverages": ["Kunu (millet drink)", "Tea"],
+        "specialDishes": ["Tuwo (millet balls)", "Shinkafa (rice dishes)", "Kilishi (dried meat)"],
+        "description": "Kanuri cuisine features millet and sorghum staples with Lake Chad fish. Kilishi (dried meat) and suya are popular protein sources."
+      },
+      "traditionalDance": "Durbar horseback festivals and court dances",
+      "religion": "Islam (Sunni, since 11th century)",
+      "language": { "name": "Kanuri", "speakers": "~10 million", "greeting": "Wusha!", "greetingMeaning": "Hello!", "family": "Saharan (Nilo-Saharan)", "writingSystem": "Arabic script historically, Latin now" },
+      "populationByCountry": [
+        { "country": "NG", "population": "~4,000,000", "percent": "4%" },
+        { "country": "NE", "population": "~600,000", "percent": "2.5%" },
+        { "country": "TD", "population": "~500,000", "percent": "3%" },
+        { "country": "CM", "population": "~100,000", "percent": "<1%" }
+      ],
+      "sources": [{ "name": "Wikipedia - Kanuri people", "url": "https://en.wikipedia.org/wiki/Kanuri_people" }],
+      "description": "The Kanuri are heirs to the 1000-year Kanem-Bornu Empire around Lake Chad, known for deep Islamic scholarship, Trans-Saharan trade history, and distinctive Durbar horseback traditions.",
+      "relatedTribes": ["hausa", "fulani", "shuwa_arab"]
+    },
+
+    {
+      "id": "mossi",
+      "name": "Mossi (Moose)",
+      "slug": "mossi",
+      "slugAliases": ["moose", "mosi"],
+      "youtubeVideoId": "ROYDtM9XwCg",
+      "countries": ["BF", "GH", "CI"],
+      "region": "Central Burkina Faso",
+      "population": "~11 million",
+      "populationPercent": "~52% (Burkina Faso)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 12.3, "lng": -1.5 },
+      "counties": ["Centre Region", "Centre-Nord Region", "Plateau-Central Region"],
+      "namePrefixes": ["Oue", "Ka", "Sa", "Ra"],
+      "commonNames": {
+        "female": ["Salamata", "Rasmata", "Fatimata", "Azeta", "Poko", "Alizeta"],
+        "male": ["Ouedraogo", "Kabore", "Sawadogo", "Compaore", "Zongo", "Ouattara"]
+      },
+      "stereotypes": ["Burkina's dominant group", "Proud empire builders", "Resistance to Islam", "Sophisticated court system", "Labor migrants"],
+      "culturalTraits": ["Built powerful Mossi kingdoms (1200s-1896) that resisted Mali and Songhai", "Distinctive Nakomsé (royal) and Nyonyosé (common) class system", "Elaborate court protocols around the Mogho Naaba (emperor)", "Weekly audiences with the Mogho Naaba still held in Ouagadougou", "Resisted Islamization longer than neighbors"],
+      "funFacts": ["The Mossi Kingdoms successfully resisted the Mali and Songhai Empires", "The Mogho Naaba (emperor) still holds weekly public audiences in Ouagadougou", "Mossi make up over half of Burkina Faso's population", "Mossi labor migrants are found across West Africa and beyond"],
+      "tradeRelations": {
+        "historical": ["Traded slaves and gold southward", "Resisted Trans-Saharan trade domination", "Internal trade in grain, cotton, livestock", "Raided neighbors for captives"],
+        "modern": ["Labor migration to Côte d'Ivoire and Ghana", "Agricultural products to regional markets", "Handicrafts and traditional textiles"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Mogho Naaba Wobgho resisted French conquest in 1896, going into exile rather than submit. Mossi soldiers fought in French colonial forces.",
+        "independenceMovement": "Maurice Yaméogo (first president) and Thomas Sankara (revolutionary leader) had Mossi heritage. Sankara renamed country 'Burkina Faso' (Land of Upright People).",
+        "keyFigures": ["Mogho Naaba Wobgho (resistance)", "Thomas Sankara (revolutionary)", "Blaise Compaoré (president 1987-2014)"]
+      },
+      "traditionalFood": {
+        "staples": ["Tô (millet/sorghum paste)", "Rice", "Beans", "Millet"],
+        "beverages": ["Dolo (millet beer)", "Zoom-koom (millet drink)"],
+        "specialDishes": ["Tô with gombo sauce", "Riz gras", "Poulet bicyclette (grilled chicken)"],
+        "description": "Mossi cuisine features tô (thick millet paste) dipped in vegetable and meat sauces. Dolo millet beer is central to social gatherings."
+      },
+      "traditionalDance": "Warba - warrior dance with elaborate costumes",
+      "religion": "Islam (growing), Traditional beliefs (Ancestor veneration), Christianity",
+      "language": { "name": "Mooré", "speakers": "~11 million", "greeting": "Ne y windiga!", "greetingMeaning": "Good morning!", "family": "Gur (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "Thomas Sankara", "role": "Revolutionary leader 'Africa's Che Guevara'", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Sankara" },
+        { "name": "Mogho Naaba Baongho", "role": "Current Mossi Emperor", "wikipedia": "https://en.wikipedia.org/wiki/Mogho_Naaba" }
+      ],
+      "sources": [{ "name": "Wikipedia - Mossi people", "url": "https://en.wikipedia.org/wiki/Mossi_people" }],
+      "description": "The Mossi are Burkina Faso's dominant ethnic group, heirs to powerful kingdoms that resisted Mali and Songhai empires, with a living emperor (Mogho Naaba) who still holds weekly audiences.",
+      "relatedTribes": ["dagomba", "mamprusi", "gurma"]
+    },
+
+    {
+      "id": "dagomba",
+      "name": "Dagomba (Dagbamba)",
+      "slug": "dagomba",
+      "slugAliases": ["dagbamba", "dagbon"],
+      "youtubeVideoId": "GJLgbdTBlxM",
+      "countries": ["GH"],
+      "region": "Northern Region, Ghana",
+      "population": "~1.5 million",
+      "populationPercent": "~5% (Ghana)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 9.4, "lng": -0.8 },
+      "counties": ["Northern Region", "Tamale Metropolitan"],
+      "namePrefixes": ["Abdul", "Ya", "Naa"],
+      "commonNames": {
+        "female": ["Abiba", "Fatima", "Fati", "Mariama", "Azara", "Salamatu"],
+        "male": ["Yakubu", "Abdul-Razak", "Mahama", "Alhassan", "Sulemana", "Abdulai"]
+      },
+      "stereotypes": ["Skilled drummers", "Damba festival", "Islamic scholars", "Northern Ghana leaders", "Rice farmers"],
+      "culturalTraits": ["Famous Lunsi (talking) drummers who preserve oral history", "Elaborate Damba and fire festivals", "Ya Na (king) paramount chief system still active", "Strong Islamic scholarship tradition", "Distinctive smock (fugu) dress"],
+      "funFacts": ["Lunsi drummers can recite centuries of royal genealogy from memory", "The Dagbon kingdom dates back to the 15th century", "Damba festival celebrates the Prophet's birthday with fire dances", "Smock weaving is a highly valued craft"],
+      "tradeRelations": {
+        "historical": ["Trans-Saharan trade network participants", "Traded slaves, gold, kola nuts northward", "Shea butter and cloth production"],
+        "modern": ["Rice and grain production for Ghana", "Shea butter exports", "Handicrafts including smock weaving"]
+      },
+      "traditionalFood": {
+        "staples": ["TZ (tuo zaafi - millet paste)", "Rice", "Yams", "Guinea fowl"],
+        "beverages": ["Pito (millet beer)", "Fura da nono (millet and milk)"],
+        "specialDishes": ["TZ with ayoyo soup", "Tubani (bean cakes)", "Wasawasa (millet couscous)"],
+        "description": "Dagomba cuisine centers on TZ (tuo zaafi), a thick millet paste served with soups. Guinea fowl is a prized protein."
+      },
+      "traditionalDance": "Damba - fire festival dance with elaborate drumming",
+      "religion": "Islam (majority), Traditional beliefs, Christianity",
+      "language": { "name": "Dagbani", "speakers": "~1.5 million", "greeting": "Despa!", "greetingMeaning": "Good morning!", "family": "Gur (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "Ya-Na Abukari II", "role": "Current King of Dagbon", "wikipedia": "https://en.wikipedia.org/wiki/Ya-Na" },
+        { "name": "John Mahama", "role": "President of Ghana (2012-2017)", "wikipedia": "https://en.wikipedia.org/wiki/John_Mahama" }
+      ],
+      "sources": [{ "name": "Wikipedia - Dagomba people", "url": "https://en.wikipedia.org/wiki/Dagomba_people" }],
+      "description": "The Dagomba of northern Ghana are known for the 500-year-old Dagbon Kingdom, Lunsi talking drummers who preserve oral history, and elaborate fire festivals.",
+      "relatedTribes": ["mossi", "mamprusi", "nanumba", "gonja"]
     }
   ]
 }
