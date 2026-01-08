@@ -2843,15 +2843,121 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   // Sort by confidence
   predictions.sort((a, b) => b.confidence - a.confidence);
   
-  // If no predictions, provide options from country-filtered tribes
+  // If no predictions found in selected country, search ALL tribes as fallback
+  if (predictions.length === 0 && country && country !== 'ALL') {
+    const allTribes = getAllTribes();
+    const countryName = (tribesData as any).countries?.find((c: any) => c.code === country)?.name || country;
+    
+    // Try detection across ALL tribes
+    const globalPredictions: TribeResult[] = [];
+    
+    // Check name database for exact match
+    const normalizedName = name.toLowerCase().trim().replace(/[^a-z]/g, '');
+    const dbEntry = nameDatabase[normalizedName];
+    
+    if (dbEntry) {
+      const matchingTribe = allTribes.find(t => t.id === dbEntry.tribe);
+      if (matchingTribe) {
+        const tribeCountries = (matchingTribe.countries as string[]) || [];
+        const tribeCountryNames = tribeCountries.map(c => {
+          const countryData = (tribesData as any).countries?.find((ct: any) => ct.code === c);
+          return countryData ? `${countryData.flag} ${countryData.name}` : c;
+        }).join(', ');
+        
+        globalPredictions.push({
+          tribe: matchingTribe,
+          confidence: 88,
+          matchReason: `Found match outside ${countryName}`,
+          matchDetails: [
+            `🌍 "${name}" is a ${matchingTribe.name} name from ${tribeCountryNames}`,
+            `📍 No match found in ${countryName} - showing best match from all Africa`,
+            `💡 Name meaning: "${dbEntry.meaning}"`,
+            `🔄 Try searching with "All Africa" for broader results`
+          ],
+          nameMeaning: dbEntry.meaning
+        });
+      }
+    }
+    
+    // Check prefixes/suffixes across all tribes
+    if (globalPredictions.length === 0) {
+      for (const tribe of allTribes) {
+        const prefixes = (tribe as any).namePrefixes as string[] | undefined;
+        if (prefixes) {
+          for (const prefix of prefixes) {
+            if (normalizedName.startsWith(prefix.toLowerCase()) && prefix.length >= 2) {
+              const tribeCountries = (tribe.countries as string[]) || [];
+              const tribeCountryNames = tribeCountries.map(c => {
+                const countryData = (tribesData as any).countries?.find((ct: any) => ct.code === c);
+                return countryData ? `${countryData.flag} ${countryData.name}` : c;
+              }).join(', ');
+              
+              globalPredictions.push({
+                tribe,
+                confidence: 65,
+                matchReason: `Prefix match outside ${countryName}`,
+                matchDetails: [
+                  `🌍 "${prefix}-" prefix is common in ${tribe.name} names`,
+                  `📍 This tribe is from ${tribeCountryNames}, not ${countryName}`,
+                  `🔍 Consider searching in a different country`,
+                  `🔄 Or use "All Africa" for comprehensive search`
+                ]
+              });
+              break;
+            }
+          }
+        }
+        if (globalPredictions.length >= 3) break;
+      }
+    }
+    
+    // Check common names across all tribes
+    if (globalPredictions.length === 0) {
+      for (const tribe of allTribes) {
+        const allNames = [...(tribe.commonNames?.female || []), ...(tribe.commonNames?.male || [])].map(n => n.toLowerCase());
+        for (const tribeName of allNames) {
+          if (normalizedName === tribeName) {
+            const tribeCountries = (tribe.countries as string[]) || [];
+            const tribeCountryNames = tribeCountries.map(c => {
+              const countryData = (tribesData as any).countries?.find((ct: any) => ct.code === c);
+              return countryData ? `${countryData.flag} ${countryData.name}` : c;
+            }).join(', ');
+            
+            globalPredictions.push({
+              tribe,
+              confidence: 85,
+              matchReason: `Exact name match from ${tribeCountryNames}`,
+              matchDetails: [
+                `🌍 "${name}" is a common ${tribe.name} name`,
+                `📍 This tribe is located in ${tribeCountryNames}`,
+                `❌ No matching tribes found in ${countryName}`,
+                `💡 The name may have origins outside your selected country`
+              ]
+            });
+            break;
+          }
+        }
+        if (globalPredictions.length >= 3) break;
+      }
+    }
+    
+    if (globalPredictions.length > 0) {
+      predictions.push(...globalPredictions);
+    }
+  }
+  
+  // If still no predictions, provide options from country-filtered tribes (or all tribes)
   if (predictions.length === 0) {
-    const topTribes = countryTribes.slice(0, 3);
+    const tribesPool = countryTribes.length > 0 ? countryTribes : getAllTribes().slice(0, 10);
+    const topTribes = tribesPool.slice(0, 3);
     const countryName = country ? (tribesData as any).countries?.find((c: any) => c.code === country)?.name || 'Africa' : 'Africa';
+    
     for (const tribe of topTribes) {
       const matchDetails = [
-        'This name doesn\'t match known patterns in our database',
-        `Showing ${tribe.name} as a major tribe${country ? ` in ${countryName}` : ''}`,
-        'Try adding more clues (region, build, personality) for better accuracy',
+        '❓ This name doesn\'t match any known patterns in our database',
+        `📊 Showing ${tribe.name} as a major tribe${country && country !== 'ALL' ? ` in ${countryName}` : ' in Africa'}`,
+        '🔍 Try variations of the name spelling',
+        '➕ Add more clues (region, build, personality) for better accuracy',
       ];
       
       // Add religious note if detected

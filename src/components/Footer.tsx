@@ -1,7 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Shuffle } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import { recipes } from '@/data/recipes';
 
 export function Footer() {
+  const navigate = useNavigate();
+
+  const handleRandomRecipe = () => {
+    const randomIndex = Math.floor(Math.random() * recipes.length);
+    const randomRecipe = recipes[randomIndex];
+    navigate(`/recipe/${randomRecipe.id}`);
+  };
+
   return (
     <footer className="border-t border-border bg-background/50">
       <div className="container mx-auto px-4 py-6 sm:py-8">
@@ -72,6 +82,17 @@ export function Footer() {
               </Link>
             </nav>
           </div>
+        </div>
+        
+        {/* Random Recipe Button */}
+        <div className="mt-6 pt-6 border-t border-border">
+          <button
+            onClick={handleRandomRecipe}
+            className="w-full sm:w-auto mx-auto flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <Shuffle className="w-4 h-4" />
+            Discover a Random Recipe
+          </button>
         </div>
         
         <div className="mt-6 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
