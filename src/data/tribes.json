@@ -8311,6 +8311,93 @@
       "sources": [{ "name": "Wikipedia - Afar people", "url": "https://en.wikipedia.org/wiki/Afar_people" }, { "name": "American Afar Diaspora", "url": "https://americanafardiaspora.org/history/" }],
       "description": "The Afar are a Cushitic people of the Horn of Africa's hottest region, known for salt mining, camel herding, fierce independence, and living in the otherworldly Danakil Depression.",
       "relatedTribes": ["somali", "oromo", "tigrinya", "beja"]
+    },
+
+    {
+      "id": "chewa",
+      "name": "Chewa",
+      "slug": "chewa",
+      "slugAliases": ["cewa", "chichewa", "nyanja"],
+      "youtubeVideoId": "wBIj12PB7Ag",
+      "countries": ["MW", "ZM", "MZ"],
+      "region": "Central Southern Africa (Malawi, Zambia, Mozambique)",
+      "population": "~12 million",
+      "populationPercent": "~35% of Malawi",
+      "populationByCountry": [
+        { "country": "MW", "population": "~8 million", "percent": "~35%" },
+        { "country": "ZM", "population": "~2 million", "percent": "~12%" },
+        { "country": "MZ", "population": "~2 million", "percent": "~6%" }
+      ],
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -13.5, "lng": 34.0 },
+      "tribeTerritoryDegrees": { "latSpan": 6, "lngSpan": 5 },
+      "counties": ["Central Region (Malawi)", "Eastern Province (Zambia)", "Tete Province (Mozambique)"],
+      "namePrefixes": [],
+      "commonNames": {
+        "female": ["Chimwemwe", "Tionge", "Tadala", "Mphatso", "Mayamiko", "Taonga"],
+        "male": ["Blessings", "Gift", "Thokozani", "Yankho", "Kondwani", "Chisomo"]
+      },
+      "stereotypes": ["Warm hospitality", "Matrilineal society", "Gule Wamkulu dancers", "Lake Malawi fishers", "Agricultural people", "The 'Warm Heart of Africa'"],
+      "genderStereotypes": {
+        "male": ["Gule Wamkulu dancers", "Fishermen", "Farmers", "Village chiefs (through matrilineal line)"],
+        "female": ["Family heads in matrilineal system", "Farmers", "Traders", "Keepers of tradition"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men performed in Gule Wamkulu masked dances, fished Lake Malawi, and cleared land. Inheritance passed through the mother's line.",
+          "female": "Women owned land and controlled family lineage in this matrilineal society. They were primary farmers and decision-makers."
+        },
+        "modern": {
+          "male": "Men work in fishing, tobacco farming, and urban employment. Some Gule Wamkulu traditions continue.",
+          "female": "Women maintain strong roles in agriculture and family. Education has increased opportunities."
+        }
+      },
+      "culturalTraits": ["Matrilineal society (rare in Africa)", "Gule Wamkulu secret society and masked dances (UNESCO heritage)", "Strong agricultural tradition", "'Warm Heart of Africa' hospitality", "Deep respect for elders", "Christianity blended with traditional beliefs"],
+      "funFacts": ["The Gule Wamkulu masked dances are performed by a secret society - women and children must not know the dancers' identities", "Chewa society is matrilineal - children belong to the mother's clan and property passes through women", "Lake Malawi, which borders Chewa lands, has more fish species than any other lake on Earth", "The Chewa are the largest ethnic group in Malawi and gave the country its national language, Chichewa", "Malawi means 'flames' in Chichewa, referring to the sun rising over Lake Malawi"],
+      "tradeRelations": {
+        "historical": ["Salt trade from Lake Chilwa", "Iron tools trading", "Ivory and slave trade resistance", "Regional food trade"],
+        "modern": ["Tobacco farming (major export)", "Lake Malawi fishing industry", "Tea and sugar production", "Cross-border trade with Zambia and Mozambique"]
+      },
+      "antiColonialResistance": "The Chewa resisted British colonial rule and forced labor. John Chilembwe led the 1915 uprising against colonial injustices. Hastings Kamuzu Banda, a Chewa, led Malawi to independence.",
+      "traditionalFood": {
+        "staples": ["Nsima (maize porridge)", "Chambo (Lake Malawi fish)", "Nthochi (plantain)", "Masamba (pumpkin leaves)"],
+        "beverages": ["Thobwa (fermented millet drink)", "Masese (banana beer)"],
+        "specialDishes": ["Chambo fish", "Nsima with ndiwo (relish)", "Kondowole (cassava porridge)"],
+        "description": "Chewa cuisine centers on nsima (thick maize porridge) served with fish from Lake Malawi and vegetable relishes."
+      },
+      "traditionalDance": "Gule Wamkulu (masked dance - UNESCO Intangible Heritage)",
+      "religion": "Christianity (predominant), traditional beliefs, Islam (minority)",
+      "history": {
+        "origin": "The Chewa migrated from the Congo Basin around the 15th century and established the powerful Maravi Empire that dominated the region.",
+        "colonialEra": "British Nyasaland (1891-1964) imposed hut taxes and forced labor. The 1915 Chilembwe Uprising was a major resistance movement.",
+        "independence": "Hastings Kamuzu Banda, a Chewa, led Malawi to independence in 1964 and ruled until 1994.",
+        "keyEvents": ["Maravi Empire (1480-1720)", "British colonization (1891)", "Chilembwe Uprising (1915)", "Independence (1964)", "Multi-party democracy (1994)"]
+      },
+      "language": {
+        "name": "Chichewa (Chinyanja)",
+        "speakers": "~15 million",
+        "greeting": "Muli bwanji?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Ndili bwino", "meaning": "I am fine" },
+          { "phrase": "Moni", "meaning": "Hello" },
+          { "phrase": "Zikomo", "meaning": "Thank you" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Dzina langa ndi...", "meaning": "My name is..." },
+          { "phrase": "Ndikukonda", "meaning": "I love you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Hastings Kamuzu Banda", "role": "First President of Malawi", "wikipedia": "https://en.wikipedia.org/wiki/Hastings_Kamuzu_Banda" },
+        { "name": "John Chilembwe", "role": "Anti-colonial leader and national hero", "wikipedia": "https://en.wikipedia.org/wiki/John_Chilembwe" },
+        { "name": "Joyce Banda", "role": "First female President of Malawi", "wikipedia": "https://en.wikipedia.org/wiki/Joyce_Banda" }
+      ],
+      "sources": [{ "name": "Wikipedia - Chewa people", "url": "https://en.wikipedia.org/wiki/Chewa_people" }, { "name": "UNESCO - Gule Wamkulu", "url": "https://ich.unesco.org/en/RL/gule-wamkulu-00142" }],
+      "description": "The Chewa are the largest ethnic group in Malawi, known for their matrilineal society, the secretive Gule Wamkulu masked dances (UNESCO heritage), and their reputation as 'The Warm Heart of Africa'.",
+      "relatedTribes": ["tumbuka", "yao", "lomwe", "ngoni"]
     }
   ]
 }
