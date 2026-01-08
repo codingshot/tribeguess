@@ -1635,6 +1635,176 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       coordinates: { lat: 50.83, lng: 4.52 },
       wikipediaUrl: "https://en.wikipedia.org/wiki/Royal_Museum_for_Central_Africa"
     }
+  ],
+
+  // ============ CHAD ============
+  sara: [
+    {
+      name: "Moundou",
+      type: "historical",
+      description: "The largest city in southern Chad and the heart of Sara country. A major cotton industry center and cultural hub for the Sara people.",
+      coordinates: { lat: 8.57, lng: 16.07 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Moundou"
+    },
+    {
+      name: "Sarh (Fort-Archambault)",
+      type: "historical",
+      description: "The second largest city in Chad, historically called Fort-Archambault during French rule. A center of Sara culture and resistance to colonial forced labor.",
+      coordinates: { lat: 9.14, lng: 18.39 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Sarh"
+    }
+  ],
+
+  toubou: [
+    {
+      name: "Tibesti Mountains",
+      type: "natural",
+      description: "The highest mountain range in the Sahara, heart of Toubou homeland. Contains Emi Koussi, the highest peak in the Sahara at 3,445m.",
+      coordinates: { lat: 21.0, lng: 17.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Tibesti_Mountains"
+    },
+    {
+      name: "Lakes of Ounianga",
+      type: "natural",
+      description: "UNESCO World Heritage Site: 18 interconnected lakes in the Sahara, a miraculous oasis in the world's most arid desert. Sacred to local Toubou populations.",
+      coordinates: { lat: 19.05, lng: 20.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lakes_of_Ounianga",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Bardaï",
+      type: "historical",
+      description: "The capital of Tibesti Region and a key Toubou settlement. An oasis town that has served as a center of Toubou resistance and governance.",
+      coordinates: { lat: 21.35, lng: 17.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Barda%C3%AF"
+    }
+  ],
+
+  // ============ NIGER ============
+  zarma: [
+    {
+      name: "Niamey (National Museum)",
+      type: "museum",
+      description: "The capital of Niger and heart of Zarma territory. The National Museum of Niger showcases Zarma and other Nigerien cultures.",
+      coordinates: { lat: 13.51, lng: 2.11 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/National_Museum_of_Niger"
+    },
+    {
+      name: "Historic Centre of Agadez",
+      type: "historical",
+      description: "UNESCO World Heritage Site: A major crossroads of Saharan caravan routes since the 15th century with iconic mud-brick architecture and the famous Agadez Mosque.",
+      coordinates: { lat: 16.97, lng: 7.99 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Agadez",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Dosso",
+      type: "historical",
+      description: "Historical center of the Dosso Sultanate and traditional Zarma governance. The Djermakoye (traditional chief) still holds ceremonial authority.",
+      coordinates: { lat: 13.04, lng: 3.19 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Dosso"
+    }
+  ],
+
+  // ============ MAURITANIA ============
+  moors: [
+    {
+      name: "Chinguetti",
+      type: "historical",
+      description: "UNESCO World Heritage Site: Islam's 'seventh holy city' with 13 ancient libraries containing thousands of medieval manuscripts dating to the 12th century.",
+      coordinates: { lat: 20.46, lng: -12.37 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Chinguetti",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Ouadane",
+      type: "historical",
+      description: "UNESCO World Heritage Site: Ancient caravan trading post founded in the 12th century, once a key stop on the trans-Saharan trade routes.",
+      coordinates: { lat: 20.93, lng: -11.62 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Ouadane",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Richat Structure (Eye of the Sahara)",
+      type: "natural",
+      description: "A 50km-wide geological dome visible from space, located in Moorish territory. Some theorize it may be the location of Atlantis.",
+      coordinates: { lat: 21.12, lng: -11.4 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Richat_Structure"
+    },
+    {
+      name: "Tichitt",
+      type: "archaeological",
+      description: "UNESCO World Heritage Site: Ancient cliff settlements with ruins dating back 4,000 years, among the earliest evidence of urbanization in West Africa.",
+      coordinates: { lat: 18.45, lng: -9.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Tichitt",
+      unescoStatus: "world-heritage"
+    }
+  ],
+
+  soninke: [
+    {
+      name: "Koumbi Saleh",
+      type: "archaeological",
+      description: "The likely capital of the ancient Ghana Empire (Wagadu), founded by the Soninke. Archaeological ruins reveal a city that may have housed 20,000+ people.",
+      coordinates: { lat: 15.77, lng: -7.97 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Koumbi_Saleh"
+    },
+    {
+      name: "Kayes",
+      type: "historical",
+      description: "Major city in the Soninke heartland of Mali. A railway hub that served as colonial capital of French Sudan before Bamako.",
+      coordinates: { lat: 14.45, lng: -11.44 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Kayes"
+    }
+  ],
+
+  // ============ ISLAND NATIONS ============
+  "cape-verdean": [
+    {
+      name: "Cidade Velha (Ribeira Grande)",
+      type: "historical",
+      description: "UNESCO World Heritage Site: The first European colonial city in the tropics, founded in 1462. Contains the oldest colonial church in sub-Saharan Africa.",
+      coordinates: { lat: 14.92, lng: -23.61 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Cidade_Velha",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Pico do Fogo",
+      type: "natural",
+      description: "The highest peak in Cape Verde at 2,829m and an active volcano. Last erupted in 2014-2015, destroying villages on its slopes.",
+      coordinates: { lat: 14.95, lng: -24.34 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Pico_do_Fogo"
+    },
+    {
+      name: "Mindelo",
+      type: "historical",
+      description: "The cultural capital of Cape Verde and birthplace of morna music. Home to Cesária Évora and the country's main carnival celebration.",
+      coordinates: { lat: 16.89, lng: -24.99 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mindelo"
+    }
+  ],
+
+  comorian: [
+    {
+      name: "Moroni Medina",
+      type: "historical",
+      description: "The old quarter of Comoros' capital with ancient mosques, narrow streets, and traditional architecture reflecting Arab and Swahili influences.",
+      coordinates: { lat: -11.7, lng: 43.26 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Moroni,_Comoros"
+    },
+    {
+      name: "Mount Karthala",
+      type: "natural",
+      description: "One of the world's largest and most active shield volcanoes. The summit crater is 3km wide and has erupted more than 20 times since 1828.",
+      coordinates: { lat: -11.75, lng: 43.35 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mount_Karthala"
+    },
+    {
+      name: "Itsandra Palace",
+      type: "historical",
+      description: "Historic palace and site of traditional Comorian governance. Symbol of the sultanate era before French colonization.",
+      coordinates: { lat: -11.67, lng: 43.24 }
+    }
   ]
 };
 
