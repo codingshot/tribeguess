@@ -1468,6 +1468,668 @@ export const recipes: Recipe[] = [
       "Only cook on one side for proper texture",
       "Serve warm for best taste"
     ]
+  },
+
+  // ============ MALAGASY (MADAGASCAR) RECIPES ============
+  {
+    id: "romazava",
+    name: "Romazava",
+    tribeSlug: "merina",
+    tribeName: "Merina",
+    category: "special",
+    description: "Madagascar's national dish - a hearty beef and leafy green stew with aromatic brèdes (greens) including paracress.",
+    culturalSignificance: "Romazava is served at nearly every important Malagasy occasion, from family gatherings to state functions. The dish represents unity as different greens come together.",
+    prepTime: "20 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef chunks", amount: "500g", notes: "Zebu meat preferred" },
+      { item: "Brèdes mafana (paracress)", amount: "2 cups", notes: "Creates tingling sensation" },
+      { item: "Spinach or mustard greens", amount: "3 cups", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "1 inch", notes: "Grated" },
+      { item: "Cooking oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Heat oil in a large pot and brown beef pieces on all sides.",
+      "Add onion, garlic, and ginger - cook until fragrant.",
+      "Add tomatoes and cook until soft.",
+      "Add water to cover meat, bring to boil, then simmer 1 hour until tender.",
+      "Add paracress and other greens in stages.",
+      "Simmer 15-20 minutes until greens are wilted.",
+      "Season with salt and serve over white rice."
+    ],
+    tips: [
+      "Brèdes mafana gives a unique tingling sensation on the tongue",
+      "Zebu (Malagasy cattle) meat has distinct flavor but beef works well",
+      "Always serve with plenty of rice - Malagasy eat rice at every meal"
+    ]
+  },
+  {
+    id: "ravitoto",
+    name: "Ravitoto",
+    tribeSlug: "merina",
+    tribeName: "Merina",
+    category: "staple",
+    description: "Pounded cassava leaves cooked with pork and coconut, a beloved everyday dish in Madagascar.",
+    culturalSignificance: "Ravitoto is comfort food that connects modern Malagasy to their agricultural roots. The labor-intensive pounding of leaves was traditionally communal work.",
+    prepTime: "1 hour",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava leaves", amount: "1 kg", notes: "Pounded or use frozen" },
+      { item: "Pork belly", amount: "500g", notes: "Cubed" },
+      { item: "Coconut milk", amount: "400ml" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "If using fresh leaves, pound in mortar until fine (or use food processor).",
+      "Brown pork pieces in a pot until fat renders.",
+      "Add onion and garlic, cook until soft.",
+      "Add pounded cassava leaves and stir well.",
+      "Pour in coconut milk and add water to cover.",
+      "Simmer for 2 hours, stirring occasionally, until leaves are tender.",
+      "Season with salt and serve with rice."
+    ],
+    tips: [
+      "Cassava leaves must cook long to remove natural toxins",
+      "Pork can be replaced with smoked fish",
+      "Frozen pounded cassava leaves save preparation time"
+    ]
+  },
+  {
+    id: "koba",
+    name: "Koba",
+    tribeSlug: "merina",
+    tribeName: "Merina",
+    category: "snack",
+    description: "Traditional Malagasy rice and peanut cake wrapped in banana leaves, a sweet treat sold by street vendors.",
+    culturalSignificance: "Koba is associated with celebrations and ceremonies. It's a must-have during the Famadihana (turning of the bones) ancestor ceremony.",
+    prepTime: "30 minutes",
+    cookTime: "4 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Rice flour", amount: "2 cups" },
+      { item: "Ground peanuts", amount: "2 cups" },
+      { item: "Brown sugar", amount: "1.5 cups" },
+      { item: "Honey", amount: "1/2 cup" },
+      { item: "Banana leaves", amount: "Large pieces", notes: "For wrapping" },
+      { item: "Water", amount: "As needed" }
+    ],
+    instructions: [
+      "Mix rice flour, ground peanuts, and sugar in a bowl.",
+      "Add honey and enough water to make thick paste.",
+      "Soften banana leaves over flame.",
+      "Spread mixture onto banana leaves, roll into log shape.",
+      "Tie securely with string.",
+      "Steam for 3-4 hours until firm.",
+      "Cool, unwrap, slice, and serve."
+    ],
+    tips: [
+      "Koba gets better after resting overnight",
+      "Foil can substitute for banana leaves",
+      "The longer it steams, the denser and sweeter it becomes"
+    ]
+  },
+
+  // ============ TUAREG (SAHARA) RECIPES ============
+  {
+    id: "tagella",
+    name: "Tagella (Tuareg Sand Bread)",
+    tribeSlug: "tuareg",
+    tribeName: "Tuareg",
+    category: "staple",
+    description: "Traditional Tuareg bread baked in hot sand and embers in the Sahara Desert.",
+    culturalSignificance: "Tagella represents Tuareg ingenuity - baking without ovens in the desert. It's prepared by men, unusual in many cultures where women handle cooking.",
+    prepTime: "30 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Wheat flour", amount: "3 cups" },
+      { item: "Water", amount: "1 cup", notes: "Lukewarm" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Clean sand and embers", amount: "For baking" }
+    ],
+    instructions: [
+      "Mix flour, salt, and water to form stiff dough.",
+      "Knead for 10 minutes until smooth.",
+      "Form into a flat disc about 2 inches thick.",
+      "Rake hot coals aside and dig hole in hot sand.",
+      "Place bread in hole, cover with sand and hot embers.",
+      "Bake for 30-45 minutes.",
+      "Remove, shake off sand, and brush clean.",
+      "Break apart and serve with stew or milk."
+    ],
+    tips: [
+      "For home cooking, use a heavy covered pot on stovetop",
+      "The bread should sound hollow when tapped",
+      "Tuareg traditionally serve this with goat stew or camel milk"
+    ]
+  },
+  {
+    id: "tuareg-tea",
+    name: "Atay (Tuareg Tea Ceremony)",
+    tribeSlug: "tuareg",
+    tribeName: "Tuareg",
+    category: "beverage",
+    description: "The famous three-glass Tuareg tea ceremony - each glass has distinct meaning and flavor.",
+    culturalSignificance: "The three glasses represent: 'first glass bitter like life, second glass sweet like love, third glass gentle like death.' Refusing tea is a serious social offense.",
+    prepTime: "5 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chinese gunpowder green tea", amount: "2 tablespoons" },
+      { item: "Fresh mint", amount: "Large bunch" },
+      { item: "Sugar", amount: "1/4 to 1/2 cup" },
+      { item: "Water", amount: "4 cups" }
+    ],
+    instructions: [
+      "Rinse tea leaves with hot water, discard water.",
+      "Add fresh water and tea to teapot.",
+      "Boil for 3-5 minutes.",
+      "Add sugar and mint.",
+      "Pour tea from height into small glasses to create foam.",
+      "Pour back into pot and repeat 2-3 times to mix.",
+      "Serve first glass (bitter).",
+      "Reboil same tea with more sugar for second glass (sweet).",
+      "Third brewing with even more sugar and mint (gentle)."
+    ],
+    tips: [
+      "Pouring from height aerates tea and creates prized foam",
+      "All three glasses must be drunk - refusing is rude",
+      "The ceremony can last 2+ hours - it's about socializing"
+    ]
+  },
+  {
+    id: "eghajira",
+    name: "Eghajira (Tuareg Cheese)",
+    tribeSlug: "tuareg",
+    tribeName: "Tuareg",
+    category: "staple",
+    description: "Traditional dried cheese made from goat or camel milk, essential for Tuareg desert survival.",
+    culturalSignificance: "Eghajira can last months without refrigeration - vital for nomadic life. It's often the only protein available during long desert crossings.",
+    prepTime: "30 minutes",
+    cookTime: "Several days (drying)",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Fresh goat milk", amount: "4 liters" },
+      { item: "Rennet or lemon juice", amount: "2 tablespoons" },
+      { item: "Salt", amount: "1 tablespoon" }
+    ],
+    instructions: [
+      "Warm milk to body temperature.",
+      "Add rennet or lemon juice to curdle.",
+      "Let sit until curds form (30 minutes to 2 hours).",
+      "Strain through cloth, pressing out whey.",
+      "Salt the curds thoroughly.",
+      "Form into small rounds or flatten into discs.",
+      "Dry in sun for several days, turning regularly.",
+      "Store in cloth bags - lasts for months."
+    ],
+    tips: [
+      "The drier the cheese, the longer it lasts",
+      "Rehydrate in water or milk before eating",
+      "Crumble into porridge or stews for protein"
+    ]
+  },
+
+  // ============ HIMBA (NAMIBIA) RECIPES ============
+  {
+    id: "otjize-butter",
+    name: "Otjize Butter",
+    tribeSlug: "himba",
+    tribeName: "Himba",
+    category: "special",
+    description: "Traditional Himba clarified butter used both as food and mixed with ochre for the famous red skin paste.",
+    culturalSignificance: "Butter is sacred to the Himba, processed near the holy fire. Otjize (the red paste) protects skin from harsh sun and insects while symbolizing the earth's red blood.",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh cow's milk", amount: "4 liters" },
+      { item: "Calabash gourd", amount: "1 large", notes: "For churning" }
+    ],
+    instructions: [
+      "Pour milk into calabash gourd.",
+      "Let sit in warm place to sour (24-48 hours).",
+      "Shake calabash rhythmically for 20-30 minutes.",
+      "Butter will separate and float to top.",
+      "Remove butter, wash with cool water.",
+      "Heat butter gently to clarify - remove milk solids.",
+      "Store clarified butter in cool place.",
+      "Mix with red ochre powder to make otjize paste."
+    ],
+    tips: [
+      "Churning is traditionally done by women while singing",
+      "Clarified butter keeps longer without refrigeration",
+      "The remaining buttermilk is also consumed"
+    ]
+  },
+  {
+    id: "oshifima",
+    name: "Oshifima (Himba/Herero Porridge)",
+    tribeSlug: "himba",
+    tribeName: "Himba",
+    category: "staple",
+    description: "Dense millet or maize porridge that forms the staple food of Himba and Herero peoples.",
+    culturalSignificance: "Oshifima is eaten daily, usually with sour milk or meat. It provides essential carbohydrates for the demanding pastoralist lifestyle.",
+    prepTime: "10 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Mahangu (pearl millet) flour", amount: "2 cups", notes: "Or maize meal" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Bring water to boil in a large pot.",
+      "Gradually add flour while stirring constantly to prevent lumps.",
+      "Reduce heat and continue stirring.",
+      "Add more flour until mixture is very thick and pulls away from pot.",
+      "Cover and let steam for 10 minutes.",
+      "Turn out onto plate, shape into mound.",
+      "Serve with sour milk, meat stew, or vegetables."
+    ],
+    tips: [
+      "The porridge should be stiff enough to eat with hands",
+      "Mahangu is more nutritious than maize and drought-resistant",
+      "Leftovers can be fried the next day"
+    ]
+  },
+  {
+    id: "omakere",
+    name: "Omakere (Soured Milk)",
+    tribeSlug: "himba",
+    tribeName: "Himba",
+    category: "beverage",
+    description: "Traditional fermented milk that is the primary protein source for Himba pastoralists.",
+    culturalSignificance: "Cattle are central to Himba life. Milk and its products define wealth and sustenance. The souring process was a natural preservation method.",
+    prepTime: "5 minutes",
+    cookTime: "2-3 days (fermentation)",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh cow's milk", amount: "2 liters" },
+      { item: "Calabash gourd", amount: "1", notes: "Adds bacteria for fermentation" }
+    ],
+    instructions: [
+      "Pour fresh milk into a cleaned calabash gourd.",
+      "Cover and leave in warm place.",
+      "Natural bacteria will sour the milk over 2-3 days.",
+      "Shake occasionally to mix.",
+      "When thick and tangy, it's ready to drink.",
+      "Serve cold with oshifima or drink alone."
+    ],
+    tips: [
+      "The calabash imparts unique flavor from previous fermentations",
+      "Similar to buttermilk or kefir in taste",
+      "Rich in probiotics and easier to digest than fresh milk"
+    ]
+  },
+
+  // ============ HERERO (NAMIBIA) RECIPES ============
+  {
+    id: "herero-dried-meat",
+    name: "Onyama Yomombambi (Herero Dried Meat)",
+    tribeSlug: "herero",
+    tribeName: "Herero",
+    category: "special",
+    description: "Traditional sun-dried beef strips, similar to biltong, a protein source that lasts for months.",
+    culturalSignificance: "Dried meat allowed Herero herders to preserve beef without refrigeration. It was essential during seasonal cattle drives and trading journeys.",
+    prepTime: "30 minutes",
+    cookTime: "3-5 days (drying)",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef", amount: "2 kg", notes: "Lean cuts" },
+      { item: "Coarse salt", amount: "1/2 cup" },
+      { item: "Black pepper", amount: "2 tablespoons" },
+      { item: "Coriander seeds", amount: "2 tablespoons", notes: "Crushed" }
+    ],
+    instructions: [
+      "Cut beef along the grain into strips 1-2 inches thick.",
+      "Mix salt, pepper, and coriander.",
+      "Rub spice mixture thoroughly into meat.",
+      "Hang meat strips in dry, shaded area with good airflow.",
+      "Let dry for 3-5 days depending on humidity.",
+      "Meat should be dry on outside but still slightly soft inside.",
+      "Store in cloth bags in cool, dry place."
+    ],
+    tips: [
+      "Fat should be trimmed as it can go rancid",
+      "Vinegar can be added to spice rub for extra preservation",
+      "Slice thin and eat as snack, or rehydrate in stews"
+    ]
+  },
+
+  // ============ WOLOF (SENEGAL) RECIPES ============
+  {
+    id: "thieboudienne",
+    name: "Thieboudienne",
+    tribeSlug: "wolof",
+    tribeName: "Wolof",
+    category: "special",
+    description: "Senegal's national dish - seasoned fish and rice cooked in tomato sauce with vegetables, invented in Saint-Louis.",
+    culturalSignificance: "Thieboudienne was inscribed on UNESCO's intangible heritage list in 2021. It represents Senegalese teranga (hospitality) and is served at every celebration.",
+    prepTime: "45 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "White fish (thiof preferred)", amount: "1 kg", notes: "Cleaned, cut in pieces" },
+      { item: "Broken rice", amount: "3 cups" },
+      { item: "Tomato paste", amount: "1/2 cup" },
+      { item: "Onions", amount: "3 large", notes: "Sliced" },
+      { item: "Garlic", amount: "1 head", notes: "Made into paste" },
+      { item: "Parsley and scallions", amount: "1 bunch each", notes: "For stuffing" },
+      { item: "Scotch bonnet", amount: "2", notes: "Whole" },
+      { item: "Carrots", amount: "3" },
+      { item: "Cabbage", amount: "1/2 head" },
+      { item: "Eggplant", amount: "1" },
+      { item: "Cassava", amount: "1 piece" },
+      { item: "Tamarind", amount: "2 tablespoons" },
+      { item: "Fish stock cubes", amount: "2" },
+      { item: "Vegetable oil", amount: "1 cup" }
+    ],
+    instructions: [
+      "Make rof (stuffing) by blending parsley, scallions, garlic, pepper.",
+      "Cut pockets in fish pieces and stuff with rof.",
+      "Fry fish until golden, set aside.",
+      "In same oil, fry onions until very dark (this gives color).",
+      "Add tomato paste, remaining rof, and fry 10 minutes.",
+      "Add water, tamarind, stock cubes, bring to boil.",
+      "Add vegetables in order of cooking time (carrots first, cabbage last).",
+      "Remove vegetables when cooked, set aside.",
+      "Add rice to the sauce, add fish on top.",
+      "Cover and steam until rice is cooked, about 25 minutes.",
+      "Arrange on large platter: rice base, vegetables around, fish on top."
+    ],
+    tips: [
+      "The burnt rice at the bottom (xoon) is considered the best part",
+      "Serve with lime wedges and extra scotch bonnet sauce",
+      "Traditionally eaten communally from one large platter"
+    ]
+  },
+  {
+    id: "bissap",
+    name: "Bissap (Hibiscus Drink)",
+    tribeSlug: "wolof",
+    tribeName: "Wolof",
+    category: "beverage",
+    description: "Refreshing deep-red drink made from hibiscus flowers, served at celebrations throughout Senegal.",
+    culturalSignificance: "Bissap is the welcome drink of Senegal, offered to guests as a sign of teranga (hospitality). It's believed to have health benefits including lowering blood pressure.",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried hibiscus flowers", amount: "2 cups" },
+      { item: "Water", amount: "8 cups" },
+      { item: "Sugar", amount: "1 cup", notes: "Adjust to taste" },
+      { item: "Orange blossom water", amount: "1 tablespoon" },
+      { item: "Fresh mint", amount: "1 bunch" },
+      { item: "Vanilla extract", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Rinse hibiscus flowers to remove dust.",
+      "Bring water to boil, add flowers, reduce heat.",
+      "Simmer 20-30 minutes until water is deep red.",
+      "Strain through fine mesh, pressing flowers to extract color.",
+      "Add sugar while hot, stir to dissolve.",
+      "Add orange blossom water, vanilla, and mint.",
+      "Refrigerate until very cold.",
+      "Serve over ice, garnished with fresh mint."
+    ],
+    tips: [
+      "The longer it steeps, the more tart it becomes",
+      "Freeze into popsicles for a treat",
+      "Add pineapple juice for bissap cocktail"
+    ]
+  },
+
+  // ============ MANDINKA (GAMBIA/SENEGAL) RECIPES ============
+  {
+    id: "domoda",
+    name: "Domoda (Groundnut Stew)",
+    tribeSlug: "mandinka",
+    tribeName: "Mandinka",
+    category: "special",
+    description: "Rich peanut butter stew with meat and vegetables, the signature dish of the Mandinka people.",
+    culturalSignificance: "Domoda is the everyday comfort food of Gambia and parts of Senegal. Groundnuts (peanuts) are a major crop, and this dish celebrates that abundance.",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef or chicken", amount: "500g", notes: "Cubed" },
+      { item: "Natural peanut butter", amount: "1 cup" },
+      { item: "Tomato paste", amount: "3 tablespoons" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Scotch bonnet", amount: "1", notes: "Whole" },
+      { item: "Sweet potato", amount: "2 medium", notes: "Cubed" },
+      { item: "Pumpkin or butternut", amount: "2 cups", notes: "Cubed" },
+      { item: "Okra", amount: "1 cup", notes: "Optional" },
+      { item: "Oil", amount: "1/4 cup" },
+      { item: "Stock cubes", amount: "2" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Brown meat in oil, remove and set aside.",
+      "Sauté onion until soft in same pot.",
+      "Add tomato paste and fry 5 minutes.",
+      "Return meat, add water to cover, simmer until almost tender.",
+      "Dissolve peanut butter in some of the broth.",
+      "Add peanut butter mixture to pot, stir well.",
+      "Add vegetables and whole scotch bonnet.",
+      "Simmer until vegetables are tender and sauce is thick.",
+      "Remove pepper, serve over white rice."
+    ],
+    tips: [
+      "Use natural peanut butter without added sugar",
+      "Don't break the scotch bonnet - it adds flavor without too much heat",
+      "The stew should be rich and coating consistency"
+    ]
+  },
+
+  // ============ BEJA (SUDAN/ERITREA) RECIPES ============
+  {
+    id: "beja-kisra",
+    name: "Kisra",
+    tribeSlug: "beja",
+    tribeName: "Beja",
+    category: "staple",
+    description: "Thin sorghum flatbread, a staple across Sudan and the Horn of Africa, similar to Ethiopian injera but thinner.",
+    culturalSignificance: "Kisra accompanies every Sudanese meal. The skill of making perfectly thin kisra is passed from mothers to daughters.",
+    prepTime: "12 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Sorghum flour", amount: "3 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Starter from previous batch", amount: "1/4 cup", notes: "Or yogurt" }
+    ],
+    instructions: [
+      "Mix flour with water and starter in large bowl.",
+      "Cover and let ferment overnight (12-24 hours).",
+      "Batter should be thin and bubbly.",
+      "Heat a large flat griddle (saj) over medium heat.",
+      "Pour thin layer of batter, spreading quickly.",
+      "Cook until set and edges lift - do not flip.",
+      "Stack cooked kisra on a plate.",
+      "Serve with stews, vegetables, or milk."
+    ],
+    tips: [
+      "Save some batter as starter for next batch",
+      "The thinner the better - should be almost translucent",
+      "Non-stick pan works well if no saj available"
+    ]
+  },
+
+  // ============ TSWANA (BOTSWANA) RECIPES ============
+  {
+    id: "seswaa",
+    name: "Seswaa",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "special",
+    description: "Botswana's national dish - pounded beef cooked until tender enough to shred, served at celebrations.",
+    culturalSignificance: "Seswaa is prepared for all important Tswana occasions: weddings, funerals, and national holidays. It's traditionally men's work to pound the meat.",
+    prepTime: "15 minutes",
+    cookTime: "3-4 hours",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef with bones", amount: "2 kg", notes: "Shin or brisket" },
+      { item: "Salt", amount: "2 tablespoons" },
+      { item: "Water", amount: "To cover" }
+    ],
+    instructions: [
+      "Place beef and bones in large pot, cover with water.",
+      "Add salt and bring to boil.",
+      "Reduce heat, simmer for 3-4 hours until very tender.",
+      "Remove meat from pot, reserve broth.",
+      "Remove bones and any excess fat.",
+      "Using two forks or wooden spoons, shred and pound meat.",
+      "Traditional method uses a wooden pestle in the pot.",
+      "Add some reserved broth to keep moist.",
+      "Serve with pap (maize porridge) and gravy."
+    ],
+    tips: [
+      "The longer it cooks, the easier to shred",
+      "Bones add flavor - cook them with the meat",
+      "Should be very soft, almost like pulled pork texture"
+    ]
+  },
+
+  // ============ SAN (BUSHMEN) RECIPES ============
+  {
+    id: "mongongo-nuts",
+    name: "Mongongo Nut Preparation",
+    tribeSlug: "san",
+    tribeName: "San",
+    category: "staple",
+    description: "Traditional method of processing mongongo nuts, the primary plant food of the San people of the Kalahari.",
+    culturalSignificance: "Mongongo nuts provide 50% of calories in traditional San diet. The gathering of these nuts was central to San social life and seasonal movement.",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Mongongo nuts", amount: "2 cups", notes: "In shells" },
+      { item: "Hot coals", amount: "For roasting" }
+    ],
+    instructions: [
+      "Gather fallen mongongo nuts (ripen March-April).",
+      "Crack outer fruit to reveal inner nut.",
+      "Roast nuts in hot coals for 30-45 minutes.",
+      "Let cool, then crack inner shell with stone.",
+      "Remove white kernel inside.",
+      "Eat kernels raw, roasted, or pound into flour.",
+      "Oil pressed from nuts used for cooking and skin care."
+    ],
+    tips: [
+      "Shells are very hard - requires specific cracking technique",
+      "Nuts are highly nutritious - 57% fat, 24% protein",
+      "Can substitute with macadamia or cashews for similar taste"
+    ]
+  },
+
+  // ============ EWE (GHANA/TOGO) RECIPES ============
+  {
+    id: "akple-fetri",
+    name: "Akple with Fetri Detsi",
+    tribeSlug: "ewe",
+    tribeName: "Ewe",
+    category: "staple",
+    description: "Soft corn and cassava dough served with mushroom palm nut soup, a signature Ewe dish.",
+    culturalSignificance: "Akple is the staple food of the Ewe people. The technique of making smooth, lump-free akple is a mark of a skilled cook.",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Corn dough (fermented)", amount: "2 cups" },
+      { item: "Cassava dough", amount: "1 cup" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Palm nut cream", amount: "2 cups" },
+      { item: "Fresh mushrooms", amount: "2 cups" },
+      { item: "Smoked fish", amount: "200g" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Tomatoes", amount: "3" },
+      { item: "Hot pepper", amount: "To taste" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "For soup: Cook palm nut cream with water for 30 minutes.",
+      "Add smoked fish, mushrooms, onion, tomatoes, pepper.",
+      "Simmer until thick and oil floats on top.",
+      "For akple: Boil water in pot.",
+      "Mix corn and cassava doughs together.",
+      "Add dough mixture gradually to boiling water, stirring constantly.",
+      "Stir vigorously until smooth and pulls from sides.",
+      "Wet hands, form balls of akple.",
+      "Serve akple balls with fetri detsi soup."
+    ],
+    tips: [
+      "Stir vigorously to prevent lumps",
+      "Akple should be soft and slightly stretchy",
+      "Palm fruit cream can be found in African grocery stores"
+    ]
+  },
+
+  // ============ FANG (GABON/CAMEROON) RECIPES ============
+  {
+    id: "nyembwe-chicken",
+    name: "Poulet Nyembwe (Palm Butter Chicken)",
+    tribeSlug: "fang",
+    tribeName: "Fang",
+    category: "special",
+    description: "Gabon's national dish - chicken cooked in rich palm fruit sauce, beloved across Central Africa.",
+    culturalSignificance: "Nyembwe is served at every important Gabonese celebration. The palm fruit sauce (nyembwe) represents the rainforest abundance of the Fang homeland.",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Whole chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Palm fruit cream/sauce", amount: "400g", notes: "Canned or fresh" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Scotch bonnet", amount: "2", notes: "Whole" },
+      { item: "Maggi cubes", amount: "2" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "2 cups" }
+    ],
+    instructions: [
+      "Season chicken with salt, garlic, and Maggi.",
+      "Let marinate for 1 hour.",
+      "Brown chicken pieces in a large pot.",
+      "Add onions and cook until soft.",
+      "Add palm fruit cream and water.",
+      "Add whole scotch bonnets for flavor.",
+      "Cover and simmer for 1 hour until chicken is tender.",
+      "Sauce should be thick and orange-red.",
+      "Serve with rice, plantains, or cassava."
+    ],
+    tips: [
+      "Don't break the peppers unless you want very spicy",
+      "Palm cream separates - stir well before using",
+      "The oil should float on top when done"
+    ]
   }
 ];
 
