@@ -1,26 +1,94 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { getRecipeById, getRecipesByTribe } from '@/data/recipes';
-import { ArrowLeft, Clock, Users, ChefHat, Flame } from 'lucide-react';
+import { getRecipeById, getRecipesByTribe, getAllRecipes, type Recipe } from '@/data/recipes';
+import { ArrowLeft, Clock, Users, ChefHat, Flame, Search } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+
+const categoryEmoji: Record<string, string> = {
+  staple: '🍚',
+  beverage: '🥤',
+  special: '🍖',
+  snack: '🥜'
+};
+
+const difficultyColor: Record<string, string> = {
+  easy: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+  medium: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
+  hard: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+};
 
 export default function RecipePage() {
   const { id } = useParams<{ id: string }>();
   const recipe = id ? getRecipeById(id) : undefined;
 
   if (!recipe) {
+    // Show recipe not found with suggestions
+    const allRecipes = getAllRecipes();
+    const sampleRecipes = allRecipes.slice(0, 9);
+
     return (
       <div className="min-h-screen bg-background">
+        <Helmet>
+          <title>Recipe Not Found | TribeGuess</title>
+          <meta name="description" content="Recipe not found. Discover other traditional African recipes from various tribes." />
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+
         <Header />
-        <main className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-2xl font-bold mb-4">Recipe Not Found</h1>
-          <p className="text-muted-foreground mb-6">The recipe you're looking for doesn't exist.</p>
-          <Link to="/learn" className="text-primary hover:underline">
-            ← Back to tribes
-          </Link>
+
+        <main className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <div className="text-6xl mb-4">🍲</div>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-3">Recipe Not Found</h1>
+            <p className="text-muted-foreground mb-6">
+              The recipe you're looking for doesn't exist. But don't worry — we have many delicious traditional recipes to explore!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button asChild>
+                <Link to="/recipes" className="gap-2">
+                  <Search className="w-4 h-4" />
+                  Browse All Recipes
+                </Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link to="/learn">
+                  Explore Tribes
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Show sample recipes */}
+          <section>
+            <h2 className="text-xl font-semibold text-center mb-6">Discover Traditional Recipes</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {sampleRecipes.map(r => (
+                <Link
+                  key={r.id}
+                  to={`/recipe/${r.id}`}
+                  className="bg-card border border-border rounded-lg p-4 hover:border-primary transition-colors"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span>{categoryEmoji[r.category]}</span>
+                    <span className="font-medium">{r.name}</span>
+                  </div>
+                  <Link
+                    to={`/learn/${r.tribeSlug}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-xs text-primary hover:underline"
+                  >
+                    {r.tribeName} Tribe
+                  </Link>
+                  <p className="text-xs text-muted-foreground line-clamp-2 mt-1">{r.description}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
         </main>
+
         <Footer />
       </div>
     );
@@ -28,23 +96,10 @@ export default function RecipePage() {
 
   const relatedRecipes = getRecipesByTribe(recipe.tribeSlug).filter(r => r.id !== recipe.id);
 
-  const difficultyColor = {
-    easy: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-    medium: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
-    hard: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
-  };
-
-  const categoryEmoji = {
-    staple: '🍚',
-    beverage: '🥤',
-    special: '🍖',
-    snack: '🥜'
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{recipe.name} - Traditional {recipe.tribeName} Recipe | African Tribes</title>
+        <title>{recipe.name} - Traditional {recipe.tribeName} Recipe | TribeGuess</title>
         <meta name="description" content={`Learn how to make ${recipe.name}, a traditional ${recipe.tribeName} dish. ${recipe.description}`} />
       </Helmet>
 
@@ -188,6 +243,13 @@ export default function RecipePage() {
             </div>
           </section>
         )}
+
+        {/* Browse More Link */}
+        <div className="mt-8 text-center">
+          <Link to="/recipes" className="text-sm text-primary hover:underline">
+            Browse all recipes →
+          </Link>
+        </div>
       </main>
 
       <Footer />

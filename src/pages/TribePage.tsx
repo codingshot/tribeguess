@@ -13,6 +13,7 @@ import { AudioGreeting, MainGreeting } from '@/components/AudioGreeting';
 import { PopulationPieChart } from '@/components/PopulationPieChart';
 import { TribeFamilyTree } from '@/components/TribeFamilyTree';
 import { CulturalLandmarks } from '@/components/CulturalLandmarks';
+import { findRecipeByName } from '@/data/recipes';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -763,13 +764,13 @@ const TribePage = () => {
                       <h3 className="text-sm font-medium text-foreground mb-2">Staple Foods</h3>
                       <ul className="space-y-1">
                         {(tribe as any).traditionalFood.staples?.map((food: string, i: number) => {
-                          const foodName = food.split('(')[0].split('-')[0].trim().toLowerCase();
-                          const hasRecipe = ['mukimo', 'githeri', 'tilapia', 'omena', 'tuwo', 'sadza', 'pap', 'injera', 'umngqusho'].some(r => foodName.includes(r));
+                          const foodName = food.split('(')[0].split('-')[0].trim();
+                          const recipe = findRecipeByName(foodName, tribe.slug);
                           return (
                             <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
                               <span className="text-primary">•</span>
-                              {hasRecipe ? (
-                                <Link to={`/recipe/${foodName.split(' ')[0]}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
+                              {recipe ? (
+                                <Link to={`/recipe/${recipe.id}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
                                   {food} 📖
                                 </Link>
                               ) : food}
@@ -781,24 +782,33 @@ const TribePage = () => {
                     <div className="p-3 bg-secondary rounded-lg">
                       <h3 className="text-sm font-medium text-foreground mb-2">Beverages</h3>
                       <ul className="space-y-1">
-                        {(tribe as any).traditionalFood.beverages?.map((drink: string, i: number) => (
-                          <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                            <span className="text-primary">•</span> {drink}
-                          </li>
-                        ))}
+                        {(tribe as any).traditionalFood.beverages?.map((drink: string, i: number) => {
+                          const drinkName = drink.split('(')[0].split('-')[0].trim();
+                          const recipe = findRecipeByName(drinkName, tribe.slug);
+                          return (
+                            <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                              <span className="text-primary">•</span>
+                              {recipe ? (
+                                <Link to={`/recipe/${recipe.id}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
+                                  {drink} 📖
+                                </Link>
+                              ) : drink}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                     <div className="p-3 bg-secondary rounded-lg">
                       <h3 className="text-sm font-medium text-foreground mb-2">Special Dishes</h3>
                       <ul className="space-y-1">
                         {(tribe as any).traditionalFood.specialDishes?.map((dish: string, i: number) => {
-                          const dishName = dish.split('(')[0].split('-')[0].trim().toLowerCase();
-                          const hasRecipe = ['mutura', 'jollof', 'egusi', 'suya', 'doro', 'pilau', 'nyama'].some(r => dishName.includes(r));
+                          const dishName = dish.split('(')[0].split('-')[0].trim();
+                          const recipe = findRecipeByName(dishName, tribe.slug);
                           return (
                             <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
                               <span className="text-primary">•</span>
-                              {hasRecipe ? (
-                                <Link to={`/recipe/${dishName.split(' ')[0]}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
+                              {recipe ? (
+                                <Link to={`/recipe/${recipe.id}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
                                   {dish} 📖
                                 </Link>
                               ) : dish}
