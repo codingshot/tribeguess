@@ -2130,6 +2130,698 @@ export const recipes: Recipe[] = [
       "Palm cream separates - stir well before using",
       "The oil should float on top when done"
     ]
+  },
+
+  // ============ ASHANTI (GHANA) RECIPES ============
+  {
+    id: "fufu-ashanti",
+    name: "Fufu with Light Soup",
+    tribeSlug: "ashanti",
+    tribeName: "Ashanti (Asante)",
+    category: "staple",
+    description: "Pounded cassava and plantain dough served with light tomato-pepper soup - the quintessential Ashanti meal.",
+    culturalSignificance: "Fufu is central to Ashanti identity. The rhythmic pounding in wooden mortars is a communal activity that brings families together. It's served at every major celebration.",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava", amount: "1 kg", notes: "Peeled and cubed" },
+      { item: "Ripe plantains", amount: "4 large", notes: "Peeled and sliced" },
+      { item: "Chicken", amount: "1 whole", notes: "Cut into pieces" },
+      { item: "Tomatoes", amount: "6 medium", notes: "Blended" },
+      { item: "Onions", amount: "2 large", notes: "Blended" },
+      { item: "Scotch bonnet peppers", amount: "3", notes: "Blended" },
+      { item: "Ginger", amount: "2 inches", notes: "Blended" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Prekese (Aidan fruit)", amount: "2 pods", notes: "Traditional spice" },
+      { item: "Salt and seasoning", amount: "To taste" }
+    ],
+    instructions: [
+      "Boil cassava and plantain until very soft, about 30-40 minutes.",
+      "Drain and pound in a mortar until smooth and stretchy.",
+      "Alternatively, blend and cook in pot, stirring constantly.",
+      "For soup: Season chicken with salt, ginger, onion. Boil until tender.",
+      "In separate pot, heat palm oil and add blended tomatoes, peppers, onions.",
+      "Add prekese and cook for 15 minutes.",
+      "Add cooked chicken and stock. Simmer for 20 minutes.",
+      "Mold fufu into balls and serve in bowl with soup poured over."
+    ],
+    tips: [
+      "Fufu should be smooth with no lumps - pounding is key",
+      "Swallow fufu without chewing - this is the traditional way",
+      "Light soup should be thin enough to drink but flavorful"
+    ],
+    variations: [
+      "Cocoyam fufu is another popular variation",
+      "Groundnut soup and palm nut soup are common alternatives"
+    ]
+  },
+  {
+    id: "kelewele",
+    name: "Kelewele (Spiced Fried Plantains)",
+    tribeSlug: "ashanti",
+    tribeName: "Ashanti (Asante)",
+    category: "snack",
+    description: "Ripe plantains seasoned with ginger, cayenne, and spices, then deep-fried until crispy. Ghana's favorite street food.",
+    culturalSignificance: "Kelewele is sold by vendors throughout Ghana, especially in the evening. It's often paired with roasted peanuts and serves as both snack and side dish.",
+    prepTime: "20 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Ripe plantains", amount: "4 large", notes: "Should be yellow with black spots" },
+      { item: "Fresh ginger", amount: "2 inches", notes: "Grated" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Cayenne pepper", amount: "1 teaspoon" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Onion powder", amount: "1/2 teaspoon" },
+      { item: "Nutmeg", amount: "1/4 teaspoon" },
+      { item: "Vegetable oil", amount: "For frying" }
+    ],
+    instructions: [
+      "Peel plantains and cut into 1-inch cubes.",
+      "Mix ginger, garlic, cayenne, salt, onion powder, and nutmeg.",
+      "Toss plantain cubes with spice mixture.",
+      "Let marinate for 15-30 minutes.",
+      "Heat oil to 350°F (175°C).",
+      "Fry plantains in batches until golden brown, about 3-4 minutes per side.",
+      "Drain on paper towels.",
+      "Serve hot with roasted peanuts."
+    ],
+    tips: [
+      "Plantains should be ripe but not too soft",
+      "Don't overcrowd the pan - fry in batches",
+      "Adjust cayenne to taste"
+    ]
+  },
+  {
+    id: "kontomire",
+    name: "Kontomire (Cocoyam Leaf Stew)",
+    tribeSlug: "ashanti",
+    tribeName: "Ashanti (Asante)",
+    category: "staple",
+    description: "Nutritious stew made from cocoyam leaves, palm oil, and smoked fish. A beloved Ashanti vegetable dish.",
+    culturalSignificance: "Kontomire represents the Ashanti connection to the land. The leaves are rich in iron and traditionally given to pregnant women and new mothers.",
+    prepTime: "20 minutes",
+    cookTime: "40 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Cocoyam leaves (taro)", amount: "1 kg", notes: "Or substitute with spinach" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Smoked fish", amount: "200g", notes: "Deboned and flaked" },
+      { item: "Onions", amount: "2 medium", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Blended" },
+      { item: "Scotch bonnet", amount: "2", notes: "Blended" },
+      { item: "Egusi (melon seeds)", amount: "1/2 cup", notes: "Ground" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Dawadawa (locust beans)", amount: "1 tablespoon", notes: "Optional" }
+    ],
+    instructions: [
+      "Wash and chop cocoyam leaves finely.",
+      "Boil leaves in salted water for 10 minutes to remove bitterness. Drain.",
+      "Heat palm oil and sauté onions until golden.",
+      "Add blended tomatoes and peppers. Cook for 10 minutes.",
+      "Add cooked leaves and stir well.",
+      "Add smoked fish and dawadawa.",
+      "Sprinkle in ground egusi and stir.",
+      "Simmer for 15 minutes. Adjust seasoning.",
+      "Serve with boiled yam, plantain, or rice."
+    ],
+    tips: [
+      "Always boil the leaves first to reduce oxalic acid",
+      "Smoked fish adds authentic Ghanaian flavor",
+      "Agushi thickens and enriches the stew"
+    ]
+  },
+  {
+    id: "nkatie-cake",
+    name: "Nkatie Cake (Peanut Brittle)",
+    tribeSlug: "ashanti",
+    tribeName: "Ashanti (Asante)",
+    category: "snack",
+    description: "Crunchy peanut and sugar bars, a popular Ghanaian treat sold by market women across Ashanti region.",
+    culturalSignificance: "Nkatie cake is a cherished snack passed down through generations. It showcases the Ashanti love for groundnuts, a major crop in Ghana.",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 12,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Roasted peanuts", amount: "2 cups", notes: "Skin removed" },
+      { item: "Sugar", amount: "1 cup" },
+      { item: "Water", amount: "1/4 cup" },
+      { item: "Butter", amount: "1 tablespoon" },
+      { item: "Salt", amount: "1/4 teaspoon" }
+    ],
+    instructions: [
+      "Spread peanuts on a greased baking sheet.",
+      "Combine sugar and water in a heavy pot.",
+      "Heat on medium, stirring until sugar dissolves.",
+      "Stop stirring and let caramelize to golden brown.",
+      "Remove from heat immediately when golden.",
+      "Quickly stir in butter and salt.",
+      "Pour over peanuts and spread quickly.",
+      "Let cool and harden completely.",
+      "Break into pieces to serve."
+    ],
+    tips: [
+      "Work fast - caramel hardens quickly",
+      "Don't stir once sugar starts caramelizing",
+      "Store in airtight container"
+    ]
+  },
+
+  // ============ MOSSI (BURKINA FASO) RECIPES ============
+  {
+    id: "to-mossi",
+    name: "Tô (Millet Porridge)",
+    tribeSlug: "mossi",
+    tribeName: "Mossi (Moose)",
+    category: "staple",
+    description: "Thick millet or sorghum porridge - the foundation of every Mossi meal in Burkina Faso.",
+    culturalSignificance: "Tô is sacred to the Mossi people. It represents community and is always shared from a communal bowl. Refusing tô is considered a great insult.",
+    prepTime: "5 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Millet flour", amount: "2 cups", notes: "Or sorghum flour" },
+      { item: "Water", amount: "6 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Bring 4 cups water to boil in a heavy pot.",
+      "Mix millet flour with remaining 2 cups cold water to form slurry.",
+      "Slowly pour slurry into boiling water, stirring constantly.",
+      "Reduce heat and cook for 10 minutes, stirring.",
+      "Add more flour gradually until very thick.",
+      "The tô should be stiff enough to hold its shape.",
+      "Cook covered on very low heat for 20 minutes.",
+      "Stir vigorously and mold into a smooth dome.",
+      "Serve with sauce (baobab leaf, okra, or meat sauce)."
+    ],
+    tips: [
+      "Stirring prevents lumps - use a wooden spatula",
+      "Final consistency should be stiffer than polenta",
+      "Traditionally eaten by pinching off pieces with fingers"
+    ]
+  },
+  {
+    id: "riz-gras-mossi",
+    name: "Riz Gras (Fatty Rice)",
+    tribeSlug: "mossi",
+    tribeName: "Mossi (Moose)",
+    category: "special",
+    description: "Celebratory one-pot rice with vegetables and meat, cooked in rich tomato sauce. Burkina Faso's festive dish.",
+    culturalSignificance: "Riz Gras is reserved for special occasions - weddings, naming ceremonies, and holidays. It represents prosperity and abundance in Mossi culture.",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Long-grain rice", amount: "3 cups" },
+      { item: "Beef or lamb", amount: "500g", notes: "Cubed" },
+      { item: "Tomato paste", amount: "4 tablespoons" },
+      { item: "Tomatoes", amount: "4 medium", notes: "Chopped" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Carrots", amount: "2", notes: "Diced" },
+      { item: "Cabbage", amount: "1/4 head", notes: "Shredded" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Bay leaves", amount: "2" },
+      { item: "Maggi cubes", amount: "2" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Season meat with salt, pepper, and 1 Maggi cube.",
+      "Brown meat in oil and set aside.",
+      "In same pot, sauté onions until golden.",
+      "Add garlic, tomato paste, and fresh tomatoes.",
+      "Cook until tomatoes break down, about 10 minutes.",
+      "Return meat to pot with 4 cups water.",
+      "Add bay leaves and simmer until meat is tender.",
+      "Add washed rice, carrots, and cabbage.",
+      "Add more water if needed (liquid should cover rice by 1 inch).",
+      "Cover tightly and cook on low until rice is done.",
+      "Fluff and serve with extra vegetables on top."
+    ],
+    tips: [
+      "The dish should be oily - 'gras' means fatty",
+      "Don't open lid while rice cooks",
+      "Leftovers taste even better the next day"
+    ]
+  },
+  {
+    id: "zoom-koom",
+    name: "Zoom-Koom (Millet Drink)",
+    tribeSlug: "mossi",
+    tribeName: "Mossi (Moose)",
+    category: "beverage",
+    description: "Refreshing millet flour drink sweetened with sugar and flavored with ginger. Essential hydration during Burkina Faso's hot season.",
+    culturalSignificance: "Zoom-koom is offered to guests as a welcome drink and sold widely on streets. It provides quick energy and is believed to have cooling properties.",
+    prepTime: "10 minutes",
+    cookTime: "0 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Millet flour", amount: "1/2 cup" },
+      { item: "Water", amount: "4 cups", notes: "Cold" },
+      { item: "Sugar", amount: "1/4 cup" },
+      { item: "Fresh ginger", amount: "2 inches", notes: "Grated" },
+      { item: "Vanilla extract", amount: "1 teaspoon", notes: "Optional" },
+      { item: "Ice cubes", amount: "As needed" }
+    ],
+    instructions: [
+      "Mix millet flour with 1 cup water to form paste.",
+      "Add remaining water and stir well.",
+      "Strain through fine sieve to remove lumps.",
+      "Add grated ginger and its juice.",
+      "Stir in sugar until dissolved.",
+      "Add vanilla if using.",
+      "Chill thoroughly or serve over ice.",
+      "Stir before serving as flour settles."
+    ],
+    tips: [
+      "Adjust sugar to taste - some prefer very sweet",
+      "Ginger quantity can be increased for more kick",
+      "Best consumed same day"
+    ]
+  },
+
+  // ============ ADDITIONAL SHONA (ZIMBABWE) RECIPES ============
+  {
+    id: "dovi",
+    name: "Dovi (Peanut Butter Stew)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "special",
+    description: "Rich peanut butter stew with chicken or vegetables - Zimbabwe's most beloved comfort food.",
+    culturalSignificance: "Dovi represents the creativity of Shona cuisine, transforming humble peanuts into a luxurious dish. It's served at family gatherings and celebrations.",
+    prepTime: "20 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Chicken", amount: "1 kg", notes: "Cut into pieces" },
+      { item: "Peanut butter", amount: "1 cup", notes: "Natural, unsweetened" },
+      { item: "Tomatoes", amount: "4 medium", notes: "Chopped" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Vegetable oil", amount: "3 tablespoons" },
+      { item: "Greens (rape/collards)", amount: "2 cups", notes: "Chopped" },
+      { item: "Water", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Season chicken with salt and brown in oil.",
+      "Add onions and cook until soft.",
+      "Add tomatoes and cook until broken down.",
+      "Mix peanut butter with water until smooth.",
+      "Pour peanut mixture into pot.",
+      "Stir well and bring to simmer.",
+      "Cover and cook for 30 minutes until chicken is tender.",
+      "Add greens in last 5 minutes.",
+      "Serve hot with sadza."
+    ],
+    tips: [
+      "Use natural peanut butter for best flavor",
+      "Stir occasionally to prevent sticking",
+      "Vegetarian version with beans is equally delicious"
+    ]
+  },
+  {
+    id: "mutakura",
+    name: "Mutakura (Mixed Legume Stew)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "staple",
+    description: "Hearty stew of mixed beans, maize, and groundnuts - traditional Shona farm food packed with protein.",
+    culturalSignificance: "Mutakura was everyday fare for Shona farmers, providing energy for hard agricultural work. It represents self-sufficiency and the bounty of the land.",
+    prepTime: "8 hours (soaking)",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried maize", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Cowpeas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Bambara nuts", amount: "1/2 cup", notes: "Soaked overnight" },
+      { item: "Peanuts (raw)", amount: "1/2 cup" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak maize, cowpeas, and bambara nuts overnight.",
+      "Drain and place in large pot with fresh water.",
+      "Bring to boil, then reduce heat.",
+      "Simmer for 1.5-2 hours until all legumes are soft.",
+      "Add peanuts in last 30 minutes.",
+      "Season with salt.",
+      "Serve as main dish or side.",
+      "Leftovers can be mashed."
+    ],
+    tips: [
+      "Adding baking soda softens legumes faster",
+      "Cook until very soft - no crunch should remain",
+      "Traditionally cooked in clay pots over fire"
+    ]
+  },
+  {
+    id: "maheu",
+    name: "Maheu (Fermented Maize Drink)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "beverage",
+    description: "Thick fermented maize beverage with slightly sour, refreshing taste. Zimbabwe's traditional energy drink.",
+    culturalSignificance: "Maheu has been a Shona drink for centuries, providing energy to workers and travelers. It's considered both food and drink.",
+    prepTime: "20 minutes",
+    cookTime: "30 minutes + 1 day fermentation",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Maize meal", amount: "1 cup" },
+      { item: "Malt (maputi)", amount: "2 tablespoons" },
+      { item: "Water", amount: "8 cups" },
+      { item: "Sugar", amount: "1/2 cup", notes: "To taste" }
+    ],
+    instructions: [
+      "Boil 6 cups water in a pot.",
+      "Mix maize meal with 2 cups cold water.",
+      "Gradually add to boiling water, stirring constantly.",
+      "Cook until thick like porridge, about 15 minutes.",
+      "Remove from heat and let cool to lukewarm.",
+      "Stir in malt - this starts fermentation.",
+      "Cover and leave at room temperature for 24-48 hours.",
+      "Stir in sugar when ready to serve.",
+      "Strain if desired. Serve cold or at room temperature."
+    ],
+    tips: [
+      "Fermentation time affects sourness - longer is more sour",
+      "Keep covered but not airtight during fermentation",
+      "Refrigerate after fermentation to stop the process"
+    ]
+  },
+
+  // ============ ADDITIONAL SWAHILI SEAFOOD RECIPES ============
+  {
+    id: "samaki-wa-kupaka",
+    name: "Samaki wa Kupaka (Coconut Fish)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "special",
+    description: "Grilled fish basted with rich coconut-turmeric sauce - a signature Swahili coastal dish from Mombasa and Lamu.",
+    culturalSignificance: "This dish showcases the Swahili mastery of blending African, Arab, and Indian flavors. It's a must-have at coastal celebrations.",
+    prepTime: "30 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Whole red snapper or tilapia", amount: "2 medium", notes: "Cleaned and scored" },
+      { item: "Coconut milk", amount: "400ml" },
+      { item: "Tamarind paste", amount: "2 tablespoons" },
+      { item: "Turmeric powder", amount: "1 teaspoon" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Fresh ginger", amount: "1 inch", notes: "Grated" },
+      { item: "Green chilies", amount: "2", notes: "Sliced" },
+      { item: "Lemon juice", amount: "2 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Score both sides of fish with deep diagonal cuts.",
+      "Rub with salt, turmeric, and lemon juice. Marinate 30 minutes.",
+      "Grill or broil fish until half-cooked, about 10 minutes.",
+      "Meanwhile, simmer coconut milk with garlic, ginger, and tamarind.",
+      "Cook sauce until slightly thickened, about 10 minutes.",
+      "Brush fish generously with coconut sauce.",
+      "Continue grilling, basting frequently, until fish is cooked through.",
+      "Serve with remaining sauce poured over.",
+      "Garnish with fresh chilies."
+    ],
+    tips: [
+      "Don't overcook the fish - it should be moist",
+      "Charcoal grilling adds authentic smoky flavor",
+      "Serve with coconut rice (wali wa nazi)"
+    ]
+  },
+  {
+    id: "pweza-wa-nazi",
+    name: "Pweza wa Nazi (Octopus in Coconut)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "special",
+    description: "Tender octopus slow-cooked in spiced coconut sauce - a Zanzibar specialty prized by coastal Swahili communities.",
+    culturalSignificance: "Octopus is a delicacy in Swahili cuisine, especially in Zanzibar where women dive for it. This dish reflects the bounty of the Indian Ocean.",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 4,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Octopus", amount: "1 kg", notes: "Cleaned and tenderized" },
+      { item: "Coconut milk", amount: "400ml" },
+      { item: "Onions", amount: "2 medium", notes: "Sliced" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Cumin powder", amount: "1 teaspoon" },
+      { item: "Coriander powder", amount: "1 teaspoon" },
+      { item: "Turmeric", amount: "1/2 teaspoon" },
+      { item: "Cardamom pods", amount: "4" },
+      { item: "Fresh coriander", amount: "For garnish" }
+    ],
+    instructions: [
+      "Tenderize octopus by beating with mallet or freezing overnight.",
+      "Boil octopus in salted water for 45 minutes until tender.",
+      "Cut into bite-sized pieces.",
+      "Sauté onions until golden in a separate pot.",
+      "Add garlic, tomatoes, and all spices.",
+      "Cook until tomatoes break down.",
+      "Add coconut milk and bring to simmer.",
+      "Add octopus pieces and cook for 20 minutes.",
+      "Garnish with fresh coriander.",
+      "Serve with ugali or chapati."
+    ],
+    tips: [
+      "Octopus must be tenderized or it will be rubbery",
+      "Test tenderness with fork before cutting",
+      "The sauce should be creamy and rich"
+    ]
+  },
+  {
+    id: "kamba-wa-nazi",
+    name: "Kamba wa Nazi (Prawns in Coconut)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "special",
+    description: "Jumbo prawns in creamy coconut curry with coastal spices - a luxurious Swahili seafood dish from Malindi.",
+    culturalSignificance: "Prawns represent the wealth of Swahili coastal trade. This dish is served at important celebrations and to honor special guests.",
+    prepTime: "20 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Jumbo prawns", amount: "500g", notes: "Cleaned, deveined, shells on" },
+      { item: "Coconut milk", amount: "400ml" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "1 inch", notes: "Grated" },
+      { item: "Curry powder", amount: "1 tablespoon" },
+      { item: "Turmeric", amount: "1/2 teaspoon" },
+      { item: "Fresh lime juice", amount: "2 tablespoons" },
+      { item: "Fresh coriander", amount: "For garnish" }
+    ],
+    instructions: [
+      "Season prawns with salt, turmeric, and lime juice.",
+      "Sauté onion until soft in coconut oil.",
+      "Add garlic and ginger, cook for 1 minute.",
+      "Add tomatoes and curry powder.",
+      "Cook until tomatoes break down, about 5 minutes.",
+      "Pour in coconut milk and bring to simmer.",
+      "Add prawns and cook for 5-7 minutes until pink.",
+      "Don't overcook - prawns should be just done.",
+      "Garnish with coriander.",
+      "Serve immediately with wali (coconut rice)."
+    ],
+    tips: [
+      "Shells add flavor but can be removed if preferred",
+      "Fresh prawns are essential - frozen work but aren't as sweet",
+      "Add a squeeze of lime before serving"
+    ]
+  },
+  {
+    id: "wali-wa-nazi",
+    name: "Wali wa Nazi (Coconut Rice)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "staple",
+    description: "Fragrant rice cooked in rich coconut milk - the perfect accompaniment to Swahili seafood and curries.",
+    culturalSignificance: "Wali wa nazi is the foundation of Swahili coastal cuisine, reflecting the abundance of coconut palms along the East African coast.",
+    prepTime: "10 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Basmati rice", amount: "2 cups" },
+      { item: "Coconut milk", amount: "400ml" },
+      { item: "Water", amount: "1 cup" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Cardamom pods", amount: "3", notes: "Optional" }
+    ],
+    instructions: [
+      "Wash rice until water runs clear.",
+      "Combine coconut milk and water in pot.",
+      "Add salt and cardamom if using.",
+      "Bring to boil, then add rice.",
+      "Stir once and reduce to lowest heat.",
+      "Cover tightly and cook for 18-20 minutes.",
+      "Don't open lid during cooking.",
+      "Remove from heat and let stand 5 minutes.",
+      "Fluff with fork and remove cardamom pods."
+    ],
+    tips: [
+      "Use full-fat coconut milk for best results",
+      "A tight-fitting lid is essential",
+      "Rice should be fluffy, not mushy"
+    ]
+  },
+
+  // ============ CHEWA (MALAWI) RECIPES ============
+  {
+    id: "nsima",
+    name: "Nsima",
+    tribeSlug: "chewa",
+    tribeName: "Chewa",
+    category: "staple",
+    description: "Malawi's national dish - thick maize porridge eaten with every meal. The heart of Chewa cuisine.",
+    culturalSignificance: "Nsima is sacred to the Chewa people. The saying 'Nsima ndi moyo' (Nsima is life) reflects its central role. It's eaten with the right hand only, as a sign of respect.",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "White maize flour", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "Pinch" }
+    ],
+    instructions: [
+      "Bring water to boil in a heavy pot.",
+      "Make paste with 1/2 cup flour and cold water.",
+      "Add paste to boiling water, stirring constantly.",
+      "Reduce heat and cook for 5 minutes.",
+      "Gradually add remaining flour, stirring vigorously with wooden spoon.",
+      "Keep stirring until very thick and pulls away from sides.",
+      "Cover and steam for 10 minutes on low heat.",
+      "Wet hands and mold into smooth ball.",
+      "Serve with ndiwo (relish)."
+    ],
+    tips: [
+      "Stirring is hard work but essential",
+      "Final nsima should be stiff enough to hold shape",
+      "Eat by pinching off pieces and dipping in relish"
+    ]
+  },
+  {
+    id: "chambo",
+    name: "Chambo (Lake Malawi Cichlid)",
+    tribeSlug: "chewa",
+    tribeName: "Chewa",
+    category: "special",
+    description: "Grilled or fried chambo fish from Lake Malawi - the most prized fish dish in Malawi.",
+    culturalSignificance: "Chambo is Malawi's national fish and a source of great pride. It's served at important occasions and represents the blessing of Lake Malawi.",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Whole chambo (or tilapia)", amount: "2 medium", notes: "Cleaned" },
+      { item: "Salt", amount: "1 tablespoon" },
+      { item: "Black pepper", amount: "1 teaspoon" },
+      { item: "Lemon juice", amount: "2 tablespoons" },
+      { item: "Garlic powder", amount: "1 teaspoon" },
+      { item: "Vegetable oil", amount: "For frying or grilling" }
+    ],
+    instructions: [
+      "Score fish with diagonal cuts on both sides.",
+      "Mix salt, pepper, garlic, and lemon juice.",
+      "Rub seasoning inside and outside fish.",
+      "Let marinate for 15 minutes.",
+      "For frying: Heat oil and fry until golden, 7-8 minutes per side.",
+      "For grilling: Oil grill and cook over medium coals, 8-10 minutes per side.",
+      "Fish is done when flesh flakes easily.",
+      "Serve with nsima and vegetable relish."
+    ],
+    tips: [
+      "Fresh chambo from the lake is incomparable",
+      "Don't over-handle fish on grill - let it char slightly",
+      "Serve immediately for best texture"
+    ]
+  },
+  {
+    id: "nthochi",
+    name: "Nthochi (Plantain Porridge)",
+    tribeSlug: "chewa",
+    tribeName: "Chewa",
+    category: "staple",
+    description: "Sweet plantain porridge, a traditional Chewa breakfast that provides energy for the day's work.",
+    culturalSignificance: "Nthochi is comfort food for the Chewa, often given to children and the elderly. It represents the nurturing aspect of Chewa culture.",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Ripe plantains", amount: "4 large", notes: "Very ripe, almost black" },
+      { item: "Water", amount: "3 cups" },
+      { item: "Sugar", amount: "2 tablespoons", notes: "Optional" },
+      { item: "Salt", amount: "Pinch" }
+    ],
+    instructions: [
+      "Peel plantains and cut into chunks.",
+      "Boil in water until very soft, about 15 minutes.",
+      "Mash thoroughly with wooden spoon.",
+      "Add more water if needed for porridge consistency.",
+      "Add salt and sugar to taste.",
+      "Simmer for 5 more minutes, stirring.",
+      "Serve warm as breakfast or snack."
+    ],
+    tips: [
+      "Riper plantains are sweeter - may not need sugar",
+      "Can add groundnut flour for extra protein",
+      "Consistency should be like thick porridge"
+    ]
+  },
+  {
+    id: "masamba",
+    name: "Masamba (Pumpkin Leaves)",
+    tribeSlug: "chewa",
+    tribeName: "Chewa",
+    category: "staple",
+    description: "Sautéed pumpkin leaves with tomatoes and groundnuts - a nutritious Chewa vegetable dish.",
+    culturalSignificance: "Masamba represents the Chewa farming tradition of using every part of the pumpkin plant. It's rich in nutrients and widely consumed.",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Pumpkin leaves", amount: "1 kg", notes: "Washed and chopped" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 large", notes: "Sliced" },
+      { item: "Groundnut flour", amount: "3 tablespoons" },
+      { item: "Vegetable oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Boil pumpkin leaves in salted water for 5 minutes. Drain.",
+      "Heat oil in pan and sauté onion until soft.",
+      "Add tomatoes and cook until broken down.",
+      "Add cooked pumpkin leaves.",
+      "Mix groundnut flour with a little water.",
+      "Stir groundnut mixture into vegetables.",
+      "Cook for 10 minutes until thick.",
+      "Season with salt.",
+      "Serve with nsima."
+    ],
+    tips: [
+      "Young tender leaves are best",
+      "Groundnut flour makes the dish creamy",
+      "Can substitute with spinach if needed"
+    ]
   }
 ];
 
