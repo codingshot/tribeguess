@@ -147,8 +147,8 @@ export function GuessForm({
         </p>
         {/* Mobile: Stack vertically, Desktop: Side by side */}
         <div className="flex flex-col sm:flex-row gap-2">
-          {/* Country Dropdown - Hug fit width */}
-          <div className="relative shrink-0 w-full sm:w-fit">
+          {/* Country Dropdown - Tight hug fit */}
+          <div className="relative shrink-0 w-full sm:w-auto">
             <select
               id="country-select"
               value={country}
@@ -156,19 +156,18 @@ export function GuessForm({
                 setCountry(e.target.value);
                 onCountryChange?.(e.target.value);
               }}
-              className="input-tribal appearance-none cursor-pointer text-base w-full sm:w-auto pr-8 pl-3 py-3 sm:py-2.5 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              className="appearance-none cursor-pointer text-base pr-7 pl-2 py-3 sm:py-2.5 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary w-full sm:w-auto"
               aria-label="Select country"
-              style={{ minWidth: 'fit-content' }}
             >
-              <option value="ALL">🌍 All</option>
+              <option value="ALL">🌍</option>
               {countries.map(c => (
                 <option key={c.code} value={c.code}>
-                  {c.flag} {c.name}
+                  {c.flag}
                 </option>
               ))}
             </select>
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-              <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg className="w-3 h-3 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>
