@@ -2849,6 +2849,673 @@ export const recipes: Recipe[] = [
       "Groundnut flour makes the dish creamy",
       "Can substitute with spinach if needed"
     ]
+  },
+
+  // ============ LUHYA (KENYA) RECIPES ============
+  {
+    id: "ingokho",
+    name: "Ingokho (Luhya Chicken)",
+    tribeSlug: "luhya",
+    tribeName: "Luhya",
+    category: "special",
+    description: "Traditional Luhya free-range chicken, boiled and served with ugali. The ultimate celebration dish of Western Kenya.",
+    culturalSignificance: "Ingokho is central to Luhya hospitality - no important guest leaves without being served chicken. It's mandatory at weddings, funerals, and family gatherings.",
+    historicalContext: "The Luhya have raised indigenous chickens for centuries. During colonial times, Luhya chicken became famous across Kenya as Luhya migrant workers brought their cooking traditions to urban areas. The dish symbolizes Luhya generosity.",
+    prepTime: "20 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Free-range chicken", amount: "1 whole", notes: "Cut into pieces" },
+      { item: "Onions", amount: "3 large", notes: "Sliced" },
+      { item: "Tomatoes", amount: "4 medium", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "For boiling" }
+    ],
+    instructions: [
+      "Clean chicken thoroughly with salt and lemon.",
+      "Place chicken pieces in a large pot with water to cover.",
+      "Add sliced onions and salt.",
+      "Bring to boil, then reduce heat and simmer for 1.5-2 hours.",
+      "The chicken should be very tender and falling off the bone.",
+      "In the last 20 minutes, add tomatoes if desired.",
+      "Serve hot with ugali and traditional vegetables (tsimboka)."
+    ],
+    tips: [
+      "Free-range (kienyeji) chicken is essential - it has more flavor",
+      "Don't rush - slow cooking is the secret",
+      "The broth is prized and served separately or with ugali"
+    ]
+  },
+  {
+    id: "tsimboka",
+    name: "Tsimboka (Luhya Leafy Greens)",
+    tribeSlug: "luhya",
+    tribeName: "Luhya",
+    category: "staple",
+    description: "Traditional Luhya preparation of leafy greens like mrenda (jute mallow), kunde, or managu cooked with onions.",
+    culturalSignificance: "Tsimboka is everyday Luhya food, representing the agricultural abundance of Western Kenya. Different greens have different seasonal availability.",
+    prepTime: "10 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Mrenda or spinach", amount: "500g", notes: "Washed and chopped" },
+      { item: "Onion", amount: "1 large", notes: "Sliced" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Cooking oil", amount: "2 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Heat oil in a pan and sauté onions until soft.",
+      "Add tomatoes and cook until broken down.",
+      "Add the leafy greens and stir.",
+      "Cover and cook for 10-15 minutes until tender.",
+      "Season with salt.",
+      "Serve with ugali."
+    ],
+    tips: [
+      "Don't overcook - greens should retain some color",
+      "Some add milk for creaminess",
+      "Mrenda becomes slimy when cooked - this is normal"
+    ]
+  },
+
+  // ============ KAMBA (KENYA) RECIPES ============
+  {
+    id: "muthokoi",
+    name: "Muthokoi (Kamba Dehulled Maize)",
+    tribeSlug: "kamba",
+    tribeName: "Kamba",
+    category: "staple",
+    description: "Traditional Kamba dish of dehulled maize cooked with beans or cowpeas. Similar to githeri but with processed maize.",
+    culturalSignificance: "Muthokoi represents Kamba agricultural heritage. The dehulling process was traditionally done by women using wooden mortars, a skill passed through generations.",
+    historicalContext: "The Kamba were famous long-distance traders, and muthokoi was ideal travel food - nutritious and long-lasting. It sustained traders on journeys from the coast to the interior.",
+    prepTime: "8 hours (soaking)",
+    cookTime: "3 hours",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dehulled maize (muthokoi)", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Beans or cowpeas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Drain soaked muthokoi and beans.",
+      "Place in pot with fresh water (cover by 3 inches).",
+      "Boil for 2-3 hours until very soft.",
+      "In separate pan, sauté onions and tomatoes.",
+      "Add to cooked muthokoi and mix well.",
+      "Season with salt and simmer for 10 more minutes."
+    ],
+    tips: [
+      "Muthokoi takes longer to cook than regular maize",
+      "Can add potatoes or pumpkin for variation",
+      "Leftovers can be mashed for a different texture"
+    ]
+  },
+  {
+    id: "kilangua",
+    name: "Kilangua (Kamba Dried Meat)",
+    tribeSlug: "kamba",
+    tribeName: "Kamba",
+    category: "special",
+    description: "Traditional Kamba dried meat, similar to biltong, preserved with salt and sun-dried.",
+    culturalSignificance: "Kilangua was essential for Kamba traders on long journeys. It's now a delicacy served at celebrations and represents the Kamba entrepreneurial spirit.",
+    prepTime: "30 minutes + 3 days drying",
+    cookTime: "20 minutes",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef", amount: "1 kg", notes: "Lean cuts, sliced thin" },
+      { item: "Coarse salt", amount: "3 tablespoons" },
+      { item: "Black pepper", amount: "1 teaspoon" },
+      { item: "Coriander", amount: "1 teaspoon", notes: "Ground" }
+    ],
+    instructions: [
+      "Cut beef into thin strips along the grain.",
+      "Mix salt, pepper, and coriander.",
+      "Rub spice mixture into all meat strips.",
+      "Hang strips in a dry, ventilated area for 3-5 days.",
+      "Meat should be dark and dry but slightly flexible.",
+      "To serve, fry briefly in oil or rehydrate in stew."
+    ],
+    tips: [
+      "Protect from flies during drying",
+      "In humid weather, use an oven on lowest setting",
+      "Stores for months in airtight container"
+    ]
+  },
+
+  // ============ KALENJIN (KENYA) RECIPES ============
+  {
+    id: "mursik",
+    name: "Mursik (Kalenjin Fermented Milk)",
+    tribeSlug: "kalenjin",
+    tribeName: "Kalenjin",
+    category: "beverage",
+    description: "Traditional fermented milk stored in a specially treated gourd, giving it a distinctive smoky flavor.",
+    culturalSignificance: "Mursik is sacred to the Kalenjin. It's used in blessings, given to warriors and athletes, and served at all important occasions. Marathon champions attribute their success to mursik.",
+    historicalContext: "The Kalenjin have been pastoralists for millennia. The mursik gourd (sotet) is treated with charcoal from specific trees (sosiot), giving the milk its unique flavor. This tradition dates back centuries.",
+    prepTime: "5 minutes + 3-5 days fermentation",
+    cookTime: "0 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh whole milk", amount: "1 liter" },
+      { item: "Gourd (sotet)", amount: "1", notes: "Traditionally prepared" },
+      { item: "Charcoal (sosiot wood)", amount: "Small piece", notes: "For coating gourd" }
+    ],
+    instructions: [
+      "Traditionally, prepare the gourd by coating inside with hot charcoal ash.",
+      "Pour fresh milk into the prepared gourd.",
+      "Cover and leave in a warm place for 3-5 days.",
+      "Shake occasionally to distribute the culture.",
+      "Mursik is ready when thick with a smoky, tangy flavor.",
+      "Serve cold or at room temperature."
+    ],
+    tips: [
+      "Modern method: add a pinch of activated charcoal to yogurt culture",
+      "The smoky flavor is distinctive and can be acquired",
+      "Mursik is high in probiotics and protein"
+    ]
+  },
+  {
+    id: "kimyet",
+    name: "Kimyet (Kalenjin Meat Stew)",
+    tribeSlug: "kalenjin",
+    tribeName: "Kalenjin",
+    category: "special",
+    description: "Traditional Kalenjin meat stew slow-cooked with local vegetables and served with ugali.",
+    culturalSignificance: "Kimyet is prepared for warriors and athletes for strength. The Kalenjin believe meat and milk are essential for producing world-class runners.",
+    prepTime: "20 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Goat or beef", amount: "1 kg", notes: "With bone" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Potatoes", amount: "4 medium", notes: "Cubed" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "4 cups" }
+    ],
+    instructions: [
+      "Brown meat pieces in a little oil.",
+      "Add onions and cook until soft.",
+      "Add tomatoes and cook until broken down.",
+      "Add water and bring to boil.",
+      "Reduce heat and simmer for 1.5 hours until meat is tender.",
+      "Add potatoes and cook for another 20 minutes.",
+      "Season with salt and serve with ugali."
+    ],
+    tips: [
+      "Bone-in meat adds more flavor to the stew",
+      "Some add indigenous vegetables like terere",
+      "Slow cooking is essential for tender meat"
+    ]
+  },
+
+  // ============ KISII (KENYA) RECIPES ============
+  {
+    id: "chinsaga",
+    name: "Chinsaga (Kisii Leafy Greens)",
+    tribeSlug: "kisii",
+    tribeName: "Kisii (Gusii)",
+    category: "staple",
+    description: "Traditional Kisii vegetable dish featuring local greens cooked with onions and tomatoes, often with sour milk.",
+    culturalSignificance: "Chinsaga is everyday Kisii food, representing the fertile Kisii highlands. The addition of sour milk (mabere) is distinctly Kisii.",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Traditional greens (spider plant, amaranth)", amount: "500g", notes: "Washed" },
+      { item: "Onion", amount: "1 large", notes: "Sliced" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Sour milk (mabere)", amount: "1/2 cup", notes: "Optional" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Sauté onions in oil until soft.",
+      "Add tomatoes and cook until broken down.",
+      "Add leafy greens and stir well.",
+      "Cover and cook for 15 minutes.",
+      "Add sour milk if using and stir.",
+      "Season with salt and serve with ugali."
+    ],
+    tips: [
+      "Spider plant (saget) is the most traditional choice",
+      "The sour milk adds a creamy, tangy flavor",
+      "Don't overcook - greens should be tender but not mushy"
+    ]
+  },
+  {
+    id: "obokima",
+    name: "Obokima (Kisii Finger Millet Ugali)",
+    tribeSlug: "kisii",
+    tribeName: "Kisii (Gusii)",
+    category: "staple",
+    description: "Dark brown ugali made from finger millet flour, a nutritious traditional Kisii staple.",
+    culturalSignificance: "Obokima is considered more nutritious than white ugali. It was the original staple before maize became dominant and is still preferred by many Kisii elders.",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Finger millet flour", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "Pinch" }
+    ],
+    instructions: [
+      "Bring water to boil.",
+      "Make a paste with 1/2 cup flour and cold water.",
+      "Stir paste into boiling water.",
+      "Cook for 5 minutes, stirring constantly.",
+      "Gradually add remaining flour, stirring vigorously.",
+      "Cook until very thick and pulls from sides.",
+      "Cover and steam for 15 minutes."
+    ],
+    tips: [
+      "Finger millet ugali is darker and denser than maize ugali",
+      "It has a slightly earthy, nutty flavor",
+      "Excellent paired with sour milk"
+    ]
+  },
+
+  // ============ BAGANDA (UGANDA) RECIPES ============
+  {
+    id: "matooke",
+    name: "Matooke (Steamed Green Bananas)",
+    tribeSlug: "baganda",
+    tribeName: "Baganda",
+    category: "staple",
+    description: "Steamed and mashed green bananas, the staple food of the Baganda people and Uganda's national dish.",
+    culturalSignificance: "Matooke is central to Baganda identity. A meal without matooke is not considered complete. It's wrapped in banana leaves for cooking and serving.",
+    historicalContext: "Bananas arrived in East Africa from Southeast Asia over 2,000 years ago. The Baganda developed over 80 varieties and built their civilization around banana cultivation. The Buganda Kingdom's prosperity was tied to banana harvests.",
+    youtubeVideoId: "tG8G3zZfDKo",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Green cooking bananas (matooke)", amount: "10-12", notes: "Unripe" },
+      { item: "Banana leaves", amount: "Several", notes: "For wrapping" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Peel green bananas carefully (sap stains).",
+      "Wrap peeled bananas in banana leaves.",
+      "Place a layer of banana leaves in a large pot.",
+      "Add wrapped bananas and more leaves on top.",
+      "Add water to the pot (not touching bananas).",
+      "Cover tightly and steam for 45-60 minutes.",
+      "Mash through the leaves until smooth.",
+      "Serve with groundnut sauce or meat stew."
+    ],
+    tips: [
+      "Use gloves when peeling - the sap is sticky",
+      "The banana leaves add flavor and moisture",
+      "Should be smooth with no lumps when mashed"
+    ]
+  },
+  {
+    id: "groundnut-sauce",
+    name: "Ebinyebwa (Groundnut Sauce)",
+    tribeSlug: "baganda",
+    tribeName: "Baganda",
+    category: "special",
+    description: "Rich peanut sauce that accompanies matooke. The most beloved sauce in Ugandan cuisine.",
+    culturalSignificance: "No matooke is complete without groundnut sauce. It's served at every important occasion and is considered essential for proper Baganda hospitality.",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Groundnut paste", amount: "1 cup", notes: "Or natural peanut butter" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Blended" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Water", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Sauté onion until golden.",
+      "Add blended tomatoes and cook for 10 minutes.",
+      "Mix groundnut paste with water until smooth.",
+      "Add to the pot and stir well.",
+      "Simmer for 20 minutes, stirring often.",
+      "Sauce should be thick and creamy.",
+      "Season with salt and serve over matooke."
+    ],
+    tips: [
+      "Natural peanut butter works if groundnut paste unavailable",
+      "Stir constantly to prevent burning",
+      "Can add vegetables or meat"
+    ]
+  },
+
+  // ============ NDEBELE (ZIMBABWE) RECIPES ============
+  {
+    id: "isitshwala",
+    name: "Isitshwala (Ndebele Thick Porridge)",
+    tribeSlug: "ndebele",
+    tribeName: "Ndebele",
+    category: "staple",
+    description: "The Ndebele version of thick maize porridge, essential to every meal. Similar to Shona sadza but with distinct preparation.",
+    culturalSignificance: "Isitshwala is the foundation of Ndebele cuisine. It's said that a true Ndebele can prepare perfect isitshwala - smooth, thick, and without lumps.",
+    prepTime: "5 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "White maize meal", amount: "2 cups" },
+      { item: "Water", amount: "5 cups" },
+      { item: "Salt", amount: "Pinch" }
+    ],
+    instructions: [
+      "Boil water in a heavy pot.",
+      "Mix some flour with cold water to make paste.",
+      "Add paste to boiling water, stirring constantly.",
+      "Cook for 5 minutes until bubbling.",
+      "Gradually add more flour, stirring vigorously.",
+      "Cook until very stiff and pulling from pot.",
+      "Cover and steam for 10 minutes."
+    ],
+    tips: [
+      "A wooden spoon (uphini) is traditional",
+      "No lumps should remain",
+      "Serve with umhluzi (gravy) or vegetables"
+    ]
+  },
+  {
+    id: "umhluzi",
+    name: "Umhluzi (Ndebele Meat Gravy)",
+    tribeSlug: "ndebele",
+    tribeName: "Ndebele",
+    category: "special",
+    description: "Rich meat-based gravy that accompanies isitshwala. The essential protein addition to every Ndebele meal.",
+    culturalSignificance: "Umhluzi represents the cattle-keeping heritage of the Ndebele. Meat is valued and prepared with care for maximum flavor.",
+    prepTime: "15 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef or goat", amount: "500g", notes: "Cubed" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "3 cups" }
+    ],
+    instructions: [
+      "Brown meat in a little oil.",
+      "Add onions and cook until soft.",
+      "Add tomatoes and cook down.",
+      "Add water and bring to boil.",
+      "Reduce heat and simmer for 1-1.5 hours.",
+      "The gravy should be rich and flavorful.",
+      "Season with salt and serve over isitshwala."
+    ],
+    tips: [
+      "The longer you cook, the richer the flavor",
+      "Some add potatoes or pumpkin",
+      "Save the bones for extra flavor"
+    ]
+  },
+
+  // ============ BEMBA (ZAMBIA) RECIPES ============
+  {
+    id: "nshima",
+    name: "Nshima (Bemba Thick Porridge)",
+    tribeSlug: "bemba",
+    tribeName: "Bemba",
+    category: "staple",
+    description: "Zambia's staple food - thick maize porridge eaten with every meal. The Bemba consider it the only 'real' food.",
+    culturalSignificance: "The Bemba say 'We haven't eaten' if a meal doesn't include nshima. It's the center of Zambian food culture and identity.",
+    historicalContext: "Before maize, the Bemba ate finger millet porridge (ubwali). When maize arrived, nshima became dominant. The Bemba maintain that their nshima preparation is the finest in Zambia.",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "White maize meal (mealie meal)", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "Pinch" }
+    ],
+    instructions: [
+      "Bring water to boil in a heavy pot.",
+      "Make a thin paste with 1/2 cup flour and cold water.",
+      "Stir paste into boiling water.",
+      "Cook for 5 minutes, stirring constantly.",
+      "Gradually add remaining flour while stirring.",
+      "Cook until very thick and smooth.",
+      "Cover and steam for 10 minutes.",
+      "Mold into serving portions."
+    ],
+    tips: [
+      "Continuous stirring prevents lumps",
+      "Should be thick enough to mold",
+      "Eat with right hand, pinching off pieces"
+    ]
+  },
+  {
+    id: "ifisashi",
+    name: "Ifisashi (Bemba Greens in Peanut Sauce)",
+    tribeSlug: "bemba",
+    tribeName: "Bemba",
+    category: "staple",
+    description: "Leafy greens cooked in a rich groundnut sauce - the most popular vegetable dish in Zambia.",
+    culturalSignificance: "Ifisashi is daily food for most Zambians. The combination of greens and groundnuts provides complete protein, essential for Bemba farmers.",
+    prepTime: "15 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Leafy greens (rape, pumpkin leaves)", amount: "500g", notes: "Chopped" },
+      { item: "Groundnut powder", amount: "1/2 cup" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Boil greens in salted water for 5 minutes. Drain.",
+      "Sauté onion and tomatoes until soft.",
+      "Add cooked greens.",
+      "Mix groundnut powder with a little water.",
+      "Stir groundnut mixture into vegetables.",
+      "Simmer for 15 minutes until thick.",
+      "Season with salt and serve with nshima."
+    ],
+    tips: [
+      "Groundnut paste can substitute for powder",
+      "Don't add too much water - should be thick",
+      "Great vegetarian protein source"
+    ]
+  },
+
+  // ============ AKAN (GHANA) RECIPES ============
+  {
+    id: "banku",
+    name: "Banku (Fermented Corn Dough)",
+    tribeSlug: "akan",
+    tribeName: "Akan",
+    category: "staple",
+    description: "Fermented corn and cassava dough ball, smooth and slightly sour. The everyday staple of the Akan people.",
+    culturalSignificance: "Banku is to the Akan what fufu is to the Ashanti. It's simpler to prepare and eaten daily with soups and stews.",
+    historicalContext: "Banku developed from fermentation techniques that preserve grain in humid climates. The slight sourness aids digestion and adds unique flavor.",
+    prepTime: "24 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fermented corn dough", amount: "2 cups" },
+      { item: "Cassava dough", amount: "1 cup" },
+      { item: "Water", amount: "3 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Mix corn and cassava doughs with water.",
+      "Strain to remove lumps.",
+      "Pour into pot and cook on medium heat.",
+      "Stir continuously with wooden paddle.",
+      "Cook until thick and pulls from pot.",
+      "Continue stirring until smooth and elastic.",
+      "Shape into balls and serve with soup."
+    ],
+    tips: [
+      "Must stir constantly or it burns",
+      "Texture should be smooth, not grainy",
+      "Traditional banku paddle (banku ta) helps achieve right texture"
+    ]
+  },
+  {
+    id: "tilapia-grilled-akan",
+    name: "Tilapia Grilled Akan Style",
+    tribeSlug: "akan",
+    tribeName: "Akan",
+    category: "special",
+    description: "Grilled tilapia rubbed with pepper, onions, and spices - the most popular fish dish on the Ghanaian coast.",
+    culturalSignificance: "Tilapia is abundant in Ghana's rivers and farms. Grilling it Akan-style with pepper and onions is a beloved tradition enjoyed across all social classes.",
+    prepTime: "20 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Whole tilapia", amount: "2 large", notes: "Cleaned and scaled" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Fresh ginger", amount: "2 inches", notes: "Grated" },
+      { item: "Scotch bonnet pepper", amount: "2", notes: "Blended" },
+      { item: "Salt", amount: "1 tablespoon" },
+      { item: "Vegetable oil", amount: "3 tablespoons" }
+    ],
+    instructions: [
+      "Score fish with deep diagonal cuts on both sides.",
+      "Mix ginger, pepper, salt, and oil.",
+      "Rub mixture inside and outside fish.",
+      "Stuff cavity with some onion slices.",
+      "Grill over charcoal, basting with oil.",
+      "Turn once, cooking about 10 minutes per side.",
+      "Serve with remaining onions and fresh pepper sauce."
+    ],
+    tips: [
+      "Charcoal grilling adds authentic smoky flavor",
+      "Fish is done when flesh flakes easily",
+      "Serve immediately for best taste"
+    ]
+  },
+
+  // ============ TIGRAY (ETHIOPIA) RECIPES ============
+  {
+    id: "kitfo",
+    name: "Kitfo (Ethiopian Beef Tartare)",
+    tribeSlug: "tigray",
+    tribeName: "Tigray",
+    category: "special",
+    description: "Finely minced raw beef seasoned with mitmita spice and niter kibbeh. A delicacy shared by Tigray and Amhara.",
+    culturalSignificance: "Kitfo is reserved for special occasions and celebrations. It's considered a test of a cook's skill - the beef must be of highest quality and prepared perfectly.",
+    historicalContext: "Raw beef dishes date back to the Ethiopian highlands' ancient cattle culture. Warriors reportedly ate raw meat for strength. Today kitfo is a beloved luxury dish.",
+    prepTime: "20 minutes",
+    cookTime: "0 minutes (raw) or 5 minutes (leb leb)",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Premium beef (tenderloin)", amount: "500g", notes: "Very fresh" },
+      { item: "Niter kibbeh (spiced butter)", amount: "3 tablespoons", notes: "Melted" },
+      { item: "Mitmita spice", amount: "2 tablespoons" },
+      { item: "Cardamom", amount: "1/4 teaspoon" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Mince beef very finely by hand or grinder.",
+      "Warm niter kibbeh until liquid.",
+      "Toss beef with melted butter.",
+      "Add mitmita and cardamom, mix well.",
+      "For 'leb leb' (slightly cooked), warm briefly in pan.",
+      "Serve immediately with injera and ayib (cheese)."
+    ],
+    tips: [
+      "Beef quality is paramount - use only the freshest",
+      "Traditional preparation is completely raw",
+      "Leb leb is the warmed version for those who prefer"
+    ]
+  },
+
+  // ============ TUTSI/HUTU (RWANDA) RECIPES ============
+  {
+    id: "isombe",
+    name: "Isombe (Cassava Leaves with Eggplant)",
+    tribeSlug: "hutu-tutsi",
+    tribeName: "Hutu/Tutsi",
+    category: "staple",
+    description: "Mashed cassava leaves cooked with eggplant, peanuts, and palm oil. Rwanda's national dish.",
+    culturalSignificance: "Isombe is eaten by all Rwandans regardless of background. It represents national unity and the rich agricultural heritage of the Land of a Thousand Hills.",
+    historicalContext: "Cassava was introduced to Rwanda in the 18th century and became essential for food security. Isombe combines it with native peanuts, creating a uniquely Rwandan dish.",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Cassava leaves", amount: "500g", notes: "Fresh or frozen, pounded" },
+      { item: "Eggplant", amount: "2 medium", notes: "Cubed" },
+      { item: "Groundnut paste", amount: "1/2 cup" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "If using fresh leaves, pound until smooth.",
+      "Boil cassava leaves in salted water for 30 minutes.",
+      "In separate pot, boil eggplant until soft.",
+      "Mash eggplant and add to cassava leaves.",
+      "Add palm oil and groundnut paste.",
+      "Simmer together for 20 minutes.",
+      "Season with salt and serve with rice or plantains."
+    ],
+    tips: [
+      "Frozen cassava leaves are easier to find abroad",
+      "The dish should be thick and hearty",
+      "Palm oil gives authentic color and flavor"
+    ]
+  },
+
+  // ============ BAKONGO (DRC/CONGO) RECIPES ============
+  {
+    id: "saka-saka",
+    name: "Saka Saka (Pondu)",
+    tribeSlug: "bakongo",
+    tribeName: "Bakongo",
+    category: "staple",
+    description: "Pounded cassava leaves stewed with palm oil and fish - the quintessential dish of the Congo Basin.",
+    culturalSignificance: "Saka saka is daily food across DRC and Congo. It represents the Bakongo connection to the rainforest and their agricultural traditions.",
+    historicalContext: "The Bakongo were among the first African peoples contacted by Portuguese explorers. Despite colonization, their food traditions remained intact. Saka saka is now a symbol of Congolese identity.",
+    prepTime: "30 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Cassava leaves", amount: "500g", notes: "Frozen or fresh, pounded" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Smoked fish", amount: "200g", notes: "Deboned" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "If using frozen leaves, thaw and chop finely.",
+      "Boil cassava leaves in salted water for 1 hour.",
+      "Drain and set aside.",
+      "Heat palm oil and sauté onion and garlic.",
+      "Add cassava leaves and stir well.",
+      "Add smoked fish and mix.",
+      "Simmer for 45 minutes, adding water if needed.",
+      "Serve with fufu or rice."
+    ],
+    tips: [
+      "Long cooking makes leaves tender and develops flavor",
+      "Palm oil is essential for authentic taste",
+      "Can add peanut butter for extra richness"
+    ]
   }
 ];
 
