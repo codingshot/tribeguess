@@ -417,6 +417,13 @@
       },
       "traditionalDance": "Ohangla and Benga - energetic dances with nyatiti lyre",
       "religion": "Traditional belief in Nyasaye (God); now mix of Christianity and traditional beliefs",
+      "traditionalReligion": {
+        "name": "Luo Traditional Religion",
+        "supremeDeity": "Nyasaye (supreme god, creator, associated with the sun)",
+        "spirits": ["Juogi (ancestral spirits)", "Lago (personal guardian spirit)", "Kachinja (malevolent spirits)"],
+        "practices": ["Tero buru (elaborate funeral ceremonies)", "Koth nyasaye (rain prayers)", "Consultation with ajuoga (diviners)", "Offerings at dala (ancestral homestead)", "Night vigils with drumming and singing"],
+        "beliefs": "Nyasaye created all things and dwells in the sky; ancestors (juogi) guide and protect the living; proper funeral rites essential for spirit to rest; the lyre (nyatiti) connects to spiritual realm"
+      },
       "history": {
         "origin": "The Luo are Nilotic people who migrated from the Bahr el Ghazal region in South Sudan between the 15th and 17th centuries. They followed the Nile River southward and eventually settled around Lake Victoria.",
         "colonialEra": "The Luo resisted British colonial rule, with leaders like Odera Akang'o and Gor Mahia becoming legendary for their resistance. The community also embraced Western education early, producing many of Kenya's first professionals.",
@@ -545,6 +552,13 @@
       },
       "traditionalDance": "Sikuti - drum-based dance performed during celebrations",
       "religion": "Traditional beliefs with Wele Khakaba (God); now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Luhya Traditional Religion",
+        "supremeDeity": "Wele Khakaba (supreme god, creator - 'the one who creates/kneads')",
+        "spirits": ["Emisambwa (ancestral spirits)", "Omusambwa (personal/clan spirits)", "Were (another name for God among some sub-tribes)"],
+        "practices": ["Circumcision rituals with spiritual preparation", "Offerings at shrines (lisembe)", "Consultation with omufumu (medicine men/diviners)", "Bullfighting with spiritual dimensions", "Ancestor appeasement ceremonies"],
+        "beliefs": "Wele Khakaba created everything from nothing; ancestors (emisambwa) protect and guide; circumcision is spiritual rebirth; bullfighting honors ancestors; traditional healers communicate with spirit world"
+      },
       "history": {
         "origin": "The Luhya are Bantu people comprising 18 sub-tribes who migrated to Western Kenya from various directions between the 14th and 16th centuries. The name 'Luhya' (meaning 'people of the same fire') was adopted in the 1930s to unify the sub-tribes.",
         "colonialEra": "Western Kenya became a labor reserve during colonization, with many Luhya men working on British farms and building the Uganda Railway. Elijah Masinde led the Dini ya Msambwa movement against colonial rule.",
@@ -670,6 +684,13 @@
       },
       "traditionalDance": "Kilumi - acrobatic dance with drums and whistles",
       "religion": "Traditional belief in Ngai Mulungu; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Kamba Traditional Religion",
+        "supremeDeity": "Ngai Mulungu (supreme god, creator, associated with Mount Kenya)",
+        "spirits": ["Aimu (ancestral spirits)", "Kithitu (protective spirits)", "Nature spirits in sacred trees"],
+        "practices": ["Prayers facing Mount Kenya or sacred hills", "Offerings under muumo (fig) trees", "Consultation with andu awe (medicine men/seers)", "Oath-taking at sacred sites", "Rain-making ceremonies"],
+        "beliefs": "Ngai Mulungu dwells in the sky and on sacred mountains; aimu ancestors protect and can punish neglect; kithitu oath is binding - violation brings supernatural punishment; traditional healers communicate with spirit world"
+      },
       "history": {
         "origin": "The Kamba (Akamba) are Bantu people who migrated from the Congo Basin region and settled in Eastern Kenya around the 16th century. They originally settled on the slopes of Mount Kilimanjaro before moving to their current homeland.",
         "colonialEra": "The Kamba were famous long-distance traders, establishing trade routes from the coast to the interior. They traded ivory, honey, and iron tools with Arab and Swahili merchants. They resisted colonial taxation and forced labor.",
@@ -797,6 +818,13 @@
       },
       "traditionalDance": "Chemirocha - jumping dance performed during celebrations",
       "religion": "Traditional belief in Asis (Sun god); now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Kalenjin Traditional Religion",
+        "supremeDeity": "Asis (sun god, supreme creator - associated with lightning)",
+        "spirits": ["Oiik (ancestral spirits)", "Ilat (thunder deity)", "Nature spirits in sacred groves"],
+        "practices": ["Prayers to Asis at sunrise", "Tumdo (circumcision/initiation with spiritual preparation)", "Sacred groves (korosek) for rituals", "Orkoiyot (prophet/ritual leader) consultations", "Libations of mursik to ancestors"],
+        "beliefs": "Asis created the world and provides rain; Orkoiyot prophets have spiritual power to see the future; circumcision transforms boys spiritually; ancestral spirits guide through dreams; running success attributed to spiritual blessing"
+      },
       "history": {
         "origin": "The Kalenjin are Nilotic people who migrated from the Ethiopian highlands around 2000 years ago. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, Marakwet, Tugen, Pokot, and Sabaot. The name 'Kalenjin' (meaning 'I say to you') was adopted in the 1940s.",
         "colonialEra": "The Nandi Resistance (1890-1906) was one of the longest resistances against British colonization in Africa. Orkoiyot Koitalel Arap Samoei led the resistance until he was killed by the British in 1905.",
@@ -1995,6 +2023,13 @@
       },
       "traditionalDance": "Chakacha - hip-focused dance performed at weddings and celebrations",
       "religion": "Predominantly Islam (Sunni)",
+      "traditionalReligion": {
+        "name": "Pre-Islamic Swahili Beliefs (blended with Islam)",
+        "supremeDeity": "Mungu (God, now identified with Allah)",
+        "spirits": ["Mizimu (ancestral spirits)", "Majini/Jinn (spirits from sea and land)", "Pepo (possessing spirits)"],
+        "practices": ["Ngoma ceremonies for spirit possession", "Maulidi celebrations (Prophet's birthday)", "Zar spirit healing rituals", "Offerings at sacred sites (shrines, caves, old baobabs)", "Consultation with waganga (traditional healers)"],
+        "beliefs": "Swahili Islam incorporates indigenous beliefs; ancestors (mizimu) remain influential; jinn inhabit the coast and sea; spirit possession ceremonies blend Islamic and African traditions; Friday prayers coexist with traditional healing"
+      },
       "history": {
         "origin": "The Swahili culture emerged from intermarriage between Bantu peoples and Arab/Persian traders from around 800 AD, creating a unique maritime civilization along the East African coast.",
         "colonialEra": "Mombasa and other Swahili city-states were colonized by Portuguese (1498-1698), then Omanis, and finally British. The Swahili maintained their culture through these transitions.",
@@ -3512,6 +3547,13 @@
       },
       "traditionalDance": "Koroso - traditional wedding dance",
       "religion": "Islam (predominantly Sunni)",
+      "traditionalReligion": {
+        "name": "Bori (Pre-Islamic Hausa Religion)",
+        "supremeDeity": "Ubangiji (supreme god, now identified with Allah)",
+        "spirits": ["Iskoki (spirits/jinn)", "Bori spirits (possessing deities)", "Inna (mother spirit)", "Sarkin Rafi (water spirit)"],
+        "practices": ["Bori spirit possession ceremonies (still practiced by some)", "Bokaye (traditional healers/diviners)", "Animal sacrifices at shrines", "Offerings at sacred rocks and trees", "Spirit mediumship for healing"],
+        "beliefs": "Pre-Islamic Hausa believed in Ubangiji and iskoki spirits; Bori cult continues underground despite Islamic dominance; possession ceremonies heal spiritual ailments; traditional healers blend Islamic prayers with indigenous practices"
+      },
       "history": {
         "origin": "The Hausa city-states emerged around 1000 AD. According to legend, Bayajidda founded the seven Hausa states (Hausa Bakwai).",
         "colonialEra": "The British conquered the Sokoto Caliphate in 1903 through indirect rule, using existing Emirate structures.",
@@ -3638,6 +3680,13 @@
       },
       "traditionalDance": "Gerewol - male beauty dance competition (Wodaabe)",
       "religion": "Islam (predominantly), Traditional beliefs in some groups",
+      "traditionalReligion": {
+        "name": "Pulaaku Traditional Spirituality",
+        "supremeDeity": "Geno (supreme creator god among pastoral Fulani)",
+        "spirits": ["Koodal (ancestral spirits)", "Jinn (nature spirits)", "Cattle spirits honored in rituals"],
+        "practices": ["Cattle naming and blessing ceremonies", "Sharo (endurance test of manhood)", "Gerewol male beauty rituals", "Consultation with marabouts (spiritual healers)", "Milk libations and cattle offerings"],
+        "beliefs": "Before Islam, Fulani revered Geno as creator; cattle are sacred wealth with spiritual significance; pulaaku code (patience, self-control, modesty) has spiritual dimensions; some pastoral groups maintain animist practices alongside Islam"
+      },
       "history": {
         "origin": "The Fulani origin is debated - possibly from Senegambia or the Middle East. They spread across the Sahel over centuries as cattle herders.",
         "colonialEra": "The Fulani resisted colonial rule in many regions. Their Islamic states (Sokoto, Macina, Fouta Djallon) were conquered by European powers.",
@@ -4383,6 +4432,13 @@
       },
       "traditionalDance": "Eskista - shoulder-shaking dance",
       "religion": "Ethiopian Orthodox Christianity (predominantly)",
+      "traditionalReligion": {
+        "name": "Ethiopian Orthodox Christianity (with ancient roots)",
+        "supremeDeity": "Egziabher (God the Father, Trinity)",
+        "spirits": ["Saints (Kidussan)", "Angels (especially Michael and Gabriel)", "The Virgin Mary (Mariam) - deeply venerated"],
+        "practices": ["Fasting over 200 days per year", "Timkat (Epiphany) celebration with Tabot procession", "Meskel (Finding of True Cross) festival", "Coffee ceremony with spiritual dimensions", "Pilgrimage to Lalibela rock churches", "Debtera (church scholars) for healing and exorcism"],
+        "beliefs": "Ark of Covenant believed kept at Axum; Ethiopian Church traces to 4th century; Ge'ez liturgy unchanged for millennia; saints intercede for believers; elaborate fasting creates spiritual purity; blend of Semitic Christianity with indigenous elements"
+      },
       "history": {
         "origin": "The Amhara have been central to Ethiopian civilization for over 2,000 years. The Solomonic dynasty, claiming descent from Solomon and Sheba, ruled Ethiopia until 1974.",
         "colonialEra": "Ethiopia was never colonized (except briefly by Italy, 1936-1941). Amhara emperors like Menelik II and Haile Selassie maintained independence.",
@@ -4500,6 +4556,13 @@
       },
       "traditionalDance": "Sabar - energetic drum and dance tradition",
       "religion": "Islam (predominantly Sufi - Mouride, Tijane brotherhoods)",
+      "traditionalReligion": {
+        "name": "Wolof Traditional Religion (blended with Islam)",
+        "supremeDeity": "Rog (supreme god, now identified with Allah)",
+        "spirits": ["Rab (guardian spirits/jinn)", "Tuur (lineage spirits)", "Ancestor spirits"],
+        "practices": ["Ndëpp spirit possession healing ceremonies", "Consultation with seriñ (marabouts/Islamic healers)", "Protective talismans (gris-gris)", "Offerings at sacred trees and sites", "Sabar drum ceremonies with spiritual elements"],
+        "beliefs": "Pre-Islamic Wolof venerated Rog and rab spirits; Islam arrived 11th century but blended with indigenous beliefs; marabouts combine Quranic healing with traditional practices; Sufi brotherhoods (Mouride, Tijane) incorporate mystical elements"
+      },
       "history": {
         "origin": "The Wolof established powerful kingdoms including the Jolof Empire (1360-1549) that dominated Senegambia before Portuguese arrival.",
         "colonialEra": "The French colonized Senegal extensively. Wolof became the urban lingua franca. The Four Communes had French citizenship from 1848.",
@@ -5004,6 +5067,13 @@
       },
       "traditionalDance": "Dhaanto - traditional dance with singing",
       "religion": "Islam (Sunni, predominantly Shafi'i)",
+      "traditionalReligion": {
+        "name": "Waaq (Pre-Islamic Somali Religion)",
+        "supremeDeity": "Waaq (sky god, supreme creator, similar to Oromo Waaqa)",
+        "spirits": ["Ayaanle (good spirits)", "Rooxaan (possessing spirits)", "Ancestor spirits consulted for guidance"],
+        "practices": ["Prayers to Waaq for rain and fertility", "Cattle sacrifices at sacred trees", "Saar spirit possession ceremonies (pre-Islamic)", "Consultation with wadaad (religious leaders)", "Offerings at ancestral graves"],
+        "beliefs": "Before Islam, Somalis worshipped Waaq and honored ancestors; Islam arrived via Arab traders around 7th century; some Cushitic practices integrated into Somali Islam; poetry invokes both Islamic and traditional imagery; clan ancestors retain spiritual significance"
+      },
       "history": {
         "origin": "The Somali people have lived in the Horn of Africa for millennia. Medieval Somali sultanates like Ajuran and Adal were powerful trading states.",
         "colonialEra": "The Somali lands were divided between Britain, Italy, France, and Ethiopia in the colonial scramble. This 'partition' remains controversial.",
@@ -5492,6 +5562,13 @@
       },
       "traditionalDance": "N'goma drumming and ancestral dances",
       "religion": "Christianity (Catholic, Kimbanguist), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Kongo Traditional Religion",
+        "supremeDeity": "Nzambi Mpungu (supreme creator god, unreachable)",
+        "spirits": ["Bakulu (ancestor spirits)", "Minkisi (spirit forces housed in power objects)", "Simbi (nature/water spirits)", "Kalunga (boundary between living and dead)"],
+        "practices": ["Nkisi power figures (minkisi) for protection and healing", "Nganga (ritual specialists) consult spirits", "Offerings at family ancestor shrines", "Communion with spirits through trances", "Funeral rituals to guide souls across Kalunga"],
+        "beliefs": "Nzambi Mpungu created the world but is distant; ancestors are intermediaries; Kalunga is the cosmic boundary (also ocean/death); minkisi objects house spiritual power; the living and dead form continuous community"
+      },
       "language": {
         "name": "Kikongo",
         "speakers": "~7 million",
@@ -5565,6 +5642,13 @@
       },
       "traditionalDance": "Likundu ancestral dances",
       "religion": "Christianity, Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Mongo Traditional Religion",
+        "supremeDeity": "Njakomba (supreme creator god)",
+        "spirits": ["Bilima (nature spirits)", "Elima (ancestral spirits)", "Water spirits of rivers and pools"],
+        "practices": ["Likundu ancestral dances", "Forest spirit propitiation before hunting", "Offerings at ancestor shrines", "Divination for important decisions", "Naming ceremonies invoking ancestors"],
+        "beliefs": "Njakomba created the world as told in Lianja epic; forest and rivers have spirits requiring respect; ancestors continue to influence the living; the Lianja epic explains cosmic origins and moral law"
+      },
       "language": {
         "name": "Lomongo",
         "speakers": "~3 million (with dialects ~12 million)",
@@ -6516,6 +6600,13 @@
       "funFacts": ["Evans-Pritchard's 'The Nuer' (1940) is foundational anthropology", "A man takes his favorite ox's name as his 'ox-name'"],
       "traditionalDance": "Cattle-honoring dances with leaping",
       "religion": "Traditional belief in Kuoth (Spirit); Christianity growing",
+      "traditionalReligion": {
+        "name": "Nuer Traditional Religion",
+        "supremeDeity": "Kuoth (Spirit/God - pervasive spiritual force)",
+        "spirits": ["Kuoth nhial (spirit of the sky)", "Kuoth piny (spirits of the earth)", "Col wic (ancestral spirits)", "Kwoth of rivers, trees, and animals"],
+        "practices": ["Cattle sacrifices for all major occasions", "Consultation with gwan kwoth (prophets/diviners)", "Leopard-skin chiefs mediate disputes", "Prayers and offerings to Kuoth", "Songs of praise for cattle (each man has an ox-name)"],
+        "beliefs": "Kuoth is everywhere - in sky, earth, and all things; cattle are sacred intermediaries between humans and Kuoth; leopard-skin chiefs have spiritual authority; twin births are spiritually significant"
+      },
       "language": { "name": "Nuer", "speakers": "~3 million", "greeting": "Maaleh?", "greetingMeaning": "How are you?", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Latin alphabet" },
       "sources": [{ "name": "Wikipedia - Nuer", "url": "https://en.wikipedia.org/wiki/Nuer_people" }],
       "description": "The Nuer are a major Nilotic people of South Sudan (~3.5M), renowned for cattle culture and distinctive six-line forehead scarification.",
@@ -6544,6 +6635,13 @@
       "funFacts": ["The Shilluk believe their first king Nyikang never died but ascended to heaven", "Each new Reth is 'possessed' by Nyikang's spirit during coronation", "Traditionally, a weakening king could be ritually killed to protect the nation"],
       "traditionalDance": "Royal ceremonies honoring Nyikang and the Reth",
       "religion": "Traditional belief in Juok (God) and Nyikang; Christianity growing",
+      "traditionalReligion": {
+        "name": "Shilluk Traditional Religion",
+        "supremeDeity": "Juok (supreme god, creator of all)",
+        "spirits": ["Nyikang (deified first king, national spirit)", "Dak (ancestor of commoners)", "Royal ancestor spirits", "Nature spirits"],
+        "practices": ["Divine kingship - Reth embodies Nyikang's spirit", "Coronation ritual where Nyikang 'possesses' new king", "Cattle sacrifices at royal shrines", "Annual Nyikang festival", "Royal burial ceremonies"],
+        "beliefs": "Nyikang never died but ascended to become a spirit; each Reth is possessed by Nyikang; a weakening king could traditionally be killed to protect the nation; divine kingship maintains cosmic order"
+      },
       "language": { "name": "Shilluk (Dhocolo)", "speakers": "~175,000", "greeting": "Imiit?", "greetingMeaning": "How are you?", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Latin alphabet" },
       "sources": [{ "name": "Wikipedia - Shilluk", "url": "https://en.wikipedia.org/wiki/Shilluk_people" }],
       "description": "The Shilluk are a Nilotic people of South Sudan known for their divine kingship (Reth), one of Africa's oldest continuous monarchies tracing to the legendary founder Nyikang.",
@@ -6578,6 +6676,13 @@
       },
       "traditionalDance": "Jengi initiation ceremonies with forest spirit masks",
       "religion": "Forest-based spirituality centered on Jengi spirit",
+      "traditionalReligion": {
+        "name": "Baka Forest Religion",
+        "supremeDeity": "Komba (creator god who shaped the world)",
+        "spirits": ["Jengi (supreme forest spirit)", "Ejengi (spirit beings represented in masks)", "Forest as living spiritual entity"],
+        "practices": ["Jengi initiation ceremonies for young men", "Yelli polyphonic singing to communicate with forest", "Offerings before hunting", "Spirit possession ceremonies", "Forest is 'the Father' - sung to maintain harmony"],
+        "beliefs": "The forest is a conscious benevolent parent; Jengi spirit is encountered during initiation; polyphonic singing pleases the forest and ensures good hunting; harmony with forest spirits essential for survival"
+      },
       "language": { "name": "Baka", "speakers": "~40,000", "greeting": "Mbote?", "greetingMeaning": "Hello?", "family": "Ubangian (Niger-Congo)", "writingSystem": "Oral tradition" },
       "sources": [{ "name": "Wikipedia - Baka", "url": "https://en.wikipedia.org/wiki/Baka_people_(Cameroon_and_Gabon)" }, { "name": "UNESCO - Baka Polyphony", "url": "https://ich.unesco.org/en/RL/oral-traditions-of-the-aka-pygmies-of-central-africa-00011" }],
       "description": "The Baka are rainforest Pygmy people of Central Africa, known for polyphonic singing (UNESCO heritage), hunting expertise, and deep spiritual connection to the Congo Basin forest.",
@@ -6606,6 +6711,13 @@
       "funFacts": ["Suri lip plates can reach 15cm diameter - larger than Mursi", "Donga fights can be fatal - winner may claim any unmarried woman", "They historically defended gold deposits from raiders"],
       "traditionalDance": "Donga ceremony stick fighting dances",
       "religion": "Traditional animism, sky god (Tumu)",
+      "traditionalReligion": {
+        "name": "Suri Traditional Religion",
+        "supremeDeity": "Tumu (sky god, controller of rain)",
+        "spirits": ["Ancestor spirits", "Cattle spirits", "Nature spirits of rivers and mountains"],
+        "practices": ["Prayers to Tumu for rain", "Cattle sacrifices", "Scarification as spiritual marks", "Donga stick fights have spiritual dimensions", "Consultation with diviners"],
+        "beliefs": "Tumu controls rain essential for cattle; scarification connects to spiritual identity; stick fighting tests not just strength but spiritual power; cattle are divine gifts"
+      },
       "language": { "name": "Suri", "speakers": "~35,000", "greeting": "Tau?", "greetingMeaning": "How are you?", "family": "Surmic (Nilo-Saharan)", "writingSystem": "Oral tradition" },
       "sources": [{ "name": "Wikipedia - Suri", "url": "https://en.wikipedia.org/wiki/Suri_people" }],
       "description": "The Suri are an Omo Valley people closely related to the Mursi, known for women's lip plates, men's Donga stick fighting, and body scarification.",
@@ -6640,6 +6752,13 @@
       },
       "traditionalDance": "Laale dance performed at weddings and celebrations",
       "religion": "Islam (Sunni)",
+      "traditionalReligion": {
+        "name": "Pre-Islamic Afar Religion (now Islamic)",
+        "supremeDeity": "Wak (sky god, now identified with Allah)",
+        "spirits": ["Jinn (from Islamic tradition)", "Ancestor spirits (integrated with Islam)", "Desert spirits"],
+        "practices": ["Islamic prayers and fasting", "Pilgrimage traditions", "Curved jile knife as coming-of-age symbol", "Salt caravan blessings", "Traditional warrior codes with spiritual elements"],
+        "beliefs": "Islam arrived via Red Sea trade; pre-Islamic Cushitic religion honored Wak (sky); traditional warrior culture integrated with Islamic values; curved knife symbolizes manhood and honor"
+      },
       "language": { "name": "Afar (Qafar af)", "speakers": "~2 million", "greeting": "Ma'a salama", "greetingMeaning": "Peace be with you", "family": "Cushitic (Afro-Asiatic)", "writingSystem": "Latin alphabet" },
       "populationByCountry": [
         { "country": "ET", "population": "~1.8M", "percent": "92%" },
@@ -7205,6 +7324,13 @@
       },
       "traditionalDance": "Dinaka - traditional dance with drums and whistles",
       "religion": "Christianity (majority), Traditional beliefs (Badimo ancestor worship)",
+      "traditionalReligion": {
+        "name": "Pedi Traditional Religion (Badimo)",
+        "supremeDeity": "Modimo (supreme god, distant creator)",
+        "spirits": ["Badimo (ancestral spirits)", "Dikgwanyape (nature spirits)", "Rain spirits (vital for agriculture)"],
+        "practices": ["Go phasa (ancestor offerings with beer and food)", "Go fetola pula (rain-making ceremonies)", "Koma (initiation schools with spiritual instruction)", "Consultation with dingaka (traditional healers)", "Ancestor communication through dreams"],
+        "beliefs": "Badimo ancestors directly intervene in life; Modimo is distant but ultimate source; rain-making ceremonies essential for survival; initiation schools transmit spiritual knowledge; misfortune often attributed to ancestral displeasure"
+      },
       "language": { "name": "Sepedi (Northern Sotho)", "speakers": "~4.6 million", "greeting": "Thobela!", "greetingMeaning": "Hello! (with respect)", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "famousPeople": [
         { "name": "Sekhukhune I", "role": "King who resisted British colonization", "wikipedia": "https://en.wikipedia.org/wiki/Sekhukhune_I" },
@@ -7249,6 +7375,13 @@
       },
       "traditionalDance": "Domba - the python dance performed during female initiation",
       "religion": "Traditional beliefs (water spirits, ancestors), Christianity",
+      "traditionalReligion": {
+        "name": "Venda Traditional Religion",
+        "supremeDeity": "Nwali (Raluvhimba) - supreme god associated with sacred Lake Fundudzi",
+        "spirits": ["Zwidutwane (ancestral spirits)", "Python spirit (Tharu) - sacred protector", "Water spirits of Lake Fundudzi"],
+        "practices": ["Domba python dance initiation", "Approach Lake Fundudzi backwards as respect", "Offerings to python spirits", "Consultation with makhadzi (spirit mediums)", "Ngoma Lungundu (sacred drum) ceremonies historically"],
+        "beliefs": "Lake Fundudzi is sacred and inhabited by spirits; the python is divine messenger; approaching sacred places backwards shows respect; ancestors guide the living; traditional healers communicate with spirit world"
+      },
       "language": { "name": "Tshivenḓa", "speakers": "~1.5 million", "greeting": "Ndaa!", "greetingMeaning": "Hello! (to elders)", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "sources": [{ "name": "Wikipedia - Venda people", "url": "https://en.wikipedia.org/wiki/Venda_people" }],
       "description": "The Venda are a mystical people of South Africa's Limpopo known for Lake Fundudzi's sacred waters, the python Domba dance, and cultural links to Great Zimbabwe.",
@@ -7289,6 +7422,13 @@
       },
       "traditionalDance": "Muchongolo - energetic warrior dance with spears and shields",
       "religion": "Christianity, Traditional beliefs (ancestor veneration)",
+      "traditionalReligion": {
+        "name": "Tsonga Traditional Religion",
+        "supremeDeity": "Tilo (sky/heaven, supreme being) - distant creator",
+        "spirits": ["Swikwembu (ancestor spirits)", "Tingoma (nature spirits)", "Ndzawu (rain spirit)"],
+        "practices": ["Ku phahla (ancestor prayers and offerings)", "Mhamba (animal sacrifice ceremonies)", "Consultation with n'anga (traditional healers/diviners)", "Ku tshova (protective rituals)", "Offerings of beer and food to ancestors"],
+        "beliefs": "Ancestors (swikwembu) directly influence daily life; the dead join ancestral realm and require propitiation; rain and harvest depend on ancestral favor; traditional healers diagnose misfortune caused by neglected spirits"
+      },
       "language": { "name": "Xitsonga", "speakers": "~6 million", "greeting": "Avuxeni!", "greetingMeaning": "Good morning!", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "populationByCountry": [
         { "country": "ZA", "population": "~2,800,000", "percent": "4.7%" },
@@ -7333,6 +7473,13 @@
       },
       "traditionalDance": "Swange - energetic group dance with synchronized movements",
       "religion": "Christianity (majority), Traditional beliefs (Aondo - supreme being)",
+      "traditionalReligion": {
+        "name": "Tiv Traditional Religion",
+        "supremeDeity": "Aondo (supreme god, creator of all)",
+        "spirits": ["Adzov (ancestral spirits)", "Akombo (supernatural forces/charms)", "Tsav (mystical power for protection or harm)"],
+        "practices": ["Akombo rituals for healing and protection", "Consultation with or (diviners)", "Agricultural rituals for harvest", "Kwagh-hir puppet performances with spiritual themes", "Offerings to Aondo through ancestors"],
+        "beliefs": "Aondo created world and delegated to spirits; tsav power can heal or harm; akombo objects contain spiritual force; ancestors influence living; no traditional kings - spiritual authority distributed among elders"
+      },
       "language": { "name": "Tiv", "speakers": "~6.5 million", "greeting": "Mough!", "greetingMeaning": "Welcome!", "family": "Bantu (Benue-Congo)", "writingSystem": "Latin alphabet" },
       "sources": [{ "name": "Wikipedia - Tiv people", "url": "https://en.wikipedia.org/wiki/Tiv_people" }],
       "description": "The Tiv are one of Nigeria's largest ethnic groups, known for egalitarian society without traditional kings, master farming in the 'Food Basket' Benue State, and kwagh-hir puppet theater.",
@@ -7378,6 +7525,13 @@
       },
       "traditionalDance": "Egwu Okorobia - masquerade dance celebrating water spirits",
       "religion": "Christianity, Traditional beliefs (Egbesu deity, water spirits)",
+      "traditionalReligion": {
+        "name": "Ijaw Traditional Religion",
+        "supremeDeity": "Woyingi (creator goddess) or Tamara (creator in some clans)",
+        "spirits": ["Egbesu (war deity and protector)", "Owuamapu (water spirits of the creeks)", "Adumu (ancestors)", "Owei (community guardian spirits)"],
+        "practices": ["Egbesu worship for protection in battle", "Offerings to water spirits before fishing", "Masquerade festivals honoring ancestors", "Consultation with bobo (priests/diviners)", "Owei community shrine ceremonies"],
+        "beliefs": "Woyingi created humans from clay; Egbesu deity protects warriors (invoked during Niger Delta conflicts); water spirits control fishing success; ancestors guide from below the waters; elaborate masquerades embody spiritual forces"
+      },
       "language": { "name": "Izon (Ijaw)", "speakers": "~14 million", "greeting": "Barakiri-o!", "greetingMeaning": "How are you!", "family": "Ijoid (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "famousPeople": [
         { "name": "Goodluck Jonathan", "role": "President of Nigeria (2010-2015)", "wikipedia": "https://en.wikipedia.org/wiki/Goodluck_Jonathan" },
@@ -7421,6 +7575,13 @@
       },
       "traditionalDance": "Durbar horseback festivals and court dances",
       "religion": "Islam (Sunni, since 11th century)",
+      "traditionalReligion": {
+        "name": "Pre-Islamic Kanuri Religion (now Islamic)",
+        "supremeDeity": "Allah (following conversion in 11th century)",
+        "spirits": ["Pre-Islamic spirits largely replaced by Islamic concepts", "Ancestor veneration integrated with Islamic practice"],
+        "practices": ["Islamic prayers and fasting", "Sufi dhikr ceremonies", "Quranic education (almajiri tradition)", "Marabout consultations blend Islamic and traditional elements", "Annual Durbar festivals honoring the Shehu"],
+        "beliefs": "Islam arrived 11th century via Trans-Saharan trade; Kanem-Bornu became major Islamic state; deep Quranic scholarship tradition; some pre-Islamic elements survive in folk practice"
+      },
       "language": { "name": "Kanuri", "speakers": "~10 million", "greeting": "Wusha!", "greetingMeaning": "Hello!", "family": "Saharan (Nilo-Saharan)", "writingSystem": "Arabic script historically, Latin now" },
       "populationByCountry": [
         { "country": "NG", "population": "~4,000,000", "percent": "4%" },
@@ -7472,6 +7633,13 @@
       },
       "traditionalDance": "Warba - warrior dance with elaborate costumes",
       "religion": "Islam (growing), Traditional beliefs (Ancestor veneration), Christianity",
+      "traditionalReligion": {
+        "name": "Mossi Traditional Religion",
+        "supremeDeity": "Wende (supreme god, creator)",
+        "spirits": ["Kinkirsi (small spirits/little people)", "Ancestor spirits (critical to well-being)", "Tengsobda (earth priest spirits)", "Nature spirits of trees and waters"],
+        "practices": ["Ancestor shrines in each compound", "Annual sacrifices to ancestors", "Consultation with Tengsobda (earth priests)", "Rainmaking ceremonies", "Royal rituals at the Mogho Naaba court"],
+        "beliefs": "Ancestors directly influence fortune; earth priests maintain relationship with land spirits; the Mogho Naaba has spiritual as well as political authority; Mossi resisted Islamization longer than neighbors, maintaining traditional practices"
+      },
       "language": { "name": "Mooré", "speakers": "~11 million", "greeting": "Ne y windiga!", "greetingMeaning": "Good morning!", "family": "Gur (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "famousPeople": [
         { "name": "Thomas Sankara", "role": "Revolutionary leader 'Africa's Che Guevara'", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Sankara" },
