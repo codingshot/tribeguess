@@ -282,7 +282,14 @@
         "description": "Kikuyu cuisine revolves around agricultural produce from the fertile Central Highlands. Mũkimo, made by mashing potatoes, pumpkin leaves, green peas, and maize, is the signature dish often served at celebrations."
       },
       "traditionalDance": "Mũgithi - a lively dance with accordion music",
-      "religion": "Traditional belief in Ngai (God) who dwells on Mt. Kenya; now predominantly Christian",
+      "religion": "Traditional Kikuyu religion (Ngai/Mũgai), now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Kikuyu Traditional Religion",
+        "supremeDeity": "Ngai (also Mũgai or Mũrungu) - creator god who dwells on Mt. Kenya (Kĩrĩnyaga)",
+        "spirits": ["Ngoma (ancestral spirits)", "Sacred trees (Mũgumo fig) as prayer sites"],
+        "practices": ["Prayers facing Mt. Kenya", "Sacrifices under Mũgumo trees", "Thenge (goat) sacrifices", "Rituals at sacred groves", "Irũa (circumcision) ceremonies for both genders traditionally"],
+        "beliefs": "Ngai lives on Mt. Kenya and blesses from the sky; the Mũgumo fig tree is sacred for prayers; the nine clans descend from Mumbi's daughters; elders mediate with the spirit world"
+      },
       "history": {
         "origin": "The Kikuyu are Bantu people who migrated from West Africa around 1000 AD. According to oral tradition, their ancestor Gikuyu was given land near Mount Kenya by Ngai (God). He married Mumbi, and they had nine daughters who became the ancestors of the nine Kikuyu clans.",
         "colonialEra": "The Kikuyu were heavily impacted by British colonization, losing significant land to white settlers in the 'White Highlands'. This led to the Mau Mau uprising (1952-1960), a major rebellion against colonial rule led primarily by Kikuyu fighters.",
@@ -1142,7 +1149,14 @@
         "description": "Traditional Maasai diet consisted almost entirely of milk, meat, and blood from their cattle. Today, they have incorporated grains and vegetables, but cattle products remain culturally central."
       },
       "traditionalDance": "Adumu - competitive jumping dance by Moran warriors",
-      "religion": "Traditional belief in Enkai (God) - both benevolent (black) and vengeful (red); Christianity growing",
+      "religion": "Traditional Maasai religion (Enkai/Ngai), Christianity growing",
+      "traditionalReligion": {
+        "name": "Maasai Traditional Religion",
+        "supremeDeity": "Enkai (also Ngai) - dual-natured god (Enkai Narok - black/benevolent, Enkai Na-nyokie - red/vengeful)",
+        "spirits": ["Ancestor spirits", "Cattle spirits", "Laibon (prophets) as spiritual intermediaries"],
+        "practices": ["Laibon diviners predict future and heal", "Cattle as sacred gifts from Enkai", "Prayers facing Mt. Kenya or Ol Doinyo Lengai", "Spitting as blessing", "Warriors' transition ceremonies (Eunoto)"],
+        "beliefs": "Enkai gave all cattle to the Maasai at creation; cattle are sacred and central to all rituals; Laibon prophets communicate with Enkai; the sky and certain mountains are sacred"
+      },
       "history": {
         "origin": "The Maasai are Nilotic people who migrated from the Nile Valley (Sudan) around the 15th century. They moved southward and by the 17th-18th century dominated the East African Rift Valley region.",
         "colonialEra": "The Maasai lost vast territories to British colonial agreements, particularly the Maasai Treaties of 1904 and 1911 which moved them from fertile lands to reserves. They resisted but were eventually confined.",
@@ -3249,6 +3263,13 @@
       },
       "traditionalDance": "Bata dance performed with Bata drums for Shango worship",
       "religion": "Traditional Yoruba religion (Ifa/Orisha), Christianity, Islam",
+      "traditionalReligion": {
+        "name": "Ifá/Orisha (Yoruba Traditional Religion)",
+        "supremeDeity": "Olodumare (supreme creator, also called Olorun - owner of heaven)",
+        "spirits": ["Orishas (deities) - Shango (thunder), Ogun (iron), Yemoja (sea), Oshun (river), Eshu (crossroads)", "Egungun (ancestral spirits)", "Ori (personal divine essence)"],
+        "practices": ["Ifá divination by Babalawo priests", "Animal sacrifices (ebo)", "Orisha festivals and possession", "Egungun masquerade for ancestors", "Kola nut offerings"],
+        "beliefs": "Every person has an Ori (destiny) chosen before birth; Orishas are intermediaries to Olodumare; Ifá divination reveals one's path; ancestor spirits (Egungun) protect the living. This religion spread globally through the diaspora as Santeria, Candomblé, and Vodou."
+      },
       "history": {
         "origin": "Yoruba civilization dates back over 2,000 years. According to legend, Oduduwa descended from heaven to create earth at Ile-Ife, founding the Yoruba people.",
         "colonialEra": "The British colonized Yorubaland in the late 19th century. Yoruba resisted, but eventually formed part of colonial Nigeria. Many Yoruba were enslaved to the Americas.",
@@ -3366,7 +3387,14 @@
         "description": "Igbo cuisine features diverse soups like Oha, Egusi, and Nsala, served with fufu or garri. Palm oil is central to most dishes."
       },
       "traditionalDance": "Atilogwu - acrobatic dance from Achalla/Nkwerre",
-      "religion": "Traditional Igbo religion (Odinani), Christianity",
+      "religion": "Traditional Igbo religion (Odinani/Chukwu), Christianity",
+      "traditionalReligion": {
+        "name": "Odinani (Igbo Traditional Religion)",
+        "supremeDeity": "Chukwu (supreme god, 'Great Spirit') or Chineke (Creator)",
+        "spirits": ["Alusi (deities) - Ala/Ani (earth goddess), Amadioha (thunder), Ikenga (personal god)", "Ndichie (ancestor spirits)", "Chi (personal guardian spirit)", "Agwu (spirit of divination)"],
+        "practices": ["Ala/Ani earth goddess worship - breaking her laws brings pollution", "Dibia (priest-healers) perform divination and healing", "Kola nut rituals for hospitality", "Mbari houses with clay sculptures", "New Yam Festival (Iri Ji)"],
+        "beliefs": "Every person has a Chi (personal spirit) that determines destiny; Ala owns the land and enforces morality; breaking taboos (nso ani) pollutes the earth; ancestors must be venerated to ensure prosperity"
+      },
       "history": {
         "origin": "Archaeological evidence shows Igbo civilization dates back to at least 900 AD. The Nri Kingdom is considered the oldest Igbo kingdom, founded around 900 AD.",
         "colonialEra": "The British conquered Igboland in the early 1900s (Arochukwu Expedition). Many Igbo embraced Western education and Christianity.",
@@ -3726,7 +3754,14 @@
         "description": "Ashanti cuisine features soups with fufu. Palm nut soup and groundnut soup are staples. Fufu is pounded until smooth and stretchy."
       },
       "traditionalDance": "Adowa - graceful hand and foot movements dance",
-      "religion": "Traditional Ashanti religion, Christianity",
+      "religion": "Traditional Ashanti religion (Nyame, Asase Yaa), Christianity",
+      "traditionalReligion": {
+        "name": "Akan Traditional Religion",
+        "supremeDeity": "Nyame (supreme sky god, creator of the universe)",
+        "spirits": ["Asase Yaa (Earth goddess, Thursday is sacred)", "Abosom (lesser deities)", "Nsamanfo (ancestor spirits)"],
+        "practices": ["Golden Stool veneration (soul of the nation)", "Libation pouring to ancestors", "Odwira purification festival", "Adinkra symbols as spiritual communication", "Akwasidae festivals"],
+        "beliefs": "Every person has a soul (kra) from Nyame; the Golden Stool contains the sunsum (soul) of the Ashanti nation; ancestors remain active in family affairs"
+      },
       "history": {
         "origin": "The Ashanti Empire was founded in 1701 when Osei Tutu united several clans. The Golden Stool, said to have descended from heaven, became the symbol of national unity.",
         "colonialEra": "The Ashanti fought four major wars against the British (1824-1900). They were eventually colonized in 1900 but the Golden Stool was never captured.",
@@ -3847,7 +3882,14 @@
         "description": "Zulu cuisine centers on maize and cattle products. Phutu (crumbly porridge) with amasi (sour milk) is a staple. Meat is eaten at celebrations."
       },
       "traditionalDance": "Indlamu - powerful war dance with high kicks",
-      "religion": "Traditional Zulu religion (ancestor worship), Christianity",
+      "religion": "Traditional Zulu religion (Unkulunkulu, amadlozi ancestors), Christianity",
+      "traditionalReligion": {
+        "name": "Zulu Traditional Religion",
+        "supremeDeity": "Unkulunkulu (the Great One, first human and creator)",
+        "spirits": ["Amadlozi (ancestor spirits)", "Amatongo (departed family spirits)", "Nomkhubulwane (rain goddess)"],
+        "practices": ["Ukubuyisa (bringing back the dead ceremony)", "Isangoma diviner consultations", "Cattle sacrifices to ancestors", "Umsebenzi ceremonies for ancestors", "Inkatha reed bundle as sacred symbol"],
+        "beliefs": "Ancestors (amadlozi) mediate between living and Unkulunkulu; isangoma diviners communicate with spirits; illness often stems from ancestral displeasure"
+      },
       "history": {
         "origin": "The Zulu were a small clan until Shaka kaSenzangakhona unified neighboring clans into the powerful Zulu Kingdom (1816-1828) through military innovation.",
         "colonialEra": "The Zulu fought the British in the Anglo-Zulu War (1879). Despite winning at Isandlwana, they were eventually defeated at Ulundi and colonized.",
@@ -3968,7 +4010,14 @@
         "description": "Xhosa cuisine features maize and beans. Umngqusho (samp and beans) is a staple. Traditional beer (umqombothi) is brewed for ceremonies."
       },
       "traditionalDance": "Umxhentso - energetic dance with stomping and singing",
-      "religion": "Traditional Xhosa religion (ancestor worship), Christianity",
+      "religion": "Traditional Xhosa religion (Qamata, amadlozi ancestors), Christianity",
+      "traditionalReligion": {
+        "name": "Xhosa Traditional Religion",
+        "supremeDeity": "Qamata (supreme creator) or uThixo",
+        "spirits": ["Amadlozi (ancestor spirits)", "Umkhapho (sacrificial offerings)", "Amathongo (spirits of the departed)"],
+        "practices": ["Ukwaluka (male initiation with circumcision)", "Intonjane (female coming-of-age)", "Amagqirha (diviners/healers)", "Cattle sacrifices to ancestors", "Brewing umqombothi for ceremonies"],
+        "beliefs": "Ancestors (amadlozi) are intermediaries to Qamata; initiation transforms boys into men; dreams carry messages from ancestors"
+      },
       "history": {
         "origin": "The Xhosa are Nguni people who migrated south over centuries. They were among the earliest Bantu groups to encounter European settlers in the Cape.",
         "colonialEra": "The Xhosa fought nine Frontier Wars against British settlers (1779-1879). The tragic Cattle Killing of 1856-57 devastated the nation.",
@@ -4085,7 +4134,14 @@
         "description": "Shona cuisine centers on sadza (thick maize porridge) eaten with relishes of vegetables, meat, or fish. Mopane worms are a delicacy."
       },
       "traditionalDance": "Jerusarema - energetic harvest dance",
-      "religion": "Traditional religion (Mwari, ancestor worship), Christianity",
+      "religion": "Traditional Shona religion (Mwari, Vadzimu ancestors), Christianity",
+      "traditionalReligion": {
+        "name": "Shona Traditional Religion",
+        "supremeDeity": "Mwari (supreme god, creator of all, associated with Matobo Hills)",
+        "spirits": ["Vadzimu (family ancestor spirits)", "Mhondoro (lion spirits of chiefs)", "Midzimu (collective ancestral spirits)"],
+        "practices": ["Bira ceremony - all-night spirit possession with mbira music", "Kurova guva (bringing back the dead)", "Consultation with svikiro (spirit mediums)", "Offerings at sacred pools and mountains", "Mwari oracle at Matobo caves"],
+        "beliefs": "Ancestors remain part of family and must be honored; mhondoro lion spirits protect tribes; the mbira instrument opens communication with spirit world"
+      },
       "history": {
         "origin": "The Shona have lived in Zimbabwe for over 1,000 years. They built the Great Zimbabwe civilization (11th-15th century) and later the Mutapa and Rozvi empires.",
         "colonialEra": "Cecil Rhodes's British South Africa Company colonized the region (1890), naming it Rhodesia. The Shona fought in the First Chimurenga (1896-97).",
@@ -4202,7 +4258,14 @@
         "description": "Oromo cuisine features grain-based dishes and the famous coffee ceremony. Coffee (buna) is central to social and spiritual life."
       },
       "traditionalDance": "Dhichisaa - energetic group dance with singing",
-      "religion": "Waaqeffanna (traditional religion), Islam, Christianity",
+      "religion": "Waaqeffanna (traditional religion), Islam, Ethiopian Orthodox Christianity",
+      "traditionalReligion": {
+        "name": "Waaqeffanna (Oromo Traditional Religion)",
+        "supremeDeity": "Waaqa (sky god, supreme creator of all)",
+        "spirits": ["Ayyaana (spirits inhabiting nature)", "Ateetee (women's protective spirit)", "Ancestor spirits"],
+        "practices": ["Irreecha thanksgiving festival at lakes", "Gadaa democratic governance system", "Qaalluu priestly lineages", "Coffee ceremonies", "Blessings at sacred sycamore trees (Odaa)"],
+        "beliefs": "Waaqa created all things and maintains cosmic balance (safuu); breaking safuu causes misfortune; Irreecha celebrates harmony between humans, nature, and Waaqa"
+      },
       "history": {
         "origin": "The Oromo are Cushitic people who have lived in the Horn of Africa for millennia. They expanded significantly in the 16th century across what is now Ethiopia.",
         "colonialEra": "The Oromo were never colonized by Europeans, but were incorporated into the Ethiopian Empire under Menelik II in the late 1800s.",
@@ -4553,7 +4616,14 @@
         "description": "Baganda cuisine centers on matooke (plantain) steamed in banana leaves. Luwombo, meat or chicken steamed in banana leaves with groundnut sauce, is served at ceremonies."
       },
       "traditionalDance": "Bakisimba - graceful dance with waist movements",
-      "religion": "Christianity (Catholic, Anglican), Islam, Traditional beliefs",
+      "religion": "Christianity (Catholic, Anglican), Islam, Traditional Buganda beliefs",
+      "traditionalReligion": {
+        "name": "Buganda Traditional Religion (Balubaale worship)",
+        "supremeDeity": "Katonda (creator god, 'father of the gods')",
+        "spirits": ["Balubaale (national deities) - Mukasa (lake/fertility), Kiwanuka (thunder/lightning), Musoke (rainbow)", "Mizimu (ancestor spirits)", "Misambwa (nature spirits)"],
+        "practices": ["Mandwa/Lubaale shrines maintained by priests", "Spirit possession ceremonies", "Offerings at sacred places", "Clan totems and taboos", "Consultation with traditional healers (Basawo)"],
+        "beliefs": "Balubaale deities protect the nation; ancestors (mizimu) can bless or curse living descendants; the Kabaka has spiritual authority; clan totems must be respected"
+      },
       "history": {
         "origin": "The Buganda kingdom was founded around the 14th century on the northern shores of Lake Victoria. It grew into one of East Africa's most powerful kingdoms.",
         "colonialEra": "The British made Buganda a protectorate in 1894, using indirect rule through the Kabaka. Buganda maintained significant autonomy.",
@@ -4806,7 +4876,14 @@
         "description": "Luba cuisine features cassava as the staple. Fufu is eaten with various sauces including sombe (cassava leaf stew) and moambe (palm nut chicken)."
       },
       "traditionalDance": "Traditional dances with masks for ceremonies",
-      "religion": "Traditional beliefs, Christianity",
+      "religion": "Traditional Luba religion (Bulopo), Christianity",
+      "traditionalReligion": {
+        "name": "Bulopo (Luba Traditional Religion)",
+        "supremeDeity": "Shakapanga or Leza (supreme creator god)",
+        "spirits": ["Bankambo (ancestor spirits)", "Vidye (nature spirits)", "Royal ancestral spirits"],
+        "practices": ["Lukasa memory boards for sacred knowledge", "Divination by bilumbu diviners", "Spirit possession ceremonies", "Royal ancestor veneration", "Masked society rituals"],
+        "beliefs": "The Mulopwe (king) has divine power from ancestors; Lukasa boards encode sacred history; ancestors communicate through dreams and diviners; the living must maintain harmony (bulopo) with the spirit world"
+      },
       "history": {
         "origin": "The Luba Kingdom emerged around 1585 near Lake Upemba. It grew into one of Central Africa's most powerful states, influencing neighboring peoples.",
         "colonialEra": "Belgian colonization (1885-1960) disrupted the kingdom. The Luba worked in the colonial administration and mining industries.",
@@ -5550,7 +5627,14 @@
         "description": "Dogon cuisine is based on millet and onions, grown on the escarpment terraces. Dolo (millet beer) is central to ceremonies."
       },
       "traditionalDance": "Masked dances (Dama funeral rites, Sigui initiation)",
-      "religion": "Traditional Dogon religion, Islam, Christianity",
+      "religion": "Traditional Dogon religion (Amma - creator god, Nommo water spirits), Islam, Christianity",
+      "traditionalReligion": {
+        "name": "Dogon Traditional Religion",
+        "supremeDeity": "Amma (creator god who made the universe from clay)",
+        "spirits": ["Nommo (water spirits, first living beings)", "Lebe (earth god, first human ancestor)"],
+        "practices": ["Hogon priest mediates between humans and spirits", "Sigui ceremony every 60 years for renewal", "Dama funeral rites with elaborate masks", "Sacred groves and shrines"],
+        "beliefs": "Complex cosmology including knowledge of Sirius star system; death transitions soul through ancestor realm"
+      },
       "language": {
         "name": "Dogon languages",
         "speakers": "~600,000",
@@ -5617,7 +5701,14 @@
         "description": "San hunter-gatherer diet varies seasonally with wild game, mongongo nuts, tubers, and over 100 edible plant species from the Kalahari."
       },
       "traditionalDance": "Trance healing dance (medicine dance) with rhythmic clapping",
-      "religion": "Traditional San spirituality, trance states, ancestor spirits",
+      "religion": "Traditional San spirituality (trance healing, ancestor spirits)",
+      "traditionalReligion": {
+        "name": "San Spiritual Tradition",
+        "supremeDeity": "N!odima or Cagn (creator/trickster god in various San groups)",
+        "spirits": ["Ancestor spirits", "Animal spirits", "Spirit of the eland (most sacred animal)"],
+        "practices": ["Trance healing dances - shamans enter altered states", "Rock paintings as spiritual communication", "Rain-making ceremonies", "First-kill rituals for young hunters"],
+        "beliefs": "Shamans (n/om kxaosi) harness supernatural potency (n/om) through trance to heal, control weather, and communicate with spirits"
+      },
       "language": {
         "name": "Khoisan languages (multiple)",
         "speakers": "~30,000 (various dialects)",
@@ -5686,7 +5777,14 @@
         "description": "Himba diet centers on cattle products - sour milk is the staple, supplemented by maize and wild plants from the arid Kunene."
       },
       "traditionalDance": "Traditional dances around the holy fire during ceremonies",
-      "religion": "Traditional beliefs, ancestor worship via holy fire (Okuruwo)",
+      "religion": "Traditional beliefs (Okuruwo holy fire, Mukuru ancestor god)",
+      "traditionalReligion": {
+        "name": "Himba Traditional Religion",
+        "supremeDeity": "Mukuru (supreme god, creator, accessed through ancestors)",
+        "spirits": ["Ancestor spirits (ovakuru)", "Cattle spirits"],
+        "practices": ["Okuruwo (sacred fire) maintained by patriarch", "Offerings to ancestors through the fire", "Fire never allowed to extinguish", "Healing through spiritual mediums"],
+        "beliefs": "Holy fire connects living to ancestors and Mukuru; cattle are sacred intermediaries; ancestors protect and guide the living"
+      },
       "language": {
         "name": "OtjiHimba (Herero dialect)",
         "speakers": "~50,000",
@@ -5749,7 +5847,14 @@
         "description": "Tuareg cuisine is adapted to desert life with millet, dates, and camel products. The elaborate tea ceremony is central to hospitality."
       },
       "traditionalDance": "Traditional camel festivals and Tendé drum ceremonies",
-      "religion": "Islam (Sunni with traditional practices)",
+      "religion": "Islam (Sunni) with pre-Islamic Berber spiritual practices",
+      "traditionalReligion": {
+        "name": "Tuareg Syncretic Islam",
+        "supremeDeity": "Allah (Islam), with pre-Islamic Berber influences",
+        "spirits": ["Kel Essuf (spirit beings of the wild)", "Djinn", "Ancestor spirits"],
+        "practices": ["Islamic prayers with Sufi influences", "Protective amulets (tifinagh script on leather)", "Tende ceremonies with drumming and singing", "Cross symbol (pre-Islamic) on jewelry"],
+        "beliefs": "Blend of Sunni Islam with ancient Berber beliefs; women traditionally have more freedom than in Arab Islam; cross symbol predates Christianity"
+      },
       "language": {
         "name": "Tamasheq (Tamashek)",
         "speakers": "~2.5 million",
@@ -5822,7 +5927,14 @@
         "description": "Senufo cuisine features millet, yams, and rice with rich sauces. Tchapalo (millet beer) is important for ceremonies."
       },
       "traditionalDance": "Poro masquerade dances, Balafon performances",
-      "religion": "Traditional beliefs (Poro), Islam, Christianity",
+      "religion": "Traditional Poro religion, Islam, Christianity",
+      "traditionalReligion": {
+        "name": "Senufo Traditional Religion (Poro)",
+        "supremeDeity": "Kolotyolo (supreme creator god, distant and uninvolved)",
+        "spirits": ["Katielo (feminine earth/mother spirit)", "Kafigeledjo (bush spirits)", "Ancestor spirits"],
+        "practices": ["Poro secret society - 7-year male initiation", "Sandogo women's divination society", "Mask ceremonies for funerals and harvests", "Offerings at sacred groves"],
+        "beliefs": "Poro society teaches cosmic order; masks embody bush spirits; Sandogo women communicate with spirits for healing and divination"
+      },
       "language": {
         "name": "Senufo languages (Senari, Supyire, etc.)",
         "speakers": "~2.5 million",
@@ -5886,7 +5998,14 @@
         "description": "Hadza diet is entirely foraged: honey is prized (up to 15% of diet), supplemented by hunted game, tubers, and baobab fruit."
       },
       "traditionalDance": "Epeme nighttime dancing and singing ceremonies",
-      "religion": "Traditional animism, ancestor spirits, Ishoko (sun deity)",
+      "religion": "Traditional Hadza beliefs (Ishoko sun god), Christianity spreading",
+      "traditionalReligion": {
+        "name": "Hadza Traditional Religion",
+        "supremeDeity": "Ishoko (sun) and Haine (moon/sky god)",
+        "spirits": ["Ancestor spirits", "Animal spirits", "Epeme spirits"],
+        "practices": ["Epeme sacred night dance (men only)", "Honey rituals and offerings", "Story-telling around fire", "No formal priests or temples"],
+        "beliefs": "Egalitarian spirituality with no institutionalized religion; sun and moon are primordial forces; epeme meat reserved for initiated men"
+      },
       "language": {
         "name": "Hadzane",
         "speakers": "~1,000",
@@ -6012,7 +6131,14 @@
         "description": "Mursi diet combines pastoralism and flood-retreat farming, with sorghum as staple and cattle blood-milk mixture providing nutrition."
       },
       "traditionalDance": "Ceremonial dances during Donga season",
-      "religion": "Traditional animism, belief in Tumwi (sky god)",
+      "religion": "Traditional animism (Tumwi sky god)",
+      "traditionalReligion": {
+        "name": "Mursi Traditional Religion",
+        "supremeDeity": "Tumwi (sky/rain god)",
+        "spirits": ["Ancestor spirits", "Cattle spirits", "Nature spirits"],
+        "practices": ["Prayers to Tumwi for rain", "Cattle sacrifices", "Consultation with diviners", "Donga stick fights as spiritual tests"],
+        "beliefs": "Tumwi controls rain essential for survival; cattle are spiritual wealth; ancestors continue to influence the living"
+      },
       "language": {
         "name": "Mursi",
         "speakers": "~10,000",
@@ -6075,7 +6201,14 @@
         "description": "Mbuti are hunter-gatherers in the Ituri; honey is highly prized, supplemented by hunted game and traded agricultural products."
       },
       "traditionalDance": "Molimo ceremony with sacred forest music",
-      "religion": "Forest-centered spirituality, the forest is divine",
+      "religion": "Forest-centered spirituality (the forest as divine parent)",
+      "traditionalReligion": {
+        "name": "Mbuti Forest Religion",
+        "supremeDeity": "The Forest itself (living deity, benevolent parent)",
+        "spirits": ["Forest spirit", "Ancestor spirits"],
+        "practices": ["Molimo ceremony - waking the forest with singing", "Hunting rituals", "Forest songs and polyphonic music", "No formal temples - forest is temple"],
+        "beliefs": "Forest is 'Father and Mother' - a conscious benevolent force; when bad things happen, the forest is 'asleep' and must be awakened with song"
+      },
       "language": {
         "name": "Efe, Asua, and Kango (Mbuti languages)",
         "speakers": "~40,000",
@@ -6228,7 +6361,14 @@
         "description": "Hamar diet combines pastoralism with sorghum farming; blood-milk mixtures provide nutrition during dry seasons."
       },
       "traditionalDance": "Evangadi nighttime jumping dances",
-      "religion": "Traditional animism, ancestor worship",
+      "religion": "Traditional animism (Barjo sky god), ancestor worship",
+      "traditionalReligion": {
+        "name": "Hamar Traditional Religion",
+        "supremeDeity": "Barjo (sky god)",
+        "spirits": ["Ancestor spirits", "Cattle spirits", "Nature spirits"],
+        "practices": ["Bull jumping ceremony for manhood", "Women's whipping as spiritual devotion", "Cattle sacrifices", "Evangadi night dances"],
+        "beliefs": "Bull jumping connects young men to spiritual manhood; scars from whipping create spiritual debt that can be called upon; cattle are sacred"
+      },
       "language": {
         "name": "Hamer",
         "speakers": "~40,000",
@@ -6291,7 +6431,14 @@
         "description": "Karo practice flood-retreat farming and fishing along the Omo River, supplemented by cattle herding."
       },
       "traditionalDance": "Ceremonial dances with full body paint",
-      "religion": "Traditional animism, nature spirits",
+      "religion": "Traditional animism (Karo nature spirits)",
+      "traditionalReligion": {
+        "name": "Karo Traditional Religion",
+        "supremeDeity": "Sky/nature deity",
+        "spirits": ["River spirits", "Ancestor spirits", "Nature spirits"],
+        "practices": ["Body painting as spiritual expression", "Scarification rituals", "River offerings", "Baz (clan leader) mediates with spirits"],
+        "beliefs": "Body paint connects humans to nature spirits; scarification marks spiritual milestones; the Omo River is sacred life-giver"
+      },
       "language": {
         "name": "Karo",
         "speakers": "~1,500",
@@ -6329,7 +6476,14 @@
       "culturalTraits": ["Among the world's tallest populations - average male height 6'3\"", "Cattle are central to wealth, marriage, religion", "Distinctive V-shaped forehead scarification (gaar)"],
       "funFacts": ["Dinka men may wash their hair in cow urine to dye it orange-gold", "Manute Bol (7'7\") and Luol Deng are famous Dinka NBA players"],
       "traditionalDance": "Jumping dances celebrating cattle",
-      "religion": "Traditional belief in Nhialic (God); Christianity spreading",
+      "religion": "Traditional Dinka religion (Nhialic), Christianity spreading",
+      "traditionalReligion": {
+        "name": "Dinka Traditional Religion",
+        "supremeDeity": "Nhialic (sky god, supreme creator 'above')",
+        "spirits": ["Yath (clan spirits/totems)", "Jak (power/spirit beings)", "Ancestor spirits", "Abuk (first woman, associated with women/gardens)"],
+        "practices": ["Cattle sacrifices - central to all rituals", "Spear masters (beny bith) as spiritual leaders", "Rain-making ceremonies", "Scarification for clan identity", "Songs and poems praising cattle"],
+        "beliefs": "Nhialic is distant but reached through spirits; cattle are divine gifts and mediate between humans and spirits; spear masters hold supernatural power to bless or curse; Deng is the rain deity"
+      },
       "language": { "name": "Dinka", "speakers": "~4.5 million", "greeting": "Ciim", "greetingMeaning": "Greetings", "family": "Nilotic (Nilo-Saharan)", "writingSystem": "Latin alphabet" },
       "famousPeople": [
         { "name": "John Garang", "role": "Independence leader", "wikipedia": "https://en.wikipedia.org/wiki/John_Garang" },
