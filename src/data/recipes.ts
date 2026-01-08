@@ -1490,3 +1490,28 @@ export const findRecipeByName = (name: string, tribeSlug: string): Recipe | unde
      normalizedName.includes(recipe.name.toLowerCase().split(' ')[0]))
   );
 };
+
+// Get all recipes
+export const getAllRecipes = (): Recipe[] => {
+  return recipes;
+};
+
+// Get all unique tribe names from recipes
+export const getRecipeTribeNames = (): { slug: string; name: string }[] => {
+  const tribes = new Map<string, string>();
+  recipes.forEach(recipe => {
+    tribes.set(recipe.tribeSlug, recipe.tribeName);
+  });
+  return Array.from(tribes.entries()).map(([slug, name]) => ({ slug, name })).sort((a, b) => a.name.localeCompare(b.name));
+};
+
+// Search recipes by query
+export const searchRecipes = (query: string): Recipe[] => {
+  const normalizedQuery = query.toLowerCase();
+  return recipes.filter(recipe =>
+    recipe.name.toLowerCase().includes(normalizedQuery) ||
+    recipe.tribeName.toLowerCase().includes(normalizedQuery) ||
+    recipe.description.toLowerCase().includes(normalizedQuery) ||
+    recipe.category.toLowerCase().includes(normalizedQuery)
+  );
+};

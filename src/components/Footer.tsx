@@ -29,6 +29,9 @@ export function Footer() {
               <Link to="/learn" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Browse Tribes
               </Link>
+              <Link to="/recipes" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Traditional Recipes
+              </Link>
               <Link to="/random" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Random Tribe
               </Link>
