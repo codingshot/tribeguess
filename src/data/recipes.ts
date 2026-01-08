@@ -679,6 +679,795 @@ export const recipes: Recipe[] = [
       "The final consistency should be like stiff mashed potatoes",
       "Eat by pinching off a piece and dipping into relish"
     ]
+  },
+
+  // ============ IGBO RECIPES ============
+  {
+    id: "ofe-nsala",
+    name: "Ofe Nsala (White Soup)",
+    tribeSlug: "igbo",
+    tribeName: "Igbo",
+    category: "special",
+    description: "A creamy, peppery catfish soup thickened with pounded yam. Known as 'white soup' because it contains no palm oil.",
+    culturalSignificance: "Ofe Nsala is a delicacy from Anambra State, traditionally served to new mothers to aid recovery. It's the signature soup for welcoming special guests.",
+    prepTime: "20 minutes",
+    cookTime: "40 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh catfish", amount: "1 kg", notes: "Cleaned and cut into pieces" },
+      { item: "Yam", amount: "1/2 tuber", notes: "For thickening" },
+      { item: "Utazi leaves", amount: "1 cup", notes: "Shredded" },
+      { item: "Uziza seeds", amount: "2 tablespoons", notes: "Ground" },
+      { item: "Crayfish", amount: "2 tablespoons", notes: "Ground" },
+      { item: "Ogiri (locust bean paste)", amount: "1 tablespoon" },
+      { item: "Yellow pepper (ata rodo)", amount: "4", notes: "Blended" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Stock cubes", amount: "2" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Boil yam chunks until very soft, then pound or mash completely.",
+      "Clean catfish thoroughly with salt and hot water to remove sliminess.",
+      "Boil fish with onion, salt, and stock cubes for 10 minutes.",
+      "Dissolve pounded yam in the fish stock to create a smooth, creamy base.",
+      "Add ground pepper, uziza seeds, crayfish, and ogiri.",
+      "Simmer for 15 minutes, stirring gently.",
+      "Add utazi leaves in the last 2 minutes.",
+      "Serve hot with pounded yam or fufu."
+    ],
+    tips: [
+      "The soup should be creamy white - never add palm oil",
+      "Use a wooden spoon to avoid breaking the fish",
+      "Utazi gives the characteristic bitter-fresh taste"
+    ]
+  },
+  {
+    id: "abacha",
+    name: "Abacha (African Salad)",
+    tribeSlug: "igbo",
+    tribeName: "Igbo",
+    category: "staple",
+    description: "Shredded dried cassava mixed with palm oil, ugba (fermented oil bean), and spices. A beloved Igbo snack and meal.",
+    culturalSignificance: "Abacha is the quintessential Igbo food, served at ceremonies, meetings, and family gatherings. It symbolizes hospitality and community bonding.",
+    prepTime: "30 minutes",
+    cookTime: "0 minutes",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried abacha (cassava flakes)", amount: "3 cups", notes: "Soaked in warm water" },
+      { item: "Ugba (oil bean)", amount: "1 cup", notes: "Fermented and shredded" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Potash (akanwu)", amount: "1 teaspoon", notes: "Dissolved in water" },
+      { item: "Ground crayfish", amount: "3 tablespoons" },
+      { item: "Pepper", amount: "To taste" },
+      { item: "Onion", amount: "1 medium", notes: "Sliced" },
+      { item: "Garden egg leaves", amount: "1 cup", notes: "Shredded" },
+      { item: "Stockfish", amount: "100g", notes: "Cooked and shredded" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak dried abacha in warm water for 10 minutes until soft. Drain well.",
+      "Mix palm oil with dissolved potash until it turns yellow and thick.",
+      "Add crayfish, pepper, salt, and stock cube to the palm oil mixture.",
+      "Combine softened abacha with the palm oil mixture.",
+      "Add ugba, onions, stockfish, and garden egg leaves.",
+      "Toss gently to coat everything evenly.",
+      "Let sit for 10 minutes before serving.",
+      "Serve at room temperature or slightly chilled."
+    ],
+    tips: [
+      "Don't over-soak the abacha or it becomes mushy",
+      "Potash makes the palm oil creamy - essential for authentic taste",
+      "Add kpomo (cow skin) for extra protein"
+    ]
+  },
+  {
+    id: "okpa",
+    name: "Okpa (Bambara Nut Pudding)",
+    tribeSlug: "igbo",
+    tribeName: "Igbo",
+    category: "snack",
+    description: "A protein-rich steamed pudding made from Bambara groundnut flour. A popular breakfast and snack in Eastern Nigeria.",
+    culturalSignificance: "Okpa is the go-to street food in Enugu and surrounding Igbo areas. It's wrapped in banana leaves, giving it a distinctive aroma.",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Bambara nut flour (okpa flour)", amount: "3 cups" },
+      { item: "Palm oil", amount: "1 cup" },
+      { item: "Water", amount: "4 cups", notes: "Warm" },
+      { item: "Crayfish", amount: "2 tablespoons", notes: "Ground (optional)" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Pepper", amount: "To taste" },
+      { item: "Banana leaves or nylon bags", amount: "For wrapping" }
+    ],
+    instructions: [
+      "Mix okpa flour with warm water until smooth, no lumps.",
+      "Add palm oil and mix thoroughly until evenly orange.",
+      "Season with salt, pepper, and crayfish.",
+      "Pour mixture into banana leaves or small nylon bags, tie securely.",
+      "Place in a large pot with water (water should not enter bags).",
+      "Steam for 1 hour until set.",
+      "Unwrap and serve warm with pap or on its own."
+    ],
+    tips: [
+      "The mixture should be thin enough to pour easily",
+      "Don't fill bags too full - it expands during cooking",
+      "Best eaten fresh and warm"
+    ]
+  },
+
+  // ============ XHOSA RECIPES ============
+  {
+    id: "umqa",
+    name: "Umqa (Xhosa Maize Bread)",
+    tribeSlug: "xhosa",
+    tribeName: "Xhosa",
+    category: "staple",
+    description: "Traditional steamed bread made from maize meal, wrapped in mealie leaves. A Xhosa staple that pairs with every meal.",
+    culturalSignificance: "Umqa is central to Xhosa cuisine and culture. The aroma of steaming umqa signals a well-kept home and is prepared for all important occasions.",
+    prepTime: "15 minutes",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Maize meal", amount: "4 cups" },
+      { item: "Boiling water", amount: "3 cups" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Sugar", amount: "2 tablespoons", notes: "Optional" },
+      { item: "Butter or margarine", amount: "2 tablespoons" },
+      { item: "Mealie leaves or muslin cloth", amount: "For wrapping" }
+    ],
+    instructions: [
+      "Mix maize meal with salt and sugar in a large bowl.",
+      "Add boiling water gradually, mixing to form a thick dough.",
+      "Add butter and knead until smooth.",
+      "Shape into a large loaf or smaller individual portions.",
+      "Wrap tightly in mealie leaves or muslin cloth.",
+      "Place in a pot with a little water (on a rack to keep above water).",
+      "Steam for 2 hours, checking water level periodically.",
+      "Unwrap and slice while still warm.",
+      "Serve with meat stew, sour milk, or chakalaka."
+    ],
+    tips: [
+      "The leaves impart a distinctive flavor",
+      "Keep the pot sealed to trap steam",
+      "Can also be baked in a covered pot for 1.5 hours"
+    ]
+  },
+  {
+    id: "umleqwa",
+    name: "Umleqwa (Xhosa Free-Range Chicken)",
+    tribeSlug: "xhosa",
+    tribeName: "Xhosa",
+    category: "special",
+    description: "Traditional slow-cooked free-range chicken, prepared for ceremonies and family gatherings. The authentic village-style chicken dish.",
+    culturalSignificance: "Umleqwa is reserved for important visitors and ceremonies. Free-range chickens from the village are considered far superior to store-bought.",
+    prepTime: "20 minutes",
+    cookTime: "3 hours",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Free-range chicken", amount: "1 whole", notes: "Cut into pieces" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Potatoes", amount: "4 medium", notes: "Quartered" },
+      { item: "Carrots", amount: "2", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Black pepper", amount: "1 teaspoon" },
+      { item: "Bay leaves", amount: "2" },
+      { item: "Water", amount: "3 cups" }
+    ],
+    instructions: [
+      "Rinse chicken pieces and pat dry.",
+      "Season chicken generously with salt and pepper.",
+      "Place chicken in a large pot with onions and bay leaves.",
+      "Add water and bring to boil.",
+      "Reduce heat and simmer for 2 hours (village chicken is tougher).",
+      "Add potatoes and carrots in the last 45 minutes.",
+      "Cook until chicken is falling-off-the-bone tender.",
+      "Adjust seasoning and serve with umqa or pap."
+    ],
+    tips: [
+      "Free-range chicken needs longer cooking time",
+      "The broth is as valued as the meat",
+      "Don't add vegetables too early or they'll be mushy"
+    ]
+  },
+  {
+    id: "umqombothi",
+    name: "Umqombothi (Xhosa Traditional Beer)",
+    tribeSlug: "xhosa",
+    tribeName: "Xhosa",
+    category: "beverage",
+    description: "Traditional Xhosa sorghum beer with a sour, yeasty taste. Brewed for ceremonies, ancestors, and social gatherings.",
+    culturalSignificance: "Umqombothi is sacred in Xhosa culture, used in ancestral rituals and ceremonies. It's always shared from a communal pot, symbolizing unity.",
+    prepTime: "30 minutes",
+    cookTime: "3 days (fermentation)",
+    servings: 20,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Maize meal", amount: "4 cups" },
+      { item: "Sorghum malt", amount: "2 cups" },
+      { item: "Water", amount: "10 liters" },
+      { item: "Wheat flour", amount: "1/2 cup", notes: "Optional, for faster fermentation" }
+    ],
+    instructions: [
+      "Day 1: Boil water and mix with maize meal to form thin porridge.",
+      "Let cool to lukewarm, then add sorghum malt. Stir well.",
+      "Cover with cloth and leave in warm place overnight.",
+      "Day 2: The mixture should be bubbling (fermenting).",
+      "Strain through a sieve into a clean container.",
+      "Return to warm place and let ferment another day.",
+      "Day 3: Strain again. The beer should be slightly fizzy.",
+      "Serve at room temperature from a traditional clay pot."
+    ],
+    tips: [
+      "Fermentation depends on temperature - warmer = faster",
+      "Should taste sour, not sweet",
+      "Best consumed fresh within 3 days"
+    ]
+  },
+
+  // ============ OROMO RECIPES ============
+  {
+    id: "marqa",
+    name: "Marqa (Oromo Meat Stew)",
+    tribeSlug: "oromo",
+    tribeName: "Oromo",
+    category: "special",
+    description: "A rich, spiced meat stew with butter and Ethiopian spices. The traditional Oromo feast dish served with injera.",
+    culturalSignificance: "Marqa is prepared for the Irreecha festival and other Oromo celebrations. It represents abundance and communal sharing.",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef or lamb", amount: "1 kg", notes: "Cubed" },
+      { item: "Onions", amount: "4 large", notes: "Finely chopped" },
+      { item: "Niter kibbeh (spiced butter)", amount: "1/2 cup" },
+      { item: "Berbere spice", amount: "3 tablespoons" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "2 inches", notes: "Grated" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Beef stock", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Black pepper", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Dry-sauté onions in a pot until deeply caramelized (no oil yet), about 15 min.",
+      "Add niter kibbeh and let it melt into the onions.",
+      "Add garlic and ginger, cook for 2 minutes.",
+      "Add berbere spice and cook, stirring, for 3 minutes.",
+      "Add tomatoes and cook until they break down.",
+      "Add meat and brown on all sides.",
+      "Pour in beef stock, bring to boil, then reduce heat.",
+      "Cover and simmer for 1-1.5 hours until meat is very tender.",
+      "Adjust salt and serve with injera."
+    ],
+    tips: [
+      "Caramelizing onions properly is the key to flavor",
+      "Niter kibbeh can be made by infusing butter with Ethiopian spices",
+      "The stew should be thick, not watery"
+    ]
+  },
+  {
+    id: "buna-qela",
+    name: "Buna Qela (Roasted Coffee)",
+    tribeSlug: "oromo",
+    tribeName: "Oromo",
+    category: "beverage",
+    description: "Traditional Oromo coffee ceremony - coffee beans roasted, ground, and brewed fresh. The birthplace of coffee culture.",
+    culturalSignificance: "The Oromo discovered coffee in the Kaffa region. The buna ceremony is a spiritual and social ritual, performed up to three times daily, each round with symbolic meaning.",
+    prepTime: "30 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Green coffee beans", amount: "1/2 cup" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Sugar", amount: "To taste", notes: "Or salt in some regions" },
+      { item: "Incense (frankincense)", amount: "For aroma" },
+      { item: "Popcorn or snacks", amount: "For serving" }
+    ],
+    instructions: [
+      "Light incense to create the ceremonial atmosphere.",
+      "Wash green coffee beans and pat dry.",
+      "Roast beans in a pan over medium heat, stirring constantly.",
+      "Roast until dark brown and fragrant, about 10-15 minutes.",
+      "Let guests smell the roasted beans (traditional custom).",
+      "Grind beans with mortar and pestle while still warm.",
+      "Add ground coffee to jebena (clay coffee pot) with water.",
+      "Bring to boil, let settle, repeat 3 times.",
+      "Pour into small cups from height to aerate.",
+      "Serve with sugar and popcorn."
+    ],
+    tips: [
+      "The ceremony has three rounds: Abol, Tona, and Baraka",
+      "Never leave before the third cup - it's the blessing",
+      "Fresh roasting is essential for authentic taste"
+    ]
+  },
+  {
+    id: "anchote",
+    name: "Anchote (Oromo Root Vegetable)",
+    tribeSlug: "oromo",
+    tribeName: "Oromo",
+    category: "staple",
+    description: "A traditional Oromo root vegetable, boiled and served with butter. Highly nutritious and unique to Ethiopia.",
+    culturalSignificance: "Anchote is known as 'the Oromo root' and is given to nursing mothers and the sick for its healing properties. It's a symbol of Oromo agricultural heritage.",
+    prepTime: "10 minutes",
+    cookTime: "45 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Anchote tubers", amount: "500g", notes: "Peeled and cubed" },
+      { item: "Butter or niter kibbeh", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Black pepper", amount: "1/2 teaspoon" },
+      { item: "Onion", amount: "1 small", notes: "Chopped (optional)" }
+    ],
+    instructions: [
+      "Peel anchote tubers and cut into chunks.",
+      "Boil in salted water until very tender, about 40 minutes.",
+      "Drain and mash slightly or leave in chunks.",
+      "Melt butter in a pan, sauté onions if using.",
+      "Add anchote and toss with butter.",
+      "Season with salt and pepper.",
+      "Serve warm as a side dish."
+    ],
+    tips: [
+      "Anchote turns yellowish when cooked - this is normal",
+      "Similar in texture to potato but more nutritious",
+      "Often served to postpartum mothers"
+    ]
+  },
+
+  // ============ SOMALI RECIPES ============
+  {
+    id: "canjeero",
+    name: "Canjeero (Somali Pancakes)",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "staple",
+    description: "Spongy, fermented pancakes similar to Ethiopian injera but thinner. The foundation of Somali breakfast.",
+    culturalSignificance: "Canjeero is eaten daily in Somali households, typically for breakfast with tea and honey. It represents the warmth of Somali hospitality.",
+    prepTime: "12 hours (fermentation)",
+    cookTime: "20 minutes",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Self-rising flour", amount: "2 cups" },
+      { item: "Corn flour", amount: "1/2 cup" },
+      { item: "Yeast", amount: "1 teaspoon" },
+      { item: "Sugar", amount: "1 tablespoon" },
+      { item: "Warm water", amount: "3 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Mix flours, yeast, sugar, and salt in a large bowl.",
+      "Gradually add warm water, whisking to avoid lumps.",
+      "Batter should be thin and pourable.",
+      "Cover and let ferment overnight (8-12 hours) in a warm place.",
+      "Stir the bubbly batter gently.",
+      "Heat a non-stick pan over medium heat (no oil needed).",
+      "Pour thin layer of batter, tilting to spread.",
+      "Cook until top is set and has many small holes.",
+      "Fold into quarters and serve with butter, honey, or stew."
+    ],
+    tips: [
+      "The batter should be bubbly after fermentation",
+      "Cook on one side only - it should be spongy",
+      "Serve immediately while soft"
+    ]
+  },
+  {
+    id: "suqaar",
+    name: "Suqaar (Somali Sautéed Meat)",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "special",
+    description: "Cubed meat sautéed with vegetables and Somali spices. Quick, flavorful, and a staple of Somali home cooking.",
+    culturalSignificance: "Suqaar is everyday comfort food in Somalia. Each family has their version, making it a personal and nostalgic dish for Somalis abroad.",
+    prepTime: "15 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Beef or lamb", amount: "500g", notes: "Cubed small" },
+      { item: "Onion", amount: "1 large", notes: "Diced" },
+      { item: "Green bell pepper", amount: "1", notes: "Diced" },
+      { item: "Tomato", amount: "1 large", notes: "Diced" },
+      { item: "Jalapeño", amount: "1", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Xawaash spice", amount: "1 tablespoon" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Vegetable oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Fresh cilantro", amount: "For garnish" }
+    ],
+    instructions: [
+      "Season meat cubes with salt, cumin, and xawaash.",
+      "Heat oil in a large pan over high heat.",
+      "Add meat and sear until browned, about 5 minutes.",
+      "Add onions and garlic, cook until softened.",
+      "Add bell pepper and jalapeño, cook 3 minutes.",
+      "Add tomatoes and cook until soft.",
+      "Reduce heat and simmer until meat is cooked through.",
+      "Garnish with fresh cilantro.",
+      "Serve with canjeero, rice, or Somali pasta."
+    ],
+    tips: [
+      "Cut meat into small, uniform cubes for quick cooking",
+      "High heat is key for proper browning",
+      "Xawaash can be made at home with cumin, coriander, turmeric, and cardamom"
+    ]
+  },
+  {
+    id: "shaah-cadays",
+    name: "Shaah Cadays (Somali Spiced Tea)",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "beverage",
+    description: "Sweet, spiced milk tea that is the lifeblood of Somali social life. No gathering is complete without shaah.",
+    culturalSignificance: "Somalis consume shaah multiple times daily. It's the first thing offered to guests and is central to Somali hospitality and social bonding.",
+    prepTime: "5 minutes",
+    cookTime: "10 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Water", amount: "2 cups" },
+      { item: "Milk", amount: "2 cups" },
+      { item: "Black tea leaves", amount: "2 tablespoons" },
+      { item: "Sugar", amount: "4 tablespoons", notes: "Adjust to taste" },
+      { item: "Cardamom pods", amount: "4", notes: "Crushed" },
+      { item: "Cinnamon stick", amount: "1 small" },
+      { item: "Cloves", amount: "2" },
+      { item: "Ginger", amount: "1/2 inch", notes: "Optional" }
+    ],
+    instructions: [
+      "Add water, cardamom, cinnamon, and cloves to a pot.",
+      "Bring to a boil.",
+      "Add tea leaves and boil for 3 minutes.",
+      "Add milk and sugar.",
+      "Bring back to boil, stirring occasionally.",
+      "Reduce heat and simmer for 5 minutes.",
+      "Strain into cups and serve hot."
+    ],
+    tips: [
+      "Boil the tea vigorously - Somalis like strong tea",
+      "Adjust sweetness to taste (traditionally very sweet)",
+      "Some add a pinch of black pepper for extra warmth"
+    ]
+  },
+
+  // ============ FULANI/FULA RECIPES ============
+  {
+    id: "fura-da-nono",
+    name: "Fura da Nono",
+    tribeSlug: "fulani",
+    tribeName: "Fulani",
+    category: "beverage",
+    description: "Millet balls served in fermented milk. The iconic Fulani drink and snack, sold by Fulani women across West Africa.",
+    culturalSignificance: "Fura da Nono represents the Fulani pastoral lifestyle. Fulani women are renowned for carrying calabashes of this refreshing drink on their heads.",
+    prepTime: "30 minutes",
+    cookTime: "20 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Millet flour", amount: "2 cups" },
+      { item: "Fresh or fermented milk (nono)", amount: "1 liter" },
+      { item: "Ginger", amount: "2 inches", notes: "Grated" },
+      { item: "Cloves", amount: "1/2 teaspoon", notes: "Ground" },
+      { item: "Sugar", amount: "To taste" },
+      { item: "Water", amount: "For mixing" }
+    ],
+    instructions: [
+      "Mix millet flour with enough water to form stiff dough.",
+      "Add grated ginger and ground cloves to the dough.",
+      "Knead well until smooth.",
+      "Form into small balls (about 2 inches diameter).",
+      "Boil in water for 15-20 minutes until cooked through.",
+      "Remove and let cool.",
+      "To serve: mash fura balls into the nono (fermented milk).",
+      "Stir until combined into a thick drink.",
+      "Add sugar if desired and serve chilled."
+    ],
+    tips: [
+      "The fura should be dense and slightly chewy",
+      "Nono is like buttermilk or kefir - tangy and thick",
+      "Traditionally served in a calabash"
+    ]
+  },
+  {
+    id: "kosai",
+    name: "Kosai (Bean Cakes)",
+    tribeSlug: "fulani",
+    tribeName: "Fulani",
+    category: "snack",
+    description: "Fried bean cakes made from black-eyed peas. A popular street food across the Sahel region.",
+    culturalSignificance: "Kosai is a beloved Fulani breakfast food, often sold alongside fura da nono. It showcases the Fulani integration of settled and nomadic food cultures.",
+    prepTime: "8 hours (soaking)",
+    cookTime: "20 minutes",
+    servings: 20,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Black-eyed peas", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Onion", amount: "1 medium" },
+      { item: "Scotch bonnet pepper", amount: "1" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Vegetable oil", amount: "For deep frying" }
+    ],
+    instructions: [
+      "Soak beans overnight. Rub between palms to remove skins.",
+      "Rinse thoroughly until water runs clear.",
+      "Blend beans with onion, pepper, and salt until smooth.",
+      "Add a little water if needed - batter should be thick and fluffy.",
+      "Beat the batter vigorously to incorporate air.",
+      "Heat oil to 180°C (350°F).",
+      "Drop spoonfuls of batter into hot oil.",
+      "Fry until golden brown, about 3-4 minutes per side.",
+      "Drain on paper towels and serve hot."
+    ],
+    tips: [
+      "Removing bean skins gives lighter, fluffier kosai",
+      "Beating the batter is crucial for texture",
+      "Serve with pap or on its own as a snack"
+    ]
+  },
+
+  // ============ BERBER/AMAZIGH RECIPES ============
+  {
+    id: "tagine-lamb",
+    name: "Tagine (Lamb with Apricots)",
+    tribeSlug: "berber",
+    tribeName: "Berber",
+    category: "special",
+    description: "Slow-cooked lamb with dried apricots, almonds, and warming spices. The iconic dish of Berber cuisine.",
+    culturalSignificance: "Tagine is named after the conical clay pot it's cooked in. It represents Berber culinary sophistication and the sweet-savory flavor profile of North African cooking.",
+    prepTime: "30 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Lamb shoulder", amount: "1 kg", notes: "Cubed" },
+      { item: "Dried apricots", amount: "1 cup" },
+      { item: "Almonds", amount: "1/2 cup", notes: "Blanched" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Honey", amount: "3 tablespoons" },
+      { item: "Cinnamon", amount: "1 teaspoon" },
+      { item: "Ginger", amount: "1 teaspoon" },
+      { item: "Saffron", amount: "Pinch" },
+      { item: "Olive oil", amount: "3 tablespoons" },
+      { item: "Butter", amount: "2 tablespoons" },
+      { item: "Salt and pepper", amount: "To taste" },
+      { item: "Fresh cilantro", amount: "For garnish" }
+    ],
+    instructions: [
+      "Season lamb with salt, pepper, cinnamon, and ginger.",
+      "Heat olive oil and butter in tagine or heavy pot.",
+      "Brown lamb on all sides, remove and set aside.",
+      "Sauté onions until caramelized, about 15 minutes.",
+      "Return lamb, add saffron soaked in warm water.",
+      "Add water to cover, bring to simmer.",
+      "Cover and cook on low for 1.5 hours.",
+      "Add apricots and honey, cook another 30 minutes.",
+      "Toast almonds in a dry pan.",
+      "Serve tagine topped with almonds and cilantro.",
+      "Accompany with couscous."
+    ],
+    tips: [
+      "A tagine pot creates the signature steaming effect",
+      "Low and slow is essential for tender meat",
+      "The sauce should be thick and glossy"
+    ]
+  },
+  {
+    id: "couscous-berber",
+    name: "Couscous Royal",
+    tribeSlug: "berber",
+    tribeName: "Berber",
+    category: "staple",
+    description: "Steamed semolina served with a rich vegetable stew and multiple meats. The national dish of the Maghreb.",
+    culturalSignificance: "Friday couscous is a sacred family tradition across North Africa. The Berbers invented couscous over a thousand years ago.",
+    prepTime: "1 hour",
+    cookTime: "2 hours",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Couscous", amount: "500g" },
+      { item: "Lamb", amount: "500g", notes: "Bone-in pieces" },
+      { item: "Chicken", amount: "4 pieces" },
+      { item: "Merguez sausages", amount: "4" },
+      { item: "Chickpeas", amount: "1 can", notes: "Drained" },
+      { item: "Carrots", amount: "4" },
+      { item: "Turnips", amount: "2" },
+      { item: "Zucchini", amount: "2" },
+      { item: "Tomatoes", amount: "3" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Ras el hanout", amount: "2 tablespoons" },
+      { item: "Olive oil", amount: "4 tablespoons" },
+      { item: "Butter", amount: "4 tablespoons" },
+      { item: "Harissa", amount: "For serving" }
+    ],
+    instructions: [
+      "In a couscoussier or large pot, brown lamb and chicken in oil.",
+      "Add onion, tomatoes, ras el hanout, salt. Cover with water.",
+      "Bring to boil, then simmer for 1 hour.",
+      "Meanwhile, moisten couscous with salted water.",
+      "Steam couscous for 20 min, fluff, rest, repeat 3 times total.",
+      "Add carrots and turnips to stew after 1 hour.",
+      "Add zucchini and chickpeas in last 20 minutes.",
+      "Grill merguez separately.",
+      "Toss steamed couscous with butter.",
+      "Mound couscous on platter, arrange meats and vegetables on top.",
+      "Serve with broth on side and harissa for heat."
+    ],
+    tips: [
+      "Traditional couscous is steamed 3 times for fluffy texture",
+      "The broth can be served separately for dipping",
+      "This is a communal dish - everyone eats from one platter"
+    ]
+  },
+
+  // ============ NUBIAN RECIPES ============
+  {
+    id: "ful-sudani",
+    name: "Ful Medames (Sudanese Style)",
+    tribeSlug: "nubian",
+    tribeName: "Nubian",
+    category: "staple",
+    description: "Slow-cooked fava beans with olive oil, cumin, and lemon. The essential Nubian breakfast.",
+    culturalSignificance: "Ful has been eaten along the Nile for thousands of years. Nubians consider it the perfect start to the day, representing continuity with ancient traditions.",
+    prepTime: "12 hours (soaking)",
+    cookTime: "4 hours",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried fava beans", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Olive oil", amount: "1/4 cup" },
+      { item: "Lemon juice", amount: "3 tablespoons" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Cumin", amount: "2 teaspoons" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Fresh parsley", amount: "For garnish" },
+      { item: "Hard-boiled eggs", amount: "For serving" },
+      { item: "Pita bread", amount: "For serving" }
+    ],
+    instructions: [
+      "Drain soaked beans and place in large pot with fresh water.",
+      "Bring to boil, then reduce to simmer.",
+      "Cook for 4-5 hours until beans are very soft (or use pressure cooker for 1 hour).",
+      "Mash some beans to make it creamy, leaving some whole.",
+      "Mix garlic with olive oil, lemon, cumin, and salt.",
+      "Pour dressing over beans and stir.",
+      "Serve in bowls with extra olive oil drizzled on top.",
+      "Garnish with parsley, serve with eggs and warm pita."
+    ],
+    tips: [
+      "Slow cooking develops the best flavor",
+      "Add more lemon for tang, more oil for richness",
+      "Some add tahini or yogurt on top"
+    ]
+  },
+
+  // ============ DINKA RECIPES ============
+  {
+    id: "walwal",
+    name: "Walwal (Dinka Sorghum Porridge)",
+    tribeSlug: "dinka",
+    tribeName: "Dinka",
+    category: "staple",
+    description: "Fermented sorghum porridge, the daily staple of the Dinka people. Nutritious and sustaining.",
+    culturalSignificance: "Walwal is central to Dinka daily life. The fermentation process was developed over generations to improve nutrition and preserve food in South Sudan's climate.",
+    prepTime: "24 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Sorghum flour", amount: "3 cups" },
+      { item: "Water", amount: "6 cups" },
+      { item: "Salt", amount: "Pinch" }
+    ],
+    instructions: [
+      "Mix sorghum flour with 3 cups water in a large bowl.",
+      "Cover and let ferment in warm place for 24-48 hours.",
+      "The mixture should smell slightly sour.",
+      "Bring remaining 3 cups water to boil.",
+      "Gradually add fermented mixture, stirring constantly.",
+      "Cook on low heat for 20-30 minutes, stirring frequently.",
+      "The porridge should be thick enough to eat with hands.",
+      "Serve with milk, meat stew, or vegetables."
+    ],
+    tips: [
+      "Longer fermentation = tangier taste",
+      "Stir constantly to prevent lumps",
+      "Can be thinned with water for drinking"
+    ]
+  },
+
+  // ============ TIGRINYA RECIPES ============
+  {
+    id: "tsebhi-derho",
+    name: "Tsebhi Derho (Eritrean Chicken Stew)",
+    tribeSlug: "tigrinya",
+    tribeName: "Tigrinya",
+    category: "special",
+    description: "Spiced chicken stew cooked in berbere and niter kibbeh. The celebratory dish of Eritrea.",
+    culturalSignificance: "Tsebhi Derho is reserved for holidays, weddings, and special guests. Its preparation is an art passed from mother to daughter.",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Whole chicken", amount: "1", notes: "Cut into 8 pieces" },
+      { item: "Onions", amount: "4 large", notes: "Finely chopped" },
+      { item: "Berbere spice", amount: "3 tablespoons" },
+      { item: "Niter kibbeh (spiced butter)", amount: "1/2 cup" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "2 inches", notes: "Grated" },
+      { item: "Hard-boiled eggs", amount: "6" },
+      { item: "Lemon juice", amount: "2 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Rub chicken with lemon juice and salt, let sit 15 minutes.",
+      "In a dry pot, cook onions over medium heat, stirring, until very soft (no oil yet).",
+      "Add niter kibbeh and continue cooking until onions are deeply caramelized.",
+      "Add berbere, garlic, ginger. Cook 3 minutes, stirring.",
+      "Add tomato paste and a little water. Simmer 5 minutes.",
+      "Add chicken pieces, turning to coat in sauce.",
+      "Add water to half-cover chicken. Bring to boil.",
+      "Reduce heat, cover, simmer 45 minutes until chicken is cooked.",
+      "Score hard-boiled eggs and add in last 10 minutes.",
+      "Serve on injera with eggs."
+    ],
+    tips: [
+      "Dry-cooking onions is essential for the right flavor",
+      "Scoring eggs helps them absorb the sauce",
+      "Sauce should be thick and coating the chicken"
+    ]
+  },
+
+  // ============ AFAR RECIPES ============
+  {
+    id: "lahoh",
+    name: "Lahoh (Afar Spongy Bread)",
+    tribeSlug: "afar",
+    tribeName: "Afar",
+    category: "staple",
+    description: "Yeast-risen spongy flatbread with many tiny holes. The daily bread of the Afar people.",
+    culturalSignificance: "Lahoh is shared at every Afar meal. Its preparation before dawn is a tradition maintained by Afar women across generations.",
+    prepTime: "2 hours (rising)",
+    cookTime: "20 minutes",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "All-purpose flour", amount: "2 cups" },
+      { item: "Semolina or corn flour", amount: "1/2 cup" },
+      { item: "Yeast", amount: "1 teaspoon" },
+      { item: "Sugar", amount: "1 teaspoon" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Warm water", amount: "2.5 cups" }
+    ],
+    instructions: [
+      "Mix flours, yeast, sugar, and salt in a bowl.",
+      "Gradually add warm water, whisking to smooth batter.",
+      "Cover and let rise in warm place for 2 hours.",
+      "Batter should be bubbly and slightly sour-smelling.",
+      "Heat a non-stick pan over medium heat.",
+      "Pour thin layer of batter, tilting to spread.",
+      "Cook until top is covered with holes and set.",
+      "Do not flip - cook one side only.",
+      "Stack on a plate, serve with honey, stew, or soup."
+    ],
+    tips: [
+      "Lahoh should have many small holes on top",
+      "Only cook on one side for proper texture",
+      "Serve warm for best taste"
+    ]
   }
 ];
 
