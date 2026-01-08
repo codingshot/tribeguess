@@ -147,8 +147,8 @@ export function GuessForm({
         </p>
         {/* Mobile: Stack vertically, Desktop: Side by side */}
         <div className="flex flex-col sm:flex-row gap-2">
-          {/* Country Dropdown */}
-          <div className="relative w-full sm:w-auto sm:shrink-0">
+          {/* Country Dropdown - Hug fit width */}
+          <div className="relative shrink-0 w-full sm:w-fit">
             <select
               id="country-select"
               value={country}
@@ -158,8 +158,9 @@ export function GuessForm({
               }}
               className="input-tribal appearance-none cursor-pointer text-base w-full sm:w-auto pr-8 pl-3 py-3 sm:py-2.5 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
               aria-label="Select country"
+              style={{ minWidth: 'fit-content' }}
             >
-              <option value="ALL">🌍 All Africa</option>
+              <option value="ALL">🌍 All</option>
               {countries.map(c => (
                 <option key={c.code} value={c.code}>
                   {c.flag} {c.name}
@@ -172,9 +173,9 @@ export function GuessForm({
               </svg>
             </div>
           </div>
-          {/* Name Input with Search Button */}
-          <div className="relative flex-1 flex gap-2">
-            <div className="relative flex-1">
+          {/* Name Input with Search Button - Fills remaining space */}
+          <div className="relative flex-1 flex gap-2 min-w-0">
+            <div className="relative flex-1 min-w-0">
               <input
                 id="name-input"
                 type="text"
