@@ -3516,6 +3516,567 @@ export const recipes: Recipe[] = [
       "Palm oil is essential for authentic taste",
       "Can add peanut butter for extra richness"
     ]
+  },
+
+  // ============ SUKUMA (TANZANIA) RECIPES ============
+  {
+    id: "ugali-sukuma",
+    name: "Ugali na Dagaa",
+    tribeSlug: "sukuma",
+    tribeName: "Sukuma",
+    category: "staple",
+    description: "Thick maize porridge served with dried sardines (dagaa) - the everyday meal of Tanzania's largest tribe.",
+    culturalSignificance: "Ugali is sacred to the Sukuma. No meal is complete without it, and offering ugali to guests is the highest form of hospitality.",
+    historicalContext: "The Sukuma are Tanzania's largest ethnic group, traditionally agro-pastoralists around Lake Victoria. Dagaa (small fish) from the lake became an affordable protein source that paired perfectly with ugali.",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Maize flour", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Dried dagaa (sardines)", amount: "200g" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 large", notes: "Sliced" },
+      { item: "Cooking oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Bring water to boil for ugali.",
+      "Gradually add maize flour, stirring constantly.",
+      "Cook until very thick and pulls from sides.",
+      "For dagaa: Rinse briefly to remove excess salt.",
+      "Sauté onions until soft, add tomatoes.",
+      "Add dagaa and cook for 10 minutes.",
+      "Serve ugali with dagaa on the side."
+    ],
+    tips: [
+      "Dagaa should be slightly crispy",
+      "Ugali should be stiff enough to mold",
+      "Some add coconut milk to dagaa for richness"
+    ]
+  },
+  {
+    id: "makande",
+    name: "Makande (Beans and Maize)",
+    tribeSlug: "sukuma",
+    tribeName: "Sukuma",
+    category: "staple",
+    description: "Hearty stew of beans and maize kernels - a protein-rich Sukuma farmer's meal.",
+    culturalSignificance: "Makande is traditional farm food that sustained Sukuma farmers through long days of work. It represents the agricultural abundance of Sukumaland.",
+    prepTime: "8 hours (soaking)",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried maize", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Red kidney beans", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Coconut milk", amount: "1 cup", notes: "Optional" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Drain soaked maize and beans.",
+      "Boil together in fresh water for 1.5-2 hours.",
+      "Add more water as needed.",
+      "When soft, add onion and coconut milk.",
+      "Simmer for another 20 minutes.",
+      "Season with salt and serve."
+    ],
+    tips: [
+      "Adding baking soda speeds up cooking",
+      "Should be thick and hearty",
+      "Leftovers can be mashed"
+    ]
+  },
+
+  // ============ CHAGGA (TANZANIA) RECIPES ============
+  {
+    id: "ndizi-nyama",
+    name: "Ndizi na Nyama (Bananas with Meat)",
+    tribeSlug: "chagga",
+    tribeName: "Chagga (Wachagga)",
+    category: "special",
+    description: "Green bananas cooked with beef or goat in a rich stew - the signature dish of the Chagga people of Kilimanjaro.",
+    culturalSignificance: "The Chagga built their civilization on banana cultivation on Mount Kilimanjaro's slopes. This dish combines their banana staple with meat for celebrations.",
+    historicalContext: "The Chagga developed sophisticated irrigation systems on Kilimanjaro over 500 years ago. Bananas became central to their diet, economy, and culture. German colonizers were amazed at Chagga agricultural innovation.",
+    prepTime: "20 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Green bananas (ndizi)", amount: "8-10", notes: "Peeled" },
+      { item: "Beef or goat", amount: "500g", notes: "Cubed" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Coconut milk", amount: "1 cup" },
+      { item: "Curry powder", amount: "1 tablespoon" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Brown meat in oil and set aside.",
+      "Sauté onions until golden.",
+      "Add tomatoes and curry powder.",
+      "Return meat with water to cover.",
+      "Simmer for 45 minutes until meat is tender.",
+      "Add peeled green bananas.",
+      "Add coconut milk and cook 30 more minutes.",
+      "Bananas should be soft but not mushy."
+    ],
+    tips: [
+      "Use gloves when peeling bananas - sap stains",
+      "Green cooking bananas are essential, not plantains",
+      "The stew should be thick and rich"
+    ]
+  },
+  {
+    id: "mbege",
+    name: "Mbege (Chagga Banana Beer)",
+    tribeSlug: "chagga",
+    tribeName: "Chagga (Wachagga)",
+    category: "beverage",
+    description: "Traditional Chagga banana beer, fermented from ripe bananas and millet. The social drink of Kilimanjaro.",
+    culturalSignificance: "Mbege is central to Chagga social life - shared at every gathering, ceremony, and negotiation. Refusing mbege is a serious insult.",
+    historicalContext: "Mbege brewing has been practiced for centuries on Kilimanjaro. The Chagga have over 30 banana varieties, some specifically for brewing. German colonizers tried to ban it, but the tradition persisted.",
+    prepTime: "1 hour + 5 days fermentation",
+    cookTime: "2 hours",
+    servings: 20,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Ripe bananas", amount: "20", notes: "Very ripe, almost black" },
+      { item: "Finger millet flour", amount: "500g" },
+      { item: "Water", amount: "10 liters" },
+      { item: "Banana leaves", amount: "Several", notes: "For covering" }
+    ],
+    instructions: [
+      "Peel and mash ripe bananas thoroughly.",
+      "Add water and strain to extract juice.",
+      "Boil millet flour in water to make thin porridge.",
+      "Cool the millet porridge.",
+      "Combine banana juice with cooled porridge.",
+      "Cover with banana leaves and ferment 3-5 days.",
+      "Strain and serve when fizzy and slightly sour."
+    ],
+    tips: [
+      "Fermentation time affects alcohol content",
+      "Should be drunk fresh within 2-3 days",
+      "Traditionally served in a communal gourd"
+    ]
+  },
+
+  // ============ SERER (SENEGAL) RECIPES ============
+  {
+    id: "ceebu-jen",
+    name: "Ceebu Jën (Senegalese Fish Rice)",
+    tribeSlug: "serer",
+    tribeName: "Serer",
+    category: "special",
+    description: "Senegal's national dish - rice cooked in rich tomato sauce with fish and vegetables. Originally a Serer/Wolof creation.",
+    culturalSignificance: "Ceebu jën is served for lunch across Senegal. It represents Senegalese hospitality and the country's fishing heritage.",
+    historicalContext: "This dish originated in Saint-Louis, Senegal, where Serer and Wolof fishing communities developed it. UNESCO recognized it as Intangible Cultural Heritage in 2021.",
+    youtubeVideoId: "lG8z_x9I0xI",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Broken rice", amount: "500g" },
+      { item: "Fresh fish (thiof/grouper)", amount: "1 kg", notes: "Cleaned, whole or steaks" },
+      { item: "Tomato paste", amount: "4 tablespoons" },
+      { item: "Tamarind paste", amount: "2 tablespoons" },
+      { item: "Vegetables", amount: "Assorted", notes: "Cabbage, carrots, cassava, eggplant" },
+      { item: "Stuffing (rof)", amount: "1/2 cup", notes: "Parsley, garlic, scotch bonnet" },
+      { item: "Vegetable oil", amount: "1 cup" },
+      { item: "Fish stock cubes", amount: "3" },
+      { item: "Dried fish (guedj)", amount: "50g", notes: "For flavor" }
+    ],
+    instructions: [
+      "Make rof: blend parsley, garlic, pepper, salt.",
+      "Stuff fish with rof mixture.",
+      "Fry stuffed fish until golden, set aside.",
+      "In same oil, fry tomato paste until darkened.",
+      "Add water, tamarind, dried fish, and stock.",
+      "Add vegetables in order of cooking time.",
+      "Remove vegetables when done, keep warm.",
+      "Add rice to the pot, cook in the sauce.",
+      "Layer fish and vegetables on top of rice to serve."
+    ],
+    tips: [
+      "The crispy rice at the bottom (xoon) is prized",
+      "Each vegetable should be perfectly cooked",
+      "Traditionally served on a large communal platter"
+    ]
+  },
+
+  // ============ HAUSA-FULANI (NIGERIA) RECIPES ============
+  {
+    id: "miyan-kuka",
+    name: "Miyan Kuka (Baobab Soup)",
+    tribeSlug: "hausa",
+    tribeName: "Hausa",
+    category: "special",
+    description: "Soup made from dried baobab leaves, giving it a distinctive mucilaginous texture. A Northern Nigerian specialty.",
+    culturalSignificance: "Miyan kuka is beloved in Northern Nigeria for its nutritional value and unique flavor. The baobab tree is sacred across the Sahel.",
+    historicalContext: "Baobab has been used in African cooking for millennia. The tree lives for over 1,000 years and every part is used. Hausa traders spread baobab recipes across their trade networks.",
+    prepTime: "15 minutes",
+    cookTime: "40 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Dried baobab leaves (kuka)", amount: "1 cup", notes: "Powdered" },
+      { item: "Meat or fish", amount: "500g" },
+      { item: "Palm oil", amount: "1/4 cup" },
+      { item: "Onions", amount: "2 medium", notes: "Chopped" },
+      { item: "Locust beans (dawadawa)", amount: "2 tablespoons" },
+      { item: "Ground crayfish", amount: "2 tablespoons" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Cook meat until tender with onions and salt.",
+      "Add palm oil and cook for 5 minutes.",
+      "Add locust beans and crayfish.",
+      "Dissolve kuka powder in water.",
+      "Add to pot and stir well.",
+      "Simmer for 15 minutes until thick.",
+      "Serve with tuwo shinkafa or tuwo masara."
+    ],
+    tips: [
+      "Stir constantly to prevent lumps",
+      "The soup should be slightly slimy - this is normal",
+      "Kuka powder is available in African stores"
+    ]
+  },
+  {
+    id: "masa",
+    name: "Masa (Hausa Rice Cakes)",
+    tribeSlug: "hausa",
+    tribeName: "Hausa",
+    category: "snack",
+    description: "Fermented rice cakes cooked in a special pan, crispy on edges and soft inside. Popular breakfast in Northern Nigeria.",
+    culturalSignificance: "Masa is street food culture in Hausa cities. Vendors set up early morning, and the smell of masa draws crowds.",
+    historicalContext: "Masa cooking requires a special pan with small round molds (called masa pan). The technique was developed centuries ago and passed through generations of Hausa women.",
+    prepTime: "8 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 20,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Rice", amount: "3 cups", notes: "Soaked and ground" },
+      { item: "Cooked rice", amount: "1 cup", notes: "For binding" },
+      { item: "Sugar", amount: "2 tablespoons" },
+      { item: "Yeast", amount: "1 teaspoon" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Vegetable oil", amount: "For frying" }
+    ],
+    instructions: [
+      "Soak rice overnight, then grind with water.",
+      "Add cooked rice and blend until smooth.",
+      "Add yeast, sugar, and salt.",
+      "Cover and ferment for 6-8 hours.",
+      "Heat masa pan and add oil to each mold.",
+      "Pour batter into molds, cover briefly.",
+      "Flip when edges are set and cook until golden."
+    ],
+    tips: [
+      "Batter should be pourable but not thin",
+      "Masa pan is essential for authentic shape",
+      "Serve with sugar, honey, or spicy sauce"
+    ]
+  },
+
+  // ============ TSWANA (BOTSWANA) ADDITIONAL RECIPES ============
+  {
+    id: "vetkoek",
+    name: "Magwinya (Fat Cakes)",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "snack",
+    description: "Deep-fried dough balls, crispy outside and fluffy inside. The most popular street food in Botswana and South Africa.",
+    culturalSignificance: "Magwinya vendors are found on every street corner. They're eaten as breakfast, snack, or with mince for a meal.",
+    prepTime: "2 hours (rising)",
+    cookTime: "20 minutes",
+    servings: 12,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Bread flour", amount: "4 cups" },
+      { item: "Instant yeast", amount: "2 teaspoons" },
+      { item: "Sugar", amount: "2 tablespoons" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Warm water", amount: "1.5 cups" },
+      { item: "Vegetable oil", amount: "For frying" }
+    ],
+    instructions: [
+      "Mix flour, yeast, sugar, and salt.",
+      "Add warm water and knead into soft dough.",
+      "Cover and let rise for 1-2 hours.",
+      "Divide into balls and let rest 15 minutes.",
+      "Heat oil to 350°F (180°C).",
+      "Flatten each ball slightly and fry.",
+      "Turn until golden brown all over.",
+      "Drain on paper towels."
+    ],
+    tips: [
+      "Oil temperature is key - too hot and they burn",
+      "Should puff up when fried",
+      "Fill with mince, jam, or cheese"
+    ]
+  },
+
+  // ============ KONGO (ANGOLA) RECIPES ============
+  {
+    id: "muamba-de-galinha",
+    name: "Muamba de Galinha (Chicken Palm Oil Stew)",
+    tribeSlug: "bakongo",
+    tribeName: "Bakongo",
+    category: "special",
+    description: "Angola's national dish - chicken stewed in palm oil with okra and squash. Rich, aromatic, and deeply flavorful.",
+    culturalSignificance: "Muamba is served at every important Angolan occasion. It represents the culinary heritage of the Kongo people that spans Angola, DRC, and Congo.",
+    historicalContext: "This dish originated in the ancient Kongo Kingdom that flourished from the 14th-19th centuries. Palm oil and okra are indigenous to Central Africa and have been cultivated for millennia.",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken", amount: "1 whole", notes: "Cut into pieces" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Okra", amount: "200g", notes: "Sliced" },
+      { item: "Butternut squash", amount: "300g", notes: "Cubed" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Chili pepper", amount: "2", notes: "Whole" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Season chicken with salt and garlic.",
+      "Brown chicken in palm oil and set aside.",
+      "Sauté onions until soft.",
+      "Add tomatoes and cook until broken down.",
+      "Return chicken with water to cover.",
+      "Add whole chilies and simmer 30 minutes.",
+      "Add squash and cook 15 minutes.",
+      "Add okra and cook 10 more minutes.",
+      "Serve with funge (cassava porridge) or rice."
+    ],
+    tips: [
+      "Don't break the chilies unless you want very spicy",
+      "Palm oil should be fresh for best flavor",
+      "Okra adds characteristic thickness"
+    ]
+  },
+
+  // ============ GANDA (UGANDA) ADDITIONAL RECIPES ============
+  {
+    id: "luwombo",
+    name: "Luwombo (Banana Leaf Stew)",
+    tribeSlug: "baganda",
+    tribeName: "Baganda",
+    category: "special",
+    description: "Meat or chicken steamed in banana leaves with groundnut sauce. The most prestigious Baganda ceremonial dish.",
+    culturalSignificance: "Luwombo is the dish of kings - it was prepared for the Kabaka (king) of Buganda. Today it's served at weddings and important ceremonies.",
+    historicalContext: "Invented by a royal cook in the Buganda palace in the 19th century, luwombo became a symbol of Baganda culinary sophistication. The banana leaf cooking method preserves moisture and adds subtle flavor.",
+    prepTime: "30 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Chicken or beef", amount: "1 kg", notes: "Cut into pieces" },
+      { item: "Banana leaves", amount: "Several", notes: "Softened over flame" },
+      { item: "Groundnut paste", amount: "1 cup" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Mushrooms", amount: "100g", notes: "Optional" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Mix groundnut paste with a little water.",
+      "Combine meat, groundnut sauce, onion, tomatoes.",
+      "Season with salt.",
+      "Pass banana leaves over flame to soften.",
+      "Place meat mixture on banana leaves.",
+      "Wrap securely into parcels.",
+      "Steam in pot with water for 2 hours.",
+      "Serve in the banana leaf with matooke."
+    ],
+    tips: [
+      "Don't let water touch the parcels directly",
+      "Leaves should be soft but not torn",
+      "The steam cooking makes meat incredibly tender"
+    ]
+  },
+
+  // ============ TURKANA (KENYA) RECIPES ============
+  {
+    id: "turkana-nyirriny",
+    name: "Nyirriny (Turkana Blood Soup)",
+    tribeSlug: "turkana",
+    tribeName: "Turkana",
+    category: "special",
+    description: "Nutritious soup combining animal blood with milk - traditional Turkana pastoral food.",
+    culturalSignificance: "Blood foods are essential for Turkana survival in the harsh arid lands. They provide iron and nutrients from cattle without killing the animal.",
+    historicalContext: "The Turkana have survived in northwest Kenya's desert for centuries through careful management of their livestock. Blood-letting techniques allow them to use cattle as 'living larders.'",
+    prepTime: "10 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Fresh cattle blood", amount: "2 cups", notes: "Collected from live animal" },
+      { item: "Fresh milk", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Blood is traditionally drawn from a live cow's jugular vein.",
+      "The wound is sealed and the cow recovers.",
+      "Mix fresh blood with fresh milk.",
+      "Heat gently while stirring (do not boil).",
+      "The mixture will thicken slightly.",
+      "Season with salt if desired.",
+      "Serve warm."
+    ],
+    tips: [
+      "This is ceremonial food, not everyday fare",
+      "Blood provides essential iron in the pastoral diet",
+      "Modern Turkana often substitute with meat soups"
+    ]
+  },
+
+  // ============ DINKA (SOUTH SUDAN) ADDITIONAL RECIPES ============
+  {
+    id: "kisra-dinka",
+    name: "Kisra (Sorghum Flatbread)",
+    tribeSlug: "dinka",
+    tribeName: "Dinka",
+    category: "staple",
+    description: "Thin, spongy flatbread made from fermented sorghum. The staple bread of South Sudan and Sudan.",
+    culturalSignificance: "Kisra accompanies every Dinka meal. The fermentation process is passed from mother to daughter, and each family has its own starter culture.",
+    historicalContext: "Sorghum has been cultivated in the Nile Valley for 4,000 years. Kisra developed as the primary way to consume this drought-resistant grain that thrives in South Sudan's climate.",
+    prepTime: "24 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Sorghum flour", amount: "2 cups" },
+      { item: "Water", amount: "3 cups" },
+      { item: "Starter culture", amount: "2 tablespoons", notes: "From previous batch" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Mix sorghum flour with water to make thin batter.",
+      "Add starter culture and mix well.",
+      "Cover and ferment at room temperature 24-48 hours.",
+      "Batter should be bubbly and slightly sour.",
+      "Heat a flat griddle (saj) or non-stick pan.",
+      "Pour thin layer of batter and spread quickly.",
+      "Cook until set and edges lift (don't flip).",
+      "Roll or fold for serving."
+    ],
+    tips: [
+      "Save some batter to start next batch",
+      "Thinner kisra is more traditional",
+      "Serve with stews, vegetables, or meat"
+    ]
+  },
+
+  // ============ SAMBURU (KENYA) RECIPES ============
+  {
+    id: "samburu-nyama",
+    name: "Samburu Nyama (Roasted Meat)",
+    tribeSlug: "samburu",
+    tribeName: "Samburu",
+    category: "special",
+    description: "Simply prepared roasted meat, the centerpiece of Samburu warrior culture. Minimal seasoning lets the meat quality shine.",
+    culturalSignificance: "Meat is reserved for ceremonies and warriors. The Samburu, like their Maasai relatives, believe that mixing meat with other foods weakens the body.",
+    historicalContext: "The Samburu are the 'Butterfly People' - close relatives of the Maasai. Their warriors (morans) traditionally eat meat separately from other foods during their warrior years.",
+    prepTime: "10 minutes",
+    cookTime: "1-2 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Goat or sheep", amount: "2 kg", notes: "On the bone" },
+      { item: "Coarse salt", amount: "To taste" },
+      { item: "Firewood", amount: "For open fire" }
+    ],
+    instructions: [
+      "Build an open fire and let it burn to coals.",
+      "Season meat generously with coarse salt.",
+      "Thread meat on green sticks or metal skewers.",
+      "Position over hot coals, not direct flame.",
+      "Rotate slowly for even cooking.",
+      "Cook for 1-2 hours until done throughout.",
+      "Slice and serve directly."
+    ],
+    tips: [
+      "Fat dripping on coals adds smoky flavor",
+      "Samburu prefer meat well-done",
+      "Traditionally eaten with hands, no utensils"
+    ]
+  },
+
+  // ============ RENDILLE (KENYA) RECIPES ============
+  {
+    id: "camel-milk-rendille",
+    name: "Rendille Camel Milk",
+    tribeSlug: "rendille",
+    tribeName: "Rendille",
+    category: "beverage",
+    description: "Fresh camel milk, the lifeblood of the Rendille people. Rich in nutrients and perfectly suited to desert survival.",
+    culturalSignificance: "Camels are central to Rendille identity. A family's wealth is measured in camels, and their milk sustains the community through harsh desert conditions.",
+    historicalContext: "The Rendille have herded camels in northern Kenya's deserts for centuries. Camel milk can sustain a person for weeks and is naturally lower in fat than cow's milk.",
+    prepTime: "0 minutes",
+    cookTime: "0 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh camel milk", amount: "1 liter" }
+    ],
+    instructions: [
+      "Camels are milked in the early morning.",
+      "Milk is collected in gourds or containers.",
+      "Consumed fresh and warm from milking.",
+      "Can be stored in traditional gourds for slight fermentation.",
+      "Serve at room temperature or slightly chilled."
+    ],
+    tips: [
+      "Camel milk has three times the vitamin C of cow's milk",
+      "It's more digestible for lactose-intolerant people",
+      "The slight saltiness is natural"
+    ]
+  },
+
+  // ============ BORANA (KENYA/ETHIOPIA) RECIPES ============
+  {
+    id: "borana-buna",
+    name: "Borana Buna (Coffee Ceremony)",
+    tribeSlug: "borana",
+    tribeName: "Borana",
+    category: "beverage",
+    description: "Traditional coffee ceremony shared with the Oromo. Coffee is roasted, ground, and brewed in a ritual that can last hours.",
+    culturalSignificance: "Coffee originated in Borana/Oromo territory. The ceremony represents hospitality, and refusing coffee is a serious offense.",
+    historicalContext: "The Borana are a branch of the Oromo people. Coffee (buna qela) was discovered in their ancestral lands and spread to the world from there. The word 'coffee' derives from 'Kaffa,' an Ethiopian region.",
+    prepTime: "20 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Green coffee beans", amount: "1/2 cup" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Sugar", amount: "To taste" },
+      { item: "Incense", amount: "For atmosphere" }
+    ],
+    instructions: [
+      "Wash green coffee beans.",
+      "Roast beans in a pan over fire until dark and aromatic.",
+      "Let guests smell the roasted beans.",
+      "Grind beans using traditional mortar and pestle.",
+      "Boil water in jebena (clay coffee pot).",
+      "Add ground coffee and simmer.",
+      "Serve in small cups, starting with eldest.",
+      "Three rounds are traditional."
+    ],
+    tips: [
+      "The ceremony is as important as the coffee",
+      "Roasting should be done just before brewing",
+      "Grass and flowers often decorate the area"
+    ]
   }
 ];
 
