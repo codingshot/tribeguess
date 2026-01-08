@@ -1805,6 +1805,216 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       description: "Historic palace and site of traditional Comorian governance. Symbol of the sultanate era before French colonization.",
       coordinates: { lat: -11.67, lng: 43.24 }
     }
+  ],
+
+  // ============ SUDAN & SOUTH SUDAN ============
+  nubian: [
+    {
+      name: "Pyramids of Meroë",
+      type: "archaeological",
+      description: "UNESCO World Heritage Site: Over 200 pyramids of the ancient Kingdom of Kush, built between 300 BCE and 300 CE. Nubia has more pyramids than Egypt.",
+      coordinates: { lat: 16.94, lng: 33.75 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mero%C3%AB",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Jebel Barkal",
+      type: "sacred",
+      description: "UNESCO World Heritage Site: Sacred mountain of the Kushites believed to be the home of the god Amun. Contains temples and pyramids dating to 1450 BCE.",
+      coordinates: { lat: 18.53, lng: 31.83 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Jebel_Barkal",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Nubian Museum (Aswan)",
+      type: "museum",
+      description: "Award-winning museum in Egypt documenting Nubian history and culture from prehistory to the present, including artifacts rescued from the Aswan Dam flooding.",
+      coordinates: { lat: 24.08, lng: 32.89 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Nubia_Museum"
+    },
+    {
+      name: "Kerma Archaeological Site",
+      type: "archaeological",
+      description: "Capital of the Kingdom of Kerma (2500-1500 BCE), one of the earliest urban centers in Africa. Features massive mud-brick structures called deffufas.",
+      coordinates: { lat: 19.6, lng: 30.42 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Kerma"
+    },
+    {
+      name: "Old Dongola",
+      type: "archaeological",
+      description: "Capital of the Christian Nubian kingdom of Makuria (6th-14th century). Contains churches, monasteries, and the Throne Hall of the Nubian kings.",
+      coordinates: { lat: 18.22, lng: 30.75 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Old_Dongola"
+    }
+  ],
+
+  beja: [
+    {
+      name: "Suakin Island",
+      type: "historical",
+      description: "UNESCO Tentative List: Ancient Red Sea port dating to Pharaonic times. Once the gateway for African pilgrims to Mecca and a major slave trade port. Now a ghost town of coral buildings.",
+      coordinates: { lat: 19.11, lng: 37.33 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Suakin",
+      unescoStatus: "tentative"
+    },
+    {
+      name: "Port Sudan",
+      type: "historical",
+      description: "Sudan's main seaport, built by the British in 1909 to replace Suakin. Center of Beja population and culture on the Red Sea coast.",
+      coordinates: { lat: 19.62, lng: 37.22 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Port_Sudan"
+    },
+    {
+      name: "Red Sea Hills",
+      type: "natural",
+      description: "The ancestral homeland of the Beja people, a rugged mountain range running parallel to the Red Sea. Rich in gold deposits mined since ancient Egyptian times.",
+      coordinates: { lat: 20.0, lng: 36.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Red_Sea_Hills"
+    },
+    {
+      name: "Kassala",
+      type: "historical",
+      description: "City at the base of the Taka Mountains, an important Beja center. Known for its distinctive rock formations and as a crossroads between Sudan and Eritrea.",
+      coordinates: { lat: 15.45, lng: 36.4 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Kassala"
+    }
+  ],
+
+  dinka: [
+    {
+      name: "Bor Town",
+      type: "historical",
+      description: "Major Dinka town in Jonglei State. Birthplace of John Garang, founder of the SPLM and key figure in South Sudan's independence. Heavily affected by civil wars.",
+      coordinates: { lat: 6.21, lng: 31.55 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bor,_South_Sudan"
+    },
+    {
+      name: "Sudd Wetlands",
+      type: "natural",
+      description: "One of the world's largest wetlands, fed by the White Nile. The Dinka's traditional cattle-herding grounds, crucial for seasonal grazing.",
+      coordinates: { lat: 7.5, lng: 30.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Sudd"
+    },
+    {
+      name: "Wau",
+      type: "historical",
+      description: "Second-largest city in South Sudan. A diverse city with significant Dinka population, historic churches, and a center of resistance during civil wars.",
+      coordinates: { lat: 7.7, lng: 28.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Wau,_South_Sudan"
+    },
+    {
+      name: "John Garang Mausoleum",
+      type: "historical",
+      description: "Memorial in Juba honoring John Garang de Mabior, the Dinka leader who led the independence struggle. He died in 2005, weeks after the peace agreement.",
+      coordinates: { lat: 4.85, lng: 31.58 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/John_Garang"
+    }
+  ],
+
+  nuer: [
+    {
+      name: "Bentiu",
+      type: "historical",
+      description: "Capital of Unity State and center of Nuer territory. Located near major oil fields. Heavily affected by South Sudan's civil conflict.",
+      coordinates: { lat: 9.23, lng: 29.83 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bentiu"
+    },
+    {
+      name: "Nasir",
+      type: "historical",
+      description: "Town in Upper Nile State significant in Nuer history. Site of the 1991 'Nasir Declaration' that split the SPLA along ethnic lines.",
+      coordinates: { lat: 8.6, lng: 33.07 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Nasir,_South_Sudan"
+    },
+    {
+      name: "Gambela",
+      type: "historical",
+      description: "Ethiopian town near the South Sudan border with a significant Nuer population. Historic trading post on the Baro River.",
+      coordinates: { lat: 8.25, lng: 34.58 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Gambela"
+    },
+    {
+      name: "Shrine of Ngundeng Bong",
+      type: "sacred",
+      description: "Sacred site associated with the 19th-century Nuer prophet Ngundeng Bong, whose prophecies and resistance against colonialism are still remembered.",
+      coordinates: { lat: 8.5, lng: 31.5 }
+    }
+  ],
+
+  tigrinya: [
+    {
+      name: "Asmara Historic Center",
+      type: "historical",
+      description: "UNESCO World Heritage Site: 'Africa's Modernist City' features exceptional examples of early 20th-century modernist architecture built during Italian colonization.",
+      coordinates: { lat: 15.34, lng: 38.93 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Asmara",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Debre Bizen Monastery",
+      type: "sacred",
+      description: "Ancient Orthodox monastery founded in 1361, perched on a mountain at 2,450m. One of Eritrea's holiest sites, women are forbidden from entering.",
+      coordinates: { lat: 15.37, lng: 39.2 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Debre_Bizen"
+    },
+    {
+      name: "Massawa Old Town",
+      type: "historical",
+      description: "Ancient Red Sea port with Ottoman Turkish and Egyptian architecture. Called the 'Pearl of the Red Sea', it was heavily damaged in the independence war.",
+      coordinates: { lat: 15.61, lng: 39.45 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Massawa"
+    },
+    {
+      name: "Adulis Archaeological Site",
+      type: "archaeological",
+      description: "Ancient port city of the Aksumite Empire, once one of the greatest trading centers of the Red Sea. Contains remains from the 1st millennium BCE.",
+      coordinates: { lat: 15.23, lng: 39.67 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Adulis"
+    },
+    {
+      name: "Eritrean National Museum",
+      type: "museum",
+      description: "Museum in Asmara housing artifacts from Eritrea's ancient history, including Aksumite relics and independence war memorabilia.",
+      coordinates: { lat: 15.34, lng: 38.94 }
+    }
+  ],
+
+  afar: [
+    {
+      name: "Danakil Depression",
+      type: "natural",
+      description: "One of the hottest and lowest places on Earth, featuring active volcanoes, sulfur springs, salt flats, and an alien landscape. Traditional Afar salt mining area.",
+      coordinates: { lat: 14.24, lng: 40.3 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Danakil_Depression"
+    },
+    {
+      name: "Erta Ale Volcano",
+      type: "natural",
+      description: "One of only six volcanoes with a persistent lava lake. Called 'the Gateway to Hell' in Afar, it's been continuously active for over a century.",
+      coordinates: { lat: 13.6, lng: 40.67 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Erta_Ale"
+    },
+    {
+      name: "Lake Afrera (Lake Afdera)",
+      type: "natural",
+      description: "Salt lake in the Danakil Depression where Afar miners have extracted salt for millennia. The salt bars are transported by camel caravan to the highlands.",
+      coordinates: { lat: 13.28, lng: 40.85 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lake_Afdera"
+    },
+    {
+      name: "Hadar (Lucy Discovery Site)",
+      type: "archaeological",
+      description: "Site where the famous 3.2-million-year-old hominid fossil 'Lucy' (Australopithecus afarensis) was discovered in 1974. Located in Afar territory.",
+      coordinates: { lat: 11.12, lng: 40.58 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Hadar,_Ethiopia"
+    },
+    {
+      name: "Dallol",
+      type: "natural",
+      description: "Hydrothermal field in the Danakil with unearthly formations of sulfur, salt, and minerals. One of Earth's most extreme environments.",
+      coordinates: { lat: 14.24, lng: 40.3 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Dallol_(hydrothermal_system)"
+    }
   ]
 };
 

@@ -7811,6 +7811,506 @@
       "sources": [{ "name": "Wikipedia - Comoros", "url": "https://en.wikipedia.org/wiki/Comoros" }],
       "description": "Comorians are the people of the Comoros Islands, a unique blend of Arab, African, and Malagasy cultures, known for elaborate Grand Marriages, perfume exports, and Swahili heritage.",
       "relatedTribes": ["swahili", "sakalava"]
+    },
+
+    {
+      "id": "nubian",
+      "name": "Nubian",
+      "slug": "nubian",
+      "slugAliases": ["nubians", "nobiin", "kenzi", "dongolawi", "mahas"],
+      "youtubeVideoId": "_bm7YoQ8b10",
+      "languageVideoId": "4dU8oS8zOBE",
+      "countries": ["SD", "EG"],
+      "region": "Nile Valley (Sudan & Egypt)",
+      "population": "~3 million",
+      "populationPercent": "~6% (Sudan)",
+      "populationByCountry": [
+        { "country": "SD", "population": "~2.5 million", "percent": "~6%" },
+        { "country": "EG", "population": "~500,000", "percent": "~0.5%" }
+      ],
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 21.0, "lng": 31.0 },
+      "tribeTerritoryDegrees": { "latSpan": 5, "lngSpan": 3 },
+      "counties": ["Northern State (Sudan)", "River Nile State", "Aswan Governorate (Egypt)", "Dongola", "Wadi Halfa"],
+      "namePrefixes": ["Sid", "Osman"],
+      "commonNames": {
+        "female": ["Fatima", "Amira", "Halima", "Nafisa", "Zeinab", "Maryam", "Aisha", "Suad"],
+        "male": ["Idris", "Salih", "Osman", "Ahmed", "Hassan", "Mohamed", "Ali", "Abdel"]
+      },
+      "stereotypes": ["Ancient civilization builders", "Pyramid builders", "Nile farmers", "Hospitable people", "Skilled craftsmen", "Proud heritage"],
+      "genderStereotypes": {
+        "male": ["Farmers and fishermen", "Guardians of Nile traditions", "Skilled boatmen (felucca)", "Traditional wrestlers"],
+        "female": ["Expert weavers", "Henna artists", "Guardians of domestic traditions", "Celebrated singers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men farmed date palms, fished the Nile, and built the iconic Nubian houses. Wrestling (Nuba wrestling) was a prestigious sport.",
+          "female": "Women managed households, created distinctive Nubian decorations, and were renowned for henna artistry and pottery."
+        },
+        "modern": {
+          "male": "Many Nubian men work in tourism, construction, and urban professions. Many were displaced by the Aswan Dam.",
+          "female": "Nubian women are educators, preservationists, and advocates for the return to ancestral lands."
+        }
+      },
+      "culturalTraits": ["Builders of over 200 pyramids at Meroë", "Distinctive colorful house architecture", "Ancient Nubian kingdoms rivaled Egypt", "Unique Nubian languages (Nobiin, Kenzi)", "Strong communal traditions despite displacement", "Iconic Nubian music and ariti songs"],
+      "funFacts": ["Nubia has more pyramids (~255) than Egypt (~138)", "The Kingdom of Kush conquered and ruled Egypt for nearly 100 years (25th Dynasty)", "Nubian wrestlers have a tradition dating back 3,000 years", "Many Nubians were displaced by the Aswan High Dam in the 1960s and seek to return", "Nubian houses are famous for their bright colors and geometric designs"],
+      "tradeRelations": {
+        "historical": ["Gold from Nubian mines ('Nubia' may derive from 'nub' meaning gold)", "Incense and ivory trade with Egypt", "Trade routes to Central Africa"],
+        "modern": ["Date palm cultivation", "Tourism (Nubian villages near Aswan)", "Handicrafts and pottery"]
+      },
+      "antiColonialResistance": "Nubians resisted Ottoman, Egyptian, and British rule. The Mahdist revolution (1881-1898) had Nubian participants fighting for independence.",
+      "traditionalFood": {
+        "staples": ["Ful medames (fava beans)", "Kisra (sorghum flatbread)", "Dates", "Fish from the Nile"],
+        "beverages": ["Hibiscus tea (karkadé)", "Date palm juice"],
+        "specialDishes": ["Aseeda (porridge)", "Sharmout (sun-dried meat)", "Nubian bread"],
+        "description": "Nubian cuisine features Nile fish, dates, sorghum bread, and the famous hibiscus tea served to all guests."
+      },
+      "traditionalDance": "Ariti (traditional Nubian singing and dance with drums)",
+      "religion": "Islam (Sunni), with ancient Nubian Christian heritage",
+      "history": {
+        "origin": "Nubians are one of the oldest civilizations in Africa, with kingdoms dating back 5,000 years. The Kingdom of Kush, Meroë, and Nobatia were powerful Nubian states.",
+        "colonialEra": "Nubia was colonized by Egypt, then the Anglo-Egyptian Condominium. The Aswan Dam (1902, 1960s) flooded ancestral lands.",
+        "independence": "Nubians in Sudan have sought greater recognition and the right to return to lands flooded by Lake Nasser/Nubia.",
+        "keyEvents": ["Kingdom of Kush (1070 BCE-350 CE)", "Conquest of Egypt (747-656 BCE)", "Christian Nubia (6th-16th century)", "Aswan Dam displacement (1960s)"]
+      },
+      "language": {
+        "name": "Nobiin (and Kenzi-Dongolawi)",
+        "speakers": "~500,000",
+        "greeting": "Mattokka?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Ai", "meaning": "Yes" },
+          { "phrase": "Owwa", "meaning": "Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Tay-ee", "meaning": "Thank you" },
+          { "phrase": "Irreen?", "meaning": "What is your name?" }
+        ],
+        "family": "Nilo-Saharan (Nubian languages)",
+        "writingSystem": "Arabic script, Old Nubian script historically"
+      },
+      "famousPeople": [
+        { "name": "Piye (Piankhi)", "role": "Kushite King who conquered Egypt", "wikipedia": "https://en.wikipedia.org/wiki/Piye" },
+        { "name": "Taharqa", "role": "Greatest Kushite Pharaoh (25th Dynasty)", "wikipedia": "https://en.wikipedia.org/wiki/Taharqa" },
+        { "name": "Amanirenas", "role": "Warrior Queen who fought Rome", "wikipedia": "https://en.wikipedia.org/wiki/Amanirenas" },
+        { "name": "Mohamed Wardi", "role": "Legendary Nubian/Sudanese singer", "wikipedia": "https://en.wikipedia.org/wiki/Mohamed_Wardi" }
+      ],
+      "sources": [{ "name": "Wikipedia - Nubians", "url": "https://en.wikipedia.org/wiki/Nubians" }, { "name": "UNESCO Meroe", "url": "https://whc.unesco.org/en/list/1336/" }],
+      "description": "The Nubians are one of Africa's oldest civilizations, builders of the pyramids of Meroë, rulers of Egypt's 25th Dynasty, and guardians of a rich cultural heritage along the Nile.",
+      "relatedTribes": ["beja", "sudanese-arabs"]
+    },
+
+    {
+      "id": "beja",
+      "name": "Beja",
+      "slug": "beja",
+      "slugAliases": ["beja-people", "bedawiyet", "hadendoa", "bisharin", "beni-amer", "ababda"],
+      "youtubeVideoId": "FarSVNjSyFw",
+      "countries": ["SD", "ER", "EG"],
+      "region": "Eastern Sudan, Eritrea & Egypt",
+      "population": "~2.5 million",
+      "populationPercent": "~5% (Sudan)",
+      "populationByCountry": [
+        { "country": "SD", "population": "~2 million", "percent": "~5%" },
+        { "country": "ER", "population": "~400,000", "percent": "~10%" },
+        { "country": "EG", "population": "~100,000", "percent": "<1%" }
+      ],
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 19.5, "lng": 37.0 },
+      "tribeTerritoryDegrees": { "latSpan": 6, "lngSpan": 4 },
+      "counties": ["Red Sea State (Sudan)", "Kassala State", "Northern Red Sea (Eritrea)", "Aswan (Egypt)"],
+      "namePrefixes": ["Ali", "Osman"],
+      "commonNames": {
+        "female": ["Fatima", "Halima", "Amina", "Khadija", "Maryam", "Aziza"],
+        "male": ["Osman", "Ali", "Mohamed", "Ahmed", "Hassan", "Ibrahim", "Saleh"]
+      },
+      "stereotypes": ["Fierce warriors", "Proud nomads", "Sword fighters", "Camel herders", "Independent spirit", "Fuzzy-Wuzzy hair"],
+      "genderStereotypes": {
+        "male": ["Expert camel herders", "Skilled swordsmen", "Fierce warriors", "Nomadic leaders"],
+        "female": ["Tent builders", "Milk and butter producers", "Weavers", "Camp managers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herded camels, defended territory, and were renowned for sword fighting. The Hadendoa were called 'Fuzzy-Wuzzies' by British soldiers for their distinctive hair.",
+          "female": "Women managed camps, processed milk products, wove mats, and dismantled/rebuilt tents during migrations."
+        },
+        "modern": {
+          "male": "Many Beja men work in Port Sudan, gold mining, or remain in pastoralism. Some were affected by Eastern Sudan conflicts.",
+          "female": "Beja women are increasingly in education while maintaining pastoral traditions."
+        }
+      },
+      "culturalTraits": ["Nomadic pastoralist lifestyle in harsh deserts", "Famous Hadendoa warriors who fought the British", "Distinctive 'tiffa' (afro) hairstyle", "Ancient Cushitic language (Bedawiyet)", "Camels are central to life and bride-price", "Oral poetry and sword dances"],
+      "funFacts": ["The Beja's Hadendoa warriors fought ferociously against British forces and inspired Kipling's poem 'Fuzzy-Wuzzy'", "Beja have maintained their language and culture for over 4,000 years", "The Beja controlled trade routes from the Nile to the Red Sea for millennia", "Ancient Egyptians traded with Beja ancestors for gold and incense", "Some historians believe Queen of Sheba had Beja connections"],
+      "tradeRelations": {
+        "historical": ["Gold trade with ancient Egypt", "Red Sea-Nile trade routes", "Frankincense and myrrh", "Slave trade routes"],
+        "modern": ["Livestock trade (camels, goats)", "Port Sudan commerce", "Artisanal gold mining"]
+      },
+      "antiColonialResistance": "The Hadendoa Beja were fierce fighters against British colonialism. At the Battle of Tamai (1884), they broke British infantry squares, earning respect as fearsome warriors.",
+      "traditionalFood": {
+        "staples": ["Camel milk", "Goat meat", "Sorghum porridge", "Dates"],
+        "beverages": ["Camel milk", "Jabana coffee"],
+        "specialDishes": ["Aseeda (sorghum porridge)", "Dried meat", "Camel butter"],
+        "description": "Beja diet centers on camel and goat products, suited to their desert nomadic lifestyle."
+      },
+      "traditionalDance": "Sword dances and warrior performances",
+      "religion": "Islam (Sunni), with ancient animist traditions",
+      "history": {
+        "origin": "The Beja are one of the oldest peoples in Africa, mentioned by ancient Egyptians, Greeks (as Blemmyes), and Romans. They've lived in the Eastern Desert for over 4,000 years.",
+        "colonialEra": "The Beja resisted Egyptian, British, and Mahdist control. The Hadendoa fought in the Mahdist War against the British.",
+        "independence": "Beja faced marginalization in Sudan, leading to Eastern Sudan conflicts and the Beja Congress political movement.",
+        "keyEvents": ["Ancient Egyptian contact (3000+ BCE)", "Blemmyes kingdom (3rd-6th century)", "Mahdist War (1880s)", "Eastern Sudan peace agreement (2006)"]
+      },
+      "language": {
+        "name": "Bedawiyet (Beja language)",
+        "speakers": "~2 million",
+        "greeting": "Dehna?",
+        "greetingMeaning": "Are you well?",
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "No standard script (oral tradition)"
+      },
+      "famousPeople": [
+        { "name": "Osman Digna", "role": "Mahdist Commander", "wikipedia": "https://en.wikipedia.org/wiki/Osman_Digna" },
+        { "name": "Musa Mohamed Ahmed", "role": "Beja Congress leader", "wikipedia": "https://en.wikipedia.org/wiki/Musa_Mohamed_Ahmed" }
+      ],
+      "sources": [{ "name": "Wikipedia - Beja people", "url": "https://en.wikipedia.org/wiki/Beja_people" }, { "name": "Minority Rights Group", "url": "https://minorityrights.org/communities/beja/" }],
+      "description": "The Beja are ancient Cushitic nomads of the Eastern Sudan desert, renowned as fierce warriors (the 'Fuzzy-Wuzzies'), skilled camel herders, and keepers of a 4,000-year-old culture.",
+      "relatedTribes": ["nubian", "afar", "tigrinya"]
+    },
+
+    {
+      "id": "dinka",
+      "name": "Dinka",
+      "slug": "dinka",
+      "slugAliases": ["dinka-people", "jieng", "muonyjang", "bor-dinka", "ngok-dinka"],
+      "youtubeVideoId": "dK7xhLl2Thw",
+      "languageVideoId": "d_jIGYHKg20",
+      "countries": ["SS", "SD"],
+      "region": "South Sudan (Bahr el Ghazal, Upper Nile)",
+      "population": "~4.5 million",
+      "populationPercent": "~35% (South Sudan)",
+      "populationByCountry": [
+        { "country": "SS", "population": "~4 million", "percent": "~35%" },
+        { "country": "SD", "population": "~500,000", "percent": "~1%" }
+      ],
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 8.0, "lng": 28.0 },
+      "tribeTerritoryDegrees": { "latSpan": 5, "lngSpan": 5 },
+      "counties": ["Lakes State", "Warrap State", "Northern Bahr el Ghazal", "Jonglei State", "Unity State"],
+      "namePrefixes": ["Deng", "Mabior", "Atem"],
+      "commonNames": {
+        "female": ["Akech", "Achol", "Ayen", "Abuk", "Atong", "Nyandeng", "Awut", "Adut", "Achan"],
+        "male": ["Deng", "Mabior", "Bol", "Mayen", "Garang", "Kuol", "Majok", "Makuei", "Atem", "Lual"]
+      },
+      "stereotypes": ["Tallest people in the world", "Cattle-obsessed", "Proud warriors", "Scarification rituals", "Strong identity", "Resilient survivors"],
+      "genderStereotypes": {
+        "male": ["Cattle herders", "Warriors defending herds", "Expert wrestlers", "Tall and lean"],
+        "female": ["Milk and butter producers", "Agricultural workers", "Mothers of many children", "Skilled beadworkers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men's lives revolved around cattle. Boys were initiated through scarification. Men defended herds and competed in wrestling.",
+          "female": "Women farmed, milked cows, and managed households. Marriage required large cattle bride-prices (over 100 cattle for elite families)."
+        },
+        "modern": {
+          "male": "Civil war displaced many. Dinka men serve in government and military. Salva Kiir (President) and John Garang were Dinka.",
+          "female": "Women face challenges from conflict but are increasingly in education and advocacy."
+        }
+      },
+      "culturalTraits": ["Cattle are central to life, wealth, and identity", "Among the world's tallest people (average male height 6'4\")", "Distinctive 'V'-pattern facial scarification", "Oral poetry and songs about cattle", "Wrestling is a major traditional sport", "Nilotic pastoral lifestyle along White Nile"],
+      "funFacts": ["Dinka cattle have names, and men compose songs praising their favorite cows", "The Dinka are among the tallest people on Earth, with average male height around 6'4\" (193 cm)", "A Dinka man's wealth is measured in cattle - 100+ cows are needed for a prestigious marriage", "Dinka have lived in South Sudan for over 1,000 years as pastoralists", "John Garang, founder of South Sudan's independence movement, was Dinka"],
+      "tradeRelations": {
+        "historical": ["Cattle trade with neighboring groups", "Ivory trade (historically)", "Fish and grain exchange"],
+        "modern": ["Cattle markets remain central", "Oil industry in Dinka areas", "Aid economy due to conflict"]
+      },
+      "antiColonialResistance": "Dinka resisted Arab slave raiders for centuries. During civil wars (1955-2005), Dinka formed the core of the SPLM/A under John Garang, fighting for South Sudan's independence.",
+      "traditionalFood": {
+        "staples": ["Cow milk", "Sorghum", "Millet", "Fish from the Nile"],
+        "beverages": ["Fermented cow milk", "Sorghum beer"],
+        "specialDishes": ["Walwal (sorghum porridge with milk)", "Dried fish", "Roasted meat"],
+        "description": "Dinka cuisine centers on cattle products (milk, blood, meat) and sorghum, reflecting their pastoral lifestyle."
+      },
+      "traditionalDance": "Jumping dances and cattle-themed songs",
+      "religion": "Traditional Dinka religion (Nhialic - sky god), Christianity",
+      "history": {
+        "origin": "The Dinka migrated to their current lands along the White Nile around 1000 CE. They are part of the Nilotic peoples.",
+        "colonialEra": "British rule (1898-1956) disrupted traditional life. Arab slave raids devastated Dinka communities before colonization.",
+        "independence": "South Sudan gained independence in 2011. Civil war (2013-2020) heavily affected Dinka areas.",
+        "keyEvents": ["Migration to South Sudan (~1000 CE)", "Resistance to slave raids (1800s)", "Civil war (1983-2005)", "South Sudan independence (2011)", "Civil war (2013-2020)"]
+      },
+      "language": {
+        "name": "Dinka (Thuɔŋjäŋ)",
+        "speakers": "~4 million",
+        "greeting": "Yin nying?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Yin ca ye pɛth", "meaning": "You are fine" },
+          { "phrase": "Lek du", "meaning": "Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Yin pɛth", "meaning": "Thank you" },
+          { "phrase": "Yin cɔl...", "meaning": "My name is..." }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "John Garang", "role": "SPLM/A leader, South Sudan founding father", "wikipedia": "https://en.wikipedia.org/wiki/John_Garang" },
+        { "name": "Salva Kiir", "role": "President of South Sudan", "wikipedia": "https://en.wikipedia.org/wiki/Salva_Kiir_Mayardit" },
+        { "name": "Manute Bol", "role": "NBA Player (7'7\")", "wikipedia": "https://en.wikipedia.org/wiki/Manute_Bol" },
+        { "name": "Luol Deng", "role": "NBA All-Star", "wikipedia": "https://en.wikipedia.org/wiki/Luol_Deng" },
+        { "name": "Alek Wek", "role": "Supermodel", "wikipedia": "https://en.wikipedia.org/wiki/Alek_Wek" }
+      ],
+      "sources": [{ "name": "Wikipedia - Dinka people", "url": "https://en.wikipedia.org/wiki/Dinka_people" }, { "name": "Britannica - Dinka", "url": "https://www.britannica.com/topic/Dinka" }],
+      "description": "The Dinka are the largest ethnic group in South Sudan, renowned as the world's tallest people, devoted cattle herders, and key figures in South Sudan's independence struggle.",
+      "relatedTribes": ["nuer", "shilluk", "maasai"]
+    },
+
+    {
+      "id": "nuer",
+      "name": "Nuer",
+      "slug": "nuer",
+      "slugAliases": ["nuer-people", "naath", "naadh"],
+      "youtubeVideoId": "FarSVNjSyFw",
+      "countries": ["SS", "ET"],
+      "region": "South Sudan & Ethiopia (Upper Nile, Gambela)",
+      "population": "~3.5 million",
+      "populationPercent": "~15% (South Sudan)",
+      "populationByCountry": [
+        { "country": "SS", "population": "~3 million", "percent": "~15%" },
+        { "country": "ET", "population": "~500,000", "percent": "~0.5%" }
+      ],
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 8.5, "lng": 32.0 },
+      "tribeTerritoryDegrees": { "latSpan": 4, "lngSpan": 4 },
+      "counties": ["Jonglei State", "Unity State", "Upper Nile State", "Gambela Region (Ethiopia)"],
+      "namePrefixes": ["Gat", "Nya"],
+      "commonNames": {
+        "female": ["Nyaruach", "Nyamal", "Nyaguek", "Nyakuoth", "Nyatut", "Nyayom", "Nyajak"],
+        "male": ["Gatluak", "Riek", "Tut", "Ruach", "Gai", "Both", "Machar", "Koang", "Puok"]
+      },
+      "stereotypes": ["Cattle lovers", "Fierce fighters", "Egalitarian society", "Tall stature", "Resilient survivors", "Scarification marks"],
+      "genderStereotypes": {
+        "male": ["Cattle camp leaders", "Warriors", "Age-set leaders", "Tall and strong"],
+        "female": ["Milk producers", "Farmers during floods", "Mothers of large families", "Camp managers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men spent months in cattle camps along rivers. Boys were initiated with forehead scarification (gar). Men defended herds and raided.",
+          "female": "Women farmed during the flood season, milked cows, and managed households. Bride-price was paid in cattle."
+        },
+        "modern": {
+          "male": "Civil war displaced many. Riek Machar (Vice President) is Nuer. Many in the diaspora (USA, Australia).",
+          "female": "Nuer women face displacement but are increasingly vocal in peace movements."
+        }
+      },
+      "culturalTraits": ["Cattle are sacred and central to identity", "Egalitarian political system (no traditional chiefs)", "Distinctive horizontal forehead scarification", "Seasonal migration between dry-season camps and wet-season villages", "The 'ghost marriage' and 'woman marriage' traditions", "Famous anthropological study by Evans-Pritchard"],
+      "funFacts": ["The Nuer were the subject of a famous anthropology book 'The Nuer' by E.E. Evans-Pritchard", "Nuer practice 'ghost marriage' where a dead man's relatives marry a woman to bear children in his name", "They have no traditional chiefs - decisions are made by consensus among elders", "Nuer and Dinka have fought cattle raids for centuries but share cultural similarities", "Men in cattle camps sleep with their cattle and know each cow individually"],
+      "tradeRelations": {
+        "historical": ["Cattle raiding/trading with Dinka", "Fish and grain exchange", "Limited trade with Arab merchants"],
+        "modern": ["Cattle markets", "Aid economy", "Oil industry impacts their lands"]
+      },
+      "antiColonialResistance": "Nuer fiercely resisted British colonial rule. The Nuer prophet Ngundeng Bong led resistance, and his prophecies are still remembered. Nuer formed significant forces in South Sudan's independence war.",
+      "traditionalFood": {
+        "staples": ["Cow milk", "Blood (mixed with milk)", "Sorghum", "Fish"],
+        "beverages": ["Sour milk", "Sorghum beer"],
+        "specialDishes": ["Blood and milk mixture", "Dried fish", "Sorghum porridge"],
+        "description": "Nuer diet relies heavily on cattle products and fish from the Nile rivers."
+      },
+      "traditionalDance": "Jumping dances, wrestling, and cattle songs",
+      "religion": "Traditional Nuer religion (Kwoth - sky god), Christianity",
+      "history": {
+        "origin": "Nuer migrated into their current lands in the Sudd region over several centuries, expanding at the expense of other groups.",
+        "colonialEra": "British 'pacification' campaigns attempted to end cattle raiding. Nuer resisted strongly.",
+        "independence": "Nuer were key in the independence struggle. Post-2013 civil war divided Nuer and Dinka politically.",
+        "keyEvents": ["Nuer expansion (1800s)", "Prophet Ngundeng (1900s)", "Civil war (1983-2005)", "2013 civil war", "Peace agreement (2018)"]
+      },
+      "language": {
+        "name": "Nuer (Thok Naath)",
+        "speakers": "~2 million",
+        "greeting": "Mal mi?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Cang mi duoth", "meaning": "The day is good" },
+          { "phrase": "Kene ba mi", "meaning": "Goodbye" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Riek Machar", "role": "Vice President of South Sudan", "wikipedia": "https://en.wikipedia.org/wiki/Riek_Machar" },
+        { "name": "Ngundeng Bong", "role": "Prophet and resistance leader", "wikipedia": "https://en.wikipedia.org/wiki/Ngundeng_Bong" },
+        { "name": "Emma McCune", "role": "Aid worker who married Riek Machar", "wikipedia": "https://en.wikipedia.org/wiki/Emma_McCune" }
+      ],
+      "sources": [{ "name": "Wikipedia - Nuer people", "url": "https://en.wikipedia.org/wiki/Nuer_people" }, { "name": "The Nuer by Evans-Pritchard", "url": "https://en.wikipedia.org/wiki/The_Nuer" }],
+      "description": "The Nuer are a Nilotic people of South Sudan, famous for their cattle-centered culture, egalitarian society, and the iconic anthropological study by Evans-Pritchard.",
+      "relatedTribes": ["dinka", "shilluk", "anuak"]
+    },
+
+    {
+      "id": "tigrinya",
+      "name": "Tigrinya",
+      "slug": "tigrinya",
+      "slugAliases": ["tigrinya-people", "tigrigna", "kebessa", "biher-tigrinya"],
+      "youtubeVideoId": "FarSVNjSyFw",
+      "countries": ["ER", "ET"],
+      "region": "Eritrea & Tigray (Ethiopia)",
+      "population": "~9 million",
+      "populationPercent": "~50% (Eritrea), ~6% (Ethiopia)",
+      "populationByCountry": [
+        { "country": "ER", "population": "~3.5 million", "percent": "~50%" },
+        { "country": "ET", "population": "~5.5 million", "percent": "~6%" }
+      ],
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 15.3, "lng": 39.0 },
+      "tribeTerritoryDegrees": { "latSpan": 4, "lngSpan": 3 },
+      "counties": ["Central Region (Eritrea)", "Maekel Zone", "Debub Region", "Tigray Region (Ethiopia)", "Asmara"],
+      "namePrefixes": ["Haile", "Gebre", "Tesfay", "Berhe"],
+      "commonNames": {
+        "female": ["Letty", "Meron", "Senait", "Rahwa", "Feven", "Semhar", "Asmeret", "Eden", "Yordanos"],
+        "male": ["Berhe", "Tesfay", "Haile", "Gebre", "Yonas", "Dawit", "Mekonnen", "Kidane", "Hagos"]
+      },
+      "stereotypes": ["Proud highlanders", "Orthodox Christians", "Coffee lovers", "Ancient script users", "Resilient fighters", "Diaspora community"],
+      "genderStereotypes": {
+        "male": ["Farmers of the highlands", "Orthodox church scholars", "Independence fighters", "Family providers"],
+        "female": ["Coffee ceremony hostesses", "Injera makers", "Strong mothers", "Community organizers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men farmed the terraced highlands, served in the church, and defended territory. Literacy in Ge'ez was prestigious.",
+          "female": "Women managed households, performed the coffee ceremony, and were skilled in traditional weaving and pottery."
+        },
+        "modern": {
+          "male": "The 30-year independence war and conscription have shaped modern Eritrean men. Many in diaspora.",
+          "female": "Women were fighters in the independence struggle. Eritrea had significant female combatants."
+        }
+      },
+      "culturalTraits": ["Use of Ge'ez script (one of Africa's oldest alphabets)", "Central role of Orthodox Christianity", "Coffee ceremony is a daily social ritual", "Injera (flatbread) is central to cuisine", "Long independence struggle shaped national identity", "Strong diaspora communities worldwide"],
+      "funFacts": ["Tigrinya uses the Ge'ez script, one of the oldest alphabets still in use (2,500+ years)", "The coffee ceremony is a 2-3 hour ritual performed multiple times daily", "Eritrea's 30-year war for independence (1961-1991) was one of Africa's longest", "About 30% of Eritrean independence fighters were women", "Asmara's modernist architecture earned UNESCO World Heritage status in 2017"],
+      "tradeRelations": {
+        "historical": ["Aksumite Empire trade routes", "Red Sea port trade (Adulis)", "Coffee and gold trade", "Salt from Danakil"],
+        "modern": ["Remittances from large diaspora", "Port of Massawa trade", "Mining sector growth"]
+      },
+      "antiColonialResistance": "Eritreans fought Italian colonization (1880s-1941), British administration, Ethiopian annexation, and a 30-year independence war (1961-1991) - one of Africa's most determined resistance movements.",
+      "traditionalFood": {
+        "staples": ["Injera (teff flatbread)", "Tsebhi (stews)", "Lentils", "Chickpeas"],
+        "beverages": ["Bun (coffee)", "Suwa (honey wine)", "Mes (mead)"],
+        "specialDishes": ["Tsebhi derho (chicken stew)", "Kilcha (bread)", "Shiro (chickpea paste)"],
+        "description": "Tigrinya cuisine centers on injera topped with spiced stews (tsebhi). The coffee ceremony is a sacred social institution."
+      },
+      "traditionalDance": "Guayla (shoulder-shaking dance) and Kuda (jumping dance)",
+      "religion": "Christianity (Orthodox Tewahedo), Islam (minority)",
+      "history": {
+        "origin": "Tigrinya-speaking peoples descend from the ancient Aksumite Empire, one of the great civilizations of antiquity.",
+        "colonialEra": "Italian colonization (1890-1941), British administration, Ethiopian annexation (1962). The 30-year war for independence followed.",
+        "independence": "Eritrea gained independence in 1993. The 1998-2000 border war with Ethiopia and recent Tigray conflict have marked recent history.",
+        "keyEvents": ["Aksumite Empire (100-940 CE)", "Italian colonization (1890)", "Federation with Ethiopia (1952)", "Independence war (1961-1991)", "Independence (1993)", "Tigray War (2020-2022)"]
+      },
+      "language": {
+        "name": "Tigrinya (ትግርኛ)",
+        "speakers": "~9 million",
+        "greeting": "ከመይ ኣለኻ? (Kemey alekha?)",
+        "greetingMeaning": "How are you? (to male)",
+        "additionalGreetings": [
+          { "phrase": "ከመይ ኣለኺ?", "meaning": "How are you? (to female)" },
+          { "phrase": "ጽቡቕ (Ts'buq)", "meaning": "Good/Fine" },
+          { "phrase": "ሰላም (Selam)", "meaning": "Peace (Hello)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "የቐንየለይ (Yeqenyeley)", "meaning": "Thank you" },
+          { "phrase": "ስመይ... (Smey...)", "meaning": "My name is..." }
+        ],
+        "family": "Semitic (Afro-Asiatic)",
+        "writingSystem": "Ge'ez script (Fidel)"
+      },
+      "famousPeople": [
+        { "name": "Isaias Afwerki", "role": "President of Eritrea", "wikipedia": "https://en.wikipedia.org/wiki/Isaias_Afwerki" },
+        { "name": "Haile Selassie", "role": "Emperor of Ethiopia (Tigrinya-Amhara heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie" },
+        { "name": "Ghirmay Ghebreslassie", "role": "Olympic Marathon Champion", "wikipedia": "https://en.wikipedia.org/wiki/Ghirmay_Ghebreslassie" }
+      ],
+      "sources": [{ "name": "Wikipedia - Tigrinya people", "url": "http://www.101lasttribes.com/tribes/tigrinya.html" }, { "name": "EthnoMed - Eritrean", "url": "https://ethnomed.org/culture/eritrean/" }],
+      "description": "The Tigrinya are the largest ethnic group in Eritrea, heirs to the ancient Aksumite Empire, known for their Orthodox Christian faith, Ge'ez script, coffee ceremony, and hard-won independence.",
+      "relatedTribes": ["tigray", "amhara", "afar", "beja"]
+    },
+
+    {
+      "id": "afar",
+      "name": "Afar",
+      "slug": "afar",
+      "slugAliases": ["afar-people", "danakil", "adal", "afar-triangle"],
+      "youtubeVideoId": "FarSVNjSyFw",
+      "countries": ["ER", "ET", "DJ"],
+      "region": "Afar Triangle (Eritrea, Ethiopia, Djibouti)",
+      "population": "~3 million",
+      "populationPercent": "Multi-country",
+      "populationByCountry": [
+        { "country": "ET", "population": "~2 million", "percent": "~2%" },
+        { "country": "ER", "population": "~500,000", "percent": "~12%" },
+        { "country": "DJ", "population": "~400,000", "percent": "~35%" }
+      ],
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 12.0, "lng": 42.0 },
+      "tribeTerritoryDegrees": { "latSpan": 5, "lngSpan": 4 },
+      "counties": ["Afar Region (Ethiopia)", "Southern Red Sea (Eritrea)", "Djibouti", "Danakil Desert"],
+      "namePrefixes": ["Ali", "Mohamed"],
+      "commonNames": {
+        "female": ["Fatima", "Amina", "Halima", "Khadija", "Safiya", "Maryam"],
+        "male": ["Ali", "Mohamed", "Ahmed", "Ibrahim", "Hassan", "Hussein", "Hanfare"]
+      },
+      "stereotypes": ["Desert survivors", "Salt traders", "Fierce warriors", "Volcanic land dwellers", "Camel herders", "Independent spirit"],
+      "genderStereotypes": {
+        "male": ["Salt traders", "Camel herders", "Warriors with curved daggers", "Desert guides"],
+        "female": ["Tent builders", "Water finders", "Milk producers", "Camp managers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herded camels, mined and traded salt, and defended territory. The curved dagger (gile) was a symbol of manhood.",
+          "female": "Women built the oval huts (ari), managed water supplies, and processed milk products in the harsh desert environment."
+        },
+        "modern": {
+          "male": "Salt mining remains important. Some work in ports (Djibouti, Assab). Climate change and conflict have affected pastoralism.",
+          "female": "Women face water scarcity challenges but maintain traditional roles. Some work in salt processing."
+        }
+      },
+      "culturalTraits": ["Live in one of Earth's hottest regions (Danakil Depression)", "Traditional salt mining and trade", "Islamic faith central to identity", "Nomadic pastoralist lifestyle with camels", "The curved dagger (gile) is a male symbol", "Oral poetry tradition"],
+      "funFacts": ["The Afar live in the Danakil Depression, one of the hottest and lowest places on Earth", "The region has active volcanoes, sulfur springs, and salt flats - an alien landscape", "Afar salt miners still carve salt bars by hand and transport them by camel caravan", "The Afar Triangle is where the human fossil 'Lucy' (3.2 million years old) was discovered", "Afar warriors historically had a reputation so fierce that outsiders rarely entered their territory"],
+      "tradeRelations": {
+        "historical": ["Salt trade with Ethiopian highlands (millennia old)", "Caravan routes to Red Sea ports", "Slave trade routes", "Incense trade"],
+        "modern": ["Salt mining (Lake Afrera)", "Port of Djibouti", "Pastoralism (camels, goats)", "Some tourism to Danakil Depression"]
+      },
+      "antiColonialResistance": "The Afar Sultanate of Aussa maintained independence for centuries. They resisted Ethiopian expansion, Italian colonization, and later marginalization. The Afar Liberation Front fought for regional autonomy.",
+      "traditionalFood": {
+        "staples": ["Camel milk", "Goat meat", "Sorghum", "Dates"],
+        "beverages": ["Camel milk", "Tea"],
+        "specialDishes": ["Grilled meat", "Milk products", "Dried meat for travel"],
+        "description": "Afar diet is adapted to their harsh desert environment, relying on camel and goat products."
+      },
+      "traditionalDance": "Warrior dances with daggers",
+      "religion": "Islam (Sunni)",
+      "history": {
+        "origin": "The Afar have lived in the Horn of Africa for millennia, with possible ancestral links to Arabian Peninsula peoples.",
+        "colonialEra": "The Sultanate of Aussa maintained autonomy. Italy colonized parts of Afar territory (Eritrea, Djibouti). Ethiopia incorporated Afar lands.",
+        "independence": "Afar were divided between Eritrea, Ethiopia, and Djibouti at independence. They have sought greater autonomy in all three countries.",
+        "keyEvents": ["Sultanate of Aussa (1734-1974)", "Lucy fossil discovery (1974)", "Afar Liberation Front (1970s)", "Ethiopian federalism (1991)", "Current Afar Region in Ethiopia"]
+      },
+      "language": {
+        "name": "Afar (Qafar af)",
+        "speakers": "~2 million",
+        "greeting": "Maalay?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Tana wa", "meaning": "I am fine" },
+          { "phrase": "Nagaya", "meaning": "Peace (Hello)" }
+        ],
+        "family": "Cushitic (Afro-Asiatic)",
+        "writingSystem": "Latin alphabet (since 1970s)"
+      },
+      "famousPeople": [
+        { "name": "Sultan Alimirah Hanfare", "role": "Last Sultan of Aussa", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Mirah_Anfari" },
+        { "name": "Issa Omar Guelleh", "role": "President of Djibouti (partly Afar heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Isma%C3%AFl_Omar_Guelleh" }
+      ],
+      "sources": [{ "name": "Wikipedia - Afar people", "url": "https://en.wikipedia.org/wiki/Afar_people" }, { "name": "American Afar Diaspora", "url": "https://americanafardiaspora.org/history/" }],
+      "description": "The Afar are a Cushitic people of the Horn of Africa's hottest region, known for salt mining, camel herding, fierce independence, and living in the otherworldly Danakil Depression.",
+      "relatedTribes": ["somali", "oromo", "tigrinya", "beja"]
     }
   ]
 }
