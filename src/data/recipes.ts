@@ -7,6 +7,7 @@ export interface Recipe {
   category: 'staple' | 'beverage' | 'special' | 'snack';
   description: string;
   culturalSignificance: string;
+  historicalContext?: string; // Additional historical information
   prepTime: string;
   cookTime: string;
   servings: number;
@@ -20,6 +21,7 @@ export interface Recipe {
   tips?: string[];
   variations?: string[];
   imageUrl?: string;
+  youtubeVideoId?: string; // YouTube video ID for cooking tutorial
 }
 
 export const recipes: Recipe[] = [
@@ -32,6 +34,8 @@ export const recipes: Recipe[] = [
     category: "staple",
     description: "A traditional Kikuyu mashed dish combining potatoes, green peas, maize, and pumpkin leaves. The national dish of the Kikuyu people.",
     culturalSignificance: "Mũkimo is the signature dish of the Kikuyu people, served at celebrations, family gatherings, and important ceremonies. The green color from pumpkin leaves represents fertility and prosperity.",
+    historicalContext: "Mũkimo has been central to Kikuyu agriculture for centuries, developed when the tribe settled in the fertile Central Highlands of Kenya around the 16th century. The dish evolved from indigenous crops grown on the slopes of Mount Kenya. During colonial times, it became a symbol of cultural identity and resistance, as the Kikuyu maintained their food traditions despite European influence.",
+    youtubeVideoId: "5cuGbmPtLGE",
     prepTime: "30 minutes",
     cookTime: "45 minutes",
     servings: 6,
@@ -260,6 +264,8 @@ export const recipes: Recipe[] = [
     category: "special",
     description: "Simple fire-roasted meat prepared the traditional Maasai way - just meat, fire, and salt.",
     culturalSignificance: "Meat is central to Maasai celebrations. Cattle are only slaughtered for ceremonies, showing the deep respect Maasai have for their livestock.",
+    historicalContext: "The Maasai have been pastoral nomads in East Africa for over 500 years, developing a unique relationship with their cattle. Nyama choma reflects their warrior tradition - the simple preparation honors the animal. During colonial times, British administrators tried unsuccessfully to change Maasai dietary practices, but the tradition persisted.",
+    youtubeVideoId: "siv6d9f4kx4",
     prepTime: "15 minutes",
     cookTime: "1-2 hours",
     servings: 8,
@@ -294,6 +300,8 @@ export const recipes: Recipe[] = [
     category: "special",
     description: "Nigeria's most famous rice dish - a one-pot meal of rice cooked in a rich tomato sauce with spices. The Yoruba claim the best version.",
     culturalSignificance: "Jollof is the centerpiece of Nigerian celebrations - from weddings to naming ceremonies. The 'Jollof Wars' between Nigeria and Ghana continue to this day.",
+    historicalContext: "Jollof rice originated from the Wolof people of Senegal and Gambia in the 14th century, spreading across West Africa through trade routes. The dish evolved differently in each region - Nigerian Jollof uses tomatoes and peppers, while Senegalese thieboudienne uses more vegetables. The trans-Atlantic slave trade carried Jollof to the Americas, influencing dishes like Louisiana jambalaya.",
+    youtubeVideoId: "jDbUg4f9EFw",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
@@ -343,6 +351,8 @@ export const recipes: Recipe[] = [
     category: "special",
     description: "A rich, thick soup made from ground melon seeds, leafy vegetables, and assorted meats. Served with pounded yam or fufu.",
     culturalSignificance: "Egusi soup is a staple across Yorubaland and Nigeria. It's often served at celebrations and represents the abundance of Nigerian cuisine.",
+    historicalContext: "Egusi (melon seeds) have been cultivated in West Africa for over 4,000 years. The soup reflects Nigeria's agricultural heritage and the Yoruba mastery of combining indigenous ingredients. During the trans-Atlantic slave trade, West African cooking techniques spread to the Caribbean and Americas.",
+    youtubeVideoId: "UHe8K6uM-Z0",
     prepTime: "30 minutes",
     cookTime: "45 minutes",
     servings: 6,
@@ -389,6 +399,8 @@ export const recipes: Recipe[] = [
     category: "special",
     description: "Spiced grilled meat skewers coated in yaji (suya spice), a beloved Nigerian street food originating from the Hausa people.",
     culturalSignificance: "Suya is the quintessential Northern Nigerian street food. Hausa traders spread it across West Africa, making it one of Africa's most recognized dishes.",
+    historicalContext: "Suya emerged from the Hausa people's nomadic pastoralist heritage. As cattle herders who followed trans-Saharan trade routes, the Hausa developed techniques for preserving and grilling meat. The yaji spice blend reflects centuries of trade with North Africa and the Middle East, incorporating groundnuts (from South America via Portuguese traders).",
+    youtubeVideoId: "r0jspooZ4Kg",
     prepTime: "4 hours (marinating)",
     cookTime: "15 minutes",
     servings: 6,
@@ -458,6 +470,7 @@ export const recipes: Recipe[] = [
     category: "staple",
     description: "A hearty dish of dried corn kernels (samp) cooked with sugar beans. Nelson Mandela's favorite food.",
     culturalSignificance: "Umngqusho was Nelson Mandela's favorite dish, highlighting its importance in South African culture. It's a symbol of Nguni heritage.",
+    historicalContext: "This dish predates European contact, originally made with indigenous African grains before maize arrived. Mandela ate it throughout his 27 years of imprisonment on Robben Island, and it was served at his presidential inauguration in 1994. The dish represents the resilience of African food traditions through colonization and apartheid.",
     prepTime: "8 hours (soaking)",
     cookTime: "3 hours",
     servings: 8,
@@ -529,6 +542,8 @@ export const recipes: Recipe[] = [
     category: "staple",
     description: "Spongy, sour flatbread made from teff flour. The foundation of Ethiopian cuisine, used as both plate and utensil.",
     culturalSignificance: "Injera is sacred in Ethiopian culture. Eating from the same plate (mesob) symbolizes friendship and community. It's present at every meal.",
+    historicalContext: "Injera dates back over 2,000 years to the ancient Aksumite Empire. Teff, a grain native to the Ethiopian Highlands, has been cultivated since 4000 BCE. The fermentation technique was developed to make the tiny teff grains digestible. During Emperor Haile Selassie's reign, injera became a symbol of Ethiopian identity and independence.",
+    youtubeVideoId: "2oRDGbJtNJA",
     prepTime: "3 days (fermentation)",
     cookTime: "30 minutes",
     servings: 8,
@@ -563,6 +578,8 @@ export const recipes: Recipe[] = [
     category: "special",
     description: "Ethiopia's national dish - a spicy chicken stew simmered in berbere spice and niter kibbeh (spiced butter).",
     culturalSignificance: "Doro wat is reserved for special occasions like weddings, holidays, and honored guests. Making it properly is a rite of passage for Ethiopian women.",
+    historicalContext: "Doro wat evolved from ancient Ethiopian stewing traditions, with berbere spice blends developed over centuries. The dish gained significance during Christian fasting periods when chicken was reserved for breaking fasts. The number of eggs (traditionally 12) represents the apostles, connecting food to Ethiopian Orthodox Christianity.",
+    youtubeVideoId: "S7W065xcDvc",
     prepTime: "30 minutes",
     cookTime: "2 hours",
     servings: 6,
@@ -608,6 +625,8 @@ export const recipes: Recipe[] = [
     category: "special",
     description: "Fragrant spiced rice dish with meat, cooked in pilau masala and caramelized onions. The pride of Swahili coast cuisine.",
     culturalSignificance: "Pilau reflects the Swahili's Arab, Indian, and African heritage. It's the centerpiece of weddings, Eid celebrations, and Friday prayers.",
+    historicalContext: "Pilau arrived on the Swahili coast through centuries of Indian Ocean trade with Persia, India, and Arabia. Mombasa and Lamu became crossroads of flavors - cardamom from India, cumin from the Middle East, and local African spices blended into the signature pilau masala. The dish symbolizes Swahili cosmopolitan identity.",
+    youtubeVideoId: "btEkKgrowPY",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
@@ -654,6 +673,8 @@ export const recipes: Recipe[] = [
     category: "staple",
     description: "Zimbabwe's staple food - thick maize porridge that accompanies every meal. The heart of Shona cuisine.",
     culturalSignificance: "A meal isn't complete without sadza in Zimbabwe. The saying 'Sadza makadii?' (How's the sadza?) is a common greeting asking about wellbeing.",
+    historicalContext: "Maize arrived in Africa via Portuguese traders from the Americas in the 16th century. The Shona adopted it and developed sadza, which became central to their identity. During Zimbabwe's liberation war, sadza sustained freedom fighters in the bush. Today it remains a symbol of Zimbabwean national identity.",
+    youtubeVideoId: "3I0nki8r41U",
     prepTime: "5 minutes",
     cookTime: "30 minutes",
     servings: 6,
@@ -1033,6 +1054,8 @@ export const recipes: Recipe[] = [
     category: "staple",
     description: "Spongy, fermented pancakes similar to Ethiopian injera but thinner. The foundation of Somali breakfast.",
     culturalSignificance: "Canjeero is eaten daily in Somali households, typically for breakfast with tea and honey. It represents the warmth of Somali hospitality.",
+    historicalContext: "Canjeero reflects the Somali nomadic heritage and the Horn of Africa's shared culinary traditions with Ethiopia. The fermentation technique was adapted to the Somali climate and available grains. During Somalia's golden age (1960s), canjeero was served to visiting diplomats as a symbol of national identity.",
+    youtubeVideoId: "2YAdBjWxAao",
     prepTime: "12 hours (fermentation)",
     cookTime: "20 minutes",
     servings: 8,
@@ -2141,6 +2164,8 @@ export const recipes: Recipe[] = [
     category: "staple",
     description: "Pounded cassava and plantain dough served with light tomato-pepper soup - the quintessential Ashanti meal.",
     culturalSignificance: "Fufu is central to Ashanti identity. The rhythmic pounding in wooden mortars is a communal activity that brings families together. It's served at every major celebration.",
+    historicalContext: "Fufu has been prepared in the Ashanti Kingdom since the 17th century, when the powerful empire controlled the gold trade. The dish spread across West Africa through Ashanti traders and warriors. The pounding technique is passed down through generations - the rhythm of the pestle is said to connect the living with ancestors.",
+    youtubeVideoId: "i_nMyOSvMf8",
     prepTime: "30 minutes",
     cookTime: "1.5 hours",
     servings: 6,
@@ -2185,6 +2210,8 @@ export const recipes: Recipe[] = [
     category: "snack",
     description: "Ripe plantains seasoned with ginger, cayenne, and spices, then deep-fried until crispy. Ghana's favorite street food.",
     culturalSignificance: "Kelewele is sold by vendors throughout Ghana, especially in the evening. It's often paired with roasted peanuts and serves as both snack and side dish.",
+    historicalContext: "Plantains arrived in West Africa from Southeast Asia via Arab and Portuguese traders in the 15th century. The Ashanti adapted them into kelewele, adding indigenous ginger and peppers. The dish became a symbol of Ghanaian street food culture and is now enjoyed internationally.",
+    youtubeVideoId: "wy2p3o0ckIM",
     prepTime: "20 minutes",
     cookTime: "15 minutes",
     servings: 4,
@@ -2868,4 +2895,13 @@ export const searchRecipes = (query: string): Recipe[] => {
     recipe.description.toLowerCase().includes(normalizedQuery) ||
     recipe.category.toLowerCase().includes(normalizedQuery)
   );
+};
+
+// Get similar recipes from other tribes (same category)
+export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {
+  const recipe = getRecipeById(recipeId);
+  if (!recipe) return [];
+  return recipes
+    .filter(r => r.id !== recipeId && r.tribeSlug !== recipe.tribeSlug && r.category === recipe.category)
+    .slice(0, limit);
 };
