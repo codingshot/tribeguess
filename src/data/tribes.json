@@ -4738,6 +4738,8 @@
       "id": "luba",
       "name": "Luba",
       "slug": "luba",
+      "youtubeVideoId": "-h8F32OCKZo",
+      "languageVideoId": "j9s-QChdLdE",
       "countries": ["CD", "ZM"],
       "region": "Central DR Congo",
       "population": "~18 million",
@@ -7016,6 +7018,7 @@
       "slug": "pedi",
       "slugAliases": ["northern-sotho", "bapedi", "sepedi"],
       "youtubeVideoId": "esZAUjLsUSk",
+      "languageVideoId": "FMz5K93Uo_8",
       "countries": ["ZA"],
       "region": "Limpopo Province, South Africa",
       "population": "~4.6 million",
@@ -7064,6 +7067,7 @@
       "slug": "venda",
       "slugAliases": ["vhavenda", "bavenda"],
       "youtubeVideoId": "twzQNsMJMRk",
+      "languageVideoId": "CkLL2YW0U0w",
       "countries": ["ZA", "ZW"],
       "region": "Limpopo Province, South Africa",
       "population": "~1.5 million",
@@ -7103,6 +7107,7 @@
       "slug": "tsonga",
       "slugAliases": ["shangaan", "vatshonga", "xitsonga"],
       "youtubeVideoId": "zDx0NIplzaY",
+      "languageVideoId": "j-kt3y-BUQE",
       "countries": ["ZA", "MZ", "ZW"],
       "region": "Limpopo, Mpumalanga, Mozambique",
       "population": "~6 million",
@@ -7146,6 +7151,7 @@
       "name": "Tiv",
       "slug": "tiv",
       "youtubeVideoId": "5tqDazVcW94",
+      "languageVideoId": "Sr0kXPeQeTk",
       "countries": ["NG", "CM"],
       "region": "Benue State, Nigeria",
       "population": "~6.5 million",
@@ -7185,6 +7191,7 @@
       "slug": "ijaw",
       "slugAliases": ["izon", "ijo"],
       "youtubeVideoId": "wdWHaOQYbXg",
+      "languageVideoId": "0tp4NQU9-1g",
       "countries": ["NG"],
       "region": "Niger Delta, Nigeria",
       "population": "~14 million",
@@ -7232,6 +7239,7 @@
       "name": "Kanuri",
       "slug": "kanuri",
       "youtubeVideoId": "WyTABUd913c",
+      "languageVideoId": "p6uz7fJpihQ",
       "countries": ["NG", "NE", "TD", "CM"],
       "region": "Borno State, Nigeria; Lake Chad Basin",
       "population": "~10 million",
@@ -7277,6 +7285,7 @@
       "slug": "mossi",
       "slugAliases": ["moose", "mosi"],
       "youtubeVideoId": "4cIYwektZw8",
+      "languageVideoId": "GMC7HbizUZ4",
       "countries": ["BF", "GH", "CI"],
       "region": "Central Burkina Faso",
       "population": "~11 million",
@@ -7325,6 +7334,7 @@
       "slug": "dagomba",
       "slugAliases": ["dagbamba", "dagbon"],
       "youtubeVideoId": "6NFzG7uijfg",
+      "languageVideoId": "dIU_EAikOWo",
       "countries": ["GH"],
       "region": "Northern Region, Ghana",
       "population": "~1.5 million",
@@ -7360,6 +7370,134 @@
       "sources": [{ "name": "Wikipedia - Dagomba people", "url": "https://en.wikipedia.org/wiki/Dagomba_people" }],
       "description": "The Dagomba of northern Ghana are known for the 500-year-old Dagbon Kingdom, Lunsi talking drummers who preserve oral history, and elaborate fire festivals.",
       "relatedTribes": ["mossi", "mamprusi", "nanumba", "gonja"]
+    },
+
+    {
+      "id": "mangbetu",
+      "name": "Mangbetu",
+      "slug": "mangbetu",
+      "youtubeVideoId": "4l-kQSP5OQ0",
+      "countries": ["CD"],
+      "region": "Orientale Province, DRC",
+      "population": "~1.7 million",
+      "populationPercent": "~1.5% (DRC)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 3.0, "lng": 28.0 },
+      "counties": ["Haut-Uele Province", "Ituri Province"],
+      "namePrefixes": ["Ne", "Na", "Ma"],
+      "commonNames": {
+        "female": ["Nebanda", "Nakpangi", "Nenzima", "Nangbatou", "Nafuka"],
+        "male": ["Okondo", "Mangbetu", "Nebanga", "Tuba", "Nabiembali"]
+      },
+      "stereotypes": ["Elongated skull tradition", "Sophisticated art", "Royal court culture", "Music and dance", "Hair styling masters"],
+      "culturalTraits": ["Famous Lipombo tradition of head elongation (now discontinued)", "Sophisticated royal court with elaborate etiquette", "Distinctive hairstyles and body art", "Master musicians with unique instruments", "Renowned sculptors and potters"],
+      "funFacts": ["The Mangbetu skull elongation tradition inspired European artists and fashion", "Their king's court rivaled many European palaces in sophistication", "Mangbetu harps and other instruments are prized museum pieces", "Women's elaborate hairstyles could take days to create"],
+      "tradeRelations": {
+        "historical": ["Ivory trade with Arab merchants", "Supplied enslaved people during slave trade era", "Traded iron goods regionally"],
+        "modern": ["Agricultural products", "Artisan crafts for tourists", "Coffee and palm oil production"]
+      },
+      "traditionalFood": {
+        "staples": ["Cassava", "Plantain", "Rice", "Forest game"],
+        "beverages": ["Palm wine", "Banana beer"],
+        "specialDishes": ["Liboke (fish in leaves)", "Saka saka (cassava leaves)", "Bushmeat stews"],
+        "description": "Mangbetu cuisine features forest products, cassava, and plantain. Palm wine is central to social gatherings."
+      },
+      "traditionalDance": "Royal court dances with elaborate costumes and music",
+      "religion": "Traditional beliefs, Christianity",
+      "language": { "name": "Mangbetu", "speakers": "~1.7 million", "greeting": "Monganga!", "greetingMeaning": "Hello/Greetings!", "family": "Central Sudanic (Nilo-Saharan)", "writingSystem": "Oral tradition, Latin alphabet" },
+      "sources": [{ "name": "Wikipedia - Mangbetu people", "url": "https://en.wikipedia.org/wiki/Mangbetu_people" }],
+      "description": "The Mangbetu of northeastern DRC are known for their former Lipombo head elongation tradition, sophisticated royal court culture, distinctive hairstyles, and refined artistic heritage.",
+      "relatedTribes": ["azande", "luba", "kongo"]
+    },
+
+    {
+      "id": "ovimbundu",
+      "name": "Ovimbundu",
+      "slug": "ovimbundu",
+      "youtubeVideoId": "mtpRziHDa7M",
+      "countries": ["AO"],
+      "region": "Central Highlands, Angola",
+      "population": "~6 million",
+      "populationPercent": "~37% (Angola)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -12.5, "lng": 16.5 },
+      "counties": ["Huambo Province", "Bié Province", "Benguela Province"],
+      "namePrefixes": ["Chi", "Um", "O"],
+      "commonNames": {
+        "female": ["Tchissola", "Olinda", "Esperança", "Luisa", "Josefina"],
+        "male": ["Savimbi", "Valentim", "Isaias", "Chivukuvuku", "Kalupeteka"]
+      },
+      "stereotypes": ["Agricultural experts", "Long-distance traders", "UNITA stronghold", "Central highlands people", "Coffee farmers"],
+      "culturalTraits": ["Historically powerful traders linking coast to interior", "Master agriculturalists in highland regions", "Complex initiation ceremonies", "Strong oral tradition and proverbs", "Syncretic Christianity with traditional beliefs"],
+      "funFacts": ["The Ovimbundu are Angola's largest ethnic group at 37%", "They built trading networks spanning thousands of kilometers", "Jonas Savimbi (UNITA leader) was Ovimbundu", "Their plateau homeland was a refuge from slave raiders"],
+      "tradeRelations": {
+        "historical": ["Controlled major trade routes to Atlantic coast", "Traded rubber, beeswax, and ivory", "Acted as middlemen between interior and Portuguese"],
+        "modern": ["Coffee and maize farming", "Rebuilding after civil war", "Agricultural exports"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "The Ovimbundu initially traded with Portuguese but later resisted expansion. During civil war, UNITA (largely Ovimbundu) fought MPLA government.",
+        "independenceMovement": "Jonas Savimbi founded UNITA in 1966. The 27-year civil war (1975-2002) devastated Ovimbundu heartland.",
+        "keyFigures": ["Jonas Savimbi (UNITA founder)", "Abel Chivukuvuku (politician)"]
+      },
+      "traditionalFood": {
+        "staples": ["Maize porridge (funge)", "Beans", "Cassava", "Sweet potato"],
+        "beverages": ["Palm wine", "Traditional beer"],
+        "specialDishes": ["Funge with fish sauce", "Bean stews", "Grilled meats"],
+        "description": "Ovimbundu cuisine features highland crops like maize and beans. The temperate climate allows diverse agriculture."
+      },
+      "traditionalDance": "Initiation dances and harvest celebrations",
+      "religion": "Christianity (Catholic and Protestant majority), Traditional beliefs",
+      "language": { "name": "Umbundu", "speakers": "~6 million", "greeting": "Walye!", "greetingMeaning": "Hello/Greetings!", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "Jonas Savimbi", "role": "UNITA founder and leader", "wikipedia": "https://en.wikipedia.org/wiki/Jonas_Savimbi" }
+      ],
+      "sources": [{ "name": "Wikipedia - Ovimbundu", "url": "https://en.wikipedia.org/wiki/Ovimbundu" }],
+      "description": "The Ovimbundu are Angola's largest ethnic group, historically powerful traders who controlled routes from the interior to the Atlantic coast, now known for highland agriculture.",
+      "relatedTribes": ["mbundu", "kongo", "chokwe"]
+    },
+
+    {
+      "id": "chokwe",
+      "name": "Chokwe",
+      "slug": "chokwe",
+      "slugAliases": ["tshokwe", "cokwe"],
+      "youtubeVideoId": "W0v_SwObQns",
+      "countries": ["AO", "CD", "ZM"],
+      "region": "Northeast Angola, DRC, Zambia",
+      "population": "~2 million",
+      "populationPercent": "~5% (Angola)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -9.0, "lng": 21.0 },
+      "counties": ["Lunda Norte", "Lunda Sul", "Moxico (Angola)", "Katanga (DRC)"],
+      "namePrefixes": ["Chi", "Ka", "Mu"],
+      "commonNames": {
+        "female": ["Tcheza", "Nzinga", "Kasanda", "Tchihemba", "Tchipoya"],
+        "male": ["Mwene", "Chibinda", "Kasanji", "Mukenga", "Tchisenda"]
+      },
+      "stereotypes": ["Master mask carvers", "Hunters", "Diamond region inhabitants", "Matrilineal society", "Artistic heritage"],
+      "culturalTraits": ["World-renowned mask-making tradition", "Pwo (female) and Mwana Pwo masks are iconic", "Matrilineal descent system", "Mukanda male initiation ceremonies", "Expert hunters and trackers"],
+      "funFacts": ["Chokwe masks are among the most valuable African art in world museums", "The Mwana Pwo mask represents the ideal woman", "Chokwe territory includes major diamond deposits", "They conquered the Lunda Empire in the 19th century"],
+      "tradeRelations": {
+        "historical": ["Major ivory and rubber traders", "Expanded through conquest and trade", "Controlled routes between Angola and Congo"],
+        "modern": ["Diamond mining region", "Artisan mask production", "Cross-border trade between three countries"]
+      },
+      "traditionalFood": {
+        "staples": ["Cassava", "Millet", "Game meat", "Fish"],
+        "beverages": ["Palm wine", "Millet beer"],
+        "specialDishes": ["Smoked game", "Fish stews", "Cassava preparations"],
+        "description": "Chokwe cuisine reflects their hunter heritage with game meats complementing cassava staples."
+      },
+      "traditionalDance": "Mukanda initiation dances with elaborate masks",
+      "religion": "Traditional beliefs (strong), Christianity",
+      "language": { "name": "Chokwe", "speakers": "~2 million", "greeting": "Moyo!", "greetingMeaning": "Life!/Hello!", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "populationByCountry": [
+        { "country": "AO", "population": "~1,000,000", "percent": "5%" },
+        { "country": "CD", "population": "~500,000", "percent": "<1%" },
+        { "country": "ZM", "population": "~500,000", "percent": "3%" }
+      ],
+      "sources": [{ "name": "Wikipedia - Chokwe people", "url": "https://en.wikipedia.org/wiki/Chokwe_people" }],
+      "description": "The Chokwe are master mask carvers spanning Angola, DRC, and Zambia, known for their Pwo and Mwana Pwo masks that represent ideals of beauty and are prized in world museums.",
+      "relatedTribes": ["lunda", "luba", "ovimbundu"]
     }
   ]
 }

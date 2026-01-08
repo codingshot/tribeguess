@@ -1559,6 +1559,82 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       description: "Town in southwestern CAR with significant Gbaya population. Center of logging and coffee production, reflecting colonial economic legacies.",
       coordinates: { lat: 3.87, lng: 18.0 }
     }
+  ],
+
+  mangbetu: [
+    {
+      name: "Mangbetu Royal Court Site",
+      type: "historical",
+      description: "Historical location of the Mangbetu royal court, known for its sophisticated culture, music, and the famous Lipombo head elongation tradition practiced by the elite.",
+      coordinates: { lat: 3.25, lng: 27.75 }
+    },
+    {
+      name: "Okondo Archaeological Area",
+      type: "archaeological",
+      description: "Region rich in Mangbetu artifacts including distinctive anthropomorphic pottery, harps, and sculptures now found in world museums.",
+      coordinates: { lat: 3.5, lng: 28.0 }
+    }
+  ],
+
+  ovimbundu: [
+    {
+      name: "Huambo City (Nova Lisboa)",
+      type: "historical",
+      description: "Historical center of Ovimbundu territory, founded as Nova Lisboa during colonial era. Second-largest city in Angola and cultural heart of the highlands.",
+      coordinates: { lat: -12.78, lng: 15.73 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Huambo"
+    },
+    {
+      name: "Bailundo Kingdom Site",
+      type: "historical",
+      description: "One of the most powerful Ovimbundu kingdoms, Bailundo was a major trading center controlling routes from the interior to the Atlantic coast.",
+      coordinates: { lat: -11.94, lng: 15.80 }
+    },
+    {
+      name: "Bié Plateau",
+      type: "natural",
+      description: "High plateau that is the heartland of Ovimbundu settlement. Its temperate climate and fertile soil made it an agricultural center.",
+      coordinates: { lat: -12.5, lng: 17.0 }
+    }
+  ],
+
+  chokwe: [
+    {
+      name: "Dundo Museum (Museu do Dundo)",
+      type: "museum",
+      description: "World-renowned museum housing the finest collection of Chokwe art, including masks, sculptures, and ceremonial objects. Founded by Diamang diamond company.",
+      coordinates: { lat: -7.38, lng: 20.83 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Dundo"
+    },
+    {
+      name: "Lunda Norte Diamond Region",
+      type: "natural",
+      description: "Major diamond-producing region that is traditional Chokwe territory. The area has been both a blessing and curse due to conflict over resources.",
+      coordinates: { lat: -8.5, lng: 20.5 }
+    }
+  ],
+
+  luba: [
+    {
+      name: "Lake Upemba",
+      type: "natural",
+      description: "The cradle of Luba civilization. The Luba Kingdom emerged near this lake around 1585, developing into one of Central Africa's most sophisticated states.",
+      coordinates: { lat: -8.83, lng: 26.63 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lake_Upemba"
+    },
+    {
+      name: "Kabongo (Historical Capital)",
+      type: "historical",
+      description: "One of the historical centers of Luba royal authority. The Mulopwe (king) ruled from such centers with a complex bureaucracy.",
+      coordinates: { lat: -7.32, lng: 24.48 }
+    },
+    {
+      name: "Tervuren Museum Luba Collection",
+      type: "museum",
+      description: "The Royal Museum for Central Africa in Belgium holds one of the world's finest Luba art collections, including memory boards (lukasa) and royal stools.",
+      coordinates: { lat: 50.83, lng: 4.52 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Royal_Museum_for_Central_Africa"
+    }
   ]
 };
 
