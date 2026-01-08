@@ -4077,6 +4077,724 @@ export const recipes: Recipe[] = [
       "Roasting should be done just before brewing",
       "Grass and flowers often decorate the area"
     ]
+  },
+
+  // ============ VENDA (SOUTH AFRICA) RECIPES ============
+  {
+    id: "tshidzimba",
+    name: "Tshidzimba (Bean and Maize Stew)",
+    tribeSlug: "venda",
+    tribeName: "Venda",
+    category: "staple",
+    description: "Hearty Venda stew combining beans, maize, and peanuts. A protein-rich dish that sustains families in the Limpopo valley.",
+    culturalSignificance: "Tshidzimba is everyday comfort food in Venda households. It represents the agricultural heritage of the Venda people and their skill in combining simple ingredients into nutritious meals.",
+    historicalContext: "The Venda migrated to South Africa from Great Zimbabwe around the 15th century, bringing Shona agricultural traditions. Tshidzimba evolved from these traditions using crops that thrived in the subtropical Limpopo region.",
+    youtubeVideoId: "LqkHxRFsMHw",
+    prepTime: "8 hours (soaking)",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried beans", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Maize kernels", amount: "1 cup", notes: "Dried, soaked overnight" },
+      { item: "Peanuts", amount: "1/2 cup", notes: "Roasted, crushed" },
+      { item: "Pumpkin leaves or spinach", amount: "2 cups", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "As needed" }
+    ],
+    instructions: [
+      "Drain soaked beans and maize.",
+      "Boil together in large pot until soft (1.5-2 hours).",
+      "Add crushed peanuts and stir well.",
+      "Add pumpkin leaves and cook 10 more minutes.",
+      "Season with salt.",
+      "Mash lightly to thicken.",
+      "Serve hot with vhuswa (maize porridge)."
+    ],
+    tips: [
+      "The peanuts add creaminess and protein",
+      "Don't over-mash - some texture is traditional",
+      "Leftovers taste even better the next day"
+    ]
+  },
+  {
+    id: "vhuswa",
+    name: "Vhuswa (Venda Maize Porridge)",
+    tribeSlug: "venda",
+    tribeName: "Venda",
+    category: "staple",
+    description: "The Venda version of maize porridge, typically served with relishes and stews. The foundation of every Venda meal.",
+    culturalSignificance: "No Venda meal is complete without vhuswa. It's the staple that accompanies all dishes and is essential at ceremonies and daily meals alike.",
+    historicalContext: "Maize arrived in southern Africa via Portuguese traders in the 16th century and quickly became the dominant staple, replacing indigenous millets and sorghum in many communities.",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Maize meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Bring water to boil in large pot.",
+      "Add salt.",
+      "Slowly add maize meal while stirring.",
+      "Reduce heat and cover.",
+      "Cook 20 minutes, stirring occasionally.",
+      "Stir vigorously to remove lumps.",
+      "Porridge should be thick and pull away from pot sides."
+    ],
+    tips: [
+      "Constant stirring prevents lumps",
+      "Serve immediately while hot",
+      "Traditionally eaten with hands, scooping up relishes"
+    ]
+  },
+  {
+    id: "mahafhe",
+    name: "Mahafhe (Venda Traditional Beer)",
+    tribeSlug: "venda",
+    tribeName: "Venda",
+    category: "beverage",
+    description: "Traditional Venda beer brewed from sorghum. Essential at ceremonies and celebrations.",
+    culturalSignificance: "Mahafhe is brewed for all important occasions - weddings, funerals, and ancestral ceremonies. The brewing is traditionally done by women, and the knowledge is passed through generations.",
+    historicalContext: "Sorghum beer has been brewed in southern Africa for thousands of years. The Venda brought their brewing traditions from Great Zimbabwe, and mahafhe remains central to cultural practices.",
+    prepTime: "5 days (fermentation)",
+    cookTime: "2 hours",
+    servings: 20,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Sorghum malt", amount: "2 kg" },
+      { item: "Sorghum flour", amount: "1 kg" },
+      { item: "Water", amount: "10 liters" },
+      { item: "Sugar", amount: "Optional, 1 cup" }
+    ],
+    instructions: [
+      "Mix sorghum malt with water to make thin porridge.",
+      "Cook until thickened, then cool to lukewarm.",
+      "Add sorghum flour and mix well.",
+      "Transfer to large clay pot or container.",
+      "Cover loosely and ferment 3-5 days.",
+      "Stir daily.",
+      "Strain through traditional basket strainer.",
+      "Serve fresh - it will continue fermenting."
+    ],
+    tips: [
+      "Fermentation time affects strength",
+      "Traditional clay pots add flavor",
+      "Best consumed within 2-3 days"
+    ]
+  },
+
+  // ============ TSWANA (BOTSWANA/SOUTH AFRICA) RECIPES ============
+  {
+    id: "seswaa",
+    name: "Seswaa (Pounded Beef)",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "special",
+    description: "Botswana's national dish - beef slow-cooked until falling apart, then pounded. The ultimate celebration food.",
+    culturalSignificance: "Seswaa is prepared for weddings, funerals, and national holidays. It represents Tswana hospitality and is always served to honored guests.",
+    historicalContext: "The Tswana have been cattle herders for centuries, and beef is central to their culture and economy. Seswaa developed as a way to make tough cuts of meat tender and delicious through long, slow cooking.",
+    youtubeVideoId: "wQ8r9Jz7vQU",
+    prepTime: "15 minutes",
+    cookTime: "4 hours",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef (brisket or shoulder)", amount: "2 kg", notes: "With bone" },
+      { item: "Water", amount: "To cover" },
+      { item: "Salt", amount: "2 tablespoons" },
+      { item: "Onion", amount: "1 large", notes: "Optional" }
+    ],
+    instructions: [
+      "Place beef in large pot with bones.",
+      "Cover with water and add salt.",
+      "Bring to boil, then reduce to simmer.",
+      "Cook 3-4 hours until meat falls off bone.",
+      "Remove bones.",
+      "Shred meat using traditional wooden spoon or fork.",
+      "Pound in pot or mortar to create fibrous texture.",
+      "Season and serve with pap and morogo (wild greens)."
+    ],
+    tips: [
+      "The key is very slow, long cooking",
+      "Some fat should remain for flavor",
+      "Traditional pounding creates the signature texture"
+    ]
+  },
+  {
+    id: "morogo",
+    name: "Morogo (Wild Spinach)",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "staple",
+    description: "Wild indigenous greens cooked with onion and tomato. A nutritious side dish that accompanies every meal.",
+    culturalSignificance: "Morogo represents the Tswana knowledge of wild plants. These greens have sustained communities for generations and are considered more nutritious than cultivated spinach.",
+    historicalContext: "Indigenous African greens like morogo were staples long before colonization. They're drought-resistant and grow wild, providing nutrition even in harsh conditions.",
+    prepTime: "10 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Morogo leaves (or spinach)", amount: "4 cups", notes: "Washed, chopped" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Tomato", amount: "1 large", notes: "Chopped" },
+      { item: "Cooking oil", amount: "2 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Heat oil in pot.",
+      "Sauté onion until soft.",
+      "Add tomato and cook until broken down.",
+      "Add morogo leaves.",
+      "Stir, cover, and cook 10-15 minutes.",
+      "Season with salt.",
+      "Serve with pap and meat."
+    ],
+    tips: [
+      "Wild morogo varieties have more nutrients",
+      "Don't overcook - should retain some color",
+      "Some add peanut butter for richness"
+    ]
+  },
+
+  // ============ PEDI (SOUTH AFRICA) RECIPES ============
+  {
+    id: "morogo-wa-dinawa",
+    name: "Morogo wa Dinawa (Greens with Beans)",
+    tribeSlug: "pedi",
+    tribeName: "Pedi",
+    category: "staple",
+    description: "Traditional Pedi dish combining wild greens with beans. A protein-rich vegetarian staple.",
+    culturalSignificance: "This dish represents Pedi agricultural wisdom - combining legumes with greens for complete nutrition. It's everyday food that has sustained the community for generations.",
+    historicalContext: "The Pedi (Northern Sotho) developed sophisticated farming practices in the Limpopo region. Their cuisine maximizes nutrition from locally available ingredients.",
+    prepTime: "8 hours (soaking)",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried beans", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Morogo or spinach", amount: "3 cups", notes: "Chopped" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Cooking oil", amount: "2 tablespoons" }
+    ],
+    instructions: [
+      "Drain and boil beans until soft (about 1 hour).",
+      "In separate pot, sauté onion in oil.",
+      "Add morogo and cook until wilted.",
+      "Add cooked beans to greens.",
+      "Mash slightly to combine.",
+      "Season with salt.",
+      "Serve with pap or sorghum porridge."
+    ],
+    tips: [
+      "Don't drain bean cooking water - it adds flavor",
+      "Traditional varieties of morogo are more bitter",
+      "Some add groundnuts for extra protein"
+    ]
+  },
+
+  // ============ TSONGA (SOUTH AFRICA/MOZAMBIQUE) RECIPES ============
+  {
+    id: "xigugu",
+    name: "Xigugu (Tsonga Peanut Sauce)",
+    tribeSlug: "tsonga",
+    tribeName: "Tsonga",
+    category: "special",
+    description: "Rich peanut-based sauce served with meat or vegetables. A signature Tsonga flavor.",
+    culturalSignificance: "Xigugu shows the Tsonga mastery of groundnut (peanut) cooking, which arrived in Africa via Portuguese traders and was quickly adopted into local cuisines.",
+    historicalContext: "The Tsonga (Shangaan) lived across the Gaza Empire, spanning modern South Africa, Mozambique, and Zimbabwe. Their cuisine reflects this cross-border heritage with Portuguese and Bantu influences.",
+    prepTime: "10 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Peanut butter (natural)", amount: "1 cup" },
+      { item: "Chicken or beef", amount: "500g", notes: "Cubed" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Water or stock", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Chili", amount: "Optional" }
+    ],
+    instructions: [
+      "Brown meat in pot and set aside.",
+      "Sauté onion until soft.",
+      "Add tomatoes and cook down.",
+      "Stir in peanut butter.",
+      "Add water/stock and mix until smooth.",
+      "Return meat to pot.",
+      "Simmer 20 minutes until thick.",
+      "Serve with xima (maize porridge)."
+    ],
+    tips: [
+      "Use natural peanut butter without sugar",
+      "Sauce should be thick, not runny",
+      "Adjust water for desired consistency"
+    ]
+  },
+  {
+    id: "tihove",
+    name: "Tihove (Tsonga Maize and Bean Dish)",
+    tribeSlug: "tsonga",
+    tribeName: "Tsonga",
+    category: "staple",
+    description: "Tsonga version of the maize-bean combination, similar to githeri but with distinct Tsonga seasonings.",
+    culturalSignificance: "Tihove is the everyday staple that keeps Tsonga families fed. It's economical, nutritious, and satisfying.",
+    historicalContext: "This dish represents the agricultural traditions shared across southern African Bantu peoples, adapted with Tsonga flavor preferences.",
+    prepTime: "8 hours (soaking)",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried maize", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Dried beans", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Groundnuts", amount: "1/2 cup", notes: "Crushed" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Drain maize and beans.",
+      "Boil together until soft (1.5-2 hours).",
+      "Add crushed groundnuts.",
+      "Season with salt.",
+      "Mash slightly if desired.",
+      "Serve hot."
+    ],
+    tips: [
+      "Adding groundnuts is distinctly Tsonga",
+      "Cook until beans are very soft",
+      "This is comfort food - simple but satisfying"
+    ]
+  },
+
+  // ============ EWE (GHANA/TOGO) RECIPES ============
+  {
+    id: "akple",
+    name: "Akple (Ewe Fermented Corn Dough)",
+    tribeSlug: "ewe",
+    tribeName: "Ewe",
+    category: "staple",
+    description: "Fermented corn dough, smoother than Ghanaian banku. The signature staple of the Ewe people.",
+    culturalSignificance: "Akple is central to Ewe identity - it's what distinguishes Ewe cuisine from neighboring groups. Preparation techniques are passed from mother to daughter.",
+    historicalContext: "The Ewe migrated to their current homeland in Ghana and Togo around the 17th century. Akple developed as their signature staple, reflecting their agricultural practices along the Volta River.",
+    youtubeVideoId: "7WP3Xh-kf_E",
+    prepTime: "24 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fermented corn dough", amount: "3 cups" },
+      { item: "Cassava dough", amount: "1 cup" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Prepare fermented corn dough 24-48 hours ahead.",
+      "Mix corn and cassava doughs.",
+      "Bring water to boil.",
+      "Add half the dough mixture and stir vigorously.",
+      "Cook until thickened.",
+      "Add remaining dough gradually.",
+      "Stir continuously with wooden paddle.",
+      "Cook until smooth and pulls from pot.",
+      "Mold into balls with wet hands."
+    ],
+    tips: [
+      "Fermentation gives akple its distinct sour taste",
+      "Must stir constantly to prevent lumps",
+      "Serve with fetri detsi (okra soup) or groundnut soup"
+    ]
+  },
+  {
+    id: "fetri-detsi",
+    name: "Fetri Detsi (Ewe Okra Soup)",
+    tribeSlug: "ewe",
+    tribeName: "Ewe",
+    category: "special",
+    description: "Ewe-style okra soup, typically made with palm oil and seafood. The perfect accompaniment to akple.",
+    culturalSignificance: "This soup showcases Ewe coastal cuisine - they're known for their seafood preparations, and fetri detsi brings together ocean and land flavors.",
+    historicalContext: "The Ewe settled along the coast of modern Ghana and Togo, developing expertise in both fishing and farming. Their cuisine reflects this dual heritage.",
+    prepTime: "20 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh okra", amount: "500g", notes: "Sliced" },
+      { item: "Smoked fish", amount: "200g", notes: "Deboned" },
+      { item: "Fresh crabs or shrimp", amount: "200g", notes: "Optional" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Blended" },
+      { item: "Chili pepper", amount: "To taste" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Blend or pound okra to slimy consistency.",
+      "Heat palm oil in pot.",
+      "Sauté onion until soft.",
+      "Add tomatoes and cook 10 minutes.",
+      "Add smoked fish and seafood.",
+      "Add water and simmer 15 minutes.",
+      "Add okra paste and stir well.",
+      "Simmer 10 more minutes until thick.",
+      "Season and serve with akple."
+    ],
+    tips: [
+      "The slimier the okra, the more authentic",
+      "Smoked fish adds essential umami",
+      "Don't overcook after adding okra"
+    ]
+  },
+
+  // ============ WOLOF (SENEGAL/GAMBIA) RECIPES ============
+  {
+    id: "thieboudienne",
+    name: "Thieboudienne (Senegalese Fish and Rice)",
+    tribeSlug: "wolof",
+    tribeName: "Wolof",
+    category: "special",
+    description: "Senegal's national dish - rice cooked with fish, vegetables, and tomato in one pot. The original jollof.",
+    culturalSignificance: "Thieboudienne is the mother of all West African rice dishes. It's served at every important occasion and is a source of deep national pride.",
+    historicalContext: "This dish originated with the Wolof people of Senegal, likely in Saint-Louis in the 19th century. It's the ancestor of jollof rice and has influenced rice dishes across West Africa. The name means 'rice with fish' in Wolof.",
+    youtubeVideoId: "nwQPxvnkEAg",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Whole fish (thiof or grouper)", amount: "1 kg", notes: "Cleaned, stuffed" },
+      { item: "Rice (broken)", amount: "4 cups" },
+      { item: "Tomato paste", amount: "1/2 cup" },
+      { item: "Vegetables", amount: "Mixed", notes: "Cassava, carrot, cabbage, eggplant" },
+      { item: "Dried fish", amount: "100g" },
+      { item: "Tamarind", amount: "2 tablespoons" },
+      { item: "Vegetable oil", amount: "1 cup" },
+      { item: "Onion", amount: "2 large", notes: "Sliced" },
+      { item: "Garlic and parsley paste (rof)", amount: "4 tablespoons" },
+      { item: "Scotch bonnet", amount: "2", notes: "Whole" }
+    ],
+    instructions: [
+      "Stuff fish with garlic-parsley paste (rof).",
+      "Fry fish in oil until golden, set aside.",
+      "In same oil, sauté onions until caramelized.",
+      "Add tomato paste and cook 10 minutes.",
+      "Add water, tamarind, and dried fish.",
+      "Add vegetables in order of cooking time.",
+      "Return fish to pot.",
+      "Remove fish and vegetables when done.",
+      "Add rice to cooking liquid.",
+      "Cook covered until rice absorbs liquid.",
+      "Serve rice with fish and vegetables arranged on top."
+    ],
+    tips: [
+      "The bottom rice (xoon) should be slightly burnt",
+      "Each vegetable should be cooked perfectly",
+      "Traditional broken rice absorbs more flavor"
+    ]
+  },
+
+  // ============ MANDINKA (GAMBIA/SENEGAL/GUINEA) RECIPES ============
+  {
+    id: "domoda",
+    name: "Domoda (Groundnut Stew)",
+    tribeSlug: "mandinka",
+    tribeName: "Mandinka",
+    category: "special",
+    description: "Gambia's national dish - rich peanut stew with meat and vegetables. Creamy, savory perfection.",
+    culturalSignificance: "Domoda is the pride of Mandinka cuisine, served at celebrations and family gatherings. It represents the importance of groundnuts in the regional economy and diet.",
+    historicalContext: "Groundnuts (peanuts) arrived in West Africa via Portuguese traders from Brazil in the 16th century and quickly became a staple crop. Domoda developed as the signature Mandinka way to prepare them.",
+    youtubeVideoId: "Kq_2A8k6GpY",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef or chicken", amount: "500g", notes: "Cubed" },
+      { item: "Peanut butter (natural)", amount: "1 cup" },
+      { item: "Tomato paste", amount: "3 tablespoons" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Vegetables", amount: "Mixed", notes: "Pumpkin, sweet potato, okra" },
+      { item: "Chili pepper", amount: "1-2" },
+      { item: "Stock or water", amount: "4 cups" },
+      { item: "Oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Brown meat in oil and set aside.",
+      "Sauté onion until golden.",
+      "Add tomato paste and cook 5 minutes.",
+      "Stir in peanut butter.",
+      "Add stock gradually, stirring to smooth.",
+      "Return meat to pot.",
+      "Add vegetables and chili.",
+      "Simmer 30-40 minutes until meat is tender.",
+      "Serve over rice."
+    ],
+    tips: [
+      "Use natural peanut butter without sugar",
+      "The sauce should be thick and orange-brown",
+      "Stir occasionally to prevent sticking"
+    ]
+  },
+
+  // ============ IJAW (NIGERIA) RECIPES ============
+  {
+    id: "banga-soup",
+    name: "Banga Soup (Palm Fruit Soup)",
+    tribeSlug: "ijaw",
+    tribeName: "Ijaw",
+    category: "special",
+    description: "Rich soup made from palm fruit extract. The signature dish of the Niger Delta peoples.",
+    culturalSignificance: "Banga soup represents Ijaw mastery of the palm tree - they use every part. It's served at important ceremonies and is a source of cultural pride.",
+    historicalContext: "The Ijaw have lived in the Niger Delta for thousands of years, developing a unique riverine culture. Banga soup showcases their indigenous use of palm fruit, distinct from palm oil processing.",
+    youtubeVideoId: "Vu7y0aD8lqw",
+    prepTime: "1 hour",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Palm fruits", amount: "2 kg", notes: "Or palm fruit concentrate" },
+      { item: "Assorted meat and fish", amount: "1 kg" },
+      { item: "Stockfish", amount: "200g", notes: "Soaked" },
+      { item: "Dried fish", amount: "200g" },
+      { item: "Periwinkles", amount: "200g", notes: "Cleaned" },
+      { item: "Beletete (scent) leaves", amount: "1 cup" },
+      { item: "Atama leaves", amount: "Optional" },
+      { item: "Oburunbebe stick", amount: "3 pieces" },
+      { item: "Salt and crayfish", amount: "To taste" }
+    ],
+    instructions: [
+      "Boil palm fruits until soft.",
+      "Pound and extract cream, straining out fiber.",
+      "Boil palm cream with oburunbebe sticks.",
+      "Cook until oil floats on top.",
+      "Add pre-cooked meat and fish.",
+      "Add stockfish, dried fish, periwinkles.",
+      "Season with salt and crayfish.",
+      "Simmer 20 minutes.",
+      "Add scent leaves at end.",
+      "Serve with starch or pounded yam."
+    ],
+    tips: [
+      "Palm fruit concentrate can substitute fresh fruits",
+      "The beletete leaves are essential for authentic flavor",
+      "Soup should be thick and orange-red"
+    ]
+  },
+  {
+    id: "native-soup-ijaw",
+    name: "Ijaw Native Soup",
+    tribeSlug: "ijaw",
+    tribeName: "Ijaw",
+    category: "special",
+    description: "Light pepper soup with fresh fish and local herbs. A Niger Delta specialty.",
+    culturalSignificance: "This soup showcases the Ijaw's close relationship with the rivers. Fresh fish is the star, prepared simply to highlight its quality.",
+    historicalContext: "The Ijaw are fishermen by tradition, living on the waterways of the Niger Delta. Their cuisine reflects direct access to fresh seafood.",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh catfish", amount: "1 kg", notes: "Cleaned, cut" },
+      { item: "Pepper", amount: "To taste", notes: "Ground" },
+      { item: "Uziza leaves", amount: "1/2 cup" },
+      { item: "Scent leaves", amount: "1/2 cup" },
+      { item: "Crayfish", amount: "2 tablespoons", notes: "Ground" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "3 cups" }
+    ],
+    instructions: [
+      "Season fish with salt and pepper.",
+      "Bring water to boil.",
+      "Add fish carefully.",
+      "Cook 15 minutes until fish is done.",
+      "Add ground crayfish.",
+      "Add fresh leaves and turn off heat.",
+      "Serve immediately."
+    ],
+    tips: [
+      "Don't overcook the fish",
+      "Fresh leaves should be added at the end",
+      "Serve as appetizer or with starch"
+    ]
+  },
+
+  // ============ HIMBA (NAMIBIA) RECIPES ============
+  {
+    id: "otjize-meat",
+    name: "Himba Roasted Meat",
+    tribeSlug: "himba",
+    tribeName: "Himba",
+    category: "special",
+    description: "Simply prepared roasted meat from cattle or goats. The Himba pastoral tradition on a plate.",
+    culturalSignificance: "Cattle are central to Himba life - they're wealth, status, and sustenance. Meat is only eaten on special occasions, showing respect for the animals.",
+    historicalContext: "The Himba have maintained their pastoral lifestyle in Namibia's Kunene region for centuries. Their cattle-based economy and diet have survived colonization and modernization.",
+    prepTime: "10 minutes",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Goat or beef", amount: "2 kg", notes: "On the bone" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Wood for fire", amount: "As needed" }
+    ],
+    instructions: [
+      "Build a fire and let it burn to coals.",
+      "Season meat with salt.",
+      "Thread onto sticks or place on rack.",
+      "Position over hot coals.",
+      "Turn regularly for even cooking.",
+      "Cook 1.5-2 hours until done.",
+      "Slice and serve."
+    ],
+    tips: [
+      "The Himba cook meat simply without marinades",
+      "Fat dripping on coals adds smoky flavor",
+      "Nothing is wasted - all parts are used"
+    ]
+  },
+  {
+    id: "omaere",
+    name: "Omaere (Himba Sour Milk)",
+    tribeSlug: "himba",
+    tribeName: "Himba",
+    category: "beverage",
+    description: "Fermented milk stored in traditional gourds. A staple of Himba diet.",
+    culturalSignificance: "Omaere is consumed daily by the Himba and is an important source of nutrition. The fermentation makes the milk last longer in the hot climate.",
+    historicalContext: "Dairy has been central to Himba survival in the harsh Namibian environment. Traditional gourd containers are passed down through generations.",
+    prepTime: "0 minutes",
+    cookTime: "2-3 days (fermentation)",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh cow's milk", amount: "1 liter" },
+      { item: "Traditional gourd", amount: "1" }
+    ],
+    instructions: [
+      "Milk the cow into a clean gourd.",
+      "Cover and store in shade.",
+      "Let ferment 2-3 days.",
+      "Shake before drinking.",
+      "Consume as beverage or with porridge."
+    ],
+    tips: [
+      "Traditional gourds contain beneficial bacteria",
+      "Fermentation time affects sourness",
+      "Can be mixed with porridge for meals"
+    ]
+  },
+
+  // ============ NDEBELE (SOUTH AFRICA/ZIMBABWE) RECIPES ============
+  {
+    id: "isitshwala",
+    name: "Isitshwala (Ndebele Thick Porridge)",
+    tribeSlug: "ndebele",
+    tribeName: "Ndebele",
+    category: "staple",
+    description: "Thick maize meal porridge, the foundation of every Ndebele meal. Stiffer than pap, perfect for scooping relishes.",
+    culturalSignificance: "Isitshwala is the heart of Ndebele cuisine. No meal is complete without it, and the ability to prepare it perfectly is a mark of a good cook.",
+    historicalContext: "The Ndebele broke away from the Zulu nation in the 1820s under Mzilikazi, eventually settling in Zimbabwe. They brought their culinary traditions, adapting them to new ingredients.",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Bring water to boil.",
+      "Add salt.",
+      "Slowly pour in maize meal while stirring.",
+      "Reduce heat and cover.",
+      "Cook 15 minutes, stirring occasionally.",
+      "Add more maize meal if needed for stiff consistency.",
+      "Stir vigorously until smooth and thick.",
+      "Serve with umhwabha (relish) or meat."
+    ],
+    tips: [
+      "Should be stiff enough to hold shape",
+      "No lumps allowed",
+      "Traditionally cooked in three-legged pot over fire"
+    ]
+  },
+  {
+    id: "umhluzi",
+    name: "Umhluzi (Ndebele Gravy/Sauce)",
+    tribeSlug: "ndebele",
+    tribeName: "Ndebele",
+    category: "staple",
+    description: "Simple tomato-based sauce that accompanies isitshwala. Can be made with or without meat.",
+    culturalSignificance: "Umhluzi turns plain porridge into a complete meal. Even in difficult times, a tomato-onion umhluzi makes food satisfying.",
+    historicalContext: "Tomatoes arrived in southern Africa with European traders but were quickly adopted. Umhluzi shows how the Ndebele incorporated new ingredients into traditional meals.",
+    prepTime: "5 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Cooking oil", amount: "2 tablespoons" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Beef or chicken", amount: "Optional, 300g" }
+    ],
+    instructions: [
+      "If using meat, brown first and set aside.",
+      "Sauté onion in oil until soft.",
+      "Add tomatoes and cook until broken down.",
+      "Add water for desired consistency.",
+      "Return meat if using.",
+      "Season with salt.",
+      "Simmer until thick.",
+      "Serve over isitshwala."
+    ],
+    tips: [
+      "Can add curry powder for variation",
+      "Some add green pepper",
+      "Sauce should coat the back of a spoon"
+    ]
+  },
+
+  // ============ AFAR (ETHIOPIA/DJIBOUTI/ERITREA) RECIPES ============
+  {
+    id: "lahoh-afar",
+    name: "Lahoh (Afar Spongy Bread)",
+    tribeSlug: "afar",
+    tribeName: "Afar",
+    category: "staple",
+    description: "Spongy, fermented flatbread similar to injera but unique to the Afar tradition. Served with every meal.",
+    culturalSignificance: "Lahoh is the daily bread of the Afar people, prepared fresh each morning. It represents the Afar adaptation to harsh desert life.",
+    historicalContext: "The Afar have survived in one of Earth's hottest regions for millennia. Their cuisine reflects available ingredients and the need for foods that travel well.",
+    prepTime: "24 hours (fermentation)",
+    cookTime: "20 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "All-purpose flour", amount: "2 cups" },
+      { item: "Whole wheat flour", amount: "1 cup" },
+      { item: "Yeast", amount: "1 teaspoon" },
+      { item: "Water", amount: "3 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Sugar", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Mix flours, yeast, sugar, and salt.",
+      "Add water and whisk to smooth batter.",
+      "Cover and ferment overnight.",
+      "Heat non-stick pan.",
+      "Pour batter to form thin circle.",
+      "Cover and cook until bubbly and set.",
+      "Don't flip - one side only.",
+      "Stack and serve with stews."
+    ],
+    tips: [
+      "Batter should be thinner than pancake batter",
+      "The bottom should be slightly browned",
+      "Serve fresh and warm"
+    ]
   }
 ];
 
