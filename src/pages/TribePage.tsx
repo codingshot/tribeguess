@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play, TrendingUp } from 'lucide-react';
 import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo, getTribeLandmarks } from '@/lib/tribeDetection';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -39,9 +40,54 @@ const TribePage = () => {
   // Type assertion for history and language
   const history = (tribe as any).history;
   const language = (tribe as any).language;
+  const tradeHistory = (tribe as any).tradeHistory;
+  const independenceHistory = (tribe as any).independenceHistory;
+  
+  // SEO metadata
+  const countries = (tribe as any).countries as string[] | undefined;
+  const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
+  const seoTitle = `${tribe.name} Tribe - Culture, Names & History | TribeGuess`;
+  const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${tribe.population}), and famous ${tribe.name} personalities.`;
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://tribeguess.com/learn/${tribe.slug}`} />
+        <link rel="canonical" href={`https://tribeguess.com/learn/${tribe.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": `${tribe.name} Tribe - Culture, Names & History`,
+            "description": seoDescription,
+            "author": {
+              "@type": "Organization",
+              "name": "TribeGuess"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "TribeGuess"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://tribeguess.com/learn/${tribe.slug}`
+            },
+            "about": {
+              "@type": "Thing",
+              "name": `${tribe.name} people`,
+              "description": tribe.description
+            }
+          })}
+        </script>
+      </Helmet>
       <Header />
       
       <main className="container mx-auto px-4 py-6 sm:py-8">
@@ -88,11 +134,30 @@ const TribePage = () => {
                 </Link>
               </div>
               
+              {/* Quick Stats Bar */}
               <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm opacity-90">
                 <div className="flex items-center gap-1">
                   <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
                   <span>{tribe.population}</span>
                 </div>
+                {language && (
+                  <div className="flex items-center gap-1">
+                    <Languages className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
+                    <span>{language.name}</span>
+                  </div>
+                )}
+                {(tribe as any).religion && (
+                  <div className="flex items-center gap-1">
+                    <Church className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
+                    <span className="truncate max-w-[120px]">{(tribe as any).religion.split(',')[0]}</span>
+                  </div>
+                )}
+                {tradeHistory && (
+                  <div className="flex items-center gap-1" title="Has documented trade history">
+                    <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
+                    <span>Trade History</span>
+                  </div>
+                )}
               </div>
             </header>
             

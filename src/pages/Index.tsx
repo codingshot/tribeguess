@@ -3,7 +3,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { GuessForm } from '@/components/GuessForm';
 import { TribeResultCard } from '@/components/TribeResultCard';
-import { detectTribe, getCountries, getTribesByCountry } from '@/lib/tribeDetection';
+import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
+import { Globe, ArrowRight, Lightbulb } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Index = () => {
@@ -87,6 +88,8 @@ const Index = () => {
     return (unique.length ? unique : ['Wanjiku', 'Odhiambo', 'Cheruiyot', 'Nafula', 'Mutua', 'Moraa', 'Kipchoge', 'Fatuma']).slice(0, 8);
   })();
   let results = null;
+  let countrySuggestions: ReturnType<typeof getCountrySuggestions> = [];
+  
   try {
     results = nameQuery ? detectTribe(nameQuery, {
       timeOfBirth: timeQuery || undefined,
@@ -95,6 +98,15 @@ const Index = () => {
       personality: personalityQuery || undefined,
       country: countryQuery || undefined
     }) : null;
+    
+    // Check for better matches in other countries
+    if (nameQuery && results) {
+      const topConfidence = results.predictions[0]?.confidence || 0;
+      // Only suggest if current results are weak
+      if (topConfidence < 70) {
+        countrySuggestions = getCountrySuggestions(nameQuery, countryQuery);
+      }
+    }
   } catch (e) {
     console.error('Detection error:', e);
   }
@@ -173,6 +185,36 @@ const Index = () => {
             <div className="mb-6 sm:mb-8">
               <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} />
             </div>
+            
+            {/* Country suggestions - "Did you mean?" */}
+            {countrySuggestions.length > 0 && (
+              <div className="mb-4 p-3 sm:p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl animate-fade-in">
+                <div className="flex items-center gap-2 text-amber-700 dark:text-amber-300 mb-2">
+                  <Lightbulb className="w-4 h-4" />
+                  <span className="text-sm font-medium">Did you mean to search in another country?</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {countrySuggestions.map((suggestion) => (
+                    <a
+                      key={suggestion.country.code}
+                      href={`/?name=${encodeURIComponent(nameQuery)}&country=${suggestion.country.code}`}
+                      className="inline-flex items-center gap-2 px-3 py-2 bg-white dark:bg-amber-900/50 rounded-lg border border-amber-200 dark:border-amber-700 hover:border-amber-400 dark:hover:border-amber-500 transition-colors group"
+                    >
+                      <span className="text-lg">{suggestion.country.flag}</span>
+                      <div className="text-left">
+                        <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                          Try {suggestion.country.name}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {suggestion.reason}
+                        </div>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
             
             <div className="space-y-3 sm:space-y-4">
               {results.predictions.map((prediction, index) => <TribeResultCard key={prediction.tribe.id} result={prediction} rank={index + 1} inputName={results.inputName} />)}
