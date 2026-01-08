@@ -1,11 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getRecipeById, getRecipesByTribe, getAllRecipes, type Recipe } from '@/data/recipes';
-import { ArrowLeft, Clock, Users, ChefHat, Flame, Search } from 'lucide-react';
+import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import { useMemo } from 'react';
 
 const categoryEmoji: Record<string, string> = {
   staple: '🍚',
@@ -23,10 +24,18 @@ const difficultyColor: Record<string, string> = {
 export default function RecipePage() {
   const { id } = useParams<{ id: string }>();
   const recipe = id ? getRecipeById(id) : undefined;
+  const allRecipes = getAllRecipes();
+
+  // Get similar recipes from other tribes (same category)
+  const similarRecipes = useMemo(() => {
+    if (!recipe) return [];
+    return allRecipes
+      .filter(r => r.id !== recipe.id && r.tribeSlug !== recipe.tribeSlug && r.category === recipe.category)
+      .slice(0, 4);
+  }, [recipe, allRecipes]);
 
   if (!recipe) {
     // Show recipe not found with suggestions
-    const allRecipes = getAllRecipes();
     const sampleRecipes = allRecipes.slice(0, 9);
 
     return (
@@ -106,18 +115,27 @@ export default function RecipePage() {
       <Header />
 
       <main className="container mx-auto px-4 py-8 max-w-4xl">
-        {/* Back Link */}
-        <Link
-          to={`/learn/${recipe.tribeSlug}`}
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to {recipe.tribeName}
-        </Link>
+        {/* Navigation Bar */}
+        <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
+          <Link
+            to={`/learn/${recipe.tribeSlug}`}
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to {recipe.tribeName}
+          </Link>
+          <Link
+            to="/recipes"
+            className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+          >
+            <BookOpen className="w-4 h-4" />
+            View All Recipes
+          </Link>
+        </div>
 
         {/* Recipe Header */}
         <header className="mb-8">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 flex-wrap">
             <span className="text-2xl">{categoryEmoji[recipe.category]}</span>
             <Badge variant="outline" className="capitalize">{recipe.category}</Badge>
             <Badge className={difficultyColor[recipe.difficulty]}>{recipe.difficulty}</Badge>
@@ -146,13 +164,41 @@ export default function RecipePage() {
           </div>
         </header>
 
+        {/* YouTube Video Tutorial */}
+        {recipe.youtubeVideoId && (
+          <section className="mb-8">
+            <h2 className="font-semibold text-lg mb-4 flex items-center gap-2">
+              <Play className="w-5 h-5 text-red-600" /> Video Tutorial
+            </h2>
+            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+              <iframe
+                src={`https://www.youtube.com/embed/${recipe.youtubeVideoId}`}
+                title={`How to make ${recipe.name}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </section>
+        )}
+
         {/* Cultural Significance */}
-        <section className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-8">
+        <section className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-6">
           <h2 className="font-semibold text-primary mb-2 flex items-center gap-2">
             <span>🌍</span> Cultural Significance
           </h2>
           <p className="text-sm text-muted-foreground">{recipe.culturalSignificance}</p>
         </section>
+
+        {/* Historical Context */}
+        {recipe.historicalContext && (
+          <section className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8">
+            <h2 className="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center gap-2">
+              <History className="w-4 h-4" /> Historical Background
+            </h2>
+            <p className="text-sm text-amber-700 dark:text-amber-300">{recipe.historicalContext}</p>
+          </section>
+        )}
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Ingredients */}
@@ -222,7 +268,7 @@ export default function RecipePage() {
           </div>
         </div>
 
-        {/* Related Recipes */}
+        {/* Related Recipes from Same Tribe */}
         {relatedRecipes.length > 0 && (
           <section className="mt-12 pt-8 border-t border-border">
             <h2 className="font-semibold text-lg mb-4">More {recipe.tribeName} Recipes</h2>
@@ -244,11 +290,46 @@ export default function RecipePage() {
           </section>
         )}
 
+        {/* Similar Recipes from Other Tribes */}
+        {similarRecipes.length > 0 && (
+          <section className="mt-8 pt-8 border-t border-border">
+            <h2 className="font-semibold text-lg mb-4 flex items-center gap-2">
+              <UtensilsCrossed className="w-5 h-5" /> Similar Dishes from Other Tribes
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {similarRecipes.map(similar => (
+                <Link
+                  key={similar.id}
+                  to={`/recipe/${similar.id}`}
+                  className="bg-card border border-border rounded-lg p-4 hover:border-primary transition-colors"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span>{categoryEmoji[similar.category]}</span>
+                    <span className="font-medium text-sm">{similar.name}</span>
+                  </div>
+                  <Link
+                    to={`/learn/${similar.tribeSlug}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-xs text-primary hover:underline"
+                  >
+                    {similar.tribeName}
+                  </Link>
+                  <p className="text-xs text-muted-foreground line-clamp-2 mt-1">{similar.description}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Browse More Link */}
-        <div className="mt-8 text-center">
-          <Link to="/recipes" className="text-sm text-primary hover:underline">
-            Browse all recipes →
-          </Link>
+        <div className="mt-10 text-center py-6 bg-secondary/30 rounded-lg">
+          <p className="text-sm text-muted-foreground mb-3">Discover more traditional African cuisine</p>
+          <Button asChild>
+            <Link to="/recipes" className="gap-2">
+              <BookOpen className="w-4 h-4" />
+              Browse All Recipes
+            </Link>
+          </Button>
         </div>
       </main>
 
