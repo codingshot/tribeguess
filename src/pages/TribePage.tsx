@@ -762,11 +762,20 @@ const TribePage = () => {
                     <div className="p-3 bg-secondary rounded-lg">
                       <h3 className="text-sm font-medium text-foreground mb-2">Staple Foods</h3>
                       <ul className="space-y-1">
-                        {(tribe as any).traditionalFood.staples?.map((food: string, i: number) => (
-                          <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                            <span className="text-primary">•</span> {food}
-                          </li>
-                        ))}
+                        {(tribe as any).traditionalFood.staples?.map((food: string, i: number) => {
+                          const foodName = food.split('(')[0].split('-')[0].trim().toLowerCase();
+                          const hasRecipe = ['mukimo', 'githeri', 'tilapia', 'omena', 'tuwo', 'sadza', 'pap', 'injera', 'umngqusho'].some(r => foodName.includes(r));
+                          return (
+                            <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                              <span className="text-primary">•</span>
+                              {hasRecipe ? (
+                                <Link to={`/recipe/${foodName.split(' ')[0]}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
+                                  {food} 📖
+                                </Link>
+                              ) : food}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                     <div className="p-3 bg-secondary rounded-lg">
@@ -782,11 +791,20 @@ const TribePage = () => {
                     <div className="p-3 bg-secondary rounded-lg">
                       <h3 className="text-sm font-medium text-foreground mb-2">Special Dishes</h3>
                       <ul className="space-y-1">
-                        {(tribe as any).traditionalFood.specialDishes?.map((dish: string, i: number) => (
-                          <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                            <span className="text-primary">•</span> {dish}
-                          </li>
-                        ))}
+                        {(tribe as any).traditionalFood.specialDishes?.map((dish: string, i: number) => {
+                          const dishName = dish.split('(')[0].split('-')[0].trim().toLowerCase();
+                          const hasRecipe = ['mutura', 'jollof', 'egusi', 'suya', 'doro', 'pilau', 'nyama'].some(r => dishName.includes(r));
+                          return (
+                            <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                              <span className="text-primary">•</span>
+                              {hasRecipe ? (
+                                <Link to={`/recipe/${dishName.split(' ')[0]}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
+                                  {dish} 📖
+                                </Link>
+                              ) : dish}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   </div>

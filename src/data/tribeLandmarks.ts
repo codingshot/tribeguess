@@ -1084,42 +1084,6 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
     }
   ],
   
-  afar: [
-    {
-      name: "Danakil Depression",
-      type: "natural",
-      description: "One of Earth's hottest and lowest places, home to the Afar people. Contains salt flats, volcanoes, and unique geological formations.",
-      coordinates: { lat: 14.2333, lng: 40.3000 },
-      wikipediaUrl: "https://en.wikipedia.org/wiki/Danakil_Depression"
-    },
-    {
-      name: "Erta Ale Volcano",
-      type: "natural",
-      description: "Active shield volcano with a lava lake, one of only a few in the world. Sacred and feared in Afar tradition.",
-      coordinates: { lat: 13.6000, lng: 40.6667 },
-      wikipediaUrl: "https://en.wikipedia.org/wiki/Erta_Ale"
-    }
-  ],
-  
-  dinka: [
-    {
-      name: "Sudd Wetlands",
-      type: "natural",
-      description: "One of the world's largest wetlands along the White Nile, traditional homeland of the Dinka cattle herders for millennia.",
-      coordinates: { lat: 7.0000, lng: 30.5000 },
-      wikipediaUrl: "https://en.wikipedia.org/wiki/Sudd"
-    }
-  ],
-  
-  nuer: [
-    {
-      name: "Lou Nuer Territory",
-      type: "natural",
-      description: "Traditional cattle grazing lands of the Nuer people along the Sobat River in South Sudan and Ethiopia.",
-      coordinates: { lat: 8.5000, lng: 33.0000 }
-    }
-  ],
-  
   // ============ MALAGASY ============
   merina: [
     {
