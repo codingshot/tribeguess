@@ -2892,3 +2892,89 @@ export function getTribeLandmarks(tribeId: string): CulturalLandmark[] {
 }
 
 export type { CulturalLandmark };
+
+// Detect if a name likely belongs to a different country than the one selected
+export interface CountrySuggestion {
+  country: Country;
+  confidence: number;
+  matchingTribes: string[];
+  reason: string;
+}
+
+export function getCountrySuggestions(name: string, currentCountry: string): CountrySuggestion[] {
+  const normalizedName = name.toLowerCase().trim().replace(/[^a-z]/g, '');
+  if (normalizedName.length < 2) return [];
+  
+  const allTribes = getAllTribes();
+  const countries = getCountries();
+  const suggestions: CountrySuggestion[] = [];
+  
+  // Skip if searching all Africa
+  if (currentCountry === 'ALL') return [];
+  
+  // Check each country for matches
+  for (const country of countries) {
+    if (country.code === currentCountry) continue;
+    
+    const countryTribes = allTribes.filter(t => 
+      (t.countries as string[] | undefined)?.includes(country.code)
+    );
+    
+    let bestMatch = 0;
+    const matchingTribes: string[] = [];
+    
+    for (const tribe of countryTribes) {
+      // Check common names
+      const allNames = [...(tribe.commonNames?.female || []), ...(tribe.commonNames?.male || [])].map(n => n.toLowerCase());
+      
+      for (const tribeName of allNames) {
+        if (normalizedName === tribeName) {
+          bestMatch = Math.max(bestMatch, 95);
+          if (!matchingTribes.includes(tribe.name)) matchingTribes.push(tribe.name);
+        } else if (tribeName.startsWith(normalizedName) || normalizedName.startsWith(tribeName)) {
+          const similarity = Math.min(normalizedName.length, tribeName.length) / Math.max(normalizedName.length, tribeName.length);
+          if (similarity > 0.7) {
+            bestMatch = Math.max(bestMatch, 70 * similarity);
+            if (!matchingTribes.includes(tribe.name)) matchingTribes.push(tribe.name);
+          }
+        }
+      }
+      
+      // Check name database
+      const dbEntry = nameDatabase[normalizedName];
+      if (dbEntry) {
+        const dbTribe = allTribes.find(t => t.id === dbEntry.tribe);
+        if (dbTribe && (dbTribe.countries as string[] | undefined)?.includes(country.code)) {
+          bestMatch = Math.max(bestMatch, 90);
+          if (!matchingTribes.includes(dbTribe.name)) matchingTribes.push(dbTribe.name);
+        }
+      }
+      
+      // Check prefixes/suffixes unique to country
+      const prefixes = (tribe as any).namePrefixes as string[] | undefined;
+      if (prefixes) {
+        for (const prefix of prefixes) {
+          if (normalizedName.startsWith(prefix.toLowerCase()) && prefix.length >= 2) {
+            bestMatch = Math.max(bestMatch, 60);
+            if (!matchingTribes.includes(tribe.name)) matchingTribes.push(tribe.name);
+          }
+        }
+      }
+    }
+    
+    // Only suggest if confidence is high enough and better than current country
+    if (bestMatch >= 60 && matchingTribes.length > 0) {
+      suggestions.push({
+        country,
+        confidence: Math.round(bestMatch),
+        matchingTribes: matchingTribes.slice(0, 2),
+        reason: matchingTribes.length === 1 
+          ? `"${name}" is a common ${matchingTribes[0]} name`
+          : `"${name}" matches ${matchingTribes.join(' or ')} naming patterns`
+      });
+    }
+  }
+  
+  // Sort by confidence and return top 2
+  return suggestions.sort((a, b) => b.confidence - a.confidence).slice(0, 2);
+}
