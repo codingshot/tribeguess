@@ -1,0 +1,685 @@
+{
+  "languageFamilies": [
+    {
+      "id": "niger-congo",
+      "slug": "niger-congo",
+      "name": "Niger-Congo",
+      "alternateNames": ["Niger-Kordofanian"],
+      "totalSpeakers": "700+ million",
+      "numberOfLanguages": "1,540+",
+      "geographicSpread": "Sub-Saharan Africa from Senegal to South Africa",
+      "color": "from-amber-500 to-orange-600",
+      "description": "The world's largest language family by number of languages and third-largest by speakers. It spans nearly all of Sub-Saharan Africa and includes the vast Bantu subfamily.",
+      "overview": "Niger-Congo is the mother of all Bantu languages, which themselves account for over 500 languages. From the Atlantic coast of Senegal to the southern tip of Africa, Niger-Congo languages unite hundreds of millions of people. The family includes tonal languages, complex noun class systems, and some of the most widely spoken African languages including Swahili, Yoruba, Igbo, and Zulu.",
+      "characteristics": [
+        {
+          "name": "Noun Class System",
+          "description": "Most Niger-Congo languages use noun classes (similar to grammatical gender but more complex), with prefixes indicating the class of a noun. Bantu languages can have 15-20 noun classes."
+        },
+        {
+          "name": "Tonal Languages",
+          "description": "Pitch differences distinguish word meanings. Yoruba has 3 tones, while some languages have up to 5 distinct tones."
+        },
+        {
+          "name": "Agglutinative Morphology",
+          "description": "Words are built by adding prefixes and suffixes. A single verb can contain information about tense, subject, object, and mood."
+        },
+        {
+          "name": "Serial Verb Constructions",
+          "description": "Multiple verbs string together without conjunctions to describe complex actions, common in Kwa and Voltaic languages."
+        }
+      ],
+      "writingSystem": {
+        "historical": "N'Ko script (invented 1949 for Manding), Vai syllabary (1830s), Nsibidi symbols (Nigeria)",
+        "modern": "Primarily Latin alphabet with tone marks. Some communities are reviving indigenous scripts.",
+        "examples": [
+          { "script": "Latin (Yoruba)", "text": "Ẹ káàárọ̀", "meaning": "Good morning", "pronunciation": "eh-KAH-ah-roh" },
+          { "script": "N'Ko", "text": "ߒߞߏ", "meaning": "I say", "pronunciation": "n-ko" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Bawo ni", "language": "Yoruba", "meaning": "Hello / How are you", "pronunciation": "BAH-woh nee" },
+        { "phrase": "Kedu", "language": "Igbo", "meaning": "Hello / How are you", "pronunciation": "KEH-doo" },
+        { "phrase": "Sawubona", "language": "Zulu", "meaning": "I see you (greeting)", "pronunciation": "sah-woo-BOH-nah" },
+        { "phrase": "Jambo", "language": "Swahili", "meaning": "Hello", "pronunciation": "JAHM-boh" },
+        { "phrase": "Na gode", "language": "Hausa", "meaning": "Thank you", "pronunciation": "nah GOH-deh" },
+        { "phrase": "Akwaaba", "language": "Akan/Twi", "meaning": "Welcome", "pronunciation": "ah-KWAH-bah" }
+      ],
+      "timeline": [
+        { "year": -5000, "event": "Proto-Niger-Congo spoken in West/Central Africa", "significance": "Origin of the family" },
+        { "year": -3000, "event": "Proto-Bantu emerges in Cameroon-Nigeria border region", "significance": "Beginning of Bantu diversification" },
+        { "year": -1000, "event": "Bantu expansion reaches East Africa", "significance": "Iron-working technology spreads with migrants" },
+        { "year": 500, "event": "Bantu speakers reach Southern Africa", "significance": "Completion of one of history's largest migrations" },
+        { "year": 1000, "event": "Great Zimbabwe civilization flourishes", "significance": "Shona speakers build stone cities" },
+        { "year": 1400, "event": "Swahili becomes East African trade language", "significance": "Niger-Congo meets Afroasiatic influences" },
+        { "year": 1830, "event": "Vai syllabary invented in Liberia", "significance": "First indigenous African script in modern era" },
+        { "year": 1949, "event": "N'Ko script invented for Manding languages", "significance": "Pan-Manding literacy movement begins" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Bantu",
+          "slug": "bantu",
+          "speakers": "350+ million",
+          "languages": "500+",
+          "description": "Largest subfamily, spanning from Cameroon to South Africa",
+          "notableLanguages": ["Swahili", "Zulu", "Xhosa", "Shona", "Kikuyu", "Luganda"]
+        },
+        {
+          "name": "Atlantic",
+          "slug": "atlantic",
+          "speakers": "50+ million",
+          "languages": "65+",
+          "description": "West African coastal languages from Senegal to Liberia",
+          "notableLanguages": ["Wolof", "Fula/Fulfulde", "Serer", "Temne"]
+        },
+        {
+          "name": "Mande",
+          "slug": "mande",
+          "speakers": "40+ million",
+          "languages": "75+",
+          "description": "Languages of ancient Mali and Songhai empires",
+          "notableLanguages": ["Mandinka", "Bambara", "Dyula", "Soninke"]
+        },
+        {
+          "name": "Kwa",
+          "slug": "kwa",
+          "speakers": "40+ million",
+          "languages": "80+",
+          "description": "Coastal West African languages of Ghana, Togo, Benin",
+          "notableLanguages": ["Akan/Twi", "Ewe", "Fon", "Ga"]
+        },
+        {
+          "name": "Volta-Niger",
+          "slug": "volta-niger",
+          "speakers": "100+ million",
+          "languages": "100+",
+          "description": "Major Nigerian and Beninese languages",
+          "notableLanguages": ["Yoruba", "Igbo", "Edo/Bini", "Nupe"]
+        },
+        {
+          "name": "Gur (Voltaic)",
+          "slug": "gur",
+          "speakers": "20+ million",
+          "languages": "90+",
+          "description": "Savanna languages of Burkina Faso, Ghana, Togo",
+          "notableLanguages": ["Mossi/Mooré", "Dagbani", "Gurma"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Nilo-Saharan", "relationship": "Possible ancient connection debated by linguists", "sharedFeatures": "Some noun class similarities" },
+        { "family": "Khoisan", "relationship": "Geographic contact led to click adoption in Nguni languages", "sharedFeatures": "Click consonants in Zulu, Xhosa" }
+      ],
+      "uniqueFeatures": [
+        "Noun classes using prefixes (mu-, ba-, ki-, etc.)",
+        "Complex tone systems distinguishing meaning",
+        "Verb extensions for causative, applicative, passive",
+        "Reduplication for emphasis or pluralization",
+        "Ideophonic expressions (vivid sound-symbolic words)"
+      ],
+      "historicalInfluence": {
+        "empires": ["Mali Empire", "Songhai Empire", "Ashanti Empire", "Zulu Kingdom", "Great Zimbabwe"],
+        "culturalExports": ["Griots/oral historians", "Kente cloth traditions", "Talking drums", "Ubuntu philosophy"],
+        "diasporaInfluence": "Niger-Congo languages influenced Gullah, Haitian Creole, Brazilian Portuguese, Caribbean English"
+      }
+    },
+    {
+      "id": "afroasiatic",
+      "slug": "afroasiatic",
+      "name": "Afroasiatic",
+      "alternateNames": ["Afro-Asiatic", "Hamito-Semitic (outdated)"],
+      "totalSpeakers": "500+ million",
+      "numberOfLanguages": "375+",
+      "geographicSpread": "North Africa, Horn of Africa, Sahel, Middle East",
+      "color": "from-blue-500 to-indigo-600",
+      "description": "One of the oldest and most geographically widespread language families, including Arabic, Amharic, Somali, and Hausa. It bridges Africa and the Middle East.",
+      "overview": "Afroasiatic languages have shaped world history through the development of writing (Ancient Egyptian, Phoenician → Greek → Latin), monotheistic religions (Hebrew, Arabic), and major civilizations. In Africa, this family includes the Ethiopian Semitic languages with their unique Ge'ez script, the Cushitic languages of the Horn, the Berber languages of the Sahara, and the Chadic languages including Hausa.",
+      "characteristics": [
+        {
+          "name": "Root-and-Pattern Morphology",
+          "description": "Words are built from consonantal roots (typically 3 consonants) with vowel patterns. Arabic k-t-b → kitab (book), katib (writer), maktaba (library)."
+        },
+        {
+          "name": "Grammatical Gender",
+          "description": "Two-gender system (masculine/feminine) in most branches, affecting nouns, pronouns, verbs, and adjectives."
+        },
+        {
+          "name": "Consonant Inventory",
+          "description": "Rich in pharyngeal and emphatic consonants not found in European languages. Ethiopian languages have ejective sounds."
+        },
+        {
+          "name": "VSO/SVO Word Order",
+          "description": "Semitic languages often place verbs first, while others use Subject-Verb-Object like English."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Ancient Egyptian hieroglyphs (3200 BCE), Phoenician alphabet → all Western alphabets, Ge'ez script (Ethiopia)",
+        "modern": "Arabic script (most widespread), Ge'ez/Ethiopic script (Ethiopia, Eritrea), Latin alphabet (Somali, Hausa), Hebrew script, Tifinagh (Berber)",
+        "examples": [
+          { "script": "Ge'ez (Amharic)", "text": "ሰላም", "meaning": "Peace/Hello", "pronunciation": "suh-LAHM" },
+          { "script": "Arabic", "text": "السلام عليكم", "meaning": "Peace be upon you", "pronunciation": "as-sa-LAA-mu a-LAY-kum" },
+          { "script": "Tifinagh (Berber)", "text": "ⴰⵣⵓⵍ", "meaning": "Hello", "pronunciation": "ah-ZOOL" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Selam", "language": "Amharic", "meaning": "Hello/Peace", "pronunciation": "suh-LAHM" },
+        { "phrase": "Nabad", "language": "Somali", "meaning": "Peace (greeting)", "pronunciation": "NAH-bahd" },
+        { "phrase": "Sannu", "language": "Hausa", "meaning": "Hello", "pronunciation": "SAHN-noo" },
+        { "phrase": "Azul", "language": "Berber/Tamazight", "meaning": "Hello", "pronunciation": "ah-ZOOL" },
+        { "phrase": "Ameseginalehu", "language": "Amharic", "meaning": "Thank you", "pronunciation": "ah-meh-seh-guh-NAH-leh-hoo" },
+        { "phrase": "Mahadsanid", "language": "Somali", "meaning": "Thank you", "pronunciation": "mah-HAHD-sah-nid" }
+      ],
+      "timeline": [
+        { "year": -10000, "event": "Proto-Afroasiatic spoken (possibly in Sahara or Horn of Africa)", "significance": "Family origin during green Sahara period" },
+        { "year": -5000, "event": "Egyptian branch develops along the Nile", "significance": "Foundation of pharaonic civilization" },
+        { "year": -3200, "event": "Egyptian hieroglyphic writing invented", "significance": "One of world's first writing systems" },
+        { "year": -1500, "event": "Phoenician alphabet emerges from Egyptian", "significance": "Ancestor of Greek, Latin, Arabic scripts" },
+        { "year": -1000, "event": "South Arabian migrants reach Ethiopia", "significance": "Ethiopian Semitic languages emerge" },
+        { "year": 100, "event": "Ge'ez script developed in Aksum", "significance": "Ethiopia's unique writing tradition begins" },
+        { "year": 630, "event": "Arabic spreads with Islam across North Africa", "significance": "Linguistic unification of North Africa" },
+        { "year": 1000, "event": "Hausa becomes Sahel trade language", "significance": "Chadic branch gains prominence" },
+        { "year": 1972, "event": "Somali Latin orthography standardized", "significance": "Somalia gains official written language" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Semitic",
+          "slug": "semitic",
+          "speakers": "400+ million",
+          "languages": "77",
+          "description": "Includes Arabic, Hebrew, Amharic, Tigrinya - languages of major world religions",
+          "notableLanguages": ["Arabic", "Amharic", "Tigrinya", "Hebrew", "Maltese"]
+        },
+        {
+          "name": "Cushitic",
+          "slug": "cushitic",
+          "speakers": "70+ million",
+          "languages": "50+",
+          "description": "Horn of Africa's indigenous languages - Oromo, Somali, Afar",
+          "notableLanguages": ["Oromo", "Somali", "Afar", "Sidama", "Beja"]
+        },
+        {
+          "name": "Berber",
+          "slug": "berber",
+          "speakers": "30+ million",
+          "languages": "30+",
+          "description": "Indigenous North African languages with ancient Tifinagh script",
+          "notableLanguages": ["Tamazight", "Kabyle", "Tuareg/Tamasheq", "Riffian", "Shilha"]
+        },
+        {
+          "name": "Chadic",
+          "slug": "chadic",
+          "speakers": "100+ million",
+          "languages": "190+",
+          "description": "Centered on Hausa, the Sahel's major trade language",
+          "notableLanguages": ["Hausa", "Ron", "Bole", "Margi", "Kotoko"]
+        },
+        {
+          "name": "Egyptian",
+          "slug": "egyptian",
+          "speakers": "0 (extinct)",
+          "languages": "1",
+          "description": "Ancient Egyptian, ancestor of Coptic (now liturgical only)",
+          "notableLanguages": ["Ancient Egyptian", "Coptic"]
+        },
+        {
+          "name": "Omotic",
+          "slug": "omotic",
+          "speakers": "5+ million",
+          "languages": "30+",
+          "description": "Ethiopian languages sometimes classified separately",
+          "notableLanguages": ["Wolaytta", "Gamo", "Kafa", "Bench"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Niger-Congo", "relationship": "Some propose ancient Nostratic connection", "sharedFeatures": "Debated sound correspondences" },
+        { "family": "Indo-European", "relationship": "Nostratic hypothesis (controversial)", "sharedFeatures": "Some pronoun and number similarities proposed" }
+      ],
+      "uniqueFeatures": [
+        "Triconsonantal root system (especially Semitic)",
+        "Pharyngeal and emphatic consonants",
+        "Ejective consonants in Ethiopian languages",
+        "Ancient alphabetic writing traditions",
+        "Suffix conjugation in verbs"
+      ],
+      "historicalInfluence": {
+        "empires": ["Ancient Egypt", "Aksumite Empire", "Caliphate", "Songhai Empire (Hausa influence)"],
+        "culturalExports": ["Alphabetic writing (via Phoenician)", "Coffee culture (Ethiopia)", "Islamic scholarship", "Ancient mathematics/astronomy"],
+        "diasporaInfluence": "Ethiopian communities worldwide, Arabic cultural sphere, Hausa trade diaspora across Sahel"
+      }
+    },
+    {
+      "id": "nilo-saharan",
+      "slug": "nilo-saharan",
+      "name": "Nilo-Saharan",
+      "alternateNames": [],
+      "totalSpeakers": "50-60 million",
+      "numberOfLanguages": "200+",
+      "geographicSpread": "Nile Valley, Sudan, South Sudan, East Africa, Sahara edges",
+      "color": "from-green-500 to-teal-600",
+      "description": "A diverse family of East African languages spoken by pastoralists and farmers from Egypt to Tanzania, including the famous Maasai, Dinka, and Luo peoples.",
+      "overview": "Nilo-Saharan languages are spoken by some of Africa's most iconic peoples - the tall Dinka and Nuer of South Sudan, the cattle-herding Maasai, the marathon-running Kalenjin, and the fishing Luo. These are the languages of the Nile Valley's ancient kingdoms and East Africa's cattle cultures. The family includes the Nilotic languages, associated with striking physical characteristics and pastoral traditions.",
+      "characteristics": [
+        {
+          "name": "Vowel Harmony",
+          "description": "Vowels in a word must be from the same set (ATR harmony). Common in Nilotic languages."
+        },
+        {
+          "name": "Vowel Length Distinction",
+          "description": "Short vs. long vowels change word meanings - important in Luo, Dinka, and Maasai."
+        },
+        {
+          "name": "Complex Verb Morphology",
+          "description": "Verbs carry extensive information about aspect, mood, direction, and participants."
+        },
+        {
+          "name": "Singulative Marking",
+          "description": "Some languages mark singular rather than plural - collective nouns are the default."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Meroitic script (ancient Nubia, partially deciphered), Egyptian influence in Nubian kingdoms",
+        "modern": "Latin alphabet with various diacritics, Arabic script for some Nubian languages",
+        "examples": [
+          { "script": "Latin (Maasai)", "text": "Supat", "meaning": "Hello", "pronunciation": "soo-PAHT" },
+          { "script": "Latin (Dholuo)", "text": "Misawa", "meaning": "Hello/How are you", "pronunciation": "mee-SAH-wah" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Misawa", "language": "Dholuo (Luo)", "meaning": "Hello/Greetings", "pronunciation": "mee-SAH-wah" },
+        { "phrase": "Supat", "language": "Maa (Maasai)", "meaning": "Hello", "pronunciation": "soo-PAHT" },
+        { "phrase": "Chamgei", "language": "Kalenjin", "meaning": "Hello", "pronunciation": "chahm-GAY" },
+        { "phrase": "Yepa", "language": "Turkana", "meaning": "Hello", "pronunciation": "YEH-pah" },
+        { "phrase": "Ero kamano", "language": "Dholuo", "meaning": "Thank you", "pronunciation": "EH-roh kah-MAH-noh" },
+        { "phrase": "Ashe", "language": "Maa (Maasai)", "meaning": "Thank you", "pronunciation": "AH-sheh" }
+      ],
+      "timeline": [
+        { "year": -8000, "event": "Proto-Nilo-Saharan spoken in green Sahara region", "significance": "Family emerges during humid African period" },
+        { "year": -3000, "event": "Nilotic peoples begin southward migration from Nile Valley", "significance": "Cattle culture spreads to East Africa" },
+        { "year": -2000, "event": "Nubian kingdoms develop along the Nile", "significance": "Nilo-Saharan states rival Egypt" },
+        { "year": -1000, "event": "Kingdom of Kush flourishes", "significance": "Meroitic civilization at its height" },
+        { "year": 500, "event": "Eastern Nilotes (proto-Maasai) reach Kenya", "significance": "Pastoralists arrive in Great Rift Valley" },
+        { "year": 1500, "event": "Luo migration from South Sudan to Lake Victoria", "significance": "Western Nilotes establish in Kenya/Uganda" },
+        { "year": 1800, "event": "Maasai dominate East African highlands", "significance": "Maa speakers control trade routes" },
+        { "year": 1960, "event": "Kalenjin emerge as distinct political identity", "significance": "Multiple Southern Nilotic groups unite" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Nilotic",
+          "slug": "nilotic",
+          "speakers": "30+ million",
+          "languages": "50+",
+          "description": "East African pastoralist languages - Maasai, Luo, Kalenjin, Dinka",
+          "notableLanguages": ["Dholuo", "Maa (Maasai)", "Kalenjin", "Dinka", "Nuer", "Turkana"]
+        },
+        {
+          "name": "Eastern Sudanic",
+          "slug": "eastern-sudanic",
+          "speakers": "20+ million",
+          "languages": "100+",
+          "description": "Ancient Nile Valley languages including Nubian",
+          "notableLanguages": ["Nubian", "Fur", "Tama", "Nilotic languages"]
+        },
+        {
+          "name": "Central Sudanic",
+          "slug": "central-sudanic",
+          "speakers": "7+ million",
+          "languages": "60+",
+          "description": "Languages of South Sudan, CAR, and DRC borders",
+          "notableLanguages": ["Lugbara", "Mangbetu", "Lendu", "Madi"]
+        },
+        {
+          "name": "Saharan",
+          "slug": "saharan",
+          "speakers": "5+ million",
+          "languages": "10+",
+          "description": "Desert languages including Kanuri of the Lake Chad region",
+          "notableLanguages": ["Kanuri", "Teda", "Daza", "Zaghawa"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Niger-Congo", "relationship": "Long geographic contact, some borrowings", "sharedFeatures": "Some shared vocabulary in contact zones" },
+        { "family": "Afroasiatic", "relationship": "Ancient Nile Valley contact with Cushitic and Egyptian", "sharedFeatures": "Some lexical borrowings, cultural exchange" }
+      ],
+      "uniqueFeatures": [
+        "Advanced Tongue Root (ATR) vowel harmony",
+        "Vowel length contrasts (short vs. long)",
+        "Singulative marking (singular, not plural, is marked)",
+        "Complex case systems in some branches",
+        "Cattle terminology is highly developed"
+      ],
+      "historicalInfluence": {
+        "empires": ["Kingdom of Kush", "Meroitic Empire", "Luo kingdoms", "Maasai age-set system"],
+        "culturalExports": ["Cattle culture traditions", "Age-set social organization", "East African pastoralism", "Long-distance running tradition"],
+        "diasporaInfluence": "Luo political influence (Obama family heritage), Maasai cultural recognition worldwide"
+      }
+    },
+    {
+      "id": "khoisan",
+      "slug": "khoisan",
+      "name": "Khoisan",
+      "alternateNames": ["Click languages", "Khoe-San"],
+      "totalSpeakers": "~400,000",
+      "numberOfLanguages": "30+",
+      "geographicSpread": "Southern Africa (Namibia, Botswana, South Africa), isolated groups in Tanzania",
+      "color": "from-yellow-500 to-amber-600",
+      "description": "Among the world's oldest language families, famous for their click consonants. Spoken by the San (Bushmen) and Khoekhoe peoples - humanity's oldest genetic lineages.",
+      "overview": "Khoisan languages are linguistic treasures representing some of humanity's deepest linguistic heritage. The San peoples (formerly called 'Bushmen') have inhabited Southern Africa for over 100,000 years, making them among the oldest continuous populations on Earth. Their click languages influenced neighboring Bantu languages like Zulu and Xhosa, which borrowed click consonants through centuries of contact.",
+      "characteristics": [
+        {
+          "name": "Click Consonants",
+          "description": "Up to 100+ click consonants in some languages, made by creating suction in the mouth. Written as !, ǂ, ǀ, ǁ, ǃ in phonetic notation."
+        },
+        {
+          "name": "Tone Systems",
+          "description": "Complex tonal systems with 4-5 tones that distinguish word meanings."
+        },
+        {
+          "name": "Extensive Consonant Inventory",
+          "description": "Some Khoisan languages have over 140 distinct consonants - among the largest inventories known."
+        },
+        {
+          "name": "Pharyngeal Sounds",
+          "description": "Various throat sounds beyond clicks, including uvular and pharyngeal consonants."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Oral tradition only - no indigenous writing systems",
+        "modern": "Latin alphabet with special symbols for clicks (!, ǂ, ǀ, ǁ, ǃ, ʘ)",
+        "examples": [
+          { "script": "Latin with clicks", "text": "!Kung", "meaning": "The !Kung people", "pronunciation": "click-kung" },
+          { "script": "Latin with clicks", "text": "ǃXóõ", "meaning": "A Khoisan language", "pronunciation": "click-koh" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Moro", "language": "Nama/Khoekhoe", "meaning": "Hello", "pronunciation": "MOH-roh" },
+        { "phrase": "!Kung", "language": "!Kung", "meaning": "Person/People", "pronunciation": "click-KUNG" },
+        { "phrase": "Aio", "language": "Nama", "meaning": "Thank you", "pronunciation": "AH-ee-oh" },
+        { "phrase": "Tsamkwa", "language": "Naro", "meaning": "Good morning", "pronunciation": "tsahm-KWAH" }
+      ],
+      "timeline": [
+        { "year": -100000, "event": "Ancestors of Khoisan peoples inhabit Southern Africa", "significance": "Among the oldest human populations" },
+        { "year": -20000, "event": "Rock art traditions begin in Southern Africa", "significance": "Some of world's oldest art" },
+        { "year": -2000, "event": "Khoekhoe pastoralists acquire livestock", "significance": "Herding spreads to Southern Africa" },
+        { "year": 500, "event": "Bantu peoples arrive in Southern Africa", "significance": "Click sounds borrowed into Nguni languages" },
+        { "year": 1652, "event": "Dutch establish Cape Colony", "significance": "Colonial pressure on Khoisan peoples begins" },
+        { "year": 1800, "event": "Many Khoisan languages begin declining", "significance": "Colonial violence and displacement" },
+        { "year": 1990, "event": "San recognition movements emerge", "significance": "Cultural revival efforts begin" },
+        { "year": 2003, "event": "ǃXóõ recognized as most complex sound system", "significance": "Global linguistic interest grows" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Khoe-Kwadi",
+          "slug": "khoe",
+          "speakers": "300,000+",
+          "languages": "20+",
+          "description": "Largest Khoisan group including Nama and Khoekhoe",
+          "notableLanguages": ["Nama", "Khoekhoe", "Naro", "Gǀui", "Khwe"]
+        },
+        {
+          "name": "Tuu",
+          "slug": "tuu",
+          "speakers": "~5,000",
+          "languages": "5+ (many extinct)",
+          "description": "Southern Africa's original languages, critically endangered",
+          "notableLanguages": ["ǃXóõ", "Nǁng"]
+        },
+        {
+          "name": "Kx'a",
+          "slug": "kxa",
+          "speakers": "~4,000",
+          "languages": "3",
+          "description": "Northern Kalahari languages",
+          "notableLanguages": ["!Kung (!Xũũ)", "ǂ'Amkoe"]
+        },
+        {
+          "name": "Sandawe & Hadza",
+          "slug": "sandawe-hadza",
+          "speakers": "~100,000",
+          "languages": "2",
+          "description": "Isolated click languages in Tanzania - possible Khoisan relatives",
+          "notableLanguages": ["Sandawe", "Hadza"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Niger-Congo (Nguni)", "relationship": "Click borrowing through contact", "sharedFeatures": "Zulu/Xhosa have 15-20 click sounds from Khoisan" },
+        { "family": "All human languages", "relationship": "Some theorize clicks were features of proto-human language", "sharedFeatures": "Possible ancient sound system" }
+      ],
+      "uniqueFeatures": [
+        "Click consonants (up to 100+ distinct clicks)",
+        "Largest consonant inventories known to linguistics",
+        "Some languages have 4-5 distinct tones",
+        "Complex morphology with many noun classes",
+        "Extremely endangered - many have only elderly speakers"
+      ],
+      "historicalInfluence": {
+        "empires": ["No centralized states - egalitarian band societies"],
+        "culturalExports": ["Rock art traditions", "Tracking/hunting expertise", "Click sounds in Bantu languages", "Trance healing ceremonies"],
+        "diasporaInfluence": "San cultural tourism, /Xam folklore preserved in Bleek-Lloyd collection"
+      }
+    },
+    {
+      "id": "bantu",
+      "slug": "bantu",
+      "name": "Bantu",
+      "alternateNames": ["Narrow Bantu", "Central-Southern Bantu"],
+      "totalSpeakers": "350+ million",
+      "numberOfLanguages": "500+",
+      "geographicSpread": "Central, East, and Southern Africa - from Cameroon to South Africa",
+      "color": "from-purple-500 to-violet-600",
+      "description": "The most widespread language subfamily in Africa, result of one of humanity's greatest migrations. From Swahili to Zulu, Bantu languages unite over a third of Africa.",
+      "overview": "The Bantu expansion is one of the most significant events in African history. Starting around 3000 BCE from the Cameroon-Nigeria border region, Bantu-speaking farmers spread their languages, iron-working technology, and agricultural practices across central, eastern, and southern Africa over 4,000 years. Today, Bantu languages include Swahili (100M+ speakers), Shona, Zulu, Kikuyu, Lingala, and hundreds more.",
+      "characteristics": [
+        {
+          "name": "Noun Class Prefixes",
+          "description": "15-20 noun classes marked by prefixes. Swahili: m-tu (person), wa-tu (people), ki-tu (thing), vi-tu (things)."
+        },
+        {
+          "name": "Agglutinative Verbs",
+          "description": "Single words express complete sentences: Swahili 'nitakupenda' = ni-ta-ku-penda = I-will-you-love = 'I will love you'"
+        },
+        {
+          "name": "Vowel Harmony",
+          "description": "Vowels in suffixes harmonize with verb root vowels in many Bantu languages."
+        },
+        {
+          "name": "Shared Core Vocabulary",
+          "description": "Common roots across all Bantu: *-ntu (person), *-amba (speak), *-genda (go), *-kúmà (to be heavy)"
+        }
+      ],
+      "writingSystem": {
+        "historical": "Primarily oral tradition, though Swahili used Arabic script from ~1100 CE",
+        "modern": "Latin alphabet (most), Arabic-derived Swahili script (historical/religious)",
+        "examples": [
+          { "script": "Latin (Swahili)", "text": "Habari", "meaning": "News / How are you", "pronunciation": "hah-BAH-ree" },
+          { "script": "Latin (Zulu)", "text": "Sawubona", "meaning": "I see you", "pronunciation": "sah-woo-BOH-nah" },
+          { "script": "Latin (Shona)", "text": "Mhoro", "meaning": "Hello", "pronunciation": "mm-HO-roh" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Jambo / Habari", "language": "Swahili", "meaning": "Hello / How are you", "pronunciation": "JAHM-boh / hah-BAH-ree" },
+        { "phrase": "Sawubona", "language": "Zulu", "meaning": "I see you (greeting)", "pronunciation": "sah-woo-BOH-nah" },
+        { "phrase": "Mhoro", "language": "Shona", "meaning": "Hello", "pronunciation": "mm-HO-roh" },
+        { "phrase": "Wĩmwega", "language": "Kikuyu", "meaning": "Hello", "pronunciation": "wee-MWEH-gah" },
+        { "phrase": "Mbote", "language": "Lingala", "meaning": "Hello", "pronunciation": "mm-BOH-teh" },
+        { "phrase": "Asante", "language": "Swahili", "meaning": "Thank you", "pronunciation": "ah-SAHN-teh" },
+        { "phrase": "Ngiyabonga", "language": "Zulu", "meaning": "Thank you", "pronunciation": "ngee-yah-BOHN-gah" }
+      ],
+      "timeline": [
+        { "year": -3000, "event": "Proto-Bantu speakers in Cameroon-Nigeria grasslands", "significance": "Origin of Bantu expansion" },
+        { "year": -2000, "event": "First wave moves into Congo Basin rainforest", "significance": "Western Bantu diversification" },
+        { "year": -1000, "event": "Eastern Bantu reach Great Lakes region", "significance": "Iron-working technology spreads east" },
+        { "year": 0, "event": "Bantu speakers reach East African coast", "significance": "Foundation for Swahili civilization" },
+        { "year": 500, "event": "Bantu expansion reaches Southern Africa", "significance": "Nguni and Sotho-Tswana groups emerge" },
+        { "year": 1000, "event": "Great Zimbabwe civilization built by Shona speakers", "significance": "Major Bantu stone city-state" },
+        { "year": 1400, "event": "Swahili becomes Indian Ocean trade language", "significance": "Bantu-Arab linguistic fusion" },
+        { "year": 1816, "event": "Zulu Kingdom established under Shaka", "significance": "Major Southern Bantu power" },
+        { "year": 2004, "event": "Swahili becomes African Union language", "significance": "Continental recognition" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Nguni",
+          "slug": "nguni",
+          "speakers": "25+ million",
+          "languages": "10+",
+          "description": "Southern African languages with click consonants - Zulu, Xhosa, Ndebele",
+          "notableLanguages": ["Zulu", "Xhosa", "Swazi/siSwati", "Ndebele"]
+        },
+        {
+          "name": "Sotho-Tswana",
+          "slug": "sotho-tswana",
+          "speakers": "15+ million",
+          "languages": "5+",
+          "description": "Southern African plateau languages",
+          "notableLanguages": ["Sesotho", "Setswana", "Northern Sotho/Sepedi"]
+        },
+        {
+          "name": "Great Lakes Bantu",
+          "slug": "great-lakes-bantu",
+          "speakers": "50+ million",
+          "languages": "60+",
+          "description": "Languages of Uganda, Rwanda, Burundi, and western Kenya/Tanzania",
+          "notableLanguages": ["Luganda", "Kinyarwanda", "Kirundi", "Kikuyu", "Luhya"]
+        },
+        {
+          "name": "Swahili & Coastal Bantu",
+          "slug": "swahili-coastal",
+          "speakers": "100+ million (including L2)",
+          "languages": "20+",
+          "description": "East African coast languages, Swahili is Africa's most spoken Bantu language",
+          "notableLanguages": ["Swahili", "Mijikenda", "Comorian", "Pokomo"]
+        },
+        {
+          "name": "Congo Basin Bantu",
+          "slug": "congo-basin",
+          "speakers": "50+ million",
+          "languages": "200+",
+          "description": "Rainforest and savanna languages of DRC, Angola, Congo",
+          "notableLanguages": ["Lingala", "Kikongo", "Tshiluba", "Mongo", "Kimbundu"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Niger-Congo (non-Bantu)", "relationship": "Sister branches within Niger-Congo", "sharedFeatures": "Noun classes, tonal systems" },
+        { "family": "Khoisan", "relationship": "Contact led to click adoption", "sharedFeatures": "Click consonants in Nguni languages" }
+      ],
+      "uniqueFeatures": [
+        "Noun class prefix system (mu-/ba-, ki-/vi-, etc.)",
+        "Agglutinative verb structure encoding subject, tense, object",
+        "Proto-Bantu reconstructed vocabulary (*-ntu = person)",
+        "Click consonants in southern Nguni languages",
+        "Ubuntu philosophy expressed in shared root -ntu"
+      ],
+      "historicalInfluence": {
+        "empires": ["Great Zimbabwe", "Kongo Kingdom", "Zulu Kingdom", "Buganda Kingdom", "Swahili city-states"],
+        "culturalExports": ["Ubuntu philosophy", "Iron-working spread", "Swahili as lingua franca", "Rumba/Soukous music from Lingala speakers"],
+        "diasporaInfluence": "Swahili taught globally, Zulu cultural exports, Kongo influences in Caribbean"
+      }
+    },
+    {
+      "id": "cushitic",
+      "slug": "cushitic",
+      "name": "Cushitic",
+      "alternateNames": ["Cuchitic", "Kushitic"],
+      "totalSpeakers": "70+ million",
+      "numberOfLanguages": "50+",
+      "geographicSpread": "Horn of Africa - Ethiopia, Somalia, Eritrea, Djibouti, Kenya, Sudan",
+      "color": "from-rose-500 to-red-600",
+      "description": "The indigenous language family of the Horn of Africa, home to Oromo (Africa's 4th most spoken language), Somali, and the ancient Beja.",
+      "overview": "Cushitic languages have been spoken in the Horn of Africa for over 7,000 years, making them one of the oldest continuously inhabited language areas. The Oromo are Ethiopia's largest ethnic group, while Somali unites one of Africa's most homogeneous nations. These languages carry rich pastoral traditions, complex clan genealogies, and poetry traditions that rival any in the world.",
+      "characteristics": [
+        {
+          "name": "SOV Word Order",
+          "description": "Subject-Object-Verb order - 'The man the cow saw' instead of 'The man saw the cow'"
+        },
+        {
+          "name": "Ejective Consonants",
+          "description": "Consonants pronounced with a burst of air from closed glottis, written as p', t', k', etc."
+        },
+        {
+          "name": "Gender and Case System",
+          "description": "Masculine/feminine nouns with complex case marking for subject, object, location, etc."
+        },
+        {
+          "name": "Postpositions",
+          "description": "Grammatical markers come after nouns (postpositions), not before (prepositions)."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Oral tradition primary; some Arabic script usage for religious texts",
+        "modern": "Latin alphabet (Somali since 1972, Oromo since 1991), Ethiopic script (some Oromo)",
+        "examples": [
+          { "script": "Latin (Somali)", "text": "Nabad", "meaning": "Peace", "pronunciation": "NAH-bahd" },
+          { "script": "Latin (Oromo)", "text": "Nagaa", "meaning": "Peace/Hello", "pronunciation": "nah-GAH" },
+          { "script": "Latin (Afar)", "text": "Tanammerte", "meaning": "Hello", "pronunciation": "tah-nahm-MER-teh" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Nabad / Iska warran", "language": "Somali", "meaning": "Peace / How are you", "pronunciation": "NAH-bahd / IS-kah WAH-rahn" },
+        { "phrase": "Nagaa / Akkam", "language": "Oromo", "meaning": "Peace / How are you", "pronunciation": "nah-GAH / AH-kahm" },
+        { "phrase": "Tanammerte", "language": "Afar", "meaning": "Hello", "pronunciation": "tah-nahm-MER-teh" },
+        { "phrase": "Mahadsanid", "language": "Somali", "meaning": "Thank you", "pronunciation": "mah-HAHD-sah-nid" },
+        { "phrase": "Galatoomi", "language": "Oromo", "meaning": "Thank you", "pronunciation": "gah-lah-TOH-mee" }
+      ],
+      "timeline": [
+        { "year": -7000, "event": "Proto-Cushitic speakers in Horn of Africa", "significance": "Family origin in ancient homeland" },
+        { "year": -3000, "event": "Cushitic peoples develop pastoral traditions", "significance": "Cattle and camel herding begins" },
+        { "year": -1000, "event": "Beja established in northeastern Sudan", "significance": "Continuous presence for 3,000+ years" },
+        { "year": 700, "event": "Islam reaches Somali and Afar coast", "significance": "Religious transformation begins" },
+        { "year": 1500, "event": "Oromo expansion into Ethiopian highlands", "significance": "Oromo become Ethiopia's largest group" },
+        { "year": 1880, "event": "Somali resistance to European colonialism", "significance": "Mad Mullah's 20-year campaign" },
+        { "year": 1960, "event": "Somalia gains independence", "significance": "First Cushitic nation-state" },
+        { "year": 1972, "event": "Somali Latin script officially adopted", "significance": "Standardized national writing" },
+        { "year": 1991, "event": "Oromo Qubee (Latin) script officially adopted", "significance": "Ethiopia's largest language gets standard script" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Highland East Cushitic",
+          "slug": "highland-east-cushitic",
+          "speakers": "10+ million",
+          "languages": "10+",
+          "description": "Ethiopian highland languages including Sidama and Hadiyya",
+          "notableLanguages": ["Sidama", "Hadiyya", "Kambata", "Gedeo"]
+        },
+        {
+          "name": "Lowland East Cushitic",
+          "slug": "lowland-east-cushitic",
+          "speakers": "55+ million",
+          "languages": "25+",
+          "description": "Major Cushitic languages - Oromo, Somali, Afar",
+          "notableLanguages": ["Oromo", "Somali", "Afar", "Saho", "Rendille"]
+        },
+        {
+          "name": "Central Cushitic (Agaw)",
+          "slug": "agaw",
+          "speakers": "1+ million",
+          "languages": "7",
+          "description": "Ancient Ethiopian languages, possibly original highland inhabitants",
+          "notableLanguages": ["Awngi", "Bilen", "Xamtanga", "Kemant"]
+        },
+        {
+          "name": "North Cushitic",
+          "slug": "north-cushitic",
+          "speakers": "2+ million",
+          "languages": "1",
+          "description": "The ancient Beja language of Sudan and Eritrea",
+          "notableLanguages": ["Beja (Bedawi)"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Semitic", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Some grammatical patterns, consonant types" },
+        { "family": "Berber", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Consonant clusters, gender system" },
+        { "family": "Egyptian", "relationship": "Distant Afroasiatic relative", "sharedFeatures": "Very ancient shared vocabulary" }
+      ],
+      "uniqueFeatures": [
+        "SOV word order (rare in Africa)",
+        "Ejective consonants (p', t', k', s')",
+        "Complex case and gender systems",
+        "Elaborate poetry traditions (Somali gabay)",
+        "Clan genealogy memorized for 20+ generations"
+      ],
+      "historicalInfluence": {
+        "empires": ["Land of Punt (ancient)", "Axum trade connections", "Somali Sultanates (Adal, Ajuran, Majeerteen)"],
+        "culturalExports": ["Frankincense and myrrh trade", "Camel pastoralism", "Somali poetry tradition", "Coffee (possibly via Oromo)"],
+        "diasporaInfluence": "Somali diaspora worldwide (2M+), Oromo communities in USA/Europe"
+      }
+    }
+  ]
+}
