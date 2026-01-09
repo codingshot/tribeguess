@@ -950,6 +950,13 @@
       },
       "traditionalDance": "Ekerongo - performed with Obokano lyre during celebrations",
       "religion": "Traditional beliefs; now predominantly Christian (Seventh-day Adventist influence)",
+      "traditionalReligion": {
+        "name": "Gusii Traditional Religion",
+        "supremeDeity": "Engoro (creator god, also called Rioba - the sun)",
+        "spirits": ["Ebirecha (ancestral spirits)", "Ababasi (spirits of the dead)", "Chisokoro (nature spirits)"],
+        "practices": ["Okorera (sacrifices to ancestors)", "Prophecy through diviners (Abaragori)", "Rain-making ceremonies", "Circumcision rituals with spiritual significance", "Offerings at sacred Omorembe trees"],
+        "beliefs": "Ancestors (ebirecha) watch over and can influence the living; Engoro created the world and gave the Gusii their fertile land; diviners communicate with the spirit world; the Omorembe (wild fig) tree is sacred for rituals"
+      },
       "history": {
         "origin": "The Gusii (Kisii) are Bantu people who migrated from the Mt. Elgon region in the 16th century. They settled in the fertile highlands of South Nyanza, an area surrounded by Nilotic communities (Luo, Kipsigis, Maasai).",
         "colonialEra": "The Gusii fiercely resisted British colonization. In 1908, the British launched a punitive expedition that resulted in significant loss of life and cattle. Despite this, the Gusii maintained their cultural practices.",
@@ -1050,6 +1057,13 @@
       },
       "traditionalDance": "Ntore - performed during celebrations and rites of passage",
       "religion": "Traditional belief in Murungu (God); now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Meru Traditional Religion",
+        "supremeDeity": "Murungu (supreme creator god who dwells on Mt. Kenya, similar to Kikuyu Ngai)",
+        "spirits": ["Mizimu (ancestral spirits)", "Ngoma (nature spirits)", "Aimu (guardian spirits of sacred places)"],
+        "practices": ["Kithira (sacrificial rituals)", "Prayers facing Mt. Kenya", "Njuri Ncheke elders mediate spiritual matters", "Circumcision ceremonies with spiritual significance", "Oaths sworn at sacred Mugumo trees"],
+        "beliefs": "Murungu created the Meru and gave them the land around Mt. Kenya; ancestors guide and protect; the Njuri Ncheke council has spiritual as well as judicial authority; sacred groves (mathanguni) must not be defiled"
+      },
       "history": {
         "origin": "The Ameru are Bantu people with origins linked to the Mwene (Coastal) region. According to their oral history, they escaped from 'Mbwa' (possibly a reference to Arab slavers) and migrated inland, settling on the eastern slopes of Mt. Kenya.",
         "colonialEra": "The Meru, like their Kikuyu neighbors, participated in the Mau Mau uprising. The Njuri Ncheke council of elders maintained authority even during colonization, secretly supporting resistance efforts.",
@@ -1309,6 +1323,13 @@
       },
       "traditionalDance": "Edonga - ceremonial dance performed during festivals and rituals",
       "religion": "Traditional belief in Akuj (God/Sky); Christianity and Islam growing",
+      "traditionalReligion": {
+        "name": "Turkana Traditional Religion",
+        "supremeDeity": "Akuj (sky god, supreme creator who sends rain and fertility)",
+        "spirits": ["Ngipean (ancestral spirits)", "Ekipe (spirits of specific places)", "Ngikaram (dream spirits)"],
+        "practices": ["Animal sacrifices during droughts", "Prayers to Akuj for rain", "Divination using intestines and sandals", "Emuron (prophets/diviners) consult spirits", "Akiriket ceremonies for blessings"],
+        "beliefs": "Akuj controls rain, which is life in the desert; ancestors can bless or curse; dreams carry messages from spirits; the Emuron (prophet/diviner) has special powers to communicate with Akuj and predict events"
+      },
       "history": {
         "origin": "The Turkana are Eastern Nilotic people who migrated from the Karamoja region of Uganda around 300-400 years ago. They are closely related to the Karamojong, Jie, and Teso peoples.",
         "colonialEra": "The British had difficulty controlling Turkana due to the harsh terrain. The Turkana resisted colonial rule and maintained relative independence. They continued cattle raiding despite British attempts to stop it.",
@@ -1403,6 +1424,13 @@
       },
       "traditionalDance": "Similar to Maasai jumping dance, performed during ceremonies",
       "religion": "Traditional belief in Nkai (God); Christianity growing",
+      "traditionalReligion": {
+        "name": "Samburu Traditional Religion",
+        "supremeDeity": "Nkai (god who lives in the sky and on mountains, same as Maasai Enkai)",
+        "spirits": ["Laibon (spiritual leaders with prophetic powers)", "Laigwenak (ancestral spirits)", "Nature spirits in mountains and trees"],
+        "practices": ["Prayers to Nkai facing sacred mountains", "Animal sacrifices during ceremonies", "Laibon divination and prophecy", "Age-set ceremonies with spiritual components", "Blessing ceremonies with milk and honey"],
+        "beliefs": "Nkai created all cattle and gave them to the Samburu; the Laibon has spiritual powers inherited through lineage; warriors receive spiritual protection through rituals; sacred sites on mountains must be respected"
+      },
       "history": {
         "origin": "The Samburu are closely related to the Maasai, sharing common Nilotic origins from the Nile Valley. They separated from the Maasai around 500 years ago and moved to the northern regions of Kenya.",
         "colonialEra": "The Samburu, like the Maasai, were confined to reserves by the British. They maintained their pastoral lifestyle and resisted colonial interference in their culture.",
@@ -1491,6 +1519,13 @@
       },
       "traditionalDance": "Traditional dances similar to Kikuyu, performed during ceremonies",
       "religion": "Traditional belief in Ngai; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Embu Traditional Religion",
+        "supremeDeity": "Ngai (supreme creator god dwelling on Mt. Kenya, shared with Kikuyu and Meru)",
+        "spirits": ["Ngoma (ancestral spirits)", "Nature spirits in sacred groves", "Aimu (protective spirits)"],
+        "practices": ["Prayers facing Mt. Kenya", "Sacrifices under sacred Mugumo trees", "Circumcision rituals with spiritual meaning", "Elder-led ceremonies", "Oath-taking at sacred sites"],
+        "beliefs": "Ngai created the Embu and gave them the southeastern slopes of Mt. Kenya; ancestors watch over the living; the Mugumo (fig) tree is sacred; elders mediate between people and the spirit world"
+      },
       "history": {
         "origin": "The Embu are Bantu people closely related to the Kikuyu and Meru. They settled on the southeastern slopes of Mount Kenya, possibly migrating from the coast like other GEMA communities.",
         "colonialEra": "The Embu participated in the Mau Mau uprising alongside the Kikuyu and Meru. Many Embu fighters were detained during the Emergency period.",
@@ -1672,6 +1707,13 @@
       },
       "traditionalDance": "Traditional warrior dances during ceremonies",
       "religion": "Traditional beliefs; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Kuria Traditional Religion",
+        "supremeDeity": "Rioba (creator god, associated with the sun)",
+        "spirits": ["Amang'ara (ancestral spirits)", "Amasambwa (nature spirits)", "Ibisokoro (evil spirits)"],
+        "practices": ["Rituals at sacred groves", "Ancestor veneration ceremonies", "Rain-making rituals", "Age-set initiation ceremonies", "Animal sacrifices for blessings"],
+        "beliefs": "Ancestors watch over and can punish or bless the living; sacred trees and groves must not be disturbed; the sun represents Rioba's power; diviners communicate with the spirit world"
+      },
       "history": {
         "origin": "The Kuria are a Bantu people who settled in the Lake Victoria region, straddling the Kenya-Tanzania border. They share cultural links with the Gusii and other Bantu communities.",
         "colonialEra": "The arbitrary colonial border separated Kuria communities between British Kenya and German/British Tanganyika.",
@@ -1757,6 +1799,13 @@
       },
       "traditionalDance": "Mwazindika - traditional dance with drums and whistles",
       "religion": "Traditional beliefs in ancestral spirits; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Taita Traditional Religion",
+        "supremeDeity": "Mlungu (supreme creator god who rules from above)",
+        "spirits": ["Mzimu (ancestral spirits)", "Pepo (nature spirits)", "Fighi/Vigango (memorial posts embodying ancestors)"],
+        "practices": ["Preservation of ancestral skulls in skull houses", "Vigango (carved wooden posts) for deceased elders", "Rituals at sacred Mbololo forest", "Rain-making ceremonies", "Ancestor consultation through mediums"],
+        "beliefs": "Ancestors remain present and must be honored with vigango; the sacred forests are homes of spirits and must not be cut; skull preservation keeps ancestors close; Mlungu created the Taita Hills as a special homeland"
+      },
       "history": {
         "origin": "The Taita are Bantu people who migrated to the Taita Hills between 1000-1300 CE, likely from the Congo Basin or Tanzania. They developed a distinct highland culture.",
         "colonialEra": "The British recognized the Taita as skilled agriculturalists and workers. Many Taita men worked on the Uganda Railway construction. The Taita resisted land alienation.",
@@ -1842,6 +1891,13 @@
       },
       "traditionalDance": "Akogo - traditional dance with drums",
       "religion": "Traditional beliefs; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Teso Traditional Religion",
+        "supremeDeity": "Akuj (sky god, creator of all things)",
+        "spirits": ["Ajok (ancestral spirits)", "Edeke (nature spirits)", "Ekapilan (powerful protective spirits)"],
+        "practices": ["Ajuoga (diviners) consult spirits", "Rain-making ceremonies", "Animal sacrifices for community blessings", "Age-set initiation rituals", "Offerings at sacred trees"],
+        "beliefs": "Akuj created the world and controls rain; ancestors protect the living; diviners (ajuoga) communicate with spirits; sacred trees are meeting places between human and spirit worlds"
+      },
       "history": {
         "origin": "The Teso are Nilotic people related to the Karamojong cluster. They migrated to their current location from Uganda, separated by colonial borders from the larger Ugandan Iteso population.",
         "colonialEra": "The British separated the Teso between Uganda and Kenya. Kenyan Teso became part of Western Province and faced marginalization.",
@@ -1928,6 +1984,13 @@
       },
       "traditionalDance": "Sengenya and Gonda - energetic dances performed at celebrations",
       "religion": "Traditional beliefs in ancestors and spirits; Islam and Christianity growing",
+      "traditionalReligion": {
+        "name": "Mijikenda Traditional Religion",
+        "supremeDeity": "Mulungu (supreme creator god)",
+        "spirits": ["Koma (ancestral spirits)", "Pepo (nature spirits)", "Vigango (memorial spirits of elders)"],
+        "practices": ["Kaya forest rituals by elders", "Vigango/Kigango carving for deceased", "Offerings at sacred Kaya sites", "Divination and traditional medicine", "Rain-making ceremonies"],
+        "beliefs": "The sacred Kaya forests are the spiritual homes of ancestors; vigango posts embody spirits of the dead; ancestors watch over the living from the Kayas; disturbing sacred sites brings misfortune"
+      },
       "history": {
         "origin": "The Mijikenda migrated from Shungwaya (possibly Somalia) around the 16th century. They settled in fortified villages (Kayas) in the coastal hinterland to protect against raids.",
         "colonialEra": "The Mijikenda resisted both Arab and British control. Mekatilili wa Menza led a famous resistance against British rule in 1913-1914.",
@@ -2126,6 +2189,13 @@
       },
       "traditionalDance": "Traditional Borana dances during Gada ceremonies",
       "religion": "Predominantly Islam; traditional Waaq beliefs among some",
+      "traditionalReligion": {
+        "name": "Borana Traditional Religion (Waaqeffannaa)",
+        "supremeDeity": "Waaq (supreme sky god, creator of all)",
+        "spirits": ["Ayyaana (spiritual forces)", "Ateetee (women's protective spirit)", "Ancestral spirits"],
+        "practices": ["Prayers to Waaq at dawn and dusk", "Gada system ceremonies with spiritual elements", "Rituals at sacred wells (tula)", "Animal sacrifices during droughts", "Qaallu (traditional priests) lead ceremonies"],
+        "beliefs": "Waaq created all things and maintains cosmic order; the Gada system has spiritual as well as political functions; sacred wells are protected by spirits; Qaallu priests mediate between Waaq and people"
+      },
       "history": {
         "origin": "The Borana are Cushitic people, part of the larger Oromo ethnic group. They migrated to their current location in northern Kenya from Ethiopia over several centuries.",
         "colonialEra": "The British divided Borana territory between Kenya and Ethiopia. The Kenyan Borana became part of the Northern Frontier District, administered separately.",
@@ -2211,6 +2281,13 @@
       },
       "traditionalDance": "Traditional warrior dances with jumping",
       "religion": "Traditional beliefs; Islam and Christianity growing",
+      "traditionalReligion": {
+        "name": "Rendille Traditional Religion",
+        "supremeDeity": "Waaq (sky god, similar to Somali/Borana deity)",
+        "spirits": ["Ancestral spirits", "Desert spirits at sacred sites", "Camel spirits that protect herds"],
+        "practices": ["Prayers to Waaq for rain and fertility", "Camel blessing ceremonies", "Age-set rituals with spiritual elements", "Offerings at sacred sites in desert", "Elders conduct spiritual ceremonies"],
+        "beliefs": "Waaq controls rain which is life in the desert; camels are sacred gifts from Waaq; ancestors guide the living; sacred sites in the desert must be respected"
+      },
       "history": {
         "origin": "The Rendille are Cushitic people with possible Somali origins. They adapted to the Kaisut Desert environment, developing a camel-based economy unique in East Africa.",
         "colonialEra": "The British had minimal contact with the remote Rendille. They maintained their pastoral lifestyle relatively undisturbed.",
@@ -2297,6 +2374,13 @@
       },
       "traditionalDance": "Traditional dances similar to Luo with fishing themes",
       "religion": "Traditional beliefs; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Suba Traditional Religion",
+        "supremeDeity": "Were (supreme god, similar to Luo Nyasaye)",
+        "spirits": ["Misambwa (ancestral spirits)", "Lake spirits", "Island spirits at sacred sites"],
+        "practices": ["Rain-making ceremonies by specialists", "Offerings to lake spirits for fishing success", "Ancestor veneration rituals", "Divination through mediums", "Sacred grove ceremonies"],
+        "beliefs": "Lake Victoria has powerful spirits that must be respected; ancestors protect fishermen; rain-makers can communicate with Were; sacred islands and groves house spirits"
+      },
       "history": {
         "origin": "The Suba are Bantu people who migrated from Uganda's Buganda region to the Lake Victoria islands between the 16th and 18th centuries. They settled on Mfangano, Rusinga, and nearby islands.",
         "colonialEra": "During colonial times, the Suba were administratively grouped with the Luo. They increasingly adopted Luo language and customs for social and economic reasons.",
@@ -2381,6 +2465,13 @@
       },
       "traditionalDance": "Traditional dances similar to Embu and Kikuyu",
       "religion": "Traditional belief in Ngai; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Mbeere Traditional Religion",
+        "supremeDeity": "Ngai (supreme creator god on Mt. Kenya, shared with Embu/Kikuyu)",
+        "spirits": ["Ngoma (ancestral spirits)", "Nature spirits in sacred groves", "Guardian spirits"],
+        "practices": ["Prayers facing Mt. Kenya", "Sacrifices at sacred Mugumo trees", "Elder-led ceremonies", "Honey offerings during rituals", "Circumcision ceremonies"],
+        "beliefs": "Ngai created the Mbeere and gave them the lowlands; ancestors guide and protect; sacred trees connect the living with spirits; honey has spiritual significance in ceremonies"
+      },
       "history": {
         "origin": "The Mbeere are Bantu people closely related to the Embu. They settled in the drier lowlands east of Mt. Kenya, developing farming techniques suited to semi-arid conditions.",
         "colonialEra": "The Mbeere participated in the Mau Mau uprising. They were affected by colonial policies but maintained their agricultural practices.",
@@ -2464,6 +2555,13 @@
       },
       "traditionalDance": "Traditional Taveta dances with drums and singing",
       "religion": "Traditional beliefs; Islam and Christianity growing",
+      "traditionalReligion": {
+        "name": "Taveta Traditional Religion",
+        "supremeDeity": "Mlungu (supreme creator god, similar to Taita deity)",
+        "spirits": ["Ancestor spirits", "Lake Jipe spirits", "Nature spirits in irrigation channels"],
+        "practices": ["Offerings at Lake Jipe for water blessings", "Ancestor veneration", "Rituals before planting seasons", "Blacksmith ceremonies with spiritual elements"],
+        "beliefs": "Lake Jipe is sacred and its waters are a gift from Mlungu; ancestors ensure successful harvests; blacksmithing has spiritual power; irrigation channels must be blessed"
+      },
       "history": {
         "origin": "The Taveta are Bantu people related to the Taita. They settled near Lake Jipe and developed irrigation agriculture, becoming important traders between the coast and interior.",
         "colonialEra": "Taveta was a refuge for escaped slaves and a trading center. The British recognized their irrigation skills and agricultural productivity.",
@@ -2543,6 +2641,13 @@
       },
       "traditionalDance": "Traditional dances similar to Meru community",
       "religion": "Traditional beliefs; now predominantly Christian",
+      "traditionalReligion": {
+        "name": "Tharaka Traditional Religion",
+        "supremeDeity": "Murungu (supreme god, shared with Meru)",
+        "spirits": ["Mizimu (ancestral spirits)", "Rain spirits", "Nature spirits in sacred sites"],
+        "practices": ["Rain-making ceremonies during droughts", "Sacrifices at sacred sites", "Elder councils with spiritual authority", "Harvest thanksgiving rituals", "Iron-smelting rituals with spiritual elements"],
+        "beliefs": "Murungu controls rain which is precious in the semi-arid land; ancestors can bring or withhold rain; iron-smelting had sacred rituals; elders communicate with the spirit world"
+      },
       "history": {
         "origin": "The Tharaka are Bantu people closely related to the Meru. They settled in the semi-arid lowlands east of Mt. Kenya, developing unique adaptations to the harsh environment.",
         "colonialEra": "The Tharaka were involved in the Mau Mau uprising. Colonial policies affected their land and livelihood.",
@@ -2710,6 +2815,13 @@
       },
       "traditionalDance": "Traditional dances during ceremonies and celebrations",
       "religion": "Traditional Waaq beliefs; Islam growing",
+      "traditionalReligion": {
+        "name": "Gabra Traditional Religion (Waaqeffannaa)",
+        "supremeDeity": "Waaq (supreme sky god, creator and sustainer of all life)",
+        "spirits": ["Ayyaana (spiritual forces)", "Ancestor spirits", "Desert spirits at sacred sites"],
+        "practices": ["Daily prayers to Waaq at dawn and dusk", "Camel blessing ceremonies", "Sorio festival (thanksgiving)", "Animal sacrifices during droughts", "Dabela (religious leaders) conduct rituals"],
+        "beliefs": "Waaq created all things and provides rain for survival in the desert; camels are sacred gifts; ancestors intercede with Waaq; the Dabela have special spiritual powers; certain desert sites are sacred"
+      },
       "history": {
         "origin": "The Gabra are Cushitic people related to the Borana. They adapted to the extreme Chalbi Desert environment, developing a unique camel-based pastoral economy.",
         "colonialEra": "The British had minimal contact with the remote Gabra. They maintained their traditional lifestyle largely undisturbed.",
@@ -2789,6 +2901,13 @@
       },
       "traditionalDance": "Traditional river dances during festivals",
       "religion": "Islam and Christianity; some traditional beliefs",
+      "traditionalReligion": {
+        "name": "Pokomo Traditional Religion",
+        "supremeDeity": "Mungu (creator god)",
+        "spirits": ["Ancestral spirits", "River spirits of Tana", "Forest spirits"],
+        "practices": ["Offerings to river spirits for fishing and farming success", "Ancestor veneration", "Rain-making ceremonies", "Rituals before planting as river recedes"],
+        "beliefs": "The Tana River has spiritual power that must be respected; ancestors ensure good harvests; river spirits control fish abundance; the land flooded by the river is sacred"
+      },
       "history": {
         "origin": "The Pokomo are Bantu people who settled along the Tana River centuries ago, developing sophisticated flood recession agriculture techniques.",
         "colonialEra": "The British recognized the Pokomo as skilled farmers. They were relatively peaceful and cooperative with colonial administration.",
@@ -2947,6 +3066,13 @@
       },
       "traditionalDance": "Similar to Maasai and Samburu dances",
       "religion": "Traditional beliefs; Christianity growing",
+      "traditionalReligion": {
+        "name": "Ilchamus Traditional Religion",
+        "supremeDeity": "Nkai (sky god, same as Maasai/Samburu deity)",
+        "spirits": ["Ancestral spirits", "Lake spirits of Baringo", "Nature spirits in sacred sites"],
+        "practices": ["Prayers to Nkai for rain and fertility", "Age-set ceremonies with spiritual elements", "Offerings at Lake Baringo for fishing success", "Honey gathering with spiritual rituals"],
+        "beliefs": "Nkai provides rain and protects cattle; Lake Baringo has spiritual significance as a life source; ancestors bless or curse fishing and farming endeavors; sacred sites must be respected"
+      },
       "history": {
         "origin": "The Ilchamus are Maa-speaking people related to Maasai and Samburu. They settled around Lake Baringo and uniquely developed fishing and irrigation agriculture.",
         "colonialEra": "The British recognized the Ilchamus' agricultural skills. They remained relatively peaceful and focused on their farming and fishing.",
