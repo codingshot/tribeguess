@@ -268,12 +268,15 @@ export const TribeFamilyTree: React.FC<FamilyTreeProps> = ({ currentTribe, ethni
                 </div>
               )}
               
-              {/* Current family */}
+              {/* Current family - now clickable */}
               <div className="ml-4 border-l-2 border-primary/30 pl-4">
                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="px-3 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded-full">
+                  <Link 
+                    to={`/languages/${languageFamily.toLowerCase().split(' ')[0].replace(/[()]/g, '')}`}
+                    className="px-3 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
+                  >
                     {languageFamily}
-                  </span>
+                  </Link>
                   {familyInfo?.speakersRange && (
                     <span className="text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded">
                       👥 {familyInfo.speakersRange} speakers
