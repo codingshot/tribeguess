@@ -153,6 +153,27 @@
       "The Kara War (1928-1931) was one of Central Africa's largest anti-colonial uprisings, led by Gbaya",
       "CAR sits at the crossroads of Bantu, Nilotic, and Ubangian language groups",
       "Traditional societies often had no chiefs - governance was by village elder consensus"
+    ],
+    "TD": [
+      "Chad has over 200 ethnic groups speaking 120+ languages across desert, Sahel, and savanna zones",
+      "The Sara are the largest ethnic group (~30%) and have traditionally dominated southern Chad",
+      "Lake Chad has shrunk by 90% since the 1960s, affecting millions of lives and livelihoods",
+      "The Kanem-Bornu Empire (c. 700-1900 CE) was one of Africa's longest-lasting empires, centered in Chad",
+      "Chad's north is Arabic-speaking and Muslim; the south is diverse with traditional and Christian faiths"
+    ],
+    "GA": [
+      "Gabon has over 40 ethnic groups, with the Fang being the largest at about 30% of the population",
+      "The Bwiti religion, using iboga plant ceremonies, originated among the Mitsogo and Fang peoples",
+      "Gabon is one of Africa's most urbanized nations - over 87% live in cities, mainly Libreville",
+      "Albert Schweitzer's famous hospital in Lambaréné served Gabonese communities for decades",
+      "Despite oil wealth, traditional forest-dwelling cultures like the Baka remain vital to Gabon's heritage"
+    ],
+    "GQ": [
+      "Equatorial Guinea is Africa's only Spanish-speaking country and one of its smallest nations",
+      "The Fang people make up about 85% of the population and dominate both mainland and island regions",
+      "Bioko Island was a major slave trade hub - known as Fernando Pó under Spanish colonial rule",
+      "Equatorial Guinea has Africa's highest GDP per capita due to oil, yet widespread poverty persists",
+      "The Bubi people are indigenous to Bioko Island and have distinct traditions from mainland Fang"
     ]
   },
   "countries": [
@@ -11345,6 +11366,971 @@
       "sources": [{ "name": "Wikipedia - Tigre people", "url": "https://en.wikipedia.org/wiki/Tigre_people" }],
       "description": "The Tigre are Eritrea's second-largest ethnic group with both Muslim and Christian communities. Their language descends from ancient Ge'ez, and they played a crucial role in Eritrea's independence struggle.",
       "relatedTribes": ["tigrinya", "beja", "afar", "rashida"]
+    },
+    {
+      "id": "toubou",
+      "name": "Toubou",
+      "slug": "toubou",
+      "slugAliases": ["teda", "daza", "tubu", "tebu"],
+      "youtubeVideoId": "LG8h5bfvWZk",
+      "countries": ["TD", "LY", "NE", "SD"],
+      "region": "Tibesti Mountains, Sahara Desert",
+      "population": "~700,000",
+      "populationPercent": "4% of Chad",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 21.0, "lng": 17.0 },
+      "counties": ["Tibesti Region", "Borkou Region", "Ennedi Region"],
+      "namePrefixes": ["Ou", "Gou", "Yo", "Ma", "Ki"],
+      "commonNames": {
+        "female": ["Keltouma", "Fatimé", "Mariam", "Zara", "Halima", "Amina", "Fati", "Khadija", "Hawa", "Aicha"],
+        "male": ["Goukouni", "Youssouf", "Mahamat", "Idriss", "Oumar", "Brahim", "Abakar", "Deby", "Ahmat", "Alifa"]
+      },
+      "stereotypes": [
+        "Among the world's most resilient desert survivors",
+        "Legendary warriors and raiders",
+        "Masters of camel caravans and desert navigation",
+        "Fiercely independent and ungovernable",
+        "Feared by colonial powers for guerrilla tactics",
+        "Deeply traditional with strict honor codes"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be warriors and herders",
+          "Must prove bravery and endurance",
+          "Camel and goat herding is central",
+          "Long-distance traders across Sahara"
+        ],
+        "female": [
+          "Manage households and camps",
+          "Expert tent makers and weavers",
+          "Own property including livestock",
+          "Significant say in marriage decisions"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men are warriors, herders, and long-distance traders. Raiding was historically common. Men handle external relations and defense.",
+          "female": "Women manage camps, produce leather goods and tents, and have property rights. Marriage is often matrilocal initially."
+        },
+        "modern": {
+          "male": "Modern Toubou men work in herding, trade, and increasingly politics and military. Many were fighters in Chad's civil wars.",
+          "female": "Women maintain traditional roles while some access education. Property rights remain stronger than many African cultures."
+        }
+      },
+      "culturalTraits": [
+        "Legendary desert survival skills",
+        "Camel-centered pastoral lifestyle",
+        "Strict codes of honor and revenge",
+        "Decentralized clan-based society",
+        "Traditional Teda and Daza divisions",
+        "Ancient salt caravan trading traditions"
+      ],
+      "funFacts": [
+        "The Toubou can survive in temperatures exceeding 50°C with minimal water",
+        "French colonial forces called them 'the most formidable warriors of the Sahara'",
+        "Toubou territory spans 2 million km² of the world's harshest desert",
+        "They controlled trans-Saharan trade routes for over 1,000 years",
+        "Toubou women have more property rights than women in many African societies",
+        "The Tibesti Mountains are the highest in the Sahara, with peaks over 3,400m"
+      ],
+      "traditionalFood": {
+        "staples": ["Dates", "Millet", "Camel milk", "Goat meat", "Dried fish"],
+        "beverages": ["Camel milk", "Tea", "Water from deep wells"],
+        "specialDishes": ["Dried meat (for desert travel)", "Millet porridge", "Dates with milk"],
+        "description": "Toubou cuisine is shaped by the desert - portable, preserved foods dominate. Camel milk is the primary drink. Dates provide essential sugar and energy for desert crossings."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Light morning meal, main meal in evening when cooler",
+        "mainMealTime": "Evening after sunset",
+        "eatingStyle": "Communal eating from shared bowls, men often eat separately",
+        "genderRules": "Men served first, guests given priority, elders receive best portions",
+        "taboos": ["Eating alone is unusual", "Waste is forbidden in the desert", "Some clans avoid certain animals"],
+        "specialOccasions": "Camel slaughtered for major celebrations and honored guests",
+        "hospitality": "Guests must be fed even if hosts have little - Saharan hospitality is sacred"
+      },
+      "traditionalDance": "Circle dances with clapping at celebrations and weddings",
+      "religion": "Islam (Sunni) with pre-Islamic Saharan traditions",
+      "traditionalReligion": {
+        "name": "Toubou Islam",
+        "supremeDeity": "Allah",
+        "spirits": ["Pre-Islamic desert spirits persist", "Djinn beliefs"],
+        "practices": ["Islamic prayers", "Traditional honor codes", "Desert survival rituals"],
+        "beliefs": "Islam arrived via trans-Saharan trade. Toubou Islam blends with ancient desert beliefs and a strong honor code governing behavior.",
+        "religiousHistory": {
+          "islamIntroduced": "~10th-11th century CE",
+          "introducedBy": "Trans-Saharan traders and Kanem-Bornu Empire",
+          "conversionProcess": "Gradual conversion through trade contacts. Pre-Islamic customs persist alongside Islam.",
+          "sources": ["Wikipedia - Toubou people", "Saharan Studies"]
+        }
+      },
+      "history": {
+        "origin": "The Toubou have inhabited the Tibesti Mountains and central Sahara for millennia. They divided into Teda (northern) and Daza (southern) groups. Their territory spans Chad, Libya, Niger, and Sudan.",
+        "colonialEra": "The French struggled for decades to control Toubou territory. Major resistance continued until the 1930s. Libya and Chad independence brought new conflicts.",
+        "independence": "Toubou were central to Chad's civil wars. Leaders like Goukouni Oueddei and Hissène Habré emerged from Toubou ranks. Conflict with Chad's government continues.",
+        "keyEvents": ["Pre-Islamic Saharan control", "French conquest attempts (1900-1930s)", "Chad civil wars (1965-present)", "Libyan-Chadian wars", "Ongoing marginalization conflicts"]
+      },
+      "tradeHistory": {
+        "historical": "The Toubou controlled trans-Saharan salt and slave trade routes for over 1,000 years. They extracted tolls and raided caravans.",
+        "modern": "Today, Toubou engage in livestock trade, salt mining, and some date cultivation. Cross-border smuggling is common in ungoverned desert regions.",
+        "tradingPartners": ["Kanuri", "Hausa", "Arabs", "Tuareg"]
+      },
+      "independenceHistory": {
+        "colonialPower": "France (Chad) and Italy (Libya)",
+        "resistance": "Fierce resistance - Tibesti wasn't fully 'pacified' until the 1930s. The French called it their most difficult African conquest.",
+        "independenceRole": "Toubou have been central to Chad's conflicts since independence, producing two presidents (Habré and Déby)."
+      },
+      "language": {
+        "name": "Tedaga (Teda) and Dazaga (Daza)",
+        "speakers": "~400,000",
+        "greeting": "Lafia?",
+        "greetingMeaning": "Peace?/Are you well?",
+        "additionalGreetings": [
+          { "phrase": "Lafia lau", "meaning": "Peace indeed" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Iyeshe", "meaning": "Thank you" }
+        ],
+        "family": "Nilo-Saharan (Saharan)",
+        "writingSystem": "Arabic script (limited use), mainly oral",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Saharan",
+          "branch": "Tebu languages (Tedaga/Dazaga)",
+          "speakers": "~400,000",
+          "relatedLanguages": ["Kanuri (distant)", "Zaghawa"],
+          "migrationHistory": "The Toubou languages are ancient Saharan tongues, related to the Kanuri of the Lake Chad basin"
+        }
+      },
+      "populationByCountry": [
+        { "country": "TD", "population": "~350,000", "percent": "2%" },
+        { "country": "LY", "population": "~200,000", "percent": "3%" },
+        { "country": "NE", "population": "~100,000", "percent": "<1%" },
+        { "country": "SD", "population": "~50,000", "percent": "<1%" }
+      ],
+      "famousPeople": [
+        { "name": "Hissène Habré", "role": "Former President of Chad (1982-1990), convicted of crimes against humanity", "wikipedia": "https://en.wikipedia.org/wiki/Hiss%C3%A8ne_Habr%C3%A9" },
+        { "name": "Goukouni Oueddei", "role": "Former President of Chad (1979-1982)", "wikipedia": "https://en.wikipedia.org/wiki/Goukouni_Oueddei" },
+        { "name": "Idriss Déby", "role": "President of Chad (1990-2021), died in battle", "wikipedia": "https://en.wikipedia.org/wiki/Idriss_D%C3%A9by" }
+      ],
+      "antiColonialResistance": "The Toubou resisted French colonization for over 30 years. The Tibesti Mountains were the last region of Chad to be 'pacified' in the 1930s. They used guerrilla tactics that French forces found impossible to counter.",
+      "sources": [{ "name": "Wikipedia - Toubou people", "url": "https://en.wikipedia.org/wiki/Toubou_people" }, { "name": "Saharan Peoples", "url": "https://www.britannica.com/topic/Teda" }],
+      "description": "The Toubou are legendary Saharan warriors who have survived in one of Earth's harshest environments for millennia. They controlled trans-Saharan trade routes and resisted colonization longer than almost any African people.",
+      "relatedTribes": ["kanuri", "zaghawa", "tuareg", "arab-baggara"]
+    },
+    {
+      "id": "zaghawa",
+      "name": "Zaghawa",
+      "slug": "zaghawa",
+      "slugAliases": ["beri", "zagawa"],
+      "youtubeVideoId": "Q0mA5pLxOYs",
+      "countries": ["TD", "SD"],
+      "region": "Chad-Sudan border (Darfur, Ennedi)",
+      "population": "~300,000",
+      "populationPercent": "2% of Chad",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 15.0, "lng": 22.0 },
+      "counties": ["Ennedi Region", "Wadi Fira Region", "North Darfur"],
+      "namePrefixes": ["Ab", "Id", "Ha", "Ma", "Yo"],
+      "commonNames": {
+        "female": ["Halima", "Mariam", "Fatima", "Zara", "Amina", "Hawa", "Khadija", "Aisha", "Salma", "Nadia"],
+        "male": ["Idriss", "Mahamat", "Hassan", "Youssouf", "Abdallah", "Brahim", "Timan", "Acheikh", "Hassaballah", "Daoussa"]
+      },
+      "stereotypes": [
+        "Skilled camel herders and traders",
+        "Politically powerful in Chad",
+        "Strong clan loyalties",
+        "Victims and fighters in Darfur conflict",
+        "Known for long-distance trading",
+        "Connected across Chad-Sudan border"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be herders and traders",
+          "Warriors when necessary",
+          "Maintain clan honor",
+          "Political engagement is valued"
+        ],
+        "female": [
+          "Manage households and livestock",
+          "Expert in dairy production",
+          "Tent makers and craftswomen",
+          "Strong voice in family decisions"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herd camels, engage in long-distance trade, and handle clan politics. Defense of territory and livestock is central.",
+          "female": "Women manage camps, milk animals, produce butter and cheese, and make tents. They have significant domestic authority."
+        },
+        "modern": {
+          "male": "Modern Zaghawa men work in trade, government, and military. Many displaced by Darfur conflict; others rose to political power in Chad.",
+          "female": "Women increasingly seek education. Many became refugees during Darfur crisis. Traditional skills remain important."
+        }
+      },
+      "culturalTraits": [
+        "Camel and cattle pastoralism",
+        "Strong clan-based social structure",
+        "Cross-border ties between Chad and Sudan",
+        "Traditional blacksmithing skills",
+        "Oral history and poetry traditions",
+        "Seasonal migration patterns"
+      ],
+      "funFacts": [
+        "The Zaghawa gave Chad two presidents: Idriss Déby and his son Mahamat",
+        "Medieval Arab geographers described the Zaghawa as ruling a major Saharan kingdom",
+        "Zaghawa territory was part of the ancient Kanem Empire before 1000 CE",
+        "The Darfur conflict particularly targeted Zaghawa communities",
+        "Zaghawa are famous for their ability to survive in harsh semi-desert conditions"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Milk", "Meat", "Dates"],
+        "beverages": ["Camel milk", "Goat milk", "Tea"],
+        "specialDishes": ["Asida (millet porridge)", "Dried meat", "Milk products"],
+        "description": "Zaghawa cuisine is pastoral - milk and meat dominate. Millet porridge (asida) is the staple, served with milk or meat sauces. Dried meat allows food storage in arid conditions."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Light morning meal, main evening meal",
+        "mainMealTime": "Evening when cooler",
+        "eatingStyle": "Communal eating, men and women sometimes separate",
+        "genderRules": "Guests and elders served first, men may eat separately",
+        "taboos": ["Wasting food is shameful", "Some clans avoid certain animals"],
+        "specialOccasions": "Meat slaughtered for weddings, naming ceremonies, and honored guests",
+        "hospitality": "Guests must be fed generously - hospitality is central to honor"
+      },
+      "traditionalDance": "Traditional dances at weddings and celebrations with drums",
+      "religion": "Islam (Sunni)",
+      "traditionalReligion": {
+        "name": "Zaghawa Islam",
+        "supremeDeity": "Allah",
+        "spirits": ["Some pre-Islamic beliefs persist"],
+        "practices": ["Islamic prayers", "Sufi traditions", "Traditional ceremonies"],
+        "beliefs": "Islam has been central to Zaghawa identity for centuries, arriving through Saharan trade.",
+        "religiousHistory": {
+          "islamIntroduced": "~9th-10th century CE",
+          "introducedBy": "Trans-Saharan trade and Kanem influence",
+          "conversionProcess": "Early conversion through trade contacts with Kanem-Bornu",
+          "sources": ["Wikipedia - Zaghawa people"]
+        }
+      },
+      "history": {
+        "origin": "The Zaghawa are an ancient Saharan people mentioned by 8th-century Arab geographers as ruling a kingdom. They inhabited the region between Kanem and Darfur for over 1,000 years.",
+        "colonialEra": "French (Chad) and British (Sudan) colonialism divided Zaghawa territory. The border has never fully separated Zaghawa communities.",
+        "independence": "Post-independence, Zaghawa became increasingly powerful in Chad. The Darfur conflict (2003+) devastated Sudanese Zaghawa communities.",
+        "keyEvents": ["Medieval Zaghawa kingdom", "Kanem Empire incorporation", "Colonial partition", "Darfur conflict (2003+)", "Déby presidency (1990-2021)"]
+      },
+      "tradeHistory": {
+        "historical": "Zaghawa traded salt, dates, and livestock across the Sahel. They were intermediaries between Saharan and savanna economies.",
+        "modern": "Cross-border trade between Chad and Sudan continues. Livestock and goods move along traditional routes.",
+        "tradingPartners": ["Toubou", "Arabs", "Fur", "Kanuri"]
+      },
+      "language": {
+        "name": "Zaghawa (Beria)",
+        "speakers": "~200,000",
+        "greeting": "Kawa?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Lafia", "meaning": "Peace/Fine" }
+        ],
+        "family": "Nilo-Saharan (Saharan)",
+        "writingSystem": "Arabic script (limited), mainly oral",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Saharan",
+          "branch": "Beria/Zaghawa",
+          "speakers": "~200,000",
+          "relatedLanguages": ["Toubou languages", "Kanuri (distant)"],
+          "migrationHistory": "Zaghawa language is ancient Saharan, related to Toubou and more distantly to Kanuri"
+        }
+      },
+      "populationByCountry": [
+        { "country": "TD", "population": "~170,000", "percent": "1%" },
+        { "country": "SD", "population": "~130,000", "percent": "<1%" }
+      ],
+      "famousPeople": [
+        { "name": "Idriss Déby", "role": "President of Chad (1990-2021)", "wikipedia": "https://en.wikipedia.org/wiki/Idriss_D%C3%A9by" },
+        { "name": "Mahamat Idriss Déby", "role": "President of Chad (2021-present)", "wikipedia": "https://en.wikipedia.org/wiki/Mahamat_Idriss_D%C3%A9by" },
+        { "name": "Timan Erdimi", "role": "Rebel leader and political figure", "wikipedia": "https://en.wikipedia.org/wiki/Timan_Erdimi" }
+      ],
+      "antiColonialResistance": "Zaghawa resisted French colonial expansion alongside other Saharan peoples. Their remote territory was difficult for colonial powers to control effectively.",
+      "sources": [{ "name": "Wikipedia - Zaghawa people", "url": "https://en.wikipedia.org/wiki/Zaghawa_people" }],
+      "description": "The Zaghawa are an ancient Saharan people straddling Chad and Sudan. They have produced Chad's most powerful political dynasty while their Sudanese kin suffered terribly in the Darfur conflict.",
+      "relatedTribes": ["toubou", "fur", "kanuri", "arab-baggara"]
+    },
+    {
+      "id": "fang",
+      "name": "Fang",
+      "slug": "fang",
+      "slugAliases": ["fang-beti", "pahouin", "pangwe"],
+      "youtubeVideoId": "WNqTKfKmELQ",
+      "countries": ["GQ", "GA", "CM"],
+      "region": "Equatorial Guinea, Gabon, Southern Cameroon",
+      "population": "~3 million",
+      "populationPercent": "85% of Equatorial Guinea, 30% of Gabon",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 1.5, "lng": 11.5 },
+      "counties": ["Río Muni", "Woleu-Ntem", "South Province Cameroon"],
+      "namePrefixes": ["Ob", "Nd", "Nz", "Mv", "Ey", "Ngu"],
+      "commonNames": {
+        "female": ["Obiang", "Ndong", "Mba", "Eyenga", "Mvondo", "Nguema", "Essono", "Nchama", "Asumu", "Eyang"],
+        "male": ["Obiang", "Nguema", "Mba", "Ndong", "Ela", "Nzeng", "Ondo", "Essono", "Asue", "Mengue"]
+      },
+      "stereotypes": [
+        "Dominant ethnic group in Equatorial Guinea and Gabon",
+        "Famous for powerful masks and sculptures",
+        "Bwiti religious traditions",
+        "Skilled farmers and hunters",
+        "Strong clan-based organization",
+        "Known for forest expertise"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traditionally hunters and warriors",
+          "Cleared forests for farming",
+          "Artists and mask makers",
+          "Clan leaders and decision makers"
+        ],
+        "female": [
+          "Expert farmers and food processors",
+          "Keepers of household spirituality",
+          "Manage family economics",
+          "Central role in ceremonies"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men hunted, cleared forest, carved masks, and managed clan affairs. Initiation into men's societies was essential.",
+          "female": "Women farmed cassava and plantains, processed food, and managed households. Had important spiritual roles."
+        },
+        "modern": {
+          "male": "Modern Fang men work in government, oil industry, and business. Many in Equatorial Guinea's ruling elite.",
+          "female": "Women increasingly educated and in professions while maintaining agricultural traditions."
+        }
+      },
+      "culturalTraits": [
+        "World-famous reliquary sculptures (Bieri)",
+        "Bwiti religious practices with iboga",
+        "Strong clan and lineage organization",
+        "Expert forest farmers and hunters",
+        "Rich oral literature traditions",
+        "Elaborate initiation ceremonies"
+      ],
+      "funFacts": [
+        "Fang masks and reliquary figures are among the most valued African art in Western museums",
+        "Pablo Picasso was inspired by Fang masks when developing Cubism",
+        "The Bwiti religion uses iboga, a powerful psychoactive plant, for spiritual initiation",
+        "Fang oral epics (Mvet) are performed with a zither-like instrument over several nights",
+        "Equatorial Guinea's ruling family (Obiang) is Fang",
+        "Fang migrated into their current territory only in the 18th-19th centuries"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Plantains", "Palm oil", "Bushmeat", "Fish"],
+        "beverages": ["Palm wine", "Sugar cane wine", "Mbuh (fermented drink)"],
+        "specialDishes": ["Nkwem (cassava leaves with meat)", "Ndole (bitter leaves)", "Smoked fish with cassava"],
+        "description": "Fang cuisine centers on cassava and plantains from forest farming. Bushmeat and fish provide protein. Palm oil and groundnuts add richness. Forest fruits supplement the diet."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Mid-morning meal, main evening meal when family gathers",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating, often gender-separated at ceremonies",
+        "genderRules": "Men served first at formal occasions, women control food distribution",
+        "taboos": ["Certain animals taboo for specific clans", "Pregnant women have dietary restrictions", "Some foods reserved for elders"],
+        "specialOccasions": "Special meats for initiations and funerals; ancestor offerings",
+        "hospitality": "Guests always fed - refusing hospitality brings shame"
+      },
+      "traditionalDance": "Mekuyo and other ceremonial dances with masks",
+      "religion": "Christianity (~90%), Bwiti (~30%, often alongside Christianity)",
+      "traditionalReligion": {
+        "name": "Bwiti",
+        "supremeDeity": "Nzame (creator god), Mebeghe (supreme being)",
+        "spirits": ["Ancestors (particularly important)", "Forest spirits", "Byeri (ancestral skulls)"],
+        "practices": ["Iboga initiation ceremonies", "Ancestor reliquary worship", "Mask ceremonies", "Mvet epic performances"],
+        "beliefs": "Bwiti centers on ancestor veneration and iboga-induced spiritual experiences. The Byeri cult maintained ancestor skulls in carved reliquary figures. Christianity has blended with Bwiti.",
+        "religiousHistory": {
+          "christianityIntroduced": "19th century",
+          "introducedBy": "Spanish and French missionaries",
+          "conversionProcess": "Colonial-era conversions, but Bwiti persisted and often merged with Christianity. Iboga use continues.",
+          "sources": ["Wikipedia - Fang people", "Bwiti traditions"]
+        }
+      },
+      "history": {
+        "origin": "The Fang migrated from northeastern Central Africa into their current territory during the 18th-19th centuries. They displaced or absorbed earlier populations as they moved toward the coast.",
+        "colonialEra": "Germany, Spain, and France divided Fang territory. Spanish Equatorial Guinea and French Gabon/Cameroon imposed different colonial regimes.",
+        "independence": "Fang dominate Equatorial Guinea politically since independence (1968). The Obiang family has ruled since 1979. In Gabon, Fang share power with other groups.",
+        "keyEvents": ["18th-19th century migration", "Colonial partition (1884-1900)", "Independence movements", "Obiang regime (1979-present)"]
+      },
+      "tradeHistory": {
+        "historical": "Fang traded ivory, rubber, and later cocoa. They were intermediaries between forest peoples and coastal traders.",
+        "modern": "In Equatorial Guinea, oil dominates. In Gabon and Cameroon, timber, cocoa, and urban employment are key.",
+        "tradingPartners": ["Bubi (coastal)", "Pygmy peoples", "European traders"]
+      },
+      "language": {
+        "name": "Fang (Pangwe)",
+        "speakers": "~1.5 million",
+        "greeting": "Mbolo!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "Wa bora?", "meaning": "How are you?" },
+          { "phrase": "Ma bora", "meaning": "I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Akiba", "meaning": "Thank you" },
+          { "phrase": "Mbembe", "meaning": "Goodbye" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Northwest Bantu (A.75)",
+          "speakers": "~1.5 million",
+          "relatedLanguages": ["Beti", "Bulu", "Ewondo"],
+          "migrationHistory": "Fang is part of the Beti-Fang language cluster, reflecting recent migration and close kinship"
+        }
+      },
+      "populationByCountry": [
+        { "country": "GQ", "population": "~1,200,000", "percent": "85%" },
+        { "country": "GA", "population": "~700,000", "percent": "30%" },
+        { "country": "CM", "population": "~600,000", "percent": "2%" }
+      ],
+      "famousPeople": [
+        { "name": "Teodoro Obiang Nguema Mbasogo", "role": "President of Equatorial Guinea (1979-present), world's longest-ruling head of state", "wikipedia": "https://en.wikipedia.org/wiki/Teodoro_Obiang_Nguema_Mbasogo" },
+        { "name": "Francisco Macías Nguema", "role": "First President of Equatorial Guinea (1968-1979), notorious dictator", "wikipedia": "https://en.wikipedia.org/wiki/Francisco_Mac%C3%ADas_Nguema" },
+        { "name": "Pierre-Claver Akendengué", "role": "Gabonese musician and poet", "wikipedia": "https://en.wikipedia.org/wiki/Pierre-Claver_Akendeng%C3%A9" }
+      ],
+      "sources": [{ "name": "Wikipedia - Fang people", "url": "https://en.wikipedia.org/wiki/Fang_people" }, { "name": "Fang Art", "url": "https://www.metmuseum.org/toah/hd/fang/hd_fang.htm" }],
+      "description": "The Fang are the dominant ethnic group of Equatorial Guinea and a major force in Gabon. Their powerful sculptures inspired Picasso and the Cubists, while their Bwiti religion with iboga ceremonies remains vital today.",
+      "relatedTribes": ["beti", "bulu", "bubi", "baka"]
+    },
+    {
+      "id": "bubi",
+      "name": "Bubi",
+      "slug": "bubi",
+      "slugAliases": ["bube", "fernandino"],
+      "youtubeVideoId": "pWYxSGGqNw8",
+      "countries": ["GQ"],
+      "region": "Bioko Island, Equatorial Guinea",
+      "population": "~65,000",
+      "populationPercent": "5% of Equatorial Guinea",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 3.45, "lng": 8.75 },
+      "counties": ["Bioko Norte", "Bioko Sur"],
+      "namePrefixes": ["Bo", "Ri", "Si", "Bi", "Lo"],
+      "commonNames": {
+        "female": ["Boricó", "Sipöpö", "Loheri", "Riebapuá", "Bioká", "Böhëbi", "Riëbö", "Loëri", "Sihala", "Böripë"],
+        "male": ["Börikö", "Riëbö", "Sipopu", "Lohëri", "Bioka", "Böalo", "Lobëla", "Sipaha", "Rioka", "Böhéla"]
+      },
+      "stereotypes": [
+        "Indigenous islanders with distinct identity",
+        "Displaced from power by mainland Fang",
+        "Traditional farmers and fishermen",
+        "Rich ceremonial traditions",
+        "Marginalized minority in their homeland",
+        "Strong community cohesion"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traditional fishermen and hunters",
+          "Cleared forest for farming",
+          "Participated in council governance",
+          "Defenders of Bubi traditions"
+        ],
+        "female": [
+          "Expert farmers, especially yams",
+          "Food processors and cooks",
+          "Central to ceremonial life",
+          "Maintain household spirituality"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men fished, hunted, and participated in village councils. Chiefs (botuku) governed with council input.",
+          "female": "Women cultivated yams and other crops, processed food, and had important ceremonial roles."
+        },
+        "modern": {
+          "male": "Modern Bubi men work in fishing, farming, and urban jobs. Political marginalization limits opportunities.",
+          "female": "Women maintain agricultural traditions while seeking education and urban employment."
+        }
+      },
+      "culturalTraits": [
+        "Unique island Bantu culture",
+        "Yam-centered agriculture and ceremonies",
+        "Traditional monarchy (historical)",
+        "Rich oral traditions and myths",
+        "Distinct language from mainland",
+        "Strong community solidarity"
+      ],
+      "funFacts": [
+        "The Bubi arrived on Bioko Island over 3,000 years ago, among the earliest Bantu migrations",
+        "Spanish colonialists called Bioko 'Fernando Pó' after Portuguese explorer Fernão do Pó",
+        "The Bubi had a traditional monarchy that resisted Spanish colonization until 1904",
+        "Bubi religion centered on ancestors and nature spirits with elaborate ceremonies",
+        "Today, Bubi are a minority on their own island due to mainland Fang migration"
+      ],
+      "traditionalFood": {
+        "staples": ["Yams", "Malanga", "Plantains", "Fish", "Palm oil"],
+        "beverages": ["Palm wine (Topé)", "Malamba (sugar cane wine)"],
+        "specialDishes": ["Pounded yam with fish", "Malanga soup", "Smoked fish"],
+        "description": "Bubi cuisine centers on yams, which hold ceremonial significance. Fish from surrounding waters is essential. Plantains and malanga complement the diet. Palm wine accompanies celebrations."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning meal, main evening meal",
+        "mainMealTime": "Evening when family gathers",
+        "eatingStyle": "Communal eating from shared dishes",
+        "genderRules": "Elders and guests served first, gender separation at ceremonies",
+        "taboos": ["Certain foods reserved for chiefs or elders", "Yam harvest ceremonies must precede eating new yams"],
+        "specialOccasions": "Yam festival marks harvest; special foods for naming ceremonies",
+        "hospitality": "Guests offered the best food available"
+      },
+      "traditionalDance": "Ritual dances with drums and gongs at ceremonies",
+      "religion": "Christianity (~90%), traditional beliefs persist",
+      "traditionalReligion": {
+        "name": "Bubi Traditional Religion",
+        "supremeDeity": "Rupé (supreme being)",
+        "spirits": ["Ancestors", "Nature spirits (momö)", "Mountain spirits"],
+        "practices": ["Ancestor offerings", "Yam ceremonies", "Spirit medium consultations", "Mountain shrine worship"],
+        "beliefs": "Traditional Bubi religion focused on ancestors and nature spirits. The peaks of Bioko were sacred. Christianity has largely replaced traditional practices.",
+        "religiousHistory": {
+          "christianityIntroduced": "19th century",
+          "introducedBy": "Spanish missionaries",
+          "conversionProcess": "Spanish colonial pressure led to widespread conversion, but elements of traditional belief persist",
+          "sources": ["Wikipedia - Bubi people"]
+        }
+      },
+      "history": {
+        "origin": "The Bubi arrived on Bioko Island in the first millennium BCE, among the earliest Bantu groups to migrate. They developed a distinct island culture over 3,000 years.",
+        "colonialEra": "Portuguese 'discovered' the island (1472), Spanish took control (1778). Bubi resisted until King Moka's defeat (1904). The island became a cocoa plantation economy.",
+        "independence": "At independence (1968), mainland Fang took power. Macías Nguema regime targeted Bubi. They remain marginalized under current government.",
+        "keyEvents": ["First millennium BCE settlement", "Portuguese contact (1472)", "Spanish colonization (1778)", "King Moka's resistance (1890s-1904)", "Independence (1968)", "Coup and Obiang regime (1979)"]
+      },
+      "tradeHistory": {
+        "historical": "Bubi traded with mainland peoples and European ships. They supplied food to passing vessels and later worked on cocoa plantations.",
+        "modern": "Fishing, farming, and urban employment. Oil industry provides some jobs but wealth flows mainly to Fang elite.",
+        "tradingPartners": ["Fang (mainland)", "European traders", "Nigerian workers"]
+      },
+      "language": {
+        "name": "Bubi",
+        "speakers": "~50,000",
+        "greeting": "Ëriböke!",
+        "greetingMeaning": "Good morning/Hello!",
+        "additionalGreetings": [
+          { "phrase": "Ö wa?", "meaning": "How are you?" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet (limited use)",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Northwest Bantu (A.31)",
+          "speakers": "~50,000",
+          "relatedLanguages": ["Benga (coastal)", "Batanga"],
+          "migrationHistory": "Bubi separated from mainland Bantu over 3,000 years ago, developing unique linguistic features"
+        }
+      },
+      "famousPeople": [
+        { "name": "King Moka", "role": "Last independent Bubi king, resisted Spanish colonization", "wikipedia": null },
+        { "name": "Wilwardo Jones Niger", "role": "Bubi nationalist and martyr", "wikipedia": null }
+      ],
+      "antiColonialResistance": "King Moka led the last Bubi resistance against Spanish colonization, holding out until 1904 when superior firepower finally defeated them. Bubi identity remains a form of resistance today.",
+      "sources": [{ "name": "Wikipedia - Bubi people", "url": "https://en.wikipedia.org/wiki/Bubi_people" }],
+      "description": "The Bubi are the indigenous people of Bioko Island, Equatorial Guinea, having lived there for over 3,000 years. Today a minority in their own homeland, they maintain distinct traditions from the dominant mainland Fang.",
+      "relatedTribes": ["fang", "baka", "benga"]
+    },
+    {
+      "id": "myene",
+      "name": "Myene",
+      "slug": "myene",
+      "slugAliases": ["myenye", "mpongwe", "galwa", "orungu", "nkomi"],
+      "youtubeVideoId": "Qr5hK2Fs9Nc",
+      "countries": ["GA"],
+      "region": "Coastal Gabon (Libreville, Ogooué River)",
+      "population": "~50,000",
+      "populationPercent": "2% of Gabon",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 0.5, "lng": 9.5 },
+      "counties": ["Estuaire Province", "Moyen-Ogooué Province", "Ogooué-Maritime Province"],
+      "namePrefixes": ["Ra", "Ag", "Om", "Nt", "Nz"],
+      "commonNames": {
+        "female": ["Régine", "Angélique", "Ombetsa", "Ngone", "Nzaou", "Kombila", "Rogombe", "Moussirou", "Ayo", "Mimbie"],
+        "male": ["Raponda", "Agondjo", "Ombagho", "Ntutume", "Nzamba", "Kombila", "Anguile", "Moussavou", "Assoumou", "Ogoula"]
+      },
+      "stereotypes": [
+        "Historic coastal traders and middlemen",
+        "First to contact Europeans in Gabon",
+        "Educated and urban elite tradition",
+        "Strong Catholic influence",
+        "Small but culturally influential",
+        "Known for sophistication and education"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traditionally traders and canoe builders",
+          "Intermediaries with Europeans",
+          "Church and colonial administration roles",
+          "Educated professionals"
+        ],
+        "female": [
+          "Market traders and entrepreneurs",
+          "Household managers",
+          "Strong in local commerce",
+          "Educators and professionals today"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men dominated coastal trade, canoe transport, and negotiation with Europeans. They built trading empires as intermediaries.",
+          "female": "Women managed local trade, processed fish, and controlled domestic economies. Many were successful traders."
+        },
+        "modern": {
+          "male": "Modern Myene men work in government, business, and professions. Long tradition of education and administration.",
+          "female": "Women are prominent in commerce, education, and professions. Urban and educated."
+        }
+      },
+      "culturalTraits": [
+        "First Gabonese to have sustained European contact",
+        "Long tradition of literacy and education",
+        "Important role of Catholic Church",
+        "Coastal trading heritage",
+        "Multiple Myene sub-groups (Mpongwe, Galwa, Orungu, Nkomi)",
+        "Elegant traditional ceremonies"
+      ],
+      "funFacts": [
+        "Myene groups controlled trade between interior peoples and European ships for centuries",
+        "Libreville was founded by freed slaves in 1849, many mixing with Mpongwe",
+        "Father André Raponda Walker (Mpongwe) was Gabon's first great scholar and historian",
+        "The Orungu had one of the region's most important slave trade ports at Cape Lopez",
+        "Myene languages gave many words to Gabonese French"
+      ],
+      "traditionalFood": {
+        "staples": ["Fish", "Cassava", "Plantains", "Palm oil", "Seafood"],
+        "beverages": ["Palm wine", "Imported wines (historically)"],
+        "specialDishes": ["Grilled fish", "Nyembwe (palm nut sauce)", "Odika (wild mango sauce)"],
+        "description": "Myene cuisine centers on fish and seafood from the coast and rivers. Cassava and plantains provide starch. Palm oil-based sauces are essential. European influence is notable."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Breakfast, lunch, family dinner",
+        "mainMealTime": "Midday or evening depending on family",
+        "eatingStyle": "Table dining common due to European influence, communal for celebrations",
+        "genderRules": "More egalitarian than many groups due to urban lifestyle",
+        "taboos": ["Varies by family and subgroup"],
+        "specialOccasions": "Elaborate meals for weddings and funerals with French influences",
+        "hospitality": "Guests receive best food; influenced by both African and French customs"
+      },
+      "traditionalDance": "Ivanga and other ceremonial dances with elegant movements",
+      "religion": "Christianity (predominantly Catholic, ~80%)",
+      "traditionalReligion": {
+        "name": "Myene Traditional / Catholic blend",
+        "supremeDeity": "Anyambie (supreme god), now mostly identified with Christian God",
+        "spirits": ["Ancestors", "Water spirits", "Forest spirits"],
+        "practices": ["Catholic sacraments", "Traditional ceremonies", "Ancestor remembrance"],
+        "beliefs": "Myene were among the first Gabonese Christians. Traditional beliefs in water spirits and ancestors blend with Catholicism.",
+        "religiousHistory": {
+          "christianityIntroduced": "Mid-19th century",
+          "introducedBy": "French Catholic missionaries, American Protestants",
+          "conversionProcess": "Early and enthusiastic adoption of Christianity, especially Catholicism. Myene became core of Gabonese Catholic community.",
+          "sources": ["Wikipedia - Myene people"]
+        }
+      },
+      "history": {
+        "origin": "Myene groups have lived along Gabon's coast and Ogooué River for centuries. They became wealthy as intermediaries in European trade starting in the 16th century.",
+        "colonialEra": "France established control in the mid-19th century with Myene cooperation. Many Myene entered colonial administration and the church.",
+        "independence": "At independence (1960), Myene were part of the educated elite. Despite small numbers, they held significant positions in government and business.",
+        "keyEvents": ["Portuguese contact (15th century)", "European trade expansion", "French colonization (1839-1960)", "Libreville founding (1849)", "Independence (1960)"]
+      },
+      "tradeHistory": {
+        "historical": "Myene controlled coastal trade - ivory, rubber, enslaved people, and forest products flowed through their hands. They were sophisticated middlemen.",
+        "modern": "Urban employment, government, and business. Fishing remains important in coastal communities.",
+        "tradingPartners": ["Fang (interior)", "European traders", "Baka (forest products)"]
+      },
+      "language": {
+        "name": "Myene (multiple dialects)",
+        "speakers": "~45,000",
+        "greeting": "Mbolo!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "O ga vèna?", "meaning": "How are you?" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Northwest Bantu (B.10)",
+          "speakers": "~45,000",
+          "relatedLanguages": ["Seki", "Kele", "Other Gabonese Bantu"],
+          "migrationHistory": "Myene languages are part of the Gabonese Bantu cluster, present in the region for over 2,000 years"
+        }
+      },
+      "famousPeople": [
+        { "name": "André Raponda Walker", "role": "Priest, linguist, historian - Gabon's first great scholar", "wikipedia": "https://en.wikipedia.org/wiki/Andr%C3%A9_Raponda_Walker" },
+        { "name": "Rose Francine Rogombé", "role": "First female head of state in Gabon (interim 2009)", "wikipedia": "https://en.wikipedia.org/wiki/Rose_Francine_Rogomb%C3%A9" },
+        { "name": "Paul Indjendjet-Gondjout", "role": "Independence-era political leader", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Indjendjet-Gondjout" }
+      ],
+      "sources": [{ "name": "Wikipedia - Myene people", "url": "https://en.wikipedia.org/wiki/Myene_people" }],
+      "description": "The Myene are Gabon's historic coastal traders who first engaged with Europeans. Though small in number, they produced Gabon's first scholars and remain influential in the nation's educated elite.",
+      "relatedTribes": ["fang", "baka", "kota", "punu"]
+    },
+    {
+      "id": "mitsogo",
+      "name": "Mitsogo",
+      "slug": "mitsogo",
+      "slugAliases": ["tsogo", "ghetsogo"],
+      "youtubeVideoId": "5cVgVdvDM9k",
+      "countries": ["GA"],
+      "region": "Central Gabon (Ngounié Province)",
+      "population": "~15,000",
+      "populationPercent": "0.7% of Gabon",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -1.5, "lng": 11.0 },
+      "counties": ["Ngounié Province", "Ogooué-Lolo Province"],
+      "namePrefixes": ["Mo", "Mb", "Ng", "Nz", "Bi"],
+      "commonNames": {
+        "female": ["Moussavou", "Mbadinga", "Ngoua", "Bitome", "Nzamba", "Mouele", "Kombila", "Issembe", "Pendi", "Boundza"],
+        "male": ["Mouélé", "Mbadinga", "Ngoua", "Bitome", "Nzamba", "Kombila", "Moussavou", "Issembe", "Moukoudi", "Boundza"]
+      },
+      "stereotypes": [
+        "Originators of the Bwiti religion",
+        "Masters of iboga ceremonial use",
+        "Skilled forest people",
+        "Spiritual leaders and healers",
+        "Guardians of sacred knowledge",
+        "Traditional artisans"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Bwiti initiates and nganga (healers)",
+          "Hunters and forest experts",
+          "Guardians of sacred knowledge",
+          "Carvers and mask makers"
+        ],
+        "female": [
+          "Agricultural experts",
+          "Important ceremonial roles",
+          "Knowledge of medicinal plants",
+          "Food preparation specialists"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men hunted, performed Bwiti ceremonies as nganga, and transmitted sacred knowledge. Forest expertise was essential.",
+          "female": "Women farmed, gathered forest products, and participated in specific aspects of Bwiti. Crucial role in food and medicine."
+        },
+        "modern": {
+          "male": "Modern Mitsogo men maintain Bwiti traditions while working in various sectors. Some lead spiritual tourism.",
+          "female": "Women increasingly access education while maintaining knowledge of plants and traditions."
+        }
+      },
+      "culturalTraits": [
+        "Bwiti religion originators",
+        "Iboga ceremonial expertise",
+        "Rich mask-making tradition",
+        "Deep forest knowledge",
+        "Oral traditions and proverbs",
+        "Complex initiation systems"
+      ],
+      "funFacts": [
+        "The Bwiti religion, now practiced across Gabon, originated among the Mitsogo",
+        "Iboga (Tabernanthe iboga) is a powerful psychoactive used in Bwiti to contact ancestors",
+        "Mitsogo masks are considered among the most spiritually powerful in Central Africa",
+        "Western scientists study iboga for treating addiction - Mitsogo have used it for centuries",
+        "Bwiti ceremonies can last all night with drumming, dancing, and spiritual visions"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Plantains", "Bushmeat", "Fish", "Forest fruits"],
+        "beverages": ["Palm wine", "Iboga (ceremonial only)"],
+        "specialDishes": ["Smoked bushmeat with cassava", "Forest vegetable stews", "Palm nut sauce"],
+        "description": "Mitsogo cuisine combines forest agriculture with hunting and gathering. Bushmeat and fish provide protein. Cassava and plantains are staples. Forest plants add variety and medicine."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning meal, evening family dinner",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating, special foods for initiates",
+        "genderRules": "Initiates may have dietary restrictions; elders receive best portions",
+        "taboos": ["Iboga only in ceremonial context", "Specific foods prohibited for initiates", "Some animals taboo for clans"],
+        "specialOccasions": "Elaborate feasts for Bwiti initiations and ceremonies",
+        "hospitality": "Guests always fed - sharing is essential"
+      },
+      "traditionalDance": "Bwiti ceremonial dancing through the night with torches",
+      "religion": "Bwiti (~70%), Christianity (~30%, often combined with Bwiti)",
+      "traditionalReligion": {
+        "name": "Bwiti",
+        "supremeDeity": "Nzambe Kana (creator), accessed through ancestors",
+        "spirits": ["Ancestors (central focus)", "Forest spirits", "Spirit of iboga plant"],
+        "practices": ["Iboga initiation ceremonies", "All-night ceremonies", "Ancestor communion", "Healing rituals", "Mask performances"],
+        "beliefs": "Bwiti teaches that ancestors can be contacted through iboga visions. Death is a transition, not an end. The forest is filled with spiritual forces.",
+        "religiousHistory": {
+          "christianityIntroduced": "Late 19th century",
+          "introducedBy": "French missionaries",
+          "conversionProcess": "Bwiti has remained strong. Many Gabonese practice both Christianity and Bwiti simultaneously.",
+          "sources": ["Wikipedia - Bwiti", "Wikipedia - Mitsogo"]
+        }
+      },
+      "history": {
+        "origin": "The Mitsogo are a forest people of central Gabon. They developed the Bwiti religion, which has spread across Gabon and beyond.",
+        "colonialEra": "French colonization disrupted forest life but Bwiti persisted underground. Colonial authorities were suspicious of iboga ceremonies.",
+        "independence": "Post-independence, Bwiti gained official recognition. Leon Mba, Gabon's first president, practiced Bwiti. The Mitsogo maintain their role as Bwiti originators.",
+        "keyEvents": ["Bwiti religion development", "French colonization", "Independence (1960)", "Bwiti recognition and spread", "International interest in iboga"]
+      },
+      "language": {
+        "name": "Ghetsogo",
+        "speakers": "~15,000",
+        "greeting": "Mbolo!",
+        "greetingMeaning": "Hello!",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet (limited use)",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Northwest Bantu (B.20)",
+          "speakers": "~15,000",
+          "relatedLanguages": ["Sira", "Sangu", "Other Ngounié Bantu"],
+          "migrationHistory": "Ghetsogo is part of the central Gabonese Bantu cluster"
+        }
+      },
+      "famousPeople": [
+        { "name": "Traditional nganga (healers)", "role": "Bwiti spiritual leaders known regionally", "wikipedia": null }
+      ],
+      "sources": [{ "name": "Wikipedia - Mitsogo", "url": "https://en.wikipedia.org/wiki/Mitsogo_people" }, { "name": "Bwiti", "url": "https://en.wikipedia.org/wiki/Bwiti" }],
+      "description": "The Mitsogo are the originators of Bwiti, Gabon's most important traditional religion. Their use of iboga for spiritual visions has influenced millions and now attracts global scientific interest.",
+      "relatedTribes": ["fang", "punu", "baka", "myene"]
+    },
+    {
+      "id": "punu",
+      "name": "Punu",
+      "slug": "punu",
+      "slugAliases": ["bapunu", "pounou"],
+      "youtubeVideoId": "LNR3Kqz8nBs",
+      "countries": ["GA", "CG"],
+      "region": "Southern Gabon, Northern Congo",
+      "population": "~250,000",
+      "populationPercent": "12% of Gabon",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -2.5, "lng": 11.5 },
+      "counties": ["Ngounié Province", "Nyanga Province", "Niari Region (Congo)"],
+      "namePrefixes": ["Ma", "Mb", "Mu", "Ng", "Di"],
+      "commonNames": {
+        "female": ["Mabika", "Mboumba", "Moussavou", "Nziengui", "Divassa", "Mbadinga", "Moundounga", "Pindi", "Kombila", "Moutsinga"],
+        "male": ["Mabika", "Mboumba", "Moussavou", "Nziengui", "Divassa", "Mouiri", "Moundounga", "Pindi", "Kombila", "Mavungu"]
+      },
+      "stereotypes": [
+        "Masters of the famous white-faced masks",
+        "Skilled woodcarvers and artists",
+        "Important in Gabon's political landscape",
+        "Strong matrilineal traditions",
+        "Known for elaborate funerary art",
+        "Successful entrepreneurs and professionals"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Master mask makers and carvers",
+          "Performers in masquerade ceremonies",
+          "Traders and entrepreneurs",
+          "Political leaders"
+        ],
+        "female": [
+          "Central to matrilineal inheritance",
+          "Household and market managers",
+          "Knowledge keepers",
+          "Ceremonial participants"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men carved masks, performed masked dances, and participated in societies. Trade and politics were male spheres.",
+          "female": "Women were central to matrilineal lineages. Children belonged to mother's line. Women controlled much property and domestic affairs."
+        },
+        "modern": {
+          "male": "Modern Punu men work in all sectors. Many successful in business and politics. Artistic traditions continue.",
+          "female": "Women are professionals while matrilineal traditions remain. Many in business and education."
+        }
+      },
+      "culturalTraits": [
+        "World-famous white-faced masks",
+        "Strong matrilineal social organization",
+        "Mukudji and Okuyi mask traditions",
+        "Expert woodcarving heritage",
+        "Elaborate funeral ceremonies",
+        "Rich musical traditions"
+      ],
+      "funFacts": [
+        "Punu white-faced masks (Mukudji) are among the most iconic African art forms",
+        "These masks represent idealized female ancestors and are worn by male dancers",
+        "Punu masks are found in major museums worldwide and highly valued by collectors",
+        "The masks feature elaborate hairstyles that took hours to create",
+        "Punu masks inspired fashion designers including Christian Dior"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Plantains", "Fish", "Bushmeat", "Palm oil"],
+        "beverages": ["Palm wine", "Fermented drinks"],
+        "specialDishes": ["Nyembwe (palm nut sauce)", "Smoked fish", "Cassava leaves with fish"],
+        "description": "Punu cuisine combines agriculture with river fishing. Cassava is the main starch, served with fish or meat in palm-based sauces. Forest products supplement the diet."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning meal, main evening dinner",
+        "mainMealTime": "Evening with family",
+        "eatingStyle": "Communal eating, special foods for ceremonies",
+        "genderRules": "Respect for elders in serving; matrilineal ties influence household structure",
+        "taboos": ["Varies by clan", "Special foods for masked dancers"],
+        "specialOccasions": "Elaborate funeral feasts with specific foods; masquerade occasions",
+        "hospitality": "Guests well fed; hospitality reflects family honor"
+      },
+      "traditionalDance": "Mukudji and Okuyi masked dances on stilts",
+      "religion": "Christianity (~70%), Bwiti and traditional practices (~30%)",
+      "traditionalReligion": {
+        "name": "Punu Traditional Religion/Bwiti",
+        "supremeDeity": "Nzambe (supreme creator)",
+        "spirits": ["Ancestors (very important)", "Nature spirits"],
+        "practices": ["Masked ceremonies", "Ancestor veneration", "Bwiti practices", "Funeral rituals"],
+        "beliefs": "Punu religion centers on ancestor spirits accessed through masked ceremonies. The white-faced masks represent female ancestors. Christianity has blended with traditional practices.",
+        "religiousHistory": {
+          "christianityIntroduced": "Late 19th century",
+          "introducedBy": "French missionaries",
+          "conversionProcess": "Christianity spread during colonial era. Traditional practices continue alongside.",
+          "sources": ["Wikipedia - Punu people"]
+        }
+      },
+      "history": {
+        "origin": "The Punu are a Bantu people of southern Gabon and northern Congo. They are part of the larger Shira-Punu cultural complex.",
+        "colonialEra": "French colonization brought Christianity and disruption, but artistic traditions persisted. Punu became sought-after workers and clerks.",
+        "independence": "Post-independence, Punu became important in Gabonese politics. Their population center in Ngounié makes them politically significant.",
+        "keyEvents": ["Bantu migrations", "French colonization", "Christian missions", "Independence (1960)", "Political prominence"]
+      },
+      "language": {
+        "name": "Yipunu",
+        "speakers": "~250,000",
+        "greeting": "Mbolo!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "U ga vɛna?", "meaning": "How are you?" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Northwest Bantu (B.40)",
+          "speakers": "~250,000",
+          "relatedLanguages": ["Shira", "Lumbu", "Vili"],
+          "migrationHistory": "Yipunu is part of the Shira-Punu cluster of southern Gabonese Bantu languages"
+        }
+      },
+      "populationByCountry": [
+        { "country": "GA", "population": "~200,000", "percent": "10%" },
+        { "country": "CG", "population": "~50,000", "percent": "1%" }
+      ],
+      "famousPeople": [
+        { "name": "Ali Bongo Ondimba", "role": "President of Gabon (2009-2023), Punu by marriage", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Bongo_Ondimba" },
+        { "name": "Jean Ping", "role": "African Union Chair, opposition leader", "wikipedia": "https://en.wikipedia.org/wiki/Jean_Ping" }
+      ],
+      "sources": [{ "name": "Wikipedia - Punu people", "url": "https://en.wikipedia.org/wiki/Punu_people" }, { "name": "Punu Masks", "url": "https://www.metmuseum.org/art/collection/search/310824" }],
+      "description": "The Punu are celebrated for their iconic white-faced masks representing idealized female ancestors. These masks, worn by male stilt-dancers, are among the most recognized African art forms worldwide.",
+      "relatedTribes": ["fang", "mitsogo", "myene", "kota"]
     }
   ]
 }
