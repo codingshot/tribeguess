@@ -2619,6 +2619,93 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'komb_p': [{ tribe: 'punu', weight: 0.9 }],
   'mout': [{ tribe: 'punu', weight: 0.95 }],
   'mavu': [{ tribe: 'punu', weight: 0.98 }],
+
+  // ============ NIGER - Tuareg prefixes ============
+  'ag_tu': [{ tribe: 'tuareg', weight: 0.98 }],
+  'atta_t': [{ tribe: 'tuareg', weight: 0.95 }],
+  'inaw_t': [{ tribe: 'tuareg', weight: 0.98 }],
+  'amak_t': [{ tribe: 'tuareg', weight: 0.95 }],
+  'takm_t': [{ tribe: 'tuareg', weight: 0.98 }],
+  'rhis': [{ tribe: 'tuareg', weight: 0.95 }],
+  'inta': [{ tribe: 'tuareg', weight: 0.95 }],
+  'tafa': [{ tribe: 'tuareg', weight: 0.9 }],
+  'alhe': [{ tribe: 'tuareg', weight: 0.9 }],
+  'tinh': [{ tribe: 'tuareg', weight: 0.98 }],
+
+  // ============ NIGER - Hausa (Niger) prefixes ============
+  'hadi_hn': [{ tribe: 'hausa_niger', weight: 0.95 }],
+  'isou': [{ tribe: 'hausa_niger', weight: 0.95 }],
+  'ouma_hn': [{ tribe: 'hausa_niger', weight: 0.9 }],
+  'tank': [{ tribe: 'hausa_niger', weight: 0.95 }],
+  'bell': [{ tribe: 'hausa_niger', weight: 0.9 }],
+  'dahi_hn': [{ tribe: 'hausa_niger', weight: 0.95 }],
+
+  // ============ NIGER - Djerma/Zarma prefixes ============
+  'hama_dj': [{ tribe: 'djerma', weight: 0.98 }],
+  'seyd_dj': [{ tribe: 'djerma', weight: 0.95 }],
+  'djib': [{ tribe: 'djerma', weight: 0.98 }],
+  'biba': [{ tribe: 'djerma', weight: 0.95 }],
+  'seyn': [{ tribe: 'djerma', weight: 0.98 }],
+  'issa_dj': [{ tribe: 'djerma', weight: 0.9 }],
+  'maha_dj': [{ tribe: 'djerma', weight: 0.85 }],
+
+  // ============ NIGER - Kanuri (Niger) prefixes ============
+  'sheh_kn': [{ tribe: 'kanuri_niger', weight: 0.98 }],
+  'buka_kn': [{ tribe: 'kanuri_niger', weight: 0.98 }],
+  'kyar_kn': [{ tribe: 'kanuri_niger', weight: 0.98 }],
+  'shet_kn': [{ tribe: 'kanuri_niger', weight: 0.98 }],
+  'falm': [{ tribe: 'kanuri_niger', weight: 0.95 }],
+  'goni': [{ tribe: 'kanuri_niger', weight: 0.95 }],
+
+  // ============ MAURITANIA - Moors prefixes ============
+  'ould': [{ tribe: 'moors', weight: 0.98 }],
+  'mint': [{ tribe: 'moors', weight: 0.98 }],
+  'sidi_m': [{ tribe: 'moors', weight: 0.95 }],
+  'maao': [{ tribe: 'moors', weight: 0.98 }],
+  'abde_m': [{ tribe: 'moors', weight: 0.9 }],
+  'chei_m': [{ tribe: 'moors', weight: 0.95 }],
+  'mokt': [{ tribe: 'moors', weight: 0.98 }],
+  'baba_m': [{ tribe: 'moors', weight: 0.9 }],
+  'fati_mr': [{ tribe: 'moors', weight: 0.85 }],
+  'tekb': [{ tribe: 'moors', weight: 0.98 }],
+
+  // ============ MAURITANIA - Haratin prefixes ============
+  'bira_h': [{ tribe: 'haratin', weight: 0.98 }],
+  'mess_h': [{ tribe: 'haratin', weight: 0.98 }],
+  'bila_h': [{ tribe: 'haratin', weight: 0.95 }],
+  'sale_h': [{ tribe: 'haratin', weight: 0.9 }],
+
+  // ============ MALI - Soninke prefixes ============
+  'baka_sk': [{ tribe: 'soninke', weight: 0.98 }],
+  'douc': [{ tribe: 'soninke', weight: 0.98 }],
+  'diak': [{ tribe: 'soninke', weight: 0.98 }],
+  'kama_sk': [{ tribe: 'soninke', weight: 0.95 }],
+  'soum': [{ tribe: 'soninke', weight: 0.98 }],
+  'syll': [{ tribe: 'soninke', weight: 0.95 }],
+  'sakh': [{ tribe: 'soninke', weight: 0.98 }],
+  'dram': [{ tribe: 'soninke', weight: 0.95 }],
+
+  // ============ MALI - Bambara prefixes ============
+  'trao_b': [{ tribe: 'bambara', weight: 0.98 }],
+  'diar_b': [{ tribe: 'bambara', weight: 0.95 }],
+  'coul_b': [{ tribe: 'bambara', weight: 0.95 }],
+  'kouy_b': [{ tribe: 'bambara', weight: 0.98 }],
+  'modi': [{ tribe: 'bambara', weight: 0.95 }],
+  'dris': [{ tribe: 'bambara', weight: 0.95 }],
+
+  // ============ MALI - Dogon prefixes ============
+  'amba_dg': [{ tribe: 'dogon', weight: 0.98 }],
+  'ogot': [{ tribe: 'dogon', weight: 0.98 }],
+  'aman_dg': [{ tribe: 'dogon', weight: 0.95 }],
+  'yasi': [{ tribe: 'dogon', weight: 0.98 }],
+  'dolo_dg': [{ tribe: 'dogon', weight: 0.9 }],
+
+  // ============ MALI/NIGER - Songhai prefixes ============
+  'maig': [{ tribe: 'songhai', weight: 0.98 }],
+  'aski': [{ tribe: 'songhai', weight: 0.98 }],
+  'soni_sg': [{ tribe: 'songhai', weight: 0.95 }],
+  'soul_sg': [{ tribe: 'songhai', weight: 0.9 }],
+  'bour': [{ tribe: 'songhai', weight: 0.95 }],
 };
 
 // Suffix patterns for additional matching
