@@ -5989,6 +5989,248 @@ export const searchRecipes = (query: string): Recipe[] => {
   );
 };
 
+// ============ BEVERAGE RECIPES ============
+export const beverageRecipes: Recipe[] = [
+  {
+    id: "ginger-juice",
+    name: "Ginger Juice (Omi Ata-ile)",
+    tribeSlug: "yoruba",
+    tribeName: "Yoruba",
+    category: "beverage",
+    description: "A potent, spicy-sweet beverage made from fresh ginger root. Sold by street vendors across Nigeria and believed to have numerous health benefits.",
+    culturalSignificance: "Ginger juice is Nigeria's favorite health drink - taken for colds, digestion, and energy. Street vendors ('zobo sellers') often add it to zobo as a 'booster.' Men especially prize it for believed vitality benefits.",
+    historicalContext: "While ginger came to Africa via Arab trade routes, Nigerians developed unique concentrated ginger drinks. The Kaduna region is Nigeria's ginger heartland, producing export-quality ginger.",
+    youtubeVideoId: "nFCzFp8k9tE",
+    prepTime: "10 minutes",
+    cookTime: "0 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh ginger root", amount: "200g", notes: "Peeled and chopped" },
+      { item: "Water", amount: "500ml", notes: "Cold or room temperature" },
+      { item: "Honey or sugar", amount: "2-4 tablespoons", notes: "To taste" },
+      { item: "Lemon or lime juice", amount: "2 tablespoons", notes: "Optional" },
+      { item: "Pineapple chunks", amount: "1 cup", notes: "Optional, for sweetness" }
+    ],
+    instructions: [
+      "Peel the ginger root thoroughly using a spoon edge or peeler.",
+      "Cut ginger into small chunks for easier blending.",
+      "Add ginger and half the water to a blender.",
+      "Blend on high until completely smooth (2-3 minutes).",
+      "Strain through a fine mesh sieve or cheesecloth, pressing to extract all juice.",
+      "Add remaining water, sweetener, and citrus juice if using.",
+      "Stir well and taste. Adjust sweetness - it should be spicy but balanced.",
+      "Serve over ice or chilled. Keeps refrigerated for 5-7 days."
+    ],
+    tips: [
+      "Use young ginger for milder flavor, mature for more heat",
+      "Add pineapple during blending for natural sweetness",
+      "The pulp can be used in cooking or dried for tea",
+      "Dilute further if too spicy for your taste"
+    ],
+    variations: [
+      "Add turmeric for 'golden ginger' drink",
+      "Mix with zobo (hibiscus) for 'zobo with ginger'",
+      "Blend with cucumber for cooling version"
+    ]
+  },
+  {
+    id: "zobo-drink",
+    name: "Zobo (Hibiscus Drink)",
+    tribeSlug: "hausa",
+    tribeName: "Hausa",
+    category: "beverage",
+    description: "Nigeria's beloved deep-red hibiscus drink, tangy, refreshing, and packed with vitamins. A staple at parties, celebrations, and sold everywhere on the streets.",
+    culturalSignificance: "Zobo transcends ethnic boundaries in Nigeria - loved by all. Every family has their secret recipe. At parties, zobo is as essential as jollof rice. The drink symbolizes hospitality and celebration.",
+    historicalContext: "Hibiscus tea has been consumed across Africa and the Middle East for centuries. In Nigeria, 'zobo' became the name, likely derived from local languages. The commercialization of zobo as a packaged drink began in the 1990s.",
+    youtubeVideoId: "HxoGHpkCW7A",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 10,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried hibiscus flowers (zobo leaves)", amount: "3 cups", notes: "About 200g" },
+      { item: "Water", amount: "4 liters" },
+      { item: "Fresh ginger", amount: "100g", notes: "Sliced" },
+      { item: "Pineapple", amount: "1 medium", notes: "Peeled, chopped (or use juice)" },
+      { item: "Sugar or honey", amount: "1-2 cups", notes: "To taste" },
+      { item: "Cloves", amount: "1 tablespoon", notes: "Optional" },
+      { item: "Orange/lemon", amount: "2", notes: "Juiced, optional" }
+    ],
+    instructions: [
+      "Rinse hibiscus flowers thoroughly to remove any sand or debris.",
+      "Add hibiscus, ginger, and cloves to a large pot with water.",
+      "Bring to a boil, then reduce heat and simmer for 20-30 minutes until deeply red.",
+      "Remove from heat and let steep for additional 30 minutes (deeper flavor).",
+      "Blend pineapple separately and strain to get juice.",
+      "Strain the hibiscus liquid through fine mesh into a large container.",
+      "Add pineapple juice, citrus juice, and sweetener while still warm.",
+      "Stir well, taste, and adjust sweetness and tartness.",
+      "Refrigerate until very cold. Serve over ice."
+    ],
+    tips: [
+      "More ginger = spicier drink",
+      "Fresh pineapple gives better flavor than canned",
+      "Don't oversweeten - the tartness is part of the appeal",
+      "Garlic is sometimes added for health benefits (use sparingly)"
+    ],
+    variations: [
+      "Add cucumber for lighter, refreshing version",
+      "Include dates for natural sweetness",
+      "Ferment slightly for probiotic benefits"
+    ]
+  },
+  {
+    id: "bissap",
+    name: "Bissap (Senegalese Hibiscus)",
+    tribeSlug: "wolof",
+    tribeName: "Wolof",
+    category: "beverage",
+    description: "Senegal's national drink - a fragrant hibiscus beverage often flavored with mint and orange blossom water. Served at every occasion.",
+    culturalSignificance: "Bissap is to Senegal what tea is to England. Served to guests, at celebrations, and sold in every neighborhood. 'Bissap rouge' (red) is most popular, while 'bissap blanc' uses white sorrel.",
+    youtubeVideoId: "q6JXq9P4FcY",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried hibiscus flowers", amount: "2 cups" },
+      { item: "Water", amount: "2 liters" },
+      { item: "Sugar", amount: "1 cup", notes: "Adjust to taste" },
+      { item: "Fresh mint leaves", amount: "1/2 cup" },
+      { item: "Orange blossom water", amount: "2 tablespoons", notes: "Optional, traditional" },
+      { item: "Vanilla extract", amount: "1 teaspoon", notes: "Optional" }
+    ],
+    instructions: [
+      "Rinse hibiscus flowers well.",
+      "Boil water and pour over hibiscus in a large heatproof container.",
+      "Add mint leaves and let steep for 2-3 hours or overnight for strongest flavor.",
+      "Strain through fine mesh, pressing flowers to extract all liquid.",
+      "Add sugar while slightly warm and stir to dissolve.",
+      "Add orange blossom water and vanilla if using.",
+      "Refrigerate until ice cold.",
+      "Serve over ice, optionally with fresh mint garnish."
+    ],
+    tips: [
+      "Orange blossom water is the secret to authentic Senegalese flavor",
+      "Can be served room temperature in cooler weather",
+      "Some add pineapple juice as in Nigerian zobo"
+    ]
+  },
+  {
+    id: "kunu-drink",
+    name: "Kunu (Millet Drink)",
+    tribeSlug: "hausa",
+    tribeName: "Hausa",
+    category: "beverage",
+    description: "A nutritious, slightly fermented millet beverage. Thick, filling, and often drunk as a light meal. The Hausa breakfast staple.",
+    culturalSignificance: "Kunu is the Hausa morning drink - filling enough to sustain until lunch. Sold by women vendors who wake before dawn to prepare it. Considered essential for nursing mothers.",
+    youtubeVideoId: "V8HXM4e7kHw",
+    prepTime: "8 hours (soaking)",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Millet", amount: "2 cups" },
+      { item: "Fresh ginger", amount: "50g" },
+      { item: "Cloves", amount: "1 teaspoon" },
+      { item: "Sweet potato", amount: "1 small", notes: "For sweetness and body" },
+      { item: "Water", amount: "3 liters" },
+      { item: "Sugar or honey", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak millet in water overnight (8+ hours).",
+      "Drain and blend millet with ginger, cloves, and sweet potato.",
+      "Add enough water to blend into smooth paste.",
+      "Strain mixture through fine mesh, collecting the starchy liquid.",
+      "Divide liquid: set half aside, boil the other half until thick.",
+      "Gradually add the reserved raw liquid to the cooked portion, stirring.",
+      "Continue cooking for 5 minutes until well combined.",
+      "Cool, add sweetener, and refrigerate.",
+      "Stir before serving as it separates. Serve chilled."
+    ],
+    tips: [
+      "Kunu should be thick but drinkable - adjust water",
+      "Sweet potato adds body and natural sweetness",
+      "Fresh is best - drink within 2 days"
+    ]
+  },
+  {
+    id: "tangawizi-tea",
+    name: "Tangawizi (Ginger Tea)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "beverage",
+    description: "A warming Swahili tea made with fresh ginger, spices, and milk. The signature hospitality drink of the East African coast.",
+    culturalSignificance: "Chai ya tangawizi is the Swahili welcome drink. Offered to every guest, drunk at breakfast and afternoon. The spice trade made ginger accessible on the coast for centuries.",
+    youtubeVideoId: "JFKHoLnWQig",
+    prepTime: "5 minutes",
+    cookTime: "10 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh ginger", amount: "50g", notes: "Grated or smashed" },
+      { item: "Black tea leaves", amount: "2 tablespoons" },
+      { item: "Water", amount: "2 cups" },
+      { item: "Milk", amount: "1 cup" },
+      { item: "Sugar", amount: "3-4 tablespoons", notes: "Swahili chai is sweet" },
+      { item: "Cardamom pods", amount: "3", notes: "Crushed, optional" }
+    ],
+    instructions: [
+      "Smash ginger with the flat of a knife to release oils.",
+      "Add water, ginger, and cardamom to a pot and bring to boil.",
+      "Reduce heat and simmer for 5 minutes to extract ginger flavor.",
+      "Add tea leaves and boil for 2-3 minutes.",
+      "Add milk and sugar, return to boil.",
+      "Reduce heat and simmer 2-3 minutes until chai-colored.",
+      "Strain into cups and serve immediately while hot."
+    ],
+    tips: [
+      "Swahili chai is boiled with milk, not added after",
+      "Strong ginger is the signature - don't skimp",
+      "Serve with mandazi (fried bread) for traditional pairing"
+    ]
+  },
+  {
+    id: "palm-wine",
+    name: "Palm Wine (Mmanya Ngwo)",
+    tribeSlug: "igbo",
+    tribeName: "Igbo",
+    category: "beverage",
+    description: "Fresh sap tapped from palm trees, mildly alcoholic and refreshing. The traditional celebratory drink of much of Africa.",
+    culturalSignificance: "Palm wine is sacred in Igbo culture - essential at traditional weddings, title-taking, and ancestor offerings. The palm wine tapper is a respected profession. Fresh 'sweet' wine is shared, older fermented wine is stronger.",
+    historicalContext: "Palm wine has been drunk in Africa for millennia. It plays central roles in ceremonies from Nigeria to Cameroon to Congo. The tree itself represents life and prosperity.",
+    youtubeVideoId: "Lj_6o7EV_Zk",
+    prepTime: "N/A",
+    cookTime: "N/A (tapped fresh)",
+    servings: 1,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Oil palm or raffia palm tree", amount: "1", notes: "With sap" },
+      { item: "Tapping gourd/container", amount: "1" },
+      { item: "Calabash for serving", amount: "1" }
+    ],
+    instructions: [
+      "Identify a mature palm tree (oil palm or raffia palm).",
+      "Climb tree and make incision near the crown (skilled work).",
+      "Attach container to collect the flowing sap.",
+      "Leave overnight to collect sap.",
+      "Retrieve in morning for sweetest wine (mmanya ọhụrụ - fresh wine).",
+      "Serve fresh within hours for sweet taste.",
+      "Allow to ferment 1-3 days for stronger wine.",
+      "Distill fermented wine for ọgọgọrọ (local gin)."
+    ],
+    tips: [
+      "Fresh palm wine is sweet; it ferments quickly in warm weather",
+      "Best drunk the same day it's tapped",
+      "The color should be milky white"
+    ]
+  }
+];
+
+// Combine with main recipes
+recipes.push(...beverageRecipes);
+
 // Get similar recipes from other tribes (same category)
 export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {
   const recipe = getRecipeById(recipeId);
