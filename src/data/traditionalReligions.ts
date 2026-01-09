@@ -143,6 +143,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Akom", "Akan Traditional Religion"],
     region: "West Africa",
     estimatedFollowers: "~8 million",
+    youtubeVideoId: "lR5A1zLl_74",
     countryBreakdown: [
       { country: "Ghana", flag: "🇬🇭", percentage: 70 },
       { country: "Côte d'Ivoire", flag: "🇨🇮", percentage: 25 },
@@ -297,6 +298,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Ngai worship", "Gikuyu Traditional Religion"],
     region: "East Africa",
     estimatedFollowers: "~2 million",
+    youtubeVideoId: "Fj0bLU9Km1o",
     countryBreakdown: [
       { country: "Kenya", flag: "🇰🇪", percentage: 98 },
       { country: "Diaspora", flag: "🌍", percentage: 2 }
@@ -441,6 +443,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Bakongo religion", "Minkisi tradition"],
     region: "Central Africa",
     estimatedFollowers: "~3 million (including diaspora influence)",
+    youtubeVideoId: "qD0sJKNhLNY",
     countryBreakdown: [
       { country: "DR Congo", flag: "🇨🇩", percentage: 45 },
       { country: "Congo-Brazzaville", flag: "🇨🇬", percentage: 30 },
@@ -515,6 +518,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Amma worship", "Dogon spirituality"],
     region: "West Africa",
     estimatedFollowers: "~600,000",
+    youtubeVideoId: "8qKj-0dH3Cg",
     countryBreakdown: [
       { country: "Mali", flag: "🇲🇱", percentage: 95 },
       { country: "Burkina Faso", flag: "🇧🇫", percentage: 5 }
@@ -590,6 +594,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Nhialic worship", "Jieng spirituality"],
     region: "East Africa / Horn of Africa",
     estimatedFollowers: "~3 million",
+    youtubeVideoId: "JGhWIpNf5Mg",
     countryBreakdown: [
       { country: "South Sudan", flag: "🇸🇸", percentage: 95 },
       { country: "Sudan", flag: "🇸🇩", percentage: 3 },
@@ -1717,6 +1722,279 @@ export const traditionalReligions: TraditionalReligionData[] = [
       { name: "Wikipedia - Himba People", url: "https://en.wikipedia.org/wiki/Himba_people" },
       { name: "Britannica - Himba", url: "https://www.britannica.com/topic/Himba" },
       { name: "Crandall - Himba Studies", url: "https://www.jstor.org/stable/3773411" }
+    ]
+  },
+  {
+    id: "shona-religion",
+    name: "Shona Traditional Religion",
+    alternateNames: ["Mwari Worship", "ChiShona Spirituality"],
+    region: "Southern Africa",
+    estimatedFollowers: "~4 million",
+    youtubeVideoId: "wk0nXm2qmTA",
+    countryBreakdown: [
+      { country: "Zimbabwe", flag: "🇿🇼", percentage: 85 },
+      { country: "Mozambique", flag: "🇲🇿", percentage: 10 },
+      { country: "South Africa", flag: "🇿🇦", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Mwari (Musikavanhu)",
+      description: "The supreme creator god who made all things. Mwari is approached through ancestral spirits (vadzimu) and special spirit mediums. The Matopo Hills are considered his earthly dwelling place.",
+      attributes: ["Creator", "Provider of Rain", "Giver of Life", "Distant yet Accessible"]
+    },
+    tenets: [
+      {
+        belief: "Vadzimu (Ancestral Spirits)",
+        description: "The deceased become guardian spirits who protect and guide their descendants. They must be honored through rituals and can communicate through dreams and spirit mediums.",
+        source: "Bourdillon - The Shona Peoples (1976)"
+      },
+      {
+        belief: "Mhondoro (Lion Spirits)",
+        description: "Powerful territorial spirits of deceased chiefs who protect entire regions. Mhondoro mediums have significant political and spiritual authority.",
+        source: "Lan, David - Guns & Rain (1985)"
+      },
+      {
+        belief: "Kurova Guva (Bringing Home the Spirit)",
+        description: "One year after death, a ceremony brings the deceased's spirit back to protect the family. Without this ritual, the spirit may cause harm.",
+        source: "Gelfand - Shona Religion (1962)"
+      }
+    ],
+    practices: [
+      { name: "Mbira Music", description: "The mbira (thumb piano) is sacred for communicating with ancestors. All-night biras (ceremonies) feature mbira music to invoke spirits.", frequency: "Monthly/Seasonal" },
+      { name: "Beer Brewing (Hwahwa)", description: "Traditional sorghum beer is brewed for ancestor ceremonies. The process itself is ritualized.", frequency: "Ceremonial" },
+      { name: "Spirit Medium Consultation", description: "Consulting svikiro (spirit mediums) possessed by ancestral spirits for guidance, healing, and resolving disputes.", frequency: "As needed" }
+    ],
+    rituals: [
+      { name: "Bira Ceremony", description: "All-night ceremony with mbira music, dancing, and spirit possession. Ancestors are fed, honored, and consulted.", occasion: "Various occasions" },
+      { name: "Kurova Guva", description: "One year after death, ceremony to bring the spirit home. An ox is sacrificed, beer brewed, and the grave visited.", occasion: "One year after death" },
+      { name: "Rainmaking at Matopo", description: "In drought, delegations visit Mwari's shrine at Matopo Hills for rain petitions.", occasion: "Drought" }
+    ],
+    sacredTexts: [
+      { name: "Oral Traditions", description: "Genealogies, praise poetry, and ritual knowledge passed through generations of elders and spirit mediums.", status: "oral" }
+    ],
+    joining: {
+      process: "Shona religion is family-based through ancestral connection. One is born into it through lineage. Spirit mediums are called by ancestors through illness or dreams.",
+      requirements: [
+        "Shona ancestry or family connection",
+        "Participation in family biras",
+        "Learning of clan totems and taboos",
+        "Recognition by family elders"
+      ],
+      notes: "Many Shona practice both traditional religion and Christianity. Ancestor veneration continues widely."
+    },
+    influence: {
+      cultural: "Shona religion shaped Great Zimbabwe's construction and the famous stone sculpture tradition. Mbira music is UNESCO-protected heritage.",
+      modern: "Spirit mediums played significant roles in the liberation war. Traditional practices continue alongside Christianity."
+    },
+    tribesFollowing: [
+      { tribeSlug: "shona", tribeName: "Shona", percentage: 45, notes: "Many syncretic with Christianity" },
+      { tribeSlug: "ndau", tribeName: "Ndau", percentage: 40, notes: "Related traditions" }
+    ],
+    sources: [
+      { name: "Wikipedia - Shona religion", url: "https://en.wikipedia.org/wiki/Shona_religion" },
+      { name: "Bourdillon - The Shona Peoples", url: "https://www.jstor.org/stable/3772938" }
+    ]
+  },
+  {
+    id: "lozi-religion",
+    name: "Lozi Traditional Religion",
+    alternateNames: ["Barotse Religion", "Nyambe Worship"],
+    region: "Southern Africa",
+    estimatedFollowers: "~400,000",
+    countryBreakdown: [
+      { country: "Zambia", flag: "🇿🇲", percentage: 85 },
+      { country: "Namibia", flag: "🇳🇦", percentage: 10 },
+      { country: "Botswana", flag: "🇧🇼", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Nyambe (Nyambi)",
+      description: "The supreme creator god who once lived on earth but fled to the sky to escape humanity. Nyambe created the first humans (Kamunu and wife) and all creatures.",
+      attributes: ["Creator", "Sky Dweller", "Distant God", "Original Ancestor"]
+    },
+    tenets: [
+      {
+        belief: "Nyambe's Departure",
+        description: "Nyambe originally lived among humans but fled to the sky when humanity became troublesome. He climbed up on a spider's web. This explains why God seems distant.",
+        source: "Lozi oral tradition"
+      },
+      {
+        belief: "Malozi Spirits",
+        description: "Ancestral spirits (mizimu) continue to influence the living. The Litunga (king) has special spiritual authority as descendant of the first kings.",
+        source: "Gluckman - The Lozi of Barotseland (1941)"
+      },
+      {
+        belief: "Kuomboka Ceremony",
+        description: "The annual royal move from floodplains to higher ground has deep spiritual significance, symbolizing the king's power over nature.",
+        source: "UNESCO - Kuomboka"
+      }
+    ],
+    practices: [
+      { name: "Kuomboka Festival", description: "Annual ceremony when the Litunga (king) moves from lower to higher ground as floods rise. Thousands gather for drumming, dancing, and royal procession.", frequency: "Annual (Feb-April)" },
+      { name: "Ancestor Offerings", description: "Regular offerings at family shrines and royal graves. Beer and food are presented to maintain good relations with spirits.", frequency: "Regular" }
+    ],
+    rituals: [
+      { name: "Kuomboka", description: "The king's ceremonial journey by royal barge (Nalikwanda) from the flooded plains. Drumming signals the move. A major cultural event.", occasion: "Annual flood season" },
+      { name: "Royal Burials", description: "Elaborate funerals for the Litunga, with cattle sacrifice and mourning period. Royal graves are sacred sites.", occasion: "Royal death" }
+    ],
+    sacredTexts: [
+      { name: "Royal Histories", description: "Oral traditions about the Lozi kings and the origin of the Barotse kingdom, maintained by royal historians.", status: "oral" }
+    ],
+    joining: {
+      process: "Lozi religion is ethnic and tied to loyalty to the Litunga. One participates through birth into a Lozi family and allegiance to the kingship.",
+      requirements: [
+        "Lozi ethnicity or adoption",
+        "Allegiance to the Litunga",
+        "Participation in Kuomboka"
+      ]
+    },
+    influence: {
+      cultural: "The Lozi kingdom maintains significant autonomy within Zambia. Kuomboka attracts international tourism.",
+      modern: "Christianity is now dominant, but Kuomboka remains a major cultural event. Traditional authority of the Litunga endures."
+    },
+    tribesFollowing: [
+      { tribeSlug: "lozi", tribeName: "Lozi/Barotse", percentage: 25, notes: "Mostly Christian but maintain traditions" }
+    ],
+    sources: [
+      { name: "Wikipedia - Lozi people", url: "https://en.wikipedia.org/wiki/Lozi_people" },
+      { name: "Gluckman - Barotse Studies", url: "https://www.jstor.org/stable/3820314" }
+    ]
+  },
+  {
+    id: "bambara-religion",
+    name: "Bambara Traditional Religion",
+    alternateNames: ["Bamana Religion", "Jo Worship"],
+    region: "West Africa",
+    estimatedFollowers: "~1 million",
+    youtubeVideoId: "8qKj-0dH3Cg",
+    countryBreakdown: [
+      { country: "Mali", flag: "🇲🇱", percentage: 85 },
+      { country: "Senegal", flag: "🇸🇳", percentage: 8 },
+      { country: "Guinea/Burkina", flag: "🌍", percentage: 7 }
+    ],
+    supremeDeity: {
+      name: "Faro",
+      description: "The master of water, speech, and fertility who reorganized the universe after creation. Faro is the source of knowledge and communicated the first words to humanity.",
+      attributes: ["Water Deity", "Master of Speech", "Reorganizer of Creation", "Source of Knowledge"]
+    },
+    tenets: [
+      {
+        belief: "Nyama (Life Force)",
+        description: "All beings possess nyama, a spiritual energy that can be dangerous if not properly managed. Rituals, taboos, and initiations manage nyama.",
+        source: "McNaughton - The Mande Blacksmiths (1988)"
+      },
+      {
+        belief: "Secret Societies (Jo)",
+        description: "Knowledge is organized through initiation societies. The six major societies (Jo) progressively reveal deeper truths about existence.",
+        source: "Imperato - Buffoons, Queens & Wooden Horsemen (1983)"
+      },
+      {
+        belief: "Boli Power Objects",
+        description: "Altars and sculptures charged with spiritual power. Bolis accumulate nyama through sacrifices and become increasingly powerful over time.",
+        source: "McNaughton - The Mande Blacksmiths (1988)"
+      }
+    ],
+    practices: [
+      { name: "Initiation Societies", description: "Progressive initiation through six societies, each revealing deeper spiritual knowledge. The Koré is the highest level.", frequency: "Stages through life" },
+      { name: "Boli Sacrifices", description: "Regular offerings to power objects. Blood, millet, and other substances feed the boli and increase its power.", frequency: "Regular" },
+      { name: "Chi Wara Dance", description: "Agricultural celebration featuring antelope headdresses representing the mythical being who taught farming.", frequency: "Planting/Harvest" }
+    ],
+    rituals: [
+      { name: "Chi Wara Festival", description: "Male and female antelope headdresses dance in pairs to honor the spirit who taught agriculture. Drummers and singers accompany.", occasion: "Agricultural calendar" },
+      { name: "N'tomo Initiation", description: "First initiation for uncircumcised boys. Teaches social values and basic spiritual concepts.", occasion: "Childhood" },
+      { name: "Koré Initiation", description: "Highest level of initiation. Deep secrets about life, death, and the cosmos are revealed.", occasion: "Adulthood" }
+    ],
+    sacredTexts: [
+      { name: "Oral Traditions", description: "Creation myths, initiation teachings, and ritual knowledge transmitted through secret societies.", status: "oral" }
+    ],
+    joining: {
+      process: "Bambara religion is entered through initiation. Children begin with N'tomo and progress through levels based on age, gender, and readiness.",
+      requirements: [
+        "Bambara heritage or community adoption",
+        "Progressive initiation through societies",
+        "Maintenance of secrecy about teachings",
+        "Participation in community rituals"
+      ],
+      notes: "Islam has spread widely among Bambara, but traditional practices persist, especially in rural areas and among blacksmith lineages."
+    },
+    influence: {
+      cultural: "Bambara art, especially Chi Wara headdresses and boli sculptures, is world-renowned. Their initiation systems influenced neighboring peoples.",
+      modern: "The ancient city of Djenné reflects Bambara-influenced architecture. Secret societies continue despite Islamization."
+    },
+    tribesFollowing: [
+      { tribeSlug: "bambara", tribeName: "Bambara/Bamana", percentage: 20, notes: "Many Muslim but retain practices" },
+      { tribeSlug: "malinke", tribeName: "Malinke/Mandinka", percentage: 15, notes: "Related traditions" }
+    ],
+    sources: [
+      { name: "Wikipedia - Bambara people", url: "https://en.wikipedia.org/wiki/Bambara_people" },
+      { name: "McNaughton - The Mande Blacksmiths", url: "https://www.jstor.org/stable/3335951" }
+    ]
+  },
+  {
+    id: "nuer-religion",
+    name: "Nuer Religion",
+    alternateNames: ["Kwoth Worship", "Nuer Spirituality"],
+    region: "East Africa",
+    estimatedFollowers: "~2 million",
+    countryBreakdown: [
+      { country: "South Sudan", flag: "🇸🇸", percentage: 85 },
+      { country: "Ethiopia", flag: "🇪🇹", percentage: 10 },
+      { country: "Sudan", flag: "🇸🇩", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Kwoth (Kwoth Nhial)",
+      description: "The supreme spirit of the sky, invisible and omnipresent. Kwoth is the creator and is in everything. There is no image of Kwoth - he is spirit (kwoth means both 'God' and 'spirit').",
+      attributes: ["Sky Spirit", "Invisible", "Omnipresent", "Creator"]
+    },
+    tenets: [
+      {
+        belief: "Kwoth is Spirit",
+        description: "Kwoth cannot be seen or depicted. He is like wind or air - everywhere but intangible. All spirits are manifestations of the one Kwoth.",
+        source: "Evans-Pritchard - Nuer Religion (1956)"
+      },
+      {
+        belief: "Cattle as Sacred",
+        description: "Cattle are central to Nuer spirituality. Sacrifices, bridewealth, and compensation all involve cattle. A man's relationship with his cattle reflects his relationship with Kwoth.",
+        source: "Evans-Pritchard - The Nuer (1940)"
+      },
+      {
+        belief: "Prophet Authority",
+        description: "Prophets (guk) receive revelations from Kwoth and can perform miracles. They have significant political and military influence.",
+        source: "Johnson - Nuer Prophets (1994)"
+      }
+    ],
+    practices: [
+      { name: "Cattle Sacrifice", description: "The primary religious act. Cattle are consecrated by rubbing ashes on their backs, then sacrificed for healing, expiation, or thanksgiving.", frequency: "Various occasions" },
+      { name: "Invocations (Lam)", description: "Formal prayers directed to Kwoth, often invoking the names of ancestors and spirits of the air.", frequency: "Daily/Ceremonial" },
+      { name: "Scarification", description: "Initiation marks (gar) cut on the forehead mark the transition to manhood. The ritual has deep spiritual significance.", frequency: "Initiation" }
+    ],
+    rituals: [
+      { name: "Initiation Scarification", description: "Six cuts across the forehead mark transition to manhood. An ox is dedicated to the initiate. No crying is permitted.", occasion: "Adolescence" },
+      { name: "Mortuary Rites", description: "Cattle are sacrificed at death. The soul must be properly released, or the ghost (joagh) may cause trouble.", occasion: "Death" },
+      { name: "Prophet Gatherings", description: "Large assemblies around prophets for healing, blessing cattle, and receiving spiritual guidance.", occasion: "Various" }
+    ],
+    sacredTexts: [
+      { name: "Oral Traditions", description: "Myths of Nuer origin, prophet teachings, and proper ritual procedures passed through generations.", status: "oral" }
+    ],
+    joining: {
+      process: "Nuer religion is tied to Nuer ethnic identity. One enters through birth into a Nuer family and initiation scarification.",
+      requirements: [
+        "Nuer birth or adoption",
+        "Male initiation scarification",
+        "Cattle ownership/relationship",
+        "Learning of invocations"
+      ],
+      notes: "Christianity has spread significantly, but traditional beliefs about Kwoth and cattle sacrifice persist."
+    },
+    influence: {
+      cultural: "Evans-Pritchard's classic study made Nuer religion famous in anthropology. Their acephalous political system fascinated scholars.",
+      modern: "Nuer prophets played roles in both resistance and recent civil conflicts. Traditional practices continue despite displacement."
+    },
+    tribesFollowing: [
+      { tribeSlug: "nuer", tribeName: "Nuer", percentage: 40, notes: "Many Christian but maintain practices" },
+      { tribeSlug: "dinka", tribeName: "Dinka", percentage: 35, notes: "Related Nilotic tradition" }
+    ],
+    sources: [
+      { name: "Evans-Pritchard - Nuer Religion", url: "https://www.jstor.org/stable/2796363" },
+      { name: "Wikipedia - Nuer people", url: "https://en.wikipedia.org/wiki/Nuer_people" }
     ]
   }
 ];
