@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { GuessForm } from '@/components/GuessForm';
 import { TribeResultCard } from '@/components/TribeResultCard';
+import { TopTribesCarousel } from '@/components/TopTribesCarousel';
 import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
 import { Globe, ArrowRight, Lightbulb } from 'lucide-react';
 import logo from '@/assets/logo.png';
@@ -164,7 +165,10 @@ const Index = () => {
               </nav>
             </div>
             
-            <aside className="mt-6 sm:mt-8 p-3 sm:p-4 bg-secondary/50 rounded-xl max-w-md mx-auto">
+            {/* Top Tribes Carousel */}
+            <TopTribesCarousel />
+            
+            <aside className="mt-8 sm:mt-10 p-3 sm:p-4 bg-secondary/50 rounded-xl max-w-md mx-auto">
               <p className="text-xs text-muted-foreground">
                 ⚠️ <strong>Disclaimer:</strong> This tool is for entertainment and educational purposes only. 
                 Stereotypes presented are common perceptions and may not apply to individuals.
