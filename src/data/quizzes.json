@@ -1,0 +1,501 @@
+{
+  "quizCategories": [
+    {
+      "id": "tribe-identification",
+      "name": "Tribe Identification",
+      "description": "Test your knowledge of African tribal names and origins",
+      "icon": "Users",
+      "color": "from-amber-500 to-orange-600"
+    },
+    {
+      "id": "cultural-traditions",
+      "name": "Cultural Traditions",
+      "description": "Learn about customs, ceremonies, and cultural practices",
+      "icon": "Sparkles",
+      "color": "from-purple-500 to-pink-600"
+    },
+    {
+      "id": "food-cuisine",
+      "name": "Food & Cuisine",
+      "description": "Discover traditional African dishes and their origins",
+      "icon": "ChefHat",
+      "color": "from-green-500 to-emerald-600"
+    },
+    {
+      "id": "geography-regions",
+      "name": "Geography & Regions",
+      "description": "Test your knowledge of African geography and tribal territories",
+      "icon": "MapPin",
+      "color": "from-blue-500 to-cyan-600"
+    },
+    {
+      "id": "languages",
+      "name": "Languages & Greetings",
+      "description": "Learn greetings and linguistic families across Africa",
+      "icon": "Languages",
+      "color": "from-rose-500 to-red-600"
+    },
+    {
+      "id": "religion-spirituality",
+      "name": "Religion & Spirituality",
+      "description": "Explore traditional beliefs and religious practices",
+      "icon": "Moon",
+      "color": "from-indigo-500 to-violet-600"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "tribe-names-beginner",
+      "categoryId": "tribe-identification",
+      "title": "Tribe Names: Beginner",
+      "difficulty": "easy",
+      "timeLimit": 120,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Which tribe is known for the name 'Otieno' meaning 'born at night'?",
+          "options": ["Kikuyu", "Luo", "Maasai", "Zulu"],
+          "correctAnswer": 1,
+          "explanation": "The Luo people of Kenya use time-based names. Otieno (male) and Atieno (female) indicate a child born during nighttime."
+        },
+        {
+          "id": "q2",
+          "question": "The Maasai people are primarily found in which countries?",
+          "options": ["Nigeria and Ghana", "Kenya and Tanzania", "Ethiopia and Sudan", "South Africa and Botswana"],
+          "correctAnswer": 1,
+          "explanation": "The Maasai are a Nilotic ethnic group inhabiting parts of Kenya and Tanzania, known for their distinctive customs and cattle herding."
+        },
+        {
+          "id": "q3",
+          "question": "Which tribe gave Kenya its first president, Jomo Kenyatta?",
+          "options": ["Luo", "Kalenjin", "Kikuyu", "Kamba"],
+          "correctAnswer": 2,
+          "explanation": "Jomo Kenyatta was from the Kikuyu tribe, Kenya's largest ethnic group."
+        },
+        {
+          "id": "q4",
+          "question": "The Yoruba people are primarily from which country?",
+          "options": ["Kenya", "South Africa", "Nigeria", "Ethiopia"],
+          "correctAnswer": 2,
+          "explanation": "The Yoruba are one of the largest ethnic groups in Nigeria, concentrated in the southwestern region."
+        },
+        {
+          "id": "q5",
+          "question": "Which tribe is famous for their 'jumping dance' (Adumu)?",
+          "options": ["Zulu", "Maasai", "Himba", "Hausa"],
+          "correctAnswer": 1,
+          "explanation": "The Maasai are famous for their jumping dance (Adumu), performed by warriors as a display of strength and stamina."
+        },
+        {
+          "id": "q6",
+          "question": "The Zulu people are the largest ethnic group in which country?",
+          "options": ["Nigeria", "Kenya", "South Africa", "Ghana"],
+          "correctAnswer": 2,
+          "explanation": "The Zulu are the largest ethnic group in South Africa with over 10 million people."
+        },
+        {
+          "id": "q7",
+          "question": "Which tribe is known for covering their bodies with red ochre?",
+          "options": ["Himba", "Maasai", "San", "Fulani"],
+          "correctAnswer": 0,
+          "explanation": "The Himba of Namibia are famous for covering their skin and hair with otjize, a mixture of butterfat and red ochre."
+        },
+        {
+          "id": "q8",
+          "question": "The Amhara people primarily speak which language?",
+          "options": ["Swahili", "Amharic", "Arabic", "Zulu"],
+          "correctAnswer": 1,
+          "explanation": "The Amhara people speak Amharic, Ethiopia's official language with its own unique alphabet of 231 characters."
+        }
+      ]
+    },
+    {
+      "id": "african-foods-quiz",
+      "categoryId": "food-cuisine",
+      "title": "Traditional African Foods",
+      "difficulty": "medium",
+      "timeLimit": 180,
+      "questions": [
+        {
+          "id": "f1",
+          "question": "Jollof rice originated from which people?",
+          "options": ["Yoruba", "Wolof", "Igbo", "Hausa"],
+          "correctAnswer": 1,
+          "explanation": "Jollof rice originated from the Wolof people of Senegal and Gambia in the 14th century."
+        },
+        {
+          "id": "f2",
+          "question": "What is the main ingredient in Egusi soup?",
+          "options": ["Palm oil", "Melon seeds", "Cassava", "Yam"],
+          "correctAnswer": 1,
+          "explanation": "Egusi soup is made from ground melon seeds (egusi), which give it its distinctive thick, nutty texture."
+        },
+        {
+          "id": "f3",
+          "question": "Mũkimo is a traditional dish from which Kenyan tribe?",
+          "options": ["Luo", "Maasai", "Kikuyu", "Kamba"],
+          "correctAnswer": 2,
+          "explanation": "Mũkimo is the signature dish of the Kikuyu people, made from mashed potatoes, green peas, maize, and pumpkin leaves."
+        },
+        {
+          "id": "f4",
+          "question": "Which tribe is known for drinking a mixture of blood and milk?",
+          "options": ["Zulu", "Maasai", "Yoruba", "Igbo"],
+          "correctAnswer": 1,
+          "explanation": "The Maasai traditionally consume 'Osaroi' - a mixture of fresh cow's blood and milk, especially for warriors."
+        },
+        {
+          "id": "f5",
+          "question": "Suya (spiced grilled meat) is a street food from which Nigerian people?",
+          "options": ["Yoruba", "Igbo", "Hausa", "Ijaw"],
+          "correctAnswer": 2,
+          "explanation": "Suya originated with Hausa cattle herders in Northern Nigeria and spread across West Africa."
+        },
+        {
+          "id": "f6",
+          "question": "What is Bobotie and where does it come from?",
+          "options": ["Fish stew from Kenya", "Spiced meat dish from Cape Malay", "Rice dish from Ghana", "Soup from Ethiopia"],
+          "correctAnswer": 1,
+          "explanation": "Bobotie is a spiced minced meat dish with egg custard topping, a Cape Malay masterpiece from South Africa."
+        },
+        {
+          "id": "f7",
+          "question": "Thieboudienne is the national dish of which country?",
+          "options": ["Nigeria", "Ghana", "Senegal", "Kenya"],
+          "correctAnswer": 2,
+          "explanation": "Thieboudienne (fish and rice) is Senegal's national dish, inscribed on UNESCO's Intangible Cultural Heritage list."
+        },
+        {
+          "id": "f8",
+          "question": "What is Injera made from?",
+          "options": ["Wheat", "Teff flour", "Cassava", "Maize"],
+          "correctAnswer": 1,
+          "explanation": "Injera is a sourdough flatbread made from teff flour, a staple food in Ethiopia and Eritrea."
+        }
+      ]
+    },
+    {
+      "id": "language-greetings",
+      "categoryId": "languages",
+      "title": "African Greetings",
+      "difficulty": "easy",
+      "timeLimit": 120,
+      "questions": [
+        {
+          "id": "l1",
+          "question": "'Jambo' is a greeting from which language?",
+          "options": ["Zulu", "Yoruba", "Swahili", "Amharic"],
+          "correctAnswer": 2,
+          "explanation": "Jambo is a common Swahili greeting, widely used in Kenya and Tanzania."
+        },
+        {
+          "id": "l2",
+          "question": "What does 'Ubuntu' mean in Nguni languages?",
+          "options": ["Hello", "I am because we are", "Thank you", "Goodbye"],
+          "correctAnswer": 1,
+          "explanation": "Ubuntu means 'I am because we are' - a philosophy of humanity and interconnectedness central to Zulu and Xhosa cultures."
+        },
+        {
+          "id": "l3",
+          "question": "Which language family do the Yoruba, Igbo, and Zulu languages belong to?",
+          "options": ["Afroasiatic", "Niger-Congo", "Nilo-Saharan", "Khoisan"],
+          "correctAnswer": 1,
+          "explanation": "These are all Niger-Congo languages, Africa's largest language family with over 1,500 languages."
+        },
+        {
+          "id": "l4",
+          "question": "The Somali language belongs to which language family?",
+          "options": ["Bantu", "Cushitic", "Semitic", "Nilotic"],
+          "correctAnswer": 1,
+          "explanation": "Somali is a Cushitic language within the Afroasiatic family, related to Afar and Oromo."
+        },
+        {
+          "id": "l5",
+          "question": "Which African language has click consonants borrowed from Khoisan?",
+          "options": ["Swahili", "Hausa", "Xhosa", "Amharic"],
+          "correctAnswer": 2,
+          "explanation": "Xhosa and Zulu have distinctive click consonants borrowed from the San/Khoisan languages."
+        },
+        {
+          "id": "l6",
+          "question": "'Sawubona' meaning 'I see you' is from which language?",
+          "options": ["Swahili", "Zulu", "Yoruba", "Hausa"],
+          "correctAnswer": 1,
+          "explanation": "Sawubona is a Zulu greeting meaning 'I see you' - a recognition of the person's existence and worth."
+        }
+      ]
+    },
+    {
+      "id": "religion-spirituality-quiz",
+      "categoryId": "religion-spirituality",
+      "title": "Traditional Beliefs",
+      "difficulty": "medium",
+      "timeLimit": 180,
+      "questions": [
+        {
+          "id": "r1",
+          "question": "Ngai is the supreme deity of which people?",
+          "options": ["Yoruba", "Kikuyu", "Zulu", "Hausa"],
+          "correctAnswer": 1,
+          "explanation": "Ngai (also Mũgai or Mũrungu) is the creator god of the Kikuyu and Maasai, believed to dwell on Mt. Kenya."
+        },
+        {
+          "id": "r2",
+          "question": "The Orisha are deities in which traditional religion?",
+          "options": ["Vodun", "Yoruba Religion", "Akan Religion", "Zulu Religion"],
+          "correctAnswer": 1,
+          "explanation": "The Orishas are divine beings in Yoruba religion, including Ogun (iron), Shango (thunder), and Yemoja (ocean)."
+        },
+        {
+          "id": "r3",
+          "question": "Which Ethiopian tribe claims descent from King Solomon and the Queen of Sheba?",
+          "options": ["Oromo", "Amhara", "Tigray", "Sidama"],
+          "correctAnswer": 1,
+          "explanation": "The Amhara and Ethiopian royalty claim descent from Menelik I, the legendary son of King Solomon and the Queen of Sheba."
+        },
+        {
+          "id": "r4",
+          "question": "Christianity was introduced to Ethiopia in which century?",
+          "options": ["1st century", "4th century", "7th century", "15th century"],
+          "correctAnswer": 1,
+          "explanation": "King Ezana of Aksum converted to Christianity in the 4th century, making Ethiopia one of the first Christian nations."
+        },
+        {
+          "id": "r5",
+          "question": "The Hajj pilgrimage of Mansa Musa in 1324 displayed the wealth of which empire?",
+          "options": ["Songhai", "Ghana", "Mali", "Kongo"],
+          "correctAnswer": 2,
+          "explanation": "Mansa Musa's legendary pilgrimage from the Mali Empire to Mecca displayed such wealth that it affected gold prices in Cairo."
+        },
+        {
+          "id": "r6",
+          "question": "Vodun (Voodoo) originated with which people?",
+          "options": ["Yoruba", "Fon/Ewe", "Igbo", "Hausa"],
+          "correctAnswer": 1,
+          "explanation": "Vodun originated with the Fon and Ewe peoples of Benin and Togo, later spreading to Haiti and the Americas."
+        }
+      ]
+    },
+    {
+      "id": "geography-quiz",
+      "categoryId": "geography-regions",
+      "title": "African Geography",
+      "difficulty": "medium",
+      "timeLimit": 150,
+      "questions": [
+        {
+          "id": "g1",
+          "question": "The Afar people inhabit one of the hottest places on Earth. What is it called?",
+          "options": ["Sahara Desert", "Danakil Depression", "Kalahari Desert", "Namib Desert"],
+          "correctAnswer": 1,
+          "explanation": "The Danakil Depression regularly reaches 50°C (122°F), where the Afar mine salt and thrive in extreme conditions."
+        },
+        {
+          "id": "g2",
+          "question": "Which mountain is sacred to the Kikuyu as the dwelling place of Ngai?",
+          "options": ["Kilimanjaro", "Mt. Kenya", "Rwenzori", "Elgon"],
+          "correctAnswer": 1,
+          "explanation": "Mt. Kenya (Kĩrĩnyaga) is sacred to the Kikuyu, who traditionally face it when praying to Ngai."
+        },
+        {
+          "id": "g3",
+          "question": "The Bantu migration originated from which region?",
+          "options": ["Ethiopia", "Cameroon-Nigeria border", "Egypt", "South Africa"],
+          "correctAnswer": 1,
+          "explanation": "Proto-Bantu speakers began expanding from the Cameroon-Nigeria border region around 1000 BCE."
+        },
+        {
+          "id": "g4",
+          "question": "The Swahili Coast stretches from which country to which country?",
+          "options": ["Egypt to South Africa", "Somalia to Mozambique", "Morocco to Senegal", "Nigeria to Cameroon"],
+          "correctAnswer": 1,
+          "explanation": "The Swahili Coast extends from Somalia in the north to northern Mozambique in the south."
+        },
+        {
+          "id": "g5",
+          "question": "The Tuareg are known as the 'Blue Men' of which desert?",
+          "options": ["Kalahari", "Namib", "Sahara", "Nubian"],
+          "correctAnswer": 2,
+          "explanation": "The Tuareg are called 'Blue Men of the Sahara' because the indigo dye from their clothing rubs off on their skin."
+        },
+        {
+          "id": "g6",
+          "question": "Which lake is central to Luo culture and livelihood?",
+          "options": ["Lake Tanganyika", "Lake Victoria", "Lake Malawi", "Lake Chad"],
+          "correctAnswer": 1,
+          "explanation": "Lake Victoria is central to Luo identity - fishing, especially tilapia and omena, is a cornerstone of their culture."
+        }
+      ]
+    },
+    {
+      "id": "cultural-traditions-quiz",
+      "categoryId": "cultural-traditions",
+      "title": "Cultural Practices",
+      "difficulty": "hard",
+      "timeLimit": 200,
+      "questions": [
+        {
+          "id": "c1",
+          "question": "The Maasai measure wealth primarily in what?",
+          "options": ["Gold", "Land", "Cattle", "Grain"],
+          "correctAnswer": 2,
+          "explanation": "Cattle are central to Maasai life - they measure wealth in cattle and believe all cattle in the world belong to them."
+        },
+        {
+          "id": "c2",
+          "question": "Which Nigerian tribe has one of the highest twin birth rates in the world?",
+          "options": ["Hausa", "Igbo", "Yoruba", "Ijaw"],
+          "correctAnswer": 2,
+          "explanation": "The Yoruba have one of the highest twin birth rates globally, possibly linked to their diet rich in yams."
+        },
+        {
+          "id": "c3",
+          "question": "The Mau Mau uprising was led primarily by which Kenyan tribe?",
+          "options": ["Luo", "Maasai", "Kikuyu", "Kamba"],
+          "correctAnswer": 2,
+          "explanation": "The Mau Mau uprising (1952-1960) against British colonial rule was led primarily by Kikuyu fighters."
+        },
+        {
+          "id": "c4",
+          "question": "Which tribe's men wear veils while women traditionally do not?",
+          "options": ["Hausa", "Fulani", "Tuareg", "Berber"],
+          "correctAnswer": 2,
+          "explanation": "Among the Tuareg, men wear the tagelmust (veil) while women traditionally go unveiled - the opposite of many cultures."
+        },
+        {
+          "id": "c5",
+          "question": "The Somali oral tradition emphasizes which art form?",
+          "options": ["Music", "Poetry", "Dance", "Sculpture"],
+          "correctAnswer": 1,
+          "explanation": "Somalia is called 'a nation of poets' - poetry competitions are major events and every major event is commemorated in verse."
+        },
+        {
+          "id": "c6",
+          "question": "Lobola (bride price) is a tradition from which region?",
+          "options": ["West Africa", "North Africa", "Southern Africa", "Horn of Africa"],
+          "correctAnswer": 2,
+          "explanation": "Lobola is a Southern African tradition, particularly among Zulu, Xhosa, and other Nguni peoples."
+        },
+        {
+          "id": "c7",
+          "question": "The 'Fuzzy-Wuzzy' nickname was given by British soldiers to which people?",
+          "options": ["Maasai", "Beja (Hadendoa)", "Zulu", "Afar"],
+          "correctAnswer": 1,
+          "explanation": "British soldiers called the Beja, especially the Hadendoa clan, 'Fuzzy-Wuzzy' due to their distinctive butter-treated hairstyles."
+        },
+        {
+          "id": "c8",
+          "question": "Which tribe is known for geometric house paintings and elaborate beadwork?",
+          "options": ["Maasai", "Ndebele", "Zulu", "Himba"],
+          "correctAnswer": 1,
+          "explanation": "The Ndebele of South Africa are famous for their striking geometric house paintings and colorful beadwork."
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first-quiz",
+      "name": "First Steps",
+      "description": "Complete your first quiz",
+      "icon": "Award",
+      "requirement": { "type": "quizzes_completed", "count": 1 }
+    },
+    {
+      "id": "perfect-score",
+      "name": "Perfect Knowledge",
+      "description": "Score 100% on any quiz",
+      "icon": "Star",
+      "requirement": { "type": "perfect_score", "count": 1 }
+    },
+    {
+      "id": "five-quizzes",
+      "name": "Dedicated Learner",
+      "description": "Complete 5 quizzes",
+      "icon": "BookOpen",
+      "requirement": { "type": "quizzes_completed", "count": 5 }
+    },
+    {
+      "id": "all-categories",
+      "name": "Well-Rounded",
+      "description": "Complete a quiz in every category",
+      "icon": "Trophy",
+      "requirement": { "type": "categories_completed", "count": 6 }
+    },
+    {
+      "id": "streak-3",
+      "name": "On a Roll",
+      "description": "Answer 3 questions correctly in a row",
+      "icon": "Flame",
+      "requirement": { "type": "streak", "count": 3 }
+    },
+    {
+      "id": "streak-10",
+      "name": "Unstoppable",
+      "description": "Answer 10 questions correctly in a row",
+      "icon": "Zap",
+      "requirement": { "type": "streak", "count": 10 }
+    },
+    {
+      "id": "speed-demon",
+      "name": "Speed Demon",
+      "description": "Complete a quiz in under 60 seconds",
+      "icon": "Timer",
+      "requirement": { "type": "time_under", "seconds": 60 }
+    },
+    {
+      "id": "tribe-master",
+      "name": "Tribe Master",
+      "description": "Score 100% on the Tribe Identification quiz",
+      "icon": "Users",
+      "requirement": { "type": "specific_quiz_perfect", "quizId": "tribe-names-beginner" }
+    }
+  ],
+  "flashcardSets": [
+    {
+      "id": "greetings",
+      "title": "African Greetings",
+      "description": "Learn how to say hello in different African languages",
+      "cards": [
+        { "front": "Hello in Swahili", "back": "Jambo / Habari", "tribe": "Swahili" },
+        { "front": "Hello in Zulu", "back": "Sawubona (I see you)", "tribe": "Zulu" },
+        { "front": "Hello in Yoruba", "back": "Bawo ni", "tribe": "Yoruba" },
+        { "front": "Hello in Amharic", "back": "Selam / Tena yistilign", "tribe": "Amhara" },
+        { "front": "Hello in Hausa", "back": "Sannu", "tribe": "Hausa" },
+        { "front": "Hello in Kikuyu", "back": "Wĩmwega", "tribe": "Kikuyu" },
+        { "front": "Hello in Somali", "back": "Assalamu alaykum / Nabad", "tribe": "Somali" },
+        { "front": "Hello in Xhosa", "back": "Molo (singular) / Molweni (plural)", "tribe": "Xhosa" }
+      ]
+    },
+    {
+      "id": "tribal-foods",
+      "title": "Traditional Foods",
+      "description": "Match foods to their tribes of origin",
+      "cards": [
+        { "front": "Mũkimo - Mashed potatoes with greens", "back": "Kikuyu (Kenya)", "tribe": "Kikuyu" },
+        { "front": "Jollof Rice - Spiced tomato rice", "back": "Originated with Wolof (Senegal)", "tribe": "Wolof" },
+        { "front": "Injera - Sourdough flatbread", "back": "Amhara/Ethiopian", "tribe": "Amhara" },
+        { "front": "Bobotie - Spiced meat with egg custard", "back": "Cape Malay (South Africa)", "tribe": "Cape Malay" },
+        { "front": "Suya - Spiced grilled meat", "back": "Hausa (Nigeria)", "tribe": "Hausa" },
+        { "front": "Thieboudienne - Fish and rice", "back": "Wolof/Senegalese", "tribe": "Wolof" },
+        { "front": "Omena - Dried silver fish", "back": "Luo (Kenya)", "tribe": "Luo" },
+        { "front": "Sadza/Pap - Maize porridge", "back": "Shona/Zulu (Southern Africa)", "tribe": "Zulu" }
+      ]
+    },
+    {
+      "id": "famous-people",
+      "title": "Famous Africans & Their Tribes",
+      "description": "Learn about notable people and their ethnic backgrounds",
+      "cards": [
+        { "front": "Nelson Mandela", "back": "Xhosa (South Africa) - Anti-apartheid leader", "tribe": "Xhosa" },
+        { "front": "Wangari Maathai", "back": "Kikuyu (Kenya) - Nobel Peace Prize 2004", "tribe": "Kikuyu" },
+        { "front": "Fela Kuti", "back": "Yoruba (Nigeria) - Afrobeat pioneer", "tribe": "Yoruba" },
+        { "front": "Miriam Makeba", "back": "Xhosa (South Africa) - 'Mama Africa'", "tribe": "Xhosa" },
+        { "front": "Mo Farah", "back": "Somali - Olympic champion runner", "tribe": "Somali" },
+        { "front": "Eliud Kipchoge", "back": "Kalenjin (Kenya) - Marathon world record", "tribe": "Kalenjin" },
+        { "front": "Chimamanda Ngozi Adichie", "back": "Igbo (Nigeria) - Author", "tribe": "Igbo" },
+        { "front": "Haile Selassie", "back": "Amhara (Ethiopia) - Emperor", "tribe": "Amhara" }
+      ]
+    }
+  ]
+}

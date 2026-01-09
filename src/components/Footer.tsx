@@ -51,6 +51,9 @@ export function Footer() {
               <Link to="/religions" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Traditional Religions
               </Link>
+              <Link to="/quiz" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                🎯 Culture Quiz
+              </Link>
             </nav>
           </div>
           

@@ -19,6 +19,7 @@ import ReligionTimeline from "./pages/ReligionTimeline";
 import ReligionDetailPage from "./pages/ReligionDetailPage";
 import ReligionCompare from "./pages/ReligionCompare";
 import IngredientPage from "./pages/IngredientPage";
+import Quiz from "./pages/Quiz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/religion-compare" element={<ReligionCompare />} />
             <Route path="/religion-timeline" element={<ReligionTimeline />} />
             <Route path="/ingredient/:id" element={<IngredientPage />} />
+            <Route path="/quiz" element={<Quiz />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
