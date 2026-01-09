@@ -2628,7 +2628,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'takm_t': [{ tribe: 'tuareg', weight: 0.98 }],
   'rhis': [{ tribe: 'tuareg', weight: 0.95 }],
   'inta': [{ tribe: 'tuareg', weight: 0.95 }],
-  'tafa': [{ tribe: 'tuareg', weight: 0.9 }],
+  'tafa_tu': [{ tribe: 'tuareg', weight: 0.9 }],
   'alhe': [{ tribe: 'tuareg', weight: 0.9 }],
   'tinh': [{ tribe: 'tuareg', weight: 0.98 }],
 
@@ -2683,7 +2683,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'soum': [{ tribe: 'soninke', weight: 0.98 }],
   'syll': [{ tribe: 'soninke', weight: 0.95 }],
   'sakh': [{ tribe: 'soninke', weight: 0.98 }],
-  'dram': [{ tribe: 'soninke', weight: 0.95 }],
+  'dram_sk': [{ tribe: 'soninke', weight: 0.95 }],
 
   // ============ MALI - Bambara prefixes ============
   'trao_b': [{ tribe: 'bambara', weight: 0.98 }],
@@ -2691,7 +2691,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'coul_b': [{ tribe: 'bambara', weight: 0.95 }],
   'kouy_b': [{ tribe: 'bambara', weight: 0.98 }],
   'modi': [{ tribe: 'bambara', weight: 0.95 }],
-  'dris': [{ tribe: 'bambara', weight: 0.95 }],
+  'dris_bm': [{ tribe: 'bambara', weight: 0.95 }],
 
   // ============ MALI - Dogon prefixes ============
   'amba_dg': [{ tribe: 'dogon', weight: 0.98 }],
