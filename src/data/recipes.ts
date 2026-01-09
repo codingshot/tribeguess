@@ -5599,6 +5599,348 @@ export const recipes: Recipe[] = [
       "Don't lift lid while cooking",
       "Pairs perfectly with fish curry"
     ]
+  },
+
+  // ============ LUBA RECIPES (Central Africa) ============
+  {
+    id: "fufu-luba",
+    name: "Fufu ya Luba",
+    tribeSlug: "luba",
+    tribeName: "Luba",
+    category: "staple",
+    description: "Traditional Luba-style cassava fufu, pounded until smooth and elastic. The foundation of every Luba meal.",
+    culturalSignificance: "Fufu is the centerpiece of Luba hospitality. It's served with every important meal and demonstrates a cook's skill through its smooth texture.",
+    historicalContext: "Cassava was introduced to Central Africa from the Americas in the 16th century and became the primary staple. The Luba Kingdom refined preparation techniques, making fufu an art form passed down through generations.",
+    youtubeVideoId: "I8E5xGMb-Ok",
+    prepTime: "30 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Cassava flour", amount: "4 cups" },
+      { item: "Water", amount: "6 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring water to a boil in a large pot.",
+      "Gradually add cassava flour while stirring constantly with a wooden spoon.",
+      "Keep stirring to prevent lumps forming.",
+      "As mixture thickens, switch to a long wooden paddle (lukombe).",
+      "Pound and fold the mixture vigorously for 15-20 minutes.",
+      "The fufu is ready when smooth, elastic, and pulls away from pot sides.",
+      "Shape into mounds using wet hands.",
+      "Serve with moambe, saka-saka, or meat stews."
+    ],
+    tips: [
+      "Good fufu should be smooth without any lumps",
+      "The pounding action requires significant arm strength",
+      "Wet your hands when shaping to prevent sticking"
+    ]
+  },
+  {
+    id: "moambe-luba",
+    name: "Moambe (Palm Nut Chicken)",
+    tribeSlug: "luba",
+    tribeName: "Luba",
+    category: "special",
+    description: "Rich chicken stew cooked in palm nut sauce, the most celebrated dish of Central Africa. Also called poulet moambe.",
+    culturalSignificance: "Moambe is the national dish of both Congos. In Luba culture, it's served at celebrations, weddings, and to honor important guests.",
+    historicalContext: "Palm oil has been central to Congo Basin cuisines for millennia. This dish evolved in the Luba Kingdom courts where chefs refined the technique of extracting and cooking with palm cream.",
+    youtubeVideoId: "vYkNcPJHXK4",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Palm nut cream (sauce graine)", amount: "2 cans or 500g fresh" },
+      { item: "Onions", amount: "2 large" },
+      { item: "Garlic", amount: "6 cloves" },
+      { item: "Tomatoes", amount: "3 medium" },
+      { item: "Scotch bonnet pepper", amount: "2", notes: "Optional" },
+      { item: "Salt and seasoning", amount: "To taste" },
+      { item: "Palm oil", amount: "3 tablespoons" }
+    ],
+    instructions: [
+      "Season chicken with salt and garlic, let marinate 30 minutes.",
+      "Brown chicken pieces in palm oil, set aside.",
+      "Sauté onions and tomatoes until soft.",
+      "Add palm nut cream and bring to simmer.",
+      "Return chicken to pot.",
+      "Add whole scotch bonnet (don't burst it for mild heat).",
+      "Simmer for 45 minutes until chicken is tender and sauce thick.",
+      "Serve with fufu or rice."
+    ],
+    tips: [
+      "The sauce should be thick and coat the chicken",
+      "Use palm nut cream, not palm oil",
+      "The red oil that rises to top is prized"
+    ]
+  },
+  {
+    id: "saka-saka-luba",
+    name: "Saka-Saka (Cassava Leaves)",
+    tribeSlug: "luba",
+    tribeName: "Luba",
+    category: "staple",
+    description: "Slow-cooked cassava leaves pounded smooth and simmered with palm oil and fish. The essential vegetable dish of the Congo.",
+    culturalSignificance: "Saka-saka (called pondu in Kinshasa) is eaten daily across the Congo. Every family has their secret recipe passed down through generations.",
+    historicalContext: "Cassava leaves have been a staple green vegetable in Central Africa since cassava's introduction. The extended cooking removes natural toxins and creates a rich, creamy texture.",
+    prepTime: "30 minutes",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Cassava leaves", amount: "1 kg", notes: "Pounded or frozen" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Dried fish or stockfish", amount: "200g" },
+      { item: "Onions", amount: "2 large" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Hot pepper", amount: "Optional" }
+    ],
+    instructions: [
+      "If using fresh leaves, pound in mortar until very fine.",
+      "Soak dried fish in warm water for 30 minutes, clean and debone.",
+      "In large pot, sauté onions in palm oil until soft.",
+      "Add pounded cassava leaves.",
+      "Add fish and garlic.",
+      "Add enough water to cover.",
+      "Simmer on low heat for 2+ hours, stirring occasionally.",
+      "Leaves should become dark green and creamy.",
+      "Season with salt and serve with fufu."
+    ],
+    tips: [
+      "The longer you cook, the better the flavor",
+      "Frozen cassava leaves work well if fresh unavailable",
+      "The dish should be smooth without fibrous texture"
+    ]
+  },
+
+  // ============ KONGO RECIPES (Central Africa) ============
+  {
+    id: "makayabu",
+    name: "Makayabu (Salted Fish Stew)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "special",
+    description: "Traditional Kongo salted fish cooked with tomatoes, onions, and palm oil. A beloved coastal delicacy from the former Kingdom of Kongo.",
+    culturalSignificance: "Makayabu reflects the Kongo people's coastal trading heritage. Salt fish was a preserved protein that traveled well and became integral to Kongo cuisine.",
+    historicalContext: "The Kingdom of Kongo controlled the mouth of the Congo River and engaged in extensive maritime trade. Salted fish preservation techniques developed for trade caravans moving inland became a culinary tradition.",
+    youtubeVideoId: "3TthfvLT8ns",
+    prepTime: "12 hours (soaking)",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Salted dried fish (makayabu)", amount: "500g" },
+      { item: "Tomatoes", amount: "4 large" },
+      { item: "Onions", amount: "3 large" },
+      { item: "Palm oil", amount: "1/4 cup" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Hot pepper", amount: "To taste" },
+      { item: "Green onions", amount: "For garnish" }
+    ],
+    instructions: [
+      "Soak salted fish overnight, changing water 3-4 times to remove excess salt.",
+      "Cut fish into serving pieces.",
+      "Sauté onions in palm oil until golden.",
+      "Add chopped tomatoes and cook until sauce forms.",
+      "Add garlic and pepper.",
+      "Add fish pieces and simmer for 30 minutes.",
+      "Don't add extra salt - fish retains some.",
+      "Garnish with green onions and serve with fufu or rice."
+    ],
+    tips: [
+      "Thorough soaking is essential to remove excess salt",
+      "The fish should flake easily when done",
+      "Pairs perfectly with cassava fufu"
+    ]
+  },
+  {
+    id: "madesu-kongo",
+    name: "Madesu ya Kongo (Kongo-Style Beans)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "staple",
+    description: "Rich red beans simmered with palm oil, onions, and smoked fish. A protein-rich staple from the Kongo heartland.",
+    culturalSignificance: "Beans are the everyday protein for most Kongo families. This dish represents home cooking and maternal care in Kongo culture.",
+    historicalContext: "Beans have been cultivated in the Congo Basin for centuries. The combination with palm oil and smoked fish created a complete protein source that sustained communities.",
+    prepTime: "8 hours (soaking)",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Red beans", amount: "500g" },
+      { item: "Palm oil", amount: "1/4 cup" },
+      { item: "Smoked fish", amount: "100g" },
+      { item: "Onions", amount: "2 large" },
+      { item: "Tomatoes", amount: "2 medium" },
+      { item: "Garlic", amount: "3 cloves" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak beans overnight, drain and rinse.",
+      "Boil beans in fresh water until nearly tender (1.5 hours).",
+      "In separate pan, sauté onions in palm oil.",
+      "Add tomatoes and cook until soft.",
+      "Add garlic and smoked fish.",
+      "Combine with beans and simmer for 30 minutes.",
+      "Season with salt and serve with fufu or bread."
+    ],
+    tips: [
+      "Soaking overnight reduces cooking time significantly",
+      "The palm oil gives the dish its characteristic color",
+      "Smoked fish adds depth of flavor"
+    ]
+  },
+  {
+    id: "nsamba-palm-wine",
+    name: "Nsamba (Palm Wine)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "beverage",
+    description: "Traditional fermented palm sap, the beloved drink of the Kongo people. Sweet when fresh, increasingly alcoholic as it ferments.",
+    culturalSignificance: "Palm wine is central to Kongo ceremonies, negotiations, and hospitality. It's offered to guests and ancestors during rituals.",
+    historicalContext: "Palm wine tapping has been practiced in the Kongo region for millennia. The technique of extracting sap from palm trees was refined over generations, and nsamba was traded along the river routes.",
+    prepTime: "Traditional tapping",
+    cookTime: "Fermentation varies",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Fresh palm sap", amount: "5 liters", notes: "From tapped palm tree" },
+      { item: "Natural yeast", amount: "Present in sap" }
+    ],
+    instructions: [
+      "Palm wine is traditionally collected by tappers who climb raffia palms.",
+      "An incision is made in the flower stem.",
+      "A gourd or container collects the dripping sap.",
+      "Fresh sap (sweet, low alcohol) is called nsamba ya mvimbi.",
+      "After 24 hours fermentation, alcohol increases.",
+      "After 48+ hours, becomes very strong (mayaka).",
+      "Best consumed fresh for sweet, mild taste."
+    ],
+    tips: [
+      "Fresh palm wine is sweetest and mildest",
+      "Fermentation cannot be stopped easily",
+      "Refrigeration slows fermentation",
+      "Traditional tappers are highly skilled craftsmen"
+    ]
+  },
+
+  // ============ MONGO RECIPES (Central Africa) ============
+  {
+    id: "liboke-mongo",
+    name: "Liboke ya Ngolo (Fish in Banana Leaves)",
+    tribeSlug: "mongo",
+    tribeName: "Mongo",
+    category: "special",
+    description: "Fresh river fish wrapped in banana leaves with herbs and spices, steamed to perfection. The signature dish of the Congo River peoples.",
+    culturalSignificance: "Liboke represents the Mongo mastery of river resources. The banana leaf wrapping keeps the fish moist and infuses it with subtle flavors.",
+    historicalContext: "The Mongo people developed sophisticated fishing techniques along the Congo River. Liboke evolved as a way to cook fish immediately after catching, using readily available banana leaves as natural cooking vessels.",
+    youtubeVideoId: "cqt3dPt3BWY",
+    prepTime: "20 minutes",
+    cookTime: "45 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh river fish", amount: "1 kg", notes: "Tilapia, catfish, or captain" },
+      { item: "Banana leaves", amount: "4 large pieces" },
+      { item: "Onions", amount: "2 medium" },
+      { item: "Tomatoes", amount: "2 medium" },
+      { item: "Hot pepper", amount: "2 small" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Salt and seasoning", amount: "To taste" },
+      { item: "Palm oil or peanut oil", amount: "3 tablespoons" }
+    ],
+    instructions: [
+      "Clean and score the fish on both sides.",
+      "Season with salt, garlic, and pepper.",
+      "Soften banana leaves over flame (don't burn).",
+      "Lay fish on banana leaf.",
+      "Top with sliced onions, tomatoes, and drizzle with oil.",
+      "Wrap tightly, securing with string or leaf strips.",
+      "Steam over boiling water for 45 minutes.",
+      "Alternatively, grill over charcoal.",
+      "Serve in the leaf for presentation."
+    ],
+    tips: [
+      "Fresh fish makes all the difference",
+      "The leaf should be pliable but not burnt",
+      "The juices collect in the packet"
+    ]
+  },
+  {
+    id: "mbinzo",
+    name: "Mbinzo (Edible Caterpillars)",
+    tribeSlug: "mongo",
+    tribeName: "Mongo",
+    category: "special",
+    description: "Edible caterpillars harvested from the rainforest, dried and fried crispy. A prized delicacy and protein source.",
+    culturalSignificance: "Caterpillar season is eagerly anticipated in Mongo territory. Mbinzo are a sustainable forest protein and an important seasonal income source.",
+    historicalContext: "The Mongo have harvested edible caterpillars for centuries, developing sophisticated knowledge of which species are safe and delicious. This forest wisdom is passed down through generations.",
+    prepTime: "20 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Dried caterpillars (mbinzo)", amount: "500g" },
+      { item: "Onions", amount: "2 medium" },
+      { item: "Tomatoes", amount: "2 medium" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Garlic", amount: "3 cloves" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Hot pepper", amount: "Optional" }
+    ],
+    instructions: [
+      "If dried, briefly soak caterpillars in warm water to soften.",
+      "Drain thoroughly and pat dry.",
+      "Heat palm oil in a pan.",
+      "Fry caterpillars until crispy, about 10 minutes.",
+      "Add onions and cook until soft.",
+      "Add tomatoes, garlic, and pepper.",
+      "Simmer for 5 minutes.",
+      "Season with salt.",
+      "Serve as a snack or with fufu."
+    ],
+    tips: [
+      "Dried caterpillars should be properly prepared before cooking",
+      "They should be crispy on the outside",
+      "High in protein and sustainable"
+    ]
+  },
+  {
+    id: "lituma-mongo",
+    name: "Lituma (Plantain Balls)",
+    tribeSlug: "mongo",
+    tribeName: "Mongo",
+    category: "staple",
+    description: "Pounded plantains formed into balls, a starchy staple of the Mongo people. Similar to fufu but made with plantains.",
+    culturalSignificance: "Lituma is everyday comfort food in Mongo households. The pounding process is traditionally done by women using large wooden mortars.",
+    historicalContext: "Plantains thrive in the humid Congo Basin climate. The Mongo developed lituma as a way to prepare this abundant crop into a filling staple food.",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Green plantains", amount: "6 large" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Water", amount: "For boiling" }
+    ],
+    instructions: [
+      "Peel plantains and cut into chunks.",
+      "Boil until very soft, about 25 minutes.",
+      "Drain and transfer to mortar.",
+      "Pound vigorously until smooth and elastic.",
+      "Add salt while pounding.",
+      "Wet hands and form into balls.",
+      "Serve immediately with any stew or sauce."
+    ],
+    tips: [
+      "Use green (unripe) plantains for best texture",
+      "Pound while still hot for smooth results",
+      "Serve immediately - they harden when cold"
+    ]
   }
 ];
 

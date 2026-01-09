@@ -422,7 +422,13 @@
         "supremeDeity": "Nyasaye (supreme god, creator, associated with the sun)",
         "spirits": ["Juogi (ancestral spirits)", "Lago (personal guardian spirit)", "Kachinja (malevolent spirits)"],
         "practices": ["Tero buru (elaborate funeral ceremonies)", "Koth nyasaye (rain prayers)", "Consultation with ajuoga (diviners)", "Offerings at dala (ancestral homestead)", "Night vigils with drumming and singing"],
-        "beliefs": "Nyasaye created all things and dwells in the sky; ancestors (juogi) guide and protect the living; proper funeral rites essential for spirit to rest; the lyre (nyatiti) connects to spiritual realm"
+        "beliefs": "Nyasaye created all things and dwells in the sky; ancestors (juogi) guide and protect the living; proper funeral rites essential for spirit to rest; the lyre (nyatiti) connects to spiritual realm",
+        "religiousHistory": {
+          "christianityIntroduced": "1907 (Church Missionary Society), accelerated from 1910s",
+          "introducedBy": "Church Missionary Society (CMS), Catholic Mill Hill Fathers, Seventh-day Adventists (major influence)",
+          "conversionProcess": "Education-driven conversion through mission schools; Seventh-day Adventists gained large following from 1910s; Legio Maria (African Christian movement) founded 1963 by Luo prophets combined Christianity with Luo spirituality",
+          "sources": ["Wikipedia - Luo people of Kenya and Tanzania", "Bethwell Ogot - History of the Southern Luo", "Legio Maria church records"]
+        }
       },
       "history": {
         "origin": "The Luo are Nilotic people who migrated from the Bahr el Ghazal region in South Sudan between the 15th and 17th centuries. They followed the Nile River southward and eventually settled around Lake Victoria.",
@@ -3966,7 +3972,13 @@
         "supremeDeity": "Nyame (supreme sky god, creator of the universe)",
         "spirits": ["Asase Yaa (Earth goddess, Thursday is sacred)", "Abosom (lesser deities)", "Nsamanfo (ancestor spirits)"],
         "practices": ["Golden Stool veneration (soul of the nation)", "Libation pouring to ancestors", "Odwira purification festival", "Adinkra symbols as spiritual communication", "Akwasidae festivals"],
-        "beliefs": "Every person has a soul (kra) from Nyame; the Golden Stool contains the sunsum (soul) of the Ashanti nation; ancestors remain active in family affairs"
+        "beliefs": "Every person has a soul (kra) from Nyame; the Golden Stool contains the sunsum (soul) of the Ashanti nation; ancestors remain active in family affairs",
+        "religiousHistory": {
+          "christianityIntroduced": "1835 (Basel Mission), expanded from 1870s",
+          "introducedBy": "Basel Mission (German-Swiss Protestants), Wesleyan Methodists (1835), Catholic White Fathers (later)",
+          "conversionProcess": "Initial royal resistance - Asantehene Osei Bonsu expelled missionaries in 1824; after British conquest (1900), Christianity spread rapidly through schools; Methodist and Presbyterian churches became prominent; syncretic practices continue with traditional festivals",
+          "sources": ["Rattray, R.S. (1927) Religion and Art in Ashanti", "Wikipedia - Christianity in Ghana", "Britannica - Asante Empire"]
+        }
       },
       "history": {
         "origin": "The Ashanti Empire was founded in 1701 when Osei Tutu united several clans. The Golden Stool, said to have descended from heaven, became the symbol of national unity.",
@@ -4867,7 +4879,14 @@
         "supremeDeity": "Katonda (creator god, 'father of the gods')",
         "spirits": ["Balubaale (national deities) - Mukasa (lake/fertility), Kiwanuka (thunder/lightning), Musoke (rainbow)", "Mizimu (ancestor spirits)", "Misambwa (nature spirits)"],
         "practices": ["Mandwa/Lubaale shrines maintained by priests", "Spirit possession ceremonies", "Offerings at sacred places", "Clan totems and taboos", "Consultation with traditional healers (Basawo)"],
-        "beliefs": "Balubaale deities protect the nation; ancestors (mizimu) can bless or curse living descendants; the Kabaka has spiritual authority; clan totems must be respected"
+        "beliefs": "Balubaale deities protect the nation; ancestors (mizimu) can bless or curse living descendants; the Kabaka has spiritual authority; clan totems must be respected",
+        "religiousHistory": {
+          "christianityIntroduced": "1877 (Church Missionary Society), Catholics arrived 1879",
+          "islamIntroduced": "1844 (Arab traders from Zanzibar)",
+          "introducedBy": "CMS Protestants led by Alexander Mackay; Catholic White Fathers led by Fr. Siméon Lourdel; Arab traders introduced Islam under Kabaka Suna II",
+          "conversionProcess": "Kabaka Mutesa I allowed both religions to compete for influence; religious wars of 1888-1892 between Protestant, Catholic, and Muslim factions; Uganda Martyrs (1885-1887) were killed by Kabaka Mwanga; British supported Protestant faction; 1993 religious coexistence established",
+          "sources": ["Wikipedia - Buganda", "Uganda Martyrs Shrine", "Britannica - History of Uganda"]
+        }
       },
       "history": {
         "origin": "The Buganda kingdom was founded around the 14th century on the northern shores of Lake Victoria. It grew into one of East Africa's most powerful kingdoms.",
@@ -5788,7 +5807,13 @@
         "supremeDeity": "Nzambi Mpungu (supreme creator god, unreachable)",
         "spirits": ["Bakulu (ancestor spirits)", "Minkisi (spirit forces housed in power objects)", "Simbi (nature/water spirits)", "Kalunga (boundary between living and dead)"],
         "practices": ["Nkisi power figures (minkisi) for protection and healing", "Nganga (ritual specialists) consult spirits", "Offerings at family ancestor shrines", "Communion with spirits through trances", "Funeral rituals to guide souls across Kalunga"],
-        "beliefs": "Nzambi Mpungu created the world but is distant; ancestors are intermediaries; Kalunga is the cosmic boundary (also ocean/death); minkisi objects house spiritual power; the living and dead form continuous community"
+        "beliefs": "Nzambi Mpungu created the world but is distant; ancestors are intermediaries; Kalunga is the cosmic boundary (also ocean/death); minkisi objects house spiritual power; the living and dead form continuous community",
+        "religiousHistory": {
+          "christianityIntroduced": "1491 (Portuguese missionaries), first sub-Saharan African Christian kingdom",
+          "introducedBy": "Portuguese Franciscan and Dominican missionaries; Manikongo Nzinga a Nkuwu baptized as João I (1491); son Afonso I (Mvemba a Nzinga) made Christianity state religion",
+          "conversionProcess": "Kongo was one of the earliest African Christian kingdoms; King Afonso I corresponded with the Pope condemning slave trade; Kimpa Vita (Dona Beatriz) led Antonian movement (1704) blending Christianity with Kongo beliefs; Kimbanguism founded 1921 by Simon Kimbangu now has 17+ million followers",
+          "sources": ["Wikipedia - Kingdom of Kongo", "Thornton, John (1998) The Kongolese Saint Anthony", "Britannica - Kongo people"]
+        }
       },
       "language": {
         "name": "Kikongo",
