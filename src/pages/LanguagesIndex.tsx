@@ -58,8 +58,8 @@ export default function LanguagesIndex() {
             <Card className="text-center">
               <CardContent className="pt-4 pb-3">
                 <GitBranch className="w-6 h-6 mx-auto mb-1 text-amber-500" />
-                <p className="text-2xl font-bold">4</p>
-                <p className="text-xs text-muted-foreground">Major Families</p>
+                <p className="text-2xl font-bold">{languageFamiliesData.languageFamilies.length}</p>
+                <p className="text-xs text-muted-foreground">Language Groups</p>
               </CardContent>
             </Card>
             <Card className="text-center">

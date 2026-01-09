@@ -521,13 +521,13 @@ const Learn = () => {
               )}
             </div>
             
-            {/* Country Flags + Macro Region + Region Filter - Under search */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-3">
+            {/* Compact Filters Row - All in one line on mobile */}
+            <div className="flex flex-wrap items-center justify-center gap-1.5 mt-2">
               {/* Macro Region Dropdown */}
               <Select value={macroRegionFilter || 'all'} onValueChange={(value) => handleMacroRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-32 h-7 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20">
-                  <Globe className="w-3 h-3 mr-1 text-primary" />
-                  <SelectValue placeholder="All Africa" />
+                <SelectTrigger className="w-auto min-w-[90px] h-7 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20 px-2">
+                  <Globe className="w-3 h-3 mr-1 text-primary shrink-0" />
+                  <SelectValue placeholder="Africa" />
                 </SelectTrigger>
                 <SelectContent className="bg-background border border-border z-50">
                   <SelectItem value="all">🌍 All Africa</SelectItem>
@@ -541,11 +541,11 @@ const Learn = () => {
 
               {/* Region Filter Dropdown */}
               <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-28 h-7 text-xs bg-background">
-                  <Layers className="w-3 h-3 mr-1 text-muted-foreground" />
+                <SelectTrigger className="w-auto min-w-[80px] h-7 text-xs bg-background px-2">
+                  <Layers className="w-3 h-3 mr-1 text-muted-foreground shrink-0" />
                   <SelectValue placeholder="Region" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border border-border z-50">
+                <SelectContent className="bg-background border border-border z-50 max-h-60">
                   <SelectItem value="all">All Regions</SelectItem>
                   {regions.map(region => (
                     <SelectItem key={region} value={region}>{region}</SelectItem>
@@ -553,21 +553,21 @@ const Learn = () => {
                 </SelectContent>
               </Select>
               
-              {/* Country Flags with Tooltips */}
-              <TooltipProvider>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  {(macroRegionFilter ? filteredCountries : countries.slice(0, 8)).map(country => (
-                    <Tooltip key={country.code} delayDuration={200}>
+              {/* Country Flags - Horizontal scroll on mobile */}
+              <div className="flex items-center gap-1 overflow-x-auto max-w-[200px] sm:max-w-none scrollbar-hide">
+                <TooltipProvider>
+                  {(macroRegionFilter ? filteredCountries.slice(0, 6) : countries.slice(0, 6)).map(country => (
+                    <Tooltip key={country.code} delayDuration={300}>
                       <TooltipTrigger asChild>
                         <button
                           onClick={() => handleCountryChange(country.code)}
-                          className={`px-1.5 py-0.5 rounded text-sm font-medium transition-all flex items-center gap-0.5 ${
+                          className={`px-1 py-0.5 rounded text-sm transition-all shrink-0 ${
                             countryFilter === country.code
-                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/30' 
-                              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                              ? 'bg-primary text-primary-foreground ring-1 ring-primary/50' 
+                              : 'bg-secondary/80 hover:bg-secondary'
                           }`}
                         >
-                          <span>{country.flag}</span>
+                          {country.flag}
                         </button>
                       </TooltipTrigger>
                       <TooltipContent side="bottom" className="text-xs">
@@ -576,17 +576,17 @@ const Learn = () => {
                     </Tooltip>
                   ))}
                   {!macroRegionFilter && (
-                    <Tooltip delayDuration={200}>
+                    <Tooltip delayDuration={300}>
                       <TooltipTrigger asChild>
                         <button
                           onClick={() => handleCountryChange('ALL')}
-                          className={`px-1.5 py-0.5 rounded text-sm font-medium transition-all ${
+                          className={`px-1 py-0.5 rounded transition-all shrink-0 ${
                             countryFilter === 'ALL'
-                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/30' 
-                              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                              ? 'bg-primary text-primary-foreground ring-1 ring-primary/50' 
+                              : 'bg-secondary/80 hover:bg-secondary'
                           }`}
                         >
-                          <Globe className="w-4 h-4" />
+                          <Globe className="w-3.5 h-3.5" />
                         </button>
                       </TooltipTrigger>
                       <TooltipContent side="bottom" className="text-xs">
@@ -594,27 +594,27 @@ const Learn = () => {
                       </TooltipContent>
                     </Tooltip>
                   )}
-                </div>
-              </TooltipProvider>
+                </TooltipProvider>
+              </div>
             </div>
             
-            {/* Quick Stats - Compact inline below filters */}
-            <div className="flex items-center justify-center gap-4 mt-3 text-xs text-muted-foreground">
-              <span className="flex items-center gap-1">
+            {/* Quick Stats - Ultra compact */}
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-2 text-[10px] sm:text-xs text-muted-foreground">
+              <span className="flex items-center gap-0.5">
                 <Users className="w-3 h-3 text-primary" />
-                <strong className="text-foreground">{countryStats.tribeCount}</strong> tribes
+                <strong className="text-foreground">{countryStats.tribeCount}</strong>
               </span>
-              <span className="flex items-center gap-1">
+              <span className="flex items-center gap-0.5">
                 <TrendingUp className="w-3 h-3 text-primary" />
                 <strong className="text-foreground">~{formatPopulation(countryStats.population)}</strong>
               </span>
-              <span className="flex items-center gap-1">
+              <span className="flex items-center gap-0.5 hidden xs:flex">
                 <MapPin className="w-3 h-3 text-primary" />
-                <strong className="text-foreground">{countryStats.regionCount}</strong> regions
+                <strong className="text-foreground">{countryStats.regionCount}</strong>
               </span>
-              <span className="flex items-center gap-1">
+              <span className="flex items-center gap-0.5 hidden sm:flex">
                 <Languages className="w-3 h-3 text-primary" />
-                <strong className="text-foreground">{countryStats.languageCount || '?'}</strong> languages
+                <strong className="text-foreground">{countryStats.languageCount || '?'}</strong>
               </span>
             </div>
             
