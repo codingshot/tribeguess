@@ -3554,7 +3554,13 @@
         "supremeDeity": "Chukwu (supreme god, 'Great Spirit') or Chineke (Creator)",
         "spirits": ["Alusi (deities) - Ala/Ani (earth goddess), Amadioha (thunder), Ikenga (personal god)", "Ndichie (ancestor spirits)", "Chi (personal guardian spirit)", "Agwu (spirit of divination)"],
         "practices": ["Ala/Ani earth goddess worship - breaking her laws brings pollution", "Dibia (priest-healers) perform divination and healing", "Kola nut rituals for hospitality", "Mbari houses with clay sculptures", "New Yam Festival (Iri Ji)"],
-        "beliefs": "Every person has a Chi (personal spirit) that determines destiny; Ala owns the land and enforces morality; breaking taboos (nso ani) pollutes the earth; ancestors must be venerated to ensure prosperity"
+        "beliefs": "Every person has a Chi (personal spirit) that determines destiny; Ala owns the land and enforces morality; breaking taboos (nso ani) pollutes the earth; ancestors must be venerated to ensure prosperity",
+        "religiousHistory": {
+          "christianityIntroduced": "1857 (CMS at Onitsha), rapid spread from 1885",
+          "introducedBy": "Church Missionary Society (Samuel Ajayi Crowther), Catholic Holy Ghost Fathers, Scottish Presbyterians",
+          "conversionProcess": "Christianity spread rapidly through mission schools; Igbo embraced education for advancement; by 1960s majority Christian; some traditional practices persist in rural areas",
+          "sources": ["Isichei, Elizabeth (1976) A History of the Igbo People", "Achebe, Chinua (1958) Things Fall Apart", "Wikipedia - Odinani"]
+        }
       },
       "history": {
         "origin": "Archaeological evidence shows Igbo civilization dates back to at least 900 AD. The Nri Kingdom is considered the oldest Igbo kingdom, founded around 900 AD.",
@@ -3678,7 +3684,13 @@
         "supremeDeity": "Ubangiji (supreme god, now identified with Allah)",
         "spirits": ["Iskoki (spirits/jinn)", "Bori spirits (possessing deities)", "Inna (mother spirit)", "Sarkin Rafi (water spirit)"],
         "practices": ["Bori spirit possession ceremonies (still practiced by some)", "Bokaye (traditional healers/diviners)", "Animal sacrifices at shrines", "Offerings at sacred rocks and trees", "Spirit mediumship for healing"],
-        "beliefs": "Pre-Islamic Hausa believed in Ubangiji and iskoki spirits; Bori cult continues underground despite Islamic dominance; possession ceremonies heal spiritual ailments; traditional healers blend Islamic prayers with indigenous practices"
+        "beliefs": "Pre-Islamic Hausa believed in Ubangiji and iskoki spirits; Bori cult continues underground despite Islamic dominance; possession ceremonies heal spiritual ailments; traditional healers blend Islamic prayers with indigenous practices",
+        "religiousHistory": {
+          "islamIntroduced": "11th century, widespread from 14th century",
+          "introducedBy": "Wangarawa traders from Mali, Arab merchants via trans-Saharan routes",
+          "conversionProcess": "Gradual adoption by ruling classes; 1804 Sokoto Jihad under Usman dan Fodio fully Islamized Hausaland; Bori practices suppressed but survive among women",
+          "sources": ["Last, Murray (1967) The Sokoto Caliphate", "Trimingham, J.S. (1962) A History of Islam in West Africa", "Wikipedia - Hausa people"]
+        }
       },
       "history": {
         "origin": "The Hausa city-states emerged around 1000 AD. According to legend, Bayajidda founded the seven Hausa states (Hausa Bakwai).",
@@ -4063,7 +4075,13 @@
         "supremeDeity": "Unkulunkulu (the Great One, first human and creator)",
         "spirits": ["Amadlozi (ancestor spirits)", "Amatongo (departed family spirits)", "Nomkhubulwane (rain goddess)"],
         "practices": ["Ukubuyisa (bringing back the dead ceremony)", "Isangoma diviner consultations", "Cattle sacrifices to ancestors", "Umsebenzi ceremonies for ancestors", "Inkatha reed bundle as sacred symbol"],
-        "beliefs": "Ancestors (amadlozi) mediate between living and Unkulunkulu; isangoma diviners communicate with spirits; illness often stems from ancestral displeasure"
+        "beliefs": "Ancestors (amadlozi) mediate between living and Unkulunkulu; isangoma diviners communicate with spirits; illness often stems from ancestral displeasure",
+        "religiousHistory": {
+          "christianityIntroduced": "1835 (American Board missionaries), widespread from 1850s",
+          "introducedBy": "American Board missionaries, Norwegian Lutheran Mission, Catholic Oblates of Mary Immaculate",
+          "conversionProcess": "Initial resistance under Shaka; mission stations grew post-Anglo-Zulu War; syncretism common with traditional beliefs; Zionist churches emerged combining both",
+          "sources": ["Hexham, Irving (1994) The Scriptures of the AmaNazaretha of EkuPhakameni", "Britannica - Zulu religion", "Wikipedia - Zulu people"]
+        }
       },
       "history": {
         "origin": "The Zulu were a small clan until Shaka kaSenzangakhona unified neighboring clans into the powerful Zulu Kingdom (1816-1828) through military innovation.",
@@ -4191,7 +4209,13 @@
         "supremeDeity": "Qamata (supreme creator) or uThixo",
         "spirits": ["Amadlozi (ancestor spirits)", "Umkhapho (sacrificial offerings)", "Amathongo (spirits of the departed)"],
         "practices": ["Ukwaluka (male initiation with circumcision)", "Intonjane (female coming-of-age)", "Amagqirha (diviners/healers)", "Cattle sacrifices to ancestors", "Brewing umqombothi for ceremonies"],
-        "beliefs": "Ancestors (amadlozi) are intermediaries to Qamata; initiation transforms boys into men; dreams carry messages from ancestors"
+        "beliefs": "Ancestors (amadlozi) are intermediaries to Qamata; initiation transforms boys into men; dreams carry messages from ancestors",
+        "religiousHistory": {
+          "christianityIntroduced": "1799 (London Missionary Society), widespread from 1820s",
+          "introducedBy": "London Missionary Society (Dr. Johannes van der Kemp), Wesleyan Methodists, Glasgow Missionary Society",
+          "conversionProcess": "Ntsikana (c.1780-1821) was first Xhosa Christian prophet; mission stations became centers of 'school people' (amagqoboka); Cattle Killing of 1856 partly driven by prophetic visions",
+          "sources": ["Peires, J.B. (1989) The Dead Will Arise: Nongqawuse and the Great Xhosa Cattle-Killing", "Wikipedia - Xhosa people"]
+        }
       },
       "history": {
         "origin": "The Xhosa are Nguni people who migrated south over centuries. They were among the earliest Bantu groups to encounter European settlers in the Cape.",
@@ -4315,7 +4339,13 @@
         "supremeDeity": "Mwari (supreme god, creator of all, associated with Matobo Hills)",
         "spirits": ["Vadzimu (family ancestor spirits)", "Mhondoro (lion spirits of chiefs)", "Midzimu (collective ancestral spirits)"],
         "practices": ["Bira ceremony - all-night spirit possession with mbira music", "Kurova guva (bringing back the dead)", "Consultation with svikiro (spirit mediums)", "Offerings at sacred pools and mountains", "Mwari oracle at Matobo caves"],
-        "beliefs": "Ancestors remain part of family and must be honored; mhondoro lion spirits protect tribes; the mbira instrument opens communication with spirit world"
+        "beliefs": "Ancestors remain part of family and must be honored; mhondoro lion spirits protect tribes; the mbira instrument opens communication with spirit world",
+        "religiousHistory": {
+          "christianityIntroduced": "1859 (London Missionary Society at Inyati), widespread from 1890s",
+          "introducedBy": "London Missionary Society, Jesuits, Dutch Reformed Church, American Methodists",
+          "conversionProcess": "Mission stations established post-1890 colonization; traditional religion remained strong in rural areas; mbira music initially banned by missionaries; now ~85% Christian but traditional practices continue",
+          "sources": ["Daneel, M.L. (1970) The God of the Matopo Hills", "Ranger, T.O. (1999) Voices from the Rocks", "Wikipedia - Shona people"]
+        }
       },
       "history": {
         "origin": "The Shona have lived in Zimbabwe for over 1,000 years. They built the Great Zimbabwe civilization (11th-15th century) and later the Mutapa and Rozvi empires.",
@@ -5422,7 +5452,20 @@
         "description": "Chagga cuisine revolves around bananas (over 20 varieties) and the traditional mbege banana beer brewed for ceremonies."
       },
       "traditionalDance": "Ngomasero - celebratory dances with drums",
-      "religion": "Christianity (Lutheran and Catholic majority)",
+      "religion": "Christianity (Lutheran and Catholic majority), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Chagga Traditional Religion",
+        "supremeDeity": "Ruwa (supreme god, associated with the sun and Mount Kilimanjaro)",
+        "spirits": ["Warumu (ancestor spirits)", "Mirimu (nature spirits)", "Mountain spirits of Kilimanjaro"],
+        "practices": ["Offerings at sacred groves", "Ancestor veneration ceremonies", "Consultation with traditional healers (wagang'i)", "Rituals before planting and harvest", "Libations to ancestors"],
+        "beliefs": "Ruwa lives in the sky and on Kilimanjaro's peak; ancestors guide the living; the mountain is sacred; banana groves are spiritually important",
+        "religiousHistory": {
+          "christianityIntroduced": "1890s",
+          "introducedBy": "German Lutheran missionaries (Leipzig Mission) and Catholic Holy Ghost Fathers",
+          "conversionProcess": "Rapid adoption due to mission schools offering education; by 1920s majority Christian",
+          "sources": ["Stahl, Kathleen M. (1964) History of the Chagga People of Kilimanjaro", "Wikipedia - Chaga people"]
+        }
+      },
       "language": {
         "name": "Kichagga",
         "speakers": "~2 million",
@@ -5489,6 +5532,19 @@
       },
       "traditionalDance": "Adzewa and Asafo dances",
       "religion": "Christianity (Methodist, Catholic), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Fante Traditional Religion",
+        "supremeDeity": "Nyame (supreme creator god, same as other Akan groups)",
+        "spirits": ["Abosom (lesser deities)", "Nsamanfo (ancestor spirits)", "Asaase Yaa (Earth goddess)", "Bosompo (sea god important to coastal Fante)"],
+        "practices": ["Asafo company rituals", "Libations to ancestors", "Consultation with akomfo (priests/priestesses)", "Rites at sacred groves", "Festival offerings (Oguaa Fetu, Bakatue)"],
+        "beliefs": "Nyame is the supreme creator; abosom serve as intermediaries; ancestors must be honored; the sea provides and must be respected; asafo companies have spiritual protection",
+        "religiousHistory": {
+          "christianityIntroduced": "1752 (Society for Propagation of Gospel), widespread from 1835",
+          "introducedBy": "British Methodist missionaries (Thomas Birch Freeman) and Catholic missionaries",
+          "conversionProcess": "Early contact with Europeans at castles led to gradual conversion; mission schools crucial; Fante became one of Ghana's most Christian groups",
+          "sources": ["Debrunner, Hans (1967) A History of Christianity in Ghana", "Wikipedia - Fante people"]
+        }
+      },
       "language": {
         "name": "Fante (Mfantse)",
         "speakers": "~2 million",
@@ -5555,6 +5611,19 @@
       },
       "traditionalDance": "Kpanlogo - hip-shaking dance from Accra",
       "religion": "Christianity, Traditional Ga religion (Kpele)",
+      "traditionalReligion": {
+        "name": "Kpele (Ga Traditional Religion)",
+        "supremeDeity": "Ataa Naa Nyonmo (Supreme Being, 'God who is both Father and Mother')",
+        "spirits": ["Woyei (family deities)", "Jemawoji (public deities)", "Nsamanfo (ancestors)", "Nai (sea god crucial to fishermen)"],
+        "practices": ["Homowo festival rituals", "Kpele worship at shrines", "Wulomo (priests) conduct ceremonies", "Libations at all gatherings", "Twin birth ceremonies (special spiritual status)"],
+        "beliefs": "Ataa Naa Nyonmo created everything; ancestors must be fed during Homowo; twins have special powers; the lagoon and sea have spirits that must be appeased",
+        "religiousHistory": {
+          "christianityIntroduced": "1828 (Basel Mission), widespread from 1850s",
+          "introducedBy": "Basel Mission (Swiss-German Protestants), later Methodists and Catholics",
+          "conversionProcess": "Slow initial adoption; mission schools key to spread; traditional religion remains strong alongside Christianity; Homowo still universally celebrated",
+          "sources": ["Field, M.J. (1937) Religion and Medicine of the Ga People", "Wikipedia - Ga people"]
+        }
+      },
       "language": {
         "name": "Ga",
         "speakers": "~3 million (Ga and Adangbe)",
