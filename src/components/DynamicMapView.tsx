@@ -78,127 +78,205 @@ const tribeColorPalette = [
 // Sources: Ethnologue, Joshua Project, Wikipedia geographic references
 const tribeTerritoryDegrees: Record<string, { latSpan: number; lngSpan: number }> = {
   // ===== KENYA - based on actual county coverage =====
-  'Kikuyu': { latSpan: 1.4, lngSpan: 1.2 }, // Central Province - Kiambu, Murang'a, Nyeri, Kirinyaga, Nyandarua
-  'Luhya': { latSpan: 1.2, lngSpan: 1.0 }, // Western Kenya - Kakamega, Bungoma, Vihiga, Busia
-  'Kalenjin': { latSpan: 2.5, lngSpan: 2.0 }, // Rift Valley highlands - 6+ counties
-  'Luo': { latSpan: 1.4, lngSpan: 1.2 }, // Nyanza - around Lake Victoria
-  'Kamba': { latSpan: 1.8, lngSpan: 1.5 }, // Machakos, Kitui, Makueni (large semi-arid area)
-  'Maasai': { latSpan: 3.0, lngSpan: 2.2 }, // Southern Kenya/Northern Tanzania - vast territory
-  'Meru': { latSpan: 1.0, lngSpan: 0.9 }, // Eastern slopes of Mt. Kenya
-  'Kisii': { latSpan: 0.7, lngSpan: 0.6 }, // Kisii highlands (compact area)
-  'Mijikenda': { latSpan: 1.5, lngSpan: 0.6 }, // Coastal strip (long and narrow)
-  'Turkana': { latSpan: 3.0, lngSpan: 2.5 }, // Northwestern Kenya - largest county
-  'Samburu': { latSpan: 1.8, lngSpan: 1.5 }, // North-central Kenya
-  'Embu': { latSpan: 0.8, lngSpan: 0.7 }, // Eastern Mt. Kenya slopes
-  'Mbeere': { latSpan: 0.6, lngSpan: 0.6 }, // Lower Embu County
-  'Swahili': { latSpan: 1.2, lngSpan: 0.5 }, // Coastal cities (narrow coastal strip)
-  'Pokot': { latSpan: 1.5, lngSpan: 1.2 }, // West Pokot, Baringo
-  'Taita': { latSpan: 0.8, lngSpan: 0.7 }, // Taita-Taveta hills
-  'Teso': { latSpan: 0.7, lngSpan: 0.6 }, // Busia County
-  'Suba': { latSpan: 0.5, lngSpan: 0.5 }, // Lake Victoria islands
-  'Gabra': { latSpan: 1.5, lngSpan: 1.5 }, // Marsabit County
-  'Borana': { latSpan: 2.0, lngSpan: 1.8 }, // Northern Kenya (Marsabit, Isiolo)
-  'Rendille': { latSpan: 1.2, lngSpan: 1.2 }, // Kaisut Desert
-  'El Molo': { latSpan: 0.3, lngSpan: 0.3 }, // Lake Turkana shores (very small)
-  'Kuria': { latSpan: 0.5, lngSpan: 0.5 }, // Migori County border
+  'Kikuyu': { latSpan: 1.4, lngSpan: 1.2 },
+  'Luhya': { latSpan: 1.2, lngSpan: 1.0 },
+  'Kalenjin': { latSpan: 2.5, lngSpan: 2.0 },
+  'Luo': { latSpan: 1.4, lngSpan: 1.2 },
+  'Kamba': { latSpan: 1.8, lngSpan: 1.5 },
+  'Maasai': { latSpan: 3.0, lngSpan: 2.2 },
+  'Meru': { latSpan: 1.0, lngSpan: 0.9 },
+  'Kisii': { latSpan: 0.7, lngSpan: 0.6 },
+  'Gusii': { latSpan: 0.7, lngSpan: 0.6 },
+  'Mijikenda': { latSpan: 1.5, lngSpan: 0.6 },
+  'Turkana': { latSpan: 3.0, lngSpan: 2.5 },
+  'Samburu': { latSpan: 1.8, lngSpan: 1.5 },
+  'Embu': { latSpan: 0.8, lngSpan: 0.7 },
+  'Mbeere': { latSpan: 0.6, lngSpan: 0.6 },
+  'Swahili': { latSpan: 1.2, lngSpan: 0.5 },
+  'Pokot': { latSpan: 1.5, lngSpan: 1.2 },
+  'Taita': { latSpan: 0.8, lngSpan: 0.7 },
+  'Teso': { latSpan: 0.7, lngSpan: 0.6 },
+  'Suba': { latSpan: 0.5, lngSpan: 0.5 },
+  'Gabra': { latSpan: 1.5, lngSpan: 1.5 },
+  'Borana': { latSpan: 2.0, lngSpan: 1.8 },
+  'Rendille': { latSpan: 1.2, lngSpan: 1.2 },
+  'El Molo': { latSpan: 0.3, lngSpan: 0.3 },
+  'Kuria': { latSpan: 0.5, lngSpan: 0.5 },
   
   // ===== NIGERIA - based on state coverage =====
-  'Yoruba': { latSpan: 3.0, lngSpan: 3.5 }, // Southwest Nigeria - 7 states
-  'Igbo': { latSpan: 2.2, lngSpan: 2.0 }, // Southeast Nigeria - 5 states
-  'Hausa': { latSpan: 5.0, lngSpan: 6.0 }, // Northern Nigeria - very large (12+ states)
-  'Fulani': { latSpan: 4.0, lngSpan: 8.0 }, // Trans-Sahel spread across multiple countries
-  'Ijaw': { latSpan: 1.5, lngSpan: 1.5 }, // Niger Delta
-  'Tiv': { latSpan: 1.5, lngSpan: 1.5 }, // Benue State
-  'Edo': { latSpan: 1.2, lngSpan: 1.2 }, // Edo State (Benin Kingdom)
-  'Nupe': { latSpan: 1.5, lngSpan: 1.5 }, // Niger State
-  'Kanuri': { latSpan: 2.5, lngSpan: 2.5 }, // Borno State (Lake Chad area)
+  'Yoruba': { latSpan: 3.0, lngSpan: 3.5 },
+  'Igbo': { latSpan: 2.2, lngSpan: 2.0 },
+  'Hausa': { latSpan: 5.0, lngSpan: 6.0 },
+  'Fulani': { latSpan: 4.0, lngSpan: 8.0 },
+  'Ijaw': { latSpan: 1.8, lngSpan: 1.8 },
+  'Tiv': { latSpan: 2.0, lngSpan: 2.2 },
+  'Edo': { latSpan: 1.2, lngSpan: 1.2 },
+  'Nupe': { latSpan: 1.5, lngSpan: 1.5 },
+  'Kanuri': { latSpan: 2.5, lngSpan: 2.5 },
+  'Ibibio': { latSpan: 1.2, lngSpan: 1.0 },
+  'Efik': { latSpan: 0.8, lngSpan: 0.8 },
+  'Urhobo': { latSpan: 1.0, lngSpan: 1.0 },
+  'Isoko': { latSpan: 0.6, lngSpan: 0.6 },
+  'Idoma': { latSpan: 1.2, lngSpan: 1.2 },
+  'Igede': { latSpan: 0.6, lngSpan: 0.6 },
+  'Jukun': { latSpan: 1.5, lngSpan: 1.5 },
+  'Ebira': { latSpan: 1.0, lngSpan: 1.0 },
+  'Gwari': { latSpan: 1.2, lngSpan: 1.2 },
+  'Berom': { latSpan: 0.8, lngSpan: 0.8 },
   
   // ===== SOUTH AFRICA =====
-  'Zulu': { latSpan: 3.0, lngSpan: 2.5 }, // KwaZulu-Natal
-  'Xhosa': { latSpan: 2.5, lngSpan: 2.0 }, // Eastern Cape
-  'Sotho': { latSpan: 2.0, lngSpan: 2.0 }, // Lesotho + Free State
-  'Tswana': { latSpan: 2.5, lngSpan: 2.5 }, // North West + Botswana
-  'Pedi': { latSpan: 1.5, lngSpan: 1.5 }, // Limpopo
-  'Venda': { latSpan: 1.0, lngSpan: 1.0 }, // Northern Limpopo
-  'Ndebele': { latSpan: 1.2, lngSpan: 1.2 }, // Mpumalanga/Limpopo
-  'Swazi': { latSpan: 1.2, lngSpan: 1.0 }, // Eswatini
+  'Zulu': { latSpan: 3.0, lngSpan: 2.5 },
+  'Xhosa': { latSpan: 2.5, lngSpan: 2.0 },
+  'Sotho': { latSpan: 2.0, lngSpan: 2.0 },
+  'Tswana': { latSpan: 2.5, lngSpan: 2.5 },
+  'Pedi': { latSpan: 1.5, lngSpan: 1.5 },
+  'Venda': { latSpan: 1.0, lngSpan: 1.0 },
+  'Ndebele': { latSpan: 1.2, lngSpan: 1.2 },
+  'Swazi': { latSpan: 1.2, lngSpan: 1.0 },
+  'Tsonga': { latSpan: 1.5, lngSpan: 1.5 },
   
   // ===== GHANA =====
-  'Ashanti': { latSpan: 1.8, lngSpan: 1.8 }, // Ashanti Region
-  'Akan': { latSpan: 2.5, lngSpan: 2.5 }, // Central/Southern Ghana (includes Fante, Bono)
-  'Ewe': { latSpan: 1.5, lngSpan: 1.2 }, // Volta Region + Togo
-  'Ga-Adangbe': { latSpan: 0.8, lngSpan: 0.8 }, // Greater Accra
-  'Dagomba': { latSpan: 1.5, lngSpan: 1.5 }, // Northern Region
+  'Ashanti': { latSpan: 1.8, lngSpan: 1.8 },
+  'Akan': { latSpan: 2.5, lngSpan: 2.5 },
+  'Ewe': { latSpan: 1.5, lngSpan: 1.2 },
+  'Ga-Adangbe': { latSpan: 0.8, lngSpan: 0.8 },
+  'Ga': { latSpan: 0.6, lngSpan: 0.6 },
+  'Dagomba': { latSpan: 1.5, lngSpan: 1.5 },
+  'Fante': { latSpan: 1.0, lngSpan: 1.0 },
   
   // ===== ETHIOPIA =====
-  'Oromo': { latSpan: 5.0, lngSpan: 4.5 }, // Central/Southern Ethiopia (largest ethnic group)
-  'Amhara': { latSpan: 3.5, lngSpan: 3.0 }, // Northern Ethiopia highlands
-  'Tigrinya': { latSpan: 2.0, lngSpan: 1.8 }, // Tigray + Eritrea
-  'Somali': { latSpan: 5.0, lngSpan: 6.0 }, // Horn of Africa - vast territory
-  'Afar': { latSpan: 2.5, lngSpan: 2.0 }, // Danakil region
-  'Gurage': { latSpan: 1.0, lngSpan: 1.0 }, // SNNPR highlands
-  'Sidama': { latSpan: 1.0, lngSpan: 1.0 }, // SNNPR
-  'Wolayta': { latSpan: 0.8, lngSpan: 0.8 }, // SNNPR
+  'Oromo': { latSpan: 5.0, lngSpan: 4.5 },
+  'Amhara': { latSpan: 3.5, lngSpan: 3.0 },
+  'Tigrinya': { latSpan: 2.0, lngSpan: 1.8 },
+  'Tigray': { latSpan: 2.0, lngSpan: 1.8 },
+  'Somali': { latSpan: 5.0, lngSpan: 6.0 },
+  'Afar': { latSpan: 2.5, lngSpan: 2.0 },
+  'Gurage': { latSpan: 1.0, lngSpan: 1.0 },
+  'Sidama': { latSpan: 1.0, lngSpan: 1.0 },
+  'Wolayta': { latSpan: 0.8, lngSpan: 0.8 },
+  'Harari': { latSpan: 0.3, lngSpan: 0.3 },
+  'Tigre': { latSpan: 1.5, lngSpan: 1.5 },
   
   // ===== UGANDA =====
-  'Baganda': { latSpan: 1.8, lngSpan: 1.8 }, // Central Uganda (Buganda Kingdom)
-  'Banyankole': { latSpan: 1.5, lngSpan: 1.5 }, // Western Uganda
-  'Basoga': { latSpan: 1.0, lngSpan: 1.0 }, // Eastern Uganda
-  'Bakiga': { latSpan: 0.8, lngSpan: 0.8 }, // Southwestern Uganda
-  'Acholi': { latSpan: 1.5, lngSpan: 1.5 }, // Northern Uganda
-  'Langi': { latSpan: 1.2, lngSpan: 1.2 }, // Northern Uganda
-  'Karamojong': { latSpan: 1.5, lngSpan: 1.5 }, // Northeastern Uganda
+  'Baganda': { latSpan: 1.8, lngSpan: 1.8 },
+  'Banyankole': { latSpan: 1.5, lngSpan: 1.5 },
+  'Basoga': { latSpan: 1.0, lngSpan: 1.0 },
+  'Bakiga': { latSpan: 0.8, lngSpan: 0.8 },
+  'Acholi': { latSpan: 1.5, lngSpan: 1.5 },
+  'Langi': { latSpan: 1.2, lngSpan: 1.2 },
+  'Karamojong': { latSpan: 1.5, lngSpan: 1.5 },
+  'Iteso': { latSpan: 1.2, lngSpan: 1.2 },
+  'Lugbara': { latSpan: 1.0, lngSpan: 1.0 },
+  'Banyoro': { latSpan: 1.2, lngSpan: 1.2 },
+  'Batoro': { latSpan: 1.0, lngSpan: 1.0 },
   
   // ===== TANZANIA =====
-  'Sukuma': { latSpan: 2.5, lngSpan: 2.5 }, // Lake Victoria region (largest tribe)
-  'Chagga': { latSpan: 0.6, lngSpan: 0.6 }, // Mt. Kilimanjaro slopes (compact)
-  'Haya': { latSpan: 1.2, lngSpan: 1.0 }, // Kagera Region
-  'Nyamwezi': { latSpan: 2.0, lngSpan: 2.0 }, // Tabora Region
-  'Makonde': { latSpan: 1.0, lngSpan: 1.0 }, // Mtwara Region
-  'Hehe': { latSpan: 1.5, lngSpan: 1.5 }, // Iringa Region
+  'Sukuma': { latSpan: 2.5, lngSpan: 2.5 },
+  'Chagga': { latSpan: 0.6, lngSpan: 0.6 },
+  'Haya': { latSpan: 1.2, lngSpan: 1.0 },
+  'Nyamwezi': { latSpan: 2.0, lngSpan: 2.0 },
+  'Makonde': { latSpan: 1.0, lngSpan: 1.0 },
+  'Hehe': { latSpan: 1.5, lngSpan: 1.5 },
+  'Gogo': { latSpan: 2.0, lngSpan: 2.0 },
+  'Ha': { latSpan: 1.0, lngSpan: 1.0 },
+  'Pare': { latSpan: 0.6, lngSpan: 0.5 },
+  'Iraqw': { latSpan: 0.8, lngSpan: 0.8 },
   
   // ===== SENEGAL / WEST AFRICA =====
-  'Wolof': { latSpan: 2.0, lngSpan: 2.5 }, // Western Senegal
-  'Serer': { latSpan: 1.2, lngSpan: 1.2 }, // Central Senegal
-  'Mandinka': { latSpan: 2.5, lngSpan: 3.0 }, // Gambia/Senegal/Guinea
-  'Diola': { latSpan: 1.0, lngSpan: 1.0 }, // Casamance
+  'Wolof': { latSpan: 2.0, lngSpan: 2.5 },
+  'Serer': { latSpan: 1.2, lngSpan: 1.2 },
+  'Mandinka': { latSpan: 2.5, lngSpan: 3.0 },
+  'Diola': { latSpan: 1.0, lngSpan: 1.0 },
+  'Jola': { latSpan: 1.0, lngSpan: 1.0 },
   
   // ===== ZIMBABWE / ZAMBIA / MALAWI =====
-  'Shona': { latSpan: 3.0, lngSpan: 2.5 }, // Zimbabwe (largest group)
-  'Ndebele (Zimbabwe)': { latSpan: 2.0, lngSpan: 2.0 }, // Matabeleland
-  'Bemba': { latSpan: 2.5, lngSpan: 2.5 }, // Northern Zambia
-  'Tonga (Zambia)': { latSpan: 1.5, lngSpan: 1.5 }, // Southern Zambia
-  'Chewa': { latSpan: 2.0, lngSpan: 2.0 }, // Malawi/Zambia
-  'Yao': { latSpan: 1.5, lngSpan: 1.5 }, // Southern Malawi/Northern Mozambique
+  'Shona': { latSpan: 3.0, lngSpan: 2.5 },
+  'Ndebele (Zimbabwe)': { latSpan: 2.0, lngSpan: 2.0 },
+  'Bemba': { latSpan: 2.5, lngSpan: 2.5 },
+  'Tonga (Zambia)': { latSpan: 1.5, lngSpan: 1.5 },
+  'Chewa': { latSpan: 2.0, lngSpan: 2.0 },
+  'Yao': { latSpan: 1.5, lngSpan: 1.5 },
+  'Lozi': { latSpan: 2.0, lngSpan: 2.0 },
+  'Tumbuka': { latSpan: 1.2, lngSpan: 1.2 },
   
   // ===== NAMIBIA / BOTSWANA =====
-  'Himba': { latSpan: 1.5, lngSpan: 1.5 }, // Kunene Region
-  'Herero': { latSpan: 2.0, lngSpan: 2.0 }, // Central Namibia
-  'Ovambo': { latSpan: 1.5, lngSpan: 2.0 }, // Northern Namibia
-  'San': { latSpan: 3.0, lngSpan: 3.0 }, // Kalahari region (wide dispersal)
+  'Himba': { latSpan: 1.5, lngSpan: 1.5 },
+  'Herero': { latSpan: 2.0, lngSpan: 2.0 },
+  'Ovambo': { latSpan: 1.5, lngSpan: 2.0 },
+  'San': { latSpan: 3.0, lngSpan: 3.0 },
+  'Damara': { latSpan: 2.0, lngSpan: 2.0 },
+  'Nama': { latSpan: 2.5, lngSpan: 2.5 },
   
   // ===== DR CONGO =====
-  'Luba': { latSpan: 3.0, lngSpan: 2.5 }, // Katanga/Kasai
-  'Kongo': { latSpan: 2.5, lngSpan: 2.0 }, // Western DRC/Angola/Congo
-  'Mongo': { latSpan: 3.0, lngSpan: 3.0 }, // Congo Basin (largest area)
-  'Lunda': { latSpan: 2.5, lngSpan: 2.5 }, // Southwestern DRC
+  'Luba': { latSpan: 3.0, lngSpan: 2.5 },
+  'Kongo': { latSpan: 2.5, lngSpan: 2.0 },
+  'Mongo': { latSpan: 3.0, lngSpan: 3.0 },
+  'Lunda': { latSpan: 2.5, lngSpan: 2.5 },
+  'Mangbetu': { latSpan: 1.5, lngSpan: 1.5 },
+  'Azande': { latSpan: 2.5, lngSpan: 2.5 },
+  'Tetela': { latSpan: 1.5, lngSpan: 1.5 },
   
   // ===== RWANDA / BURUNDI =====
-  'Hutu': { latSpan: 1.5, lngSpan: 1.2 }, // Throughout Rwanda/Burundi
-  'Tutsi': { latSpan: 1.5, lngSpan: 1.2 }, // Throughout Rwanda/Burundi
-  'Twa': { latSpan: 1.0, lngSpan: 1.0 }, // Forest regions
+  'Hutu': { latSpan: 1.5, lngSpan: 1.2 },
+  'Tutsi': { latSpan: 1.5, lngSpan: 1.2 },
+  'Twa': { latSpan: 1.0, lngSpan: 1.0 },
+  'Banyarwanda': { latSpan: 1.8, lngSpan: 1.5 },
   
   // ===== SAHEL / SAHARA =====
-  'Tuareg': { latSpan: 6.0, lngSpan: 8.0 }, // Sahara (very large nomadic territory)
-  'Songhai': { latSpan: 2.5, lngSpan: 3.0 }, // Niger River bend
-  'Mossi': { latSpan: 2.5, lngSpan: 2.5 }, // Central Burkina Faso
-  'Bambara': { latSpan: 3.0, lngSpan: 3.5 }, // Mali (Segou, Sikasso)
-  'Dogon': { latSpan: 1.0, lngSpan: 1.0 }, // Bandiagara Escarpment (compact)
+  'Tuareg': { latSpan: 6.0, lngSpan: 8.0 },
+  'Songhai': { latSpan: 2.5, lngSpan: 3.0 },
+  'Mossi': { latSpan: 2.5, lngSpan: 2.5 },
+  'Bambara': { latSpan: 3.0, lngSpan: 3.5 },
+  'Dogon': { latSpan: 1.0, lngSpan: 1.0 },
+  'Songhay': { latSpan: 2.5, lngSpan: 3.0 },
+  'Djerma': { latSpan: 2.0, lngSpan: 2.0 },
   
   // ===== CAMEROON =====
-  'Bamileke': { latSpan: 1.2, lngSpan: 1.2 }, // Western Highlands
-  'Beti-Pahuin': { latSpan: 2.0, lngSpan: 2.0 }, // Central/Southern Cameroon
-  'Fulbe': { latSpan: 2.0, lngSpan: 2.0 }, // Adamawa Region
+  'Bamileke': { latSpan: 1.2, lngSpan: 1.2 },
+  'Beti-Pahuin': { latSpan: 2.0, lngSpan: 2.0 },
+  'Beti': { latSpan: 2.0, lngSpan: 2.0 },
+  'Fulbe': { latSpan: 2.0, lngSpan: 2.0 },
+  'Fang': { latSpan: 2.0, lngSpan: 2.0 },
+  'Duala': { latSpan: 0.8, lngSpan: 0.8 },
+  'Bassa': { latSpan: 1.0, lngSpan: 1.0 },
+  
+  // ===== NORTH AFRICA =====
+  'Berber': { latSpan: 5.0, lngSpan: 8.0 },
+  'Amazigh': { latSpan: 5.0, lngSpan: 8.0 },
+  'Kabyle': { latSpan: 1.5, lngSpan: 1.5 },
+  'Riffian': { latSpan: 1.0, lngSpan: 1.5 },
+  'Shilha': { latSpan: 2.0, lngSpan: 2.0 },
+  'Nubian': { latSpan: 3.0, lngSpan: 2.0 },
+  'Copts': { latSpan: 4.0, lngSpan: 3.0 },
+  'Beja': { latSpan: 3.0, lngSpan: 2.5 },
+  
+  // ===== ANGOLA / MOZAMBIQUE =====
+  'Ovimbundu': { latSpan: 2.5, lngSpan: 2.5 },
+  'Mbundu': { latSpan: 2.0, lngSpan: 2.0 },
+  'Bakongo': { latSpan: 2.0, lngSpan: 2.0 },
+  'Makua': { latSpan: 3.0, lngSpan: 2.5 },
+  'Sena': { latSpan: 1.5, lngSpan: 1.5 },
+  
+  // ===== SUDAN / SOUTH SUDAN =====
+  'Dinka': { latSpan: 4.0, lngSpan: 3.5 },
+  'Nuer': { latSpan: 3.0, lngSpan: 2.5 },
+  'Shilluk': { latSpan: 1.5, lngSpan: 1.5 },
+  'Bari': { latSpan: 1.5, lngSpan: 1.5 },
+  'Fur': { latSpan: 2.5, lngSpan: 2.5 },
+  'Zaghawa': { latSpan: 2.0, lngSpan: 2.0 },
+  
+  // ===== MADAGASCAR =====
+  'Merina': { latSpan: 2.5, lngSpan: 2.0 },
+  'Betsileo': { latSpan: 2.0, lngSpan: 1.5 },
+  'Betsimisaraka': { latSpan: 3.0, lngSpan: 1.0 },
+  'Sakalava': { latSpan: 4.0, lngSpan: 2.0 },
+  'Antandroy': { latSpan: 1.5, lngSpan: 2.0 },
+  'Mahafaly': { latSpan: 1.5, lngSpan: 1.5 },
+  
+  // ===== HORN OF AFRICA =====
+  'Bilen': { latSpan: 0.5, lngSpan: 0.5 },
+  'Saho': { latSpan: 1.0, lngSpan: 0.8 },
+  'Kunama': { latSpan: 1.0, lngSpan: 1.0 },
 };
 
 const getTerritoryDegrees = (tribeName: string, counties: string[]): { latSpan: number; lngSpan: number } => {
@@ -213,9 +291,16 @@ const getTerritoryDegrees = (tribeName: string, counties: string[]): { latSpan: 
     return tribeTerritoryDegrees[simpleName];
   }
   
-  // Fallback based on county count
+  // Try matching without parenthetical content
+  const cleanName = tribeName.replace(/\s*\([^)]*\)\s*/g, '').trim();
+  if (tribeTerritoryDegrees[cleanName]) {
+    return tribeTerritoryDegrees[cleanName];
+  }
+  
+  // Fallback based on county count - more granular
   const countyCount = counties.length;
-  if (countyCount >= 6) return { latSpan: 2.5, lngSpan: 2.2 };
+  if (countyCount >= 8) return { latSpan: 3.5, lngSpan: 3.2 };
+  if (countyCount >= 6) return { latSpan: 2.8, lngSpan: 2.5 };
   if (countyCount >= 4) return { latSpan: 2.0, lngSpan: 1.8 };
   if (countyCount >= 2) return { latSpan: 1.5, lngSpan: 1.3 };
   return { latSpan: 1.0, lngSpan: 1.0 };
