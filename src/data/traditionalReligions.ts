@@ -815,6 +815,176 @@ export const traditionalReligions: TraditionalReligionData[] = [
       { name: "Britannica - Ethiopian Orthodox", url: "https://www.britannica.com/topic/Ethiopian-Orthodox-Tewahedo-Church" },
       { name: "UNESCO - Lalibela", url: "https://whc.unesco.org/en/list/18" }
     ]
+  },
+  {
+    id: "christianity-africa",
+    name: "Christianity in Africa",
+    alternateNames: ["African Christianity", "African Churches"],
+    region: "Pan-African",
+    estimatedFollowers: "~700 million",
+    countryBreakdown: [
+      { country: "Nigeria", flag: "🇳🇬", percentage: 20 },
+      { country: "Ethiopia", flag: "🇪🇹", percentage: 8 },
+      { country: "DR Congo", flag: "🇨🇩", percentage: 12 },
+      { country: "South Africa", flag: "🇿🇦", percentage: 8 },
+      { country: "Kenya", flag: "🇰🇪", percentage: 6 },
+      { country: "Other", flag: "🌍", percentage: 46 }
+    ],
+    supremeDeity: {
+      name: "God (Trinity)",
+      description: "The triune God - Father, Son (Jesus Christ), and Holy Spirit. African Christianity emphasizes Jesus as liberator, healer, and ancestor. Many African expressions incorporate charismatic gifts and spiritual warfare.",
+      attributes: ["Creator", "Savior", "Holy Spirit", "Healer", "Provider"]
+    },
+    tenets: [
+      {
+        belief: "Jesus Christ as Lord and Savior",
+        description: "Salvation through faith in Jesus Christ who died and rose again. African Christianity often emphasizes Jesus's power over evil spirits and His role as the ultimate ancestor and mediator.",
+        source: "World Christianity: An Introduction - Chow (2016)"
+      },
+      {
+        belief: "The Bible as Scripture",
+        description: "The Bible as the inspired word of God. African Christians often interpret scripture through cultural lenses, finding parallels with African worldviews on ancestors, spirits, and community.",
+        source: "African Theology - Mbiti (1986)"
+      },
+      {
+        belief: "Holy Spirit Power",
+        description: "Pentecostal and Charismatic Christianity is dominant in Africa, emphasizing spiritual gifts, healing, prophecy, and deliverance from demonic forces.",
+        source: "African Pentecostalism - Kalu (2008)"
+      },
+      {
+        belief: "Community and Ubuntu",
+        description: "African Christianity emphasizes communal faith expression, collective worship, and mutual responsibility - aligning with traditional African values of community.",
+        source: "African Christian Theology - Bujo (1992)"
+      }
+    ],
+    practices: [
+      { name: "Sunday Worship", description: "Extended worship services featuring lively music, dancing, prayer, and preaching. Services often last 2-4 hours.", frequency: "Weekly" },
+      { name: "Overnight Prayer Vigils", description: "All-night prayer meetings common in Pentecostal churches, seeking spiritual breakthrough and protection.", frequency: "Regular" },
+      { name: "Tithing and Offerings", description: "Financial contributions to church, often seen as seed-sowing for blessings. Prosperity gospel is influential.", frequency: "Regular" },
+      { name: "Deliverance Services", description: "Rituals to cast out demons and break curses. Addresses African concerns about witchcraft and spiritual attacks.", frequency: "As needed" }
+    ],
+    rituals: [
+      { name: "Water Baptism", description: "Immersion baptism as public declaration of faith. River baptisms are popular, connecting to biblical imagery.", occasion: "After conversion" },
+      { name: "Confirmation/First Communion", description: "In Catholic and mainline churches, marking full church membership after instruction.", occasion: "Adolescence" },
+      { name: "Anointing with Oil", description: "Praying over the sick with anointing oil for healing and protection.", occasion: "Illness/need" }
+    ],
+    sacredTexts: [
+      { name: "The Bible", description: "The 66-book Protestant canon or 73-book Catholic canon. Many African translations exist. Oral reading and memorization are important.", status: "written" },
+      { name: "Hymn Books", description: "African Christian hymnody blending Western hymns with African musical traditions and indigenous compositions.", status: "written" }
+    ],
+    joining: {
+      process: "Varies by denomination: Pentecostal churches emphasize a conversion experience ('born again'), Catholic/mainline churches have catechism periods. Public confession of faith and baptism are common.",
+      requirements: [
+        "Faith in Jesus Christ",
+        "Repentance from sin",
+        "Water baptism",
+        "Church membership (varies by denomination)"
+      ],
+      notes: "Christianity arrived in North Africa in the 1st century and Ethiopia in the 4th. Missionary Christianity spread south from the 15th century. African-initiated churches emerged from the 19th century."
+    },
+    influence: {
+      cultural: "Christianity has profoundly shaped African education, healthcare, literature, and music. African gospel music has global influence. Churches are major social institutions.",
+      modern: "Africa has the fastest-growing Christian population globally. Nigerian and Ghanaian megachurches have worldwide reach. African missionaries are sent globally.",
+      diaspora: "African Christian communities thrive in Europe and Americas. Redeemed Christian Church of God (Nigeria) has thousands of parishes worldwide."
+    },
+    tribesFollowing: [
+      { tribeSlug: "kikuyu", tribeName: "Kikuyu", percentage: 80, notes: "Majority Christian" },
+      { tribeSlug: "igbo", tribeName: "Igbo", percentage: 85, notes: "Strongly Christian region" },
+      { tribeSlug: "yoruba", tribeName: "Yoruba", percentage: 40, notes: "Mixed with Islam and traditional" },
+      { tribeSlug: "zulu", tribeName: "Zulu", percentage: 70, notes: "Many syncretic practices" },
+      { tribeSlug: "akan", tribeName: "Akan/Ashanti", percentage: 75, notes: "Strong Christian presence" }
+    ],
+    sources: [
+      { name: "Pew Research - Christianity in Africa", url: "https://www.pewresearch.org/religion/2011/12/19/global-christianity-regions/" },
+      { name: "World Christianity - Johnson & Ross", url: "https://en.wikipedia.org/wiki/Christianity_in_Africa" },
+      { name: "African Christian Theology", url: "https://www.britannica.com/topic/Christianity" }
+    ]
+  },
+  {
+    id: "islam-africa",
+    name: "Islam in Africa",
+    alternateNames: ["African Islam", "Sub-Saharan Islam"],
+    region: "Pan-African",
+    estimatedFollowers: "~500 million",
+    countryBreakdown: [
+      { country: "Egypt", flag: "🇪🇬", percentage: 18 },
+      { country: "Nigeria", flag: "🇳🇬", percentage: 20 },
+      { country: "Algeria", flag: "🇩🇿", percentage: 9 },
+      { country: "Morocco", flag: "🇲🇦", percentage: 8 },
+      { country: "Sudan", flag: "🇸🇩", percentage: 9 },
+      { country: "Other", flag: "🌍", percentage: 36 }
+    ],
+    supremeDeity: {
+      name: "Allah",
+      description: "The one God (Allah) as revealed to Prophet Muhammad. African Islam emphasizes Allah's mercy, power, and guidance. Sufi traditions are prominent, emphasizing mystical union with the divine.",
+      attributes: ["One God", "All-Merciful", "All-Knowing", "Creator", "Judge"]
+    },
+    tenets: [
+      {
+        belief: "Shahada (Declaration of Faith)",
+        description: "'There is no god but Allah, and Muhammad is His messenger.' The central creed of Islam, recited in Arabic, marking entry into the faith.",
+        source: "The Oxford Handbook of Islam"
+      },
+      {
+        belief: "Five Pillars of Islam",
+        description: "Faith (Shahada), Prayer (Salat), Charity (Zakat), Fasting (Sawm), Pilgrimage (Hajj). These form the core obligations of Muslim life.",
+        source: "Encyclopedia of Islam"
+      },
+      {
+        belief: "Quran as God's Word",
+        description: "The Quran is the literal, unchanged word of Allah revealed to Muhammad. African Muslims often memorize it in Arabic even without speaking Arabic.",
+        source: "Introduction to Islam - Denny"
+      },
+      {
+        belief: "Sufi Spirituality",
+        description: "Sufi brotherhoods (tariqas) like Tijaniyya, Qadiriyya, and Muridiyya are influential in African Islam, emphasizing spiritual masters, dhikr (remembrance), and saints.",
+        source: "Sufism in Africa - Vikør"
+      }
+    ],
+    practices: [
+      { name: "Salat (Five Daily Prayers)", description: "Prayers performed at dawn, noon, afternoon, sunset, and night, facing Mecca. Friday noon prayer (Jumu'ah) is congregational.", frequency: "5 times daily" },
+      { name: "Ramadan Fasting", description: "Month-long fast from dawn to sunset. Breaking fast (iftar) is a communal celebration. Eid al-Fitr marks the end.", frequency: "Annual" },
+      { name: "Quran Schools (Madrasa)", description: "Islamic education where children memorize the Quran. Mali, Senegal, and Nigeria have famous centers of learning.", frequency: "Daily" },
+      { name: "Mawlid (Prophet's Birthday)", description: "Celebration of Muhammad's birth with poetry, processions, and feasting. Especially elaborate in Sufi communities.", frequency: "Annual" }
+    ],
+    rituals: [
+      { name: "Hajj Pilgrimage", description: "Pilgrimage to Mecca at least once in a lifetime if able. African Muslims travel in large groups. 'Alhaji/Alhaja' is an honorific for those who have completed it.", occasion: "Once in lifetime" },
+      { name: "Eid al-Adha", description: "Festival of Sacrifice commemorating Ibrahim's willingness to sacrifice his son. Sheep, goats, or cattle are slaughtered and meat shared.", occasion: "Annual" },
+      { name: "Tabaski", description: "West African name for Eid al-Adha. Major celebration with new clothes, feasting, and family gatherings.", occasion: "Annual" }
+    ],
+    sacredTexts: [
+      { name: "Quran", description: "The holy book of Islam, 114 suras (chapters) revealed to Prophet Muhammad. Recitation in Arabic is spiritually valued.", status: "written" },
+      { name: "Hadith", description: "Collections of Prophet Muhammad's sayings and actions. Used for guidance on daily life and religious practice.", status: "written" },
+      { name: "Sufi Poetry", description: "Devotional poetry from Sufi masters. Timbuktu manuscripts and West African writings are renowned.", status: "written" }
+    ],
+    joining: {
+      process: "Converting to Islam requires sincerely reciting the Shahada before witnesses. Male converts undergo circumcision if not already circumcised. Islamic education follows.",
+      requirements: [
+        "Sincere recitation of Shahada",
+        "Intention to follow Islamic law",
+        "Circumcision (for males)",
+        "Basic learning of prayers and practice"
+      ],
+      notes: "Islam arrived in Africa in the 7th century, first in Egypt and North Africa, then spreading via trade routes across the Sahara and along the East African coast. It has been in Africa almost as long as in Arabia."
+    },
+    influence: {
+      cultural: "Islam shaped African empires (Mali, Songhai, Sokoto), architecture (Great Mosque of Djenné), scholarship (Timbuktu manuscripts), and law. Arabic script was adapted for African languages.",
+      modern: "Islam continues growing in Africa. Sufi brotherhoods remain influential in politics and society. Islamic finance and education are expanding.",
+      diaspora: "African Muslim communities exist globally. The Mouride brotherhood (Senegal) has significant diaspora presence."
+    },
+    tribesFollowing: [
+      { tribeSlug: "hausa", tribeName: "Hausa", percentage: 95, notes: "Predominantly Muslim since Sokoto Caliphate" },
+      { tribeSlug: "fulani", tribeName: "Fulani", percentage: 90, notes: "Historically spread Islam in West Africa" },
+      { tribeSlug: "somali", tribeName: "Somali", percentage: 99, notes: "Almost entirely Muslim" },
+      { tribeSlug: "swahili", tribeName: "Swahili", percentage: 95, notes: "Islam central to Swahili culture" },
+      { tribeSlug: "wolof", tribeName: "Wolof", percentage: 94, notes: "Muridiyya Sufi influence strong" },
+      { tribeSlug: "mandinka", tribeName: "Mandinka", percentage: 90, notes: "Strong Islamic tradition" }
+    ],
+    sources: [
+      { name: "Pew Research - Islam in Africa", url: "https://www.pewresearch.org/religion/2011/01/27/the-future-of-the-global-muslim-population/" },
+      { name: "Encyclopedia of Islam", url: "https://en.wikipedia.org/wiki/Islam_in_Africa" },
+      { name: "Sufism in West Africa", url: "https://www.britannica.com/topic/Islam" }
+    ]
   }
 ];
 
