@@ -2706,6 +2706,78 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'soni_sg': [{ tribe: 'songhai', weight: 0.95 }],
   'soul_sg': [{ tribe: 'songhai', weight: 0.9 }],
   'bour': [{ tribe: 'songhai', weight: 0.95 }],
+
+  // ============ DR CONGO - Luba prefixes ============
+  'ilun': [{ tribe: 'luba', weight: 0.98 }],
+  'kala_lb': [{ tribe: 'luba', weight: 0.95 }],
+  'kaso': [{ tribe: 'luba', weight: 0.95 }],
+  'kabo_lb': [{ tribe: 'luba', weight: 0.95 }],
+  'mwam': [{ tribe: 'luba', weight: 0.9 }],
+  'muto': [{ tribe: 'luba', weight: 0.95 }],
+  'mula': [{ tribe: 'luba', weight: 0.9 }],
+  'tshi_lb': [{ tribe: 'luba', weight: 0.95 }],
+  'ngun': [{ tribe: 'luba', weight: 0.9 }],
+  'muji': [{ tribe: 'luba', weight: 0.95 }],
+
+  // ============ DR CONGO - Mongo prefixes ============
+  'bofe': [{ tribe: 'mongo', weight: 0.98 }],
+  'loki': [{ tribe: 'mongo', weight: 0.95 }],
+  'monk': [{ tribe: 'mongo', weight: 0.95 }],
+  'ilon': [{ tribe: 'mongo', weight: 0.95 }],
+  'bola': [{ tribe: 'mongo', weight: 0.9 }],
+  'moki': [{ tribe: 'mongo', weight: 0.95 }],
+  'lifo': [{ tribe: 'mongo', weight: 0.95 }],
+  'bong': [{ tribe: 'mongo', weight: 0.9 }],
+  'efam': [{ tribe: 'mongo', weight: 0.98 }],
+
+  // ============ DR CONGO/CONGO/ANGOLA - Kongo prefixes ============
+  'nzin': [{ tribe: 'kongo', weight: 0.98 }],
+  'kimp': [{ tribe: 'kongo', weight: 0.95 }],
+  'nsim': [{ tribe: 'kongo', weight: 0.95 }],
+  'mafu': [{ tribe: 'kongo', weight: 0.9 }],
+  'nken': [{ tribe: 'kongo', weight: 0.95 }],
+  'ndon': [{ tribe: 'kongo', weight: 0.95 }],
+  'make': [{ tribe: 'kongo', weight: 0.85 }],
+  'nzuz': [{ tribe: 'kongo', weight: 0.98 }],
+  'mbal_kg': [{ tribe: 'kongo', weight: 0.9 }],
+  'kimb': [{ tribe: 'kongo', weight: 0.95 }],
+  'nkuk': [{ tribe: 'kongo', weight: 0.95 }],
+  'kasa': [{ tribe: 'kongo', weight: 0.95 }],
+  'mata': [{ tribe: 'kongo', weight: 0.9 }],
+  'mabi': [{ tribe: 'kongo', weight: 0.95 }, { tribe: 'bakongo', weight: 0.95 }],
+
+  // ============ CONGO-BRAZZAVILLE - Mbochi prefixes ============
+  'sass': [{ tribe: 'mbochi', weight: 0.98 }],
+  'ngue': [{ tribe: 'mbochi', weight: 0.95 }],
+  'obam': [{ tribe: 'mbochi', weight: 0.98 }],
+  'itou': [{ tribe: 'mbochi', weight: 0.95 }],
+  'ngou_mb': [{ tribe: 'mbochi', weight: 0.95 }],
+  'okam': [{ tribe: 'mbochi', weight: 0.95 }],
+
+  // ============ CAR - Gbaya prefixes ============
+  'zamb': [{ tribe: 'gbaya', weight: 0.95 }],
+  'yawa_gb': [{ tribe: 'gbaya', weight: 0.95 }],
+  'koyo': [{ tribe: 'gbaya', weight: 0.9 }],
+  'ngoy': [{ tribe: 'gbaya', weight: 0.9 }],
+  'doya': [{ tribe: 'gbaya', weight: 0.95 }],
+  'gazo': [{ tribe: 'gbaya', weight: 0.95 }],
+  'wabe': [{ tribe: 'gbaya', weight: 0.95 }],
+  'boga': [{ tribe: 'gbaya', weight: 0.98 }],
+  'koli_gb': [{ tribe: 'gbaya', weight: 0.95 }],
+  'zigu': [{ tribe: 'gbaya', weight: 0.98 }],
+
+  // ============ CAR - Banda prefixes ============
+  'dack': [{ tribe: 'banda', weight: 0.98 }],
+  'gang_bd': [{ tribe: 'banda', weight: 0.95 }],
+  'boka_bd': [{ tribe: 'banda', weight: 0.98 }],
+  'yaba': [{ tribe: 'banda', weight: 0.9 }],
+  'koit': [{ tribe: 'banda', weight: 0.95 }],
+
+  // ============ CAR - Mandjia prefixes ============
+  'manj': [{ tribe: 'mandjia', weight: 0.98 }],
+  'koum': [{ tribe: 'mandjia', weight: 0.9 }],
+  'dakp': [{ tribe: 'mandjia', weight: 0.95 }],
+  'yang_mj': [{ tribe: 'mandjia', weight: 0.9 }],
 };
 
 // Suffix patterns for additional matching

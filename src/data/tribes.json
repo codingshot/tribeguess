@@ -13673,6 +13673,933 @@
       "sources": [{ "name": "Wikipedia - Songhai people", "url": "https://en.wikipedia.org/wiki/Songhai_people" }, { "name": "Songhai Empire", "url": "https://en.wikipedia.org/wiki/Songhai_Empire" }],
       "description": "The Songhai are heirs to one of Africa's greatest empires, which at its height controlled the trans-Saharan trade and made Timbuktu a world center of Islamic learning.",
       "relatedTribes": ["bambara", "djerma", "tuareg", "fulani", "bozo"]
+    },
+
+    {
+      "id": "luba",
+      "name": "Luba",
+      "slug": "luba",
+      "youtubeVideoId": "kFhRrPQ1P1w",
+      "countries": ["CD"],
+      "region": "Kasai & Katanga, DR Congo",
+      "population": "~6-7 million",
+      "populationPercent": "8%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -8.0, "lng": 23.5 },
+      "counties": ["Kasaï-Oriental", "Kasaï-Central", "Haut-Katanga", "Lomami"],
+      "namePrefixes": ["Mu", "Ka", "Tshi", "Ci", "Ngu", "Bu", "Di", "Lu", "Nka"],
+      "commonNames": {
+        "female": ["Mujinga", "Kabibi", "Ngalula", "Cibombo", "Mutombo", "Kashala", "Mukendi", "Tshilombo", "Nzeba", "Kabongo"],
+        "male": ["Ilunga", "Kalala", "Kasongo", "Kabongo", "Mwamba", "Ngongo", "Mutombo", "Mulamba", "Tshisekedi", "Kalonda"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Highly organized and hierarchical",
+        "Exceptional artists and craftspeople",
+        "Strong political tradition",
+        "Proud of their imperial heritage",
+        "Value education highly"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be leaders and decision-makers",
+          "Skilled in woodcarving and metalwork",
+          "Responsible for family honor"
+        ],
+        "female": [
+          "Keepers of oral tradition and history",
+          "Expert potters and weavers",
+          "Central to family stability"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men held political positions, engaged in hunting, warfare, and craftsmanship. The Mulopwe (king) was always male.",
+          "female": "Women managed agriculture, trade, and domestic affairs. They held significant spiritual roles and could be powerful diviners."
+        },
+        "modern": {
+          "male": "Luba men dominate business, politics, and education in southeastern DRC. Many are prominent professionals.",
+          "female": "Women increasingly pursue education and careers while maintaining traditional family roles."
+        }
+      },
+      "culturalTraits": [
+        "Memory boards (lukasa) for recording history",
+        "Sophisticated woodcarving and metalwork",
+        "Complex political system with divine kingship",
+        "Oral tradition preserved by court historians",
+        "Elaborate scarification patterns",
+        "Rich tradition of royal regalia"
+      ],
+      "funFacts": [
+        "The Luba Empire was one of the largest and most powerful states in Central African history",
+        "Luba memory boards (lukasa) are considered among Africa's most sophisticated mnemonic devices",
+        "The title 'Mulopwe' meant the ruler had divine blood",
+        "Luba art is displayed in major museums worldwide including the Met and British Museum",
+        "The Baluba were central to the Congo independence movement"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu (cassava mash)", "Saka-saka (cassava leaves)", "Plantains", "Dried fish", "Palm oil dishes"],
+        "beverages": ["Palm wine", "Kasiksi (banana beer)", "Lotoko (distilled spirit)"],
+        "specialDishes": ["Chicken moambe (palm nut stew)", "Liboke (fish in banana leaves)", "Pondu (cassava leaves with fish)"],
+        "description": "Luba cuisine centers on cassava as the main staple, complemented by fish from local rivers and lakes. Moambe (palm nut sauce) is a signature dish."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Late morning meal and evening dinner, with fufu being the primary staple",
+        "mainMealTime": "Evening when family gathers",
+        "eatingStyle": "Communal eating from shared pots, using hands to form fufu balls for dipping",
+        "genderRules": "Men served first, followed by elders, then women and children",
+        "taboos": ["Certain totemic animals forbidden by clan", "Pregnant women avoid specific foods", "Chiefs have dietary restrictions"],
+        "specialOccasions": "Elaborate feasts for enthronement, funerals, and harvest festivals",
+        "hospitality": "Visitors always offered food and drink; refusing is considered offensive"
+      },
+      "traditionalDance": "Kasala praise poetry performance with accompanying drums",
+      "religion": "Christianity (Catholic majority), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Luba Traditional Religion",
+        "supremeDeity": "Shakapanga (Supreme Creator) - distant but ultimate source of power",
+        "spirits": ["Vidye (spirits of nature)", "Mikishi (ancestral spirits)", "Royal ancestral spirits"],
+        "practices": ["Divination", "Ancestral veneration", "Spirit possession", "Sacred kingship rituals", "Use of power objects (nkisi)"],
+        "beliefs": "The Mulopwe (king) possessed divine power; ancestors mediate with the spirit world; nature spirits inhabit rivers, trees, and mountains.",
+        "religiousHistory": {
+          "islamIntroduced": "N/A - Limited Islamic influence",
+          "introducedBy": "Belgian missionaries (Christianity)",
+          "conversionProcess": "Belgian colonial missionaries converted many Luba to Catholicism in the early 20th century, though traditional practices persist.",
+          "sources": ["Wikipedia - Luba people", "African Studies"]
+        }
+      },
+      "history": {
+        "origin": "The Luba Kingdom emerged around 1500 CE near Lake Kisale in what is now southeastern DRC. Founded by legendary figure Kongolo, it expanded under his successor Kalala Ilunga to become one of Central Africa's greatest empires.",
+        "colonialEra": "Belgian colonization (1885-1960) exploited Luba labor in mines and plantations. The Luba maintained cultural identity despite colonial oppression and forced labor.",
+        "independence": "Luba leaders including Patrice Lumumba and Étienne Tshisekedi played central roles in Congolese independence and politics. The Kasai region saw secession attempts in the 1960s.",
+        "keyEvents": ["Luba Kingdom founding (~1500)", "Empire expansion under Kalala Ilunga", "Belgian colonization (1885)", "Katanga secession crisis (1960-63)", "Kasai conflict"]
+      },
+      "tradeHistory": {
+        "historical": "The Luba controlled important trade routes for copper, salt, and iron. They traded with the Swahili coast through intermediaries.",
+        "modern": "Today Luba dominate diamond and copper mining regions. Many are successful traders and businesspeople across DRC.",
+        "keyGoods": ["Copper", "Salt", "Iron tools", "Ivory", "Slaves (historical)"],
+        "tradePartners": ["Swahili traders", "Lunda", "Portuguese (indirect)", "Yeke"]
+      },
+      "independenceHistory": {
+        "resistance": "The Luba resisted Belgian forced labor and taxation, with periodic uprisings. The Luba-Lulua conflict in 1959-60 preceded independence.",
+        "role": "Luba intellectuals like Patrice Lumumba and Antoine Gizenga were central to independence movements. Étienne Tshisekedi later became a major opposition figure.",
+        "keyFigures": ["Patrice Lumumba (first Prime Minister)", "Albert Kalonji (South Kasai leader)", "Étienne Tshisekedi (opposition leader)"],
+        "postIndependence": "The Kasai region experienced significant conflict. Luba have remained politically influential in Congolese politics."
+      },
+      "language": {
+        "name": "Tshiluba (Kiluba)",
+        "speakers": "~6.3 million",
+        "greeting": "Moyo",
+        "greetingMeaning": "Hello / Life",
+        "additionalGreetings": [
+          { "phrase": "Muoyo", "meaning": "How are you?" },
+          { "phrase": "Udi bimpe?", "meaning": "Are you well?" },
+          { "phrase": "Ndi bimpe", "meaning": "I am well" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Atlantic-Congo",
+          "branch": "Bantu",
+          "subBranch": "Luba group",
+          "speakers": "~6.3 million",
+          "relatedLanguages": ["Kiluba", "Songe", "Hemba", "Lunda"],
+          "migrationHistory": "Luba languages spread with the expansion of the Luba Empire from the Upemba Depression"
+        }
+      },
+      "famousPeople": [
+        { "name": "Patrice Lumumba", "role": "First Prime Minister of DRC (Luba-Katanga heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Patrice_Lumumba" },
+        { "name": "Étienne Tshisekedi", "role": "Opposition leader and Prime Minister", "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi" },
+        { "name": "Félix Tshisekedi", "role": "Current President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi" },
+        { "name": "Dikembe Mutombo", "role": "NBA Hall of Fame basketball player", "wikipedia": "https://en.wikipedia.org/wiki/Dikembe_Mutombo" }
+      ],
+      "sources": [{ "name": "Wikipedia - Luba people", "url": "https://en.wikipedia.org/wiki/Luba_people" }, { "name": "Luba Empire", "url": "https://en.wikipedia.org/wiki/Luba_Empire" }],
+      "description": "The Luba are one of Central Africa's most historically significant peoples, founders of the powerful Luba Empire known for its sophisticated art, political system, and cultural traditions.",
+      "relatedTribes": ["lunda", "songe", "kongo", "mongo"]
+    },
+
+    {
+      "id": "mongo",
+      "name": "Mongo",
+      "slug": "mongo",
+      "youtubeVideoId": "A-Fk8JcZ9po",
+      "countries": ["CD"],
+      "region": "Congo Basin, Central DRC",
+      "population": "~6 million",
+      "populationPercent": "7%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -0.5, "lng": 21.0 },
+      "counties": ["Équateur", "Tshuapa", "Mongala", "Mai-Ndombe"],
+      "namePrefixes": ["Bo", "Lo", "Mo", "Nko", "Iko", "Ilo", "Bom", "Lom"],
+      "commonNames": {
+        "female": ["Bofeko", "Lokita", "Monkanda", "Ilonga", "Bolamba", "Mokili", "Lifoko", "Bongongo", "Motema"],
+        "male": ["Bokassa", "Lokonga", "Mobutu", "Iloko", "Bomboko", "Lotika", "Bokamba", "Longombe", "Efambe"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Skilled river navigators",
+        "Expert fishermen and traders",
+        "Strong oral tradition",
+        "Egalitarian social structure",
+        "Forest knowledge"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expert canoe builders and fishermen",
+          "Responsible for hunting and trade",
+          "Keepers of clan histories"
+        ],
+        "female": [
+          "Agricultural specialists",
+          "Fish processing and trading",
+          "Central to family economics"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men dominated fishing, hunting, and canoe-building. They managed external trade and political affairs.",
+          "female": "Women controlled agriculture, fish processing, and local markets. They had significant economic independence."
+        },
+        "modern": {
+          "male": "Many Mongo men work in river transport, fishing, and trade. Education is increasingly valued.",
+          "female": "Women continue to dominate local trade while pursuing education and formal employment."
+        }
+      },
+      "culturalTraits": [
+        "Elaborate canoe-building tradition",
+        "Extensive fishing knowledge",
+        "Lianja epic oral tradition",
+        "Complex music with talking drums",
+        "Decentralized political organization",
+        "Forest conservation practices"
+      ],
+      "funFacts": [
+        "The Mongo are the largest ethnic group in the Congo Basin rainforest",
+        "Mongo is an umbrella term for many related groups including Nkundo, Tetela, and Kusu",
+        "The Lianja epic is one of Africa's great oral literature traditions",
+        "Mongo talking drums could transmit complex messages across great distances",
+        "Mobutu Sese Seko was of Ngbandi/Mongo heritage"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "River fish", "Plantains", "Palm oil", "Forest mushrooms"],
+        "beverages": ["Palm wine (masanga)", "Sugar cane wine", "Banana beer"],
+        "specialDishes": ["Liboke (fish in banana leaves)", "Maboke (meat in leaves)", "Ntaba (smoked fish)", "Soso (caterpillars)"],
+        "description": "Mongo cuisine is dominated by river fish and forest products. Liboke (fish steamed in banana leaves) is a signature dish. Caterpillars and grubs are important protein sources."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening meals, with fish being the main protein",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Family groups eat together; fish is shared communally",
+        "genderRules": "Men receive larger fish portions; special cuts reserved for elders",
+        "taboos": ["Clan totemic animals forbidden", "Pregnant women avoid certain fish", "Some foods forbidden to unmarried girls"],
+        "specialOccasions": "Large fish catches celebrated with communal feasting",
+        "hospitality": "Visitors offered fish and palm wine; hospitality is a core value"
+      },
+      "traditionalDance": "Lokole drum dances and hunting celebration dances",
+      "religion": "Christianity (Catholic/Protestant), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Mongo Traditional Religion",
+        "supremeDeity": "Njakomba or Mbombo (Supreme Creator)",
+        "spirits": ["Bilima (nature spirits)", "Elima (ancestral spirits)", "Forest spirits"],
+        "practices": ["Ancestor veneration", "Spirit mediums", "Forest rituals", "Hunting magic", "Divination"],
+        "beliefs": "The forest is sacred and inhabited by spirits. Ancestors guide the living. Nature must be respected for hunting and fishing success.",
+        "religiousHistory": {
+          "introducedBy": "Catholic and Protestant missionaries",
+          "conversionProcess": "Belgian missionaries established missions throughout Mongo territory in the early 20th century. Traditional beliefs remain strong alongside Christianity."
+        }
+      },
+      "history": {
+        "origin": "The Mongo peoples migrated into the Congo Basin over 2,000 years ago as part of the Bantu expansion. They adapted to the rainforest environment, developing sophisticated fishing and forest management practices.",
+        "colonialEra": "Belgian colonial rule (1885-1960) was brutal in Mongo territory. Rubber collection under Leopold II caused massive suffering. Forced labor continued under Belgian colonial administration.",
+        "independence": "Mongo leaders participated in independence movements. Post-independence, the region has faced ongoing conflict and underdevelopment.",
+        "keyEvents": ["Bantu migration to Congo Basin", "Forced rubber collection atrocities (1885-1908)", "Independence (1960)", "Mobutu era (1965-1997)"]
+      },
+      "language": {
+        "name": "Lomongo",
+        "speakers": "~2 million (core Mongo dialects)",
+        "greeting": "Losako",
+        "greetingMeaning": "Greetings / Peace",
+        "additionalGreetings": [
+          { "phrase": "Mbote", "meaning": "Hello" },
+          { "phrase": "Ozali malamu?", "meaning": "Are you well?" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Atlantic-Congo",
+          "branch": "Bantu",
+          "subBranch": "Mongo-Nkundu group",
+          "speakers": "~6 million (all Mongo languages)",
+          "relatedLanguages": ["Nkundo", "Tetela", "Kusu", "Mbole", "Lokele"],
+          "migrationHistory": "Mongo languages diversified in the Congo Basin over the past 2,000 years"
+        }
+      },
+      "famousPeople": [
+        { "name": "Mobutu Sese Seko", "role": "President of Zaire (1965-1997)", "wikipedia": "https://en.wikipedia.org/wiki/Mobutu_Sese_Seko" },
+        { "name": "Antoine Gizenga", "role": "Prime Minister and independence leader", "wikipedia": "https://en.wikipedia.org/wiki/Antoine_Gizenga" }
+      ],
+      "sources": [{ "name": "Wikipedia - Mongo people", "url": "https://en.wikipedia.org/wiki/Mongo_people" }],
+      "description": "The Mongo are the largest ethnic cluster in the Congo Basin rainforest, comprising many subgroups who share linguistic and cultural heritage as expert river navigators and forest dwellers.",
+      "relatedTribes": ["luba", "kongo", "tetela"]
+    },
+
+    {
+      "id": "kongo",
+      "name": "Kongo",
+      "slug": "kongo",
+      "youtubeVideoId": "E_bYmL8BO8I",
+      "countries": ["CD", "CG", "AO"],
+      "region": "Lower Congo River Basin",
+      "population": "~10 million",
+      "populationPercent": "Varies by country",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -5.5, "lng": 14.5 },
+      "counties": ["Kongo-Central (DRC)", "Pool Region (Congo-Brazzaville)", "Zaire Province (Angola)"],
+      "namePrefixes": ["N", "Nz", "Mba", "Ki", "Nsa", "Nku", "Fu", "Ma", "Nk"],
+      "commonNames": {
+        "female": ["Nzinga", "Kimpa", "Nsimba", "Mafuta", "Nkenge", "Ndona", "Makeba", "Nzuzi", "Mbala"],
+        "male": ["Nkrumah", "Kimbangu", "Nsaku", "Nzinga", "Mabiala", "Kasa-Vubu", "Matadi", "Nkunku", "Lumumba"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Proud of their kingdom heritage",
+        "Strong Christian tradition (early converts)",
+        "Political awareness and activism",
+        "Skilled traders and negotiators",
+        "Rich artistic tradition"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Political leaders and organizers",
+          "Trade and commerce",
+          "Keepers of clan authority"
+        ],
+        "female": [
+          "Economic powerhouses in markets",
+          "Spiritual leaders (historically queens)",
+          "Agricultural management"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men held political power but the Kongo had matrilineal succession - power passed through the mother's line. Men managed external affairs and trade.",
+          "female": "Women were central to succession and could be powerful queens. The legendary Queen Nzinga led resistance against Portuguese colonialism."
+        },
+        "modern": {
+          "male": "Kongo men are prominent in politics and business across three countries.",
+          "female": "Women dominate local trade and markets. Some hold political positions."
+        }
+      },
+      "culturalTraits": [
+        "Matrilineal succession system",
+        "Early adoption of Christianity (1491)",
+        "Powerful minkisi (spiritual power objects)",
+        "Sophisticated metalworking",
+        "Complex political organization",
+        "Rich textile tradition (raffia cloth)"
+      ],
+      "funFacts": [
+        "The Kingdom of Kongo was one of Africa's largest and most powerful states from the 14th-19th century",
+        "Kongo adopted Christianity in 1491 under King Nzinga a Nkuwu - one of Africa's first Christian kingdoms",
+        "Queen Nzinga of Ndongo-Matamba (Kongo region) is one of Africa's greatest warrior queens",
+        "The Kongo people span three modern countries: DRC, Congo-Brazzaville, and Angola",
+        "Kongo spiritual practices influenced Haitian Vodou and Brazilian Candomblé"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu (cassava)", "Saka-saka (cassava leaves)", "Plantains", "Palm oil", "Fish"],
+        "beverages": ["Palm wine (nsamba)", "Ginger beer", "Sugar cane juice"],
+        "specialDishes": ["Moambe (palm nut chicken)", "Makayabu (salted fish)", "Chikwanga (cassava bread)", "Madesu (beans)"],
+        "description": "Kongo cuisine relies heavily on cassava and palm oil. Moambe (chicken or fish in palm nut sauce) is the most famous dish, known as the national dish in both Congos."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Late morning and evening meals",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating; fufu balls dipped in sauce",
+        "genderRules": "Men served first; matrilineal relatives share food",
+        "taboos": ["Clan totems forbidden", "Some foods restricted for pregnant women"],
+        "specialOccasions": "Palm wine and goat meat for celebrations",
+        "hospitality": "Guests offered palm wine and food immediately"
+      },
+      "traditionalDance": "Nkisi dances and harvest celebrations",
+      "religion": "Christianity (Catholic majority, Kimbanguism), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Kongo Traditional Religion & Kimbanguism",
+        "supremeDeity": "Nzambi a Mpungu (Supreme God)",
+        "spirits": ["Bakulu (ancestors)", "Bisimbi (nature spirits)", "Nkisi (power objects)"],
+        "practices": ["Nkisi power objects", "Ancestral veneration", "Divination", "Healing rituals", "Kimbanguist prophetic movement"],
+        "beliefs": "Nzambi is the supreme creator. Ancestors and nature spirits interact with the living. Nkisi objects contain spiritual power.",
+        "religiousHistory": {
+          "islamIntroduced": "N/A",
+          "introducedBy": "Portuguese missionaries (1491)",
+          "conversionProcess": "King Nzinga a Nkuwu converted in 1491, making Kongo one of Africa's first Christian kingdoms. Kimbanguism, an African Christian movement, emerged in 1921.",
+          "sources": ["Wikipedia - Kingdom of Kongo", "Wikipedia - Kimbanguism"]
+        }
+      },
+      "history": {
+        "origin": "The Kingdom of Kongo emerged around 1390 CE and became one of Africa's largest pre-colonial states. It controlled trade and had diplomatic relations with Portugal and the Vatican.",
+        "colonialEra": "The Kongo was fragmented by Portuguese, French, and Belgian colonialism. The trans-Atlantic slave trade devastated the population. King Leopold II's Congo Free State inflicted brutal atrocities.",
+        "independence": "Kongo leaders were central to independence movements in all three countries. Joseph Kasa-Vubu became DRC's first president.",
+        "keyEvents": ["Kingdom founding (~1390)", "Christian conversion (1491)", "Portuguese contact", "Slave trade devastation", "Colonial partition", "Independence (1960)"]
+      },
+      "tradeHistory": {
+        "historical": "The Kongo Kingdom controlled important trade routes for ivory, copper, and slaves. They had direct diplomatic relations with Portugal and the Vatican.",
+        "modern": "Kongo people remain important traders in Kinshasa, Brazzaville, and cross-border commerce.",
+        "keyGoods": ["Ivory", "Copper", "Raffia cloth", "Slaves (historical)", "Palm oil"],
+        "tradePartners": ["Portugal", "Dutch", "British", "Arabs (indirect)"]
+      },
+      "independenceHistory": {
+        "resistance": "The Kongo resisted colonialism repeatedly. Simon Kimbangu's religious movement (1921) was a form of anti-colonial resistance.",
+        "role": "Joseph Kasa-Vubu (Kongo) was DRC's first president. Kongo people led independence movements in both Congos.",
+        "keyFigures": ["Joseph Kasa-Vubu", "Simon Kimbangu", "Queen Nzinga (historical)"],
+        "postIndependence": "The ABAKO movement represented Kongo interests post-independence. Regional tensions have persisted."
+      },
+      "language": {
+        "name": "Kikongo",
+        "speakers": "~7 million",
+        "greeting": "Mbote",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Mbote na yo", "meaning": "Hello to you" },
+          { "phrase": "Ozali malamu?", "meaning": "How are you?" },
+          { "phrase": "Keba malamu", "meaning": "Take care" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Atlantic-Congo",
+          "branch": "Bantu",
+          "subBranch": "Kikongo group",
+          "speakers": "~7 million",
+          "relatedLanguages": ["Lingala", "Kituba (trade language)", "Vili", "Yombe"],
+          "migrationHistory": "Kongo language spread with the expansion of the Kingdom of Kongo"
+        }
+      },
+      "populationByCountry": [
+        { "country": "CD", "population": "~5 million", "percent": "5%" },
+        { "country": "CG", "population": "~2 million", "percent": "40%" },
+        { "country": "AO", "population": "~3 million", "percent": "10%" }
+      ],
+      "famousPeople": [
+        { "name": "Joseph Kasa-Vubu", "role": "First President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Kasa-Vubu" },
+        { "name": "Simon Kimbangu", "role": "Prophet and founder of Kimbanguism", "wikipedia": "https://en.wikipedia.org/wiki/Simon_Kimbangu" },
+        { "name": "Queen Nzinga", "role": "17th century warrior queen of Ndongo", "wikipedia": "https://en.wikipedia.org/wiki/Nzinga_of_Ndongo_and_Matamba" },
+        { "name": "Miriam Makeba", "role": "Singer (of Xhosa and Swazi heritage, but 'Makeba' is Kongo origin)", "wikipedia": "https://en.wikipedia.org/wiki/Miriam_Makeba" }
+      ],
+      "sources": [{ "name": "Wikipedia - Kongo people", "url": "https://en.wikipedia.org/wiki/Kongo_people" }, { "name": "Kingdom of Kongo", "url": "https://en.wikipedia.org/wiki/Kingdom_of_Kongo" }],
+      "description": "The Kongo are one of Africa's most historically significant peoples, heirs to the Kingdom of Kongo which had diplomatic relations with European powers and was among the first African kingdoms to adopt Christianity.",
+      "relatedTribes": ["luba", "mongo", "teke", "yaka", "vili"]
+    },
+
+    {
+      "id": "bakongo",
+      "name": "Bakongo (Congo-Brazzaville)",
+      "slug": "bakongo",
+      "countries": ["CG"],
+      "region": "Southern Congo-Brazzaville",
+      "population": "~1.2 million",
+      "populationPercent": "40%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": -4.3, "lng": 15.0 },
+      "counties": ["Pool", "Bouenza", "Niari", "Kouilou"],
+      "namePrefixes": ["N", "Nz", "Ma", "Ki", "Nsa", "Nku", "Fu", "Mba"],
+      "commonNames": {
+        "female": ["Nzinga", "Nsimba", "Ndona", "Makeba", "Nzuzi", "Massamba", "Mvoumbi"],
+        "male": ["Sassou", "Mabiala", "Nkoua", "Massemba", "Ngouabi", "Youlou", "Kolélas"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Politically dominant in Congo-Brazzaville",
+        "Strong Catholic tradition",
+        "Business-oriented",
+        "Urban and educated"
+      ],
+      "genderStereotypes": {
+        "male": ["Political leaders", "Business professionals"],
+        "female": ["Market traders", "Family managers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men held political positions and managed trade.",
+          "female": "Women controlled local markets and agriculture."
+        },
+        "modern": {
+          "male": "Men dominate politics and formal economy.",
+          "female": "Women are prominent in trade and increasingly in professions."
+        }
+      },
+      "culturalTraits": [
+        "Matrilineal society",
+        "Strong Catholic influence",
+        "Urban concentration in Brazzaville",
+        "Political engagement",
+        "Rich musical tradition (Congo rumba origins)"
+      ],
+      "funFacts": [
+        "Congo-Brazzaville's Bakongo are part of the greater Kongo ethnic group",
+        "Brazzaville was the capital of Free France during WWII",
+        "Congolese rumba originated in Kongo communities",
+        "The Pool region was historically the heartland of the Kongo Kingdom"
+      ],
+      "traditionalFood": {
+        "staples": ["Fufu", "Saka-saka", "Plantains", "Manioc"],
+        "beverages": ["Palm wine", "Ginger beer"],
+        "specialDishes": ["Moambe", "Chikwanga", "Makayabu"],
+        "description": "Similar to DRC Kongo cuisine, centered on cassava, palm oil, and fish."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening meals",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating",
+        "genderRules": "Men served first",
+        "taboos": ["Clan totems forbidden"],
+        "specialOccasions": "Celebrations feature palm wine and goat",
+        "hospitality": "Generous to guests"
+      },
+      "traditionalDance": "Kongo dances and rumba",
+      "religion": "Christianity (Catholic majority)",
+      "traditionalReligion": {
+        "name": "Kongo Traditional Religion",
+        "supremeDeity": "Nzambi a Mpungu",
+        "spirits": ["Bakulu (ancestors)", "Bisimbi (nature spirits)"],
+        "practices": ["Ancestral veneration", "Nkisi power objects"],
+        "beliefs": "Same as broader Kongo tradition"
+      },
+      "history": {
+        "origin": "Part of the greater Kongo ethnic group, the Bakongo of Congo-Brazzaville occupied the Pool region, historically central to the Kongo Kingdom.",
+        "colonialEra": "French colonial rule from 1880-1960 separated them from Belgian Congo Kongo.",
+        "independence": "Bakongo leaders like Fulbert Youlou led independence. Political tensions with northern groups have marked post-independence history.",
+        "keyEvents": ["French colonization (1880)", "Independence (1960)", "Political conflicts"]
+      },
+      "language": {
+        "name": "Kikongo/Kituba",
+        "speakers": "~1.5 million",
+        "greeting": "Mbote",
+        "greetingMeaning": "Hello",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Fulbert Youlou", "role": "First President of Congo-Brazzaville", "wikipedia": "https://en.wikipedia.org/wiki/Fulbert_Youlou" },
+        { "name": "Bernard Kolélas", "role": "Opposition leader and Prime Minister", "wikipedia": "https://en.wikipedia.org/wiki/Bernard_Kol%C3%A9las" }
+      ],
+      "sources": [{ "name": "Wikipedia - Kongo people", "url": "https://en.wikipedia.org/wiki/Kongo_people" }],
+      "description": "The Bakongo of Congo-Brazzaville are part of the greater Kongo ethnic group, historically dominant in the country's south and political life.",
+      "relatedTribes": ["kongo", "teke", "vili", "lari"]
+    },
+
+    {
+      "id": "mbochi",
+      "name": "Mbochi",
+      "slug": "mbochi",
+      "countries": ["CG"],
+      "region": "Northern Congo-Brazzaville",
+      "population": "~400,000",
+      "populationPercent": "12%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 0.5, "lng": 16.0 },
+      "counties": ["Cuvette", "Cuvette-Ouest", "Plateaux"],
+      "namePrefixes": ["Ngo", "Obo", "Mbo", "Iko", "Nsa"],
+      "commonNames": {
+        "female": ["Nguesso", "Obongo", "Mboumba", "Ikobo", "Ngatsongo"],
+        "male": ["Sassou", "Nguesso", "Obami", "Itoua", "Ngouabi", "Okamba"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Currently politically dominant",
+        "Northern solidarity",
+        "Military connections",
+        "River people"
+      ],
+      "genderStereotypes": {
+        "male": ["Military and political leaders", "River traders"],
+        "female": ["Agricultural workers", "Fish traders"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were fishermen, hunters, and warriors.",
+          "female": "Women managed agriculture and local trade."
+        },
+        "modern": {
+          "male": "Mbochi men are prominent in military and government.",
+          "female": "Women continue traditional roles while entering education."
+        }
+      },
+      "culturalTraits": [
+        "River-based culture",
+        "Strong fishing traditions",
+        "Relatively egalitarian society",
+        "Northern ethnic solidarity",
+        "Traditional wrestling"
+      ],
+      "funFacts": [
+        "Denis Sassou Nguesso, who has ruled Congo since 1997, is Mbochi",
+        "The Mbochi live along the Alima and Congo rivers",
+        "They are known for their canoe-building skills",
+        "Traditional Mbochi society was relatively decentralized"
+      ],
+      "traditionalFood": {
+        "staples": ["Fish", "Cassava", "Plantains", "Bushmeat"],
+        "beverages": ["Palm wine", "Local beers"],
+        "specialDishes": ["Smoked fish dishes", "Forest game stews", "Cassava preparations"],
+        "description": "Mbochi cuisine centers on river fish and forest products."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Family groups",
+        "genderRules": "Men served first",
+        "taboos": ["Various food taboos by clan"],
+        "specialOccasions": "Festivals feature abundant fish and palm wine",
+        "hospitality": "Visitors well-treated"
+      },
+      "traditionalDance": "Traditional dances at celebrations",
+      "religion": "Christianity, Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Mbochi Traditional Religion",
+        "supremeDeity": "Nzambi (Supreme Creator)",
+        "spirits": ["Nature spirits", "Ancestral spirits"],
+        "practices": ["Ancestral veneration", "Divination", "River rituals"],
+        "beliefs": "Spirits inhabit rivers and forests; ancestors guide the living"
+      },
+      "history": {
+        "origin": "The Mbochi have lived along the Congo and Alima rivers for centuries, developing a river-based culture.",
+        "colonialEra": "French colonial rule grouped them with other northern peoples.",
+        "independence": "Since 1968, Mbochi or Mbochi-allied leaders have dominated Congolese politics (Ngouabi, Sassou Nguesso).",
+        "keyEvents": ["French colonization", "Independence (1960)", "Ngouabi coup (1968)", "Sassou Nguesso rule"]
+      },
+      "language": {
+        "name": "Mbochi",
+        "speakers": "~150,000",
+        "greeting": "Mbote",
+        "greetingMeaning": "Hello",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Denis Sassou Nguesso", "role": "President of Congo-Brazzaville", "wikipedia": "https://en.wikipedia.org/wiki/Denis_Sassou_Nguesso" },
+        { "name": "Marien Ngouabi", "role": "President 1968-1977", "wikipedia": "https://en.wikipedia.org/wiki/Marien_Ngouabi" }
+      ],
+      "sources": [{ "name": "Wikipedia - Mbochi people", "url": "https://en.wikipedia.org/wiki/Mboshi_people" }],
+      "description": "The Mbochi are a river-dwelling people of northern Congo-Brazzaville who have dominated the country's politics since 1968.",
+      "relatedTribes": ["bakongo", "teke", "kouyou"]
+    },
+
+    {
+      "id": "gbaya",
+      "name": "Gbaya",
+      "slug": "gbaya",
+      "youtubeVideoId": "s3VHMQzG5M0",
+      "countries": ["CF", "CM"],
+      "region": "Western CAR and Eastern Cameroon",
+      "population": "~1.5 million",
+      "populationPercent": "33% of CAR",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.5, "lng": 15.5 },
+      "counties": ["Nana-Mambéré", "Mambéré-Kadéï", "Ouham", "Ombella-M'Poko (CAR)", "Adamawa (Cameroon)"],
+      "namePrefixes": ["Za", "Ya", "Ko", "Ngo", "Do", "Ga", "So", "Wa"],
+      "commonNames": {
+        "female": ["Zambo", "Yawa", "Koyo", "Ngoya", "Doyaba", "Gazoua", "Wabela"],
+        "male": ["Boganda", "Kolingba", "Ziguélé", "Yakoma", "Zoumara", "Gbaya", "Waziri"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Fierce independence",
+        "Agricultural expertise",
+        "Forest knowledge",
+        "Warrior tradition",
+        "Egalitarian values"
+      ],
+      "genderStereotypes": {
+        "male": ["Hunters and warriors", "Forest experts", "Community leaders"],
+        "female": ["Agricultural specialists", "Gatherers", "Family managers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were hunters, warriors, and managed external affairs. They cleared forest for farming.",
+          "female": "Women dominated agriculture, gathering, and domestic affairs. They had significant economic independence."
+        },
+        "modern": {
+          "male": "Many men continue farming and hunting. Some pursue education and formal employment.",
+          "female": "Women remain central to agriculture while increasingly pursuing education."
+        }
+      },
+      "culturalTraits": [
+        "Highly egalitarian society - no traditional chiefs",
+        "Expert hunters and gatherers",
+        "Labi initiation ceremonies",
+        "Rich oral tradition",
+        "Sophisticated forest knowledge",
+        "Resistance to centralized authority"
+      ],
+      "funFacts": [
+        "The Gbaya are the largest ethnic group in CAR",
+        "They led one of Central Africa's largest anti-colonial uprisings (Kara War, 1928-1931)",
+        "Gbaya society traditionally had no chiefs - decisions made by consensus",
+        "Barthélémy Boganda, 'Father of CAR,' was Gbaya",
+        "The Labi initiation creates strong bonds between age-mates"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Millet", "Sorghum", "Bushmeat", "Wild plants"],
+        "beverages": ["Palm wine", "Millet beer", "Honey wine"],
+        "specialDishes": ["Gozo (cassava dough)", "Bushmeat stews", "Caterpillars", "Wild yams"],
+        "description": "Gbaya cuisine combines agriculture with hunting and gathering. Wild game and forest products are important alongside cultivated crops."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening meals",
+        "mainMealTime": "Evening after day's work",
+        "eatingStyle": "Family groups eat together; communal sharing",
+        "genderRules": "Generally egalitarian; men and women may eat together",
+        "taboos": ["Various clan-specific prohibitions", "Some foods restricted during initiation"],
+        "specialOccasions": "Large hunts celebrated with communal feasting",
+        "hospitality": "Generosity to guests is valued"
+      },
+      "traditionalDance": "Labi initiation dances and harvest celebrations",
+      "religion": "Christianity, Traditional beliefs, Islam (minority)",
+      "traditionalReligion": {
+        "name": "Gbaya Traditional Religion",
+        "supremeDeity": "So (Supreme God)",
+        "spirits": ["Nature spirits", "Ancestral spirits", "Forest spirits"],
+        "practices": ["Labi initiation", "Divination", "Ancestral veneration", "Hunting rituals"],
+        "beliefs": "So is the distant creator. Spirits inhabit the forest and must be respected. Ancestors watch over the living."
+      },
+      "history": {
+        "origin": "The Gbaya migrated to their current location from the northeast, possibly fleeing Fulani jihads in the 19th century. They settled in the forests of what is now CAR and Cameroon.",
+        "colonialEra": "The Gbaya fiercely resisted French colonization. The Kara War (1928-1931) was one of Central Africa's largest uprisings, brutally suppressed by French forces.",
+        "independence": "Barthélémy Boganda, a Gbaya priest, led CAR's independence movement. He died in a suspicious plane crash in 1959, just before independence.",
+        "keyEvents": ["Migration from northeast (~19th century)", "Kara War (1928-1931)", "Boganda's independence leadership", "Independence (1960)", "Ongoing conflicts"]
+      },
+      "independenceHistory": {
+        "resistance": "The Kara War (1928-1931) was a major anti-colonial uprising. The French used extreme brutality to suppress it, killing thousands.",
+        "role": "Barthélémy Boganda was the 'Father of the Nation' - a priest who fought for independence and equality.",
+        "keyFigures": ["Barthélémy Boganda (independence leader)", "Karnu (Kara War leader)"],
+        "postIndependence": "Gbaya have been central to CAR politics. André Kolingba was president 1981-1993."
+      },
+      "language": {
+        "name": "Gbaya",
+        "speakers": "~1 million",
+        "greeting": "Ké wa?",
+        "greetingMeaning": "How are you?",
+        "family": "Ubangian (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Atlantic-Congo",
+          "branch": "Ubangian",
+          "subBranch": "Gbaya-Manza-Ngbaka",
+          "speakers": "~1 million",
+          "relatedLanguages": ["Manza", "Ngbaka", "Banda"],
+          "migrationHistory": "Gbaya languages spread with migrations from the northeast"
+        }
+      },
+      "famousPeople": [
+        { "name": "Barthélémy Boganda", "role": "Father of the Central African Republic", "wikipedia": "https://en.wikipedia.org/wiki/Barth%C3%A9lemy_Boganda" },
+        { "name": "André Kolingba", "role": "President of CAR (1981-1993)", "wikipedia": "https://en.wikipedia.org/wiki/Andr%C3%A9_Kolingba" }
+      ],
+      "sources": [{ "name": "Wikipedia - Gbaya people", "url": "https://en.wikipedia.org/wiki/Gbaya_people" }, { "name": "Kara War", "url": "https://en.wikipedia.org/wiki/Kongo-Wara_rebellion" }],
+      "description": "The Gbaya are the largest ethnic group in the Central African Republic, known for their egalitarian society, fierce resistance to colonialism, and the leadership of independence figure Barthélémy Boganda.",
+      "relatedTribes": ["banda", "mandjia", "ngbaka", "mboum"]
+    },
+
+    {
+      "id": "banda",
+      "name": "Banda",
+      "slug": "banda",
+      "countries": ["CF", "CD", "SS"],
+      "region": "Central and Eastern CAR",
+      "population": "~1.3 million",
+      "populationPercent": "27% of CAR",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.5, "lng": 20.0 },
+      "counties": ["Ouaka", "Haute-Kotto", "Basse-Kotto", "Mbomou (CAR)"],
+      "namePrefixes": ["Da", "Ga", "Ngu", "Ya", "Ko", "Ba", "Mba"],
+      "commonNames": {
+        "female": ["Dacko", "Ganga", "Nguia", "Yabada", "Kobaya", "Bandama"],
+        "male": ["Bokassa", "Dacko", "Gangala", "Yangongo", "Koita", "Banda"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Central to CAR politics",
+        "Agricultural skills",
+        "Warrior tradition",
+        "Forest expertise",
+        "Resilient people"
+      ],
+      "genderStereotypes": {
+        "male": ["Warriors and hunters", "Political leaders", "Iron workers"],
+        "female": ["Farmers", "Potters", "Market traders"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were hunters, warriors, and iron workers. They managed external relations.",
+          "female": "Women dominated farming, pottery, and local trade."
+        },
+        "modern": {
+          "male": "Men pursue various occupations; some in politics and military.",
+          "female": "Women continue agriculture while accessing education."
+        }
+      },
+      "culturalTraits": [
+        "Skilled iron workers",
+        "Complex initiation systems",
+        "Rich musical tradition",
+        "Agricultural expertise",
+        "Decentralized political organization",
+        "Strong oral traditions"
+      ],
+      "funFacts": [
+        "Jean-Bédel Bokassa, the infamous self-crowned 'Emperor,' was Banda",
+        "David Dacko, CAR's first president, was also Banda",
+        "The Banda were major victims of 19th-century slave raids from the north",
+        "Banda ironworking was renowned throughout the region"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Sorghum", "Millet", "Bushmeat", "Fish"],
+        "beverages": ["Palm wine", "Sorghum beer", "Mead"],
+        "specialDishes": ["Gozo (cassava paste)", "Smoked meat", "Wild vegetable stews"],
+        "description": "Banda cuisine combines farming products with hunted game. Cassava is the main staple."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal family meals",
+        "genderRules": "Men often eat first",
+        "taboos": ["Clan totems forbidden", "Initiation-related food rules"],
+        "specialOccasions": "Celebrations feature meat and palm wine",
+        "hospitality": "Guests receive food and shelter"
+      },
+      "traditionalDance": "Initiation dances and harvest festivals",
+      "religion": "Christianity, Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Banda Traditional Religion",
+        "supremeDeity": "Ngakola (Supreme Being)",
+        "spirits": ["Nature spirits", "Ancestral spirits"],
+        "practices": ["Initiation rites", "Ancestral veneration", "Divination"],
+        "beliefs": "Ancestors and spirits influence daily life; the forest is spiritually powerful"
+      },
+      "history": {
+        "origin": "The Banda are believed to have migrated from the northeast, settling in central CAR over centuries.",
+        "colonialEra": "Banda territory was subject to severe slave raiding before and during early colonial period. French rule brought forced labor.",
+        "independence": "Banda leaders dominated early CAR politics. Bokassa's brutal reign (1966-1979) tarnished the country's reputation.",
+        "keyEvents": ["Slave raid era", "French colonization", "Independence (1960)", "Bokassa regime (1966-79)", "Ongoing conflicts"]
+      },
+      "language": {
+        "name": "Banda languages",
+        "speakers": "~1 million",
+        "greeting": "Baré",
+        "greetingMeaning": "Hello",
+        "family": "Ubangian (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "David Dacko", "role": "First President of CAR", "wikipedia": "https://en.wikipedia.org/wiki/David_Dacko" },
+        { "name": "Jean-Bédel Bokassa", "role": "Self-proclaimed Emperor of CAR", "wikipedia": "https://en.wikipedia.org/wiki/Jean-B%C3%A9del_Bokassa" }
+      ],
+      "sources": [{ "name": "Wikipedia - Banda people", "url": "https://en.wikipedia.org/wiki/Banda_people_(Central_Africa)" }],
+      "description": "The Banda are one of the largest ethnic groups in the Central African Republic, known for their ironworking traditions and complex history including two of CAR's most prominent leaders.",
+      "relatedTribes": ["gbaya", "mandjia", "ngbaka", "zande"]
+    },
+
+    {
+      "id": "mandjia",
+      "name": "Mandjia (Mandja)",
+      "slug": "mandjia",
+      "countries": ["CF"],
+      "region": "Western Central African Republic",
+      "population": "~200,000",
+      "populationPercent": "4% of CAR",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.0, "lng": 17.0 },
+      "counties": ["Ouham", "Ouham-Pendé", "Nana-Grébizi"],
+      "namePrefixes": ["Ma", "Ngu", "Ko", "Da", "Ya"],
+      "commonNames": {
+        "female": ["Manja", "Nguia", "Koya", "Dayaba", "Yangba"],
+        "male": ["Mandja", "Koumba", "Ngueto", "Dakpa", "Yangou"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Farming expertise",
+        "Traditional crafts",
+        "Peaceful reputation",
+        "Strong community bonds"
+      ],
+      "genderStereotypes": {
+        "male": ["Farmers and hunters", "Craftsmen"],
+        "female": ["Farmers", "Potters", "Weavers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men cleared land, hunted, and managed external affairs.",
+          "female": "Women were central to farming, food processing, and domestic life."
+        },
+        "modern": {
+          "male": "Most men continue in agriculture; some in education and trade.",
+          "female": "Women remain agricultural specialists while accessing education."
+        }
+      },
+      "culturalTraits": [
+        "Agricultural expertise",
+        "Traditional pottery",
+        "Initiation ceremonies",
+        "Oral traditions",
+        "Village-based society"
+      ],
+      "funFacts": [
+        "The Mandjia are closely related to the Gbaya linguistically and culturally",
+        "They maintain strong traditional practices despite missionary influence",
+        "Mandjia pottery is known throughout the region"
+      ],
+      "traditionalFood": {
+        "staples": ["Cassava", "Millet", "Sorghum", "Bushmeat"],
+        "beverages": ["Palm wine", "Millet beer"],
+        "specialDishes": ["Cassava dishes", "Game stews", "Wild vegetables"],
+        "description": "Mandjia cuisine is similar to other CAR peoples, centered on cassava and forest products."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Family groups",
+        "genderRules": "Men often served first",
+        "taboos": ["Various traditional prohibitions"],
+        "specialOccasions": "Celebrations with meat and palm wine",
+        "hospitality": "Guests well received"
+      },
+      "traditionalDance": "Initiation and harvest dances",
+      "religion": "Christianity, Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Mandjia Traditional Religion",
+        "supremeDeity": "Supreme Creator",
+        "spirits": ["Nature spirits", "Ancestors"],
+        "practices": ["Initiation", "Ancestral veneration", "Divination"],
+        "beliefs": "Similar to related Gbaya traditions"
+      },
+      "history": {
+        "origin": "The Mandjia are closely related to the Gbaya and share similar migration history from the northeast.",
+        "colonialEra": "French colonial rule affected Mandjia territory with forced labor and taxation.",
+        "independence": "Mandjia have participated in CAR's complex post-independence politics.",
+        "keyEvents": ["Migration from northeast", "French colonization", "Independence (1960)", "Ongoing conflicts"]
+      },
+      "language": {
+        "name": "Mandjia",
+        "speakers": "~200,000",
+        "greeting": "Mo dé",
+        "greetingMeaning": "Hello",
+        "family": "Ubangian (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [],
+      "sources": [{ "name": "Ethnologue - Manza", "url": "https://www.ethnologue.com/language/mzv" }],
+      "description": "The Mandjia are an agricultural people of western CAR, closely related to the Gbaya linguistically and culturally.",
+      "relatedTribes": ["gbaya", "banda", "ngbaka", "mboum"]
     }
   ]
 }
