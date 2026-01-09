@@ -1197,7 +1197,13 @@
         "supremeDeity": "Enkai (also Ngai) - dual-natured god (Enkai Narok - black/benevolent, Enkai Na-nyokie - red/vengeful)",
         "spirits": ["Ancestor spirits", "Cattle spirits", "Laibon (prophets) as spiritual intermediaries"],
         "practices": ["Laibon diviners predict future and heal", "Cattle as sacred gifts from Enkai", "Prayers facing Mt. Kenya or Ol Doinyo Lengai", "Spitting as blessing", "Warriors' transition ceremonies (Eunoto)"],
-        "beliefs": "Enkai gave all cattle to the Maasai at creation; cattle are sacred and central to all rituals; Laibon prophets communicate with Enkai; the sky and certain mountains are sacred"
+        "beliefs": "Enkai gave all cattle to the Maasai at creation; cattle are sacred and central to all rituals; Laibon prophets communicate with Enkai; the sky and certain mountains are sacred",
+        "religiousHistory": {
+          "christianityIntroduced": "1904 (Africa Inland Mission), widespread from 1950s",
+          "introducedBy": "Africa Inland Mission, Catholic missionaries, later evangelical groups",
+          "conversionProcess": "Initial strong resistance as Christianity threatened cattle-centered culture; conversion accelerated post-independence through schools and clinics; many Maasai maintain dual practice with traditional beliefs; Laibon prophets remain influential",
+          "sources": ["Spear, Thomas & Waller, Richard (1993) Being Maasai", "Wikipedia - Maasai people", "AIM International archives"]
+        }
       },
       "history": {
         "origin": "The Maasai are Nilotic people who migrated from the Nile Valley (Sudan) around the 15th century. They moved southward and by the 17th-18th century dominated the East African Rift Valley region.",
@@ -3429,7 +3435,14 @@
         "supremeDeity": "Olodumare (supreme creator, also called Olorun - owner of heaven)",
         "spirits": ["Orishas (deities) - Shango (thunder), Ogun (iron), Yemoja (sea), Oshun (river), Eshu (crossroads)", "Egungun (ancestral spirits)", "Ori (personal divine essence)"],
         "practices": ["Ifá divination by Babalawo priests", "Animal sacrifices (ebo)", "Orisha festivals and possession", "Egungun masquerade for ancestors", "Kola nut offerings"],
-        "beliefs": "Every person has an Ori (destiny) chosen before birth; Orishas are intermediaries to Olodumare; Ifá divination reveals one's path; ancestor spirits (Egungun) protect the living. This religion spread globally through the diaspora as Santeria, Candomblé, and Vodou."
+        "beliefs": "Every person has an Ori (destiny) chosen before birth; Orishas are intermediaries to Olodumare; Ifá divination reveals one's path; ancestor spirits (Egungun) protect the living. This religion spread globally through the diaspora as Santeria, Candomblé, and Vodou.",
+        "religiousHistory": {
+          "christianityIntroduced": "1842 (CMS at Abeokuta), widespread from 1850s",
+          "islamIntroduced": "14th-15th century via Hausa traders, widespread from 1800s",
+          "introducedBy": "Christianity: Church Missionary Society (Henry Townsend, Samuel Ajayi Crowther); Islam: Hausa-Fulani traders and Sokoto Caliphate influence",
+          "conversionProcess": "Christianity spread through liberated slaves returning from Sierra Leone and mission schools; Islam spread from north via trade; both coexist with traditional Orisha worship; many Yoruba practice religious syncretism",
+          "sources": ["Peel, J.D.Y. (2000) Religious Encounter and the Making of the Yoruba", "Wikipedia - Yoruba religion", "Britannica - Yoruba"]
+        }
       },
       "history": {
         "origin": "Yoruba civilization dates back over 2,000 years. According to legend, Oduduwa descended from heaven to create earth at Ile-Ife, founding the Yoruba people.",
@@ -3823,7 +3836,13 @@
         "supremeDeity": "Geno (supreme creator god among pastoral Fulani)",
         "spirits": ["Koodal (ancestral spirits)", "Jinn (nature spirits)", "Cattle spirits honored in rituals"],
         "practices": ["Cattle naming and blessing ceremonies", "Sharo (endurance test of manhood)", "Gerewol male beauty rituals", "Consultation with marabouts (spiritual healers)", "Milk libations and cattle offerings"],
-        "beliefs": "Before Islam, Fulani revered Geno as creator; cattle are sacred wealth with spiritual significance; pulaaku code (patience, self-control, modesty) has spiritual dimensions; some pastoral groups maintain animist practices alongside Islam"
+        "beliefs": "Before Islam, Fulani revered Geno as creator; cattle are sacred wealth with spiritual significance; pulaaku code (patience, self-control, modesty) has spiritual dimensions; some pastoral groups maintain animist practices alongside Islam",
+        "religiousHistory": {
+          "islamIntroduced": "11th century (Takrur kingdom), widespread from 18th century jihads",
+          "introducedBy": "Trans-Saharan traders, later spread by Fulani scholars themselves (Usman dan Fodio, Seku Amadu, El Hadj Umar Tall)",
+          "conversionProcess": "Early Fulani adopted Islam gradually through trade contacts; 18th-19th century Fulani jihads in Nigeria, Guinea, and Mali made them champions of Islamic reform; Wodaabe and some pastoral groups retain pre-Islamic practices",
+          "sources": ["Robinson, David (2004) Muslim Societies in African History", "Trimingham - History of Islam in West Africa", "Wikipedia - Fulani people"]
+        }
       },
       "history": {
         "origin": "The Fulani origin is debated - possibly from Senegambia or the Middle East. They spread across the Sahel over centuries as cattle herders.",
@@ -4469,7 +4488,14 @@
         "supremeDeity": "Waaqa (sky god, supreme creator of all)",
         "spirits": ["Ayyaana (spirits inhabiting nature)", "Ateetee (women's protective spirit)", "Ancestor spirits"],
         "practices": ["Irreecha thanksgiving festival at lakes", "Gadaa democratic governance system", "Qaalluu priestly lineages", "Coffee ceremonies", "Blessings at sacred sycamore trees (Odaa)"],
-        "beliefs": "Waaqa created all things and maintains cosmic balance (safuu); breaking safuu causes misfortune; Irreecha celebrates harmony between humans, nature, and Waaqa"
+        "beliefs": "Waaqa created all things and maintains cosmic balance (safuu); breaking safuu causes misfortune; Irreecha celebrates harmony between humans, nature, and Waaqa",
+        "religiousHistory": {
+          "islamIntroduced": "10th century (coastal trade), widespread from 16th century",
+          "christianityIntroduced": "19th century (Swedish Evangelical Mission, 1866)",
+          "introducedBy": "Islam: Somali and Arab traders; Christianity: Swedish Evangelical Mission, later Catholics and Protestants",
+          "conversionProcess": "Eastern Oromo adopted Islam through Harar trade contacts; Christianity spread through mission schools from late 1800s; Waaqeffanna revival since 1990s with millions celebrating Irreecha; today roughly 48% Muslim, 31% Orthodox, 18% Protestant, 3% traditional",
+          "sources": ["Hassen, Mohammed (1990) The Oromo of Ethiopia", "Wikipedia - Oromo people", "Bartels, Lambert (1983) Oromo Religion"]
+        }
       },
       "history": {
         "origin": "The Oromo are Cushitic people who have lived in the Horn of Africa for millennia. They expanded significantly in the 16th century across what is now Ethiopia.",

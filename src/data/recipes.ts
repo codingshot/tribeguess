@@ -5246,6 +5246,359 @@ export const recipes: Recipe[] = [
       "The orange oil layer is a sign it's done",
       "Can substitute with palm oil + peanut butter"
     ]
+  },
+
+  // ============ AMHARA (ETHIOPIA) RECIPES ============
+  {
+    id: "doro-wot",
+    name: "Doro Wot (Ethiopian Chicken Stew)",
+    tribeSlug: "amhara",
+    tribeName: "Amhara",
+    category: "special",
+    description: "Ethiopia's national dish - spicy chicken stew slow-cooked in berbere spice and served with injera. The pride of Ethiopian cuisine.",
+    culturalSignificance: "Doro Wot is the celebratory dish for Ethiopian holidays, especially Christmas (Genna) and Easter (Fasika). It represents the pinnacle of Ethiopian cooking.",
+    historicalContext: "This dish has been prepared in the Ethiopian highlands for centuries. The complex berbere spice blend can contain up to 16 spices, and family recipes are closely guarded secrets.",
+    youtubeVideoId: "Bz1x3khJvI8",
+    prepTime: "1 hour",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Chicken", amount: "1 whole", notes: "Cut into pieces" },
+      { item: "Red onions", amount: "6 large", notes: "Finely chopped (no oil used initially!)" },
+      { item: "Berbere spice", amount: "1/2 cup" },
+      { item: "Niter kibbeh (spiced butter)", amount: "1/2 cup" },
+      { item: "Eggs", amount: "6", notes: "Hard-boiled and scored" },
+      { item: "Garlic", amount: "8 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "2 tablespoons", notes: "Fresh, minced" },
+      { item: "Chicken stock", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Marinate chicken in lemon juice and salt for 30 minutes.",
+      "Dry-sauté onions in pot for 30+ minutes until deeply caramelized.",
+      "Add niter kibbeh and let onions absorb.",
+      "Add berbere, garlic, and ginger. Cook 5 minutes.",
+      "Add chicken stock and stir well.",
+      "Add chicken pieces, cover and simmer 45 minutes.",
+      "Score hard-boiled eggs and add to stew.",
+      "Simmer another 15 minutes.",
+      "Serve over injera with boiled egg per person."
+    ],
+    tips: [
+      "The onions must cook WITHOUT oil first - this is key",
+      "Authentic berbere makes all the difference",
+      "The eggs should absorb the red color"
+    ]
+  },
+  {
+    id: "injera",
+    name: "Injera (Ethiopian Sourdough Flatbread)",
+    tribeSlug: "amhara",
+    tribeName: "Amhara",
+    category: "staple",
+    description: "Spongy, sour flatbread made from teff flour. The foundation of every Ethiopian meal - both plate and utensil.",
+    culturalSignificance: "Injera is sacred in Ethiopian culture. Meals are served on it, and pieces are torn to scoop up stews. Eating from shared injera builds community.",
+    historicalContext: "Teff has been cultivated in Ethiopia for over 3,000 years. Injera's unique fermentation process was developed in the highlands and is found nowhere else in Africa.",
+    youtubeVideoId: "4qEJbGc9Id8",
+    prepTime: "3 days (fermentation)",
+    cookTime: "30 minutes",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Teff flour", amount: "3 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Mix teff flour and water in large bowl.",
+      "Cover loosely and ferment 2-3 days at room temperature.",
+      "Batter should be bubbly and sour-smelling.",
+      "Stir well before cooking.",
+      "Heat large non-stick pan (mitad traditionally).",
+      "Pour batter in spiral from outside to center.",
+      "Cover and cook until bubbles form and top sets.",
+      "Do not flip - remove when edges lift.",
+      "Stack on plate and keep covered."
+    ],
+    tips: [
+      "100% teff is traditional; some use teff-wheat mix",
+      "Fermentation time affects sourness",
+      "The surface should have 'eyes' (small holes)"
+    ]
+  },
+  {
+    id: "shiro-wot",
+    name: "Shiro Wot (Chickpea Stew)",
+    tribeSlug: "amhara",
+    tribeName: "Amhara",
+    category: "staple",
+    description: "Silky, spiced chickpea stew that's the everyday comfort food of Ethiopia. Essential during fasting periods.",
+    culturalSignificance: "Shiro is eaten during the 200+ fasting days when Ethiopian Orthodox Christians abstain from meat. It's nutritious, affordable, and universally loved.",
+    historicalContext: "Ethiopian Orthodox fasting traditions created a rich vegan cuisine. Shiro represents this culinary creativity - simple ingredients transformed into something sublime.",
+    prepTime: "10 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Shiro powder (roasted chickpea flour)", amount: "1 cup" },
+      { item: "Red onion", amount: "1 large", notes: "Finely chopped" },
+      { item: "Vegetable oil", amount: "1/4 cup" },
+      { item: "Berbere spice", amount: "2 tablespoons" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Water", amount: "3 cups" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Sauté onion in oil until soft.",
+      "Add berbere and garlic, cook 2 minutes.",
+      "Slowly add water and bring to simmer.",
+      "Whisk in shiro powder gradually to prevent lumps.",
+      "Simmer 20 minutes, stirring often.",
+      "Add more water for desired consistency.",
+      "Season with salt.",
+      "Serve over injera."
+    ],
+    tips: [
+      "Pre-mixed shiro powder includes spices",
+      "Should be smooth like thick soup",
+      "Can add tomato for tegabino variation"
+    ]
+  },
+
+  // ============ OROMO (ETHIOPIA) RECIPES ============
+  {
+    id: "chechebsa",
+    name: "Chechebsa (Kita Fir-Fir)",
+    tribeSlug: "oromo",
+    tribeName: "Oromo",
+    category: "staple",
+    description: "Traditional Oromo breakfast - shredded flatbread tossed with spiced butter and berbere. Pure comfort food.",
+    culturalSignificance: "Chechebsa is the traditional Oromo breakfast, often prepared for guests and special mornings. It's a symbol of Oromo hospitality.",
+    historicalContext: "This dish reflects the pastoral and agricultural heritage of the Oromo. Simple ingredients - bread, butter, spice - become extraordinary through preparation.",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Flour", amount: "2 cups" },
+      { item: "Water", amount: "1 cup" },
+      { item: "Niter kibbeh (spiced butter)", amount: "1/2 cup" },
+      { item: "Berbere", amount: "2 tablespoons" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Honey", amount: "Optional, for serving" }
+    ],
+    instructions: [
+      "Mix flour, water, and salt into soft dough.",
+      "Roll thin and cook on dry pan (like thick pancake).",
+      "Tear cooked bread into bite-sized pieces.",
+      "Melt niter kibbeh in pan.",
+      "Add berbere to butter, mix well.",
+      "Add torn bread pieces.",
+      "Toss until bread absorbs spiced butter.",
+      "Serve hot, optionally with honey."
+    ],
+    tips: [
+      "The bread should be slightly crispy in places",
+      "Niter kibbeh adds essential flavor",
+      "Some serve with yogurt on the side"
+    ]
+  },
+  {
+    id: "buna-coffee-ceremony",
+    name: "Buna (Oromo Coffee Ceremony)",
+    tribeSlug: "oromo",
+    tribeName: "Oromo",
+    category: "beverage",
+    description: "The original coffee ceremony from the birthplace of coffee. Three rounds of freshly roasted and brewed coffee.",
+    culturalSignificance: "Coffee originated in Oromia, and the Oromo have been drinking it for over 1,000 years. The ceremony is a spiritual and social ritual.",
+    historicalContext: "Legend says an Oromo goatherd named Kaldi discovered coffee when his goats became energetic after eating coffee berries. The Oromo developed coffee culture before it spread globally.",
+    prepTime: "15 minutes",
+    cookTime: "45 minutes (for full ceremony)",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Green coffee beans", amount: "1/2 cup" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Sugar", amount: "To taste" },
+      { item: "Incense", amount: "Traditional frankincense" },
+      { item: "Popcorn or bread", amount: "Optional accompaniment" }
+    ],
+    instructions: [
+      "Wash green coffee beans.",
+      "Roast beans in pan over coals, shaking constantly.",
+      "When dark and aromatic, walk around to share the smell.",
+      "Grind roasted beans with mortar and pestle.",
+      "Add ground coffee to jebena (clay pot) with water.",
+      "Boil on coals until foam rises.",
+      "Pour first round (abol) into small cups.",
+      "Add water and repeat for second (tona) and third (baraka) rounds."
+    ],
+    tips: [
+      "The roasting smell is part of the ceremony",
+      "Each round gets progressively weaker",
+      "Incense burning is traditional",
+      "Accept at least one cup - it's rude to refuse"
+    ]
+  },
+
+  // ============ SWAHILI (COASTAL EAST AFRICA) RECIPES ============
+  {
+    id: "pilau",
+    name: "Pilau (Swahili Spiced Rice)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "special",
+    description: "Fragrant spiced rice that's the crown jewel of Swahili cuisine. A blend of African, Arab, and Indian influences.",
+    culturalSignificance: "Pilau is served at weddings, Eid celebrations, and important gatherings across the Swahili coast. Each family has their own spice blend.",
+    historicalContext: "Pilau reflects centuries of Indian Ocean trade. Arab and Persian traders brought rice and spices; the Swahili created something uniquely African from these influences.",
+    youtubeVideoId: "UHdPJ3dqxjA",
+    prepTime: "30 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Basmati rice", amount: "2 cups" },
+      { item: "Beef or chicken", amount: "500g", notes: "Cubed" },
+      { item: "Pilau masala", amount: "2 tablespoons" },
+      { item: "Onions", amount: "2 large", notes: "Sliced thin" },
+      { item: "Garlic", amount: "6 cloves" },
+      { item: "Tomatoes", amount: "2 medium" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Stock", amount: "4 cups" },
+      { item: "Whole spices", amount: "Cumin, cardamom, cinnamon, cloves" }
+    ],
+    instructions: [
+      "Fry onions in oil until deeply browned.",
+      "Add whole spices and fry 1 minute.",
+      "Add meat and brown on all sides.",
+      "Add tomatoes, garlic, and pilau masala.",
+      "Add stock and simmer until meat is tender.",
+      "Add washed rice.",
+      "Cover tightly and cook on low heat.",
+      "When water is absorbed, fluff with fork.",
+      "Let rest 10 minutes before serving."
+    ],
+    tips: [
+      "Browning onions properly is crucial",
+      "Don't stir rice once added",
+      "Pilau masala can be bought or made fresh"
+    ]
+  },
+  {
+    id: "biryani-swahili",
+    name: "Swahili Biryani",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "special",
+    description: "Layered rice and meat dish with East African coastal flair. More colorful and aromatic than subcontinental versions.",
+    culturalSignificance: "Biryani came to the Swahili coast via Indian Ocean trade and became a Swahili specialty. It's the ultimate celebration dish.",
+    historicalContext: "Mombasa and Lamu were major Indian Ocean ports. Biryani traveled from Persia through India to East Africa, evolving along the way.",
+    youtubeVideoId: "b6kqhpzxw-0",
+    prepTime: "1 hour",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Basmati rice", amount: "3 cups" },
+      { item: "Chicken or goat", amount: "1 kg" },
+      { item: "Yogurt", amount: "1 cup" },
+      { item: "Onions", amount: "4 large" },
+      { item: "Tomatoes", amount: "3 medium" },
+      { item: "Biryani spice mix", amount: "3 tablespoons" },
+      { item: "Ghee", amount: "1/2 cup" },
+      { item: "Saffron or food color", amount: "For coloring rice" },
+      { item: "Fried onions", amount: "For topping" }
+    ],
+    instructions: [
+      "Marinate meat in yogurt and spices for 1 hour.",
+      "Fry onions until crispy, reserve for topping.",
+      "Cook meat with tomatoes until tender.",
+      "Par-boil rice until 70% done.",
+      "Layer meat and rice in pot.",
+      "Add saffron-soaked milk on top.",
+      "Seal pot with foil and lid.",
+      "Cook on very low heat (dum) for 30 minutes.",
+      "Mix gently and top with fried onions."
+    ],
+    tips: [
+      "Dum cooking (low heat, sealed pot) is essential",
+      "Potato slices at bottom prevent burning",
+      "Serve with kachumbari salad"
+    ]
+  },
+  {
+    id: "mahamri",
+    name: "Mahamri (Swahili Donuts)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "snack",
+    description: "Cardamom-scented fried dough triangles. The beloved breakfast and tea-time treat of the Swahili coast.",
+    culturalSignificance: "Mahamri are sold on every Swahili street corner, especially during Ramadan. They're the perfect accompaniment to spiced chai.",
+    historicalContext: "This treat shows Indian and Arab influences on Swahili cuisine. Cardamom arrived via Indian Ocean trade and became essential to coastal cooking.",
+    youtubeVideoId: "bD_5xWW1LlI",
+    prepTime: "2 hours (rising)",
+    cookTime: "20 minutes",
+    servings: 12,
+    difficulty: "medium",
+    ingredients: [
+      { item: "All-purpose flour", amount: "3 cups" },
+      { item: "Coconut milk", amount: "1 cup" },
+      { item: "Sugar", amount: "1/2 cup" },
+      { item: "Yeast", amount: "1 tablespoon" },
+      { item: "Cardamom powder", amount: "1 teaspoon" },
+      { item: "Egg", amount: "1" },
+      { item: "Oil for frying", amount: "As needed" }
+    ],
+    instructions: [
+      "Warm coconut milk and dissolve sugar.",
+      "Add yeast and let foam for 5 minutes.",
+      "Mix flour and cardamom.",
+      "Add yeast mixture and egg, knead to soft dough.",
+      "Cover and let rise 1-2 hours until doubled.",
+      "Roll out and cut into triangles.",
+      "Deep fry until golden brown.",
+      "Drain and serve warm."
+    ],
+    tips: [
+      "Coconut milk makes them extra fragrant",
+      "Don't overcrowd the frying pan",
+      "Best eaten fresh and warm"
+    ]
+  },
+  {
+    id: "wali-wa-nazi",
+    name: "Wali wa Nazi (Coconut Rice)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "staple",
+    description: "Creamy coconut-infused rice that's a staple of the Swahili coast. Simple yet incredibly flavorful.",
+    culturalSignificance: "Wali wa nazi accompanies almost every coastal meal. The coconut palms that line the coast provide the essential ingredient.",
+    historicalContext: "Coconut has been central to Swahili cuisine for centuries. Before refrigeration, coconut milk was freshly pressed daily.",
+    prepTime: "10 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Rice", amount: "2 cups" },
+      { item: "Coconut milk", amount: "2 cups" },
+      { item: "Water", amount: "1 cup" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Wash rice until water runs clear.",
+      "Combine coconut milk and water in pot.",
+      "Add salt and bring to boil.",
+      "Add rice and stir once.",
+      "Cover and reduce to very low heat.",
+      "Cook 20 minutes until all liquid absorbed.",
+      "Fluff with fork and serve."
+    ],
+    tips: [
+      "Fresh coconut milk is best",
+      "Don't lift lid while cooking",
+      "Pairs perfectly with fish curry"
+    ]
   }
 ];
 
