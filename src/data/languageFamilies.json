@@ -1003,6 +1003,198 @@
         "culturalExports": ["Maasai warrior culture (global icon)", "Kalenjin running dominance", "Cattle raiding traditions", "Elaborate beadwork"],
         "diasporaInfluence": "Obama family (Luo), Kenyan runners worldwide, Maasai cultural tourism"
       }
+    },
+    {
+      "id": "songhai",
+      "slug": "songhai",
+      "name": "Songhai",
+      "alternateNames": ["Songhay", "Sonrai", "Songay"],
+      "totalSpeakers": "6+ million",
+      "numberOfLanguages": "10+",
+      "geographicSpread": "Niger River Valley - Mali, Niger, Burkina Faso, Benin, Nigeria",
+      "color": "from-amber-600 to-yellow-500",
+      "description": "The language of one of Africa's greatest empires - the Songhai Empire that dominated West Africa in the 15th-16th centuries. Today spoken along the Niger River from Timbuktu to Nigeria.",
+      "overview": "Songhai languages are the linguistic legacy of the mighty Songhai Empire, which at its height controlled the trans-Saharan trade routes and made Timbuktu one of the world's great centers of learning. The Songhai people built upon the earlier Mali Empire's foundations and created an even larger realm. Today, Songhai languages remain important in the Niger River valley, with Zarma (Djerma) being a major language in Niger's capital Niamey and surrounding areas.",
+      "characteristics": [
+        {
+          "name": "SOV Word Order",
+          "description": "Subject-Object-Verb word order, placing the verb at the end of sentences - different from many African languages."
+        },
+        {
+          "name": "Postpositions",
+          "description": "Uses postpositions (after nouns) rather than prepositions, following the head-final pattern."
+        },
+        {
+          "name": "Tonal System",
+          "description": "Two-tone system distinguishing high and low tones to differentiate words and grammatical functions."
+        },
+        {
+          "name": "Noun Suffixes",
+          "description": "Grammatical relationships marked by suffixes on nouns, including definite articles and plurals."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Arabic script used during Songhai Empire era for scholarly and religious texts in Timbuktu",
+        "modern": "Latin alphabet with special characters for sounds not in European languages; some Arabic script use continues",
+        "examples": [
+          { "script": "Latin (Zarma)", "text": "Fofo", "meaning": "Hello", "pronunciation": "FOH-foh" },
+          { "script": "Latin (Koyraboro Senni)", "text": "Mate ni go?", "meaning": "How are you?", "pronunciation": "MAH-teh nee goh" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Fofo", "language": "Zarma", "meaning": "Hello", "pronunciation": "FOH-foh" },
+        { "phrase": "Mate ni go?", "language": "Zarma", "meaning": "How are you?", "pronunciation": "MAH-teh nee goh" },
+        { "phrase": "Baani samay", "language": "Zarma", "meaning": "Good morning", "pronunciation": "BAH-nee sah-MAY" },
+        { "phrase": "Kala a tonton", "language": "Zarma", "meaning": "Thank you", "pronunciation": "KAH-lah ah tohn-TOHN" },
+        { "phrase": "Ay ma fonda", "language": "Zarma", "meaning": "I don't understand", "pronunciation": "eye mah FOHN-dah" },
+        { "phrase": "Woo", "language": "Songhai Proper", "meaning": "Yes", "pronunciation": "woh" }
+      ],
+      "timeline": [
+        { "year": -100, "event": "Proto-Songhai speakers settle along the middle Niger River", "significance": "Origins of Songhai culture" },
+        { "year": 800, "event": "Songhai establish the city-state of Gao", "significance": "Foundation of Songhai civilization" },
+        { "year": 1009, "event": "King Kossoi converts to Islam", "significance": "Islam becomes state religion" },
+        { "year": 1375, "event": "Gao conquered by Mali Empire", "significance": "Songhai under Malian rule" },
+        { "year": 1464, "event": "Sunni Ali begins Songhai Empire expansion", "significance": "Rise of independent Songhai Empire" },
+        { "year": 1493, "event": "Askia Muhammad takes power, golden age begins", "significance": "Peak of Songhai learning and trade" },
+        { "year": 1591, "event": "Moroccan army defeats Songhai at Tondibi", "significance": "Fall of Songhai Empire" },
+        { "year": 1900, "event": "French colonial rule established", "significance": "Colonial period begins" },
+        { "year": 1960, "event": "Niger and Mali gain independence", "significance": "Modern Songhai identity emerges" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Northern Songhai",
+          "slug": "northern-songhai",
+          "speakers": "1+ million",
+          "languages": "5+",
+          "description": "Languages of the Saharan trade routes including Tadaksahak",
+          "notableLanguages": ["Tadaksahak", "Tasawaq", "Korandje"]
+        },
+        {
+          "name": "Southern Songhai",
+          "slug": "southern-songhai",
+          "speakers": "5+ million",
+          "languages": "5+",
+          "description": "Major languages of the Niger River valley including Zarma",
+          "notableLanguages": ["Zarma/Djerma", "Koyraboro Senni (Gao)", "Koyra Chiini (Timbuktu)", "Dendi"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Nilo-Saharan (debated)", "relationship": "Songhai is often classified within Nilo-Saharan but some linguists consider it an isolate", "sharedFeatures": "Some vocabulary similarities with Saharan languages" },
+        { "family": "Mande (contact)", "relationship": "Centuries of contact with Mande-speaking neighbors", "sharedFeatures": "Borrowed vocabulary, shared cultural terms" },
+        { "family": "Arabic (contact)", "relationship": "Heavy Islamic influence during empire era", "sharedFeatures": "Many Arabic loanwords for religion, governance, trade" }
+      ],
+      "uniqueFeatures": [
+        "SOV (Subject-Object-Verb) word order - rare in Africa",
+        "Postpositions instead of prepositions",
+        "Rich oral history traditions (griots/jesere)",
+        "Complex verbal morphology with many suffixes",
+        "Strong connection to Islamic scholarly tradition (Timbuktu manuscripts)"
+      ],
+      "historicalInfluence": {
+        "empires": ["Songhai Empire (1464-1591)", "Dendi Kingdom", "Dosso Sultanate"],
+        "culturalExports": ["Timbuktu scholarly tradition", "Trans-Saharan trade practices", "Islamic jurisprudence (Sankore University)", "Griot traditions"],
+        "diasporaInfluence": "Songhai trade diaspora across Sahel, Timbuktu's legacy as center of African Islamic learning, manuscripts preserved worldwide"
+      }
+    },
+    {
+      "id": "mande",
+      "slug": "mande",
+      "name": "Mande",
+      "alternateNames": ["Mandé", "Mandingo"],
+      "totalSpeakers": "40+ million",
+      "numberOfLanguages": "75+",
+      "geographicSpread": "West Africa - Mali, Guinea, Senegal, Gambia, Sierra Leone, Liberia, Ivory Coast",
+      "color": "from-green-600 to-emerald-500",
+      "description": "The language family of the great Mali Empire and its legendary emperor Mansa Musa. Mande languages spread across West Africa through trade, migration, and the influence of medieval African empires.",
+      "overview": "Mande languages are spoken by the descendants of one of Africa's most influential civilizations. The Mali Empire (1235-1600) spread Mande languages, Islam, and trade networks across West Africa. Mande peoples developed the N'Ko script in 1949, one of Africa's most successful modern writing systems. The griot tradition of oral historians and musicians remains central to Mande culture today.",
+      "characteristics": [
+        {
+          "name": "SOV Word Order",
+          "description": "Subject-Object-Verb word order - the verb comes at the end of sentences, unlike most Niger-Congo languages."
+        },
+        {
+          "name": "Tone Systems",
+          "description": "Two or three tones distinguish words. Tonal melodies also carry grammatical information."
+        },
+        {
+          "name": "Noun-Adjective Order",
+          "description": "Adjectives typically follow nouns, as in 'house big' rather than 'big house'."
+        },
+        {
+          "name": "Postpositions",
+          "description": "Uses postpositions after nouns rather than prepositions before them."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Arabic script (Ajami) used for religious and administrative texts since the Mali Empire",
+        "modern": "N'Ko script (invented 1949 by Solomana Kante), Latin alphabet widely used, Arabic continues in Islamic contexts",
+        "examples": [
+          { "script": "N'Ko", "text": "ߒߞߏ", "meaning": "I say (the language's name)", "pronunciation": "n-KOH" },
+          { "script": "Latin (Mandinka)", "text": "I be di?", "meaning": "How are you?", "pronunciation": "ee beh DEE" },
+          { "script": "Latin (Bambara)", "text": "I ni ce", "meaning": "Hello (to one person)", "pronunciation": "ee nee CHEH" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "I ni ce", "language": "Bambara", "meaning": "Hello (to one person)", "pronunciation": "ee nee CHEH" },
+        { "phrase": "I ni sogoma", "language": "Bambara", "meaning": "Good morning", "pronunciation": "ee nee soh-GOH-mah" },
+        { "phrase": "I ni baara", "language": "Bambara", "meaning": "Thank you for your work", "pronunciation": "ee nee BAH-rah" },
+        { "phrase": "I be di?", "language": "Mandinka", "meaning": "How are you?", "pronunciation": "ee beh DEE" },
+        { "phrase": "Abaraka", "language": "Mandinka", "meaning": "Thank you", "pronunciation": "ah-bah-RAH-kah" },
+        { "phrase": "A be ñɔɔ le", "language": "Dyula", "meaning": "Hello", "pronunciation": "ah beh NYOH leh" }
+      ],
+      "timeline": [
+        { "year": 500, "event": "Proto-Mande speakers establish along the Niger River", "significance": "Origins of Mande civilization" },
+        { "year": 1235, "event": "Sundiata Keita founds the Mali Empire", "significance": "Mande languages gain imperial prestige" },
+        { "year": 1312, "event": "Mansa Musa begins reign", "significance": "Mali becomes world's richest empire" },
+        { "year": 1324, "event": "Mansa Musa's famous pilgrimage to Mecca", "significance": "Mande culture gains global attention" },
+        { "year": 1500, "event": "Mali Empire declines, successor states emerge", "significance": "Mande diaspora spreads further" },
+        { "year": 1800, "event": "Mande traders establish networks across West Africa", "significance": "Dyula becomes major trade language" },
+        { "year": 1949, "event": "Solomana Kante creates N'Ko script", "significance": "Pan-Mande literacy movement begins" },
+        { "year": 2000, "event": "N'Ko gains digital support (Unicode)", "significance": "Modern revival of indigenous script" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Western Mande",
+          "slug": "western-mande",
+          "speakers": "30+ million",
+          "languages": "40+",
+          "description": "Major languages of the Mali Empire heartland",
+          "notableLanguages": ["Mandinka", "Bambara", "Dyula/Jula", "Soninke", "Susu"]
+        },
+        {
+          "name": "Eastern Mande",
+          "slug": "eastern-mande",
+          "speakers": "5+ million",
+          "languages": "20+",
+          "description": "Languages of the eastern Mande region",
+          "notableLanguages": ["Busa", "Samo", "Mano", "Dan"]
+        },
+        {
+          "name": "Southern Mande",
+          "slug": "southern-mande",
+          "speakers": "2+ million",
+          "languages": "15+",
+          "description": "Forest region languages of Liberia and Ivory Coast",
+          "notableLanguages": ["Kpelle", "Loma", "Mende", "Vai"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Niger-Congo (parent)", "relationship": "Mande is a major branch of Niger-Congo, though its exact position is debated", "sharedFeatures": "Some shared vocabulary with other Niger-Congo branches" },
+        { "family": "Atlantic (contact)", "relationship": "Centuries of geographic contact in Senegambia", "sharedFeatures": "Borrowed vocabulary, shared cultural terms" },
+        { "family": "Arabic (influence)", "relationship": "Islamic influence since 11th century", "sharedFeatures": "Many Arabic loanwords for religion, learning, trade" }
+      ],
+      "uniqueFeatures": [
+        "N'Ko script - successful modern African writing system",
+        "SOV word order (rare in Niger-Congo)",
+        "Griot tradition (jeli) - hereditary oral historians and musicians",
+        "Intricate tonal grammar systems",
+        "Strong association with trans-Saharan gold trade"
+      ],
+      "historicalInfluence": {
+        "empires": ["Mali Empire (1235-1600)", "Ghana Empire (300-1200)", "Samori Ture's Empire (1878-1898)"],
+        "culturalExports": ["Griot traditions (jeli)", "Kora and balafon music", "N'Ko script", "Islam in West Africa", "Gold mining techniques"],
+        "diasporaInfluence": "Mandinka influence in Gambia/Senegal, Dyula trade diaspora across Sahel, Mande music influences global music (Ali Farka Touré, Salif Keita)"
+      }
     }
   ]
 }
