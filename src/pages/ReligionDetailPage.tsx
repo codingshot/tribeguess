@@ -8,8 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   ArrowLeft, Sparkles, BookOpen, Users, ExternalLink, 
   Globe, Church, Star, Heart, Scroll, TreePine, Mountain,
-  ChevronRight, Play
+  ChevronRight, Play, Scale
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { findReligionByName } from "@/data/traditionalReligions";
 
@@ -107,6 +108,12 @@ export default function ReligionDetailPage() {
                 <span>{religion.estimatedFollowers}</span>
               </div>
             </div>
+            <Link to={`/religion-compare?ids=${religion.id}`} className="mt-4 inline-block">
+              <Button variant="secondary" size="sm" className="gap-2">
+                <Scale className="w-4 h-4" />
+                Compare with others
+              </Button>
+            </Link>
           </header>
 
           {/* Video Section */}
@@ -426,14 +433,21 @@ export default function ReligionDetailPage() {
                       .filter(r => r.id !== religion.id)
                       .slice(0, 4)
                       .map((r) => (
-                        <Link 
-                          key={r.id} 
-                          to={`/religion/${r.id}`}
-                          className="flex items-center justify-between p-2 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors text-sm"
-                        >
-                          <span>{r.name}</span>
-                          <ChevronRight className="w-4 h-4 text-muted-foreground" />
-                        </Link>
+                        <div key={r.id} className="flex items-center justify-between p-2 bg-secondary rounded-lg text-sm">
+                          <Link 
+                            to={`/religion/${r.id}`}
+                            className="hover:text-primary transition-colors flex-1"
+                          >
+                            {r.name}
+                          </Link>
+                          <Link
+                            to={`/religion-compare?ids=${religion.id},${r.id}`}
+                            className="text-muted-foreground hover:text-primary p-1"
+                            title={`Compare with ${r.name}`}
+                          >
+                            <Scale className="w-4 h-4" />
+                          </Link>
+                        </div>
                       ))}
                   </div>
                   <Link 

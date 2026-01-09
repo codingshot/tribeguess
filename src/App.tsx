@@ -17,6 +17,7 @@ import Recipes from "./pages/Recipes";
 import ReligionsPage from "./pages/ReligionsPage";
 import ReligionTimeline from "./pages/ReligionTimeline";
 import ReligionDetailPage from "./pages/ReligionDetailPage";
+import ReligionCompare from "./pages/ReligionCompare";
 import IngredientPage from "./pages/IngredientPage";
 import NotFound from "./pages/NotFound";
 
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/recipe/:id" element={<RecipePage />} />
             <Route path="/religions" element={<ReligionsPage />} />
             <Route path="/religion/:id" element={<ReligionDetailPage />} />
+            <Route path="/religion-compare" element={<ReligionCompare />} />
             <Route path="/religion-timeline" element={<ReligionTimeline />} />
             <Route path="/ingredient/:id" element={<IngredientPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
