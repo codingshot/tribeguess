@@ -1,12 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getRecipeById, getRecipesByTribe, getAllRecipes, type Recipe } from '@/data/recipes';
-import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed } from 'lucide-react';
+import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed, Languages } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useMemo } from 'react';
+import { getAllTribes } from '@/lib/tribeDetection';
+import languageFamiliesData from '@/data/languageFamilies.json';
 
 const categoryEmoji: Record<string, string> = {
   staple: '🍚',
@@ -33,6 +35,26 @@ export default function RecipePage() {
       .filter(r => r.id !== recipe.id && r.tribeSlug !== recipe.tribeSlug && r.category === recipe.category)
       .slice(0, 4);
   }, [recipe, allRecipes]);
+
+  // Find the language family for this tribe's recipe
+  const tribeLanguageFamily = useMemo(() => {
+    if (!recipe) return null;
+    const allTribes = getAllTribes();
+    const tribe = allTribes.find(t => t.slug === recipe.tribeSlug);
+    if (!tribe) return null;
+    
+    const tribeFamily = (tribe as any).language?.family?.toLowerCase() || '';
+    
+    // Find matching language family
+    return languageFamiliesData.languageFamilies.find(family => {
+      const familyId = family.id.toLowerCase();
+      const familyName = family.name.toLowerCase();
+      if (tribeFamily.includes(familyId) || tribeFamily.includes(familyName)) return true;
+      return family.subFamilies.some((sf: any) => 
+        tribeFamily.includes(sf.slug.toLowerCase()) || tribeFamily.includes(sf.name.toLowerCase())
+      );
+    });
+  }, [recipe]);
 
   if (!recipe) {
     // Show recipe not found with suggestions
@@ -242,11 +264,31 @@ export default function RecipePage() {
 
         {/* Historical Context */}
         {recipe.historicalContext && (
-          <section className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8">
+          <section className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-6">
             <h2 className="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center gap-2">
               <History className="w-4 h-4" /> Historical Background
             </h2>
             <p className="text-sm text-amber-700 dark:text-amber-300">{recipe.historicalContext}</p>
+          </section>
+        )}
+
+        {/* Language Family Cross-Link */}
+        {tribeLanguageFamily && (
+          <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-8">
+            <h2 className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center gap-2">
+              <Languages className="w-4 h-4" /> Language & Culture
+            </h2>
+            <p className="text-sm text-blue-700 dark:text-blue-300 mb-3">
+              The {recipe.tribeName} people speak a language from the {tribeLanguageFamily.name} family, 
+              with {tribeLanguageFamily.totalSpeakers} speakers across {tribeLanguageFamily.geographicSpread.split(' - ')[0]}.
+            </p>
+            <Link 
+              to={`/languages/${tribeLanguageFamily.slug}`}
+              className="inline-flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+            >
+              <Languages className="w-4 h-4" />
+              Explore {tribeLanguageFamily.name} Language Family →
+            </Link>
           </section>
         )}
 

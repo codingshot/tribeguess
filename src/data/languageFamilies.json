@@ -1240,7 +1240,13 @@
         { "phrase": "Lafiya", "language": "Hausa", "meaning": "Fine/Well", "pronunciation": "lah-FEE-yah" },
         { "phrase": "Na gode", "language": "Hausa", "meaning": "Thank you", "pronunciation": "nah GOH-deh" },
         { "phrase": "Sai anjima", "language": "Hausa", "meaning": "See you later", "pronunciation": "sigh ahn-JEE-mah" },
-        { "phrase": "Ka zo lafiya?", "language": "Hausa", "meaning": "Did you come well?", "pronunciation": "kah zoh lah-FEE-yah" }
+        { "phrase": "Ka zo lafiya?", "language": "Hausa", "meaning": "Did you come well?", "pronunciation": "kah zoh lah-FEE-yah" },
+        { "phrase": "Yaya suna?", "language": "Hausa", "meaning": "What is your name?", "pronunciation": "YAH-yah SOO-nah" },
+        { "phrase": "Sunana...", "language": "Hausa", "meaning": "My name is...", "pronunciation": "soo-NAH-nah" },
+        { "phrase": "Barka da zuwa", "language": "Hausa", "meaning": "Welcome", "pronunciation": "BAHR-kah dah ZOO-wah" },
+        { "phrase": "Allah ya barka", "language": "Hausa", "meaning": "God bless you", "pronunciation": "AH-lah yah BAHR-kah" },
+        { "phrase": "Ina gajiya?", "language": "Hausa", "meaning": "Are you tired?", "pronunciation": "EE-nah gah-JEE-yah" },
+        { "phrase": "Bari mu tafi", "language": "Hausa", "meaning": "Let's go", "pronunciation": "BAH-ree moo TAH-fee" }
       ],
       "timeline": [
         { "year": -2000, "event": "Proto-Chadic speakers settle around Lake Chad", "significance": "Origins of Chadic family" },
@@ -1346,7 +1352,14 @@
         { "phrase": "Lo'o gidiyee?", "language": "Wolaytta", "meaning": "How are you?", "pronunciation": "LOH-oh gee-dee-YEH" },
         { "phrase": "Geza?", "language": "Gamo", "meaning": "How are you?", "pronunciation": "GEH-zah" },
         { "phrase": "Nome?", "language": "Kafa", "meaning": "How are you?", "pronunciation": "NOH-meh" },
-        { "phrase": "Galatoma", "language": "Wolaytta", "meaning": "Thank you", "pronunciation": "gah-lah-TOH-mah" }
+        { "phrase": "Galatoma", "language": "Wolaytta", "meaning": "Thank you", "pronunciation": "gah-lah-TOH-mah" },
+        { "phrase": "Taani lo'o", "language": "Wolaytta", "meaning": "I am fine", "pronunciation": "TAH-nee LOH-oh" },
+        { "phrase": "Hara", "language": "Hamar", "meaning": "Hello", "pronunciation": "HAH-rah" },
+        { "phrase": "Xaanaa", "language": "Gamo", "meaning": "Good", "pronunciation": "XHAH-nah" },
+        { "phrase": "Buni", "language": "Kafa", "meaning": "Coffee", "pronunciation": "BOO-nee" },
+        { "phrase": "Yaa!", "language": "Wolaytta", "meaning": "Yes", "pronunciation": "YAH" },
+        { "phrase": "Coo", "language": "Hamar", "meaning": "Peace", "pronunciation": "CHOH" },
+        { "phrase": "Mitta", "language": "Gamo", "meaning": "Food", "pronunciation": "MEE-tah" }
       ],
       "timeline": [
         { "year": -3000, "event": "Proto-Omotic speakers in Ethiopian highlands", "significance": "Origins of Omotic family" },
@@ -1445,7 +1458,13 @@
         { "phrase": "Jërëjëf", "language": "Wolof", "meaning": "Thank you", "pronunciation": "jeh-reh-JEHF" },
         { "phrase": "A jam tan?", "language": "Fula/Pulaar", "meaning": "Are you at peace?", "pronunciation": "ah jahm tahn" },
         { "phrase": "Jam tan", "language": "Fula/Pulaar", "meaning": "Peace only (I'm fine)", "pronunciation": "jahm tahn" },
-        { "phrase": "A jaraama", "language": "Fula/Pulaar", "meaning": "Thank you", "pronunciation": "ah jah-RAH-mah" }
+        { "phrase": "A jaraama", "language": "Fula/Pulaar", "meaning": "Thank you", "pronunciation": "ah jah-RAH-mah" },
+        { "phrase": "Na nga def", "language": "Wolof", "meaning": "Hello (singular)", "pronunciation": "nah ngah def" },
+        { "phrase": "Maa ngi tudd...", "language": "Wolof", "meaning": "My name is...", "pronunciation": "mah ngee tood" },
+        { "phrase": "Waaw", "language": "Wolof", "meaning": "Yes", "pronunciation": "wahw" },
+        { "phrase": "Déedéet", "language": "Wolof", "meaning": "No", "pronunciation": "day-DAYT" },
+        { "phrase": "Kasumay", "language": "Diola", "meaning": "Hello", "pronunciation": "kah-soo-MAY" },
+        { "phrase": "On holla ko?", "language": "Fula", "meaning": "Where are you going?", "pronunciation": "on HOH-lah koh" }
       ],
       "timeline": [
         { "year": -2000, "event": "Proto-Atlantic speakers along West African coast", "significance": "Origins of Atlantic family" },
@@ -1553,7 +1572,13 @@
         { "phrase": "Me da wo ase", "language": "Akan/Twi", "meaning": "Thank you", "pronunciation": "meh dah woh AH-seh" },
         { "phrase": "Woezɔ", "language": "Ewe", "meaning": "Welcome", "pronunciation": "woh-eh-ZOH" },
         { "phrase": "Akpe", "language": "Ewe", "meaning": "Thank you", "pronunciation": "AHK-peh" },
-        { "phrase": "Ojekoo", "language": "Ga", "meaning": "Welcome", "pronunciation": "oh-jeh-KOH-oh" }
+        { "phrase": "Ojekoo", "language": "Ga", "meaning": "Welcome", "pronunciation": "oh-jeh-KOH-oh" },
+        { "phrase": "Me din de...", "language": "Akan/Twi", "meaning": "My name is...", "pronunciation": "meh deen deh" },
+        { "phrase": "Ɛyɛ", "language": "Akan/Twi", "meaning": "It is good", "pronunciation": "eh-YEH" },
+        { "phrase": "Aane", "language": "Akan/Twi", "meaning": "Yes", "pronunciation": "ah-NEH" },
+        { "phrase": "Daabi", "language": "Akan/Twi", "meaning": "No", "pronunciation": "dah-BEE" },
+        { "phrase": "Ɛfɔ?", "language": "Ewe", "meaning": "How are you?", "pronunciation": "eh-FOH" },
+        { "phrase": "Afẽ na wo", "language": "Fon", "meaning": "Blessings to you", "pronunciation": "ah-FEH nah woh" }
       ],
       "timeline": [
         { "year": -1000, "event": "Proto-Kwa speakers in West African forests", "significance": "Origins of Kwa family" },
@@ -1661,7 +1686,13 @@
         { "phrase": "Laafi", "language": "Mooré", "meaning": "Peace (I'm fine)", "pronunciation": "LAH-fee" },
         { "phrase": "Barka", "language": "Mooré", "meaning": "Thank you", "pronunciation": "BAHR-kah" },
         { "phrase": "Despa!", "language": "Dagbani", "meaning": "Good morning!", "pronunciation": "DEHS-pah" },
-        { "phrase": "A alafia?", "language": "Dagbani", "meaning": "Are you well?", "pronunciation": "ah ah-LAH-fee-ah" }
+        { "phrase": "A alafia?", "language": "Dagbani", "meaning": "Are you well?", "pronunciation": "ah ah-LAH-fee-ah" },
+        { "phrase": "Y yɛla bɛ?", "language": "Mooré", "meaning": "What's your name?", "pronunciation": "yee YEH-lah beh" },
+        { "phrase": "M yɛla...", "language": "Mooré", "meaning": "My name is...", "pronunciation": "mm YEH-lah" },
+        { "phrase": "N ba!", "language": "Mooré", "meaning": "Hello!", "pronunciation": "nn BAH" },
+        { "phrase": "Naawuni so pam", "language": "Dagbani", "meaning": "God is great", "pronunciation": "nah-WOO-nee soh pahm" },
+        { "phrase": "Kasim", "language": "Kasem (Grusi)", "meaning": "Hello", "pronunciation": "kah-SEEM" },
+        { "phrase": "Fo yi", "language": "Senufo", "meaning": "Thank you", "pronunciation": "foh YEE" }
       ],
       "timeline": [
         { "year": -500, "event": "Proto-Gur speakers in West African savanna", "significance": "Origins of Gur family" },
