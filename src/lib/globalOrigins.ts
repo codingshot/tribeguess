@@ -240,10 +240,13 @@ export const globalOrigins: GlobalOrigin[] = [
     continent: 'Asia',
     countries: ['Vietnam'],
     description: 'Names of Vietnamese origin, often poetic with nature meanings.',
+    nameSuffixes: ['anh', 'linh', 'chi'],
     commonNames: {
-      male: ['minh', 'duc', 'hung', 'tuan', 'quang', 'thanh', 'long', 'nam', 'dung', 'hieu', 'an', 'bao', 'cuong', 'dat', 'hai'],
-      female: ['mai', 'lan', 'huong', 'trang', 'linh', 'thu', 'hanh', 'nga', 'phuong', 'tuyet', 'kim', 'hong', 'ngoc', 'yen', 'van']
-    }
+      male: ['minh', 'duc', 'hung', 'tuan', 'quang', 'thanh', 'long', 'nam', 'dung', 'hieu', 'an', 'bao', 'cuong', 'dat', 'hai', 'khoa', 'lam', 'phuc', 'tai', 'vinh'],
+      female: ['mai', 'lan', 'huong', 'trang', 'linh', 'thu', 'hanh', 'nga', 'phuong', 'tuyet', 'kim', 'hong', 'ngoc', 'yen', 'van', 'chi', 'dao', 'diep', 'giang', 'ha']
+    },
+    religion: 'buddhist',
+    culturalNotes: 'Vietnamese names typically have three parts: family name, middle name, and given name. The given name is used for address.'
   },
   {
     id: 'thai',
@@ -251,12 +254,72 @@ export const globalOrigins: GlobalOrigin[] = [
     region: 'Southeast Asia',
     continent: 'Asia',
     countries: ['Thailand'],
-    description: 'Names of Thai origin, often with auspicious meanings.',
+    description: 'Names of Thai origin, often with auspicious meanings chosen by monks.',
+    namePrefixes: ['porn', 'sri', 'chai'],
     commonNames: {
-      male: ['somchai', 'prasert', 'surapong', 'thongchai', 'wichai', 'nattapong', 'sakchai', 'kittisak', 'phichet', 'charoen'],
-      female: ['pornpan', 'siriwan', 'supaporn', 'narinee', 'siriporn', 'pimchanok', 'nichapa', 'prapassorn', 'lalita', 'malee']
+      male: ['somchai', 'prasert', 'surapong', 'thongchai', 'wichai', 'nattapong', 'sakchai', 'kittisak', 'phichet', 'charoen', 'ananda', 'bhumibol', 'chakri', 'decha', 'ekachai'],
+      female: ['pornpan', 'siriwan', 'supaporn', 'narinee', 'siriporn', 'pimchanok', 'nichapa', 'prapassorn', 'lalita', 'malee', 'apsara', 'busaba', 'chaba', 'duangjai', 'fah']
     },
-    religion: 'buddhist'
+    religion: 'buddhist',
+    culturalNotes: 'Thai formal names are often very long and auspicious. Thais typically use nicknames (one syllable) in daily life, often unrelated to the formal name.'
+  },
+  {
+    id: 'cambodian',
+    name: 'Cambodian/Khmer',
+    region: 'Southeast Asia',
+    continent: 'Asia',
+    countries: ['Cambodia'],
+    description: 'Names from Cambodia (Khmer), influenced by Buddhism and Hindu Sanskrit.',
+    commonNames: {
+      male: ['sokha', 'dara', 'vuthy', 'piseth', 'sothea', 'bunna', 'chea', 'deth', 'heng', 'kimheng', 'narong', 'rith', 'samnang', 'sophal', 'virak'],
+      female: ['channary', 'kunthea', 'maly', 'neary', 'pich', 'rany', 'srey', 'tevy', 'vanna', 'bopha', 'chariya', 'kalliyan', 'kolab', 'leap', 'rachana']
+    },
+    religion: 'buddhist',
+    culturalNotes: 'Khmer names often come from Pali/Sanskrit. "Srey" (woman) commonly precedes female names. Many names reflect Buddhist virtues.'
+  },
+  {
+    id: 'burmese',
+    name: 'Burmese/Myanmar',
+    region: 'Southeast Asia',
+    continent: 'Asia',
+    countries: ['Myanmar'],
+    description: 'Names from Myanmar (Burma), often determined by day of birth.',
+    commonNames: {
+      male: ['aung', 'htun', 'kyaw', 'maung', 'min', 'myo', 'naing', 'nyein', 'oo', 'thein', 'tun', 'win', 'zaw', 'thura', 'thiha'],
+      female: ['aye', 'hla', 'khin', 'mya', 'nu', 'san', 'swe', 'thin', 'thi', 'wai', 'yin', 'zin', 'nwe', 'phyu', 'su']
+    },
+    religion: 'buddhist',
+    culturalNotes: 'Burmese names are determined by the day of birth following traditional astrology. There are no surnames - names can be one to four syllables.'
+  },
+  {
+    id: 'lao',
+    name: 'Lao',
+    region: 'Southeast Asia',
+    continent: 'Asia',
+    countries: ['Laos'],
+    description: 'Names from Laos, sharing roots with Thai and Buddhist traditions.',
+    commonNames: {
+      male: ['bounmy', 'khamla', 'somphone', 'thongchan', 'viengkham', 'bounyaseng', 'chansamone', 'douangchanh', 'khamphoui', 'ounheuan', 'phouthone', 'sayavong', 'sithong', 'thonglith', 'vongdeuan'],
+      female: ['bounthavy', 'chansouk', 'douangdeuane', 'khamla', 'maniphone', 'phengsy', 'sengdeuane', 'thipphavanh', 'vatsana', 'viengkham', 'amphone', 'bouphanh', 'chanmaly', 'khamsay', 'laddavanh']
+    },
+    religion: 'buddhist',
+    culturalNotes: 'Lao names are similar to Thai, reflecting shared Tai cultural heritage. Many names incorporate words for gold, prosperity, and Buddhist concepts.'
+  },
+  {
+    id: 'malay',
+    name: 'Malay',
+    region: 'Southeast Asia',
+    continent: 'Asia',
+    countries: ['Malaysia', 'Brunei', 'Singapore'],
+    description: 'Names from Malay culture, blending indigenous and Islamic influences.',
+    namePrefixes: ['abdul', 'mohd', 'muhammad', 'siti', 'nor'],
+    nameSuffixes: ['bin', 'binti'],
+    commonNames: {
+      male: ['ahmad', 'muhammad', 'mohd', 'abdul', 'aziz', 'hassan', 'ibrahim', 'ismail', 'omar', 'yusof', 'ali', 'farid', 'hafiz', 'imran', 'kamal'],
+      female: ['siti', 'nur', 'norhaiza', 'fatimah', 'aisyah', 'zainab', 'haslinda', 'nurul', 'fauziah', 'rosnah', 'aminah', 'azizah', 'halimah', 'khadijah', 'mariam']
+    },
+    religion: 'muslim',
+    culturalNotes: 'Most Malays are Muslim, and names reflect Arabic/Islamic origins. "Bin" (son of) and "Binti" (daughter of) are used instead of surnames.'
   },
   {
     id: 'filipino',
@@ -264,13 +327,13 @@ export const globalOrigins: GlobalOrigin[] = [
     region: 'Southeast Asia',
     continent: 'Asia',
     countries: ['Philippines'],
-    description: 'Names of Filipino origin, often Spanish-influenced.',
+    description: 'Names of Filipino origin, blending indigenous, Spanish, and American influences.',
     commonNames: {
-      male: ['jose', 'juan', 'miguel', 'carlos', 'rafael', 'antonio', 'manuel', 'francisco', 'rodrigo', 'andres', 'romeo', 'ramon', 'eduardo', 'ricardo', 'ernesto'],
-      female: ['maria', 'ana', 'rosa', 'elena', 'carmen', 'josefina', 'corazon', 'imelda', 'lourdes', 'milagros', 'esperanza', 'concepcion', 'remedios', 'angelica', 'marites']
+      male: ['jose', 'juan', 'miguel', 'carlos', 'rafael', 'antonio', 'manuel', 'francisco', 'rodrigo', 'andres', 'romeo', 'ramon', 'eduardo', 'ricardo', 'ernesto', 'bayani', 'datu', 'lapu', 'makisig', 'tala'],
+      female: ['maria', 'ana', 'rosa', 'elena', 'carmen', 'josefina', 'corazon', 'imelda', 'lourdes', 'milagros', 'esperanza', 'concepcion', 'remedios', 'angelica', 'marites', 'diwata', 'ligaya', 'luningning', 'mayumi', 'sampaguita']
     },
     religion: 'christian',
-    culturalNotes: 'Spanish colonial influence makes Filipino names similar to Hispanic names.'
+    culturalNotes: 'Filipino naming reflects 333 years of Spanish colonialism, American influence, and indigenous heritage. Indigenous names are experiencing revival.'
   },
   {
     id: 'indonesian',
@@ -278,12 +341,28 @@ export const globalOrigins: GlobalOrigin[] = [
     region: 'Southeast Asia',
     continent: 'Asia',
     countries: ['Indonesia'],
-    description: 'Names from Indonesia, often Javanese or Islamic influenced.',
+    description: 'Names from Indonesia, varying by region - Javanese, Sundanese, Balinese, and more.',
     commonNames: {
-      male: ['agus', 'budi', 'dedi', 'eko', 'hendra', 'iwan', 'joko', 'kurniawan', 'rudi', 'susanto', 'wahyu', 'yudi', 'teguh', 'suryadi', 'bambang'],
-      female: ['dewi', 'siti', 'sri', 'rina', 'wati', 'yanti', 'ratna', 'indah', 'putri', 'lestari', 'kartini', 'mega', 'fitri', 'ayu', 'cahya']
+      male: ['agus', 'budi', 'dedi', 'eko', 'hendra', 'iwan', 'joko', 'kurniawan', 'rudi', 'susanto', 'wahyu', 'yudi', 'teguh', 'suryadi', 'bambang', 'andi', 'bagus', 'dwi', 'firman', 'gilang'],
+      female: ['dewi', 'siti', 'sri', 'rina', 'wati', 'yanti', 'ratna', 'indah', 'putri', 'lestari', 'kartini', 'mega', 'fitri', 'ayu', 'cahya', 'bunga', 'citra', 'diah', 'endang', 'galuh']
     },
-    religion: 'muslim'
+    religion: 'muslim',
+    culturalNotes: 'Indonesia is incredibly diverse with 300+ ethnic groups. Javanese often use single names, while Balinese names indicate birth order (Wayan, Made, Nyoman, Ketut).'
+  },
+  {
+    id: 'balinese',
+    name: 'Balinese',
+    region: 'Southeast Asia',
+    continent: 'Asia',
+    countries: ['Indonesia'],
+    description: 'Names from Bali, Indonesia, following a unique birth-order naming system.',
+    namePrefixes: ['wayan', 'made', 'nyoman', 'ketut', 'putu', 'kadek', 'komang'],
+    commonNames: {
+      male: ['wayan', 'made', 'nyoman', 'ketut', 'gede', 'putu', 'kadek', 'komang', 'agung', 'bagus', 'gusti', 'ngurah', 'anak', 'cokorda', 'dewa'],
+      female: ['wayan', 'made', 'nyoman', 'ketut', 'ayu', 'luh', 'desak', 'gusti', 'anak', 'cokorda', 'putu', 'kadek', 'komang', 'ni', 'dayu']
+    },
+    religion: 'hindu',
+    culturalNotes: 'Balinese names follow birth order: Wayan/Putu (1st), Made/Kadek (2nd), Nyoman/Komang (3rd), Ketut (4th), then cycle repeats. Bali is Hindu in Muslim-majority Indonesia.'
   },
 
   // ============ MIDDLE EASTERN ORIGINS (Muslim) ============
@@ -384,7 +463,7 @@ export const globalOrigins: GlobalOrigin[] = [
     culturalNotes: 'Many Caribbean names have African Diaspora roots from the transatlantic slave trade.'
   },
 
-  // ============ PACIFIC ============
+  // ============ PACIFIC & OCEANIA ============
   {
     id: 'polynesian',
     name: 'Polynesian',
@@ -393,9 +472,119 @@ export const globalOrigins: GlobalOrigin[] = [
     countries: ['Hawaii', 'Samoa', 'Tonga', 'Fiji', 'New Zealand'],
     description: 'Names from Polynesian cultures including Hawaiian, Samoan, and Māori.',
     commonNames: {
-      male: ['kai', 'mana', 'keoni', 'tane', 'maui', 'koa', 'lono', 'nui', 'pua', 'rangi', 'aroha', 'tama', 'wiremu', 'hemi', 'ihaia'],
-      female: ['moana', 'leilani', 'kaia', 'hina', 'tiare', 'maile', 'lani', 'mele', 'pua', 'aroha', 'mereana', 'hinemoana', 'anahera', 'wiremu', 'ataahua']
-    }
+      male: ['kai', 'mana', 'keoni', 'tane', 'maui', 'koa', 'lono', 'nui', 'pua', 'rangi', 'aroha', 'tama', 'wiremu', 'hemi', 'ihaia', 'tamati', 'rawiri', 'hoani', 'matiu', 'tui'],
+      female: ['moana', 'leilani', 'kaia', 'hina', 'tiare', 'maile', 'lani', 'mele', 'pua', 'aroha', 'mereana', 'hinemoana', 'anahera', 'ataahua', 'teuila', 'sinalei', 'lanuola', 'moemoana']
+    },
+    culturalNotes: 'Polynesian seafarers reached Madagascar ~2000 years ago, connecting Pacific and African cultures. Hawaiian names often reference nature and ancestors.'
+  },
+  {
+    id: 'maori',
+    name: 'Māori',
+    region: 'New Zealand',
+    continent: 'Oceania',
+    countries: ['New Zealand'],
+    description: 'Names of Māori origin, the indigenous Polynesian people of New Zealand.',
+    nameSuffixes: ['rangi', 'whenua', 'nui', 'roa'],
+    commonNames: {
+      male: ['wiremu', 'rawiri', 'hemi', 'hoani', 'matiu', 'tamati', 'tane', 'rangi', 'kahu', 'nikau', 'ihaka', 'aperahama', 'tiaki', 'pita', 'karaitiana'],
+      female: ['aroha', 'mereana', 'hine', 'ngaio', 'anahera', 'ataahua', 'whina', 'kapua', 'marama', 'tui', 'manaia', 'waimarama', 'huia', 'kiri', 'pare']
+    },
+    culturalNotes: 'Māori names often carry deep spiritual significance, connecting to ancestors (tupuna) and the land (whenua).'
+  },
+  {
+    id: 'hawaiian',
+    name: 'Hawaiian',
+    region: 'Hawaii',
+    continent: 'Oceania',
+    countries: ['Hawaii', 'USA'],
+    description: 'Names of Hawaiian origin, rich in natural and spiritual meanings.',
+    commonNames: {
+      male: ['keanu', 'kai', 'manu', 'makoa', 'koa', 'kalani', 'keoni', 'akamu', 'nainoa', 'kekoa', 'kawika', 'liko', 'mikala', 'nahele', 'palani'],
+      female: ['leilani', 'moana', 'kalani', 'mahina', 'kaia', 'malia', 'aloha', 'kaila', 'lani', 'maile', 'noelani', 'olina', 'pualani', 'kailani', 'nalani']
+    },
+    culturalNotes: 'Hawaiian names often describe natural phenomena, virtues, or honor ancestors. Many contain references to sky (lani), sea (kai), or love (aloha).'
+  },
+  {
+    id: 'samoan',
+    name: 'Samoan',
+    region: 'Pacific Islands',
+    continent: 'Oceania',
+    countries: ['Samoa', 'American Samoa'],
+    description: 'Names from Samoan culture, one of the oldest Polynesian civilizations.',
+    commonNames: {
+      male: ['malietoa', 'tupu', 'siaosi', 'petelo', 'ioane', 'tavita', 'mataio', 'tui', 'afaese', 'leilua', 'peni', 'sione', 'viliamu', 'tanielu', 'ioelu'],
+      female: ['sina', 'teuila', 'lupe', 'moana', 'sinalei', 'lalelei', 'manamea', 'penina', 'filemu', 'tiresa', 'malia', 'asenati', 'faatoese', 'lanuola', 'katalina']
+    },
+    religion: 'christian',
+    culturalNotes: 'Samoan naming often includes titles (matai) and references to family lineage. Many modern names blend Samoan and Biblical origins.'
+  },
+  {
+    id: 'tongan',
+    name: 'Tongan',
+    region: 'Pacific Islands',
+    continent: 'Oceania',
+    countries: ['Tonga'],
+    description: 'Names from the Kingdom of Tonga, the only Pacific monarchy.',
+    commonNames: {
+      male: ['siaosi', 'tevita', 'sione', 'tupou', 'viliami', 'mele', 'fineasi', 'semisi', 'taniela', 'sitiveni', 'taufatofua', 'lopeti', 'pita', 'mosese', 'paula'],
+      female: ['salote', 'ana', 'ofa', 'seini', 'mele', 'tupou', 'luseane', 'elisiva', 'mafile\'o', 'nanise', 'sela', 'tina', 'vika', 'losaline', 'meleane']
+    },
+    religion: 'christian',
+    culturalNotes: 'Tongan names often honor royalty and ancestors. The kingdom has strong Christian influences since the 19th century.'
+  },
+  {
+    id: 'fijian',
+    name: 'Fijian',
+    region: 'Pacific Islands',
+    continent: 'Oceania',
+    countries: ['Fiji'],
+    description: 'Names from Fiji, blending Melanesian and Polynesian influences.',
+    commonNames: {
+      male: ['seru', 'waisake', 'josua', 'epeli', 'ratu', 'timoci', 'viliame', 'isireli', 'nemani', 'jone', 'semi', 'taniela', 'apisai', 'kitione', 'leone'],
+      female: ['litia', 'adi', 'sera', 'kelera', 'marica', 'mere', 'salote', 'ana', 'lavenia', 'sainimili', 'vika', 'lusiana', 'teresia', 'arieta', 'mereoni']
+    },
+    religion: 'christian',
+    culturalNotes: 'Fijian society has chiefly titles (Ratu for men, Adi for women) that precede names, indicating noble lineage.'
+  },
+  {
+    id: 'melanesian',
+    name: 'Melanesian',
+    region: 'Pacific Islands',
+    continent: 'Oceania',
+    countries: ['Papua New Guinea', 'Solomon Islands', 'Vanuatu', 'New Caledonia'],
+    description: 'Names from Melanesian cultures, among the most linguistically diverse on Earth.',
+    commonNames: {
+      male: ['kila', 'tari', 'navu', 'raga', 'mala', 'sela', 'bulu', 'wani', 'levi', 'kori', 'aisi', 'palou', 'silas', 'joel', 'peter'],
+      female: ['nela', 'tina', 'mary', 'rose', 'janet', 'grace', 'ruth', 'anna', 'lily', 'joy', 'miriam', 'rachel', 'esther', 'naomi', 'sarah']
+    },
+    culturalNotes: 'Papua New Guinea alone has over 800 languages. Melanesian naming traditions vary greatly by tribe and region.'
+  },
+  {
+    id: 'micronesian',
+    name: 'Micronesian',
+    region: 'Pacific Islands',
+    continent: 'Oceania',
+    countries: ['Micronesia', 'Palau', 'Marshall Islands', 'Guam', 'Kiribati'],
+    description: 'Names from Micronesian island cultures across the western Pacific.',
+    commonNames: {
+      male: ['timo', 'kino', 'noel', 'peter', 'john', 'tony', 'santos', 'manuel', 'jose', 'frank', 'roman', 'nakamura', 'albert', 'david', 'robert'],
+      female: ['maria', 'ana', 'rosa', 'carmen', 'dolores', 'flora', 'lucia', 'teresa', 'pilar', 'mercedes', 'cristina', 'bertha', 'elena', 'ines', 'rita']
+    },
+    religion: 'christian',
+    culturalNotes: 'Spanish, German, Japanese, and American colonial history influenced Micronesian naming, creating unique blends of indigenous and foreign names.'
+  },
+  {
+    id: 'aboriginal-australian',
+    name: 'Aboriginal Australian',
+    region: 'Australia',
+    continent: 'Oceania',
+    countries: ['Australia'],
+    description: 'Names from the indigenous peoples of Australia, the oldest continuous culture on Earth.',
+    commonNames: {
+      male: ['jarrah', 'bunjil', 'koori', 'murra', 'barramundi', 'iluka', 'jarli', 'koa', 'marlu', 'ngarlu', 'tarkine', 'warra', 'yindi', 'yarran', 'bunji'],
+      female: ['alinta', 'kirra', 'bindi', 'jedda', 'marlee', 'lowanna', 'merindah', 'tarni', 'yindi', 'alira', 'kalina', 'mia', 'talia', 'kylie', 'indira']
+    },
+    culturalNotes: 'Aboriginal names often connect to Dreamtime stories, totemic animals, and the land. Many names describe natural features or spiritual concepts.'
   },
 
   // ============ AFRICAN DIASPORA ============
