@@ -1996,6 +1996,318 @@ export const traditionalReligions: TraditionalReligionData[] = [
       { name: "Evans-Pritchard - Nuer Religion", url: "https://www.jstor.org/stable/2796363" },
       { name: "Wikipedia - Nuer people", url: "https://en.wikipedia.org/wiki/Nuer_people" }
     ]
+  },
+  {
+    id: "tuareg-beliefs",
+    name: "Tuareg Traditional Beliefs",
+    alternateNames: ["Kel Tamasheq Spirituality", "Amenokal Traditions"],
+    region: "North Africa",
+    estimatedFollowers: "~500,000 (practicing traditional alongside Islam)",
+    youtubeVideoId: "gNp7Sz6iRaQ",
+    countryBreakdown: [
+      { country: "Niger", flag: "🇳🇪", percentage: 35 },
+      { country: "Mali", flag: "🇲🇱", percentage: 30 },
+      { country: "Algeria", flag: "🇩🇿", percentage: 15 },
+      { country: "Libya", flag: "🇱🇾", percentage: 10 },
+      { country: "Burkina Faso", flag: "🇧🇫", percentage: 10 }
+    ],
+    supremeDeity: {
+      name: "Amanar (with Islamic Alla)",
+      description: "Pre-Islamic Tuareg believed in Amanar (fate/destiny) and various spirits. After Islamization (7th-11th century), these merged with Islamic concepts. The Tuareg practice a unique Islam retaining many pre-Islamic elements.",
+      attributes: ["Fate", "Desert Spirit", "Ancestor Connection", "Cosmic Order"]
+    },
+    tenets: [
+      {
+        belief: "Kel Essuf (People of the Solitude)",
+        description: "Spirits inhabit lonely places in the desert. The Essuf are neither good nor evil but must be respected. They cause illness if offended and can possess individuals.",
+        source: "Rasmussen - Those Who Touch: Tuareg Medicine Women (2006)"
+      },
+      {
+        belief: "Tamazaq Matrilineal Heritage",
+        description: "Unlike most Islamic societies, Tuareg trace descent through mothers. The tent belongs to women, and nobility passes through the female line. This pre-Islamic practice persists.",
+        source: "Keenan - The Tuareg: People of Ahaggar (1977)"
+      },
+      {
+        belief: "Tende Spirit Rituals",
+        description: "Music and dance ceremonies (tende) communicate with spirits and heal possession sickness. Women lead these ceremonies, maintaining ancient roles Islam elsewhere curtailed.",
+        source: "Card - Tuareg Music and Social Identity (1982)"
+      },
+      {
+        belief: "Imashaghen (Noble) Spiritual Authority",
+        description: "The traditional noble class holds spiritual authority alongside Islamic teachers. The Amenokal (paramount chief) has quasi-sacred status.",
+        source: "Claudot-Hawad - Tuareg Cosmology (1993)"
+      }
+    ],
+    practices: [
+      { name: "Tende Ceremonies", description: "All-night music sessions with mortar drums and women's songs. Used for healing, celebration, and spirit communication.", frequency: "Special occasions" },
+      { name: "Amulet Making (Tcherot)", description: "Leather pouches containing Quranic verses mixed with pre-Islamic symbols. Worn for protection against spirits and misfortune.", frequency: "Daily wear" },
+      { name: "Blue Veil Tradition (Tagelmust)", description: "Men's face veil has spiritual significance - protecting against evil spirits entering through the mouth. More veiled in important situations.", frequency: "Daily" },
+      { name: "Ancestor Consultations", description: "Through dreams and ceremonies, ancestors guide decisions. Graves are marked and visited.", frequency: "As needed" }
+    ],
+    rituals: [
+      { name: "Cure Rite (Tende n Goumaten)", description: "Healing ceremony for spirit possession. Drummers play specific rhythms; the possessed dances until the spirit releases them.", occasion: "Illness" },
+      { name: "Naming Ceremony (Isem)", description: "Seven days after birth, the child receives a name. Combines Islamic prayers with traditional Tuareg practices.", occasion: "Birth" },
+      { name: "Takouba Sword Blessing", description: "Traditional swords are blessed with Quranic verses and pre-Islamic invocations before battle or important journeys.", occasion: "Warfare/Travel" }
+    ],
+    sacredTexts: [
+      { name: "Oral Tifinagh Poetry", description: "Ancient poetry in Tifinagh script encodes spiritual knowledge, history, and values. Memorized by bards (Aggawen).", status: "oral" },
+      { name: "Amulet Texts", description: "Quranic verses mixed with magical squares and Tifinagh symbols in protective writings.", status: "written" }
+    ],
+    joining: {
+      process: "One is born into Tuareg society and its spiritual practices. Full membership requires growing up in the culture, learning the language (Tamasheq), and understanding social hierarchy.",
+      requirements: [
+        "Tuareg parentage or adoption",
+        "Knowledge of Tamasheq language",
+        "Understanding of caste/hierarchy",
+        "Participation in tende and social ceremonies"
+      ],
+      notes: "The Tuareg are Muslim but maintain distinctive pre-Islamic practices. Their Islam is notably liberal - women are not veiled (men are), and matrilineal descent continues."
+    },
+    influence: {
+      cultural: "Tuareg controlled trans-Saharan trade routes for centuries. Their cross symbol and indigo-dyed clothing are iconic. Their music influenced global 'desert blues'.",
+      modern: "Tuareg identity remains strong despite modern borders dividing them across five countries. Traditional practices persist alongside Islam."
+    },
+    tribesFollowing: [
+      { tribeSlug: "tuareg", tribeName: "Tuareg", percentage: 30, notes: "All Muslim but retain pre-Islamic practices" }
+    ],
+    sources: [
+      { name: "Wikipedia - Tuareg people", url: "https://en.wikipedia.org/wiki/Tuareg_people" },
+      { name: "Rasmussen - Tuareg Studies", url: "https://www.jstor.org/stable/160873" }
+    ]
+  },
+  {
+    id: "coptic-christianity",
+    name: "Coptic Orthodox Christianity",
+    alternateNames: ["Egyptian Christianity", "Coptic Church"],
+    region: "North Africa",
+    estimatedFollowers: "~15-20 million",
+    youtubeVideoId: "f5jqH1sS5vg",
+    countryBreakdown: [
+      { country: "Egypt", flag: "🇪🇬", percentage: 90 },
+      { country: "Sudan", flag: "🇸🇩", percentage: 3 },
+      { country: "Libya", flag: "🇱🇾", percentage: 2 },
+      { country: "Global diaspora", flag: "🌍", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "The Holy Trinity (God the Father, Son, Holy Spirit)",
+      description: "Copts hold to Miaphysite Christology - Christ has one united nature, fully divine and fully human. This distinction from Chalcedonian Christianity (451 AD) defines Coptic theology.",
+      attributes: ["Creator", "Redeemer", "Sanctifier", "One Triune God"]
+    },
+    tenets: [
+      {
+        belief: "Apostolic Foundation",
+        description: "St. Mark the Evangelist founded the Church of Alexandria in 42 AD. The Coptic Pope is Mark's successor, making it one of the oldest Christian churches.",
+        source: "Meinardus - Two Thousand Years of Coptic Christianity (2002)"
+      },
+      {
+        belief: "Miaphysitism",
+        description: "Christ has one united nature (miaphysis) - divine and human united without separation, confusion, or change. This differs from both Chalcedonian dyophysitism and Eutychian monophysitism.",
+        source: "Davis - The Early Coptic Papacy (2004)"
+      },
+      {
+        belief: "Theotokos (Mary, Mother of God)",
+        description: "Deep veneration of the Virgin Mary as Theotokos (God-bearer). Her apparition at Zeitoun (1968-1970) was witnessed by millions and is officially recognized.",
+        source: "Watson - Zeitoun Apparitions (1977)"
+      },
+      {
+        belief: "Monasticism's Birthplace",
+        description: "Egypt gave birth to Christian monasticism. St. Anthony (251-356 AD) is the 'Father of Monasticism.' Coptic monasteries in the desert continue unbroken tradition.",
+        source: "Athanasius - Life of Anthony"
+      }
+    ],
+    practices: [
+      { name: "Coptic Liturgy", description: "Divine Liturgy in Coptic (Egyptian) and Arabic. Services can last 3-4 hours with elaborate hymns, incense, and processions.", frequency: "Sundays and feasts" },
+      { name: "Extensive Fasting", description: "Over 200 fasting days per year - no meat, dairy, or animal products. Lent (55 days), Advent, and apostles' fasts are observed.", frequency: "Throughout year" },
+      { name: "Pilgrimage", description: "Visits to ancient monasteries (Wadi Natrun), Holy Family sites in Egypt, and churches with miraculous icons.", frequency: "Annual/Lifelong" },
+      { name: "Coptic Cross Tattoo", description: "A small cross tattooed on the inner wrist, identifying Copts since Islamic times when visible markers were mandated.", frequency: "Once in childhood" }
+    ],
+    rituals: [
+      { name: "Baptism and Confirmation", description: "Infants baptized at 40 days (boys) or 80 days (girls), immediately followed by confirmation and first communion.", occasion: "Infancy" },
+      { name: "Holy Matrimony", description: "Elaborate ceremony in Coptic churches. Divorce is extremely rare; the church only grants it in specific circumstances.", occasion: "Marriage" },
+      { name: "Funeral and 40 Days", description: "Body buried facing east. Memorial services at 3, 7, and 40 days, then annually. Prayers for the dead are important.", occasion: "Death" }
+    ],
+    sacredTexts: [
+      { name: "Coptic Bible", description: "Old Testament from Greek Septuagint, New Testament in Coptic. The Coptic version preserves early Christian texts.", status: "written" },
+      { name: "Liturgical Books", description: "Agpeya (Book of Hours) with seven daily prayers. Psalmody, Difnar, and Synaxarion (saints' lives).", status: "written" }
+    ],
+    joining: {
+      process: "Catechumenate of study and instruction. Adult converts attend classes, learn Coptic faith, and are sponsored by a Coptic Christian before baptism.",
+      requirements: [
+        "Catechetical instruction (6-12 months typical)",
+        "Sponsorship by Orthodox Copt",
+        "Baptism by triple immersion",
+        "Confirmation and first communion immediately after"
+      ],
+      notes: "Copts are welcoming to converts but thorough in instruction. The church has experienced growth among those seeking ancient Christianity."
+    },
+    influence: {
+      cultural: "Coptic preserved ancient Egyptian language in liturgical form. Coptic art and architecture influenced Byzantine and Islamic Egypt. Monasteries preserved classical texts.",
+      modern: "The largest Christian community in the Middle East. Pope Tawadros II leads from Cairo. Copts are culturally influential in Egypt despite minority status.",
+      diaspora: "Large communities in USA, Canada, Australia, and Europe maintain Coptic identity and have built hundreds of churches abroad."
+    },
+    tribesFollowing: [
+      { tribeSlug: "egyptian", tribeName: "Egyptian Copts", percentage: 100, notes: "Ethnic Egyptian Christians" },
+      { tribeSlug: "nubian", tribeName: "Nubian Christians", percentage: 15, notes: "Some Nubians are Coptic" }
+    ],
+    sources: [
+      { name: "Coptic Orthodox Church Official", url: "https://www.copticchurch.net/" },
+      { name: "Wikipedia - Coptic Orthodox Church", url: "https://en.wikipedia.org/wiki/Coptic_Orthodox_Church_of_Alexandria" }
+    ]
+  },
+  {
+    id: "nubian-heritage",
+    name: "Nubian Traditional Heritage",
+    alternateNames: ["Nubian Spirituality", "Nobiin Traditional Beliefs"],
+    region: "North Africa",
+    estimatedFollowers: "~300,000 (maintaining traditional practices)",
+    youtubeVideoId: "sV1KZMqOJYQ",
+    countryBreakdown: [
+      { country: "Sudan", flag: "🇸🇩", percentage: 50 },
+      { country: "Egypt", flag: "🇪🇬", percentage: 45 },
+      { country: "Other", flag: "🌍", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Apedemak (Historical) / Allah (Modern)",
+      description: "Ancient Nubians worshipped Apedemak (lion-headed warrior god), Isis, and Amun. Christianity arrived in the 6th century; Islam came later. Today, Nubians are predominantly Muslim but maintain distinctive cultural-spiritual practices.",
+      attributes: ["Warrior Protector", "Lion God", "Nile Blessings"]
+    },
+    tenets: [
+      {
+        belief: "Nile Spirituality",
+        description: "The Nile is sacred and central to Nubian identity. Traditional blessings invoke the river. Ceremonies often occur near water. Displacement from Nile due to dams caused profound spiritual trauma.",
+        source: "Fernea - Nubians in Egypt (1973)"
+      },
+      {
+        belief: "Angel of the Nile (Malak al-Nil)",
+        description: "Belief in a protective spirit of the Nile who guards Nubian communities. Offerings were historically made to ensure good floods and fishing.",
+        source: "Jennings - Nubian Studies (1985)"
+      },
+      {
+        belief: "Kushite Heritage Pride",
+        description: "Nubians trace ancestry to the ancient Kingdom of Kush, which conquered Egypt and ruled as the 25th Dynasty. This glorious heritage shapes Nubian identity.",
+        source: "Welsby - The Medieval Kingdoms of Nubia (2002)"
+      },
+      {
+        belief: "Ancestral House Sanctity",
+        description: "Traditional Nubian houses have spiritual significance. Before the Aswan Dam flooding, home relocation ceremonies sought ancestral permission.",
+        source: "Geiser - The Egyptian Nubian (1986)"
+      }
+    ],
+    practices: [
+      { name: "Nubian Wedding Ceremonies", description: "Multi-day celebrations with distinctive songs, dances, and rituals. The bride's henna ceremony and river blessing are central.", frequency: "Marriages" },
+      { name: "Seboua Ceremony", description: "Seven days after birth, the baby is blessed. Traditional Nubian songs are sung, and the child is presented to the community.", frequency: "Births" },
+      { name: "Healing with Bakhoor", description: "Burning of incense mixtures for spiritual cleansing and healing. Specific blends address different ailments.", frequency: "As needed" },
+      { name: "Zar Ceremony", description: "Spirit possession rituals to heal psychological distress. Music, dance, and animal sacrifice appease possessing spirits.", frequency: "Healing" }
+    ],
+    rituals: [
+      { name: "Arageed Dance", description: "Traditional Nubian circle dance performed at celebrations. Distinctive hand movements and songs in Nobiin language.", occasion: "Celebrations" },
+      { name: "Nile Blessing", description: "Before journeys or important events, Nubians traditionally seek the river's blessing. Water from the Nile may be used in ceremonies.", occasion: "Various" },
+      { name: "Mourning Rituals", description: "Three days of mourning with community support. Women wear black for 40 days. Memorial meals at specific intervals.", occasion: "Death" }
+    ],
+    sacredTexts: [
+      { name: "Meroitic Inscriptions", description: "Ancient Nubian script (still undeciphered) recorded religious texts. The knowledge of its meaning is lost.", status: "written" },
+      { name: "Oral Songs and Poetry", description: "Nobiin-language songs encode history, values, and spiritual knowledge. Passed through generations of women singers.", status: "oral" }
+    ],
+    joining: {
+      process: "Nubian identity is primarily ethnic and cultural. One enters by birth into a Nubian family or marriage into the community.",
+      requirements: [
+        "Nubian heritage or marriage",
+        "Knowledge of Nobiin or Kenzi language (traditional)",
+        "Participation in community celebrations",
+        "Respect for Nile and ancestral traditions"
+      ],
+      notes: "Nubians are primarily Muslim today but maintain distinctive cultural practices. The Aswan Dam displacement (1960s-70s) scattered communities but cultural revival efforts continue."
+    },
+    influence: {
+      cultural: "Nubian civilization gave the world distinctive art, architecture, and the concept of divine kingship. The pyramids of Meroë predate many Egyptian structures.",
+      modern: "Despite displacement, Nubians maintain strong identity. The Nubian language, music, and architecture are being revived. Nubian villages in Aswan are tourist attractions."
+    },
+    tribesFollowing: [
+      { tribeSlug: "nubian", tribeName: "Nubian", percentage: 85, notes: "Muslim but maintain traditional practices" }
+    ],
+    sources: [
+      { name: "Wikipedia - Nubian people", url: "https://en.wikipedia.org/wiki/Nubian_people" },
+      { name: "Fernea - Nubians in Egypt", url: "https://www.jstor.org/stable/2801472" }
+    ]
+  },
+  {
+    id: "berber-amazigh-spirituality",
+    name: "Amazigh (Berber) Traditional Spirituality",
+    alternateNames: ["Berber Religion", "Imazighen Beliefs"],
+    region: "North Africa",
+    estimatedFollowers: "~1 million (practicing traditional alongside Islam)",
+    youtubeVideoId: "qR8M8WJJRdc",
+    countryBreakdown: [
+      { country: "Morocco", flag: "🇲🇦", percentage: 40 },
+      { country: "Algeria", flag: "🇩🇿", percentage: 35 },
+      { country: "Tunisia", flag: "🇹🇳", percentage: 10 },
+      { country: "Libya", flag: "🇱🇾", percentage: 10 },
+      { country: "Other", flag: "🌍", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Akuc / Yakuc (with Islamic Allah)",
+      description: "Pre-Islamic Amazigh worshipped Akuc (supreme deity), spirits of nature, and ancestors. After Islamic conversion (7th-8th century), these beliefs merged with Islam but many persist in folk practices.",
+      attributes: ["Supreme God", "Sky Father", "Source of Blessing"]
+    },
+    tenets: [
+      {
+        belief: "Maraboutism and Saint Veneration",
+        description: "Holy men and women (marabouts/morabits) have baraka (blessing power). Their tombs are pilgrimage sites. This blends pre-Islamic ancestor veneration with Islamic Sufism.",
+        source: "Gellner - Saints of the Atlas (1969)"
+      },
+      {
+        belief: "Jinn and Nature Spirits",
+        description: "Belief in jinn inhabiting springs, caves, and mountains. Offerings appease them. Some locations are forbidden due to dangerous spirits.",
+        source: "Westermarck - Ritual and Belief in Morocco (1926)"
+      },
+      {
+        belief: "Evil Eye (Ain/Tit)",
+        description: "The evil eye causes illness and misfortune. Protection through silver jewelry, Fatima's hand (khamsa), and specific rituals is essential.",
+        source: "Maloney - The Evil Eye (1976)"
+      },
+      {
+        belief: "Sacred Landscapes",
+        description: "Mountains, springs, and specific trees have spiritual power. The Atlas Mountains are particularly sacred. Natural features mark boundaries with the spirit world.",
+        source: "Crawford - Amazigh Culture (2002)"
+      }
+    ],
+    practices: [
+      { name: "Moussem Festivals", description: "Annual gatherings at saints' tombs. Thousands camp for days of prayer, music, trade, and social bonding. Major events include Moussem of Imilchil.", frequency: "Annual" },
+      { name: "Ahwash Dance", description: "Collective poetry and dance gatherings. Men and women form lines, singing call-and-response. Deep spiritual and social significance.", frequency: "Celebrations" },
+      { name: "Henna Rituals", description: "Henna applied for protection and blessing at marriages, births, and festivals. Specific designs ward off evil.", frequency: "Life events" },
+      { name: "Spring and Water Veneration", description: "Sacred springs are visited for healing and blessing. Water is taken home for protective use.", frequency: "As needed" }
+    ],
+    rituals: [
+      { name: "Boujloud (Bilmawen)", description: "Carnival-like celebration with men in goat skins. Ancient fertility rite now tied to Eid al-Adha. The 'wild man' brings blessing and purification.", occasion: "After Eid" },
+      { name: "Yennayer (Amazigh New Year)", description: "Celebrated January 12-13. Feasting, cleaning houses, and special foods mark the agricultural new year.", occasion: "January" },
+      { name: "Bride's Protection Ritual", description: "Elaborate rituals protect the bride from jinn and evil eye. She's painted with henna, surrounded by protective objects.", occasion: "Marriage" }
+    ],
+    sacredTexts: [
+      { name: "Oral Poetry (Izlan)", description: "Sung poetry encoding values, history, and spiritual wisdom. Performed at ahwash gatherings.", status: "oral" },
+      { name: "Tifinagh Inscriptions", description: "Ancient Amazigh script found on rocks and tombs. Some had ritual/religious purposes.", status: "written" }
+    ],
+    joining: {
+      process: "Amazigh identity is primarily ethnic. Spiritual practices are learned through family and community participation.",
+      requirements: [
+        "Amazigh heritage or community adoption",
+        "Knowledge of Tamazight language (dialects vary)",
+        "Participation in community celebrations",
+        "Respect for saints and sacred places"
+      ],
+      notes: "Amazigh are predominantly Muslim but maintain pre-Islamic practices. There's a cultural renaissance movement reclaiming Amazigh identity and spirituality."
+    },
+    influence: {
+      cultural: "Amazigh civilization spans 5,000+ years. They influenced North African architecture, music, and textiles. The Tifinagh script is one of the world's oldest.",
+      modern: "Amazigh (Berber) identity revival is strong. Morocco and Algeria recognize Tamazight as an official language. Traditional festivals attract global interest."
+    },
+    tribesFollowing: [
+      { tribeSlug: "berber", tribeName: "Berber/Amazigh", percentage: 20, notes: "Muslim but many retain traditional practices" },
+      { tribeSlug: "tuareg", tribeName: "Tuareg", percentage: 25, notes: "Related Amazigh group" }
+    ],
+    sources: [
+      { name: "Wikipedia - Berber people", url: "https://en.wikipedia.org/wiki/Berbers" },
+      { name: "Gellner - Saints of the Atlas", url: "https://www.jstor.org/stable/2800155" }
+    ]
   }
 ];
 
