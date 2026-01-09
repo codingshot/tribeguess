@@ -10669,6 +10669,257 @@
       "sources": [{ "name": "Wikipedia - Kabyle people", "url": "https://en.wikipedia.org/wiki/Kabyle_people" }],
       "description": "The Kabyle are Algeria's largest Amazigh group, leaders of the Berber cultural revival. Their mountain homeland, democratic traditions, and fierce independence spirit have preserved their identity through centuries of conquest.",
       "relatedTribes": ["amazigh", "tuareg", "chaoui", "mozabite"]
+    },
+    {
+      "id": "harari",
+      "name": "Harari",
+      "slug": "harari",
+      "slugAliases": ["adare", "harar"],
+      "youtubeVideoId": "7KfWqJMpNEY",
+      "countries": ["ET"],
+      "region": "Eastern Ethiopia (Harar)",
+      "population": "~50,000",
+      "populationPercent": "0.05% of Ethiopia",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 9.31, "lng": 42.12 },
+      "counties": ["Harari Region", "Harar city"],
+      "namePrefixes": ["Ab", "Mu", "Fa", "Ha", "Sh"],
+      "commonNames": {
+        "female": ["Fatima", "Amina", "Halima", "Shadia", "Zahra", "Maryam", "Khadija", "Husna", "Suad", "Nasra"],
+        "male": ["Abdullah", "Ahmed", "Muhammad", "Ibrahim", "Hassan", "Amir", "Hashim", "Yusuf", "Omar", "Abdi"]
+      },
+      "stereotypes": [
+        "Ancient Islamic scholarly tradition",
+        "Skilled traders and merchants",
+        "Famous for distinctive walled city",
+        "Hyena feeding tradition",
+        "Coffee culture originators",
+        "Peaceful coexistence with neighbors"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be educated in Islamic sciences",
+          "Traders and merchants",
+          "Protectors of Islamic heritage",
+          "Scholarly and religious"
+        ],
+        "female": [
+          "Manage households with skill",
+          "Expert basket weavers",
+          "Preserve Harari cultural traditions",
+          "Active in local trade"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men dominated trade, religious scholarship, and city governance. Harar was a center of Islamic learning with men as religious leaders.",
+          "female": "Women managed households, engaged in local trade, and produced famous Harari baskets. Had significant economic independence."
+        },
+        "modern": {
+          "male": "Modern Harari men work in trade, government, and professions. Many preserve Islamic scholarly traditions.",
+          "female": "Women increasingly educated while maintaining basket-weaving traditions. Active in commerce and cultural preservation."
+        }
+      },
+      "culturalTraits": [
+        "Harar - Africa's fourth holiest Islamic city",
+        "92 mosques and 102 shrines in ancient walled city",
+        "Famous colorful basket weaving tradition",
+        "Hyena feeding ceremony (unique tradition)",
+        "Coffee birthplace - first cultivated coffee",
+        "Rimbaud lived here (French poet)"
+      ],
+      "funFacts": [
+        "Harar is considered the fourth holiest city in Islam after Mecca, Medina, and Jerusalem",
+        "The walled city has 92 mosques - the densest concentration in the world",
+        "Hararis have fed hyenas for centuries - now a tourist attraction",
+        "Coffee was first cultivated by the Harari - spread from here to the world",
+        "French poet Arthur Rimbaud spent his final years trading in Harar",
+        "Harari baskets are UNESCO-recognized intangible heritage"
+      ],
+      "traditionalFood": {
+        "staples": ["Hulbat (fenugreek paste)", "Injera", "Coffee", "Khat"],
+        "beverages": ["Coffee (buna)", "Spiced tea"],
+        "specialDishes": ["Hulbat with bread", "Porridge dishes", "Spiced meat"],
+        "description": "Harari cuisine features unique spiced dishes. Hulbat, a fenugreek-based paste, is distinctive. Coffee is central - Harar is coffee's birthplace. Khat chewing is traditional."
+      },
+      "traditionalDance": "Traditional Harari dances performed at weddings and festivals",
+      "religion": "Islam (Sunni) - nearly 100%",
+      "traditionalReligion": {
+        "name": "Harari Islam",
+        "supremeDeity": "Allah",
+        "spirits": ["Saints (auliya)", "Djinn beliefs"],
+        "practices": ["Five daily prayers", "Shrine visitation", "Mawlid celebrations", "Sufi practices"],
+        "beliefs": "Harar is one of Islam's holiest cities with centuries of scholarship. 102 shrines honor local saints. Sufi traditions are strong.",
+        "religiousHistory": {
+          "islamIntroduced": "7th-9th century CE",
+          "introducedBy": "Arab traders across Red Sea",
+          "conversionProcess": "Harar became Muslim early through trade. By 13th century, it was a major center of Islamic learning. Never conquered by Christian Ethiopia.",
+          "sources": ["Wikipedia - Harari people", "UNESCO Harar"]
+        }
+      },
+      "history": {
+        "origin": "The Harari are a Semitic-speaking people who built the walled city of Harar, one of Islam's holiest cities. Founded around the 7th century, Harar became a major center of trade and Islamic scholarship.",
+        "colonialEra": "Egypt briefly occupied (1875-1885), then Harar was incorporated into Ethiopia under Menelik II (1887). The city maintained autonomy and religious character.",
+        "independence": "Harari Region is Ethiopia's smallest regional state. Despite small population, Harari cultural and religious influence is significant.",
+        "keyEvents": ["City founding (~7th century)", "Sultanate of Adal alliance (16th century)", "Egyptian occupation (1875-1885)", "Ethiopian incorporation (1887)", "UNESCO World Heritage (2006)"]
+      },
+      "language": {
+        "name": "Harari (Ge Sinan)",
+        "speakers": "~25,000",
+        "greeting": "Yewu?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Nahu", "meaning": "Fine/Good" },
+          { "phrase": "Assalamu alaykum", "meaning": "Peace be upon you (Islamic)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Wuhubi", "meaning": "Thank you" },
+          { "phrase": "Salamat", "meaning": "Goodbye" }
+        ],
+        "family": "Ethiopian Semitic (Afroasiatic)",
+        "writingSystem": "Arabic script (historically), Ge'ez, Latin",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Semitic",
+          "branch": "Ethiopian Semitic (Harari-East Gurage)",
+          "speakers": "~25,000",
+          "relatedLanguages": ["Silte", "Zay", "Gurage languages"],
+          "migrationHistory": "Harari is a distinct Ethiopian Semitic language that developed in isolation in the walled city"
+        }
+      },
+      "famousPeople": [
+        { "name": "Amir Nur ibn Mujahid", "role": "16th century leader who built Harar's walls", "wikipedia": "https://en.wikipedia.org/wiki/Nur_ibn_Mujahid" },
+        { "name": "Arthur Rimbaud", "role": "French poet who lived and traded in Harar (non-Harari)", "wikipedia": "https://en.wikipedia.org/wiki/Arthur_Rimbaud" }
+      ],
+      "sources": [{ "name": "Wikipedia - Harari people", "url": "https://en.wikipedia.org/wiki/Harari_people" }, { "name": "UNESCO Harar", "url": "https://whc.unesco.org/en/list/1189" }],
+      "description": "The Harari built one of Islam's holiest cities - a walled medieval city with 92 mosques. Their coffee cultivation, basket weaving, and hyena-feeding traditions make them unique among Ethiopian peoples.",
+      "relatedTribes": ["oromo", "somali", "amhara", "gurage"]
+    },
+    {
+      "id": "tigre",
+      "name": "Tigre",
+      "slug": "tigre",
+      "slugAliases": ["tigre-people"],
+      "youtubeVideoId": "TQpU7mGqr9c",
+      "countries": ["ER", "SD"],
+      "region": "Eritrea (lowlands) and eastern Sudan",
+      "population": "~2 million",
+      "populationPercent": "30% of Eritrea",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 16.0, "lng": 38.5 },
+      "counties": ["Northern Red Sea", "Anseba", "Gash-Barka"],
+      "namePrefixes": ["Ab", "Wol", "Ghe", "Tes", "Ha"],
+      "commonNames": {
+        "female": ["Letemichael", "Ghenet", "Feven", "Hanna", "Mihret", "Abrehet", "Senait", "Ribka", "Tsigereda", "Eden"],
+        "male": ["Woldemichael", "Ghebremedhin", "Tesfay", "Abraham", "Yohannes", "Haile", "Berhane", "Ghirmay", "Mehari", "Tesfaldet"]
+      },
+      "stereotypes": [
+        "Skilled pastoralists and farmers",
+        "Strong Muslim majority with Christian minority",
+        "Ancient trading traditions",
+        "Connection to Aksumite heritage",
+        "Resilient through conflicts",
+        "Rich oral poetry traditions"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Herders and farmers",
+          "Warriors and defenders",
+          "Traders and merchants",
+          "Decision-makers in clan matters"
+        ],
+        "female": [
+          "Household managers",
+          "Skilled in traditional crafts",
+          "Maintain cultural traditions",
+          "Active in local trade"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed livestock, engaged in trade, and defended territory. Clan leadership was through male elders.",
+          "female": "Women managed households, processed food, and produced crafts. Had voice in family decisions."
+        },
+        "modern": {
+          "male": "Modern Tigre men work in agriculture, urban professions, and some in diaspora. Many served in independence struggle.",
+          "female": "Women increasingly educated. Many fled conflict to diaspora while maintaining cultural traditions."
+        }
+      },
+      "culturalTraits": [
+        "Rich oral poetry and song traditions",
+        "Pastoral and agricultural lifestyle",
+        "Both Muslim and Christian communities",
+        "Traditional clan governance",
+        "Ancient Aksumite heritage",
+        "Coffee and milk hospitality traditions"
+      ],
+      "funFacts": [
+        "Tigre language is different from Tigrinya - often confused but distinct",
+        "Tigre people are about 30% of Eritrea's population but less known than Tigrinya",
+        "Both Muslim and Christian Tigre communities exist peacefully",
+        "Tigre oral poetry traditions are among Africa's richest",
+        "Many Tigre served in Eritrea's 30-year independence struggle"
+      ],
+      "traditionalFood": {
+        "staples": ["Ga'at (porridge)", "Injera", "Sorghum", "Milk and meat"],
+        "beverages": ["Coffee", "Milk", "Suwa (beer for Christians)"],
+        "specialDishes": ["Ga'at with butter and berbere", "Kitcha fit-fit", "Zigni (meat stew)"],
+        "description": "Tigre cuisine reflects pastoral heritage. Ga'at porridge with butter is staple. Milk products are important. Both meat and grain dishes feature."
+      },
+      "traditionalDance": "Traditional circle dances with singing and clapping at celebrations",
+      "religion": "Islam (~60%), Christianity (~40% - Orthodox and Catholic)",
+      "traditionalReligion": {
+        "name": "Tigre Islam and Christianity",
+        "supremeDeity": "Allah (Muslim) / God (Christian)",
+        "spirits": ["Djinn beliefs among Muslims", "Saints among Christians"],
+        "practices": ["Islamic or Christian prayers", "Traditional ceremonies", "Saint days"],
+        "beliefs": "Tigre are split between Islam and Christianity. Both faiths coexist peacefully. Traditional beliefs sometimes persist alongside Abrahamic faiths.",
+        "religiousHistory": {
+          "christianityIntroduced": "4th-6th century CE",
+          "islamIntroduced": "7th-8th century CE",
+          "introducedBy": "Christianity through Aksumite influence; Islam through Arab traders",
+          "conversionProcess": "Coastal and lowland Tigre converted to Islam through trade. Highland groups remained Christian. Both traditions coexist.",
+          "sources": ["Wikipedia - Tigre people"]
+        }
+      },
+      "history": {
+        "origin": "The Tigre descend from ancient populations of the Eritrean lowlands, with connections to the Aksumite Empire. They speak a language related to but distinct from Tigrinya.",
+        "colonialEra": "Italian Eritrea (1890-1941) affected Tigre territories. Many Tigre fought in various colonial armies and later in independence movements.",
+        "independence": "Tigre participated in Eritrea's 30-year independence struggle (1961-1991). After independence, some Tigre faced marginalization concerns.",
+        "keyEvents": ["Aksumite period connections", "Italian colonization (1890-1941)", "Independence struggle (1961-1991)", "Eritrean independence (1993)"]
+      },
+      "language": {
+        "name": "Tigre (ትግረ)",
+        "speakers": "~1.5 million",
+        "greeting": "Salaam",
+        "greetingMeaning": "Peace/Hello",
+        "additionalGreetings": [
+          { "phrase": "Kemey aleka?", "meaning": "How are you?" },
+          { "phrase": "Hazi yila", "meaning": "I'm fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Yeqenyeley", "meaning": "Thank you" },
+          { "phrase": "Salaam mealka", "meaning": "Goodbye" }
+        ],
+        "family": "Ethiopian Semitic (Afroasiatic)",
+        "writingSystem": "Ge'ez script",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Semitic",
+          "branch": "Ethiopian Semitic (North Ethiopic - Tigre)",
+          "speakers": "~1.5 million",
+          "relatedLanguages": ["Tigrinya", "Ge'ez (ancestor)", "Dahlik"],
+          "migrationHistory": "Tigre descends from Ge'ez, the ancient Aksumite language. Diverged from Tigrinya over 1,000 years ago."
+        }
+      },
+      "famousPeople": [
+        { "name": "Hamid Idris Awate", "role": "Father of Eritrean independence struggle", "wikipedia": "https://en.wikipedia.org/wiki/Hamid_Idris_Awate" },
+        { "name": "Woldeab Woldemariam", "role": "Eritrean journalist and independence activist", "wikipedia": "https://en.wikipedia.org/wiki/Woldeab_Woldemariam" }
+      ],
+      "antiColonialResistance": "Tigre fighters were crucial in Eritrea's 30-year independence struggle against Ethiopia. Hamid Idris Awate, a Tigre, fired the first shots of the independence war in 1961.",
+      "sources": [{ "name": "Wikipedia - Tigre people", "url": "https://en.wikipedia.org/wiki/Tigre_people" }],
+      "description": "The Tigre are Eritrea's second-largest ethnic group with both Muslim and Christian communities. Their language descends from ancient Ge'ez, and they played a crucial role in Eritrea's independence struggle.",
+      "relatedTribes": ["tigrinya", "beja", "afar", "rashida"]
     }
   ]
 }
