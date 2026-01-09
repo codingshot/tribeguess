@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Slider } from '@/components/ui/slider';
 import { Link } from 'react-router-dom';
-import { Church, Moon, Sparkles, Calendar, MapPin, BookOpen, ChevronRight, Map, Clock, Play, Pause } from 'lucide-react';
+import { Church, Moon, Sparkles, Calendar, MapPin, BookOpen, ChevronRight, Map, Clock, Play, Pause, FastForward, Rewind, RotateCcw } from 'lucide-react';
 import tribesData from '@/data/tribes.json';
 
 interface ReligionEvent {
@@ -90,9 +90,11 @@ export default function ReligionTimeline() {
   const [selectedRegion, setSelectedRegion] = useState<string>('all');
   const [selectedReligion, setSelectedReligion] = useState<string>('all');
   const [selectedCentury, setSelectedCentury] = useState<string>('all');
-  const [viewMode, setViewMode] = useState<'timeline' | 'map'>('timeline');
-  const [timelineYear, setTimelineYear] = useState<number>(2000);
+  const [viewMode, setViewMode] = useState<'timeline' | 'map'>('map');
+  const [timelineYear, setTimelineYear] = useState<number>(300);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [animationSpeed, setAnimationSpeed] = useState<number>(100);
+  const [showSpreadLines, setShowSpreadLines] = useState(true);
 
   // Extract religion timeline events from tribes data
   const timelineEvents = useMemo(() => {
@@ -305,7 +307,7 @@ export default function ReligionTimeline() {
     return filteredEvents.filter(e => e.year <= timelineYear);
   }, [filteredEvents, timelineYear]);
 
-  // Animation effect for timeline slider
+  // Animation effect for timeline slider with variable speed
   useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isAnimating && viewMode === 'map') {
@@ -315,12 +317,53 @@ export default function ReligionTimeline() {
             setIsAnimating(false);
             return 2000;
           }
-          return prev + 25;
+          return prev + 10;
         });
-      }, 150);
+      }, animationSpeed);
     }
     return () => clearInterval(interval);
-  }, [isAnimating, viewMode]);
+  }, [isAnimating, viewMode, animationSpeed]);
+
+  // Calculate spread lines between events
+  const spreadLines = useMemo(() => {
+    const lines: Array<{
+      from: { x: number; y: number };
+      to: { x: number; y: number };
+      religion: 'christianity' | 'islam' | 'traditional';
+      year: number;
+    }> = [];
+
+    const sortedEvents = [...timelineFilteredEvents]
+      .filter(e => e.coordinates)
+      .sort((a, b) => a.year - b.year);
+
+    // Group by religion
+    const byReligion = {
+      christianity: sortedEvents.filter(e => e.religion === 'christianity'),
+      islam: sortedEvents.filter(e => e.religion === 'islam'),
+      traditional: sortedEvents.filter(e => e.religion === 'traditional')
+    };
+
+    // Create spread lines connecting chronological events
+    Object.entries(byReligion).forEach(([religion, events]) => {
+      for (let i = 1; i < events.length; i++) {
+        const prev = events[i - 1];
+        const curr = events[i];
+        if (prev.coordinates && curr.coordinates) {
+          const fromPos = projectCoordinates(prev.coordinates.lat, prev.coordinates.lng, mapBounds);
+          const toPos = projectCoordinates(curr.coordinates.lat, curr.coordinates.lng, mapBounds);
+          lines.push({
+            from: fromPos,
+            to: toPos,
+            religion: religion as 'christianity' | 'islam' | 'traditional',
+            year: curr.year
+          });
+        }
+      }
+    });
+
+    return lines;
+  }, [timelineFilteredEvents, mapBounds]);
 
   const getCenturyLabel = (year: number) => {
     if (year < 100) return '1st Century';
@@ -448,20 +491,42 @@ export default function ReligionTimeline() {
         {viewMode === 'map' && (
           <section className="py-8">
             <div className="container mx-auto px-4">
-              {/* Timeline Slider */}
+              {/* Timeline Slider with Enhanced Controls */}
               <div className="bg-muted/50 rounded-xl p-4 mb-4 border border-border">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-3">
+                  <div className="flex items-center gap-2">
+                    {/* Reset button */}
+                    <button
+                      onClick={() => {
+                        setIsAnimating(false);
+                        setTimelineYear(300);
+                      }}
+                      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+                      title="Reset to 300 CE"
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                    </button>
+                    
+                    {/* Slow down */}
+                    <button
+                      onClick={() => setAnimationSpeed(prev => Math.min(prev + 50, 300))}
+                      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+                      title="Slow down"
+                    >
+                      <Rewind className="w-4 h-4" />
+                    </button>
+                    
+                    {/* Play/Pause */}
                     <button
                       onClick={() => {
                         if (isAnimating) {
                           setIsAnimating(false);
                         } else {
-                          setTimelineYear(300);
+                          if (timelineYear >= 2000) setTimelineYear(300);
                           setIsAnimating(true);
                         }
                       }}
-                      className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
                     >
                       {isAnimating ? (
                         <>
@@ -469,34 +534,92 @@ export default function ReligionTimeline() {
                         </>
                       ) : (
                         <>
-                          <Play className="w-4 h-4" /> Animate
+                          <Play className="w-4 h-4" /> {timelineYear >= 2000 ? 'Restart' : 'Play'}
                         </>
                       )}
                     </button>
-                    <span className="text-sm text-muted-foreground">
-                      Year: <span className="font-bold text-foreground">{timelineYear} CE</span>
+                    
+                    {/* Speed up */}
+                    <button
+                      onClick={() => setAnimationSpeed(prev => Math.max(prev - 50, 50))}
+                      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+                      title="Speed up"
+                    >
+                      <FastForward className="w-4 h-4" />
+                    </button>
+
+                    <span className="text-sm text-muted-foreground ml-2">
+                      Speed: <span className="font-medium text-foreground">{animationSpeed < 100 ? 'Fast' : animationSpeed > 150 ? 'Slow' : 'Normal'}</span>
                     </span>
                   </div>
-                  <div className="text-sm">
-                    <span className="text-muted-foreground">Showing </span>
-                    <span className="font-bold text-primary">{timelineFilteredEvents.filter(e => e.coordinates).length}</span>
-                    <span className="text-muted-foreground"> events through {getCenturyLabel(timelineYear)}</span>
+
+                  <div className="flex items-center gap-4">
+                    {/* Toggle spread lines */}
+                    <label className="flex items-center gap-2 text-sm cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={showSpreadLines}
+                        onChange={(e) => setShowSpreadLines(e.target.checked)}
+                        className="rounded border-border"
+                      />
+                      <span className="text-muted-foreground">Show spread paths</span>
+                    </label>
+
+                    <div className="text-sm">
+                      <span className="text-muted-foreground">Year: </span>
+                      <span className="font-bold text-primary text-lg">{timelineYear} CE</span>
+                    </div>
                   </div>
                 </div>
+
+                {/* Year display bar */}
+                <div className="relative mb-2">
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <span className="text-xs text-muted-foreground bg-background px-2 py-0.5 rounded">
+                      {getCenturyLabel(timelineYear)} • {timelineFilteredEvents.filter(e => e.coordinates).length} events
+                    </span>
+                  </div>
+                </div>
+
                 <Slider
                   value={[timelineYear]}
-                  onValueChange={([val]) => setTimelineYear(val)}
+                  onValueChange={([val]) => {
+                    setTimelineYear(val);
+                    if (isAnimating) setIsAnimating(false);
+                  }}
                   min={300}
                   max={2000}
-                  step={25}
+                  step={10}
                   className="w-full"
                 />
-                <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                <div className="flex justify-between text-xs text-muted-foreground mt-2">
                   <span>300 CE</span>
-                  <span>800 CE</span>
-                  <span>1200 CE</span>
-                  <span>1600 CE</span>
+                  <span>700 CE</span>
+                  <span>1100 CE</span>
+                  <span>1500 CE</span>
+                  <span>1800 CE</span>
                   <span>2000 CE</span>
+                </div>
+
+                {/* Era indicators */}
+                <div className="flex gap-2 mt-3 flex-wrap">
+                  {[
+                    { label: 'Early Christianity', year: 330, color: 'bg-blue-500/20 text-blue-400' },
+                    { label: 'Islamic Expansion', year: 700, color: 'bg-green-500/20 text-green-400' },
+                    { label: 'Medieval Period', year: 1100, color: 'bg-amber-500/20 text-amber-400' },
+                    { label: 'Colonial Era', year: 1800, color: 'bg-purple-500/20 text-purple-400' }
+                  ].map(era => (
+                    <button
+                      key={era.label}
+                      onClick={() => {
+                        setIsAnimating(false);
+                        setTimelineYear(era.year);
+                      }}
+                      className={`text-xs px-2 py-1 rounded-full ${era.color} hover:opacity-80 transition-opacity`}
+                    >
+                      {era.label}
+                    </button>
+                  ))}
                 </div>
               </div>
 
@@ -510,9 +633,64 @@ export default function ReligionTimeline() {
                     title="Religion spread map"
                   />
                   
-                  {/* Overlay markers with proper projection */}
+                  {/* Overlay with spread lines and markers */}
                   <div className="absolute inset-0 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      {/* Spread lines showing religion propagation */}
+                      {showSpreadLines && spreadLines
+                        .filter(line => line.year <= timelineYear)
+                        .map((line, i) => {
+                          const color = religionMarkerColors[line.religion];
+                          const age = timelineYear - line.year;
+                          const opacity = age < 100 ? 0.6 : age < 300 ? 0.4 : 0.2;
+                          
+                          return (
+                            <line
+                              key={`spread-${i}`}
+                              x1={line.from.x}
+                              y1={line.from.y}
+                              x2={line.to.x}
+                              y2={line.to.y}
+                              stroke={color}
+                              strokeWidth="0.15"
+                              strokeOpacity={opacity}
+                              strokeDasharray="0.5,0.3"
+                              className={age < 50 ? 'animate-pulse' : ''}
+                            />
+                          );
+                        })}
+
+                      {/* Region influence areas */}
+                      {timelineFilteredEvents.filter(e => e.coordinates).map((event, i) => {
+                        const { x, y } = projectCoordinates(
+                          event.coordinates!.lat, 
+                          event.coordinates!.lng, 
+                          mapBounds
+                        );
+                        const color = religionMarkerColors[event.religion];
+                        const yearDiff = timelineYear - event.year;
+                        
+                        // Growing influence radius based on time
+                        const baseRadius = 0.8;
+                        const maxRadius = 3;
+                        const growthTime = 200; // years to reach max
+                        const radius = Math.min(baseRadius + (yearDiff / growthTime) * (maxRadius - baseRadius), maxRadius);
+                        const opacity = yearDiff < 50 ? 0.3 : yearDiff < 200 ? 0.15 : 0.08;
+                        
+                        return yearDiff > 0 ? (
+                          <circle
+                            key={`influence-${event.tribe}-${event.year}-${i}`}
+                            cx={x}
+                            cy={y}
+                            r={radius}
+                            fill={color}
+                            fillOpacity={opacity}
+                            className={yearDiff < 100 ? 'animate-pulse' : ''}
+                          />
+                        ) : null;
+                      })}
+
+                      {/* Event markers */}
                       {timelineFilteredEvents.filter(e => e.coordinates).map((event, i) => {
                         const { x, y } = projectCoordinates(
                           event.coordinates!.lat, 
@@ -523,31 +701,53 @@ export default function ReligionTimeline() {
                         
                         // Fade in based on recency
                         const yearDiff = timelineYear - event.year;
-                        const opacity = yearDiff < 50 ? 1 : yearDiff < 200 ? 0.8 : 0.6;
+                        const opacity = yearDiff < 50 ? 1 : yearDiff < 200 ? 0.9 : 0.7;
+                        const markerSize = yearDiff < 100 ? 1.5 : 1.2;
                         
                         return (
-                          <g key={`${event.tribe}-${event.year}-${i}`}>
+                          <g key={`marker-${event.tribe}-${event.year}-${i}`}>
                             {/* Pulse effect for recent events */}
-                            {yearDiff < 100 && (
-                              <circle
-                                cx={x}
-                                cy={y}
-                                r="2.5"
-                                fill="none"
-                                stroke={color}
-                                strokeWidth="0.2"
-                                className="animate-ping"
-                                style={{ animationDuration: '2s' }}
-                              />
+                            {yearDiff < 100 && yearDiff >= 0 && (
+                              <>
+                                <circle
+                                  cx={x}
+                                  cy={y}
+                                  r="2.5"
+                                  fill="none"
+                                  stroke={color}
+                                  strokeWidth="0.15"
+                                  className="animate-ping"
+                                  style={{ animationDuration: '2s' }}
+                                />
+                                <circle
+                                  cx={x}
+                                  cy={y}
+                                  r="1.8"
+                                  fill="none"
+                                  stroke={color}
+                                  strokeWidth="0.1"
+                                  className="animate-ping"
+                                  style={{ animationDuration: '3s', animationDelay: '0.5s' }}
+                                />
+                              </>
                             )}
+                            {/* Main marker */}
                             <circle
                               cx={x}
                               cy={y}
-                              r="1.2"
+                              r={markerSize}
                               fill={color}
                               stroke="white"
                               strokeWidth="0.2"
                               style={{ opacity }}
+                            />
+                            {/* Inner dot for emphasis */}
+                            <circle
+                              cx={x}
+                              cy={y}
+                              r="0.4"
+                              fill="white"
+                              style={{ opacity: opacity * 0.8 }}
                             />
                           </g>
                         );

@@ -1480,6 +1480,244 @@ export const traditionalReligions: TraditionalReligionData[] = [
       { name: "Britannica - Berber", url: "https://www.britannica.com/topic/Berber" },
       { name: "Encyclopaedia of Islam", url: "https://referenceworks.brillonline.com/entries/encyclopaedia-of-islam-2/berbers" }
     ]
+  },
+  {
+    id: "malagasy-religion",
+    name: "Malagasy Traditional Religion",
+    alternateNames: ["Fomba Malagasy", "Malagasy Ancestor Worship", "Razana"],
+    region: "East Africa",
+    estimatedFollowers: "~5 million",
+    youtubeVideoId: "K7n0gFo-cVs",
+    countryBreakdown: [
+      { country: "Madagascar", flag: "🇲🇬", percentage: 100 }
+    ],
+    supremeDeity: {
+      name: "Zanahary (Andriamanitra)",
+      description: "The creator god who made heaven and earth. Zanahary is considered distant but omnipresent, working through ancestors (razana) who act as intermediaries between the living and divine.",
+      attributes: ["Creator", "Omnipresent", "Source of Life", "Heavenly Father"]
+    },
+    tenets: [
+      {
+        belief: "Razana (Ancestor Veneration)",
+        description: "The deceased ancestors continue to influence the living. Proper veneration through ritual and offerings ensures their blessing and protection. Razana can bring fortune or misfortune.",
+        source: "Bloch, Maurice - Placing the Dead (1971)"
+      },
+      {
+        belief: "Fady (Taboos)",
+        description: "Sacred prohibitions that govern behavior. Fady can be personal, familial, or regional. Violating fady brings misfortune and requires purification rituals.",
+        source: "Encyclopedia of Madagascar"
+      },
+      {
+        belief: "Hasina (Sacred Life Force)",
+        description: "A spiritual power inherent in all things, strongest in ancestors, rulers, and sacred objects. Hasina can be transferred, accumulated, and manipulated through ritual.",
+        source: "Astuti, Rita - People of the Sea (1995)"
+      },
+      {
+        belief: "Vintana (Destiny)",
+        description: "Each person has a destiny influenced by their birth time. Astrologers (mpanandro) read vintana to determine auspicious times for important activities.",
+        source: "Ruud, Jørgen - Taboo: Sacred Life Force in Madagascar (1960)"
+      }
+    ],
+    practices: [
+      { name: "Famadihana (Turning of the Bones)", description: "Every 5-7 years, families exhume ancestors' remains, rewrap them in fresh silk shrouds, and dance with them. Celebrates the bond between living and dead.", frequency: "Every 5-7 years" },
+      { name: "Joro (Invocation)", description: "Prayers and offerings to ancestors, often involving rum, honey, and cattle sacrifice. Performed at family tombs or sacred stones.", frequency: "Major occasions" },
+      { name: "Mpanandro Consultation", description: "Consulting traditional astrologers for auspicious dates for weddings, funerals, business ventures, and farming activities.", frequency: "As needed" },
+      { name: "Tromba Spirit Possession", description: "Mediums become possessed by royal or ancestral spirits who speak through them, offering guidance and healing.", frequency: "Ceremonial" }
+    ],
+    rituals: [
+      { name: "Famadihana", description: "The famous 'turning of the bones' ceremony. Families gather for feasting, music, and dancing while honoring ancestors. Expensive but spiritually essential.", occasion: "Every 5-7 years" },
+      { name: "Famorana (Circumcision)", description: "Coming-of-age ritual for boys, often performed in groups. Includes celebration, blessings, and consumption of the foreskin mixed with banana by male relatives.", occasion: "Childhood (7-8 years)" },
+      { name: "Marriage Negotiations", description: "Complex process involving families, elders, and vodiondry (bride price). Astrologers determine auspicious dates. Multiple ceremonies over days.", occasion: "Marriage" }
+    ],
+    sacredTexts: [
+      { name: "Tantara ny Andriana (Royal History)", description: "Written compilation of oral traditions about Merina royalty, customs, and beliefs. Collected by Father Callet in 19th century.", status: "written" },
+      { name: "Oral Traditions (Ohabolana)", description: "Proverbs, myths, and genealogies passed through generations. Contain ethical teachings and cosmological knowledge.", status: "oral" }
+    ],
+    joining: {
+      process: "Malagasy religion is tied to family and community. One participates through birth and family affiliation. Outsiders may participate in ceremonies through marriage or community integration.",
+      requirements: [
+        "Family connection or community adoption",
+        "Respect for fady (taboos)",
+        "Participation in famadihana and family ceremonies",
+        "Learning family genealogy and razana (ancestors)"
+      ],
+      notes: "Many Malagasy practice both traditional religion and Christianity, seeing no contradiction. Famadihana and ancestor veneration continue among Christians."
+    },
+    influence: {
+      cultural: "Malagasy identity is deeply tied to ancestor veneration. Architecture, art, and social organization reflect religious beliefs. The tomb is often grander than the home.",
+      modern: "Despite Christianity's spread, famadihana remains widely practiced. Government recognizes traditional practices. Tourism has brought international attention.",
+      diaspora: "Malagasy diaspora in France maintains cultural connections. Remains are sometimes repatriated for burial in Madagascar."
+    },
+    tribesFollowing: [
+      { tribeSlug: "merina", tribeName: "Merina", percentage: 55, notes: "Highland practices, elaborate famadihana" },
+      { tribeSlug: "betsileo", tribeName: "Betsileo", percentage: 50, notes: "Similar highland traditions" },
+      { tribeSlug: "sakalava", tribeName: "Sakalava", percentage: 60, notes: "Strong tromba tradition" },
+      { tribeSlug: "antandroy", tribeName: "Antandroy", percentage: 70, notes: "Strong traditional adherence" }
+    ],
+    sources: [
+      { name: "Wikipedia - Religion in Madagascar", url: "https://en.wikipedia.org/wiki/Religion_in_Madagascar" },
+      { name: "Britannica - Madagascar Religion", url: "https://www.britannica.com/place/Madagascar/Religion" },
+      { name: "Bloch - Placing the Dead", url: "https://www.jstor.org/stable/10.1086/657823" }
+    ]
+  },
+  {
+    id: "oromo-waaqeffanna",
+    name: "Oromo Waaqeffanna",
+    alternateNames: ["Waaqeffannaa", "Waaqa Worship", "Oromo Indigenous Religion"],
+    region: "Horn of Africa",
+    estimatedFollowers: "~3 million",
+    youtubeVideoId: "vQ5pRz_AhZM",
+    countryBreakdown: [
+      { country: "Ethiopia", flag: "🇪🇹", percentage: 85 },
+      { country: "Kenya", flag: "🇰🇪", percentage: 12 },
+      { country: "Somalia", flag: "🇸🇴", percentage: 3 }
+    ],
+    supremeDeity: {
+      name: "Waaqa (Waaqayyo)",
+      description: "The supreme sky god, creator of everything. Waaqa is omnipresent, omniscient, and the source of all life. Unlike in some traditions, Waaqa can be approached directly without intermediaries.",
+      attributes: ["Sky God", "Creator", "Omniscient", "Source of Law and Order"]
+    },
+    tenets: [
+      {
+        belief: "Safuu (Cosmic Moral Order)",
+        description: "The ethical and moral code governing relationships between humans, nature, and Waaqa. Violating safuu disrupts cosmic harmony and brings misfortune.",
+        source: "Bartels, Lambert - Oromo Religion (1983)"
+      },
+      {
+        belief: "Ayyaana (Spiritual Beings)",
+        description: "Spirits that mediate between Waaqa and humans. Each person has an ayyaana. There are also ayyaana of places, times, and natural phenomena.",
+        source: "Hassen, Mohammed - The Oromo of Ethiopia (1990)"
+      },
+      {
+        belief: "Qaallu System",
+        description: "Spiritual leadership through qaallu priests who communicate with Waaqa and maintain safuu. The qaallu institution predates Gadaa governance.",
+        source: "Knutsson, Karl Eric - Authority and Change (1967)"
+      },
+      {
+        belief: "Nagaa (Peace/Harmony)",
+        description: "The ideal state of existence where safuu is maintained. Nagaa encompasses personal peace, social harmony, and ecological balance.",
+        source: "Oromo Studies Association"
+      }
+    ],
+    practices: [
+      { name: "Irreecha Festival", description: "The most important thanksgiving ceremony held at Lake Hora Arsedi after the rainy season. Millions gather to thank Waaqa for life, water, and harvest.", frequency: "Annual (September/October)" },
+      { name: "Prayer at Sacred Sites", description: "Regular prayers at mountains, rivers, and large trees considered sacred. Water sources are particularly venerated.", frequency: "Weekly/Seasonal" },
+      { name: "Qaallu Consultation", description: "Seeking guidance from qaallu priests for important decisions, healing, and resolving disputes.", frequency: "As needed" },
+      { name: "Muuda Pilgrimage", description: "Traditional pilgrimage to qaallu centers, bringing offerings and seeking blessings.", frequency: "Annual/Occasional" }
+    ],
+    rituals: [
+      { name: "Irreecha Birraa", description: "Spring thanksgiving at water bodies. Participants wear traditional dress, carry green grass and flowers, and offer thanks for rain and new growth.", occasion: "September/October" },
+      { name: "Irreecha Arfaasaa", description: "Autumn thanksgiving marking the end of harvest. Offerings of crops and prayers for continued blessings.", occasion: "April/May" },
+      { name: "Ateetee", description: "Women's fertility and protection ritual. Women gather to pray, sing, and appeal to the mother deity aspect for childbearing and family protection.", occasion: "Fertility issues/Annually" }
+    ],
+    sacredTexts: [
+      { name: "Oral Law (Seera)", description: "Extensive oral tradition containing laws, history, and religious teachings. Preserved by qaallu and elders.", status: "oral" },
+      { name: "Geerarsa (Poetry)", description: "Sacred poetry and songs praising Waaqa, recounting history, and encoding moral teachings.", status: "oral" }
+    ],
+    joining: {
+      process: "Waaqeffanna is traditionally ethnic, tied to Oromo identity. However, the recent revival has welcomed those interested in learning and practicing the tradition.",
+      requirements: [
+        "Genuine interest in Oromo spiritual traditions",
+        "Learning of safuu principles",
+        "Participation in Irreecha and community ceremonies",
+        "Acceptance by qaallu or community elders"
+      ],
+      notes: "Waaqeffanna has experienced revival since the 1990s. Irreecha now draws millions and has become a symbol of Oromo cultural identity."
+    },
+    influence: {
+      cultural: "Waaqeffanna shaped the democratic Gadaa system of governance. Environmental ethics influence land use. Calendar and naming conventions derive from the religion.",
+      modern: "Irreecha festival recognized by Ethiopian government. Waaqeffanna councils advocate for religious rights. Revival among educated urban Oromo.",
+      diaspora: "Oromo diaspora communities in US, Europe, and Middle East maintain Irreecha celebrations. Online communities share teachings."
+    },
+    tribesFollowing: [
+      { tribeSlug: "oromo", tribeName: "Oromo", percentage: 15, notes: "Revival ongoing; many Christian/Muslim" },
+      { tribeSlug: "borana", tribeName: "Borana", percentage: 25, notes: "Stronger traditional retention" },
+      { tribeSlug: "guji", tribeName: "Guji", percentage: 20, notes: "Active qaallu institutions" }
+    ],
+    sources: [
+      { name: "Wikipedia - Waaqeffanna", url: "https://en.wikipedia.org/wiki/Waaqeffanna" },
+      { name: "Britannica - Oromo", url: "https://www.britannica.com/topic/Oromo" },
+      { name: "Bartels - Oromo Religion", url: "https://www.africabib.org/rec.php?RID=084927667" }
+    ]
+  },
+  {
+    id: "himba-religion",
+    name: "Himba Traditional Religion",
+    alternateNames: ["Himba Ancestor Worship", "OvaHimba Beliefs"],
+    region: "Southern Africa",
+    estimatedFollowers: "~50,000",
+    youtubeVideoId: "ZmDhRvvs5Xw",
+    countryBreakdown: [
+      { country: "Namibia", flag: "🇳🇦", percentage: 90 },
+      { country: "Angola", flag: "🇦🇴", percentage: 10 }
+    ],
+    supremeDeity: {
+      name: "Mukuru",
+      description: "The supreme being and first ancestor of the Himba people. Mukuru is approached through the sacred ancestral fire (okuruwo) and through the lineage ancestors. He is the source of blessing and protection.",
+      attributes: ["Supreme Ancestor", "Creator", "Source of Blessings", "Guardian of Traditions"]
+    },
+    tenets: [
+      {
+        belief: "Okuruwo (Ancestral Fire)",
+        description: "The sacred fire that must never go out, representing the connection between living and dead. The fire belongs to the lineage and is tended by the headman or senior wife.",
+        source: "Crandall, David - The Place of Stunted Ironwood Trees (2000)"
+      },
+      {
+        belief: "Bilateral Descent",
+        description: "Himba trace descent through both father (patriclan/oruzo) and mother (matriclan/eanda). The patriclan determines ritual responsibilities; the matriclan determines inheritance.",
+        source: "Malan, J.S. - Peoples of Namibia (1995)"
+      },
+      {
+        belief: "Ancestor Communication",
+        description: "Ancestors actively influence daily life. They are consulted through the sacred fire for important decisions and can cause illness or misfortune if neglected or offended.",
+        source: "Jacobsohn, Margaret - Himba (1990)"
+      },
+      {
+        belief: "Cattle as Sacred",
+        description: "Cattle are central to spiritual and social life. They are sacrificed to ancestors, used in bride price, and their movements are believed to be guided by ancestors.",
+        source: "Bollig, Michael - Risk Management in a Hazardous Environment (2006)"
+      }
+    ],
+    practices: [
+      { name: "Tending Okuruwo", description: "The sacred fire is maintained continuously. The headman communicates with ancestors at the fire, making offerings and seeking guidance.", frequency: "Daily" },
+      { name: "Otjize Application", description: "Women apply red ochre and butterfat mixture (otjize) to skin and hair. This has both aesthetic and spiritual significance, connecting to the earth and ancestors.", frequency: "Daily" },
+      { name: "Cattle Rituals", description: "Important events require cattle sacrifice at the sacred fire. The meat is shared communally, and ancestors receive their portion through the fire.", frequency: "Major occasions" },
+      { name: "Divination", description: "Consulting with elders or diviners to interpret signs, dreams, and ancestor messages for guidance in important matters.", frequency: "As needed" }
+    ],
+    rituals: [
+      { name: "Okujepisa Omukazendhu", description: "Coming-of-age ceremony for girls at first menstruation. The girl is secluded, taught women's knowledge, and presented with a new hairstyle indicating marriageable status.", occasion: "Puberty" },
+      { name: "Cattle Sacrifice", description: "When seeking ancestor blessing or dealing with illness/misfortune. An animal is sacrificed at the okuruwo, and the blood is offered to ancestors.", occasion: "Various" },
+      { name: "Marriage (Okujepisa)", description: "Complex multi-day ceremony involving both clans. Cattle exchange, blessing at the sacred fire, and the bride's transition to her husband's homestead.", occasion: "Marriage" },
+      { name: "Funeral (Okutumba)", description: "The deceased is buried with possessions. Cattle are sacrificed. The okuruwo ceremonies help the spirit join the ancestors.", occasion: "Death" }
+    ],
+    sacredTexts: [
+      { name: "Oral Histories", description: "Genealogies, clan histories, and origin stories passed through generations. Elders are the primary keepers of this knowledge.", status: "oral" },
+      { name: "Songs and Praise Poetry", description: "Cattle praise songs (omirongere) and historical recitations that encode spiritual and cultural knowledge.", status: "oral" }
+    ],
+    joining: {
+      process: "Himba religion is tied to lineage and ethnicity. One is born into the tradition through family membership. Marriage into a Himba family involves learning and participating in customs.",
+      requirements: [
+        "Birth into or marriage to Himba family",
+        "Acceptance by clan elders",
+        "Participation in okuruwo rituals",
+        "Learning clan genealogies and taboos"
+      ],
+      notes: "The Himba have resisted many outside influences. Their traditions remain strong, though modernization pressures exist."
+    },
+    influence: {
+      cultural: "Himba religion shapes every aspect of daily life - from hairstyles indicating life stage to cattle management reflecting spiritual relationships. Their distinctive appearance reflects religious aesthetics.",
+      modern: "Tourism has brought attention and income but also pressures. Himba advocates work to maintain traditions while accessing education and healthcare.",
+      diaspora: "Some Himba have migrated to Namibian towns but often maintain village connections and participate in ceremonies."
+    },
+    tribesFollowing: [
+      { tribeSlug: "himba", tribeName: "Himba", percentage: 85, notes: "Strong traditional retention" },
+      { tribeSlug: "herero", tribeName: "Herero", percentage: 20, notes: "Related traditions, more Christian influence" }
+    ],
+    sources: [
+      { name: "Wikipedia - Himba People", url: "https://en.wikipedia.org/wiki/Himba_people" },
+      { name: "Britannica - Himba", url: "https://www.britannica.com/topic/Himba" },
+      { name: "Crandall - Himba Studies", url: "https://www.jstor.org/stable/3773411" }
+    ]
   }
 ];
 
