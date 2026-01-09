@@ -7937,6 +7937,13 @@
       },
       "traditionalDance": "Mukanda initiation dances with elaborate masks",
       "religion": "Traditional beliefs (strong), Christianity",
+      "traditionalReligion": {
+        "name": "Chokwe Traditional Religion",
+        "supremeDeity": "Nzambi/Kalunga (supreme creator god)",
+        "spirits": ["Mahamba (ancestor spirits)", "Hamba (nature spirits in trees, rivers, animals)", "Akishi (masked spirit beings)"],
+        "practices": ["Mukanda male initiation with masks", "Nganga (diviner-healers) consult spirits", "Offerings to mahamba ancestors at shrines", "Masked ceremonies with Pwo and Mwana Pwo spirits", "Hunting rituals asking forest spirits for success"],
+        "beliefs": "Nzambi created the world but is distant; mahamba ancestors actively influence the living; masks embody spirits during ceremonies; mukanda initiation connects boys to ancestral wisdom; hunters must respect forest spirits"
+      },
       "language": { "name": "Chokwe", "speakers": "~2 million", "greeting": "Moyo!", "greetingMeaning": "Life!/Hello!", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "populationByCountry": [
         { "country": "AO", "population": "~1,000,000", "percent": "5%" },
@@ -8846,6 +8853,263 @@
       "sources": [{ "name": "Wikipedia - Chewa people", "url": "https://en.wikipedia.org/wiki/Chewa_people" }, { "name": "UNESCO - Gule Wamkulu", "url": "https://ich.unesco.org/en/RL/gule-wamkulu-00142" }],
       "description": "The Chewa are the largest ethnic group in Malawi, known for their matrilineal society, the secretive Gule Wamkulu masked dances (UNESCO heritage), and their reputation as 'The Warm Heart of Africa'.",
       "relatedTribes": ["tumbuka", "yao", "lomwe", "ngoni"]
+    },
+
+    {
+      "id": "edo",
+      "name": "Edo (Bini)",
+      "slug": "edo",
+      "slugAliases": ["benin", "bini", "bini-edo"],
+      "countries": ["NG"],
+      "region": "Edo State, Nigeria",
+      "population": "~5 million",
+      "populationPercent": "~2.5% (Nigeria)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.34, "lng": 5.62 },
+      "counties": ["Edo State", "Benin City"],
+      "namePrefixes": ["Osa", "Ogie", "Iro", "Eki"],
+      "commonNames": {
+        "female": ["Osarugue", "Efe", "Eki", "Osarenren", "Osayande", "Itohan", "Osazee"],
+        "male": ["Osarugue", "Ogiemwonyi", "Irowa", "Osayande", "Osarodion", "Osagie", "Nosakhare"]
+      },
+      "stereotypes": ["Bronze casting masters", "Benin Kingdom heirs", "Proud royal heritage", "Artistic tradition", "Strong cultural identity"],
+      "culturalTraits": ["Benin bronze casting tradition (UNESCO heritage)", "Oba (king) system - divine kingship", "Elaborate coral bead regalia", "Igue festival celebrating the Oba", "Complex guild system for artisans", "Strong patrilineal inheritance"],
+      "funFacts": ["Benin bronzes are among the most valuable African art - many in British museums after 1897 raid", "The Benin Empire had one of the world's longest city walls (15th-16th century)", "Oba Ewuare the Great made Benin City one of Africa's largest cities", "Edo people trace their origin to a prince from Ife"],
+      "tradeRelations": {
+        "historical": ["Major pepper and ivory trade with Portuguese (1400s)", "Bronze casting from European brass imports", "Controlled trade routes to the coast"],
+        "modern": ["Agricultural products", "Rubber production", "Trade hub at Benin City"]
+      },
+      "traditionalFood": {
+        "staples": ["Pounded yam", "Egusi soup", "Black soup (owoho)", "Owo soup"],
+        "beverages": ["Palm wine", "Ogidiga (local gin)"],
+        "specialDishes": ["Egusi soup", "Bitterleaf soup", "Pepper soup"],
+        "description": "Edo cuisine features rich soups with pounded yam, including the distinctive black soup made with local herbs."
+      },
+      "traditionalDance": "Ukele dance and ceremonial royal dances",
+      "religion": "Traditional Edo religion, Christianity",
+      "traditionalReligion": {
+        "name": "Edo Traditional Religion",
+        "supremeDeity": "Osanobua (supreme creator god who lives in heaven)",
+        "spirits": ["Olokun (god of the sea and wealth)", "Ogun (god of iron and war)", "Obiemwen (earth goddess)", "Ancestors (Erinmwin)", "Personal chi (Ehi)"],
+        "practices": ["Offerings and prayers to Olokun for prosperity", "Igue festival honoring the Oba's mystical power", "Bronze casting as sacred art for royal shrines", "Ancestor veneration at family shrines", "Consultation with Ohen (priests/priestesses)", "Coral bead rituals connecting to Olokun"],
+        "beliefs": "Osanobua created the world; Olokun (sea god) brings wealth and fertility; the Oba is semi-divine; ancestors continue to influence the living; elaborate rituals maintain cosmic order; bronze art has spiritual power"
+      },
+      "language": { "name": "Edo (Bini)", "speakers": "~5 million", "greeting": "Kóyo!", "greetingMeaning": "Hello!", "family": "Volta-Niger (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "Oba Ewuare II", "role": "Current Oba of Benin", "wikipedia": "https://en.wikipedia.org/wiki/Ewuare_II" },
+        { "name": "Oba Ewuare the Great", "role": "15th Century Empire Builder", "wikipedia": "https://en.wikipedia.org/wiki/Ewuare" },
+        { "name": "Samuel Ogbemudia", "role": "Governor and Administrator", "wikipedia": "https://en.wikipedia.org/wiki/Samuel_Ogbemudia" }
+      ],
+      "sources": [{ "name": "Wikipedia - Edo people", "url": "https://en.wikipedia.org/wiki/Edo_people" }],
+      "description": "The Edo are the people of the ancient Benin Kingdom in Nigeria, world-renowned for their bronze casting tradition and the divine kingship of the Oba.",
+      "relatedTribes": ["yoruba", "igbo", "ijaw", "urhobo"]
+    },
+
+    {
+      "id": "ewe",
+      "name": "Ewe",
+      "slug": "ewe",
+      "slugAliases": ["eʋe", "eibe", "krepi"],
+      "countries": ["GH", "TG", "BJ"],
+      "region": "Volta Region (Ghana) & Togo",
+      "population": "~7 million",
+      "populationPercent": "~14% (Ghana)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 6.6, "lng": 0.8 },
+      "counties": ["Volta Region", "Oti Region (Ghana)", "Maritime Region (Togo)"],
+      "namePrefixes": ["Ko", "Afi", "Kof", "Edem"],
+      "commonNames": {
+        "female": ["Afi", "Ama", "Akos", "Abla", "Dzifa", "Sena", "Yawa"],
+        "male": ["Kofi", "Kwame", "Edem", "Kosi", "Senyo", "Atsufui", "Fiifi"]
+      },
+      "stereotypes": ["Master drummers", "Kente weavers", "Voodoo practitioners", "Strong traders", "Divided by colonial borders"],
+      "culturalTraits": ["Agbadza and Atsiagbekor drum and dance traditions", "Kente cloth weaving (shared with Akan)", "Vodun (Voodoo) religious traditions", "Divided between Ghana and Togo by colonial borders", "Strong oral poetry tradition", "Ewe drum language communication"],
+      "funFacts": ["The Ewe are the origin of Vodun/Voodoo which spread to Haiti and Louisiana", "Ewe drumming is so complex it influenced modern jazz and Afrobeat", "The Ewe were divided by an arbitrary colonial line - same families in two countries", "Ewe kente weaving patterns each have specific meanings"],
+      "tradeRelations": {
+        "historical": ["Kola nut and palm oil trade", "Kente cloth production", "Cross-border trade networks"],
+        "modern": ["Textile and craft exports", "Cross-border trade with Togo", "Fishing industry on Volta Lake"]
+      },
+      "traditionalFood": {
+        "staples": ["Akple (fermented corn dough)", "Banku", "Fish (fresh and smoked)", "Palm nut soup"],
+        "beverages": ["Palm wine", "Akpeteshie (local gin)"],
+        "specialDishes": ["Akple with okro stew", "One man thousand (sardine dish)", "Dzenkple (fried corn dough)"],
+        "description": "Ewe cuisine centers on corn-based staples with abundant fish from the Volta River and Atlantic coast."
+      },
+      "traditionalDance": "Agbadza - drum and dance tradition with spiritual significance",
+      "religion": "Christianity, Traditional Vodun, Islam (minority)",
+      "traditionalReligion": {
+        "name": "Ewe Vodun (Voodoo)",
+        "supremeDeity": "Mawu-Lisa (dual creator deity - Mawu is female/moon, Lisa is male/sun)",
+        "spirits": ["Trowo (nature deities/vodun)", "Legba (messenger spirit, gatekeeper)", "Sakpata (earth/smallpox deity)", "Hevieso (thunder deity)", "Togbui (ancestral spirits)"],
+        "practices": ["Vodun ceremonies with drumming and possession", "Offerings to Legba at crossroads", "Consultation with bokono (diviners) using Afa", "Shrine rituals for specific vodun", "Ancestor veneration ceremonies", "Sacred grove worship"],
+        "beliefs": "Mawu-Lisa created the world and trowo spirits; Legba must be propitiated first in all rituals; vodun spirits can possess devotees; Afa divination reveals divine will; ancestors continue to guide; sacred groves are spirit dwelling places"
+      },
+      "language": { "name": "Ewe (Eʋegbe)", "speakers": "~7 million", "greeting": "Ndi na wo!", "greetingMeaning": "Good morning/Hello!", "family": "Gbe (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "Kofi Annan", "role": "UN Secretary-General (Ewe-Fante heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Kofi_Annan" },
+        { "name": "Sylvanus Olympio", "role": "First President of Togo", "wikipedia": "https://en.wikipedia.org/wiki/Sylvanus_Olympio" }
+      ],
+      "sources": [{ "name": "Wikipedia - Ewe people", "url": "https://en.wikipedia.org/wiki/Ewe_people" }],
+      "description": "The Ewe are a Gbe-speaking people of Ghana and Togo, the originators of Vodun religion, renowned for their complex drumming traditions and textile artistry.",
+      "relatedTribes": ["fon", "fante", "akan", "ga"]
+    },
+
+    {
+      "id": "bamileke",
+      "name": "Bamileke",
+      "slug": "bamileke",
+      "slugAliases": ["bamiléké", "grassfields"],
+      "countries": ["CM"],
+      "region": "West Region, Cameroon (Grassfields)",
+      "population": "~4 million",
+      "populationPercent": "~15% (Cameroon)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 5.5, "lng": 10.4 },
+      "counties": ["West Region", "Bafoussam", "Dschang", "Mbouda"],
+      "namePrefixes": ["Fo", "Tche", "Nde", "Kam"],
+      "commonNames": {
+        "female": ["Ngwa", "Maffo", "Tchaptchet", "Nkemnji", "Ngounou"],
+        "male": ["Fotso", "Kamga", "Nde", "Tchagang", "Tchio", "Nganso"]
+      },
+      "stereotypes": ["Business-minded entrepreneurs", "Strong traditional chieftaincies", "Elaborate beadwork", "Powerful secret societies", "Land of 100 chiefdoms"],
+      "culturalTraits": ["Over 100 small kingdoms (fondoms) each with a Fo (chief)", "Elaborate beadwork and masks for royal ceremonies", "Ku'ngang and other secret societies with political power", "Strong entrepreneurial tradition", "Complex skull reliquary ancestor veneration", "Terraced hillside agriculture"],
+      "funFacts": ["Bamileke have one of the highest rates of entrepreneurship in Africa", "The region has over 100 independent chiefdoms, each with elaborate royal traditions", "Bamileke elephant masks are among Africa's most iconic artworks", "Secret societies historically checked the power of chiefs"],
+      "tradeRelations": {
+        "historical": ["Long-distance trade networks", "Coffee and palm oil", "Regional power through trade wealth"],
+        "modern": ["Coffee production hub", "Business networks across Cameroon", "Diaspora remittances"]
+      },
+      "traditionalFood": {
+        "staples": ["Achu (cocoyam fufu)", "Koki (bean pudding)", "Ndolé (bitterleaf stew)", "Plantains"],
+        "beverages": ["Raffia wine", "Corn beer"],
+        "specialDishes": ["Achu soup (yellow soup with limestone)", "Kondre (plantain and meat stew)", "Koki beans"],
+        "description": "Bamileke cuisine features achu (cocoyam fufu with yellow soup), koki bean pudding, and the national dish ndolé."
+      },
+      "traditionalDance": "Nkang - masked dance during royal festivals",
+      "religion": "Christianity (majority), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Bamileke Traditional Religion",
+        "supremeDeity": "Si (supreme god, creator of all things)",
+        "spirits": ["Nsi (earth deity)", "Skull reliquaries of royal ancestors", "Nature spirits in sacred groves", "Patron spirits of secret societies"],
+        "practices": ["Skull preservation and veneration of deceased chiefs", "Secret society rituals (Ku'ngang)", "Royal ceremonies with elephant masks", "Offerings at ancestor shrines", "Consultation with diviners", "Dance ceremonies invoking spirits"],
+        "beliefs": "Si created the world; deceased chiefs become powerful ancestor spirits; skulls house the spirits of the dead; secret societies maintain cosmic and social order; elaborate masks embody spiritual forces; the Fo (chief) mediates between living and dead"
+      },
+      "language": { "name": "Bamileke languages (Ghomálá', Medumba, etc.)", "speakers": "~4 million", "greeting": "Mbom nkwé!", "greetingMeaning": "Good morning!", "family": "Grassfields Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "André Fotso", "role": "Business magnate and politician", "wikipedia": null },
+        { "name": "Victor Fotso", "role": "Businessman", "wikipedia": "https://en.wikipedia.org/wiki/Victor_Fotso" }
+      ],
+      "sources": [{ "name": "Wikipedia - Bamileke people", "url": "https://en.wikipedia.org/wiki/Bamileke_people" }],
+      "description": "The Bamileke are the entrepreneurial people of Cameroon's Grassfields, organized into over 100 chiefdoms, known for elaborate beadwork, powerful secret societies, and business acumen.",
+      "relatedTribes": ["bamoun", "tikar", "grassfields"]
+    },
+
+    {
+      "id": "sotho",
+      "name": "Sotho (Basotho)",
+      "slug": "sotho",
+      "slugAliases": ["basotho", "southern-sotho", "sesotho"],
+      "countries": ["ZA", "LS"],
+      "region": "Lesotho & Free State, South Africa",
+      "population": "~8 million",
+      "populationPercent": "~7.9% (South Africa)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -29.3, "lng": 28.5 },
+      "counties": ["Lesotho", "Free State Province", "Gauteng Province"],
+      "namePrefixes": ["Mo", "Ma", "Le", "Ts"],
+      "commonNames": {
+        "female": ["Mpho", "Lerato", "Palesa", "Mathabo", "Maleshoane", "Mapalesa", "Nthabiseng"],
+        "male": ["Thabo", "Tshepo", "Lesego", "Letlotlo", "Moshe", "Tumelo", "Lehlohonolo"]
+      },
+      "stereotypes": ["Mountain kingdom people", "Blanket culture", "Proud warriors", "Poetry tradition", "Miners in South Africa"],
+      "culturalTraits": ["Distinctive Basotho blankets as cultural symbols", "Mokorotlo (conical hat) national symbol", "Mountain horsemanship tradition", "Praise poetry (lithoko)", "Strong initiation traditions", "Close ties between Lesotho and SA Sotho"],
+      "funFacts": ["King Moshoeshoe I united the Sotho nation and resisted Zulu and Boer attacks", "Basotho blankets have specific designs with cultural meanings", "Lesotho is the only country in the world entirely above 1,000 meters elevation", "Basotho ponies are legendary for navigating mountain terrain"],
+      "tradeRelations": {
+        "historical": ["Cattle and grain trade", "Trading posts with Europeans", "Labor migration to mines"],
+        "modern": ["Migrant labor to South African mines", "Wool and mohair exports from Lesotho", "Water export from Lesotho highlands"]
+      },
+      "traditionalFood": {
+        "staples": ["Pap (maize porridge)", "Moroko (wild spinach)", "Nyekoe (bean dish)", "Samp"],
+        "beverages": ["Joala (sorghum beer)", "Motoho (fermented porridge)"],
+        "specialDishes": ["Oxtail stew", "Tripe", "Phuthu (crumbly pap)"],
+        "description": "Sotho cuisine features maize as the staple, with wild greens and legumes complementing beef and mutton."
+      },
+      "traditionalDance": "Mohobelo - vigorous male dance with stamping and singing",
+      "religion": "Christianity (majority), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Sotho Traditional Religion",
+        "supremeDeity": "Modimo (supreme god, associated with sky and ancestors)",
+        "spirits": ["Balimo (ancestral spirits)", "Badimo (collective ancestors)", "Nature spirits in mountains and water"],
+        "practices": ["Animal sacrifices (especially cattle) to balimo", "Consultation with ngaka (traditional healers/diviners)", "Initiation schools (lebollo) with spiritual elements", "Praise poetry invoking ancestors", "Offerings at family ancestral graves", "Rain-making ceremonies"],
+        "beliefs": "Modimo is the supreme creator; balimo ancestors actively influence daily life; proper rituals ensure ancestral blessing; initiation connects youth to ancestral wisdom; the ngaka communicates with the spirit world; dreams carry ancestral messages"
+      },
+      "language": { "name": "Sesotho", "speakers": "~8 million", "greeting": "Lumela!", "greetingMeaning": "Hello!", "family": "Bantu (Niger-Congo) - Sotho-Tswana group", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "King Moshoeshoe I", "role": "Founder of the Sotho nation", "wikipedia": "https://en.wikipedia.org/wiki/Moshoeshoe_I" },
+        { "name": "Cyril Ramaphosa", "role": "President of South Africa (Sotho-Venda heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Cyril_Ramaphosa" },
+        { "name": "Thomas Mofolo", "role": "Author of Chaka", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mofolo" }
+      ],
+      "populationByCountry": [
+        { "country": "ZA", "population": "~4.5 million", "percent": "7.9%" },
+        { "country": "LS", "population": "~2 million", "percent": "99%" }
+      ],
+      "sources": [{ "name": "Wikipedia - Sotho people", "url": "https://en.wikipedia.org/wiki/Sotho_people" }],
+      "description": "The Sotho (Basotho) are a Bantu people of the mountainous kingdom of Lesotho and South Africa's Free State, known for their blanket culture, horsemanship, and the legacy of King Moshoeshoe I.",
+      "relatedTribes": ["tswana", "pedi", "zulu", "xhosa"]
+    },
+
+    {
+      "id": "ndebele",
+      "name": "Ndebele (amaNdebele)",
+      "slug": "ndebele",
+      "slugAliases": ["matabele", "northern-ndebele", "southern-ndebele"],
+      "countries": ["ZA", "ZW"],
+      "region": "Mpumalanga/Limpopo (SA), Matabeleland (Zimbabwe)",
+      "population": "~3 million",
+      "populationPercent": "~2% (South Africa), ~15% (Zimbabwe)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -25.4, "lng": 29.0 },
+      "counties": ["Mpumalanga Province", "Limpopo Province (SA)", "Bulawayo", "Matabeleland (ZW)"],
+      "namePrefixes": ["Si", "No", "Mzi"],
+      "commonNames": {
+        "female": ["Nobuhle", "Nothando", "Siphesihle", "Nomusa", "Sindiswa"],
+        "male": ["Sipho", "Mzilikazi", "Nkosana", "Siyabonga", "Themba"]
+      },
+      "stereotypes": ["Geometric house painting", "Beadwork masters", "Warrior heritage", "Colorful traditional dress", "Strong cultural preservation"],
+      "culturalTraits": ["Distinctive geometric house painting by women", "Elaborate beaded clothing and jewelry", "Descended from Zulu warriors under Mzilikazi", "Strong initiation traditions", "Neck rings (idzila) for married women", "Two distinct groups - Northern (Zimbabwe) and Southern (SA)"],
+      "funFacts": ["Ndebele house paintings are so distinctive they're a global symbol of African art", "Mzilikazi led a breakaway from Shaka Zulu and founded the Ndebele kingdom in Zimbabwe", "Southern Ndebele women wear brass neck rings that can weigh 25 kg", "Ndebele beadwork colors have specific meanings - white for love, blue for loyalty"],
+      "tradeRelations": {
+        "historical": ["Cattle raiding economy under Mzilikazi", "Controlled trade in Matabeleland", "Labor migration to mines"],
+        "modern": ["Beadwork and crafts sold to tourists", "Labor migration to cities", "Cultural tourism"]
+      },
+      "traditionalFood": {
+        "staples": ["Isitshwala (maize porridge)", "Umxhanxa (samp and beans)", "Imifino (wild greens)", "Amasi (sour milk)"],
+        "beverages": ["Umqombothi (sorghum beer)", "Amahewu (fermented porridge drink)"],
+        "specialDishes": ["Tripe", "Grilled meat (inyama)", "Umbida (fermented rapoko/millet)"],
+        "description": "Ndebele cuisine shares Nguni staples of maize porridge, sour milk, and wild greens with beef as the prized meat."
+      },
+      "traditionalDance": "Isitshikitsha - rhythmic dance with beaded costume display",
+      "religion": "Christianity, Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Ndebele Traditional Religion",
+        "supremeDeity": "Unkulunkulu (supreme creator) / Mlimo (Zimbabwe Ndebele high god)",
+        "spirits": ["Amadlozi (ancestral spirits)", "Abalozi (spirits of the deep)", "Nature spirits in hills and caves"],
+        "practices": ["Ancestral veneration with cattle sacrifices", "Ukwethwasa (spiritual training for healers)", "Rainmaking ceremonies at shrines", "Consultation with isangoma (diviners)", "Initiation ceremonies with spiritual dimensions", "Offerings at Matopos Hills shrines (Zimbabwe)"],
+        "beliefs": "Unkulunkulu/Mlimo created all things; amadlozi ancestors guide and protect; the Matopos Hills are sacred (Zimbabwe Ndebele); improper ritual causes misfortune; dreams convey ancestral messages; isangoma communicate with the spirit world"
+      },
+      "language": { "name": "isiNdebele / Northern Ndebele", "speakers": "~3 million", "greeting": "Lotjhani!", "greetingMeaning": "Hello!", "family": "Nguni (Bantu, Niger-Congo)", "writingSystem": "Latin alphabet" },
+      "famousPeople": [
+        { "name": "King Mzilikazi", "role": "Founder of the Ndebele kingdom", "wikipedia": "https://en.wikipedia.org/wiki/Mzilikazi" },
+        { "name": "King Lobengula", "role": "Last king of the Ndebele", "wikipedia": "https://en.wikipedia.org/wiki/Lobengula" },
+        { "name": "Joshua Nkomo", "role": "Father of Zimbabwe independence", "wikipedia": "https://en.wikipedia.org/wiki/Joshua_Nkomo" },
+        { "name": "Esther Mahlangu", "role": "Artist and cultural icon", "wikipedia": "https://en.wikipedia.org/wiki/Esther_Mahlangu" }
+      ],
+      "populationByCountry": [
+        { "country": "ZA", "population": "~1 million", "percent": "2%" },
+        { "country": "ZW", "population": "~2 million", "percent": "15%" }
+      ],
+      "sources": [{ "name": "Wikipedia - Ndebele people", "url": "https://en.wikipedia.org/wiki/Northern_Ndebele_people" }],
+      "description": "The Ndebele are a Nguni people known for their iconic geometric house paintings, elaborate beadwork, and warrior heritage tracing to Mzilikazi's breakaway from Shaka Zulu.",
+      "relatedTribes": ["zulu", "xhosa", "swazi", "shona"]
     }
   ]
 }
