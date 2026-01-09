@@ -6478,8 +6478,366 @@ export const beverageRecipes: Recipe[] = [
   }
 ];
 
-// Combine with main recipes
+// ============ CENTRAL AFRICAN RECIPES ============
+const centralAfricanRecipes: Recipe[] = [
+  {
+    id: "poulet-moambe",
+    name: "Poulet Moambé (Congolese Chicken in Palm Butter)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "special",
+    description: "The national dish of DR Congo and Congo-Brazzaville - chicken slow-cooked in rich palm nut sauce. A creamy, earthy stew that defines Central African cuisine.",
+    culturalSignificance: "Poulet Moambé is served at every important celebration - weddings, funerals, political gatherings. It represents hospitality and prosperity. The palm nut sauce (moambé) is the heart of Congolese cooking.",
+    historicalContext: "Palm oil has been central to Central African cuisine for millennia. The Kongo Kingdom, which flourished from the 14th-19th century, developed elaborate court cuisine featuring moambé. Portuguese contact in the 15th century spread the dish's fame. During colonial times, Congolese cooks adapted the recipe for European tastes while maintaining its essence.",
+    youtubeVideoId: "D7BqpKT4M6c",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken", amount: "1 whole", notes: "Cut into pieces, about 1.5kg" },
+      { item: "Palm nut cream (moambé)", amount: "400g", notes: "Canned or fresh-pressed" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Scotch bonnet pepper", amount: "1", notes: "Whole, for heat" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Chicken stock", amount: "2 cups" },
+      { item: "Salt and pepper", amount: "To taste" },
+      { item: "Bay leaves", amount: "2" }
+    ],
+    instructions: [
+      "Season chicken pieces with salt, pepper, and half the garlic.",
+      "Heat palm oil in a large pot. Brown chicken on all sides, then remove.",
+      "Sauté onions until golden. Add remaining garlic and cook 1 minute.",
+      "Add tomatoes and cook until soft and saucy, about 10 minutes.",
+      "Return chicken to pot. Add palm nut cream and chicken stock.",
+      "Add bay leaves and whole scotch bonnet (don't burst it unless you want extreme heat).",
+      "Bring to simmer, then cover and cook on low for 1 hour.",
+      "Stir occasionally. The sauce should become thick and coat the chicken.",
+      "Remove pepper and bay leaves. Adjust seasoning.",
+      "Serve with fufu (cassava or plantain), rice, or chikwangue."
+    ],
+    tips: [
+      "Authentic moambé sauce is made by boiling and pressing palm nuts - canned is acceptable",
+      "The sauce should be thick and slightly grainy from the palm nut fiber",
+      "Don't burst the pepper unless you want very spicy stew"
+    ],
+    variations: [
+      "Use fish instead of chicken for Mwambe ya Mbisi",
+      "Add bitter leaves (ndunda) for additional flavor",
+      "Some add peanut butter for extra richness"
+    ]
+  },
+  {
+    id: "ndole",
+    name: "Ndolé (Cameroonian Bitter Leaves with Peanuts)",
+    tribeSlug: "douala",
+    tribeName: "Douala",
+    category: "special",
+    description: "Cameroon's national dish - bitter leaves cooked with peanuts and meat. A complex, deeply flavored stew that defines Cameroonian cuisine.",
+    culturalSignificance: "Ndolé is the pride of Cameroon and essential at all celebrations. The laborious preparation (washing bitter leaves repeatedly) shows love for guests. No Cameroonian wedding or funeral is complete without it.",
+    historicalContext: "The bitter leaf (Vernonia) grows wild in Central Africa and has been used for millennia. The Douala people of the coast developed ndolé, but it spread to become Cameroon's national dish. The combination of bitter leaves and groundnuts reflects the genius of Central African flavor balancing.",
+    youtubeVideoId: "UBQBphm8wQM",
+    prepTime: "1 hour (mostly washing leaves)",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Bitter leaves (ndolé)", amount: "500g", notes: "Fresh or frozen, must be washed repeatedly" },
+      { item: "Groundnut paste (peanut butter)", amount: "200g", notes: "Unsweetened" },
+      { item: "Beef or goat meat", amount: "500g", notes: "Cut into chunks" },
+      { item: "Smoked fish", amount: "200g", notes: "Deboned" },
+      { item: "Fresh shrimp", amount: "200g", notes: "Cleaned" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Onions", amount: "2 large", notes: "Blended" },
+      { item: "Garlic", amount: "5 cloves" },
+      { item: "Fresh ginger", amount: "2 inches" },
+      { item: "Crayfish", amount: "2 tablespoons", notes: "Ground" },
+      { item: "Maggi cubes", amount: "2" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Wash bitter leaves in multiple changes of water (5-7 times) to remove bitterness.",
+      "Squeeze out water and chop finely.",
+      "Boil meat with onion, salt, and seasoning until tender. Reserve stock.",
+      "Blend garlic and ginger together.",
+      "Heat palm oil in a large pot. Fry meat until browned. Remove.",
+      "In same oil, fry blended onions until fragrant.",
+      "Add groundnut paste and stir until oil separates, about 10 minutes.",
+      "Add garlic-ginger paste and crayfish. Fry 2 minutes.",
+      "Add meat stock gradually, stirring to create smooth sauce.",
+      "Add washed bitter leaves. Stir well and simmer 15 minutes.",
+      "Add smoked fish, shrimp, and meat. Cook 15 more minutes.",
+      "Adjust seasoning. Serve with plantains, rice, or miondo."
+    ],
+    tips: [
+      "Proper washing of bitter leaves is essential - taste as you go",
+      "The groundnut paste must fry until oil separates for proper flavor",
+      "Fresh bitter leaves are best but frozen works if unavailable"
+    ],
+    variations: [
+      "Vegetarian version uses only smoked fish and shrimp",
+      "Some add egusi (melon seeds) for extra body"
+    ]
+  },
+  {
+    id: "nyembwe",
+    name: "Nyembwe (Gabonese Palm Nut Chicken)",
+    tribeSlug: "fang",
+    tribeName: "Fang",
+    category: "special",
+    description: "Gabon's national dish - chicken in a rich, aromatic palm nut sauce. Similar to Congolese moambé but with distinctive Gabonese seasonings.",
+    culturalSignificance: "Nyembwe is the soul of Gabonese cooking. Served at all important occasions, it represents abundance and hospitality. The dish showcases Gabon's rainforest ingredients.",
+    historicalContext: "The Fang people, who migrated into Gabon in the 18th-19th centuries, brought sophisticated forest cooking techniques. Nyembwe combines ancient palm nut traditions with forest herbs unique to Gabon's equatorial rainforest.",
+    youtubeVideoId: "9HSG8XZPRWA",
+    prepTime: "20 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Palm nut cream", amount: "500g", notes: "Concentrated sauce" },
+      { item: "Onions", amount: "2 medium", notes: "Sliced" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "1 inch", notes: "Grated" },
+      { item: "Fresh okra", amount: "200g", notes: "Sliced" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Fish stock or water", amount: "1 cup" },
+      { item: "Salt and pepper", amount: "To taste" },
+      { item: "Fresh basil", amount: "1/4 cup", notes: "Gabonese variety preferred" }
+    ],
+    instructions: [
+      "Season chicken with salt, pepper, garlic, and ginger.",
+      "Heat palm oil and brown chicken on all sides. Remove.",
+      "Sauté onions until soft. Add okra and cook 5 minutes.",
+      "Add palm nut cream and stock. Stir to combine.",
+      "Return chicken to pot. Cover and simmer 1 hour.",
+      "Add fresh basil in last 10 minutes.",
+      "Sauce should be thick and rich. Adjust seasoning.",
+      "Serve with rice, plantains, or cassava."
+    ],
+    tips: [
+      "Gabonese nyembwe is often thicker than Congolese moambé",
+      "Fresh palm nut cream is superior to canned if available",
+      "The dish is better the next day after flavors meld"
+    ]
+  },
+  {
+    id: "saka-saka",
+    name: "Saka Saka (Cassava Leaves Stew)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "staple",
+    description: "Pounded cassava leaves slow-cooked with palm oil and groundnuts. A staple across Central Africa that accompanies most meals.",
+    culturalSignificance: "Saka saka is everyday food across DR Congo, Congo-Brazzaville, and beyond. The laborious pounding of leaves shows the value placed on good cooking. It's the perfect accompaniment to fufu.",
+    historicalContext: "Cassava was introduced to Africa from Brazil in the 16th century via Portuguese traders. Central Africans quickly integrated every part of the plant into their cuisine - roots for fufu, leaves for saka saka. The dish represents the African genius for adopting and transforming ingredients.",
+    youtubeVideoId: "eS6yP8WMQEU",
+    prepTime: "1 hour",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava leaves", amount: "1 kg", notes: "Fresh, or frozen pounded" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Groundnut paste", amount: "100g", notes: "Unsweetened peanut butter" },
+      { item: "Smoked fish", amount: "200g", notes: "Or dried fish" },
+      { item: "Palm nut cream", amount: "200g", notes: "Optional, for richness" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Hot pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "If using fresh leaves, remove stems and pound thoroughly in mortar (or blend).",
+      "Wash pounded leaves several times to reduce bitterness.",
+      "Boil leaves in water for 30 minutes. Drain.",
+      "Heat palm oil. Sauté onion and garlic until soft.",
+      "Add groundnut paste and stir until oil separates.",
+      "Add cassava leaves and mix well.",
+      "Add smoked fish and optional palm nut cream.",
+      "Add water if too thick. Cover and simmer 1-1.5 hours, stirring occasionally.",
+      "The leaves should become very soft and the dish thick.",
+      "Serve with fufu, chikwangue, or rice."
+    ],
+    tips: [
+      "Frozen pre-pounded cassava leaves save hours of work",
+      "The dish must cook long and slow to develop flavor",
+      "It's even better reheated the next day"
+    ]
+  },
+  {
+    id: "chikwangue",
+    name: "Chikwangue (Cassava Bread)",
+    tribeSlug: "mongo",
+    tribeName: "Mongo",
+    category: "staple",
+    description: "Fermented cassava wrapped in leaves and steamed. A dense, slightly sour bread that's the staple starch of the Congo Basin.",
+    culturalSignificance: "Chikwangue is the daily bread of millions in Central Africa. Wrapped in banana leaves, it's portable and keeps for days. Every household knows how to make it.",
+    historicalContext: "Cassava became Central Africa's main staple after its introduction in the 16th century. The fermentation technique was developed to make it digestible and preserve it. Chikwangue wrapping in leaves represents sustainable, zero-waste cooking.",
+    youtubeVideoId: "YwMnC5gqwG0",
+    prepTime: "3 days (fermentation)",
+    cookTime: "2 hours",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava roots", amount: "2 kg", notes: "Fresh, peeled" },
+      { item: "Banana leaves", amount: "10 large", notes: "For wrapping" },
+      { item: "Water", amount: "For soaking" },
+      { item: "Salt", amount: "1 tablespoon", notes: "Optional" }
+    ],
+    instructions: [
+      "Peel cassava and soak in water for 3-4 days until soft and fermented.",
+      "Remove fibers from the center of each root.",
+      "Pound or blend fermented cassava into smooth paste.",
+      "Knead paste until stretchy and uniform.",
+      "Soften banana leaves over flame to make them pliable.",
+      "Place portion of cassava paste on leaf. Roll into log shape.",
+      "Wrap tightly, folding ends. Tie with leaf strips.",
+      "Steam wrapped chikwangue for 2 hours.",
+      "Cool slightly before unwrapping. Slice to serve.",
+      "Serve with saka saka, moambé, or any stew."
+    ],
+    tips: [
+      "Proper fermentation gives chikwangue its characteristic slight sourness",
+      "Banana leaves can be substituted with aluminum foil (less traditional)",
+      "Chikwangue keeps for several days at room temperature"
+    ]
+  },
+  {
+    id: "eru",
+    name: "Eru (Cameroonian Wild Spinach)",
+    tribeSlug: "bamileke",
+    tribeName: "Bamileke",
+    category: "special",
+    description: "Wild forest vegetable cooked with waterleaf and proteins. A luxurious, slightly slimy stew that's a Cameroonian delicacy.",
+    culturalSignificance: "Eru is a prized dish from the southwestern and western regions of Cameroon. The eru leaves are foraged from the rainforest, and the dish is reserved for special occasions due to ingredient cost.",
+    historicalContext: "Eru (Gnetum africanum) grows wild in the forests of Cameroon and Nigeria. Its harvesting has been an important forest livelihood for centuries. Overharvesting has made the plant scarce, increasing its value as a delicacy.",
+    youtubeVideoId: "tYHjR5GDw1k",
+    prepTime: "30 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Shredded eru leaves", amount: "500g", notes: "Fresh or frozen" },
+      { item: "Waterleaf (or spinach)", amount: "300g", notes: "Chopped" },
+      { item: "Palm oil", amount: "1 cup" },
+      { item: "Beef", amount: "300g", notes: "Cubed" },
+      { item: "Smoked fish", amount: "200g", notes: "Deboned" },
+      { item: "Dry fish (stockfish)", amount: "100g", notes: "Soaked, deboned" },
+      { item: "Crayfish", amount: "3 tablespoons", notes: "Ground" },
+      { item: "Onion", amount: "1 medium", notes: "Sliced" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Boil beef until tender. Reserve stock.",
+      "Heat palm oil in large pot. Don't bleach it - you want the red color.",
+      "Add sliced onions and fry until fragrant.",
+      "Add crayfish and fry 2 minutes.",
+      "Add waterleaf and cook until wilted and water released.",
+      "Add eru leaves and mix well with palm oil.",
+      "Add beef, smoked fish, dry fish, and a little beef stock.",
+      "Cover and cook on low heat for 20 minutes.",
+      "Stir occasionally. The dish should be moist but not watery.",
+      "Serve with garri, fufu, or water fufu."
+    ],
+    tips: [
+      "Waterleaf adds moisture - don't overcook or it becomes slimy",
+      "Eru should maintain some texture, not be mushy",
+      "The red palm oil color should coat everything"
+    ]
+  },
+  {
+    id: "koki-beans",
+    name: "Koki (Steamed Bean Pudding)",
+    tribeSlug: "bamileke",
+    tribeName: "Bamileke",
+    category: "special",
+    description: "Spiced black-eyed pea pudding steamed in banana leaves. A Cameroonian delicacy with rich, earthy flavor.",
+    culturalSignificance: "Koki is a labor of love, prepared for important celebrations in western Cameroon. The wrapping in banana leaves connects the dish to the land and tradition.",
+    historicalContext: "The Bamileke people of Cameroon's western highlands developed sophisticated cuisine despite their mountainous terrain. Koki represents this culinary ingenuity - transforming simple beans into a festive dish.",
+    youtubeVideoId: "1pR9hvJpH3k",
+    prepTime: "12 hours (soaking)",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Black-eyed peas", amount: "500g", notes: "Soaked overnight" },
+      { item: "Red palm oil", amount: "3/4 cup" },
+      { item: "Crayfish", amount: "3 tablespoons", notes: "Ground" },
+      { item: "Onion", amount: "1 medium" },
+      { item: "Hot pepper", amount: "To taste" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Banana leaves", amount: "Several large" },
+      { item: "Smoked fish", amount: "Optional garnish" }
+    ],
+    instructions: [
+      "Soak black-eyed peas overnight. Remove skins by rubbing.",
+      "Blend peeled beans with onion and pepper to smooth paste.",
+      "Add palm oil and blend/beat until well combined.",
+      "Add crayfish and salt. Mix thoroughly.",
+      "Soften banana leaves over flame.",
+      "Spoon mixture onto leaves. Wrap into parcels.",
+      "Tie securely with leaf strips.",
+      "Steam for 2 hours. Check water level periodically.",
+      "Unwrap carefully. The koki should be firm and set.",
+      "Serve with ripe plantains and pepper sauce."
+    ],
+    tips: [
+      "Removing bean skins is tedious but essential for smooth texture",
+      "Beat mixture well to incorporate air for lighter texture",
+      "Koki can be grilled after steaming for smoky flavor"
+    ]
+  },
+  {
+    id: "liboke-fish",
+    name: "Liboke (Fish in Banana Leaves)",
+    tribeSlug: "mongo",
+    tribeName: "Mongo",
+    category: "special",
+    description: "Fresh river fish steamed in banana leaf parcels with spices. A classic Congo Basin cooking method that locks in flavor.",
+    culturalSignificance: "Liboke represents the harmony between Congolese people and their rivers. The banana leaf wrapping is both practical and symbolic - connecting the meal to the land.",
+    historicalContext: "The Mongo people live in the heart of the Congo Basin, the world's second-largest rainforest. Their cooking methods evolved to use forest products sustainably. Liboke requires no pots - just leaves, fish, and fire.",
+    youtubeVideoId: "qPNxS3z2ckM",
+    prepTime: "20 minutes",
+    cookTime: "45 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Whole tilapia or catfish", amount: "1 large", notes: "Cleaned, scaled" },
+      { item: "Tomatoes", amount: "2", notes: "Sliced" },
+      { item: "Onions", amount: "1 large", notes: "Sliced" },
+      { item: "Green pepper", amount: "1", notes: "Sliced" },
+      { item: "Garlic", amount: "4 cloves", notes: "Sliced" },
+      { item: "Fresh ginger", amount: "1 inch", notes: "Sliced" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Fresh basil", amount: "1/4 cup" },
+      { item: "Salt and pepper", amount: "To taste" },
+      { item: "Banana leaves", amount: "2-3 large" }
+    ],
+    instructions: [
+      "Score fish on both sides. Season inside and out with salt, pepper, garlic.",
+      "Soften banana leaves over flame until pliable.",
+      "Lay leaves overlapping. Place layer of tomatoes and onions.",
+      "Place fish on vegetables. Top with remaining vegetables and ginger.",
+      "Drizzle palm oil over everything. Add basil.",
+      "Wrap leaves tightly around fish, creating sealed parcel.",
+      "Tie with banana leaf strips or string.",
+      "Steam over boiling water for 45 minutes (or grill over coals).",
+      "Unwrap at table - the aroma is part of the experience.",
+      "Serve with fufu, plantains, or rice."
+    ],
+    tips: [
+      "Traditional method grills liboke over wood coals for smoky flavor",
+      "Multiple small fish can substitute for one large fish",
+      "The banana leaf imparts subtle flavor - don't substitute foil"
+    ]
+  }
+];
+
+// Combine all recipes
 recipes.push(...beverageRecipes);
+recipes.push(...centralAfricanRecipes);
 
 // Get similar recipes from other tribes (same category)
 export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {
