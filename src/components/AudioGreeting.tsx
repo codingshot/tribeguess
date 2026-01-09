@@ -191,6 +191,30 @@ const phoneticMappings: Record<string, string> = {
   "Moro": "MOH-roh",
   "Wa penduka nawa?": "wah pehn-DOO-kah NAH-wah",
   "Nawa": "NAH-wah",
+  
+  // Berber/Amazigh phrases
+  "Azul": "ah-ZOOL",
+  "Tanmirt": "tah-neh-MEERT",
+  "Tanemmirt": "tah-neh-MEERT",
+  "Manzakin?": "mahn-zah-KEEN",
+  "Labas": "lah-BAHS",
+  "Ar tufat": "ahr too-FAHT",
+  "Ayyuz": "ah-YOOZ",
+  "Azul fellawen": "ah-ZOOL fell-AH-wehn",
+  
+  // Turkana
+  "Yepa": "YEH-pah",
+  "Ejok": "eh-JOHK",
+  "Apolon": "ah-poh-LOHN",
+  "Ejoka": "eh-JOH-kah",
+  
+  // Additional Nilotic phrasings
+  "Nabad / Iska warran": "NAH-bahd / IS-kah WAH-rahn",
+  "Nagaa / Akkam": "nah-GAH / AH-kahm",
+  "Tanammerte": "tah-nahm-MER-teh",
+  "Galatoomi": "gah-lah-TOH-mee",
+  "Jambo / Habari": "JAHM-boh / hah-BAH-ree",
+  "Mbote": "mm-BOH-teh",
 };
 
 // Language family to voice locale mapping for better pronunciation
@@ -231,12 +255,32 @@ const languageVoiceMap: Record<string, string> = {
   "Amharic": "am-ET",
   "Afaan Oromoo": "am-ET",
   "Tigrinya": "am-ET",
+  "Ge'ez": "am-ET",
+  "Gurage": "am-ET",
   
   // Somali
   "Somali": "so-SO",
   
   // Arabic-influenced
   "Arabic": "ar-EG",
+  
+  // Berber/Amazigh
+  "Tamazight": "ar-MA",
+  "Kabyle": "ar-DZ", 
+  "Riffian": "ar-MA",
+  "Tuareg": "ar-DZ",
+  "Tamasheq": "ar-ML",
+  "Tachelhit": "ar-MA",
+  "Shilha": "ar-MA",
+  
+  // Additional Nilotic (not already listed)
+  "Maasai": "sw-KE",
+  "Turkana": "sw-KE",
+  "Dinka": "en-US",
+  "Nuer": "en-US",
+  "Acholi": "en-UG",
+  "Alur": "en-UG",
+  "Samburu": "sw-KE",
 };
 
 // Get phonetic pronunciation or generate a simple one
