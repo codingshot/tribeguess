@@ -2779,6 +2779,105 @@ const suffixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'ounga': [{ tribe: 'punu', weight: 0.95 }],
   'inga': [{ tribe: 'punu', weight: 0.85 }],
 
+  // ============ NIGER - Tuareg suffixes ============
+  'ague': [{ tribe: 'tuareg', weight: 0.95 }],
+  'atène': [{ tribe: 'tuareg', weight: 0.98 }],
+  'aïr': [{ tribe: 'tuareg', weight: 0.9 }],
+  'aden': [{ tribe: 'tuareg', weight: 0.85 }],
+  'aghi': [{ tribe: 'tuareg', weight: 0.95 }],
+  'awel': [{ tribe: 'tuareg', weight: 0.98 }],
+  'ewen': [{ tribe: 'tuareg', weight: 0.95 }],
+  'idaou': [{ tribe: 'tuareg', weight: 0.98 }],
+  'oult': [{ tribe: 'tuareg', weight: 0.98 }],
+  'oulte': [{ tribe: 'tuareg', weight: 0.98 }],
+
+  // ============ NIGER - Hausa (Niger) suffixes ============
+  'awa_hn': [{ tribe: 'hausa_niger', weight: 0.95 }],
+  'iya_hn': [{ tribe: 'hausa_niger', weight: 0.9 }],
+  'uwa': [{ tribe: 'hausa_niger', weight: 0.95 }],
+  'awa': [{ tribe: 'hausa_niger', weight: 0.85 }, { tribe: 'hausa', weight: 0.85 }],
+  'atu': [{ tribe: 'hausa_niger', weight: 0.9 }],
+  'iru_hn': [{ tribe: 'hausa_niger', weight: 0.9 }],
+  'amu': [{ tribe: 'hausa_niger', weight: 0.85 }],
+
+  // ============ NIGER - Djerma (Zarma) suffixes ============
+  'aize': [{ tribe: 'djerma', weight: 0.98 }],
+  'andi': [{ tribe: 'djerma', weight: 0.9 }],
+  'anga_dj': [{ tribe: 'djerma', weight: 0.95 }],
+  'izi': [{ tribe: 'djerma', weight: 0.85 }],
+  'ndi': [{ tribe: 'djerma', weight: 0.85 }],
+  'ari_dj': [{ tribe: 'djerma', weight: 0.9 }],
+  'oussa': [{ tribe: 'djerma', weight: 0.95 }],
+  'eize': [{ tribe: 'djerma', weight: 0.98 }],
+
+  // ============ NIGER - Kanuri (Niger) suffixes ============
+  'ami_kn': [{ tribe: 'kanuri_niger', weight: 0.95 }],
+  'ori': [{ tribe: 'kanuri_niger', weight: 0.9 }],
+  'ouri': [{ tribe: 'kanuri_niger', weight: 0.9 }],
+  'mba_kn': [{ tribe: 'kanuri_niger', weight: 0.85 }],
+  'ari_kn': [{ tribe: 'kanuri_niger', weight: 0.85 }],
+  'ama_kn': [{ tribe: 'kanuri_niger', weight: 0.9 }],
+  'umi': [{ tribe: 'kanuri_niger', weight: 0.9 }],
+
+  // ============ MAURITANIA - Moors (Beydane) suffixes ============
+  'ould': [{ tribe: 'moors', weight: 0.98 }],
+  'bint': [{ tribe: 'moors', weight: 0.98 }],
+  'mine': [{ tribe: 'moors', weight: 0.85 }],
+  'amine': [{ tribe: 'moors', weight: 0.95 }],
+  'med': [{ tribe: 'moors', weight: 0.8 }],
+  'ahmed': [{ tribe: 'moors', weight: 0.95 }],
+  'dine': [{ tribe: 'moors', weight: 0.9 }],
+  'ddin': [{ tribe: 'moors', weight: 0.95 }],
+  'llah': [{ tribe: 'moors', weight: 0.85 }],
+  'ullah': [{ tribe: 'moors', weight: 0.9 }],
+
+  // ============ MAURITANIA - Haratin suffixes ============
+  'bili': [{ tribe: 'haratin', weight: 0.95 }],
+  'lam_hr': [{ tribe: 'haratin', weight: 0.9 }],
+  'adi_hr': [{ tribe: 'haratin', weight: 0.85 }],
+  'oum_hr': [{ tribe: 'haratin', weight: 0.85 }],
+  'ama_hr': [{ tribe: 'haratin', weight: 0.8 }],
+
+  // ============ MALI - Soninke suffixes ============
+  'ané': [{ tribe: 'soninke', weight: 0.95 }],
+  'aré': [{ tribe: 'soninke', weight: 0.95 }],
+  'ouré': [{ tribe: 'soninke', weight: 0.98 }],
+  'aka_sk': [{ tribe: 'soninke', weight: 0.9 }],
+  'illo': [{ tribe: 'soninke', weight: 0.9 }],
+  'ahé': [{ tribe: 'soninke', weight: 0.95 }],
+  'emé': [{ tribe: 'soninke', weight: 0.9 }],
+
+  // ============ MALI - Bambara (Bamana) suffixes ============
+  'oré_bm': [{ tribe: 'bambara', weight: 0.95 }],
+  'aké': [{ tribe: 'bambara', weight: 0.9 }],
+  'ulé': [{ tribe: 'bambara', weight: 0.95 }],
+  'oro_bm': [{ tribe: 'bambara', weight: 0.9 }],
+  'assa': [{ tribe: 'bambara', weight: 0.85 }],
+  'amba_bm': [{ tribe: 'bambara', weight: 0.9 }],
+  'ani_bm': [{ tribe: 'bambara', weight: 0.85 }],
+  'ibou': [{ tribe: 'bambara', weight: 0.9 }],
+
+  // ============ MALI - Dogon suffixes ============
+  'ogo_dg': [{ tribe: 'dogon', weight: 0.95 }],
+  'agou': [{ tribe: 'dogon', weight: 0.98 }],
+  'ogu': [{ tribe: 'dogon', weight: 0.95 }],
+  'elu': [{ tribe: 'dogon', weight: 0.9 }],
+  'amba_dg': [{ tribe: 'dogon', weight: 0.95 }],
+  'andé': [{ tribe: 'dogon', weight: 0.9 }],
+  'igué': [{ tribe: 'dogon', weight: 0.98 }],
+  'ingué': [{ tribe: 'dogon', weight: 0.98 }],
+  'togo': [{ tribe: 'dogon', weight: 0.95 }],
+
+  // ============ MALI - Songhai suffixes ============
+  'nza': [{ tribe: 'songhai', weight: 0.95 }],
+  'ria_sg': [{ tribe: 'songhai', weight: 0.9 }],
+  'ssa_sg': [{ tribe: 'songhai', weight: 0.85 }],
+  'ndi_sg': [{ tribe: 'songhai', weight: 0.9 }],
+  'ngou': [{ tribe: 'songhai', weight: 0.95 }],
+  'izo': [{ tribe: 'songhai', weight: 0.9 }],
+  'itou': [{ tribe: 'songhai', weight: 0.95 }],
+  'aïza': [{ tribe: 'songhai', weight: 0.98 }],
+
   // ============ Nigeria - Yoruba suffixes ============
   'deji': [{ tribe: 'yoruba', weight: 0.95 }],
   'lola': [{ tribe: 'yoruba', weight: 0.95 }],
@@ -2835,7 +2934,7 @@ const suffixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'ito': [{ tribe: 'fon', weight: 0.9 }],
   
   // ============ West Africa - Mossi suffixes (Burkina Faso) ============
-  'ogo': [{ tribe: 'mossi', weight: 0.95 }],
+  'ogo_ms': [{ tribe: 'mossi', weight: 0.95 }],
   'ana': [{ tribe: 'mossi', weight: 0.8 }],
   'ore': [{ tribe: 'mossi', weight: 0.9 }],
   
