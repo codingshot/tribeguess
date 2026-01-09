@@ -1,0 +1,92 @@
+name: 📺 Video Not Working
+description: Report a broken, removed, or inappropriate video
+title: "[Video Issue]: "
+labels: ["data", "video", "quick-fix"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a video that's not working? Let us know so we can fix it!
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      options:
+        - Video removed/unavailable
+        - Video is private
+        - Video is age-restricted
+        - Wrong video (doesn't match content)
+        - Video in wrong language
+        - Inappropriate/offensive content
+        - Poor quality video
+        - Video embed not loading
+    validations:
+      required: true
+
+  - type: dropdown
+    id: video_type
+    attributes:
+      label: Video Category
+      options:
+        - Culture Documentary (tribe page)
+        - Language Tutorial (tribe page)
+        - Recipe Tutorial
+        - Religion Documentary
+        - Blog Article Video
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Which Tribe/Recipe/Article?
+      placeholder: "Maasai tribe"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: "https://tribeguess.com/learn/maasai"
+    validations:
+      required: true
+
+  - type: input
+    id: video_id
+    attributes:
+      label: Current Video ID
+      description: The YouTube video ID that's not working
+      placeholder: "dQw4w9WgXcQ"
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Message
+      description: What error do you see?
+      placeholder: "Video unavailable - This video is no longer available..."
+
+  - type: input
+    id: replacement
+    attributes:
+      label: Suggested Replacement Video (optional)
+      description: If you know a good replacement video, provide the YouTube URL or ID
+      placeholder: "https://youtube.com/watch?v=... or just the video ID"
+
+  - type: textarea
+    id: replacement_notes
+    attributes:
+      label: Notes on Replacement
+      description: Why is this a good replacement?
+      placeholder: "High quality documentary from a reputable channel, covers traditional culture well..."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have confirmed the video is not working (tried refreshing, different browser)
+          required: true

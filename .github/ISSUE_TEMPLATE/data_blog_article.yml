@@ -1,0 +1,125 @@
+name: 📝 Blog Article Proposal
+description: Propose a new cultural article for the blog
+title: "[Blog]: "
+labels: ["content", "blog", "needs-review"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want to write about African culture? Propose your article idea here!
+
+  - type: input
+    id: title
+    attributes:
+      label: Proposed Title
+      placeholder: "The Art of African Drumming: A Journey Through Rhythm"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: region
+    attributes:
+      label: Primary Region
+      options:
+        - Pan-African
+        - East Africa
+        - West Africa
+        - Central Africa
+        - Southern Africa
+        - North Africa
+        - Horn of Africa
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Article Summary
+      description: 2-3 sentence summary of what the article will cover
+      placeholder: "This article will explore the cultural significance of drumming across African cultures, from the talking drums of the Yoruba to the djembe of the Mandinka..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: outline
+    attributes:
+      label: Article Outline
+      description: Main sections/topics to cover
+      placeholder: |
+        1. Introduction to African drumming traditions
+        2. Types of drums across regions
+           - West African drums (djembe, talking drum)
+           - East African drums (ngoma, entenga)
+        3. Cultural and ceremonial significance
+        4. Famous African drummers
+        5. Drumming in the diaspora
+    validations:
+      required: true
+
+  - type: textarea
+    id: tribes
+    attributes:
+      label: Tribes/Cultures Featured
+      description: Which tribes or cultures will be discussed?
+      placeholder: "Yoruba, Mandinka, Ashanti, Baganda, Zulu..."
+
+  - type: textarea
+    id: tags
+    attributes:
+      label: Proposed Tags
+      description: Topics/keywords for this article
+      placeholder: "African music, drums, Yoruba, Mandinka, cultural traditions, ceremonies"
+
+  - type: input
+    id: read_time
+    attributes:
+      label: Estimated Read Time
+      placeholder: "5 minutes"
+
+  - type: dropdown
+    id: writing
+    attributes:
+      label: Who will write this?
+      options:
+        - I will write the full article
+        - I can help research but need a writer
+        - I'm just proposing the idea
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Planned Sources
+      description: What sources will you use?
+      placeholder: |
+        - Academic papers on African musicology
+        - UNESCO intangible heritage documentation
+        - Interviews with drummers
+        - Museum archives
+    validations:
+      required: true
+
+  - type: textarea
+    id: images
+    attributes:
+      label: Image Ideas
+      description: What images would accompany this article?
+      placeholder: |
+        - Djembe drums
+        - Traditional drumming ceremony
+        - Talking drum players
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Guidelines
+      options:
+        - label: This topic hasn't been covered in existing blog posts
+          required: true
+        - label: The article will be factual, not stereotypical
+          required: true
+        - label: I will cite sources for cultural claims
+          required: true

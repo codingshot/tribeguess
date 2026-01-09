@@ -1,0 +1,93 @@
+name: ✨ Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your feature suggestion! We love hearing ideas to make TribeGuess better.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Need
+      description: What problem does this feature solve? What need does it address?
+      placeholder: "I find it difficult to compare tribes side by side..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you'd like to see.
+      placeholder: "Add a comparison tool that lets users select 2-4 tribes and see them side by side..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: "I tried opening multiple tabs, but it's not convenient..."
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      options:
+        - User Interface / UX
+        - Search & Filtering
+        - Tribe Data
+        - Recipes
+        - Religions
+        - Languages
+        - Quiz / Learning
+        - Blog / Content
+        - Maps / Visualization
+        - Audio / Pronunciation
+        - Mobile Experience
+        - Performance
+        - Accessibility
+        - SEO
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to you?
+      options:
+        - Nice to have
+        - Would use it regularly
+        - Critical for my use case
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups or Examples
+      description: If you have any sketches, mockups, or examples from other sites, share them here.
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Would you like to contribute?
+      options:
+        - label: I'm willing to help implement this feature
+        - label: I can help with design/mockups
+        - label: I can help test this feature
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to ensure this feature hasn't been requested
+          required: true
