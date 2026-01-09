@@ -95,20 +95,20 @@ export default function Recipes() {
           </header>
 
           {/* Ingredients Section */}
-          <section className="mb-8 p-4 bg-gradient-to-r from-amber-500/10 to-primary/5 rounded-xl border border-amber-500/20">
-            <div className="flex items-center gap-2 mb-3">
-              <Leaf className="w-5 h-5 text-amber-600" />
-              <h2 className="font-semibold">Traditional Ingredients</h2>
+          <section className="mb-6 sm:mb-8 p-3 sm:p-4 bg-gradient-to-r from-amber-500/10 to-primary/5 rounded-xl border border-amber-500/20">
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
+              <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600 flex-shrink-0" />
+              <h2 className="font-semibold text-sm sm:text-base">Traditional Ingredients</h2>
             </div>
-            <p className="text-sm text-muted-foreground mb-3">
+            <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
               Explore the staple foods and ingredients that define African cuisine
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {getAllIngredients().map(ingredient => (
                 <Link 
                   key={ingredient.id} 
                   to={`/ingredient/${ingredient.id}`}
-                  className="px-3 py-1.5 bg-background rounded-full text-xs sm:text-sm font-medium hover:bg-primary/10 border border-border hover:border-primary/30 transition-colors"
+                  className="px-2 sm:px-3 py-1 sm:py-1.5 bg-background rounded-full text-xs font-medium hover:bg-primary/10 border border-border hover:border-primary/30 transition-colors"
                 >
                   {ingredient.name}
                 </Link>
@@ -117,49 +117,51 @@ export default function Recipes() {
           </section>
 
           {/* Search & Filters */}
-          <div className="mb-6 space-y-4">
+          <div className="mb-4 sm:mb-6 space-y-3 sm:space-y-4">
             {/* Search Input */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search recipes by name, tribe, or description..."
+                placeholder="Search recipes..."
                 value={search}
                 onChange={(e) => handleSearchChange(e.target.value)}
-                className="pl-10 h-11"
+                className="pl-10 h-10 sm:h-11 text-sm"
               />
             </div>
 
-            {/* Tribe Filter Pills */}
-            <div className="flex flex-wrap gap-2">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mr-2">
-                <Filter className="w-4 h-4" />
-                <span className="hidden sm:inline">Filter by tribe:</span>
+            {/* Tribe Filter Pills - Scrollable on mobile */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                <Filter className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                <span>Filter by tribe:</span>
               </div>
-              {tribeNames.map(tribe => (
-                <button
-                  key={tribe.slug}
-                  onClick={() => handleTribeFilter(tribe.slug)}
-                  className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors ${
-                    selectedTribe === tribe.slug
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-secondary hover:bg-secondary/80 text-foreground'
-                  }`}
-                >
-                  {tribe.name}
-                </button>
-              ))}
+              <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible scrollbar-hide">
+                {tribeNames.map(tribe => (
+                  <button
+                    key={tribe.slug}
+                    onClick={() => handleTribeFilter(tribe.slug)}
+                    className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
+                      selectedTribe === tribe.slug
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-secondary hover:bg-secondary/80 text-foreground'
+                    }`}
+                  >
+                    {tribe.name}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Active Filters & Clear */}
             {hasFilters && (
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-xs sm:text-sm text-muted-foreground">
                   {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
                 </span>
-                <Button variant="ghost" size="sm" onClick={clearFilters} className="h-7 text-xs gap-1">
+                <Button variant="ghost" size="sm" onClick={clearFilters} className="h-6 sm:h-7 text-xs gap-1 px-2">
                   <X className="w-3 h-3" />
-                  Clear filters
+                  Clear
                 </Button>
               </div>
             )}
@@ -167,15 +169,15 @@ export default function Recipes() {
 
           {/* Recipe Grid */}
           {filteredRecipes.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
               {filteredRecipes.map(recipe => (
                 <RecipeCard key={recipe.id} recipe={recipe} />
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground mb-4">No recipes found matching your criteria.</p>
-              <Button variant="outline" onClick={clearFilters}>
+            <div className="text-center py-8 sm:py-12">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4">No recipes found matching your criteria.</p>
+              <Button variant="outline" size="sm" onClick={clearFilters}>
                 Clear filters
               </Button>
             </div>
@@ -192,37 +194,37 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
     <Link
       to={`/recipe/${recipe.id}`}
-      className="bg-card border border-border rounded-xl p-4 hover:border-primary hover:shadow-md transition-all group"
+      className="bg-card border border-border rounded-xl p-3 sm:p-4 hover:border-primary hover:shadow-md transition-all group flex flex-col"
     >
-      <div className="flex items-center gap-2 mb-2">
-        <span className="text-xl">{categoryEmoji[recipe.category]}</span>
-        <Badge variant="outline" className="capitalize text-xs">{recipe.category}</Badge>
-        <Badge className={`text-xs ${difficultyColor[recipe.difficulty]}`}>{recipe.difficulty}</Badge>
+      <div className="flex items-center gap-1.5 sm:gap-2 mb-2 flex-wrap">
+        <span className="text-lg sm:text-xl">{categoryEmoji[recipe.category]}</span>
+        <Badge variant="outline" className="capitalize text-[10px] sm:text-xs px-1.5 sm:px-2">{recipe.category}</Badge>
+        <Badge className={`text-[10px] sm:text-xs px-1.5 sm:px-2 ${difficultyColor[recipe.difficulty]}`}>{recipe.difficulty}</Badge>
       </div>
 
-      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
+      <h3 className="font-semibold text-sm sm:text-base text-foreground group-hover:text-primary transition-colors mb-1 line-clamp-1">
         {recipe.name}
       </h3>
 
       <Link
         to={`/learn/${recipe.tribeSlug}`}
         onClick={(e) => e.stopPropagation()}
-        className="text-xs text-primary hover:underline mb-2 inline-block"
+        className="text-[10px] sm:text-xs text-primary hover:underline mb-1.5 sm:mb-2 inline-block"
       >
         {recipe.tribeName} Tribe
       </Link>
 
-      <p className="text-xs text-muted-foreground line-clamp-2 mb-3">
+      <p className="text-[10px] sm:text-xs text-muted-foreground line-clamp-2 mb-2 sm:mb-3 flex-grow">
         {recipe.description}
       </p>
 
-      <div className="flex items-center gap-3 text-xs text-muted-foreground">
+      <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-muted-foreground mt-auto">
         <div className="flex items-center gap-1">
-          <Clock className="w-3 h-3" />
+          <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
           <span>{recipe.cookTime}</span>
         </div>
         <div className="flex items-center gap-1">
-          <Users className="w-3 h-3" />
+          <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
           <span>Serves {recipe.servings}</span>
         </div>
       </div>
