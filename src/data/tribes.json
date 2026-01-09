@@ -174,6 +174,27 @@
       "Bioko Island was a major slave trade hub - known as Fernando Pó under Spanish colonial rule",
       "Equatorial Guinea has Africa's highest GDP per capita due to oil, yet widespread poverty persists",
       "The Bubi people are indigenous to Bioko Island and have distinct traditions from mainland Fang"
+    ],
+    "NE": [
+      "Niger is named after the Niger River, which means 'river of rivers' in Tuareg",
+      "The Hausa are Niger's largest ethnic group (53%), dominating southern regions",
+      "The Tuareg 'blue people' control the northern Sahara and have their own ancient script (Tifinagh)",
+      "Niger has some of the world's highest birth rates, averaging 7 children per woman",
+      "The Djerma founded Niger's capital Niamey and dominated post-independence politics"
+    ],
+    "MR": [
+      "Mauritania was the last country to officially abolish slavery in 1981 (criminalized in 2007)",
+      "The country is divided between Arab-Berber Moors and Black African groups",
+      "Hassaniya Arabic is the dominant language, a unique dialect with Berber influences",
+      "Traditional force-feeding (gavage) for women was practiced to demonstrate wealth",
+      "Mauritania's vast manuscript libraries contain centuries of Islamic scholarship"
+    ],
+    "ML": [
+      "Mali was home to three of Africa's greatest empires: Ghana, Mali, and Songhai",
+      "Timbuktu was once one of the world's great centers of Islamic learning",
+      "The Bambara are Mali's largest ethnic group, dominating politics and culture",
+      "Mali has over 4,000 ancient manuscripts in private collections and libraries",
+      "The Dogon people are famous for their cliff villages and complex cosmology"
     ]
   },
   "countries": [
@@ -12331,6 +12352,1327 @@
       "sources": [{ "name": "Wikipedia - Punu people", "url": "https://en.wikipedia.org/wiki/Punu_people" }, { "name": "Punu Masks", "url": "https://www.metmuseum.org/art/collection/search/310824" }],
       "description": "The Punu are celebrated for their iconic white-faced masks representing idealized female ancestors. These masks, worn by male stilt-dancers, are among the most recognized African art forms worldwide.",
       "relatedTribes": ["fang", "mitsogo", "myene", "kota"]
+    },
+    {
+      "id": "tuareg",
+      "name": "Tuareg",
+      "slug": "tuareg",
+      "slugAliases": ["touareg", "imuhagh", "kel-tamashek"],
+      "youtubeVideoId": "WH3lFx7mOFM",
+      "countries": ["NE", "ML", "DZ", "LY", "BF"],
+      "region": "Sahara Desert - Niger, Mali, Algeria, Libya",
+      "population": "~2.5 million",
+      "populationPercent": "11% of Niger, 3% of Mali",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 18.0, "lng": 8.0 },
+      "latSpan": 8,
+      "lngSpan": 12,
+      "counties": ["Agadez Region", "Tahoua Region", "Kidal Region", "Timbuktu Region"],
+      "namePrefixes": ["Ag", "Atta", "Amak", "Inaw", "Takm", "Agh", "Alh"],
+      "commonNames": {
+        "female": ["Tafaout", "Takama", "Amayas", "Tabarat", "Aicha", "Fatimata", "Mariama", "Tahount", "Ghalia", "Tinhinan"],
+        "male": ["Ag Mahmoud", "Attaher", "Amayas", "Rhissa", "Mano", "Moussa", "Ibrahim", "Mohammed", "Aghali", "Intallah"]
+      },
+      "stereotypes": [
+        "Blue people of the desert (indigo-dyed clothing)",
+        "Fierce warriors and traders",
+        "Masters of Saharan navigation",
+        "Romantic nomadic freedom",
+        "Matrilineal society",
+        "Expert camel herders"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Veil-wearing (tagelmust) tradition",
+          "Master warriors and raiders",
+          "Caravan leaders and traders",
+          "Poets and musicians"
+        ],
+        "female": [
+          "Property owners and inheritance controllers",
+          "Tent owners (ahayog)",
+          "Musicians and poets",
+          "Decision makers in camp life"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men wore the veil (tagelmust), led caravans, protected camps, and conducted raids. Male honor was tied to bravery and poetry.",
+          "female": "Women owned the tent and property, controlled inheritance, and held high status. They were poets, musicians, and cultural transmitters."
+        },
+        "modern": {
+          "male": "Modern Tuareg men work in tourism, mining, and urban trades. Many maintain pastoral traditions alongside new professions.",
+          "female": "Women continue to hold property and cultural authority. Some are artists and activists promoting Tuareg heritage."
+        }
+      },
+      "culturalTraits": [
+        "Tifinagh alphabet (ancient script)",
+        "Indigo-dyed clothing and veils",
+        "Matrilineal inheritance",
+        "Nomadic pastoral lifestyle",
+        "Rich musical tradition (imzad, tehardent)",
+        "Salt and gold caravan trade heritage"
+      ],
+      "funFacts": [
+        "Tuareg men wear veils while women don't - the opposite of most cultures",
+        "The Tuareg have their own ancient alphabet called Tifinagh",
+        "Tuareg women historically had the right to divorce and keep property",
+        "The 'blue men' name comes from indigo dye that stains their skin",
+        "Tuareg led the great salt caravans across the Sahara for over 1,000 years"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Camel milk", "Dates", "Goat meat", "Taguella bread"],
+        "beverages": ["Green tea (atay)", "Camel milk"],
+        "specialDishes": ["Taguella (sand-baked bread)", "Eghajira (millet porridge)", "Dried meat with dates"],
+        "description": "Tuareg cuisine is adapted to desert life. Taguella bread is baked in hot sand. Camel milk and dates provide nutrition during travel. Three glasses of sweet green tea is essential hospitality."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Light morning meal, main evening meal",
+        "mainMealTime": "Evening around the fire",
+        "eatingStyle": "Communal eating from shared dish, tea ceremony",
+        "genderRules": "Men and women may eat separately; guests are honored",
+        "taboos": ["Left hand for eating prohibited", "Refusing tea is offensive"],
+        "specialOccasions": "Elaborate feasts for marriages, festivals, and important guests",
+        "hospitality": "Three glasses of tea ritual - first bitter, second sweet, third mild"
+      },
+      "traditionalDance": "Tende drum dances and sword dances at festivals",
+      "religion": "Islam (~99%, often blended with pre-Islamic traditions)",
+      "traditionalReligion": {
+        "name": "Pre-Islamic beliefs/Sufi Islam",
+        "supremeDeity": "Amanay (pre-Islamic), Allah (Islamic)",
+        "spirits": ["Kel esuf (spirits of the wild)", "Djinn", "Ancestor spirits"],
+        "practices": ["Sufi ceremonies", "Amulet-making", "Spirit appeasement", "Divination"],
+        "beliefs": "Tuareg Islam incorporates pre-Islamic beliefs in spirits (kel esuf) and the power of marabouts. The desert is seen as inhabited by unseen forces.",
+        "religiousHistory": {
+          "islamIntroduced": "7th-11th century",
+          "introducedBy": "Arab and Berber traders",
+          "conversionProcess": "Gradual conversion through trade. Islam became central while pre-Islamic beliefs remained as folk practices.",
+          "sources": ["Wikipedia - Tuareg people", "Wikipedia - Tuareg religion"]
+        }
+      },
+      "history": {
+        "origin": "The Tuareg are Berber nomads who have dominated Saharan trade routes for millennia. They controlled the trans-Saharan caravan trade in gold, salt, and slaves.",
+        "colonialEra": "French colonization disrupted caravan routes and imposed borders. Tuareg resisted fiercely, leading to the 1916-1917 Tuareg Revolt crushed at the Battle of Tit.",
+        "independence": "Post-independence, Tuareg found themselves divided across five nations. Rebellions in Niger and Mali (1990s, 2012) sought autonomy. Azawad independence was briefly declared in 2012.",
+        "keyEvents": ["Trans-Saharan trade dominance", "French conquest", "1916 Revolt", "Niger/Mali rebellions", "2012 Azawad independence"]
+      },
+      "language": {
+        "name": "Tamashek (Tamasheq)",
+        "speakers": "~2.5 million",
+        "greeting": "Mani toudak?",
+        "greetingMeaning": "How are you? (to a man)",
+        "additionalGreetings": [
+          { "phrase": "Alkheir ɣas", "meaning": "Good morning" },
+          { "phrase": "Tanemmirt", "meaning": "Thank you" }
+        ],
+        "family": "Berber (Afroasiatic)",
+        "writingSystem": "Tifinagh (traditional), Latin (modern)",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Berber",
+          "branch": "Southern Berber (Tuareg)",
+          "speakers": "~2.5 million",
+          "relatedLanguages": ["Kabyle", "Tachelhit", "Other Berber"],
+          "migrationHistory": "Tuareg languages descend from ancient Berber spoken across North Africa"
+        }
+      },
+      "populationByCountry": [
+        { "country": "NE", "population": "~1.5 million", "percent": "7%" },
+        { "country": "ML", "population": "~500,000", "percent": "2.5%" },
+        { "country": "DZ", "population": "~200,000", "percent": "0.5%" },
+        { "country": "LY", "population": "~150,000", "percent": "2%" },
+        { "country": "BF", "population": "~150,000", "percent": "0.7%" }
+      ],
+      "famousPeople": [
+        { "name": "Tinariwen", "role": "Grammy-winning Tuareg rock band", "wikipedia": "https://en.wikipedia.org/wiki/Tinariwen" },
+        { "name": "Mano Dayak", "role": "Tuareg leader and peace activist", "wikipedia": "https://en.wikipedia.org/wiki/Mano_Dayak" }
+      ],
+      "sources": [{ "name": "Wikipedia - Tuareg people", "url": "https://en.wikipedia.org/wiki/Tuareg_people" }],
+      "description": "The Tuareg are the legendary 'blue people' of the Sahara, known for their veiled men, matrilineal society, ancient Tifinagh script, and mastery of the world's largest desert.",
+      "relatedTribes": ["hausa", "songhai", "fulani", "berber"]
+    },
+    {
+      "id": "hausa_niger",
+      "name": "Hausa (Niger)",
+      "slug": "hausa-niger",
+      "slugAliases": ["hausawa-niger"],
+      "youtubeVideoId": "ksKw3bBiVR4",
+      "countries": ["NE", "NG"],
+      "region": "Southern Niger, Northern Nigeria",
+      "population": "~12 million (Niger)",
+      "populationPercent": "53% of Niger",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 13.5, "lng": 7.5 },
+      "latSpan": 3,
+      "lngSpan": 5,
+      "counties": ["Maradi Region", "Zinder Region", "Tahoua Region", "Dosso Region"],
+      "namePrefixes": ["Mala", "Abdu", "Mami", "Habi", "Amin", "Bala", "Ibra"],
+      "commonNames": {
+        "female": ["Hadiza", "Amina", "Fatima", "Hauwa", "Zainab", "Mariama", "Halima", "Rabi", "Saudatu", "Aisha"],
+        "male": ["Abdou", "Mahamadou", "Issoufou", "Oumarou", "Ibrahim", "Musa", "Sani", "Tanko", "Bello", "Dahiru"]
+      },
+      "stereotypes": [
+        "Master traders and merchants",
+        "Islamic scholars",
+        "Skilled craftspeople",
+        "Hospitable hosts",
+        "Political leaders",
+        "Agricultural experts"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traders and merchants",
+          "Islamic scholars (malams)",
+          "Farmers and herders",
+          "Political leaders"
+        ],
+        "female": [
+          "Skilled in kulle (seclusion traditions)",
+          "Food processors and traders",
+          "Skilled embroiderers",
+          "Household managers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men controlled public trade, agriculture, and religious scholarship. Hausa city-states were led by male emirs and sultans.",
+          "female": "Women practiced kulle (seclusion) but managed household economies. They traded from home through intermediaries and children."
+        },
+        "modern": {
+          "male": "Modern Hausa men dominate trade, politics, and professions. Many maintain Islamic scholarship traditions.",
+          "female": "Women increasingly access education and formal employment. Home-based businesses remain important."
+        }
+      },
+      "culturalTraits": [
+        "Ajami script tradition",
+        "Elaborate city-state history",
+        "Master traders across Africa",
+        "Islamic scholarship centers",
+        "Distinctive architecture (Hausa adobe)",
+        "Rich oral literature (tatsuniyoyi)"
+      ],
+      "funFacts": [
+        "Hausa is the most widely spoken language in West Africa with 80+ million speakers",
+        "Hausa city-states like Kano and Zinder were major trade centers for centuries",
+        "Hausa women developed a parallel economy through home-based trade",
+        "The Hausa developed their own script (Ajami) based on Arabic letters",
+        "Hausa traders reached as far as Sudan and North Africa"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Rice", "Beans", "Groundnuts"],
+        "beverages": ["Kunun zaki (millet drink)", "Fura da nono (millet balls with milk)"],
+        "specialDishes": ["Tuwo (millet/sorghum pudding)", "Miyan kuka (baobab soup)", "Kilishi (dried spiced meat)"],
+        "description": "Hausa cuisine centers on millet and sorghum dishes served with rich soups. Kilishi jerky is a famous Hausa specialty. Fura da nono is a beloved drink."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, lunch, main evening meal",
+        "mainMealTime": "Evening with family",
+        "eatingStyle": "Communal eating, hand-eating from shared bowls",
+        "genderRules": "Men and women often eat separately; children eat with mothers",
+        "taboos": ["Left hand for eating prohibited", "Eating alone considered odd"],
+        "specialOccasions": "Elaborate feasts for Eid, weddings, naming ceremonies",
+        "hospitality": "Guests must be fed - 'stranger' and 'guest' are the same word (bako)"
+      },
+      "traditionalDance": "Koroso and other festival dances",
+      "religion": "Islam (~99%, predominantly Sunni)",
+      "traditionalReligion": {
+        "name": "Pre-Islamic Bori/Islam",
+        "supremeDeity": "Ubangiji (God in pre-Islamic), Allah",
+        "spirits": ["Iskoki (spirits)", "Bori spirits"],
+        "practices": ["Bori possession ceremonies (surviving)", "Islamic practices", "Sufi orders"],
+        "beliefs": "Hausa Islam is predominantly Sunni with Sufi influences. Pre-Islamic Bori spirit practices survive among some groups, especially women.",
+        "religiousHistory": {
+          "islamIntroduced": "11th-14th century",
+          "introducedBy": "Arab and Berber traders",
+          "conversionProcess": "Gradual conversion through trade. The Sokoto Jihad (1804) under Usman dan Fodio established strict Islamic governance.",
+          "sources": ["Wikipedia - Hausa people", "Wikipedia - Bori religion"]
+        }
+      },
+      "history": {
+        "origin": "The Hausa are an ancient people who built major city-states (Kano, Katsina, Zinder, Gobir) that dominated West African trade for centuries.",
+        "colonialEra": "French colonization of Niger separated Hausa from their kin in Nigeria. The colonial period disrupted traditional political structures.",
+        "independence": "Post-independence, Hausa became Niger's largest ethnic group. They dominate politics, trade, and culture, though tensions with Tuareg exist in the north.",
+        "keyEvents": ["Hausa city-states", "Sokoto Jihad (1804)", "French colonization", "Independence (1960)", "Democratic transitions"]
+      },
+      "language": {
+        "name": "Hausa",
+        "speakers": "~12 million (Niger)",
+        "greeting": "Sannu!",
+        "greetingMeaning": "Hello! (common greeting)",
+        "additionalGreetings": [
+          { "phrase": "Ina kwana?", "meaning": "How did you sleep? (morning)" },
+          { "phrase": "Lafiya lau", "meaning": "I'm fine" }
+        ],
+        "family": "Chadic (Afroasiatic)",
+        "writingSystem": "Latin (Boko), Arabic (Ajami)",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Chadic",
+          "branch": "West Chadic",
+          "speakers": "~80 million (total)",
+          "relatedLanguages": ["Ron", "Bole", "Other Chadic"],
+          "migrationHistory": "Hausa spread through trade across West Africa"
+        }
+      },
+      "famousPeople": [
+        { "name": "Issoufou Mahamadou", "role": "President of Niger (2011-2021)", "wikipedia": "https://en.wikipedia.org/wiki/Mahamadou_Issoufou" },
+        { "name": "Tandja Mamadou", "role": "President of Niger (1999-2010)", "wikipedia": "https://en.wikipedia.org/wiki/Tandja_Mamadou" }
+      ],
+      "sources": [{ "name": "Wikipedia - Hausa people", "url": "https://en.wikipedia.org/wiki/Hausa_people" }],
+      "description": "The Hausa of Niger are the country's largest ethnic group, renowned for their trading networks, Islamic scholarship, and the historic city-states that once dominated West African commerce.",
+      "relatedTribes": ["fulani", "songhai", "tuareg", "kanuri"]
+    },
+    {
+      "id": "djerma",
+      "name": "Djerma (Zarma)",
+      "slug": "djerma",
+      "slugAliases": ["zarma", "dyerma", "zabarma"],
+      "youtubeVideoId": "Hy8X5NWBP6I",
+      "countries": ["NE", "NG", "BJ", "BF"],
+      "region": "Western Niger, Niger River Valley",
+      "population": "~4 million",
+      "populationPercent": "21% of Niger",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 13.5, "lng": 2.5 },
+      "latSpan": 3,
+      "lngSpan": 3,
+      "counties": ["Dosso Region", "Tillabéri Region", "Niamey"],
+      "namePrefixes": ["Ham", "Dji", "Gao", "Wey", "Sey", "Bani"],
+      "commonNames": {
+        "female": ["Hamsatou", "Bibata", "Fati", "Hadjo", "Mariama", "Zeinabou", "Aissata", "Koumba", "Hawa", "Djamila"],
+        "male": ["Hamadou", "Seydou", "Djibo", "Amadou", "Ousmane", "Boubacar", "Moussa", "Issaka", "Mahamane", "Seyni"]
+      },
+      "stereotypes": [
+        "Proud warriors",
+        "Independent spirit",
+        "Farmers and fishers",
+        "Political leaders in Niger",
+        "Cultural pride",
+        "Musicians and storytellers"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Warriors and hunters",
+          "Farmers and fishermen",
+          "Political leaders",
+          "Musicians (griots)"
+        ],
+        "female": [
+          "Skilled pottery makers",
+          "Agricultural workers",
+          "Market traders",
+          "Household managers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, hunters, and farmers. Djerma resisted colonization fiercely. Men controlled political and religious matters.",
+          "female": "Women farmed, made pottery, traded in markets, and managed households. They had significant economic autonomy."
+        },
+        "modern": {
+          "male": "Modern Djerma men work in government, professions, and agriculture. Many are in Niamey's political and business circles.",
+          "female": "Women access education and formal employment while maintaining traditional roles in agriculture and trade."
+        }
+      },
+      "culturalTraits": [
+        "Strong warrior tradition",
+        "Rich oral history (griots)",
+        "Distinctive music and dance",
+        "Niger River fishing culture",
+        "Traditional wrestling",
+        "Independence movement leadership"
+      ],
+      "funFacts": [
+        "The Djerma were the first Nigeriens to resist French colonization",
+        "Djerma and Songhai languages are closely related - some scholars consider them one group",
+        "The first President of Niger, Hamani Diori, was Djerma",
+        "Traditional Djerma wrestling (kokawa) is a major sport in Niger",
+        "The Djerma are famous for their distinctive drumming and dance traditions"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Rice", "Fish", "Sorghum", "Cowpeas"],
+        "beverages": ["Dolo (millet beer)", "Zobo (hibiscus drink)"],
+        "specialDishes": ["Foura (millet dumplings)", "Smoked fish dishes", "Dambou (steamed millet)"],
+        "description": "Djerma cuisine combines Sahelian grains with Niger River fish. Millet dishes are central. Smoked fish from the Niger River is a specialty."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning meal, main evening meal",
+        "mainMealTime": "Evening with family",
+        "eatingStyle": "Communal eating from shared dishes",
+        "genderRules": "Men and women may eat separately; elders served first",
+        "taboos": ["Eating alone is discouraged", "Refusing food is offensive"],
+        "specialOccasions": "Feasts for Islamic holidays, weddings, naming ceremonies",
+        "hospitality": "Visitors must be fed - hospitality is a moral obligation"
+      },
+      "traditionalDance": "Horso and other spirit possession dances",
+      "religion": "Islam (~95%), Traditional beliefs (~5%)",
+      "traditionalReligion": {
+        "name": "Pre-Islamic beliefs/Islam",
+        "supremeDeity": "Irikoy (God)",
+        "spirits": ["Holey (spirits)", "Doguwa (female spirits)", "Hauka spirits"],
+        "practices": ["Spirit possession ceremonies", "Divination", "Islamic practices"],
+        "beliefs": "Djerma practice Sunni Islam but maintain pre-Islamic spirit beliefs. The Hauka movement (spirit possession of colonial figures) emerged among them.",
+        "religiousHistory": {
+          "islamIntroduced": "15th-17th century",
+          "introducedBy": "Muslim scholars and traders",
+          "conversionProcess": "Gradual conversion from traditional religion. Pre-Islamic practices remain as folk beliefs and healing practices.",
+          "sources": ["Wikipedia - Zarma people", "Wikipedia - Hauka"]
+        }
+      },
+      "history": {
+        "origin": "The Djerma/Zarma are related to the Songhai and migrated to their current lands from the Dendi region. They built warrior kingdoms along the Niger River.",
+        "colonialEra": "Djerma fiercely resisted French colonization. The defeat of Samory Ture affected the region. French rule established Niamey (a Djerma area) as the capital.",
+        "independence": "Post-independence, Djerma initially dominated Nigerien politics. The first two presidents were Djerma. They remain influential in government and culture.",
+        "keyEvents": ["Songhai Empire connections", "Warrior kingdoms", "French conquest", "Independence (1960)", "Djerma political leadership"]
+      },
+      "language": {
+        "name": "Zarma (Djerma)",
+        "speakers": "~4 million",
+        "greeting": "Mate ni go?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Baani samay", "meaning": "Good morning" },
+          { "phrase": "Fofo", "meaning": "Hello" }
+        ],
+        "family": "Nilo-Saharan (Songhai)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Songhai",
+          "branch": "Southern Songhai",
+          "speakers": "~4 million",
+          "relatedLanguages": ["Songhai proper", "Dendi", "Koyraboro Senni"],
+          "migrationHistory": "Zarma descends from Songhai and spread along the Niger River"
+        }
+      },
+      "famousPeople": [
+        { "name": "Hamani Diori", "role": "First President of Niger (1960-1974)", "wikipedia": "https://en.wikipedia.org/wiki/Hamani_Diori" },
+        { "name": "Mahamane Ousmane", "role": "President of Niger (1993-1996)", "wikipedia": "https://en.wikipedia.org/wiki/Mahamane_Ousmane" }
+      ],
+      "sources": [{ "name": "Wikipedia - Zarma people", "url": "https://en.wikipedia.org/wiki/Zarma_people" }],
+      "description": "The Djerma (Zarma) are Niger's second-largest ethnic group, known for their warrior traditions, political leadership since independence, and rich musical heritage along the Niger River.",
+      "relatedTribes": ["songhai", "fulani", "hausa", "tuareg"]
+    },
+    {
+      "id": "kanuri_niger",
+      "name": "Kanuri (Niger)",
+      "slug": "kanuri-niger",
+      "slugAliases": ["beriberi", "kanouri"],
+      "youtubeVideoId": "xNKL7f3eDQg",
+      "countries": ["NE", "NG", "TD", "CM"],
+      "region": "Southeastern Niger, Lake Chad Basin",
+      "population": "~700,000 (Niger)",
+      "populationPercent": "4% of Niger",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 13.8, "lng": 12.5 },
+      "latSpan": 2,
+      "lngSpan": 3,
+      "counties": ["Diffa Region", "Zinder Region"],
+      "namePrefixes": ["Sheh", "Buka", "Kyar", "Shett", "Alk", "Wazi"],
+      "commonNames": {
+        "female": ["Falmata", "Bintu", "Khadija", "Aisha", "Zara", "Fatima", "Hauwa", "Maryam", "Fati", "Zainab"],
+        "male": ["Shehu", "Bukar", "Kyari", "Shettima", "Alkali", "Modu", "Baba", "Musa", "Mustapha", "Goni"]
+      },
+      "stereotypes": [
+        "Descendants of Kanem-Bornu Empire",
+        "Islamic scholars",
+        "Proud of imperial heritage",
+        "Traders and farmers",
+        "Skilled horsemen",
+        "Resilient people"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Islamic scholars and teachers",
+          "Traders and merchants",
+          "Farmers and herders",
+          "Descendants of warriors"
+        ],
+        "female": [
+          "Skilled embroiderers",
+          "Food processors",
+          "Market traders",
+          "Household managers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, scholars, and traders in the Kanem-Bornu Empire. They controlled politics, religion, and external affairs.",
+          "female": "Women managed households, processed food, and traded. Noble women had significant influence in the royal court."
+        },
+        "modern": {
+          "male": "Modern Kanuri men work in trade, professions, and government. Many maintain Islamic scholarship traditions.",
+          "female": "Women access education while maintaining traditional roles. Many are traders and artisans."
+        }
+      },
+      "culturalTraits": [
+        "Kanem-Bornu Empire heritage",
+        "Strong Islamic scholarship tradition",
+        "Distinctive embroidery and crafts",
+        "Horseback riding culture",
+        "Rich oral history",
+        "Lake Chad fishing traditions"
+      ],
+      "funFacts": [
+        "The Kanem-Bornu Empire lasted over 1,000 years - one of Africa's longest-lasting states",
+        "Kanuri scholars corresponded with scholars in Egypt, Morocco, and Arabia",
+        "The Kanuri introduced horses to many Sahel societies",
+        "Lake Chad has shrunk 90% since the 1960s, severely affecting Kanuri livelihoods",
+        "The Kanuri mai (king) system dates back over a millennium"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Fish", "Rice", "Wheat"],
+        "beverages": ["Kunun (millet drink)", "Zobo"],
+        "specialDishes": ["Tuwo with fish soup", "Kilishi (dried meat)", "Lake Chad fish dishes"],
+        "description": "Kanuri cuisine combines Sahelian grains with Lake Chad fish. Millet tuwo with rich soups is central. Fish from Lake Chad was historically abundant."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, lunch, main evening meal",
+        "mainMealTime": "Evening with family",
+        "eatingStyle": "Communal eating from shared dishes",
+        "genderRules": "Strict separation; men and women eat apart",
+        "taboos": ["Left hand prohibited", "Eating standing discouraged"],
+        "specialOccasions": "Elaborate feasts for Eid, weddings, Sallah celebrations",
+        "hospitality": "Guests are honored and must be fed generously"
+      },
+      "traditionalDance": "Durbar celebrations with horse displays",
+      "religion": "Islam (~99%, Sunni)",
+      "traditionalReligion": {
+        "name": "Islam (Sunni)",
+        "supremeDeity": "Allah",
+        "spirits": ["Some pre-Islamic beliefs survive as folk practices"],
+        "practices": ["Five pillars of Islam", "Sufi orders", "Quranic education"],
+        "beliefs": "Kanuri have been Muslim for over 1,000 years. They are known for strong Islamic scholarship and maintaining Quranic schools.",
+        "religiousHistory": {
+          "islamIntroduced": "11th century",
+          "introducedBy": "Arab traders and scholars",
+          "conversionProcess": "The Kanem kings converted early and made Islam the state religion. One of Africa's earliest Islamic states.",
+          "sources": ["Wikipedia - Kanuri people", "Wikipedia - Kanem-Bornu Empire"]
+        }
+      },
+      "history": {
+        "origin": "The Kanuri built the Kanem-Bornu Empire, one of Africa's greatest and longest-lasting states, dominating the Lake Chad region for over 1,000 years.",
+        "colonialEra": "The empire was divided between French (Niger), British (Nigeria), and German/French (Chad/Cameroon) colonial powers. This fragmented Kanuri society.",
+        "independence": "Post-independence Kanuri found themselves in four countries. Climate change (Lake Chad shrinkage) and Boko Haram insurgency have severely affected Kanuri communities.",
+        "keyEvents": ["Kanem Empire founding (~700 CE)", "Bornu Empire", "Islamic scholarship centers", "Colonial partition", "Lake Chad crisis"]
+      },
+      "language": {
+        "name": "Kanuri",
+        "speakers": "~4 million (total)",
+        "greeting": "Ambu!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "Wushe wushe", "meaning": "How are you?" }
+        ],
+        "family": "Nilo-Saharan (Saharan)",
+        "writingSystem": "Latin alphabet, Arabic (historical)",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Saharan",
+          "branch": "Western Saharan",
+          "speakers": "~4 million",
+          "relatedLanguages": ["Kanembu", "Teda", "Daza"],
+          "migrationHistory": "Kanuri spread with the Kanem-Bornu Empire"
+        }
+      },
+      "famousPeople": [
+        { "name": "Idris Alooma", "role": "Greatest Mai of Bornu (1571-1603)", "wikipedia": "https://en.wikipedia.org/wiki/Idris_Alooma" },
+        { "name": "Rabih az-Zubayr", "role": "Warlord who conquered Bornu (1893)", "wikipedia": "https://en.wikipedia.org/wiki/Rabih_az-Zubayr" }
+      ],
+      "sources": [{ "name": "Wikipedia - Kanuri people", "url": "https://en.wikipedia.org/wiki/Kanuri_people" }],
+      "description": "The Kanuri are heirs to the thousand-year Kanem-Bornu Empire, known for their Islamic scholarship, imperial heritage, and resilience facing the Lake Chad environmental crisis.",
+      "relatedTribes": ["hausa", "toubou", "zaghawa", "fulani"]
+    },
+    {
+      "id": "moors",
+      "name": "Moors (Beydane)",
+      "slug": "moors",
+      "slugAliases": ["beydane", "bidan", "maures"],
+      "youtubeVideoId": "k3qFzv6LYNU",
+      "countries": ["MR", "ML", "SN"],
+      "region": "Mauritania, Western Sahara",
+      "population": "~2.5 million",
+      "populationPercent": "70% of Mauritania",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 18.0, "lng": -10.0 },
+      "latSpan": 8,
+      "lngSpan": 10,
+      "counties": ["Nouakchott", "Adrar", "Tagant", "Hodh"],
+      "namePrefixes": ["Oul", "Sidi", "Moh", "Ahm", "Mint", "Bab"],
+      "commonNames": {
+        "female": ["Fatimetou", "Mariem", "Mounina", "Khadijetou", "Aminetou", "Malouma", "Vatma", "Aïcha", "Nana", "Tekber"],
+        "male": ["Mohamed Ould", "Ahmed Ould", "Sidi", "Maaouya", "Abdelaziz", "Cheikh", "Yahya", "Moustapha", "Moktar", "Baba"]
+      },
+      "stereotypes": [
+        "Desert warriors and nomads",
+        "Proud aristocratic heritage",
+        "Islamic scholars and marabouts",
+        "Poetry and oral tradition",
+        "Hospitality in the desert",
+        "Complex social stratification"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Warriors and raiders (historical)",
+          "Herders and traders",
+          "Islamic scholars",
+          "Political leaders"
+        ],
+        "female": [
+          "Praised for beauty and corpulence",
+          "Musicians and poets",
+          "Tent owners",
+          "Significant family influence"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, scholars, and herders. Warrior groups (hassane) dominated politically. Scholarly groups (zawiya) held religious authority.",
+          "female": "Women owned tents and household property. They composed poetry, played music, and had significant influence. Corpulence was traditionally prized."
+        },
+        "modern": {
+          "male": "Modern Moor men work in government, business, and professions. Many maintain scholarly traditions.",
+          "female": "Women increasingly access education and politics. Traditional arts like music remain important."
+        }
+      },
+      "culturalTraits": [
+        "Hassaniya Arabic language",
+        "Complex caste/tribal system",
+        "Rich poetry tradition",
+        "Distinctive tent architecture",
+        "Traditional music (tidinit)",
+        "Tea ceremony culture"
+      ],
+      "funFacts": [
+        "Mauritania was the last country to officially abolish slavery (1981, criminalized 2007)",
+        "Moor women traditionally gained status through corpulence - force-feeding (gavage) was practiced",
+        "Mauritanian tea ceremony involves three glasses - bitter, sweet, and perfumed",
+        "The Moors speak Hassaniya, a distinctive Arabic dialect with Berber influences",
+        "Mauritania has vast manuscript libraries with centuries of Islamic scholarship"
+      ],
+      "traditionalFood": {
+        "staples": ["Rice", "Millet", "Camel meat", "Goat meat", "Dates"],
+        "beverages": ["Mint tea (atay)", "Camel milk (zrig)"],
+        "specialDishes": ["Mechoui (roasted lamb)", "Thieboudienne (rice with fish)", "Couscous"],
+        "description": "Moor cuisine combines nomadic traditions with influences from Senegal. Rice and meat dishes dominate. Camel milk and dates are staples. Three glasses of sweet tea is essential."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, lunch, evening meal",
+        "mainMealTime": "Lunch and evening",
+        "eatingStyle": "Communal eating from large shared dish",
+        "genderRules": "Men and women eat separately; guests are prioritized",
+        "taboos": ["Left hand prohibited", "Refusing tea is rude"],
+        "specialOccasions": "Elaborate feasts with mechoui for weddings and Islamic holidays",
+        "hospitality": "Three glasses of tea ritual - essential hospitality"
+      },
+      "traditionalDance": "Hawl (traditional music and dance gatherings)",
+      "religion": "Islam (~100%, Sunni Maliki)",
+      "traditionalReligion": {
+        "name": "Islam (Sunni Maliki)",
+        "supremeDeity": "Allah",
+        "spirits": ["Djinn beliefs remain"],
+        "practices": ["Five pillars", "Sufi orders (Tijaniyya, Qadiriyya)", "Marabout veneration"],
+        "beliefs": "Moors are devout Muslims following the Maliki school. Sufi orders are influential. Marabouts (religious leaders) have significant social power.",
+        "religiousHistory": {
+          "islamIntroduced": "8th-11th century",
+          "introducedBy": "Arab and Berber conquerors/traders",
+          "conversionProcess": "Islam spread with the Arab-Berber ancestors of the Moors. Mauritania became a center of Islamic learning.",
+          "sources": ["Wikipedia - Moors", "Wikipedia - Mauritania"]
+        }
+      },
+      "history": {
+        "origin": "The Moors descend from Arab-Berber groups who migrated to the western Sahara. They established the Almoravid Empire that conquered Morocco and Spain.",
+        "colonialEra": "France colonized Mauritania in the late 19th-early 20th century, disrupting nomadic life and traditional power structures.",
+        "independence": "Independent Mauritania (1960) has been dominated by Moor politics. The legacy of slavery and relations with Black Mauritanians remain sensitive issues.",
+        "keyEvents": ["Almoravid Empire", "Hassane/Zawiya division", "French colonization", "Independence (1960)", "Ongoing social reforms"]
+      },
+      "language": {
+        "name": "Hassaniya Arabic",
+        "speakers": "~3 million",
+        "greeting": "Salam aleykum",
+        "greetingMeaning": "Peace be upon you",
+        "additionalGreetings": [
+          { "phrase": "Labaas?", "meaning": "How are you?" },
+          { "phrase": "El hamdoulillah", "meaning": "Thanks to God" }
+        ],
+        "family": "Semitic (Afroasiatic)",
+        "writingSystem": "Arabic script",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Semitic",
+          "branch": "Arabic (Maghrebi)",
+          "speakers": "~3 million",
+          "relatedLanguages": ["Moroccan Arabic", "Algerian Arabic", "Other Maghrebi"],
+          "migrationHistory": "Hassaniya developed from Yemeni Arabic with Berber influences"
+        }
+      },
+      "famousPeople": [
+        { "name": "Malouma", "role": "Grammy-nominated singer and politician", "wikipedia": "https://en.wikipedia.org/wiki/Malouma" },
+        { "name": "Moktar Ould Daddah", "role": "First President of Mauritania", "wikipedia": "https://en.wikipedia.org/wiki/Moktar_Ould_Daddah" }
+      ],
+      "sources": [{ "name": "Wikipedia - Moors", "url": "https://en.wikipedia.org/wiki/Moors" }],
+      "description": "The Moors are the Arab-Berber majority of Mauritania, known for their desert nomadism, Islamic scholarship, rich poetry, and complex social traditions spanning a millennium.",
+      "relatedTribes": ["tuareg", "wolof", "fulani", "berber"]
+    },
+    {
+      "id": "haratin",
+      "name": "Haratin",
+      "slug": "haratin",
+      "slugAliases": ["haratine", "black-moors"],
+      "youtubeVideoId": "aR3YQsL9_V4",
+      "countries": ["MR", "MA", "DZ"],
+      "region": "Mauritania, Morocco, Algeria",
+      "population": "~1.5 million",
+      "populationPercent": "~40% of Mauritania",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 17.0, "lng": -12.0 },
+      "latSpan": 5,
+      "lngSpan": 8,
+      "counties": ["Nouakchott", "Guidimaka", "Gorgol", "Assaba"],
+      "namePrefixes": ["Mou", "Bil", "Mes", "Ahm", "Sal", "Bou"],
+      "commonNames": {
+        "female": ["Aminetou", "Fatimetou", "Khadijetou", "Mounina", "Maïmouna", "Vatma", "Mariem", "Salka", "Daddah", "Aïchétou"],
+        "male": ["Biram", "Messaoud", "Boubacar", "Saleck", "Moustapha", "Mohamed", "Samba", "Bilal", "Abdallahi", "Cheikh"]
+      },
+      "stereotypes": [
+        "Descendants of formerly enslaved people",
+        "Hardworking farmers and laborers",
+        "Activists for equality",
+        "Musicians and artisans",
+        "Culturally Moor but distinct identity",
+        "Emerging political voice"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Farmers and laborers",
+          "Activists and leaders",
+          "Musicians",
+          "Urban workers"
+        ],
+        "female": [
+          "Domestic workers (historically)",
+          "Farmers",
+          "Market traders",
+          "Activists"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men worked in agriculture, herding, and labor. The legacy of slavery meant limited social mobility. Haratin men are now prominent in activism.",
+          "female": "Women traditionally worked as domestics and farmers. They faced multiple oppressions but are increasingly vocal in anti-slavery movements."
+        },
+        "modern": {
+          "male": "Modern Haratin men work in all sectors. Activists like Biram Dah Abeid have become internationally recognized for human rights work.",
+          "female": "Women increasingly access education and activism. They are central to movements challenging traditional hierarchies."
+        }
+      },
+      "culturalTraits": [
+        "Shared language with Moors (Hassaniya)",
+        "Distinct social identity",
+        "Agricultural expertise",
+        "Musical traditions",
+        "Anti-slavery activism",
+        "Emerging political consciousness"
+      ],
+      "funFacts": [
+        "Haratin means 'freed slaves' in Arabic - many are descendants of enslaved people",
+        "Mauritania didn't criminalize slavery until 2007 and practices continue",
+        "Biram Dah Abeid, a Haratin, is a globally recognized anti-slavery activist",
+        "Haratin speak Hassaniya but maintain distinct cultural identity",
+        "The Haratin movement is one of Africa's most important civil rights struggles"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Rice", "Vegetables", "Meat"],
+        "beverages": ["Tea", "Milk"],
+        "specialDishes": ["Similar to Moor cuisine but historically simpler fare"],
+        "description": "Haratin cuisine is similar to Moor food but historically reflected their lower status. Agricultural products they grew were often consumed by masters."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening meals",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating",
+        "genderRules": "Men and women may eat separately",
+        "taboos": ["Standard Islamic food prohibitions"],
+        "specialOccasions": "Celebrations increasingly possible with improved status",
+        "hospitality": "Hospitality important despite limited means"
+      },
+      "traditionalDance": "Participation in traditional Mauritanian music",
+      "religion": "Islam (~100%, Sunni)",
+      "traditionalReligion": {
+        "name": "Islam (Sunni)",
+        "supremeDeity": "Allah",
+        "spirits": ["Folk beliefs shared with Moors"],
+        "practices": ["Five pillars of Islam", "Sufi practices"],
+        "beliefs": "Haratin are Muslims but historically were denied full religious education. Modern movements emphasize Islamic equality.",
+        "religiousHistory": {
+          "islamIntroduced": "With enslavement",
+          "introducedBy": "Moor masters",
+          "conversionProcess": "Enslaved people were converted to Islam. Modern activists cite Islamic equality to challenge discrimination.",
+          "sources": ["Wikipedia - Haratin"]
+        }
+      },
+      "history": {
+        "origin": "Haratin are descendants of enslaved Black Africans who were assimilated into Moor culture over centuries. They speak Hassaniya but face ongoing discrimination.",
+        "colonialEra": "French colonization nominally ended slavery but did little to change social structures. Haratin remained at the bottom of Mauritanian society.",
+        "independence": "Post-independence, slavery continued despite abolitions in 1981 and criminalization in 2007. Haratin activism has grown significantly since the 2000s.",
+        "keyEvents": ["Centuries of slavery", "1981 abolition (not enforced)", "2007 criminalization", "Biram Dah Abeid's movement", "Ongoing struggle for equality"]
+      },
+      "language": {
+        "name": "Hassaniya Arabic",
+        "speakers": "~1.5 million (Haratin)",
+        "greeting": "Salam aleykum",
+        "greetingMeaning": "Peace be upon you",
+        "family": "Semitic (Afroasiatic)",
+        "writingSystem": "Arabic script",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Semitic",
+          "branch": "Arabic",
+          "speakers": "~1.5 million",
+          "relatedLanguages": ["Moor Hassaniya"],
+          "migrationHistory": "Adopted Hassaniya through cultural assimilation"
+        }
+      },
+      "famousPeople": [
+        { "name": "Biram Dah Abeid", "role": "Anti-slavery activist, presidential candidate", "wikipedia": "https://en.wikipedia.org/wiki/Biram_Dah_Abeid" },
+        { "name": "Messaoud Ould Boulkheir", "role": "Former National Assembly President", "wikipedia": "https://en.wikipedia.org/wiki/Messaoud_Ould_Boulkheir" }
+      ],
+      "sources": [{ "name": "Wikipedia - Haratin", "url": "https://en.wikipedia.org/wiki/Haratin" }],
+      "description": "The Haratin are Mauritania's largest demographic group, descendants of enslaved people now at the forefront of one of the world's most important ongoing anti-slavery movements.",
+      "relatedTribes": ["moors", "wolof", "soninke", "fulani"]
+    },
+    {
+      "id": "soninke",
+      "name": "Soninke",
+      "slug": "soninke",
+      "slugAliases": ["sarakole", "maraka", "wangara"],
+      "youtubeVideoId": "p4qL5HZJR1E",
+      "countries": ["ML", "MR", "SN", "GM", "GN", "BF"],
+      "region": "Mali-Mauritania-Senegal border region",
+      "population": "~2.5 million",
+      "populationPercent": "9% of Mali",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 14.5, "lng": -11.0 },
+      "latSpan": 3,
+      "lngSpan": 5,
+      "counties": ["Kayes Region (Mali)", "Guidimaka (Mauritania)", "Tambacounda (Senegal)"],
+      "namePrefixes": ["Bak", "Dou", "Dia", "Sou", "Kam", "Sak"],
+      "commonNames": {
+        "female": ["Assa", "Djeneba", "Fatou", "Fanta", "Aïssata", "Mariama", "Koumba", "Sira", "Kadia", "Tenin"],
+        "male": ["Bakary", "Souleymane", "Doucouré", "Diakité", "Kamara", "Soumaré", "Sylla", "Sakho", "Keita", "Dramé"]
+      },
+      "stereotypes": [
+        "Founders of Ghana Empire",
+        "Master traders and merchants",
+        "Prolific migrants to Europe",
+        "Strong family networks",
+        "Famous for sending remittances",
+        "Hardworking and ambitious"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traders and merchants",
+          "Migrant workers in Europe",
+          "Gold traders (historical)",
+          "Strong family providers"
+        ],
+        "female": [
+          "Household managers",
+          "Agricultural workers",
+          "Maintain village while men migrate",
+          "Strong community roles"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men dominated trade and migration. Soninke men traveled across Africa and now to Europe. They are expected to send remittances home.",
+          "female": "Women maintain villages while men migrate. They farm, manage households, and maintain community bonds during long male absences."
+        },
+        "modern": {
+          "male": "Soninke men are famous as migrant workers in France and other countries. Remittances support home communities.",
+          "female": "Women increasingly educated. They manage significant resources from remittances and are village decision-makers."
+        }
+      },
+      "culturalTraits": [
+        "Ghana Empire founders",
+        "Ancient gold trade controllers",
+        "Strong migration tradition",
+        "Complex caste system",
+        "Rich oral traditions (griots)",
+        "Tight-knit diaspora networks"
+      ],
+      "funFacts": [
+        "The Soninke founded the Ghana Empire (not modern Ghana) - one of Africa's first great states",
+        "Soninke controlled the gold trade that made the Ghana Empire wealthy",
+        "There are more Soninke in France than in some African countries",
+        "Soninke villages often depend heavily on remittances from Europe",
+        "The famous Koumbi Saleh was the capital of Soninke Ghana"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Rice", "Fish", "Meat"],
+        "beverages": ["Bissap (hibiscus)", "Ginger drinks"],
+        "specialDishes": ["Dembikere (millet couscous)", "Lakhere (millet porridge)", "Yassa"],
+        "description": "Soninke cuisine is based on millet and sorghum. Fish from the Senegal River features prominently. Dembikere couscous is a specialty."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Morning porridge, lunch, evening meal",
+        "mainMealTime": "Evening with family",
+        "eatingStyle": "Communal eating from shared dishes",
+        "genderRules": "Men and women may eat separately; elders honored",
+        "taboos": ["Standard Islamic prohibitions", "Clan-specific taboos"],
+        "specialOccasions": "Elaborate feasts for weddings, Eid, returns of migrants",
+        "hospitality": "Guests are treated generously - reflects on family honor"
+      },
+      "traditionalDance": "Traditional dances at ceremonies and festivals",
+      "religion": "Islam (~95%)",
+      "traditionalReligion": {
+        "name": "Pre-Islamic/Islam",
+        "supremeDeity": "Dama (pre-Islamic), Allah",
+        "spirits": ["Ancestral spirits", "Nature spirits"],
+        "practices": ["Islamic practices", "Some pre-Islamic rituals survive"],
+        "beliefs": "Soninke are predominantly Muslim but some pre-Islamic practices survive. The Ghana Empire initially practiced traditional religion before Islamic conversion.",
+        "religiousHistory": {
+          "islamIntroduced": "11th century",
+          "introducedBy": "Trans-Saharan traders",
+          "conversionProcess": "The Ghana Empire fell partly due to Islamic pressure. Soninke gradually converted through trade and scholarship.",
+          "sources": ["Wikipedia - Soninke people", "Wikipedia - Ghana Empire"]
+        }
+      },
+      "history": {
+        "origin": "The Soninke founded the Ghana Empire (c. 300-1200 CE), controlling the gold and salt trade. They were West Africa's first major state-builders.",
+        "colonialEra": "French colonization fragmented Soninke across several colonies. Men began migrating to cities and eventually to France for work.",
+        "independence": "Post-independence, Soninke remained divided across Mali, Mauritania, and Senegal. Migration to France intensified from the 1960s onward.",
+        "keyEvents": ["Ghana Empire", "Trans-Saharan trade", "French colonization", "Mass migration to France", "Diaspora development"]
+      },
+      "language": {
+        "name": "Soninke",
+        "speakers": "~2.5 million",
+        "greeting": "An mara!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "An kari?", "meaning": "How are you?" }
+        ],
+        "family": "Mande (Niger-Congo)",
+        "writingSystem": "Latin alphabet, Arabic (historical)",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Mande",
+          "branch": "Western Mande (Soninke-Bobo)",
+          "speakers": "~2.5 million",
+          "relatedLanguages": ["Bobo", "Other Mande"],
+          "migrationHistory": "Soninke spread through trade and empire"
+        }
+      },
+      "famousPeople": [
+        { "name": "Kaya Magan Cissé", "role": "Legendary founder of Ghana Empire", "wikipedia": "https://en.wikipedia.org/wiki/Kaya_Magan_Ciss%C3%A9" }
+      ],
+      "sources": [{ "name": "Wikipedia - Soninke people", "url": "https://en.wikipedia.org/wiki/Soninke_people" }],
+      "description": "The Soninke are the founders of the ancient Ghana Empire, renowned for controlling West Africa's gold trade and now famous for their migration networks connecting Sahel villages to European cities.",
+      "relatedTribes": ["bambara", "mandinka", "fulani", "moors"]
+    },
+    {
+      "id": "bambara",
+      "name": "Bambara (Bamana)",
+      "slug": "bambara",
+      "slugAliases": ["bamana", "bamanankan"],
+      "youtubeVideoId": "TvuZ4j8tGqM",
+      "countries": ["ML", "SN", "GM", "GN", "BF", "CI"],
+      "region": "Southern Mali, Senegal-Gambia",
+      "population": "~6 million",
+      "populationPercent": "36% of Mali",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 12.5, "lng": -7.0 },
+      "latSpan": 4,
+      "lngSpan": 6,
+      "counties": ["Ségou Region", "Sikasso Region", "Koulikoro Region", "Bamako"],
+      "namePrefixes": ["Tra", "Dia", "Cou", "Kan", "Kou", "Dia", "Kei"],
+      "commonNames": {
+        "female": ["Fatoumata", "Mariam", "Oumou", "Aïssata", "Kadiatou", "Fanta", "Awa", "Aminata", "Rokia", "Bintou"],
+        "male": ["Modibo", "Amadou", "Seydou", "Mamadou", "Cheick", "Drissa", "Bakary", "Oumar", "Ibrahima", "Moussa"]
+      },
+      "stereotypes": [
+        "Farmers and warriors",
+        "Founders of great kingdoms",
+        "Masters of traditional religion",
+        "Skilled woodcarvers",
+        "Dominant ethnic group of Mali",
+        "Proud cultural identity"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Farmers and warriors",
+          "Blacksmiths and artisans",
+          "Hunters (donzo tradition)",
+          "Political leaders"
+        ],
+        "female": [
+          "Potters (specific caste)",
+          "Farmers",
+          "Market traders",
+          "Household managers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men farmed, hunted, and went to war. Bambara kingdoms were male-led. The ton youth associations trained boys in community responsibility.",
+          "female": "Women farmed, traded, and managed households. Certain crafts (pottery) were female. Women had significant economic autonomy through trade."
+        },
+        "modern": {
+          "male": "Modern Bambara men dominate Malian politics, business, and professions. Farming remains important.",
+          "female": "Women increasingly educated. Many are traders and professionals while maintaining traditional roles."
+        }
+      },
+      "culturalTraits": [
+        "Segou and Kaarta kingdoms legacy",
+        "Complex initiation societies",
+        "Renowned sculpture and mask tradition",
+        "Strong traditional religion despite Islam",
+        "Donzo hunter traditions",
+        "N'Ko script development"
+      ],
+      "funFacts": [
+        "Bambara is the most widely spoken language in Mali, used as a lingua franca",
+        "The Bambara Empire of Ségou was one of the last to fall to French colonization",
+        "Bambara masks are world-famous and found in major museums",
+        "The N'Ko alphabet was created to write Bambara and related languages",
+        "Bambara hunter societies (donzo) are powerful traditional institutions"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Rice", "Groundnuts", "Shea butter"],
+        "beverages": ["Dolo (millet beer)", "Ginger drinks", "Bissap"],
+        "specialDishes": ["Tô (millet porridge)", "Tigadègèna (peanut sauce)", "Poulet Yassa"],
+        "description": "Bambara cuisine centers on millet and sorghum. Tô (thick porridge) with various sauces is essential. Groundnuts and shea butter enrich dishes."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Morning porridge, midday meal, evening meal",
+        "mainMealTime": "Evening with family",
+        "eatingStyle": "Communal eating from shared bowls",
+        "genderRules": "Men and women often eat separately; order by age/status",
+        "taboos": ["Clan totems (specific to lineage)", "Eating alone considered strange"],
+        "specialOccasions": "Elaborate feasts for marriages, funerals, and festivals",
+        "hospitality": "Guests are honored - 'Teriya' (friendship) is essential"
+      },
+      "traditionalDance": "Ton youth association dances, mask dances",
+      "religion": "Islam (~75%), Traditional religion (~20%), Christianity (~5%)",
+      "traditionalReligion": {
+        "name": "Bambara Traditional Religion",
+        "supremeDeity": "Bemba (creator god)",
+        "spirits": ["Ancestral spirits", "Nyama (spiritual force)", "Nature spirits"],
+        "practices": ["Initiation societies (komo, kore)", "Ancestor veneration", "Mask ceremonies", "Divination"],
+        "beliefs": "Bambara religion involves complex initiation societies and belief in nyama (spiritual force). Traditional practices remain strong even among Muslims.",
+        "religiousHistory": {
+          "islamIntroduced": "11th century onwards",
+          "introducedBy": "Muslim traders and scholars",
+          "conversionProcess": "Bambara resisted Islam longer than neighbors. The Ségou and Kaarta kingdoms were non-Muslim until the 19th century.",
+          "sources": ["Wikipedia - Bambara people", "Wikipedia - Bambara religion"]
+        }
+      },
+      "history": {
+        "origin": "The Bambara migrated from the Mande heartland and established the powerful kingdoms of Ségou and Kaarta in the 17th-19th centuries.",
+        "colonialEra": "The Bambara kingdoms fell to French conquest in the late 19th century. Colonial rule disrupted traditional political structures but Bambara culture persisted.",
+        "independence": "Post-independence Mali has been dominated by Bambara language and culture. Bambara became the de facto national language and Bamako is in Bambara territory.",
+        "keyEvents": ["Ségou Kingdom founding (1712)", "Kaarta Kingdom", "French conquest", "Independence (1960)", "Cultural dominance of Mali"]
+      },
+      "language": {
+        "name": "Bambara (Bamanankan)",
+        "speakers": "~15 million (including second language)",
+        "greeting": "I ni ce!",
+        "greetingMeaning": "Hello! (to one person)",
+        "additionalGreetings": [
+          { "phrase": "I ka kɛnɛ?", "meaning": "Are you well?" },
+          { "phrase": "Aw ni ce", "meaning": "Hello (to multiple people)" }
+        ],
+        "family": "Mande (Niger-Congo)",
+        "writingSystem": "Latin alphabet, N'Ko",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Mande",
+          "branch": "Western Mande (Manding)",
+          "speakers": "~6 million (native), 15 million (total)",
+          "relatedLanguages": ["Mandinka", "Dyula", "Malinke"],
+          "migrationHistory": "Bambara spread from the Mande heartland with empire expansion"
+        }
+      },
+      "famousPeople": [
+        { "name": "Salif Keita", "role": "World-renowned singer 'Golden Voice of Africa'", "wikipedia": "https://en.wikipedia.org/wiki/Salif_Keita" },
+        { "name": "Rokia Traoré", "role": "Grammy-nominated singer-songwriter", "wikipedia": "https://en.wikipedia.org/wiki/Rokia_Traor%C3%A9" }
+      ],
+      "sources": [{ "name": "Wikipedia - Bambara people", "url": "https://en.wikipedia.org/wiki/Bambara_people" }],
+      "description": "The Bambara are Mali's largest ethnic group, founders of great kingdoms, and custodians of rich artistic and religious traditions that have shaped West African culture.",
+      "relatedTribes": ["mandinka", "soninke", "fulani", "dogon"]
+    },
+    {
+      "id": "dogon",
+      "name": "Dogon",
+      "slug": "dogon",
+      "slugAliases": ["tommo", "toro-so"],
+      "youtubeVideoId": "WvTYmB8XQnE",
+      "countries": ["ML", "BF"],
+      "region": "Bandiagara Escarpment, Mali",
+      "population": "~800,000",
+      "populationPercent": "4% of Mali",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 14.3, "lng": -3.5 },
+      "latSpan": 2,
+      "lngSpan": 2,
+      "counties": ["Mopti Region", "Bandiagara Circle"],
+      "namePrefixes": ["Amba", "Oni", "Ogo", "Anu", "Amma", "Dyo"],
+      "commonNames": {
+        "female": ["Yasigi", "Yana", "Ami", "Amassou", "Yatié", "Andou", "Fatou", "Anta", "Penda", "Oumou"],
+        "male": ["Amaguiné", "Ogotemmêli", "Amadingué", "Anassi", "Agali", "Antandou", "Ogotembi", "Dolo", "Saye", "Oumarou"]
+      },
+      "stereotypes": [
+        "Cliff dwellers",
+        "Ancient astronomical knowledge",
+        "Master woodcarvers",
+        "Complex cosmology",
+        "Mysterious and spiritual",
+        "Guardians of ancient secrets"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Farmers (millet, onions)",
+          "Woodcarvers and artists",
+          "Hogon (spiritual leaders)",
+          "Mask dancers"
+        ],
+        "female": [
+          "Potters (exclusive craft)",
+          "Farmers",
+          "Market traders",
+          "Beer brewers (dolo)"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men farmed, carved, and performed mask dances. The hogon (spiritual leader) and elders made decisions. Initiation societies structured male life.",
+          "female": "Women farmed, made pottery, brewed beer, and managed households. Menstruation huts were part of traditional life."
+        },
+        "modern": {
+          "male": "Modern Dogon men farm, work in tourism, and maintain craft traditions. Many guide tourists to cliff villages.",
+          "female": "Women continue traditional roles. Tourism provides additional income opportunities."
+        }
+      },
+      "culturalTraits": [
+        "Cliff villages on Bandiagara Escarpment",
+        "Complex cosmology and astronomy knowledge",
+        "Famous mask traditions",
+        "Distinctive architecture",
+        "Dama funeral ceremonies",
+        "UNESCO World Heritage site"
+      ],
+      "funFacts": [
+        "Dogon claim ancient knowledge of Sirius B, the invisible companion star of Sirius",
+        "The Bandiagara Escarpment villages are a UNESCO World Heritage Site",
+        "Dogon masks represent over 80 different characters",
+        "Dogon cosmology describes the universe with remarkable complexity",
+        "The Dogon fled to the cliffs to resist Islamization centuries ago"
+      ],
+      "traditionalFood": {
+        "staples": ["Millet", "Sorghum", "Onions", "Beans", "Shallots"],
+        "beverages": ["Dolo (millet beer)", "Millet porridge drinks"],
+        "specialDishes": ["Millet tô with onion sauce", "Bean dishes", "Dried fish"],
+        "description": "Dogon cuisine is based on millet grown on cliff terraces. Onions are a major crop and export. Dolo beer is important in ceremonies."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning meal, evening meal",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating, specific utensils for ritual foods",
+        "genderRules": "Men and women often eat separately; ritual rules during ceremonies",
+        "taboos": ["Totemic animals vary by lineage", "Specific rules during ceremonies"],
+        "specialOccasions": "Elaborate feasts for dama funerals and Sigui ceremonies",
+        "hospitality": "Visitors welcomed with dolo and food"
+      },
+      "traditionalDance": "Mask dances at dama funerals and festivals",
+      "religion": "Traditional religion (~35%), Islam (~60%), Christianity (~5%)",
+      "traditionalReligion": {
+        "name": "Dogon Religion",
+        "supremeDeity": "Amma (creator god)",
+        "spirits": ["Nommo (water spirits)", "Lebe (earth spirit)", "Ancestral spirits"],
+        "practices": ["Mask ceremonies", "Dama funerals", "Sigui ceremony (every 60 years)", "Divination"],
+        "beliefs": "Dogon religion has a complex cosmology involving Amma, the Nommo water spirits, and celestial knowledge. The Sigui ceremony occurs every 60 years to renew the world.",
+        "religiousHistory": {
+          "islamIntroduced": "15th century onwards",
+          "introducedBy": "Muslim traders and neighbors",
+          "conversionProcess": "Dogon resisted Islam for centuries by retreating to cliffs. Conversion has accelerated recently but traditional practices remain strong.",
+          "sources": ["Wikipedia - Dogon people", "Wikipedia - Dogon religion"]
+        }
+      },
+      "history": {
+        "origin": "The Dogon migrated to the Bandiagara cliffs between the 13th-15th centuries, possibly fleeing Islamization. They displaced or absorbed the Tellem people.",
+        "colonialEra": "French colonization had limited impact on remote Dogon villages. Traditional structures largely survived.",
+        "independence": "Post-independence, Dogon villages became major tourist attractions. Recent jihadist violence has severely affected the region.",
+        "keyEvents": ["Migration to cliffs", "Tellem displacement", "French colonization", "Tourism development", "2012-present security crisis"]
+      },
+      "language": {
+        "name": "Dogon languages (multiple)",
+        "speakers": "~800,000",
+        "greeting": "Seyou!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "Po!", "meaning": "Greetings!" }
+        ],
+        "family": "Dogon (Niger-Congo or isolate)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo (disputed)",
+          "family": "Dogon",
+          "branch": "Multiple related languages",
+          "speakers": "~800,000",
+          "relatedLanguages": ["Toro So", "Donno So", "Tommo So"],
+          "migrationHistory": "Dogon languages form their own family, possibly related to Niger-Congo"
+        }
+      },
+      "famousPeople": [
+        { "name": "Ogotemmêli", "role": "Sage who revealed Dogon cosmology to Marcel Griaule", "wikipedia": null }
+      ],
+      "sources": [{ "name": "Wikipedia - Dogon people", "url": "https://en.wikipedia.org/wiki/Dogon_people" }, { "name": "UNESCO - Cliff of Bandiagara", "url": "https://whc.unesco.org/en/list/516" }],
+      "description": "The Dogon are famous for their cliff-dwelling villages on the Bandiagara Escarpment, complex cosmology, and spectacular mask traditions that have captivated scholars and visitors for generations.",
+      "relatedTribes": ["bambara", "fulani", "bozo", "songhai"]
+    },
+    {
+      "id": "songhai",
+      "name": "Songhai",
+      "slug": "songhai",
+      "slugAliases": ["songhay", "sonrai"],
+      "youtubeVideoId": "3K3aY3rBw-c",
+      "countries": ["ML", "NE", "BJ", "NG"],
+      "region": "Niger River Bend, Mali-Niger",
+      "population": "~3.5 million",
+      "populationPercent": "6% of Mali, 5% of Niger",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 16.5, "lng": 0.0 },
+      "latSpan": 4,
+      "lngSpan": 5,
+      "counties": ["Gao Region (Mali)", "Timbuktu Region (Mali)", "Tillabéri Region (Niger)"],
+      "namePrefixes": ["Sou", "Mai", "Ask", "Son", "Tin", "Gao"],
+      "commonNames": {
+        "female": ["Aissata", "Fatimata", "Hawa", "Mariama", "Zeinabou", "Bibata", "Fati", "Bintou", "Aissa", "Koura"],
+        "male": ["Maiga", "Askia", "Soni", "Souley", "Boureima", "Hama", "Issa", "Amadou", "Moussa", "Oumarou"]
+      },
+      "stereotypes": [
+        "Builders of great Songhai Empire",
+        "Niger River traders and fishers",
+        "Islamic scholars (Timbuktu tradition)",
+        "Proud imperial heritage",
+        "Musicians and poets",
+        "Master canoe builders"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Traders and merchants",
+          "Fishers and boatmen",
+          "Islamic scholars",
+          "Farmers"
+        ],
+        "female": [
+          "Pottery makers",
+          "Fish processors",
+          "Market traders",
+          "Household managers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men traded, fished, and served as scholars in the great empire. Askia Muhammad established Islamic learning centers.",
+          "female": "Women processed fish, made pottery, traded, and managed households. They had significant economic roles in river trade."
+        },
+        "modern": {
+          "male": "Modern Songhai men work in trade, professions, and government. Fishing and farming continue.",
+          "female": "Women access education and formal employment while maintaining traditional economic activities."
+        }
+      },
+      "culturalTraits": [
+        "Songhai Empire heritage",
+        "Timbuktu learning centers",
+        "Niger River culture",
+        "Rich musical traditions",
+        "Islamic scholarship legacy",
+        "Distinctive architecture"
+      ],
+      "funFacts": [
+        "The Songhai Empire was larger than Western Europe at its peak",
+        "Timbuktu was one of the world's great centers of learning with thousands of manuscripts",
+        "Askia Muhammad made a famous pilgrimage to Mecca with tons of gold",
+        "The Songhai developed sophisticated bureaucracy and taxation systems",
+        "Morocco conquered the empire in 1591 with firearms"
+      ],
+      "traditionalFood": {
+        "staples": ["Rice", "Millet", "Fish", "Sorghum", "Beans"],
+        "beverages": ["Dolo", "Tea", "Hibiscus drinks"],
+        "specialDishes": ["Rice with fish", "Dried fish dishes", "Millet couscous"],
+        "description": "Songhai cuisine centers on Niger River fish and rice. Dried and smoked fish are specialties. Rice cultivation along the river is ancient."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Morning meal, lunch, evening meal",
+        "mainMealTime": "Evening with family",
+        "eatingStyle": "Communal eating from shared dishes",
+        "genderRules": "Men and women often eat separately; age hierarchy observed",
+        "taboos": ["Standard Islamic prohibitions", "Some clan-specific taboos"],
+        "specialOccasions": "Elaborate feasts for Islamic holidays and life events",
+        "hospitality": "Guests are generously treated"
+      },
+      "traditionalDance": "Traditional dances at festivals and ceremonies",
+      "religion": "Islam (~99%)",
+      "traditionalReligion": {
+        "name": "Islam (Sunni)",
+        "supremeDeity": "Allah",
+        "spirits": ["Some pre-Islamic spirits survive in folk belief"],
+        "practices": ["Five pillars", "Sufi orders", "Islamic scholarship"],
+        "beliefs": "Songhai are devout Muslims with a proud tradition of Islamic scholarship centered on Timbuktu.",
+        "religiousHistory": {
+          "islamIntroduced": "11th century",
+          "introducedBy": "Trans-Saharan traders",
+          "conversionProcess": "Islam became the state religion under Askia Muhammad (1493-1528). Timbuktu became a center of Islamic learning.",
+          "sources": ["Wikipedia - Songhai people", "Wikipedia - Songhai Empire"]
+        }
+      },
+      "history": {
+        "origin": "The Songhai built one of Africa's greatest empires (c. 1464-1591), controlling the trans-Saharan trade and making Timbuktu a world center of learning.",
+        "colonialEra": "French colonization fragmented Songhai across Mali and Niger. The empire's decline had already occurred centuries earlier after Moroccan invasion.",
+        "independence": "Post-independence, Songhai remain divided between Mali and Niger. They maintain cultural and linguistic unity despite borders.",
+        "keyEvents": ["Songhai Empire founding", "Askia Muhammad's reign", "Moroccan invasion (1591)", "French colonization", "Independence"]
+      },
+      "language": {
+        "name": "Songhai",
+        "speakers": "~3.5 million",
+        "greeting": "Mate ni baani?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Fofo", "meaning": "Hello" }
+        ],
+        "family": "Nilo-Saharan (Songhai)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Songhai",
+          "branch": "Northern Songhai",
+          "speakers": "~3.5 million",
+          "relatedLanguages": ["Zarma/Djerma", "Dendi"],
+          "migrationHistory": "Songhai spread along the Niger River with empire expansion"
+        }
+      },
+      "populationByCountry": [
+        { "country": "ML", "population": "~2 million", "percent": "10%" },
+        { "country": "NE", "population": "~1.5 million", "percent": "6%" }
+      ],
+      "famousPeople": [
+        { "name": "Askia Muhammad", "role": "Greatest emperor of Songhai (1493-1528)", "wikipedia": "https://en.wikipedia.org/wiki/Askia_Muhammad_I" },
+        { "name": "Sonni Ali", "role": "Founder of Songhai Empire (1464-1492)", "wikipedia": "https://en.wikipedia.org/wiki/Sonni_Ali" }
+      ],
+      "sources": [{ "name": "Wikipedia - Songhai people", "url": "https://en.wikipedia.org/wiki/Songhai_people" }, { "name": "Songhai Empire", "url": "https://en.wikipedia.org/wiki/Songhai_Empire" }],
+      "description": "The Songhai are heirs to one of Africa's greatest empires, which at its height controlled the trans-Saharan trade and made Timbuktu a world center of Islamic learning.",
+      "relatedTribes": ["bambara", "djerma", "tuareg", "fulani", "bozo"]
     }
   ]
 }
