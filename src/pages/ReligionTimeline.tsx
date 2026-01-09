@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Link } from 'react-router-dom';
-import { Church, Moon, Sparkles, Calendar, MapPin, BookOpen, ChevronRight } from 'lucide-react';
+import { Church, Moon, Sparkles, Calendar, MapPin, BookOpen, ChevronRight, Map, Clock } from 'lucide-react';
 import tribesData from '@/data/tribes.json';
 
 interface ReligionEvent {
@@ -19,12 +19,19 @@ interface ReligionEvent {
   description: string;
   introducedBy?: string;
   source?: string;
+  coordinates?: { lat: number; lng: number };
 }
 
 const religionColors = {
   christianity: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
   islam: 'bg-green-500/20 text-green-400 border-green-500/30',
   traditional: 'bg-amber-500/20 text-amber-400 border-amber-500/30'
+};
+
+const religionMarkerColors = {
+  christianity: '#3B82F6',
+  islam: '#22C55E',
+  traditional: '#F59E0B'
 };
 
 const religionIcons = {
@@ -42,9 +49,29 @@ const regionColors: Record<string, string> = {
   'Horn of Africa': 'bg-rose-500/20 text-rose-300'
 };
 
+// Region centers for map display
+const regionCenters: Record<string, { lat: number; lng: number }> = {
+  'East Africa': { lat: -2, lng: 35 },
+  'West Africa': { lat: 10, lng: 0 },
+  'Southern Africa': { lat: -25, lng: 25 },
+  'Central Africa': { lat: 0, lng: 20 },
+  'North Africa': { lat: 28, lng: 15 },
+  'Horn of Africa': { lat: 8, lng: 42 }
+};
+
+const centuries = [
+  { id: '4th-7th', label: '4th-7th Century', range: [300, 699] },
+  { id: '8th-11th', label: '8th-11th Century', range: [700, 1099] },
+  { id: '12th-15th', label: '12th-15th Century', range: [1100, 1499] },
+  { id: '16th-18th', label: '16th-18th Century', range: [1500, 1799] },
+  { id: '19th-20th', label: '19th-20th Century', range: [1800, 1999] }
+];
+
 export default function ReligionTimeline() {
   const [selectedRegion, setSelectedRegion] = useState<string>('all');
   const [selectedReligion, setSelectedReligion] = useState<string>('all');
+  const [selectedCentury, setSelectedCentury] = useState<string>('all');
+  const [viewMode, setViewMode] = useState<'timeline' | 'map'>('timeline');
 
   // Extract religion timeline events from tribes data
   const timelineEvents = useMemo(() => {
@@ -53,6 +80,7 @@ export default function ReligionTimeline() {
     tribesData.tribes.forEach((tribe: any) => {
       if (tribe.traditionalReligion?.religiousHistory) {
         const history = tribe.traditionalReligion.religiousHistory;
+        const coordinates = tribe.mapCoordinates;
         
         // Determine region from countries
         let region = 'East Africa';
@@ -60,7 +88,7 @@ export default function ReligionTimeline() {
           region = 'West Africa';
         } else if (tribe.countries?.includes('ZA') || tribe.countries?.includes('ZW') || tribe.countries?.includes('ZM') || tribe.countries?.includes('BW')) {
           region = 'Southern Africa';
-        } else if (tribe.countries?.includes('CD') || tribe.countries?.includes('CG') || tribe.countries?.includes('CM')) {
+        } else if (tribe.countries?.includes('CD') || tribe.countries?.includes('CG') || tribe.countries?.includes('CM') || tribe.countries?.includes('AO')) {
           region = 'Central Africa';
         } else if (tribe.countries?.includes('ET') || tribe.countries?.includes('ER') || tribe.countries?.includes('SO')) {
           region = 'Horn of Africa';
@@ -80,7 +108,8 @@ export default function ReligionTimeline() {
             tribeSlug: tribe.slug,
             description: history.conversionProcess || 'Christianity introduced through missionary work.',
             introducedBy: history.introducedBy,
-            source: history.sources?.[0]
+            source: history.sources?.[0],
+            coordinates
           });
         }
 
@@ -96,7 +125,8 @@ export default function ReligionTimeline() {
             tribeSlug: tribe.slug,
             description: history.conversionProcess || 'Islam spread through trade and scholarship.',
             introducedBy: history.introducedBy,
-            source: history.sources?.[0]
+            source: history.sources?.[0],
+            coordinates
           });
         }
       }
@@ -113,7 +143,8 @@ export default function ReligionTimeline() {
         tribeSlug: 'amhara',
         description: 'King Ezana converts to Christianity, making Aksum one of the first Christian states. Ethiopian Orthodox Church established.',
         introducedBy: 'Frumentius (first Bishop of Aksum)',
-        source: 'Ethiopian Orthodox Church tradition'
+        source: 'Ethiopian Orthodox Church tradition',
+        coordinates: { lat: 14.12, lng: 38.72 }
       },
       {
         year: 639,
@@ -124,7 +155,8 @@ export default function ReligionTimeline() {
         tribeSlug: 'amazigh',
         description: 'Arab conquest of Egypt begins the Islamization of North Africa.',
         introducedBy: 'Amr ibn al-As',
-        source: 'Wikipedia - Islamic conquest of Egypt'
+        source: 'Wikipedia - Islamic conquest of Egypt',
+        coordinates: { lat: 30.04, lng: 31.24 }
       },
       {
         year: 700,
@@ -135,7 +167,8 @@ export default function ReligionTimeline() {
         tribeSlug: 'swahili',
         description: 'Arab and Persian traders bring Islam to East African coast. Coastal city-states become Muslim.',
         introducedBy: 'Arab and Persian merchants',
-        source: 'Britannica - Swahili culture'
+        source: 'Britannica - Swahili culture',
+        coordinates: { lat: -4.04, lng: 39.67 }
       },
       {
         year: 1000,
@@ -146,7 +179,8 @@ export default function ReligionTimeline() {
         tribeSlug: 'kanuri',
         description: 'Mai Hume accepts Islam, beginning the Islamization of the Lake Chad region.',
         introducedBy: 'Trans-Saharan traders',
-        source: 'Trimingham - History of Islam in West Africa'
+        source: 'Trimingham - History of Islam in West Africa',
+        coordinates: { lat: 12.0, lng: 15.0 }
       },
       {
         year: 1076,
@@ -157,7 +191,20 @@ export default function ReligionTimeline() {
         tribeSlug: 'mandinka',
         description: 'Almoravid conquest spreads Islam in the Western Sahel.',
         introducedBy: 'Almoravid movement',
-        source: 'Britannica - Almoravid dynasty'
+        source: 'Britannica - Almoravid dynasty',
+        coordinates: { lat: 16.0, lng: -8.0 }
+      },
+      {
+        year: 1491,
+        yearDisplay: '1491 CE',
+        religion: 'christianity',
+        region: 'Central Africa',
+        tribe: 'Kingdom of Kongo',
+        tribeSlug: 'kongo',
+        description: 'Manikongo Nzinga a Nkuwu baptized as João I, establishing one of the first Christian kingdoms in sub-Saharan Africa.',
+        introducedBy: 'Portuguese Franciscan missionaries',
+        source: 'Wikipedia - Kingdom of Kongo',
+        coordinates: { lat: -6.27, lng: 14.24 }
       },
       {
         year: 1652,
@@ -168,7 +215,8 @@ export default function ReligionTimeline() {
         tribeSlug: 'san',
         description: 'Dutch East India Company arrives at Cape Town, beginning European missionary presence in Southern Africa.',
         introducedBy: 'Dutch Reformed Church',
-        source: 'Wikipedia - Christianity in South Africa'
+        source: 'Wikipedia - Christianity in South Africa',
+        coordinates: { lat: -33.93, lng: 18.42 }
       },
       {
         year: 1804,
@@ -179,7 +227,20 @@ export default function ReligionTimeline() {
         tribeSlug: 'hausa',
         description: 'Usman dan Fodio\'s Sokoto Jihad creates the Sokoto Caliphate, fully Islamizing Hausaland.',
         introducedBy: 'Usman dan Fodio',
-        source: 'Last, Murray - The Sokoto Caliphate'
+        source: 'Last, Murray - The Sokoto Caliphate',
+        coordinates: { lat: 13.06, lng: 5.24 }
+      },
+      {
+        year: 1877,
+        yearDisplay: '1877',
+        religion: 'christianity',
+        region: 'East Africa',
+        tribe: 'Baganda',
+        tribeSlug: 'baganda',
+        description: 'CMS missionaries arrive in Buganda, leading to religious competition and eventual Uganda Martyrs tragedy.',
+        introducedBy: 'Church Missionary Society (Alexander Mackay)',
+        source: 'Uganda Martyrs Shrine',
+        coordinates: { lat: 0.35, lng: 32.58 }
       }
     ];
 
@@ -190,31 +251,53 @@ export default function ReligionTimeline() {
     return timelineEvents.filter(event => {
       if (selectedRegion !== 'all' && event.region !== selectedRegion) return false;
       if (selectedReligion !== 'all' && event.religion !== selectedReligion) return false;
+      if (selectedCentury !== 'all') {
+        const century = centuries.find(c => c.id === selectedCentury);
+        if (century && (event.year < century.range[0] || event.year > century.range[1])) return false;
+      }
       return true;
     });
-  }, [timelineEvents, selectedRegion, selectedReligion]);
+  }, [timelineEvents, selectedRegion, selectedReligion, selectedCentury]);
 
   const regions = ['all', 'East Africa', 'West Africa', 'Southern Africa', 'Central Africa', 'Horn of Africa', 'North Africa'];
 
   // Group events by century for timeline visualization
   const eventsByCentury = useMemo(() => {
-    const centuries: Record<string, ReligionEvent[]> = {};
+    const grouped: Record<string, ReligionEvent[]> = {};
     filteredEvents.forEach(event => {
       const century = Math.floor(event.year / 100) * 100;
       const centuryLabel = century < 100 ? '1st century' : 
                           century < 1000 ? `${Math.floor(century/100) + 1}th century` :
                           `${Math.floor(century/100) + 1}th century`;
-      if (!centuries[centuryLabel]) centuries[centuryLabel] = [];
-      centuries[centuryLabel].push(event);
+      if (!grouped[centuryLabel]) grouped[centuryLabel] = [];
+      grouped[centuryLabel].push(event);
     });
-    return centuries;
+    return grouped;
+  }, [filteredEvents]);
+
+  // Get map bounds for filtered events
+  const mapUrl = useMemo(() => {
+    const eventsWithCoords = filteredEvents.filter(e => e.coordinates);
+    if (eventsWithCoords.length === 0) {
+      return `https://www.openstreetmap.org/export/embed.html?bbox=-20,${-35},55,${38}&layer=mapnik`;
+    }
+    
+    // Calculate center and bounds
+    const lats = eventsWithCoords.map(e => e.coordinates!.lat);
+    const lngs = eventsWithCoords.map(e => e.coordinates!.lng);
+    const minLat = Math.min(...lats) - 5;
+    const maxLat = Math.max(...lats) + 5;
+    const minLng = Math.min(...lngs) - 5;
+    const maxLng = Math.max(...lngs) + 5;
+    
+    return `https://www.openstreetmap.org/export/embed.html?bbox=${minLng},${minLat},${maxLng},${maxLat}&layer=mapnik`;
   }, [filteredEvents]);
 
   return (
     <>
       <Helmet>
         <title>Religion Timeline in Africa | Spread of Christianity & Islam</title>
-        <meta name="description" content="Interactive timeline showing when Christianity, Islam, and traditional religions spread across African regions and tribes." />
+        <meta name="description" content="Interactive timeline and map showing when Christianity, Islam, and traditional religions spread across African regions and tribes." />
       </Helmet>
 
       <Header />
@@ -231,7 +314,7 @@ export default function ReligionTimeline() {
             </p>
             
             {/* Legend */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-blue-500" />
                 <span className="text-sm text-muted-foreground">Christianity</span>
@@ -244,6 +327,32 @@ export default function ReligionTimeline() {
                 <div className="w-3 h-3 rounded-full bg-amber-500" />
                 <span className="text-sm text-muted-foreground">Traditional Religions</span>
               </div>
+            </div>
+
+            {/* View Toggle */}
+            <div className="flex justify-center gap-2">
+              <button
+                onClick={() => setViewMode('timeline')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+                  viewMode === 'timeline' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'bg-muted hover:bg-muted/80'
+                }`}
+              >
+                <Clock className="w-4 h-4" />
+                Timeline
+              </button>
+              <button
+                onClick={() => setViewMode('map')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+                  viewMode === 'map' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'bg-muted hover:bg-muted/80'
+                }`}
+              >
+                <Map className="w-4 h-4" />
+                Map View
+              </button>
             </div>
           </div>
         </section>
@@ -267,6 +376,22 @@ export default function ReligionTimeline() {
                 </select>
               </div>
 
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4 text-muted-foreground" />
+                <select
+                  value={selectedCentury}
+                  onChange={(e) => setSelectedCentury(e.target.value)}
+                  className="bg-background border border-border rounded-lg px-3 py-2 text-sm"
+                >
+                  <option value="all">All Centuries</option>
+                  {centuries.map(century => (
+                    <option key={century.id} value={century.id}>
+                      {century.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               <Tabs value={selectedReligion} onValueChange={setSelectedReligion} className="w-auto">
                 <TabsList className="bg-muted/50">
                   <TabsTrigger value="all">All</TabsTrigger>
@@ -282,7 +407,84 @@ export default function ReligionTimeline() {
           </div>
         </section>
 
-        {/* Timeline */}
+        {/* Map View */}
+        {viewMode === 'map' && (
+          <section className="py-8">
+            <div className="container mx-auto px-4">
+              <div className="relative bg-muted rounded-xl overflow-hidden border border-border">
+                {/* Map */}
+                <div className="relative h-[500px] sm:h-[600px]">
+                  <iframe
+                    src={mapUrl}
+                    className="absolute inset-0 w-full h-full"
+                    style={{ border: 0 }}
+                    title="Religion spread map"
+                  />
+                  
+                  {/* Overlay markers */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      {filteredEvents.filter(e => e.coordinates).map((event, i) => {
+                        // Simplified projection for demonstration
+                        const x = ((event.coordinates!.lng + 20) / 75) * 100;
+                        const y = ((38 - event.coordinates!.lat) / 73) * 100;
+                        const color = religionMarkerColors[event.religion];
+                        return (
+                          <circle
+                            key={`${event.tribe}-${event.year}-${i}`}
+                            cx={x}
+                            cy={y}
+                            r="1.5"
+                            fill={color}
+                            stroke="white"
+                            strokeWidth="0.3"
+                            className="opacity-80"
+                          />
+                        );
+                      })}
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Event list overlay */}
+                <div className="absolute bottom-0 left-0 right-0 max-h-48 overflow-y-auto bg-background/95 backdrop-blur-sm border-t border-border p-4">
+                  <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    {filteredEvents.length} Religious Events
+                  </h3>
+                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+                    {filteredEvents.slice(0, 12).map((event, i) => {
+                      const Icon = religionIcons[event.religion];
+                      return (
+                        <Link
+                          key={`${event.tribe}-${event.year}-${i}`}
+                          to={`/learn/${event.tribeSlug}`}
+                          className="flex items-center gap-2 p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors text-sm"
+                        >
+                          <div className={`p-1 rounded ${religionColors[event.religion]}`}>
+                            <Icon className="w-3 h-3" />
+                          </div>
+                          <div className="overflow-hidden">
+                            <p className="font-medium truncate">{event.tribe}</p>
+                            <p className="text-xs text-muted-foreground">{event.yearDisplay}</p>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  {filteredEvents.length > 12 && (
+                    <p className="text-xs text-muted-foreground mt-2 text-center">
+                      +{filteredEvents.length - 12} more events. Switch to Timeline view for complete list.
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Timeline View */}
+        {viewMode === 'timeline' && (
         <section className="py-12">
           <div className="container mx-auto px-4 max-w-4xl">
             {Object.entries(eventsByCentury).length === 0 ? (
@@ -382,6 +584,7 @@ export default function ReligionTimeline() {
             )}
           </div>
         </section>
+        )}
 
         {/* Statistics */}
         <section className="py-12 bg-muted/30 border-t border-border">
