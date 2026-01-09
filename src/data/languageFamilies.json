@@ -680,6 +680,329 @@
         "culturalExports": ["Frankincense and myrrh trade", "Camel pastoralism", "Somali poetry tradition", "Coffee (possibly via Oromo)"],
         "diasporaInfluence": "Somali diaspora worldwide (2M+), Oromo communities in USA/Europe"
       }
+    },
+    {
+      "id": "semitic",
+      "slug": "semitic",
+      "name": "Semitic",
+      "alternateNames": ["Ethiopian Semitic", "South Semitic"],
+      "totalSpeakers": "400+ million",
+      "numberOfLanguages": "77",
+      "geographicSpread": "Middle East, North Africa, Horn of Africa",
+      "color": "from-emerald-500 to-teal-600",
+      "description": "The ancient language family of Amharic, Tigrinya, Arabic, and Hebrew. In Africa, Ethiopian Semitic languages are home to unique scripts, Orthodox Christianity, and ancient literary traditions.",
+      "overview": "Semitic languages in Africa are centered on the Ethiopian highlands, where Amharic, Tigrinya, and Ge'ez have been spoken for over 2,000 years. The Aksumite Empire adopted a unique Ge'ez script that remains in use today - one of the world's oldest continuously used writing systems. Amharic is Ethiopia's national language with 30+ million native speakers, while Tigrinya serves both Ethiopia and Eritrea. These languages carry the legacy of ancient trade routes connecting Africa to Arabia and the Mediterranean.",
+      "characteristics": [
+        {
+          "name": "Triconsonantal Roots",
+          "description": "Words built from 3-consonant roots with vowel patterns. Amharic s-b-r → säbbärä (broke), t-säbbärä (was broken), mäsbär (breaker)."
+        },
+        {
+          "name": "Ge'ez Script (Ethiopic)",
+          "description": "An abugida where each character represents a consonant+vowel. 33 base characters with 7 vowel forms each = 231+ characters."
+        },
+        {
+          "name": "Ejective Consonants",
+          "description": "Consonants produced with a closed glottis burst (p', t', k', ts', ch'). Distinguishes words like t'ena (health) vs tena (bundle)."
+        },
+        {
+          "name": "Verb-Final Order",
+          "description": "Unlike Arabic, Ethiopian Semitic languages place verbs at the end of sentences (SOV order)."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Ge'ez/Ethiopic script developed ~100 CE from South Arabian, one of Africa's oldest indigenous scripts",
+        "modern": "Ge'ez script for Amharic, Tigrinya, Ge'ez. Arabic script for Arabic. Hebrew script for Hebrew.",
+        "examples": [
+          { "script": "Ge'ez (Amharic)", "text": "ሰላም", "meaning": "Peace/Hello", "pronunciation": "suh-LAHM" },
+          { "script": "Ge'ez (Tigrinya)", "text": "ከመይ ኣለኻ", "meaning": "How are you (m)", "pronunciation": "keh-MEY ah-LEH-kha" },
+          { "script": "Ge'ez (Ge'ez)", "text": "ይትባረክ", "meaning": "Blessed", "pronunciation": "yit-BAH-rek" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Selam", "language": "Amharic", "meaning": "Hello/Peace", "pronunciation": "suh-LAHM" },
+        { "phrase": "Tena yistilign", "language": "Amharic", "meaning": "May God give you health (formal hello)", "pronunciation": "teh-nah yee-STEE-leen" },
+        { "phrase": "Dehna neh?", "language": "Amharic", "meaning": "Are you well?", "pronunciation": "deh-NAH neh" },
+        { "phrase": "Ameseginalehu", "language": "Amharic", "meaning": "Thank you", "pronunciation": "ah-meh-sehg-nah-LEH-hoo" },
+        { "phrase": "Kemey aleka", "language": "Tigrinya", "meaning": "How are you (m)?", "pronunciation": "keh-MEY ah-LEH-kah" },
+        { "phrase": "Yekenyelay", "language": "Tigrinya", "meaning": "Thank you", "pronunciation": "yeh-kehn-yeh-LAY" },
+        { "phrase": "Egziabhier yimesgen", "language": "Amharic", "meaning": "Thanks be to God", "pronunciation": "ehg-zee-ahb-HEER yee-mehs-gehn" }
+      ],
+      "timeline": [
+        { "year": -1000, "event": "South Arabian migrants reach Ethiopian highlands", "significance": "Semitic languages enter Africa" },
+        { "year": -500, "event": "D'mt kingdom flourishes in northern Ethiopia", "significance": "First Ethiopian Semitic state" },
+        { "year": 100, "event": "Aksumite Empire develops Ge'ez script", "significance": "One of Africa's oldest writing traditions" },
+        { "year": 330, "event": "King Ezana converts Aksum to Christianity", "significance": "Ge'ez becomes liturgical language" },
+        { "year": 1270, "event": "Solomonic dynasty restored, Amharic rises", "significance": "Amharic begins replacing Ge'ez in court" },
+        { "year": 1500, "event": "Amharic becomes Ethiopian court language", "significance": "Transition from Ge'ez complete" },
+        { "year": 1855, "event": "Amharic poetry and literature flourishes", "significance": "Modern Ethiopian literature begins" },
+        { "year": 1974, "event": "Tigrinya used in Eritrean liberation movement", "significance": "Tigrinya nationalism grows" },
+        { "year": 1993, "event": "Eritrea independence - Tigrinya becomes official", "significance": "Two Semitic-speaking nations in Africa" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Ethiopic (Ethiopian Semitic)",
+          "slug": "ethiopic",
+          "speakers": "50+ million",
+          "languages": "15+",
+          "description": "African Semitic languages of Ethiopia and Eritrea",
+          "notableLanguages": ["Amharic", "Tigrinya", "Tigre", "Ge'ez", "Gurage", "Harari"]
+        },
+        {
+          "name": "Arabic",
+          "slug": "arabic",
+          "speakers": "350+ million",
+          "languages": "30+ varieties",
+          "description": "North Africa and Sahel - from Morocco to Sudan",
+          "notableLanguages": ["Egyptian Arabic", "Moroccan Arabic", "Sudanese Arabic", "Hassaniya"]
+        },
+        {
+          "name": "Hebrew",
+          "slug": "hebrew",
+          "speakers": "9+ million",
+          "languages": "1",
+          "description": "Ancient language revived in modern Israel",
+          "notableLanguages": ["Modern Hebrew", "Biblical Hebrew"]
+        },
+        {
+          "name": "South Semitic",
+          "slug": "south-semitic",
+          "speakers": "3+ million",
+          "languages": "10+",
+          "description": "Southern Arabian and Socotra languages",
+          "notableLanguages": ["Mehri", "Soqotri", "Jibbali"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Cushitic", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Some sound correspondences, case systems" },
+        { "family": "Berber", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Root-and-pattern morphology" },
+        { "family": "Chadic", "relationship": "Distant Afroasiatic relative", "sharedFeatures": "Some pronoun similarities" }
+      ],
+      "uniqueFeatures": [
+        "Triconsonantal root system (k-t-b → write, book, writer, library)",
+        "Ge'ez script - 231+ character abugida unique to Ethiopia",
+        "Ejective consonants (t', k', p', ch', ts')",
+        "2,000+ year literary tradition in Ge'ez",
+        "Orthodox Christian religious vocabulary"
+      ],
+      "historicalInfluence": {
+        "empires": ["Aksumite Empire", "Ethiopian Empire", "Caliphates (Arabic)", "Ancient Israel"],
+        "culturalExports": ["Ge'ez liturgical tradition", "Ethiopian Orthodox Christianity", "Coffee culture (via Amharic 'bunna')", "Arabic calligraphy"],
+        "diasporaInfluence": "Ethiopian/Eritrean diaspora (2M+), Hebrew language revival, Arabic as global lingua franca"
+      }
+    },
+    {
+      "id": "berber",
+      "slug": "berber",
+      "name": "Berber (Amazigh)",
+      "alternateNames": ["Tamazight", "Amazigh", "Libyco-Berber"],
+      "totalSpeakers": "30-40 million",
+      "numberOfLanguages": "30+",
+      "geographicSpread": "North Africa - Morocco, Algeria, Libya, Tunisia, Niger, Mali, Mauritania, Egypt",
+      "color": "from-cyan-500 to-blue-600",
+      "description": "The indigenous language family of North Africa, spoken by the Amazigh (Berber) peoples from the Mediterranean to the Sahara. Carriers of the ancient Tifinagh script and Tuareg desert traditions.",
+      "overview": "Berber languages are the original languages of North Africa, predating Arabic by millennia. The Amazigh ('free people') have inhabited the Maghreb and Sahara for over 5,000 years. Today, Berber languages are experiencing a revival with official recognition in Morocco and Algeria. The Tuareg of the Sahara maintain the most vibrant Berber traditions, including the ancient Tifinagh alphabet still used today.",
+      "characteristics": [
+        {
+          "name": "Consonant Clusters",
+          "description": "Berber allows long strings of consonants: Tmazight 'tfktstt' (you gave it to her). Vowels are minimal."
+        },
+        {
+          "name": "Root-Based Morphology",
+          "description": "Like Arabic, words derive from consonantal roots. K-R-Z → akraz (plow), ikraz (field), amekraz (farmer)."
+        },
+        {
+          "name": "VSO Word Order",
+          "description": "Verb-Subject-Object order, similar to Classical Arabic and Celtic languages."
+        },
+        {
+          "name": "Tifinagh Script",
+          "description": "Ancient geometric alphabet descended from Libyan script (3000+ years old). Each consonant is a symbol."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Libyco-Berber inscriptions from 1000 BCE, Tifinagh preserved by Tuareg for 2000+ years",
+        "modern": "Neo-Tifinagh (official in Morocco), Latin alphabet (common), Arabic script (historical)",
+        "examples": [
+          { "script": "Neo-Tifinagh", "text": "ⴰⵣⵓⵍ", "meaning": "Hello", "pronunciation": "ah-ZOOL" },
+          { "script": "Neo-Tifinagh", "text": "ⵜⴰⵏⵎⵎⵉⵔⵜ", "meaning": "Thank you", "pronunciation": "tah-neh-MEERT" },
+          { "script": "Latin (Kabyle)", "text": "Azul fellawen", "meaning": "Hello to you (pl)", "pronunciation": "ah-ZOOL fell-AH-wehn" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Azul", "language": "Tamazight (general)", "meaning": "Hello", "pronunciation": "ah-ZOOL" },
+        { "phrase": "Tanmirt / Tanemmirt", "language": "Tamazight", "meaning": "Thank you", "pronunciation": "tah-neh-MEERT" },
+        { "phrase": "Manzakin?", "language": "Tamazight", "meaning": "How are you?", "pronunciation": "mahn-zah-KEEN" },
+        { "phrase": "Labas", "language": "Tamazight/Riffian", "meaning": "Fine/Hello", "pronunciation": "lah-BAHS" },
+        { "phrase": "Ar tufat", "language": "Tamazight", "meaning": "Goodbye (until morning)", "pronunciation": "ahr too-FAHT" },
+        { "phrase": "Ayyuz", "language": "Tuareg/Tamasheq", "meaning": "Hello (Tuareg)", "pronunciation": "ah-YOOZ" }
+      ],
+      "timeline": [
+        { "year": -5000, "event": "Proto-Berber spoken across North Africa", "significance": "Berber peoples establish across Sahara" },
+        { "year": -1000, "event": "Libyan (ancient Berber) inscriptions appear", "significance": "Tifinagh script origins" },
+        { "year": -200, "event": "Numidia kingdoms flourish (Tunisia/Algeria)", "significance": "Berber kingdoms rival Rome" },
+        { "year": 700, "event": "Arab conquest brings Arabic and Islam", "significance": "Berber-Arab cultural fusion begins" },
+        { "year": 1050, "event": "Almoravid Berber empire from Senegal to Spain", "significance": "Berber power at its height" },
+        { "year": 1500, "event": "Tuareg control trans-Saharan trade routes", "significance": "Desert Berbers dominate trade" },
+        { "year": 1980, "event": "Berber Spring - cultural identity movement", "significance": "Amazigh revival begins" },
+        { "year": 2011, "event": "Tamazight becomes official in Morocco", "significance": "Constitutional recognition" },
+        { "year": 2016, "event": "Tamazight becomes official in Algeria", "significance": "Full official status achieved" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Northern Berber",
+          "slug": "northern-berber",
+          "speakers": "20+ million",
+          "languages": "15+",
+          "description": "Morocco and Algeria's major Berber varieties",
+          "notableLanguages": ["Tachelhit (Shilha)", "Kabyle", "Central Atlas Tamazight", "Riffian"]
+        },
+        {
+          "name": "Tuareg (Tamasheq)",
+          "slug": "tuareg",
+          "speakers": "2+ million",
+          "languages": "5+",
+          "description": "Saharan nomadic languages of Niger, Mali, Algeria, Libya",
+          "notableLanguages": ["Tamahaq", "Tamasheq", "Tayart", "Tahaggart"]
+        },
+        {
+          "name": "Zenati",
+          "slug": "zenati",
+          "speakers": "5+ million",
+          "languages": "10+",
+          "description": "Eastern Berber languages of Algeria, Libya, Tunisia",
+          "notableLanguages": ["Chenoua", "Mozabite (Mzab)", "Nafusi", "Siwi"]
+        },
+        {
+          "name": "Eastern Berber",
+          "slug": "eastern-berber",
+          "speakers": "50,000+",
+          "languages": "3",
+          "description": "Isolated Berber communities in Egypt and Libya",
+          "notableLanguages": ["Siwi (Egypt)", "Awjila", "Nafusi"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Semitic", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Root-and-pattern morphology, gender" },
+        { "family": "Cushitic", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Verb morphology patterns" },
+        { "family": "Ancient Egyptian", "relationship": "Both descendants of Proto-Afroasiatic", "sharedFeatures": "Some lexical cognates" }
+      ],
+      "uniqueFeatures": [
+        "Tifinagh - one of Africa's oldest alphabets (3000+ years)",
+        "Extreme consonant clusters (sometimes 4-5 consonants together)",
+        "VSO word order with rich agreement systems",
+        "Tuareg preserve ancient script traditions",
+        "Survived Romanization, Arabization, Islamization"
+      ],
+      "historicalInfluence": {
+        "empires": ["Numidia", "Mauretania", "Almoravid Empire", "Almohad Empire", "Tuareg Confederacies"],
+        "culturalExports": ["Tifinagh script", "Tuareg indigo clothing/culture", "Couscous to world cuisine", "Amazigh folk music traditions"],
+        "diasporaInfluence": "1M+ Berbers in Europe (France, Spain, Netherlands), Amazigh cultural revival movements"
+      }
+    },
+    {
+      "id": "nilotic",
+      "slug": "nilotic",
+      "name": "Nilotic",
+      "alternateNames": ["Nilotic Languages", "Eastern Nilotic", "Western Nilotic", "Southern Nilotic"],
+      "totalSpeakers": "35+ million",
+      "numberOfLanguages": "60+",
+      "geographicSpread": "East Africa - Kenya, Tanzania, Uganda, South Sudan, Ethiopia",
+      "color": "from-orange-500 to-red-600",
+      "description": "The languages of East Africa's legendary pastoralist peoples - Maasai, Dinka, Luo, Kalenjin, and Turkana. Speakers are renowned for cattle culture, athletic prowess, and warrior traditions.",
+      "overview": "Nilotic peoples migrated from the Nile Valley southward over thousands of years, bringing cattle-centered cultures to East Africa. The Maasai became iconic symbols of African tradition, the Kalenjin dominate world distance running, and the Luo produced global leaders like Barack Obama's father. These languages share cattle terminology, age-set systems, and pastoralist traditions that define East African culture.",
+      "characteristics": [
+        {
+          "name": "ATR Vowel Harmony",
+          "description": "Advanced Tongue Root harmony - vowels in a word must share the same tongue position (tense or lax)."
+        },
+        {
+          "name": "Vowel Length Distinction",
+          "description": "Short and long vowels change meaning. Dholuo: 'bur' (hole) vs 'buur' (mole). Critical for understanding."
+        },
+        {
+          "name": "Elaborate Cattle Vocabulary",
+          "description": "Hundreds of terms for cattle colors, horn shapes, ages, and conditions. Cattle are central to culture."
+        },
+        {
+          "name": "Tonal Systems",
+          "description": "Pitch distinguishes words and grammar. Luo and Dinka have complex tone patterns."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Oral tradition - elaborate oral poetry, praise songs, and genealogies",
+        "modern": "Latin alphabet with tone marks where used",
+        "examples": [
+          { "script": "Latin (Dholuo)", "text": "Misawa", "meaning": "Hello/Greetings", "pronunciation": "mee-SAH-wah" },
+          { "script": "Latin (Maa/Maasai)", "text": "Supai", "meaning": "Hello", "pronunciation": "soo-PAH-ee" },
+          { "script": "Latin (Kalenjin)", "text": "Chamgei", "meaning": "Hello", "pronunciation": "chahm-GAY" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Misawa", "language": "Dholuo (Luo)", "meaning": "Hello/Greetings", "pronunciation": "mee-SAH-wah" },
+        { "phrase": "Oyawore", "language": "Dholuo", "meaning": "Good morning", "pronunciation": "oh-yah-WOH-reh" },
+        { "phrase": "Ero kamano", "language": "Dholuo", "meaning": "Thank you", "pronunciation": "EH-roh kah-MAH-noh" },
+        { "phrase": "Supai", "language": "Maa (Maasai)", "meaning": "Hello", "pronunciation": "soo-PAH-ee" },
+        { "phrase": "Ashe oleng", "language": "Maa (Maasai)", "meaning": "Thank you very much", "pronunciation": "AH-sheh oh-LEHNG" },
+        { "phrase": "Chamgei", "language": "Kalenjin", "meaning": "Hello", "pronunciation": "chahm-GAY" },
+        { "phrase": "Kongoi", "language": "Kalenjin", "meaning": "Thank you", "pronunciation": "kohn-GOH-ee" },
+        { "phrase": "Yepa", "language": "Turkana", "meaning": "Hello", "pronunciation": "YEH-pah" },
+        { "phrase": "Ejok", "language": "Turkana", "meaning": "Thank you", "pronunciation": "eh-JOHK" }
+      ],
+      "timeline": [
+        { "year": -3000, "event": "Proto-Nilotic peoples in Nile Valley region", "significance": "Nilotic family origins" },
+        { "year": -1000, "event": "Nilotic speakers begin southward migrations", "significance": "Cattle culture spreads to East Africa" },
+        { "year": 500, "event": "Eastern Nilotes (proto-Maasai) reach Kenya", "significance": "Rift Valley becomes Nilotic homeland" },
+        { "year": 1500, "event": "Luo migration from South Sudan to Lake Victoria", "significance": "Western Nilotes establish in Kenya/Uganda" },
+        { "year": 1700, "event": "Maasai expansion across Rift Valley", "significance": "Maasai dominate East African highlands" },
+        { "year": 1850, "event": "Kalenjin age-sets organize resistance to colonial expansion", "significance": "Nandi resistance famous" },
+        { "year": 1960, "event": "Kalenjin identity consolidates in independent Kenya", "significance": "Political identity emerges" },
+        { "year": 1988, "event": "Kalenjin runners begin dominating world athletics", "significance": "Running tradition gains global fame" },
+        { "year": 2008, "event": "Barack Obama (Luo heritage) elected US President", "significance": "Luo diaspora in global spotlight" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Western Nilotic",
+          "slug": "western-nilotic",
+          "speakers": "15+ million",
+          "languages": "25+",
+          "description": "Luo, Dinka, Nuer, Shilluk - peoples of Lake Victoria and South Sudan",
+          "notableLanguages": ["Dholuo (Kenya/Tanzania)", "Acholi", "Alur", "Dinka", "Nuer", "Shilluk"]
+        },
+        {
+          "name": "Eastern Nilotic",
+          "slug": "eastern-nilotic",
+          "speakers": "5+ million",
+          "languages": "15+",
+          "description": "Maasai, Turkana, Samburu - East Africa's iconic pastoralists",
+          "notableLanguages": ["Maa (Maasai/Samburu)", "Turkana", "Teso", "Karamojong", "Toposa"]
+        },
+        {
+          "name": "Southern Nilotic",
+          "slug": "southern-nilotic",
+          "speakers": "10+ million",
+          "languages": "15+",
+          "description": "Kalenjin group and Datooga - Kenya and Tanzania highlands",
+          "notableLanguages": ["Kalenjin (Nandi, Kipsigis, Pokot)", "Datooga", "Omotik"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Nilo-Saharan (other branches)", "relationship": "Part of larger Nilo-Saharan family", "sharedFeatures": "Vowel harmony, some vocabulary" },
+        { "family": "Bantu (through contact)", "relationship": "Millennia of geographic contact", "sharedFeatures": "Borrowed vocabulary, cultural exchange" },
+        { "family": "Cushitic (through contact)", "relationship": "Trade and intermarriage in Kenya/Ethiopia", "sharedFeatures": "Some loanwords, cultural practices" }
+      ],
+      "uniqueFeatures": [
+        "ATR vowel harmony (tense/lax vowel sets)",
+        "Elaborate cattle terminology (100+ terms for cattle)",
+        "Age-set social organization systems",
+        "World-renowned long-distance running traditions",
+        "Tall stature - Dinka and Maasai among world's tallest peoples"
+      ],
+      "historicalInfluence": {
+        "empires": ["Luo kingdoms (Acholi, Alur)", "Maasai age-set confederacy", "Dinka chiefdoms", "Nandi resistance"],
+        "culturalExports": ["Maasai warrior culture (global icon)", "Kalenjin running dominance", "Cattle raiding traditions", "Elaborate beadwork"],
+        "diasporaInfluence": "Obama family (Luo), Kenyan runners worldwide, Maasai cultural tourism"
+      }
     }
   ]
 }

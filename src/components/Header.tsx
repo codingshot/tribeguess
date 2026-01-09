@@ -28,12 +28,12 @@ export function Header() {
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group" aria-label="TribeGuess home">
             <img 
               src={logo} 
-              alt="" 
+              alt="TribeGuess" 
               className="w-8 h-8 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform duration-300"
               width={40}
               height={40}
             />
-            <span className="text-lg sm:text-xl font-bold text-foreground font-tribal tracking-wide">
+            <span className="hidden sm:inline text-lg sm:text-xl font-bold text-foreground font-tribal tracking-wide">
               Tribe<span className="text-primary">Guess</span>
             </span>
           </Link>

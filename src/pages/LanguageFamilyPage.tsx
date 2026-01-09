@@ -10,10 +10,11 @@ import { Progress } from '@/components/ui/progress';
 import {
   Languages, Users, Clock, MapPin, BookOpen, Volume2, GitBranch,
   ArrowRight, ChevronRight, Globe, Scroll, PenTool, MessageCircle,
-  History, Link2, Sparkles, Play, ArrowLeft
+  History, Link2, Sparkles, ArrowLeft
 } from 'lucide-react';
 import { getAllTribes } from '@/lib/tribeDetection';
 import languageFamiliesData from '@/data/languageFamilies.json';
+import { AudioGreeting } from '@/components/AudioGreeting';
 
 interface SubFamily {
   name: string;
@@ -325,25 +326,25 @@ export default function LanguageFamilyPage() {
                     Common Phrases Across {family.name}
                   </CardTitle>
                   <CardDescription>
-                    Learn greetings and phrases from different {family.name} languages
+                    Learn greetings and phrases from different {family.name} languages. Click the play button to hear pronunciation with African accents.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
                     {family.commonPhrases.map((phrase: Phrase, i: number) => (
                       <div 
                         key={i} 
                         className="p-4 bg-gradient-to-br from-primary/5 to-transparent rounded-xl border border-primary/20 hover:border-primary/40 transition-colors"
                       >
-                        <div className="flex items-center justify-between mb-2">
-                          <Badge variant="secondary" className="text-xs">{phrase.language}</Badge>
-                          <Button variant="ghost" size="icon" className="h-8 w-8">
-                            <Play className="w-4 h-4" />
-                          </Button>
-                        </div>
-                        <p className="text-lg font-semibold mb-1">{phrase.phrase}</p>
-                        <p className="text-sm text-muted-foreground">{phrase.meaning}</p>
-                        <p className="text-xs text-primary italic mt-1">/{phrase.pronunciation}/</p>
+                        <Badge variant="secondary" className="text-xs mb-3">{phrase.language}</Badge>
+                        <AudioGreeting 
+                          phrase={phrase.phrase}
+                          meaning={phrase.meaning}
+                          phonetic={phrase.pronunciation}
+                          languageName={phrase.language}
+                          languageFamily={family.name}
+                          size="md"
+                        />
                       </div>
                     ))}
                   </div>
