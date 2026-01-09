@@ -1619,30 +1619,6 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
     }
   ],
 
-  toubou: [
-    {
-      name: "Tibesti Mountains",
-      type: "natural",
-      description: "The highest mountain range in the Sahara, heart of Toubou homeland. Contains Emi Koussi, the highest peak in the Sahara at 3,445m.",
-      coordinates: { lat: 21.0, lng: 17.5 },
-      wikipediaUrl: "https://en.wikipedia.org/wiki/Tibesti_Mountains"
-    },
-    {
-      name: "Lakes of Ounianga",
-      type: "natural",
-      description: "UNESCO World Heritage Site: 18 interconnected lakes in the Sahara, a miraculous oasis in the world's most arid desert. Sacred to local Toubou populations.",
-      coordinates: { lat: 19.05, lng: 20.5 },
-      wikipediaUrl: "https://en.wikipedia.org/wiki/Lakes_of_Ounianga",
-      unescoStatus: "world-heritage"
-    },
-    {
-      name: "Bardaï",
-      type: "historical",
-      description: "The capital of Tibesti Region and a key Toubou settlement. An oasis town that has served as a center of Toubou resistance and governance.",
-      coordinates: { lat: 21.35, lng: 17.0 },
-      wikipediaUrl: "https://en.wikipedia.org/wiki/Barda%C3%AF"
-    }
-  ],
 
   // ============ NIGER ============
   zarma: [
@@ -1978,6 +1954,263 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       description: "Hydrothermal field in the Danakil with unearthly formations of sulfur, salt, and minerals. One of Earth's most extreme environments.",
       coordinates: { lat: 14.24, lng: 40.3 },
       wikipediaUrl: "https://en.wikipedia.org/wiki/Dallol_(hydrothermal_system)"
+    }
+  ],
+
+  // ============ CHAD ============
+  toubou: [
+    {
+      name: "Tibesti Mountains",
+      type: "natural",
+      description: "The highest mountain range in the Sahara, sacred homeland of the Toubou people. Contains ancient volcanic peaks rising to 3,415m at Emi Koussi.",
+      coordinates: { lat: 20.0, lng: 17.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Tibesti_Mountains"
+    },
+    {
+      name: "Emi Koussi",
+      type: "natural",
+      description: "The highest peak in Chad and the Sahara Desert at 3,415m. A dormant volcano sacred to the Toubou, featuring a massive caldera with seasonal water.",
+      coordinates: { lat: 19.8, lng: 18.53 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Emi_Koussi"
+    },
+    {
+      name: "Lakes of Ounianga",
+      type: "natural",
+      description: "A series of 18 interconnected lakes in the Sahara, home to Toubou communities for millennia. UNESCO World Heritage Site featuring unique desert hydrology.",
+      coordinates: { lat: 19.05, lng: 20.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lakes_of_Ounianga",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Bardaï Oasis",
+      type: "historical",
+      description: "Traditional capital of the Toubou Teda people in the Tibesti Mountains. A vital oasis settlement with palm groves and ancient trading traditions.",
+      coordinates: { lat: 21.35, lng: 17.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Barda%C3%AF"
+    },
+    {
+      name: "Zouar",
+      type: "historical",
+      description: "Important Toubou settlement at the foot of the Tibesti Mountains. Traditional caravan stop on trans-Saharan trade routes.",
+      coordinates: { lat: 20.45, lng: 16.52 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Zouar"
+    }
+  ],
+
+  zaghawa: [
+    {
+      name: "Ennedi Massif",
+      type: "natural",
+      description: "Spectacular sandstone plateau with natural arches, towers, and canyons. Contains ancient rock art and is home to Zaghawa communities. UNESCO World Heritage Site.",
+      coordinates: { lat: 17.0, lng: 22.0 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Ennedi_Plateau",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Aloba Arch",
+      type: "natural",
+      description: "One of the world's largest natural arches located in the Ennedi Massif. Sacred site with ancient rock paintings nearby.",
+      coordinates: { lat: 16.9, lng: 21.8 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Aloba_Arch"
+    },
+    {
+      name: "Iriba",
+      type: "historical",
+      description: "Traditional Zaghawa town in the Wadi Fira region. Important market center and cultural hub for Zaghawa communities.",
+      coordinates: { lat: 15.12, lng: 22.25 }
+    },
+    {
+      name: "Fada (Largeau)",
+      type: "historical",
+      description: "Gateway town to the Ennedi region and historic Zaghawa settlement. Contains colonial-era buildings and serves as regional administrative center.",
+      coordinates: { lat: 17.18, lng: 21.58 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Fada,_Chad"
+    },
+    {
+      name: "Guelta d'Archei",
+      type: "natural",
+      description: "Permanent water source in the Ennedi Massif, home to rare Nile crocodiles. Sacred watering hole for Zaghawa camel herders for centuries.",
+      coordinates: { lat: 16.88, lng: 21.82 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Guelta_d%27Archei"
+    }
+  ],
+
+  // ============ EQUATORIAL GUINEA ============
+  fang: [
+    {
+      name: "Monte Alén National Park",
+      type: "natural",
+      description: "Dense rainforest in the Fang heartland of continental Equatorial Guinea. Contains rich biodiversity and traditional Fang sacred forest sites.",
+      coordinates: { lat: 1.65, lng: 10.3 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Monte_Al%C3%A9n_National_Park"
+    },
+    {
+      name: "Bata Cathedral",
+      type: "sacred",
+      description: "Major Catholic cathedral in the largest city of continental Equatorial Guinea. Represents the blend of Fang culture with Christianity.",
+      coordinates: { lat: 1.86, lng: 9.77 }
+    },
+    {
+      name: "Mongomo Royal Palace",
+      type: "historical",
+      description: "Modern palace complex built in the Fang heartland, symbolizing Fang political power in contemporary Equatorial Guinea.",
+      coordinates: { lat: 1.63, lng: 11.32 }
+    },
+    {
+      name: "Nzang Ayong Sculptures Park",
+      type: "museum",
+      description: "Open-air museum in Bata featuring monumental sculptures celebrating Fang mythology, traditions, and cultural heroes.",
+      coordinates: { lat: 1.85, lng: 9.78 }
+    },
+    {
+      name: "Evinayong",
+      type: "historical",
+      description: "Traditional Fang town in the forest interior. Center of Fang cultural traditions and gateway to the rainforest highlands.",
+      coordinates: { lat: 1.45, lng: 10.55 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Evinayong"
+    }
+  ],
+
+  bubi: [
+    {
+      name: "Pico Basilé (Pico Santa Isabel)",
+      type: "natural",
+      description: "Highest peak in Equatorial Guinea at 3,011m, sacred mountain of the Bubi people. Features unique cloud forest ecosystem and traditional spiritual significance.",
+      coordinates: { lat: 3.58, lng: 8.77 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Pico_Basil%C3%A9"
+    },
+    {
+      name: "Malabo (Santa Isabel)",
+      type: "historical",
+      description: "Capital city on Bioko Island, originally a Bubi settlement. Features colonial architecture and remains the cultural center of Bubi life.",
+      coordinates: { lat: 3.75, lng: 8.78 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Malabo"
+    },
+    {
+      name: "Moka Valley",
+      type: "natural",
+      description: "High-altitude valley on Bioko Island, traditional Bubi heartland. Known for its agricultural terraces and endemic wildlife.",
+      coordinates: { lat: 3.35, lng: 8.67 }
+    },
+    {
+      name: "Luba Crater Scientific Reserve",
+      type: "natural",
+      description: "Protected volcanic caldera in Bubi territory with unique biodiversity. Features nesting beaches for endangered sea turtles.",
+      coordinates: { lat: 3.27, lng: 8.55 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Luba_Crater_Scientific_Reserve"
+    },
+    {
+      name: "Riaba (Bubi Cultural Center)",
+      type: "historical",
+      description: "Traditional Bubi town in southeastern Bioko. Important center for preserving Bubi language, customs, and traditional governance.",
+      coordinates: { lat: 3.43, lng: 8.82 }
+    }
+  ],
+
+  // ============ GABON ============
+  myene: [
+    {
+      name: "Libreville Cathedral",
+      type: "sacred",
+      description: "Sainte-Marie Cathedral in the Myene heartland of Libreville. Historic church representing the early Christianization of the Myene coastal peoples.",
+      coordinates: { lat: 0.39, lng: 9.45 }
+    },
+    {
+      name: "Pointe-Denis Beach",
+      type: "natural",
+      description: "Pristine beach near Libreville traditionally used by Myene fishermen. Now a protected nesting site for leatherback sea turtles.",
+      coordinates: { lat: 0.25, lng: 9.3 }
+    },
+    {
+      name: "Cap Estérias",
+      type: "historical",
+      description: "Historic Myene fishing village north of Libreville. Site of early European contact and traditional Myene maritime culture.",
+      coordinates: { lat: 0.62, lng: 9.33 }
+    },
+    {
+      name: "National Museum of Arts and Traditions",
+      type: "museum",
+      description: "Museum in Libreville showcasing Myene and other Gabonese cultures. Contains masks, ritual objects, and ethnographic collections.",
+      coordinates: { lat: 0.4, lng: 9.44 }
+    },
+    {
+      name: "Pongara National Park",
+      type: "natural",
+      description: "Coastal park in traditional Myene territory. Protects mangroves, beaches, and wildlife that have sustained Myene communities for centuries.",
+      coordinates: { lat: 0.15, lng: 9.38 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Pongara_National_Park"
+    }
+  ],
+
+  mitsogo: [
+    {
+      name: "Lopé National Park",
+      type: "natural",
+      description: "UNESCO World Heritage Site containing ancient rainforest and savanna mosaic. Sacred territory of the Mitsogo and birthplace of the Bwiti religion.",
+      coordinates: { lat: -0.5, lng: 11.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Lop%C3%A9_National_Park",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Bwiti Sacred Forest Temples",
+      type: "sacred",
+      description: "Sacred forest clearings where Mitsogo Bwiti initiation ceremonies take place. Hidden temples for the consumption of iboga and spiritual communion.",
+      coordinates: { lat: -1.5, lng: 11.3 }
+    },
+    {
+      name: "Mouila",
+      type: "historical",
+      description: "Regional capital near Mitsogo territory. Important center for preserving Bwiti traditions and Mitsogo cultural identity.",
+      coordinates: { lat: -1.87, lng: 11.06 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mouila"
+    },
+    {
+      name: "Chutes de l'Impératrice (Empress Falls)",
+      type: "natural",
+      description: "Spectacular waterfall in the Ogooué River basin near Mitsogo lands. Sacred site associated with water spirits in Bwiti cosmology.",
+      coordinates: { lat: -1.6, lng: 11.2 }
+    },
+    {
+      name: "Ogooué River Sacred Sites",
+      type: "sacred",
+      description: "Series of sacred locations along the Ogooué River where Mitsogo ancestors performed rituals. The river is central to Bwiti mythology.",
+      coordinates: { lat: -0.8, lng: 11.0 }
+    }
+  ],
+
+  punu: [
+    {
+      name: "Tchibanga",
+      type: "historical",
+      description: "Capital of Nyanga Province and center of Punu cultural life. Important market town preserving Punu traditions and mask-making heritage.",
+      coordinates: { lat: -2.85, lng: 11.03 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Tchibanga"
+    },
+    {
+      name: "Moukalaba-Doudou National Park",
+      type: "natural",
+      description: "Protected rainforest and savanna in Punu territory. Contains gorillas, elephants, and sacred sites associated with Punu ancestor veneration.",
+      coordinates: { lat: -2.33, lng: 10.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Moukalaba-Doudou_National_Park"
+    },
+    {
+      name: "Ndendé",
+      type: "historical",
+      description: "Traditional Punu town known for its skilled mask carvers. Center for the creation of the famous white-faced Punu masks used in Mukudj ceremonies.",
+      coordinates: { lat: -2.4, lng: 11.35 }
+    },
+    {
+      name: "Mayumba National Park",
+      type: "natural",
+      description: "Coastal park near Punu territory protecting the largest leatherback turtle nesting site in Africa. Traditional Punu fishing grounds.",
+      coordinates: { lat: -3.4, lng: 10.65 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Mayumba_National_Park"
+    },
+    {
+      name: "Nyanga Highlands",
+      type: "natural",
+      description: "Forested highlands of the Nyanga Province, traditional Punu homeland. Contains waterfalls, sacred groves, and ancestral burial sites.",
+      coordinates: { lat: -2.5, lng: 11.2 }
     }
   ]
 };
