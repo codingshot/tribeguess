@@ -7,6 +7,7 @@ export interface TraditionalReligionData {
   alternateNames?: string[];
   region: string;
   estimatedFollowers: string;
+  youtubeVideoId?: string; // For documentary/educational videos
   countryBreakdown: { country: string; flag: string; percentage: number }[];
   supremeDeity: {
     name: string;
@@ -59,6 +60,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Ifá", "Orisha worship", "Isese"],
     region: "West Africa",
     estimatedFollowers: "~40 million (including diaspora)",
+    youtubeVideoId: "3Gt0GqK4pjU",
     countryBreakdown: [
       { country: "Nigeria", flag: "🇳🇬", percentage: 60 },
       { country: "Benin", flag: "🇧🇯", percentage: 15 },
@@ -220,6 +222,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Zulu Ancestor Veneration", "Amadlozi worship"],
     region: "Southern Africa",
     estimatedFollowers: "~5 million",
+    youtubeVideoId: "gE1v9HHp5kQ",
     countryBreakdown: [
       { country: "South Africa", flag: "🇿🇦", percentage: 85 },
       { country: "Eswatini", flag: "🇸🇿", percentage: 8 },
@@ -366,6 +369,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Enkai worship"],
     region: "East Africa",
     estimatedFollowers: "~1.5 million",
+    youtubeVideoId: "Y5tH-GyLuSA",
     countryBreakdown: [
       { country: "Kenya", flag: "🇰🇪", percentage: 60 },
       { country: "Tanzania", flag: "🇹🇿", percentage: 40 }
@@ -741,6 +745,7 @@ export const traditionalReligions: TraditionalReligionData[] = [
     alternateNames: ["Ethiopian Orthodox Church", "Tewahedo", "Ethiopian Christianity"],
     region: "Horn of Africa",
     estimatedFollowers: "~45 million",
+    youtubeVideoId: "XpLFKLo-CvM",
     countryBreakdown: [
       { country: "Ethiopia", flag: "🇪🇹", percentage: 92 },
       { country: "Eritrea", flag: "🇪🇷", percentage: 5 },
@@ -984,6 +989,253 @@ export const traditionalReligions: TraditionalReligionData[] = [
       { name: "Pew Research - Islam in Africa", url: "https://www.pewresearch.org/religion/2011/01/27/the-future-of-the-global-muslim-population/" },
       { name: "Encyclopedia of Islam", url: "https://en.wikipedia.org/wiki/Islam_in_Africa" },
       { name: "Sufism in West Africa", url: "https://www.britannica.com/topic/Islam" }
+    ]
+  },
+  {
+    id: "vodun-religion",
+    name: "Vodun (West African Vodou)",
+    alternateNames: ["Voodoo", "Vodou", "Vodu", "Vudu"],
+    region: "West Africa",
+    estimatedFollowers: "~60 million (including diaspora syncretism)",
+    youtubeVideoId: "RBUlZT1XoQU",
+    countryBreakdown: [
+      { country: "Benin", flag: "🇧🇯", percentage: 35 },
+      { country: "Togo", flag: "🇹🇬", percentage: 20 },
+      { country: "Ghana", flag: "🇬🇭", percentage: 10 },
+      { country: "Nigeria", flag: "🇳🇬", percentage: 15 },
+      { country: "Haiti (diaspora)", flag: "🇭🇹", percentage: 10 },
+      { country: "Other diaspora", flag: "🌍", percentage: 10 }
+    ],
+    supremeDeity: {
+      name: "Mawu-Lisa",
+      description: "The supreme creator deity, often described as a dual god - Mawu (female, moon, night, fertility) and Lisa (male, sun, day, strength). Together they created the universe and the vodun spirits. In some traditions, Nana Buluku is above Mawu-Lisa as the primordial creator.",
+      attributes: ["Creator Dual-Deity", "Moon and Sun", "Source of Vodun", "Cosmic Balance"]
+    },
+    tenets: [
+      {
+        belief: "Vodun Spirits",
+        description: "Vodun are divine spirits that govern nature, human affairs, and the cosmos. Each vodun has specific domains (sea, thunder, iron, smallpox). Humans interact with vodun through offerings, dance, and possession.",
+        source: "Mama Lola: A Vodou Priestess - Brown (1991)"
+      },
+      {
+        belief: "Ancestor Communion",
+        description: "The dead remain connected to the living. Ancestors (tovodu) are venerated through regular offerings. Neglecting ancestors causes misfortune. The dead can be consulted through divination.",
+        source: "Sacred Arts of Haitian Vodou - Cosentino (1995)"
+      },
+      {
+        belief: "Fa/Ifa Divination",
+        description: "Complex divination system using palm nuts or cowrie shells. Bokonon (diviners) interpret 256 signs to reveal the will of Fa and provide guidance. Related to Yoruba Ifá.",
+        source: "Encyclopedia of African Religion - Asante"
+      },
+      {
+        belief: "Sacred Possession",
+        description: "Vodun spirits mount (possess) devotees during ceremonies. The possessed person becomes the vodun's 'horse,' speaking and acting as the deity. This is the highest form of communion.",
+        source: "Divine Horsemen - Deren (1953)"
+      }
+    ],
+    practices: [
+      { name: "Vodun Ceremonies", description: "Rituals with drumming, dancing, singing, and offerings to invite vodun presence. Each vodun has specific rhythms and colors.", frequency: "Regular/feast days" },
+      { name: "Fa Consultation", description: "Divination sessions with Bokonon priests to determine the will of spirits and receive life guidance.", frequency: "As needed" },
+      { name: "Offerings and Sacrifice", description: "Food, drink, and animal offerings to vodun and ancestors. The blood of sacrifice carries ashé (spiritual power).", frequency: "Regular" },
+      { name: "Zangbeto (Night Watchmen)", description: "Masked guardians that patrol villages at night, believed to house powerful spirits that protect the community.", frequency: "Ongoing" }
+    ],
+    rituals: [
+      { name: "Vodun National Day", description: "January 10 is official Vodun Day in Benin. Massive celebrations at Ouidah with devotees worldwide. Government-recognized holiday since 1996.", occasion: "January 10" },
+      { name: "Initiation (Vodunsi)", description: "Becoming a vodun initiate involves seclusion in a convent (vodunkpamè), learning sacred knowledge, receiving the vodun, and emerging reborn.", occasion: "Calling by spirits" },
+      { name: "Funeral Rites", description: "Elaborate ceremonies to ensure the deceased joins the ancestors properly. Improper burial creates wandering spirits.", occasion: "Death" }
+    ],
+    sacredTexts: [
+      { name: "Fa Corpus", description: "256 odus (signs) with associated myths, proverbs, and prescriptions. Memorized by Bokonon priests over years of training.", status: "oral" },
+      { name: "Vodun Songs and Chants", description: "Sacred songs for each vodun, encoding mythology and invoking their presence.", status: "oral" }
+    ],
+    joining: {
+      process: "One may be called by a vodun through dreams, illness, or divination. Initiation involves a period of seclusion (weeks to months), learning sacred knowledge, and receiving the vodun through ceremonies.",
+      requirements: [
+        "Called by a vodun (through signs/divination)",
+        "Acceptance by a vodun priest/priestess",
+        "Period of seclusion and training",
+        "Initiation ceremony",
+        "Ongoing service to the vodun"
+      ],
+      notes: "Vodun is the official religion of Benin. It influenced Haitian Vodou, Cuban Santería (via Yoruba), and Louisiana Voodoo. The Hollywood portrayal as 'black magic' is a harmful stereotype."
+    },
+    influence: {
+      cultural: "Vodun shaped the Kingdom of Dahomey's political and military systems. The Amazons of Dahomey were devoted to war vodun. Art and music are deeply connected to vodun practice.",
+      modern: "Benin recognized Vodun as an official religion in 1996. Vodun festivals attract global tourists. Vodun temples and practices are UNESCO-documented.",
+      diaspora: "Enslaved people brought Vodun to the Americas, creating Haitian Vodou, Cuban Regla de Ocha, Brazilian Candomblé, and New Orleans Voodoo."
+    },
+    tribesFollowing: [
+      { tribeSlug: "fon", tribeName: "Fon", percentage: 65, notes: "Vodun's historical center in Dahomey" },
+      { tribeSlug: "ewe", tribeName: "Ewe", percentage: 55, notes: "Strong vodun tradition" },
+      { tribeSlug: "mina", tribeName: "Mina", percentage: 50, notes: "Coastal vodun practitioners" },
+      { tribeSlug: "adja", tribeName: "Adja", percentage: 45, notes: "Related tradition" }
+    ],
+    sources: [
+      { name: "Wikipedia - West African Vodun", url: "https://en.wikipedia.org/wiki/West_African_Vodun" },
+      { name: "Britannica - Vodou", url: "https://www.britannica.com/topic/Vodou" },
+      { name: "UNESCO - Vodun Culture", url: "https://ich.unesco.org/en/RL/oral-heritage-of-gelede-00002" }
+    ]
+  },
+  {
+    id: "serer-religion",
+    name: "Serer Religion (A ƭat Roog)",
+    alternateNames: ["Roog worship", "A ƭat Roog", "Serer Traditional Religion"],
+    region: "West Africa",
+    estimatedFollowers: "~1.5 million",
+    youtubeVideoId: "pa-HNLxRzWc",
+    countryBreakdown: [
+      { country: "Senegal", flag: "🇸🇳", percentage: 85 },
+      { country: "Gambia", flag: "🇬🇲", percentage: 10 },
+      { country: "Mauritania", flag: "🇲🇷", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Roog (Roog Sene/Koox)",
+      description: "The supreme creator god, invisible and omnipotent. Roog created the universe, humanity, and all living things. Unlike intermediary spirits, Roog is approached directly through prayer. Roog is neither male nor female but the source of all.",
+      attributes: ["Supreme Creator", "Omnipotent", "Invisible", "Source of Justice"]
+    },
+    tenets: [
+      {
+        belief: "Pangool (Ancestral Spirits)",
+        description: "Pangool are ancestral spirits and saints who intercede between Roog and humans. They are venerated at shrines and sacred groves. Some pangool were historical figures who achieved sainthood.",
+        source: "Serer Religion - Wikipedia/Academic sources"
+      },
+      {
+        belief: "Jom (Honor/Dignity)",
+        description: "Central ethical concept meaning honor, dignity, and moral integrity. A person with Jom keeps promises, respects elders, and acts with courage. Loss of Jom brings shame.",
+        source: "The Serer People - Gravrand"
+      },
+      {
+        belief: "Sacredness of Nature",
+        description: "Trees, springs, and certain animals are sacred. The baobab tree is especially holy. Sacred forests (bosquets sacrés) are protected sanctuaries for pangool.",
+        source: "Serer Cosmogony - Gravrand"
+      },
+      {
+        belief: "Reincarnation (Ciiɗ)",
+        description: "The soul (fit) reincarnates within the family lineage. Naming ceremonies identify which ancestor has returned. The cycle continues until final union with Roog.",
+        source: "The Civilizations of Senegambia - Gravrand"
+      }
+    ],
+    practices: [
+      { name: "Xooy (Divination Ceremony)", description: "Annual gathering of Serer seers (Saltigué) who make prophecies for the coming year. Held in Fatick region. A major cultural event.", frequency: "Annual" },
+      { name: "Libation to Pangool", description: "Pouring millet beer or water at pangool shrines while reciting prayers. Done for blessings, healing, or thanks.", frequency: "Regular" },
+      { name: "Ndut (Initiation)", description: "Coming-of-age initiation for boys in sacred forests. Involves circumcision, teaching of sacred knowledge, and emergence as men.", frequency: "Adolescence" },
+      { name: "Sacred Wrestling", description: "Serer wrestling (Njom) has religious dimensions. Wrestlers are blessed by Saltigué and call on pangool for strength.", frequency: "Seasonal" }
+    ],
+    rituals: [
+      { name: "Funeral Rites", description: "Elaborate ceremonies lasting days. The deceased is prepared, mourned, and guided to join the pangool. Professional mourners and wrestlers participate.", occasion: "Death" },
+      { name: "Naming Ceremony (Ngénte)", description: "Seven days after birth, the child is named. A Saltigué divines which ancestor has reincarnated. Sacrifices and feasting follow.", occasion: "Birth + 7 days" },
+      { name: "Harvest Thanksgiving", description: "After harvest, first fruits are offered to Roog and pangool. Community feasting celebrates the earth's blessing.", occasion: "Post-harvest" }
+    ],
+    sacredTexts: [
+      { name: "Oral Traditions", description: "Creation myths, pangool histories, and ethical teachings passed through griots and Saltigué priests.", status: "oral" },
+      { name: "Proverbs and Songs", description: "Wisdom literature encoding Serer ethics and worldview. Sung at ceremonies and taught to youth.", status: "oral" }
+    ],
+    joining: {
+      process: "Serer religion is closely tied to Serer ethnicity and lineage. One is born into it through family. Initiation (Ndut) marks full membership. Some Saltigué are called through visions.",
+      requirements: [
+        "Serer birth or adoption into family",
+        "Completion of initiation (Ndut for males)",
+        "Knowledge of family pangool and taboos",
+        "Acceptance by elders and Saltigué"
+      ],
+      notes: "Many Serer are nominally Muslim or Christian but maintain traditional practices, especially for funerals, naming, and the Xooy ceremony. Serer presidents of Senegal (Senghor, Sall) have participated in traditional ceremonies."
+    },
+    influence: {
+      cultural: "Serer religion shaped the Serer kingdoms of Sine and Saloum. Serer wrestling is Senegal's national sport. Serer cosmology influenced Senegalese philosophy.",
+      modern: "The Xooy ceremony attracts national media attention. Serer sacred forests are conservation sites. Some educated Serer are reviving traditional practices."
+    },
+    tribesFollowing: [
+      { tribeSlug: "serer", tribeName: "Serer", percentage: 30, notes: "Many syncretic with Islam/Christianity" },
+      { tribeSlug: "niominka", tribeName: "Niominka (Serer)", percentage: 40, notes: "Island Serer with strong tradition" },
+      { tribeSlug: "ndut", tribeName: "Ndut", percentage: 35, notes: "Related group" }
+    ],
+    sources: [
+      { name: "Wikipedia - Serer religion", url: "https://en.wikipedia.org/wiki/Serer_religion" },
+      { name: "Henry Gravrand - Serer Studies", url: "https://en.wikipedia.org/wiki/Henry_Gravrand" },
+      { name: "Britannica - Serer people", url: "https://www.britannica.com/topic/Serer" }
+    ]
+  },
+  {
+    id: "bwiti-religion",
+    name: "Bwiti",
+    alternateNames: ["Bouiti", "Bwete", "Iboga tradition"],
+    region: "Central Africa",
+    estimatedFollowers: "~2 million",
+    youtubeVideoId: "W7RTY5o_2MM",
+    countryBreakdown: [
+      { country: "Gabon", flag: "🇬🇦", percentage: 70 },
+      { country: "Cameroon", flag: "🇨🇲", percentage: 15 },
+      { country: "Republic of Congo", flag: "🇨🇬", percentage: 10 },
+      { country: "Equatorial Guinea", flag: "🇬🇶", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Nzame (Nzambe)",
+      description: "The supreme creator god who made the universe and humanity. Nzame is the ultimate source but is accessed through iboga visions, ancestors, and the Bwiti spirits. In some branches, Bwiti itself is the personified divine force.",
+      attributes: ["Creator", "Source of Visions", "Cosmic Father", "Ultimate Truth"]
+    },
+    tenets: [
+      {
+        belief: "Iboga as Sacrament",
+        description: "The iboga plant (Tabernanthe iboga) is the central sacrament. Consuming iboga root bark induces visionary states allowing communication with ancestors and direct experience of spiritual truth. Iboga is considered the 'Tree of Knowledge.'",
+        source: "Bwiti: An Ethnography - Fernandez (1982)"
+      },
+      {
+        belief: "Ancestral Wisdom",
+        description: "Ancestors (bwiti) are the repository of wisdom. Through iboga visions, initiates meet ancestors who reveal life's purpose, heal traumas, and provide guidance. The dead are not gone but transformed.",
+        source: "The Iboga Experience - Goutarel"
+      },
+      {
+        belief: "Unity of All Life",
+        description: "Bwiti teaches the interconnection of all living things. The forest is sacred. Humans, animals, plants, and spirits form one community. Harming nature harms oneself.",
+        source: "Forest of Symbols - Turner"
+      },
+      {
+        belief: "Rebirth Through Initiation",
+        description: "Initiation is a symbolic death and rebirth. The initiate 'dies' under iboga's influence, meets the ancestors, and is 'reborn' with new knowledge and purpose.",
+        source: "Bwiti Initiation - Samorini"
+      }
+    ],
+    practices: [
+      { name: "Ngozé (Night Ceremonies)", description: "All-night ceremonies with iboga, dancing, singing, and torch-lit processions. The community supports those journeying on iboga.", frequency: "Regular/initiations" },
+      { name: "Sacred Music (Ngombi)", description: "The mouth bow (ngombi) produces hypnotic music central to Bwiti. Rhythms guide the visionary journey and invoke spirits.", frequency: "All ceremonies" },
+      { name: "Confession and Healing", description: "Initiates confess their lives under iboga, releasing traumas. The community witnesses and supports transformation.", frequency: "Initiations" },
+      { name: "Forest Medicines", description: "Bwiti includes extensive plant medicine knowledge beyond iboga. Healers (nganga) use dozens of plants for physical and spiritual ailments.", frequency: "Ongoing" }
+    ],
+    rituals: [
+      { name: "Initiation (Ndem)", description: "Multi-day ceremony where the initiate consumes large amounts of iboga, experiences visions, meets ancestors, and is reborn as a Bwiti member.", occasion: "Calling/readiness" },
+      { name: "Funeral Rites", description: "Bwiti funerals guide the deceased to the ancestors. Living family members may take iboga to communicate with the departing soul.", occasion: "Death" },
+      { name: "Annual Celebrations", description: "Communities gather annually for major ceremonies celebrating Bwiti, the forest, and communal bonds.", occasion: "Annual" }
+    ],
+    sacredTexts: [
+      { name: "Oral Traditions", description: "Creation myths, initiatic teachings, and sacred songs passed down through Bwiti lineages. Much is secret, revealed only to initiates.", status: "oral" },
+      { name: "Ngombi Songs", description: "Sacred songs accompanying ceremonies, encoding spiritual teachings and guiding the iboga journey.", status: "oral" }
+    ],
+    joining: {
+      process: "Initiation requires finding a Bwiti community willing to accept you. After preparation, the initiate undergoes an intense multi-day ceremony involving large doses of iboga, during which they experience visions and symbolic death/rebirth.",
+      requirements: [
+        "Sincere desire to learn and transform",
+        "Acceptance by a Bwiti community/nganga",
+        "Physical and psychological readiness",
+        "Completion of initiation ceremony",
+        "Ongoing participation in community"
+      ],
+      notes: "Bwiti was originally practiced by the Pygmy peoples (Babongo/Mitsogo) of Gabon. The Fang adopted it in the 19th century. Today there are many branches including syncretic Christian forms. Iboga is legal in Gabon but controlled elsewhere."
+    },
+    influence: {
+      cultural: "Bwiti is central to Gabonese national identity. President Omar Bongo was initiated. It preserved forest spirituality against colonialism.",
+      modern: "Ibogaine (from iboga) is studied globally for addiction treatment. Gabon declared iboga a national treasure. Eco-tourism connects to Bwiti.",
+      diaspora: "Bwiti practices are emerging in Europe and Americas, though controversial due to ibogaine's power and legal status."
+    },
+    tribesFollowing: [
+      { tribeSlug: "fang", tribeName: "Fang", percentage: 45, notes: "Major adopters in 19th century" },
+      { tribeSlug: "mitsogo", tribeName: "Mitsogo", percentage: 70, notes: "Original practitioners" },
+      { tribeSlug: "babongo", tribeName: "Babongo (Pygmies)", percentage: 65, notes: "Original forest tradition" },
+      { tribeSlug: "punu", tribeName: "Punu", percentage: 35, notes: "Some Bwiti lineages" }
+    ],
+    sources: [
+      { name: "Wikipedia - Bwiti", url: "https://en.wikipedia.org/wiki/Bwiti" },
+      { name: "Bwiti: An Ethnography - Fernandez", url: "https://www.jstor.org/stable/j.ctt32bnh4" },
+      { name: "Britannica - Iboga", url: "https://www.britannica.com/plant/iboga" }
     ]
   }
 ];
