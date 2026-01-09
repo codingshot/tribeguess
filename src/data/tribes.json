@@ -5900,6 +5900,31 @@
         "specialDishes": ["Fante Fante", "Aprapransa (palm nut soup with fufu)", "Oto (mashed yam)", "Abenkwan (palm soup)"],
         "description": "Fante cuisine is coastal and fish-heavy, with kenkey and fried fish being the signature dish of the Central Region."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast of kenkey or porridge, fish-based lunch, substantial family dinner",
+        "mainMealTime": "Evening dinner when fishermen return with fresh catch",
+        "eatingStyle": "Communal eating from shared bowls, hands preferred for kenkey with fish",
+        "genderRules": "Men eat together, women and children separately; fishermen receive largest portions",
+        "taboos": ["Pregnant women avoid certain sea fish", "Children don't eat crab (believed to make them walk sideways)", "Never refuse food from elders"],
+        "specialOccasions": "Fante Fante at festivals, palm wine for libations, oto (mashed yam) for naming ceremonies",
+        "hospitality": "Visitors always offered water first, then food - 'A stranger who stays becomes family'"
+      },
+      "tradeRelations": {
+        "historicalPartners": ["European traders (Portuguese, Dutch, British)", "Ashanti Empire", "Neighboring Akan states", "Trans-Atlantic slave trade networks"],
+        "tradedGoods": ["Gold", "Fish (smoked and dried)", "Salt", "Palm oil", "European manufactured goods", "Slaves (tragically)"],
+        "tradingPosts": ["Cape Coast Castle", "Elmina Castle", "Anomabu Fort", "Winneba"],
+        "modernTrade": "Fishing industry, salt production, tourism (castle heritage), education services",
+        "economicLegacy": "Early European contact created educated elite who became leaders in Gold Coast independence movement"
+      },
+      "independenceHistory": {
+        "colonialPower": "Britain (from 1874 Gold Coast Colony)",
+        "resistanceMovements": ["Fante Confederacy (1868-1873) - early attempt at self-governance", "UGCC leadership participation", "Cape Coast intelligentsia activism"],
+        "keyFigures": ["John Mensah Sarbah (lawyer, nationalist)", "George Ekem Ferguson (explorer, diplomat)", "James Hutton Brew (journalist, activist)"],
+        "independenceRole": "Cape Coast was intellectual center of Gold Coast nationalism; many independence leaders educated at Fante schools",
+        "significantEvents": ["Fante Confederacy constitution (1871) - Africa's first written constitution", "1948 Accra riots spread to Cape Coast", "Ghana independence 1957"],
+        "postIndependence": "Fante continue as educated elite in law, education, diplomacy; Cape Coast remains cultural and educational hub"
+      },
       "traditionalDance": "Adzewa and Asafo dances",
       "religion": "Christianity (Methodist, Catholic), Traditional beliefs",
       "traditionalReligion": {
@@ -6281,6 +6306,31 @@
         "specialDishes": ["Millet porridge", "Onion sauce", "Dried fish stews"],
         "description": "Dogon cuisine is based on millet and onions, grown on the escarpment terraces. Dolo (millet beer) is central to ceremonies."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Light morning meal before field work, substantial evening meal after sunset",
+        "mainMealTime": "Evening meal when family gathers after terrace farming",
+        "eatingStyle": "Men eat separately from women and children; food served in calabashes on low wooden stools",
+        "genderRules": "Hogon (spiritual leader) eats alone with special rituals; men served first; boys eat with fathers after initiation",
+        "taboos": ["Certain foods forbidden during mourning periods", "Hogon has strict dietary restrictions", "Eating with left hand forbidden", "Some clans have animal totem taboos"],
+        "specialOccasions": "Dolo beer essential at all ceremonies; special millet dishes during Dama and Sigui; masked dancers receive offerings",
+        "hospitality": "Visitors offered water and dolo immediately - 'A guest brings blessings from Amma'"
+      },
+      "tradeRelations": {
+        "historicalPartners": ["Trans-Saharan caravan traders", "Songhai Empire", "Fulani pastoralists", "Bambara kingdoms", "Mossi states"],
+        "tradedGoods": ["Onions (famous Dogon export)", "Millet", "Woven cloth", "Iron tools", "Wood carvings", "Salt (imported)", "Kola nuts"],
+        "tradingPosts": ["Bandiagara market", "Mopti crossroads", "Djenne (historic trade center)"],
+        "modernTrade": "Tourism (UNESCO heritage), onion farming, craft sales (masks, sculptures), cultural performances",
+        "economicLegacy": "Cliff location provided protection but limited trade; onion cultivation became regional specialty"
+      },
+      "independenceHistory": {
+        "colonialPower": "France (from 1893 French Sudan)",
+        "resistanceMovements": ["Passive resistance through geographic isolation", "Maintenance of traditional religion against French missionaries", "Preservation of secret knowledge"],
+        "keyFigures": ["Ogotemmêli (preserved oral traditions shared with Marcel Griaule)", "Local Hogons who maintained cultural continuity"],
+        "independenceRole": "Geographic isolation meant less direct colonial impact; focus on cultural preservation rather than armed resistance",
+        "significantEvents": ["French conquest of Mali (1890s)", "Marcel Griaule expeditions documented culture (1931-1956)", "Mali independence 1960", "UNESCO World Heritage status 1989"],
+        "postIndependence": "Tourism brings income but threatens traditions; ongoing conflict in northern Mali affects region; climate change impacts terrace farming"
+      },
       "traditionalDance": "Masked dances (Dama funeral rites, Sigui initiation)",
       "religion": "Traditional Dogon religion (Amma - creator god, Nommo water spirits), Islam, Christianity",
       "traditionalReligion": {
@@ -6354,6 +6404,31 @@
         "beverages": ["Water stored in ostrich eggs", "Plant juices"],
         "specialDishes": ["Roasted game", "Mongongo nut dishes", "Honey"],
         "description": "San hunter-gatherer diet varies seasonally with wild game, mongongo nuts, tubers, and over 100 edible plant species from the Kalahari."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": "Variable - eating when food available",
+        "mealPattern": "No fixed meals; eat when hunt successful or gathering yields food; sharing immediate",
+        "mainMealTime": "Evening around fire after day's foraging; meat roasted and shared immediately",
+        "eatingStyle": "Highly egalitarian - all food shared among band members regardless of who found it",
+        "genderRules": "No strict gender hierarchy in food access; women's gathered foods often more reliable than men's hunting; healers may receive first portions at ceremonies",
+        "taboos": ["First-kill rituals for young hunters - special rules about eating their first animal", "Certain foods avoided during pregnancy", "Eland meat has sacred significance - special sharing rules"],
+        "specialOccasions": "Meat from large kills triggers feast and healing dance; honey considered special delicacy; trance dances often coincide with successful hunts",
+        "hospitality": "Everything shared - 'demand sharing' means anyone can request food from anyone; refusing to share is worst social offense"
+      },
+      "tradeRelations": {
+        "historicalPartners": ["Khoikhoi pastoralists", "Bantu farmers (Tswana, Herero)", "Early European traders"],
+        "tradedGoods": ["Ostrich eggshell beads", "Animal skins", "Hunting services", "Honey", "Medicinal plants", "Received: tobacco, iron, beads, cattle"],
+        "tradingPosts": ["Seasonal camps at water sources", "Meeting points with pastoralist neighbors"],
+        "modernTrade": "Tourism (tracking guides, cultural tourism), craft sales (jewelry, art), land rights advocacy",
+        "economicLegacy": "Never had concept of land ownership; dispossession by farmers and governments devastated traditional economy"
+      },
+      "independenceHistory": {
+        "colonialPower": "Multiple (German in Namibia, British in Botswana, Dutch/British in South Africa)",
+        "resistanceMovements": ["Dispersed resistance through evasion and deep desert retreat", "Continued traditional practices despite persecution", "Modern land rights movements (First People of the Kalahari)"],
+        "keyFigures": ["Roy Sesana (founder, First People of the Kalahari)", "Nqakamang Saukobo (San rights activist)", "N!xau (actor in 'The Gods Must Be Crazy' - brought global attention)"],
+        "independenceRole": "Marginalized during both colonial era and post-independence by all governments; focus on survival rather than nationalism",
+        "significantEvents": ["Gradual displacement since 1500s", "Botswana CKGR relocations (1997-2006)", "2006 Botswana High Court land rights victory", "Ongoing struggles across all countries"],
+        "postIndependence": "Continue fighting for land rights; tourism provides some income but also exploitation; language and culture endangered; some communities in protected areas"
       },
       "traditionalDance": "Trance healing dance (medicine dance) with rhythmic clapping",
       "religion": "Traditional San spirituality (trance healing, ancestor spirits)",
@@ -6430,6 +6505,31 @@
         "beverages": ["Fermented sour milk", "Otjize (alcoholic)"],
         "specialDishes": ["Omaere (sour milk porridge)", "Roasted meat"],
         "description": "Himba diet centers on cattle products - sour milk is the staple, supplemented by maize and wild plants from the arid Kunene."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Sour milk morning and evening; solid food when available",
+        "mainMealTime": "Evening meal around the okuruwo (holy fire) with family",
+        "eatingStyle": "Family eats around fire; calabashes for milk; men may eat in separate group",
+        "genderRules": "Head of household oversees distribution; children and elderly served generously; guests receive best portions",
+        "taboos": ["Never let holy fire extinguish while eating", "Cattle from maternal line may have restrictions", "Certain foods forbidden during mourning", "Never eat facing away from fire"],
+        "specialOccasions": "Cattle slaughtered for important ceremonies (weddings, funerals); meat offered to ancestors through fire; special milk offerings",
+        "hospitality": "Visitors offered sour milk immediately - 'Cattle provide, we share'"
+      },
+      "tradeRelations": {
+        "historicalPartners": ["Herero relatives", "Ovambo traders", "Portuguese from Angola", "German colonizers"],
+        "tradedGoods": ["Cattle", "Goats", "Hides", "Ochre", "Jewelry", "Received: iron tools, beads, cloth, maize"],
+        "tradingPosts": ["Opuwo market", "Border trading with Angola", "Mobile trading with passing caravans"],
+        "modernTrade": "Tourism (cultural visits, photography), cattle sales, ochre trade, beadwork and jewelry",
+        "economicLegacy": "Cattle wealth remains primary; tourism income increasingly important but controversial"
+      },
+      "independenceHistory": {
+        "colonialPower": "Germany (1884-1915), then South Africa (until 1990)",
+        "resistanceMovements": ["Survived German-Herero genocide by fleeing to remote Kunene and Angola", "Maintained traditional practices through isolation", "Returned after German defeat"],
+        "keyFigures": ["Chief Vita Tom (resisted German cattle confiscation)", "Modern traditional leaders defending land rights"],
+        "independenceRole": "Remote location meant less direct conflict; focus on survival and cultural preservation; returned to Namibia after German genocide of Herero relatives",
+        "significantEvents": ["1904-1908 German genocide killed 80% of related Herero", "Himba survived by fleeing to Angola and remote areas", "Namibian independence 1990", "Ongoing struggles against Epupa Dam (would flood ancestral lands)"],
+        "postIndependence": "Continue semi-nomadic lifestyle; fight against development projects threatening lands; tourism brings income but also exploitation concerns; climate change affecting pastoral life"
       },
       "traditionalDance": "Traditional dances around the holy fire during ceremonies",
       "religion": "Traditional beliefs (Okuruwo holy fire, Mukuru ancestor god)",
