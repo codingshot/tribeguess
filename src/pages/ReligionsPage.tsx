@@ -9,9 +9,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users, BookOpen, ExternalLink, ChevronRight, Search, Filter, X, Scale } from "lucide-react";
+import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users, BookOpen, ExternalLink, ChevronRight, Search, Filter, X, Scale, BarChart3 } from "lucide-react";
 import { getAllReligions, TraditionalReligionData } from "@/data/traditionalReligions";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { ReligionStatsDashboard } from '@/components/ReligionStatsDashboard';
 
 interface TraditionalReligion {
   name: string;
@@ -228,8 +229,23 @@ export default function ReligionsPage() {
                   Compare Tool
                 </Button>
               </Link>
+              <Link to="/religion-timeline">
+                <Button variant="outline" className="gap-2">
+                  <BarChart3 className="w-4 h-4" />
+                  Timeline Map
+                </Button>
+              </Link>
             </div>
           </div>
+
+          {/* Statistics Dashboard */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <BarChart3 className="h-6 w-6 text-primary" />
+              Religion Statistics Dashboard
+            </h2>
+            <ReligionStatsDashboard />
+          </section>
 
           {/* Quick Compare Bar */}
           {compareSelection.length > 0 && (

@@ -1,16 +1,10 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { Shuffle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 import { recipes } from '@/data/recipes';
 
 export function Footer() {
-  const navigate = useNavigate();
-
-  const handleRandomRecipe = () => {
-    const randomIndex = Math.floor(Math.random() * recipes.length);
-    const randomRecipe = recipes[randomIndex];
-    navigate(`/recipe/${randomRecipe.id}`);
-  };
+  // Get a random recipe ID for the link
+  const randomRecipeId = recipes[Math.floor(Math.random() * recipes.length)]?.id;
 
   return (
     <footer className="border-t border-border bg-background/50">
@@ -42,6 +36,9 @@ export function Footer() {
               <Link to="/recipes" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Traditional Recipes
               </Link>
+              <Link to={`/recipe/${randomRecipeId}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Random Recipe
+              </Link>
               <Link to="/random" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Random Tribe
               </Link>
@@ -57,7 +54,7 @@ export function Footer() {
             </nav>
           </div>
           
-          {/* Popular Regions */}
+          {/* Regions */}
           <div>
             <h3 className="font-semibold text-foreground mb-3 text-sm">Regions</h3>
             <nav className="flex flex-col gap-2">
@@ -72,6 +69,18 @@ export function Footer() {
               </Link>
               <Link to="/learn?country=ZA" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 🇿🇦 South Africa
+              </Link>
+              <Link to="/learn?country=GH" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                🇬🇭 Ghana
+              </Link>
+              <Link to="/learn?country=TZ" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                🇹🇿 Tanzania
+              </Link>
+              <Link to="/learn?country=EG" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                🇪🇬 Egypt
+              </Link>
+              <Link to="/learn?country=MA" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                🇲🇦 Morocco
               </Link>
             </nav>
           </div>
@@ -88,17 +97,6 @@ export function Footer() {
               </Link>
             </nav>
           </div>
-        </div>
-        
-        {/* Random Recipe Button */}
-        <div className="mt-6 pt-6 border-t border-border">
-          <button
-            onClick={handleRandomRecipe}
-            className="w-full sm:w-auto mx-auto flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <Shuffle className="w-4 h-4" />
-            Discover a Random Recipe
-          </button>
         </div>
         
         <div className="mt-6 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
