@@ -25,11 +25,52 @@ export default function IngredientPage() {
     );
   }
 
+  // Generate JSON-LD structured data for SEO
+  const ingredientSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": `${ingredient.name} - Traditional African Ingredient`,
+    "description": ingredient.description,
+    "author": {
+      "@type": "Organization",
+      "name": "TribeGuess"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TribeGuess"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://tribeguess.com/ingredient/${ingredient.id}`
+    },
+    "keywords": `${ingredient.name}, African ingredients, ${ingredient.category}, traditional food, ${ingredient.localNames.map(ln => ln.name).join(', ')}`
+  };
+
+  const tribesUsingIngredient = ingredient.localNames.map(ln => ln.tribe).join(', ');
+
   return (
     <>
       <Helmet>
-        <title>{ingredient.name} - Traditional African Ingredient | TribeGuess</title>
-        <meta name="description" content={ingredient.description} />
+        <title>{ingredient.name} - Traditional African Ingredient | Health Benefits & Uses | TribeGuess</title>
+        <meta name="description" content={`${ingredient.description} Used by ${tribesUsingIngredient}. Learn about varieties, health benefits, and culinary uses of ${ingredient.name} in African cuisine.`} />
+        <meta name="keywords" content={`${ingredient.name}, African ingredient, ${ingredient.category}, traditional food, health benefits, ${ingredient.localNames.map(ln => ln.name).join(', ')}`} />
+        <link rel="canonical" href={`https://tribeguess.com/ingredient/${ingredient.id}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${ingredient.name} - African Ingredient Guide`} />
+        <meta property="og:description" content={ingredient.description} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://tribeguess.com/ingredient/${ingredient.id}`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`${ingredient.name} - African Ingredient`} />
+        <meta name="twitter:description" content={ingredient.description} />
+        
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(ingredientSchema)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen flex flex-col bg-background">
