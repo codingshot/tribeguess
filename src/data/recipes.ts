@@ -7132,10 +7132,360 @@ const eastAfricanRecipes: Recipe[] = [
   }
 ];
 
+// ============ SOUTHERN AFRICAN RECIPES ============
+const southernAfricanRecipes: Recipe[] = [
+  {
+    id: "braai",
+    name: "Braai (South African BBQ)",
+    tribeSlug: "afrikaner",
+    tribeName: "South African",
+    category: "special",
+    description: "More than just a barbecue - braai is South Africa's national pastime. Meat grilled over wood coals, bringing people together across all cultures.",
+    culturalSignificance: "Braai transcends race and class in South Africa. Heritage Day (September 24) is informally called 'National Braai Day.' The braai is where South Africans bond.",
+    historicalContext: "While grilling meat is ancient, South African braai culture developed from Dutch, British, and African traditions merging. The word 'braai' is Afrikaans. Every group has their style, but the social ritual is shared.",
+    youtubeVideoId: "3mQzv-Gc5SU",
+    prepTime: "30 minutes",
+    cookTime: "1-2 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Boerewors (farmer's sausage)", amount: "1 kg", notes: "Traditional beef sausage" },
+      { item: "Lamb chops", amount: "1 kg" },
+      { item: "Beef steaks", amount: "1 kg" },
+      { item: "Chicken pieces", amount: "1 kg", notes: "Marinated" },
+      { item: "Sosaties (kebabs)", amount: "8 skewers", notes: "Cape Malay style" },
+      { item: "Coarse salt", amount: "To taste" },
+      { item: "Wood or charcoal", amount: "As needed", notes: "Wood preferred" }
+    ],
+    instructions: [
+      "Build a wood fire and let it burn down to hot coals (1 hour).",
+      "Spread coals evenly under the grill.",
+      "Start with boerewors - cook slowly, turning once.",
+      "Add lamb chops - medium-high heat for pink inside.",
+      "Grill steaks to preference - don't press them!",
+      "Add sosaties and chicken - ensure chicken is cooked through.",
+      "Season with salt only - let the meat shine.",
+      "Serve with pap, chakalaka, and braaibroodjies."
+    ],
+    tips: [
+      "Wood (especially sekelbos or rooikrans) is preferred over charcoal",
+      "Never flip meat more than once",
+      "The braaimaster controls the fire - don't interfere!"
+    ],
+    variations: [
+      "Shisa nyama - township braai style with mielie pap",
+      "Potjiekos - stew cooked over braai coals"
+    ]
+  },
+  {
+    id: "bobotie",
+    name: "Bobotie",
+    tribeSlug: "cape-malay",
+    tribeName: "Cape Malay",
+    category: "special",
+    description: "South Africa's national dish - spiced minced meat with an egg custard topping. A Cape Malay masterpiece combining Indonesian, Dutch, and African influences.",
+    culturalSignificance: "Bobotie represents South Africa's multicultural heritage. It's comfort food served at family gatherings and has become a symbol of the 'rainbow nation' cuisine.",
+    historicalContext: "Brought to the Cape by Indonesian slaves and political exiles in the 17th century, bobotie evolved by combining Malay spices with Dutch techniques. The name may come from 'botok' (Indonesian steamed meat dish).",
+    youtubeVideoId: "Sz9RY_MoH2c",
+    prepTime: "20 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef or lamb mince", amount: "1 kg" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Bread", amount: "2 slices", notes: "Soaked in milk" },
+      { item: "Eggs", amount: "3", notes: "2 for topping, 1 mixed in" },
+      { item: "Milk", amount: "1 cup" },
+      { item: "Curry powder", amount: "2 tablespoons" },
+      { item: "Turmeric", amount: "1 teaspoon" },
+      { item: "Apricot jam", amount: "2 tablespoons" },
+      { item: "Raisins", amount: "1/4 cup" },
+      { item: "Bay leaves", amount: "3-4" },
+      { item: "Almonds", amount: "2 tablespoons", notes: "Slivered" }
+    ],
+    instructions: [
+      "Sauté onions until golden.",
+      "Add mince and brown well.",
+      "Add curry powder, turmeric, and cook 2 minutes.",
+      "Squeeze milk from bread, add bread to meat.",
+      "Stir in jam, raisins, and one beaten egg.",
+      "Season with salt and pepper.",
+      "Transfer to baking dish, press bay leaves on top.",
+      "Beat remaining eggs with milk, pour over meat.",
+      "Sprinkle with almonds.",
+      "Bake at 180°C for 35-40 minutes until topping is set and golden.",
+      "Serve with yellow rice and chutney."
+    ],
+    tips: [
+      "The sweet-savory balance is key - don't skip the jam and raisins",
+      "Soaked bread gives the characteristic soft texture",
+      "The custard should be just set, not overcooked"
+    ]
+  },
+  {
+    id: "pap-en-sheba",
+    name: "Pap en Sous (Pap and Tomato Sauce)",
+    tribeSlug: "zulu",
+    tribeName: "Zulu/South African",
+    category: "staple",
+    description: "South Africa's most common staple - stiff maize porridge served with tomato and onion sauce. The everyday food of millions.",
+    culturalSignificance: "Pap (also called mielie pap) is the staple starch for all South African black communities. 'Pap en vleis' (pap and meat) is the classic braai side.",
+    historicalContext: "Maize came to Africa from the Americas in the 16th century. It quickly became the dominant crop, displacing indigenous grains. Pap preparation methods vary by region and community.",
+    youtubeVideoId: "Y0FvV8yHHVE",
+    prepTime: "5 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Maize meal (mealie meal)", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Butter", amount: "2 tablespoons", notes: "Optional" }
+    ],
+    instructions: [
+      "Bring water and salt to boil in a heavy pot.",
+      "Reduce heat to medium. Slowly pour in maize meal, stirring constantly.",
+      "Stir vigorously to prevent lumps.",
+      "Reduce heat to low, cover, and cook 20-25 minutes.",
+      "Stir every 5 minutes to prevent sticking.",
+      "Pap should be stiff enough to shape. Add more water if too thick.",
+      "Stir in butter if using.",
+      "Serve with chakalaka, tomato gravy, or meat."
+    ],
+    tips: [
+      "Krummelpap (crumbly) is drier; stywe pap (stiff) is firmer",
+      "Slap pap (soft) is porridge consistency for breakfast",
+      "The pot will stick - soak immediately after cooking"
+    ],
+    variations: [
+      "Krummelpap - crumbly, for braai",
+      "Stywe pap - stiff, for shaping",
+      "Slap pap - soft, for breakfast"
+    ]
+  },
+  {
+    id: "chakalaka",
+    name: "Chakalaka",
+    tribeSlug: "zulu",
+    tribeName: "South African",
+    category: "staple",
+    description: "Spicy vegetable relish originating from township cooking. Essential braai and pap accompaniment.",
+    culturalSignificance: "Chakalaka emerged from gold mine hostels and townships. It's now beloved nationwide as the perfect spicy side for pap and braai.",
+    historicalContext: "Created by mine workers who combined available vegetables with spices. Each family and region has its own recipe. The name possibly comes from a Zulu or Tsonga word.",
+    youtubeVideoId: "Tq-KV7s0VvA",
+    prepTime: "15 minutes",
+    cookTime: "25 minutes",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Green peppers", amount: "2", notes: "Diced" },
+      { item: "Carrots", amount: "3", notes: "Grated" },
+      { item: "Baked beans", amount: "1 can (410g)" },
+      { item: "Tomatoes", amount: "4", notes: "Chopped" },
+      { item: "Curry powder", amount: "2 tablespoons" },
+      { item: "Fresh chilies", amount: "2-3", notes: "Chopped" },
+      { item: "Vegetable oil", amount: "3 tablespoons" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Heat oil and sauté onions until soft.",
+      "Add peppers and cook 5 minutes.",
+      "Add curry powder and chilies, fry 2 minutes.",
+      "Add grated carrots and cook 5 minutes.",
+      "Add tomatoes and simmer until soft.",
+      "Stir in baked beans.",
+      "Simmer 10 minutes until thick and well combined.",
+      "Season with salt and pepper.",
+      "Serve hot or at room temperature with pap and braai."
+    ],
+    tips: [
+      "Can be made a day ahead - flavors improve",
+      "Adjust chilies to taste - it should have kick",
+      "Some add cabbage for extra bulk"
+    ]
+  },
+  {
+    id: "bunny-chow",
+    name: "Bunny Chow",
+    tribeSlug: "indian-sa",
+    tribeName: "South African Indian",
+    category: "special",
+    description: "A hollowed-out bread loaf filled with curry. Durban's famous street food with Indian origins.",
+    culturalSignificance: "Invented by Durban's Indian community, bunny chow is now loved by all South Africans. It's portable, filling, and perfectly combines Indian curry with bread.",
+    historicalContext: "Created in Durban in the 1940s, possibly to serve curry to workers who couldn't use plates. 'Bunny' may come from 'bania' (Indian merchant caste). It became iconic street food.",
+    youtubeVideoId: "U8E8Y8XPVAU",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Bread loaves", amount: "4 small", notes: "Unsliced white bread" },
+      { item: "Lamb or chicken", amount: "750g", notes: "Cubed" },
+      { item: "Onions", amount: "2 large" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Curry powder", amount: "3 tablespoons" },
+      { item: "Masala", amount: "1 tablespoon" },
+      { item: "Ginger-garlic paste", amount: "2 tablespoons" },
+      { item: "Potatoes", amount: "2", notes: "Cubed" },
+      { item: "Fresh coriander", amount: "For garnish" },
+      { item: "Oil", amount: "4 tablespoons" }
+    ],
+    instructions: [
+      "Make curry: Fry onions until golden.",
+      "Add ginger-garlic paste, fry 2 minutes.",
+      "Add curry powder and masala, fry until fragrant.",
+      "Add meat and brown on all sides.",
+      "Add tomatoes and enough water to cover.",
+      "Simmer 45 minutes until meat is tender.",
+      "Add potatoes, cook until soft.",
+      "Cut top off bread loaves, hollow out the center.",
+      "Fill with hot curry.",
+      "Top with the bread 'lid' and serve immediately."
+    ],
+    tips: [
+      "The curry should be thick enough not to make bread soggy",
+      "Eat by tearing bread and scooping curry",
+      "Quarter bunny is most popular size"
+    ]
+  },
+  {
+    id: "malva-pudding",
+    name: "Malva Pudding",
+    tribeSlug: "afrikaner",
+    tribeName: "Afrikaner/South African",
+    category: "special",
+    description: "A sweet, spongy baked dessert soaked in cream sauce. South Africa's most beloved dessert.",
+    culturalSignificance: "Malva pudding is the quintessential South African dessert. Served at every special occasion, from Sunday lunch to weddings. It represents Afrikaner home cooking at its best.",
+    historicalContext: "Of Cape Dutch origin, the name may come from the Afrikaans word 'malvalekker' (mallow plant) or from the Malmsey wine sometimes used. Every South African grandmother has her own recipe.",
+    youtubeVideoId: "lBZnL1fSz54",
+    prepTime: "15 minutes",
+    cookTime: "45 minutes",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Sugar", amount: "1 cup" },
+      { item: "Eggs", amount: "2" },
+      { item: "Apricot jam", amount: "2 tablespoons" },
+      { item: "Flour", amount: "1.5 cups" },
+      { item: "Baking soda", amount: "1 teaspoon" },
+      { item: "Salt", amount: "Pinch" },
+      { item: "Butter", amount: "1 tablespoon", notes: "Melted" },
+      { item: "Milk", amount: "1 cup" },
+      { item: "Vinegar", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Beat sugar and eggs until fluffy.",
+      "Add jam and mix well.",
+      "Sift flour, baking soda, and salt together.",
+      "Add melted butter to milk, then add vinegar.",
+      "Alternately add dry ingredients and milk mixture to egg mixture.",
+      "Pour into greased baking dish.",
+      "Bake at 180°C for 45 minutes until golden.",
+      "Make sauce: Heat 1 cup cream, 100g butter, 1 cup sugar until dissolved.",
+      "Pour hot sauce over hot pudding immediately after baking.",
+      "Let soak 10 minutes. Serve with custard or cream."
+    ],
+    tips: [
+      "The sauce must be poured while both pudding and sauce are hot",
+      "It should be spongy and soaked through",
+      "Serve with vanilla custard for authentic experience"
+    ]
+  },
+  {
+    id: "biltong",
+    name: "Biltong",
+    tribeSlug: "afrikaner",
+    tribeName: "South African",
+    category: "snack",
+    description: "Air-dried, cured meat - South Africa's answer to jerky, but softer and more flavorful. A national obsession.",
+    culturalSignificance: "Biltong is South Africa's favorite snack. Found everywhere from supermarkets to sports stadiums. Making biltong at home is a cherished tradition.",
+    historicalContext: "Dutch settlers (Voortrekkers) needed to preserve meat for their Great Trek inland. They adapted indigenous curing techniques with vinegar and spices. The tradition continues.",
+    youtubeVideoId: "oaYjgxBD4fI",
+    prepTime: "30 minutes",
+    cookTime: "5-7 days (drying)",
+    servings: 20,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef (silverside or topside)", amount: "2 kg", notes: "Cut into 2-3cm thick strips" },
+      { item: "Brown vinegar", amount: "1 cup" },
+      { item: "Coarse salt", amount: "1/4 cup" },
+      { item: "Coriander seeds", amount: "3 tablespoons", notes: "Roasted and crushed" },
+      { item: "Black pepper", amount: "2 tablespoons", notes: "Coarsely ground" },
+      { item: "Brown sugar", amount: "2 tablespoons" },
+      { item: "Bicarbonate of soda", amount: "1 teaspoon", notes: "Optional, for tenderness" }
+    ],
+    instructions: [
+      "Cut beef into long strips following the grain.",
+      "Mix salt, pepper, coriander, sugar, and bicarb.",
+      "Splash vinegar over meat in a glass dish.",
+      "Sprinkle spice mixture generously over all surfaces.",
+      "Cover and refrigerate 12-24 hours, turning once.",
+      "Remove meat, pat dry with paper towels.",
+      "Hang strips in a cool, dry, ventilated place.",
+      "Use a fan for air circulation if needed.",
+      "Dry for 5-7 days depending on desired texture.",
+      "Slice thinly across the grain to serve."
+    ],
+    tips: [
+      "Fat adds flavor but can go rancid - trim excess",
+      "Good airflow is essential to prevent mold",
+      "Wet biltong (3-4 days) is softer; dry biltong (7+ days) is firmer"
+    ]
+  },
+  {
+    id: "koeksisters",
+    name: "Koeksisters",
+    tribeSlug: "afrikaner",
+    tribeName: "Afrikaner",
+    category: "snack",
+    description: "Braided dough deep-fried and soaked in cold syrup. Sticky, sweet, and addictively crispy.",
+    culturalSignificance: "Koeksisters are the Afrikaner contribution to South African sweets. Sunday markets and church fundraisers are incomplete without them.",
+    historicalContext: "Adapted from the Dutch 'koeksister.' The Cape Malay version (koesister) is different - spiced and coated in coconut. The Afrikaner version is braided and syrup-soaked.",
+    youtubeVideoId: "Jj8pCnAVWYg",
+    prepTime: "2 hours (including resting)",
+    cookTime: "30 minutes",
+    servings: 24,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Flour", amount: "4 cups" },
+      { item: "Baking powder", amount: "4 teaspoons" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Butter", amount: "50g", notes: "Cold, cubed" },
+      { item: "Eggs", amount: "2" },
+      { item: "Milk", amount: "1 cup" },
+      { item: "Sugar", amount: "4 cups", notes: "For syrup" },
+      { item: "Water", amount: "2 cups", notes: "For syrup" },
+      { item: "Cream of tartar", amount: "1/2 teaspoon" },
+      { item: "Ginger", amount: "1 teaspoon", notes: "Ground" },
+      { item: "Oil for frying", amount: "As needed" }
+    ],
+    instructions: [
+      "Make syrup: Boil sugar, water, cream of tartar, and ginger. Chill thoroughly.",
+      "Mix flour, baking powder, and salt. Rub in butter.",
+      "Beat eggs with milk, add to flour mixture.",
+      "Knead into smooth dough. Rest 2 hours in fridge.",
+      "Roll dough 5mm thick. Cut into rectangles.",
+      "Cut each rectangle into 3 strips, leaving one end joined.",
+      "Braid tightly, pinching ends.",
+      "Heat oil to 180°C. Fry koeksisters until deep golden.",
+      "Immediately dip hot koeksisters into ice-cold syrup for 1 minute.",
+      "Drain on rack. Eat fresh - they're best same day."
+    ],
+    tips: [
+      "The syrup MUST be ice-cold and the koeksisters piping hot",
+      "This temperature difference creates the crispy, sticky texture",
+      "Work in batches to keep syrup cold"
+    ]
+  }
+];
+
 // Combine all recipes
 recipes.push(...beverageRecipes);
 recipes.push(...centralAfricanRecipes);
 recipes.push(...eastAfricanRecipes);
+recipes.push(...southernAfricanRecipes);
 
 // Get similar recipes from other tribes (same category)
 export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {
