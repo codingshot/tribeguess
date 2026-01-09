@@ -41,6 +41,27 @@
       "description": "Explore traditional beliefs and religious practices",
       "icon": "Moon",
       "color": "from-indigo-500 to-violet-600"
+    },
+    {
+      "id": "famous-africans",
+      "name": "Famous Africans",
+      "description": "Learn about notable historical and modern African figures",
+      "icon": "Star",
+      "color": "from-yellow-500 to-amber-600"
+    },
+    {
+      "id": "colonial-history",
+      "name": "Colonial & Independence History",
+      "description": "Explore Africa's resistance movements and path to independence",
+      "icon": "BookOpen",
+      "color": "from-slate-500 to-gray-700"
+    },
+    {
+      "id": "music-dance",
+      "name": "Music & Dance",
+      "description": "Discover African musical traditions, instruments, and dances",
+      "icon": "Music",
+      "color": "from-pink-500 to-rose-600"
     }
   ],
   "quizzes": [
@@ -391,6 +412,201 @@
           "explanation": "The Ndebele of South Africa are famous for their striking geometric house paintings and colorful beadwork."
         }
       ]
+    },
+    {
+      "id": "famous-africans-quiz",
+      "categoryId": "famous-africans",
+      "title": "Notable African Leaders & Icons",
+      "difficulty": "medium",
+      "timeLimit": 180,
+      "questions": [
+        {
+          "id": "fa1",
+          "question": "Which tribe did Nelson Mandela belong to?",
+          "options": ["Zulu", "Xhosa", "Sotho", "Ndebele"],
+          "correctAnswer": 1,
+          "explanation": "Nelson Mandela was a Xhosa, born into the Thembu royal family. His clan name was Madiba, now used as a respectful term for him."
+        },
+        {
+          "id": "fa2",
+          "question": "Wangari Maathai, Africa's first female Nobel Peace Prize winner (2004), was from which tribe?",
+          "options": ["Luo", "Kikuyu", "Maasai", "Kamba"],
+          "correctAnswer": 1,
+          "explanation": "Wangari Maathai was a Kikuyu environmentalist who founded the Green Belt Movement and planted over 51 million trees across Africa."
+        },
+        {
+          "id": "fa3",
+          "question": "Fela Kuti, the pioneer of Afrobeat music, belonged to which Nigerian ethnic group?",
+          "options": ["Hausa", "Igbo", "Yoruba", "Fulani"],
+          "correctAnswer": 2,
+          "explanation": "Fela Kuti was Yoruba and created Afrobeat, blending jazz, funk, and traditional Yoruba rhythms with political activism."
+        },
+        {
+          "id": "fa4",
+          "question": "Which Ethiopian emperor claimed descent from King Solomon and the Queen of Sheba?",
+          "options": ["Menelik I", "Haile Selassie", "Tewodros II", "Yohannes IV"],
+          "correctAnswer": 1,
+          "explanation": "Haile Selassie (1892-1975) claimed descent from the Solomonic dynasty. He became a messianic figure for the Rastafari movement."
+        },
+        {
+          "id": "fa5",
+          "question": "Olympic champion Eliud Kipchoge, who broke the 2-hour marathon barrier, is from which Kenyan tribe?",
+          "options": ["Kikuyu", "Maasai", "Kalenjin", "Luo"],
+          "correctAnswer": 2,
+          "explanation": "Eliud Kipchoge is Kalenjin (specifically Nandi). The Kalenjin people have produced a disproportionate number of world-class distance runners."
+        },
+        {
+          "id": "fa6",
+          "question": "Miriam Makeba, known as 'Mama Africa', was from which South African ethnic group?",
+          "options": ["Zulu", "Xhosa", "Sotho", "Tswana"],
+          "correctAnswer": 1,
+          "explanation": "Miriam Makeba was Xhosa. Her song 'Pata Pata' became a global hit, and she spent decades in exile fighting apartheid through music."
+        },
+        {
+          "id": "fa7",
+          "question": "Shaka Zulu, who transformed the Zulu into a military power, lived in which century?",
+          "options": ["17th century", "18th century", "19th century", "20th century"],
+          "correctAnswer": 2,
+          "explanation": "Shaka Zulu (c. 1787-1828) revolutionized warfare in Southern Africa, creating a Zulu empire that dominated the region until British colonization."
+        },
+        {
+          "id": "fa8",
+          "question": "Which Somali-British athlete won four Olympic gold medals in long-distance running?",
+          "options": ["Abdi Bile", "Mo Farah", "Abdihakim Abdirahman", "Hassan Mead"],
+          "correctAnswer": 1,
+          "explanation": "Mo Farah (Sir Mohamed Muktar Jama Farah) is Somali-British and won gold in 5000m and 10000m at both London 2012 and Rio 2016 Olympics."
+        }
+      ]
+    },
+    {
+      "id": "colonial-history-quiz",
+      "categoryId": "colonial-history",
+      "title": "Resistance & Independence",
+      "difficulty": "hard",
+      "timeLimit": 200,
+      "questions": [
+        {
+          "id": "ch1",
+          "question": "The Mau Mau uprising (1952-1960) was a rebellion against which colonial power?",
+          "options": ["France", "Britain", "Portugal", "Germany"],
+          "correctAnswer": 1,
+          "explanation": "The Mau Mau uprising was fought primarily by Kikuyu fighters against British colonial rule in Kenya. It was a major catalyst for Kenyan independence in 1963."
+        },
+        {
+          "id": "ch2",
+          "question": "Which African country was NEVER colonized by a European power?",
+          "options": ["Liberia", "Ethiopia", "Ghana", "Egypt"],
+          "correctAnswer": 1,
+          "explanation": "Ethiopia successfully resisted colonization, defeating Italy at the Battle of Adwa in 1896. Liberia was founded by freed American slaves but was never fully independent of US influence."
+        },
+        {
+          "id": "ch3",
+          "question": "The Berlin Conference of 1884-85, which divided Africa among European powers, was held in which country?",
+          "options": ["France", "Britain", "Germany", "Belgium"],
+          "correctAnswer": 2,
+          "explanation": "The Berlin Conference was hosted by German Chancellor Otto von Bismarck. It formalized the 'Scramble for Africa' without any African representation."
+        },
+        {
+          "id": "ch4",
+          "question": "Mohammed Abdullah Hassan ('Mad Mullah') led a 20-year resistance against colonizers in which region?",
+          "options": ["Nigeria", "Somalia", "Sudan", "Algeria"],
+          "correctAnswer": 1,
+          "explanation": "Mohammed Abdullah Hassan led Somali resistance against British, Italian, and Ethiopian forces from 1899-1920 using guerrilla tactics and religious poetry."
+        },
+        {
+          "id": "ch5",
+          "question": "The Zulu defeated the British at which famous 1879 battle?",
+          "options": ["Battle of Omdurman", "Battle of Isandlwana", "Battle of Adwa", "Battle of Tamai"],
+          "correctAnswer": 1,
+          "explanation": "At Isandlwana on January 22, 1879, the Zulu army overwhelmed and destroyed a British column of over 1,300 soldiers—one of Britain's worst colonial defeats."
+        },
+        {
+          "id": "ch6",
+          "question": "Which resistance leader was hanged by the Germans in 1914 and is now a Cameroonian national hero?",
+          "options": ["Samori Ture", "Rudolf Duala Manga Bell", "Jomo Kenyatta", "Dedan Kimathi"],
+          "correctAnswer": 1,
+          "explanation": "Rudolf Duala Manga Bell, a Douala king, was executed for resisting German land expropriation. He is commemorated on Cameroonian currency."
+        },
+        {
+          "id": "ch7",
+          "question": "The apartheid system in South Africa officially ended in which year?",
+          "options": ["1990", "1991", "1993", "1994"],
+          "correctAnswer": 3,
+          "explanation": "Apartheid officially ended in 1994 with South Africa's first democratic elections, won by Nelson Mandela and the ANC."
+        },
+        {
+          "id": "ch8",
+          "question": "Samori Ture resisted French colonization for nearly 20 years in which region?",
+          "options": ["West Africa", "Central Africa", "East Africa", "North Africa"],
+          "correctAnswer": 0,
+          "explanation": "Samori Ture built the Wassoulou Empire in West Africa (modern Guinea, Mali, Ivory Coast) and fought the French from 1882-1898 using a scorched-earth strategy."
+        }
+      ]
+    },
+    {
+      "id": "music-dance-quiz",
+      "categoryId": "music-dance",
+      "title": "African Music & Dance",
+      "difficulty": "medium",
+      "timeLimit": 180,
+      "questions": [
+        {
+          "id": "md1",
+          "question": "Which Nigerian musician is credited with creating Afrobeat?",
+          "options": ["King Sunny Ade", "Fela Kuti", "Burna Boy", "Wizkid"],
+          "correctAnswer": 1,
+          "explanation": "Fela Kuti created Afrobeat in the late 1960s, blending jazz, funk, highlife, and traditional Yoruba music with political lyrics."
+        },
+        {
+          "id": "md2",
+          "question": "The 'Adumu' or jumping dance is performed by warriors of which tribe?",
+          "options": ["Zulu", "Maasai", "Samburu", "Turkana"],
+          "correctAnswer": 1,
+          "explanation": "The Maasai Adumu (jumping dance) is performed by morani (warriors) to demonstrate strength and attract potential brides. The highest jumper gains prestige."
+        },
+        {
+          "id": "md3",
+          "question": "The kora, a 21-string instrument, is associated with which West African people?",
+          "options": ["Yoruba", "Hausa", "Mandinka", "Igbo"],
+          "correctAnswer": 2,
+          "explanation": "The kora is the instrument of the Mandinka griots (storytellers). It has been called 'the African harp' and dates back to the Mali Empire."
+        },
+        {
+          "id": "md4",
+          "question": "Highlife music originated in which country?",
+          "options": ["Nigeria", "Ghana", "Senegal", "South Africa"],
+          "correctAnswer": 1,
+          "explanation": "Highlife originated in Ghana in the early 20th century, blending traditional Akan music with Western instruments. It spread across West Africa."
+        },
+        {
+          "id": "md5",
+          "question": "The mbira (thumb piano) is the national instrument of which country?",
+          "options": ["Kenya", "Nigeria", "Zimbabwe", "South Africa"],
+          "correctAnswer": 2,
+          "explanation": "The mbira is sacred to the Shona people of Zimbabwe, used in bira ceremonies to communicate with ancestral spirits."
+        },
+        {
+          "id": "md6",
+          "question": "Which South African genre combines house music with Zulu rhythms?",
+          "options": ["Kwaito", "Gqom", "Amapiano", "All of the above"],
+          "correctAnswer": 3,
+          "explanation": "Kwaito, Gqom, and Amapiano all blend electronic music with traditional South African sounds. Amapiano has recently gained global popularity."
+        },
+        {
+          "id": "md7",
+          "question": "The 'Isicathamiya' a cappella style was made famous by which group?",
+          "options": ["Mahotella Queens", "Ladysmith Black Mambazo", "Soul Brothers", "Stimela"],
+          "correctAnswer": 1,
+          "explanation": "Ladysmith Black Mambazo brought Isicathamiya (tip-toe dancing/singing) to global audiences. This Zulu tradition developed in the gold mines."
+        },
+        {
+          "id": "md8",
+          "question": "Tuareg blues/desert blues music features which instrument prominently?",
+          "options": ["Djembe drum", "Electric guitar", "Balafon", "Talking drum"],
+          "correctAnswer": 1,
+          "explanation": "Tuareg blues (bands like Tinariwen, Bombino) feature electric guitars with traditional melodies. It emerged from Tuareg rebellion camps in the 1980s."
+        }
+      ]
     }
   ],
   "achievements": [
@@ -420,7 +636,7 @@
       "name": "Well-Rounded",
       "description": "Complete a quiz in every category",
       "icon": "Trophy",
-      "requirement": { "type": "categories_completed", "count": 6 }
+      "requirement": { "type": "categories_completed", "count": 9 }
     },
     {
       "id": "streak-3",

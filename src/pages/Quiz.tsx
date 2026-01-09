@@ -11,14 +11,14 @@ import {
   Users, Sparkles, ChefHat, MapPin, Languages, Moon, 
   Trophy, Star, BookOpen, Flame, Zap, Timer, Award,
   Play, ArrowRight, RotateCcw, Check, X, Clock, Target,
-  ChevronLeft, ChevronRight, Shuffle, Brain
+  ChevronLeft, ChevronRight, Shuffle, Brain, Music
 } from 'lucide-react';
 import { useQuizResults, QuizResult } from '@/hooks/useQuizResults';
 import quizData from '@/data/quizzes.json';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Users, Sparkles, ChefHat, MapPin, Languages, Moon, Trophy, Star, 
-  BookOpen, Flame, Zap, Timer, Award
+  BookOpen, Flame, Zap, Timer, Award, Music
 };
 
 interface Question {
