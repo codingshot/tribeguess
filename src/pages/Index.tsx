@@ -118,6 +118,22 @@ const Index = () => {
         {!results ?
       // Landing view
       <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in">
+            {/* Glowing Tribe animation styles */}
+            <style>{`
+              @keyframes glowPulse {
+                0%, 100% { 
+                  text-shadow: 0 0 10px hsl(38 92% 50% / 0.5), 0 0 20px hsl(38 92% 50% / 0.3), 0 0 30px hsl(38 92% 50% / 0.2);
+                  filter: brightness(1);
+                }
+                50% { 
+                  text-shadow: 0 0 20px hsl(38 92% 50% / 0.8), 0 0 40px hsl(38 92% 50% / 0.5), 0 0 60px hsl(38 92% 50% / 0.3);
+                  filter: brightness(1.2);
+                }
+              }
+              .glow-tribe {
+                animation: glowPulse 2s ease-in-out infinite;
+              }
+            `}</style>
             <div className="mb-6 sm:mb-8">
               {/* Hero with orbiting flags - all supported countries */}
               <div className="relative inline-block">
@@ -139,7 +155,7 @@ const Index = () => {
                 <img src={logo} alt="TribeGuess - Tribe Guesser Logo" className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle" width={128} height={128} />
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
-                Guess Her <span className="gradient-gold-text">Tribe</span>
+                Guess Her <span className="gradient-gold-text glow-tribe">Tribe</span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto px-2">
                 Enter a name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.

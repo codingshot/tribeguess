@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Shuffle, Search, BookOpen, FileText, Flame } from 'lucide-react';
+import { Shuffle, Search, BookOpen, FileText } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import { getAllTribes } from '@/lib/tribeDetection';
 
@@ -23,33 +23,6 @@ export function Header() {
   
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <style>{`
-        @keyframes fireFlicker {
-          0%, 100% { 
-            text-shadow: 0 0 4px #ff6b00, 0 0 8px #ff4500, 0 0 12px #ff0000;
-            transform: scale(1);
-          }
-          25% { 
-            text-shadow: 0 0 6px #ff8c00, 0 0 12px #ff6b00, 0 0 18px #ff4500;
-            transform: scale(1.02);
-          }
-          50% { 
-            text-shadow: 0 0 8px #ffa500, 0 0 16px #ff8c00, 0 0 24px #ff6b00;
-            transform: scale(1.04);
-          }
-          75% { 
-            text-shadow: 0 0 6px #ff8c00, 0 0 12px #ff6b00, 0 0 18px #ff4500;
-            transform: scale(1.02);
-          }
-        }
-        .fire-text {
-          animation: fireFlicker 1.5s ease-in-out infinite;
-          background: linear-gradient(180deg, #fff5e6 0%, #ffd700 25%, #ff8c00 50%, #ff4500 75%, #ff0000 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-      `}</style>
       <div className="container mx-auto px-4 py-2.5 sm:py-3">
         <nav className="flex items-center justify-between" aria-label="Main navigation">
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group" aria-label="TribeGuess home">
@@ -109,9 +82,7 @@ export function Header() {
               title="Discover a random tribe"
             >
               <Shuffle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              <span className="hidden xs:inline">Random</span>
-              <span className="fire-text font-bold">Tribe</span>
-              <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-200 animate-pulse" />
+              <span>Random Tribe</span>
             </button>
           </div>
         </nav>
