@@ -899,6 +899,76 @@ export default function ReligionTimeline() {
     ];
   }, []);
 
+  // Bantu Migration routes with animated timeline
+  const bantuMigrationRoutes = useMemo(() => {
+    return [
+      // Main Bantu expansion from Cameroon origin
+      { id: 'bantu-origin', name: 'Bantu Origin (Cameroon-Nigeria Border)', startYear: -1000, endYear: -500,
+        points: [
+          { lat: 6.0, lng: 10.0 }, // Cameroon Grassfields (origin)
+          { lat: 4.0, lng: 15.0 }, // Central African Republic
+          { lat: 0.0, lng: 18.0 }, // Northern Congo Basin
+        ],
+        description: 'Proto-Bantu speakers begin expanding from the Cameroon-Nigeria border region'
+      },
+      // Western Stream (along Atlantic coast)
+      { id: 'bantu-west', name: 'Western Bantu Stream', startYear: -500, endYear: 500,
+        points: [
+          { lat: 4.0, lng: 15.0 }, // Central Africa
+          { lat: 0.0, lng: 12.0 }, // Gabon
+          { lat: -4.0, lng: 12.0 }, // Congo coast
+          { lat: -6.3, lng: 14.2 }, // Kongo Kingdom area
+          { lat: -12.0, lng: 14.0 }, // Angola
+          { lat: -22.0, lng: 17.0 }, // Namibia
+        ],
+        description: 'Western Bantu groups spread along the Atlantic coast through the Congo Basin'
+      },
+      // Eastern Stream (through Great Lakes)
+      { id: 'bantu-east-lakes', name: 'Eastern Stream (Great Lakes)', startYear: -500, endYear: 500,
+        points: [
+          { lat: 0.0, lng: 18.0 }, // Congo Basin
+          { lat: -1.0, lng: 29.0 }, // Great Lakes Region
+          { lat: -2.0, lng: 33.0 }, // Tanzania
+          { lat: -6.0, lng: 35.0 }, // Central Tanzania
+          { lat: -4.0, lng: 39.5 }, // Swahili Coast
+        ],
+        description: 'Eastern Bantu groups migrate through the Great Lakes, reaching the Indian Ocean'
+      },
+      // Southern Stream (to Southern Africa)
+      { id: 'bantu-south', name: 'Southern Bantu Expansion', startYear: 0, endYear: 1000,
+        points: [
+          { lat: -6.0, lng: 35.0 }, // Tanzania
+          { lat: -10.0, lng: 34.0 }, // Malawi
+          { lat: -15.0, lng: 28.0 }, // Zambia
+          { lat: -19.0, lng: 25.0 }, // Botswana
+          { lat: -26.0, lng: 28.0 }, // South Africa (Highveld)
+          { lat: -30.0, lng: 30.0 }, // Natal (Zulu, Xhosa)
+        ],
+        description: 'Bantu-speaking peoples reach Southern Africa, becoming ancestors of Zulu, Xhosa, Sotho, Shona'
+      },
+      // Madagascar Branch
+      { id: 'bantu-madagascar', name: 'Madagascar (Mixed Austronesian-Bantu)', startYear: 500, endYear: 1000,
+        points: [
+          { lat: -4.0, lng: 39.5 }, // East African coast
+          { lat: -12.0, lng: 43.0 }, // Comoros
+          { lat: -18.0, lng: 47.0 }, // Madagascar
+        ],
+        description: 'Bantu influences reach Madagascar, mixing with earlier Austronesian settlers'
+      }
+    ];
+  }, []);
+
+  // Bantu migration milestones for timeline
+  const bantuMilestones = useMemo(() => [
+    { year: -1000, label: 'Proto-Bantu expansion begins', region: 'Cameroon-Nigeria border' },
+    { year: -500, label: 'Bantu enter Congo Basin', region: 'Central Africa' },
+    { year: 0, label: 'Great Lakes region reached', region: 'East Africa' },
+    { year: 300, label: 'Indian Ocean coast settled', region: 'Swahili Coast' },
+    { year: 500, label: 'Southern migration accelerates', region: 'Zambia/Zimbabwe' },
+    { year: 1000, label: 'Bantu reach South Africa', region: 'Southern Africa' },
+    { year: 1500, label: 'Great Bantu kingdoms emerge', region: 'Kongo, Zimbabwe, Zulu' },
+  ], []);
+
   // Calculate spread lines between events
   const spreadLines = useMemo(() => {
     const lines: Array<{

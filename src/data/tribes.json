@@ -9567,6 +9567,345 @@
       "sources": [{ "name": "Wikipedia - Duala people", "url": "https://en.wikipedia.org/wiki/Duala_people" }],
       "description": "The Douala are the coastal people of Cameroon's largest city, historically key intermediaries in European trade, with the Ngondo water festival and national hero Rudolf Duala Manga Bell.",
       "relatedTribes": ["bassa", "bakweri", "sawa", "bamileke"]
+    },
+    {
+      "id": "somali",
+      "name": "Somali",
+      "slug": "somali",
+      "youtubeVideoId": "vVGX9JqEaXo",
+      "countries": ["SO", "ET", "KE", "DJ"],
+      "region": "Horn of Africa",
+      "population": "~20 million",
+      "populationPercent": "98% (Somalia)",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 5.15, "lng": 46.2 },
+      "tribeTerritoryDegrees": { "latSpan": 8, "lngSpan": 6 },
+      "counties": ["Mogadishu", "Hargeisa", "Bosaso", "Kismayo", "Ogaden (Ethiopia)", "North Eastern (Kenya)"],
+      "namePrefixes": ["Abdi", "Mo", "Fa", "Ha", "Ay"],
+      "clanStructure": {
+        "majorClans": [
+          { "name": "Darod", "population": "~5 million", "regions": ["Puntland", "Jubbaland", "Ogaden"], "subclans": ["Marehan", "Ogaden", "Harti", "Majeerteen"] },
+          { "name": "Hawiye", "population": "~5 million", "regions": ["Mogadishu", "Hirshabelle", "Galmudug"], "subclans": ["Abgaal", "Habr Gidir", "Murusade", "Hawadle"] },
+          { "name": "Isaaq", "population": "~4 million", "regions": ["Somaliland"], "subclans": ["Habar Awal", "Habar Yonis", "Habar Jeclo", "Arab", "Garhajis"] },
+          { "name": "Dir", "population": "~2 million", "regions": ["Northwestern Somalia", "Djibouti"], "subclans": ["Issa", "Gadabuursi", "Biimaal"] },
+          { "name": "Rahanweyn/Digil-Mirifle", "population": "~3 million", "regions": ["South-West State"], "subclans": ["Digil", "Mirifle"] }
+        ],
+        "description": "Somali society is organized into clan-families (qabil), which provide social security, political representation, and collective responsibility. Each person can recite their lineage back 20+ generations."
+      },
+      "commonNames": {
+        "female": ["Fadumo", "Hodan", "Sahra", "Ayan", "Hawa", "Halimo", "Zahra", "Amina", "Khadija", "Maryam"],
+        "male": ["Mohamed", "Abdi", "Hassan", "Ahmed", "Ali", "Omar", "Ibrahim", "Yusuf", "Ismail", "Abdullahi"]
+      },
+      "stereotypes": ["Poets and oral historians", "Fierce independence", "Strong traders", "Camel herders", "Resilient diaspora", "Nation of poets"],
+      "genderStereotypes": {
+        "male": ["Camel herders and warriors", "Clan representatives", "Traders and merchants", "Protectors of family honor"],
+        "female": ["Household managers", "Market traders", "Keepers of oral traditions", "Strong family anchors"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men traditionally managed livestock (camels, goats, cattle), represented the family in clan matters, and were responsible for protection and external trade.",
+          "female": "Women managed households, processed milk, made the aqal (portable house), traded in markets, and were custodians of oral poetry and traditions."
+        },
+        "modern": {
+          "male": "Many in business, diaspora remittances, and politics. Men dominate clan leadership and formal governance.",
+          "female": "Women increasingly in business, education, and civil society. Somali mothers often hold families together through conflict and displacement."
+        }
+      },
+      "pastoralTraditions": {
+        "livestock": ["Camels (primary wealth)", "Goats", "Sheep", "Cattle (in south)"],
+        "seasons": ["Gu (main rains, March-June)", "Hagaa (dry, July-September)", "Deyr (short rains, October-November)", "Jilaal (dry, December-March)"],
+        "migrations": "Pastoral families move seasonally following rains and grazing. Permanent settlements are rare among traditional herders.",
+        "camelCulture": "Camels are central to Somali identity. They are bride wealth, blood compensation (mag), and symbols of wealth. Somali poetry is filled with camel imagery."
+      },
+      "culturalTraits": ["Poetry as supreme art form", "Oral tradition and genealogy memorization", "Strong clan identity", "Xeer (customary law)", "Tea and frankincense culture", "Henna traditions"],
+      "funFacts": [
+        "Somalia is called 'a nation of poets' - poetry competitions are major events",
+        "Every Somali can recite their genealogy back 20+ generations",
+        "The Somali language has one of Africa's largest vocabularies for camels",
+        "Frankincense and myrrh from Somalia were traded to ancient Egypt",
+        "Somali pirates briefly made global headlines but represented tiny minority"
+      ],
+      "traditionalFood": {
+        "staples": ["Bariis iskukaris (spiced rice)", "Anjero/Canjeero (sourdough pancake)", "Muufo (flatbread)", "Pasta (Italian influence)"],
+        "beverages": ["Shaah (spiced tea with cardamom)", "Camel milk", "Basbaas (hot sauce)"],
+        "specialDishes": ["Suqaar (sautéed meat)", "Sambusa (fried pastries)", "Maraq (meat soup)", "Digaag (chicken with rice)", "Xalwo (sweet)"],
+        "description": "Somali cuisine reflects Arab, Indian, and Italian influences. Spiced rice, camel meat, and sweet tea with cardamom are staples."
+      },
+      "traditionalDance": "Dhaanto and Buraanbur (traditional dances with poetry)",
+      "religion": "Islam (Sunni, Shafi'i school) - 99%+",
+      "traditionalReligion": {
+        "name": "Somali Islam with pre-Islamic customs",
+        "supremeDeity": "Allah",
+        "spirits": ["Pre-Islamic wadaad (religious leaders)", "Belief in evil eye and djinn"],
+        "practices": ["Five daily prayers", "Ramadan fasting", "Zakat", "Hajj", "Maulid (Prophet's birthday)", "Religious poetry (qaswad)"],
+        "beliefs": "Islam is central to Somali identity; the clan system predates but was adapted to Islam; saints (awliyo) are venerated; xeer (customary law) complements sharia",
+        "religiousHistory": {
+          "islamIntroduced": "7th-8th century CE (among earliest in Africa)",
+          "introducedBy": "Arab and Persian traders along the coast",
+          "conversionProcess": "Islam spread through trade along the Indian Ocean coast. Mogadishu was a major Islamic center by the 10th century. The religion became deeply integrated with Somali identity.",
+          "sources": ["Wikipedia - Somali people", "I.M. Lewis - A Pastoral Democracy"]
+        }
+      },
+      "history": {
+        "origin": "Somalis are Cushitic people who have inhabited the Horn of Africa for thousands of years. They developed pastoral nomadism adapted to the arid environment.",
+        "colonialEra": "Somalia was divided between British (north), Italian (south), French (Djibouti), Ethiopian (Ogaden), and Kenyan (NFD) control. This 'scramble' created lasting divisions.",
+        "independence": "British and Italian Somaliland united in 1960. The dream of 'Greater Somalia' uniting all Somali lands led to conflicts with Ethiopia and Kenya.",
+        "keyEvents": ["Arab trade contacts (7th century)", "Adal Sultanate vs Ethiopia (16th century)", "Colonial partition (1884-1960)", "Independence (1960)", "Ogaden War (1977-78)", "Civil War (1991-present)"]
+      },
+      "language": {
+        "name": "Somali (Af Soomaali)",
+        "speakers": "~20 million",
+        "greeting": "Assalamu alaykum",
+        "greetingMeaning": "Peace be upon you",
+        "additionalGreetings": [
+          { "phrase": "Nabad miyaa?", "meaning": "Is it peace? (How are you?)" },
+          { "phrase": "Iska waran?", "meaning": "What's the news?" },
+          { "phrase": "Nabadgelyo", "meaning": "Peaceful journey (goodbye)" }
+        ],
+        "family": "Cushitic (Afroasiatic)",
+        "writingSystem": "Latin alphabet (since 1972)",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Cushitic",
+          "branch": "Lowland East Cushitic",
+          "speakers": "~20 million",
+          "relatedLanguages": ["Oromo", "Afar", "Saho", "Rendille"],
+          "migrationHistory": "Cushitic peoples originated in the Ethiopian highlands and spread across the Horn of Africa over millennia"
+        }
+      },
+      "famousPeople": [
+        { "name": "Mohammed Abdullah Hassan", "role": "Anti-colonial resistance leader 'Mad Mullah'", "wikipedia": "https://en.wikipedia.org/wiki/Mohammed_Abdullah_Hassan" },
+        { "name": "Iman", "role": "Supermodel", "wikipedia": "https://en.wikipedia.org/wiki/Iman_(model)" },
+        { "name": "Mo Farah", "role": "Olympic champion runner", "wikipedia": "https://en.wikipedia.org/wiki/Mo_Farah" },
+        { "name": "Ilhan Omar", "role": "US Congresswoman", "wikipedia": "https://en.wikipedia.org/wiki/Ilhan_Omar" }
+      ],
+      "antiColonialResistance": "Mohammed Abdullah Hassan led a 20-year resistance against British, Italian, and Ethiopian forces (1899-1920). Known to the British as 'Mad Mullah,' he used guerrilla tactics and religious poetry to rally resistance. His movement was only defeated by aerial bombardment.",
+      "sources": [{ "name": "Wikipedia - Somali people", "url": "https://en.wikipedia.org/wiki/Somali_people" }, { "name": "I.M. Lewis - A Pastoral Democracy", "url": "https://en.wikipedia.org/wiki/A_Pastoral_Democracy" }],
+      "description": "The Somali people are one of Africa's most homogeneous ethnic groups, united by language, clan system, pastoral traditions, and Islam. Their rich poetry tradition and resilient diaspora span the globe.",
+      "relatedTribes": ["afar", "oromo", "rendille", "beja"]
+    },
+    {
+      "id": "afar",
+      "name": "Afar",
+      "slug": "afar",
+      "youtubeVideoId": "Pp_6P-8RVws",
+      "countries": ["ET", "DJ", "ER"],
+      "region": "Afar Triangle (Horn of Africa)",
+      "population": "~3.5 million",
+      "populationPercent": "3% (Ethiopia), 35% (Djibouti)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 11.5, "lng": 41.5 },
+      "tribeTerritoryDegrees": { "latSpan": 5, "lngSpan": 4 },
+      "counties": ["Afar Region (Ethiopia)", "Djibouti", "Southern Eritrea"],
+      "namePrefixes": ["Ali", "Mo", "Ha", "Ab"],
+      "clanStructure": {
+        "majorClans": [
+          { "name": "Asaimara ('Red Ones')", "population": "~1.5 million", "regions": ["Lowlands"], "subclans": ["Pastoral nobility, traditional rulers"] },
+          { "name": "Adoimara ('White Ones')", "population": "~2 million", "regions": ["Various"], "subclans": ["Commoners and workers"] }
+        ],
+        "description": "Afar society traditionally divided into Asaimara (red, noble) and Adoimara (white, commoner) classes, though this distinction is fading. Sultan of Aussa historically led the most powerful sultanate."
+      },
+      "commonNames": {
+        "female": ["Amina", "Fatima", "Kadiga", "Mariam", "Halima", "Zeinab"],
+        "male": ["Mohamed", "Ali", "Hassan", "Ahmed", "Ibrahim", "Hanfare"]
+      },
+      "stereotypes": ["Desert survivors", "Fierce warriors", "Salt traders", "Fiercely independent", "Guardians of the Danakil", "Resilient to extreme heat"],
+      "genderStereotypes": {
+        "male": ["Warriors and herders", "Salt caravan leaders", "Protectors of territory", "Clan representatives"],
+        "female": ["Household managers in extreme heat", "Milk processors", "Builders of ari (mobile huts)", "Water gatherers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed livestock (camels, goats, cattle), led salt caravans to the highlands, and protected clan territory. Warriors were highly valued.",
+          "female": "Women built and maintained the ari (dome-shaped house), processed milk, gathered water, and managed households in extreme desert conditions."
+        },
+        "modern": {
+          "male": "Many still pastoral, some in salt mining and tourism (Danakil). Increasing involvement in regional politics.",
+          "female": "Women maintain traditional roles but increasingly access education in settled communities."
+        }
+      },
+      "pastoralTraditions": {
+        "livestock": ["Camels", "Goats", "Sheep", "Cattle (in wetter areas)"],
+        "seasons": ["Karma (winter rains)", "Sugum (spring rains)", "Hagay (summer dry)", "Dada (autumn)"],
+        "migrations": "Afar pastoralists move between wet season highlands and dry season lowlands following grazing.",
+        "saltTrade": "The Danakil Depression contains vast salt flats. Afar men have mined and transported salt to Ethiopian highlands for centuries."
+      },
+      "culturalTraits": ["Survival in extreme heat (Danakil)", "Salt caravan tradition", "Warrior culture", "Distinctive curved knife (gile)", "Poetry and oral traditions", "Fiercely territorial"],
+      "funFacts": [
+        "The Afar inhabit the Danakil Depression, one of the hottest places on Earth (often 50°C/122°F)",
+        "The Afar Triangle is where three tectonic plates meet - geologically one of Earth's most active areas",
+        "Salt bars from the Danakil were used as currency in Ethiopia for centuries",
+        "The Afar were among the last peoples in Africa to be fully mapped due to their fierce resistance to outsiders",
+        "Lucy (Australopithecus afarensis) was found in Afar territory - the region has crucial human evolution sites"
+      ],
+      "traditionalFood": {
+        "staples": ["Milk and meat", "Durra (sorghum)", "Injera when available", "Dates"],
+        "beverages": ["Camel milk", "Tea", "Coffee"],
+        "specialDishes": ["Grilled goat meat", "Dried meat (quanta)", "Sorghum porridge"],
+        "description": "Afar diet is adapted to desert life - mainly milk and meat from livestock. Salt from the Danakil is a crucial trade item."
+      },
+      "traditionalDance": "Laale (dance with rhythmic clapping and jumping)",
+      "religion": "Islam (Sunni) - nearly 100%",
+      "traditionalReligion": {
+        "name": "Afar Islam",
+        "supremeDeity": "Allah",
+        "spirits": ["Pre-Islamic sky deity Wak may persist in some traditions", "Belief in djinn"],
+        "practices": ["Islamic prayers", "Ramadan fasting", "Veneration of saints", "Traditional healing alongside Islam"],
+        "beliefs": "Islam is central to Afar identity. Pre-Islamic beliefs in sky spirits and nature forces partially integrated with Islamic practice.",
+        "religiousHistory": {
+          "islamIntroduced": "10th-13th century CE",
+          "introducedBy": "Arab traders and the Sultanate of Shoa expansion",
+          "conversionProcess": "Islam spread through trade routes from the Red Sea coast. The Sultanate of Aussa became a center of Afar Islamic culture.",
+          "sources": ["Wikipedia - Afar people", "Afar Regional State records"]
+        }
+      },
+      "history": {
+        "origin": "The Afar are Cushitic people who have inhabited the Horn of Africa for thousands of years. They established the Sultanate of Aussa in the 16th century.",
+        "colonialEra": "Afar territory was divided between Ethiopia, French Somaliland (Djibouti), and Italian Eritrea. The Afar largely resisted foreign control.",
+        "independence": "The Afar in Djibouti gained independence in 1977. Ethiopian Afar have autonomous regional status. Eritrean Afar are a minority.",
+        "keyEvents": ["Sultanate of Aussa (1577-1975)", "Colonial partition (1880s)", "Ethiopian annexation of Aussa (1975)", "Djibouti independence (1977)", "Afar-Issa conflicts in Djibouti"]
+      },
+      "language": {
+        "name": "Afar (Qafaraf)",
+        "speakers": "~3.5 million",
+        "greeting": "Maalin wanaag",
+        "greetingMeaning": "Good day",
+        "additionalGreetings": [
+          { "phrase": "Galeeli?", "meaning": "How are you?" },
+          { "phrase": "Tama", "meaning": "I'm fine" }
+        ],
+        "family": "Cushitic (Afroasiatic)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Cushitic",
+          "branch": "Lowland East Cushitic",
+          "speakers": "~3.5 million",
+          "relatedLanguages": ["Somali", "Saho", "Oromo"],
+          "migrationHistory": "Afar language developed in the Afar Triangle over millennia; related to other Cushitic languages of the Horn"
+        }
+      },
+      "famousPeople": [
+        { "name": "Sultan Ali Mirah Hanfare", "role": "Last Sultan of Aussa (ruled 1944-1975, died 2011)", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Mirah_Hanfare" },
+        { "name": "Issa Liban", "role": "Afar politician in Djibouti", "wikipedia": null }
+      ],
+      "antiColonialResistance": "The Afar fiercely resisted all foreign incursions into their territory. The Danakil's extreme environment served as natural protection. The Afar Liberation Front fought against the Derg regime in Ethiopia.",
+      "sources": [{ "name": "Wikipedia - Afar people", "url": "https://en.wikipedia.org/wiki/Afar_people" }],
+      "description": "The Afar people inhabit one of Earth's most extreme environments - the Danakil Depression. Known as fierce warriors and salt traders, they have maintained independence in their harsh homeland for centuries.",
+      "relatedTribes": ["somali", "saho", "oromo", "issa"]
+    },
+    {
+      "id": "beja",
+      "name": "Beja",
+      "slug": "beja",
+      "youtubeVideoId": "gN9YP8KPVAU",
+      "countries": ["SD", "ER", "EG"],
+      "region": "Red Sea Hills (Horn of Africa / Northeast Africa)",
+      "population": "~2.5 million",
+      "populationPercent": "5% (Sudan)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 19.0, "lng": 36.5 },
+      "tribeTerritoryDegrees": { "latSpan": 6, "lngSpan": 4 },
+      "counties": ["Red Sea State (Sudan)", "Kassala State", "Southern Egypt", "Northern Eritrea"],
+      "namePrefixes": ["Mo", "Ha", "Os", "Ti"],
+      "clanStructure": {
+        "majorClans": [
+          { "name": "Hadendoa", "population": "~800,000", "regions": ["Port Sudan, Tokar Delta"], "subclans": ["Known for distinctive hair 'fuzzy-wuzzy'"] },
+          { "name": "Beni Amer", "population": "~500,000", "regions": ["Eritrea-Sudan border"], "subclans": ["Mixed Beja-Tigre heritage"] },
+          { "name": "Ababda", "population": "~400,000", "regions": ["Southern Egypt, Northern Sudan"], "subclans": ["Northern Beja"] },
+          { "name": "Bisharin", "population": "~300,000", "regions": ["Nubian Desert"], "subclans": ["Camel nomads"] },
+          { "name": "Amarar", "population": "~250,000", "regions": ["Central Red Sea Hills"], "subclans": ["Highland Beja"] }
+        ],
+        "description": "The Beja are divided into several clans (qabila), each with distinct territories in the Red Sea Hills. The Hadendoa are most famous due to colonial-era encounters."
+      },
+      "commonNames": {
+        "female": ["Fatima", "Halima", "Mariam", "Amna", "Hadiya"],
+        "male": ["Osman", "Mohamed", "Taha", "Hassan", "Ibrahim", "Hamid"]
+      },
+      "stereotypes": ["Fierce warriors", "Independent highlanders", "Camel herders", "'Fuzzy-Wuzzy' hair (Hadendoa)", "Ancient traders", "Proud and reserved"],
+      "genderStereotypes": {
+        "male": ["Warriors and herders", "Caravan leaders", "Protectors of passes", "Sword fighters"],
+        "female": ["Tent builders and managers", "Milk processors", "Jewelry makers", "Guardians of traditions"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed camels and goats, protected trade routes through the Red Sea Hills, and represented clans in disputes. Sword fighting was a valued skill.",
+          "female": "Women built and maintained tents, processed dairy, crafted jewelry, and managed households. Senior women had significant authority."
+        },
+        "modern": {
+          "male": "Many still pastoral; some in Port Sudan commerce, mining, and labor. Political marginalization has led to Beja Congress activism.",
+          "female": "Women maintain traditional roles; limited access to education in remote areas. Some urban Beja women in professions."
+        }
+      },
+      "pastoralTraditions": {
+        "livestock": ["Camels (primary)", "Goats", "Sheep", "Some cattle in wetter valleys"],
+        "seasons": ["Winter rains in highlands", "Summer heat in lowlands"],
+        "migrations": "Beja pastoralists move between Red Sea Hills valleys and coastal plains following seasonal pastures.",
+        "camelCulture": "Beja riding camels are prized throughout Sudan and Egypt. Camel racing is a valued tradition."
+      },
+      "culturalTraits": ["Distinctive Hadendoa hairstyle", "Sword culture (shotel)", "Oral poetry tradition", "Fierce independence from central governments", "Ancient trade route guardians", "Traditional music with rababa"],
+      "funFacts": [
+        "British soldiers called the Hadendoa 'Fuzzy-Wuzzies' due to their distinctive butter-treated hairstyles",
+        "Rudyard Kipling wrote about them: 'So 'ere's to you, Fuzzy-Wuzzy, at your 'ome in the Soudan'",
+        "The Beja have inhabited the Red Sea Hills for over 4,000 years - mentioned in ancient Egyptian texts",
+        "The Beja broke a British square at the Battle of Tamai (1884) - one of few forces to achieve this",
+        "Ancient Greeks called them 'Blemmyes' and Romans feared their raids on Egyptian borders"
+      ],
+      "traditionalFood": {
+        "staples": ["Camel and goat milk", "Durra (sorghum)", "Asida (porridge)", "Meat"],
+        "beverages": ["Camel milk", "Strong coffee (jabana)", "Tea"],
+        "specialDishes": ["Dried meat", "Milk mixed with blood (traditional)", "Sorghum porridge with butter"],
+        "description": "Beja diet is primarily pastoral - milk and meat from their herds. Sorghum porridge supplements the diet. Strong coffee is central to hospitality."
+      },
+      "traditionalDance": "Traditional sword dances and circle dances with rababa (stringed instrument)",
+      "religion": "Islam (Sunni) - nearly 100%",
+      "traditionalReligion": {
+        "name": "Beja Islam with pre-Islamic remnants",
+        "supremeDeity": "Allah",
+        "spirits": ["Pre-Islamic beliefs in mountains and springs may persist", "Belief in djinn"],
+        "practices": ["Islamic prayers", "Sufi orders (Khatmiyya influential)", "Veneration of saints", "Traditional healing"],
+        "beliefs": "Islam overlaid ancient beliefs; sacred mountains and springs retain significance; Sufi mysticism popular",
+        "religiousHistory": {
+          "islamIntroduced": "7th-14th century CE (gradual)",
+          "introducedBy": "Arab traders and later Sufi missionaries",
+          "conversionProcess": "Islam spread slowly through trade and intermarriage. The Beja resisted conversion longer than many neighbors. Sufi orders completed Islamization by 15th century.",
+          "sources": ["Wikipedia - Beja people", "Sudan Notes and Records"]
+        }
+      },
+      "history": {
+        "origin": "The Beja are among Africa's most ancient peoples, mentioned in Egyptian texts from 2700 BCE. They speak a Cushitic language and have inhabited the Red Sea Hills for millennia.",
+        "colonialEra": "The Beja initially supported the Mahdist revolt against Egypt/Britain but later fought against Mahdists. They gained fame as fierce warriors against British forces.",
+        "independence": "After Sudanese independence (1956), Beja have felt marginalized by Khartoum. The Beja Congress has advocated for regional rights. Eastern Sudan conflicts continue.",
+        "keyEvents": ["Egyptian contacts (2700 BCE+)", "Blemmye raids on Roman Egypt", "Gradual Islamization (7th-15th century)", "Mahdist era (1881-1898)", "Battles against British (1884-1885)", "Beja Congress activism (2000s)"]
+      },
+      "language": {
+        "name": "Beja (Bedawiyet/Tu Bedawie)",
+        "speakers": "~2 million",
+        "greeting": "Hwotak?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Dabal", "meaning": "Good/Fine" },
+          { "phrase": "Barakallah", "meaning": "God bless you (thanks)" }
+        ],
+        "family": "Cushitic (Afroasiatic)",
+        "writingSystem": "Arabic script (limited), mostly oral",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Cushitic",
+          "branch": "North Cushitic (Beja is sole member)",
+          "speakers": "~2 million",
+          "relatedLanguages": ["Distant relationship to other Cushitic languages"],
+          "migrationHistory": "Beja language is an isolate within Cushitic - the sole North Cushitic language, suggesting very ancient separation from other Cushitic peoples"
+        }
+      },
+      "famousPeople": [
+        { "name": "Osman Digna", "role": "Mahdist commander who fought British", "wikipedia": "https://en.wikipedia.org/wiki/Osman_Digna" },
+        { "name": "Mohamed Tahir Ayla", "role": "Beja Congress leader", "wikipedia": null }
+      ],
+      "antiColonialResistance": "The Beja, especially the Hadendoa under Osman Digna, fought fiercely against British and Egyptian forces in the 1880s-1890s. They broke a British square at Tamai - a rare feat. Kipling honored them as worthy foes.",
+      "sources": [{ "name": "Wikipedia - Beja people", "url": "https://en.wikipedia.org/wiki/Beja_people" }, { "name": "Sudan Notes and Records", "url": "https://www.jstor.org/journal/sudanotesrecor" }],
+      "description": "The Beja are one of Africa's most ancient peoples, inhabiting the Red Sea Hills for over 4,000 years. Known as fierce warriors who broke British squares, they maintain proud pastoral traditions.",
+      "relatedTribes": ["afar", "nubian", "rashida", "hadendoa"]
     }
   ]
 }
