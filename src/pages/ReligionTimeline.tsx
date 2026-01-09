@@ -157,6 +157,31 @@ export default function ReligionTimeline() {
 
     // Add historical events that don't come from tribe data
     const historicalEvents: ReligionEvent[] = [
+      // Early Christianity (1st-4th Century)
+      {
+        year: 42,
+        yearDisplay: '42 CE',
+        religion: 'christianity',
+        region: 'North Africa',
+        tribe: 'Egyptian Copts',
+        tribeSlug: 'coptic',
+        description: 'Saint Mark the Evangelist arrives in Alexandria, establishing the Coptic Church - one of the oldest Christian communities in the world.',
+        introducedBy: 'Saint Mark the Evangelist',
+        source: 'Coptic Orthodox Church tradition',
+        coordinates: { lat: 31.2, lng: 29.9 }
+      },
+      {
+        year: 180,
+        yearDisplay: '180 CE',
+        religion: 'christianity',
+        region: 'North Africa',
+        tribe: 'Berber/Roman Africa',
+        tribeSlug: 'amazigh',
+        description: 'Scillitan Martyrs - first recorded Christian martyrs in Roman North Africa, demonstrating early Christian presence in Tunisia.',
+        introducedBy: 'Early missionaries',
+        source: 'Early Church records',
+        coordinates: { lat: 36.8, lng: 10.18 }
+      },
       {
         year: 330,
         yearDisplay: '4th century CE',
@@ -170,16 +195,53 @@ export default function ReligionTimeline() {
         coordinates: { lat: 14.12, lng: 38.72 }
       },
       {
+        year: 451,
+        yearDisplay: '451 CE',
+        religion: 'christianity',
+        region: 'North Africa',
+        tribe: 'Nubian Kingdoms',
+        tribeSlug: 'nubian',
+        description: 'Nubian kingdoms of Nobatia, Makuria, and Alodia adopt Christianity, creating a Christian civilization that lasted 1000 years.',
+        introducedBy: 'Byzantine missionaries',
+        source: 'Medieval Nubian history',
+        coordinates: { lat: 18.5, lng: 31.8 }
+      },
+      // Early Islam (7th-10th Century)
+      {
+        year: 615,
+        yearDisplay: '615 CE',
+        religion: 'islam',
+        region: 'Horn of Africa',
+        tribe: 'Aksumite Empire',
+        tribeSlug: 'amhara',
+        description: 'First Hijra - Muslim refugees flee persecution in Mecca and find sanctuary with the Christian King of Aksum, marking first contact between Islam and Africa.',
+        introducedBy: 'Companions of Prophet Muhammad',
+        source: 'Islamic historical records',
+        coordinates: { lat: 14.12, lng: 38.72 }
+      },
+      {
         year: 639,
         yearDisplay: '639 CE',
         religion: 'islam',
         region: 'North Africa',
         tribe: 'Copts/Egyptians',
         tribeSlug: 'amazigh',
-        description: 'Arab conquest of Egypt begins the Islamization of North Africa.',
+        description: 'Arab conquest of Egypt begins the Islamization of North Africa under General Amr ibn al-As.',
         introducedBy: 'Amr ibn al-As',
         source: 'Wikipedia - Islamic conquest of Egypt',
         coordinates: { lat: 30.04, lng: 31.24 }
+      },
+      {
+        year: 670,
+        yearDisplay: '670 CE',
+        religion: 'islam',
+        region: 'North Africa',
+        tribe: 'Amazigh/Berber',
+        tribeSlug: 'amazigh',
+        description: 'Uqba ibn Nafi founds Kairouan in modern Tunisia, which becomes a major center of Islamic learning in Africa.',
+        introducedBy: 'Uqba ibn Nafi',
+        source: 'Islamic history of Maghreb',
+        coordinates: { lat: 35.67, lng: 10.1 }
       },
       {
         year: 700,
@@ -188,11 +250,24 @@ export default function ReligionTimeline() {
         region: 'East Africa',
         tribe: 'Swahili Coast',
         tribeSlug: 'swahili',
-        description: 'Arab and Persian traders bring Islam to East African coast. Coastal city-states become Muslim.',
+        description: 'Arab and Persian traders bring Islam to East African coast. Coastal city-states become Muslim trading hubs.',
         introducedBy: 'Arab and Persian merchants',
         source: 'Britannica - Swahili culture',
         coordinates: { lat: -4.04, lng: 39.67 }
       },
+      {
+        year: 750,
+        yearDisplay: '750 CE',
+        religion: 'islam',
+        region: 'East Africa',
+        tribe: 'Mogadishu traders',
+        tribeSlug: 'somali',
+        description: 'Mogadishu becomes established as a major Islamic trading center, spreading Islam into the Horn of Africa.',
+        introducedBy: 'Arab and Persian traders',
+        source: 'Somali history',
+        coordinates: { lat: 2.05, lng: 45.34 }
+      },
+      // Medieval Period (11th-15th Century)
       {
         year: 1000,
         yearDisplay: '11th century',
@@ -200,10 +275,22 @@ export default function ReligionTimeline() {
         region: 'West Africa',
         tribe: 'Kanem-Bornu Empire',
         tribeSlug: 'kanuri',
-        description: 'Mai Hume accepts Islam, beginning the Islamization of the Lake Chad region.',
+        description: 'Mai Hume accepts Islam, beginning the Islamization of the Lake Chad region through trans-Saharan trade.',
         introducedBy: 'Trans-Saharan traders',
         source: 'Trimingham - History of Islam in West Africa',
         coordinates: { lat: 12.0, lng: 15.0 }
+      },
+      {
+        year: 1040,
+        yearDisplay: '1040 CE',
+        religion: 'islam',
+        region: 'West Africa',
+        tribe: 'Sanhaja Berbers',
+        tribeSlug: 'amazigh',
+        description: 'Almoravid movement begins in Mauritania, spreading reformist Islam across the Western Sahara.',
+        introducedBy: 'Abdullah ibn Yasin',
+        source: 'Almoravid history',
+        coordinates: { lat: 20.0, lng: -10.0 }
       },
       {
         year: 1076,
@@ -212,11 +299,60 @@ export default function ReligionTimeline() {
         region: 'West Africa',
         tribe: 'Ghana Empire',
         tribeSlug: 'mandinka',
-        description: 'Almoravid conquest spreads Islam in the Western Sahel.',
+        description: 'Almoravid conquest spreads Islam in the Western Sahel, influencing the Ghana Empire.',
         introducedBy: 'Almoravid movement',
         source: 'Britannica - Almoravid dynasty',
         coordinates: { lat: 16.0, lng: -8.0 }
       },
+      {
+        year: 1235,
+        yearDisplay: '1235 CE',
+        religion: 'islam',
+        region: 'West Africa',
+        tribe: 'Mali Empire',
+        tribeSlug: 'mandinka',
+        description: 'Sundiata Keita establishes the Mali Empire; Islam becomes religion of the elite and trading classes.',
+        introducedBy: 'Manding traders and scholars',
+        source: 'Epic of Sundiata',
+        coordinates: { lat: 13.5, lng: -8.0 }
+      },
+      {
+        year: 1324,
+        yearDisplay: '1324 CE',
+        religion: 'islam',
+        region: 'West Africa',
+        tribe: 'Mali Empire',
+        tribeSlug: 'mandinka',
+        description: 'Mansa Musa\'s legendary pilgrimage to Mecca displays the wealth and Islamic devotion of the Mali Empire to the world.',
+        introducedBy: 'Mansa Musa',
+        source: 'Historical accounts',
+        coordinates: { lat: 12.65, lng: -8.0 }
+      },
+      {
+        year: 1400,
+        yearDisplay: '15th century',
+        religion: 'islam',
+        region: 'East Africa',
+        tribe: 'Kilwa Sultanate',
+        tribeSlug: 'swahili',
+        description: 'Kilwa becomes the wealthiest city-state on the Swahili Coast, with grand mosques and Islamic scholarship.',
+        introducedBy: 'Shirazi and Arab traders',
+        source: 'Swahili Coast archaeology',
+        coordinates: { lat: -8.95, lng: 39.52 }
+      },
+      {
+        year: 1464,
+        yearDisplay: '1464 CE',
+        religion: 'islam',
+        region: 'West Africa',
+        tribe: 'Songhai Empire',
+        tribeSlug: 'songhai',
+        description: 'Sunni Ali establishes the Songhai Empire; Timbuktu becomes a world-renowned center of Islamic learning.',
+        introducedBy: 'Trans-Saharan scholars',
+        source: 'Songhai history',
+        coordinates: { lat: 16.77, lng: -3.0 }
+      },
+      // Colonial Era Christianity (15th-19th Century)
       {
         year: 1491,
         yearDisplay: '1491 CE',
@@ -227,6 +363,18 @@ export default function ReligionTimeline() {
         description: 'Manikongo Nzinga a Nkuwu baptized as João I, establishing one of the first Christian kingdoms in sub-Saharan Africa.',
         introducedBy: 'Portuguese Franciscan missionaries',
         source: 'Wikipedia - Kingdom of Kongo',
+        coordinates: { lat: -6.27, lng: 14.24 }
+      },
+      {
+        year: 1518,
+        yearDisplay: '1518 CE',
+        religion: 'christianity',
+        region: 'Central Africa',
+        tribe: 'Kingdom of Kongo',
+        tribeSlug: 'kongo',
+        description: 'Henrique, son of Afonso I, becomes the first black African bishop in the Catholic Church.',
+        introducedBy: 'Portuguese Catholic Church',
+        source: 'Kongolese church history',
         coordinates: { lat: -6.27, lng: 14.24 }
       },
       {
@@ -242,16 +390,89 @@ export default function ReligionTimeline() {
         coordinates: { lat: -33.93, lng: 18.42 }
       },
       {
+        year: 1737,
+        yearDisplay: '1737 CE',
+        religion: 'christianity',
+        region: 'Southern Africa',
+        tribe: 'Khoikhoi',
+        tribeSlug: 'khoikhoi',
+        description: 'Moravian missionaries establish Genadendal, the first mission station in South Africa.',
+        introducedBy: 'Moravian Brethren',
+        source: 'South African church history',
+        coordinates: { lat: -34.03, lng: 19.55 }
+      },
+      // 19th Century Jihads and Missions
+      {
         year: 1804,
         yearDisplay: '1804',
         religion: 'islam',
         region: 'West Africa',
         tribe: 'Hausa/Fulani',
         tribeSlug: 'hausa',
-        description: 'Usman dan Fodio\'s Sokoto Jihad creates the Sokoto Caliphate, fully Islamizing Hausaland.',
+        description: 'Usman dan Fodio\'s Sokoto Jihad creates the Sokoto Caliphate, the largest state in 19th century Africa, fully Islamizing Hausaland.',
         introducedBy: 'Usman dan Fodio',
         source: 'Last, Murray - The Sokoto Caliphate',
         coordinates: { lat: 13.06, lng: 5.24 }
+      },
+      {
+        year: 1818,
+        yearDisplay: '1818 CE',
+        religion: 'islam',
+        region: 'West Africa',
+        tribe: 'Fulani/Masina',
+        tribeSlug: 'fulani',
+        description: 'Seku Amadu establishes the Masina Empire through jihad, spreading Islam in the Niger Delta region.',
+        introducedBy: 'Seku Amadu',
+        source: 'Fulani jihad history',
+        coordinates: { lat: 14.5, lng: -4.0 }
+      },
+      {
+        year: 1841,
+        yearDisplay: '1841 CE',
+        religion: 'christianity',
+        region: 'West Africa',
+        tribe: 'Yoruba',
+        tribeSlug: 'yoruba',
+        description: 'Samuel Ajayi Crowther, a freed slave, returns to Nigeria as a missionary and later becomes the first African Anglican bishop.',
+        introducedBy: 'Church Missionary Society',
+        source: 'CMS records',
+        coordinates: { lat: 6.45, lng: 3.39 }
+      },
+      {
+        year: 1852,
+        yearDisplay: '1852 CE',
+        religion: 'islam',
+        region: 'West Africa',
+        tribe: 'Toucouleur Empire',
+        tribeSlug: 'fulani',
+        description: 'El Hadj Umar Tall begins his jihad, establishing the Toucouleur Empire across Senegambia and Mali.',
+        introducedBy: 'El Hadj Umar Tall',
+        source: 'West African jihad history',
+        coordinates: { lat: 14.7, lng: -17.4 }
+      },
+      {
+        year: 1857,
+        yearDisplay: '1857 CE',
+        religion: 'christianity',
+        region: 'East Africa',
+        tribe: 'Coastal peoples',
+        tribeSlug: 'swahili',
+        description: 'David Livingstone explores the Zambezi, opening paths for missionary activity in Central and East Africa.',
+        introducedBy: 'London Missionary Society',
+        source: 'Livingstone journals',
+        coordinates: { lat: -15.4, lng: 28.3 }
+      },
+      {
+        year: 1875,
+        yearDisplay: '1875 CE',
+        religion: 'christianity',
+        region: 'Central Africa',
+        tribe: 'Various',
+        tribeSlug: 'kongo',
+        description: 'White Fathers (Missionaries of Africa) begin extensive work in the Great Lakes region, converting millions.',
+        introducedBy: 'Cardinal Lavigerie\'s White Fathers',
+        source: 'Catholic missionary records',
+        coordinates: { lat: -2.0, lng: 29.5 }
       },
       {
         year: 1877,
@@ -264,6 +485,79 @@ export default function ReligionTimeline() {
         introducedBy: 'Church Missionary Society (Alexander Mackay)',
         source: 'Uganda Martyrs Shrine',
         coordinates: { lat: 0.35, lng: 32.58 }
+      },
+      {
+        year: 1879,
+        yearDisplay: '1879 CE',
+        religion: 'islam',
+        region: 'West Africa',
+        tribe: 'Mandinka',
+        tribeSlug: 'mandinka',
+        description: 'Samori Ture builds the Wassoulou Empire, combining Islamic governance with resistance to French colonialism.',
+        introducedBy: 'Samori Ture',
+        source: 'Wassoulou Empire history',
+        coordinates: { lat: 10.5, lng: -8.5 }
+      },
+      {
+        year: 1885,
+        yearDisplay: '1885 CE',
+        religion: 'islam',
+        region: 'Horn of Africa',
+        tribe: 'Mahdist Sudan',
+        tribeSlug: 'sudanese',
+        description: 'The Mahdist State falls to British forces, but leaves lasting Islamic revival influence in Sudan.',
+        introducedBy: 'Muhammad Ahmad (the Mahdi)',
+        source: 'Sudanese history',
+        coordinates: { lat: 15.6, lng: 32.5 }
+      },
+      {
+        year: 1886,
+        yearDisplay: '1886 CE',
+        religion: 'christianity',
+        region: 'East Africa',
+        tribe: 'Baganda',
+        tribeSlug: 'baganda',
+        description: '45 Uganda Martyrs killed for their Christian faith, later canonized by the Catholic Church.',
+        introducedBy: 'White Fathers and CMS',
+        source: 'Uganda Martyrs Shrine',
+        coordinates: { lat: 0.31, lng: 32.56 }
+      },
+      // 20th Century
+      {
+        year: 1913,
+        yearDisplay: '1913 CE',
+        religion: 'christianity',
+        region: 'West Africa',
+        tribe: 'Yoruba',
+        tribeSlug: 'yoruba',
+        description: 'Aladura (Praying) Churches emerge in Nigeria, blending Christianity with African spirituality.',
+        introducedBy: 'African independent church founders',
+        source: 'African Christianity history',
+        coordinates: { lat: 7.4, lng: 3.9 }
+      },
+      {
+        year: 1921,
+        yearDisplay: '1921 CE',
+        religion: 'christianity',
+        region: 'Central Africa',
+        tribe: 'Bakongo',
+        tribeSlug: 'kongo',
+        description: 'Simon Kimbangu begins prophetic movement that becomes one of Africa\'s largest independent churches.',
+        introducedBy: 'Simon Kimbangu',
+        source: 'Kimbanguist Church history',
+        coordinates: { lat: -5.5, lng: 14.9 }
+      },
+      {
+        year: 1930,
+        yearDisplay: '1930 CE',
+        religion: 'christianity',
+        region: 'Southern Africa',
+        tribe: 'Zulu/Swazi',
+        tribeSlug: 'zulu',
+        description: 'Zionist and Apostolic churches grow rapidly in Southern Africa, combining Christian and African traditions.',
+        introducedBy: 'African church founders',
+        source: 'South African church history',
+        coordinates: { lat: -29.0, lng: 31.0 }
       }
     ];
 
