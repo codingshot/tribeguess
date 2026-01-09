@@ -1,12 +1,13 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Slider } from '@/components/ui/slider';
 import { Link } from 'react-router-dom';
-import { Church, Moon, Sparkles, Calendar, MapPin, BookOpen, ChevronRight, Map, Clock } from 'lucide-react';
+import { Church, Moon, Sparkles, Calendar, MapPin, BookOpen, ChevronRight, Map, Clock, Play, Pause } from 'lucide-react';
 import tribesData from '@/data/tribes.json';
 
 interface ReligionEvent {
@@ -67,11 +68,31 @@ const centuries = [
   { id: '19th-20th', label: '19th-20th Century', range: [1800, 1999] }
 ];
 
+// Convert lat/lng to pixel coordinates for the map overlay
+// Using Web Mercator projection with Africa-specific bounds
+const projectCoordinates = (lat: number, lng: number, bounds: { minLng: number; maxLng: number; minLat: number; maxLat: number }) => {
+  // Mercator projection
+  const latRad = lat * Math.PI / 180;
+  const mercatorY = Math.log(Math.tan(Math.PI / 4 + latRad / 2));
+  
+  const minLatRad = bounds.minLat * Math.PI / 180;
+  const maxLatRad = bounds.maxLat * Math.PI / 180;
+  const minMercY = Math.log(Math.tan(Math.PI / 4 + minLatRad / 2));
+  const maxMercY = Math.log(Math.tan(Math.PI / 4 + maxLatRad / 2));
+  
+  const x = ((lng - bounds.minLng) / (bounds.maxLng - bounds.minLng)) * 100;
+  const y = ((maxMercY - mercatorY) / (maxMercY - minMercY)) * 100;
+  
+  return { x, y };
+};
+
 export default function ReligionTimeline() {
   const [selectedRegion, setSelectedRegion] = useState<string>('all');
   const [selectedReligion, setSelectedReligion] = useState<string>('all');
   const [selectedCentury, setSelectedCentury] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'timeline' | 'map'>('timeline');
+  const [timelineYear, setTimelineYear] = useState<number>(2000);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Extract religion timeline events from tribes data
   const timelineEvents = useMemo(() => {
@@ -275,23 +296,39 @@ export default function ReligionTimeline() {
     return grouped;
   }, [filteredEvents]);
 
-  // Get map bounds for filtered events
-  const mapUrl = useMemo(() => {
-    const eventsWithCoords = filteredEvents.filter(e => e.coordinates);
-    if (eventsWithCoords.length === 0) {
-      return `https://www.openstreetmap.org/export/embed.html?bbox=-20,${-35},55,${38}&layer=mapnik`;
+  // Fixed map bounds for Africa
+  const mapBounds = { minLng: -20, maxLng: 55, minLat: -35, maxLat: 38 };
+  const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${mapBounds.minLng},${mapBounds.minLat},${mapBounds.maxLng},${mapBounds.maxLat}&layer=mapnik`;
+
+  // Filter events by timeline year for map animation
+  const timelineFilteredEvents = useMemo(() => {
+    return filteredEvents.filter(e => e.year <= timelineYear);
+  }, [filteredEvents, timelineYear]);
+
+  // Animation effect for timeline slider
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isAnimating && viewMode === 'map') {
+      interval = setInterval(() => {
+        setTimelineYear(prev => {
+          if (prev >= 2000) {
+            setIsAnimating(false);
+            return 2000;
+          }
+          return prev + 25;
+        });
+      }, 150);
     }
-    
-    // Calculate center and bounds
-    const lats = eventsWithCoords.map(e => e.coordinates!.lat);
-    const lngs = eventsWithCoords.map(e => e.coordinates!.lng);
-    const minLat = Math.min(...lats) - 5;
-    const maxLat = Math.max(...lats) + 5;
-    const minLng = Math.min(...lngs) - 5;
-    const maxLng = Math.max(...lngs) + 5;
-    
-    return `https://www.openstreetmap.org/export/embed.html?bbox=${minLng},${minLat},${maxLng},${maxLat}&layer=mapnik`;
-  }, [filteredEvents]);
+    return () => clearInterval(interval);
+  }, [isAnimating, viewMode]);
+
+  const getCenturyLabel = (year: number) => {
+    if (year < 100) return '1st Century';
+    if (year < 500) return `${Math.floor(year / 100) + 1}th Century`;
+    if (year < 1000) return `${Math.floor(year / 100) + 1}th Century`;
+    if (year < 2000) return `${Math.floor(year / 100) + 1}th Century`;
+    return '21st Century';
+  };
 
   return (
     <>
@@ -411,35 +448,108 @@ export default function ReligionTimeline() {
         {viewMode === 'map' && (
           <section className="py-8">
             <div className="container mx-auto px-4">
+              {/* Timeline Slider */}
+              <div className="bg-muted/50 rounded-xl p-4 mb-4 border border-border">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={() => {
+                        if (isAnimating) {
+                          setIsAnimating(false);
+                        } else {
+                          setTimelineYear(300);
+                          setIsAnimating(true);
+                        }
+                      }}
+                      className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm"
+                    >
+                      {isAnimating ? (
+                        <>
+                          <Pause className="w-4 h-4" /> Pause
+                        </>
+                      ) : (
+                        <>
+                          <Play className="w-4 h-4" /> Animate
+                        </>
+                      )}
+                    </button>
+                    <span className="text-sm text-muted-foreground">
+                      Year: <span className="font-bold text-foreground">{timelineYear} CE</span>
+                    </span>
+                  </div>
+                  <div className="text-sm">
+                    <span className="text-muted-foreground">Showing </span>
+                    <span className="font-bold text-primary">{timelineFilteredEvents.filter(e => e.coordinates).length}</span>
+                    <span className="text-muted-foreground"> events through {getCenturyLabel(timelineYear)}</span>
+                  </div>
+                </div>
+                <Slider
+                  value={[timelineYear]}
+                  onValueChange={([val]) => setTimelineYear(val)}
+                  min={300}
+                  max={2000}
+                  step={25}
+                  className="w-full"
+                />
+                <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                  <span>300 CE</span>
+                  <span>800 CE</span>
+                  <span>1200 CE</span>
+                  <span>1600 CE</span>
+                  <span>2000 CE</span>
+                </div>
+              </div>
+
               <div className="relative bg-muted rounded-xl overflow-hidden border border-border">
                 {/* Map */}
                 <div className="relative h-[500px] sm:h-[600px]">
                   <iframe
                     src={mapUrl}
-                    className="absolute inset-0 w-full h-full"
+                    className="absolute inset-0 w-full h-full pointer-events-none"
                     style={{ border: 0 }}
                     title="Religion spread map"
                   />
                   
-                  {/* Overlay markers */}
+                  {/* Overlay markers with proper projection */}
                   <div className="absolute inset-0 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                      {filteredEvents.filter(e => e.coordinates).map((event, i) => {
-                        // Simplified projection for demonstration
-                        const x = ((event.coordinates!.lng + 20) / 75) * 100;
-                        const y = ((38 - event.coordinates!.lat) / 73) * 100;
+                      {timelineFilteredEvents.filter(e => e.coordinates).map((event, i) => {
+                        const { x, y } = projectCoordinates(
+                          event.coordinates!.lat, 
+                          event.coordinates!.lng, 
+                          mapBounds
+                        );
                         const color = religionMarkerColors[event.religion];
+                        
+                        // Fade in based on recency
+                        const yearDiff = timelineYear - event.year;
+                        const opacity = yearDiff < 50 ? 1 : yearDiff < 200 ? 0.8 : 0.6;
+                        
                         return (
-                          <circle
-                            key={`${event.tribe}-${event.year}-${i}`}
-                            cx={x}
-                            cy={y}
-                            r="1.5"
-                            fill={color}
-                            stroke="white"
-                            strokeWidth="0.3"
-                            className="opacity-80"
-                          />
+                          <g key={`${event.tribe}-${event.year}-${i}`}>
+                            {/* Pulse effect for recent events */}
+                            {yearDiff < 100 && (
+                              <circle
+                                cx={x}
+                                cy={y}
+                                r="2.5"
+                                fill="none"
+                                stroke={color}
+                                strokeWidth="0.2"
+                                className="animate-ping"
+                                style={{ animationDuration: '2s' }}
+                              />
+                            )}
+                            <circle
+                              cx={x}
+                              cy={y}
+                              r="1.2"
+                              fill={color}
+                              stroke="white"
+                              strokeWidth="0.2"
+                              style={{ opacity }}
+                            />
+                          </g>
                         );
                       })}
                     </svg>
@@ -450,16 +560,16 @@ export default function ReligionTimeline() {
                 <div className="absolute bottom-0 left-0 right-0 max-h-48 overflow-y-auto bg-background/95 backdrop-blur-sm border-t border-border p-4">
                   <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
                     <MapPin className="w-4 h-4" />
-                    {filteredEvents.length} Religious Events
+                    {timelineFilteredEvents.length} Religious Events (by {timelineYear} CE)
                   </h3>
                   <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
-                    {filteredEvents.slice(0, 12).map((event, i) => {
+                    {timelineFilteredEvents.slice(-12).reverse().map((event, i) => {
                       const Icon = religionIcons[event.religion];
                       return (
                         <Link
                           key={`${event.tribe}-${event.year}-${i}`}
                           to={`/learn/${event.tribeSlug}`}
-                          className="flex items-center gap-2 p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors text-sm"
+                          className="flex items-center gap-2 p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors text-sm pointer-events-auto"
                         >
                           <div className={`p-1 rounded ${religionColors[event.religion]}`}>
                             <Icon className="w-3 h-3" />
@@ -472,9 +582,9 @@ export default function ReligionTimeline() {
                       );
                     })}
                   </div>
-                  {filteredEvents.length > 12 && (
+                  {timelineFilteredEvents.length > 12 && (
                     <p className="text-xs text-muted-foreground mt-2 text-center">
-                      +{filteredEvents.length - 12} more events. Switch to Timeline view for complete list.
+                      Showing most recent 12 events. Use timeline to explore earlier events.
                     </p>
                   )}
                 </div>

@@ -1,12 +1,14 @@
+import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { getAllTribes } from "@/lib/tribeDetection";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users, BookOpen, ExternalLink, ChevronRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users, BookOpen, ExternalLink, ChevronRight, Search, Filter, X } from "lucide-react";
 import { getAllReligions, TraditionalReligionData } from "@/data/traditionalReligions";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
@@ -43,11 +45,68 @@ const PIE_COLORS = ['#F59E0B', '#3B82F6', '#22C55E', '#EC4899', '#8B5CF6', '#06B
 const featuredReligions = getAllReligions();
 
 export default function ReligionsPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+  const [selectedRegion, setSelectedRegion] = useState(searchParams.get('region') || 'all');
+  const [selectedTribe, setSelectedTribe] = useState(searchParams.get('tribe') || 'all');
+  
   const allTribes = getAllTribes() as TribeWithReligion[];
   
   // Filter tribes with traditional religion data
   const tribesWithReligion = allTribes.filter(t => t.traditionalReligion);
   
+  // Get unique regions and tribe names for filter dropdowns
+  const uniqueRegions = ['West Africa', 'East Africa', 'Southern Africa', 'Central Africa', 'Horn of Africa', 'North Africa'];
+  const tribesWithReligionNames = [...new Set(featuredReligions.flatMap(r => r.tribesFollowing.map(t => t.tribeName)))].sort();
+
+  // Filter religions based on search and filters
+  const filteredReligions = useMemo(() => {
+    return featuredReligions.filter(religion => {
+      // Search filter
+      if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        const matchesSearch = 
+          religion.name.toLowerCase().includes(query) ||
+          religion.supremeDeity.name.toLowerCase().includes(query) ||
+          religion.alternateNames?.some(n => n.toLowerCase().includes(query)) ||
+          religion.tenets.some(t => t.belief.toLowerCase().includes(query)) ||
+          religion.tribesFollowing.some(t => t.tribeName.toLowerCase().includes(query));
+        if (!matchesSearch) return false;
+      }
+      
+      // Region filter
+      if (selectedRegion !== 'all' && religion.region !== selectedRegion) return false;
+      
+      // Tribe filter
+      if (selectedTribe !== 'all') {
+        const hasTribe = religion.tribesFollowing.some(t => t.tribeName === selectedTribe);
+        if (!hasTribe) return false;
+      }
+      
+      return true;
+    });
+  }, [searchQuery, selectedRegion, selectedTribe]);
+
+  // Update URL params when filters change
+  const updateFilters = (key: string, value: string) => {
+    const newParams = new URLSearchParams(searchParams);
+    if (value && value !== 'all') {
+      newParams.set(key, value);
+    } else {
+      newParams.delete(key);
+    }
+    setSearchParams(newParams);
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedRegion('all');
+    setSelectedTribe('all');
+    setSearchParams({});
+  };
+
+  const hasActiveFilters = searchQuery || selectedRegion !== 'all' || selectedTribe !== 'all';
+
   // Group by region
   const regionGroups = tribesWithReligion.reduce((acc, tribe) => {
     // Determine the broad region
@@ -147,14 +206,111 @@ export default function ReligionsPage() {
             </p>
           </div>
 
+          {/* Search and Filters */}
+          <section className="mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-4">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Search religions, deities, tenets..."
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    updateFilters('q', e.target.value);
+                  }}
+                  className="pl-10"
+                />
+              </div>
+              <div className="flex gap-2">
+                <select
+                  value={selectedRegion}
+                  onChange={(e) => {
+                    setSelectedRegion(e.target.value);
+                    updateFilters('region', e.target.value);
+                  }}
+                  className="bg-background border border-border rounded-lg px-3 py-2 text-sm"
+                >
+                  <option value="all">All Regions</option>
+                  {uniqueRegions.map(region => (
+                    <option key={region} value={region}>{region}</option>
+                  ))}
+                </select>
+                <select
+                  value={selectedTribe}
+                  onChange={(e) => {
+                    setSelectedTribe(e.target.value);
+                    updateFilters('tribe', e.target.value);
+                  }}
+                  className="bg-background border border-border rounded-lg px-3 py-2 text-sm"
+                >
+                  <option value="all">All Tribes</option>
+                  {tribesWithReligionNames.map(tribe => (
+                    <option key={tribe} value={tribe}>{tribe}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            
+            {/* Active Filters */}
+            {hasActiveFilters && (
+              <div className="flex flex-wrap items-center gap-2">
+                <Filter className="w-4 h-4 text-muted-foreground" />
+                {searchQuery && (
+                  <Badge variant="secondary" className="flex items-center gap-1">
+                    Search: {searchQuery}
+                    <X className="w-3 h-3 cursor-pointer" onClick={() => {
+                      setSearchQuery('');
+                      updateFilters('q', '');
+                    }} />
+                  </Badge>
+                )}
+                {selectedRegion !== 'all' && (
+                  <Badge variant="secondary" className="flex items-center gap-1">
+                    Region: {selectedRegion}
+                    <X className="w-3 h-3 cursor-pointer" onClick={() => {
+                      setSelectedRegion('all');
+                      updateFilters('region', 'all');
+                    }} />
+                  </Badge>
+                )}
+                {selectedTribe !== 'all' && (
+                  <Badge variant="secondary" className="flex items-center gap-1">
+                    Tribe: {selectedTribe}
+                    <X className="w-3 h-3 cursor-pointer" onClick={() => {
+                      setSelectedTribe('all');
+                      updateFilters('tribe', 'all');
+                    }} />
+                  </Badge>
+                )}
+                <button
+                  onClick={clearFilters}
+                  className="text-xs text-muted-foreground hover:text-foreground"
+                >
+                  Clear all
+                </button>
+              </div>
+            )}
+          </section>
+
           {/* Featured Religions with Full Details */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <BookOpen className="h-6 w-6 text-primary" />
-              Detailed Religion Profiles
+              {hasActiveFilters ? `${filteredReligions.length} Matching Religions` : 'Detailed Religion Profiles'}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredReligions.map((religion) => (
+            
+            {filteredReligions.length === 0 ? (
+              <div className="text-center py-12 text-muted-foreground">
+                <Sparkles className="w-12 h-12 mx-auto mb-4 opacity-50" />
+                <p>No religions found matching your filters.</p>
+                <button onClick={clearFilters} className="text-primary hover:underline mt-2">
+                  Clear filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredReligions.map((religion) => (
                 <Link key={religion.id} to={`/religion/${religion.id}`} className="block">
                   <Card className="hover:shadow-lg transition-shadow border-primary/20 h-full hover:border-primary/50">
                     <CardHeader className="pb-3">
@@ -222,6 +378,7 @@ export default function ReligionsPage() {
                 </Link>
               ))}
             </div>
+            )}
           </section>
 
           {/* Common Elements Section */}

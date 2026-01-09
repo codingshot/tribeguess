@@ -17,6 +17,7 @@ import Recipes from "./pages/Recipes";
 import ReligionsPage from "./pages/ReligionsPage";
 import ReligionTimeline from "./pages/ReligionTimeline";
 import ReligionDetailPage from "./pages/ReligionDetailPage";
+import IngredientPage from "./pages/IngredientPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
