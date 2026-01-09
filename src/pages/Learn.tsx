@@ -306,48 +306,48 @@ const Learn = () => {
           
           {/* Search and Filters - Inline Layout */}
           <section className="max-w-3xl mx-auto mb-4" aria-label="Search and filters">
-            {/* Search Bar + View Toggle + Info - All inline */}
-            <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
-              {/* Search Bar - Live search as you type */}
-              <div className="relative flex-1">
-                <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                <input
-                  id="tribe-search"
-                  type="text"
-                  value={localSearch}
-                  onChange={(e) => {
-                    const value = e.target.value;
-                    setLocalSearch(value);
-                    // Live search - update URL as user types
+            {/* Search Bar */}
+            <div className="relative">
+              <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <input
+                id="tribe-search"
+                type="text"
+                value={localSearch}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setLocalSearch(value);
+                  // Live search - update URL as user types
+                  const params = new URLSearchParams(searchParams);
+                  if (value) {
+                    params.set('search', value);
+                  } else {
+                    params.delete('search');
+                  }
+                  setSearchParams(params);
+                }}
+                placeholder="Search tribes, names..."
+                className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
+              />
+              {localSearch && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLocalSearch('');
                     const params = new URLSearchParams(searchParams);
-                    if (value) {
-                      params.set('search', value);
-                    } else {
-                      params.delete('search');
-                    }
+                    params.delete('search');
                     setSearchParams(params);
                   }}
-                  placeholder="Search tribes, names..."
-                  className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
-                />
-                {localSearch && (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setLocalSearch('');
-                      const params = new URLSearchParams(searchParams);
-                      params.delete('search');
-                      setSearchParams(params);
-                    }}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
-                    aria-label="Clear search"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
-                )}
-              </div>
-              
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
+                  aria-label="Clear search"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+            
+            {/* View Toggle + Advanced Filters + Info - Same row on mobile */}
+            <div className="flex items-center justify-center gap-2 mt-2">
               {/* Compact View Toggle with Active State */}
               <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0">
                 <button
@@ -397,7 +397,7 @@ const Learn = () => {
                       : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                   }`}>
                     <SlidersHorizontal className="w-4 h-4" />
-                    <span className="text-xs font-medium hidden sm:inline">Advanced</span>
+                    <span className="text-xs font-medium">Advanced</span>
                     {hasAdvancedFilters && (
                       <span className="w-2 h-2 rounded-full bg-primary-foreground" />
                     )}
@@ -418,22 +418,20 @@ const Learn = () => {
                         <ArrowUpDown className="w-4 h-4 text-muted-foreground" />
                         Sort By
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {[
-                          { value: '', label: 'Default' },
-                          { value: 'pop-desc', label: '👥 Population ↓' },
-                          { value: 'pop-asc', label: '👥 Population ↑' },
-                          { value: 'name-asc', label: '🔤 Name A-Z' },
-                          { value: 'name-desc', label: '🔤 Name Z-A' },
+                          { value: 'pop-desc', label: 'Population (High)' },
+                          { value: 'pop-asc', label: 'Population (Low)' },
+                          { value: 'name-asc', label: 'Name (A-Z)' },
+                          { value: 'name-desc', label: 'Name (Z-A)' },
                         ].map(option => (
                           <button
                             key={option.value}
-                            type="button"
                             onClick={() => setTempSort(option.value)}
-                            className={`px-3 py-2 text-xs rounded-lg border transition-all ${
+                            className={`px-3 py-1.5 text-xs rounded-full transition-colors ${
                               tempSort === option.value
-                                ? 'border-primary bg-primary/10 text-primary'
-                                : 'border-border bg-secondary/50 text-foreground hover:bg-secondary'
+                                ? 'bg-primary text-primary-foreground'
+                                : 'bg-muted hover:bg-muted/80'
                             }`}
                           >
                             {option.label}
@@ -441,52 +439,45 @@ const Learn = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* Multi-Select Countries */}
+                    
+                    {/* Multi-Country Selection */}
                     <div className="space-y-3">
                       <label className="text-sm font-medium flex items-center gap-2">
                         <Flag className="w-4 h-4 text-muted-foreground" />
                         Filter by Countries
-                        {tempCountries.length > 0 && (
-                          <span className="text-xs text-primary">({tempCountries.length} selected)</span>
-                        )}
                       </label>
-                      <div className="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto pr-2">
-                        {countries.map(c => (
-                          <button
-                            key={c.code}
-                            type="button"
-                            onClick={() => toggleTempCountry(c.code)}
-                            className={`flex items-center gap-2 px-3 py-2 text-xs rounded-lg border transition-all text-left ${
-                              tempCountries.includes(c.code)
-                                ? 'border-primary bg-primary/10 text-primary'
-                                : 'border-border bg-secondary/50 text-foreground hover:bg-secondary'
+                      <div className="grid grid-cols-3 gap-2 max-h-48 overflow-y-auto">
+                        {countries.map(country => (
+                          <label
+                            key={country.code}
+                            className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer transition-colors ${
+                              tempCountries.includes(country.code)
+                                ? 'bg-primary/10 border border-primary/30'
+                                : 'bg-muted/50 hover:bg-muted'
                             }`}
                           >
-                            <span className="text-base">{c.flag}</span>
-                            <span className="truncate flex-1">{c.name}</span>
-                            {tempCountries.includes(c.code) && (
-                              <Check className="w-3 h-3 text-primary flex-shrink-0" />
-                            )}
-                          </button>
+                            <Checkbox
+                              checked={tempCountries.includes(country.code)}
+                              onCheckedChange={() => toggleTempCountry(country.code)}
+                            />
+                            <span className="text-sm">{country.flag}</span>
+                            <span className="text-xs truncate">{country.name}</span>
+                          </label>
                         ))}
                       </div>
                     </div>
                   </div>
-
-                  <DialogFooter className="flex gap-2 sm:gap-2">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={clearAdvancedFilters}
-                      className="flex-1"
-                    >
-                      Clear
+                  
+                  <DialogFooter className="flex flex-col sm:flex-row gap-2">
+                    <Button variant="outline" onClick={clearAdvancedFilters} className="w-full sm:w-auto">
+                      Clear Filters
                     </Button>
-                    <Button
-                      type="button"
-                      onClick={applyAdvancedFilters}
-                      className="flex-1"
+                    <Button 
+                      onClick={() => {
+                        applyAdvancedFilters();
+                        setAdvancedFiltersOpen(false);
+                      }} 
+                      className="w-full sm:w-auto"
                     >
                       Apply Filters
                     </Button>
