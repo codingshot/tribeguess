@@ -5630,26 +5630,95 @@
       "traditionalFood": {
         "staples": ["Ugali (maize porridge)", "Sorghum", "Millet", "Beef", "Milk"],
         "beverages": ["Pombe (millet beer)", "Fresh milk", "Fermented milk (Maziwa lala)"],
-        "specialDishes": ["Nyama choma (roasted meat)", "Ugali with beef stew", "Dried fish"],
+        "specialDishes": ["Nyama choma (roasted meat)", "Ugali with beef stew", "Dried fish", "Makande (beans and maize)"],
         "description": "Sukuma diet centers on ugali, cattle products, and grains grown in the savanna region south of Lake Victoria."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Light morning meal, main evening meal after cattle return",
+        "mainMealTime": "Evening - after cattle herding duties complete",
+        "eatingStyle": "Communal eating from shared bowls, ugali balls dipped in stew, elders served first",
+        "genderRules": "Men eat separately from women and children, elders receive choice meat portions, cattle herders prioritized",
+        "taboos": ["Milk and meat should not be mixed in same meal", "Certain cattle are not slaughtered (breeding stock)", "Women avoid certain foods during pregnancy", "Totemic animals of the clan forbidden"],
+        "specialOccasions": "Cattle slaughtered for major ceremonies, pombe beer essential for all celebrations, dance competitions feature elaborate feasts",
+        "hospitality": "Guests offered milk immediately upon arrival - refusing milk is a grave insult"
+      },
+      "tradeRelations": {
+        "historical": ["Cattle trade with neighboring peoples", "Ivory trade routes to coast", "Grain and cotton exchange", "Salt trade from Lake Victoria"],
+        "modern": ["Cotton production for export", "Cattle markets across Tanzania", "Fish trade from Lake Victoria", "Agricultural products to urban centers"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Sukuma chiefs resisted German colonization. During the Maji Maji Rebellion (1905-1907), some Sukuma participated in resistance against German forced labor policies.",
+        "independenceMovement": "Sukuma supported TANU and Julius Nyerere's independence movement. Many Sukuma became prominent in post-independence Tanzania.",
+        "keyFigures": ["Chief Makwaia (early colonial resistance)", "Paul Bomani (independence-era politician)", "Edward Sokoine (Prime Minister)"]
       },
       "traditionalDance": "Bugobogobo - competitive snake dances with elaborate costumes",
       "religion": "Christianity (majority), Traditional beliefs, Islam",
+      "traditionalReligion": {
+        "name": "Sukuma Traditional Religion",
+        "supremeDeity": "Likube (supreme god, creator of all things)",
+        "spirits": ["Basegu (ancestral spirits)", "Misambwa (nature spirits)", "Balogi (evil spirits that cause illness)"],
+        "practices": ["Bafumu (diviners) consult spirits for guidance", "Cattle sacrifices for ancestors", "Bugobogobo dances have spiritual dimensions", "Rain-making ceremonies by specialists", "Protective charms and medicines"],
+        "beliefs": "Likube created the world but is distant; ancestors (basegu) actively influence daily life; cattle connect the living with ancestors; dance competitions honor the spirits; traditional healers (bafumu) mediate between worlds",
+        "religiousHistory": {
+          "christianityIntroduced": "1879 (White Fathers missionaries)",
+          "introducedBy": "Catholic White Fathers, later Protestant missions (Lutheran, Anglican, Moravian)",
+          "conversionProcess": "Gradual conversion through mission schools and hospitals; traditional beliefs persist alongside Christianity; many Sukuma practice dual religion",
+          "sources": ["Wikipedia - Sukuma people", "Cory, Hans (1949) The Sukuma Law and Custom"]
+        }
+      },
+      "history": {
+        "origin": "The Sukuma migrated to the Lake Victoria region centuries ago, possibly from the northwest. 'Sukuma' means 'north' - they are the 'people of the north' relative to their Nyamwezi neighbors.",
+        "colonialEra": "German colonization brought forced cotton cultivation. The Sukuma resisted forced labor. Under British rule, cotton production expanded with some Sukuma becoming wealthy farmers.",
+        "independence": "Post-independence, the Sukuma supported ujamaa socialism under Nyerere. Cotton cooperatives were formed. The Sukuma remain Tanzania's largest and politically significant ethnic group.",
+        "keyEvents": ["Migration to Lake Victoria region", "German colonization and cotton cultivation", "Maji Maji involvement (1905-1907)", "British cotton expansion", "Independence and ujamaa"]
+      },
       "language": {
         "name": "Sukuma (Kisukuma)",
         "speakers": "~10 million",
         "greeting": "Wuzila?",
         "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Mbujile", "meaning": "Good morning" },
+          { "phrase": "Wunoga", "meaning": "I am fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Nasalila", "meaning": "Thank you" },
+          { "phrase": "Ndagila", "meaning": "Goodbye" }
+        ],
         "family": "Bantu (Niger-Congo)",
-        "writingSystem": "Latin alphabet"
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Great Lakes Bantu (Zone F)",
+          "speakers": "~10 million",
+          "relatedLanguages": ["Nyamwezi", "Sumbwa", "Zinza", "Haya"],
+          "migrationHistory": "Sukuma language belongs to the interlacustrine Bantu group, related to languages spoken around the Great Lakes"
+        }
       },
+      "famousPeople": [
+        { "name": "Paul Bomani", "role": "Independence-era politician and diplomat", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Bomani" },
+        { "name": "Edward Sokoine", "role": "Prime Minister of Tanzania (1977-1980, 1983-1984)", "wikipedia": "https://en.wikipedia.org/wiki/Edward_Sokoine" },
+        { "name": "Mama Salma Kikwete", "role": "First Lady of Tanzania (2005-2015)", "wikipedia": null }
+      ],
       "sources": [
         { "name": "Wikipedia - Sukuma people", "url": "https://en.wikipedia.org/wiki/Sukuma_people" },
         { "name": "Ethnologue - Sukuma", "url": "https://www.ethnologue.com/language/suk" },
         { "name": "Sukuma Legacy Project", "url": "https://sukumalegacy.org/" }
       ],
       "description": "The Sukuma are Tanzania's largest ethnic group (16%), renowned for cattle herding, cotton farming, and spectacular traditional dance competitions featuring live pythons.",
-      "relatedTribes": ["nyamwezi", "haya", "zinza", "sumbwa"]
+      "relatedTribes": ["nyamwezi", "haya", "zinza", "sumbwa"],
+      "diaspora": {
+        "globalPopulation": "~50,000",
+        "majorCountries": ["USA", "UK", "Kenya", "Uganda"],
+        "breakdown": [
+          { "country": "Kenya", "population": "~20,000", "cities": ["Nairobi"] },
+          { "country": "Uganda", "population": "~10,000", "cities": ["Kampala"] }
+        ],
+        "communities": ["Cross-border communities with neighboring countries", "Students in international universities"],
+        "associations": ["Sukuma Cultural Association", "Tanzanian diaspora groups"]
+      }
     },
 
     {
@@ -5693,8 +5762,27 @@
       "traditionalFood": {
         "staples": ["Bananas (Ndizi)", "Meat (Nyama)", "Beans", "Maize"],
         "beverages": ["Mbege (banana beer)", "Coffee", "Milk"],
-        "specialDishes": ["Machalari (banana and meat stew)", "Kisusio (blood sausage)", "Roasted bananas"],
+        "specialDishes": ["Machalari (banana and meat stew)", "Kisusio (blood sausage)", "Roasted bananas", "Mtori (banana and meat mash)"],
         "description": "Chagga cuisine revolves around bananas (over 20 varieties) and the traditional mbege banana beer brewed for ceremonies."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch after morning farm work, family dinner",
+        "mainMealTime": "Lunch and dinner equally important for family bonding",
+        "eatingStyle": "Eating from shared bowls, banana dishes central, mbege beer for adult gatherings",
+        "genderRules": "Men receive choice meat portions, women control food preparation and storage, elders honored with first servings",
+        "taboos": ["Certain banana varieties reserved for specific uses", "Pregnant women avoid some foods", "Strangers cannot enter the banana grove", "Blood sausage preparation has specific rules"],
+        "specialOccasions": "Mbege beer essential for all celebrations, cattle slaughtered for major ceremonies, coffee shared with guests",
+        "hospitality": "Coffee and mbege offered to all visitors - refusing brings bad omens"
+      },
+      "tradeRelations": {
+        "historical": ["Ivory trade to coast", "Iron tools traded regionally", "Cattle trade with Maasai", "Coffee and banana trade with neighbors"],
+        "modern": ["Coffee export to global markets", "Tourism (Kilimanjaro climbing)", "Banana trade across Tanzania", "Education services - many Chagga teachers nationwide"]
+      },
+      "independenceHistory": {
+        "antiColonialResistance": "Mangi Meli led fierce resistance against German colonization in the 1890s. He was hanged by Germans in 1900 along with 18 other chiefs for leading the rebellion.",
+        "independenceMovement": "Chagga chiefs supported TANU and Tanzanian independence. The Chagga coffee cooperative (KNCU) was one of Africa's first successful cooperatives.",
+        "keyFigures": ["Mangi Meli (anti-German resistance)", "Chief Marealle II (colonial-era leader)", "Joseph Warioba (Prime Minister)"]
       },
       "traditionalDance": "Ngomasero - celebratory dances with drums",
       "religion": "Christianity (Lutheran and Catholic majority), Traditional beliefs",
@@ -5705,30 +5793,67 @@
         "practices": ["Offerings at sacred groves", "Ancestor veneration ceremonies", "Consultation with traditional healers (wagang'i)", "Rituals before planting and harvest", "Libations to ancestors"],
         "beliefs": "Ruwa lives in the sky and on Kilimanjaro's peak; ancestors guide the living; the mountain is sacred; banana groves are spiritually important",
         "religiousHistory": {
-          "christianityIntroduced": "1890s",
+          "christianityIntroduced": "1893",
           "introducedBy": "German Lutheran missionaries (Leipzig Mission) and Catholic Holy Ghost Fathers",
-          "conversionProcess": "Rapid adoption due to mission schools offering education; by 1920s majority Christian",
+          "conversionProcess": "Rapid adoption due to mission schools offering education; by 1920s majority Christian; chiefs embraced Christianity for access to Western education",
           "sources": ["Stahl, Kathleen M. (1964) History of the Chagga People of Kilimanjaro", "Wikipedia - Chaga people"]
         }
+      },
+      "history": {
+        "origin": "The Chagga migrated to Kilimanjaro from various directions between 1400-1700 CE. They developed sophisticated irrigation systems on the mountain slopes and became successful farmers.",
+        "colonialEra": "German colonization brought coffee plantations and mission education. Mangi Meli led resistance (1890s) and was executed. Under British rule, the Chagga formed successful coffee cooperatives.",
+        "independence": "Post-independence, the Chagga focused on education and business. They have one of Tanzania's highest literacy and development rates.",
+        "keyEvents": ["Settlement on Kilimanjaro (1400-1700 CE)", "Development of irrigation", "German conquest and Meli's resistance (1890s)", "Coffee cooperative formation (1933)", "Independence (1961)"]
       },
       "language": {
         "name": "Kichagga",
         "speakers": "~2 million",
         "greeting": "Yiole?",
         "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Evi", "meaning": "Fine/Good" },
+          { "phrase": "Kwaheye", "meaning": "Goodbye" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Asante", "meaning": "Thank you (Swahili borrowed)" },
+          { "phrase": "Ndiyo", "meaning": "Yes" }
+        ],
         "family": "Bantu (Niger-Congo)",
-        "writingSystem": "Latin alphabet"
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Northeast Coastal Bantu",
+          "speakers": "~2 million",
+          "relatedLanguages": ["Pare", "Gweno", "Meru (Kenya)"],
+          "migrationHistory": "Kichagga belongs to the Eastern Bantu group and developed on the slopes of Kilimanjaro with multiple dialects across different chiefdoms"
+        }
       },
       "famousPeople": [
-        { "name": "Mangi Meli", "role": "Chief who resisted German colonization", "wikipedia": "https://en.wikipedia.org/wiki/Mangi_Meli" },
-        { "name": "Joseph Sinde Warioba", "role": "Former Prime Minister of Tanzania", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Sinde_Warioba" }
+        { "name": "Mangi Meli", "role": "Chief who resisted German colonization (executed 1900)", "wikipedia": "https://en.wikipedia.org/wiki/Mangi_Meli" },
+        { "name": "Joseph Sinde Warioba", "role": "Former Prime Minister of Tanzania", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Sinde_Warioba" },
+        { "name": "Chief Thomas Marealle II", "role": "Colonial-era paramount chief, nationalist", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Marealle_II" }
       ],
       "sources": [
         { "name": "Wikipedia - Chaga people", "url": "https://en.wikipedia.org/wiki/Chaga_people" },
         { "name": "Ethnologue - Chagga languages", "url": "https://www.ethnologue.com/language/kde" }
       ],
-      "description": "The Chagga (Wachagga) live on the slopes of Mount Kilimanjaro, renowned for coffee farming, high education rates, and entrepreneurial spirit.",
-      "relatedTribes": ["pare", "meru", "sukuma", "haya"]
+      "description": "The Chagga (Wachagga) live on the slopes of Mount Kilimanjaro, renowned for coffee farming, high education rates, entrepreneurial spirit, and Mangi Meli's heroic resistance against colonization.",
+      "relatedTribes": ["pare", "meru", "sukuma", "haya"],
+      "diaspora": {
+        "globalPopulation": "~100,000",
+        "majorCountries": ["USA", "UK", "Germany", "Kenya"],
+        "breakdown": [
+          { "country": "Kenya", "population": "~30,000", "cities": ["Nairobi"] },
+          { "country": "United States", "population": "~20,000", "cities": ["Various"] },
+          { "country": "Germany", "population": "~15,000", "cities": ["Berlin", "Munich"] }
+        ],
+        "communities": ["Many Chagga students at international universities", "Business communities in East African cities"],
+        "associations": ["Kilimanjaro Alumni Associations", "Tanzanian diaspora groups"]
+      },
+      "gallery": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mount_Kilimanjaro_and_banana_plantation.jpg/640px-Mount_Kilimanjaro_and_banana_plantation.jpg", "caption": "Chagga banana plantation with Mount Kilimanjaro", "credit": "Wikimedia Commons" }
+      ]
     },
 
     {
