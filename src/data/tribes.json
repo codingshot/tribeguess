@@ -576,6 +576,16 @@
         "specialDishes": ["Chicken with greens and ugali", "Mursik (fermented milk)", "Managu (African nightshade)", "Isombe (cassava leaves)"],
         "description": "Luhya cuisine is famous for generous portions. The iconic 'chicken and ugali' is a cultural symbol. Celebrations feature specially prepared free-range chicken (ingokho) with traditional vegetables."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch with ugali, substantial family dinner",
+        "mainMealTime": "Dinner when extended family gathers",
+        "eatingStyle": "Communal eating with hands, ugali balls dipped into vegetables/soup, large portions expected",
+        "genderRules": "Men served first and given choice portions of chicken (gizzard for elders), women eat together, children last",
+        "taboos": ["Chicken gizzard reserved for the father/elder", "Young people cannot eat certain chicken parts", "Wasting food brings poverty", "Eating before washing hands invites illness"],
+        "specialOccasions": "Ingokho (chicken) and ugali for all celebrations, busaa beer for elders, bull slaughtered for major ceremonies",
+        "hospitality": "A Luhya home without food for visitors brings shame - 'We cook first, ask questions later'"
+      },
       "traditionalDance": "Sikuti - drum-based dance performed during celebrations",
       "religion": "Traditional beliefs with Wele Khakaba (God); now predominantly Christian",
       "traditionalReligion": {
@@ -707,6 +717,16 @@
         "beverages": ["Uki (honey beer)", "Kaluvu (palm wine)", "Ngwa (millet porridge)"],
         "specialDishes": ["Nzuki (honey - used in many dishes)", "Kilulu (wild vegetables)", "Kyondo (dried vegetables)", "Managu (African nightshade)"],
         "description": "Kamba cuisine reflects the semi-arid environment. Honey (nzuki) is a prized product used in beverages and cooking. Dried foods like mboka (dried meat) were essential for traders on long journeys."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Light morning meal, substantial evening meal when family reunites",
+        "mainMealTime": "Evening (around 6-7pm)",
+        "eatingStyle": "Communal eating from shared pot, ugali balls dipped in sauce, right hand only",
+        "genderRules": "Men served separately with choice portions, women and children eat together, elders given honey beer",
+        "taboos": ["Wasting water or food in dry land is taboo", "Pregnant women avoid certain wild foods", "Honey collection has rituals", "Some clans avoid specific animals"],
+        "specialOccasions": "Uki (honey beer) for all ceremonies, goat meat for weddings, dried meat for long journeys and celebrations",
+        "hospitality": "Even in drought, visitors must be fed - 'A guest is a gift from God'"
       },
       "traditionalDance": "Kilumi - acrobatic dance with drums and whistles",
       "religion": "Traditional belief in Ngai Mulungu; now predominantly Christian",
@@ -984,6 +1004,16 @@
         "specialDishes": ["Matoke with groundnut sauce", "Ensinia (cowpeas)", "Engare (amaranth leaves)", "Chimbera (roast meat)"],
         "description": "Gusii cuisine features bananas (ematoke) prominently, prepared in various ways. The fertile highlands produce abundant vegetables, with finger millet being the traditional grain for ugali."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Morning porridge, lunch break from farm, main family dinner",
+        "mainMealTime": "Dinner when family gathers (around 7pm)",
+        "eatingStyle": "Eating from shared pots with hands, ugali balls into soup, children learn by watching",
+        "genderRoles": "Men eat separately in traditional homes, receive choice meat portions, women control food distribution",
+        "taboos": ["Certain fish avoided traditionally", "Pregnant women have food restrictions", "Some clans avoid specific animals", "Eating before elders is disrespectful"],
+        "specialOccasions": "Obokano lyre music accompanies ceremonial meals, busaa beer for elders, bull for major ceremonies",
+        "hospitality": "Visitors must eat before any business - refusing food is an insult"
+      },
       "traditionalDance": "Ekerongo - performed with Obokano lyre during celebrations",
       "religion": "Traditional beliefs; now predominantly Christian (Seventh-day Adventist influence)",
       "traditionalReligion": {
@@ -1090,6 +1120,16 @@
         "beverages": ["Muratina (honey beer)", "Miraa tea (khat leaves brewed)", "Fermented porridge"],
         "specialDishes": ["Mburi (goat meat)", "Miraa (khat - chewed socially)", "Muthokoi", "Traditional vegetables with beans"],
         "description": "Meru cuisine shares similarities with Kikuyu but includes unique dishes. Miraa (khat) plays a significant cultural and economic role, chewed during social gatherings and exported widely."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch, family dinner with ugali/mukimo",
+        "mainMealTime": "Lunch and dinner equally important",
+        "eatingStyle": "Communal eating from shared pots, right hand, miraa chewing is social bonding",
+        "genderRules": "Men served first, elders get choice portions, women control kitchen and food distribution",
+        "taboos": ["Pregnant women avoid certain foods", "Some clans have animal taboos", "Wasting food dishonors ancestors", "Eating before elders is disrespectful"],
+        "specialOccasions": "Goat meat for ceremonies, muratina beer for elders, miraa for social gatherings and negotiations",
+        "hospitality": "Guests must be fed and offered miraa - 'An empty-handed welcome is no welcome'"
       },
       "traditionalDance": "Ntore - performed during celebrations and rites of passage",
       "religion": "Traditional belief in Murungu (God); now predominantly Christian",
@@ -3484,6 +3524,16 @@
         "specialDishes": ["Efo riro (vegetable stew)", "Moin moin (bean pudding)", "Akara (bean cakes)", "Asun (peppered goat meat)"],
         "description": "Yoruba cuisine is rich and varied, known for soups like Ewedu and Gbegiri served with Amala. Peppered meat dishes and bean preparations are staples."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light morning meal with ogi or akara, substantial afternoon meal as main, lighter evening meal or leftovers",
+        "mainMealTime": "Afternoon (between 1-4pm) when work is paused",
+        "eatingStyle": "Communal eating from shared bowls, right hand used for eating, children eat together",
+        "genderRules": "Men and elder males served first, women eat together separately, children last",
+        "taboos": ["Walking while eating is disrespectful", "Eating in public markets shows poor breeding", "Young people shouldn't eat gizzard (reserved for elders)"],
+        "specialOccasions": "Amala with gbegiri and ewedu for important guests, pounded yam at ceremonies, jollof rice at parties",
+        "hospitality": "Guests must be fed before discussing business - 'A visitor is a blessing from Olodumare'"
+      },
       "traditionalDance": "Bata dance performed with Bata drums for Shango worship",
       "religion": "Traditional Yoruba religion (Ifa/Orisha), Christianity, Islam",
       "traditionalReligion": {
@@ -3616,6 +3666,16 @@
         "specialDishes": ["Abacha (African salad)", "Nkwobi (spiced cow feet)", "Ugba (oil bean salad)", "Pepper soup"],
         "description": "Igbo cuisine features diverse soups like Oha, Egusi, and Nsala, served with fufu or garri. Palm oil is central to most dishes."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast of akamu or garri, main meal at lunch, family dinner in evening",
+        "mainMealTime": "Lunch and dinner equally important for family bonding",
+        "eatingStyle": "Eating with right hand from individual or shared plates, fufu balls dipped into soup",
+        "genderRules": "Kola nut must be broken by eldest male, men served first, but women control food preparation and distribution",
+        "taboos": ["Left hand must never touch food", "Eating before elders is disrespectful", "Pregnant women avoid snail (slippery baby)", "Eggs restricted for children in some areas"],
+        "specialOccasions": "Ji (yam) is central to New Yam Festival, ofe oha for special guests, goat meat at title ceremonies",
+        "hospitality": "Kola nut ceremony precedes all meals for guests - 'He who brings kola brings life'"
+      },
       "traditionalDance": "Atilogwu - acrobatic dance from Achalla/Nkwerre",
       "religion": "Traditional Igbo religion (Odinani/Chukwu), Christianity",
       "traditionalReligion": {
@@ -3745,6 +3805,16 @@
         "beverages": ["Kunun zaki (millet drink)", "Fura da nono", "Zobo"],
         "specialDishes": ["Kilishi (dried spiced meat)", "Masa (rice cakes)", "Dambu (dried shredded meat)", "Danwake (bean dumplings)"],
         "description": "Hausa cuisine features grains, legumes, and meat. Suya and Kilishi are famous across Nigeria. Fura da nono is a beloved traditional drink."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Early breakfast (kosai/akara with kunu), main meal at lunch, light dinner often leftovers",
+        "mainMealTime": "Lunch after Dhuhr prayers (around 1pm)",
+        "eatingStyle": "Eating from shared bowls with right hand, sitting on floor mats in traditional homes",
+        "genderRules": "Men and women eat separately (particularly in practicing Muslim homes), men served first, boys eat with fathers after age 7",
+        "taboos": ["Left hand forbidden for eating (Islamic)", "Eating pork absolutely prohibited", "Women should eat modestly and not in public", "Wasting food is sinful"],
+        "specialOccasions": "Ram meat at Eid celebrations, tuwo shinkafa for weddings, dates during Ramadan iftar",
+        "hospitality": "Strangers must be fed before questions - 'The guest's food is already cooked by God'"
       },
       "traditionalDance": "Koroso - traditional wedding dance",
       "religion": "Islam (predominantly Sunni)",
@@ -3885,6 +3955,16 @@
         "specialDishes": ["Fura (millet balls with milk)", "Lahal (milk with millet)", "Beef stews"],
         "description": "Fulani diet centers on dairy products - milk, butter, and yogurt. As pastoralists, cattle provide both sustenance and wealth."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning meal of milk/porridge, evening meal with family, milk consumed throughout day",
+        "mainMealTime": "Evening when cattle return from grazing",
+        "eatingStyle": "Eating from shared calabash bowls, milk drunk fresh or fermented, right hand only",
+        "genderRules": "Men and women often eat separately, milk distribution controlled by senior women, boys eat with fathers after initiation",
+        "taboos": ["Selling milk is shameful (should be given freely)", "Certain cattle sacred and cannot be eaten", "Wasting milk brings bad luck", "Some clans avoid fish"],
+        "specialOccasions": "Cattle slaughtered only for major ceremonies, Sharo whipping festivals include feasting, Gerewol with special foods",
+        "hospitality": "A guest must be offered fresh milk immediately - 'Milk shared is blessing multiplied'"
+      },
       "traditionalDance": "Gerewol - male beauty dance competition (Wodaabe)",
       "religion": "Islam (predominantly), Traditional beliefs in some groups",
       "traditionalReligion": {
@@ -4014,6 +4094,16 @@
         "beverages": ["Palm wine (Nsafufuo)", "Pito (millet beer)"],
         "specialDishes": ["Kelewele (spiced plantain)", "Ampesi", "Abenkwan (palm nut soup)", "Waakye"],
         "description": "Ashanti cuisine features soups with fufu. Palm nut soup and groundnut soup are staples. Fufu is pounded until smooth and stretchy."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast of porridge, substantial lunch, family dinner with fufu",
+        "mainMealTime": "Dinner when family gathers (around 6-7pm)",
+        "eatingStyle": "Fufu balls swallowed without chewing, eating from shared bowl with right hand, soup shared",
+        "genderRules": "Men served first in traditional homes, Asantehemaa (queen mother) has food privileges, children eat separately",
+        "taboos": ["Chewing fufu is improper", "Eating your clan totem forbidden", "Pregnant women avoid certain animals", "Whistling while eating invites spirits"],
+        "specialOccasions": "Sheep sacrificed for Odwira festival, palm wine for elders at ceremonies, fufu with palm nut soup for honored guests",
+        "hospitality": "Guests must eat before departure - 'We don't let visitors leave hungry'"
       },
       "traditionalDance": "Adowa - graceful hand and foot movements dance",
       "religion": "Traditional Ashanti religion (Nyame, Asase Yaa), Christianity",
@@ -4149,6 +4239,16 @@
         "specialDishes": ["Inkobe (samp and beans)", "Uphuthu namasi (phutu with amasi)", "Braai (grilled meat)"],
         "description": "Zulu cuisine centers on maize and cattle products. Phutu (crumbly porridge) with amasi (sour milk) is a staple. Meat is eaten at celebrations."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Main meal late morning, second meal in evening after work, snacking on amasi throughout day",
+        "mainMealTime": "Late morning (around 10-11am) and evening",
+        "eatingStyle": "Eating from communal pot with hands, sitting on floor, eldest served first",
+        "genderRules": "Men eat separately from women, boys join men after initiation, women and girls eat together",
+        "taboos": ["Menstruating women cannot prepare food for men", "Newly initiated boys cannot eat certain foods", "Meat from struck-by-lightning animals forbidden", "Certain cuts reserved for specific family members"],
+        "specialOccasions": "Cattle slaughtered for ancestral ceremonies (umsebenzi), umqombothi beer essential at all celebrations",
+        "hospitality": "No one leaves a Zulu home hungry - refusing food is an insult to ancestors"
+      },
       "traditionalDance": "Indlamu - powerful war dance with high kicks",
       "religion": "Traditional Zulu religion (Unkulunkulu, amadlozi ancestors), Christianity",
       "traditionalReligion": {
@@ -4283,6 +4383,16 @@
         "specialDishes": ["Umleqwa (free-range chicken)", "Ulusu (tripe)", "Imifino (African greens)"],
         "description": "Xhosa cuisine features maize and beans. Umngqusho (samp and beans) is a staple. Traditional beer (umqombothi) is brewed for ceremonies."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Main meal in late morning, second meal in evening, amasi snacking throughout day",
+        "mainMealTime": "Mid-morning and evening",
+        "eatingStyle": "Communal eating with hands from shared pots, sitting in circles",
+        "genderRules": "Men eat separately from women, initiated men have special seating, elders served first choice cuts",
+        "taboos": ["Initiates cannot eat certain foods during circumcision period", "New mothers have food restrictions", "Certain clan totems cannot be eaten", "Menstruating women avoid cooking for men"],
+        "specialOccasions": "Cattle slaughtered for ancestral ceremonies, imbeleko ceremony requires specific foods, umqombothi at all celebrations",
+        "hospitality": "A hungry visitor brings shame to the household - food is always shared"
+      },
       "traditionalDance": "Umxhentso - energetic dance with stomping and singing",
       "religion": "Traditional Xhosa religion (Qamata, amadlozi ancestors), Christianity",
       "traditionalReligion": {
@@ -4413,6 +4523,16 @@
         "specialDishes": ["Madora (mopane worms)", "Nhopi (pumpkin mash)", "Sadza ne nyama", "Rupiza (wild fruit)"],
         "description": "Shona cuisine centers on sadza (thick maize porridge) eaten with relishes of vegetables, meat, or fish. Mopane worms are a delicacy."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Main meal mid-morning after farm work begins, evening meal when family gathers",
+        "mainMealTime": "Late morning (10-11am) and evening (6-7pm)",
+        "eatingStyle": "Eating with right hand, sadza balls dipped into relish, communal from shared pots",
+        "genderRules": "Men and boys eat together, women and girls separately, father gets best portions of meat",
+        "taboos": ["Eating your totem animal (mutupo) is forbidden", "Pregnant women avoid certain foods", "New widows have food restrictions", "Some foods forbidden during mourning"],
+        "specialOccasions": "Cattle slaughtered for bira ceremonies, sadza with beef at weddings, seven days beer for celebrations",
+        "hospitality": "Guests are honored with the best food - 'A visitor is a messenger from God'"
+      },
       "traditionalDance": "Jerusarema - energetic harvest dance",
       "religion": "Traditional Shona religion (Mwari, Vadzimu ancestors), Christianity",
       "traditionalReligion": {
@@ -4542,6 +4662,16 @@
         "beverages": ["Buna (coffee)", "Farsoo (honey wine)"],
         "specialDishes": ["Anchote (root vegetable)", "Qoocoo (butter and barley)", "Kurkufa (flour balls in sauce)"],
         "description": "Oromo cuisine features grain-based dishes and the famous coffee ceremony. Coffee (buna) is central to social and spiritual life."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Main meal late morning, evening meal with family, coffee ceremony anytime",
+        "mainMealTime": "Late morning and evening",
+        "eatingStyle": "Eating from shared plate with right hand, injera torn and used to scoop food, coffee ceremony is communal",
+        "genderRules": "Men and women may eat together, elders honored with first servings, women conduct coffee ceremonies",
+        "taboos": ["Some clans avoid pork", "Wasting food disrespects Waaqa", "Eating alone is unfortunate", "Refusing coffee ceremony is offensive"],
+        "specialOccasions": "Coffee ceremony for all gatherings and important discussions, Irreecha thanksgiving includes special foods, cattle for Gadaa ceremonies",
+        "hospitality": "Three rounds of coffee (abol, tona, baraka) must be completed - leaving early is insulting"
       },
       "traditionalDance": "Dhichisaa - energetic group dance with singing",
       "religion": "Waaqeffanna (traditional religion), Islam, Ethiopian Orthodox Christianity",
@@ -4674,6 +4804,16 @@
         "specialDishes": ["Shiro (chickpea stew)", "Gomen (collard greens)", "Beyaynetu (vegetarian platter for fasting)"],
         "description": "Amhara cuisine features injera with various wots (stews). Ethiopian Orthodox fasting traditions have created extensive vegetarian dishes."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Main meal at lunch, lighter dinner, fasting days (Wed/Fri) no animal products until 3pm",
+        "mainMealTime": "Lunch (around 1pm), eaten communally",
+        "eatingStyle": "Eating from shared injera platter with right hand, gursha (hand-feeding others) shows love",
+        "genderRules": "Men and women eat together from same platter, elders given best spots, children learn gursha tradition",
+        "taboos": ["Fasting from animal products over 200 days/year (Orthodox)", "Pork forbidden", "Eating alone is unfortunate", "Wasting food is sinful"],
+        "specialOccasions": "Doro wot (chicken stew) for holidays and guests, kitfo for celebrations, coffee ceremony for all gatherings",
+        "hospitality": "The coffee ceremony is sacred hospitality - three cups must be served, refusing is offensive"
+      },
       "traditionalDance": "Eskista - shoulder-shaking dance",
       "religion": "Ethiopian Orthodox Christianity (predominantly)",
       "traditionalReligion": {
@@ -4797,6 +4937,16 @@
         "beverages": ["Ataya (mint tea)", "Bissap (hibiscus drink)", "Bouye (baobab juice)"],
         "specialDishes": ["Thiéré (couscous)", "Lakh (millet porridge)", "Pastels (fried pastries)"],
         "description": "Wolof cuisine is flavorful with rice as the staple. Thiéboudienne (fish and rice) is the national dish. Peanuts are used extensively."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, substantial lunch (main meal), lighter dinner",
+        "mainMealTime": "Lunch (around 2pm) - the most important meal",
+        "eatingStyle": "Eating from communal bowl (bol) with right hand, sitting in circle on floor, eldest in center",
+        "genderRules": "Men and women may share bowl, elders served from center where best food is, children on edges",
+        "taboos": ["Left hand never touches food", "Standing while eating is disrespectful", "Eating before saying 'Bismillah' improper", "Wasting food is sinful"],
+        "specialOccasions": "Lamb for Tabaski (Eid), thiéboudienne for Sunday family gatherings, ndogou spread for Ramadan iftar",
+        "hospitality": "Teranga (hospitality) is sacred - guests are family and must be fed generously"
       },
       "traditionalDance": "Sabar - energetic drum and dance tradition",
       "religion": "Islam (predominantly Sufi - Mouride, Tijane brotherhoods)",

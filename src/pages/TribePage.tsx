@@ -884,6 +884,107 @@ const TribePage = () => {
                 </section>
               )}
               
+              {/* Meal Traditions Section */}
+              {(tribe as any).eatingCustoms && (
+                <section className="border-t border-border pt-6">
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                    🍽️ Meal Traditions
+                  </h2>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Discover how the {tribe.name} people gather, eat, and honor food traditions.
+                  </p>
+                  
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                    {/* Meals Per Day */}
+                    {(tribe as any).eatingCustoms.mealsPerDay && (
+                      <div className="p-3 bg-secondary rounded-lg text-center">
+                        <p className="text-2xl font-bold text-primary">{(tribe as any).eatingCustoms.mealsPerDay}</p>
+                        <p className="text-xs text-muted-foreground">Meals per Day</p>
+                      </div>
+                    )}
+                    
+                    {/* Main Meal Time */}
+                    {(tribe as any).eatingCustoms.mainMealTime && (
+                      <div className="p-3 bg-secondary rounded-lg text-center">
+                        <p className="text-sm font-semibold text-foreground">{(tribe as any).eatingCustoms.mainMealTime}</p>
+                        <p className="text-xs text-muted-foreground">Main Meal Time</p>
+                      </div>
+                    )}
+                    
+                    {/* Eating Style */}
+                    {(tribe as any).eatingCustoms.eatingStyle && (
+                      <div className="p-3 bg-secondary rounded-lg text-center">
+                        <p className="text-sm font-semibold text-foreground truncate" title={(tribe as any).eatingCustoms.eatingStyle}>
+                          {(tribe as any).eatingCustoms.eatingStyle.length > 50 
+                            ? (tribe as any).eatingCustoms.eatingStyle.substring(0, 50) + '...' 
+                            : (tribe as any).eatingCustoms.eatingStyle}
+                        </p>
+                        <p className="text-xs text-muted-foreground">Eating Style</p>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {/* Meal Pattern */}
+                    {(tribe as any).eatingCustoms.mealPattern && (
+                      <div className="p-4 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 rounded-lg border border-amber-200 dark:border-amber-800">
+                        <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
+                          <span>⏰</span> Daily Meal Pattern
+                        </h3>
+                        <p className="text-sm text-muted-foreground">{(tribe as any).eatingCustoms.mealPattern}</p>
+                      </div>
+                    )}
+                    
+                    {/* Gender & Age Rules */}
+                    {(tribe as any).eatingCustoms.genderRules && (
+                      <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
+                        <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
+                          <span>👥</span> Gender & Age Customs
+                        </h3>
+                        <p className="text-sm text-muted-foreground">{(tribe as any).eatingCustoms.genderRules}</p>
+                      </div>
+                    )}
+                    
+                    {/* Food Taboos */}
+                    {(tribe as any).eatingCustoms.taboos && (tribe as any).eatingCustoms.taboos.length > 0 && (
+                      <div className="p-4 bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 rounded-lg border border-red-200 dark:border-red-800">
+                        <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
+                          <span>🚫</span> Food Taboos & Restrictions
+                        </h3>
+                        <ul className="space-y-1">
+                          {(tribe as any).eatingCustoms.taboos.map((taboo: string, i: number) => (
+                            <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                              <span className="text-red-500 mt-0.5">•</span>
+                              {taboo}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    
+                    {/* Special Occasions */}
+                    {(tribe as any).eatingCustoms.specialOccasions && (
+                      <div className="p-4 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-lg border border-green-200 dark:border-green-800">
+                        <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
+                          <span>🎉</span> Celebratory Foods
+                        </h3>
+                        <p className="text-sm text-muted-foreground">{(tribe as any).eatingCustoms.specialOccasions}</p>
+                      </div>
+                    )}
+                    
+                    {/* Hospitality */}
+                    {(tribe as any).eatingCustoms.hospitality && (
+                      <div className="p-4 bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 rounded-lg border border-yellow-200 dark:border-yellow-800">
+                        <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
+                          <span>🤝</span> Hospitality Traditions
+                        </h3>
+                        <p className="text-sm text-muted-foreground italic">"{(tribe as any).eatingCustoms.hospitality}"</p>
+                      </div>
+                    )}
+                  </div>
+                </section>
+              )}
+              
               {/* Diaspora Section */}
               {tribe.diaspora && (
                 <section className="border-t border-border pt-6">
