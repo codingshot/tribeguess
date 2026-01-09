@@ -10,91 +10,211 @@ interface TribeMapProps {
   countries?: string[];
 }
 
-// Approximate territory sizes based on verified geographic data (in degrees)
+// Comprehensive territory sizes based on verified geographic data (in degrees)
+// Sources: Ethnologue, Joshua Project, Wikipedia geographic references
 // These are used for the individual tribe page maps
 const getTerritorySizeForTribe = (tribeName: string, counties: string[]): { latSpan: number; lngSpan: number } => {
   const territoryData: Record<string, { latSpan: number; lngSpan: number }> = {
-    // ===== KENYA =====
-    'Kikuyu': { latSpan: 1.6, lngSpan: 1.4 },
-    'Luhya': { latSpan: 1.4, lngSpan: 1.2 },
-    'Kalenjin': { latSpan: 2.8, lngSpan: 2.2 },
-    'Luo': { latSpan: 1.6, lngSpan: 1.4 },
-    'Kamba': { latSpan: 2.2, lngSpan: 2.0 },
-    'Maasai': { latSpan: 3.5, lngSpan: 2.8 },
-    'Meru': { latSpan: 1.2, lngSpan: 1.0 },
-    'Kisii': { latSpan: 0.9, lngSpan: 0.8 },
-    'Mijikenda': { latSpan: 1.8, lngSpan: 0.8 },
-    'Turkana': { latSpan: 3.5, lngSpan: 3.0 },
-    'Samburu': { latSpan: 2.0, lngSpan: 1.8 },
-    'Embu': { latSpan: 1.0, lngSpan: 0.9 },
-    'Swahili': { latSpan: 1.5, lngSpan: 0.7 },
-    'Pokot': { latSpan: 1.8, lngSpan: 1.5 },
-    'Borana': { latSpan: 2.5, lngSpan: 2.2 },
-    'Rendille': { latSpan: 1.5, lngSpan: 1.5 },
+    // ===== KENYA - based on actual county coverage =====
+    'Kikuyu': { latSpan: 1.4, lngSpan: 1.2 },
+    'Luhya': { latSpan: 1.2, lngSpan: 1.0 },
+    'Kalenjin': { latSpan: 2.5, lngSpan: 2.0 },
+    'Luo': { latSpan: 1.4, lngSpan: 1.2 },
+    'Kamba': { latSpan: 1.8, lngSpan: 1.5 },
+    'Maasai': { latSpan: 3.0, lngSpan: 2.2 },
+    'Meru': { latSpan: 1.0, lngSpan: 0.9 },
+    'Kisii': { latSpan: 0.7, lngSpan: 0.6 },
+    'Gusii': { latSpan: 0.7, lngSpan: 0.6 },
+    'Mijikenda': { latSpan: 1.5, lngSpan: 0.6 },
+    'Turkana': { latSpan: 3.0, lngSpan: 2.5 },
+    'Samburu': { latSpan: 1.8, lngSpan: 1.5 },
+    'Embu': { latSpan: 0.8, lngSpan: 0.7 },
+    'Mbeere': { latSpan: 0.6, lngSpan: 0.6 },
+    'Swahili': { latSpan: 1.2, lngSpan: 0.5 },
+    'Pokot': { latSpan: 1.5, lngSpan: 1.2 },
+    'Borana': { latSpan: 2.0, lngSpan: 1.8 },
+    'Rendille': { latSpan: 1.2, lngSpan: 1.2 },
+    'Taita': { latSpan: 0.8, lngSpan: 0.7 },
+    'Teso': { latSpan: 0.7, lngSpan: 0.6 },
+    'Suba': { latSpan: 0.5, lngSpan: 0.5 },
+    'Gabra': { latSpan: 1.5, lngSpan: 1.5 },
+    'El Molo': { latSpan: 0.3, lngSpan: 0.3 },
+    'Kuria': { latSpan: 0.5, lngSpan: 0.5 },
     
-    // ===== NIGERIA =====
-    'Yoruba': { latSpan: 3.5, lngSpan: 4.0 },
-    'Igbo': { latSpan: 2.8, lngSpan: 2.5 },
-    'Hausa': { latSpan: 5.5, lngSpan: 6.5 },
-    'Fulani': { latSpan: 4.5, lngSpan: 9.0 },
-    'Ijaw': { latSpan: 2.0, lngSpan: 2.0 },
-    'Tiv': { latSpan: 2.0, lngSpan: 2.0 },
-    'Edo': { latSpan: 1.5, lngSpan: 1.5 },
-    'Kanuri': { latSpan: 3.0, lngSpan: 3.0 },
+    // ===== NIGERIA - based on state coverage =====
+    'Yoruba': { latSpan: 3.0, lngSpan: 3.5 },
+    'Igbo': { latSpan: 2.2, lngSpan: 2.0 },
+    'Hausa': { latSpan: 5.0, lngSpan: 6.0 },
+    'Fulani': { latSpan: 4.0, lngSpan: 8.0 },
+    'Ijaw': { latSpan: 1.8, lngSpan: 1.8 },
+    'Tiv': { latSpan: 2.0, lngSpan: 2.2 },
+    'Edo': { latSpan: 1.2, lngSpan: 1.2 },
+    'Nupe': { latSpan: 1.5, lngSpan: 1.5 },
+    'Kanuri': { latSpan: 2.5, lngSpan: 2.5 },
+    'Ibibio': { latSpan: 1.2, lngSpan: 1.0 },
+    'Efik': { latSpan: 0.8, lngSpan: 0.8 },
+    'Urhobo': { latSpan: 1.0, lngSpan: 1.0 },
+    'Isoko': { latSpan: 0.6, lngSpan: 0.6 },
+    'Idoma': { latSpan: 1.2, lngSpan: 1.2 },
+    'Igede': { latSpan: 0.6, lngSpan: 0.6 },
+    'Jukun': { latSpan: 1.5, lngSpan: 1.5 },
+    'Ebira': { latSpan: 1.0, lngSpan: 1.0 },
+    'Gwari': { latSpan: 1.2, lngSpan: 1.2 },
+    'Berom': { latSpan: 0.8, lngSpan: 0.8 },
     
     // ===== SOUTH AFRICA =====
-    'Zulu': { latSpan: 3.5, lngSpan: 3.0 },
-    'Xhosa': { latSpan: 3.0, lngSpan: 2.5 },
-    'Sotho': { latSpan: 2.5, lngSpan: 2.5 },
-    'Tswana': { latSpan: 3.0, lngSpan: 3.0 },
-    'Pedi': { latSpan: 2.0, lngSpan: 2.0 },
-    'Venda': { latSpan: 1.2, lngSpan: 1.2 },
-    'Ndebele': { latSpan: 1.5, lngSpan: 1.5 },
+    'Zulu': { latSpan: 3.0, lngSpan: 2.5 },
+    'Xhosa': { latSpan: 2.5, lngSpan: 2.0 },
+    'Sotho': { latSpan: 2.0, lngSpan: 2.0 },
+    'Tswana': { latSpan: 2.5, lngSpan: 2.5 },
+    'Pedi': { latSpan: 1.5, lngSpan: 1.5 },
+    'Venda': { latSpan: 1.0, lngSpan: 1.0 },
+    'Ndebele': { latSpan: 1.2, lngSpan: 1.2 },
+    'Swazi': { latSpan: 1.2, lngSpan: 1.0 },
+    'Tsonga': { latSpan: 1.5, lngSpan: 1.5 },
     
     // ===== GHANA =====
-    'Ashanti': { latSpan: 2.2, lngSpan: 2.2 },
-    'Akan': { latSpan: 3.0, lngSpan: 3.0 },
-    'Ewe': { latSpan: 1.8, lngSpan: 1.5 },
+    'Ashanti': { latSpan: 1.8, lngSpan: 1.8 },
+    'Akan': { latSpan: 2.5, lngSpan: 2.5 },
+    'Ewe': { latSpan: 1.5, lngSpan: 1.2 },
+    'Ga-Adangbe': { latSpan: 0.8, lngSpan: 0.8 },
+    'Ga': { latSpan: 0.6, lngSpan: 0.6 },
+    'Dagomba': { latSpan: 1.5, lngSpan: 1.5 },
+    'Fante': { latSpan: 1.0, lngSpan: 1.0 },
     
     // ===== ETHIOPIA =====
-    'Oromo': { latSpan: 5.5, lngSpan: 5.0 },
-    'Amhara': { latSpan: 4.0, lngSpan: 3.5 },
-    'Tigrinya': { latSpan: 2.5, lngSpan: 2.0 },
-    'Somali': { latSpan: 6.0, lngSpan: 7.0 },
-    'Afar': { latSpan: 3.0, lngSpan: 2.5 },
+    'Oromo': { latSpan: 5.0, lngSpan: 4.5 },
+    'Amhara': { latSpan: 3.5, lngSpan: 3.0 },
+    'Tigrinya': { latSpan: 2.0, lngSpan: 1.8 },
+    'Tigray': { latSpan: 2.0, lngSpan: 1.8 },
+    'Somali': { latSpan: 5.0, lngSpan: 6.0 },
+    'Afar': { latSpan: 2.5, lngSpan: 2.0 },
+    'Gurage': { latSpan: 1.0, lngSpan: 1.0 },
+    'Sidama': { latSpan: 1.0, lngSpan: 1.0 },
+    'Wolayta': { latSpan: 0.8, lngSpan: 0.8 },
+    'Harari': { latSpan: 0.3, lngSpan: 0.3 },
+    'Tigre': { latSpan: 1.5, lngSpan: 1.5 },
     
     // ===== UGANDA =====
-    'Baganda': { latSpan: 2.2, lngSpan: 2.2 },
-    'Banyankole': { latSpan: 2.0, lngSpan: 2.0 },
-    'Acholi': { latSpan: 2.0, lngSpan: 2.0 },
+    'Baganda': { latSpan: 1.8, lngSpan: 1.8 },
+    'Banyankole': { latSpan: 1.5, lngSpan: 1.5 },
+    'Basoga': { latSpan: 1.0, lngSpan: 1.0 },
+    'Bakiga': { latSpan: 0.8, lngSpan: 0.8 },
+    'Acholi': { latSpan: 1.5, lngSpan: 1.5 },
+    'Langi': { latSpan: 1.2, lngSpan: 1.2 },
+    'Karamojong': { latSpan: 1.5, lngSpan: 1.5 },
+    'Iteso': { latSpan: 1.2, lngSpan: 1.2 },
+    'Lugbara': { latSpan: 1.0, lngSpan: 1.0 },
+    'Banyoro': { latSpan: 1.2, lngSpan: 1.2 },
+    'Batoro': { latSpan: 1.0, lngSpan: 1.0 },
     
     // ===== TANZANIA =====
-    'Sukuma': { latSpan: 3.0, lngSpan: 3.0 },
-    'Chagga': { latSpan: 0.8, lngSpan: 0.8 },
-    'Haya': { latSpan: 1.5, lngSpan: 1.2 },
+    'Sukuma': { latSpan: 2.5, lngSpan: 2.5 },
+    'Chagga': { latSpan: 0.6, lngSpan: 0.6 },
+    'Haya': { latSpan: 1.2, lngSpan: 1.0 },
+    'Nyamwezi': { latSpan: 2.0, lngSpan: 2.0 },
+    'Makonde': { latSpan: 1.0, lngSpan: 1.0 },
+    'Hehe': { latSpan: 1.5, lngSpan: 1.5 },
+    'Gogo': { latSpan: 2.0, lngSpan: 2.0 },
+    'Ha': { latSpan: 1.0, lngSpan: 1.0 },
+    'Pare': { latSpan: 0.6, lngSpan: 0.5 },
+    'Iraqw': { latSpan: 0.8, lngSpan: 0.8 },
     
-    // ===== SENEGAL =====
-    'Wolof': { latSpan: 2.5, lngSpan: 3.0 },
-    'Mandinka': { latSpan: 3.0, lngSpan: 3.5 },
+    // ===== SENEGAL / WEST AFRICA =====
+    'Wolof': { latSpan: 2.0, lngSpan: 2.5 },
+    'Serer': { latSpan: 1.2, lngSpan: 1.2 },
+    'Mandinka': { latSpan: 2.5, lngSpan: 3.0 },
+    'Diola': { latSpan: 1.0, lngSpan: 1.0 },
+    'Jola': { latSpan: 1.0, lngSpan: 1.0 },
     
-    // ===== ZIMBABWE =====
-    'Shona': { latSpan: 3.5, lngSpan: 3.0 },
+    // ===== ZIMBABWE / ZAMBIA / MALAWI =====
+    'Shona': { latSpan: 3.0, lngSpan: 2.5 },
+    'Ndebele (Zimbabwe)': { latSpan: 2.0, lngSpan: 2.0 },
+    'Bemba': { latSpan: 2.5, lngSpan: 2.5 },
+    'Tonga (Zambia)': { latSpan: 1.5, lngSpan: 1.5 },
+    'Chewa': { latSpan: 2.0, lngSpan: 2.0 },
+    'Yao': { latSpan: 1.5, lngSpan: 1.5 },
+    'Lozi': { latSpan: 2.0, lngSpan: 2.0 },
+    'Tumbuka': { latSpan: 1.2, lngSpan: 1.2 },
+    
+    // ===== NAMIBIA / BOTSWANA =====
+    'Himba': { latSpan: 1.5, lngSpan: 1.5 },
+    'Herero': { latSpan: 2.0, lngSpan: 2.0 },
+    'Ovambo': { latSpan: 1.5, lngSpan: 2.0 },
+    'San': { latSpan: 3.0, lngSpan: 3.0 },
+    'Damara': { latSpan: 2.0, lngSpan: 2.0 },
+    'Nama': { latSpan: 2.5, lngSpan: 2.5 },
     
     // ===== DR CONGO =====
-    'Luba': { latSpan: 3.5, lngSpan: 3.0 },
-    'Kongo': { latSpan: 3.0, lngSpan: 2.5 },
-    'Mongo': { latSpan: 4.0, lngSpan: 4.0 },
+    'Luba': { latSpan: 3.0, lngSpan: 2.5 },
+    'Kongo': { latSpan: 2.5, lngSpan: 2.0 },
+    'Mongo': { latSpan: 3.0, lngSpan: 3.0 },
+    'Lunda': { latSpan: 2.5, lngSpan: 2.5 },
+    'Mangbetu': { latSpan: 1.5, lngSpan: 1.5 },
+    'Azande': { latSpan: 2.5, lngSpan: 2.5 },
+    'Tetela': { latSpan: 1.5, lngSpan: 1.5 },
     
-    // ===== SAHEL =====
-    'Tuareg': { latSpan: 7.0, lngSpan: 10.0 },
-    'Bambara': { latSpan: 3.5, lngSpan: 4.0 },
-    'Mossi': { latSpan: 3.0, lngSpan: 3.0 },
-    'Dogon': { latSpan: 1.2, lngSpan: 1.2 },
+    // ===== RWANDA / BURUNDI =====
+    'Hutu': { latSpan: 1.5, lngSpan: 1.2 },
+    'Tutsi': { latSpan: 1.5, lngSpan: 1.2 },
+    'Twa': { latSpan: 1.0, lngSpan: 1.0 },
+    'Banyarwanda': { latSpan: 1.8, lngSpan: 1.5 },
     
-    // ===== NAMIBIA =====
-    'Himba': { latSpan: 2.0, lngSpan: 2.0 },
-    'Herero': { latSpan: 2.5, lngSpan: 2.5 },
-    'San': { latSpan: 4.0, lngSpan: 4.0 },
+    // ===== SAHEL / SAHARA =====
+    'Tuareg': { latSpan: 6.0, lngSpan: 8.0 },
+    'Songhai': { latSpan: 2.5, lngSpan: 3.0 },
+    'Mossi': { latSpan: 2.5, lngSpan: 2.5 },
+    'Bambara': { latSpan: 3.0, lngSpan: 3.5 },
+    'Dogon': { latSpan: 1.0, lngSpan: 1.0 },
+    'Songhay': { latSpan: 2.5, lngSpan: 3.0 },
+    'Djerma': { latSpan: 2.0, lngSpan: 2.0 },
+    
+    // ===== CAMEROON =====
+    'Bamileke': { latSpan: 1.2, lngSpan: 1.2 },
+    'Beti-Pahuin': { latSpan: 2.0, lngSpan: 2.0 },
+    'Beti': { latSpan: 2.0, lngSpan: 2.0 },
+    'Fulbe': { latSpan: 2.0, lngSpan: 2.0 },
+    'Fang': { latSpan: 2.0, lngSpan: 2.0 },
+    'Duala': { latSpan: 0.8, lngSpan: 0.8 },
+    'Bassa': { latSpan: 1.0, lngSpan: 1.0 },
+    
+    // ===== NORTH AFRICA =====
+    'Berber': { latSpan: 5.0, lngSpan: 8.0 },
+    'Amazigh': { latSpan: 5.0, lngSpan: 8.0 },
+    'Kabyle': { latSpan: 1.5, lngSpan: 1.5 },
+    'Riffian': { latSpan: 1.0, lngSpan: 1.5 },
+    'Shilha': { latSpan: 2.0, lngSpan: 2.0 },
+    'Nubian': { latSpan: 3.0, lngSpan: 2.0 },
+    'Copts': { latSpan: 4.0, lngSpan: 3.0 },
+    'Beja': { latSpan: 3.0, lngSpan: 2.5 },
+    
+    // ===== ANGOLA / MOZAMBIQUE =====
+    'Ovimbundu': { latSpan: 2.5, lngSpan: 2.5 },
+    'Mbundu': { latSpan: 2.0, lngSpan: 2.0 },
+    'Bakongo': { latSpan: 2.0, lngSpan: 2.0 },
+    'Makua': { latSpan: 3.0, lngSpan: 2.5 },
+    'Sena': { latSpan: 1.5, lngSpan: 1.5 },
+    
+    // ===== SUDAN / SOUTH SUDAN =====
+    'Dinka': { latSpan: 4.0, lngSpan: 3.5 },
+    'Nuer': { latSpan: 3.0, lngSpan: 2.5 },
+    'Shilluk': { latSpan: 1.5, lngSpan: 1.5 },
+    'Bari': { latSpan: 1.5, lngSpan: 1.5 },
+    'Fur': { latSpan: 2.5, lngSpan: 2.5 },
+    'Zaghawa': { latSpan: 2.0, lngSpan: 2.0 },
+    
+    // ===== MADAGASCAR =====
+    'Merina': { latSpan: 2.5, lngSpan: 2.0 },
+    'Betsileo': { latSpan: 2.0, lngSpan: 1.5 },
+    'Betsimisaraka': { latSpan: 3.0, lngSpan: 1.0 },
+    'Sakalava': { latSpan: 4.0, lngSpan: 2.0 },
+    'Antandroy': { latSpan: 1.5, lngSpan: 2.0 },
+    'Mahafaly': { latSpan: 1.5, lngSpan: 1.5 },
+    
+    // ===== HORN OF AFRICA (additional) =====
+    'Bilen': { latSpan: 0.5, lngSpan: 0.5 },
+    'Saho': { latSpan: 1.0, lngSpan: 0.8 },
+    'Kunama': { latSpan: 1.0, lngSpan: 1.0 },
   };
   
   // Direct match
@@ -108,12 +228,19 @@ const getTerritorySizeForTribe = (tribeName: string, counties: string[]): { latS
     return territoryData[simpleName];
   }
   
-  // Fallback based on county count
+  // Try matching without parenthetical content
+  const cleanName = tribeName.replace(/\s*\([^)]*\)\s*/g, '').trim();
+  if (territoryData[cleanName]) {
+    return territoryData[cleanName];
+  }
+  
+  // Fallback based on county count - more granular
   const countyCount = counties.length;
-  if (countyCount >= 6) return { latSpan: 3.0, lngSpan: 2.8 };
-  if (countyCount >= 4) return { latSpan: 2.2, lngSpan: 2.0 };
-  if (countyCount >= 2) return { latSpan: 1.8, lngSpan: 1.6 };
-  return { latSpan: 1.2, lngSpan: 1.2 };
+  if (countyCount >= 8) return { latSpan: 3.5, lngSpan: 3.2 };
+  if (countyCount >= 6) return { latSpan: 2.8, lngSpan: 2.5 };
+  if (countyCount >= 4) return { latSpan: 2.0, lngSpan: 1.8 };
+  if (countyCount >= 2) return { latSpan: 1.5, lngSpan: 1.3 };
+  return { latSpan: 1.0, lngSpan: 1.0 };
 };
 
 export const TribeMap = forwardRef<HTMLDivElement, TribeMapProps>(function TribeMap({ lat, lng, tribeName, counties, countries = ['KE'] }, ref) {
