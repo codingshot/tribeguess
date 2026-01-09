@@ -285,16 +285,29 @@ export const TribeFamilyTree: React.FC<FamilyTreeProps> = ({ currentTribe, ethni
                         <Info className="w-4 h-4" />
                       </button>
                     </TooltipTrigger>
-                    <TooltipContent className="max-w-xs bg-popover text-popover-foreground border border-border shadow-md">
-                      <p className="text-xs">{familyInfo?.description || `The ${languageFamily} language family.`}</p>
+                    <TooltipContent className="max-w-xs bg-popover text-popover-foreground border border-border shadow-md p-3">
+                      <p className="text-xs font-medium mb-1">{languageFamily}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {familyInfo?.description || `A language family within the broader African linguistic tradition. ${currentTribe.name} is part of this linguistic group.`}
+                      </p>
+                      {familyInfo?.speakersRange && (
+                        <p className="text-xs mt-1">
+                          <strong>Total speakers:</strong> {familyInfo.speakersRange}
+                        </p>
+                      )}
                       {familyInfo?.siblings && familyInfo.siblings.length > 0 && (
-                        <p className="text-xs mt-1 text-muted-foreground">
-                          <strong>Sub-groups:</strong> {familyInfo.siblings.join(', ')}
+                        <p className="text-xs mt-1">
+                          <strong>Related languages:</strong> {familyInfo.siblings.slice(0, 5).join(', ')}{familyInfo.siblings.length > 5 ? '...' : ''}
                         </p>
                       )}
                       {familyInfo?.migrationNote && (
-                        <p className="text-xs mt-1 text-primary/80 italic">
+                        <p className="text-xs mt-2 text-primary/80 italic border-t border-border/50 pt-2">
                           🗺️ {familyInfo.migrationNote}
+                        </p>
+                      )}
+                      {!familyInfo && (
+                        <p className="text-xs mt-1 text-muted-foreground italic">
+                          Explore related tribes to learn more about this language family.
                         </p>
                       )}
                     </TooltipContent>
