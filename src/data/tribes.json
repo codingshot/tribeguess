@@ -9906,6 +9906,769 @@
       "sources": [{ "name": "Wikipedia - Beja people", "url": "https://en.wikipedia.org/wiki/Beja_people" }, { "name": "Sudan Notes and Records", "url": "https://www.jstor.org/journal/sudanotesrecor" }],
       "description": "The Beja are one of Africa's most ancient peoples, inhabiting the Red Sea Hills for over 4,000 years. Known as fierce warriors who broke British squares, they maintain proud pastoral traditions.",
       "relatedTribes": ["afar", "nubian", "rashida", "hadendoa"]
+    },
+    {
+      "id": "amazigh",
+      "name": "Amazigh (Berber)",
+      "slug": "amazigh",
+      "slugAliases": ["berber", "imazighen"],
+      "youtubeVideoId": "YjTLqbJHVk4",
+      "languageVideoId": "R7kPEDL4oQg",
+      "countries": ["MA", "DZ", "TN", "LY", "NE", "ML"],
+      "region": "North Africa (Maghreb & Sahara)",
+      "population": "~40 million",
+      "populationPercent": "Varies: Morocco 40%, Algeria 25%, Niger 10%",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 31.63, "lng": -7.98 },
+      "counties": ["Atlas Mountains", "Rif", "Kabylie", "Sahara"],
+      "namePrefixes": ["Am", "Mas", "Ti", "Ta", "Iz", "Ou", "Ai"],
+      "commonNames": {
+        "female": ["Tiziri", "Tanina", "Kahina", "Dihya", "Fatima", "Tafat", "Titrit", "Tayri", "Thiziri", "Tanit", "Yemma", "Lwiza", "Tassadit", "Malika", "Zineb"],
+        "male": ["Massinissa", "Idir", "Amazigh", "Amayas", "Youba", "Aksil", "Jugurtha", "Masintha", "Izem", "Azwaw", "Yeffas", "Aksel", "Ayrad", "Anas", "Koceila"]
+      },
+      "stereotypes": [
+        "Fiercely independent",
+        "Proud of ancient heritage",
+        "Skilled mountain farmers",
+        "Expert desert navigators (Tuareg)",
+        "Strong oral poetry traditions",
+        "Resistant to outside domination"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Warriors and protectors of family honor",
+          "Decision-makers in village councils",
+          "Responsible for livestock and external affairs",
+          "Poets and oral historians (among Tuareg, men are veiled)"
+        ],
+        "female": [
+          "Keepers of Amazigh culture and language",
+          "Skilled weavers and artisans",
+          "Manage household and children's education",
+          "Among Tuareg, women own property and tents"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed livestock, tribal defense, and represented families in councils. Among Tuareg, men wear veils while women do not - a unique reversal.",
+          "female": "Women preserved culture through weaving, pottery, and teaching children. Amazigh women had more rights than in some neighboring cultures."
+        },
+        "modern": {
+          "male": "Modern Amazigh men work in agriculture, tourism, and urban professions. Many are active in cultural revival movements.",
+          "female": "Women are increasingly educated and work outside the home. Many lead cultural preservation organizations."
+        }
+      },
+      "culturalTraits": [
+        "Tifinagh script - one of Africa's oldest alphabets",
+        "Amazigh New Year (Yennayer) on January 12",
+        "Intricate carpet and textile weaving traditions",
+        "Ahwash and Ahidous group dances",
+        "Silver jewelry with symbolic geometric patterns",
+        "Couscous as central ceremonial food"
+      ],
+      "funFacts": [
+        "The word 'Amazigh' means 'free people' - they've resisted conquest for millennia",
+        "Queen Dihya (Kahina) led Amazigh resistance against Arab conquest in the 7th century",
+        "Tuareg men, not women, wear veils - a practice unique in the Muslim world",
+        "Tifinagh script has been used continuously for over 2,000 years",
+        "Couscous, now a world food, originated with the Amazigh"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous (seksu)", "Tagine", "Barley bread (tafarnout)", "Dates"],
+        "beverages": ["Mint tea", "Buttermilk (leben)", "Sheep's milk"],
+        "specialDishes": ["Rfissa (shredded msemen with chicken)", "Tharid (bread stew)", "Baddaz (sorghum couscous)"],
+        "description": "Amazigh cuisine features couscous as the central dish, served with vegetables, meat tagines, and buttermilk. Regional variations exist from Atlas Mountains to Sahara."
+      },
+      "traditionalDance": "Ahidous - collective dance with drums and chanting, performed at festivals",
+      "religion": "Islam (Sunni) with some traditional Amazigh practices preserved",
+      "traditionalReligion": {
+        "name": "Traditional Amazigh beliefs",
+        "supremeDeity": "Ancient gods included Ammon (ram god), Tanit, and Atlas; now Islamic Allah",
+        "spirits": ["Belief in djinn", "Sacred mountains and springs", "Ancestor veneration"],
+        "practices": ["Yennayer (New Year) celebrations", "Seasonal festivals", "Saints' tomb visits", "Traditional healing"],
+        "beliefs": "Pre-Islamic Amazigh religion included sky gods and earth goddesses. Islam arrived 7th century but blended with local practices. Saints' tombs (marabouts) are revered.",
+        "religiousHistory": {
+          "islamIntroduced": "7th century CE",
+          "introducedBy": "Arab conquests and later Sufi missionaries",
+          "conversionProcess": "Amazigh resisted Arab conquest under leaders like Kusaila and Kahina. Conversion took centuries, with Amazigh Islam retaining local elements.",
+          "sources": ["Wikipedia - Berber people", "Amazigh Cultural Foundation"]
+        }
+      },
+      "history": {
+        "origin": "The Amazigh (Berbers) are the indigenous people of North Africa, present for at least 10,000 years. Ancient kingdoms included Numidia and Mauretania. They built great civilizations and traded with Phoenicians, Greeks, and Romans.",
+        "colonialEra": "Amazigh regions resisted French colonization fiercely. The Rif War (1921-1926) under Abd el-Krim was a major anti-colonial struggle. Kabylie uprisings continued into the 1960s.",
+        "independence": "Post-independence governments promoted Arab identity, suppressing Amazigh language and culture. The Berber Spring (1980) began cultural revival. Tamazight became official in Morocco (2011) and Algeria (2016).",
+        "keyEvents": ["Numidian kingdoms (200 BCE)", "Resistance to Arab conquest (7th century)", "Almoravid/Almohad Empires (11th-13th century)", "Rif War (1921-1926)", "Berber Spring (1980)", "Official recognition (2011-2016)"]
+      },
+      "language": {
+        "name": "Tamazight (Berber languages)",
+        "speakers": "~30-40 million",
+        "greeting": "Azul",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Azul fellawen", "meaning": "Hello to you (plural)" },
+          { "phrase": "Manzakin?", "meaning": "How are you?" },
+          { "phrase": "Labas", "meaning": "Fine / Hello" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Tanmirt", "meaning": "Thank you" },
+          { "phrase": "Ar tufat", "meaning": "Goodbye (until morning)" }
+        ],
+        "family": "Berber (Afroasiatic)",
+        "writingSystem": "Neo-Tifinagh script (official), Latin, Arabic",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Berber",
+          "branch": "Northern Berber (Tamazight, Kabyle, Riffian, Tachelhit)",
+          "speakers": "~30-40 million across varieties",
+          "relatedLanguages": ["Kabyle", "Riffian", "Tachelhit", "Tuareg"],
+          "migrationHistory": "Amazigh peoples have inhabited North Africa since prehistoric times. Related to ancient Libyans mentioned in Egyptian texts."
+        }
+      },
+      "famousPeople": [
+        { "name": "Dihya (Kahina)", "role": "Warrior queen who resisted Arab conquest", "wikipedia": "https://en.wikipedia.org/wiki/Kahina" },
+        { "name": "Massinissa", "role": "First King of unified Numidia", "wikipedia": "https://en.wikipedia.org/wiki/Masinissa" },
+        { "name": "Zinedine Zidane", "role": "French footballer of Kabyle Amazigh origin", "wikipedia": "https://en.wikipedia.org/wiki/Zinedine_Zidane" },
+        { "name": "Idir", "role": "Kabyle singer and cultural icon", "wikipedia": "https://en.wikipedia.org/wiki/Idir" },
+        { "name": "Abd el-Krim", "role": "Rif War leader against Spain/France", "wikipedia": "https://en.wikipedia.org/wiki/Abd_el-Krim" }
+      ],
+      "antiColonialResistance": "Amazigh resistance is legendary. Queen Dihya resisted Arab conquest (7th century). Abd el-Krim's Rif Republic (1921-1926) defeated Spanish forces before France intervened. Kabyle uprisings continued through French rule.",
+      "sources": [{ "name": "Wikipedia - Berber people", "url": "https://en.wikipedia.org/wiki/Berbers" }, { "name": "Amazigh Cultural Foundation", "url": "https://www.amazighcultural.org" }],
+      "description": "The Amazigh (Berbers) are North Africa's indigenous people with 10,000+ years of history. Known for fierce independence, the Tifinagh script, and vibrant cultural traditions that survived conquest and colonization.",
+      "relatedTribes": ["tuareg", "kabyle", "riffian", "tachelhit"]
+    },
+    {
+      "id": "tuareg",
+      "name": "Tuareg",
+      "slug": "tuareg",
+      "slugAliases": ["imuhag", "kel-tamasheq", "blue-people"],
+      "youtubeVideoId": "kJvMfHbH8gs",
+      "languageVideoId": "0tP8aLNgflY",
+      "countries": ["NE", "ML", "DZ", "LY", "BF"],
+      "region": "Sahara Desert",
+      "population": "~2.5 million",
+      "populationPercent": "Niger ~10%, Mali ~5%",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 18.07, "lng": 7.98 },
+      "counties": ["Aïr Mountains", "Ahaggar", "Adrar des Ifoghas", "Ténéré"],
+      "namePrefixes": ["Ag", "Ult", "Oult", "Agg", "Tin"],
+      "commonNames": {
+        "female": ["Tina", "Maimuna", "Fatimata", "Hindou", "Mariama", "Aicha", "Taklit", "Ghaylan", "Tadalat", "Fadimata"],
+        "male": ["Ag Mahmoud", "Intalla", "Akli", "Illyas", "Amayas", "Mano", "Attaher", "Ibrahim", "Moussa", "Rhissa"]
+      },
+      "stereotypes": [
+        "Masters of the Sahara desert",
+        "Noble warrior tradition",
+        "Blue-veiled men (indigo dye stains skin)",
+        "Skilled navigators and traders",
+        "Romantic, poetic culture",
+        "Fierce independence fighters"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Men wear the tagelmust (veil) - women do not",
+          "Warriors and caravan leaders",
+          "Responsible for external politics",
+          "Expected to be poets and musicians"
+        ],
+        "female": [
+          "Women own the family tent and property",
+          "Hold more rights than in most Saharan cultures",
+          "Keepers of Tifinagh literacy",
+          "Musicians and cultural preservers"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Tuareg men managed camels, led caravans, and defended the tribe. Uniquely, they are veiled while women are not - veiling represents honor and maturity.",
+          "female": "Women own the family tent and possessions. They are educated in Tifinagh, play the imzad fiddle, and have significant social status."
+        },
+        "modern": {
+          "male": "Modern Tuareg men work in tourism, herding, and some in armed movements. Many have migrated to cities while maintaining cultural identity.",
+          "female": "Women continue owning property and maintaining matrilineal traditions. Some work in cooperatives producing traditional crafts."
+        }
+      },
+      "culturalTraits": [
+        "Tagelmust (indigo veil) worn by men - stains skin blue",
+        "Matrilineal descent and female property ownership",
+        "Tifinagh script (oldest in Africa still in use)",
+        "Imzad (one-string fiddle) played only by women",
+        "Desert Festivals of music and camel racing",
+        "Salt caravans trading across the Sahara"
+      ],
+      "funFacts": [
+        "Tuareg men, not women, wear veils - opposite of most Muslim societies",
+        "The 'blue people' name comes from indigo dye staining their skin",
+        "Women traditionally own the family tent and property passes through mothers",
+        "Tuareg use a unique Tifinagh alphabet passed down for 2,000+ years",
+        "They controlled trans-Saharan trade routes for over 1,000 years"
+      ],
+      "traditionalFood": {
+        "staples": ["Tagella (sand bread)", "Millet", "Dates", "Camel and goat meat/milk"],
+        "beverages": ["Strong sweet tea (three rounds tradition)", "Camel milk"],
+        "specialDishes": ["Taguella (ash-baked bread)", "Dried meat (tichtar)", "Milk with millet porridge"],
+        "description": "Tuareg cuisine is adapted to desert life. Tagella bread is baked in sand under coals. Tea ceremonies with three rounds (bitter as death, mild as life, sweet as love) are essential hospitality."
+      },
+      "traditionalDance": "Tinde - women's song and dance with drum, performed at festivals and weddings",
+      "religion": "Islam (Sunni) with pre-Islamic Tuareg traditions",
+      "traditionalReligion": {
+        "name": "Tuareg Islam with traditional elements",
+        "supremeDeity": "Allah",
+        "spirits": ["Kel Essuf (spirits of the wild)", "Djinn", "Belief in evil eye (takate)"],
+        "practices": ["Islamic prayers", "Amulets and talismans", "Traditional healing", "Marabout (saint) veneration"],
+        "beliefs": "Tuareg practice a relaxed Islam that preserves pre-Islamic beliefs. Women's status, music, and poetry continued despite stricter Arab Islam. Kel Essuf spirits inhabit wild places.",
+        "religiousHistory": {
+          "islamIntroduced": "7th-11th century CE",
+          "introducedBy": "Arab and Berber merchants, Sufi missionaries",
+          "conversionProcess": "Tuareg adopted Islam gradually through trade contacts. Their isolated desert location preserved many pre-Islamic practices including women's rights.",
+          "sources": ["Wikipedia - Tuareg people", "Saharan Studies"]
+        }
+      },
+      "history": {
+        "origin": "Tuareg are a Berber people who migrated into the Sahara over 2,000 years ago. They controlled trans-Saharan trade routes, taxing and protecting caravans carrying gold, salt, and slaves.",
+        "colonialEra": "French colonization (1900s) disrupted Tuareg trading economy. Multiple uprisings against French rule occurred. Colonial borders divided Tuareg across five new countries.",
+        "independence": "Post-independence, Tuareg felt marginalized by southern governments. Rebellions erupted in Niger (1990s, 2007) and Mali (2012). The 2012 Azawad independence movement briefly succeeded before being reversed.",
+        "keyEvents": ["Control of trans-Saharan trade (10th-19th century)", "French conquest (1900s)", "Niger rebellions (1990-1995, 2007-2009)", "Mali rebellion and Azawad declaration (2012)"]
+      },
+      "language": {
+        "name": "Tamasheq / Tamahaq",
+        "speakers": "~2 million",
+        "greeting": "Ayyuz",
+        "greetingMeaning": "Hello (greeting)",
+        "additionalGreetings": [
+          { "phrase": "Mani tehaled?", "meaning": "How are you?" },
+          { "phrase": "Alkhayr", "meaning": "Fine/Good" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Tanmirt", "meaning": "Thank you" },
+          { "phrase": "Ar ntemenaghit", "meaning": "Goodbye (we'll meet again)" }
+        ],
+        "family": "Tuareg (Berber/Afroasiatic)",
+        "writingSystem": "Tifinagh (traditional), Latin, Arabic",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Berber",
+          "branch": "Tuareg (Southern Berber)",
+          "speakers": "~2 million",
+          "relatedLanguages": ["Tamahaq (Ahaggar)", "Tayart", "Tawallammat"],
+          "migrationHistory": "Tuareg languages descend from ancient Berber, adapted to Saharan life over 2,000 years"
+        }
+      },
+      "famousPeople": [
+        { "name": "Tinariwen", "role": "Grammy-winning desert blues band", "wikipedia": "https://en.wikipedia.org/wiki/Tinariwen" },
+        { "name": "Mano Dayak", "role": "Tuareg leader and writer", "wikipedia": "https://en.wikipedia.org/wiki/Mano_Dayak" },
+        { "name": "Ibrahim Ag Bahanga", "role": "Rebel leader in Niger/Mali", "wikipedia": "https://en.wikipedia.org/wiki/Ibrahim_Ag_Bahanga" }
+      ],
+      "antiColonialResistance": "Tuareg fiercely resisted French colonization in the early 1900s. Post-independence, multiple rebellions fought for autonomy in Niger and Mali (1990s, 2007, 2012).",
+      "sources": [{ "name": "Wikipedia - Tuareg people", "url": "https://en.wikipedia.org/wiki/Tuareg_people" }, { "name": "Festival au Désert", "url": "https://www.festival-au-desert.org" }],
+      "description": "The Tuareg are the legendary 'blue people' of the Sahara - veiled men, property-owning women, and masters of desert navigation. Their Tifinagh script and musical traditions make them unique among African peoples.",
+      "relatedTribes": ["amazigh", "wodaabe", "hausa", "songhai"]
+    },
+    {
+      "id": "amhara",
+      "name": "Amhara",
+      "slug": "amhara",
+      "youtubeVideoId": "ZJAqvdPqd8E",
+      "languageVideoId": "8kqSqgxN2Jg",
+      "countries": ["ET"],
+      "region": "Ethiopian Highlands (Amhara Region)",
+      "population": "~32 million",
+      "populationPercent": "27% of Ethiopia",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 11.5, "lng": 37.5 },
+      "counties": ["Gondar", "Gojjam", "Wello", "Shewa"],
+      "namePrefixes": ["Ab", "Tes", "Sel", "Ber", "Geb", "Mir"],
+      "commonNames": {
+        "female": ["Tigist", "Hiwot", "Meron", "Bethlehem", "Selamawit", "Yordanos", "Rahel", "Tsehay", "Hirut", "Almaz", "Meseret", "Mahlet", "Kidist", "Wubit", "Blen"],
+        "male": ["Abebe", "Kebede", "Haile", "Teshome", "Mulugeta", "Tadesse", "Getachew", "Tesfaye", "Bereket", "Dawit", "Solomon", "Yohannes", "Girma", "Bekele", "Tilahun"]
+      },
+      "stereotypes": [
+        "Proud of ancient Christian heritage",
+        "Historically dominant politically",
+        "Strong literary and religious traditions",
+        "Coffee culture originators",
+        "Considered aristocratic by other groups",
+        "Devout Orthodox Christians"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be educated and literate",
+          "Family leaders and decision-makers",
+          "Strong in religious scholarship",
+          "Historically soldiers and administrators"
+        ],
+        "female": [
+          "Skilled in injera and traditional cooking",
+          "Manage household and children's education",
+          "Important in coffee ceremony culture",
+          "Increasingly educated and professional"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed land, served in government or military, and led religious activities. Education was primarily for men through church schools.",
+          "female": "Women managed households, performed coffee ceremonies, and raised children. Noble women had significant influence behind scenes."
+        },
+        "modern": {
+          "male": "Modern Amhara men work in all sectors - government, business, academia. Many are professionals or entrepreneurs.",
+          "female": "Women are increasingly educated and work outside home. Many are professionals while maintaining cultural traditions."
+        }
+      },
+      "culturalTraits": [
+        "Ethiopian Orthodox Christianity central to identity",
+        "Ge'ez script (Ethiopic) - unique 231+ character alphabet",
+        "Coffee ceremony as daily ritual and hospitality",
+        "Injera (fermented flatbread) with wot (stews)",
+        "Fasting traditions (200+ days/year for devout)",
+        "Meskel and Timkat festivals"
+      ],
+      "funFacts": [
+        "Amharic uses a unique alphabet with 231+ characters",
+        "Ethiopian Orthodox Christians fast over 200 days per year",
+        "Coffee originated in Ethiopia - the ceremony is central to Amhara culture",
+        "Ethiopia's Ge'ez calendar has 13 months ('13 months of sunshine')",
+        "The Amhara claim descent from King Solomon and Queen of Sheba"
+      ],
+      "traditionalFood": {
+        "staples": ["Injera (fermented teff flatbread)", "Wot (spiced stews)", "Berbere spice", "Teff grain"],
+        "beverages": ["Buna (coffee)", "Tej (honey wine)", "Tella (barley beer)"],
+        "specialDishes": ["Doro wot (chicken stew)", "Kitfo (raw beef)", "Shiro (chickpea stew)", "Tibs (sautéed meat)"],
+        "description": "Amhara cuisine centers on injera - a spongy fermented flatbread used as both plate and utensil. Wot stews with berbere spice are served on injera. The coffee ceremony is essential hospitality."
+      },
+      "traditionalDance": "Eskista - shoulder dance with rhythmic movements, performed at celebrations",
+      "religion": "Ethiopian Orthodox Tewahedo Christianity (~85%), Islam (~15%)",
+      "traditionalReligion": {
+        "name": "Ethiopian Orthodox Tewahedo Christianity",
+        "supremeDeity": "God (Egziabher) - Trinitarian Christianity",
+        "spirits": ["Angels", "Saints (especially St. George, St. Mary)", "Demons (Zar spirits in folk beliefs)"],
+        "practices": ["Liturgy in Ge'ez", "Extensive fasting", "Pilgrimage to Lalibela", "Timkat (Epiphany)", "Meskel (Finding of True Cross)"],
+        "beliefs": "Orthodox Christianity since 4th century CE. The Ark of the Covenant is believed to rest in Axum. Ethiopian Orthodoxy has unique practices including Saturday Sabbath.",
+        "religiousHistory": {
+          "christianityIntroduced": "4th century CE (330 AD)",
+          "introducedBy": "Syrian monks Frumentius and Aedesius; King Ezana of Axum",
+          "conversionProcess": "King Ezana converted and made Christianity the state religion. Ethiopia is one of the world's oldest Christian nations.",
+          "sources": ["Wikipedia - Ethiopian Orthodox Tewahedo Church", "Ethiopian Heritage Foundation"]
+        }
+      },
+      "history": {
+        "origin": "The Amhara descend from the Semitic-speaking peoples who migrated from South Arabia around 500 BCE. They built the Aksumite Empire and later the medieval Ethiopian Empire. Amhara culture became dominant through the Solomonic dynasty.",
+        "colonialEra": "Ethiopia was never colonized (except brief Italian occupation 1936-1941). Amhara emperors like Menelik II and Haile Selassie ruled the empire. Menelik defeated Italy at Adwa (1896).",
+        "independence": "The Derg communist regime (1974-1991) ended imperial rule. The current federal system gives regional autonomy but Amhara remain politically influential.",
+        "keyEvents": ["Aksumite Empire (100-940 CE)", "Solomonic dynasty restoration (1270)", "Battle of Adwa (1896)", "Italian occupation (1936-1941)", "Derg revolution (1974)", "Current conflicts (2020s)"]
+      },
+      "language": {
+        "name": "Amharic (Amarigna)",
+        "speakers": "~32 million native, 25 million second language",
+        "greeting": "Selam",
+        "greetingMeaning": "Hello/Peace",
+        "additionalGreetings": [
+          { "phrase": "Tena yistilign", "meaning": "May God give you health (formal hello)" },
+          { "phrase": "Dehna neh? / Dehna nesh?", "meaning": "Are you well? (m/f)" },
+          { "phrase": "Egziabhier yimesgen", "meaning": "Thanks be to God" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Ameseginalehu", "meaning": "Thank you" },
+          { "phrase": "Awo / Ayee", "meaning": "Yes / No" },
+          { "phrase": "Dehna hunu", "meaning": "Goodbye (be well)" }
+        ],
+        "family": "Ethiopian Semitic (Afroasiatic)",
+        "writingSystem": "Ge'ez/Ethiopic script (fidel) - 231+ characters",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Semitic",
+          "branch": "Ethiopian Semitic (South Semitic)",
+          "speakers": "~57 million (native + second language)",
+          "relatedLanguages": ["Tigrinya", "Tigre", "Ge'ez (liturgical)", "Gurage", "Harari"],
+          "migrationHistory": "Semitic languages entered Ethiopia from South Arabia around 500 BCE, evolving into Ethiopian Semitic family"
+        }
+      },
+      "famousPeople": [
+        { "name": "Emperor Haile Selassie", "role": "Last Ethiopian Emperor, Rastafari messiah figure", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie" },
+        { "name": "Emperor Menelik II", "role": "Defeated Italy at Adwa, founded Addis Ababa", "wikipedia": "https://en.wikipedia.org/wiki/Menelik_II" },
+        { "name": "Haile Gebrselassie", "role": "Legendary distance runner, world records", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie" },
+        { "name": "Teddy Afro", "role": "Beloved Ethiopian singer", "wikipedia": "https://en.wikipedia.org/wiki/Teddy_Afro" },
+        { "name": "Empress Taytu Betul", "role": "Warrior empress, founded Addis Ababa", "wikipedia": "https://en.wikipedia.org/wiki/Taytu_Betul" }
+      ],
+      "antiColonialResistance": "Ethiopia under Amhara emperors was never colonized. Emperor Menelik II defeated Italy at the Battle of Adwa (1896) - the first African victory over a European power. Emperor Haile Selassie led resistance against Italian occupation (1936-1941).",
+      "sources": [{ "name": "Wikipedia - Amhara people", "url": "https://en.wikipedia.org/wiki/Amhara_people" }, { "name": "Ethiopian Heritage Foundation", "url": "https://www.ethiopianheritage.org" }],
+      "description": "The Amhara are Ethiopia's historically dominant group, carriers of ancient Orthodox Christianity, the Ge'ez script, and a 3,000-year civilization. Coffee culture, fasting traditions, and the unique Ethiopian calendar define their heritage.",
+      "relatedTribes": ["tigrinya", "oromo", "gurage", "agaw"]
+    },
+    {
+      "id": "tigrinya",
+      "name": "Tigrinya",
+      "slug": "tigrinya",
+      "slugAliases": ["tigray", "tigrayan", "tigrai"],
+      "youtubeVideoId": "8lEVZ_Qy_wQ",
+      "languageVideoId": "gYnM7qz9RUw",
+      "countries": ["ET", "ER"],
+      "region": "Northern Ethiopia (Tigray) and Eritrea",
+      "population": "~9 million",
+      "populationPercent": "Ethiopia 6%, Eritrea 55%",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 14.1, "lng": 38.8 },
+      "counties": ["Tigray Region", "Eritrean highlands"],
+      "namePrefixes": ["Geb", "Ber", "Tek", "Wol", "Abi", "Alem"],
+      "commonNames": {
+        "female": ["Abrhet", "Feven", "Haben", "Saba", "Senait", "Tigist", "Hanna", "Merhawit", "Winta", "Milena", "Eden", "Feruz", "Rahwa", "Nazret", "Aida"],
+        "male": ["Yohannes", "Tekle", "Gebremichael", "Amanuel", "Bereket", "Dawit", "Haile", "Kidane", "Mesfin", "Zeray", "Tesfay", "Kahsay", "Abraham", "Samuel", "Hagos"]
+      },
+      "stereotypes": [
+        "Ancient Christian heritage (Axum)",
+        "Proud and resilient",
+        "Strong warriors (defeated Italy)",
+        "Connection to Ark of the Covenant legend",
+        "Skilled farmers despite harsh terrain",
+        "Coffee and tej (honey wine) culture"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Fierce warriors and defenders",
+          "Expected to be educated in religious texts",
+          "Family decision-makers",
+          "Hard workers in difficult terrain"
+        ],
+        "female": [
+          "Skilled in traditional cooking and brewing",
+          "Strong household managers",
+          "Keepers of religious traditions",
+          "Increasingly educated and professional"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed livestock, defended territory, and led religious activities. Church education was important for boys.",
+          "female": "Women managed households, prepared traditional foods, and raised children. Had significant voice in family decisions."
+        },
+        "modern": {
+          "male": "Modern Tigrinya men work across sectors. Many in diaspora due to conflicts. Strong in business and professions.",
+          "female": "Women are increasingly educated. Many fled conflict and work in diaspora communities maintaining cultural identity."
+        }
+      },
+      "culturalTraits": [
+        "Axumite heritage - ancient civilization",
+        "Ethiopian Orthodox Christianity central",
+        "Ge'ez script shared with Amhara",
+        "Meskel and Timkat festivals",
+        "Honey wine (tej) and coffee culture",
+        "Resistant spirit through centuries of conflict"
+      ],
+      "funFacts": [
+        "Axum, in Tigray, claims to house the Ark of the Covenant",
+        "The Axumite Empire was one of the four great powers of the ancient world",
+        "Tigrinya speakers in Eritrea and Ethiopia share culture but were divided by colonialism",
+        "Ge'ez, the liturgical language, originated in the Tigray region",
+        "The Tigrinya helped defeat Italy at Adwa (1896) alongside other Ethiopians"
+      ],
+      "traditionalFood": {
+        "staples": ["Injera", "Tsebhi (stew)", "Hilbet (lentil paste)", "Teff"],
+        "beverages": ["Suwa (traditional beer)", "Tej (honey wine)", "Buna (coffee)"],
+        "specialDishes": ["Tsebhi derho (chicken stew)", "Shiro", "Alicha (mild stew)", "Kitfo"],
+        "description": "Tigrinya cuisine shares Ethiopian traditions but has distinct dishes. Tsebhi stews with berbere spice on injera are staples. Suwa beer and tej are traditional beverages."
+      },
+      "traditionalDance": "Kuda - shoulder dance with rapid movements, similar to Amhara Eskista",
+      "religion": "Ethiopian Orthodox Tewahedo Christianity (~90%), Islam (~10%)",
+      "traditionalReligion": {
+        "name": "Ethiopian Orthodox Tewahedo Christianity",
+        "supremeDeity": "God (Egziabher)",
+        "spirits": ["Saints (especially St. Mary, St. George)", "Angels"],
+        "practices": ["Ge'ez liturgy", "Fasting", "Pilgrimages to ancient churches", "Timkat celebration"],
+        "beliefs": "Orthodox Christianity since 4th century. Axum is holiest city - claims to hold Ark of the Covenant at Church of Our Lady Mary of Zion.",
+        "religiousHistory": {
+          "christianityIntroduced": "4th century CE",
+          "introducedBy": "King Ezana of Axum, Syrian missionaries",
+          "conversionProcess": "Axum was one of the first kingdoms to adopt Christianity officially (330 CE).",
+          "sources": ["Wikipedia - Tigrinya people", "Axum Heritage"]
+        }
+      },
+      "history": {
+        "origin": "The Tigrinya are descendants of the Aksumite Empire (100-940 CE), one of the ancient world's great powers. Axum was a major trading empire with its own script (Ge'ez) and early Christianity.",
+        "colonialEra": "Italian Eritrea (1890-1941) divided Tigrinya speakers. The Tigray region remained in Ethiopia. Both groups fought against Italian occupation.",
+        "independence": "Eritrea gained independence (1993) after 30-year war. Recent Tigray War (2020-2022) caused massive humanitarian crisis.",
+        "keyEvents": ["Aksumite Empire (100-940 CE)", "Ethiopian-Aksumite period", "Italian Eritrea (1890-1941)", "Battle of Adwa (1896)", "Eritrean independence (1993)", "Tigray War (2020-2022)"]
+      },
+      "language": {
+        "name": "Tigrinya (ትግርኛ)",
+        "speakers": "~9 million",
+        "greeting": "Selam",
+        "greetingMeaning": "Hello/Peace",
+        "additionalGreetings": [
+          { "phrase": "Kemey aleka/alexi?", "meaning": "How are you? (m/f)" },
+          { "phrase": "Dehaando", "meaning": "Fine/Good" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Yekenyelay", "meaning": "Thank you" },
+          { "phrase": "Dehri negiru", "meaning": "See you later" }
+        ],
+        "family": "Ethiopian Semitic (Afroasiatic)",
+        "writingSystem": "Ge'ez/Ethiopic script",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Semitic",
+          "branch": "Ethiopian Semitic (North Ethiopic)",
+          "speakers": "~9 million",
+          "relatedLanguages": ["Tigre", "Ge'ez (ancestor)", "Amharic"],
+          "migrationHistory": "Tigrinya descends from Ge'ez, the language of ancient Axum. Closest living language to the ancient liturgical tongue."
+        }
+      },
+      "famousPeople": [
+        { "name": "Emperor Yohannes IV", "role": "Ethiopian Emperor from Tigray", "wikipedia": "https://en.wikipedia.org/wiki/Yohannes_IV" },
+        { "name": "Ras Alula", "role": "Legendary general who defeated Egyptians and Italians", "wikipedia": "https://en.wikipedia.org/wiki/Ras_Alula" },
+        { "name": "Isaias Afwerki", "role": "President of Eritrea (controversial)", "wikipedia": "https://en.wikipedia.org/wiki/Isaias_Afwerki" },
+        { "name": "Meles Zenawi", "role": "Prime Minister of Ethiopia (1995-2012)", "wikipedia": "https://en.wikipedia.org/wiki/Meles_Zenawi" }
+      ],
+      "antiColonialResistance": "Ras Alula of Tigray was Ethiopia's greatest general, defeating Egyptian invasions and Italian forces before Adwa. Tigrinya fighters were crucial at the Battle of Adwa (1896).",
+      "sources": [{ "name": "Wikipedia - Tigrinya people", "url": "https://en.wikipedia.org/wiki/Tigrinya_people" }, { "name": "Axum Heritage", "url": "https://whc.unesco.org/en/list/15" }],
+      "description": "The Tigrinya are heirs to the ancient Axumite Empire, carriers of one of the world's oldest Christian traditions and the Ge'ez script. Their history spans 3,000 years of civilization in the Ethiopian highlands.",
+      "relatedTribes": ["amhara", "tigre", "afar", "agaw"]
+    },
+    {
+      "id": "gurage",
+      "name": "Gurage",
+      "slug": "gurage",
+      "youtubeVideoId": "QpzS7GCT8gY",
+      "countries": ["ET"],
+      "region": "South-Central Ethiopia (Gurage Zone)",
+      "population": "~2.5 million",
+      "populationPercent": "2% of Ethiopia",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 8.2, "lng": 38.0 },
+      "counties": ["Gurage Zone", "SNNPR"],
+      "namePrefixes": ["Ab", "Bel", "Wor", "Zew", "Geb"],
+      "commonNames": {
+        "female": ["Workinesh", "Abebech", "Almaz", "Birtukan", "Tsehay", "Zenebech", "Tirunesh", "Mestawet", "Belaynesh", "Aster"],
+        "male": ["Worku", "Abebe", "Bekele", "Zerihun", "Gebremedhin", "Tilahun", "Meshesha", "Assefa", "Tefera", "Bogale"]
+      },
+      "stereotypes": [
+        "Exceptional businesspeople and traders",
+        "Strong work ethic - 'never idle'",
+        "Tight-knit community support",
+        "Enset (false banana) culture",
+        "Skilled at saving and investment",
+        "Strong mutual aid traditions"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be entrepreneurs",
+          "Support extended family financially",
+          "Decision-makers in business",
+          "Hard workers with multiple jobs"
+        ],
+        "female": [
+          "Manage household finances skillfully",
+          "Support family businesses",
+          "Experts in enset preparation",
+          "Strong role in community support networks"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed livestock, trade, and external relations. Expected to work extremely hard and support extended family.",
+          "female": "Women processed enset (labor-intensive), managed households, and participated in savings associations (equb)."
+        },
+        "modern": {
+          "male": "Gurage men are famous as businessmen throughout Ethiopia. Many own restaurants, hotels, and shops across the country.",
+          "female": "Women increasingly work in business and professions while maintaining strong family support networks."
+        }
+      },
+      "culturalTraits": [
+        "Enset (false banana) as primary food crop",
+        "Exceptional business and trading skills",
+        "Strong community mutual aid (equb/idir)",
+        "Work ethic: 'A Gurage never sits idle'",
+        "Multiple Gurage subgroups with dialects",
+        "Migration for trade throughout Ethiopia"
+      ],
+      "funFacts": [
+        "Gurage are famous throughout Ethiopia as the best businesspeople",
+        "They cultivate enset (false banana) - a crop that can feed a family for years",
+        "Gurage communities have powerful mutual aid societies (equb) for pooling money",
+        "Many Ethiopian restaurants and hotels are Gurage-owned",
+        "The phrase 'working like a Gurage' means working extremely hard"
+      ],
+      "traditionalFood": {
+        "staples": ["Kocho (fermented enset)", "Kitfo (raw minced beef)", "Gomen (collard greens)", "Ayib (cottage cheese)"],
+        "beverages": ["Tej", "Tella", "Coffee"],
+        "specialDishes": ["Kitfo with kocho", "Kurt (raw meat cubes)", "Dulet (tripe dish)"],
+        "description": "Gurage cuisine centers on enset - 'false banana' whose stem is fermented into kocho. Kitfo (spiced raw beef) with kocho is the signature dish, often served with gomen and ayib."
+      },
+      "traditionalDance": "Gurage dance - energetic movements with shoulder and chest emphasis",
+      "religion": "Ethiopian Orthodox Christianity (~55%), Islam (~40%), Traditional (~5%)",
+      "traditionalReligion": {
+        "name": "Mixed religious traditions",
+        "supremeDeity": "Waq (traditional), God/Allah (Abrahamic faiths)",
+        "spirits": ["Ancestral spirits", "Nature spirits"],
+        "practices": ["Traditional festivals", "Mixed Christian/Muslim practices", "Community rituals"],
+        "beliefs": "Gurage traditionally had their own beliefs in Waq (sky god). Today split between Orthodox Christianity and Islam, with traditional practices continuing.",
+        "religiousHistory": {
+          "christianityIntroduced": "Medieval period (gradual)",
+          "islamIntroduced": "Medieval period (through trade)",
+          "introducedBy": "Ethiopian expansion, Muslim traders",
+          "conversionProcess": "Both religions spread gradually. Some Gurage subgroups are predominantly Christian, others Muslim.",
+          "sources": ["Wikipedia - Gurage people"]
+        }
+      },
+      "history": {
+        "origin": "The Gurage are an Ethiopian Semitic-speaking people in south-central Ethiopia. They are divided into multiple subgroups (Sebat Bet - 'seven houses') with related but distinct dialects.",
+        "colonialEra": "Incorporated into Ethiopian Empire under Menelik II. Never colonized. Known for trading throughout the empire.",
+        "independence": "Post-1991, Gurage Zone was established. Gurage business networks span Ethiopia and diaspora.",
+        "keyEvents": ["Sebat Bet ('Seven Houses') confederation", "Integration into Ethiopian Empire", "Trading network expansion", "Gurage Zone establishment (1995)"]
+      },
+      "language": {
+        "name": "Gurage languages (multiple)",
+        "speakers": "~2 million",
+        "greeting": "Yadirna?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Dehna", "meaning": "Fine/Good" }
+        ],
+        "family": "Ethiopian Semitic (Afroasiatic)",
+        "writingSystem": "Ge'ez script (limited use), mostly oral",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Semitic",
+          "branch": "Ethiopian Semitic (Gurage cluster)",
+          "speakers": "~2 million",
+          "relatedLanguages": ["Amharic (distant)", "Harari", "Other Ethiopian Semitic"],
+          "migrationHistory": "Gurage languages form a distinct cluster within Ethiopian Semitic, suggesting long isolation in their highland homeland"
+        }
+      },
+      "famousPeople": [
+        { "name": "Kenenisa Bekele", "role": "Legendary long-distance runner", "wikipedia": "https://en.wikipedia.org/wiki/Kenenisa_Bekele" },
+        { "name": "Mulugeta Buli", "role": "General and patriot", "wikipedia": null }
+      ],
+      "sources": [{ "name": "Wikipedia - Gurage people", "url": "https://en.wikipedia.org/wiki/Gurage_people" }],
+      "description": "The Gurage are famous throughout Ethiopia for their business acumen and work ethic. Their enset-based agriculture and strong mutual aid traditions have created prosperous communities despite limited resources.",
+      "relatedTribes": ["amhara", "hadiya", "silte", "oromo"]
+    },
+    {
+      "id": "kabyle",
+      "name": "Kabyle",
+      "slug": "kabyle",
+      "slugAliases": ["kabylian", "kabyles"],
+      "youtubeVideoId": "Y5vJRKk3hyQ",
+      "languageVideoId": "3qHXd3mGQSs",
+      "countries": ["DZ"],
+      "region": "Kabylie (Northern Algeria)",
+      "population": "~6 million",
+      "populationPercent": "15% of Algeria",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 36.7, "lng": 4.5 },
+      "counties": ["Tizi Ouzou", "Béjaïa", "Bouira"],
+      "namePrefixes": ["L", "M", "Ta", "Ou", "Ai"],
+      "commonNames": {
+        "female": ["Lynda", "Samia", "Kahina", "Katia", "Djamila", "Louiza", "Malika", "Nadia", "Soraya", "Yasmina"],
+        "male": ["Lounes", "Mouloud", "Ferhat", "Saïd", "Idir", "Mhand", "Mohand", "Yousef", "Karim", "Madjid"]
+      },
+      "stereotypes": [
+        "Fiercely proud of Amazigh identity",
+        "Leaders of Berber cultural revival",
+        "Educated and intellectual tradition",
+        "Strong independence spirit",
+        "Skilled artisans and farmers",
+        "Resistance to Arabization"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Defenders of Kabyle identity",
+          "Expected to be educated",
+          "Decision-makers in village assemblies",
+          "Traditionally migrate for work"
+        ],
+        "female": [
+          "Keepers of language and culture",
+          "Skilled weavers and potters",
+          "Manage households in men's absence",
+          "Strong voices in family matters"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed agriculture, attended village assemblies (tajmaât), and migrated for work. Defense of territory and honor was crucial.",
+          "female": "Women produced textiles, pottery, and olive oil. They maintained language and culture, teaching children Kabyle traditions."
+        },
+        "modern": {
+          "male": "Modern Kabyle men work in all sectors. Many in France and Europe. Strong in business, academia, and cultural activism.",
+          "female": "Women are increasingly educated and professional. Lead in cultural preservation. Many work outside home."
+        }
+      },
+      "culturalTraits": [
+        "Tajmaât (village assembly) democratic tradition",
+        "Kabyle music and poetry traditions",
+        "Amazigh New Year (Yennayer) celebrations",
+        "Olive oil and fig production",
+        "Distinctive silver jewelry and pottery",
+        "Strong diaspora in France"
+      ],
+      "funFacts": [
+        "Zinedine Zidane, one of the world's greatest footballers, is Kabyle",
+        "The Berber Spring (1980) started in Kabylie, sparking Amazigh cultural revival",
+        "Kabyle villages have traditional democratic assemblies (tajmaât) - direct democracy",
+        "Kabylie has the highest literacy rate in Algeria",
+        "The singer Idir helped revive Kabyle music and identity globally"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous", "Olive oil", "Figs", "Barley bread"],
+        "beverages": ["Mint tea", "Buttermilk"],
+        "specialDishes": ["Berkoukes (small pasta soup)", "Tchicha (cracked wheat)", "Aghroum (barley bread)"],
+        "description": "Kabyle cuisine features couscous with vegetables and meat. Olive oil is central - Kabylie produces much of Algeria's olives. Figs and pomegranates are important fruits."
+      },
+      "traditionalDance": "Achewiq - traditional Kabyle dance with distinctive movements",
+      "religion": "Islam (Sunni) with pre-Islamic Amazigh elements preserved",
+      "traditionalReligion": {
+        "name": "Kabyle Islam",
+        "supremeDeity": "Allah",
+        "spirits": ["Pre-Islamic beliefs in nature spirits persist", "Djinn"],
+        "practices": ["Islamic observance", "Yennayer celebrations", "Marabout (saint) veneration"],
+        "beliefs": "Islam arrived 7th century but Kabyle retained distinct practices. Pre-Islamic festivals like Yennayer continue. Local saints (marabouts) are revered.",
+        "religiousHistory": {
+          "islamIntroduced": "7th century CE",
+          "introducedBy": "Arab conquest, though Kabylie resisted longest",
+          "conversionProcess": "Kabyle resisted Arab conquest under Queen Dihya (Kahina). Conversion took centuries. Pre-Islamic customs continued.",
+          "sources": ["Wikipedia - Kabyle people"]
+        }
+      },
+      "history": {
+        "origin": "The Kabyle are Amazigh people of northern Algeria, inhabiting the mountainous Kabylie region. They maintained independence from various conquerors due to mountain terrain.",
+        "colonialEra": "France colonized Algeria (1830) but Kabylie resisted fiercely. The 1871 Mokrani Revolt was a major Kabyle uprising. During independence war (1954-1962), Kabyles were prominent in FLN.",
+        "independence": "Post-independence, Kabyle identity was suppressed by Arabization policies. The Berber Spring (1980) launched cultural revival. Black Spring (2001) protested discrimination.",
+        "keyEvents": ["Resistance to Arab conquest (7th century)", "French colonization (1830)", "Mokrani Revolt (1871)", "Independence war participation (1954-1962)", "Berber Spring (1980)", "Black Spring (2001)"]
+      },
+      "language": {
+        "name": "Kabyle (Taqbaylit)",
+        "speakers": "~6 million",
+        "greeting": "Azul fellawen",
+        "greetingMeaning": "Hello to you (plural)",
+        "additionalGreetings": [
+          { "phrase": "Amek?", "meaning": "How are you?" },
+          { "phrase": "Ladha", "meaning": "Fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Tanmirt", "meaning": "Thank you" },
+          { "phrase": "Ar tufat", "meaning": "Goodbye (until morning)" }
+        ],
+        "family": "Berber (Afroasiatic)",
+        "writingSystem": "Latin alphabet, Neo-Tifinagh, Arabic (historically)",
+        "linguisticLineage": {
+          "phylum": "Afroasiatic",
+          "family": "Berber",
+          "branch": "Northern Berber (Kabyle)",
+          "speakers": "~6 million",
+          "relatedLanguages": ["Tamazight", "Riffian", "Tachelhit"],
+          "migrationHistory": "Kabyle is part of the Northern Berber branch, spoken in the same region for millennia"
+        }
+      },
+      "famousPeople": [
+        { "name": "Zinedine Zidane", "role": "French footballer, Real Madrid legend", "wikipedia": "https://en.wikipedia.org/wiki/Zinedine_Zidane" },
+        { "name": "Idir", "role": "Kabyle singer, cultural icon", "wikipedia": "https://en.wikipedia.org/wiki/Idir" },
+        { "name": "Mouloud Mammeri", "role": "Writer, Amazigh language pioneer", "wikipedia": "https://en.wikipedia.org/wiki/Mouloud_Mammeri" },
+        { "name": "Fatma N'Soumer", "role": "Resistance leader against French (1850s)", "wikipedia": "https://en.wikipedia.org/wiki/Lalla_Fatma_N%27Soumer" },
+        { "name": "Lounes Matoub", "role": "Singer, cultural activist (assassinated)", "wikipedia": "https://en.wikipedia.org/wiki/Lounes_Matoub" }
+      ],
+      "antiColonialResistance": "Kabyle resistance is legendary. Fatma N'Soumer led resistance to French conquest (1850s). The 1871 Mokrani Revolt was one of Algeria's largest uprisings. Kabyles were prominent in the independence war (1954-1962).",
+      "sources": [{ "name": "Wikipedia - Kabyle people", "url": "https://en.wikipedia.org/wiki/Kabyle_people" }],
+      "description": "The Kabyle are Algeria's largest Amazigh group, leaders of the Berber cultural revival. Their mountain homeland, democratic traditions, and fierce independence spirit have preserved their identity through centuries of conquest.",
+      "relatedTribes": ["amazigh", "tuareg", "chaoui", "mozabite"]
     }
   ]
 }
