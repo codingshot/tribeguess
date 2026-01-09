@@ -148,7 +148,7 @@ export function GuessForm({
         {/* Mobile: Stack vertically, Desktop: Side by side */}
         <div className="flex flex-col sm:flex-row gap-2">
           {/* Country Dropdown - Shows flag + name on mobile, flag only on desktop */}
-          <div className="relative shrink-0 w-full sm:w-auto">
+          <div className="relative shrink-0 w-full sm:w-[140px]">
             <select
               id="country-select"
               value={country}
@@ -156,7 +156,7 @@ export function GuessForm({
                 setCountry(e.target.value);
                 onCountryChange?.(e.target.value);
               }}
-              className="appearance-none cursor-pointer text-base pr-8 pl-3 py-3 sm:py-2.5 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary w-full sm:w-auto"
+              className="appearance-none cursor-pointer text-base pr-8 pl-3 py-3 sm:py-2.5 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary w-full truncate"
               aria-label="Select country"
             >
               <option value="ALL">🌍 All Africa</option>
