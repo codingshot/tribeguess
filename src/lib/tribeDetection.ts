@@ -2714,20 +2714,20 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'kabo_lb': [{ tribe: 'luba', weight: 0.95 }],
   'mwam': [{ tribe: 'luba', weight: 0.9 }],
   'muto': [{ tribe: 'luba', weight: 0.95 }],
-  'mula': [{ tribe: 'luba', weight: 0.9 }],
+  'mula_lb': [{ tribe: 'luba', weight: 0.9 }],
   'tshi_lb': [{ tribe: 'luba', weight: 0.95 }],
   'ngun': [{ tribe: 'luba', weight: 0.9 }],
   'muji': [{ tribe: 'luba', weight: 0.95 }],
 
   // ============ DR CONGO - Mongo prefixes ============
   'bofe': [{ tribe: 'mongo', weight: 0.98 }],
-  'loki': [{ tribe: 'mongo', weight: 0.95 }],
+  'loki_mg': [{ tribe: 'mongo', weight: 0.95 }],
   'monk': [{ tribe: 'mongo', weight: 0.95 }],
   'ilon': [{ tribe: 'mongo', weight: 0.95 }],
   'bola': [{ tribe: 'mongo', weight: 0.9 }],
   'moki': [{ tribe: 'mongo', weight: 0.95 }],
   'lifo': [{ tribe: 'mongo', weight: 0.95 }],
-  'bong': [{ tribe: 'mongo', weight: 0.9 }],
+  'bong_mg': [{ tribe: 'mongo', weight: 0.9 }],
   'efam': [{ tribe: 'mongo', weight: 0.98 }],
 
   // ============ DR CONGO/CONGO/ANGOLA - Kongo prefixes ============
@@ -2736,7 +2736,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'nsim': [{ tribe: 'kongo', weight: 0.95 }],
   'mafu': [{ tribe: 'kongo', weight: 0.9 }],
   'nken': [{ tribe: 'kongo', weight: 0.95 }],
-  'ndon': [{ tribe: 'kongo', weight: 0.95 }],
+  'ndon_kg': [{ tribe: 'kongo', weight: 0.95 }],
   'make': [{ tribe: 'kongo', weight: 0.85 }],
   'nzuz': [{ tribe: 'kongo', weight: 0.98 }],
   'mbal_kg': [{ tribe: 'kongo', weight: 0.9 }],
@@ -2744,11 +2744,11 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'nkuk': [{ tribe: 'kongo', weight: 0.95 }],
   'kasa': [{ tribe: 'kongo', weight: 0.95 }],
   'mata': [{ tribe: 'kongo', weight: 0.9 }],
-  'mabi': [{ tribe: 'kongo', weight: 0.95 }, { tribe: 'bakongo', weight: 0.95 }],
+  'mabi_kg': [{ tribe: 'kongo', weight: 0.95 }, { tribe: 'bakongo', weight: 0.95 }],
 
   // ============ CONGO-BRAZZAVILLE - Mbochi prefixes ============
   'sass': [{ tribe: 'mbochi', weight: 0.98 }],
-  'ngue': [{ tribe: 'mbochi', weight: 0.95 }],
+  'ngue_mb': [{ tribe: 'mbochi', weight: 0.95 }],
   'obam': [{ tribe: 'mbochi', weight: 0.98 }],
   'itou': [{ tribe: 'mbochi', weight: 0.95 }],
   'ngou_mb': [{ tribe: 'mbochi', weight: 0.95 }],
