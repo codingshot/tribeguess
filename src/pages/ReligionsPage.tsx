@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users } from "lucide-react";
+import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users, BookOpen, ExternalLink, ChevronRight } from "lucide-react";
+import { getAllReligions, TraditionalReligionData } from "@/data/traditionalReligions";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 interface TraditionalReligion {
   name: string;
@@ -35,13 +37,10 @@ const regionIcons: Record<string, React.ReactNode> = {
   "North Africa": <Moon className="h-4 w-4" />,
 };
 
-// Categorize supreme deities by common themes
-const deityThemes = [
-  { theme: "Sky/Creator Gods", keywords: ["sky", "creator", "heaven", "above", "supreme", "father"], icon: <Sun className="h-5 w-5" /> },
-  { theme: "Earth/Nature Gods", keywords: ["earth", "nature", "land", "fertility", "mother"], icon: <Mountain className="h-5 w-5" /> },
-  { theme: "Water/Rain Gods", keywords: ["water", "rain", "river", "lake", "sea"], icon: <Droplets className="h-5 w-5" /> },
-  { theme: "Ancestral Spirits", keywords: ["ancestor", "spirit", "soul", "dead"], icon: <Users className="h-5 w-5" /> },
-];
+const PIE_COLORS = ['#F59E0B', '#3B82F6', '#22C55E', '#EC4899', '#8B5CF6', '#06B6D4'];
+
+// Featured religions from our detailed database
+const featuredReligions = getAllReligions();
 
 export default function ReligionsPage() {
   const allTribes = getAllTribes() as TribeWithReligion[];
@@ -147,6 +146,95 @@ export default function ReligionsPage() {
               This content is for educational and entertainment purposes only.
             </p>
           </div>
+
+          {/* Featured Religions with Full Details */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <BookOpen className="h-6 w-6 text-primary" />
+              Detailed Religion Profiles
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredReligions.map((religion) => (
+                <Card key={religion.id} className="hover:shadow-lg transition-shadow border-primary/20">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-lg text-primary">{religion.name}</CardTitle>
+                    <p className="text-xs text-muted-foreground">{religion.region} • {religion.estimatedFollowers}</p>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div>
+                      <p className="text-xs font-semibold text-muted-foreground uppercase">Supreme Deity</p>
+                      <p className="text-sm font-medium">{religion.supremeDeity.name}</p>
+                    </div>
+                    
+                    {/* Country Breakdown Mini Chart */}
+                    <div className="h-24">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <PieChart>
+                          <Pie
+                            data={religion.countryBreakdown.slice(0, 5)}
+                            dataKey="percentage"
+                            nameKey="country"
+                            cx="50%"
+                            cy="50%"
+                            outerRadius={35}
+                            innerRadius={20}
+                          >
+                            {religion.countryBreakdown.slice(0, 5).map((_, i) => (
+                              <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
+                            ))}
+                          </Pie>
+                          <Tooltip formatter={(value) => `${value}%`} />
+                        </PieChart>
+                      </ResponsiveContainer>
+                    </div>
+                    
+                    {/* Tribes Following */}
+                    <div>
+                      <p className="text-xs font-semibold text-muted-foreground uppercase">Tribes Following</p>
+                      <div className="flex flex-wrap gap-1 mt-1">
+                        {religion.tribesFollowing.slice(0, 3).map((tribe) => (
+                          <Link key={tribe.tribeSlug} to={`/learn/${tribe.tribeSlug}`}>
+                            <Badge variant="secondary" className="text-xs hover:bg-primary/20">
+                              {tribe.tribeName} ({tribe.percentage}%)
+                            </Badge>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Key Tenets */}
+                    <div>
+                      <p className="text-xs font-semibold text-muted-foreground uppercase">Core Tenets</p>
+                      <ul className="text-xs text-muted-foreground list-disc list-inside mt-1">
+                        {religion.tenets.slice(0, 2).map((tenet, i) => (
+                          <li key={i}>{tenet.belief}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Sources */}
+                    <div className="pt-2 border-t border-border">
+                      <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                        <ExternalLink className="w-3 h-3" />
+                        Sources:
+                        {religion.sources.slice(0, 2).map((source, i) => (
+                          <a 
+                            key={i}
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            [{i + 1}]
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
 
           {/* Common Elements Section */}
           <section className="mb-12">
