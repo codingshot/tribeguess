@@ -305,49 +305,51 @@ const Learn = () => {
           </header>
           
           {/* Search and Filters - Inline Layout */}
-          <section className="max-w-3xl mx-auto mb-4" aria-label="Search and filters">
-            {/* Search Bar */}
-            <div className="relative">
-              <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-              <input
-                id="tribe-search"
-                type="text"
-                value={localSearch}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setLocalSearch(value);
-                  // Live search - update URL as user types
-                  const params = new URLSearchParams(searchParams);
-                  if (value) {
-                    params.set('search', value);
-                  } else {
-                    params.delete('search');
-                  }
-                  setSearchParams(params);
-                }}
-                placeholder="Search tribes, names..."
-                className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
-              />
-              {localSearch && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setLocalSearch('');
+          <section className="max-w-4xl mx-auto mb-4" aria-label="Search and filters">
+            {/* Search Bar + Controls - Same row on desktop */}
+            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-3">
+              {/* Search Bar */}
+              <div className="relative flex-1">
+                <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <input
+                  id="tribe-search"
+                  type="text"
+                  value={localSearch}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setLocalSearch(value);
+                    // Live search - update URL as user types
                     const params = new URLSearchParams(searchParams);
-                    params.delete('search');
+                    if (value) {
+                      params.set('search', value);
+                    } else {
+                      params.delete('search');
+                    }
                     setSearchParams(params);
                   }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
-                  aria-label="Clear search"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
-            </div>
-            
-            {/* View Toggle + Advanced Filters + Info - Same row on mobile */}
-            <div className="flex items-center justify-center gap-2 mt-2">
+                  placeholder="Search tribes, names, or characteristics"
+                  className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
+                />
+                {localSearch && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLocalSearch('');
+                      const params = new URLSearchParams(searchParams);
+                      params.delete('search');
+                      setSearchParams(params);
+                    }}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+              
+              {/* View Toggle + Advanced Filters + Info - Same row */}
+              <div className="flex items-center justify-center gap-2 mt-2 lg:mt-0 flex-shrink-0">
               {/* Compact View Toggle with Active State */}
               <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0">
                 <button
@@ -510,6 +512,7 @@ const Learn = () => {
                   </Tooltip>
                 </TooltipProvider>
               )}
+            </div>
             </div>
             
             {/* Compact Filters Row - All in one line on mobile */}
