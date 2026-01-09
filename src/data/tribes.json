@@ -9230,6 +9230,343 @@
       "sources": [{ "name": "Wikipedia - Ndebele people", "url": "https://en.wikipedia.org/wiki/Northern_Ndebele_people" }],
       "description": "The Ndebele are a Nguni people known for their iconic geometric house paintings, elaborate beadwork, and warrior heritage tracing to Mzilikazi's breakaway from Shaka Zulu.",
       "relatedTribes": ["zulu", "xhosa", "swazi", "shona"]
+    },
+
+    {
+      "id": "tuareg",
+      "name": "Tuareg (Kel Tamasheq)",
+      "slug": "tuareg",
+      "slugAliases": ["kel-tamasheq", "imuhar", "imuhagh", "imajaghan", "blue-people"],
+      "countries": ["NE", "ML", "DZ", "LY", "BF"],
+      "region": "Sahara Desert (Niger, Mali, Algeria, Libya, Burkina Faso)",
+      "population": "~2.5 million",
+      "populationPercent": "Trans-Saharan nomads",
+      "populationByCountry": [
+        { "country": "NE", "population": "~1.2 million", "percent": "~5%" },
+        { "country": "ML", "population": "~800,000", "percent": "~4%" },
+        { "country": "DZ", "population": "~100,000", "percent": "~0.2%" },
+        { "country": "LY", "population": "~50,000", "percent": "~0.7%" },
+        { "country": "BF", "population": "~50,000", "percent": "~0.2%" }
+      ],
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 18.0, "lng": 8.0 },
+      "tribeTerritoryDegrees": { "latSpan": 15, "lngSpan": 25 },
+      "counties": ["Agadez Region (Niger)", "Kidal Region (Mali)", "Tamanrasset (Algeria)", "Fezzan (Libya)"],
+      "namePrefixes": ["Ag", "Ult", "Tin"],
+      "commonNames": {
+        "female": ["Tadalat", "Hawwa", "Fadimata", "Hawa", "Lalla", "Takama", "Ghalia"],
+        "male": ["Amayas", "Attaher", "Moussa", "Ibrahim", "Rhissa", "Mano", "Ag Ghali"]
+      },
+      "stereotypes": ["Blue people of the desert", "Noble nomads", "Fierce warriors", "Matrilineal society", "Legendary navigators", "Caravan traders"],
+      "genderStereotypes": {
+        "male": ["Master navigators", "Warriors and protectors", "Camel herders", "Wearers of the tagelmust (veil)"],
+        "female": ["Tent owners", "Lineage keepers", "Musicians and poets", "Property controllers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, herders, and caravan traders. Unusually, men veil their faces while women do not. Men handle external affairs.",
+          "female": "Women own the tents, control property, and trace lineage. They are poets and musicians. Tuareg society is matrilineal."
+        },
+        "modern": {
+          "male": "Many continue herding and trading. Some work in tourism or mining. Some were involved in independence movements.",
+          "female": "Women maintain strong social positions. Some are prominent musicians (like Tartit). Educational access is increasing."
+        }
+      },
+      "culturalTraits": ["Tagelmust (indigo face veil for men)", "Tifinagh alphabet - one of the oldest", "Matrilineal descent (rare for Muslims)", "Women do not veil, men do", "Tende music ceremonies", "Noble/vassal caste system", "Legendary desert navigation", "Camel caravans across Sahara"],
+      "funFacts": ["Tuareg men wear veils while women don't - the reverse of most Islamic societies", "Their indigo-dyed clothes stain the skin, earning them 'Blue People' name", "The Tifinagh alphabet is over 2,500 years old and still used", "They trace descent through mothers, not fathers", "A famous Tuareg curse: 'May you own a house' - implying loss of nomadic freedom"],
+      "tradeRelations": {
+        "historical": ["Trans-Saharan gold and salt trade", "Slave trading until 19th century", "Control of desert trade routes", "Caravan protection services"],
+        "modern": ["Livestock trading", "Tourism and guides", "Artisan crafts (silver, leather)", "Cross-border trade"]
+      },
+      "antiColonialResistance": "The Tuareg fiercely resisted French colonization. Kaocen led a major uprising in 1916-1917. Post-independence, Tuareg have launched multiple rebellions for autonomy, including movements in Mali (1990s, 2012) and Niger.",
+      "traditionalFood": {
+        "staples": ["Taguella (sand bread)", "Couscous", "Millet porridge", "Dates", "Camel milk"],
+        "beverages": ["Atay (mint tea ceremony - 3 glasses)", "Camel milk", "Eghajira (cheese drink)"],
+        "specialDishes": ["Taguella baked in sand under coals", "Meat dried and preserved for travel", "Dates stuffed with butter"],
+        "description": "Tuareg cuisine is adapted for desert life - preserved foods, camel products, and bread baked in sand."
+      },
+      "traditionalDance": "Tende - women lead drumming and singing ceremonies",
+      "religion": "Islam (with pre-Islamic traditions)",
+      "traditionalReligion": {
+        "name": "Tuareg Beliefs (Islamic with pre-Islamic elements)",
+        "supremeDeity": "Allah (with Kel Essuf spirit beliefs)",
+        "spirits": ["Kel Essuf (spirits of solitude)", "Jinn in the desert", "Protective ancestor spirits"],
+        "practices": ["Tende healing ceremonies", "Amulet (tcherot) wearing", "Face veiling for spiritual protection", "Ancestor consultations", "Music for spirit communication"],
+        "beliefs": "Unique Islam preserving matrilineal descent; men veil for protection against evil spirits; Kel Essuf spirits inhabit lonely places; music and poetry have spiritual power; ancestors guide through dreams",
+        "religiousHistory": {
+          "islamIntroduced": "7th-11th century CE",
+          "introducedBy": "Arab and Berber traders across trans-Saharan routes",
+          "conversionProcess": "Gradual adoption through trade contact, maintaining many pre-Islamic practices including matrilineality and spirit beliefs",
+          "sources": ["Wikipedia - Tuareg people"]
+        }
+      },
+      "language": {
+        "name": "Tamasheq (Tamajaq, Tamahaq)",
+        "speakers": "~2.5 million",
+        "greeting": "Mani tehedem?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Alkher ghas", "meaning": "Only good (response)" },
+          { "phrase": "Tanemmert", "meaning": "Thank you" }
+        ],
+        "family": "Berber (Afro-Asiatic)",
+        "writingSystem": "Tifinagh script (ancient), Latin, Arabic"
+      },
+      "famousPeople": [
+        { "name": "Tinariwen", "role": "Grammy-winning desert blues band", "wikipedia": "https://en.wikipedia.org/wiki/Tinariwen" },
+        { "name": "Mano Dayak", "role": "Tuareg leader and author", "wikipedia": "https://en.wikipedia.org/wiki/Mano_Dayak" },
+        { "name": "Tartit", "role": "Female Tuareg music group", "wikipedia": "https://en.wikipedia.org/wiki/Tartit" }
+      ],
+      "sources": [{ "name": "Wikipedia - Tuareg people", "url": "https://en.wikipedia.org/wiki/Tuareg_people" }],
+      "description": "The Tuareg are the 'Blue People' of the Sahara, legendary nomadic traders known for their matrilineal society, male veiling tradition, ancient Tifinagh script, and fierce independence.",
+      "relatedTribes": ["amazigh", "fulani", "hausa", "songhai"]
+    },
+
+    {
+      "id": "nubian",
+      "name": "Nubian (Nobiin)",
+      "slug": "nubian",
+      "slugAliases": ["nobiin", "nubians", "dongolawi", "kenzi"],
+      "countries": ["SD", "EG"],
+      "region": "Nile Valley (Sudan and Southern Egypt)",
+      "population": "~3 million",
+      "populationPercent": "~7% (Sudan)",
+      "populationByCountry": [
+        { "country": "SD", "population": "~2.5 million", "percent": "~6%" },
+        { "country": "EG", "population": "~500,000", "percent": "~0.5%" }
+      ],
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 22.0, "lng": 31.5 },
+      "tribeTerritoryDegrees": { "latSpan": 8, "lngSpan": 4 },
+      "counties": ["Northern State (Sudan)", "Aswan Governorate (Egypt)", "Dongola Region"],
+      "namePrefixes": [],
+      "commonNames": {
+        "female": ["Aisha", "Fatima", "Halima", "Mariam", "Sitana", "Nafisa"],
+        "male": ["Ahmed", "Mohamed", "Idris", "Hamza", "Fadl", "Ismail"]
+      },
+      "stereotypes": ["Ancient civilization heirs", "Nile people", "Skilled boatmen", "Distinctive architecture", "Dark-skinned beauty", "Proud heritage"],
+      "genderStereotypes": {
+        "male": ["Nile sailors and fishermen", "Merchants", "Date palm farmers", "Skilled craftsmen"],
+        "female": ["Distinctive dress and jewelry", "Henna artists", "Household managers", "Keepers of Nubian songs"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men sailed the Nile, farmed date palms, and traded. Many worked as laborers in Egypt. They managed external family affairs.",
+          "female": "Women maintained distinctive Nubian homes (painted walls), managed households, and preserved songs and traditions."
+        },
+        "modern": {
+          "male": "Many displaced by Aswan dams work in cities. Some returned to tourism. Activism for Nubian rights and return.",
+          "female": "Women preserve traditions through songs and crafts. Some became activists for cultural preservation."
+        }
+      },
+      "culturalTraits": ["Distinctive painted house designs", "Ancient Nile civilization heritage", "Displacement survivors (Aswan dams)", "Famadihana-like ancestor ceremonies", "Distinctive music and songs", "Skilled Nile navigation", "Proud African identity"],
+      "funFacts": ["The Kingdom of Kush conquered and ruled Egypt as the 25th Dynasty", "Nubia has more pyramids than Egypt - over 200", "Aswan dams displaced hundreds of thousands of Nubians from ancestral lands", "Nubian is one of the oldest written African languages", "Meroe was called 'Island of Gold' by ancient Egyptians"],
+      "tradeRelations": {
+        "historical": ["Gold trade (Nubia means 'land of gold')", "Ivory and ebony to Egypt", "Slaves (reluctantly) to Arab world", "Incense and spices"],
+        "modern": ["Date palm products", "Tourism in Aswan area", "Crafts and handicrafts", "Fishing on Lake Nasser"]
+      },
+      "antiColonialResistance": "Ancient Nubians resisted Egyptian, Roman, and Arab invasions repeatedly. Christian Nubia held against Arab conquest for 600 years. Modern Nubians resisted displacement by the Aswan dams through legal and cultural activism.",
+      "traditionalFood": {
+        "staples": ["Gurassa (thick bread)", "Kisra (sorghum pancake)", "Ful medames (fava beans)", "Dates", "Nile fish"],
+        "beverages": ["Hibiscus drink", "Date juice", "Arabic coffee"],
+        "specialDishes": ["Shakshuka (Nubian style)", "Molokhia", "Grilled Nile perch", "Date dishes"],
+        "description": "Nubian cuisine centers on Nile fish, dates, sorghum bread, and dishes shared with Egyptian and Sudanese neighbors."
+      },
+      "traditionalDance": "Arageed - circular dance with hand movements and call-and-response songs",
+      "religion": "Islam (predominant), Christianity (minority)",
+      "traditionalReligion": {
+        "name": "Ancient Nubian Religion (historical) / Nubian Islamic Traditions",
+        "supremeDeity": "Apedemak (historical lion god) / Allah (modern)",
+        "spirits": ["Nile spirits", "Ancestor spirits", "Nature spirits at sacred sites"],
+        "practices": ["Nile veneration", "Zar possession ceremonies", "Ancestor commemorations", "Healing with bakhoor incense", "Sacred grove visits"],
+        "beliefs": "The Nile is sacred and central to Nubian identity; ancestors continue to influence the living; displacement from Nile caused spiritual trauma; healing involves spirit appeasement",
+        "religiousHistory": {
+          "christianityIntroduced": "6th century CE",
+          "islamIntroduced": "14th-15th century CE (complete conversion)",
+          "introducedBy": "Byzantine missionaries (Christianity), Arab traders and rulers (Islam)",
+          "conversionProcess": "Christianity lasted ~800 years in Nubia. Islamic conversion came gradually through intermarriage and trade.",
+          "sources": ["Wikipedia - Nubian people"]
+        }
+      },
+      "language": {
+        "name": "Nobiin (Nubian languages)",
+        "speakers": "~500,000 (Nobiin), ~2 million (all Nubian languages)",
+        "greeting": "Mattod?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Ayi", "meaning": "Yes" },
+          { "phrase": "Mashallah", "meaning": "God has willed it" }
+        ],
+        "family": "Nilo-Saharan (Eastern Sudanic)",
+        "writingSystem": "Arabic script, Latin (modern), Old Nubian script (historical)"
+      },
+      "famousPeople": [
+        { "name": "Taharqa", "role": "Pharaoh of Egypt and Nubia (25th Dynasty)", "wikipedia": "https://en.wikipedia.org/wiki/Taharqa" },
+        { "name": "Amanirenas", "role": "Queen who fought the Roman Empire", "wikipedia": "https://en.wikipedia.org/wiki/Amanirenas" },
+        { "name": "Hakim Amer", "role": "Egyptian Nubian singer", "wikipedia": null }
+      ],
+      "sources": [{ "name": "Wikipedia - Nubian people", "url": "https://en.wikipedia.org/wiki/Nubian_people" }],
+      "description": "The Nubians are the heirs of ancient Kush, rulers of Egypt as the 25th Dynasty, with a 5,000-year Nile civilization marked by pyramids, distinctive culture, and displacement survival.",
+      "relatedTribes": ["egyptian", "beja", "fur", "dinka"]
+    },
+
+    {
+      "id": "fang",
+      "name": "Fang (Pangwe)",
+      "slug": "fang",
+      "slugAliases": ["pangwe", "pahouin", "fan", "mpangwe"],
+      "countries": ["GA", "GQ", "CM"],
+      "region": "Equatorial Africa (Gabon, Equatorial Guinea, Cameroon)",
+      "population": "~1.5 million",
+      "populationPercent": "~30% (Gabon), ~85% (Equatorial Guinea)",
+      "populationByCountry": [
+        { "country": "GA", "population": "~700,000", "percent": "~30%" },
+        { "country": "GQ", "population": "~500,000", "percent": "~85%" },
+        { "country": "CM", "population": "~300,000", "percent": "~1%" }
+      ],
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 1.5, "lng": 11.5 },
+      "tribeTerritoryDegrees": { "latSpan": 4, "lngSpan": 5 },
+      "counties": ["Woleu-Ntem (Gabon)", "Río Muni (Equatorial Guinea)", "South Region (Cameroon)"],
+      "namePrefixes": ["Nze", "Ondo", "Mba", "Nkogo"],
+      "commonNames": {
+        "female": ["Nzang", "Mengue", "Eyene", "Obiang", "Mvondo"],
+        "male": ["Ondo", "Nze", "Mba", "Nguema", "Obiang", "Nkogo", "Eyeghe"]
+      },
+      "stereotypes": ["Forest warriors", "Reliquary artists", "Recent migrants", "Dominant political force", "Strong oral traditions", "Bwiti practitioners"],
+      "genderStereotypes": {
+        "male": ["Warriors and hunters", "Bwiti initiates", "Political leaders", "Reliquary guardians"],
+        "female": ["Agriculturalists", "Traders", "Household heads", "Healers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, hunters, and guardians of ancestor reliquaries. They underwent Bwiti initiation. Village councils were male.",
+          "female": "Women managed agriculture, trade, and households. They had important roles in healing and could achieve status through commerce."
+        },
+        "modern": {
+          "male": "Fang men dominate politics in Gabon and Equatorial Guinea. Many work in oil industry, government, and business.",
+          "female": "Women increasingly educated and active in urban professions. Some maintain agricultural traditions."
+        }
+      },
+      "culturalTraits": ["Bieri reliquary figures (world-famous art)", "Bwiti religious practice with iboga", "Mvet epic traditions with harp", "Recent expansion (18th-19th century)", "Forest hunting culture", "Strong clan identity", "Distinctive ancestor worship"],
+      "funFacts": ["Fang reliquary figures are among the most valuable African art - they inspired Picasso", "The Bwiti religion uses iboga, a psychoactive plant, for spiritual visions", "Fang expanded rapidly in the 18th-19th centuries, absorbing many smaller groups", "The Mvet is an epic tradition with harp accompaniment lasting whole nights", "Fang dominate politics in three different countries"],
+      "tradeRelations": {
+        "historical": ["Ivory and rubber trade", "Forest products to coast", "Expansion through trade and warfare", "European contact via trade factories"],
+        "modern": ["Cocoa and coffee production", "Timber industry", "Oil sector in Equatorial Guinea", "Cross-border trade"]
+      },
+      "antiColonialResistance": "Fang resisted both German and French colonization. They fought the 'Fang Wars' against colonial forces in the early 20th century. Later, Fang leaders led independence movements in Gabon and Equatorial Guinea.",
+      "traditionalFood": {
+        "staples": ["Cassava (fufu/bâton)", "Plantains", "Palm nut sauce (nyembwe)", "Forest game", "River fish"],
+        "beverages": ["Palm wine", "Iboga (ceremonial)", "Sugarcane wine"],
+        "specialDishes": ["Nyembwe (palm nut chicken)", "Smoked game", "Forest snails", "Liboke (fish in leaves)"],
+        "description": "Fang cuisine features forest products, palm nut sauces, and foods wrapped and steamed in leaves."
+      },
+      "traditionalDance": "Ozila - dance for celebrations and ancestor rituals",
+      "religion": "Christianity, Bwiti (syncretic), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Fang Traditional Religion / Bwiti",
+        "supremeDeity": "Nzame (supreme creator god)",
+        "spirits": ["Bieri (ancestor spirits in reliquaries)", "Nature spirits", "Bwiti spirits accessed through iboga"],
+        "practices": ["Bieri reliquary veneration", "Bwiti initiation ceremonies", "Iboga visions for spiritual knowledge", "Mvet epic performances", "Ancestor skull preservation", "Forest shrine rituals"],
+        "beliefs": "Nzame created the world; ancestors are preserved in reliquaries and continue to guide; Bwiti ceremonies using iboga reveal spiritual truths; the Mvet embodies cultural wisdom; forests are sacred"
+      },
+      "language": {
+        "name": "Fang (Fan, Pangwe)",
+        "speakers": "~1.5 million",
+        "greeting": "Mbolo!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "Akiba", "meaning": "Thank you" },
+          { "phrase": "Ane wa?", "meaning": "How are you?" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Léon Mba", "role": "First President of Gabon", "wikipedia": "https://en.wikipedia.org/wiki/L%C3%A9on_M%27ba" },
+        { "name": "Teodoro Obiang", "role": "President of Equatorial Guinea", "wikipedia": "https://en.wikipedia.org/wiki/Teodoro_Obiang_Nguema_Mbasogo" },
+        { "name": "Ali Bongo Ondimba", "role": "Former President of Gabon", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Bongo_Ondimba" }
+      ],
+      "sources": [{ "name": "Wikipedia - Fang people", "url": "https://en.wikipedia.org/wiki/Fang_people" }],
+      "description": "The Fang are the dominant people of equatorial Africa, creators of world-renowned reliquary art, practitioners of the Bwiti religion, and political leaders in three countries.",
+      "relatedTribes": ["beti", "bulu", "kongo", "mongo"]
+    },
+
+    {
+      "id": "douala",
+      "name": "Douala (Duala)",
+      "slug": "douala",
+      "slugAliases": ["duala", "diwala", "dwala"],
+      "countries": ["CM"],
+      "region": "Littoral Region, Cameroon",
+      "population": "~200,000 (ethnic), ~3.5 million (city)",
+      "populationPercent": "~1% (Cameroon)",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 4.05, "lng": 9.7 },
+      "tribeTerritoryDegrees": { "latSpan": 1, "lngSpan": 1 },
+      "counties": ["Wouri Division", "Douala City", "Littoral Region"],
+      "namePrefixes": ["Din", "Bel", "Mbo"],
+      "commonNames": {
+        "female": ["Eyidi", "Mbango", "Dina", "Mundi", "Mukom"],
+        "male": ["Mbella", "Dika", "Lobé", "Manga", "Bell", "Akwa"]
+      },
+      "stereotypes": ["Coastal traders", "City builders", "Early European contact", "Business-oriented", "Urban sophisticates", "Colonial collaborators and resisters"],
+      "genderStereotypes": {
+        "male": ["Traders and middlemen", "Urban professionals", "Kings (chiefs of major families)", "Skilled negotiators"],
+        "female": ["Market traders", "Fish sellers", "Household managers", "Business women"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were traders, fishermen, and leaders of trading houses. Major families (Bell, Akwa, Deido) controlled trade. Men negotiated with Europeans.",
+          "female": "Women managed local markets, fish trade, and households. They had significant economic power in local commerce."
+        },
+        "modern": {
+          "male": "Many in business, professions, and government. Some maintain traditional chieftaincy roles. Urban middle class.",
+          "female": "Women prominent in trade and markets. Increasingly in professions. Douala market women are legendary."
+        }
+      },
+      "culturalTraits": ["Major trading families (Bell, Akwa, Deido)", "Elaborate canoe traditions", "Ngondo water festival", "First Europeans in Cameroon interior", "Sophisticated urban culture", "Multi-lingual tradition"],
+      "funFacts": ["Douala kings signed treaties with Germans making them key intermediaries in colonial trade", "Rudolf Duala Manga Bell was hanged for resisting German land seizures - now a national hero", "The Ngondo festival includes water spirits and is major tourist attraction", "Douala city is Cameroon's largest city and economic capital", "The Duala language was once a major trade language of the coast"],
+      "tradeRelations": {
+        "historical": ["Middlemen between interior and Europeans", "Slaves (pre-colonial)", "Ivory, palm oil, and rubber", "German, British, and French trade"],
+        "modern": ["Port of Douala handles most Cameroon trade", "Business and commerce hub", "Service sector", "Import-export trade"]
+      },
+      "antiColonialResistance": "Rudolf Duala Manga Bell led resistance against German land expropriation and was executed in 1914. He is now a Cameroonian national hero. His resistance inspired later independence movements.",
+      "traditionalFood": {
+        "staples": ["Miondo/Bobolo (fermented cassava sticks)", "Ndolé (bitter leaves)", "Fish and seafood", "Plantains"],
+        "beverages": ["Palm wine", "Mimbo (local drinks)"],
+        "specialDishes": ["Ndolé with prawns", "Grilled fish with miondo", "Pepper soup"],
+        "description": "Douala cuisine features seafood from the Atlantic coast, fermented cassava sticks, and the national dish ndolé."
+      },
+      "traditionalDance": "Ambas Bay dance and Ngondo festival dances",
+      "religion": "Christianity (predominant), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Douala Traditional Religion",
+        "supremeDeity": "Nyambe (supreme god)",
+        "spirits": ["Jengu (water spirits)", "Ancestor spirits", "Nature spirits"],
+        "practices": ["Ngondo festival with water spirits", "Canoe rituals", "Ancestor veneration", "Libations to jengu", "Divination practices"],
+        "beliefs": "Nyambe created everything; Jengu are powerful water spirits who can bring blessings or harm; ancestors continue to influence the living; the Wouri River is sacred; elaborate funerals ensure ancestors are satisfied"
+      },
+      "language": {
+        "name": "Duala (Douala)",
+        "speakers": "~200,000",
+        "greeting": "Mbote!",
+        "greetingMeaning": "Hello!",
+        "additionalGreetings": [
+          { "phrase": "Nde mba?", "meaning": "How are you?" },
+          { "phrase": "Na sombe!", "meaning": "Thank you!" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Rudolf Duala Manga Bell", "role": "Anti-colonial resistance hero", "wikipedia": "https://en.wikipedia.org/wiki/Rudolf_Duala_Manga_Bell" },
+        { "name": "King Akwa", "role": "Historical trading king", "wikipedia": null },
+        { "name": "Manu Dibango", "role": "World-famous musician (Sawa heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Manu_Dibango" }
+      ],
+      "sources": [{ "name": "Wikipedia - Duala people", "url": "https://en.wikipedia.org/wiki/Duala_people" }],
+      "description": "The Douala are the coastal people of Cameroon's largest city, historically key intermediaries in European trade, with the Ngondo water festival and national hero Rudolf Duala Manga Bell.",
+      "relatedTribes": ["bassa", "bakweri", "sawa", "bamileke"]
     }
   ]
 }

@@ -6835,9 +6835,307 @@ const centralAfricanRecipes: Recipe[] = [
   }
 ];
 
+// ============ EAST AFRICAN RECIPES ============
+const eastAfricanRecipes: Recipe[] = [
+  {
+    id: "luwombo",
+    name: "Luwombo (Ugandan Steamed Stew)",
+    tribeSlug: "baganda",
+    tribeName: "Baganda",
+    category: "special",
+    description: "Uganda's royal dish - meat or chicken steamed in banana leaves with groundnut sauce. The signature dish of Buganda Kingdom cuisine.",
+    culturalSignificance: "Luwombo was created for the Kabaka (king) of Buganda in the late 19th century. It remains the prestige dish served at important occasions, from weddings to state functions.",
+    historicalContext: "Legend says Luwombo was invented by a royal chef to please Kabaka Mwanga II. The cooking method locks in flavors and was practical for feeding many guests at royal functions. Today it's a symbol of Ugandan hospitality.",
+    youtubeVideoId: "0f7TJGFn5k8",
+    prepTime: "30 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken pieces", amount: "1.5 kg", notes: "Or beef/goat" },
+      { item: "Groundnut paste (peanut butter)", amount: "1 cup", notes: "Unsweetened" },
+      { item: "Banana leaves", amount: "Several large", notes: "For wrapping" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Mushrooms", amount: "200g", notes: "Optional, traditional" },
+      { item: "Green pepper", amount: "1" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Chicken stock", amount: "1 cup" }
+    ],
+    instructions: [
+      "Season chicken with salt and set aside.",
+      "Mix groundnut paste with stock until smooth.",
+      "Combine chicken, groundnut sauce, onions, tomatoes, and peppers.",
+      "Soften banana leaves over flame until pliable.",
+      "Divide mixture among several banana leaf portions.",
+      "Wrap each portion securely, tying with banana fiber or string.",
+      "Place packets in a large pot with a little water at bottom.",
+      "Steam for 1.5-2 hours until chicken is tender.",
+      "Serve packets unopened - each guest unwraps their own.",
+      "Serve with matooke (steamed green bananas) or rice."
+    ],
+    tips: [
+      "The banana leaf imparts subtle flavor - don't substitute foil",
+      "Make sure packets are sealed to trap steam",
+      "Luwombo can be made with beef, goat, or fish"
+    ],
+    variations: [
+      "Luwombo lwa Nkoko (chicken)",
+      "Luwombo lwa Nte (beef)",
+      "Luwombo lwa Binyebwa (groundnut-only vegetarian)"
+    ]
+  },
+  {
+    id: "isombe",
+    name: "Isombe (Rwandan Cassava Leaves)",
+    tribeSlug: "banyarwanda",
+    tribeName: "Banyarwanda",
+    category: "staple",
+    description: "Creamy cassava leaves cooked with eggplant and peanuts. Rwanda's beloved comfort food.",
+    culturalSignificance: "Isombe is everyday food in Rwanda, served at home and at celebrations. The dish represents Rwandan ingenuity in creating delicious meals from simple ingredients.",
+    historicalContext: "Cassava leaves became a staple after the plant's introduction from South America. Rwandans transformed them into a creamy, nutritious dish that's now a national symbol.",
+    youtubeVideoId: "UzMBXQTJLZ4",
+    prepTime: "1 hour",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava leaves", amount: "1 kg", notes: "Fresh, pounded, or frozen" },
+      { item: "Eggplant", amount: "2 medium", notes: "Peeled, cubed" },
+      { item: "Groundnut paste", amount: "1/2 cup" },
+      { item: "Palm oil or vegetable oil", amount: "1/4 cup" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Leeks", amount: "2", notes: "Traditional addition" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Spinach", amount: "1 cup", notes: "Optional, for color" }
+    ],
+    instructions: [
+      "If using fresh cassava leaves, pound thoroughly and wash multiple times.",
+      "Boil cassava leaves in salted water for 30 minutes to reduce bitterness.",
+      "Drain and set aside.",
+      "Cook eggplant cubes until very soft, mash completely.",
+      "Sauté onions and leeks in oil until soft.",
+      "Add mashed eggplant and stir well.",
+      "Add cassava leaves and mix thoroughly.",
+      "Stir in groundnut paste.",
+      "Cook on low heat for 1 hour, stirring occasionally.",
+      "The dish should become creamy and unified.",
+      "Serve with rice, ugali, or boiled sweet potatoes."
+    ],
+    tips: [
+      "Frozen pre-pounded cassava leaves save hours of preparation",
+      "The eggplant creates the creamy texture - don't skip it",
+      "Long, slow cooking is essential for the right consistency"
+    ]
+  },
+  {
+    id: "kitfo",
+    name: "Kitfo (Ethiopian Spiced Beef Tartare)",
+    tribeSlug: "gurage",
+    tribeName: "Gurage",
+    category: "special",
+    description: "Finely minced raw beef seasoned with mitmita spice and niter kibbeh (spiced butter). Ethiopia's most celebrated raw meat dish.",
+    culturalSignificance: "Kitfo is the signature dish of the Gurage people and is considered one of Ethiopia's finest foods. It's served at special occasions and in dedicated 'kitfo houses' across the country.",
+    historicalContext: "The Gurage people of southwestern Ethiopia developed kitfo as their signature contribution to Ethiopian cuisine. Raw meat dishes have ancient roots in Ethiopian culture, possibly dating to times when cooking fires would reveal location to enemies.",
+    youtubeVideoId: "J0V5yB0nAi4",
+    prepTime: "30 minutes",
+    cookTime: "10 minutes (for butter)",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Very fresh lean beef", amount: "500g", notes: "Tenderloin preferred" },
+      { item: "Niter kibbeh (spiced butter)", amount: "4 tablespoons", notes: "Melted, warm" },
+      { item: "Mitmita spice", amount: "1-2 tablespoons", notes: "Spicy Ethiopian blend" },
+      { item: "Korerima (Ethiopian cardamom)", amount: "1/2 teaspoon" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Ayib (Ethiopian cheese)", amount: "For serving" },
+      { item: "Gomen (collard greens)", amount: "For serving" }
+    ],
+    instructions: [
+      "Start with extremely fresh, high-quality beef from a trusted source.",
+      "Using a very sharp knife, mince the beef as finely as possible.",
+      "Warm the niter kibbeh until just melted.",
+      "Mix the minced beef with warm butter immediately.",
+      "Add mitmita, korerima, and salt to taste.",
+      "Mix thoroughly - the warm butter should coat all the meat.",
+      "Serve immediately with ayib (fresh cheese) and gomen (greens).",
+      "Traditionally served on injera."
+    ],
+    tips: [
+      "Freshness is paramount - only use same-day beef from trusted sources",
+      "Kitfo can be served leb leb (slightly warmed) or fully cooked for those who prefer",
+      "Niter kibbeh is essential - regular butter won't give authentic flavor"
+    ],
+    variations: [
+      "Leb leb - slightly warmed but still rare",
+      "Betam leb leb - cooked through (for those who don't eat raw)",
+      "Special kitfo - with extra butter and spices"
+    ]
+  },
+  {
+    id: "matoke",
+    name: "Matoke (Ugandan Steamed Plantains)",
+    tribeSlug: "baganda",
+    tribeName: "Baganda",
+    category: "staple",
+    description: "Green bananas steamed until tender, then mashed into a soft, starchy staple. The foundation of Ugandan cuisine.",
+    culturalSignificance: "Matoke is to Uganda what rice is to Asia. No meal is complete without it in central Uganda. The word 'matoke' also means 'food' in Luganda, showing its cultural centrality.",
+    historicalContext: "Bananas were introduced to East Africa over 1,000 years ago from Southeast Asia. Uganda became the banana capital of Africa, developing unique cooking varieties and preparation methods.",
+    youtubeVideoId: "8TFFu-lWqNI",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Green cooking bananas (matoke)", amount: "2 kg", notes: "About 10-12 bananas" },
+      { item: "Banana leaves", amount: "Several", notes: "For wrapping" },
+      { item: "Water", amount: "2 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Peel green bananas (the sap stains - oil hands first).",
+      "Wash bananas and place in a pot lined with banana leaves.",
+      "Add salt and water.",
+      "Cover with more banana leaves, then the lid.",
+      "Steam for 45-60 minutes until completely tender.",
+      "Mash the bananas inside the leaves using a wooden spoon.",
+      "Continue steaming for 10 more minutes.",
+      "Shape into a mound and serve with stews or luwombo."
+    ],
+    tips: [
+      "Oil your hands before peeling to prevent sap staining",
+      "The bananas should be completely soft before mashing",
+      "Banana leaves add subtle flavor - foil works but isn't traditional"
+    ]
+  },
+  {
+    id: "tibs",
+    name: "Tibs (Ethiopian Sautéed Meat)",
+    tribeSlug: "amhara",
+    tribeName: "Amhara",
+    category: "special",
+    description: "Sautéed cubes of meat with onions, peppers, and Ethiopian spices. Ethiopia's most popular hot meat dish.",
+    culturalSignificance: "Tibs is celebration food - served at weddings, holidays, and whenever there's cause for joy. Different regions have signature variations.",
+    historicalContext: "Tibs evolved as Ethiopia's answer to quick-cooked meat dishes. Unlike stews that cook for hours, tibs is fast and festive, often prepared at the table on a clay brazier.",
+    youtubeVideoId: "QhPxChMKz8k",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Beef or lamb", amount: "500g", notes: "Cubed" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Green peppers", amount: "2" },
+      { item: "Tomatoes", amount: "2", notes: "Wedged" },
+      { item: "Niter kibbeh", amount: "3 tablespoons" },
+      { item: "Berbere spice", amount: "1 tablespoon", notes: "For derek tibs" },
+      { item: "Rosemary", amount: "1 sprig", notes: "Fresh" },
+      { item: "Garlic", amount: "3 cloves" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Heat niter kibbeh in a pan until very hot.",
+      "Add meat cubes and sear on all sides.",
+      "Add onions and cook until softened.",
+      "Add garlic, peppers, and rosemary.",
+      "For derek (dry) tibs, add berbere and cook until spices coat meat.",
+      "For alicha (mild) tibs, skip berbere.",
+      "Add tomatoes at the end, cook briefly.",
+      "Serve sizzling on a heated clay dish with injera."
+    ],
+    tips: [
+      "High heat is essential for proper searing",
+      "Serve immediately while sizzling",
+      "Can be made with beef, lamb, goat, or organ meats"
+    ]
+  },
+  {
+    id: "pilau-swahili",
+    name: "Pilau (Swahili Spiced Rice)",
+    tribeSlug: "swahili",
+    tribeName: "Swahili",
+    category: "special",
+    description: "Fragrant rice cooked with meat and a blend of spices including cumin, cardamom, and cinnamon. The Swahili coast's signature rice dish.",
+    culturalSignificance: "Pilau is the celebration rice of the Swahili coast. No wedding, Eid, or major event is complete without it. The skill of making perfect pilau is a mark of culinary mastery.",
+    historicalContext: "Pilau came to East Africa via Indian Ocean trade routes, blending Persian, Indian, and Arab influences with African ingredients. It represents centuries of cultural exchange on the Swahili coast.",
+    youtubeVideoId: "I3XTDXy1BfI",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Basmati rice", amount: "3 cups" },
+      { item: "Beef or chicken", amount: "500g" },
+      { item: "Onions", amount: "3 large", notes: "Sliced thin" },
+      { item: "Pilau masala", amount: "2 tablespoons" },
+      { item: "Whole spices", amount: "1 tablespoon", notes: "Cumin, cardamom, cinnamon sticks, cloves" },
+      { item: "Garlic paste", amount: "2 tablespoons" },
+      { item: "Ginger paste", amount: "1 tablespoon" },
+      { item: "Tomatoes", amount: "2", notes: "Blended" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Wash rice and soak for 30 minutes. Drain.",
+      "Boil meat with salt until tender. Reserve stock.",
+      "Fry sliced onions in oil until deep brown (this is crucial).",
+      "Add whole spices and fry until fragrant.",
+      "Add garlic and ginger paste, fry 2 minutes.",
+      "Add blended tomatoes and cook until oil separates.",
+      "Add pilau masala and cooked meat. Stir well.",
+      "Add drained rice and mix gently.",
+      "Add hot meat stock (ratio 1:1.5 rice to liquid).",
+      "Bring to boil, then reduce to very low heat.",
+      "Cover tightly and cook 20-25 minutes until rice is fluffy.",
+      "Fluff gently with fork. Serve with kachumbari."
+    ],
+    tips: [
+      "The darkened onions are the secret to authentic color and flavor",
+      "Don't stir once rice is added and covered",
+      "Let rest 5 minutes before serving"
+    ]
+  },
+  {
+    id: "nyama-choma-kenyan",
+    name: "Nyama Choma (Kenyan Roasted Meat)",
+    tribeSlug: "kikuyu",
+    tribeName: "Kikuyu",
+    category: "special",
+    description: "Kenya's national dish - goat or beef roasted over charcoal until crispy outside and juicy inside. Simple seasoning lets the meat shine.",
+    culturalSignificance: "Nyama choma is Kenya's social food. Friends gather at 'nyama choma joints' to share meat, conversation, and cold drinks. It transcends all ethnic and class boundaries.",
+    historicalContext: "Roasting meat over fire is ancient, but nyama choma as a social institution developed in urban Kenya. It became the great equalizer - a space where all Kenyans gather regardless of background.",
+    youtubeVideoId: "mP8gS8U4wFU",
+    prepTime: "10 minutes",
+    cookTime: "1-2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Goat ribs or leg", amount: "2 kg", notes: "Or beef" },
+      { item: "Coarse salt", amount: "To taste" },
+      { item: "Lemon juice", amount: "Optional" },
+      { item: "Charcoal", amount: "For grilling" }
+    ],
+    instructions: [
+      "Light charcoal and let burn until white-hot coals form.",
+      "Place meat on grill rack above coals (not in flames).",
+      "Roast slowly, turning regularly.",
+      "Sprinkle salt as it cooks.",
+      "Cook for 1-2 hours until charred outside, juicy inside.",
+      "Cut into bite-sized pieces with a sharp knife.",
+      "Serve with ugali, kachumbari, and sukuma wiki."
+    ],
+    tips: [
+      "Low and slow is the key - high flames burn the outside",
+      "Goat is traditional; beef is also popular",
+      "Serve immediately off the grill"
+    ]
+  }
+];
+
 // Combine all recipes
 recipes.push(...beverageRecipes);
 recipes.push(...centralAfricanRecipes);
+recipes.push(...eastAfricanRecipes);
 
 // Get similar recipes from other tribes (same category)
 export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {

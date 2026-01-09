@@ -618,6 +618,81 @@ export default function ReligionTimeline() {
     return () => clearInterval(interval);
   }, [isAnimating, viewMode, animationSpeed]);
 
+  // Trade route definitions for spread visualization
+  const tradeRoutes = useMemo(() => {
+    return [
+      // Trans-Saharan Trade Routes (Islam)
+      { id: 'trans-sahara-west', name: 'Western Trans-Saharan Route', religion: 'islam' as const, startYear: 700, 
+        points: [
+          { lat: 35.7, lng: -5.8 }, // Morocco (Fes)
+          { lat: 27.0, lng: -8.0 }, // Western Sahara
+          { lat: 20.0, lng: -5.0 }, // Mauritania
+          { lat: 16.0, lng: -8.0 }, // Mali (Timbuktu area)
+          { lat: 13.5, lng: -2.0 }  // Gao
+        ]
+      },
+      { id: 'trans-sahara-central', name: 'Central Trans-Saharan Route', religion: 'islam' as const, startYear: 800,
+        points: [
+          { lat: 32.5, lng: 13.0 }, // Libya (Tripoli)
+          { lat: 27.0, lng: 12.0 }, // Fezzan
+          { lat: 22.0, lng: 14.0 }, // Southern Libya
+          { lat: 18.0, lng: 13.0 }, // Agadez region
+          { lat: 13.0, lng: 10.0 }  // Kano area
+        ]
+      },
+      { id: 'trans-sahara-east', name: 'Eastern Trans-Saharan Route', religion: 'islam' as const, startYear: 900,
+        points: [
+          { lat: 31.2, lng: 29.9 }, // Cairo
+          { lat: 24.0, lng: 32.9 }, // Aswan
+          { lat: 18.5, lng: 31.8 }, // Nubia
+          { lat: 15.0, lng: 32.5 }, // Sudan
+          { lat: 12.0, lng: 15.0 }  // Lake Chad
+        ]
+      },
+      // Indian Ocean Trade Routes (Islam)
+      { id: 'indian-ocean', name: 'Indian Ocean Maritime Route', religion: 'islam' as const, startYear: 700,
+        points: [
+          { lat: 21.5, lng: 59.0 }, // Oman (off map, starts arrow)
+          { lat: 11.5, lng: 43.0 }, // Djibouti
+          { lat: 2.05, lng: 45.3 }, // Mogadishu
+          { lat: -4.0, lng: 39.7 }, // Mombasa
+          { lat: -6.2, lng: 39.2 }, // Zanzibar
+          { lat: -8.9, lng: 39.5 }  // Kilwa
+        ]
+      },
+      // Nile Valley Route (Christianity)
+      { id: 'nile-valley', name: 'Nile Valley Route', religion: 'christianity' as const, startYear: 42,
+        points: [
+          { lat: 31.2, lng: 29.9 }, // Alexandria
+          { lat: 30.0, lng: 31.2 }, // Cairo
+          { lat: 24.0, lng: 32.9 }, // Aswan
+          { lat: 18.5, lng: 31.8 }, // Nubia
+          { lat: 15.6, lng: 32.5 }  // Khartoum area
+        ]
+      },
+      // Ethiopian Highlands (Christianity)
+      { id: 'ethiopian-highlands', name: 'Ethiopian Highland Route', religion: 'christianity' as const, startYear: 330,
+        points: [
+          { lat: 15.3, lng: 39.0 }, // Massawa coast
+          { lat: 14.1, lng: 38.7 }, // Aksum
+          { lat: 12.6, lng: 37.5 }, // Gondar area
+          { lat: 9.0, lng: 38.7 },  // Addis Ababa area
+          { lat: 7.0, lng: 38.5 }   // Southern Ethiopia
+        ]
+      },
+      // Atlantic Coast Route (Christianity - Colonial)
+      { id: 'atlantic-colonial', name: 'Atlantic Colonial Route', religion: 'christianity' as const, startYear: 1491,
+        points: [
+          { lat: 38.7, lng: -9.1 }, // Lisbon (off map)
+          { lat: 14.7, lng: -17.4 }, // Dakar
+          { lat: 6.4, lng: 3.4 },   // Lagos
+          { lat: -6.3, lng: 14.2 }, // Kongo
+          { lat: -33.9, lng: 18.4 } // Cape Town
+        ]
+      }
+    ];
+  }, []);
+
   // Calculate spread lines between events
   const spreadLines = useMemo(() => {
     const lines: Array<{
@@ -658,6 +733,16 @@ export default function ReligionTimeline() {
 
     return lines;
   }, [timelineFilteredEvents, mapBounds]);
+
+  // Calculate trade route paths for current year
+  const visibleTradeRoutes = useMemo(() => {
+    return tradeRoutes.filter(route => route.startYear <= timelineYear).map(route => {
+      const projectedPoints = route.points
+        .filter(p => p.lat >= mapBounds.minLat && p.lat <= mapBounds.maxLat && p.lng >= mapBounds.minLng && p.lng <= mapBounds.maxLng)
+        .map(p => projectCoordinates(p.lat, p.lng, mapBounds));
+      return { ...route, projectedPoints };
+    });
+  }, [tradeRoutes, timelineYear, mapBounds]);
 
   const getCenturyLabel = (year: number) => {
     if (year < 100) return '1st Century';
@@ -930,6 +1015,74 @@ export default function ReligionTimeline() {
                   {/* Overlay with spread lines and markers */}
                   <div className="absolute inset-0 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      {/* Animated Trade Routes */}
+                      {showSpreadLines && visibleTradeRoutes.map((route) => {
+                        if (route.projectedPoints.length < 2) return null;
+                        const color = religionMarkerColors[route.religion];
+                        const age = timelineYear - route.startYear;
+                        const opacity = Math.min(0.8, age / 200);
+                        
+                        // Create path from points
+                        const pathD = route.projectedPoints
+                          .map((p, idx) => `${idx === 0 ? 'M' : 'L'} ${p.x} ${p.y}`)
+                          .join(' ');
+                        
+                        return (
+                          <g key={route.id}>
+                            {/* Glowing background path */}
+                            <path
+                              d={pathD}
+                              fill="none"
+                              stroke={color}
+                              strokeWidth="0.8"
+                              strokeOpacity={opacity * 0.3}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              filter="url(#glow)"
+                            />
+                            {/* Main route path with animated dash */}
+                            <path
+                              d={pathD}
+                              fill="none"
+                              stroke={color}
+                              strokeWidth="0.25"
+                              strokeOpacity={opacity}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeDasharray="1.5,0.8"
+                              style={{
+                                animation: age < 300 ? 'dash 3s linear infinite' : 'none'
+                              }}
+                            />
+                            {/* Arrow markers along route */}
+                            {route.projectedPoints.slice(1).map((point, idx) => {
+                              const prevPoint = route.projectedPoints[idx];
+                              const angle = Math.atan2(point.y - prevPoint.y, point.x - prevPoint.x) * 180 / Math.PI;
+                              return (
+                                <polygon
+                                  key={`arrow-${route.id}-${idx}`}
+                                  points="0,-0.3 0.6,0 0,0.3"
+                                  fill={color}
+                                  fillOpacity={opacity * 0.8}
+                                  transform={`translate(${point.x}, ${point.y}) rotate(${angle})`}
+                                />
+                              );
+                            })}
+                          </g>
+                        );
+                      })}
+
+                      {/* SVG Filter for glow effect */}
+                      <defs>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                          <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+                          <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+
                       {/* Spread lines showing religion propagation */}
                       {showSpreadLines && spreadLines
                         .filter(line => line.year <= timelineYear)
