@@ -11,14 +11,16 @@ import {
   Users, Sparkles, ChefHat, MapPin, Languages, Moon, 
   Trophy, Star, BookOpen, Flame, Zap, Timer, Award,
   Play, ArrowRight, RotateCcw, Check, X, Clock, Target,
-  ChevronLeft, ChevronRight, Shuffle, Brain, Music
+  ChevronLeft, ChevronRight, Shuffle, Brain, Music, Calendar
 } from 'lucide-react';
 import { useQuizResults, QuizResult } from '@/hooks/useQuizResults';
+import { useDailyChallenge, dailyAchievements } from '@/hooks/useDailyChallenge';
+import { DailyChallenge } from '@/components/DailyChallenge';
 import quizData from '@/data/quizzes.json';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Users, Sparkles, ChefHat, MapPin, Languages, Moon, Trophy, Star, 
-  BookOpen, Flame, Zap, Timer, Award, Music
+  BookOpen, Flame, Zap, Timer, Award, Music, Calendar, Target, RotateCcw
 };
 
 interface Question {
@@ -63,6 +65,7 @@ export default function QuizPage() {
   const [shuffledCards, setShuffledCards] = useState<FlashCard[]>([]);
   
   const { stats, addResult, getBestResult, getCategoryStats } = useQuizResults();
+  const { dailyStats, unlockedAchievements: dailyUnlockedAchievements } = useDailyChallenge();
 
   // Timer effect
   useEffect(() => {
@@ -212,6 +215,13 @@ export default function QuizPage() {
                 </p>
               </div>
 
+              {/* Daily Challenge Section */}
+              <div className="mb-8">
+                <div className="max-w-md mx-auto">
+                  <DailyChallenge />
+                </div>
+              </div>
+
               {/* Stats Overview */}
               {stats.totalQuizzesTaken > 0 && (
                 <div className="grid sm:grid-cols-4 gap-4 mb-8">
@@ -232,14 +242,14 @@ export default function QuizPage() {
                   <Card className="text-center">
                     <CardContent className="pt-4 pb-3">
                       <Flame className="w-6 h-6 mx-auto mb-1 text-orange-500" />
-                      <p className="text-2xl font-bold">{stats.bestStreak}</p>
-                      <p className="text-xs text-muted-foreground">Best Streak</p>
+                      <p className="text-2xl font-bold">{dailyStats.currentStreak}</p>
+                      <p className="text-xs text-muted-foreground">Daily Streak</p>
                     </CardContent>
                   </Card>
                   <Card className="text-center">
                     <CardContent className="pt-4 pb-3">
                       <Star className="w-6 h-6 mx-auto mb-1 text-purple-500" />
-                      <p className="text-2xl font-bold">{stats.achievements.length}</p>
+                      <p className="text-2xl font-bold">{stats.achievements.length + dailyUnlockedAchievements.length}</p>
                       <p className="text-xs text-muted-foreground">Achievements</p>
                     </CardContent>
                   </Card>
@@ -350,29 +360,70 @@ export default function QuizPage() {
 
                 {/* Achievements Tab */}
                 <TabsContent value="achievements">
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {quizData.achievements.map((achievement) => {
-                      const Icon = iconMap[achievement.icon] || Award;
-                      const isUnlocked = stats.achievements.includes(achievement.id);
-                      
-                      return (
-                        <Card key={achievement.id} className={isUnlocked ? 'border-primary/50 bg-primary/5' : 'opacity-60'}>
-                          <CardContent className="pt-4 text-center">
-                            <div className={`w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center ${isUnlocked ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
-                              <Icon className="w-6 h-6" />
-                            </div>
-                            <h3 className="font-semibold mb-1">{achievement.name}</h3>
-                            <p className="text-sm text-muted-foreground">{achievement.description}</p>
-                            {isUnlocked && (
-                              <Badge className="mt-2 bg-green-500/20 text-green-400">
-                                <Check className="w-3 h-3 mr-1" />
-                                Unlocked
-                              </Badge>
-                            )}
-                          </CardContent>
-                        </Card>
-                      );
-                    })}
+                  <div className="space-y-6">
+                    {/* Daily Achievements Section */}
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <Calendar className="w-5 h-5 text-orange-500" />
+                        Daily Challenge Achievements
+                      </h3>
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {dailyAchievements.map((achievement) => {
+                          const Icon = iconMap[achievement.icon] || Award;
+                          const isUnlocked = dailyUnlockedAchievements.includes(achievement.id);
+                          
+                          return (
+                            <Card key={achievement.id} className={isUnlocked ? 'border-orange-500/50 bg-orange-500/5' : 'opacity-60'}>
+                              <CardContent className="pt-4 text-center">
+                                <div className={`w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center ${isUnlocked ? 'bg-orange-500 text-white' : 'bg-muted text-muted-foreground'}`}>
+                                  <Icon className="w-6 h-6" />
+                                </div>
+                                <h3 className="font-semibold mb-1">{achievement.name}</h3>
+                                <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                                {isUnlocked && (
+                                  <Badge className="mt-2 bg-orange-500/20 text-orange-400">
+                                    <Check className="w-3 h-3 mr-1" />
+                                    Unlocked
+                                  </Badge>
+                                )}
+                              </CardContent>
+                            </Card>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Quiz Achievements Section */}
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <Trophy className="w-5 h-5 text-primary" />
+                        Quiz Achievements
+                      </h3>
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {quizData.achievements.map((achievement) => {
+                          const Icon = iconMap[achievement.icon] || Award;
+                          const isUnlocked = stats.achievements.includes(achievement.id);
+                          
+                          return (
+                            <Card key={achievement.id} className={isUnlocked ? 'border-primary/50 bg-primary/5' : 'opacity-60'}>
+                              <CardContent className="pt-4 text-center">
+                                <div className={`w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center ${isUnlocked ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
+                                  <Icon className="w-6 h-6" />
+                                </div>
+                                <h3 className="font-semibold mb-1">{achievement.name}</h3>
+                                <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                                {isUnlocked && (
+                                  <Badge className="mt-2 bg-green-500/20 text-green-400">
+                                    <Check className="w-3 h-3 mr-1" />
+                                    Unlocked
+                                  </Badge>
+                                )}
+                              </CardContent>
+                            </Card>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
                 </TabsContent>
               </Tabs>
