@@ -8,9 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   ArrowLeft, Sparkles, BookOpen, Users, ExternalLink, 
   Globe, Church, Star, Heart, Scroll, TreePine, Mountain,
-  ChevronRight
+  ChevronRight, Play
 } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import { findReligionByName } from "@/data/traditionalReligions";
 
 const PIE_COLORS = ['#F59E0B', '#3B82F6', '#22C55E', '#EC4899', '#8B5CF6', '#06B6D4', '#EF4444', '#14B8A6'];
 
@@ -107,6 +108,31 @@ export default function ReligionDetailPage() {
               </div>
             </div>
           </header>
+
+          {/* Video Section */}
+          {religion.youtubeVideoId && (
+            <section className="mb-8 bg-gradient-to-r from-red-500/10 to-red-600/5 dark:from-red-900/20 dark:to-red-950/10 rounded-xl p-4 sm:p-6 border border-red-200 dark:border-red-800">
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                <Play className="w-5 h-5 text-red-600" />
+                Documentary / Educational Video
+              </h2>
+              <p className="text-sm text-muted-foreground mb-3">
+                Learn more about {religion.name} through this documentary.
+              </p>
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src={`https://www.youtube.com/embed/${religion.youtubeVideoId}?rel=0`}
+                  title={`${religion.name} Documentary`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-xs text-muted-foreground mt-2 italic">
+                📺 Video content is sourced from YouTube for educational purposes.
+              </p>
+            </section>
+          )}
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content */}

@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play, TrendingUp } from 'lucide-react';
 import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo, getTribeLandmarks } from '@/lib/tribeDetection';
+import { findReligionByName } from '@/data/traditionalReligions';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TribeMap } from '@/components/TribeMap';
@@ -566,9 +567,24 @@ const TribePage = () => {
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-2xl">{getReligionEmoji(religionInfo.primary)}</span>
                           <div>
-                            <p className="font-semibold capitalize">
-                              {religionInfo.primary === 'mixed' ? 'Mixed Religious Heritage' : `Predominantly ${religionInfo.primary.charAt(0).toUpperCase() + religionInfo.primary.slice(1)}`}
-                            </p>
+                            {(() => {
+                              // Try to find a linked religion page
+                              const linkedReligion = findReligionByName(religionInfo.primary);
+                              const displayText = religionInfo.primary === 'mixed' 
+                                ? 'Mixed Religious Heritage' 
+                                : `Predominantly ${religionInfo.primary.charAt(0).toUpperCase() + religionInfo.primary.slice(1)}`;
+                              
+                              return linkedReligion ? (
+                                <Link 
+                                  to={`/religion/${linkedReligion.id}`}
+                                  className="font-semibold capitalize hover:text-primary hover:underline transition-colors"
+                                >
+                                  {displayText} →
+                                </Link>
+                              ) : (
+                                <p className="font-semibold capitalize">{displayText}</p>
+                              );
+                            })()}
                             {religionInfo.percentage && (
                               <p className="text-xs opacity-75">~{religionInfo.percentage}% of population</p>
                             )}
@@ -583,9 +599,56 @@ const TribePage = () => {
                       </div>
                     )}
                     
-                    {tribeReligion && !religionInfo && (
+                    {/* Traditional Religion Link if available */}
+                    {(tribe as any).traditionalReligion && (
+                      <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-800 mb-3">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-2xl">🌍</span>
+                          <div>
+                            {(() => {
+                              const tradReligion = (tribe as any).traditionalReligion;
+                              const linkedReligion = findReligionByName(tradReligion.name || tribe.name);
+                              
+                              return linkedReligion ? (
+                                <Link 
+                                  to={`/religion/${linkedReligion.id}`}
+                                  className="font-semibold text-amber-900 dark:text-amber-100 hover:underline transition-colors"
+                                >
+                                  {tradReligion.name || `${tribe.name} Traditional Religion`} →
+                                </Link>
+                              ) : (
+                                <p className="font-semibold text-amber-900 dark:text-amber-100">
+                                  {tradReligion.name || `${tribe.name} Traditional Religion`}
+                                </p>
+                              );
+                            })()}
+                          </div>
+                        </div>
+                        {(tribe as any).traditionalReligion.supremeDeity && (
+                          <p className="text-sm text-amber-800 dark:text-amber-200 mb-1">
+                            <strong>Supreme Deity:</strong> {(tribe as any).traditionalReligion.supremeDeity}
+                          </p>
+                        )}
+                        {(tribe as any).traditionalReligion.beliefs && (
+                          <p className="text-xs text-amber-700 dark:text-amber-300">
+                            {(tribe as any).traditionalReligion.beliefs}
+                          </p>
+                        )}
+                      </div>
+                    )}
+                    
+                    {tribeReligion && !religionInfo && !(tribe as any).traditionalReligion && (
                       <p className="text-sm text-muted-foreground leading-relaxed">{tribeReligion}</p>
                     )}
+                    
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <Link 
+                        to="/religions"
+                        className="text-xs text-primary hover:underline flex items-center gap-1"
+                      >
+                        Explore all African religions →
+                      </Link>
+                    </div>
                     
                     <p className="text-xs text-muted-foreground mt-3 italic">
                       💡 Religious heritage often influences naming traditions. Many {tribe.name} names reflect their religious background.
