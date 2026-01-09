@@ -5941,6 +5941,256 @@ export const recipes: Recipe[] = [
       "Pound while still hot for smooth results",
       "Serve immediately - they harden when cold"
     ]
+  },
+
+  // ============ SHONA RECIPES (Zimbabwe) ============
+  {
+    id: "sadza",
+    name: "Sadza",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "staple",
+    description: "Zimbabwe's national dish - a thick maize porridge that is the foundation of every meal. Served with relishes of meat, vegetables, or beans.",
+    culturalSignificance: "Sadza is not just food - it's identity. A meal without sadza isn't considered a proper meal. The ability to make smooth sadza is a mark of a good cook.",
+    historicalContext: "When maize arrived in Africa via Portuguese traders in the 16th century, it transformed diets across the continent. The Shona adapted it into sadza, which replaced earlier millet and sorghum porridges.",
+    youtubeVideoId: "hFxNxr2H5qE",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "White maize meal (mealie meal)", amount: "500g" },
+      { item: "Water", amount: "1.5 liters" },
+      { item: "Salt", amount: "Pinch (optional)" }
+    ],
+    instructions: [
+      "Bring water to a rolling boil in a heavy-bottomed pot.",
+      "Add a handful of maize meal and stir to make thin porridge (bota).",
+      "Let this simmer for 5 minutes.",
+      "Gradually add remaining maize meal, stirring continuously with wooden paddle (mugoti).",
+      "Keep stirring vigorously - lumps are unacceptable.",
+      "The sadza is ready when it pulls away from the pot sides cleanly.",
+      "It should be thick enough to mold but not dry.",
+      "Serve immediately with any relish (nyama, muriwo, beans)."
+    ],
+    tips: [
+      "Vigorous stirring is essential for smooth texture",
+      "Traditionally stirred with a wooden paddle in one direction",
+      "Should hold its shape when scooped"
+    ]
+  },
+  {
+    id: "madora",
+    name: "Madora (Mopane Worms)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "special",
+    description: "Dried mopane caterpillars, a protein-rich delicacy fried crispy and served as a relish or snack. A sustainable, traditional protein source.",
+    culturalSignificance: "Madora season is eagerly anticipated. These caterpillars are harvested from mopane trees and are an important income source for rural women. They're packed with protein.",
+    historicalContext: "Mopane worms have been eaten for centuries in Southern Africa. They were a crucial survival food and remain an important part of food security. Export markets now exist for dried madora.",
+    youtubeVideoId: "LkpxU3cFHAk",
+    prepTime: "30 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried madora (mopane worms)", amount: "500g" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Tomatoes", amount: "3 medium" },
+      { item: "Cooking oil", amount: "4 tablespoons" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Garlic", amount: "2 cloves" },
+      { item: "Green pepper", amount: "1" }
+    ],
+    instructions: [
+      "Soak dried madora in warm water for 20-30 minutes to soften.",
+      "Drain and squeeze out excess water.",
+      "Some remove the intestinal matter; others cook as-is for stronger flavor.",
+      "Heat oil and fry madora until starting to crisp, about 10 minutes.",
+      "Add chopped onions and garlic, cook until soft.",
+      "Add tomatoes and green pepper.",
+      "Season with salt and simmer for 10 minutes.",
+      "Serve with sadza as a protein-rich relish."
+    ],
+    tips: [
+      "Fresh madora from the bush are more tender",
+      "The crispy version (dry-fried) is popular as a snack",
+      "High in protein, zinc, and iron"
+    ]
+  },
+  {
+    id: "dovi",
+    name: "Dovi (Peanut Butter Stew)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "staple",
+    description: "A rich, creamy stew made with peanut butter, greens, and often chicken. The beloved comfort food of Zimbabwe.",
+    culturalSignificance: "Dovi appears at every celebration. The rich peanut sauce makes simple vegetables luxurious. It's often the dish guests request when visiting Zimbabwean homes.",
+    historicalContext: "Groundnuts (peanuts) came to Africa from South America via Portuguese traders. Africans quickly adopted them, creating dishes like dovi that are now considered traditionally African.",
+    youtubeVideoId: "Gq5nLFxLPxE",
+    prepTime: "15 minutes",
+    cookTime: "40 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Peanut butter (natural)", amount: "1 cup", notes: "Unsweetened" },
+      { item: "Chicken pieces", amount: "1 kg", notes: "Or beef/goat" },
+      { item: "Onion", amount: "2 medium" },
+      { item: "Tomatoes", amount: "3 large" },
+      { item: "Leafy greens (collard/kale)", amount: "1 bunch" },
+      { item: "Water or stock", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Cooking oil", amount: "3 tablespoons" }
+    ],
+    instructions: [
+      "Season and brown chicken pieces in oil. Set aside.",
+      "Sauté onions until golden.",
+      "Add chopped tomatoes and cook until soft.",
+      "Mix peanut butter with water until smooth.",
+      "Add peanut mixture to pot.",
+      "Return chicken, stir well.",
+      "Simmer for 30 minutes until chicken is cooked.",
+      "Add greens in last 5 minutes.",
+      "Serve over sadza."
+    ],
+    tips: [
+      "Natural peanut butter works best - no added sugar",
+      "The oil should separate when fully cooked",
+      "Can substitute beef, goat, or make vegetarian"
+    ]
+  },
+
+  // ============ WOLOF RECIPES (Senegal) ============
+  {
+    id: "thieboudienne",
+    name: "Thiéboudiène (Senegalese Fish & Rice)",
+    tribeSlug: "wolof",
+    tribeName: "Wolof",
+    category: "special",
+    description: "Senegal's national dish - a flavorful one-pot meal of fish, rice, and vegetables in rich tomato sauce. The original 'Jollof' dish.",
+    culturalSignificance: "Thiéboudiène is served at every celebration. It's considered the mother of all Jollof-type dishes, predating Nigerian and Ghanaian versions.",
+    historicalContext: "Created in Saint-Louis, Senegal in the 19th century by Penda Mbaye. The dish spread across West Africa, evolving into various Jollof rice traditions. Senegalese insist theirs is the original and best.",
+    youtubeVideoId: "u0BGGKQN9x8",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Whole fish (grouper/red snapper)", amount: "1.5 kg" },
+      { item: "Broken rice (riz brisé)", amount: "500g" },
+      { item: "Tomato paste", amount: "200g" },
+      { item: "Onions", amount: "3 large" },
+      { item: "Cabbage", amount: "1/4 head" },
+      { item: "Carrots", amount: "3" },
+      { item: "Eggplant", amount: "1" },
+      { item: "Cassava", amount: "200g" },
+      { item: "Hot pepper (piment)", amount: "2" },
+      { item: "Vegetable oil", amount: "1 cup" },
+      { item: "Dried fish (guedj)", amount: "100g" },
+      { item: "Tamarind", amount: "2 tablespoons" }
+    ],
+    instructions: [
+      "Stuff fish with rof (parsley, garlic, pepper paste). Set aside.",
+      "Fry onions until dark brown (this is crucial for color).",
+      "Add tomato paste and fry until oil separates.",
+      "Add water, dried fish, and vegetables (hardest first: cassava, carrots).",
+      "Simmer until vegetables are half-cooked.",
+      "Remove vegetables, add fish, cook until done.",
+      "Remove fish, add rice to the pot.",
+      "Cook rice in the fish broth until done.",
+      "Arrange rice on platter, top with fish and vegetables.",
+      "The crispy rice at bottom (xoone) is prized."
+    ],
+    tips: [
+      "The darkened onions give the dish its red color",
+      "Broken rice absorbs more flavor than whole grain",
+      "Each vegetable should retain its shape"
+    ]
+  },
+  {
+    id: "yassa-poulet",
+    name: "Yassa Poulet (Onion Chicken)",
+    tribeSlug: "wolof",
+    tribeName: "Wolof",
+    category: "special",
+    description: "Grilled chicken smothered in tangy caramelized onion and lemon sauce. One of Senegal's most beloved dishes.",
+    culturalSignificance: "Yassa originated in the Casamance region but is now beloved nationwide. The dish is a celebration centerpiece and represents Senegalese hospitality.",
+    historicalContext: "Yassa comes from the Jola people of Casamance in southern Senegal. It gained national popularity and is now considered a Senegalese classic rather than regional.",
+    youtubeVideoId: "1EzHQ-6kfN0",
+    prepTime: "4 hours (marinating)",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken pieces", amount: "1.5 kg" },
+      { item: "Onions", amount: "1 kg", notes: "Sliced thin" },
+      { item: "Lemon juice", amount: "1 cup" },
+      { item: "Mustard (Dijon)", amount: "3 tablespoons" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Hot pepper", amount: "2 small" },
+      { item: "Garlic", amount: "6 cloves" },
+      { item: "Olives (green)", amount: "1/2 cup", notes: "Optional" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Marinate chicken in lemon juice, half the onions, garlic, and mustard for 4+ hours.",
+      "Remove chicken, reserve marinade and onions.",
+      "Grill or pan-fry chicken until golden and cooked through.",
+      "In large pot, sauté remaining fresh onions until soft.",
+      "Add marinated onions and cook until caramelized.",
+      "Add reserved marinade and simmer.",
+      "Add grilled chicken to the onion sauce.",
+      "Add olives if using, simmer 15 minutes.",
+      "Serve with white rice."
+    ],
+    tips: [
+      "The longer the marinade, the better the flavor",
+      "Caramelized onions should be deeply golden",
+      "Fish version (yassa poisson) is equally popular"
+    ]
+  },
+
+  // ============ AMHARA RECIPES (Ethiopia) ============
+  {
+    id: "shiro-wet",
+    name: "Shiro Wet",
+    tribeSlug: "amhara",
+    tribeName: "Amhara",
+    category: "staple",
+    description: "Creamy chickpea flour stew spiced with berbere. The everyday comfort food of Ethiopian fasting and beyond.",
+    culturalSignificance: "Shiro is eaten on fasting days (no meat/dairy) but loved every day. It's affordable, nutritious, and universally beloved across Ethiopia.",
+    historicalContext: "During the many fasting periods of Ethiopian Orthodox Christianity (over 200 days a year), shiro became essential. It provides protein from legumes during meat-free periods.",
+    youtubeVideoId: "WjJJ0zxGHjg",
+    prepTime: "10 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Shiro flour (chickpea/fava blend)", amount: "1 cup" },
+      { item: "Water", amount: "3 cups" },
+      { item: "Oil (olive or vegetable)", amount: "1/4 cup" },
+      { item: "Onion", amount: "1 large", notes: "Very finely chopped" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Tomato", amount: "1 large" },
+      { item: "Berbere spice", amount: "1-2 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Sauté onions in oil until deeply caramelized (no shortcuts here).",
+      "Add garlic and cook 1 minute.",
+      "Add chopped tomato and cook until broken down.",
+      "Add berbere and stir well.",
+      "Mix shiro flour with water until smooth.",
+      "Gradually add shiro mixture to pot, stirring constantly.",
+      "Simmer on low, stirring often, until thickened (15-20 minutes).",
+      "Adjust consistency with water if needed.",
+      "Serve on injera."
+    ],
+    tips: [
+      "Constant stirring prevents lumps",
+      "Should be thick but pourable",
+      "Drizzle with oil before serving for traditional finish"
+    ]
   }
 ];
 
