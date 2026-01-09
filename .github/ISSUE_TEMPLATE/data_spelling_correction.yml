@@ -1,0 +1,93 @@
+name: ✏️ Spelling / Typo Correction
+description: Report a spelling error, typo, or incorrect data
+title: "[Correction]: "
+labels: ["data", "typo", "quick-fix"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a typo or incorrect data? Thanks for helping us maintain accuracy!
+
+  - type: dropdown
+    id: error_type
+    attributes:
+      label: Type of Error
+      options:
+        - Spelling/Typo
+        - Grammatical Error
+        - Incorrect Tribe Name
+        - Incorrect Population Data
+        - Incorrect Country/Region
+        - Wrong Language Family
+        - Incorrect Name Meaning
+        - Incorrect Historical Date
+        - Incorrect Coordinates
+        - Other Factual Error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data_type
+    attributes:
+      label: Where is this error?
+      options:
+        - Tribe Data
+        - Recipe Data
+        - Religion Data
+        - Language/Phrase Data
+        - Blog Article
+        - Ingredient Data
+        - UI Text / Labels
+        - README/Documentation
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Specific Location
+      description: Which tribe/recipe/article contains the error?
+      placeholder: "Kikuyu tribe page, description section"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: "https://tribeguess.com/learn/kikuyu"
+
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Current (Incorrect) Text
+      description: Copy the incorrect text exactly as it appears
+      placeholder: "The Kikuyu are primarly found in..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct_text
+    attributes:
+      label: Correct Text
+      description: What should it say instead?
+      placeholder: "The Kikuyu are primarily found in..."
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source (if factual correction)
+      description: For factual corrections, provide a source
+      placeholder: "https://ethnologue.com/..."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have verified the correct spelling/information
+          required: true

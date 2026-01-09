@@ -1,0 +1,107 @@
+name: 👤 Famous Person Addition
+description: Add a notable person to a tribe's famous people list
+title: "[Data - Famous Person]: "
+labels: ["data", "famous-people", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us celebrate notable Africans! Submit information about famous people from various tribes.
+
+  - type: input
+    id: tribe
+    attributes:
+      label: Tribe / Ethnic Group
+      placeholder: "Yoruba"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Person's Name
+      placeholder: "Wole Soyinka"
+    validations:
+      required: true
+
+  - type: input
+    id: birth_year
+    attributes:
+      label: Birth Year
+      placeholder: "1934"
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Politics / Government
+        - Arts / Literature
+        - Music / Entertainment
+        - Sports
+        - Science / Academia
+        - Business / Entrepreneurship
+        - Activism / Human Rights
+        - Religion / Spirituality
+        - Historical Figure
+        - Military / Leadership
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Primary Role / Title
+      placeholder: "Writer, Nobel Laureate"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Brief Biography
+      description: 2-3 sentences about their achievements
+      placeholder: "Wole Soyinka is a Nigerian playwright, poet, and essayist. He was the first African to win the Nobel Prize in Literature (1986). His works explore themes of African identity, colonialism, and human rights."
+    validations:
+      required: true
+
+  - type: textarea
+    id: achievements
+    attributes:
+      label: Key Achievements
+      placeholder: |
+        - Nobel Prize in Literature (1986)
+        - Authored "Death and the King's Horseman"
+        - Founded the Drama Association of Nigeria
+        - Political activism and imprisonment
+
+  - type: input
+    id: image_url
+    attributes:
+      label: Image URL (optional)
+      description: Wikimedia Commons or similar freely licensed image
+      placeholder: "https://commons.wikimedia.org/..."
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      placeholder: |
+        - Wikipedia: https://en.wikipedia.org/wiki/Wole_Soyinka
+        - Nobel Prize: https://nobelprize.org/...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: This person's tribal/ethnic affiliation is verified
+          required: true
+        - label: The information is accurate and from reliable sources
+          required: true
+        - label: This person is notable enough for inclusion (significant achievements)
+          required: true

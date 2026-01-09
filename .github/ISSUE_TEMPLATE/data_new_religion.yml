@@ -1,0 +1,159 @@
+name: ⛪ New Religion
+description: Submit data for an African religion not in the database
+title: "[Data - Religion]: "
+labels: ["data", "religion", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing religious/spiritual tradition data! Please provide respectful, accurate information.
+
+  - type: input
+    id: name
+    attributes:
+      label: Religion Name
+      placeholder: "Akan Traditional Religion"
+    validations:
+      required: true
+
+  - type: input
+    id: alternate_names
+    attributes:
+      label: Alternate Names
+      placeholder: "Akom, Akan spirituality"
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Indigenous African Religion
+        - Syncretic Religion
+        - Diaspora Religion
+        - Major World Religion (African context)
+    validations:
+      required: true
+
+  - type: input
+    id: regions
+    attributes:
+      label: Regions
+      description: Where is this religion practiced?
+      placeholder: "Ghana, Ivory Coast, Togo"
+    validations:
+      required: true
+
+  - type: input
+    id: tribes
+    attributes:
+      label: Associated Tribes
+      placeholder: "Ashanti, Fante, Akuapem, Akyem"
+    validations:
+      required: true
+
+  - type: input
+    id: followers
+    attributes:
+      label: Estimated Followers
+      placeholder: "~3 million"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Overview of this religious tradition (2-4 sentences)
+      placeholder: "The Akan traditional religion centers on the worship of Nyame (the Supreme Being) and a pantheon of lesser deities (abosom). It emphasizes ancestor veneration, spiritual balance, and communal harmony..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: beliefs
+    attributes:
+      label: Core Beliefs / Tenets
+      description: List the main beliefs of this religion
+      placeholder: |
+        - Belief in Nyame (Supreme God)
+        - Abosom (lesser deities/spirits)
+        - Nsamanfo (ancestor spirits)
+        - Kra (soul/life force)
+        - Sunsum (spirit/personality)
+    validations:
+      required: true
+
+  - type: input
+    id: supreme_deity
+    attributes:
+      label: Supreme Deity/Being
+      placeholder: "Nyame (also called Onyame or Onyankopon)"
+
+  - type: textarea
+    id: other_deities
+    attributes:
+      label: Other Deities/Spirits
+      description: List other important spiritual beings
+      placeholder: |
+        - Asase Yaa (Earth goddess)
+        - Tano (river god)
+        - Bia (another river deity)
+
+  - type: textarea
+    id: rituals
+    attributes:
+      label: Key Rituals & Ceremonies
+      placeholder: |
+        - Akwasidae: Ancestor veneration festival every 40 days
+        - Odwira: Annual purification festival
+        - Apo: Cleansing ceremonies
+        - Libation pouring to ancestors
+
+  - type: textarea
+    id: sacred_items
+    attributes:
+      label: Sacred Objects/Symbols
+      placeholder: |
+        - Golden Stool (Sika Dwa Kofi)
+        - Adinkra symbols
+        - Kente cloth patterns
+
+  - type: textarea
+    id: history
+    attributes:
+      label: Historical Context
+      description: Origins and historical development
+      placeholder: "The Akan religious system developed over centuries in the Gold Coast region. It was suppressed during colonialism but has experienced revival..."
+
+  - type: textarea
+    id: modern_practice
+    attributes:
+      label: Modern Practice
+      description: How is this religion practiced today?
+      placeholder: "Many Akan people today practice syncretic forms combining traditional beliefs with Christianity. Traditional priests (okomfo) still serve communities..."
+
+  - type: input
+    id: video_id
+    attributes:
+      label: YouTube Documentary ID
+      placeholder: "dQw4w9WgXcQ"
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      placeholder: |
+        - Academic source: [Title] by [Author]
+        - Encyclopedia of African Religion
+        - Ethnographic studies
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: This information is respectful and does not misrepresent the religious tradition
+          required: true
+        - label: I have verified this against academic or authoritative sources
+          required: true

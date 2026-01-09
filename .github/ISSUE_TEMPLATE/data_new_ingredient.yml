@@ -1,0 +1,145 @@
+name: 🥬 New Ingredient
+description: Submit data for an African ingredient not in the database
+title: "[Data - Ingredient]: "
+labels: ["data", "ingredient", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing ingredient data! African ingredients are central to culinary heritage.
+
+  - type: input
+    id: name
+    attributes:
+      label: Ingredient Name (English)
+      placeholder: "Moringa"
+    validations:
+      required: true
+
+  - type: textarea
+    id: local_names
+    attributes:
+      label: Local Names
+      description: Names in different African languages
+      placeholder: |
+        - Zogale (Hausa)
+        - Ewe ile (Yoruba)
+        - Murungai (Swahili)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Grain / Cereal
+        - Vegetable
+        - Fruit
+        - Legume / Pulse
+        - Tuber / Root
+        - Nut / Seed
+        - Oil / Fat
+        - Spice / Seasoning
+        - Herb
+        - Meat / Protein
+        - Dairy
+        - Beverage Ingredient
+    validations:
+      required: true
+
+  - type: input
+    id: regions
+    attributes:
+      label: Regions Where Used
+      placeholder: "West Africa, East Africa, North Africa"
+    validations:
+      required: true
+
+  - type: input
+    id: tribes
+    attributes:
+      label: Tribes That Use This Ingredient
+      placeholder: "Hausa, Yoruba, Kikuyu, Maasai"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Overview of the ingredient (2-3 sentences)
+      placeholder: "Moringa is a nutrient-rich plant native to Africa, known as the 'miracle tree' for its high vitamin content. The leaves, seeds, and pods are all edible..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: varieties
+    attributes:
+      label: Varieties
+      description: Different types or varieties of this ingredient
+      placeholder: |
+        - Moringa oleifera (most common)
+        - Moringa stenopetala (Ethiopian variety)
+
+  - type: textarea
+    id: culinary_uses
+    attributes:
+      label: Culinary Uses
+      description: How is this ingredient used in cooking?
+      placeholder: |
+        - Leaves used in soups and stews
+        - Seeds pressed for oil
+        - Dried and powdered as seasoning
+        - Pods eaten as vegetables
+
+  - type: textarea
+    id: cultural_significance
+    attributes:
+      label: Cultural Significance
+      description: Cultural or ceremonial importance
+      placeholder: "Used in traditional medicine, considered a superfood, used in ceremonies..."
+
+  - type: textarea
+    id: nutrition
+    attributes:
+      label: Nutritional Information (optional)
+      description: Key nutritional benefits
+      placeholder: |
+        - High in vitamin C
+        - Rich in iron
+        - Good source of protein
+
+  - type: input
+    id: season
+    attributes:
+      label: Growing Season
+      placeholder: "Year-round in tropical climates"
+
+  - type: textarea
+    id: recipes
+    attributes:
+      label: Associated Recipes
+      description: Dishes that feature this ingredient
+      placeholder: |
+        - Moringa soup (Nigeria)
+        - Moringa tea
+        - Moringa powder smoothies
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      placeholder: |
+        - FAO: https://fao.org/...
+        - Traditional Food Plants of Africa
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: I have verified this ingredient is used in traditional African cuisine
+          required: true

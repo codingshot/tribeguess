@@ -1,0 +1,229 @@
+name: 📊 New Tribe Data
+description: Submit data for a tribe not currently in the database
+title: "[Data - Tribe]: "
+labels: ["data", "new-tribe", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing tribe data! Please provide as much verified information as possible.
+        
+        ⚠️ **Important**: All data must be from verified sources. Include citations where possible.
+
+  - type: input
+    id: name
+    attributes:
+      label: Tribe Name
+      description: Primary name of the tribe
+      placeholder: "Nuer"
+    validations:
+      required: true
+
+  - type: input
+    id: alternate_names
+    attributes:
+      label: Alternate Names
+      description: Other names this tribe is known by (comma-separated)
+      placeholder: "Naath, Nei Ti Naath"
+
+  - type: input
+    id: countries
+    attributes:
+      label: Countries
+      description: Countries where this tribe is found (comma-separated)
+      placeholder: "South Sudan, Ethiopia, Sudan"
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Specific Region
+      description: More specific geographic location within countries
+      placeholder: "Upper Nile region, Gambela"
+
+  - type: dropdown
+    id: macro_region
+    attributes:
+      label: Macro Region
+      options:
+        - East Africa
+        - West Africa
+        - Central Africa
+        - Southern Africa
+        - North Africa
+        - Horn of Africa
+    validations:
+      required: true
+
+  - type: input
+    id: population
+    attributes:
+      label: Population Estimate
+      description: Approximate population with source year
+      placeholder: "~3.5 million (2023)"
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Primary Language
+      description: Main language spoken by this tribe
+      placeholder: "Nuer"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language_family
+    attributes:
+      label: Language Family
+      options:
+        - Bantu
+        - Nilotic
+        - Cushitic
+        - Semitic
+        - Berber
+        - Chadic
+        - Atlantic
+        - Mande
+        - Kwa
+        - Gur
+        - Omotic
+        - Khoisan
+        - Other Niger-Congo
+        - Other Afroasiatic
+        - Other Nilo-Saharan
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: 2-4 sentence overview of the tribe (factual, not stereotypical)
+      placeholder: "The Nuer are a Nilotic ethnic group primarily inhabiting South Sudan and western Ethiopia. They are known for their pastoralist lifestyle, cattle culture, and the segmentary lineage system..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: stereotype
+    attributes:
+      label: Cultural Perceptions
+      description: Common (respectful) perceptions or traits associated with this tribe
+      placeholder: "Known for their tall stature, cattle herding traditions, and warrior culture..."
+
+  - type: input
+    id: greeting
+    attributes:
+      label: Greeting
+      description: "Hello" or common greeting in their language
+      placeholder: "Maalɛ"
+
+  - type: input
+    id: greeting_meaning
+    attributes:
+      label: Greeting Meaning
+      description: English translation of the greeting
+      placeholder: "Hello / Greetings"
+
+  - type: textarea
+    id: famous_people
+    attributes:
+      label: Famous People
+      description: Notable individuals from this tribe (name, role, brief description)
+      placeholder: |
+        - Riek Machar: Politician, Vice President of South Sudan
+        - Gatluak Gai: Human rights activist
+
+  - type: textarea
+    id: names
+    attributes:
+      label: Common Names
+      description: List common names with meanings and gender
+      placeholder: |
+        - Gai (male): "wealthy" or "prosperous"
+        - Nyaluak (female): "born during the rainy season"
+        - Kuol (male): "strong like a lion"
+
+  - type: textarea
+    id: eating_customs
+    attributes:
+      label: Meal Traditions
+      description: Eating customs, food taboos, hospitality practices
+      placeholder: |
+        Meals per day: 2 main meals
+        Main foods: Sorghum, millet, fish, milk, beef
+        Taboos: Certain fish species are avoided by specific clans
+        Hospitality: Guests are always offered milk first
+
+  - type: textarea
+    id: trade_history
+    attributes:
+      label: Trade Relations
+      description: Historical and modern trade/economic activities
+      placeholder: |
+        Historical: Traded cattle with neighboring tribes, salt trade
+        Modern: Cattle herding, fishing, some agriculture
+        Partners: Dinka, Shilluk, Anuak
+
+  - type: textarea
+    id: independence_history
+    attributes:
+      label: Colonial & Independence History
+      description: Colonial experience and post-independence history
+      placeholder: |
+        Colonial power: British (as part of Sudan)
+        Resistance: Participated in various uprisings
+        Independence: Fought for South Sudan independence (2011)
+
+  - type: textarea
+    id: religious_history
+    attributes:
+      label: Religious History
+      description: Traditional beliefs and introduction of other religions
+      placeholder: |
+        Traditional: Belief in Kwoth (supreme being), ancestor veneration
+        Christianity: Introduced in 19th century by missionaries
+        Current: Mix of traditional beliefs and Christianity
+
+  - type: input
+    id: coordinates
+    attributes:
+      label: Territory Coordinates
+      description: Approximate center of traditional territory (latitude, longitude)
+      placeholder: "8.5, 31.5"
+
+  - type: input
+    id: video_id
+    attributes:
+      label: YouTube Documentary ID
+      description: YouTube video ID for a cultural documentary (the part after "v=")
+      placeholder: "dQw4w9WgXcQ"
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: List your sources for this data (required for verification)
+      placeholder: |
+        - Ethnologue: https://www.ethnologue.com/language/nus
+        - Joshua Project: https://joshuaproject.net/people_groups/...
+        - Wikipedia: https://en.wikipedia.org/wiki/Nuer_people
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Data Verification
+      options:
+        - label: I have verified this data against at least 2 reliable sources
+          required: true
+        - label: The description is factual and not based on stereotypes
+          required: true
+        - label: Population data is from within the last 5 years
+          required: true

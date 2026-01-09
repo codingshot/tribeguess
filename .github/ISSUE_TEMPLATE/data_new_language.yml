@@ -1,0 +1,138 @@
+name: 🗣️ New Language Family / Phrases
+description: Add a new language family or phrases to an existing family
+title: "[Data - Language]: "
+labels: ["data", "language", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing language data! Accurate linguistic information helps preserve African heritage.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Submission Type
+      options:
+        - New Language Family
+        - New Sub-Family/Branch
+        - New Phrases for Existing Family
+        - Correction to Existing Data
+    validations:
+      required: true
+
+  - type: input
+    id: family_name
+    attributes:
+      label: Language Family Name
+      description: For new family or the family you're adding phrases to
+      placeholder: "Adamawa-Ubangi"
+    validations:
+      required: true
+
+  - type: input
+    id: alternate_names
+    attributes:
+      label: Alternate Names
+      description: Other names for this language family
+      placeholder: "Adamawa-Eastern, Ubangi"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Overview of the language family (for new families)
+      placeholder: "The Adamawa-Ubangi languages are a proposed branch of the Niger-Congo family spoken in central Africa, primarily in the Central African Republic, DRC, and Cameroon..."
+
+  - type: input
+    id: speaker_count
+    attributes:
+      label: Estimated Speakers
+      placeholder: "~10 million"
+
+  - type: input
+    id: language_count
+    attributes:
+      label: Number of Languages
+      description: How many languages are in this family?
+      placeholder: "~160"
+
+  - type: input
+    id: countries
+    attributes:
+      label: Countries
+      description: Countries where these languages are spoken
+      placeholder: "Central African Republic, DRC, Cameroon, Chad, Sudan"
+
+  - type: input
+    id: related_tribes
+    attributes:
+      label: Related Tribes
+      description: Tribes that speak languages from this family
+      placeholder: "Banda, Zande, Ngbaka, Gbaya"
+
+  - type: textarea
+    id: branches
+    attributes:
+      label: Major Branches/Sub-families
+      description: List the main branches of this language family
+      placeholder: |
+        - Adamawa (Cameroon, Nigeria)
+        - Ubangi (CAR, DRC)
+        - Banda (CAR)
+        - Zande (DRC, South Sudan)
+
+  - type: textarea
+    id: unique_features
+    attributes:
+      label: Unique Linguistic Features
+      description: What makes this language family distinctive?
+      placeholder: |
+        - Noun class systems
+        - Tonal languages
+        - Complex verb morphology
+
+  - type: textarea
+    id: phrases
+    attributes:
+      label: Common Phrases
+      description: |
+        Provide phrases in this format:
+        Phrase | Translation | Pronunciation | Notes
+      placeholder: |
+        | Hello | Mo bala | /mo BA-la/ | Formal greeting |
+        | Thank you | Singila | /sin-GI-la/ | |
+        | How are you? | I ye wa? | /ee YE wa/ | |
+        | Goodbye | Bala mo | /BA-la mo/ | |
+    validations:
+      required: true
+
+  - type: textarea
+    id: alphabet
+    attributes:
+      label: Writing System / Alphabet
+      description: Information about how this language is written
+      placeholder: "Uses Latin alphabet with additional characters: ɛ, ɔ, ŋ..."
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Cite your sources for this linguistic data
+      placeholder: |
+        - Ethnologue: https://www.ethnologue.com/...
+        - Glottolog: https://glottolog.org/...
+        - Academic paper: [Title] by [Author]
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: I have verified this data against linguistic sources (Ethnologue, Glottolog, academic papers)
+          required: true
+        - label: Pronunciations have been verified by a speaker or linguist
+          required: true

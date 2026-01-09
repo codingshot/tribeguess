@@ -1,0 +1,82 @@
+name: 📛 Name Meaning Submission
+description: Submit new name meanings or correct existing ones
+title: "[Data - Names]: "
+labels: ["data", "names", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us build the most comprehensive database of African name meanings!
+
+  - type: dropdown
+    id: submission_type
+    attributes:
+      label: Submission Type
+      options:
+        - New names to add
+        - Correction to existing name
+        - Missing meaning for existing name
+    validations:
+      required: true
+
+  - type: input
+    id: tribe
+    attributes:
+      label: Tribe / Ethnic Group
+      placeholder: "Kikuyu"
+    validations:
+      required: true
+
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      placeholder: "Kenya"
+    validations:
+      required: true
+
+  - type: textarea
+    id: names
+    attributes:
+      label: Names to Add/Correct
+      description: |
+        Format: Name | Gender | Meaning | Notes (optional)
+        Gender: male, female, or unisex
+      placeholder: |
+        | Wanjiku | female | One who comes from the Njiku clan | Most common female name |
+        | Kamau | male | Quiet warrior | |
+        | Njeri | female | Traveling one | Named after one of the 9 Kikuyu daughters |
+        | Mwangi | male | Rapid increase / many | |
+    validations:
+      required: true
+
+  - type: textarea
+    id: naming_traditions
+    attributes:
+      label: Naming Traditions (optional)
+      description: Any relevant context about how names are given in this culture
+      placeholder: "In Kikuyu culture, children are often named after grandparents. First-born males are named after paternal grandfather..."
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: How did you learn these name meanings?
+      placeholder: |
+        - Native speaker / cultural knowledge
+        - Gikuyu Cultural Foundation
+        - Academic source: [Title]
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: I am a native speaker OR have verified these meanings with reliable sources
+          required: true
+        - label: Gender assignments are accurate to traditional usage
+          required: true

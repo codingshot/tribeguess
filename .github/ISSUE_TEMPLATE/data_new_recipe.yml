@@ -1,0 +1,182 @@
+name: 🍲 New Recipe
+description: Submit a traditional African recipe
+title: "[Data - Recipe]: "
+labels: ["data", "new-recipe", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing a recipe! Please provide authentic, traditional recipes with verified information.
+
+  - type: input
+    id: name
+    attributes:
+      label: Recipe Name (English)
+      placeholder: "Jollof Rice"
+    validations:
+      required: true
+
+  - type: input
+    id: local_name
+    attributes:
+      label: Local/Traditional Name
+      placeholder: "Jolof Rice, Benachin"
+
+  - type: input
+    id: tribe
+    attributes:
+      label: Associated Tribe
+      description: Primary tribe or ethnic group associated with this dish
+      placeholder: "Wolof"
+    validations:
+      required: true
+
+  - type: input
+    id: countries
+    attributes:
+      label: Countries
+      description: Countries where this dish is popular
+      placeholder: "Senegal, Gambia, Nigeria, Ghana"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of the dish (2-3 sentences)
+      placeholder: "A one-pot rice dish cooked in a rich tomato sauce with spices. Considered the pride of West African cuisine..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Staple (everyday dish)
+        - Special (ceremonial/festive)
+        - Beverage
+        - Snack
+        - Dessert
+        - Condiment
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - easy
+        - medium
+        - hard
+    validations:
+      required: true
+
+  - type: input
+    id: prep_time
+    attributes:
+      label: Prep Time
+      placeholder: "30 minutes"
+    validations:
+      required: true
+
+  - type: input
+    id: cook_time
+    attributes:
+      label: Cook Time
+      placeholder: "1 hour"
+    validations:
+      required: true
+
+  - type: input
+    id: servings
+    attributes:
+      label: Servings
+      placeholder: "6"
+    validations:
+      required: true
+
+  - type: textarea
+    id: ingredients
+    attributes:
+      label: Ingredients
+      description: List all ingredients with amounts
+      placeholder: |
+        - 2 cups long-grain rice
+        - 400g fresh tomatoes, blended
+        - 1 large onion, diced
+        - 2 tablespoons tomato paste
+        - 1/4 cup vegetable oil
+        - 1 teaspoon thyme
+        - 2 bay leaves
+        - Salt and pepper to taste
+        - 2 cups chicken stock
+    validations:
+      required: true
+
+  - type: textarea
+    id: instructions
+    attributes:
+      label: Cooking Instructions
+      description: Step-by-step instructions
+      placeholder: |
+        1. Wash and soak the rice for 30 minutes, then drain
+        2. Heat oil in a large pot over medium heat
+        3. Add onions and sauté until translucent
+        4. Add tomato paste and fry for 2 minutes
+        5. Add blended tomatoes and cook for 15 minutes
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: history
+    attributes:
+      label: Historical/Cultural Context
+      description: Background on the dish's origins and cultural significance
+      placeholder: "Jollof rice originated from the Wolof people of Senegal and Gambia. It's now a staple across West Africa, with each country having its own variation..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: variations
+    attributes:
+      label: Regional Variations
+      description: How this dish differs across regions or tribes
+      placeholder: |
+        - Nigerian: Uses more tomato and is typically spicier
+        - Ghanaian: Often includes more vegetables
+        - Senegalese: Uses broken rice (thieboudienne style)
+
+  - type: input
+    id: video_id
+    attributes:
+      label: YouTube Tutorial ID
+      description: YouTube video ID for a cooking tutorial (optional)
+      placeholder: "dQw4w9WgXcQ"
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Where did you learn this recipe?
+      placeholder: |
+        - Family recipe passed down
+        - "African Recipes" by [Author]
+        - Traditional cooking course
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: This is an authentic traditional recipe, not a modern fusion dish
+          required: true
+        - label: I have personally made this recipe or learned it from a reliable source
+          required: true
