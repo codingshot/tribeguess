@@ -1,13 +1,14 @@
 import { useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, ChefHat, Clock, Users, Filter, X } from 'lucide-react';
+import { Search, ChefHat, Clock, Users, Filter, X, Leaf } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { getAllRecipes, getRecipeTribeNames, type Recipe } from '@/data/recipes';
+import { getAllIngredients } from '@/data/ingredients';
 
 const categoryEmoji: Record<string, string> = {
   staple: '🍚',
@@ -92,6 +93,28 @@ export default function Recipes() {
               Explore authentic dishes and beverages from tribes across Africa
             </p>
           </header>
+
+          {/* Ingredients Section */}
+          <section className="mb-8 p-4 bg-gradient-to-r from-amber-500/10 to-primary/5 rounded-xl border border-amber-500/20">
+            <div className="flex items-center gap-2 mb-3">
+              <Leaf className="w-5 h-5 text-amber-600" />
+              <h2 className="font-semibold">Traditional Ingredients</h2>
+            </div>
+            <p className="text-sm text-muted-foreground mb-3">
+              Explore the staple foods and ingredients that define African cuisine
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {getAllIngredients().map(ingredient => (
+                <Link 
+                  key={ingredient.id} 
+                  to={`/ingredient/${ingredient.id}`}
+                  className="px-3 py-1.5 bg-background rounded-full text-xs sm:text-sm font-medium hover:bg-primary/10 border border-border hover:border-primary/30 transition-colors"
+                >
+                  {ingredient.name}
+                </Link>
+              ))}
+            </div>
+          </section>
 
           {/* Search & Filters */}
           <div className="mb-6 space-y-4">

@@ -428,6 +428,418 @@ export const ingredients: Ingredient[] = [
       { name: "Palm Oil - Wikipedia", url: "https://en.wikipedia.org/wiki/Palm_oil" },
       { name: "African Oil Palm", url: "https://en.wikipedia.org/wiki/Elaeis_guineensis" }
     ]
+  },
+  {
+    id: "plantain",
+    name: "Plantain",
+    localNames: [
+      { tribe: "Yoruba", name: "Ọ̀gẹ̀dẹ̀ agbagba", tribeSlug: "yoruba" },
+      { tribe: "Igbo", name: "Ogede", tribeSlug: "igbo" },
+      { tribe: "Swahili", name: "Ndizi ya kupika", tribeSlug: "swahili" },
+      { tribe: "Akan", name: "Borɔde", tribeSlug: "ashanti" },
+      { tribe: "Kongo", name: "Makemba", tribeSlug: "kongo" }
+    ],
+    category: "root",
+    description: "A starchy cooking banana that must be cooked before eating. Plantains came to Africa from Southeast Asia over 2,500 years ago and became a dietary staple across Central and West Africa.",
+    culturalSignificance: "Plantains are called 'the lazy man's crop' because they produce year-round with minimal care. In Uganda, matooke (cooking banana) is so central that 'eating' literally means 'eating matooke.' Dodo (fried plantain) is a beloved Nigerian comfort food.",
+    nutritionalInfo: "Per 100g: 122 calories, 1.3g protein, 32g carbohydrates. Rich in potassium, vitamin A (especially when ripe), vitamin C, and fiber.",
+    varieties: [
+      { 
+        name: "Green Plantain (Unripe)", 
+        description: "Starchy and firm, used for savory dishes. Similar to potatoes in cooking.",
+        regions: ["Throughout Africa"],
+        characteristics: "Firm, starchy, savory flavor"
+      },
+      { 
+        name: "Yellow Plantain (Ripe)", 
+        description: "Sweeter and softer. Perfect for frying as dodo or kelewele.",
+        regions: ["Throughout Africa"],
+        characteristics: "Sweet, soft, caramelizes when fried"
+      },
+      { 
+        name: "Black Plantain (Overripe)", 
+        description: "Very sweet, almost like dessert. Used in some sweet dishes.",
+        regions: ["Throughout Africa"],
+        characteristics: "Very sweet, soft, dessert uses"
+      },
+      { 
+        name: "Matooke/East African Highland Banana", 
+        description: "Smaller cooking bananas specific to Uganda and Rwanda. Cooked green and mashed.",
+        regions: ["Uganda", "Rwanda", "Burundi", "Tanzania"],
+        characteristics: "Smaller, always cooked green, staple starch"
+      }
+    ],
+    preparation: [
+      "Green: boil, fry, or roast like potatoes",
+      "Yellow/ripe: slice and fry for dodo/kelewele",
+      "Matooke: steam in banana leaves, mash",
+      "Chips: slice thin and deep fry",
+      "Flour: dry and grind for baking"
+    ],
+    storage: "Store at room temperature. Green last 1-2 weeks. Once ripe, use within days or refrigerate (skin darkens but flesh stays good).",
+    healthBenefits: [
+      "High potassium for heart health",
+      "Good source of resistant starch (when green)",
+      "Vitamin A increases as ripeness increases",
+      "Fiber supports digestive health"
+    ],
+    culinaryUses: [
+      "Dodo (Nigerian fried plantain)",
+      "Kelewele (Ghanaian spiced fried plantain)",
+      "Matooke (Ugandan mashed plantain)",
+      "Plantain chips",
+      "Boiled plantain with stews"
+    ],
+    tribesUsing: [
+      { tribeSlug: "yoruba", tribeName: "Yoruba", usage: "Dodo (fried), with beans and rice" },
+      { tribeSlug: "baganda", tribeName: "Baganda", usage: "Matooke is the national staple food" },
+      { tribeSlug: "ashanti", tribeName: "Ashanti", usage: "Kelewele (spiced fried plantain)" },
+      { tribeSlug: "kongo", tribeName: "Kongo", usage: "Makemba with moambe sauce" }
+    ],
+    sources: [
+      { name: "Plantain - Wikipedia", url: "https://en.wikipedia.org/wiki/Cooking_plantain" },
+      { name: "Matooke - Uganda", url: "https://en.wikipedia.org/wiki/Matoke" }
+    ]
+  },
+  {
+    id: "yam",
+    name: "Yam",
+    localNames: [
+      { tribe: "Yoruba", name: "Isu", tribeSlug: "yoruba" },
+      { tribe: "Igbo", name: "Ji", tribeSlug: "igbo" },
+      { tribe: "Hausa", name: "Doya", tribeSlug: "hausa" },
+      { tribe: "Akan", name: "Bayerɛ", tribeSlug: "ashanti" },
+      { tribe: "Ewe", name: "Ete", tribeSlug: "ewe" }
+    ],
+    category: "root",
+    description: "True yams (Dioscorea species) are native to Africa and Asia. Nigeria produces 70% of the world's yams. Not to be confused with American 'yams' which are actually sweet potatoes.",
+    culturalSignificance: "Yam is sacred in Igbo culture - the New Yam Festival (Iri Ji) celebrates the harvest. Among the Ashanti, yams symbolize masculinity and wealth. Yam tubers can weigh over 60kg and are status symbols at festivals.",
+    nutritionalInfo: "Per 100g: 118 calories, 1.5g protein, 28g carbohydrates. Good source of potassium, vitamin C, B vitamins, and manganese.",
+    varieties: [
+      { 
+        name: "White Yam (Dioscorea rotundata)", 
+        description: "Most popular in West Africa. White flesh, starchy, versatile.",
+        regions: ["Nigeria", "Ghana", "Côte d'Ivoire", "Benin"],
+        characteristics: "White flesh, firm, starchy"
+      },
+      { 
+        name: "Water Yam (Dioscorea alata)", 
+        description: "Purple skin with white to purple flesh. Smooth texture when cooked.",
+        regions: ["Throughout Africa"],
+        characteristics: "Purple skin, smooth texture"
+      },
+      { 
+        name: "Yellow Yam (Dioscorea cayenensis)", 
+        description: "Yellow flesh with firmer texture. Sweeter taste.",
+        regions: ["West Africa"],
+        characteristics: "Yellow flesh, sweeter, firmer"
+      },
+      { 
+        name: "Bitter Yam (Dioscorea dumetorum)", 
+        description: "Requires extensive processing to remove toxins. Used medicinally.",
+        regions: ["West and Central Africa"],
+        characteristics: "Bitter, requires processing, medicinal"
+      },
+      { 
+        name: "Pona/Labreko (Premium varieties)", 
+        description: "High-quality varieties in Ghana prized for pounded yam.",
+        regions: ["Ghana"],
+        characteristics: "Premium, excellent for fufu"
+      }
+    ],
+    preparation: [
+      "Peel (thick rough skin) and cut into chunks",
+      "Boil until tender (20-30 minutes)",
+      "Pound for fufu (traditional mortar and pestle)",
+      "Fry as chips or fritters (ojojo)",
+      "Roast directly over fire (boli)"
+    ],
+    storage: "Store in cool, dry, dark place. Lasts 2-4 months. Don't refrigerate - damages texture.",
+    seasonality: "Harvested July-October. New Yam Festivals held August-September.",
+    healthBenefits: [
+      "Complex carbohydrates for sustained energy",
+      "Diosgenin compound used in medicine",
+      "Potassium supports blood pressure",
+      "Antioxidants in purple varieties"
+    ],
+    culinaryUses: [
+      "Pounded Yam (Iyan) - the king of Nigerian fufu",
+      "Amala (yam flour fufu)",
+      "Yam pottage/porridge",
+      "Fried yam with egg sauce",
+      "Yam chips and fritters"
+    ],
+    tribesUsing: [
+      { tribeSlug: "igbo", tribeName: "Igbo", usage: "Ji (yam) is sacred - New Yam Festival" },
+      { tribeSlug: "yoruba", tribeName: "Yoruba", usage: "Iyan (pounded yam), Asaro (yam pottage)" },
+      { tribeSlug: "ashanti", tribeName: "Ashanti", usage: "Fufu, Oto (mashed yam with eggs)" },
+      { tribeSlug: "ewe", tribeName: "Ewe", usage: "Dzenkple (yam balls), Akple accompaniment" }
+    ],
+    sources: [
+      { name: "Yam (vegetable) - Wikipedia", url: "https://en.wikipedia.org/wiki/Yam_(vegetable)" },
+      { name: "IITA - Yam", url: "https://www.iita.org/cropsnew/yam/" }
+    ]
+  },
+  {
+    id: "groundnuts",
+    name: "Groundnuts (Peanuts)",
+    localNames: [
+      { tribe: "Hausa", name: "Gyada", tribeSlug: "hausa" },
+      { tribe: "Yoruba", name: "Epa", tribeSlug: "yoruba" },
+      { tribe: "Swahili", name: "Karanga", tribeSlug: "swahili" },
+      { tribe: "Wolof", name: "Gerte", tribeSlug: "wolof" },
+      { tribe: "Mandinka", name: "Tio", tribeSlug: "mandinka" }
+    ],
+    category: "legume",
+    description: "Though originating in South America, groundnuts arrived in Africa with the Portuguese in the 16th century and became integral to African cuisines. Senegal and Nigeria are major producers.",
+    culturalSignificance: "In Senegal, groundnut is everything - Mafé (groundnut stew) is the national dish, and groundnut oil is the primary cooking fat. Kuli-kuli (groundnut snacks) are beloved across West Africa. The crop transformed Sahelian agriculture and trade.",
+    nutritionalInfo: "Per 100g: 567 calories, 26g protein, 16g carbohydrates, 49g fat. Excellent source of protein, healthy fats, vitamin E, B vitamins, and minerals.",
+    varieties: [
+      { 
+        name: "Virginia (Large)", 
+        description: "Large kernels, often roasted and eaten as snacks.",
+        regions: ["Nigeria", "Senegal"],
+        characteristics: "Large, crunchy, good for roasting"
+      },
+      { 
+        name: "Spanish (Small)", 
+        description: "Small kernels with red skins. High oil content for pressing.",
+        regions: ["Throughout Africa"],
+        characteristics: "Small, high oil, red skin"
+      },
+      { 
+        name: "Valencia", 
+        description: "Three or more kernels per pod. Sweet flavor.",
+        regions: ["Sudan", "Malawi"],
+        characteristics: "Multiple kernels, sweet"
+      }
+    ],
+    preparation: [
+      "Roast in shell or shelled for snacking",
+      "Grind into paste/butter",
+      "Press for groundnut oil",
+      "Boil for soups and stews",
+      "Make kuli-kuli (spiced fried groundnut cake)"
+    ],
+    storage: "In shell: 6+ months in cool, dry place. Shelled/paste: refrigerate 3-6 months. Watch for aflatoxin in humid conditions.",
+    healthBenefits: [
+      "Complete plant protein source",
+      "Heart-healthy monounsaturated fats",
+      "High in antioxidant resveratrol",
+      "Supports blood sugar control",
+      "Rich in folate for pregnancy"
+    ],
+    culinaryUses: [
+      "Mafé/Maafe (groundnut stew)",
+      "Groundnut soup (West Africa)",
+      "Kuli-kuli (fried groundnut snack)",
+      "Groundnut oil for cooking",
+      "Roasted groundnuts (street snack)"
+    ],
+    tribesUsing: [
+      { tribeSlug: "wolof", tribeName: "Wolof", usage: "Mafé is the national dish of Senegal" },
+      { tribeSlug: "hausa", tribeName: "Hausa", usage: "Kuli-kuli, groundnut oil, Miyan gyada (soup)" },
+      { tribeSlug: "mandinka", tribeName: "Mandinka", usage: "Domoda (groundnut stew), snacks" },
+      { tribeSlug: "ashanti", tribeName: "Ashanti", usage: "Nkate nkwan (groundnut soup)" }
+    ],
+    sources: [
+      { name: "Peanut - Wikipedia", url: "https://en.wikipedia.org/wiki/Peanut" },
+      { name: "ICRISAT - Groundnut", url: "https://www.icrisat.org/groundnut/" }
+    ]
+  },
+  {
+    id: "hibiscus",
+    name: "Hibiscus (Zobo/Bissap)",
+    localNames: [
+      { tribe: "Hausa", name: "Zobo", tribeSlug: "hausa" },
+      { tribe: "Yoruba", name: "Isapa", tribeSlug: "yoruba" },
+      { tribe: "Wolof", name: "Bissap", tribeSlug: "wolof" },
+      { tribe: "Swahili", name: "Chai ya Hibiscus", tribeSlug: "swahili" },
+      { tribe: "Amhara", name: "Karkade", tribeSlug: "amhara" }
+    ],
+    category: "beverage-base",
+    description: "Hibiscus sabdariffa (Roselle) produces the deep red calyces used for Africa's most popular herbal beverage. Native to West Africa, it spread to Egypt, Sudan, and globally.",
+    culturalSignificance: "Zobo/Bissap is the quintessential African refreshment - served at celebrations, sold on streets, and made in every home. In Senegal, bissap (with its purple-red color) is the national drink. In Sudan, karkade is traditional hospitality.",
+    nutritionalInfo: "Per 100g dried calyces: 49 calories. Very high in vitamin C, antioxidants (anthocyanins), and organic acids. Naturally caffeine-free.",
+    varieties: [
+      { 
+        name: "Dark Red Variety", 
+        description: "Deepest color and flavor. Preferred for beverages.",
+        regions: ["Nigeria", "Senegal", "Sudan"],
+        characteristics: "Deep burgundy, tangy, intense"
+      },
+      { 
+        name: "Light Red/Pink Variety", 
+        description: "Milder flavor, lighter color.",
+        regions: ["Throughout Africa"],
+        characteristics: "Lighter, milder taste"
+      }
+    ],
+    preparation: [
+      "Boil dried calyces in water (10-15 minutes)",
+      "Strain and sweeten with sugar or honey",
+      "Add ginger, pineapple, or citrus for flavor",
+      "Serve cold (most popular) or hot",
+      "Ferment slightly for tangier flavor"
+    ],
+    storage: "Dried calyces: 1-2 years in airtight container. Made drink: refrigerate 3-5 days.",
+    healthBenefits: [
+      "Lowers blood pressure (clinically proven)",
+      "Very high in antioxidants",
+      "Supports liver health",
+      "May aid weight management",
+      "Naturally caffeine-free"
+    ],
+    culinaryUses: [
+      "Zobo drink (Nigeria)",
+      "Bissap (Senegal)",
+      "Karkade (Sudan, Egypt)",
+      "Hibiscus jam and jellies",
+      "Leaves used as vegetable (ewedu-style)"
+    ],
+    tribesUsing: [
+      { tribeSlug: "hausa", tribeName: "Hausa", usage: "Zobo drink with ginger and spices" },
+      { tribeSlug: "wolof", tribeName: "Wolof", usage: "Bissap rouge - national drink" },
+      { tribeSlug: "yoruba", tribeName: "Yoruba", usage: "Zobo with pineapple and ginger" },
+      { tribeSlug: "amhara", tribeName: "Amhara", usage: "Karkade tea, often served at ceremonies" }
+    ],
+    sources: [
+      { name: "Hibiscus sabdariffa - Wikipedia", url: "https://en.wikipedia.org/wiki/Hibiscus_sabdariffa" },
+      { name: "Zobo drink", url: "https://en.wikipedia.org/wiki/Hibiscus_tea" }
+    ]
+  },
+  {
+    id: "baobab",
+    name: "Baobab",
+    localNames: [
+      { tribe: "Wolof", name: "Buy", tribeSlug: "wolof" },
+      { tribe: "Hausa", name: "Kuka", tribeSlug: "hausa" },
+      { tribe: "Swahili", name: "Mbuyu", tribeSlug: "swahili" },
+      { tribe: "Shona", name: "Muuyu", tribeSlug: "shona" },
+      { tribe: "Maasai", name: "Osupetai", tribeSlug: "maasai" }
+    ],
+    category: "vegetable",
+    description: "The 'Tree of Life' produces nutritious fruit, leaves, and seeds. Baobabs can live 2,000+ years and are central to African landscapes and cultures. Every part of the tree is used.",
+    culturalSignificance: "Baobabs are sacred across Africa - believed to house spirits, used for burial of griots, and central to oral traditions. The Dogon believe the first baobab was planted upside down by God. The fruit is called 'monkey bread' or 'cream of tartar tree.'",
+    nutritionalInfo: "Per 100g powder: 280 calories. 6x more vitamin C than oranges, 2x more calcium than milk. Rich in fiber, potassium, magnesium, and antioxidants.",
+    varieties: [
+      { 
+        name: "Adansonia digitata (African Baobab)", 
+        description: "The species across mainland Africa. Produces the edible fruit powder.",
+        regions: ["Sahel to Southern Africa"],
+        characteristics: "Large fruit, powdery pulp, edible leaves"
+      },
+      { 
+        name: "Fruit Pulp/Powder", 
+        description: "The dry, tangy powder inside the fruit. Main commercial product.",
+        regions: ["Throughout Africa"],
+        characteristics: "Tangy, powdery, nutritious"
+      },
+      { 
+        name: "Baobab Leaves", 
+        description: "Young leaves are cooked as vegetable or dried as powder for soups.",
+        regions: ["West Africa especially"],
+        characteristics: "Nutritious, slightly mucilaginous"
+      }
+    ],
+    preparation: [
+      "Dissolve powder in water for drink",
+      "Add powder to porridge and smoothies",
+      "Cook leaves as vegetable",
+      "Press seeds for oil",
+      "Use in baking as nutritional boost"
+    ],
+    storage: "Dried powder: 2+ years in cool, dry place. Fresh leaves: use within days.",
+    healthBenefits: [
+      "Exceptionally high in vitamin C",
+      "Prebiotic fiber for gut health",
+      "Helps regulate blood sugar",
+      "High antioxidant content",
+      "Natural electrolyte source"
+    ],
+    culinaryUses: [
+      "Miyan kuka (baobab leaf soup, Nigeria)",
+      "Bouye (baobab drink, Senegal)",
+      "Mabuyu (candy-coated seeds, East Africa)",
+      "Smoothie and porridge additive",
+      "Traditional medicines"
+    ],
+    tribesUsing: [
+      { tribeSlug: "hausa", tribeName: "Hausa", usage: "Miyan kuka (soup), medicinal uses" },
+      { tribeSlug: "wolof", tribeName: "Wolof", usage: "Bouye drink (baobab juice)" },
+      { tribeSlug: "swahili", tribeName: "Swahili", usage: "Ubuyu (candy-coated seeds snack)" },
+      { tribeSlug: "maasai", tribeName: "Maasai", usage: "Medicinal uses, bark for rope" }
+    ],
+    sources: [
+      { name: "Adansonia - Wikipedia", url: "https://en.wikipedia.org/wiki/Adansonia" },
+      { name: "Baobab superfruit", url: "https://en.wikipedia.org/wiki/Adansonia_digitata" }
+    ]
+  },
+  {
+    id: "shea-butter",
+    name: "Shea Butter (Karité)",
+    localNames: [
+      { tribe: "Hausa", name: "Man shanu / Kadanya", tribeSlug: "hausa" },
+      { tribe: "Yoruba", name: "Ori", tribeSlug: "yoruba" },
+      { tribe: "Bambara", name: "Sii / Shi", tribeSlug: "bambara" },
+      { tribe: "Mossi", name: "Kaako", tribeSlug: "mossi" }
+    ],
+    category: "oil",
+    description: "Extracted from the nuts of the shea tree (Vitellaria paradoxa), native to the African Savanna. Women have processed shea butter for thousands of years. It's called 'women's gold' for its economic importance.",
+    culturalSignificance: "Shea processing is traditionally women's work and a major income source. The shea belt across West Africa involves millions of women. Beyond food, shea is sacred - used in baby care, protection rituals, and wood preservation.",
+    nutritionalInfo: "Per 100g: 884 calories, 100g fat (mainly stearic and oleic acids). Contains vitamins A, E, and F. High in unsaponifiables which give unique skin benefits.",
+    varieties: [
+      { 
+        name: "Unrefined (Yellow) Shea", 
+        description: "Traditional hand-processed with smoky aroma. Retains all nutrients.",
+        regions: ["Ghana", "Burkina Faso", "Mali", "Nigeria"],
+        characteristics: "Yellow/beige, nutty smell, grainy texture"
+      },
+      { 
+        name: "Refined Shea", 
+        description: "Commercially processed, white, odorless. Loses some nutrients.",
+        regions: ["Commercial processing centers"],
+        characteristics: "White, smooth, no smell"
+      },
+      { 
+        name: "Nilotica Shea (East African)", 
+        description: "From Eastern Africa, softer and creamier than West African variety.",
+        regions: ["Uganda", "South Sudan", "Ethiopia"],
+        characteristics: "Softer, creamier, higher olein content"
+      }
+    ],
+    preparation: [
+      "Traditional: crack nuts, roast, grind, knead with water",
+      "Use as cooking fat (high smoke point)",
+      "Apply directly to skin and hair",
+      "Mix into food for nutritional boost",
+      "Melt for chocolate making (cocoa butter substitute)"
+    ],
+    storage: "Lasts 2+ years at room temperature. Keep away from moisture. Refrigerate in hot climates.",
+    healthBenefits: [
+      "Excellent moisturizer (topical)",
+      "Anti-inflammatory properties",
+      "High smoke point for cooking",
+      "Contains beneficial fatty acids",
+      "Traditional use for healing"
+    ],
+    culinaryUses: [
+      "Cooking oil (especially for frying)",
+      "Chocolate making (cocoa butter alternative)",
+      "Traditional food preparation",
+      "Baby food additive",
+      "Ceremonial foods"
+    ],
+    tribesUsing: [
+      { tribeSlug: "hausa", tribeName: "Hausa", usage: "Cooking oil, skin care, baby care" },
+      { tribeSlug: "yoruba", tribeName: "Yoruba", usage: "Ori - for cooking and traditional medicine" },
+      { tribeSlug: "mossi", tribeName: "Mossi", usage: "Central to women's economy and cooking" },
+      { tribeSlug: "bambara", tribeName: "Bambara", usage: "Primary cooking fat, trade item" }
+    ],
+    sources: [
+      { name: "Shea butter - Wikipedia", url: "https://en.wikipedia.org/wiki/Shea_butter" },
+      { name: "Global Shea Alliance", url: "https://globalshea.com/" }
+    ]
   }
 ];
 
