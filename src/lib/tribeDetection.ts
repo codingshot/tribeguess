@@ -1,5 +1,15 @@
 import tribesData from '@/data/tribes.json';
 import { tribeLandmarks, CulturalLandmark } from '@/data/tribeLandmarks';
+import { detectGlobalOrigin, getAfricanTribesByReligion, GlobalOrigin } from './globalOrigins';
+
+export interface GlobalOriginInfo {
+  isNonAfrican: boolean;
+  origins: GlobalOrigin[];
+  religion?: 'muslim' | 'christian' | 'hindu' | 'buddhist' | 'jewish' | 'sikh' | 'other';
+  religiousNote?: string;
+  religiousTribes: string[];
+  confidence: number;
+}
 
 export interface TribeResult {
   tribe: typeof tribesData.tribes[0];
@@ -20,6 +30,7 @@ export interface DetectionResult {
   predictions: TribeResult[];
   inputName: string;
   timeOfBirth?: string;
+  globalOrigin?: GlobalOriginInfo;
 }
 
 // Comprehensive name database with verified meanings - TRIPLE FACT-CHECKED 2024
@@ -2974,10 +2985,26 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
     }
   }
   
+  // Detect global (non-African) origins
+  const globalOriginResult = detectGlobalOrigin(name);
+  let globalOriginInfo: GlobalOriginInfo | undefined;
+  
+  if (globalOriginResult.isNonAfrican || globalOriginResult.religion) {
+    const religiousTribes = globalOriginResult.religion 
+      ? getAfricanTribesByReligion(globalOriginResult.religion as 'muslim' | 'christian')
+      : [];
+    
+    globalOriginInfo = {
+      ...globalOriginResult,
+      religiousTribes
+    };
+  }
+  
   return {
     predictions: predictions.slice(0, 5),
     inputName: name,
     timeOfBirth,
+    globalOrigin: globalOriginInfo,
   };
 }
 

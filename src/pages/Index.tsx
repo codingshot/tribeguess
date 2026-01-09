@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { GuessForm } from '@/components/GuessForm';
 import { TribeResultCard } from '@/components/TribeResultCard';
 import { TopTribesCarousel } from '@/components/TopTribesCarousel';
+import { GlobalOriginCard } from '@/components/GlobalOriginCard';
 import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
 import { Globe, ArrowRight, Lightbulb } from 'lucide-react';
 import logo from '@/assets/logo.png';
@@ -234,6 +235,18 @@ const Index = () => {
                   ))}
                 </div>
               </div>
+            )}
+            
+            {/* Global Origin Card - show when non-African origin detected */}
+            {results.globalOrigin && (results.globalOrigin.isNonAfrican || results.globalOrigin.religion) && (
+              <GlobalOriginCard
+                origins={results.globalOrigin.origins}
+                inputName={results.inputName}
+                religion={results.globalOrigin.religion}
+                religiousNote={results.globalOrigin.religiousNote}
+                religiousTribes={results.globalOrigin.religiousTribes}
+                confidence={results.globalOrigin.confidence}
+              />
             )}
             
             <div className="space-y-3 sm:space-y-4">
