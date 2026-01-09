@@ -405,6 +405,126 @@ npm run preview
 
 ---
 
+## 📋 Data Gaps & Contributions Needed
+
+This section tracks **missing, incomplete, or incorrect data** that needs community contributions.
+
+### 🔴 Missing Tribe Profiles (High Priority)
+
+The following regions have limited or no tribal coverage:
+
+#### Horn of Africa
+| Country | Missing Tribes | Notes |
+|---------|---------------|-------|
+| 🇸🇴 Somalia | Digil, Rahanweyn, Jareer | Only Somali/Isaaq covered |
+| 🇩🇯 Djibouti | Afar (detailed profile) | Basic entry exists |
+| 🇸🇸 South Sudan | Dinka (detailed), Nuer, Shilluk, Azande | Major gaps |
+| 🇸🇩 Sudan | Beja, Nubians (detailed), Fur | Limited coverage |
+
+#### Central Africa
+| Country | Missing Tribes | Notes |
+|---------|---------------|-------|
+| 🇨🇩 DR Congo | Luba, Mongo, Kongo (detailed), Twa | Need full cultural profiles |
+| 🇨🇬 Congo-Brazzaville | Bakongo, Mbochi, Sangha | No entries |
+| 🇹🇩 Chad | Sara, Arabs, Gorane | Basic Toubou only |
+| 🇨🇫 CAR | Gbaya, Banda, Mandjia | No entries |
+| 🇬🇦 Gabon | Fang (detailed), Punu, Myene | Basic entries |
+| 🇬🇶 Equatorial Guinea | Bubi, Fang (EG variant) | Basic entries |
+| 🇦🇴 Angola | Ovimbundu, Kimbundu, Bakongo | No entries |
+
+#### North Africa
+| Country | Missing Tribes | Notes |
+|---------|---------------|-------|
+| 🇪🇬 Egypt | Nubian (Egyptian), Bedouin, Berber | No entries |
+| 🇱🇾 Libya | Berber/Amazigh, Tuareg (LY), Toubou (LY) | No entries |
+| 🇹🇳 Tunisia | Berber/Amazigh (Tunisian) | No entries |
+| 🇩🇿 Algeria | Kabyle, Chaoui, Mozabite, Tuareg (DZ) | No entries |
+| 🇲🇦 Morocco | Berber/Amazigh (Moroccan), Sahrawi | No entries |
+
+### 🟡 Incomplete Tribe Profiles (Medium Priority)
+
+These tribes exist but need more data:
+
+| Tribe | Country | Missing Fields |
+|-------|---------|----------------|
+| Tuareg | Mali/Niger | `eatingCustoms`, gallery images |
+| Bambara | Mali | `tradeHistory`, `independenceHistory` |
+| Dogon | Mali | Cultural landmarks, YouTube video |
+| Songhai | Niger/Mali | `religiousInfluence`, recipes |
+| Moors | Mauritania | `genderRoles`, gallery images |
+| Haratin | Mauritania | Historical context, recipes |
+| Hausa (Niger) | Niger | Differentiation from Nigerian Hausa |
+| Djerma | Niger | `eatingCustoms`, landmarks |
+| Himba | Namibia | `tradeHistory`, recipes |
+| San | Botswana/Namibia | `independenceHistory`, modernization |
+| Berber | Morocco/Algeria | Full profile needed |
+
+### 🟡 Missing Cultural Landmarks
+
+Tribes lacking verified GPS landmarks in `tribeLandmarks.ts`:
+
+| Region | Tribes Needing Landmarks |
+|--------|-------------------------|
+| Sahel | Tuareg, Bambara, Dogon, Songhai, Moors, Djerma |
+| Central Africa | Fang, Myene, Punu, Bubi, Hutu, Tutsi |
+| Southern Africa | Himba, San, Tswana, Ndebele, Venda |
+| Horn of Africa | Somali (more), Afar, Dinka, Nuer |
+
+### 🟡 Missing Recipes
+
+Tribes/regions needing traditional recipes in `recipes.ts`:
+
+| Category | Needed |
+|----------|--------|
+| Sahel Cuisine | Thiakry (Senegal), Dégué (Mali), Millet couscous |
+| Central African | Saka-saka (Congo), Moambe chicken, Chikwanga |
+| North African | Berber tagine, Couscous (Algerian), Harira |
+| Horn of Africa | Kitcha (Eritrea), Injera variations, Somali rice |
+| Beverages | Palm wine (detailed), Hibiscus drinks, Baobab juice |
+
+### 🟡 Missing Language Families
+
+Expand `languageFamilies.json` with:
+
+| Family | Subgroups Needed |
+|--------|------------------|
+| Afroasiatic | Coptic (historical), Berber subgroups |
+| Nilo-Saharan | Fur-Amdang, Saharan, Songhay (expanded) |
+| Khoisan | Detailed breakdown of click languages |
+| Austronesian | Malagasy (Madagascar connection) |
+
+### 🔴 Incorrect/Outdated Data (Needs Verification)
+
+| Data Point | Issue | Source Needed |
+|------------|-------|---------------|
+| Some population estimates | May be outdated (pre-2020) | Joshua Project 2024 |
+| Trans-border tribe distributions | Border changes not reflected | Ethnologue 2024 |
+| Religion percentages | Colonial-era estimates | Pew Research |
+| Some name meanings | Unverified folk etymologies | Academic sources |
+| Trade route dates | Approximations | Historical archives |
+
+### 📝 How to Contribute Data
+
+1. **Use Issue Templates**: Visit [GitHub Issues](https://github.com/yourusername/tribeguess/issues/new/choose) and select the appropriate template:
+   - `data_new_tribe.yml` - Add a new tribe
+   - `data_new_recipe.yml` - Add a traditional recipe
+   - `data_spelling_correction.yml` - Fix spelling/translation errors
+   - `data_name_meaning.yml` - Add/correct name meanings
+   - `data_new_language.yml` - Add language family data
+   - `data_famous_person.yml` - Add notable person to quiz
+
+2. **Required for All Contributions**:
+   - Source citation (academic paper, official website, or museum)
+   - Country and region context
+   - Verification that data doesn't already exist
+
+3. **Image Contributions**:
+   - Must be Wikimedia Commons, Creative Commons, or original
+   - Include attribution and license information
+   - Minimum resolution: 800x600
+
+---
+
 ## 📊 Data Sources & Verification
 
 All tribe data is triple fact-checked against verified sources:
