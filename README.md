@@ -10,21 +10,22 @@
 
 <p align="center">
   <a href="https://tribeguess.com">Live Demo</a> •
-  <a href="#features">Features</a> •
-  <a href="#quick-links">Quick Links</a> •
-  <a href="#user-stories">User Stories</a> •
-  <a href="#improvements">Improvements</a>
+  <a href="#-features">Features</a> •
+  <a href="#-user-guide">User Guide</a> •
+  <a href="#-screenshots">Screenshots</a> •
+  <a href="#-roadmap">Roadmap</a>
 </p>
 
 ---
 
 ## 📖 About
 
-**TribeGuess** is an educational entertainment web application that predicts African tribal heritage based on names. It combines a sophisticated name-matching algorithm with a comprehensive cultural encyclopedia covering 50+ tribes across 25+ African countries.
+**TribeGuess** is an educational entertainment web application that predicts African tribal heritage based on names. It combines a sophisticated name-matching algorithm with a comprehensive cultural encyclopedia covering **250+ tribes** across **25+ African countries**.
 
-The app serves as both:
-1. **A Guessing Game** - Enter a name and discover its likely tribal origin
-2. **A Cultural Encyclopedia** - Explore detailed information about African tribes, languages, traditions, and famous people
+The app serves as:
+1. **🔮 A Guessing Game** - Enter a name and discover its likely tribal origin
+2. **📚 A Cultural Encyclopedia** - Explore detailed information about African tribes, languages, traditions, recipes, and religions
+3. **🎓 A Learning Platform** - Quizzes, flashcards, and daily challenges to test your knowledge
 
 ### 🎯 Mission
 
@@ -38,22 +39,119 @@ To celebrate and preserve African cultural diversity by making tribal heritage a
 
 | Feature | Description |
 |---------|-------------|
-| **🔮 Name-Based Tribe Detection** | AI-powered algorithm analyzing 600+ name patterns, prefixes, and suffixes |
-| **📚 Tribe Encyclopedia** | Detailed pages for 65+ tribes with history, culture, and traditions |
+| **🔮 Name-Based Tribe Detection** | AI-powered algorithm analyzing 9,000+ name patterns, prefixes, and suffixes |
+| **📚 Tribe Encyclopedia** | Detailed pages for 250+ tribes with history, culture, meal traditions, and trade relations |
 | **🗺️ Interactive Maps** | OpenStreetMap integration showing tribal territories with custom overlays |
-| **🎲 Random Tribe Explorer** | SEO-optimized random tribe discovery feature |
-| **🔊 Audio Greetings** | Web Speech API pronunciation for tribal greetings |
-| **📺 Culture Documentaries** | Verified YouTube embeds for 55+ tribes |
-| **🔍 Advanced Search & Filters** | Multi-country, language family, and region filtering |
+| **🍲 Traditional Recipes** | 100+ authentic African dishes with ingredients, instructions, and YouTube tutorials |
+| **⛪ Religion Explorer** | 29 documented religions with comparison tools and animated timeline maps |
+| **🗣️ Language Families** | 16 language groups with phrases, audio pronunciations, and tribe connections |
+| **🎯 Quiz System** | 9+ categories with 75+ questions, flashcards, daily challenges, and achievements |
+| **📝 Cultural Blog** | SEO-optimized articles on naming traditions, history, and cuisine |
 
 ### Advanced Features
 
-- **Multi-Country Support**: Tracks tribes across borders (e.g., Maasai in Kenya & Tanzania)
+- **Multi-Country Support**: Tracks tribes across borders (e.g., Fulani across 13+ countries)
 - **URL State Synchronization**: All filters and searches are shareable via URL
-- **Gender Dynamics**: Cultural context on traditional roles and stereotypes
-- **Religious Influence Profiles**: Visualized religious demographics per tribe
-- **Name Meaning Database**: 500+ verified name meanings with gender classification
-- **Population Statistics**: Demographic data with visual breakdowns
+- **Religious Name Detection**: Identifies Muslim/Christian names and suggests relevant tribes
+- **Global Origin Detection**: Recognizes non-African name patterns and explains connections
+- **Audio Pronunciations**: Web Speech API with African accents for greetings and phrases
+- **Meal Traditions**: Eating customs, taboos, and hospitality practices for each tribe
+- **Trade & Independence History**: Historical trade relations and anti-colonial resistance
+
+---
+
+## 📸 Screenshots
+
+### Home Page - Guess Her Tribe
+![Home Page](public/docs/screenshot-home.png)
+*Enter a name and select a country to discover the likely tribal origin with cultural insights.*
+
+### Encyclopedia - Browse All Tribes
+![Learn Page](public/docs/screenshot-learn.png)
+*Filter 250+ tribes by country, region, language family, and population with Grid/List/Map views.*
+
+### Tribe Detail Page
+![Tribe Page](public/docs/screenshot-tribe.png)
+*Comprehensive tribe profiles with culture documentaries, greetings, stereotypes, and traditions.*
+
+### Cultural Blog
+![Blog Page](public/docs/screenshot-blog.png)
+*Articles on African naming traditions, ethnic diversity, and culinary heritage with region/topic filters.*
+
+### Traditional Recipes
+![Recipes Page](public/docs/screenshot-recipes.png)
+*100+ authentic dishes organized by tribe with ingredients, cooking times, and YouTube tutorials.*
+
+### African Religions
+![Religions Page](public/docs/screenshot-religions.png)
+*Explore 29 traditional religions with statistics dashboard, comparison tool, and animated trade route map.*
+
+### African Culture Quiz
+![Quiz Page](public/docs/screenshot-quiz.png)
+*Test your knowledge with quizzes, flashcards, daily challenges, and 13 unique achievements.*
+
+### Language Families
+![Languages Page](public/docs/screenshot-languages.png)
+*16 language groups with 2,000+ languages, common phrases, and audio pronunciations.*
+
+---
+
+## 📖 User Guide
+
+### 🔮 Guessing a Tribe
+
+1. **Go to the Home Page** at [tribeguess.com](https://tribeguess.com)
+2. **Select a Country** from the dropdown (e.g., 🇰🇪 Kenya, 🇳🇬 Nigeria) or choose "All Africa"
+3. **Enter a First Name** - First names work best for analysis
+4. **Click "Guess the Tribe"** or press Enter
+5. **View Results** - See the predicted tribe(s) with match confidence and cultural insights
+
+**Pro Tips:**
+- Use the **"Show Advanced Clues"** button to add time of birth, region, build, and personality for more accurate predictions
+- Try popular names shown below the search bar for your selected country
+- Share results via URL - the entire prediction is encoded in the link!
+
+### 📚 Browsing the Encyclopedia
+
+1. **Navigate to Learn** at [/learn](https://tribeguess.com/learn)
+2. **Search** by tribe name or use filters:
+   - 🌍 **Country Filter**: Click flags to filter by specific countries
+   - 🗺️ **Region Filter**: Select macro-regions (West Africa, East Africa, etc.)
+   - 🗣️ **Language Family**: Filter by Bantu, Nilotic, Cushitic, etc.
+   - 📊 **Advanced Filters**: Population range, view mode (Grid/List/Map)
+3. **Click a Tribe Card** to view the full detail page
+4. **Explore Sections**: Documentary videos, greetings, name meanings, stereotypes, traditions
+
+### 🍲 Exploring Recipes
+
+1. **Navigate to Recipes** at [/recipes](https://tribeguess.com/recipes)
+2. **Browse Ingredients**: Click traditional ingredients to learn about staples like Cassava, Plantain, Shea Butter
+3. **Filter by Tribe**: Use the tribe filter pills to find dishes from specific ethnic groups
+4. **View Recipe Details**: Ingredients, step-by-step instructions, cooking time, and video tutorials
+5. **Discover Connections**: Each recipe links back to the tribe and language family pages
+
+### ⛪ Exploring Religions
+
+1. **Navigate to Religions** at [/religions](https://tribeguess.com/religions)
+2. **View Statistics Dashboard**: See religion counts, regional distribution, and follower estimates
+3. **Compare Religions**: Use the **Compare Tool** to see side-by-side tenets and practices
+4. **Explore Timeline Map**: See animated trade routes and historical spread of religions
+5. **Click Religion Cards**: View detailed pages with beliefs, rituals, and connected tribes
+
+### 🎯 Taking Quizzes
+
+1. **Navigate to Quiz** at [/quiz](https://tribeguess.com/quiz)
+2. **Start Daily Challenge**: Answer 5 random questions in 90 seconds to build your streak
+3. **Choose a Category**: 9+ categories including Famous Africans, Colonial History, Music & Dance
+4. **Earn Achievements**: Complete challenges for badges like "Speed Demon" and "Perfect Day"
+5. **Study with Flashcards**: Review cultural facts in flashcard mode
+
+### 🗣️ Learning Languages
+
+1. **Navigate to Languages** at [/languages](https://tribeguess.com/languages)
+2. **Explore Language Families**: Niger-Congo, Afroasiatic, Nilo-Saharan, Khoisan, and more
+3. **Listen to Phrases**: Click audio buttons to hear pronunciations with African accents
+4. **Connect to Tribes**: Each language family links to the tribes that speak it
 
 ---
 
@@ -66,10 +164,20 @@ To celebrate and preserve African cultural diversity by making tribal heritage a
 | [`tribeguess.com/learn/:slug`](https://tribeguess.com/learn/kikuyu) | Tribe Detail - Individual tribe page |
 | [`tribeguess.com/random`](https://tribeguess.com/random) | Random - Discover a random tribe |
 | [`tribeguess.com/blog`](https://tribeguess.com/blog) | Blog - Cultural articles and insights |
-| [`tribeguess.com/learn?country=NG`](https://tribeguess.com/learn?country=NG) | Filter by Country |
-| [`tribeguess.com/learn?macroRegion=West%20Africa`](https://tribeguess.com/learn?macroRegion=West%20Africa) | Filter by Region |
-| [`tribeguess.com/learn?languageFamily=Bantu`](https://tribeguess.com/learn?languageFamily=Bantu) | Filter by Language |
-| [`tribeguess.com/?name=Wanjiku&country=KE`](https://tribeguess.com/?name=Wanjiku&country=KE) | Direct Guess Link |
+| [`tribeguess.com/recipes`](https://tribeguess.com/recipes) | Recipes - Traditional African dishes |
+| [`tribeguess.com/religions`](https://tribeguess.com/religions) | Religions - Spiritual traditions directory |
+| [`tribeguess.com/quiz`](https://tribeguess.com/quiz) | Quiz - Test your knowledge |
+| [`tribeguess.com/languages`](https://tribeguess.com/languages) | Languages - African language families |
+| [`tribeguess.com/global-origins`](https://tribeguess.com/global-origins) | Global Origins - Non-African name explorer |
+| [`tribeguess.com/religion-timeline`](https://tribeguess.com/religion-timeline) | Religion Timeline - Animated historical map |
+
+**Filter Examples:**
+| URL | Description |
+|-----|-------------|
+| [`/learn?country=NG`](https://tribeguess.com/learn?country=NG) | Nigerian tribes only |
+| [`/learn?macroRegion=West%20Africa`](https://tribeguess.com/learn?macroRegion=West%20Africa) | West African tribes |
+| [`/learn?languageFamily=Bantu`](https://tribeguess.com/learn?languageFamily=Bantu) | Bantu-speaking tribes |
+| [`/?name=Wanjiku&country=KE`](https://tribeguess.com/?name=Wanjiku&country=KE) | Direct guess for Wanjiku (Kenya) |
 
 ---
 
@@ -78,14 +186,15 @@ To celebrate and preserve African cultural diversity by making tribal heritage a
 ```
 tribeguess/
 ├── public/
+│   ├── docs/                      # 📸 Documentation screenshots
 │   ├── tribes/                    # Tribe-specific images
-│   │   └── himba/                 # Example: Himba tribe gallery
 │   ├── favicon.png                # Site favicon
 │   ├── og-image.png               # Social sharing preview
+│   ├── sitemap.xml                # SEO sitemap
 │   └── robots.txt                 # SEO crawl rules
 │
 ├── src/
-│   ├── __tests__/                 # 🆕 Regression Test System
+│   ├── __tests__/                 # Regression Test System
 │   │   ├── REGRESSION_TESTS.md    # Comprehensive test specification
 │   │   ├── CHANGE_CHECKLIST.md    # Pre/post change verification
 │   │   └── testUtils.ts           # Automated test utilities
@@ -94,88 +203,77 @@ tribeguess/
 │   │   └── logo.png               # Main application logo
 │   │
 │   ├── components/
-│   │   ├── ui/                    # shadcn/ui component library (50+ components)
-│   │   ├── DynamicMapView.tsx     # Africa-wide map with country bounds
+│   │   ├── ui/                    # shadcn/ui component library
+│   │   ├── AudioGreeting.tsx      # Audio pronunciation with accents
+│   │   ├── BlogAudioPlayer.tsx    # Text-to-speech for articles
+│   │   ├── CulturalLandmarks.tsx  # Landmark cards and maps
+│   │   ├── DailyChallenge.tsx     # Daily quiz challenge widget
+│   │   ├── DynamicMapView.tsx     # Africa-wide interactive map
+│   │   ├── GlobalOriginCard.tsx   # Non-African name origin display
 │   │   ├── GuessForm.tsx          # Name input with advanced clues
 │   │   ├── Header.tsx             # Navigation with Random button
+│   │   ├── Footer.tsx             # Global footer navigation
 │   │   ├── ImageGallery.tsx       # Tribe culture photo gallery
-│   │   ├── KenyaMapView.tsx       # Legacy Kenya-specific map
-│   │   ├── NameSearch.tsx         # Name meaning search component
-│   │   ├── NavLink.tsx            # Navigation link component
-│   │   ├── PersonCard.tsx         # Famous person profile card
-│   │   ├── TribeCard.tsx          # Tribe preview card for grid
+│   │   ├── PopulationPieChart.tsx # Multi-country population chart
+│   │   ├── RelatedBlogs.tsx       # Related articles section
+│   │   ├── ReligionStatsDashboard.tsx # Religion statistics
+│   │   ├── ShareButton.tsx        # Social sharing popover
+│   │   ├── TopTribesCarousel.tsx  # Featured tribes slider
+│   │   ├── TribeCard.tsx          # Tribe preview card
 │   │   ├── TribeFamilyTree.tsx    # Ethnic lineage visualization
 │   │   ├── TribeMap.tsx           # Individual tribe territory map
 │   │   └── TribeResultCard.tsx    # Prediction result display
 │   │
 │   ├── data/
-│   │   ├── tribes.json            # Master tribe database (65+ tribes)
-│   │   └── blogPosts.ts           # Cultural articles database
+│   │   ├── tribes.json            # Master tribe database (250+ tribes)
+│   │   ├── recipes.ts             # Traditional recipes database
+│   │   ├── ingredients.ts         # African ingredients database
+│   │   ├── traditionalReligions.ts # Religion data and mappings
+│   │   ├── tribeLandmarks.ts      # Cultural landmarks with GPS
+│   │   ├── languageFamilies.json  # Language families data
+│   │   ├── blogPosts.json         # Cultural blog articles
+│   │   └── quizzes.json           # Quiz questions and categories
 │   │
 │   ├── hooks/
 │   │   ├── use-mobile.tsx         # Mobile detection hook
 │   │   ├── use-toast.ts           # Toast notification hook
-│   │   └── useGlobalSearch.ts     # Combined search hook
+│   │   ├── useGlobalSearch.ts     # Combined search hook
+│   │   ├── useDailyChallenge.ts   # Daily challenge state
+│   │   └── useQuizResults.ts      # Quiz results and achievements
 │   │
 │   ├── lib/
-│   │   ├── tribeDetection.ts      # Core detection algorithm (2400+ lines)
+│   │   ├── tribeDetection.ts      # Core detection algorithm
+│   │   ├── globalOrigins.ts       # Non-African name origins
+│   │   ├── tribeLinks.ts          # Tribe linking utilities
 │   │   └── utils.ts               # Utility functions
 │   │
-│   ├── pages/
-│   │   ├── Index.tsx              # Home page - guess form
-│   │   ├── Learn.tsx              # Encyclopedia page - grid/map view
-│   │   ├── TribePage.tsx          # Individual tribe detail page
-│   │   ├── RandomTribe.tsx        # SEO-optimized random redirect
-│   │   ├── Blog.tsx               # Cultural articles list
-│   │   ├── BlogPost.tsx           # Individual article page
-│   │   └── NotFound.tsx           # 404 page
-│   │
-│   ├── App.tsx                    # Root component with routing
-│   ├── App.css                    # Global styles
-│   ├── index.css                  # Tailwind base & custom tokens
-│   └── main.tsx                   # Application entry point
+│   └── pages/
+│       ├── Index.tsx              # Home - guess form
+│       ├── Learn.tsx              # Encyclopedia - grid/map view
+│       ├── TribePage.tsx          # Individual tribe detail
+│       ├── Blog.tsx               # Cultural articles list
+│       ├── BlogPost.tsx           # Individual article page
+│       ├── Recipes.tsx            # Recipe directory
+│       ├── RecipePage.tsx         # Individual recipe page
+│       ├── IngredientPage.tsx     # Ingredient detail page
+│       ├── ReligionsPage.tsx      # Religion directory
+│       ├── ReligionDetailPage.tsx # Individual religion page
+│       ├── ReligionTimeline.tsx   # Animated trade route map
+│       ├── ReligionCompare.tsx    # Religion comparison tool
+│       ├── Quiz.tsx               # Quiz and flashcards
+│       ├── LanguagesIndex.tsx     # Language families directory
+│       ├── LanguageFamilyPage.tsx # Individual language family
+│       ├── GlobalOrigins.tsx      # Non-African origins explorer
+│       ├── RandomTribe.tsx        # Random tribe redirect
+│       ├── Privacy.tsx            # Privacy policy
+│       ├── Terms.tsx              # Terms of service
+│       └── NotFound.tsx           # 404 page
 │
 ├── index.html                     # HTML template with SEO meta
 ├── tailwind.config.ts             # Tailwind configuration
 ├── vite.config.ts                 # Vite build configuration
-├── tsconfig.json                  # TypeScript configuration
-└── package.json                   # Dependencies & scripts
+└── vercel.json                    # Vercel deployment config
 ```
-
----
-
-## 👤 User Stories
-
-### Primary User Stories
-
-| ID | As a... | I want to... | So that... |
-|----|---------|--------------|------------|
-| US-01 | Curious user | Enter a name and see which tribe it belongs to | I can learn about my heritage or a friend's |
-| US-02 | Student | Browse an encyclopedia of African tribes | I can learn about cultural diversity |
-| US-03 | Researcher | Filter tribes by country, region, and language family | I can find specific cultural groups |
-| US-04 | Explorer | Click "Random" to discover a new tribe | I can expand my cultural knowledge |
-| US-05 | Learner | Watch documentary videos on tribe pages | I can see visual representations of cultures |
-| US-06 | User | Share my results via URL | My friends can see the same prediction |
-
-### Secondary User Stories
-
-| ID | As a... | I want to... | So that... |
-|----|---------|--------------|------------|
-| US-07 | Mobile user | Use the app on my phone seamlessly | I can access it anywhere |
-| US-08 | Visitor | See an interactive map of tribal territories | I can understand geographic distribution |
-| US-09 | Language enthusiast | Listen to greetings in tribal languages | I can learn basic phrases |
-| US-10 | History buff | Read about tribal origins and colonial history | I can understand historical context |
-| US-11 | User | Search for names and see their meanings | I can understand name etymology |
-| US-12 | Power user | Use advanced clues (time, region, build) | I can get more accurate predictions |
-
-### Future User Stories (Backlog)
-
-| ID | As a... | I want to... | Priority |
-|----|---------|--------------|----------|
-| US-13 | User | Create an account to save favorite tribes | Medium |
-| US-14 | Contributor | Submit corrections to tribe data | High |
-| US-15 | User | Take a cultural quiz about tribes | Low |
-| US-16 | Developer | Access an API for tribe data | Low |
 
 ---
 
@@ -200,13 +298,10 @@ tribeguess/
 | `lucide-react` | Icon library |
 | `react-helmet-async` | SEO meta management |
 | `sonner` | Toast notifications |
-| `recharts` | Data visualization |
-| `class-variance-authority` | Component variants |
-| `tailwind-merge` | Class merging utility |
-| `zod` | Schema validation |
-| `react-hook-form` | Form management |
-| `date-fns` | Date utilities |
+| `recharts` | Data visualization (charts) |
 | `embla-carousel-react` | Carousel component |
+| `react-hook-form` + `zod` | Form management & validation |
+| `date-fns` | Date utilities |
 
 ### External APIs & Services
 
@@ -215,6 +310,7 @@ tribeguess/
 | **OpenStreetMap** | Interactive map tiles |
 | **YouTube Embed** | Documentary videos |
 | **Web Speech API** | Audio pronunciation |
+| **Wikimedia Commons** | Cultural imagery |
 
 ---
 
@@ -250,75 +346,62 @@ npm run preview
 
 ---
 
-## 📈 Improvements & Roadmap
+## 📈 Roadmap
 
 ### ✅ Recently Completed
 
-| Improvement | Description | Status |
-|-------------|-------------|--------|
-| **🆕 Regression Test System** | Comprehensive test documentation with automated utilities | ✅ Done |
-| **🆕 Mobile Search Button** | Touch-friendly search button for all devices | ✅ Done |
-| **🆕 Fact-Checked Tribe Expansion** | Added 10+ tribes (Oromo, Amhara, Sukuma, etc.) with sources | ✅ Done |
-| **Blog Search & Filtering** | Search, region, and tag filters with shareable URLs | ✅ Done |
-| **Footer Component** | Unified footer with navigation links across all pages | ✅ Done |
-| **Blog Sources/References** | Academic citations and source links on each article | ✅ Done |
-| **Global Search Hook** | Combined search across tribes and blog articles | ✅ Done |
-| **SEO Blog System** | 8 cultural articles with SEO optimization, JSON-LD, hyperlinks to tribes | ✅ Done |
-| **XML Sitemap** | Added sitemap.xml for SEO crawling | ✅ Done |
-| **Full Country Dropdown** | "All Africa" option with full country names | ✅ Done |
-| **Population Pie Charts** | Interactive charts for multi-country tribes | ✅ Done |
-| **Precision Territory Mapping** | 100+ tribes with verified geographic coordinates and spans | ✅ Done |
-| **Multi-Region Territory Data** | Accurate lat/lng spans for Kenya, Nigeria, Ethiopia, SA, Ghana, etc. | ✅ Done |
-| **Live Search** | Filters as you type without pressing Enter | ✅ Done |
-| **View Toggle Active State** | Grid/List/Map buttons show active selection | ✅ Done |
-| **List View Mode** | New list view option alongside grid and map | ✅ Done |
-| **East African Voice Audio** | Audio greetings prefer Swahili/African voices | ✅ Done |
-| **Phonetic Breakdowns** | Pronunciation guides like [weem-WEH-gah] for greetings | ✅ Done |
-| **404/Terms/Privacy Pages** | Created legal and error pages with SEO | ✅ Done |
-| **SEO Optimization** | Meta tags, Open Graph, structured data added | ✅ Done |
-| **YouTube Video Audit** | Verified all 50+ tribe videos, replaced broken IDs | ✅ Done |
-| **Multi-Country Tribe Data** | Tuareg (7 countries), Maasai (2), Somali (5), Fulani (13+) | ✅ Done |
-| **URL State Sync** | All filters shareable via URL parameters | ✅ Done |
-| **Random Tribe Feature** | SEO-optimized /random route with navbar button | ✅ Done |
+| Feature | Description |
+|---------|-------------|
+| **🆕 Comprehensive Tribe Data** | 250+ tribes with eatingCustoms, tradeRelations, independenceHistory |
+| **🆕 Language Families System** | 16 language groups with phrases, audio, and tribe connections |
+| **🆕 Recipe-Language Cross-Linking** | Bidirectional navigation between recipes and language families |
+| **🆕 Religion Timeline Map** | Animated trade routes showing historical religious spread |
+| **🆕 Quiz & Achievements** | 9 categories, 75+ questions, 13 achievements, daily challenges |
+| **🆕 Global Origins Explorer** | Non-African name pattern detection with diaspora connections |
+| **🆕 Mobile-Responsive Dropdowns** | Country dropdown shows flag + name on mobile |
+| **Ingredients Database** | Dedicated pages for African staples (Plantain, Shea Butter, etc.) |
+| **Religion Comparison Tool** | Compare up to 4 religions side-by-side |
+| **Audio Pronunciations** | Web Speech API with African accents for all language families |
 
-### 🔴 High Priority
+### 🔴 High Priority (TODO)
 
-| Improvement | Description | Impact |
-|-------------|-------------|--------|
-| **West African Phonetics** | Add phonetic mappings for Yoruba, Igbo, Hausa | Audio accuracy |
-| **Image Lazy Loading** | Lazy load tribe images in grid view | Speed |
-| **Pagination/Infinite Scroll** | Handle large tribe lists efficiently | UX |
-| **Central African Data** | Add DR Congo, Cameroon, CAR tribes | Data completeness |
-| **PWA Support** | Add service worker for offline access | Accessibility |
+| Task | Description | Impact |
+|------|-------------|--------|
+| **Add More Tribe Images** | Gallery images for tribes currently lacking visuals | Visual appeal |
+| **Central African Expansion** | Add DR Congo, Cameroon, CAR tribes with full data | Data completeness |
+| **Tribe Migration Maps** | Interactive visualization of historical migrations | Education |
+| **Image Lazy Loading** | Lazy load tribe images in grid view | Performance |
+| **PWA Support** | Service worker for offline access | Accessibility |
 
-### 🟡 Medium Priority
+### 🟡 Medium Priority (TODO)
 
-| Improvement | Description | Impact |
-|-------------|-------------|--------|
+| Task | Description | Impact |
+|------|-------------|--------|
+| **Tribe Comparison Tool** | Side-by-side culture comparison | Education |
+| **Name Submission Form** | Allow users to submit new name meanings | Community |
 | **Keyboard Shortcuts** | G/L/M keys for view switching | Power users |
-| **Phonetic Guide Legend** | Explain symbols (caps = stress, hyphens = syllables) | Learning |
-| **Tribe Comparison** | Side-by-side culture comparison | Education |
-| **Favorites/Bookmarks** | Save favorite tribes locally | Engagement |
-| **Multi-language UI** | Translate to French, Swahili, etc. | Reach |
+| **Multi-language UI** | Translate to French, Swahili, Portuguese | Reach |
+| **More Blog Articles** | Expand coverage of Central/North African topics | Content |
 
-### 🟢 Future Ideas
+### 🟢 Future Ideas (Backlog)
 
 | Feature | Description |
 |---------|-------------|
-| **Cultural Quiz** | Interactive quiz about tribe traditions |
 | **Family Tree Builder** | Map multi-tribal heritage |
 | **AR Name Cards** | Augmented reality name meaning cards |
 | **Voice Search** | Speak a name to search |
-| **Tribe Comparison** | Side-by-side culture comparison |
 | **Historical Timeline** | Interactive migration timelines |
+| **API for Developers** | Public API for tribe data |
+| **Mobile App** | React Native or PWA app |
+| **User Accounts** | Save favorites, track quiz progress |
 
 ### 🐛 Known Issues
 
 | Issue | Status | Workaround |
 |-------|--------|------------|
-| Duplicate Sukuma entry in JSON | Low priority | De-duplication logic handles it |
-| Speech synthesis limited languages | Browser limitation | Falls back to closest locale |
 | Some smaller tribes lack gallery images | In progress | Adding images progressively |
+| Speech synthesis has limited African language support | Browser limitation | Falls back to closest locale |
+| Religion pie charts may not render on first load | Low priority | Refresh the page |
 
 ---
 
@@ -327,9 +410,9 @@ npm run preview
 All tribe data is triple fact-checked against verified sources:
 
 ### Academic Sources
-- Ethnologue (ethnologue.com)
-- Joshua Project (joshuaproject.net)
-- Wikipedia (with cross-referencing)
+- Ethnologue (ethnologue.com) - Language data
+- Joshua Project (joshuaproject.net) - Population estimates
+- Wikipedia (with cross-referencing) - Historical context
 
 ### Cultural Archives
 - Gikuyu Cultural Foundation
@@ -340,7 +423,7 @@ All tribe data is triple fact-checked against verified sources:
 
 ### Media Sources
 - YouTube documentaries (manually verified)
-- Cultural photography archives
+- Wikimedia Commons (cultural photography)
 
 ---
 
@@ -350,10 +433,11 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ### Areas Needing Help
 
-1. **Data Entry**: Adding more tribes, especially from Central/North Africa
-2. **Translations**: UI in African languages
-3. **Verification**: Cross-checking name meanings
+1. **Data Entry**: Adding tribes from Central/North Africa
+2. **Translations**: UI in African languages (French, Swahili, Arabic)
+3. **Verification**: Cross-checking name meanings and population data
 4. **Photography**: Cultural images with proper licensing
+5. **Content**: Blog articles on underrepresented regions
 
 ---
 
@@ -370,6 +454,7 @@ This application is for **entertainment and educational purposes only**.
 - Predictions are based on common naming patterns and may not be accurate for all names
 - Stereotypes presented are common perceptions and may not apply to individuals
 - We respect all cultures and aim to celebrate African diversity
+- Always verify important cultural information with authoritative sources
 
 ---
 
