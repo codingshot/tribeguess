@@ -16,6 +16,7 @@ import RecipePage from "./pages/RecipePage";
 import Recipes from "./pages/Recipes";
 import ReligionsPage from "./pages/ReligionsPage";
 import ReligionTimeline from "./pages/ReligionTimeline";
+import ReligionDetailPage from "./pages/ReligionDetailPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,7 +40,8 @@ const App = () => (
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipe/:id" element={<RecipePage />} />
             <Route path="/religions" element={<ReligionsPage />} />
-            <Route path="/religion" element={<ReligionTimeline />} />
+            <Route path="/religion/:id" element={<ReligionDetailPage />} />
+            <Route path="/religion-timeline" element={<ReligionTimeline />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

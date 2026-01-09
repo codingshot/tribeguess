@@ -504,6 +504,317 @@ export const traditionalReligions: TraditionalReligionData[] = [
       { name: "Wikipedia - Kongo people", url: "https://en.wikipedia.org/wiki/Kongo_people" },
       { name: "Britannica - Kingdom of Kongo", url: "https://www.britannica.com/place/Kongo-kingdom" }
     ]
+  },
+  {
+    id: "dogon-religion",
+    name: "Dogon Religion",
+    alternateNames: ["Amma worship", "Dogon spirituality"],
+    region: "West Africa",
+    estimatedFollowers: "~600,000",
+    countryBreakdown: [
+      { country: "Mali", flag: "🇲🇱", percentage: 95 },
+      { country: "Burkina Faso", flag: "🇧🇫", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Amma",
+      description: "The supreme creator god who created the universe from a cosmic egg. Amma made the Nommo, primordial beings who brought order to the universe. Amma is believed to have created the stars, including knowledge of Sirius.",
+      attributes: ["Creator", "Cosmic Egg Origin", "All-Knowing", "Distant yet Present"]
+    },
+    tenets: [
+      {
+        belief: "Nommo (Primordial Spirits)",
+        description: "Eight Nommo ancestors emerged from Amma's creation to organize the world. They are amphibious beings associated with water, fertility, and order. The Nommo taught humanity essential skills.",
+        source: "Conversations with Ogotemmêli - Griaule (1948)"
+      },
+      {
+        belief: "Sirius Star Knowledge",
+        description: "Dogon cosmology includes detailed knowledge of the Sirius star system, including Sirius B (Po Tolo). This astronomical knowledge has fascinated researchers and sparked debate about its origins.",
+        source: "The Pale Fox - Griaule & Dieterlen (1965)"
+      },
+      {
+        belief: "Bandiagara Cliffs as Sacred",
+        description: "The Bandiagara Escarpment is the sacred homeland where the Dogon settled, building cliff dwellings. The landscape is integral to religious practice and ancestral connection.",
+        source: "UNESCO World Heritage - Bandiagara"
+      },
+      {
+        belief: "Cyclical Renewal (Sigui)",
+        description: "Every 60 years, the Sigui ceremony renews the world and commemorates the first ancestor's death. It lasts 7 years and moves through villages.",
+        source: "Dogon Religious Art - Richards (2005)"
+      }
+    ],
+    practices: [
+      { name: "Hogon (High Priest)", description: "The Hogon is the spiritual leader, living in seclusion and mediating with Amma. He is forbidden to shake hands or be touched.", frequency: "Permanent role" },
+      { name: "Mask Dances (Dama)", description: "Elaborate masked ceremonies guide souls to the afterlife and honor ancestors. Masks represent animals, spirits, and mythological beings.", frequency: "Funeral & annual" },
+      { name: "Lebe Worship", description: "Veneration of Lebe, the first mortal transformed by Nommo after death. Lebe represents agricultural fertility.", frequency: "Regular offerings" }
+    ],
+    rituals: [
+      { name: "Sigui Festival", description: "Major ceremony every 60 years marking the renewal of generations. Initiates learn sacred language (Sigi so) and perform with Kanaga masks.", occasion: "Every 60 years (last 1967-1973)" },
+      { name: "Dama (Funeral Ceremony)", description: "Complex funeral rites with masked dances to guide the deceased's nyama (life force) to the ancestor realm. Can last days.", occasion: "After death" },
+      { name: "Bulu (Altar Rites)", description: "Offerings at family and village altars to maintain relationships with ancestors and Nommo spirits.", occasion: "Regular occasions" }
+    ],
+    sacredTexts: [
+      { name: "Sigi so", description: "A secret ritual language used only during Sigui ceremonies. Knowledge passed down through generations of initiates.", status: "oral" },
+      { name: "Oral Cosmogony", description: "Detailed creation narratives recorded by anthropologist Marcel Griaule through conversations with priest Ogotemmêli.", status: "oral" }
+    ],
+    joining: {
+      process: "Dogon religion is deeply tied to Dogon ethnicity and village membership. One must be born into a Dogon family and initiated through age-grade ceremonies. Outsiders may observe but not fully participate.",
+      requirements: [
+        "Dogon birth or marriage",
+        "Initiation through age ceremonies",
+        "Knowledge of clan taboos (togu)",
+        "Participation in village Dama and rituals"
+      ],
+      notes: "Islam has spread among some Dogon, but traditional practices remain strong, especially for funerals and the Sigui festival."
+    },
+    influence: {
+      cultural: "Dogon art, particularly their carved doors and masks, is world-renowned. Their astronomical knowledge sparked global interest and debate.",
+      modern: "Bandiagara is a UNESCO World Heritage Site. Dogon culture attracts researchers and tourists. The Sigui festival draws international attention."
+    },
+    tribesFollowing: [
+      { tribeSlug: "dogon", tribeName: "Dogon", percentage: 65, notes: "Some converted to Islam" },
+      { tribeSlug: "bambara", tribeName: "Bambara", percentage: 10, notes: "Some shared practices" }
+    ],
+    sources: [
+      { name: "Conversations with Ogotemmêli - Griaule", url: "https://en.wikipedia.org/wiki/Conversations_with_Ogotemmêli" },
+      { name: "Wikipedia - Dogon people", url: "https://en.wikipedia.org/wiki/Dogon_people" },
+      { name: "UNESCO - Bandiagara", url: "https://whc.unesco.org/en/list/516" }
+    ]
+  },
+  {
+    id: "dinka-religion",
+    name: "Dinka Religion",
+    alternateNames: ["Nhialic worship", "Jieng spirituality"],
+    region: "East Africa / Horn of Africa",
+    estimatedFollowers: "~3 million",
+    countryBreakdown: [
+      { country: "South Sudan", flag: "🇸🇸", percentage: 95 },
+      { country: "Sudan", flag: "🇸🇩", percentage: 3 },
+      { country: "Diaspora", flag: "🌍", percentage: 2 }
+    ],
+    supremeDeity: {
+      name: "Nhialic (Nhial)",
+      description: "The supreme sky god, ruler of all spirits, source of sustenance through rain. Nhialic is the creator who lives in the sky but is reached through intermediary spirits called Yath. Nhialic is invoked for rain, fertility, and justice.",
+      attributes: ["Sky God", "Rain Giver", "Creator", "Judge of Disputes"]
+    },
+    tenets: [
+      {
+        belief: "Cattle as Sacred",
+        description: "Cattle are central to Dinka spirituality, serving as bridewealth, sacrifice, and the measure of wealth. Each man has a 'personality ox' reflecting his character. Cattle connect humans to Nhialic.",
+        source: "Divinity and Experience - Lienhardt (1961)"
+      },
+      {
+        belief: "Yath (Divinities/Spirits)",
+        description: "Yath are spirits that possess people and clan groups. They include ancestor spirits, nature spirits, and spirits associated with specific places. Some Yath are benevolent, others dangerous.",
+        source: "Divinity and Experience - Lienhardt"
+      },
+      {
+        belief: "Beny Bith (Masters of the Fishing Spear)",
+        description: "Hereditary priestly lineages called 'spear-masters' mediate between humans and Nhialic. They perform sacrifices, settle disputes, and can invoke divine power.",
+        source: "The Dinka of the Sudan - Deng (1972)"
+      },
+      {
+        belief: "Clan Divinities (Jok)",
+        description: "Each clan has its own divinity (jok) inherited through the father. These clan divinities protect members and require specific rituals and taboos.",
+        source: "Dinka Cosmology - Malual (2013)"
+      }
+    ],
+    practices: [
+      { name: "Cattle Sacrifice", description: "Oxen are sacrificed to Nhialic and Yath for rain, healing, fertility, and to mark important life events. The color and form of the ox matter.", frequency: "Major occasions" },
+      { name: "Song and Dance", description: "Cattle songs (dit) praise animals and ancestors. Young men compose and perform songs at cattle camps, dances, and ceremonies.", frequency: "Daily at camps" },
+      { name: "Spear-Master Mediation", description: "Disputes are settled by spear-masters who invoke Nhialic's justice. Their curse is greatly feared.", frequency: "As needed" }
+    ],
+    rituals: [
+      { name: "Burial of the Spear-Master", description: "When a great spear-master dies, he is buried alive (traditionally) in a ceremony where he goes willingly into the grave, demonstrating power over death.", occasion: "Death of spear-master" },
+      { name: "Initiation (Gaar)", description: "Boys undergo scarification on the forehead (six horizontal lines), marking transition to manhood and clan membership.", occasion: "Adolescence" },
+      { name: "Rain-Making", description: "Spear-masters perform rituals to call rain from Nhialic during droughts, involving cattle sacrifice and invocations.", occasion: "Drought" }
+    ],
+    sacredTexts: [
+      { name: "Cattle Songs (Dit)", description: "Oral poetry praising cattle, ancestors, and personal achievements. Each man composes his own songs.", status: "oral" },
+      { name: "Myths of Origin", description: "Narratives of creation, the first Dinka, and the origin of cattle and spear-master lineages.", status: "oral" }
+    ],
+    joining: {
+      process: "One is Dinka by birth. Religion is inseparable from ethnic identity, cattle culture, and clan membership. The initiation scarification marks permanent entry into the community.",
+      requirements: [
+        "Dinka birth",
+        "Initiation scarification (gaar)",
+        "Cattle ownership (for full participation)",
+        "Knowledge of clan divinities and taboos"
+      ],
+      notes: "Christianity has spread among Dinka, especially in towns, but cattle sacrifice and traditional practices persist even among Christians."
+    },
+    influence: {
+      cultural: "Dinka cattle culture shaped the largest ethnic group in South Sudan. Their height, pastoral lifestyle, and ceremonies are distinctive in Africa.",
+      modern: "Many Dinka leaders in South Sudan government. The diaspora maintains cultural associations. Civil war has affected traditional practices."
+    },
+    tribesFollowing: [
+      { tribeSlug: "dinka", tribeName: "Dinka", percentage: 55, notes: "Many syncretic with Christianity" },
+      { tribeSlug: "nuer", tribeName: "Nuer", percentage: 45, notes: "Related Nilotic tradition" },
+      { tribeSlug: "shilluk", tribeName: "Shilluk", percentage: 35, notes: "Divine kingship tradition" }
+    ],
+    sources: [
+      { name: "Divinity and Experience - Lienhardt", url: "https://en.wikipedia.org/wiki/Godfrey_Lienhardt" },
+      { name: "Wikipedia - Dinka people", url: "https://en.wikipedia.org/wiki/Dinka_people" },
+      { name: "The Dinka of Sudan - Deng", url: "https://www.britannica.com/topic/Dinka" }
+    ]
+  },
+  {
+    id: "shona-mwari",
+    name: "Shona Religion (Mwari Cult)",
+    alternateNames: ["Mwari worship", "Matonjeni cult", "Shona Traditional Religion"],
+    region: "Southern Africa",
+    estimatedFollowers: "~4 million",
+    countryBreakdown: [
+      { country: "Zimbabwe", flag: "🇿🇼", percentage: 80 },
+      { country: "Mozambique", flag: "🇲🇿", percentage: 10 },
+      { country: "Botswana", flag: "🇧🇼", percentage: 5 },
+      { country: "South Africa", flag: "🇿🇦", percentage: 5 }
+    ],
+    supremeDeity: {
+      name: "Mwari (Musikavanhu)",
+      description: "The supreme creator god, 'the one who creates.' Mwari is a transcendent deity who can be approached through oracular shrines at Matonjeni in the Matobo Hills. Mwari speaks through appointed oracles.",
+      attributes: ["Creator", "Owner of All", "Oracular Voice", "Rainmaker"]
+    },
+    tenets: [
+      {
+        belief: "Mhondoro (Lion Spirits)",
+        description: "Powerful ancestor spirits of founding clan leaders become mhondoro after death. They possess spirit mediums and guide nations. Nehanda and Chaminuka are famous mhondoro.",
+        source: "The Spirits of the Shona - Bourdillon (1976)"
+      },
+      {
+        belief: "Vadzimu (Ancestor Spirits)",
+        description: "Family ancestors remain connected to the living, offering protection and guidance. Neglecting vadzimu causes misfortune. Regular offerings maintain the relationship.",
+        source: "Shona Religion - Gelfand (1962)"
+      },
+      {
+        belief: "N'anga (Traditional Healers)",
+        description: "N'anga are diviners and healers who diagnose spiritual causes of illness and misfortune. They communicate with vadzimu through divination bones and spirit possession.",
+        source: "Britannica - Shona religion"
+      },
+      {
+        belief: "Matobo Oracles",
+        description: "The Matobo Hills house shrines where the voice of Mwari speaks through human priests. Pilgrimages seek rain, healing, and guidance on national matters.",
+        source: "UNESCO - Matobo Hills"
+      }
+    ],
+    practices: [
+      { name: "Bira (Ancestor Ceremony)", description: "Night-long ceremonies with music, dance, and brewing to invite ancestor spirits to possess mediums and communicate with family.", frequency: "Regular/crisis" },
+      { name: "Mukwerera (Rain Ceremony)", description: "Ceremonies at Matobo shrines or local mountains asking Mwari for rain. Involves beer brewing and specific rituals.", frequency: "Drought/seasonal" },
+      { name: "N'anga Consultation", description: "Visiting traditional healers for divination using hakata (bones/shells) to determine spiritual causes of problems.", frequency: "As needed" }
+    ],
+    rituals: [
+      { name: "Kurova Guva", description: "Ceremony one year after death to bring the spirit home as a vadzimu ancestor. Essential for the deceased to become a protective ancestor.", occasion: "One year after death" },
+      { name: "Kutamba Muzukuru", description: "Ceremony for children who died. Prevents the spirit from causing harm to subsequent children.", occasion: "After child death" },
+      { name: "Nhimbe (Work Party)", description: "Communal labor with spiritual dimensions. Working together invokes ancestral blessings on the harvest.", occasion: "Planting/harvest" }
+    ],
+    sacredTexts: [
+      { name: "Oral Traditions", description: "Myths of creation, mhondoro histories, and proper ritual procedures passed through mediums and elders.", status: "oral" },
+      { name: "Praise Poetry (Nhango)", description: "Recitations of clan histories, totems, and mhondoro achievements during ceremonies.", status: "oral" }
+    ],
+    joining: {
+      process: "Shona religion is tied to Shona identity and clan membership. One inherits vadzimu through family. However, the Mwari cult has historically accepted pilgrims from multiple ethnic groups seeking rain.",
+      requirements: [
+        "Shona ancestry (for vadzimu connection)",
+        "Knowledge of totem and clan prohibitions",
+        "Participation in family bira ceremonies",
+        "Acceptance by clan elders"
+      ],
+      notes: "Most Shona are Christian but maintain vadzimu practices. The Matobo shrines continue to receive pilgrims. Spirit mediums were crucial in Zimbabwe's liberation war."
+    },
+    influence: {
+      cultural: "Shona religion shaped Great Zimbabwe civilization. Spirit mediums like Nehanda inspired resistance to colonialism. Mbira music has global influence.",
+      modern: "Traditional practices continue alongside Christianity. Matobo Hills are a UNESCO World Heritage Site. Spirit mediums remain influential."
+    },
+    tribesFollowing: [
+      { tribeSlug: "shona", tribeName: "Shona", percentage: 45, notes: "Most syncretic with Christianity" },
+      { tribeSlug: "ndebele", tribeName: "Ndebele (Zimbabwe)", percentage: 25, notes: "Adopted aspects after settling" },
+      { tribeSlug: "venda", tribeName: "Venda", percentage: 30, notes: "Related southern tradition" }
+    ],
+    sources: [
+      { name: "The Spirits of the Shona - Bourdillon", url: "https://en.wikipedia.org/wiki/Shona_religion" },
+      { name: "Wikipedia - Shona people", url: "https://en.wikipedia.org/wiki/Shona_people" },
+      { name: "UNESCO - Matobo Hills", url: "https://whc.unesco.org/en/list/306" }
+    ]
+  },
+  {
+    id: "ethiopian-orthodox",
+    name: "Ethiopian Orthodox Tewahedo Christianity",
+    alternateNames: ["Ethiopian Orthodox Church", "Tewahedo", "Ethiopian Christianity"],
+    region: "Horn of Africa",
+    estimatedFollowers: "~45 million",
+    countryBreakdown: [
+      { country: "Ethiopia", flag: "🇪🇹", percentage: 92 },
+      { country: "Eritrea", flag: "🇪🇷", percentage: 5 },
+      { country: "Diaspora", flag: "🌍", percentage: 3 }
+    ],
+    supremeDeity: {
+      name: "Egziabher (God)",
+      description: "The triune God of Christianity. Ethiopian Orthodoxy emphasizes Christ's unified divine-human nature (Miaphysitism). God is approached through intercession of Mary (Maryam), saints, and angels.",
+      attributes: ["Trinity", "Creator", "Redeemer", "One Nature of Christ"]
+    },
+    tenets: [
+      {
+        belief: "Tewahedo (One United Nature)",
+        description: "Christ has one united divine-human nature after incarnation - not two natures as in Chalcedonian Christianity. This Miaphysite doctrine defines Ethiopian Orthodoxy.",
+        source: "Ethiopian Orthodox Church Official"
+      },
+      {
+        belief: "Ark of the Covenant",
+        description: "Ethiopian tradition holds that the Ark of the Covenant is in Axum, brought by Menelik I, son of Solomon and Sheba. Every church has a replica (tabot) consecrating it.",
+        source: "Kebra Nagast (Glory of Kings)"
+      },
+      {
+        belief: "Judaic Practices",
+        description: "Ethiopian Christianity retains Jewish customs: Saturday Sabbath, kosher-style food laws, circumcision on 8th day, and ritual purity. This reflects ancient pre-Islamic Christian traditions.",
+        source: "Ethiopian Orthodoxy - Binns (2017)"
+      },
+      {
+        belief: "Saint Veneration",
+        description: "Saints, especially the Virgin Mary (Kidane Mehret), angels (especially Michael and Gabriel), and Ethiopian saints are venerated through feast days and icons.",
+        source: "Encyclopedia of Ethiopian Orthodox Church"
+      }
+    ],
+    practices: [
+      { name: "Fasting (Tsom)", description: "Over 250 fasting days annually. Fasts are vegan (no animal products). Wednesday, Friday, and major fasts like Lent are strictly observed.", frequency: "Regular" },
+      { name: "Daily Prayer", description: "Seven times daily prayer traditionally. Churches hold predawn services. Priests chant the Psalms of David.", frequency: "Daily" },
+      { name: "Pilgrimage", description: "Pilgrimages to Lalibela (rock-hewn churches), Axum (Ark of the Covenant), and Lake Tana monasteries. Major feast days draw millions.", frequency: "Annual feasts" },
+      { name: "Liturgical Dance (Debtera)", description: "Trained religious scholars perform sacred dances with sistrums and drums during major celebrations.", frequency: "Feast days" }
+    ],
+    rituals: [
+      { name: "Timkat (Epiphany)", description: "The holiest festival, celebrating Christ's baptism. Tabots are processed to water, and mass baptismal renewal occurs. January 19.", occasion: "January 19" },
+      { name: "Meskel (Finding of True Cross)", description: "Festival commemorating St. Helena finding the True Cross. Features massive bonfires (demera) and colorful processions. September 27.", occasion: "September 27" },
+      { name: "Hidar Zion (St. Mary Day)", description: "Feast of St. Mary of Zion on November 30. Massive pilgrimage to Axum where the Ark is kept.", occasion: "November 30" }
+    ],
+    sacredTexts: [
+      { name: "Ethiopian Bible (81 books)", description: "The Ethiopian Orthodox canon includes books not in other Bibles: Enoch, Jubilees, and others. The Ge'ez text is one of Christianity's oldest.", status: "written" },
+      { name: "Kebra Nagast", description: "The 'Glory of Kings' narrates how the Ark came to Ethiopia and establishes the Solomonic dynasty's divine right.", status: "written" },
+      { name: "Synaxarium", description: "Lives of saints read daily corresponding to the Ethiopian calendar's 13 months.", status: "written" }
+    ],
+    joining: {
+      process: "One may convert to Ethiopian Orthodoxy through catechism, baptism, and confirmation by a priest. Born members are baptized at 40 days (boys) or 80 days (girls) and receive communion from infancy.",
+      requirements: [
+        "Period of instruction in the faith",
+        "Baptism by triple immersion",
+        "Confirmation with holy chrism",
+        "Commitment to fasting and feast days"
+      ],
+      notes: "Ethiopian Orthodoxy is one of the oldest Christian churches, predating European Christianity. It has influenced Ethiopian culture for 1,700 years."
+    },
+    influence: {
+      cultural: "Ethiopian Orthodoxy shaped the Ethiopian Empire, calendar, art, music, and literature. The Ge'ez script was preserved through the church. Lalibela's churches are UNESCO sites.",
+      modern: "About 44% of Ethiopia is Orthodox. The church leads in education and social services. Diaspora communities maintain strong ties.",
+      diaspora: "Ethiopian Orthodox churches exist worldwide. Rastafari movement drew inspiration from Ethiopian Christianity and Haile Selassie."
+    },
+    tribesFollowing: [
+      { tribeSlug: "amhara", tribeName: "Amhara", percentage: 85, notes: "Historically the imperial church" },
+      { tribeSlug: "tigray", tribeName: "Tigray", percentage: 90, notes: "Axum is in Tigray" },
+      { tribeSlug: "oromo", tribeName: "Oromo", percentage: 35, notes: "Mixed with other faiths" },
+      { tribeSlug: "gurage", tribeName: "Gurage", percentage: 50, notes: "Mixed Orthodox and other" }
+    ],
+    sources: [
+      { name: "Ethiopian Orthodox Tewahedo Church", url: "https://en.wikipedia.org/wiki/Ethiopian_Orthodox_Tewahedo_Church" },
+      { name: "Britannica - Ethiopian Orthodox", url: "https://www.britannica.com/topic/Ethiopian-Orthodox-Tewahedo-Church" },
+      { name: "UNESCO - Lalibela", url: "https://whc.unesco.org/en/list/18" }
+    ]
   }
 ];
 
@@ -518,4 +829,15 @@ export const getAllReligions = (): TraditionalReligionData[] => {
 
 export const getReligionsByRegion = (region: string): TraditionalReligionData[] => {
   return traditionalReligions.filter(r => r.region === region);
+};
+
+// Find religion by name for linking from tribe pages
+export const findReligionByName = (religionName: string): TraditionalReligionData | undefined => {
+  const searchTerm = religionName.toLowerCase();
+  return traditionalReligions.find(r => 
+    r.name.toLowerCase().includes(searchTerm) ||
+    r.id.toLowerCase().includes(searchTerm) ||
+    r.alternateNames?.some(alt => alt.toLowerCase().includes(searchTerm)) ||
+    r.supremeDeity.name.toLowerCase().includes(searchTerm)
+  );
 };
