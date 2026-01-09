@@ -155,83 +155,71 @@ export default function ReligionsPage() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredReligions.map((religion) => (
-                <Card key={religion.id} className="hover:shadow-lg transition-shadow border-primary/20">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-lg text-primary">{religion.name}</CardTitle>
-                    <p className="text-xs text-muted-foreground">{religion.region} • {religion.estimatedFollowers}</p>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div>
-                      <p className="text-xs font-semibold text-muted-foreground uppercase">Supreme Deity</p>
-                      <p className="text-sm font-medium">{religion.supremeDeity.name}</p>
-                    </div>
-                    
-                    {/* Country Breakdown Mini Chart */}
-                    <div className="h-24">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
-                          <Pie
-                            data={religion.countryBreakdown.slice(0, 5)}
-                            dataKey="percentage"
-                            nameKey="country"
-                            cx="50%"
-                            cy="50%"
-                            outerRadius={35}
-                            innerRadius={20}
-                          >
-                            {religion.countryBreakdown.slice(0, 5).map((_, i) => (
-                              <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
-                            ))}
-                          </Pie>
-                          <Tooltip formatter={(value) => `${value}%`} />
-                        </PieChart>
-                      </ResponsiveContainer>
-                    </div>
-                    
-                    {/* Tribes Following */}
-                    <div>
-                      <p className="text-xs font-semibold text-muted-foreground uppercase">Tribes Following</p>
-                      <div className="flex flex-wrap gap-1 mt-1">
-                        {religion.tribesFollowing.slice(0, 3).map((tribe) => (
-                          <Link key={tribe.tribeSlug} to={`/learn/${tribe.tribeSlug}`}>
-                            <Badge variant="secondary" className="text-xs hover:bg-primary/20">
+                <Link key={religion.id} to={`/religion/${religion.id}`} className="block">
+                  <Card className="hover:shadow-lg transition-shadow border-primary/20 h-full hover:border-primary/50">
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-lg text-primary">{religion.name}</CardTitle>
+                      <p className="text-xs text-muted-foreground">{religion.region} • {religion.estimatedFollowers}</p>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div>
+                        <p className="text-xs font-semibold text-muted-foreground uppercase">Supreme Deity</p>
+                        <p className="text-sm font-medium">{religion.supremeDeity.name}</p>
+                      </div>
+                      
+                      <div className="h-24">
+                        <ResponsiveContainer width="100%" height="100%">
+                          <PieChart>
+                            <Pie
+                              data={religion.countryBreakdown.slice(0, 5)}
+                              dataKey="percentage"
+                              nameKey="country"
+                              cx="50%"
+                              cy="50%"
+                              outerRadius={35}
+                              innerRadius={20}
+                            >
+                              {religion.countryBreakdown.slice(0, 5).map((_, i) => (
+                                <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
+                              ))}
+                            </Pie>
+                            <Tooltip formatter={(value) => `${value}%`} />
+                          </PieChart>
+                        </ResponsiveContainer>
+                      </div>
+                      
+                      <div>
+                        <p className="text-xs font-semibold text-muted-foreground uppercase">Tribes Following</p>
+                        <div className="flex flex-wrap gap-1 mt-1">
+                          {religion.tribesFollowing.slice(0, 3).map((tribe) => (
+                            <Badge key={tribe.tribeSlug} variant="secondary" className="text-xs">
                               {tribe.tribeName} ({tribe.percentage}%)
                             </Badge>
-                          </Link>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Key Tenets */}
-                    <div>
-                      <p className="text-xs font-semibold text-muted-foreground uppercase">Core Tenets</p>
-                      <ul className="text-xs text-muted-foreground list-disc list-inside mt-1">
-                        {religion.tenets.slice(0, 2).map((tenet, i) => (
-                          <li key={i}>{tenet.belief}</li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Sources */}
-                    <div className="pt-2 border-t border-border">
-                      <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                        <ExternalLink className="w-3 h-3" />
-                        Sources:
-                        {religion.sources.slice(0, 2).map((source, i) => (
-                          <a 
-                            key={i}
-                            href={source.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline"
-                          >
-                            [{i + 1}]
-                          </a>
-                        ))}
+                      <div>
+                        <p className="text-xs font-semibold text-muted-foreground uppercase">Core Tenets</p>
+                        <ul className="text-xs text-muted-foreground list-disc list-inside mt-1">
+                          {religion.tenets.slice(0, 2).map((tenet, i) => (
+                            <li key={i}>{tenet.belief}</li>
+                          ))}
+                        </ul>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+
+                      <div className="pt-2 border-t border-border flex items-center justify-between">
+                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                          <ExternalLink className="w-3 h-3" />
+                          {religion.sources.length} sources
+                        </div>
+                        <span className="text-xs text-primary flex items-center gap-1">
+                          View details <ChevronRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </section>

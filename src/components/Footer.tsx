@@ -48,8 +48,11 @@ export function Footer() {
               <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Cultural Blog
               </Link>
-              <Link to="/religion" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/religion-timeline" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Religion Timeline
+              </Link>
+              <Link to="/religions" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Traditional Religions
               </Link>
             </nav>
           </div>
