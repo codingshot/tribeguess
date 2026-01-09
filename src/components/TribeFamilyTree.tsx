@@ -28,13 +28,28 @@ interface FamilyTreeProps {
 }
 
 // Comprehensive African language family hierarchy
-const languageFamilyHierarchy: Record<string, { parent?: string; siblings: string[]; description: string; speakersRange?: string }> = {
+const languageFamilyHierarchy: Record<string, { parent?: string; siblings: string[]; description: string; speakersRange?: string; migrationNote?: string }> = {
   // Niger-Congo (largest family)
   'Bantu (Niger-Congo)': {
     parent: 'Niger-Congo',
     siblings: ['Nguni', 'Great Lakes Bantu', 'Congo Basin Bantu', 'East African Bantu', 'Southern Bantu'],
     description: 'Largest African language family with 500+ languages, spoken from Cameroon to South Africa',
-    speakersRange: '350+ million'
+    speakersRange: '350+ million',
+    migrationNote: 'Bantu expansion began ~3000 BCE from Cameroon/Nigeria, reaching Southern Africa by 500 CE'
+  },
+  'Grassfields Bantu (Niger-Congo)': {
+    parent: 'Niger-Congo',
+    siblings: ['Bamileke languages', 'Bamoun', 'Tikar', 'Ring languages'],
+    description: 'Highland languages of Cameroon\'s Western grassfields, known for complex chieftaincy systems',
+    speakersRange: '5+ million',
+    migrationNote: 'Remained in the Bantu homeland region while others migrated south and east'
+  },
+  'Nguni (Bantu, Niger-Congo)': {
+    parent: 'Bantu (Niger-Congo)',
+    siblings: ['Zulu', 'Xhosa', 'Swazi', 'Ndebele'],
+    description: 'Southern Bantu languages characterized by click consonants borrowed from Khoisan',
+    speakersRange: '25+ million',
+    migrationNote: 'Nguni speakers arrived in Southern Africa around 1000 CE, adopting clicks from Khoisan peoples'
   },
   'Niger-Congo (Volta-Niger)': {
     parent: 'Niger-Congo',
@@ -52,7 +67,8 @@ const languageFamilyHierarchy: Record<string, { parent?: string; siblings: strin
     parent: 'Niger-Congo',
     siblings: ['Mandinka', 'Bambara', 'Dyula', 'Soninke'],
     description: 'West African languages with rich oral traditions and historical empires',
-    speakersRange: '40+ million'
+    speakersRange: '40+ million',
+    migrationNote: 'Mande languages spread with the Mali and Songhai empires (13th-16th centuries)'
   },
   'Niger-Congo (Gur)': {
     parent: 'Niger-Congo',
@@ -66,13 +82,36 @@ const languageFamilyHierarchy: Record<string, { parent?: string; siblings: strin
     description: 'Coastal West African languages including Akan (~30M speakers)',
     speakersRange: '40+ million'
   },
+  'Gbe (Niger-Congo)': {
+    parent: 'Niger-Congo (Kwa)',
+    siblings: ['Ewe', 'Fon', 'Gen', 'Aja'],
+    description: 'Vodun-practicing coastal peoples of Ghana, Togo, Benin; origin of Haitian Voodoo',
+    speakersRange: '10+ million'
+  },
+  
+  // Afro-Asiatic (including Berber)
+  'Berber (Afro-Asiatic)': {
+    parent: 'Afro-Asiatic',
+    siblings: ['Tamazight', 'Kabyle', 'Tuareg (Tamasheq)', 'Riffian', 'Shilha'],
+    description: 'Indigenous languages of North Africa predating Arab conquest, with ancient Tifinagh script',
+    speakersRange: '30+ million',
+    migrationNote: 'Berber peoples have inhabited North Africa for at least 5,000 years, with Tuareg expanding across Sahara'
+  },
   
   // Nilo-Saharan
   'Nilotic': {
     parent: 'Nilo-Saharan',
     siblings: ['Western Nilotic (Luo, Dinka)', 'Eastern Nilotic (Maasai, Turkana)', 'Southern Nilotic (Kalenjin)'],
     description: 'East African pastoralist languages spoken from South Sudan to Tanzania',
-    speakersRange: '30+ million'
+    speakersRange: '30+ million',
+    migrationNote: 'Nilotic peoples migrated south from the Nile Valley starting ~3000 years ago'
+  },
+  'Nilo-Saharan (Eastern Sudanic)': {
+    parent: 'Nilo-Saharan',
+    siblings: ['Nubian', 'Nara', 'Tama', 'Nilotic'],
+    description: 'Ancient language family of the Nile Valley and Sudan, including the Nubian languages',
+    speakersRange: '35+ million',
+    migrationNote: 'Nubians have lived in the Nile Valley for over 5,000 years with the Kingdom of Kush'
   },
   'Western Nilotic': {
     parent: 'Nilotic',
@@ -98,7 +137,8 @@ const languageFamilyHierarchy: Record<string, { parent?: string; siblings: strin
     parent: 'Afroasiatic',
     siblings: ['Highland East Cushitic', 'Lowland East Cushitic (Oromo, Somali)', 'Central Cushitic'],
     description: 'Major Horn of Africa family including Oromo (~40M) and Somali (~20M)',
-    speakersRange: '70+ million'
+    speakersRange: '70+ million',
+    migrationNote: 'Cushitic peoples have inhabited the Horn of Africa for over 7,000 years'
   },
   'Cushitic (Afro-Asiatic)': {
     parent: 'Afroasiatic',
@@ -116,6 +156,13 @@ const languageFamilyHierarchy: Record<string, { parent?: string; siblings: strin
     parent: 'Semitic',
     siblings: ['Amharic', 'Tigrinya', 'Tigre', 'Gurage languages'],
     description: 'Unique African Semitic languages with the ancient Ge\'ez script tradition',
+    speakersRange: '40+ million',
+    migrationNote: 'South Arabian migrants crossed the Red Sea ~3000 years ago, founding Aksumite civilization'
+  },
+  'Ethiopian Semitic (Afro-Asiatic)': {
+    parent: 'Afroasiatic',
+    siblings: ['Amharic', 'Tigrinya', 'Gurage', 'Harari'],
+    description: 'Unique African Semitic languages using the ancient Ge\'ez script system',
     speakersRange: '40+ million'
   },
   'Afroasiatic (Chadic)': {
@@ -130,7 +177,8 @@ const languageFamilyHierarchy: Record<string, { parent?: string; siblings: strin
     parent: undefined,
     siblings: ['!Kung', 'Nama', 'Sandawe', 'Hadza'],
     description: 'Ancient click languages of Southern Africa, among oldest human language families',
-    speakersRange: '~400,000'
+    speakersRange: '~400,000',
+    migrationNote: 'Khoisan peoples are among the oldest human populations, present in Southern Africa for 100,000+ years'
   }
 };
 
@@ -244,9 +292,24 @@ export const TribeFamilyTree: React.FC<FamilyTreeProps> = ({ currentTribe, ethni
                           <strong>Sub-groups:</strong> {familyInfo.siblings.join(', ')}
                         </p>
                       )}
+                      {familyInfo?.migrationNote && (
+                        <p className="text-xs mt-1 text-primary/80 italic">
+                          🗺️ {familyInfo.migrationNote}
+                        </p>
+                      )}
                     </TooltipContent>
                   </Tooltip>
                 </div>
+                
+                {/* Migration history note if available */}
+                {familyInfo?.migrationNote && (
+                  <div className="mt-2 p-2 bg-primary/5 rounded-lg border border-primary/20">
+                    <p className="text-xs text-muted-foreground flex items-start gap-1">
+                      <span className="text-primary">🗺️</span>
+                      <span><strong>Migration:</strong> {familyInfo.migrationNote}</span>
+                    </p>
+                  </div>
+                )}
                 
                 {/* Current language */}
                 {currentTribe.language?.name && (
