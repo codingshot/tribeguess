@@ -7481,11 +7481,252 @@ const southernAfricanRecipes: Recipe[] = [
   }
 ];
 
+// ============ WEST AFRICAN RECIPES (Expanded) ============
+const westAfricanRecipes: Recipe[] = [
+  {
+    id: "pounded-yam",
+    name: "Pounded Yam (Iyan)",
+    tribeSlug: "yoruba",
+    tribeName: "Yoruba",
+    category: "staple",
+    description: "Smooth, stretchy dough made from boiled yams pounded to perfection. The most prestigious Nigerian staple, served with rich soups.",
+    culturalSignificance: "Pounded yam is considered the 'king' of Nigerian swallows. Serving it signals celebration and respect for guests. No proper Yoruba ceremony is complete without it.",
+    historicalContext: "Yams have been cultivated in West Africa for over 10,000 years. Pounding yams was traditionally women's work - the rhythmic sound of pestles was the heartbeat of village life. The yam is so important that festivals (New Yam Festival) celebrate its harvest.",
+    youtubeVideoId: "Z4nqLzj6zso",
+    prepTime: "20 minutes",
+    cookTime: "40 minutes",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "White yam (puna yam)", amount: "2 kg", notes: "Peeled and cubed" },
+      { item: "Water", amount: "For boiling" }
+    ],
+    instructions: [
+      "Peel yams and cut into medium chunks.",
+      "Boil in water until very soft (30-40 minutes). Test with fork - should slide in easily.",
+      "Drain most water, leaving just a little.",
+      "Transfer hot yams to a mortar (or use yam pounder machine).",
+      "Pound with pestle, adding tiny amounts of warm water as needed.",
+      "Continue pounding until completely smooth with no lumps (10-15 minutes).",
+      "The perfect pounded yam should stretch when pulled and be silky smooth.",
+      "Shape into mounds and serve immediately with egusi, efo riro, or ogbono soup."
+    ],
+    tips: [
+      "Yams must be pounded while hot for best results",
+      "Modern Nigerians often use yam flour (poundo yam) for convenience",
+      "The traditional mortar and pestle gives the best texture"
+    ]
+  },
+  {
+    id: "suya",
+    name: "Suya (Spiced Grilled Meat)",
+    tribeSlug: "hausa",
+    tribeName: "Hausa",
+    category: "snack",
+    description: "Thinly sliced beef or chicken coated in spicy peanut spice (yaji) and grilled over charcoal. Nigeria's beloved street food.",
+    culturalSignificance: "Suya is Nigeria's national street food, originally from the Hausa people. Suya spots come alive at night across Nigeria. It transcends ethnic boundaries.",
+    historicalContext: "Suya originated with Hausa cattle herders in Northern Nigeria. The spice blend (yaji) was developed to preserve and flavor meat. Today it's found across West Africa and beyond.",
+    youtubeVideoId: "6nT0bWmLdkI",
+    prepTime: "30 minutes (plus marinating)",
+    cookTime: "15 minutes",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef (sirloin or flank)", amount: "1 kg", notes: "Sliced very thin" },
+      { item: "Yaji spice mix (or make below)", amount: "1 cup" },
+      { item: "Vegetable oil", amount: "4 tablespoons" },
+      { item: "Onion", amount: "1 large", notes: "Sliced into rings" },
+      { item: "Tomatoes", amount: "2", notes: "Sliced" },
+      { item: "Cabbage", amount: "1/4 head", notes: "Shredded (for serving)" }
+    ],
+    instructions: [
+      "For yaji spice: Mix 1 cup roasted groundnut powder, 2 tbsp cayenne, 1 tbsp ginger, 1 tbsp garlic powder, 1 tbsp onion powder, 1 tsp bouillon powder, salt to taste.",
+      "Slice beef very thin (across the grain) into 2-inch wide strips.",
+      "Thread meat onto skewers (soaked wooden or metal).",
+      "Coat generously with yaji spice, pressing to adhere.",
+      "Drizzle with oil and let marinate 2-24 hours.",
+      "Grill over hot charcoal, turning frequently (5-7 minutes total).",
+      "Brush with more oil and sprinkle more yaji while grilling.",
+      "Serve hot with sliced onions, tomatoes, and cabbage. Wrap in newspaper (traditional)."
+    ],
+    tips: [
+      "Very thin slicing is key - some use freezing to help slice",
+      "Authentic suya uses beef, but chicken, ram, and kidney are popular",
+      "Night-time suya tastes different - it's a social experience"
+    ]
+  },
+  {
+    id: "fufu-ghanaian",
+    name: "Fufu (Ghanaian)",
+    tribeSlug: "akan",
+    tribeName: "Akan",
+    category: "staple",
+    description: "Smooth, stretchy dough made from pounded cassava and plantain. Ghana's beloved staple, served with light soup or palm nut soup.",
+    culturalSignificance: "Fufu is the soul of Ghanaian cuisine. Eating fufu is an art - you pinch, dip in soup, and swallow without chewing. Sunday fufu is a family tradition.",
+    historicalContext: "Fufu likely developed when cassava arrived from the Americas in the 16th century. Ghanaians perfected the cassava-plantain combination. The pounding creates the distinctive stretch.",
+    youtubeVideoId: "uRbLLx5eoHU",
+    prepTime: "20 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava", amount: "1 kg", notes: "Peeled and cubed" },
+      { item: "Ripe plantains", amount: "2 large", notes: "Peeled and cubed" },
+      { item: "Water", amount: "For boiling" }
+    ],
+    instructions: [
+      "Peel cassava, remove central fiber, and cut into chunks.",
+      "Peel plantains and cut into chunks.",
+      "Boil cassava first (it takes longer) for 15 minutes.",
+      "Add plantains and continue boiling until both are very soft (20-25 more minutes).",
+      "Drain and transfer to a large mortar.",
+      "Pound together, wetting the pestle occasionally, until completely smooth and elastic.",
+      "Two people traditionally work together - one pounds, one turns the dough.",
+      "Shape into smooth balls and serve in soup bowls with light soup or palm nut soup."
+    ],
+    tips: [
+      "Modern cooks use fufu flour (instant) for convenience",
+      "The dough should stretch without breaking when pulled",
+      "Fufu is swallowed, not chewed - this is etiquette"
+    ]
+  },
+  {
+    id: "kelewele",
+    name: "Kelewele (Spiced Fried Plantains)",
+    tribeSlug: "akan",
+    tribeName: "Akan/Ghanaian",
+    category: "snack",
+    description: "Ripe plantain cubes marinated in ginger and spices, then deep-fried until caramelized and crispy. Ghana's favorite street snack.",
+    culturalSignificance: "Kelewele is Ghana's beloved street food, found at every corner. It's the perfect accompaniment to roasted peanuts and served at parties and celebrations.",
+    historicalContext: "Plantains came to Africa from Southeast Asia centuries ago. Ghanaians developed kelewele as a way to add excitement to the fruit. The ginger-spice blend is distinctively Ghanaian.",
+    youtubeVideoId: "6hVmR2hVt3U",
+    prepTime: "20 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Ripe plantains", amount: "4", notes: "Skin should be mostly yellow with black spots" },
+      { item: "Fresh ginger", amount: "2 inches", notes: "Grated or blended" },
+      { item: "Cayenne pepper", amount: "1/2 teaspoon" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Onion", amount: "1/4", notes: "Grated (optional)" },
+      { item: "Vegetable oil", amount: "For deep frying" }
+    ],
+    instructions: [
+      "Peel plantains and cut into 1-inch cubes.",
+      "Blend or grate ginger and mix with cayenne, salt, and grated onion.",
+      "Toss plantain cubes in the spice mixture.",
+      "Let marinate for 15-30 minutes.",
+      "Heat oil to 180°C/350°F.",
+      "Fry plantains in batches until golden brown and caramelized (3-4 minutes per batch).",
+      "Drain on paper towels.",
+      "Serve hot with roasted groundnuts (peanuts)."
+    ],
+    tips: [
+      "Plantains should be ripe but still firm - not mushy",
+      "Don't overcrowd the oil - fry in batches",
+      "Some add garlic, anise, or nutmeg to the spice blend"
+    ]
+  },
+  {
+    id: "mafe",
+    name: "Mafé (Peanut Stew)",
+    tribeSlug: "wolof",
+    tribeName: "Wolof/Senegalese",
+    category: "special",
+    description: "Rich, creamy stew with meat simmered in peanut sauce with vegetables. Senegal's comfort food, eaten across West Africa.",
+    culturalSignificance: "Mafé embodies Senegalese teranga (hospitality). It's a communal dish, served on a large platter for the family to share. Every grandmother has her secret recipe.",
+    historicalContext: "Mafé developed from the peanut (groundnut) cultivation brought to West Africa. Senegal became a major groundnut producer under French colonialism. The stew combines African and imported ingredients.",
+    youtubeVideoId: "dMW3oTjYGfo",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef or lamb", amount: "1 kg", notes: "Cut into chunks" },
+      { item: "Natural peanut butter", amount: "1 cup", notes: "Or ground peanuts" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Tomato paste", amount: "3 tablespoons" },
+      { item: "Tomatoes", amount: "3", notes: "Blended" },
+      { item: "Vegetable oil", amount: "4 tablespoons" },
+      { item: "Sweet potato", amount: "2", notes: "Cubed" },
+      { item: "Carrots", amount: "2", notes: "Cubed" },
+      { item: "Cabbage", amount: "1/4 head", notes: "Quartered (optional)" },
+      { item: "Scotch bonnet pepper", amount: "1", notes: "Whole (for flavor)" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Season meat with salt and brown in oil in a large pot.",
+      "Remove meat and sauté onions until golden.",
+      "Add tomato paste and cook for 2 minutes.",
+      "Add blended tomatoes and cook until oil separates (10 minutes).",
+      "Dissolve peanut butter in 2 cups warm water and add to pot.",
+      "Return meat to pot and add enough water to cover.",
+      "Simmer for 30 minutes until meat is almost tender.",
+      "Add sweet potato, carrots, and whole pepper.",
+      "Cook 20 more minutes until vegetables are tender and sauce is thick.",
+      "Serve over rice with the vegetables arranged on top."
+    ],
+    tips: [
+      "Natural peanut butter (no sugar) is essential for authentic flavor",
+      "The sauce should be thick and creamy, not watery",
+      "Fish or chicken can substitute for beef"
+    ]
+  },
+  {
+    id: "thieboudienne",
+    name: "Thieboudienne (Senegalese Fish Rice)",
+    tribeSlug: "wolof",
+    tribeName: "Wolof/Senegalese",
+    category: "special",
+    description: "Senegal's national dish - fish stuffed with herbs, cooked with vegetables, and served on tomato-stained rice. A one-pot masterpiece.",
+    culturalSignificance: "Thieboudienne is Senegal's national dish, inscribed on UNESCO's Intangible Cultural Heritage list. It represents Senegalese teranga (hospitality) and communal eating.",
+    historicalContext: "Thieboudienne originated in Saint-Louis, Senegal in the 19th century. It combines local fishing traditions with rice introduced through trade. The dish is served on a large platter for family sharing.",
+    youtubeVideoId: "2p3qGD2K8yU",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Whole fish (thiof, grouper, or white fish)", amount: "1.5 kg", notes: "Scaled and cleaned" },
+      { item: "Rice (broken)", amount: "3 cups" },
+      { item: "Tomato paste", amount: "4 tablespoons" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Onion", amount: "2 large", notes: "Sliced" },
+      { item: "Cabbage", amount: "1/4 head" },
+      { item: "Cassava", amount: "200g", notes: "Cubed" },
+      { item: "Sweet potato", amount: "1 large", notes: "Cubed" },
+      { item: "Carrots", amount: "2" },
+      { item: "Eggplant", amount: "1 small" },
+      { item: "Tamarind paste", amount: "2 tablespoons" },
+      { item: "Rof (stuffing): parsley, garlic, pepper, fish bouillon", amount: "Mixed into paste" }
+    ],
+    instructions: [
+      "Make rof: blend parsley, garlic, pepper, and bouillon into paste.",
+      "Make incisions in fish and stuff with rof.",
+      "Heat oil and fry fish briefly on both sides. Set aside.",
+      "In same oil, fry onions until golden, add tomato paste, cook 5 minutes.",
+      "Add water (8 cups), tamarind, and bring to boil.",
+      "Add vegetables in order of cooking time (cassava first, then others).",
+      "When vegetables are tender, remove them and fish to platter.",
+      "Add rice to the cooking liquid. It should absorb all liquid.",
+      "Cover and cook rice until done (20-25 minutes).",
+      "Serve rice in center of platter, arrange fish and vegetables around it."
+    ],
+    tips: [
+      "The tomato-stained rice is essential - it should be red-orange",
+      "Different regions have variations - white thieboudienne uses no tomato",
+      "Traditionally served in a large communal bowl"
+    ]
+  }
+];
+
 // Combine all recipes
 recipes.push(...beverageRecipes);
 recipes.push(...centralAfricanRecipes);
 recipes.push(...eastAfricanRecipes);
 recipes.push(...southernAfricanRecipes);
+recipes.push(...westAfricanRecipes);
 
 // Get similar recipes from other tribes (same category)
 export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {
