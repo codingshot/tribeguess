@@ -10,11 +10,12 @@ import { Progress } from '@/components/ui/progress';
 import {
   Languages, Users, Clock, MapPin, BookOpen, Volume2, GitBranch,
   ArrowRight, ChevronRight, Globe, Scroll, PenTool, MessageCircle,
-  History, Link2, Sparkles, ArrowLeft
+  History, Link2, Sparkles, ArrowLeft, UtensilsCrossed
 } from 'lucide-react';
 import { getAllTribes } from '@/lib/tribeDetection';
 import languageFamiliesData from '@/data/languageFamilies.json';
 import { AudioGreeting } from '@/components/AudioGreeting';
+import { recipes } from '@/data/recipes';
 
 interface SubFamily {
   name: string;
@@ -65,17 +66,33 @@ export default function LanguageFamilyPage() {
     );
   }
 
-  // Find tribes that belong to this language family
+  // Find tribes that belong to this language family with improved matching
   const relatedTribes = allTribes.filter(tribe => {
     const tribeFamily = (tribe as any).language?.family?.toLowerCase() || '';
-    return tribeFamily.includes(family.id) || 
-           family.subFamilies.some((sf: SubFamily) => 
-             tribeFamily.includes(sf.slug) || 
-             sf.notableLanguages.some(lang => 
-               tribeFamily.toLowerCase().includes(lang.toLowerCase().split('/')[0].split('(')[0].trim())
-             )
-           );
+    const familyId = family.id.toLowerCase();
+    const familyName = family.name.toLowerCase();
+    
+    // Direct match on family id or name
+    if (tribeFamily.includes(familyId) || tribeFamily.includes(familyName)) return true;
+    
+    // Match on sub-families
+    return family.subFamilies.some((sf: SubFamily) => {
+      const subFamilySlug = sf.slug.toLowerCase();
+      const subFamilyName = sf.name.toLowerCase();
+      if (tribeFamily.includes(subFamilySlug) || tribeFamily.includes(subFamilyName)) return true;
+      
+      // Match on notable languages within sub-family
+      return sf.notableLanguages.some(lang => {
+        const langName = lang.toLowerCase().split('/')[0].split('(')[0].trim();
+        return tribeFamily.includes(langName);
+      });
+    });
   });
+
+  // Find related recipes from tribes that speak this language family
+  const relatedRecipes = recipes.filter(recipe => 
+    relatedTribes.some(tribe => tribe.slug === recipe.tribeSlug)
+  ).slice(0, 8);
 
   // Format year for timeline
   const formatYear = (year: number) => {
@@ -162,12 +179,13 @@ export default function LanguageFamilyPage() {
 
           {/* Main Content Tabs */}
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 md:grid-cols-5">
+            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-3 md:grid-cols-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="phrases">Phrases</TabsTrigger>
               <TabsTrigger value="timeline">Timeline</TabsTrigger>
               <TabsTrigger value="subfamilies">Sub-families</TabsTrigger>
               <TabsTrigger value="tribes">Tribes</TabsTrigger>
+              <TabsTrigger value="recipes">Recipes</TabsTrigger>
             </TabsList>
 
             {/* Overview Tab */}
@@ -468,6 +486,61 @@ export default function LanguageFamilyPage() {
                       <Users className="w-12 h-12 mx-auto mb-4 opacity-50" />
                       <p>No tribes with this language family found in our database yet.</p>
                       <p className="text-sm mt-2">We're continuously adding more tribes!</p>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* Recipes Tab */}
+            <TabsContent value="recipes" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <UtensilsCrossed className="w-5 h-5 text-primary" />
+                    Traditional Cuisine of {family.name} Speakers
+                  </CardTitle>
+                  <CardDescription>
+                    Explore traditional recipes from tribes speaking {family.name} languages
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {relatedRecipes.length > 0 ? (
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {relatedRecipes.map((recipe) => (
+                        <Link
+                          key={recipe.id}
+                          to={`/recipe/${recipe.id}`}
+                          className="group p-4 bg-muted/30 hover:bg-muted/60 rounded-lg border border-border hover:border-primary/30 transition-colors"
+                        >
+                          <Badge variant="secondary" className="text-xs mb-2">{recipe.tribeName}</Badge>
+                          <h4 className="font-semibold text-sm group-hover:text-primary transition-colors">{recipe.name}</h4>
+                          <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{recipe.description}</p>
+                          <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+                            <Badge variant="outline" className="text-xs">{recipe.category}</Badge>
+                            <span>{recipe.prepTime}</span>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center py-8 text-muted-foreground">
+                      <UtensilsCrossed className="w-12 h-12 mx-auto mb-4 opacity-50" />
+                      <p>No recipes from {family.name}-speaking tribes in our database yet.</p>
+                      <Link to="/recipes" className="text-primary hover:underline text-sm mt-2 inline-block">
+                        Browse all African recipes →
+                      </Link>
+                    </div>
+                  )}
+                  
+                  {relatedRecipes.length > 0 && (
+                    <div className="mt-6 text-center">
+                      <Link to="/recipes">
+                        <Button variant="outline" size="sm">
+                          View All Recipes
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </Link>
                     </div>
                   )}
                 </CardContent>

@@ -1195,6 +1195,535 @@
         "culturalExports": ["Griot traditions (jeli)", "Kora and balafon music", "N'Ko script", "Islam in West Africa", "Gold mining techniques"],
         "diasporaInfluence": "Mandinka influence in Gambia/Senegal, Dyula trade diaspora across Sahel, Mande music influences global music (Ali Farka Touré, Salif Keita)"
       }
+    },
+    {
+      "id": "chadic",
+      "slug": "chadic",
+      "name": "Chadic",
+      "alternateNames": ["Chad Languages"],
+      "totalSpeakers": "100+ million",
+      "numberOfLanguages": "190+",
+      "geographicSpread": "Nigeria, Niger, Chad, Cameroon, Central African Republic",
+      "color": "from-rose-500 to-pink-600",
+      "description": "The largest branch of Afroasiatic in Africa by number of languages, dominated by Hausa - one of Africa's most widely spoken languages with 80+ million speakers and a major trade lingua franca across the Sahel.",
+      "overview": "Chadic languages are centered around Lake Chad and the Sahel region. Hausa, the family's giant, has been a trade language for centuries, spreading across West Africa through the famous Hausa merchant networks. The family includes nearly 200 languages, making it the most linguistically diverse branch of Afroasiatic. Hausa's influence extended along trans-Saharan trade routes, and today it's one of Africa's major languages with rich literary traditions.",
+      "characteristics": [
+        {
+          "name": "Tone Systems",
+          "description": "Most Chadic languages are tonal, with 2-3 tones distinguishing word meanings and grammatical functions."
+        },
+        {
+          "name": "Grammatical Gender",
+          "description": "Two-gender system (masculine/feminine) inherited from Afroasiatic, affecting nouns, pronouns, and verb agreement."
+        },
+        {
+          "name": "Aspect-Prominent Verbs",
+          "description": "Verbs focus on whether actions are completed or ongoing (aspect) rather than when they happen (tense)."
+        },
+        {
+          "name": "Lateral Fricatives",
+          "description": "Distinctive sounds not found in most world languages, including lateral fricatives and implosives."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Ajami script (Arabic) used for Hausa literature since the Sokoto Caliphate (1804)",
+        "modern": "Latin alphabet (Boko) is standard; Arabic script (Ajami) continues for religious and some literary texts",
+        "examples": [
+          { "script": "Latin (Boko)", "text": "Sannu", "meaning": "Hello", "pronunciation": "SAHN-noo" },
+          { "script": "Ajami", "text": "سَنُّو", "meaning": "Hello", "pronunciation": "SAHN-noo" },
+          { "script": "Latin (Hausa)", "text": "Na gode", "meaning": "Thank you", "pronunciation": "nah GOH-deh" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Sannu", "language": "Hausa", "meaning": "Hello", "pronunciation": "SAHN-noo" },
+        { "phrase": "Ina kwana?", "language": "Hausa", "meaning": "How did you sleep?", "pronunciation": "EE-nah KWAH-nah" },
+        { "phrase": "Lafiya", "language": "Hausa", "meaning": "Fine/Well", "pronunciation": "lah-FEE-yah" },
+        { "phrase": "Na gode", "language": "Hausa", "meaning": "Thank you", "pronunciation": "nah GOH-deh" },
+        { "phrase": "Sai anjima", "language": "Hausa", "meaning": "See you later", "pronunciation": "sigh ahn-JEE-mah" },
+        { "phrase": "Ka zo lafiya?", "language": "Hausa", "meaning": "Did you come well?", "pronunciation": "kah zoh lah-FEE-yah" }
+      ],
+      "timeline": [
+        { "year": -2000, "event": "Proto-Chadic speakers settle around Lake Chad", "significance": "Origins of Chadic family" },
+        { "year": 500, "event": "Hausa city-states begin to emerge", "significance": "Urban Hausa civilization begins" },
+        { "year": 1000, "event": "Islam reaches Hausaland through trans-Saharan trade", "significance": "Religious transformation begins" },
+        { "year": 1400, "event": "Hausa becomes major trade language across Sahel", "significance": "Hausa trade diaspora expands" },
+        { "year": 1804, "event": "Usman dan Fodio's Sokoto Jihad", "significance": "Islamic reformation, Hausa literature flourishes" },
+        { "year": 1903, "event": "British conquest of Sokoto Caliphate", "significance": "Colonial period begins" },
+        { "year": 1960, "event": "Nigerian independence", "significance": "Hausa becomes one of Nigeria's national languages" },
+        { "year": 2000, "event": "Hausa gains digital presence", "significance": "Major online content in Hausa" }
+      ],
+      "subFamilies": [
+        {
+          "name": "West Chadic",
+          "slug": "west-chadic",
+          "speakers": "85+ million",
+          "languages": "60+",
+          "description": "Dominated by Hausa, the giant of Chadic languages",
+          "notableLanguages": ["Hausa", "Ron", "Angas", "Bole", "Tangale"]
+        },
+        {
+          "name": "Central Chadic (Biu-Mandara)",
+          "slug": "central-chadic",
+          "speakers": "5+ million",
+          "languages": "80+",
+          "description": "Diverse languages of the Mandara Mountains region",
+          "notableLanguages": ["Margi", "Mandara", "Bura", "Kamwe", "Higi"]
+        },
+        {
+          "name": "East Chadic",
+          "slug": "east-chadic",
+          "speakers": "2+ million",
+          "languages": "40+",
+          "description": "Languages around Lake Chad and eastern regions",
+          "notableLanguages": ["Dangaleat", "Migama", "Kera", "Tumak"]
+        },
+        {
+          "name": "Masa",
+          "slug": "masa",
+          "speakers": "500,000+",
+          "languages": "10+",
+          "description": "Languages of the Logone River region",
+          "notableLanguages": ["Masa", "Musey", "Zumaya"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Semitic", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Some grammatical gender patterns, pronoun structures" },
+        { "family": "Berber", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Some consonant patterns" },
+        { "family": "Cushitic", "relationship": "Sister branch within Afroasiatic", "sharedFeatures": "Verb morphology similarities" }
+      ],
+      "uniqueFeatures": [
+        "Hausa is Africa's 3rd most spoken indigenous language",
+        "Rich oral and written literary tradition (Hausa)",
+        "Distinctive lateral fricative consonants",
+        "Complex verbal plurality systems",
+        "Extensive trade vocabulary from centuries of commerce"
+      ],
+      "historicalInfluence": {
+        "empires": ["Hausa city-states (Kano, Katsina, Zaria)", "Sokoto Caliphate", "Kanem-Bornu Empire (influence)"],
+        "culturalExports": ["Hausa trade networks", "Ajami literary tradition", "Islamic scholarship", "Leatherwork and textiles"],
+        "diasporaInfluence": "Hausa spoken in Ghana, Togo, Cameroon, Niger; Hausa traders established communities across West Africa; BBC Hausa and VOA Hausa reach millions"
+      }
+    },
+    {
+      "id": "omotic",
+      "slug": "omotic",
+      "name": "Omotic",
+      "alternateNames": ["Omo-Tana", "West Cushitic (outdated)"],
+      "totalSpeakers": "8+ million",
+      "numberOfLanguages": "30+",
+      "geographicSpread": "Southwestern Ethiopia, along the Omo River valley",
+      "color": "from-lime-500 to-green-600",
+      "description": "The indigenous languages of Ethiopia's Omo Valley - one of humanity's most linguistically and culturally diverse regions, home to ancient traditions and unique cultural practices.",
+      "overview": "Omotic languages are spoken by some of Africa's most culturally distinctive peoples in Ethiopia's Omo River valley. This UNESCO World Heritage region is home to tribes with unique body painting traditions, lip plates, and agricultural practices. Omotic is sometimes classified as a separate family from Afroasiatic, highlighting its distinctiveness. Languages like Wolaytta, Gamo, and Kafa represent ancient Ethiopian heritage predating Semitic and Cushitic migrations.",
+      "characteristics": [
+        {
+          "name": "SOV Word Order",
+          "description": "Subject-Object-Verb order, placing the verb at sentence end - typical of Ethiopian area languages."
+        },
+        {
+          "name": "Case Marking",
+          "description": "Nouns marked for grammatical case (nominative, accusative, genitive) through suffixes."
+        },
+        {
+          "name": "Verb-Final Structure",
+          "description": "Complex verbs with multiple suffixes for tense, aspect, mood, and person."
+        },
+        {
+          "name": "Ejective Consonants",
+          "description": "Glottalized stop consonants produced with airstream compression - shared with Ethiopian Semitic."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Primarily oral tradition; some early contact with Ge'ez script",
+        "modern": "Latin-based alphabets developed for each major language; Ge'ez script occasionally used",
+        "examples": [
+          { "script": "Latin (Wolaytta)", "text": "Sarotay", "meaning": "Hello", "pronunciation": "sah-roh-TAY" },
+          { "script": "Latin (Gamo)", "text": "Geza?", "meaning": "How are you?", "pronunciation": "GEH-zah" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Sarotay", "language": "Wolaytta", "meaning": "Hello/Peace", "pronunciation": "sah-roh-TAY" },
+        { "phrase": "Lo'o gidiyee?", "language": "Wolaytta", "meaning": "How are you?", "pronunciation": "LOH-oh gee-dee-YEH" },
+        { "phrase": "Geza?", "language": "Gamo", "meaning": "How are you?", "pronunciation": "GEH-zah" },
+        { "phrase": "Nome?", "language": "Kafa", "meaning": "How are you?", "pronunciation": "NOH-meh" },
+        { "phrase": "Galatoma", "language": "Wolaytta", "meaning": "Thank you", "pronunciation": "gah-lah-TOH-mah" }
+      ],
+      "timeline": [
+        { "year": -3000, "event": "Proto-Omotic speakers in Ethiopian highlands", "significance": "Origins of Omotic family" },
+        { "year": -1000, "event": "Omotic cultures flourish in Omo River valley", "significance": "Agricultural traditions develop" },
+        { "year": 1400, "event": "Kafa Kingdom established", "significance": "Coffee originates from Kafa region" },
+        { "year": 1600, "event": "Wolaytta Kingdom at its height", "significance": "Major Omotic state power" },
+        { "year": 1894, "event": "Ethiopian expansion incorporates Omotic regions", "significance": "Integration into Ethiopian state" },
+        { "year": 1980, "event": "UNESCO recognizes Omo Valley cultural significance", "significance": "International recognition" },
+        { "year": 2011, "event": "Lower Omo Valley declared UNESCO World Heritage Site", "significance": "Global heritage status" }
+      ],
+      "subFamilies": [
+        {
+          "name": "North Omotic",
+          "slug": "north-omotic",
+          "speakers": "7+ million",
+          "languages": "20+",
+          "description": "Major languages including Wolaytta and Gamo",
+          "notableLanguages": ["Wolaytta", "Gamo", "Gofa", "Dawro", "Basketo", "Yem"]
+        },
+        {
+          "name": "South Omotic (Aroid)",
+          "slug": "south-omotic",
+          "speakers": "500,000+",
+          "languages": "10+",
+          "description": "Languages of the lower Omo Valley, including Hamar and Aari",
+          "notableLanguages": ["Hamar", "Aari", "Dime", "Karo"]
+        },
+        {
+          "name": "Mao",
+          "slug": "mao",
+          "speakers": "100,000+",
+          "languages": "5+",
+          "description": "Endangered languages of the Omo-Gibe region",
+          "notableLanguages": ["Hozo", "Sezo", "Ganza"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Cushitic", "relationship": "Geographically adjacent; some scholars see them as related within Afroasiatic", "sharedFeatures": "Case marking, SOV order" },
+        { "family": "Ethiopian Semitic", "relationship": "Millennia of contact and language influence", "sharedFeatures": "Ejective consonants, verb-final structure" },
+        { "family": "Nilo-Saharan (contact)", "relationship": "Border contact with Surmic languages", "sharedFeatures": "Some borrowed vocabulary" }
+      ],
+      "uniqueFeatures": [
+        "Coffee originates from Kafa region (coffee named after Kafa)",
+        "Unique lip plate and body painting traditions",
+        "Complex agricultural terracing systems",
+        "Some of Africa's most endangered languages",
+        "Rich oral tradition with historical epics"
+      ],
+      "historicalInfluence": {
+        "empires": ["Kafa Kingdom", "Wolaytta Kingdom", "Gamo chiefdoms"],
+        "culturalExports": ["Coffee to the world (from Kafa)", "Unique cultural traditions", "Traditional agriculture"],
+        "diasporaInfluence": "Wolaytta diaspora in Addis Ababa and abroad, coffee culture's global spread from Kafa origins"
+      }
+    },
+    {
+      "id": "atlantic",
+      "slug": "atlantic",
+      "name": "Atlantic",
+      "alternateNames": ["Atlantic-Congo (partial)", "West Atlantic"],
+      "totalSpeakers": "50+ million",
+      "numberOfLanguages": "65+",
+      "geographicSpread": "West African coast - Senegal, Gambia, Guinea-Bissau, Guinea, Sierra Leone, Mauritania",
+      "color": "from-sky-500 to-blue-600",
+      "description": "The indigenous languages of the Atlantic coast of West Africa, including Wolof (Senegal's dominant language) and Fula/Fulfulde (spoken by the widespread Fulani people across the Sahel).",
+      "overview": "Atlantic languages stretch along West Africa's Atlantic coast and deep into the Sahel through the Fulani pastoral migrations. Wolof dominates Senegalese culture and is the language of Dakar's vibrant urban scene. Fula (Fulfulde/Pulaar) is spoken by 40+ million Fulani herders from Senegal to Sudan. The Serer people of Senegal maintain some of Africa's most sophisticated traditional astronomical and agricultural knowledge in their language.",
+      "characteristics": [
+        {
+          "name": "Noun Class Systems",
+          "description": "Complex noun class systems using prefixes and suffixes, with 15-20 classes in some languages marking animate/inanimate, human/animal, etc."
+        },
+        {
+          "name": "Consonant Mutation",
+          "description": "Initial consonants of words change based on grammatical context - distinctive feature of Fula and other Atlantic languages."
+        },
+        {
+          "name": "Verbal Extensions",
+          "description": "Verbs modified with suffixes for causative, reciprocal, reflexive, and other meanings."
+        },
+        {
+          "name": "Complex Morphology",
+          "description": "Words built through extensive prefixing and suffixing, especially in noun phrases."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Arabic script (Wolofal for Wolof, Ajami for Fula) used since Islamic contact",
+        "modern": "Latin alphabet standard; Arabic script maintains some use for religious texts",
+        "examples": [
+          { "script": "Latin (Wolof)", "text": "Nanga def?", "meaning": "How are you?", "pronunciation": "NAHN-gah def" },
+          { "script": "Latin (Fula)", "text": "A jam tan?", "meaning": "Are you at peace?", "pronunciation": "ah jahm tahn" },
+          { "script": "Wolofal", "text": "نانگا دەف", "meaning": "How are you?", "pronunciation": "NAHN-gah def" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Nanga def?", "language": "Wolof", "meaning": "How are you?", "pronunciation": "NAHN-gah def" },
+        { "phrase": "Mangi fi rekk", "language": "Wolof", "meaning": "I'm fine", "pronunciation": "MAHN-gee fee rehk" },
+        { "phrase": "Jërëjëf", "language": "Wolof", "meaning": "Thank you", "pronunciation": "jeh-reh-JEHF" },
+        { "phrase": "A jam tan?", "language": "Fula/Pulaar", "meaning": "Are you at peace?", "pronunciation": "ah jahm tahn" },
+        { "phrase": "Jam tan", "language": "Fula/Pulaar", "meaning": "Peace only (I'm fine)", "pronunciation": "jahm tahn" },
+        { "phrase": "A jaraama", "language": "Fula/Pulaar", "meaning": "Thank you", "pronunciation": "ah jah-RAH-mah" }
+      ],
+      "timeline": [
+        { "year": -2000, "event": "Proto-Atlantic speakers along West African coast", "significance": "Origins of Atlantic family" },
+        { "year": 500, "event": "Serer establish agricultural civilization in Senegambia", "significance": "Early Atlantic kingdoms" },
+        { "year": 1000, "event": "Fulani begin pastoral migrations eastward", "significance": "Fula language spreads across Sahel" },
+        { "year": 1200, "event": "Wolof states emerge in Senegal", "significance": "Wolof political power grows" },
+        { "year": 1444, "event": "Portuguese contact at Cape Verde", "significance": "European-Atlantic language contact begins" },
+        { "year": 1800, "event": "Fulani jihads spread Islam and Fula influence", "significance": "Fula becomes major Sahel language" },
+        { "year": 1960, "event": "Senegalese independence", "significance": "Wolof becomes de facto national language" },
+        { "year": 2000, "event": "Wolof hip-hop gains global recognition", "significance": "Wolof urban culture spreads" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Northern Atlantic (Senegambian)",
+          "slug": "senegambian",
+          "speakers": "15+ million",
+          "languages": "10+",
+          "description": "Wolof, Serer, and related languages of Senegal and Gambia",
+          "notableLanguages": ["Wolof", "Serer", "Lebu", "Ndut"]
+        },
+        {
+          "name": "Fula-Serer",
+          "slug": "fula-serer",
+          "speakers": "40+ million",
+          "languages": "5+",
+          "description": "Fula/Fulfulde and closely related Serer languages",
+          "notableLanguages": ["Fula/Fulfulde/Pulaar", "Serer-Sine"]
+        },
+        {
+          "name": "Bak Languages",
+          "slug": "bak",
+          "speakers": "1+ million",
+          "languages": "15+",
+          "description": "Diola, Manjak, and related languages of Guinea-Bissau region",
+          "notableLanguages": ["Diola/Jola", "Manjak", "Balanta", "Papel"]
+        },
+        {
+          "name": "Mel Languages",
+          "slug": "mel",
+          "speakers": "2+ million",
+          "languages": "15+",
+          "description": "Temne, Kissi, and coastal Guinea/Sierra Leone languages",
+          "notableLanguages": ["Temne", "Kissi", "Bullom", "Sherbro"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Niger-Congo (parent)", "relationship": "Atlantic is a major branch of Niger-Congo", "sharedFeatures": "Noun class systems, verbal extensions" },
+        { "family": "Mande (contact)", "relationship": "Millennia of geographic contact", "sharedFeatures": "Borrowed vocabulary, cultural exchange" },
+        { "family": "Bantu (sister)", "relationship": "Both branches of Atlantic-Congo within Niger-Congo", "sharedFeatures": "Noun class systems, similar morphology" }
+      ],
+      "uniqueFeatures": [
+        "Consonant mutation (initial consonants change grammatically)",
+        "Complex noun class systems (15-20 classes)",
+        "Fula spoken across 18+ countries by pastoralists",
+        "Wolof's unique urban culture (Dakar)",
+        "Serer astronomical and calendrical knowledge"
+      ],
+      "historicalInfluence": {
+        "empires": ["Jolof Empire", "Serer kingdoms", "Futa Toro", "Futa Jallon", "Sokoto (Fulani influence)"],
+        "culturalExports": ["Wolof hip-hop and mbalax music", "Fulani pastoral traditions", "Serer wrestling traditions", "Atlantic Coast textiles"],
+        "diasporaInfluence": "Large Wolof/Senegalese diaspora in France and USA, Fulani communities across West Africa, Atlantic Creoles in Cape Verde and Guinea-Bissau"
+      }
+    },
+    {
+      "id": "kwa",
+      "slug": "kwa",
+      "name": "Kwa",
+      "alternateNames": ["New Kwa"],
+      "totalSpeakers": "40+ million",
+      "numberOfLanguages": "80+",
+      "geographicSpread": "West African coast - Ghana, Togo, Benin, southeastern Ivory Coast",
+      "color": "from-amber-500 to-yellow-600",
+      "description": "The languages of the Gold Coast and Slave Coast - Akan (Ashanti, Twi, Fante), Ewe, Fon, and Ga. These languages powered the Ashanti Empire and the Dahomey Kingdom.",
+      "overview": "Kwa languages are spoken along the Gulf of Guinea coast, in regions historically known as the Gold Coast and Slave Coast. Akan (including Twi and Fante) is the dominant language of Ghana, spoken by the Ashanti, Fante, and other Akan peoples who built powerful kingdoms. Ewe and Fon are the languages of Vodun (Voodoo) religious traditions that spread to the Americas. The Ga people of Accra speak a Kwa language distinct from their Akan neighbors.",
+      "characteristics": [
+        {
+          "name": "Tonal Systems",
+          "description": "Complex tone systems with 2-4 tones, where pitch distinguishes word meanings and grammatical functions."
+        },
+        {
+          "name": "Serial Verb Constructions",
+          "description": "Multiple verbs strung together without conjunctions to describe complex actions - a distinctive Kwa feature."
+        },
+        {
+          "name": "Subject-Verb-Object Order",
+          "description": "Basic SVO word order similar to English, with topic-comment structures."
+        },
+        {
+          "name": "Noun Class Remnants",
+          "description": "Simplified noun class systems compared to Bantu, with fewer distinctions."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Oral tradition; some early literacy through European contact",
+        "modern": "Latin alphabet with various diacritics for tones; Adinkra symbols (Akan) for cultural concepts",
+        "examples": [
+          { "script": "Latin (Twi)", "text": "Wo ho te sɛn?", "meaning": "How are you?", "pronunciation": "woh hoh teh sehn" },
+          { "script": "Latin (Ewe)", "text": "Woezɔ", "meaning": "Welcome", "pronunciation": "woh-eh-ZOH" },
+          { "script": "Latin (Ga)", "text": "Ote sɛn?", "meaning": "How are you?", "pronunciation": "oh-teh sehn" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Akwaaba", "language": "Akan/Twi", "meaning": "Welcome", "pronunciation": "ah-KWAH-bah" },
+        { "phrase": "Wo ho te sɛn?", "language": "Akan/Twi", "meaning": "How are you?", "pronunciation": "woh hoh teh sehn" },
+        { "phrase": "Me da wo ase", "language": "Akan/Twi", "meaning": "Thank you", "pronunciation": "meh dah woh AH-seh" },
+        { "phrase": "Woezɔ", "language": "Ewe", "meaning": "Welcome", "pronunciation": "woh-eh-ZOH" },
+        { "phrase": "Akpe", "language": "Ewe", "meaning": "Thank you", "pronunciation": "AHK-peh" },
+        { "phrase": "Ojekoo", "language": "Ga", "meaning": "Welcome", "pronunciation": "oh-jeh-KOH-oh" }
+      ],
+      "timeline": [
+        { "year": -1000, "event": "Proto-Kwa speakers in West African forests", "significance": "Origins of Kwa family" },
+        { "year": 1200, "event": "Akan gold trade develops", "significance": "Akan economic power rises" },
+        { "year": 1670, "event": "Ashanti Empire founded by Osei Tutu I", "significance": "Golden Stool unites Akan peoples" },
+        { "year": 1700, "event": "Dahomey Kingdom rises (Fon speakers)", "significance": "Major Kwa-speaking state power" },
+        { "year": 1824, "event": "First Anglo-Ashanti War", "significance": "Ashanti military power at peak" },
+        { "year": 1874, "event": "British Gold Coast established", "significance": "Colonial period begins" },
+        { "year": 1957, "event": "Ghana becomes first sub-Saharan country to gain independence", "significance": "Akan-led independence movement" },
+        { "year": 1990, "event": "Ghanaian highlife and hiplife gain global fame", "significance": "Twi music spreads internationally" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Akan (Tano)",
+          "slug": "akan",
+          "speakers": "30+ million",
+          "languages": "20+",
+          "description": "Ghana's dominant language group including Twi, Fante, and Baule",
+          "notableLanguages": ["Twi (Asante)", "Fante", "Akuapem", "Baule (Ivory Coast)", "Nzema"]
+        },
+        {
+          "name": "Gbe (Ewe-Fon)",
+          "slug": "gbe",
+          "speakers": "8+ million",
+          "languages": "20+",
+          "description": "Languages of Vodun traditions - Ewe, Fon, and related languages",
+          "notableLanguages": ["Ewe", "Fon", "Gen", "Aja", "Mina"]
+        },
+        {
+          "name": "Ga-Dangme",
+          "slug": "ga-dangme",
+          "speakers": "3+ million",
+          "languages": "5+",
+          "description": "Languages of Accra and the eastern Gold Coast",
+          "notableLanguages": ["Ga", "Dangme (Adangbe)", "Krobo"]
+        },
+        {
+          "name": "Nyo (Potou-Tano)",
+          "slug": "nyo",
+          "speakers": "2+ million",
+          "languages": "15+",
+          "description": "Southwestern Ghana and southeastern Ivory Coast languages",
+          "notableLanguages": ["Anyi", "Sefwi", "Ahanta"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Volta-Niger", "relationship": "Sister branch within Niger-Congo, including Yoruba and Igbo", "sharedFeatures": "Tonal systems, SVO order" },
+        { "family": "Bantu", "relationship": "Distant relatives within Niger-Congo", "sharedFeatures": "Some noun class features" },
+        { "family": "Atlantic", "relationship": "Sister branch within Niger-Congo", "sharedFeatures": "Verbal morphology patterns" }
+      ],
+      "uniqueFeatures": [
+        "Serial verb constructions ('He took it went gave me')",
+        "Adinkra symbols encode cultural concepts (Akan)",
+        "Vodun religious vocabulary (Ewe/Fon)",
+        "Ashanti gold weight proverbs",
+        "Complex day-naming systems (Akan)"
+      ],
+      "historicalInfluence": {
+        "empires": ["Ashanti Empire", "Dahomey Kingdom", "Denkyira Kingdom", "Akwamu Empire"],
+        "culturalExports": ["Kente cloth", "Adinkra symbols", "Vodun/Voodoo to Americas", "Ashanti gold weights", "Highlife music"],
+        "diasporaInfluence": "Akan day-names in Jamaica and Americas, Vodun/Voodoo traditions in Haiti and Brazil, Ghanaian diaspora in UK and USA"
+      }
+    },
+    {
+      "id": "gur",
+      "slug": "gur",
+      "name": "Gur",
+      "alternateNames": ["Voltaic", "Central Gur"],
+      "totalSpeakers": "20+ million",
+      "numberOfLanguages": "90+",
+      "geographicSpread": "Sahel and savanna - Burkina Faso, Ghana, Mali, Togo, Benin, Ivory Coast, Niger",
+      "color": "from-orange-600 to-red-500",
+      "description": "The languages of the savanna and Sahel - Mossi (Burkina Faso's majority), Dagbani, and Gurma peoples. Speakers of these languages built the powerful Mossi kingdoms that resisted both Mali and Songhai empires.",
+      "overview": "Gur (also called Voltaic) languages are spoken across the West African savanna, centered on Burkina Faso. The Mossi people, speaking Mooré, form Burkina Faso's largest ethnic group and maintained independent kingdoms for centuries. The Mossi states uniquely resisted both Islamization and conquest by the Mali and Songhai empires. Gur languages extend into northern Ghana (Dagbani, Mampruli) and across the Sahel to Niger and Benin.",
+      "characteristics": [
+        {
+          "name": "Noun Class Systems",
+          "description": "Extensive noun class systems with suffixes marking singular/plural and semantic categories (human, animal, object)."
+        },
+        {
+          "name": "Tonal Systems",
+          "description": "Two or three tones distinguish words and grammatical categories."
+        },
+        {
+          "name": "SVO Word Order",
+          "description": "Basic Subject-Verb-Object order with topic-prominent sentence structures."
+        },
+        {
+          "name": "Reduplication",
+          "description": "Word parts repeated for plurals, intensification, or repeated action."
+        }
+      ],
+      "writingSystem": {
+        "historical": "Primarily oral tradition; limited Arabic script use in Islamic areas",
+        "modern": "Latin alphabet with special characters for sounds unique to Gur languages",
+        "examples": [
+          { "script": "Latin (Mooré)", "text": "Ne y windiga!", "meaning": "Good morning!", "pronunciation": "neh yee win-DEE-gah" },
+          { "script": "Latin (Dagbani)", "text": "Despa!", "meaning": "Good morning!", "pronunciation": "DEHS-pah" },
+          { "script": "Latin (Mooré)", "text": "Barka", "meaning": "Thank you", "pronunciation": "BAHR-kah" }
+        ]
+      },
+      "commonPhrases": [
+        { "phrase": "Ne y windiga!", "language": "Mooré (Mossi)", "meaning": "Good morning!", "pronunciation": "neh yee win-DEE-gah" },
+        { "phrase": "Laafi bala?", "language": "Mooré", "meaning": "Are you in peace?", "pronunciation": "LAH-fee BAH-lah" },
+        { "phrase": "Laafi", "language": "Mooré", "meaning": "Peace (I'm fine)", "pronunciation": "LAH-fee" },
+        { "phrase": "Barka", "language": "Mooré", "meaning": "Thank you", "pronunciation": "BAHR-kah" },
+        { "phrase": "Despa!", "language": "Dagbani", "meaning": "Good morning!", "pronunciation": "DEHS-pah" },
+        { "phrase": "A alafia?", "language": "Dagbani", "meaning": "Are you well?", "pronunciation": "ah ah-LAH-fee-ah" }
+      ],
+      "timeline": [
+        { "year": -500, "event": "Proto-Gur speakers in West African savanna", "significance": "Origins of Gur family" },
+        { "year": 1100, "event": "Mossi kingdoms begin to form", "significance": "Mossi political structures emerge" },
+        { "year": 1333, "event": "Mossi warriors sack Timbuktu", "significance": "Mossi military power demonstrated" },
+        { "year": 1500, "event": "Mossi kingdoms resist Songhai expansion", "significance": "Maintain independence from empires" },
+        { "year": 1700, "event": "Dagomba and Mamprusi kingdoms at height", "significance": "Gur kingdoms in northern Ghana flourish" },
+        { "year": 1896, "event": "French conquest of Mossi kingdoms", "significance": "Colonial period begins" },
+        { "year": 1960, "event": "Upper Volta (Burkina Faso) independence", "significance": "Mossi-led nation gains independence" },
+        { "year": 1983, "event": "Thomas Sankara becomes leader", "significance": "Famous Mossi revolutionary transforms nation" }
+      ],
+      "subFamilies": [
+        {
+          "name": "Oti-Volta (Central Gur)",
+          "slug": "oti-volta",
+          "speakers": "15+ million",
+          "languages": "30+",
+          "description": "Mossi, Dagbani, Gurma and related languages",
+          "notableLanguages": ["Mooré (Mossi)", "Dagbani", "Mampruli", "Gurma", "Kusaal"]
+        },
+        {
+          "name": "Grusi",
+          "slug": "grusi",
+          "speakers": "2+ million",
+          "languages": "20+",
+          "description": "Languages of Ghana-Burkina border region",
+          "notableLanguages": ["Kasem", "Sisaala", "Vagla", "Chakali"]
+        },
+        {
+          "name": "Lobi-Dagara",
+          "slug": "lobi-dagara",
+          "speakers": "2+ million",
+          "languages": "15+",
+          "description": "Languages of southwestern Burkina Faso and northern Ghana",
+          "notableLanguages": ["Dagaare", "Lobi", "Birifor", "Wali"]
+        },
+        {
+          "name": "Senufo",
+          "slug": "senufo",
+          "speakers": "3+ million",
+          "languages": "15+",
+          "description": "Languages of the Senufo people of Ivory Coast, Mali, Burkina Faso",
+          "notableLanguages": ["Senari", "Supyire", "Mamara", "Karaboro"]
+        }
+      ],
+      "distantCousins": [
+        { "family": "Kwa", "relationship": "Sister branch within Niger-Congo, share border in Ghana", "sharedFeatures": "Some noun class features" },
+        { "family": "Mande (contact)", "relationship": "Centuries of contact in Sahel region", "sharedFeatures": "Borrowed vocabulary from trade" },
+        { "family": "Atlantic (contact)", "relationship": "Trade contacts through Fulani networks", "sharedFeatures": "Some loanwords" }
+      ],
+      "uniqueFeatures": [
+        "Mossi kingdoms resisted Mali and Songhai empires",
+        "Complex noun class suffix systems",
+        "Strong oral historical traditions",
+        "Distinctive savanna agricultural vocabulary",
+        "Thomas Sankara was Mossi - 'Africa's Che Guevara'"
+      ],
+      "historicalInfluence": {
+        "empires": ["Mossi Kingdoms (Ouagadougou, Yatenga, Tenkodogo)", "Dagomba Kingdom", "Mamprusi Kingdom", "Gurma states"],
+        "culturalExports": ["Mossi masks and sculptures", "Traditional architecture (Kassena compounds)", "Resistance to imperial conquest", "Revolutionary politics (Sankara)"],
+        "diasporaInfluence": "Mossi labor migration to Ivory Coast and Ghana, Burkinabè diaspora in France, Dagomba influence in northern Ghana politics"
+      }
     }
   ]
 }
