@@ -4795,6 +4795,457 @@ export const recipes: Recipe[] = [
       "The bottom should be slightly browned",
       "Serve fresh and warm"
     ]
+  },
+
+  // ============ TSWANA (BOTSWANA) RECIPES ============
+  {
+    id: "seswaa",
+    name: "Seswaa (Pounded Beef)",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "special",
+    description: "Botswana's national dish - slow-cooked beef pounded to shredded perfection. The ultimate comfort food.",
+    culturalSignificance: "Seswaa is served at weddings, funerals, and national celebrations. It represents Tswana hospitality and communal eating traditions.",
+    historicalContext: "The Tswana have raised cattle for centuries across the Kalahari region. Seswaa developed as a way to make tough cuts tender and flavorful, originally cooked in three-legged pots over open fires.",
+    youtubeVideoId: "7cPjWMPG4Xk",
+    prepTime: "15 minutes",
+    cookTime: "4 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef (bone-in cuts)", amount: "2 kg", notes: "Chuck, brisket, or shank" },
+      { item: "Salt", amount: "2 tablespoons" },
+      { item: "Water", amount: "To cover meat" }
+    ],
+    instructions: [
+      "Place beef in a large pot with bones.",
+      "Add water to cover and salt.",
+      "Bring to boil, then reduce to simmer.",
+      "Cook 3-4 hours until meat falls off bone.",
+      "Remove bones from pot.",
+      "Using two forks or wooden pestle, pound meat in pot.",
+      "Shred until fibers separate.",
+      "Continue cooking to reduce liquid.",
+      "Season with salt and serve with pap or sorghum."
+    ],
+    tips: [
+      "The bones add rich flavor",
+      "Traditional preparation uses three-legged pot over fire",
+      "Should be stringy, not mushy"
+    ]
+  },
+  {
+    id: "bogobe",
+    name: "Bogobe (Sorghum Porridge)",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "staple",
+    description: "Traditional sorghum porridge that's been a Tswana staple for centuries. The perfect base for seswaa.",
+    culturalSignificance: "Bogobe is the foundation of Tswana meals. Sorghum was the original grain before maize arrived, connecting modern Tswana to their ancestors.",
+    historicalContext: "Sorghum originated in Africa and has been cultivated in Botswana for over 3,000 years. It's drought-resistant, perfect for the Kalahari climate.",
+    prepTime: "5 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Sorghum meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Sour milk (optional)", amount: "1 cup" }
+    ],
+    instructions: [
+      "Bring water to boil in pot.",
+      "Add salt.",
+      "Slowly stir in sorghum meal.",
+      "Reduce heat and cover.",
+      "Cook 25-30 minutes, stirring occasionally.",
+      "Add more water if needed.",
+      "Serve with sour milk or meat stew."
+    ],
+    tips: [
+      "Sorghum takes longer to cook than maize",
+      "Fermented sorghum (ting) is also popular",
+      "Can add butter for richness"
+    ]
+  },
+
+  // ============ SAN (BUSHMEN) RECIPES ============
+  {
+    id: "mongongo-nuts",
+    name: "Mongongo Nut Preparation",
+    tribeSlug: "san",
+    tribeName: "San (Bushmen)",
+    category: "staple",
+    description: "The staple food of the Kalahari San - nutrient-rich mongongo nuts gathered from the wild.",
+    culturalSignificance: "Mongongo nuts are so important that San measure distance by 'mongongo days.' They provide protein, fat, and vitamins from the harsh Kalahari.",
+    historicalContext: "The San have gathered mongongo nuts for at least 7,000 years. Archaeological sites show ancient nut-cracking stones. One anthropologist famously asked 'Why farm when there are so many mongongo nuts?' to illustrate San prosperity.",
+    prepTime: "30 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Mongongo nuts", amount: "2 cups", notes: "In shells" },
+      { item: "Water", amount: "For boiling" }
+    ],
+    instructions: [
+      "Gather ripe mongongo nuts from beneath trees.",
+      "Remove outer fruit flesh (can be eaten fresh).",
+      "Crack hard inner shell with stones or tools.",
+      "Extract the nutritious inner kernel.",
+      "Roast kernels over low fire for enhanced flavor.",
+      "Eat as is or pound into paste."
+    ],
+    tips: [
+      "Outer fruit is also edible and nutritious",
+      "Shells are very hard - traditional stone anvils used",
+      "Nuts store well for months"
+    ]
+  },
+
+  // ============ SHONA (ZIMBABWE) RECIPES ============
+  {
+    id: "sadza",
+    name: "Sadza (Shona Thick Porridge)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "staple",
+    description: "Zimbabwe's national dish - thick white maize porridge that's the foundation of every meal.",
+    culturalSignificance: "Sadza is so central to Shona life that a meal without it isn't considered complete. The saying goes 'No sadza, no meal.'",
+    historicalContext: "While maize arrived with Portuguese traders in the 16th century, the Shona quickly made it central to their cuisine, replacing millet and sorghum in many areas.",
+    youtubeVideoId: "bYyqyHCGzV4",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Bring 3 cups water to boil.",
+      "Mix remaining water with 1/2 cup maize meal to make slurry.",
+      "Stir slurry into boiling water.",
+      "Cook 5 minutes until thickening.",
+      "Gradually add remaining maize meal.",
+      "Stir vigorously with wooden spoon.",
+      "Cover and cook 15 minutes on low.",
+      "Stir again until smooth and stiff.",
+      "Serve with nyama (meat) or vegetables."
+    ],
+    tips: [
+      "Should be stiff enough to mold with hands",
+      "A wooden cooking stick (mugoti) is traditional",
+      "Left overnight becomes 'sadza rezuro'"
+    ]
+  },
+  {
+    id: "muriwo-unedovi",
+    name: "Muriwo Unedovi (Greens with Peanut Butter)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "staple",
+    description: "Collard greens or pumpkin leaves cooked with peanut butter. The classic sadza accompaniment.",
+    culturalSignificance: "This dish showcases Shona ingenuity - combining indigenous greens with groundnuts for a protein-rich, flavorful side dish.",
+    historicalContext: "Groundnuts have been cultivated in Zimbabwe for centuries. Combining them with foraged greens created a nutritious, sustainable dish.",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Collard greens or pumpkin leaves", amount: "500g", notes: "Chopped" },
+      { item: "Peanut butter", amount: "3 tablespoons" },
+      { item: "Tomato", amount: "1 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 small", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "1/2 cup" }
+    ],
+    instructions: [
+      "Sauté onion until soft.",
+      "Add tomato and cook 3 minutes.",
+      "Add greens and water.",
+      "Cover and cook 10 minutes until wilted.",
+      "Stir in peanut butter.",
+      "Mix well and simmer 5 minutes.",
+      "Season with salt.",
+      "Serve with sadza."
+    ],
+    tips: [
+      "Natural peanut butter works best",
+      "Don't overcook the greens",
+      "Can add a bit of cooking oil"
+    ]
+  },
+
+  // ============ BEMBA (ZAMBIA) RECIPES ============
+  {
+    id: "ifisashi",
+    name: "Ifisashi (Greens in Peanut Sauce)",
+    tribeSlug: "bemba",
+    tribeName: "Bemba",
+    category: "staple",
+    description: "Zambia's beloved vegetable dish - leafy greens cooked in rich groundnut sauce. Comfort food perfection.",
+    culturalSignificance: "Ifisashi represents Bemba agricultural traditions. Every family has their version, passed down through generations.",
+    historicalContext: "The Bemba have practiced slash-and-burn agriculture (chitemene) for centuries. Groundnuts and greens from cleared forest land created this classic combination.",
+    youtubeVideoId: "cA9K8MHv1tA",
+    prepTime: "15 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Leafy greens (rape, pumpkin leaves)", amount: "500g" },
+      { item: "Groundnut powder", amount: "1 cup" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "1 cup" }
+    ],
+    instructions: [
+      "Cook greens in water until wilted.",
+      "In separate pan, sauté onion and tomatoes.",
+      "Mix groundnut powder with water to make paste.",
+      "Add groundnut paste to tomato mixture.",
+      "Stir and cook 5 minutes.",
+      "Add cooked greens to sauce.",
+      "Simmer together 10 minutes.",
+      "Season and serve with nshima."
+    ],
+    tips: [
+      "Fresh groundnut powder has the best flavor",
+      "Add a bit of bicarbonate to keep greens green",
+      "Should be thick and creamy"
+    ]
+  },
+  {
+    id: "nshima",
+    name: "Nshima (Zambian Thick Porridge)",
+    tribeSlug: "bemba",
+    tribeName: "Bemba",
+    category: "staple",
+    description: "Zambia's staple food - thick maize porridge that forms the base of nearly every meal.",
+    culturalSignificance: "Nshima is sacred to Zambians. It's said that a Zambian hasn't eaten until they've had nshima. It's always eaten with hands.",
+    historicalContext: "While maize arrived from the Americas, it replaced earlier grains like millet and sorghum. The Bemba perfected nshima preparation over centuries.",
+    prepTime: "5 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White mealie meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" }
+    ],
+    instructions: [
+      "Boil 3 cups water.",
+      "Mix 1 cup water with 1/2 cup mealie meal.",
+      "Pour slurry into boiling water.",
+      "Stir and cook 5 minutes.",
+      "Add remaining mealie meal gradually.",
+      "Stir vigorously with wooden paddle.",
+      "Cook until very thick and pulls from pot.",
+      "Shape into smooth mound and serve."
+    ],
+    tips: [
+      "No salt needed - flavor comes from relish",
+      "Should be smooth with no lumps",
+      "Always eaten with hands"
+    ]
+  },
+
+  // ============ DINKA (SOUTH SUDAN) RECIPES ============
+  {
+    id: "walwal",
+    name: "Walwal (Dinka Sorghum Porridge)",
+    tribeSlug: "dinka",
+    tribeName: "Dinka",
+    category: "staple",
+    description: "Traditional Dinka sorghum porridge served with milk or stews. The staple that fuels the world's tallest people.",
+    culturalSignificance: "Walwal sustains the Dinka through dry and wet seasons. Sorghum is grown during the rains and stored for year-round use.",
+    historicalContext: "The Dinka have cultivated sorghum in the Sudd region for millennia, adapting agriculture to the Nile's seasonal flooding patterns.",
+    prepTime: "5 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Sorghum flour", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Sour milk", amount: "1 cup", notes: "Optional" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Bring water to boil.",
+      "Slowly add sorghum flour while stirring.",
+      "Reduce heat to low.",
+      "Cook 25-30 minutes, stirring often.",
+      "Add salt to taste.",
+      "Serve with sour milk or meat stew."
+    ],
+    tips: [
+      "Stir constantly to prevent lumps",
+      "Can be thin (like porridge) or thick (like ugali)",
+      "Sour milk is traditional accompaniment"
+    ]
+  },
+
+  // ============ MOSSI (BURKINA FASO) RECIPES ============
+  {
+    id: "to-sauce",
+    name: "Tô with Baobab Leaf Sauce",
+    tribeSlug: "mossi",
+    tribeName: "Mossi",
+    category: "staple",
+    description: "Burkina Faso's national dish - millet or sorghum Tô served with slimy baobab leaf sauce.",
+    culturalSignificance: "Tô is the heart of Mossi cuisine. The Mogho Naba (Mossi King) serves Tô at royal ceremonies, symbolizing unity.",
+    historicalContext: "The Mossi kingdoms resisted invasion for 800 years, maintaining their culinary traditions. Tô has been the royal food since the founding of Ouagadougou.",
+    youtubeVideoId: "J8P5rTqFzAY",
+    prepTime: "20 minutes",
+    cookTime: "40 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Millet or sorghum flour", amount: "3 cups" },
+      { item: "Dried baobab leaves", amount: "1 cup" },
+      { item: "Water", amount: "6 cups" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Dawadawa (locust bean)", amount: "1 tablespoon" }
+    ],
+    instructions: [
+      "For Tô: Boil water and slowly add flour while stirring.",
+      "Cook 20 minutes, adding water as needed.",
+      "Stir until smooth and elastic.",
+      "For sauce: Soak baobab leaves in hot water.",
+      "Sauté onion in palm oil.",
+      "Add soaked leaves and dawadawa.",
+      "Simmer 15 minutes until slimy.",
+      "Serve sauce over molded Tô."
+    ],
+    tips: [
+      "Tô should be smooth without lumps",
+      "Baobab sauce should be slimy (that's correct!)",
+      "Dawadawa adds umami flavor"
+    ]
+  },
+
+  // ============ KANURI (NIGERIA/CHAD) RECIPES ============
+  {
+    id: "kilishi",
+    name: "Kilishi (Dried Spiced Meat)",
+    tribeSlug: "kanuri",
+    tribeName: "Kanuri",
+    category: "snack",
+    description: "Northern Nigeria's famous dried meat - thinly sliced beef coated in spiced groundnut paste and sun-dried. Africa's beef jerky.",
+    culturalSignificance: "Kilishi represents Kanuri ingenuity in preserving meat without refrigeration. It's a premium snack served to honored guests.",
+    historicalContext: "The Kanem-Bornu Empire developed kilishi for traders on trans-Saharan journeys. It could last months without spoiling.",
+    youtubeVideoId: "wZfF6bQCjgQ",
+    prepTime: "3 hours",
+    cookTime: "2 days (drying)",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Beef", amount: "1 kg", notes: "Lean cuts" },
+      { item: "Groundnut paste", amount: "2 cups" },
+      { item: "Dried chili", amount: "4 tablespoons" },
+      { item: "Ginger", amount: "2 tablespoons", notes: "Ground" },
+      { item: "Garlic", amount: "1 tablespoon", notes: "Ground" },
+      { item: "Salt", amount: "1 tablespoon" },
+      { item: "Seasoning cubes", amount: "2" }
+    ],
+    instructions: [
+      "Slice beef very thin (2mm) against the grain.",
+      "Dry meat in sun or oven until stiff (1 day).",
+      "Mix groundnut paste with all spices.",
+      "Add water to make spreadable paste.",
+      "Coat each meat piece with paste.",
+      "Return to sun/low oven to dry again.",
+      "Once dry, briefly roast over fire.",
+      "Store in airtight container."
+    ],
+    tips: [
+      "Slicing thin is crucial",
+      "The groundnut coating should be thick",
+      "Brief roasting adds smoky flavor"
+    ]
+  },
+
+  // ============ KONGO (DRC/CONGO) RECIPES ============
+  {
+    id: "pondu",
+    name: "Pondu (Cassava Leaves)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "staple",
+    description: "Congolese cassava leaf stew - the green heart of Kongo cuisine, cooked for hours until silky smooth.",
+    culturalSignificance: "Pondu is so important that Congolese in the diaspora grow cassava just for the leaves. It connects people to home.",
+    historicalContext: "Cassava arrived from Brazil via Portuguese traders in the 16th century. The Kongo people developed pondu, making full use of both the root and leaves.",
+    youtubeVideoId: "sQYpL8YK_wM",
+    prepTime: "30 minutes",
+    cookTime: "3 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Cassava leaves", amount: "1 kg", notes: "Pounded or finely chopped" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Smoked fish", amount: "200g" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "2 cups" }
+    ],
+    instructions: [
+      "Pound cassava leaves to paste (or blend).",
+      "Boil leaves in water for 1 hour to remove bitterness.",
+      "Drain and rinse.",
+      "Sauté onion and garlic in palm oil.",
+      "Add leaves and more water.",
+      "Add smoked fish.",
+      "Simmer 2 hours until very soft.",
+      "Season and serve with fufu or rice."
+    ],
+    tips: [
+      "Long cooking removes bitterness",
+      "Frozen pounded leaves available in African stores",
+      "Should be smooth and silky"
+    ]
+  },
+  {
+    id: "moambe-chicken",
+    name: "Moambe Chicken (Palm Nut Chicken)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "special",
+    description: "DRC's national dish - chicken braised in rich palm nut cream. Silky, orange, and unforgettable.",
+    culturalSignificance: "Moambe is the pride of Congolese cuisine, served at weddings, Christmas, and any celebration worth its name.",
+    historicalContext: "Palm trees are native to the Congo Basin. The Kongo developed moambe sauce long before European contact, making it one of Central Africa's most authentic dishes.",
+    youtubeVideoId: "eN-pKRr6jDA",
+    prepTime: "20 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Palm cream (moambe)", amount: "2 cups" },
+      { item: "Onion", amount: "2 medium" },
+      { item: "Garlic", amount: "6 cloves" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Scotch bonnet pepper", amount: "1" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Season and brown chicken pieces.",
+      "Remove chicken and sauté onions.",
+      "Add garlic and tomato paste.",
+      "Return chicken to pot.",
+      "Add palm cream and pepper.",
+      "Add water to cover.",
+      "Simmer 1 hour until chicken is tender.",
+      "Oil should float on top when ready.",
+      "Serve with rice or fufu."
+    ],
+    tips: [
+      "Palm cream in cans available at African stores",
+      "The orange oil layer is a sign it's done",
+      "Can substitute with palm oil + peanut butter"
+    ]
   }
 ];
 
