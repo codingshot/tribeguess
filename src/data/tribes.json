@@ -281,6 +281,16 @@
         "specialDishes": ["Nyama Choma (roasted meat)", "Matoke (cooked bananas)", "Mutura with Kachumbari"],
         "description": "Kikuyu cuisine revolves around agricultural produce from the fertile Central Highlands. Mũkimo, made by mashing potatoes, pumpkin leaves, green peas, and maize, is the signature dish often served at celebrations."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast (ũcũrũ porridge or tea), substantial lunch with main dish, family dinner",
+        "mainMealTime": "Lunch during farm work, dinner when family gathers",
+        "eatingStyle": "Communal from shared pots, hands used traditionally, children eat together to learn sharing",
+        "genderRules": "Men served first, women eat with children, elders receive choice portions",
+        "taboos": ["Eating alone is unfortunate", "Refusing food from host is offensive", "Pregnant women avoid certain foods"],
+        "specialOccasions": "Mũkimo served at all celebrations, Mũtura (blood sausage) at ceremonies, beer for elders",
+        "hospitality": "Visitors must be offered food immediately - 'A guest comes with blessings'"
+      },
       "traditionalDance": "Mũgithi - a lively dance with accordion music",
       "religion": "Traditional Kikuyu religion (Ngai/Mũgai), now predominantly Christian",
       "traditionalReligion": {
@@ -414,6 +424,16 @@
         "beverages": ["Busaa (fermented millet beer)", "Kong'o (distilled spirit)", "Fresh lake water fish soup"],
         "specialDishes": ["Aliya (stewed fish with greens)", "Apoth (smoked fish)", "Fish wrapped in banana leaves", "Osuga (bitter vegetable stew)"],
         "description": "Luo cuisine is dominated by fish from Lake Victoria. Tilapia and omena are prepared in numerous ways - fried, smoked, sun-dried, or stewed with vegetables. Ugali (kuon) is the staple accompaniment."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast before fishing, main meal when boats return, evening family meal",
+        "mainMealTime": "Mid-afternoon after fishing/work",
+        "eatingStyle": "Communal eating from shared bowls, fish head to eldest, hands traditionally",
+        "genderRules": "Men eat together, women and children separately, men receive fish heads (honor)",
+        "taboos": ["Certain fish are clan totems - cannot eat your clan's fish", "No mixing milk and fish", "Pregnant women avoid certain foods"],
+        "specialOccasions": "Dholuo weddings feature massive fish feasts, funerals require beef, circumcision avoided",
+        "hospitality": "Visitors offered food and busaa beer, refusing is an insult to the homestead"
       },
       "traditionalDance": "Ohangla and Benga - energetic dances with nyatiti lyre",
       "religion": "Traditional belief in Nyasaye (God); now mix of Christianity and traditional beliefs",
@@ -822,6 +842,16 @@
         "specialDishes": ["Roasted meat (celebration dish)", "Milk with blood (for strength)", "Moktet (boiled meat)", "Green vegetables with mursik"],
         "description": "Mursik is the iconic Kalenjin drink - fermented milk stored in a gourd lined with burnt wood ash (sot), giving it a smoky flavor. Athletes credit it for their running success."
       },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast (mursik, porridge), moderate lunch, family dinner after sunset",
+        "mainMealTime": "Evening - when family gathers after herding",
+        "eatingStyle": "Communal from shared pots, mursik gourds passed around, sitting on stools",
+        "genderRules": "Men served first, specific meat portions for each gender, warriors eat separately during initiation",
+        "taboos": ["Mursik gourds sacred - not shared with strangers", "Certain animals totemic to clans", "No eating before elders"],
+        "specialOccasions": "Circumcision ceremonies require specific meats, tumdo (initiation) has strict food rules",
+        "hospitality": "Guests offered mursik immediately - refusing is extremely rude"
+      },
       "traditionalDance": "Chemirocha - jumping dance performed during celebrations",
       "religion": "Traditional belief in Asis (Sun god); now predominantly Christian",
       "traditionalReligion": {
@@ -1195,6 +1225,16 @@
         "beverages": ["Fresh milk", "Blood and milk mixture", "Fermented milk"],
         "specialDishes": ["Roasted meat during ceremonies", "Olpul (meat soup)", "Warrior's blood drink (ceremonial)"],
         "description": "Traditional Maasai diet consisted almost entirely of milk, meat, and blood from their cattle. Today, they have incorporated grains and vegetables, but cattle products remain culturally central."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": "1-2 large meals traditionally",
+        "mealPattern": "Warriors eat 1-2 large meals daily, not snacking. Milk throughout day, meat in evening.",
+        "mainMealTime": "Evening - after cattle return from grazing",
+        "eatingStyle": "Men eat together at engang (homestead), women separately, eating with hands from shared gourds",
+        "genderRules": "Meat touched by women forbidden to warriors during certain periods, blood drawn by men only",
+        "taboos": ["Never mix milk and meat in same meal - separates cattle's 'life' and 'death'", "Warriors avoid vegetables", "Pregnant women avoid certain foods"],
+        "specialOccasions": "Olpul (meat feast) for ceremonies, blood drunk for warrior strength, meat distributed by age-set",
+        "hospitality": "Guests offered milk immediately - the sweetest from the best cow. Refusing milk deeply offensive."
       },
       "traditionalDance": "Adumu - competitive jumping dance by Moran warriors",
       "religion": "Traditional Maasai religion (Enkai/Ngai), Christianity growing",
@@ -1623,6 +1663,16 @@
         "beverages": ["Shaah (spiced tea)", "Camel milk"],
         "specialDishes": ["Bariis iskukaris (spiced rice with meat)", "Suqaar (cubed meat)", "Sambusa (samosas)", "Canjeero (pancakes)"],
         "description": "Somali cuisine is influenced by Arab, Indian, and East African flavors. Spiced rice dishes, meat, and camel products are central. Shaah (Somali tea) with cardamom is a cultural staple."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Canjeero breakfast with tea, light lunch, large dinner (main meal)",
+        "mainMealTime": "Evening dinner - elaborate family meal",
+        "eatingStyle": "Communal from shared plates, eating with right hand only, floor seating on mats",
+        "genderRules": "Men and guests eat first, women cook and eat separately, eldest served first portions",
+        "taboos": ["Pork and alcohol strictly forbidden (Islam)", "Left hand never used for eating", "Food must be halal"],
+        "specialOccasions": "Weddings feature lamb/goat slaughter, Eid celebrations with elaborate meat dishes, Ramadan fasting",
+        "hospitality": "Martisoor (hospitality) is sacred - guests fed immediately, refusing food insults host's honor"
       },
       "traditionalDance": "Dhaanto - traditional dance performed at celebrations",
       "religion": "Sunni Islam (predominantly)",

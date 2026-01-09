@@ -105,11 +105,61 @@ export default function RecipePage() {
 
   const relatedRecipes = getRecipesByTribe(recipe.tribeSlug).filter(r => r.id !== recipe.id);
 
+  // Generate JSON-LD structured data for SEO
+  const recipeSchema = {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    "name": recipe.name,
+    "description": recipe.description,
+    "author": {
+      "@type": "Organization",
+      "name": "TribeGuess"
+    },
+    "prepTime": `PT${parseInt(recipe.prepTime) || 15}M`,
+    "cookTime": `PT${parseInt(recipe.cookTime) || 30}M`,
+    "totalTime": `PT${(parseInt(recipe.prepTime) || 15) + (parseInt(recipe.cookTime) || 30)}M`,
+    "recipeYield": recipe.servings,
+    "recipeCategory": recipe.category,
+    "recipeCuisine": `${recipe.tribeName} African`,
+    "recipeIngredient": recipe.ingredients,
+    "recipeInstructions": recipe.instructions.map((step, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "text": step
+    })),
+    "keywords": `${recipe.name}, ${recipe.tribeName} food, African recipe, traditional African cuisine, ${recipe.category}`,
+    ...(recipe.youtubeVideoId && {
+      "video": {
+        "@type": "VideoObject",
+        "name": `How to make ${recipe.name}`,
+        "embedUrl": `https://www.youtube.com/embed/${recipe.youtubeVideoId}`
+      }
+    })
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{recipe.name} - Traditional {recipe.tribeName} Recipe | TribeGuess</title>
-        <meta name="description" content={`Learn how to make ${recipe.name}, a traditional ${recipe.tribeName} dish. ${recipe.description}`} />
+        <title>{recipe.name} - Traditional {recipe.tribeName} Recipe | African Cuisine | TribeGuess</title>
+        <meta name="description" content={`Learn how to make ${recipe.name}, a traditional ${recipe.tribeName} dish from Africa. ${recipe.description} Prep time: ${recipe.prepTime}, Serves: ${recipe.servings}.`} />
+        <meta name="keywords" content={`${recipe.name}, ${recipe.tribeName} recipe, African food, traditional cuisine, ${recipe.category}, how to cook ${recipe.name}`} />
+        <link rel="canonical" href={`https://tribeguess.com/recipe/${recipe.id}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${recipe.name} - ${recipe.tribeName} Traditional Recipe`} />
+        <meta property="og:description" content={`Authentic ${recipe.tribeName} recipe: ${recipe.description}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://tribeguess.com/recipe/${recipe.id}`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${recipe.name} - ${recipe.tribeName} Recipe`} />
+        <meta name="twitter:description" content={recipe.description} />
+        
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(recipeSchema)}
+        </script>
       </Helmet>
 
       <Header />
