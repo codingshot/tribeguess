@@ -3,12 +3,13 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { getAllTribes } from "@/lib/tribeDetection";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
-import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users, BookOpen, ExternalLink, ChevronRight, Search, Filter, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sparkles, Sun, Moon, Mountain, Droplets, Wind, Flame, TreePine, Users, BookOpen, ExternalLink, ChevronRight, Search, Filter, X, Scale } from "lucide-react";
 import { getAllReligions, TraditionalReligionData } from "@/data/traditionalReligions";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
@@ -46,9 +47,11 @@ const featuredReligions = getAllReligions();
 
 export default function ReligionsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [selectedRegion, setSelectedRegion] = useState(searchParams.get('region') || 'all');
   const [selectedTribe, setSelectedTribe] = useState(searchParams.get('tribe') || 'all');
+  const [compareSelection, setCompareSelection] = useState<string[]>([]);
   
   const allTribes = getAllTribes() as TribeWithReligion[];
   
@@ -106,6 +109,20 @@ export default function ReligionsPage() {
   };
 
   const hasActiveFilters = searchQuery || selectedRegion !== 'all' || selectedTribe !== 'all';
+
+  const toggleCompare = (id: string) => {
+    setCompareSelection(prev => 
+      prev.includes(id) 
+        ? prev.filter(i => i !== id)
+        : prev.length < 4 ? [...prev, id] : prev
+    );
+  };
+
+  const goToCompare = () => {
+    if (compareSelection.length > 0) {
+      navigate(`/religion-compare?ids=${compareSelection.join(",")}`);
+    }
+  };
 
   // Group by region
   const regionGroups = tribesWithReligion.reduce((acc, tribe) => {
@@ -204,7 +221,37 @@ export default function ReligionsPage() {
             <p className="text-xs text-muted-foreground mt-2">
               This content is for educational and entertainment purposes only.
             </p>
+            <div className="flex justify-center gap-3 mt-4">
+              <Link to="/religion-compare">
+                <Button variant="outline" className="gap-2">
+                  <Scale className="w-4 h-4" />
+                  Compare Tool
+                </Button>
+              </Link>
+            </div>
           </div>
+
+          {/* Quick Compare Bar */}
+          {compareSelection.length > 0 && (
+            <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-primary text-primary-foreground px-4 py-3 rounded-full shadow-lg flex items-center gap-3">
+              <span className="text-sm font-medium">{compareSelection.length} selected</span>
+              <Button 
+                size="sm" 
+                variant="secondary" 
+                onClick={goToCompare}
+                className="gap-1"
+              >
+                <Scale className="w-3 h-3" />
+                Compare
+              </Button>
+              <button 
+                onClick={() => setCompareSelection([])}
+                className="text-primary-foreground/80 hover:text-primary-foreground"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          )}
 
           {/* Search and Filters */}
           <section className="mb-8">
@@ -311,12 +358,31 @@ export default function ReligionsPage() {
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredReligions.map((religion) => (
-                <Link key={religion.id} to={`/religion/${religion.id}`} className="block">
-                  <Card className="hover:shadow-lg transition-shadow border-primary/20 h-full hover:border-primary/50">
-                    <CardHeader className="pb-3">
-                      <CardTitle className="text-lg text-primary">{religion.name}</CardTitle>
-                      <p className="text-xs text-muted-foreground">{religion.region} • {religion.estimatedFollowers}</p>
-                    </CardHeader>
+                <div key={religion.id} className="relative">
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleCompare(religion.id);
+                    }}
+                    className={`absolute top-3 right-3 z-10 p-1.5 rounded-full border transition-colors ${
+                      compareSelection.includes(religion.id)
+                        ? 'bg-primary text-primary-foreground border-primary'
+                        : 'bg-background/80 text-muted-foreground border-border hover:border-primary'
+                    }`}
+                    title={compareSelection.includes(religion.id) ? 'Remove from compare' : 'Add to compare'}
+                  >
+                    <Scale className="w-4 h-4" />
+                  </button>
+                  <Link to={`/religion/${religion.id}`} className="block">
+                    <Card className={`hover:shadow-lg transition-shadow h-full ${
+                      compareSelection.includes(religion.id)
+                        ? 'border-primary ring-2 ring-primary/20'
+                        : 'border-primary/20 hover:border-primary/50'
+                    }`}>
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-lg text-primary pr-8">{religion.name}</CardTitle>
+                        <p className="text-xs text-muted-foreground">{religion.region} • {religion.estimatedFollowers}</p>
+                      </CardHeader>
                     <CardContent className="space-y-3">
                       <div>
                         <p className="text-xs font-semibold text-muted-foreground uppercase">Supreme Deity</p>
@@ -376,6 +442,7 @@ export default function ReligionsPage() {
                     </CardContent>
                   </Card>
                 </Link>
+              </div>
               ))}
             </div>
             )}

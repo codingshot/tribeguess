@@ -1237,6 +1237,249 @@ export const traditionalReligions: TraditionalReligionData[] = [
       { name: "Bwiti: An Ethnography - Fernandez", url: "https://www.jstor.org/stable/j.ctt32bnh4" },
       { name: "Britannica - Iboga", url: "https://www.britannica.com/plant/iboga" }
     ]
+  },
+  {
+    id: "igbo-odinani",
+    name: "Igbo Odinani",
+    alternateNames: ["Odinala", "Omenala", "Igbo Traditional Religion"],
+    region: "West Africa",
+    estimatedFollowers: "~3 million (with syncretic practitioners)",
+    youtubeVideoId: "v8XZ3QOWXFU",
+    countryBreakdown: [
+      { country: "Nigeria", flag: "🇳🇬", percentage: 95 },
+      { country: "Cameroon", flag: "🇨🇲", percentage: 3 },
+      { country: "Diaspora", flag: "🌍", percentage: 2 }
+    ],
+    supremeDeity: {
+      name: "Chukwu (Chi-Ukwu)",
+      description: "The supreme creator god whose name means 'Great Chi' or 'Great Spirit'. Chukwu is the source of all existence, too great to approach directly. Worship flows through intermediary spirits (Alusi) and ancestors.",
+      attributes: ["Supreme Creator", "Source of Chi (Life Force)", "Omnipotent", "Distant but All-Knowing"]
+    },
+    tenets: [
+      {
+        belief: "Chi (Personal Spirit)",
+        description: "Every person has a Chi - a personal god or divine spark given by Chukwu before birth. Your Chi determines your destiny and fortune. 'Onye kwe, Chi ya ekwe' - when a person agrees, their Chi agrees.",
+        source: "Things Fall Apart - Chinua Achebe (1958)"
+      },
+      {
+        belief: "Ofo na Ogu (Truth and Justice)",
+        description: "The sacred symbols of moral authority. Ofo represents truth and righteousness. One who holds Ofo must be morally upright, as wrongdoing brings spiritual consequences.",
+        source: "Igbo Traditional Religion - Uchendu (1965)"
+      },
+      {
+        belief: "Ala (Earth Goddess)",
+        description: "Ala is the earth goddess, guardian of morality, fertility, and the dead. Crimes against the earth (aru ala) like murder or adultery require purification rituals.",
+        source: "Britannica - Igbo Religion"
+      },
+      {
+        belief: "Reincarnation (Ilo Uwa)",
+        description: "Ancestors return through reincarnation, often within the same family. Diviners identify which ancestor has returned in a newborn. Names often reflect this belief.",
+        source: "Igbo Worldview - Onwuejeogwu (1981)"
+      }
+    ],
+    practices: [
+      { name: "Divination (Afa)", description: "Dibia (priests) consult oracle systems to determine causes of problems and prescribe solutions. Multiple divination methods exist.", frequency: "As needed" },
+      { name: "Alusi Worship", description: "Spirits governing various aspects of life receive offerings at shrines. Each village has patron Alusi with dedicated priests.", frequency: "Regular" },
+      { name: "Kolanut Ceremony", description: "Breaking and sharing kolanut begins all significant gatherings. Prayers are said while presenting kolanut to ancestors and spirits.", frequency: "Daily/Ceremonial" },
+      { name: "Masquerade Tradition", description: "Masked spirits (Mmanwu) represent ancestors and spirits. They appear at festivals, funerals, and to enforce social order.", frequency: "Ceremonial" }
+    ],
+    rituals: [
+      { name: "Igu Aro (New Yam Festival)", description: "Annual celebration of first harvest. Yams are offered to Ala and ancestors before consumption. A major community gathering.", occasion: "August/September" },
+      { name: "Iwa Akwa (Coming of Age)", description: "Young men's initiation into adulthood, marking independence and responsibility. Involves community celebration and gift-giving.", occasion: "Adulthood" },
+      { name: "Second Burial", description: "Elaborate funeral rites for the deceased to ensure proper passage to ancestorhood. May occur months after initial burial.", occasion: "Death of elders" }
+    ],
+    sacredTexts: [
+      { name: "Oral Traditions", description: "Creation myths, proverbs (ilu), and stories encoding Odinani philosophy. Passed through dibia, elders, and griots.", status: "oral" },
+      { name: "Odu Chukwu", description: "Sacred verses and divination poetry similar to Yoruba Odu Ifa, containing spiritual and ethical teachings.", status: "oral" }
+    ],
+    joining: {
+      process: "One is typically born into Odinani through Igbo lineage. Each person receives their Chi at birth. Deeper participation involves consulting dibia and receiving initiation into specific Alusi cults.",
+      requirements: [
+        "Igbo heritage or adoption into Igbo family",
+        "Consultation with Dibia for Chi alignment",
+        "Learning of rituals and taboos",
+        "Initiation into Alusi worship if called"
+      ],
+      notes: "Christianity heavily impacted Odinani. Many Igbo practice syncretically. Revival movements (Odinala Ndi Igbo) are growing among diaspora and educated Igbo."
+    },
+    influence: {
+      cultural: "Odinani shaped Igbo republicanism, democratic village assemblies, and the saying 'Igbo enwe eze' (Igbo have no king). Art, music, and festivals remain influenced.",
+      modern: "Chinua Achebe's novels brought global attention. Academic study is growing. Some Igbo-Americans are reviving practices.",
+      diaspora: "Interest in African spirituality has sparked Odinani revival among African-Americans tracing Igbo ancestry."
+    },
+    tribesFollowing: [
+      { tribeSlug: "igbo", tribeName: "Igbo", percentage: 25, notes: "Majority syncretic with Christianity" },
+      { tribeSlug: "ibibio", tribeName: "Ibibio", percentage: 15, notes: "Related traditions" },
+      { tribeSlug: "ijaw", tribeName: "Ijaw", percentage: 10, notes: "Some shared practices" }
+    ],
+    sources: [
+      { name: "Wikipedia - Odinani", url: "https://en.wikipedia.org/wiki/Odinani" },
+      { name: "Britannica - Igbo Religion", url: "https://www.britannica.com/topic/Igbo-religion" },
+      { name: "Igbo Traditional Religion - Uchendu", url: "https://www.jstor.org/stable/1156679" }
+    ]
+  },
+  {
+    id: "san-bushmen",
+    name: "San/Bushmen Religion",
+    alternateNames: ["Khoisan Spirituality", "First People's Religion", "|Xam beliefs"],
+    region: "Southern Africa",
+    estimatedFollowers: "~100,000",
+    youtubeVideoId: "Y3-3zPxH_ns",
+    countryBreakdown: [
+      { country: "Botswana", flag: "🇧🇼", percentage: 40 },
+      { country: "Namibia", flag: "🇳🇦", percentage: 35 },
+      { country: "South Africa", flag: "🇿🇦", percentage: 15 },
+      { country: "Angola/Zimbabwe", flag: "🌍", percentage: 10 }
+    ],
+    supremeDeity: {
+      name: "|Kaggen (Cagn/Kaang)",
+      description: "The trickster-creator god, often appearing as a praying mantis. |Kaggen created the world, gave animals their colors, and taught humans to hunt. He is mischievous, wise, and deeply connected to the eland antelope.",
+      attributes: ["Creator-Trickster", "Shape-shifter", "Connected to Eland", "Source of n|om (spiritual power)"]
+    },
+    tenets: [
+      {
+        belief: "N|om (Spiritual Potency)",
+        description: "A supernatural potency that healers activate during trance dances. N|om is 'heated' through intense dancing until it 'boils', enabling healers to enter the spirit world.",
+        source: "Kalahari Hunter-Gatherers - Lee & DeVore (1976)"
+      },
+      {
+        belief: "Eland Spirit",
+        description: "The eland antelope is the most spiritually powerful animal. It features centrally in rock art, healing rituals, and coming-of-age ceremonies. Killing an eland requires special rituals.",
+        source: "Rock Art of Southern Africa - Lewis-Williams (1990)"
+      },
+      {
+        belief: "Spirit World Connection",
+        description: "The world has layers: this world, the spirit world above, and the underworld. Shamans travel between these during trance. Rock paintings depict these journeys.",
+        source: "The Mind in the Cave - Lewis-Williams (2002)"
+      },
+      {
+        belief: "Egalitarian Ethos",
+        description: "No person is above another. Sharing is mandatory. Boasting is shamed through 'insulting the meat'. The group's wellbeing supersedes individual glory.",
+        source: "The !Kung San - Lee (1979)"
+      }
+    ],
+    practices: [
+      { name: "Trance Dance (Healing Dance)", description: "All-night dance where healers enter trance through rhythmic movement and hyperventilation. They heal the sick and protect the community from malevolent spirits.", frequency: "Weekly/Monthly" },
+      { name: "Rock Art", description: "Painting on rock shelters depicting spiritual experiences, the eland, therianthropes (human-animal forms), and trance visions. Some sites are over 20,000 years old.", frequency: "Ceremonial/Vision-induced" },
+      { name: "Storytelling", description: "Elders share creation myths and |Kaggen tales around evening fires. Stories encode survival knowledge and spiritual teachings.", frequency: "Nightly" },
+      { name: "Eland Rituals", description: "When an eland is hunted, specific rituals honor its spirit. Girls' coming-of-age ceremonies involve eland symbolism.", frequency: "Ceremonial" }
+    ],
+    rituals: [
+      { name: "First Kill (Boys)", description: "A boy's first hunt kill is marked with ritual scarification. The animal's fat is rubbed into cuts to transfer its qualities.", occasion: "First successful hunt" },
+      { name: "Eland Dance (Girls)", description: "Menstruation ceremony where girls are secluded, then emerge to dance. The community celebrates with an eland-mimicking dance.", occasion: "First menstruation" },
+      { name: "Rain-Making", description: "In drought, shamans travel in trance to capture a 'rain animal' and lead it across the land. Rock art depicts rain animals.", occasion: "Drought" }
+    ],
+    sacredTexts: [
+      { name: "|Xam Narratives (Bleek & Lloyd Collection)", description: "19th-century transcription of |Xam San stories by Wilhelm Bleek and Lucy Lloyd. A crucial record of nearly-lost mythology.", status: "oral" },
+      { name: "Living Oral Tradition", description: "Stories, songs, and healing knowledge passed among remaining San communities, particularly the Ju|'hoansi and !Kung.", status: "oral" }
+    ],
+    joining: {
+      process: "San spirituality is integrated into daily life for San communities. Outsiders can respectfully learn about practices but full participation is tied to San identity. Some communities share with researchers and visitors.",
+      requirements: [
+        "San community membership or acceptance",
+        "Learning from elder healers",
+        "Participation in community life",
+        "Years of observation and practice"
+      ],
+      notes: "San spirituality is not proselytizing. It's inseparable from their hunter-gatherer lifestyle and worldview. Colonial and modern pressures have disrupted traditions."
+    },
+    influence: {
+      cultural: "San rock art is a world heritage treasure. Their egalitarian society influenced debates on human nature. Language contributes to understanding human origins.",
+      modern: "Tourism and research bring income but also challenges. Some communities revive practices for younger generations. Films like 'The Gods Must Be Crazy' brought visibility (with controversy).",
+      diaspora: "No significant diaspora; the religion is tied to the land. Some Khoi-descendant South Africans explore ancestral spirituality."
+    },
+    tribesFollowing: [
+      { tribeSlug: "san", tribeName: "San/Bushmen", percentage: 70, notes: "Core practitioners" },
+      { tribeSlug: "khoi", tribeName: "Khoikhoi", percentage: 35, notes: "Related Khoisan traditions" },
+      { tribeSlug: "nama", tribeName: "Nama", percentage: 25, notes: "Shared heritage" }
+    ],
+    sources: [
+      { name: "Wikipedia - San Religion", url: "https://en.wikipedia.org/wiki/San_religion" },
+      { name: "Rock Art Research Institute", url: "https://www.wits.ac.za/rari/" },
+      { name: "Britannica - San People", url: "https://www.britannica.com/topic/San" }
+    ]
+  },
+  {
+    id: "berber-religion",
+    name: "Berber/Amazigh Traditional Religion",
+    alternateNames: ["Amazigh Paganism", "Libyan Religion", "North African Indigenous Religion"],
+    region: "North Africa",
+    estimatedFollowers: "~50,000 (with syncretic elements among millions)",
+    youtubeVideoId: "nCQzJTPjpQM",
+    countryBreakdown: [
+      { country: "Morocco", flag: "🇲🇦", percentage: 40 },
+      { country: "Algeria", flag: "🇩🇿", percentage: 30 },
+      { country: "Libya", flag: "🇱🇾", percentage: 15 },
+      { country: "Tunisia/Mali/Niger", flag: "🌍", percentage: 15 }
+    ],
+    supremeDeity: {
+      name: "Yakuc/Akuc (Sky God)",
+      description: "The supreme sky deity worshipped across Amazigh communities under various names (Yakuc, Akuc, Yakush). Associated with weather, rain, and celestial order. Worship was largely supplanted by Islam but elements persist.",
+      attributes: ["Sky God", "Rain Bringer", "Supreme Deity", "Celestial Order"]
+    },
+    tenets: [
+      {
+        belief: "Animism and Nature Spirits",
+        description: "Mountains, springs, caves, and trees house spirits. The Atlas Mountains are particularly sacred. Natural phenomena reflect spiritual activity.",
+        source: "Berber Culture and Language - Chaker (1989)"
+      },
+      {
+        belief: "Ancestor Reverence",
+        description: "Ancestors (Idurar) protect the living and are honored at shrines and during festivals. Family tombs receive regular offerings. The dead influence the living.",
+        source: "Encyclopaedia of Islam - Berbers"
+      },
+      {
+        belief: "Sacred Springs and Caves",
+        description: "Water sources and caves are meeting points between worlds. Pilgrimages to sacred springs continue even among Muslim Berbers. Caves feature in creation myths.",
+        source: "Berber Mythology - Basset (1910)"
+      },
+      {
+        belief: "Solar and Lunar Worship",
+        description: "The sun and moon held divine significance. The Amazigh calendar (Yennayer) marks solar cycles. Some festivals align with solstices.",
+        source: "Ancient Libyan Religion - Brett & Fentress (1996)"
+      }
+    ],
+    practices: [
+      { name: "Yennayer (New Year)", description: "Amazigh New Year (January 12) celebrating harvest and renewal. Traditional foods, rituals, and community gatherings mark the day. Still widely practiced.", frequency: "Annual" },
+      { name: "Shrine Pilgrimages", description: "Visits to saints' tombs (marabouts) and sacred natural sites. Offerings are made for blessings, healing, and fertility. Syncretic with Sufi Islam.", frequency: "Ongoing" },
+      { name: "Tattoo Traditions", description: "Women's facial tattoos (now declining) carried spiritual protection and tribal identity. Designs encoded beliefs about fertility and warding evil.", frequency: "Cultural practice" },
+      { name: "Music and Dance", description: "Ahwash and Ahidous gatherings combine music, dance, and poetry with spiritual and community significance.", frequency: "Festivals/Ceremonies" }
+    ],
+    rituals: [
+      { name: "Yennayer Celebrations", description: "Families prepare special meals, especially couscous with seven vegetables. Doors are marked, new clothes worn, and ancestors remembered.", occasion: "January 12" },
+      { name: "Rain Rituals (Anzar)", description: "During drought, ceremonies appeal to Anzar, the rain deity. A bride-doll is paraded and water symbolism invoked.", occasion: "Drought" },
+      { name: "Marriage Rituals", description: "Traditional weddings include henna, symbolic rituals for fertility, protection against evil eye, and community feasting over multiple days.", occasion: "Marriage" }
+    ],
+    sacredTexts: [
+      { name: "Oral Mythology", description: "Creation myths, hero stories, and moral tales passed through generations. The Tuareg Imuhagh maintain some of the richest traditions.", status: "oral" },
+      { name: "Tifinagh Script", description: "Ancient Berber writing system (2000+ years old). Used for inscriptions and now revived for modern use. Carries cultural-spiritual significance.", status: "written" }
+    ],
+    joining: {
+      process: "Traditional Amazigh religion is ethnic and cultural rather than conversion-based. Most Amazigh today practice Islam with indigenous elements. Cultural participation is open to those integrated into communities.",
+      requirements: [
+        "Amazigh heritage or community adoption",
+        "Participation in cultural festivals",
+        "Learning of Tamazight language",
+        "Respect for ancestral traditions"
+      ],
+      notes: "Pre-Islamic Berber religion largely merged with Islam. However, distinct cultural practices survive. Amazigh identity movements are reviving interest in pre-Islamic heritage."
+    },
+    influence: {
+      cultural: "Amazigh symbols (Aza/Yaz), calendar, and festivals endure. Berber queens like Kahina resisted Arab conquest. The Tifinagh script is UNESCO-recognized.",
+      modern: "Amazigh cultural movements in Morocco and Algeria have won official recognition. Yennayer became a national holiday in Algeria (2018) and Morocco (2023).",
+      diaspora: "European Amazigh diaspora maintains cultural practices. Music and art scenes keep traditions alive. Some explore pre-Islamic spirituality."
+    },
+    tribesFollowing: [
+      { tribeSlug: "berber", tribeName: "Berber/Amazigh", percentage: 15, notes: "Cultural elements within Islam" },
+      { tribeSlug: "tuareg", tribeName: "Tuareg", percentage: 20, notes: "Strong cultural retention" },
+      { tribeSlug: "kabyle", tribeName: "Kabyle", percentage: 10, notes: "Some syncretic practices" },
+      { tribeSlug: "riffian", tribeName: "Riffian", percentage: 10, notes: "Cultural identity focus" }
+    ],
+    sources: [
+      { name: "Wikipedia - Traditional Berber Religion", url: "https://en.wikipedia.org/wiki/Traditional_Berber_religion" },
+      { name: "Britannica - Berber", url: "https://www.britannica.com/topic/Berber" },
+      { name: "Encyclopaedia of Islam", url: "https://referenceworks.brillonline.com/entries/encyclopaedia-of-islam-2/berbers" }
+    ]
   }
 ];
 
