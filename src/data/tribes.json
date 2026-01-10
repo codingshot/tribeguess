@@ -370,9 +370,11 @@
       "famousPeople": [
         { "name": "Jomo Kenyatta", "role": "First President of Kenya", "birth": 1897, "death": 1978, "wikipedia": "https://en.wikipedia.org/wiki/Jomo_Kenyatta", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Jomo_Kenyatta_1978.jpg/220px-Jomo_Kenyatta_1978.jpg" },
         { "name": "Wangari Maathai", "role": "Nobel Peace Prize Laureate 2004", "birth": 1940, "death": 2011, "wikipedia": "https://en.wikipedia.org/wiki/Wangari_Maathai", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wangari_Maathai_portrait_by_Martin_Rowe.jpg/220px-Wangari_Maathai_portrait_by_Martin_Rowe.jpg" },
-        { "name": "Ngũgĩ wa Thiong'o", "role": "Author & Playwright", "birth": 1938, "wikipedia": "https://en.wikipedia.org/wiki/Ng%C5%A9g%C4%A9_wa_Thiong%27o", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Ngugi_wa_Thiong%27o%2C_2018_%28cropped%29.jpg/220px-Ngugi_wa_Thiong%27o%2C_2018_%28cropped%29.jpg" },
+        { "name": "Ngũgĩ wa Thiong'o", "role": "Author, Playwright & Academic", "birth": 1938, "wikipedia": "https://en.wikipedia.org/wiki/Ng%C5%A9g%C4%A9_wa_Thiong%27o", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Ngugi_wa_Thiong%27o%2C_2018_%28cropped%29.jpg/220px-Ngugi_wa_Thiong%27o%2C_2018_%28cropped%29.jpg" },
         { "name": "Mwai Kibaki", "role": "Third President of Kenya", "birth": 1931, "death": 2022, "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mwai_Kibaki%2C_October_2003.jpg/220px-Mwai_Kibaki%2C_October_2003.jpg" },
-        { "name": "Dedan Kimathi", "role": "Mau Mau Leader", "birth": 1920, "death": 1957, "wikipedia": "https://en.wikipedia.org/wiki/Dedan_Kimathi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dedan_Kimathi.jpg/220px-Dedan_Kimathi.jpg" }
+        { "name": "Dedan Kimathi", "role": "Mau Mau Liberation Hero", "birth": 1920, "death": 1957, "wikipedia": "https://en.wikipedia.org/wiki/Dedan_Kimathi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dedan_Kimathi.jpg/220px-Dedan_Kimathi.jpg" },
+        { "name": "Uhuru Kenyatta", "role": "Fourth President of Kenya", "birth": 1961, "wikipedia": "https://en.wikipedia.org/wiki/Uhuru_Kenyatta", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Uhuru_Kenyatta_2015.jpg/220px-Uhuru_Kenyatta_2015.jpg" },
+        { "name": "Catherine Ndereba", "role": "Marathon Legend - 'Catherine the Great'", "birth": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Catherine_Ndereba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Catherine_Ndereba.jpg/220px-Catherine_Ndereba.jpg" }
       ],
       "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise.",
       "relatedTribes": ["meru", "embu"],
@@ -806,11 +808,12 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Kalonzo Musyoka", "role": "Former Vice President & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Kalonzo_Musyoka" },
-        { "name": "Charity Ngilu", "role": "Former Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Charity_Ngilu" },
-        { "name": "Paul Ngei", "role": "Independence Hero (Kapenguria Six)", "wikipedia": "https://en.wikipedia.org/wiki/Paul_Ngei" },
-        { "name": "Kivutha Kibwana", "role": "Former Governor & Activist", "wikipedia": "https://en.wikipedia.org/wiki/Kivutha_Kibwana" },
-        { "name": "Kakai Kilonzo", "role": "Legendary Musician", "wikipedia": "https://en.wikipedia.org/wiki/Kakai_Kilonzo" }
+        { "name": "Kalonzo Musyoka", "role": "Former Vice President of Kenya", "birth": 1953, "wikipedia": "https://en.wikipedia.org/wiki/Kalonzo_Musyoka", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Kalonzo_Musyoka.jpg/220px-Kalonzo_Musyoka.jpg" },
+        { "name": "Charity Ngilu", "role": "Former Cabinet Secretary & Governor", "birth": 1952, "wikipedia": "https://en.wikipedia.org/wiki/Charity_Ngilu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Charity_Ngilu.jpg/220px-Charity_Ngilu.jpg" },
+        { "name": "Paul Ngei", "role": "Independence Hero (Kapenguria Six)", "birth": 1923, "death": 2004, "wikipedia": "https://en.wikipedia.org/wiki/Paul_Ngei", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Paul_Ngei.jpg/220px-Paul_Ngei.jpg" },
+        { "name": "Kivutha Kibwana", "role": "Former Governor of Makueni & Activist", "birth": 1950, "wikipedia": "https://en.wikipedia.org/wiki/Kivutha_Kibwana", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Kivutha_Kibwana.jpg/220px-Kivutha_Kibwana.jpg" },
+        { "name": "Kakai Kilonzo", "role": "Legendary Benga Musician", "birth": 1953, "death": 1987, "wikipedia": "https://en.wikipedia.org/wiki/Kakai_Kilonzo" },
+        { "name": "Mutua Matheka", "role": "Award-winning Photographer", "birth": 1988, "wikipedia": null, "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Mutua_Matheka.jpg/220px-Mutua_Matheka.jpg" }
       ],
       "description": "The Kamba (Akamba) people are known for their exceptional craftsmanship, particularly wood carving in Wamunyu, and their rich musical traditions. They traditionally inhabit the semi-arid Eastern Kenya.",
       "relatedTribes": ["kikuyu", "meru", "embu"],
@@ -1092,11 +1095,12 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Simeon Nyachae", "role": "Former Powerful Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Simeon_Nyachae" },
-        { "name": "Nyashinski", "role": "Award-winning Musician", "wikipedia": "https://en.wikipedia.org/wiki/Nyashinski" },
-        { "name": "Sam Ongeri", "role": "Former Cabinet Secretary for Education", "wikipedia": "https://en.wikipedia.org/wiki/Sam_Ongeri" },
-        { "name": "Zachary Onyonka", "role": "Former Finance Minister & Economist", "wikipedia": "https://en.wikipedia.org/wiki/Zachary_Onyonka" },
-        { "name": "James Ongwae", "role": "Former Governor of Kisii County", "wikipedia": "https://en.wikipedia.org/wiki/James_Ongwae" }
+        { "name": "Simeon Nyachae", "role": "Former Powerful Cabinet Minister", "birth": 1932, "death": 2021, "wikipedia": "https://en.wikipedia.org/wiki/Simeon_Nyachae", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Simeon_Nyachae.jpg/220px-Simeon_Nyachae.jpg" },
+        { "name": "Nyashinski", "role": "Award-winning Musician & Rapper", "birth": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Nyashinski", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Nyashinski_performing.jpg/220px-Nyashinski_performing.jpg" },
+        { "name": "Sam Ongeri", "role": "Former Cabinet Secretary for Education", "birth": 1939, "wikipedia": "https://en.wikipedia.org/wiki/Sam_Ongeri", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Sam_Ongeri.jpg/220px-Sam_Ongeri.jpg" },
+        { "name": "Zachary Onyonka", "role": "Former Finance Minister & Economist", "birth": 1939, "death": 1999, "wikipedia": "https://en.wikipedia.org/wiki/Zachary_Onyonka" },
+        { "name": "James Ongwae", "role": "Former Governor of Kisii County", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/James_Ongwae" },
+        { "name": "Fred Matiang'i", "role": "Former Interior Cabinet Secretary", "birth": 1967, "wikipedia": "https://en.wikipedia.org/wiki/Fred_Matiang%27i", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Fred_Matiang%27i.jpg/220px-Fred_Matiang%27i.jpg" }
       ],
       "description": "The Kisii (Abagusii) people are known for their agricultural productivity in the fertile highlands of South Nyanza. They are famous for soapstone carving and have a strong emphasis on education.",
       "relatedTribes": ["luo", "luhya", "kuria"],
@@ -3616,11 +3620,12 @@
         "writingSystem": "Latin alphabet with diacritics"
       },
       "famousPeople": [
-        { "name": "Wole Soyinka", "role": "Nobel Literature Laureate 1986", "wikipedia": "https://en.wikipedia.org/wiki/Wole_Soyinka" },
-        { "name": "Fela Kuti", "role": "Afrobeat Pioneer", "wikipedia": "https://en.wikipedia.org/wiki/Fela_Kuti" },
-        { "name": "Obafemi Awolowo", "role": "Nigerian Statesman", "wikipedia": "https://en.wikipedia.org/wiki/Obafemi_Awolowo" },
-        { "name": "King Sunny Ade", "role": "Jùjú Music Legend", "wikipedia": "https://en.wikipedia.org/wiki/King_Sunny_Ade" },
-        { "name": "Chimamanda Ngozi Adichie", "role": "Author", "wikipedia": "https://en.wikipedia.org/wiki/Chimamanda_Ngozi_Adichie" }
+        { "name": "Wole Soyinka", "role": "Nobel Literature Laureate 1986", "birth": 1934, "wikipedia": "https://en.wikipedia.org/wiki/Wole_Soyinka", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wole_Soyinka_%28cropped%29.jpg/220px-Wole_Soyinka_%28cropped%29.jpg" },
+        { "name": "Fela Kuti", "role": "Afrobeat Pioneer & Political Activist", "birth": 1938, "death": 1997, "wikipedia": "https://en.wikipedia.org/wiki/Fela_Kuti", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Fela_Kuti.jpg/220px-Fela_Kuti.jpg" },
+        { "name": "Obafemi Awolowo", "role": "Nigerian Statesman & Premier", "birth": 1909, "death": 1987, "wikipedia": "https://en.wikipedia.org/wiki/Obafemi_Awolowo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Obafemi_Awolowo.jpg/220px-Obafemi_Awolowo.jpg" },
+        { "name": "King Sunny Ade", "role": "Jùjú Music Legend", "birth": 1946, "wikipedia": "https://en.wikipedia.org/wiki/King_Sunny_Ade", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/King_Sunny_Ade.jpg/220px-King_Sunny_Ade.jpg" },
+        { "name": "Wizkid", "role": "Grammy-winning Afrobeats Star", "birth": 1990, "wikipedia": "https://en.wikipedia.org/wiki/Wizkid", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/WizKid_2012.jpg/220px-WizKid_2012.jpg" },
+        { "name": "Sade Adu", "role": "Grammy-winning Singer-Songwriter", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/Sade_Adu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sade_Adu.jpg/220px-Sade_Adu.jpg" }
       ],
       "description": "The Yoruba are one of Africa's largest ethnic groups, known for rich culture, art, mythology, and a sophisticated pre-colonial civilization centered at Ile-Ife.",
       "relatedTribes": ["igbo", "hausa"],
@@ -3757,11 +3762,12 @@
         "writingSystem": "Latin alphabet (Önwu alphabet)"
       },
       "famousPeople": [
-        { "name": "Chinua Achebe", "role": "Father of African Literature", "wikipedia": "https://en.wikipedia.org/wiki/Chinua_Achebe" },
-        { "name": "Nnamdi Azikiwe", "role": "First President of Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Nnamdi_Azikiwe" },
-        { "name": "Chukwuemeka Ojukwu", "role": "Biafran Leader", "wikipedia": "https://en.wikipedia.org/wiki/Chukwuemeka_Odumegwu_Ojukwu" },
-        { "name": "Philip Emeagwali", "role": "Computer Scientist", "wikipedia": "https://en.wikipedia.org/wiki/Philip_Emeagwali" },
-        { "name": "Ngozi Okonjo-Iweala", "role": "WTO Director-General", "wikipedia": "https://en.wikipedia.org/wiki/Ngozi_Okonjo-Iweala" }
+        { "name": "Chinua Achebe", "role": "Father of African Literature", "birth": 1930, "death": 2013, "wikipedia": "https://en.wikipedia.org/wiki/Chinua_Achebe", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Chinua_Achebe_-_Buffalo_25Sep2008.jpg/220px-Chinua_Achebe_-_Buffalo_25Sep2008.jpg" },
+        { "name": "Nnamdi Azikiwe", "role": "First President of Nigeria", "birth": 1904, "death": 1996, "wikipedia": "https://en.wikipedia.org/wiki/Nnamdi_Azikiwe", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Nnamdi_Azikiwe.jpg/220px-Nnamdi_Azikiwe.jpg" },
+        { "name": "Chukwuemeka Ojukwu", "role": "Biafran Leader", "birth": 1933, "death": 2011, "wikipedia": "https://en.wikipedia.org/wiki/Chukwuemeka_Odumegwu_Ojukwu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Odumegwu_Ojukwu.jpg/220px-Odumegwu_Ojukwu.jpg" },
+        { "name": "Philip Emeagwali", "role": "Computer Scientist", "birth": 1954, "wikipedia": "https://en.wikipedia.org/wiki/Philip_Emeagwali", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Philip_Emeagwali.jpg/220px-Philip_Emeagwali.jpg" },
+        { "name": "Ngozi Okonjo-Iweala", "role": "WTO Director-General", "birth": 1954, "wikipedia": "https://en.wikipedia.org/wiki/Ngozi_Okonjo-Iweala", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ngozi_Okonjo-Iweala_at_GAVI.jpg/220px-Ngozi_Okonjo-Iweala_at_GAVI.jpg" },
+        { "name": "Chimamanda Ngozi Adichie", "role": "Award-winning Author", "birth": 1977, "wikipedia": "https://en.wikipedia.org/wiki/Chimamanda_Ngozi_Adichie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Chimamanda_Ngozi_Adichie_9386.jpg/220px-Chimamanda_Ngozi_Adichie_9386.jpg" }
       ],
       "description": "The Igbo are a major Nigerian ethnic group known for entrepreneurship, decentralized governance, and rich cultural traditions including masquerades and the kola nut ceremony.",
       "relatedTribes": ["yoruba", "ibibio"],
@@ -3897,11 +3903,11 @@
         "writingSystem": "Latin alphabet (Boko), Arabic script (Ajami)"
       },
       "famousPeople": [
-        { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio" },
-        { "name": "Ahmadu Bello", "role": "Premier of Northern Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello" },
-        { "name": "Aminu Kano", "role": "Politician & Reformer", "wikipedia": "https://en.wikipedia.org/wiki/Aminu_Kano" },
-        { "name": "Sani Abacha", "role": "Military Head of State", "wikipedia": "https://en.wikipedia.org/wiki/Sani_Abacha" },
-        { "name": "Nana Asma'u", "role": "Scholar & Poet", "wikipedia": "https://en.wikipedia.org/wiki/Nana_Asma%27u" }
+        { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "birth": 1754, "death": 1817, "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Uthman_dan_Fodio.png/220px-Uthman_dan_Fodio.png" },
+        { "name": "Ahmadu Bello", "role": "Premier of Northern Nigeria", "birth": 1910, "death": 1966, "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ahmadu_Bello.jpg/220px-Ahmadu_Bello.jpg" },
+        { "name": "Aminu Kano", "role": "Politician & Social Reformer", "birth": 1920, "death": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Aminu_Kano", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Aminu_Kano.jpg/220px-Aminu_Kano.jpg" },
+        { "name": "Sani Abacha", "role": "Military Head of State", "birth": 1943, "death": 1998, "wikipedia": "https://en.wikipedia.org/wiki/Sani_Abacha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/General_Sani_Abacha.jpg/220px-General_Sani_Abacha.jpg" },
+        { "name": "Nana Asma'u", "role": "Scholar, Poet & Educator", "birth": 1793, "death": 1864, "wikipedia": "https://en.wikipedia.org/wiki/Nana_Asma%27u", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nana_Asmau.jpg/220px-Nana_Asmau.jpg" }
       ],
       "description": "The Hausa are one of Africa's largest ethnic groups, known for trade, Islamic scholarship, and city-state civilization. Their language serves as a lingua franca across West Africa.",
       "relatedTribes": ["fulani", "kanuri"],
@@ -5618,9 +5624,11 @@
         "writingSystem": "Ge'ez script (Fidel) - 231 characters"
       },
       "famousPeople": [
-        { "name": "Haile Selassie I", "role": "Last Emperor of Ethiopia", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie" },
-        { "name": "Tedros Adhanom", "role": "Director-General of WHO", "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom" },
-        { "name": "Mulatu Astatke", "role": "Father of Ethio-Jazz", "wikipedia": "https://en.wikipedia.org/wiki/Mulatu_Astatke" }
+        { "name": "Haile Selassie I", "role": "Last Emperor of Ethiopia", "birth": 1892, "death": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Haile_Selassie_in_full_dress.jpg/220px-Haile_Selassie_in_full_dress.jpg" },
+        { "name": "Tedros Adhanom", "role": "Director-General of WHO", "birth": 1965, "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Tedros_Adhanom_Ghebreyesus_-_2022.jpg/220px-Tedros_Adhanom_Ghebreyesus_-_2022.jpg" },
+        { "name": "Mulatu Astatke", "role": "Father of Ethio-Jazz", "birth": 1943, "wikipedia": "https://en.wikipedia.org/wiki/Mulatu_Astatke", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Mulatu_Astatke_playing_vibraphone.jpg/220px-Mulatu_Astatke_playing_vibraphone.jpg" },
+        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Peace Prize Winner", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Abiy_Ahmed_Ali.jpg/220px-Abiy_Ahmed_Ali.jpg" },
+        { "name": "Menelik II", "role": "Emperor who defeated Italy at Adwa", "birth": 1844, "death": 1913, "wikipedia": "https://en.wikipedia.org/wiki/Menelik_II", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Menelik_II%2C_Negus_of_Shewa%2C_c._1878.jpg/220px-Menelik_II%2C_Negus_of_Shewa%2C_c._1878.jpg" }
       ],
       "sources": [
         { "name": "Wikipedia - Amhara people", "url": "https://en.wikipedia.org/wiki/Amhara_people" },
@@ -5872,9 +5880,10 @@
         }
       },
       "famousPeople": [
-        { "name": "Mangi Meli", "role": "Chief who resisted German colonization (executed 1900)", "wikipedia": "https://en.wikipedia.org/wiki/Mangi_Meli" },
-        { "name": "Joseph Sinde Warioba", "role": "Former Prime Minister of Tanzania", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Sinde_Warioba" },
-        { "name": "Chief Thomas Marealle II", "role": "Colonial-era paramount chief, nationalist", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Marealle_II" }
+        { "name": "Mangi Meli", "role": "Chief who resisted German colonization (executed 1900)", "birth": 1868, "death": 1900, "wikipedia": "https://en.wikipedia.org/wiki/Mangi_Meli", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Mangi_Meli_of_Kilimanjaro.jpg/220px-Mangi_Meli_of_Kilimanjaro.jpg" },
+        { "name": "Joseph Sinde Warioba", "role": "Former Prime Minister of Tanzania", "birth": 1940, "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Sinde_Warioba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Joseph_Warioba.jpg/220px-Joseph_Warioba.jpg" },
+        { "name": "Chief Thomas Marealle II", "role": "Colonial-era paramount chief, nationalist", "birth": 1915, "death": 2007, "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Marealle_II" },
+        { "name": "Peniel Mlapa", "role": "International Footballer", "birth": 1991, "wikipedia": "https://en.wikipedia.org/wiki/Peniel_Mlapa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Peniel_Mlapa.jpg/220px-Peniel_Mlapa.jpg" }
       ],
       "sources": [
         { "name": "Wikipedia - Chaga people", "url": "https://en.wikipedia.org/wiki/Chaga_people" },
@@ -6136,8 +6145,9 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Félix Tshisekedi", "role": "President of DR Congo", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi" },
-        { "name": "Étienne Tshisekedi", "role": "Opposition Leader", "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi" }
+        { "name": "Félix Tshisekedi", "role": "President of DR Congo", "birth": 1963, "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/F%C3%A9lix_Tshisekedi_2019.jpg/220px-F%C3%A9lix_Tshisekedi_2019.jpg" },
+        { "name": "Étienne Tshisekedi", "role": "Opposition Leader & Democracy Activist", "birth": 1932, "death": 2017, "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/%C3%89tienne_Tshisekedi.jpg/220px-%C3%89tienne_Tshisekedi.jpg" },
+        { "name": "Papa Wemba", "role": "King of Rumba Rock", "birth": 1949, "death": 2016, "wikipedia": "https://en.wikipedia.org/wiki/Papa_Wemba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Papa_Wemba_2006.jpg/220px-Papa_Wemba_2006.jpg" }
       ],
       "sources": [
         { "name": "Wikipedia - Luba people", "url": "https://en.wikipedia.org/wiki/Luba_people" },
@@ -8046,8 +8056,11 @@
       },
       "language": { "name": "Sepedi (Northern Sotho)", "speakers": "~4.6 million", "greeting": "Thobela!", "greetingMeaning": "Hello! (with respect)", "family": "Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "famousPeople": [
-        { "name": "Sekhukhune I", "role": "King who resisted British colonization", "wikipedia": "https://en.wikipedia.org/wiki/Sekhukhune_I" },
-        { "name": "Peter Mokaba", "role": "Anti-apartheid activist", "wikipedia": "https://en.wikipedia.org/wiki/Peter_Mokaba" }
+        { "name": "Sekhukhune I", "role": "King who resisted British colonization", "birth": 1814, "death": 1882, "wikipedia": "https://en.wikipedia.org/wiki/Sekhukhune_I", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/King_Sekhukhune_I.jpg/220px-King_Sekhukhune_I.jpg" },
+        { "name": "Peter Mokaba", "role": "Anti-apartheid activist & ANC Youth League leader", "birth": 1959, "death": 2002, "wikipedia": "https://en.wikipedia.org/wiki/Peter_Mokaba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Peter_Mokaba.jpg/220px-Peter_Mokaba.jpg" },
+        { "name": "Cyril Ramaphosa", "role": "President of South Africa", "birth": 1952, "wikipedia": "https://en.wikipedia.org/wiki/Cyril_Ramaphosa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cyril_Ramaphosa_%282024%29.jpg/220px-Cyril_Ramaphosa_%282024%29.jpg" },
+        { "name": "Dina Pule", "role": "Former Communications Minister", "birth": 1968, "wikipedia": "https://en.wikipedia.org/wiki/Dina_Pule" },
+        { "name": "Peter Keetse", "role": "Legendary Footballer", "birth": 1951, "death": 2009, "wikipedia": "https://en.wikipedia.org/wiki/Peter_Keetse" }
       ],
       "sources": [{ "name": "Wikipedia - Pedi people", "url": "https://en.wikipedia.org/wiki/Pedi_people" }, { "name": "South Africa Government", "url": "https://www.gov.za/about-sa/south-africas-people" }],
       "description": "The Pedi (Bapedi) are a Northern Sotho people of South Africa known for rain-making ceremonies, fierce resistance to colonization under Sekhukhune I, and rich initiation traditions.",
@@ -10027,9 +10040,10 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Rudolf Duala Manga Bell", "role": "Anti-colonial resistance hero", "wikipedia": "https://en.wikipedia.org/wiki/Rudolf_Duala_Manga_Bell" },
-        { "name": "King Akwa", "role": "Historical trading king", "wikipedia": null },
-        { "name": "Manu Dibango", "role": "World-famous musician (Sawa heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Manu_Dibango" }
+        { "name": "Rudolf Duala Manga Bell", "role": "Anti-colonial resistance hero", "birth": 1873, "death": 1914, "wikipedia": "https://en.wikipedia.org/wiki/Rudolf_Duala_Manga_Bell", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rudolf_Duala_Manga_Bell.jpg/220px-Rudolf_Duala_Manga_Bell.jpg" },
+        { "name": "King Akwa", "role": "Historical trading king", "birth": 1830, "death": 1908, "wikipedia": null },
+        { "name": "Manu Dibango", "role": "World-famous saxophonist (Soul Makossa)", "birth": 1933, "death": 2020, "wikipedia": "https://en.wikipedia.org/wiki/Manu_Dibango", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Manu_Dibango_2018.jpg/220px-Manu_Dibango_2018.jpg" },
+        { "name": "Richard Bona", "role": "Grammy-winning Bassist & Singer", "birth": 1967, "wikipedia": "https://en.wikipedia.org/wiki/Richard_Bona", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Richard_Bona.jpg/220px-Richard_Bona.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Duala people", "url": "https://en.wikipedia.org/wiki/Duala_people" }],
       "description": "The Douala are the coastal people of Cameroon's largest city, historically key intermediaries in European trade, with the Ngondo water festival and national hero Rudolf Duala Manga Bell.",
@@ -10141,10 +10155,13 @@
         }
       },
       "famousPeople": [
-        { "name": "Mohammed Abdullah Hassan", "role": "Anti-colonial resistance leader 'Mad Mullah'", "wikipedia": "https://en.wikipedia.org/wiki/Mohammed_Abdullah_Hassan" },
-        { "name": "Iman", "role": "Supermodel", "wikipedia": "https://en.wikipedia.org/wiki/Iman_(model)" },
-        { "name": "Mo Farah", "role": "Olympic champion runner", "wikipedia": "https://en.wikipedia.org/wiki/Mo_Farah" },
-        { "name": "Ilhan Omar", "role": "US Congresswoman", "wikipedia": "https://en.wikipedia.org/wiki/Ilhan_Omar" }
+        { "name": "Mohammed Abdullah Hassan", "role": "Anti-colonial resistance leader 'Mad Mullah'", "birth": 1856, "death": 1920, "wikipedia": "https://en.wikipedia.org/wiki/Mohammed_Abdullah_Hassan", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Mohammed_Abdullah_Hassan.jpg/220px-Mohammed_Abdullah_Hassan.jpg" },
+        { "name": "Iman", "role": "Supermodel & Entrepreneur", "birth": 1955, "wikipedia": "https://en.wikipedia.org/wiki/Iman_(model)", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Iman_%28model%29.jpg/220px-Iman_%28model%29.jpg" },
+        { "name": "Mo Farah", "role": "Olympic Champion Long-Distance Runner", "birth": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Mo_Farah", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mo_Farah_2017.jpg/220px-Mo_Farah_2017.jpg" },
+        { "name": "Ilhan Omar", "role": "US Congresswoman", "birth": 1982, "wikipedia": "https://en.wikipedia.org/wiki/Ilhan_Omar", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Ilhan_Omar%2C_official_portrait%2C_116th_Congress.jpg/220px-Ilhan_Omar%2C_official_portrait%2C_116th_Congress.jpg" },
+        { "name": "K'naan", "role": "Grammy-nominated Musician", "birth": 1978, "wikipedia": "https://en.wikipedia.org/wiki/K%27naan", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/K%27naan.jpg/220px-K%27naan.jpg" },
+        { "name": "Abdi Bile", "role": "World Champion Runner", "birth": 1962, "wikipedia": "https://en.wikipedia.org/wiki/Abdi_Bile", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Abdi_Bile.jpg/220px-Abdi_Bile.jpg" },
+        { "name": "Ayaan Hirsi Ali", "role": "Author & Former Dutch Politician", "birth": 1969, "wikipedia": "https://en.wikipedia.org/wiki/Ayaan_Hirsi_Ali", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ayaan_Hirsi_Ali_by_Gage_Skidmore.jpg/220px-Ayaan_Hirsi_Ali_by_Gage_Skidmore.jpg" }
       ],
       "antiColonialResistance": "Mohammed Abdullah Hassan led a 20-year resistance against British, Italian, and Ethiopian forces (1899-1920). Known to the British as 'Mad Mullah,' he used guerrilla tactics and religious poetry to rally resistance. His movement was only defeated by aerial bombardment.",
       "sources": [{ "name": "Wikipedia - Somali people", "url": "https://en.wikipedia.org/wiki/Somali_people" }, { "name": "I.M. Lewis - A Pastoral Democracy", "url": "https://en.wikipedia.org/wiki/A_Pastoral_Democracy" }],
