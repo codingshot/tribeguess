@@ -662,10 +662,10 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Masinde Muliro", "role": "Independence Hero & Politician", "birth": 1922, "death": 1992, "wikipedia": "https://en.wikipedia.org/wiki/Masinde_Muliro" },
+        { "name": "Masinde Muliro", "role": "Independence Hero & Politician", "birth": 1922, "death": 1992, "wikipedia": "https://en.wikipedia.org/wiki/Masinde_Muliro", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Masinde_Muliro.jpg/220px-Masinde_Muliro.jpg" },
         { "name": "Victor Wanyama", "role": "Football Star (Spurs, Montreal)", "birth": 1991, "wikipedia": "https://en.wikipedia.org/wiki/Victor_Wanyama", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Victor_Wanyama_2018-02-04_1.jpg/220px-Victor_Wanyama_2018-02-04_1.jpg" },
         { "name": "Michael Olunga", "role": "Footballer (Kenya Top Scorer)", "birth": 1994, "wikipedia": "https://en.wikipedia.org/wiki/Michael_Olunga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/20190324_Michael_Olunga_2.jpg/220px-20190324_Michael_Olunga_2.jpg" },
-        { "name": "Michael Kijana Wamalwa", "role": "8th Vice President of Kenya", "birth": 1944, "death": 2003, "wikipedia": "https://en.wikipedia.org/wiki/Michael_Kijana_Wamalwa" },
+        { "name": "Michael Kijana Wamalwa", "role": "8th Vice President of Kenya", "birth": 1944, "death": 2003, "wikipedia": "https://en.wikipedia.org/wiki/Michael_Kijana_Wamalwa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Michael_Kijana_Wamalwa.jpg/220px-Michael_Kijana_Wamalwa.jpg" },
         { "name": "Musalia Mudavadi", "role": "Prime Cabinet Secretary", "birth": 1960, "wikipedia": "https://en.wikipedia.org/wiki/Musalia_Mudavadi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Musalia_Mudavadi.png/220px-Musalia_Mudavadi.png" }
       ],
       "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality.",
@@ -1208,9 +1208,9 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Kiraitu Murungi", "role": "Former Governor & Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Kiraitu_Murungi" },
-        { "name": "Peter Kenneth", "role": "Former Gatanga MP & Presidential Candidate", "wikipedia": "https://en.wikipedia.org/wiki/Peter_Kenneth" },
-        { "name": "Anne Waiguru", "role": "Governor of Kirinyaga", "wikipedia": "https://en.wikipedia.org/wiki/Anne_Waiguru" },
+        { "name": "Kiraitu Murungi", "role": "Former Governor & Cabinet Minister", "birth": 1952, "wikipedia": "https://en.wikipedia.org/wiki/Kiraitu_Murungi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kiraitu_Murungi.jpg/220px-Kiraitu_Murungi.jpg" },
+        { "name": "Peter Kenneth", "role": "Former Gatanga MP & Presidential Candidate", "birth": 1965, "wikipedia": "https://en.wikipedia.org/wiki/Peter_Kenneth", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Peter_Kenneth.jpg/220px-Peter_Kenneth.jpg" },
+        { "name": "Anne Waiguru", "role": "Governor of Kirinyaga", "birth": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Anne_Waiguru", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Anne_Waiguru_2019.jpg/220px-Anne_Waiguru_2019.jpg" },
         { "name": "Kabando wa Kabando", "role": "Former MP & Political Analyst", "wikipedia": "https://en.wikipedia.org/wiki/Kabando_wa_Kabando" }
       ],
       "description": "The Meru (Ameru) people inhabit the eastern slopes of Mount Kenya. They are known for their powerful council of elders (Njuri Ncheke) and are the primary cultivators of miraa (khat) in Kenya.",
@@ -1360,10 +1360,10 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "George Saitoti", "role": "Former Vice President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/George_Saitoti" },
-        { "name": "William ole Ntimama", "role": "Prominent Politician & Maasai Leader", "wikipedia": "https://en.wikipedia.org/wiki/William_ole_Ntimama" },
-        { "name": "David Rudisha", "role": "800m World Record (Maasai heritage)", "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha" },
-        { "name": "Edward Lowassa", "role": "Former Tanzania PM (Tanzanian Maasai)", "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa" }
+        { "name": "George Saitoti", "role": "Former Vice President of Kenya", "birth": 1945, "death": 2012, "wikipedia": "https://en.wikipedia.org/wiki/George_Saitoti", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/George_Saitoti.jpg/220px-George_Saitoti.jpg" },
+        { "name": "William ole Ntimama", "role": "Prominent Politician & Maasai Leader", "birth": 1932, "death": 2016, "wikipedia": "https://en.wikipedia.org/wiki/William_ole_Ntimama", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/William_ole_Ntimama.jpg/220px-William_ole_Ntimama.jpg" },
+        { "name": "David Rudisha", "role": "800m World Record (Maasai heritage)", "birth": 1988, "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/David_Rudisha_2012.jpg/220px-David_Rudisha_2012.jpg" },
+        { "name": "Edward Lowassa", "role": "Former Tanzania PM (Tanzanian Maasai)", "birth": 1953, "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Edward_Lowassa_%28cropped%29.jpg/220px-Edward_Lowassa_%28cropped%29.jpg" }
       ],
       "description": "The Maasai are one of the most internationally recognized African tribes, known for their distinctive customs, dress, and residence in wildlife-rich areas. They are semi-nomadic pastoralists who have maintained their traditions despite modernization.",
       "relatedTribes": ["samburu", "kalenjin", "turkana"],
@@ -2158,9 +2158,9 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Mekatilili wa Menza", "role": "Giriama Freedom Fighter", "wikipedia": "https://en.wikipedia.org/wiki/Mekatilili_wa_Menza" },
-        { "name": "Ronald Ngala", "role": "Independence Leader & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Ronald_Ngala" },
-        { "name": "Katana Ngala", "role": "Cabinet Minister", "wikipedia": "https://en.wikipedia.org/wiki/Katana_Ngala" }
+        { "name": "Mekatilili wa Menza", "role": "Giriama Freedom Fighter", "birth": 1840, "death": 1924, "wikipedia": "https://en.wikipedia.org/wiki/Mekatilili_wa_Menza", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Mekatilili_wa_Menza_statue.jpg/220px-Mekatilili_wa_Menza_statue.jpg" },
+        { "name": "Ronald Ngala", "role": "Independence Leader & Politician", "birth": 1923, "death": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Ronald_Ngala", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ronald_Ngala.jpg/220px-Ronald_Ngala.jpg" },
+        { "name": "Katana Ngala", "role": "Cabinet Minister", "birth": 1953, "wikipedia": "https://en.wikipedia.org/wiki/Katana_Ngala" }
       ],
       "description": "The Mijikenda ('Nine Towns') are a group of nine related Bantu communities on Kenya's coast. They share cultural traditions including sacred Kaya forests, palm wine culture, and distinctive music and dance.",
       "relatedTribes": ["swahili", "taita"],
@@ -2267,9 +2267,9 @@
         "writingSystem": "Latin alphabet (formerly Arabic script)"
       },
       "famousPeople": [
-        { "name": "Najib Balala", "role": "Former Tourism Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Najib_Balala" },
-        { "name": "Amina Mohamed", "role": "WTO Director-General Candidate & Diplomat", "wikipedia": "https://en.wikipedia.org/wiki/Amina_J._Mohamed" },
-        { "name": "Ali Mazrui", "role": "Renowned Scholar & Political Scientist", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Mazrui" }
+        { "name": "Najib Balala", "role": "Former Tourism Cabinet Secretary", "birth": 1967, "wikipedia": "https://en.wikipedia.org/wiki/Najib_Balala", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Najib_Balala.jpg/220px-Najib_Balala.jpg" },
+        { "name": "Amina Mohamed", "role": "WTO Director-General Candidate & Diplomat", "birth": 1961, "wikipedia": "https://en.wikipedia.org/wiki/Amina_J._Mohamed", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Amina_Mohamed.jpg/220px-Amina_Mohamed.jpg" },
+        { "name": "Ali Mazrui", "role": "Renowned Scholar & Political Scientist", "birth": 1933, "death": 2014, "wikipedia": "https://en.wikipedia.org/wiki/Ali_Mazrui", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ali_Mazrui.jpg/220px-Ali_Mazrui.jpg" }
       ],
       "description": "The Swahili people are the creators of Swahili language and culture. They have a rich blend of African, Arab, and Asian influences, reflected in their language, architecture, and cuisine along Kenya's coast.",
       "relatedTribes": ["mijikenda"],
@@ -4046,11 +4046,11 @@
         "writingSystem": "Latin alphabet, Arabic script (Ajami)"
       },
       "famousPeople": [
-        { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio" },
-        { "name": "Ahmadou Bello", "role": "Premier of Northern Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello" },
-        { "name": "Macky Sall", "role": "President of Senegal", "wikipedia": "https://en.wikipedia.org/wiki/Macky_Sall" },
-        { "name": "Alpha Condé", "role": "Former President of Guinea", "wikipedia": "https://en.wikipedia.org/wiki/Alpha_Cond%C3%A9" },
-        { "name": "Muhammadu Buhari", "role": "President of Nigeria", "wikipedia": "https://en.wikipedia.org/wiki/Muhammadu_Buhari" }
+        { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "birth": 1754, "death": 1817, "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Uthman_dan_Fodio.png/220px-Uthman_dan_Fodio.png" },
+        { "name": "Ahmadou Bello", "role": "Premier of Northern Nigeria", "birth": 1910, "death": 1966, "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ahmadu_Bello.jpg/220px-Ahmadu_Bello.jpg" },
+        { "name": "Macky Sall", "role": "President of Senegal", "birth": 1961, "wikipedia": "https://en.wikipedia.org/wiki/Macky_Sall", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Macky_Sall_2019_%28cropped%29.jpg/220px-Macky_Sall_2019_%28cropped%29.jpg" },
+        { "name": "Alpha Condé", "role": "Former President of Guinea", "birth": 1938, "wikipedia": "https://en.wikipedia.org/wiki/Alpha_Cond%C3%A9", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Alpha_Cond%C3%A9_-_World_Economic_Forum_on_Africa_2012.jpg/220px-Alpha_Cond%C3%A9_-_World_Economic_Forum_on_Africa_2012.jpg" },
+        { "name": "Muhammadu Buhari", "role": "President of Nigeria", "birth": 1942, "wikipedia": "https://en.wikipedia.org/wiki/Muhammadu_Buhari", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Muhammadu_Buhari%2C_President_of_the_Federal_Republic_of_Nigeria_%28cropped3%29.jpg/220px-Muhammadu_Buhari%2C_President_of_the_Federal_Republic_of_Nigeria_%28cropped3%29.jpg" }
       ],
       "description": "The Fulani (Fula, Peul) are a vast nomadic people spread across the Sahel, known for cattle herding, beauty traditions, and founding several Islamic states.",
       "relatedTribes": ["hausa", "wolof", "bambara"],
@@ -4186,11 +4186,11 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Osei Tutu I", "role": "Founder of Ashanti Empire", "wikipedia": "https://en.wikipedia.org/wiki/Osei_Tutu_I" },
-        { "name": "Yaa Asantewaa", "role": "Queen Mother & War Leader", "wikipedia": "https://en.wikipedia.org/wiki/Yaa_Asantewaa" },
-        { "name": "Kofi Annan", "role": "UN Secretary-General", "wikipedia": "https://en.wikipedia.org/wiki/Kofi_Annan" },
-        { "name": "Kwame Nkrumah", "role": "First President of Ghana", "wikipedia": "https://en.wikipedia.org/wiki/Kwame_Nkrumah" },
-        { "name": "Otumfuo Osei Tutu II", "role": "Current Asantehene (King)", "wikipedia": "https://en.wikipedia.org/wiki/Otumfuo_Nana_Osei_Tutu_II" }
+        { "name": "Osei Tutu I", "role": "Founder of Ashanti Empire", "birth": 1660, "death": 1717, "wikipedia": "https://en.wikipedia.org/wiki/Osei_Tutu_I" },
+        { "name": "Yaa Asantewaa", "role": "Queen Mother & War Leader", "birth": 1840, "death": 1921, "wikipedia": "https://en.wikipedia.org/wiki/Yaa_Asantewaa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Yaa_Asantewaa.jpg/220px-Yaa_Asantewaa.jpg" },
+        { "name": "Kofi Annan", "role": "UN Secretary-General", "birth": 1938, "death": 2018, "wikipedia": "https://en.wikipedia.org/wiki/Kofi_Annan", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Kofi_Annan_2012_%28cropped%29.jpg/220px-Kofi_Annan_2012_%28cropped%29.jpg" },
+        { "name": "Kwame Nkrumah", "role": "First President of Ghana", "birth": 1909, "death": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Kwame_Nkrumah", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Kwame_Nkrumah_%28JFKWHP-AR6409-A%29.jpg/220px-Kwame_Nkrumah_%28JFKWHP-AR6409-A%29.jpg" },
+        { "name": "Otumfuo Osei Tutu II", "role": "Current Asantehene (King)", "birth": 1950, "wikipedia": "https://en.wikipedia.org/wiki/Otumfuo_Nana_Osei_Tutu_II", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Otumfuo_Osei_Tutu_II.jpg/220px-Otumfuo_Osei_Tutu_II.jpg" }
       ],
       "description": "The Ashanti (Asante) built one of Africa's most powerful empires, known for kente cloth, gold craftsmanship, the Golden Stool, and matrilineal traditions.",
       "relatedTribes": ["fante", "ewe", "ga"],
@@ -4614,11 +4614,11 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Robert Mugabe", "role": "First Prime Minister/President of Zimbabwe", "wikipedia": "https://en.wikipedia.org/wiki/Robert_Mugabe" },
-        { "name": "Thomas Mapfumo", "role": "'Lion of Zimbabwe' Musician", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mapfumo" },
-        { "name": "Stella Chiweshe", "role": "Mbira Queen", "wikipedia": "https://en.wikipedia.org/wiki/Stella_Chiweshe" },
-        { "name": "Herbert Chitepo", "role": "Liberation War Hero", "wikipedia": "https://en.wikipedia.org/wiki/Herbert_Chitepo" },
-        { "name": "Tendai Biti", "role": "Political Leader", "wikipedia": "https://en.wikipedia.org/wiki/Tendai_Biti" }
+        { "name": "Robert Mugabe", "role": "First Prime Minister/President of Zimbabwe", "birth": 1924, "death": 2019, "wikipedia": "https://en.wikipedia.org/wiki/Robert_Mugabe", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Robert_Mugabe_May_2015_%28cropped%29.jpg/220px-Robert_Mugabe_May_2015_%28cropped%29.jpg" },
+        { "name": "Thomas Mapfumo", "role": "'Lion of Zimbabwe' Musician", "birth": 1945, "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mapfumo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Thomas_mapfumo.jpg/220px-Thomas_mapfumo.jpg" },
+        { "name": "Stella Chiweshe", "role": "Mbira Queen", "birth": 1946, "death": 2023, "wikipedia": "https://en.wikipedia.org/wiki/Stella_Chiweshe", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Stella_chiweshe_2006.jpg/220px-Stella_chiweshe_2006.jpg" },
+        { "name": "Herbert Chitepo", "role": "Liberation War Hero", "birth": 1923, "death": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Herbert_Chitepo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Herbert_Chitepo.jpg/220px-Herbert_Chitepo.jpg" },
+        { "name": "Tendai Biti", "role": "Political Leader", "birth": 1966, "wikipedia": "https://en.wikipedia.org/wiki/Tendai_Biti", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tendai_Biti_-_World_Economic_Forum_on_Africa_2012.jpg/220px-Tendai_Biti_-_World_Economic_Forum_on_Africa_2012.jpg" }
       ],
       "description": "The Shona are Zimbabwe's largest ethnic group, builders of Great Zimbabwe, and known for stone sculpture, mbira music, and agricultural traditions.",
       "relatedTribes": ["ndebele", "tonga", "kalanga"],
@@ -4755,11 +4755,11 @@
         "writingSystem": "Latin alphabet (Qubee)"
       },
       "famousPeople": [
-        { "name": "Abebe Bikila", "role": "Olympic Marathon Legend", "wikipedia": "https://en.wikipedia.org/wiki/Abebe_Bikila" },
-        { "name": "Haile Gebrselassie", "role": "Distance Running Legend", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie" },
-        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Laureate", "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed" },
-        { "name": "Tirunesh Dibaba", "role": "Olympic Champion Runner", "wikipedia": "https://en.wikipedia.org/wiki/Tirunesh_Dibaba" },
-        { "name": "Kenenisa Bekele", "role": "Distance Running Champion", "wikipedia": "https://en.wikipedia.org/wiki/Kenenisa_Bekele" }
+        { "name": "Abebe Bikila", "role": "Olympic Marathon Legend", "birth": 1932, "death": 1973, "wikipedia": "https://en.wikipedia.org/wiki/Abebe_Bikila", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Abebe_Bikila_1968c.jpg/220px-Abebe_Bikila_1968c.jpg" },
+        { "name": "Haile Gebrselassie", "role": "Distance Running Legend", "birth": 1973, "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Haile_Gebrselassie_2008-06-26.jpg/220px-Haile_Gebrselassie_2008-06-26.jpg" },
+        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Laureate", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Abiy_Ahmed_%28cropped%29.jpg/220px-Abiy_Ahmed_%28cropped%29.jpg" },
+        { "name": "Tirunesh Dibaba", "role": "Olympic Champion Runner", "birth": 1985, "wikipedia": "https://en.wikipedia.org/wiki/Tirunesh_Dibaba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tirunesh_Dibaba_2012.jpg/220px-Tirunesh_Dibaba_2012.jpg" },
+        { "name": "Kenenisa Bekele", "role": "Distance Running Champion", "birth": 1982, "wikipedia": "https://en.wikipedia.org/wiki/Kenenisa_Bekele", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kenenisa_Bekele_2017.jpg/220px-Kenenisa_Bekele_2017.jpg" }
       ],
       "description": "The Oromo are Ethiopia's largest ethnic group, known for the Gadaa democratic system, coffee culture, and producing world-class distance runners.",
       "relatedTribes": ["amhara", "somali", "afar"],
@@ -5023,11 +5023,11 @@
         "writingSystem": "Latin alphabet, Arabic script (Wolofal)"
       },
       "famousPeople": [
-        { "name": "Youssou N'Dour", "role": "Grammy-Winning Musician", "wikipedia": "https://en.wikipedia.org/wiki/Youssou_N%27Dour" },
-        { "name": "Akon", "role": "International Music Star", "wikipedia": "https://en.wikipedia.org/wiki/Akon" },
-        { "name": "Amadou Bamba", "role": "Founder of Mouride Brotherhood", "wikipedia": "https://en.wikipedia.org/wiki/Amadou_Bamba" },
-        { "name": "Sadio Mané", "role": "Football Star", "wikipedia": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9" },
-        { "name": "Léopold Sédar Senghor", "role": "First President of Senegal", "wikipedia": "https://en.wikipedia.org/wiki/L%C3%A9opold_S%C3%A9dar_Senghor" }
+        { "name": "Youssou N'Dour", "role": "Grammy-Winning Musician", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/Youssou_N%27Dour", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Youssou_N%27Dour_2014.jpg/220px-Youssou_N%27Dour_2014.jpg" },
+        { "name": "Akon", "role": "International Music Star", "birth": 1973, "wikipedia": "https://en.wikipedia.org/wiki/Akon", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Akon_%28cropped%29.jpg/220px-Akon_%28cropped%29.jpg" },
+        { "name": "Amadou Bamba", "role": "Founder of Mouride Brotherhood", "birth": 1853, "death": 1927, "wikipedia": "https://en.wikipedia.org/wiki/Amadou_Bamba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Amadou_bamba.jpg/220px-Amadou_bamba.jpg" },
+        { "name": "Sadio Mané", "role": "Football Star", "birth": 1992, "wikipedia": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sadio_Man%C3%A9_2019.jpg/220px-Sadio_Man%C3%A9_2019.jpg" },
+        { "name": "Léopold Sédar Senghor", "role": "First President of Senegal", "birth": 1906, "death": 2001, "wikipedia": "https://en.wikipedia.org/wiki/L%C3%A9opold_S%C3%A9dar_Senghor", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Leopold_Sedar_Senghor_%281987%29.jpg/220px-Leopold_Sedar_Senghor_%281987%29.jpg" }
       ],
       "description": "The Wolof are Senegal's largest ethnic group, known for teranga hospitality, colorful fashion, wrestling tradition, and Sufi Islamic brotherhoods.",
       "relatedTribes": ["serer", "fulani", "mandinka"],
@@ -5154,11 +5154,11 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Kabaka Mutebi II", "role": "Current King of Buganda", "wikipedia": "https://en.wikipedia.org/wiki/Mutebi_II_of_Buganda" },
-        { "name": "Apollo Milton Obote", "role": "First PM & President of Uganda", "wikipedia": "https://en.wikipedia.org/wiki/Milton_Obote" },
-        { "name": "Philly Lutaaya", "role": "Musician & AIDS Activist", "wikipedia": "https://en.wikipedia.org/wiki/Philly_Lutaaya" },
-        { "name": "Mutesa I", "role": "Kabaka who met Stanley", "wikipedia": "https://en.wikipedia.org/wiki/Mutesa_I_of_Buganda" },
-        { "name": "Bobi Wine", "role": "Politician & Musician", "wikipedia": "https://en.wikipedia.org/wiki/Bobi_Wine" }
+        { "name": "Kabaka Mutebi II", "role": "Current King of Buganda", "birth": 1955, "wikipedia": "https://en.wikipedia.org/wiki/Mutebi_II_of_Buganda", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Mutebi_II.jpg/220px-Mutebi_II.jpg" },
+        { "name": "Apollo Milton Obote", "role": "First PM & President of Uganda", "birth": 1925, "death": 2005, "wikipedia": "https://en.wikipedia.org/wiki/Milton_Obote", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Milton_Obote_%281960%29.jpg/220px-Milton_Obote_%281960%29.jpg" },
+        { "name": "Philly Lutaaya", "role": "Musician & AIDS Activist", "birth": 1951, "death": 1989, "wikipedia": "https://en.wikipedia.org/wiki/Philly_Lutaaya", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Philly_Lutaaya.jpg/220px-Philly_Lutaaya.jpg" },
+        { "name": "Mutesa I", "role": "Kabaka who met Stanley", "birth": 1837, "death": 1884, "wikipedia": "https://en.wikipedia.org/wiki/Mutesa_I_of_Buganda" },
+        { "name": "Bobi Wine", "role": "Politician & Musician", "birth": 1982, "wikipedia": "https://en.wikipedia.org/wiki/Bobi_Wine", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Bobi_Wine_%28cropped%29.jpg/220px-Bobi_Wine_%28cropped%29.jpg" }
       ],
       "description": "The Baganda are Uganda's largest ethnic group, known for their sophisticated kingdom, clan system, bark cloth tradition, and matooke cuisine.",
       "relatedTribes": ["banyankole", "basoga", "banyoro"],
@@ -5413,10 +5413,10 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Laurent-Désiré Kabila", "role": "Former President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/Laurent-D%C3%A9sir%C3%A9_Kabila" },
-        { "name": "Félix Tshisekedi", "role": "Current President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi" },
-        { "name": "Étienne Tshisekedi", "role": "Opposition Leader", "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi" },
-        { "name": "Mobutu Sese Seko", "role": "Former President (partial Luba heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Mobutu_Sese_Seko" }
+        { "name": "Laurent-Désiré Kabila", "role": "Former President of DRC", "birth": 1939, "death": 2001, "wikipedia": "https://en.wikipedia.org/wiki/Laurent-D%C3%A9sir%C3%A9_Kabila", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Laurent-D%C3%A9sir%C3%A9_Kabila_1997.jpg/220px-Laurent-D%C3%A9sir%C3%A9_Kabila_1997.jpg" },
+        { "name": "Félix Tshisekedi", "role": "Current President of DRC", "birth": 1963, "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/F%C3%A9lix_Tshisekedi_%28cropped%29.jpg/220px-F%C3%A9lix_Tshisekedi_%28cropped%29.jpg" },
+        { "name": "Étienne Tshisekedi", "role": "Opposition Leader", "birth": 1932, "death": 2017, "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%C3%89tienne_Tshisekedi_2011.jpg/220px-%C3%89tienne_Tshisekedi_2011.jpg" },
+        { "name": "Mobutu Sese Seko", "role": "Former President (partial Luba heritage)", "birth": 1930, "death": 1997, "wikipedia": "https://en.wikipedia.org/wiki/Mobutu_Sese_Seko", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Mobutu.jpg/220px-Mobutu.jpg" }
       ],
       "description": "The Luba are a major Congolese ethnic group known for their sophisticated pre-colonial kingdom, remarkable art tradition, and political influence in modern DRC.",
       "relatedTribes": ["lunda", "kuba", "kongo"],
@@ -5541,11 +5541,11 @@
         "writingSystem": "Latin alphabet (since 1972)"
       },
       "famousPeople": [
-        { "name": "Mo Farah", "role": "Olympic Champion Runner", "wikipedia": "https://en.wikipedia.org/wiki/Mo_Farah" },
-        { "name": "Ilhan Omar", "role": "US Congresswoman", "wikipedia": "https://en.wikipedia.org/wiki/Ilhan_Omar" },
-        { "name": "Nuruddin Farah", "role": "Novelist", "wikipedia": "https://en.wikipedia.org/wiki/Nuruddin_Farah" },
-        { "name": "Iman", "role": "Supermodel & Entrepreneur", "wikipedia": "https://en.wikipedia.org/wiki/Iman_(model)" },
-        { "name": "K'naan", "role": "Musician", "wikipedia": "https://en.wikipedia.org/wiki/K%27naan" }
+        { "name": "Mo Farah", "role": "Olympic Champion Runner", "birth": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Mo_Farah", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Mo_Farah_2012_Olympics_%28cropped%29.jpg/220px-Mo_Farah_2012_Olympics_%28cropped%29.jpg" },
+        { "name": "Ilhan Omar", "role": "US Congresswoman", "birth": 1982, "wikipedia": "https://en.wikipedia.org/wiki/Ilhan_Omar", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Ilhan_Omar%2C_official_portrait%2C_116th_Congress_%28cropped%29.jpg/220px-Ilhan_Omar%2C_official_portrait%2C_116th_Congress_%28cropped%29.jpg" },
+        { "name": "Nuruddin Farah", "role": "Novelist", "birth": 1945, "wikipedia": "https://en.wikipedia.org/wiki/Nuruddin_Farah", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nuruddin_Farah_2008.jpg/220px-Nuruddin_Farah_2008.jpg" },
+        { "name": "Iman", "role": "Supermodel & Entrepreneur", "birth": 1955, "wikipedia": "https://en.wikipedia.org/wiki/Iman_(model)", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Iman_in_1969.jpg/220px-Iman_in_1969.jpg" },
+        { "name": "K'naan", "role": "Musician", "birth": 1978, "wikipedia": "https://en.wikipedia.org/wiki/K%27naan", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/K%27naan_SxSW_2010.jpg/220px-K%27naan_SxSW_2010.jpg" }
       ],
       "description": "The Somali are a Cushitic people of the Horn of Africa known for pastoral nomadism, rich poetic tradition, strong clan identity, and Islamic faith.",
       "relatedTribes": ["oromo", "afar", "borana"],
