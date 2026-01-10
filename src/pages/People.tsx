@@ -128,10 +128,6 @@ export default function People() {
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <section className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm mb-4">
-              <Users className="w-4 h-4" />
-              {allPeople.length}+ Notable People
-            </div>
             <h1 className="text-3xl md:text-4xl font-serif font-bold mb-3">
               Famous People of African Tribes
             </h1>
