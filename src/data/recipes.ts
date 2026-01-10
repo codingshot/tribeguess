@@ -9004,6 +9004,851 @@ const southernAfricanRecipes: Recipe[] = [
       "Consistency should be like thick buttermilk",
       "Fermentation time varies with temperature"
     ]
+  },
+
+  // ============ OVIMBUNDU (ANGOLA) RECIPES ============
+  {
+    id: "funge-ovimbundu",
+    name: "Funge (Angolan Cassava Porridge)",
+    tribeSlug: "ovimbundu",
+    tribeName: "Ovimbundu",
+    category: "staple",
+    description: "Angola's national staple - thick cassava flour porridge served with rich stews. The centerpiece of every Ovimbundu meal.",
+    culturalSignificance: "Funge is to Angolans what ugali is to East Africans. The Ovimbundu of the central highlands perfected it, serving it at every family gathering.",
+    historicalContext: "Cassava arrived in Angola from Brazil via Portuguese traders in the 16th century. The Ovimbundu adapted it to their highland agriculture, making funge the foundation of Angolan cuisine.",
+    youtubeVideoId: "Ys1i6rXKp1Q",
+    prepTime: "5 minutes",
+    cookTime: "20 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Cassava flour (fuba de bombó)", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring salted water to a rolling boil in a heavy pot.",
+      "Gradually add cassava flour while stirring vigorously with a wooden spoon.",
+      "Reduce heat and continue stirring to prevent lumps.",
+      "Cook 15-20 minutes, stirring constantly until very thick and smooth.",
+      "The funge should pull away from the sides of the pot.",
+      "Wet a bowl and shape funge into a mound.",
+      "Serve immediately with calulu, muamba, or fish stews."
+    ],
+    tips: [
+      "Constant stirring is key to smooth funge",
+      "Should be thicker than mashed potatoes",
+      "Eat by pinching pieces to scoop up stew"
+    ]
+  },
+  {
+    id: "calulu-ovimbundu",
+    name: "Calulu (Angolan Fish and Vegetable Stew)",
+    tribeSlug: "ovimbundu",
+    tribeName: "Ovimbundu",
+    category: "special",
+    description: "Angola's beloved dried fish stew with okra, sweet potato leaves, and palm oil. A celebration dish with complex flavors.",
+    culturalSignificance: "Calulu is served at weddings, funerals, and family celebrations. It represents the essence of Angolan comfort food and hospitality.",
+    historicalContext: "Calulu combines indigenous vegetables with dried fish traditions. The Ovimbundu adapted coastal recipes for their inland highlands, creating this iconic dish.",
+    youtubeVideoId: "wWDv2t4bU8U",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Dried fish (bacalhau or similar)", amount: "500g", notes: "Soaked overnight" },
+      { item: "Fresh fish", amount: "500g", notes: "Cut into pieces" },
+      { item: "Okra", amount: "300g", notes: "Sliced" },
+      { item: "Sweet potato leaves (or spinach)", amount: "400g" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Chili peppers", amount: "2-3" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak dried fish overnight, then drain and shred.",
+      "In a large pot, heat palm oil and sauté onions until golden.",
+      "Add garlic and tomatoes, cook until soft.",
+      "Add dried fish and fresh fish pieces.",
+      "Add enough water to cover, bring to simmer.",
+      "Add okra and cook 15 minutes until tender.",
+      "Add sweet potato leaves and chili peppers.",
+      "Simmer 20 more minutes until everything is tender.",
+      "Season with salt. Serve with funge."
+    ],
+    tips: [
+      "Good calulu should be thick, not soupy",
+      "Palm oil gives authentic color and flavor",
+      "Some add jimboa (wild spinach) for extra flavor"
+    ]
+  },
+  {
+    id: "muamba-ovimbundu",
+    name: "Muamba de Galinha (Angolan Palm Chicken)",
+    tribeSlug: "ovimbundu",
+    tribeName: "Ovimbundu",
+    category: "special",
+    description: "Angola's national chicken dish - tender chicken cooked in palm nut sauce with okra and spices. Rich, creamy, and unforgettable.",
+    culturalSignificance: "Muamba is Angola's national dish, served at every celebration. The Ovimbundu version from the highlands is particularly prized.",
+    historicalContext: "Palm oil and palm nut sauce are ancient African ingredients. Portuguese colonizers spread the dish's fame globally, but Angolans perfected the recipe.",
+    youtubeVideoId: "fLK6YYQn7Zs",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Palm nut cream (muamba)", amount: "400g", notes: "Or palm oil concentrate" },
+      { item: "Okra", amount: "200g", notes: "Whole small ones" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Hot chili", amount: "1-2", notes: "Whole" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Lemon juice", amount: "2 tablespoons" }
+    ],
+    instructions: [
+      "Marinate chicken with lemon juice, garlic, and salt for 30 minutes.",
+      "Brown chicken pieces in a little oil, set aside.",
+      "Sauté onions until golden, add tomatoes.",
+      "Add palm nut cream and stir well.",
+      "Return chicken to pot, add water to cover halfway.",
+      "Add whole chilies and simmer 30 minutes.",
+      "Add okra and cook 15 more minutes.",
+      "Sauce should thicken and coat the chicken.",
+      "Serve with funge, rice, or fufu."
+    ],
+    tips: [
+      "Don't cut the okra - leave whole to avoid sliminess",
+      "Palm nut cream can be found in African stores",
+      "Adjust chili to preference - traditional is quite spicy"
+    ]
+  },
+
+  // ============ CHOKWE (ANGOLA/DRC/ZAMBIA) RECIPES ============
+  {
+    id: "chikuanga-chokwe",
+    name: "Chikuanga (Chokwe Cassava Bread)",
+    tribeSlug: "chokwe",
+    tribeName: "Chokwe",
+    category: "staple",
+    description: "Traditional cassava bread wrapped and steamed in banana leaves. A portable staple for Chokwe hunters and travelers.",
+    culturalSignificance: "Chikuanga sustained Chokwe hunters during long expeditions. It keeps well without refrigeration, making it perfect for their semi-nomadic lifestyle.",
+    historicalContext: "The Chokwe were renowned hunters and traders. Chikuanga was the ideal travel food, providing energy for long journeys across the Angola-DRC-Zambia region.",
+    youtubeVideoId: "Ys1i6rXKp1Q",
+    prepTime: "3 days (fermentation)",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava roots", amount: "3 kg", notes: "Peeled" },
+      { item: "Water", amount: "For soaking" },
+      { item: "Banana leaves", amount: "8-10 large", notes: "For wrapping" }
+    ],
+    instructions: [
+      "Peel cassava and soak in water for 3-4 days until soft and fermented.",
+      "Drain and remove the fibrous core from each piece.",
+      "Pound the softened cassava into a smooth, sticky paste.",
+      "Prepare banana leaves by briefly passing over flame to soften.",
+      "Place portions of cassava paste on each leaf.",
+      "Wrap tightly into cylindrical packages, tying with leaf strips.",
+      "Steam in a large pot for 2 hours until firm.",
+      "Let cool slightly before unwrapping and slicing."
+    ],
+    tips: [
+      "Fermentation gives the distinctive tangy flavor",
+      "Properly wrapped chikuanga lasts for days",
+      "Slice and serve with any stew or sauce"
+    ]
+  },
+  {
+    id: "mukua-chokwe",
+    name: "Mukua (Chokwe Game Stew)",
+    tribeSlug: "chokwe",
+    tribeName: "Chokwe",
+    category: "special",
+    description: "Traditional Chokwe hunter's stew made with wild game, cassava leaves, and forest ingredients. Reflects their hunting heritage.",
+    culturalSignificance: "Hunting is central to Chokwe identity. This stew represents the bounty of successful hunts and is shared communally.",
+    historicalContext: "The Chokwe were master hunters who tracked elephants for ivory trade. Their cuisine reflects deep knowledge of forest ingredients and game preparation.",
+    youtubeVideoId: "qPNxS3z2ckM",
+    prepTime: "30 minutes",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Game meat (or beef)", amount: "1 kg", notes: "Cubed" },
+      { item: "Cassava leaves (saka saka)", amount: "500g", notes: "Finely shredded" },
+      { item: "Palm oil", amount: "4 tablespoons" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Tomatoes", amount: "2" },
+      { item: "Peanut butter", amount: "3 tablespoons" },
+      { item: "Chili pepper", amount: "1-2" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Boil meat until tender, about 1-1.5 hours. Reserve broth.",
+      "In a separate pot, cook cassava leaves in salted water for 30 minutes.",
+      "Heat palm oil and sauté onions and tomatoes.",
+      "Add cooked meat and some broth.",
+      "Stir in peanut butter until dissolved.",
+      "Add drained cassava leaves.",
+      "Simmer together for 20 minutes until flavors blend.",
+      "Season and serve with chikuanga or funge."
+    ],
+    tips: [
+      "Traditional uses various bush meats",
+      "Cassava leaves need long cooking to remove toxins",
+      "Peanut butter adds richness to the sauce"
+    ]
+  },
+
+  // ============ LUNDA (ANGOLA/DRC/ZAMBIA) RECIPES ============
+  {
+    id: "nshima-lunda",
+    name: "Nshima ya Lunda (Lunda Maize Porridge)",
+    tribeSlug: "lunda",
+    tribeName: "Lunda",
+    category: "staple",
+    description: "The Lunda version of thick maize porridge, served with relishes. A unifying food across the three-country Lunda territory.",
+    culturalSignificance: "Nshima brings Lunda families together. The act of sharing from one pot reinforces community bonds.",
+    historicalContext: "The Lunda Empire was one of Central Africa's greatest, spanning modern Angola, DRC, and Zambia. Their cuisine reflects this vast territory.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize meal", amount: "2 cups" },
+      { item: "Water", amount: "5 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring 4 cups water to boil with salt.",
+      "Mix remaining cup water with 1 cup maize meal to make slurry.",
+      "Pour slurry into boiling water, stirring constantly.",
+      "Cook 5 minutes until thickened.",
+      "Gradually add remaining maize meal, stirring vigorously.",
+      "Reduce heat and cook 15-20 minutes, stirring often.",
+      "Nshima is ready when it pulls cleanly from the pot.",
+      "Shape into smooth mound and serve."
+    ],
+    tips: [
+      "No lumps should remain in good nshima",
+      "Should be stiff enough to shape",
+      "Eat with fingers, pinching to scoop relish"
+    ]
+  },
+  {
+    id: "mfumbwa-lunda",
+    name: "Mfumbwa (Wild Spinach Stew)",
+    tribeSlug: "lunda",
+    tribeName: "Lunda",
+    category: "staple",
+    description: "Lunda wild spinach cooked with palm oil and dried fish. A nutritious everyday dish from the forest.",
+    culturalSignificance: "Wild greens are essential to Lunda diet, foraged from the forests that cover their homeland.",
+    youtubeVideoId: "1NxD3Hp_L_U",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Wild spinach (or regular spinach)", amount: "500g" },
+      { item: "Dried fish", amount: "100g", notes: "Shredded" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Onion", amount: "1 medium" },
+      { item: "Tomato", amount: "1" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Wash and chop spinach finely.",
+      "Soak dried fish briefly, then shred.",
+      "Heat palm oil and sauté onion until soft.",
+      "Add tomato and cook 3 minutes.",
+      "Add dried fish and stir.",
+      "Add spinach, cover, and cook 20 minutes.",
+      "Stir occasionally, adding water if needed.",
+      "Season and serve with nshima."
+    ],
+    tips: [
+      "Traditional uses mfumbwa leaves from the forest",
+      "Palm oil gives distinctive orange color",
+      "Dried fish adds protein and umami"
+    ]
+  },
+
+  // ============ MBUNDU (ANGOLA) RECIPES ============
+  {
+    id: "kizaca-mbundu",
+    name: "Kizaca (Mbundu Bean Stew)",
+    tribeSlug: "mbundu",
+    tribeName: "Mbundu",
+    category: "staple",
+    description: "Traditional Mbundu stew of beans cooked with dried fish and palm oil. A protein-rich staple from coastal Angola.",
+    culturalSignificance: "The Mbundu are the second largest group in Angola. Kizaca represents their agricultural heritage around Luanda.",
+    historicalContext: "The Mbundu kingdom of Ndongo resisted Portuguese colonization under Queen Nzinga. Their cuisine blends indigenous and coastal influences.",
+    youtubeVideoId: "fE0DuXu53Pk",
+    prepTime: "8 hours (soaking)",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried beans", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Dried fish", amount: "200g" },
+      { item: "Palm oil", amount: "4 tablespoons" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Tomatoes", amount: "2" },
+      { item: "Garlic", amount: "3 cloves" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak beans overnight, drain and rinse.",
+      "Boil beans until tender, about 1 hour.",
+      "Soak dried fish briefly, then shred.",
+      "In a separate pan, heat palm oil.",
+      "Sauté onion, garlic, and tomatoes.",
+      "Add shredded dried fish and cook 5 minutes.",
+      "Add cooked beans and some cooking liquid.",
+      "Simmer together 20 minutes until thick.",
+      "Serve with funge or rice."
+    ],
+    tips: [
+      "Traditional uses feijão manteiga (butter beans)",
+      "Dried fish adds essential flavor",
+      "Should be thick, not soupy"
+    ]
+  },
+
+  // ============ MAKONDE (TANZANIA/MOZAMBIQUE) RECIPES ============
+  {
+    id: "wali-na-maharage-makonde",
+    name: "Wali na Maharage (Makonde Rice and Beans)",
+    tribeSlug: "makonde",
+    tribeName: "Makonde",
+    category: "staple",
+    description: "Coconut rice cooked with spiced beans - the everyday food of the Makonde people of southeastern Tanzania.",
+    culturalSignificance: "This dish reflects the Makonde's coastal influences while maintaining their plateau traditions.",
+    historicalContext: "The Makonde are renowned for their wood carving traditions. Living on the Makonde Plateau, they developed cuisine that blends coastal and inland ingredients.",
+    youtubeVideoId: "1KvdLQ_RWaQ",
+    prepTime: "30 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Rice", amount: "2 cups" },
+      { item: "Kidney beans", amount: "1 cup", notes: "Cooked" },
+      { item: "Coconut milk", amount: "1 can (400ml)" },
+      { item: "Onion", amount: "1" },
+      { item: "Garlic", amount: "2 cloves" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Cook beans until tender if not already cooked.",
+      "Sauté onion and garlic until fragrant.",
+      "Add cumin and stir.",
+      "Add rice and stir to coat.",
+      "Add coconut milk and water to cover rice by 1 inch.",
+      "Add cooked beans and salt.",
+      "Cover and cook on low until rice is done, about 20 minutes.",
+      "Fluff and serve."
+    ],
+    tips: [
+      "Coconut milk gives rich, creamy texture",
+      "Can use pigeon peas instead of kidney beans",
+      "Serve with grilled fish or meat"
+    ]
+  },
+  {
+    id: "ugali-makonde",
+    name: "Ugali wa Makonde (Cassava Ugali)",
+    tribeSlug: "makonde",
+    tribeName: "Makonde",
+    category: "staple",
+    description: "Makonde-style stiff porridge made from cassava flour rather than maize. Reflects the cassava-rich Makonde Plateau.",
+    culturalSignificance: "Cassava is central to Makonde agriculture and cuisine, adapted to the plateau's conditions.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "20 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Cassava flour", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring salted water to boil.",
+      "Gradually add cassava flour, stirring constantly.",
+      "Reduce heat and keep stirring vigorously.",
+      "Cook 15-20 minutes until very thick.",
+      "Should pull cleanly from pot sides.",
+      "Shape into mound and serve with relishes."
+    ],
+    tips: [
+      "Cassava ugali is slightly stickier than maize",
+      "Pairs well with dried fish and greens",
+      "Traditional to Makonde and other coastal groups"
+    ]
+  },
+
+  // ============ YAO (MALAWI/MOZAMBIQUE/TANZANIA) RECIPES ============
+  {
+    id: "nsima-yao",
+    name: "Nsima ya Yao (Yao-Style Porridge)",
+    tribeSlug: "yao",
+    tribeName: "Yao",
+    category: "staple",
+    description: "The Yao people's version of thick maize porridge, often served with freshwater fish from Lake Malawi.",
+    culturalSignificance: "The Yao are predominantly Muslim, having converted through trade contacts. Their cuisine reflects both African and Islamic influences.",
+    historicalContext: "The Yao were major traders between the coast and interior, bringing Islamic culture to Malawi. Their food traditions blend local ingredients with coastal influences.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize flour", amount: "2 cups" },
+      { item: "Water", amount: "5 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Boil 4 cups water with salt.",
+      "Mix remaining water with 1 cup flour.",
+      "Add slurry to boiling water, stirring.",
+      "Cook 5 minutes until it thickens.",
+      "Add remaining flour gradually.",
+      "Stir vigorously for 15 minutes.",
+      "Shape and serve with fish or meat."
+    ],
+    tips: [
+      "Yao often serve with dried usipa fish",
+      "Halal meat is preferred by Muslim Yao",
+      "Shared from a communal bowl"
+    ]
+  },
+  {
+    id: "usipa-yao",
+    name: "Usipa (Yao Dried Lake Fish)",
+    tribeSlug: "yao",
+    tribeName: "Yao",
+    category: "staple",
+    description: "Tiny dried sardine-like fish from Lake Malawi, cooked with tomatoes and onions. A protein staple for the Yao.",
+    culturalSignificance: "Lake Malawi provides abundant fish. The Yao preserve it by sun-drying, creating a year-round protein source.",
+    youtubeVideoId: "lie8xwHRG44",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried usipa fish", amount: "2 cups" },
+      { item: "Tomatoes", amount: "2", notes: "Chopped" },
+      { item: "Onion", amount: "1", notes: "Sliced" },
+      { item: "Cooking oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Rinse dried fish briefly to remove excess salt.",
+      "Heat oil and sauté onions until golden.",
+      "Add tomatoes and cook until soft.",
+      "Add dried fish and stir to coat.",
+      "Add a little water if needed.",
+      "Cover and simmer 10 minutes.",
+      "Serve with nsima."
+    ],
+    tips: [
+      "Don't overcook or fish becomes mushy",
+      "Can add groundnut powder for richness",
+      "Similar to Kenyan omena but larger fish"
+    ]
+  },
+
+  // ============ LOZI (ZAMBIA) RECIPES ============
+  {
+    id: "nshima-lozi",
+    name: "Buhobe (Lozi Thick Porridge)",
+    tribeSlug: "lozi",
+    tribeName: "Lozi",
+    category: "staple",
+    description: "The Lozi staple porridge, served with fish from the Zambezi floodplains. The foundation of every Lozi meal.",
+    culturalSignificance: "The Lozi Kingdom (Barotseland) is one of Africa's oldest monarchies. Buhobe with fish represents the abundance of the Zambezi.",
+    historicalContext: "The Lozi control the Zambezi floodplains and are famous for the annual Kuomboka ceremony when the king moves from low to high ground as floods rise.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize meal", amount: "2 cups" },
+      { item: "Water", amount: "5 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring 4 cups salted water to boil.",
+      "Mix remaining water with 1 cup maize meal.",
+      "Add slurry to boiling water, stirring constantly.",
+      "Cook until thickened.",
+      "Add remaining maize meal gradually.",
+      "Stir vigorously for 15-20 minutes.",
+      "Shape into mound and serve with fish."
+    ],
+    tips: [
+      "Lozi serve with abundant Zambezi fish",
+      "Must be stiff and shapeable",
+      "Eaten with fingers in the traditional way"
+    ]
+  },
+  {
+    id: "inswi-lozi",
+    name: "Inswi (Lozi Zambezi Bream)",
+    tribeSlug: "lozi",
+    tribeName: "Lozi",
+    category: "special",
+    description: "Fresh Zambezi tigerfish or bream, grilled or fried in the Lozi tradition. The pride of Barotseland's waters.",
+    culturalSignificance: "Fishing is central to Lozi identity. The Zambezi provides abundant bream, tigerfish, and other species.",
+    historicalContext: "The Lozi developed sophisticated fishing techniques in the Zambezi floodplains, including fish traps and nets that are still used today.",
+    youtubeVideoId: "2mJVG-uRKGg",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Whole bream or tilapia", amount: "2 large", notes: "Cleaned and scaled" },
+      { item: "Salt", amount: "1 tablespoon" },
+      { item: "Lemon juice", amount: "2 tablespoons" },
+      { item: "Garlic", amount: "4 cloves", notes: "Crushed" },
+      { item: "Cooking oil", amount: "For frying" }
+    ],
+    instructions: [
+      "Make diagonal cuts on both sides of fish.",
+      "Mix salt, lemon juice, and garlic.",
+      "Rub mixture inside and out. Marinate 30 minutes.",
+      "Heat oil in a deep pan.",
+      "Fry fish until golden on each side, about 8 minutes per side.",
+      "Drain on paper towels.",
+      "Serve with buhobe and vegetables."
+    ],
+    tips: [
+      "Fresh Zambezi fish is incomparable",
+      "Tigerfish is prized but boney",
+      "Grilling over wood fire is traditional"
+    ]
+  },
+
+  // ============ NGONI (MALAWI/ZAMBIA/TANZANIA) RECIPES ============
+  {
+    id: "nsima-ngoni",
+    name: "Nsima ya Ngoni (Ngoni Warrior's Porridge)",
+    tribeSlug: "ngoni",
+    tribeName: "Ngoni",
+    category: "staple",
+    description: "The thick maize porridge of the Ngoni warriors who migrated from Zululand. Hearty and sustaining.",
+    culturalSignificance: "The Ngoni fled Shaka's Zulu wars and settled across southern Africa. Their cuisine blends Zulu and Central African traditions.",
+    historicalContext: "The Ngoni migration (mfecane) spread Zulu military and cultural traditions across modern Malawi, Zambia, and Tanzania.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize meal", amount: "2 cups" },
+      { item: "Water", amount: "5 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring salted water to rolling boil.",
+      "Add maize meal gradually, stirring constantly.",
+      "Reduce heat and continue stirring.",
+      "Cook 20 minutes until very thick.",
+      "Shape and serve with meat relish."
+    ],
+    tips: [
+      "Ngoni prefer stiff nsima for hard work",
+      "Traditionally served with beef - cattle are precious",
+      "Eating is done with the right hand only"
+    ]
+  },
+  {
+    id: "nyama-ngoni",
+    name: "Nyama ya Ngoni (Ngoni Grilled Beef)",
+    tribeSlug: "ngoni",
+    tribeName: "Ngoni",
+    category: "special",
+    description: "Traditional Ngoni grilled beef, reflecting their Zulu cattle-keeping heritage. Simple, fire-roasted perfection.",
+    culturalSignificance: "Cattle are central to Ngoni wealth and identity, inherited from their Zulu ancestors. Beef is for celebrations.",
+    historicalContext: "When the Ngoni fled Zululand during the mfecane, they brought their cattle culture. Beef remains ceremonial food.",
+    youtubeVideoId: "siv6d9f4kx4",
+    prepTime: "15 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef (ribs or steaks)", amount: "2 kg" },
+      { item: "Coarse salt", amount: "2 tablespoons" },
+      { item: "Wood fire", amount: "For grilling" }
+    ],
+    instructions: [
+      "Build a fire and let it burn to hot coals.",
+      "Season beef generously with coarse salt.",
+      "Position meat over hot coals.",
+      "Grill slowly, turning occasionally.",
+      "Cook 1 hour or until done to preference.",
+      "Slice and serve with nsima."
+    ],
+    tips: [
+      "Slow grilling over wood is essential",
+      "Fat dripping on coals adds flavor",
+      "Ngoni tradition favors well-done meat"
+    ]
+  },
+
+  // ============ TUMBUKA (MALAWI) RECIPES ============
+  {
+    id: "nsima-tumbuka",
+    name: "Nsima ya Tumbuka",
+    tribeSlug: "tumbuka",
+    tribeName: "Tumbuka",
+    category: "staple",
+    description: "The Tumbuka people's version of thick maize porridge, from northern Malawi's highlands.",
+    culturalSignificance: "The Tumbuka are the second largest group in Malawi. Nsima is the daily staple.",
+    historicalContext: "The Tumbuka kingdom was subjugated by Ngoni invaders but maintained their distinct language and food traditions.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize flour", amount: "2 cups" },
+      { item: "Water", amount: "5 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Boil salted water in a heavy pot.",
+      "Gradually add maize flour while stirring.",
+      "Stir vigorously to prevent lumps.",
+      "Cook on low heat for 20 minutes.",
+      "Shape into smooth mound.",
+      "Serve with ndiwo (relish)."
+    ],
+    tips: [
+      "Tumbuka use a wooden paddle for stirring",
+      "Served with various vegetable and meat relishes",
+      "Essential at every meal"
+    ]
+  },
+  {
+    id: "masamba-tumbuka",
+    name: "Ndiwo wa Masamba (Tumbuka Pumpkin Leaf Relish)",
+    tribeSlug: "tumbuka",
+    tribeName: "Tumbuka",
+    category: "staple",
+    description: "Traditional Tumbuka vegetable relish made from pumpkin leaves and groundnuts.",
+    culturalSignificance: "Pumpkin leaves are a treasured vegetable across Malawi. The Tumbuka version with groundnuts is particularly rich.",
+    youtubeVideoId: "1NxD3Hp_L_U",
+    prepTime: "15 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Pumpkin leaves", amount: "500g", notes: "Chopped" },
+      { item: "Groundnut flour", amount: "3 tablespoons" },
+      { item: "Tomato", amount: "1", notes: "Chopped" },
+      { item: "Onion", amount: "1", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Wash and chop pumpkin leaves finely.",
+      "Sauté onion and tomato until soft.",
+      "Add pumpkin leaves with a little water.",
+      "Cover and cook 15 minutes.",
+      "Mix groundnut flour with water to make paste.",
+      "Stir groundnut paste into vegetables.",
+      "Simmer 10 minutes until creamy.",
+      "Serve with nsima."
+    ],
+    tips: [
+      "Groundnut flour adds protein and richness",
+      "Can substitute with peanut butter",
+      "Other greens can be used too"
+    ]
+  },
+
+  // ============ SARA (CHAD) RECIPES ============
+  {
+    id: "boule-sara",
+    name: "Boule (Sara Millet Porridge)",
+    tribeSlug: "sara",
+    tribeName: "Sara",
+    category: "staple",
+    description: "The Sara people's thick millet porridge, the foundation of southern Chadian cuisine.",
+    culturalSignificance: "The Sara are Chad's largest ethnic group. Millet is their staple grain, adapted to the savanna climate.",
+    historicalContext: "The Sara were major cotton farmers under French colonialism. They maintained their millet-based diet despite colonial pressures.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "10 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Millet flour", amount: "2 cups" },
+      { item: "Water", amount: "5 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Toast millet flour lightly in a dry pan for enhanced flavor.",
+      "Bring salted water to boil.",
+      "Gradually add millet flour, stirring constantly.",
+      "Reduce heat and continue cooking.",
+      "Stir for 25-30 minutes until very thick.",
+      "Shape into mound and serve with sauce."
+    ],
+    tips: [
+      "Millet has a nuttier flavor than maize",
+      "Toasting enhances the flavor",
+      "Essential to Sara daily diet"
+    ]
+  },
+  {
+    id: "daraba-sara",
+    name: "Daraba (Sara Okra-Peanut Sauce)",
+    tribeSlug: "sara",
+    tribeName: "Sara",
+    category: "special",
+    description: "Traditional Sara sauce of okra and peanuts, served over boule. Rich, nutritious, and beloved.",
+    culturalSignificance: "Daraba is comfort food for the Sara people. The combination of okra's texture and peanut richness is perfect.",
+    youtubeVideoId: "qPNxS3z2ckM",
+    prepTime: "20 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh okra", amount: "500g", notes: "Sliced" },
+      { item: "Peanut butter", amount: "4 tablespoons" },
+      { item: "Tomatoes", amount: "2", notes: "Chopped" },
+      { item: "Onion", amount: "1" },
+      { item: "Meat (optional)", amount: "300g" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "If using meat, brown it first and set aside.",
+      "Sauté onion until soft. Add tomatoes.",
+      "Add sliced okra and stir.",
+      "Add water to cover and simmer 15 minutes.",
+      "Stir peanut butter into the pot.",
+      "Return meat and simmer until sauce thickens.",
+      "Serve over boule."
+    ],
+    tips: [
+      "Okra gives the sauce its characteristic texture",
+      "Peanut butter should be unsweetened",
+      "Can be made vegetarian"
+    ]
+  },
+  {
+    id: "bili-bili-sara",
+    name: "Bili-Bili (Sara Millet Beer)",
+    tribeSlug: "sara",
+    tribeName: "Sara",
+    category: "beverage",
+    description: "Traditional Sara fermented millet beer. The social drink of southern Chad.",
+    culturalSignificance: "Bili-bili is central to Sara social life. Shared at festivals, weddings, and community gatherings.",
+    historicalContext: "The Sara are predominantly Christian, unlike Muslim northern Chad, allowing them to maintain brewing traditions.",
+    youtubeVideoId: "oNDwxXWM5To",
+    prepTime: "5-7 days (fermentation)",
+    cookTime: "3 hours",
+    servings: 20,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Red millet", amount: "2 kg" },
+      { item: "Water", amount: "10 liters" },
+      { item: "Yeast (wild or commercial)", amount: "As needed" }
+    ],
+    instructions: [
+      "Soak millet in water for 2 days until sprouted.",
+      "Dry the sprouted millet in the sun.",
+      "Grind the malted millet into flour.",
+      "Mix with water to make a thick mash.",
+      "Boil the mash for 2-3 hours, stirring often.",
+      "Cool and transfer to fermentation vessel.",
+      "Add yeast (or let wild yeast colonize).",
+      "Ferment 3-5 days until sour and alcoholic.",
+      "Strain and serve in calabash gourds."
+    ],
+    tips: [
+      "Fermentation time affects alcohol content",
+      "Traditionally shared from a communal gourd",
+      "Best drunk fresh within a few days"
+    ]
+  },
+
+  // ============ TOUBOU (CHAD/LIBYA/NIGER) RECIPES ============
+  {
+    id: "tibesti-porridge",
+    name: "Tibesti Millet Porridge",
+    tribeSlug: "toubou",
+    tribeName: "Toubou",
+    category: "staple",
+    description: "Simple millet porridge of the Toubou desert nomads. Sustaining food for Sahara survival.",
+    culturalSignificance: "The Toubou are legendary desert survivors. Their simple cuisine reflects the scarcity of the Tibesti Mountains.",
+    historicalContext: "The Toubou have lived in the central Sahara for millennia. Their food traditions are adapted to extreme aridity.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Millet flour", amount: "1 cup" },
+      { item: "Water or camel milk", amount: "3 cups" },
+      { item: "Salt", amount: "Pinch" },
+      { item: "Dates", amount: "For serving" }
+    ],
+    instructions: [
+      "Bring liquid to boil in a pot.",
+      "Gradually add millet flour, stirring.",
+      "Cook until thick, about 15 minutes.",
+      "Season with salt.",
+      "Serve with dates on the side."
+    ],
+    tips: [
+      "Camel milk adds richness",
+      "Toubou eat sparingly by necessity",
+      "Dates provide essential sugars"
+    ]
+  },
+  {
+    id: "toubou-dried-meat",
+    name: "Toubou Desert Jerky",
+    tribeSlug: "toubou",
+    tribeName: "Toubou",
+    category: "staple",
+    description: "Traditional Toubou sun-dried meat that keeps for months in the desert heat. Essential survival food.",
+    culturalSignificance: "Meat preservation is essential for Toubou nomads. Dried meat provides protein during long desert crossings.",
+    historicalContext: "The Toubou controlled trans-Saharan trade routes. Preserved meats sustained them across vast distances.",
+    youtubeVideoId: "siv6d9f4kx4",
+    prepTime: "30 minutes",
+    cookTime: "3-5 days (drying)",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Goat or camel meat", amount: "2 kg", notes: "Lean cuts" },
+      { item: "Salt", amount: "4 tablespoons" },
+      { item: "Chili powder (optional)", amount: "1 tablespoon" }
+    ],
+    instructions: [
+      "Cut meat into thin strips (1/4 inch thick).",
+      "Remove all visible fat (fat spoils).",
+      "Mix salt and chili powder.",
+      "Rub salt mixture into meat strips.",
+      "Hang strips on lines in direct desert sun.",
+      "Dry for 3-5 days until completely hard.",
+      "Store in dry cloth bags.",
+      "Rehydrate by soaking before cooking."
+    ],
+    tips: [
+      "Complete drying is essential for preservation",
+      "Keeps for months without refrigeration",
+      "Pound before cooking to tenderize"
+    ]
   }
 ];
 
