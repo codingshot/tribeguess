@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, BookOpen, Clock, Globe, Tag } from 'lucide-react';
 import {
@@ -9,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { blogPosts, BlogPost } from '@/data/blogPosts';
 
-export function FeaturedBlogsCarousel() {
+export const FeaturedBlogsCarousel = memo(function FeaturedBlogsCarousel() {
   // Get recent/featured blog posts (limit to 10)
   const featuredPosts = blogPosts.slice(0, 10);
 
@@ -67,9 +68,9 @@ export function FeaturedBlogsCarousel() {
       </Carousel>
     </section>
   );
-}
+});
 
-function BlogCardCarousel({ post, formatDate }: { post: BlogPost; formatDate: (date: string) => string }) {
+const BlogCardCarousel = memo(function BlogCardCarousel({ post, formatDate }: { post: BlogPost; formatDate: (date: string) => string }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
@@ -123,4 +124,4 @@ function BlogCardCarousel({ post, formatDate }: { post: BlogPost; formatDate: (d
       </div>
     </Link>
   );
-}
+});

@@ -69,6 +69,7 @@ export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images
               alt={image.caption || `Gallery image ${index + 1}`}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
               <ZoomIn className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -152,6 +153,8 @@ export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images
                     src={image.url}
                     alt={`Thumbnail ${index + 1}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </button>
               ))}
