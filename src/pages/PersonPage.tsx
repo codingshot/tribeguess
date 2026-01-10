@@ -134,9 +134,11 @@ export default function PersonPage() {
 
                 {/* Info */}
                 <div className="flex-1 text-center md:text-left">
-                  <Badge className="mb-3">
-                    {CATEGORY_ICONS[person.category]} {person.category}
-                  </Badge>
+                  <Link to={`/people?category=${encodeURIComponent(person.category)}`}>
+                    <Badge className="mb-3 cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors">
+                      {CATEGORY_ICONS[person.category]} {person.category}
+                    </Badge>
+                  </Link>
                   
                   <h1 className="text-2xl md:text-4xl font-serif font-bold mb-2">
                     {person.name}

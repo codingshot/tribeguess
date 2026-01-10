@@ -800,10 +800,16 @@ const TribePage = () => {
                     👤 Notable People
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-2">
-                    {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia?: string | null; image?: string }>).map((person, i) => (
-                      <PersonCard key={i} person={person} />
+                    {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia?: string | null; image?: string; birth?: number; death?: number }>).map((person, i) => (
+                      <PersonCard key={i} person={person} tribeSlug={tribe.slug} />
                     ))}
                   </div>
+                  <Link 
+                    to={`/people?tribe=${tribe.slug}`}
+                    className="mt-4 inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                  >
+                    View all {tribe.name} people →
+                  </Link>
                 </section>
               )}
 
