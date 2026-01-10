@@ -7187,6 +7187,199 @@ const centralAfricanRecipes: Recipe[] = [
       "Multiple small fish can substitute for one large fish",
       "The banana leaf imparts subtle flavor - don't substitute foil"
     ]
+  },
+  // ============ MORE CENTRAL AFRICAN RECIPES ============
+  {
+    id: "chikwanga",
+    name: "Chikwanga (Fermented Cassava Bread)",
+    tribeSlug: "luba",
+    tribeName: "Luba",
+    category: "staple",
+    description: "Fermented cassava wrapped and steamed in banana leaves. A dense, tangy staple bread unique to Central Africa.",
+    culturalSignificance: "Chikwanga is the bread of the Congo Basin, eaten with every meal. The fermentation process is centuries old, and each family has their technique.",
+    historicalContext: "After cassava arrived from South America, Central Africans developed sophisticated processing to remove toxins and create chikwanga. The fermentation also preserves the starch for days without refrigeration.",
+    youtubeVideoId: "Ys1i6rXKp1Q",
+    prepTime: "3 days (fermentation)",
+    cookTime: "2 hours",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava roots", amount: "5 kg", notes: "Peeled" },
+      { item: "Water", amount: "For soaking" },
+      { item: "Banana leaves", amount: "Several large" }
+    ],
+    instructions: [
+      "Peel cassava and soak in water for 3-4 days until soft.",
+      "The fermentation creates the characteristic sour flavor.",
+      "Remove cassava, discard soaking water.",
+      "Pound or process into smooth, stretchy paste.",
+      "Knead thoroughly - this develops the texture.",
+      "Divide into portions. Shape into cylinders.",
+      "Wrap each tightly in softened banana leaves.",
+      "Steam for 2 hours until firm.",
+      "Cool before unwrapping. Slice to serve with stews."
+    ],
+    tips: [
+      "Proper fermentation is essential - taste for sourness",
+      "The dough should be very smooth and stretchy",
+      "Chikwanga keeps several days wrapped in leaves"
+    ]
+  },
+  {
+    id: "ngombo",
+    name: "Ngombo (Congolese Okra Stew)",
+    tribeSlug: "mongo",
+    tribeName: "Mongo",
+    category: "staple",
+    description: "Fresh okra stew with palm oil and fish - a silky, nutritious dish from the Congo Basin.",
+    culturalSignificance: "Ngombo (okra) is a everyday vegetable across Central Africa. This simple preparation showcases the ingredient at its best, paired with smoked fish for depth.",
+    historicalContext: "Okra originated in Africa and has been cultivated for thousands of years. The Mongo people of the Congo rainforest developed many variations, using forest ingredients and river fish.",
+    youtubeVideoId: "qPNxS3z2ckM",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh okra", amount: "500g", notes: "Sliced" },
+      { item: "Smoked fish", amount: "200g", notes: "Deboned, flaked" },
+      { item: "Palm oil", amount: "1/4 cup" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "2", notes: "Chopped" },
+      { item: "Garlic", amount: "3 cloves" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Hot pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Heat palm oil in a pot over medium heat.",
+      "Sauté onion until golden. Add garlic.",
+      "Add tomatoes and cook until soft.",
+      "Add sliced okra and stir to coat with oil.",
+      "Add smoked fish and hot pepper.",
+      "Add 1/2 cup water. Cover and simmer 20 minutes.",
+      "Stir occasionally. The okra will become silky.",
+      "Season with salt. Serve with fufu or rice."
+    ],
+    tips: [
+      "Fresh okra gives better texture than frozen",
+      "Don't overcook - okra should be tender, not slimy",
+      "Smoked fish is traditional but dried fish works"
+    ]
+  },
+  {
+    id: "maboke-vegetables",
+    name: "Maboke ya Ndunda (Bitter Leaves in Banana Leaf)",
+    tribeSlug: "kongo",
+    tribeName: "Kongo",
+    category: "staple",
+    description: "Bitter leaves steamed in banana leaf parcels with palm oil and spices. A healthy Congolese classic.",
+    culturalSignificance: "Maboke cooking - steaming in banana leaves - is quintessentially Congolese. It works for fish, meat, and vegetables. The leaves impart subtle flavor while keeping moisture in.",
+    historicalContext: "The banana leaf wrapping technique predates metal pots in Central Africa. It's efficient, flavorful, and zero-waste - the leaves biodegrade after use.",
+    youtubeVideoId: "eS6yP8WMQEU",
+    prepTime: "30 minutes",
+    cookTime: "45 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Bitter leaves (ndunda)", amount: "500g", notes: "Washed multiple times" },
+      { item: "Palm oil", amount: "3 tablespoons" },
+      { item: "Onion", amount: "1", notes: "Sliced" },
+      { item: "Smoked fish", amount: "100g", notes: "Optional" },
+      { item: "Garlic", amount: "2 cloves" },
+      { item: "Hot pepper", amount: "1" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Banana leaves", amount: "2 large" }
+    ],
+    instructions: [
+      "Wash bitter leaves 5-6 times to reduce bitterness.",
+      "Squeeze out excess water.",
+      "Mix leaves with palm oil, onion, garlic, pepper, and smoked fish.",
+      "Season with salt.",
+      "Soften banana leaves over flame.",
+      "Divide mixture between leaves. Wrap into parcels.",
+      "Tie securely with leaf strips.",
+      "Steam over boiling water for 45 minutes.",
+      "Serve in the parcels with fufu."
+    ],
+    tips: [
+      "Thorough washing is essential for palatability",
+      "Can substitute spinach if bitter leaves unavailable",
+      "The steam-in-leaf method intensifies flavors"
+    ]
+  },
+  {
+    id: "baton-manioc",
+    name: "Bâton de Manioc (Cassava Stick)",
+    tribeSlug: "fang",
+    tribeName: "Fang",
+    category: "staple",
+    description: "Fermented cassava paste wrapped in leaves and shaped into sticks. A portable staple food of Central Africa.",
+    culturalSignificance: "Bâton de manioc is the to-go food of Central Africa - wrapped, portable, and sustaining. Workers carry it to fields; travelers take it on journeys.",
+    historicalContext: "This is essentially chikwanga in stick form, developed for portability. The Fang people refined the shaping technique, creating uniform sticks that cook evenly.",
+    youtubeVideoId: "Ys1i6rXKp1Q",
+    prepTime: "3 days (fermentation)",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Cassava", amount: "3 kg", notes: "Peeled" },
+      { item: "Water", amount: "For soaking" },
+      { item: "Marantaceae leaves or banana leaves", amount: "Several" }
+    ],
+    instructions: [
+      "Peel cassava and soak in water 3-4 days.",
+      "When soft and sour, drain and pound to smooth paste.",
+      "Knead until elastic and stretchy.",
+      "Divide into portions. Roll each into a stick shape.",
+      "Wrap tightly in leaves, twisting ends.",
+      "Steam for 1.5 hours until firm.",
+      "Cool before serving. Unwrap and slice.",
+      "Eat with sauces, stews, or grilled fish."
+    ],
+    tips: [
+      "The paste must be very smooth - no cassava lumps",
+      "Tight wrapping ensures even cooking",
+      "Can be resteamed if it dries out"
+    ]
+  },
+  {
+    id: "sanga-pork",
+    name: "Sanga (Gabonese Spiced Pork)",
+    tribeSlug: "fang",
+    tribeName: "Fang",
+    category: "special",
+    description: "Pork stewed with wild spinach and forest spices. A hearty Gabonese dish from the rainforest interior.",
+    culturalSignificance: "Sanga showcases Gabon's forest ingredients. Wild game was traditional, but pork is now common. It's celebration food, served at gatherings and holidays.",
+    historicalContext: "The Fang people are skilled hunters and forest cultivators. Their cuisine blends bush meat traditions with domesticated animals, always featuring local leaves and spices.",
+    youtubeVideoId: "9HSG8XZPRWA",
+    prepTime: "20 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Pork shoulder", amount: "1 kg", notes: "Cubed" },
+      { item: "Leafy greens (spinach, kale)", amount: "500g" },
+      { item: "Palm oil", amount: "1/4 cup" },
+      { item: "Onion", amount: "2 medium", notes: "Chopped" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Ginger", amount: "1 inch" },
+      { item: "Hot pepper", amount: "2" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Season pork with salt, garlic, and ginger.",
+      "Heat palm oil in a large pot. Brown pork on all sides.",
+      "Add onions and cook until soft.",
+      "Add water to cover. Simmer 1 hour until pork is tender.",
+      "Add chopped greens and hot peppers.",
+      "Cook 15-20 minutes until greens are tender.",
+      "Adjust seasoning. The stew should be rich and thick.",
+      "Serve with manioc or rice."
+    ],
+    tips: [
+      "Wild boar is traditional if available",
+      "Cassava leaves can replace spinach for authenticity",
+      "The fat should render into the stew"
+    ]
   }
 ];
 
@@ -7483,6 +7676,272 @@ const eastAfricanRecipes: Recipe[] = [
       "Low and slow is the key - high flames burn the outside",
       "Goat is traditional; beef is also popular",
       "Serve immediately off the grill"
+    ]
+  },
+  // ============ ERITREAN RECIPES ============
+  {
+    id: "eritrean-ful",
+    name: "Ful Medames (Eritrean Fava Beans)",
+    tribeSlug: "tigrinya",
+    tribeName: "Tigrinya",
+    category: "staple",
+    description: "Slow-cooked fava beans mashed with olive oil, lemon, and spices. Eritrea's beloved breakfast dish with ancient roots.",
+    culturalSignificance: "Ful is the quintessential Eritrean breakfast, eaten daily across the country. It's a social food, often shared from a communal plate. During fasting periods, it's the go-to protein source.",
+    historicalContext: "Fava beans have been cultivated in the Horn of Africa for millennia, making ful one of the world's oldest prepared dishes. Eritrea's version is distinct, featuring berbere and local olive oil from the highlands.",
+    youtubeVideoId: "7qHl84U8Rfs",
+    prepTime: "8 hours (soaking)",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried fava beans", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Olive oil", amount: "1/4 cup" },
+      { item: "Lemon juice", amount: "2 tablespoons" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Berbere spice", amount: "1/2 teaspoon", notes: "Optional" },
+      { item: "Tomatoes", amount: "2", notes: "Diced" },
+      { item: "Fresh parsley", amount: "For garnish" },
+      { item: "Boiled eggs", amount: "For serving" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak fava beans overnight in plenty of water.",
+      "Drain and rinse beans. Place in large pot with fresh water.",
+      "Bring to boil, then reduce heat and simmer 1.5-2 hours until very soft.",
+      "Drain most water, leaving beans moist.",
+      "Mash beans roughly with fork or potato masher.",
+      "Stir in olive oil, lemon juice, garlic, and cumin.",
+      "Season with salt and berbere if desired.",
+      "Top with diced tomatoes and fresh parsley.",
+      "Serve warm with boiled eggs and fresh bread."
+    ],
+    tips: [
+      "Eritrean ful is more olive oil-forward than Egyptian versions",
+      "Traditionally served with freshly baked himbasha bread",
+      "Can be topped with yogurt or fresh cheese"
+    ]
+  },
+  {
+    id: "lahoh",
+    name: "Lahoh (Eritrean Spongy Pancakes)",
+    tribeSlug: "tigre",
+    tribeName: "Tigre",
+    category: "staple",
+    description: "Fermented spongy pancakes with a thousand tiny holes. The Eritrean answer to Ethiopian injera, lighter and tangier.",
+    culturalSignificance: "Lahoh is breakfast, snack, and accompaniment all in one. It's essential during Ramadan when Eritrean Muslims break their fast. The holes represent abundance.",
+    historicalContext: "Lahoh shares ancestry with Yemeni lahoh and Ethiopian injera, reflecting Eritrea's position at the crossroads of African and Arabian culinary traditions. The fermentation technique dates back centuries.",
+    youtubeVideoId: "N7y8_t1q4aM",
+    prepTime: "12 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "All-purpose flour", amount: "2 cups" },
+      { item: "Semolina flour", amount: "1 cup" },
+      { item: "Active dry yeast", amount: "1 teaspoon" },
+      { item: "Sugar", amount: "1 teaspoon" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Warm water", amount: "3 cups" }
+    ],
+    instructions: [
+      "Mix both flours in a large bowl.",
+      "Dissolve yeast and sugar in 1/2 cup warm water. Let foam 5 minutes.",
+      "Add yeast mixture to flour with remaining water.",
+      "Whisk until smooth batter forms (should be like thin pancake batter).",
+      "Cover and let ferment at room temperature 8-12 hours.",
+      "Stir batter gently - it should be bubbly and slightly sour.",
+      "Heat a non-stick pan over medium-high heat.",
+      "Pour thin layer of batter, tilting to spread.",
+      "Cook until bubbles form and top sets (don't flip).",
+      "Serve with honey, ful, or stews."
+    ],
+    tips: [
+      "The batter should be thinner than pancake batter",
+      "More fermentation means more sour flavor",
+      "Only cook one side - the top should be spongy"
+    ],
+    variations: [
+      "Sweet lahoh with honey and sesame",
+      "Savory with eggs and spices",
+      "Rolled with cream cheese"
+    ]
+  },
+  {
+    id: "shahan-ful",
+    name: "Shahan Ful (Eritrean Scrambled Ful)",
+    tribeSlug: "tigrinya",
+    tribeName: "Tigrinya",
+    category: "staple",
+    description: "Ful beans scrambled with eggs, tomatoes, and spices. The heartiest Eritrean breakfast combining two morning staples.",
+    culturalSignificance: "Shahan ful is the 'complete breakfast' in Eritrea, combining protein from beans and eggs. Popular in Asmara's cafes, it represents the Italian influence on Eritrean urban cuisine.",
+    historicalContext: "During Italian colonization, Eritrean cooks adapted local ful with European egg preparations. The result is uniquely Eritrean - a fusion that predates modern fusion cuisine by a century.",
+    youtubeVideoId: "2oRYO3YzL0k",
+    prepTime: "10 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Cooked fava beans (ful)", amount: "2 cups", notes: "Mashed" },
+      { item: "Eggs", amount: "4" },
+      { item: "Tomatoes", amount: "2", notes: "Diced" },
+      { item: "Onion", amount: "1 medium", notes: "Diced" },
+      { item: "Green chilies", amount: "2", notes: "Chopped" },
+      { item: "Olive oil", amount: "3 tablespoons" },
+      { item: "Cumin", amount: "1/2 teaspoon" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Heat olive oil in a pan over medium heat.",
+      "Sauté onions until translucent.",
+      "Add tomatoes and chilies, cook until soft.",
+      "Add mashed ful and stir to combine.",
+      "Make wells in the mixture and crack eggs into them.",
+      "Scramble everything together until eggs are cooked.",
+      "Season with cumin, salt, and pepper.",
+      "Serve hot with lahoh or crusty bread."
+    ],
+    tips: [
+      "Don't overcook the eggs - they should be just set",
+      "Adjust chili heat to preference",
+      "Drizzle with extra olive oil before serving"
+    ]
+  },
+  // ============ DJIBOUTI RECIPES ============
+  {
+    id: "skoudehkaris",
+    name: "Skoudehkaris (Djibouti Lamb Rice)",
+    tribeSlug: "afar",
+    tribeName: "Afar",
+    category: "special",
+    description: "Djibouti's national dish - lamb and rice cooked with cardamom, cinnamon, and tomatoes. A celebration of Arab-African fusion cuisine.",
+    culturalSignificance: "Skoudehkaris is THE dish of Djibouti, served at weddings, Eid, and whenever there's cause for celebration. It represents the unique blend of Somali, Arab, and French influences.",
+    historicalContext: "The dish reflects Djibouti's position on ancient trade routes. Arab spices merged with African cooking techniques, while French colonial influence refined presentation. The name may derive from Arabic roots meaning 'meat and rice.'",
+    youtubeVideoId: "sH-8-X-1bDo",
+    prepTime: "30 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Lamb", amount: "1 kg", notes: "Cut into large pieces, bone-in" },
+      { item: "Basmati rice", amount: "3 cups" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Tomatoes", amount: "4", notes: "Blended" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Cardamom pods", amount: "6" },
+      { item: "Cinnamon sticks", amount: "2" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Black pepper", amount: "1 teaspoon" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Season lamb with salt, pepper, and cumin.",
+      "Heat oil in a large pot. Brown lamb pieces on all sides. Remove.",
+      "Sauté sliced onions until golden brown.",
+      "Add garlic, cardamom, and cinnamon. Fry 1 minute.",
+      "Add tomato paste and blended tomatoes. Cook until oil separates.",
+      "Return lamb to pot. Add water to cover.",
+      "Simmer for 45 minutes until lamb is tender.",
+      "Remove lamb and measure broth. You need 4.5 cups for rice.",
+      "Wash rice and add to the broth.",
+      "Bring to boil, then reduce heat to very low.",
+      "Cover tightly and cook 20-25 minutes until rice is done.",
+      "Arrange rice on platter with lamb pieces on top.",
+      "Garnish with fried onions and serve with salad."
+    ],
+    tips: [
+      "The caramelized onions are essential for authentic flavor",
+      "Rice should absorb all the spiced lamb broth",
+      "Serve with banana and hot sauce on the side"
+    ]
+  },
+  {
+    id: "laxoox-djibouti",
+    name: "Laxoox (Djibouti Sourdough Crepes)",
+    tribeSlug: "issa",
+    tribeName: "Issa",
+    category: "staple",
+    description: "Thin, spongy sourdough crepes with a thousand bubbles. Djibouti's daily bread, similar to Somali canjeero but with local variations.",
+    culturalSignificance: "Laxoox is eaten at every meal in Djibouti. Breakfast sees it with honey and butter; dinner with stews and meat. Making perfect laxoox is a skill passed from mother to daughter.",
+    historicalContext: "This fermented flatbread connects Djibouti to greater Somali and East African bread traditions. The natural fermentation technique preserves the batter in the hot climate and adds distinctive tang.",
+    youtubeVideoId: "upwo318A830",
+    prepTime: "24 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "All-purpose flour", amount: "2 cups" },
+      { item: "Self-rising flour", amount: "1 cup" },
+      { item: "Cornmeal", amount: "1/4 cup" },
+      { item: "Sugar", amount: "1 tablespoon" },
+      { item: "Salt", amount: "1/2 teaspoon" },
+      { item: "Warm water", amount: "3 cups" },
+      { item: "Vegetable oil", amount: "For cooking" }
+    ],
+    instructions: [
+      "Combine all dry ingredients in a large bowl.",
+      "Add warm water gradually, whisking to form smooth batter.",
+      "Cover loosely and let ferment at room temperature 18-24 hours.",
+      "Batter should be bubbly and slightly sour-smelling.",
+      "Stir well and add water if too thick (should pour easily).",
+      "Heat a non-stick pan over medium-high heat.",
+      "Pour thin layer of batter, swirling to cover pan.",
+      "Cook until bubbles form, edges lift, and bottom is golden.",
+      "Do not flip - top should be spongy with many holes.",
+      "Fold and serve with honey, ghee, or stews."
+    ],
+    tips: [
+      "Longer fermentation means more sour and complex flavor",
+      "The pan must be hot enough or bubbles won't form properly",
+      "Perfect laxoox has uniform holes across the entire surface"
+    ]
+  },
+  {
+    id: "maraq-digaag",
+    name: "Maraq Digaag (Djibouti Chicken Soup)",
+    tribeSlug: "afar",
+    tribeName: "Afar",
+    category: "staple",
+    description: "Aromatic chicken soup spiced with cumin, coriander, and turmeric. A comforting Djiboutian staple perfect for the hot climate.",
+    culturalSignificance: "Maraq is the everyday soup of Djibouti, served to nourish the sick, welcome guests, and accompany rice dishes. Its warming spices are believed to aid digestion in the intense heat.",
+    historicalContext: "This soup reflects Djibouti's position on spice trade routes. Indian, Arab, and African flavors combine in a uniquely Djiboutian way. French colonial influence added the refinement of serving courses.",
+    youtubeVideoId: "rSBRekdNG0g",
+    prepTime: "15 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Whole chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Onions", amount: "2 large", notes: "Quartered" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Potatoes", amount: "3", notes: "Cubed" },
+      { item: "Carrots", amount: "2", notes: "Sliced" },
+      { item: "Garlic", amount: "5 cloves" },
+      { item: "Cumin", amount: "1 tablespoon" },
+      { item: "Turmeric", amount: "1 teaspoon" },
+      { item: "Coriander", amount: "1 teaspoon" },
+      { item: "Green chilies", amount: "2", notes: "Whole" },
+      { item: "Fresh cilantro", amount: "For garnish" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Place chicken pieces in large pot with onions and garlic.",
+      "Cover with water (about 8 cups) and bring to boil.",
+      "Skim foam and reduce to simmer.",
+      "Add cumin, turmeric, coriander, and whole chilies.",
+      "Simmer 30 minutes until chicken is nearly done.",
+      "Add potatoes, carrots, and tomatoes.",
+      "Continue simmering 20 minutes until vegetables are tender.",
+      "Adjust seasoning with salt.",
+      "Garnish with fresh cilantro.",
+      "Serve hot with rice or laxoox."
+    ],
+    tips: [
+      "The broth should be golden from turmeric",
+      "Don't pierce the chilies unless you want it very spicy",
+      "This soup is even better the next day"
     ]
   }
 ];
@@ -7832,6 +8291,233 @@ const southernAfricanRecipes: Recipe[] = [
       "The syrup MUST be ice-cold and the koeksisters piping hot",
       "This temperature difference creates the crispy, sticky texture",
       "Work in batches to keep syrup cold"
+    ]
+  },
+  // ============ MORE SOUTHERN AFRICAN RECIPES ============
+  {
+    id: "seswaa",
+    name: "Seswaa (Botswana Pounded Beef)",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "special",
+    description: "Botswana's national dish - beef slow-cooked until tender, then pounded and shredded. Simple yet deeply satisfying.",
+    culturalSignificance: "Seswaa is essential at all Botswana celebrations - weddings, funerals, and national holidays. It represents community and tradition, cooked in large pots over open fires.",
+    historicalContext: "The Tswana people developed seswaa as a way to make tough beef tender. Cattle are central to Tswana culture and wealth. The dish honors this relationship with beef at its most basic and delicious.",
+    youtubeVideoId: "0qJk1mG0O4c",
+    prepTime: "15 minutes",
+    cookTime: "4 hours",
+    servings: 10,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Beef (bone-in, like ribs or shin)", amount: "2 kg" },
+      { item: "Water", amount: "To cover" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Place beef in a large pot. Add water to cover.",
+      "Bring to boil, then reduce to gentle simmer.",
+      "Cook for 3-4 hours until meat falls off bone.",
+      "Remove bones, leaving meat in pot.",
+      "Using two forks or a pestle, pound and shred the meat.",
+      "Let meat cook in its own juices a bit longer.",
+      "Season generously with salt.",
+      "Serve with pap (bogobe) and morogo (greens)."
+    ],
+    tips: [
+      "The longer it cooks, the easier it shreds",
+      "Bone-in cuts give the best flavor",
+      "Traditional pounding uses a wooden mortar called 'mokoto'"
+    ]
+  },
+  {
+    id: "kapana",
+    name: "Kapana (Namibian Street BBQ)",
+    tribeSlug: "ovambo",
+    tribeName: "Ovambo/Namibian",
+    category: "snack",
+    description: "Namibia's famous street food - beef grilled on open drums and chopped into bite-size pieces. Served with spicy relish.",
+    culturalSignificance: "Kapana is Namibia's great equalizer - everyone from workers to executives crowds around kapana grills in townships. It's the heartbeat of Namibian street culture.",
+    historicalContext: "Kapana emerged in Namibia's informal settlements as an affordable, social way to eat meat. The tradition spread nationwide and is now a beloved national institution with dedicated kapana markets.",
+    youtubeVideoId: "YXk0RDzuv_c",
+    prepTime: "10 minutes",
+    cookTime: "15 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Beef (cheap cuts, like brisket)", amount: "1 kg", notes: "Cut into chunks" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Chili powder", amount: "Optional" },
+      { item: "Tomatoes", amount: "2", notes: "For relish" },
+      { item: "Onions", amount: "1 large", notes: "For relish" },
+      { item: "Chilies", amount: "3-4", notes: "For relish" },
+      { item: "Vinegar", amount: "2 tablespoons" }
+    ],
+    instructions: [
+      "Make relish: Dice tomatoes, onions, and chilies. Mix with vinegar and salt.",
+      "Heat a drum or large grill until very hot.",
+      "Grill beef chunks, turning frequently.",
+      "Season with salt as it cooks.",
+      "Chop grilled meat into smaller pieces on the grill.",
+      "Continue cooking until well-done with crispy edges.",
+      "Serve hot with relish and braai salt.",
+      "Eat with hands, picking pieces directly."
+    ],
+    tips: [
+      "Kapana should be well-done with crispy fat",
+      "The social experience is part of the meal",
+      "Best enjoyed standing around the grill"
+    ]
+  },
+  {
+    id: "matemba",
+    name: "Matemba (Dried Kapenta Fish)",
+    tribeSlug: "tonga",
+    tribeName: "Tonga/Zimbabwean",
+    category: "staple",
+    description: "Tiny dried fish from Lake Kariba, cooked with tomatoes and groundnuts. A protein staple of southern Africa.",
+    culturalSignificance: "Matemba (kapenta) from Lake Kariba feeds millions across Zimbabwe and Zambia. It's affordable protein that's sustained communities through hard times.",
+    historicalContext: "Kapenta were introduced to Lake Kariba in the 1960s from Lake Tanganyika. The small sardine-like fish thrived and created a new fishing industry. Today it's a dietary cornerstone.",
+    youtubeVideoId: "cxj0vDYL6K8",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried kapenta/matemba", amount: "2 cups" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Onion", amount: "1 large", notes: "Sliced" },
+      { item: "Groundnut powder", amount: "2 tablespoons", notes: "Optional" },
+      { item: "Cooking oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Fresh greens", amount: "For serving" }
+    ],
+    instructions: [
+      "Rinse dried kapenta briefly to remove excess salt.",
+      "Heat oil in a pan over medium heat.",
+      "Sauté onions until translucent.",
+      "Add tomatoes and cook until soft.",
+      "Add kapenta and stir to combine.",
+      "Add a splash of water and groundnut powder if using.",
+      "Cover and simmer 10 minutes.",
+      "Season with salt. Serve with sadza and greens."
+    ],
+    tips: [
+      "Don't oversoak the fish or it loses flavor",
+      "Groundnut powder adds richness but is optional",
+      "Fresh kapenta (if available) needs less cooking"
+    ]
+  },
+  {
+    id: "nshima-zambia",
+    name: "Nshima (Zambian Maize Porridge)",
+    tribeSlug: "bemba",
+    tribeName: "Bemba/Zambian",
+    category: "staple",
+    description: "Zambia's national dish - stiff maize porridge eaten with every meal. The foundation of Zambian cuisine.",
+    culturalSignificance: "Nshima is so central to Zambian life that a meal without it isn't considered a meal. It's shaped by hand into balls and used to scoop relish (ndiwo).",
+    historicalContext: "Maize became dominant in Zambia during the colonial era. The technique of cooking it into stiff porridge spread from southern Africa. Today, nshima defines Zambian food culture.",
+    youtubeVideoId: "y4fCVmL9Wgo",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "White mealie meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "To taste", notes: "Optional" }
+    ],
+    instructions: [
+      "Bring water to boil in a heavy pot.",
+      "Mix 1/2 cup mealie meal with cold water to make slurry.",
+      "Pour slurry into boiling water, stirring constantly.",
+      "Reduce heat and simmer 5 minutes, stirring.",
+      "Gradually add remaining mealie meal, stirring vigorously.",
+      "Use wooden spoon to work out all lumps.",
+      "Cook on low heat 10-15 minutes, stirring and turning.",
+      "Nshima should be stiff enough to shape but not dry.",
+      "Wet hands and shape into balls. Serve with ndiwo (relish)."
+    ],
+    tips: [
+      "The slurry method prevents lumps",
+      "Keep stirring - nshima requires attention",
+      "Perfect nshima doesn't stick to your hands when shaping"
+    ]
+  },
+  {
+    id: "muriwo-unedovi",
+    name: "Muriwo Unedovi (Zimbabwean Greens with Peanut Butter)",
+    tribeSlug: "shona",
+    tribeName: "Shona",
+    category: "staple",
+    description: "Leafy greens cooked with peanut butter - Zimbabwe's favorite vegetable dish. Rich, creamy, and deeply satisfying.",
+    culturalSignificance: "Muriwo (greens) with dovi (peanut butter) is everyday food across Zimbabwe. The combination provides complete nutrition - greens for vitamins, groundnuts for protein.",
+    historicalContext: "Groundnuts arrived in Africa from South America centuries ago. Zimbabweans embraced them completely, grinding them into butter for cooking. This dish is a perfect example of that integration.",
+    youtubeVideoId: "1NxD3Hp_L_U",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Collard greens or kale", amount: "1 large bunch", notes: "Chopped" },
+      { item: "Peanut butter", amount: "3 tablespoons", notes: "Unsweetened" },
+      { item: "Tomato", amount: "1", notes: "Chopped" },
+      { item: "Onion", amount: "1 medium", notes: "Chopped" },
+      { item: "Water", amount: "1/2 cup" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Wash and chop greens into small pieces.",
+      "Sauté onion until soft. Add tomato and cook 3 minutes.",
+      "Add chopped greens and stir.",
+      "Mix peanut butter with water until smooth.",
+      "Pour peanut butter mixture over greens.",
+      "Stir to combine. Cover and simmer 15 minutes.",
+      "Stir occasionally, adding water if too dry.",
+      "Season with salt. Serve with sadza."
+    ],
+    tips: [
+      "Traditional uses freshly ground peanut paste",
+      "Any leafy green works - spinach, rape, kale",
+      "The peanut butter should coat the greens, not be soupy"
+    ]
+  },
+  {
+    id: "vetkoek",
+    name: "Vetkoek (Fat Cakes)",
+    tribeSlug: "afrikaner",
+    tribeName: "South African",
+    category: "snack",
+    description: "Deep-fried bread dough - crispy outside, fluffy inside. Filled with mince or spread with jam.",
+    culturalSignificance: "Vetkoek is beloved street food and home comfort. Every South African knows the joy of a hot vetkoek. Markets and food stalls across the country serve them.",
+    historicalContext: "Dutch settlers brought fried bread traditions. The Afrikaans name means 'fat cake.' Similar to American doughnuts but typically savory. Now embraced by all South Africans.",
+    youtubeVideoId: "LRO_YiU8h9A",
+    prepTime: "2 hours (including rising)",
+    cookTime: "20 minutes",
+    servings: 12,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Bread flour", amount: "4 cups" },
+      { item: "Instant yeast", amount: "10g" },
+      { item: "Sugar", amount: "2 tablespoons" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Warm water", amount: "1.5 cups" },
+      { item: "Oil", amount: "For deep frying" }
+    ],
+    instructions: [
+      "Mix flour, yeast, sugar, and salt.",
+      "Add warm water and knead to soft dough (10 minutes).",
+      "Cover and let rise until doubled (1-2 hours).",
+      "Punch down and divide into 12 balls.",
+      "Let rest 10 minutes.",
+      "Heat oil to 170°C (not too hot).",
+      "Flatten balls slightly and fry until golden (3-4 minutes per side).",
+      "Drain on paper towels.",
+      "Split open and fill with curry mince, syrup, or jam."
+    ],
+    tips: [
+      "Oil must be right temperature - too hot burns outside before inside cooks",
+      "Don't crowd the pot - fry 2-3 at a time",
+      "Best eaten fresh and warm"
     ]
   }
 ];
