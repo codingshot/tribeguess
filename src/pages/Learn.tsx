@@ -754,7 +754,7 @@ const Learn = () => {
               {filteredTribes.map((tribe, index) => (
                 <article 
                   key={tribe.id}
-                  className="animate-fade-in"
+                  className="animate-fade-in content-auto-sm"
                   style={{ animationDelay: `${Math.min(index, 12) * 30}ms` }}
                 >
                   <TribeCard tribe={tribe} />
@@ -772,7 +772,7 @@ const Learn = () => {
                   <Link
                     key={tribe.id}
                     to={`/learn/${tribe.slug}`}
-                    className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-md transition-all group"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-md transition-all group content-auto-sm"
                   >
                     {/* Flags */}
                     <div className="flex -space-x-1 w-10 flex-shrink-0">

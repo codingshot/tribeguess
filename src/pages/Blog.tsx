@@ -223,7 +223,9 @@ const Blog = () => {
         {filteredPosts.length > 0 ? (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
             {filteredPosts.map((post) => (
-              <BlogPostCard key={post.slug} post={post} />
+              <div key={post.slug} className="content-auto-sm">
+                <BlogPostCard post={post} />
+              </div>
             ))}
           </div>
         ) : (
