@@ -1,13 +1,13 @@
 import { useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, ChefHat, Clock, Users, Filter, X, Leaf } from 'lucide-react';
+import { Search, ChefHat, Clock, Users, Filter, X, Leaf, Globe, MapPin, ToggleLeft, ToggleRight } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { getAllRecipes, getRecipeTribeNames, type Recipe } from '@/data/recipes';
+import { getAllRecipes, getRecipeTribeNames, recipeRegions, type Recipe, type RecipeRegion } from '@/data/recipes';
 import { getAllIngredients } from '@/data/ingredients';
 
 const categoryEmoji: Record<string, string> = {
@@ -23,13 +23,40 @@ const difficultyColor: Record<string, string> = {
   hard: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
 };
 
+// Country code to name mapping
+const countryNames: Record<string, string> = {
+  KE: 'Kenya', NG: 'Nigeria', GH: 'Ghana', ZA: 'South Africa', ET: 'Ethiopia',
+  TZ: 'Tanzania', UG: 'Uganda', CD: 'DR Congo', SN: 'Senegal', CM: 'Cameroon',
+  MA: 'Morocco', DZ: 'Algeria', TN: 'Tunisia', EG: 'Egypt', SD: 'Sudan',
+  RW: 'Rwanda', BI: 'Burundi', SO: 'Somalia', ER: 'Eritrea', DJ: 'Djibouti',
+  MW: 'Malawi', ZM: 'Zambia', ZW: 'Zimbabwe', BW: 'Botswana', NA: 'Namibia',
+  AO: 'Angola', MZ: 'Mozambique', LS: 'Lesotho', SZ: 'Eswatini', MG: 'Madagascar',
+  CF: 'Central African Republic', CG: 'Congo', GA: 'Gabon', TD: 'Chad',
+  ML: 'Mali', NE: 'Niger', BF: 'Burkina Faso', CI: "Côte d'Ivoire", BJ: 'Benin', TG: 'Togo',
+  LY: 'Libya', MR: 'Mauritania', SS: 'South Sudan'
+};
+
 export default function Recipes() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get('q') || '');
   const selectedTribe = searchParams.get('tribe') || '';
+  const selectedRegion = searchParams.get('region') || '';
+  const selectedCountry = searchParams.get('country') || '';
+  const [showRegionalView, setShowRegionalView] = useState(!!selectedRegion);
   
   const allRecipes = getAllRecipes();
   const tribeNames = getRecipeTribeNames();
+  
+  // Get unique countries from recipes
+  const availableCountries = useMemo(() => {
+    const countries = new Set<string>();
+    allRecipes.forEach(recipe => {
+      if (recipe.country) countries.add(recipe.country);
+    });
+    return Array.from(countries).sort((a, b) => 
+      (countryNames[a] || a).localeCompare(countryNames[b] || b)
+    );
+  }, [allRecipes]);
 
   const filteredRecipes = useMemo(() => {
     return allRecipes.filter(recipe => {
@@ -39,10 +66,12 @@ export default function Recipes() {
         recipe.tribeName.toLowerCase().includes(search.toLowerCase());
       
       const matchesTribe = !selectedTribe || recipe.tribeSlug === selectedTribe;
+      const matchesRegion = !selectedRegion || recipe.region === selectedRegion;
+      const matchesCountry = !selectedCountry || recipe.country === selectedCountry;
       
-      return matchesSearch && matchesTribe;
+      return matchesSearch && matchesTribe && matchesRegion && matchesCountry;
     });
-  }, [allRecipes, search, selectedTribe]);
+  }, [allRecipes, search, selectedTribe, selectedRegion, selectedCountry]);
 
   const handleTribeFilter = (slug: string) => {
     const newParams = new URLSearchParams(searchParams);
@@ -50,6 +79,29 @@ export default function Recipes() {
       newParams.delete('tribe');
     } else {
       newParams.set('tribe', slug);
+    }
+    setSearchParams(newParams);
+  };
+
+  const handleRegionFilter = (region: RecipeRegion) => {
+    const newParams = new URLSearchParams(searchParams);
+    if (region === selectedRegion) {
+      newParams.delete('region');
+    } else {
+      newParams.set('region', region);
+      newParams.delete('tribe'); // Clear tribe when selecting region
+      newParams.delete('country');
+    }
+    setSearchParams(newParams);
+  };
+
+  const handleCountryFilter = (country: string) => {
+    const newParams = new URLSearchParams(searchParams);
+    if (country === selectedCountry) {
+      newParams.delete('country');
+    } else {
+      newParams.set('country', country);
+      newParams.delete('tribe');
     }
     setSearchParams(newParams);
   };
@@ -70,7 +122,33 @@ export default function Recipes() {
     setSearchParams({});
   };
 
-  const hasFilters = search || selectedTribe;
+  const toggleRegionalView = () => {
+    setShowRegionalView(!showRegionalView);
+    if (showRegionalView) {
+      // Switching to tribe view - clear region/country filters
+      const newParams = new URLSearchParams(searchParams);
+      newParams.delete('region');
+      newParams.delete('country');
+      setSearchParams(newParams);
+    } else {
+      // Switching to regional view - clear tribe filter
+      const newParams = new URLSearchParams(searchParams);
+      newParams.delete('tribe');
+      setSearchParams(newParams);
+    }
+  };
+
+  const hasFilters = search || selectedTribe || selectedRegion || selectedCountry;
+
+  // Get recipe counts by region for display
+  const recipeCountsByRegion = useMemo(() => {
+    const counts: Record<string, number> = {};
+    recipeRegions.forEach(r => counts[r.id] = 0);
+    allRecipes.forEach(recipe => {
+      if (recipe.region) counts[recipe.region]++;
+    });
+    return counts;
+  }, [allRecipes]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -93,6 +171,88 @@ export default function Recipes() {
               Explore authentic dishes and beverages from tribes across Africa
             </p>
           </header>
+
+          {/* Regional Cuisines Toggle */}
+          <section className="mb-6 p-4 bg-gradient-to-r from-primary/10 to-amber-500/10 rounded-xl border border-primary/20">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div className="flex items-center gap-2">
+                <Globe className="w-5 h-5 text-primary" />
+                <h2 className="font-semibold text-base">Regional Cuisines</h2>
+              </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleRegionalView}
+                className="gap-2"
+              >
+                {showRegionalView ? (
+                  <>
+                    <ToggleRight className="w-4 h-4 text-primary" />
+                    <span className="hidden sm:inline">Switch to</span> Tribe View
+                  </>
+                ) : (
+                  <>
+                    <ToggleLeft className="w-4 h-4" />
+                    <span className="hidden sm:inline">Switch to</span> Region View
+                  </>
+                )}
+              </Button>
+            </div>
+            
+            {showRegionalView && (
+              <div className="mt-4 space-y-4">
+                {/* Region Pills */}
+                <div>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
+                    <MapPin className="w-3 h-3" />
+                    <span>Filter by region:</span>
+                  </div>
+                  <div className="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible scrollbar-hide">
+                    {recipeRegions.map(region => (
+                      <button
+                        key={region.id}
+                        onClick={() => handleRegionFilter(region.id)}
+                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap flex-shrink-0 flex items-center gap-1.5 ${
+                          selectedRegion === region.id
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-secondary hover:bg-secondary/80 text-foreground'
+                        }`}
+                      >
+                        <span>{region.emoji}</span>
+                        <span>{region.name}</span>
+                        <span className="text-[10px] opacity-70">({recipeCountsByRegion[region.id]})</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Country Pills (if region selected) */}
+                {selectedRegion && availableCountries.length > 0 && (
+                  <div>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
+                      <span>🏳️</span>
+                      <span>Filter by country:</span>
+                    </div>
+                    <div className="flex gap-1.5 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible scrollbar-hide">
+                      {availableCountries.map(countryCode => (
+                        <button
+                          key={countryCode}
+                          onClick={() => handleCountryFilter(countryCode)}
+                          className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
+                            selectedCountry === countryCode
+                              ? 'bg-amber-600 text-white'
+                              : 'bg-muted hover:bg-muted/80 text-foreground'
+                          }`}
+                        >
+                          {countryNames[countryCode] || countryCode}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </section>
 
           {/* Ingredients Section */}
           <section className="mb-6 sm:mb-8 p-3 sm:p-4 bg-gradient-to-r from-amber-500/10 to-primary/5 rounded-xl border border-amber-500/20">
@@ -130,28 +290,30 @@ export default function Recipes() {
               />
             </div>
 
-            {/* Tribe Filter Pills - Scrollable on mobile */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
-                <Filter className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
-                <span>Filter by tribe:</span>
+            {/* Tribe Filter Pills - Only show when not in regional view */}
+            {!showRegionalView && (
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                  <Filter className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                  <span>Filter by tribe:</span>
+                </div>
+                <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible scrollbar-hide">
+                  {tribeNames.map(tribe => (
+                    <button
+                      key={tribe.slug}
+                      onClick={() => handleTribeFilter(tribe.slug)}
+                      className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
+                        selectedTribe === tribe.slug
+                          ? 'bg-primary text-primary-foreground'
+                          : 'bg-secondary hover:bg-secondary/80 text-foreground'
+                      }`}
+                    >
+                      {tribe.name}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible scrollbar-hide">
-                {tribeNames.map(tribe => (
-                  <button
-                    key={tribe.slug}
-                    onClick={() => handleTribeFilter(tribe.slug)}
-                    className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
-                      selectedTribe === tribe.slug
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-secondary hover:bg-secondary/80 text-foreground'
-                    }`}
-                  >
-                    {tribe.name}
-                  </button>
-                ))}
-              </div>
-            </div>
+            )}
 
             {/* Active Filters & Clear */}
             {hasFilters && (
@@ -159,6 +321,16 @@ export default function Recipes() {
                 <span className="text-xs sm:text-sm text-muted-foreground">
                   {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
                 </span>
+                {selectedRegion && (
+                  <Badge variant="secondary" className="text-xs">
+                    {recipeRegions.find(r => r.id === selectedRegion)?.name}
+                  </Badge>
+                )}
+                {selectedCountry && (
+                  <Badge variant="secondary" className="text-xs">
+                    {countryNames[selectedCountry]}
+                  </Badge>
+                )}
                 <Button variant="ghost" size="sm" onClick={clearFilters} className="h-6 sm:h-7 text-xs gap-1 px-2">
                   <X className="w-3 h-3" />
                   Clear
