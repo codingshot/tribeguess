@@ -1,6 +1,6 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Input } from '@/components/ui/input';
@@ -8,8 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search, Users, User, MapPin, ExternalLink, Filter, X } from 'lucide-react';
-import { getAllPeople, getAllCategories, getPeopleCountByCategory, type Person } from '@/lib/peopleUtils';
+import { Search, Users, User, X } from 'lucide-react';
+import { getAllPeople, getAllCategories, getPeopleCountByCategory, getAllTribesWithPeople, type Person } from '@/lib/peopleUtils';
 import { getCountries } from '@/lib/tribeDetection';
 
 const CATEGORY_ICONS: Record<string, string> = {
@@ -29,14 +29,30 @@ const CATEGORY_ICONS: Record<string, string> = {
 };
 
 export default function People() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedCountry, setSelectedCountry] = useState<string>('ALL');
+  const [searchParams, setSearchParams] = useSearchParams();
+  
+  // Read from URL params
+  const searchQuery = searchParams.get('q') || '';
+  const selectedCategory = searchParams.get('category') || 'all';
+  const selectedCountry = searchParams.get('country') || 'ALL';
+  const selectedTribe = searchParams.get('tribe') || 'all';
   
   const allPeople = useMemo(() => getAllPeople(), []);
   const categories = useMemo(() => getAllCategories(), []);
   const categoryCounts = useMemo(() => getPeopleCountByCategory(), []);
   const countries = useMemo(() => getCountries(), []);
+  const tribes = useMemo(() => getAllTribesWithPeople(), []);
+  
+  // Update URL params
+  const updateParams = (key: string, value: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (value && value !== 'all' && value !== 'ALL' && value !== '') {
+      params.set(key, value);
+    } else {
+      params.delete(key);
+    }
+    setSearchParams(params);
+  };
   
   // Filter people
   const filteredPeople = useMemo(() => {
@@ -59,22 +75,35 @@ export default function People() {
       results = results.filter(p => p.countries.includes(selectedCountry));
     }
     
+    if (selectedTribe !== 'all') {
+      results = results.filter(p => p.tribeSlug === selectedTribe);
+    }
+    
     // Sort alphabetically by name
     return results.sort((a, b) => a.name.localeCompare(b.name));
-  }, [allPeople, searchQuery, selectedCategory, selectedCountry]);
+  }, [allPeople, searchQuery, selectedCategory, selectedCountry, selectedTribe]);
   
   const clearFilters = () => {
-    setSearchQuery('');
-    setSelectedCategory('all');
-    setSelectedCountry('ALL');
+    setSearchParams({});
   };
   
-  const hasFilters = searchQuery || selectedCategory !== 'all' || selectedCountry !== 'ALL';
+  const hasFilters = searchQuery || selectedCategory !== 'all' || selectedCountry !== 'ALL' || selectedTribe !== 'all';
+
+  // Build page title based on filters
+  const pageTitle = useMemo(() => {
+    const parts = ['Famous African People'];
+    if (selectedCategory !== 'all') parts.unshift(selectedCategory);
+    if (selectedTribe !== 'all') {
+      const tribe = tribes.find(t => t.slug === selectedTribe);
+      if (tribe) parts.push(`from ${tribe.name} Tribe`);
+    }
+    return parts.join(' ') + ' | TribeGuess';
+  }, [selectedCategory, selectedTribe, tribes]);
 
   return (
     <>
       <Helmet>
-        <title>Famous African People | Notable Figures from African Tribes | TribeGuess</title>
+        <title>{pageTitle}</title>
         <meta 
           name="description" 
           content={`Discover ${allPeople.length}+ notable people from African tribes. Explore politicians, athletes, artists, activists and more with their tribal heritage and biographies.`} 
@@ -118,7 +147,7 @@ export default function People() {
               <Button
                 variant={selectedCategory === 'all' ? 'default' : 'outline'}
                 size="sm"
-                onClick={() => setSelectedCategory('all')}
+                onClick={() => updateParams('category', 'all')}
                 className="rounded-full"
               >
                 All ({allPeople.length})
@@ -128,7 +157,7 @@ export default function People() {
                   key={cat}
                   variant={selectedCategory === cat ? 'default' : 'outline'}
                   size="sm"
-                  onClick={() => setSelectedCategory(cat)}
+                  onClick={() => updateParams('category', cat)}
                   className="rounded-full"
                 >
                   {CATEGORY_ICONS[cat] || '⭐'} {cat} ({categoryCounts[cat] || 0})
@@ -146,12 +175,26 @@ export default function People() {
                   type="text"
                   placeholder="Search by name, role, or tribe..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => updateParams('q', e.target.value)}
                   className="pl-10"
                 />
               </div>
               
-              <Select value={selectedCountry} onValueChange={setSelectedCountry}>
+              <Select value={selectedTribe} onValueChange={(v) => updateParams('tribe', v)}>
+                <SelectTrigger className="w-full sm:w-[180px]">
+                  <SelectValue placeholder="Tribe" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border shadow-lg max-h-[300px]">
+                  <SelectItem value="all">All Tribes</SelectItem>
+                  {tribes.map(t => (
+                    <SelectItem key={t.slug} value={t.slug}>
+                      {t.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              
+              <Select value={selectedCountry} onValueChange={(v) => updateParams('country', v)}>
                 <SelectTrigger className="w-full sm:w-[180px]">
                   <SelectValue placeholder="Country" />
                 </SelectTrigger>
@@ -184,7 +227,7 @@ export default function People() {
           {/* People Grid */}
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {filteredPeople.map((person) => (
-              <PersonCard key={`${person.tribeSlug}-${person.id}`} person={person} />
+              <PersonCard key={person.id} person={person} onCategoryClick={(cat) => updateParams('category', cat)} />
             ))}
           </section>
 
@@ -208,8 +251,12 @@ export default function People() {
   );
 }
 
-function PersonCard({ person }: { person: Person }) {
-  const [imageError, setImageError] = useState(false);
+interface PersonCardProps {
+  person: Person;
+  onCategoryClick: (category: string) => void;
+}
+
+function PersonCard({ person, onCategoryClick }: PersonCardProps) {
   const countries = useMemo(() => getCountries(), []);
   const countryFlags = person.countries
     .map(code => countries.find(c => c.code === code)?.flag)
@@ -217,19 +264,21 @@ function PersonCard({ person }: { person: Person }) {
     .join(' ');
 
   return (
-    <Link to={`/person/${person.id}`}>
-      <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30 group">
-        <CardContent className="p-4">
+    <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30 group">
+      <CardContent className="p-4">
+        <Link to={`/person/${person.id}`} className="block">
           <div className="flex gap-3">
             {/* Avatar */}
-            {person.image && !imageError ? (
+            {person.image ? (
               <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20">
                 <img
                   src={person.image}
                   alt={person.name}
                   className="w-full h-full object-cover"
-                  onError={() => setImageError(true)}
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
               </div>
             ) : (
@@ -246,28 +295,35 @@ function PersonCard({ person }: { person: Person }) {
               <p className="text-xs text-muted-foreground line-clamp-2 mb-2">
                 {person.role}
               </p>
-              
-              <div className="flex items-center gap-2 flex-wrap">
-                <Badge variant="secondary" className="text-xs">
-                  {CATEGORY_ICONS[person.category]} {person.category}
-                </Badge>
-              </div>
             </div>
           </div>
+        </Link>
+        
+        {/* Category Badge - Clickable */}
+        <div className="mt-2">
+          <Badge 
+            variant="secondary" 
+            className="text-xs cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              onCategoryClick(person.category);
+            }}
+          >
+            {CATEGORY_ICONS[person.category]} {person.category}
+          </Badge>
+        </div>
 
-          {/* Tribe & Country */}
-          <div className="mt-3 pt-3 border-t flex items-center justify-between text-xs">
-            <Link 
-              to={`/learn/${person.tribeSlug}`}
-              onClick={(e) => e.stopPropagation()}
-              className="text-primary hover:underline truncate max-w-[60%]"
-            >
-              {person.tribeName}
-            </Link>
-            <span className="text-muted-foreground">{countryFlags}</span>
-          </div>
-        </CardContent>
-      </Card>
-    </Link>
+        {/* Tribe & Country */}
+        <div className="mt-3 pt-3 border-t flex items-center justify-between text-xs">
+          <Link 
+            to={`/people?tribe=${person.tribeSlug}`}
+            className="text-primary hover:underline truncate max-w-[60%]"
+          >
+            {person.tribeName}
+          </Link>
+          <span className="text-muted-foreground">{countryFlags}</span>
+        </div>
+      </CardContent>
+    </Card>
   );
 }

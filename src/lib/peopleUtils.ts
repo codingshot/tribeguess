@@ -86,18 +86,6 @@ function detectCategory(role: string): string {
   return 'Notable Figure';
 }
 
-// Extract birth year from role if mentioned
-function extractBirthYear(role: string): number | undefined {
-  // Look for patterns like "(born 1990)" or "born 1990" or "(1990-" or "(1990 -"
-  const bornMatch = role.match(/born\s*(\d{4})/i);
-  if (bornMatch) return parseInt(bornMatch[1]);
-  
-  const yearRangeMatch = role.match(/\((\d{4})\s*[-–]/);
-  if (yearRangeMatch) return parseInt(yearRangeMatch[1]);
-  
-  return undefined;
-}
-
 // Generate URL-friendly slug from name
 function generateSlug(name: string): string {
   return name
@@ -107,34 +95,44 @@ function generateSlug(name: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-// Extract all people from tribes data
+// Cache for people to avoid repeated processing
+let cachedPeople: Person[] | null = null;
+
+// Extract all people from tribes data with deduplication
 export function getAllPeople(): Person[] {
-  const people: Person[] = [];
+  if (cachedPeople) return cachedPeople;
+  
+  const peopleMap = new Map<string, Person>();
   const tribes = tribesData.tribes || [];
   
   tribes.forEach((tribe: any) => {
     if (tribe.famousPeople && Array.isArray(tribe.famousPeople)) {
       tribe.famousPeople.forEach((person: any) => {
         const id = generateSlug(person.name);
-        people.push({
-          id,
-          name: person.name,
-          role: person.role,
-          wikipedia: person.wikipedia,
-          image: person.image,
-          tribeId: tribe.id,
-          tribeName: tribe.name,
-          tribeSlug: tribe.slug,
-          countries: tribe.countries || [],
-          category: detectCategory(person.role),
-          birthYear: person.birth,
-          deathYear: person.death,
-        });
+        
+        // Only add if not already present (prevents duplicates)
+        if (!peopleMap.has(id)) {
+          peopleMap.set(id, {
+            id,
+            name: person.name,
+            role: person.role,
+            wikipedia: person.wikipedia,
+            image: person.image,
+            tribeId: tribe.id,
+            tribeName: tribe.name,
+            tribeSlug: tribe.slug,
+            countries: tribe.countries || [],
+            category: detectCategory(person.role),
+            birthYear: person.birth,
+            deathYear: person.death,
+          });
+        }
       });
     }
   });
   
-  return people;
+  cachedPeople = Array.from(peopleMap.values());
+  return cachedPeople;
 }
 
 // Get person by slug
@@ -150,34 +148,26 @@ export function getAllCategories(): string[] {
   return Array.from(categories).sort();
 }
 
+// Get all unique tribes that have people
+export function getAllTribesWithPeople(): { slug: string; name: string }[] {
+  const people = getAllPeople();
+  const tribesMap = new Map<string, string>();
+  
+  people.forEach(p => {
+    if (!tribesMap.has(p.tribeSlug)) {
+      tribesMap.set(p.tribeSlug, p.tribeName);
+    }
+  });
+  
+  return Array.from(tribesMap.entries())
+    .map(([slug, name]) => ({ slug, name }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
 // Get people by tribe
 export function getPeopleByTribe(tribeSlug: string): Person[] {
   const allPeople = getAllPeople();
   return allPeople.filter(p => p.tribeSlug === tribeSlug);
-}
-
-// Search people
-export function searchPeople(query: string, category?: string, country?: string): Person[] {
-  let results = getAllPeople();
-  
-  if (query && query.length >= 2) {
-    const searchLower = query.toLowerCase();
-    results = results.filter(p => 
-      p.name.toLowerCase().includes(searchLower) ||
-      p.role.toLowerCase().includes(searchLower) ||
-      p.tribeName.toLowerCase().includes(searchLower)
-    );
-  }
-  
-  if (category && category !== 'all') {
-    results = results.filter(p => p.category === category);
-  }
-  
-  if (country && country !== 'ALL') {
-    results = results.filter(p => p.countries.includes(country));
-  }
-  
-  return results;
 }
 
 // Get count by category
@@ -187,6 +177,18 @@ export function getPeopleCountByCategory(): Record<string, number> {
   
   people.forEach(p => {
     counts[p.category] = (counts[p.category] || 0) + 1;
+  });
+  
+  return counts;
+}
+
+// Get count by tribe
+export function getPeopleCountByTribe(): Record<string, number> {
+  const people = getAllPeople();
+  const counts: Record<string, number> = {};
+  
+  people.forEach(p => {
+    counts[p.tribeSlug] = (counts[p.tribeSlug] || 0) + 1;
   });
   
   return counts;
