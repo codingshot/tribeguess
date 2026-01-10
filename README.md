@@ -470,17 +470,51 @@ Tribes lacking verified GPS landmarks in `tribeLandmarks.ts`:
 | Southern Africa | Himba, San, Tswana, Ndebele, Venda |
 | Horn of Africa | Somali (more), Afar, Dinka, Nuer |
 
-### 🟡 Missing Recipes
+### 🟡 Recipe Audit - Missing Fields
 
-Tribes/regions needing traditional recipes in `recipes.ts`:
+**Recipes Missing YouTube Video IDs** (Need cooking tutorial links):
+
+| Recipe | Tribe | Status |
+|--------|-------|--------|
+| Osaroi (Blood and Milk) | Maasai | ⚠️ No video |
+| Pap en Vleis | Zulu | ⚠️ No video |
+| Romazava | Merina | ⚠️ No video |
+| Ravitoto | Merina | ⚠️ No video |
+| Koba | Merina | ⚠️ No video |
+| Eghajira (Tuareg Cheese) | Tuareg | ⚠️ No video |
+| Otjize Butter | Himba | ⚠️ No video |
+| Oshifima | Himba | ⚠️ No video |
+| Omakere | Himba | ⚠️ No video |
+
+**Recipes Missing Historical Context**:
+
+| Category | Count | Notes |
+|----------|-------|-------|
+| Staple porridges | ~15 | Most nshima/ugali variants lack historicalContext |
+| Beverages | ~8 | Fermented drinks need brewing history |
+| Snacks | ~5 | Need cultural occasion info |
+
+### 🟡 Missing Recipes by Region
 
 | Category | Needed |
 |----------|--------|
 | Sahel Cuisine | Thiakry (Senegal), Dégué (Mali), Millet couscous |
-| Central African | Saka-saka (Congo), Moambe chicken, Chikwanga |
-| North African | Berber tagine, Couscous (Algerian), Harira |
-| Horn of Africa | Kitcha (Eritrea), Injera variations, Somali rice |
-| Beverages | Palm wine (detailed), Hibiscus drinks, Baobab juice |
+| Central African | Palm wine (detailed), More DRC dishes |
+| Horn of Africa | Kitcha (Eritrea), More Somali variations |
+| Beverages | Palm wine regions, Hibiscus drinks, Baobab juice |
+
+### ✅ Recently Added Recipes
+
+| Recipe | Tribe | Region |
+|--------|-------|--------|
+| Shakshuka | Tunisian Arab | North Africa |
+| Harira | Moroccan Arab | North Africa |
+| Chorba Frik | Algerian | North Africa |
+| Funge | Ovimbundu | Central/Angola |
+| Calulu | Ovimbundu | Central/Angola |
+| Muamba de Galinha | Ovimbundu | Central/Angola |
+| Chikuanga | Chokwe | Central Africa |
+| 30+ Central African recipes | Various | Central/Southern |
 
 ### 🟡 Missing Language Families
 
