@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Shuffle, Search, BookOpen, FileText } from 'lucide-react';
+import { Shuffle, Sparkles, BookOpen, FileText } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import { getAllTribes } from '@/lib/tribeDetection';
 
@@ -48,7 +48,7 @@ export function Header() {
               }`}
               aria-current={isActive('/') && !location.pathname.startsWith('/learn') && !location.pathname.startsWith('/blog') ? 'page' : undefined}
             >
-              <Search className="w-4 h-4" />
+              <Sparkles className="w-4 h-4" />
               <span className="hidden sm:inline">Guess</span>
             </Link>
             <Link
