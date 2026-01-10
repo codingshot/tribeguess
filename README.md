@@ -470,16 +470,20 @@ Tribes lacking verified GPS landmarks in `tribeLandmarks.ts`:
 | Southern Africa | Himba, San, Tswana, Ndebele, Venda |
 | Horn of Africa | Somali (more), Afar, Dinka, Nuer |
 
-### 🟡 Recipe Audit - Missing Fields
+### ✅ Recipe Video Audit - COMPLETED (January 2026)
 
-**Broken YouTube Video IDs** (Verified January 2026):
+All broken YouTube video IDs have been replaced with working tutorials:
 
-| Video ID | Status | Used In | Replacement |
-|----------|--------|---------|-------------|
-| `Ys1i6rXKp1Q` | ❌ Unavailable | Chikwanga, Funge, Chokwe recipes | `CJSs3Op2iu0` (Pondu/Saka-saka) |
-| `y4fCVmL9Wgo` | ❌ Unavailable | 10+ Nshima/porridge recipes | `XinrsmLFkp0` (Zambian Nshima) |
-| `qPNxS3z2ckM` | ❌ Unavailable | Liboke, Ngombo, Mukua, Daraba | `q7aQ--A76lo` (Congolese cooking) |
-| `1NxD3Hp_L_U` | ❌ Unavailable | African greens recipes | `y2JsmDDgVu0` (African Spinach Stew) |
+| Old Video ID | Status | Used In | New Video ID |
+|--------------|--------|---------|--------------|
+| `Ys1i6rXKp1Q` | ✅ Fixed | Chikwanga, Funge, Chokwe recipes | `CJSs3Op2iu0` |
+| `y4fCVmL9Wgo` | ✅ Fixed | Millet/porridge (Himba, Sara, Toubou) | `jcjKAF_G56g` |
+| `y4fCVmL9Wgo` | ✅ Fixed | Nshima recipes (Lunda, Yao, Lozi, Ngoni, Tumbuka) | `j3XN0gosaq8` |
+| `y4fCVmL9Wgo` | ✅ Fixed | Makonde Ugali | `c4T0MU0gjcA` |
+| `qPNxS3z2ckM` | ✅ Fixed | Liboke (Mongo, Chokwe) | `igiBDfuL5KU` |
+| `qPNxS3z2ckM` | ✅ Fixed | Okra stews (Ngombo, Daraba) | `1LF1R-23g9g` |
+| `1NxD3Hp_L_U` | ✅ Fixed | Zimbabwe greens (Muriwo) | `f4mODRjE1vc` |
+| `1NxD3Hp_L_U` | ✅ Fixed | Peanut greens (Lunda, Tumbuka) | `5FWQPgHiRms` |
 
 **Working Video IDs** (Verified):
 
@@ -490,6 +494,13 @@ Tribes lacking verified GPS landmarks in `tribeLandmarks.ts`:
 | `siv6d9f4kx4` | Nyama Choma | ✅ Working |
 | `jDbUg4f9EFw` | Jollof Rice | ✅ Working |
 | `2oRDGbJtNJA` | Injera | ✅ Working |
+| `jcjKAF_G56g` | Millet Porridge | ✅ Working |
+| `j3XN0gosaq8` | Zambian Nshima | ✅ Working |
+| `c4T0MU0gjcA` | Ugali Tutorial | ✅ Working |
+| `igiBDfuL5KU` | Congolese Liboke | ✅ Working |
+| `1LF1R-23g9g` | Ghana Okra Stew | ✅ Working |
+| `f4mODRjE1vc` | Zimbabwe Muriwo | ✅ Working |
+| `5FWQPgHiRms` | Peanut Butter Greens | ✅ Working |
 
 ### 🟡 Missing Recipes by Region
 
