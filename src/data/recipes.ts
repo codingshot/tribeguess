@@ -8202,6 +8202,268 @@ const eastAfricanRecipes: Recipe[] = [
       "Fermented milk is the traditional accompaniment"
     ]
   },
+  
+  // ============ NUER (SOUTH SUDAN) ADDITIONAL RECIPES ============
+  {
+    id: "nuer-fish-stew",
+    name: "Nuer Fish Stew",
+    tribeSlug: "nuer",
+    tribeName: "Nuer",
+    category: "special",
+    description: "Traditional Nuer freshwater fish stew made with Nile perch and okra, a protein-rich dish from the Sudd wetlands.",
+    culturalSignificance: "Fish from the White Nile and Sudd wetlands supplement the Nuer cattle-based diet, especially during dry seasons when the herds are moved.",
+    historicalContext: "The Nuer live in the Sudd, one of the world's largest wetlands. They developed sophisticated fishing techniques alongside cattle herding, using the seasonal floods.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "15 minutes",
+    cookTime: "40 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh Nile perch or tilapia", amount: "1 kg", notes: "Cut into portions" },
+      { item: "Okra", amount: "200g", notes: "Sliced" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Groundnut paste", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "2 cups" }
+    ],
+    instructions: [
+      "Clean and season fish with salt, set aside.",
+      "In a pot, sauté onion until translucent.",
+      "Add tomatoes and cook until softened.",
+      "Add groundnut paste and water, stir well.",
+      "Bring to a simmer and add okra.",
+      "Carefully place fish portions in the stew.",
+      "Cover and simmer 25-30 minutes until fish is cooked through.",
+      "Serve with wal (sorghum porridge)."
+    ],
+    tips: [
+      "Fresh fish from the Nile is traditional",
+      "Okra thickens the stew naturally",
+      "Don't stir after adding fish to keep pieces intact"
+    ]
+  },
+  {
+    id: "nuer-milk-stew",
+    name: "Ret (Nuer Soured Milk Stew)",
+    tribeSlug: "nuer",
+    tribeName: "Nuer",
+    category: "staple",
+    description: "Traditional Nuer stew made with soured cattle milk and vegetables, a staple that celebrates their pastoral lifestyle.",
+    culturalSignificance: "The Nuer are among the most cattle-devoted peoples in Africa. This dish honors their most precious resource - cattle milk.",
+    historicalContext: "The Nuer traditionally did not eat cattle meat frequently, preferring to use milk products. Soured milk preserves without refrigeration in South Sudan's heat.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Soured milk (or buttermilk)", amount: "2 cups" },
+      { item: "Leafy greens", amount: "2 cups", notes: "Chopped" },
+      { item: "Sorghum flour", amount: "2 tablespoons", notes: "For thickening" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Cook greens in a small amount of water until wilted.",
+      "In a separate pot, gently warm soured milk (don't boil).",
+      "Mix sorghum flour with a little cold water to make a paste.",
+      "Stir flour paste into the milk to thicken.",
+      "Add cooked greens and salt.",
+      "Simmer gently for 10 minutes.",
+      "Serve warm with sorghum porridge."
+    ],
+    tips: [
+      "Don't boil the milk or it will curdle",
+      "Traditional preparation uses gourd containers",
+      "Can add dried fish for extra protein"
+    ]
+  },
+
+  // ============ SHILLUK (SOUTH SUDAN) RECIPES ============
+  {
+    id: "shilluk-fish",
+    name: "Shilluk Smoked Fish",
+    tribeSlug: "shilluk",
+    tribeName: "Shilluk",
+    category: "special",
+    description: "Traditional Shilluk smoked fish from the White Nile, preserved over slow-burning fires and served with millet porridge.",
+    culturalSignificance: "The Shilluk kingdom along the White Nile developed sophisticated fishing and smoking techniques. Fish was tribute paid to the Reth (king).",
+    historicalContext: "The Shilluk established one of Sudan's oldest kingdoms, with their capital at Fashoda. Fishing the Nile was central to their economy.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "30 minutes",
+    cookTime: "3 hours (smoking)",
+    servings: 6,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Fresh Nile fish", amount: "2 kg", notes: "Whole, cleaned" },
+      { item: "Salt", amount: "3 tablespoons" },
+      { item: "Wood chips", amount: "For smoking" }
+    ],
+    instructions: [
+      "Clean and gut fish, leaving heads on.",
+      "Make deep diagonal cuts along the body.",
+      "Rub salt thoroughly into cuts and cavity.",
+      "Let sit for 2 hours to draw out moisture.",
+      "Build a smoking fire with hardwood.",
+      "Place fish on a rack above the smoke (not flames).",
+      "Smoke for 3-4 hours, turning occasionally.",
+      "Fish is done when firm and golden-brown.",
+      "Serve with millet or sorghum porridge."
+    ],
+    tips: [
+      "Slow smoking is key - no direct flame",
+      "Smoked fish keeps for weeks without refrigeration",
+      "Traditional smoking uses Nile riverbank wood"
+    ]
+  },
+  {
+    id: "shilluk-millet-porridge",
+    name: "Shilluk Millet Porridge",
+    tribeSlug: "shilluk",
+    tribeName: "Shilluk",
+    category: "staple",
+    description: "The daily staple of the Shilluk people - thick millet porridge served with fish or vegetable stews.",
+    culturalSignificance: "Millet grows well in the Shilluk homeland along the Nile. This porridge sustains the community through all seasons.",
+    historicalContext: "The Shilluk were more sedentary than their Dinka and Nuer neighbors, developing agriculture along the Nile's fertile banks.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Millet flour", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring salted water to a rolling boil.",
+      "Reduce heat to medium.",
+      "Gradually add millet flour, stirring constantly.",
+      "Continue stirring vigorously to prevent lumps.",
+      "Cook for 20-25 minutes until very thick.",
+      "The porridge should pull cleanly from the pot sides.",
+      "Shape into a mound and serve with stew or fish."
+    ],
+    tips: [
+      "Constant stirring prevents lumps",
+      "Millet has a slightly sweeter taste than sorghum",
+      "Can be made thinner as a breakfast drink"
+    ]
+  },
+  {
+    id: "shilluk-okra-stew",
+    name: "Shilluk Okra Stew",
+    tribeSlug: "shilluk",
+    tribeName: "Shilluk",
+    category: "staple",
+    description: "Thick okra stew with dried fish and groundnuts, the everyday accompaniment to Shilluk millet porridge.",
+    culturalSignificance: "Okra thrives in the Shilluk homeland and its mucilaginous texture is prized for scooping up porridge.",
+    historicalContext: "Okra is indigenous to Africa and has been cultivated in the Nile Valley for millennia. The Shilluk developed this simple but nourishing preparation.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "15 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh okra", amount: "500g", notes: "Sliced" },
+      { item: "Dried fish", amount: "150g", notes: "Soaked and shredded" },
+      { item: "Groundnuts", amount: "1/2 cup", notes: "Ground to paste" },
+      { item: "Onion", amount: "1", notes: "Chopped" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "2 cups" }
+    ],
+    instructions: [
+      "Soak dried fish in warm water for 15 minutes, then shred.",
+      "Sauté onion until soft.",
+      "Add sliced okra and stir-fry for 5 minutes.",
+      "Add water and bring to simmer.",
+      "Stir in groundnut paste until dissolved.",
+      "Add shredded dried fish.",
+      "Simmer 20 minutes until thick and slimy.",
+      "Season with salt and serve over millet porridge."
+    ],
+    tips: [
+      "The slimy texture is intentional and prized",
+      "Fresh okra gives best results",
+      "Groundnuts add protein and richness"
+    ]
+  },
+
+  // ============ DINKA (SOUTH SUDAN) ADDITIONAL RECIPES ============
+  {
+    id: "dinka-fish-stew",
+    name: "Dinka Fish Stew",
+    tribeSlug: "dinka",
+    tribeName: "Dinka",
+    category: "special",
+    description: "Hearty freshwater fish stew from the Sudd wetlands, made with Nile fish and local vegetables.",
+    culturalSignificance: "While the Dinka are primarily pastoralists, fishing supplements their diet during the dry season when they camp near the Nile.",
+    historicalContext: "The Dinka have inhabited the Sudd region for over 1,000 years. During the dry season, cattle camps move to the river, where fishing becomes important.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "20 minutes",
+    cookTime: "35 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh tilapia or Nile perch", amount: "1 kg" },
+      { item: "Groundnut paste", amount: "4 tablespoons" },
+      { item: "Tomatoes", amount: "3", notes: "Chopped" },
+      { item: "Onion", amount: "1 large" },
+      { item: "Green leafy vegetables", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "3 cups" }
+    ],
+    instructions: [
+      "Clean fish and cut into portions, season with salt.",
+      "Sauté onion until translucent.",
+      "Add tomatoes and cook until soft.",
+      "Stir in groundnut paste and water.",
+      "Bring to a simmer.",
+      "Add fish portions carefully.",
+      "Cover and cook for 20 minutes.",
+      "Add leafy greens in final 5 minutes.",
+      "Serve with walwal (sorghum porridge)."
+    ],
+    tips: [
+      "Fresh Nile fish is traditional",
+      "Don't over-stir once fish is added",
+      "Groundnuts provide richness and protein"
+    ]
+  },
+  {
+    id: "dinka-blood-milk",
+    name: "Dinka Blood and Milk",
+    tribeSlug: "dinka",
+    tribeName: "Dinka",
+    category: "beverage",
+    description: "Traditional Dinka ceremonial drink mixing fresh cattle blood with milk - similar to the Maasai tradition.",
+    culturalSignificance: "Like the Maasai, the Dinka have a sacred relationship with their cattle. Blood is drawn from live animals without killing them.",
+    historicalContext: "The Dinka are among the world's tallest people, which some attribute to their high-protein, cattle-based diet including blood and milk.",
+    youtubeVideoId: "cRvcIyVXWIw",
+    prepTime: "10 minutes",
+    cookTime: "None",
+    servings: 2,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Fresh cattle blood", amount: "1 cup", notes: "From live animal" },
+      { item: "Fresh milk", amount: "2 cups" },
+      { item: "Calabash gourd", amount: "1", notes: "For serving" }
+    ],
+    instructions: [
+      "Blood is drawn by making a small incision in the cow's neck vein.",
+      "Collect blood in a clean calabash.",
+      "The wound is sealed with mud - the cow recovers fully.",
+      "Mix fresh blood with warm milk.",
+      "Shake or stir to combine.",
+      "Drink immediately while fresh."
+    ],
+    tips: [
+      "Reserved for warriors and special occasions",
+      "Blood provides iron and protein",
+      "Modern Dinka often substitute with plain milk"
+    ]
+  },
+
   {
     id: "mursi-sorghum",
     name: "Mursi Sorghum Balls",
@@ -9364,6 +9626,129 @@ const southernAfricanRecipes: Recipe[] = [
       "Traditional uses feijão manteiga (butter beans)",
       "Dried fish adds essential flavor",
       "Should be thick, not soupy"
+    ]
+  },
+
+  // ============ KIMBUNDU (ANGOLA) RECIPES ============
+  {
+    id: "kimbundu-funge",
+    name: "Funge de Bombo (Kimbundu Cassava Funge)",
+    tribeSlug: "kimbundu",
+    tribeName: "Kimbundu",
+    category: "staple",
+    description: "The Kimbundu version of Angola's national cassava porridge, made with fermented cassava flour for a distinctive tangy flavor.",
+    culturalSignificance: "The Kimbundu around Luanda developed their own style of funge using bombo (fermented cassava), reflecting their coastal-influenced cuisine.",
+    historicalContext: "The Kimbundu's Ndongo kingdom was the first to receive cassava from Portuguese traders in the 16th century. They developed fermentation techniques that enhanced both flavor and nutrition.",
+    youtubeVideoId: "CJSs3Op2iu0",
+    prepTime: "3 days (fermentation)",
+    cookTime: "20 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Cassava roots", amount: "1 kg", notes: "Peeled" },
+      { item: "Water", amount: "For soaking and cooking" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Peel and grate cassava roots.",
+      "Soak in water for 3-4 days until fermented and sour-smelling.",
+      "Drain and squeeze out excess water.",
+      "Dry the fermented cassava and pound into flour.",
+      "Bring salted water to a boil.",
+      "Gradually add fermented cassava flour, stirring vigorously.",
+      "Continue stirring until thick and smooth.",
+      "Cook for 15 minutes until glossy.",
+      "Serve with calulu or muamba de galinha."
+    ],
+    tips: [
+      "Fermentation gives distinctive sour flavor",
+      "Must be stirred constantly to prevent lumps",
+      "Bombo flour can be made in batches and stored"
+    ]
+  },
+  {
+    id: "kimbundu-calulu",
+    name: "Calulu de Peixe (Kimbundu Fish Calulu)",
+    tribeSlug: "kimbundu",
+    tribeName: "Kimbundu",
+    category: "special",
+    description: "Kimbundu-style fish and vegetable stew with dried and fresh fish, palm oil, and gimboa leaves - a Luanda specialty.",
+    culturalSignificance: "The coastal Kimbundu have access to fresh Atlantic fish, making their calulu distinct from inland versions. It's served at weddings and celebrations.",
+    historicalContext: "Luanda was founded in Kimbundu territory in 1575. Their calulu blends Portuguese and indigenous influences, representing centuries of cultural fusion.",
+    youtubeVideoId: "wWDv2t4bU8U",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh fish (sea bass or similar)", amount: "500g" },
+      { item: "Dried fish", amount: "200g" },
+      { item: "Sweet potato leaves or spinach", amount: "500g" },
+      { item: "Okra", amount: "200g", notes: "Sliced" },
+      { item: "Palm oil", amount: "1/2 cup" },
+      { item: "Onion", amount: "2 large" },
+      { item: "Tomatoes", amount: "4" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak dried fish for 30 minutes, then shred.",
+      "Cut fresh fish into portions and season.",
+      "Blanch leafy greens briefly and chop.",
+      "Heat palm oil and sauté onions and garlic.",
+      "Add tomatoes and cook until soft.",
+      "Add dried fish and cook 10 minutes.",
+      "Add okra and a cup of water.",
+      "Layer fresh fish on top, cover and simmer 20 minutes.",
+      "Add greens in final 5 minutes.",
+      "Serve with funge."
+    ],
+    tips: [
+      "Layer ingredients - don't stir once fish is added",
+      "Palm oil gives authentic orange color",
+      "Fresh Atlantic fish makes Kimbundu version distinctive"
+    ]
+  },
+  {
+    id: "kimbundu-moamba",
+    name: "Moamba de Ginguba (Kimbundu Groundnut Chicken)",
+    tribeSlug: "kimbundu",
+    tribeName: "Kimbundu",
+    category: "special",
+    description: "Kimbundu-style chicken stewed in groundnut (peanut) sauce - a variation of the classic moamba using peanuts instead of palm nuts.",
+    culturalSignificance: "The Kimbundu were major groundnut cultivators. This variation of moamba showcases their agricultural heritage.",
+    historicalContext: "Groundnuts arrived in Angola from Brazil via Portuguese traders. The Kimbundu quickly adopted them, creating this fusion of indigenous and New World ingredients.",
+    youtubeVideoId: "fLK6YYQn7Zs",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Groundnut paste (peanut butter)", amount: "1 cup", notes: "Natural, unsweetened" },
+      { item: "Onion", amount: "2 large" },
+      { item: "Tomatoes", amount: "4", notes: "Blended" },
+      { item: "Garlic", amount: "4 cloves" },
+      { item: "Palm oil", amount: "4 tablespoons" },
+      { item: "Chicken stock", amount: "2 cups" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Season chicken with salt and pepper.",
+      "Brown chicken pieces in palm oil, set aside.",
+      "Sauté onion and garlic until soft.",
+      "Add blended tomatoes and cook 10 minutes.",
+      "Stir in groundnut paste until smooth.",
+      "Add chicken stock gradually, stirring.",
+      "Return chicken to pot.",
+      "Cover and simmer 45 minutes until chicken is tender.",
+      "Sauce should be thick and creamy.",
+      "Serve with funge or rice."
+    ],
+    tips: [
+      "Natural peanut butter works best",
+      "Stir frequently to prevent sticking",
+      "Can substitute palm oil with vegetable oil"
     ]
   },
 
@@ -10825,6 +11210,9 @@ const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> =
   'hamar': { region: 'horn', country: 'ET' },
   'karo': { region: 'horn', country: 'ET' },
   'nuer': { region: 'horn', country: 'SS' },
+  'dinka': { region: 'horn', country: 'SS' },
+  'shilluk': { region: 'horn', country: 'SS' },
+  'kimbundu': { region: 'central', country: 'AO' },
   // West Africa
   'yoruba': { region: 'west', country: 'NG' },
   'igbo': { region: 'west', country: 'NG' },
