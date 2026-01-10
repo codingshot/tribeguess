@@ -7721,12 +7721,247 @@ const westAfricanRecipes: Recipe[] = [
   }
 ];
 
+// ============ NORTH AFRICAN RECIPES ============
+const northAfricanRecipes: Recipe[] = [
+  {
+    id: "moroccan-tagine",
+    name: "Moroccan Lamb Tagine",
+    tribeSlug: "moroccan-arab",
+    tribeName: "Moroccan Arab",
+    category: "special",
+    description: "Slow-cooked lamb stew with dried fruits, nuts, and aromatic spices, cooked in the iconic cone-shaped tagine pot.",
+    culturalSignificance: "Tagine is central to Moroccan hospitality. The clay pot's design allows steam to condense and return to the dish, creating incredibly tender meat. Served at celebrations and family gatherings.",
+    historicalContext: "The tagine cooking method dates back to the 8th century when the Berbers of Morocco developed the distinctive cone-shaped pot. The dish evolved with Arab, Andalusian, and Ottoman influences, incorporating spices from the trans-Saharan trade routes.",
+    youtubeVideoId: "y9k6uSd4LKE",
+    prepTime: "30 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Lamb shoulder", amount: "1 kg", notes: "Cut into chunks" },
+      { item: "Onions", amount: "2 large", notes: "Sliced" },
+      { item: "Dried apricots", amount: "1 cup" },
+      { item: "Dried prunes", amount: "1/2 cup" },
+      { item: "Almonds", amount: "1/2 cup", notes: "Blanched" },
+      { item: "Honey", amount: "2 tablespoons" },
+      { item: "Ras el hanout", amount: "2 tablespoons" },
+      { item: "Cinnamon stick", amount: "1" },
+      { item: "Saffron threads", amount: "1/4 teaspoon" },
+      { item: "Fresh coriander", amount: "1/2 cup", notes: "Chopped" },
+      { item: "Olive oil", amount: "4 tablespoons" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Season lamb with salt, pepper, and ras el hanout.",
+      "Heat olive oil in tagine base or heavy pot. Brown lamb on all sides.",
+      "Remove lamb and sauté onions until golden.",
+      "Return lamb, add saffron bloomed in warm water, cinnamon stick.",
+      "Add water to cover halfway, bring to boil, then reduce to simmer.",
+      "Cover and cook for 1.5 hours until lamb is very tender.",
+      "Add dried fruits and honey, cook 20 more minutes.",
+      "Toast almonds in dry pan until golden.",
+      "Garnish with almonds and fresh coriander. Serve with couscous."
+    ],
+    tips: [
+      "If using clay tagine, start with low heat to prevent cracking",
+      "The slow cooking develops deep flavors - don't rush",
+      "Preserved lemons can be added for authentic flavor"
+    ],
+    variations: [
+      "Chicken tagine with olives and preserved lemons",
+      "Vegetable tagine with chickpeas",
+      "Fish tagine with chermoula"
+    ]
+  },
+  {
+    id: "koshari",
+    name: "Koshari (Egyptian Rice and Lentils)",
+    tribeSlug: "egyptian-arab",
+    tribeName: "Egyptian Arab",
+    category: "staple",
+    description: "Egypt's national dish - layers of rice, lentils, macaroni, and chickpeas topped with spicy tomato sauce and crispy fried onions.",
+    culturalSignificance: "Koshari is Egypt's beloved street food, found in dedicated koshari shops throughout Cairo. It's affordable, filling, and represents Egyptian ingenuity in creating a complete protein from humble ingredients.",
+    historicalContext: "Koshari emerged in 19th century Cairo, combining Indian rice dishes brought by British soldiers (khichdi), Italian pasta from Mediterranean trade, and local Egyptian ingredients. It became the poor man's feast and national comfort food.",
+    youtubeVideoId: "qE9TmaNJQog",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Rice", amount: "2 cups" },
+      { item: "Brown lentils", amount: "1 cup" },
+      { item: "Elbow macaroni", amount: "2 cups" },
+      { item: "Chickpeas", amount: "1 can", notes: "Drained" },
+      { item: "Onions", amount: "3 large", notes: "Thinly sliced" },
+      { item: "Tomato sauce", amount: "2 cups" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Cumin", amount: "1 tablespoon" },
+      { item: "Coriander", amount: "1 teaspoon" },
+      { item: "Chili flakes", amount: "1 teaspoon" },
+      { item: "White vinegar", amount: "3 tablespoons" },
+      { item: "Vegetable oil", amount: "1 cup", notes: "For frying onions" }
+    ],
+    instructions: [
+      "Cook lentils in water until tender (20-25 minutes). Drain.",
+      "Cook rice separately until fluffy.",
+      "Cook macaroni according to package, drain.",
+      "Fry sliced onions in oil until deeply golden and crispy. Set aside.",
+      "For sauce: sauté garlic in oil, add tomato sauce, cumin, coriander, chili, vinegar. Simmer 15 minutes.",
+      "Mix rice and lentils together gently.",
+      "To serve: layer rice-lentil mix, then macaroni, then chickpeas.",
+      "Top generously with tomato sauce and crispy onions.",
+      "Serve with extra vinegar-garlic sauce (dakka) on side."
+    ],
+    tips: [
+      "The crispy onions are essential - fry until deeply caramelized",
+      "Serve immediately so layers stay distinct",
+      "Dakka sauce (vinegar-garlic-chili) is served alongside"
+    ]
+  },
+  {
+    id: "tunisian-brik",
+    name: "Brik à l'Oeuf (Tunisian Egg Pastry)",
+    tribeSlug: "tunisian-arab",
+    tribeName: "Tunisian Arab",
+    category: "snack",
+    description: "Crispy fried pastry triangles filled with a runny egg, tuna, capers, and parsley. Tunisia's iconic street food.",
+    culturalSignificance: "Brik is Tunisia's most famous appetizer, eaten with hands while carefully avoiding the runny yolk spilling. Traditionally served during Ramadan and at special occasions.",
+    historicalContext: "Brik comes from the Turkish börek, introduced during Ottoman rule. Tunisians made it their own by adding the signature runny egg. The malsouka pastry sheets are uniquely North African, related to Moroccan warka.",
+    youtubeVideoId: "oQk_4Tf7YpU",
+    prepTime: "20 minutes",
+    cookTime: "10 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Malsouka or brick pastry sheets", amount: "4", notes: "Or phyllo doubled" },
+      { item: "Eggs", amount: "4", notes: "Small or medium" },
+      { item: "Canned tuna", amount: "1 can", notes: "Drained and flaked" },
+      { item: "Onion", amount: "1 small", notes: "Finely chopped" },
+      { item: "Capers", amount: "2 tablespoons" },
+      { item: "Fresh parsley", amount: "1/4 cup", notes: "Chopped" },
+      { item: "Harissa paste", amount: "1 teaspoon", notes: "Optional" },
+      { item: "Lemon juice", amount: "1 tablespoon" },
+      { item: "Vegetable oil", amount: "For deep frying" }
+    ],
+    instructions: [
+      "Mix tuna with onion, capers, parsley, harissa, and lemon juice.",
+      "Place pastry sheet on work surface.",
+      "Put 2 tablespoons tuna mixture in center.",
+      "Make a well and carefully crack an egg into it.",
+      "Fold pastry into a triangle, sealing edges with water.",
+      "Heat oil to 180°C/350°F.",
+      "Carefully slide brik into oil, yolk side up first.",
+      "Fry 1-2 minutes per side until golden and crispy.",
+      "Drain and serve immediately with lemon wedges."
+    ],
+    tips: [
+      "The yolk should remain runny - don't overcook",
+      "Work quickly once egg is added so pastry doesn't get soggy",
+      "Eat with hands, tilting to drink the runny yolk first"
+    ]
+  },
+  {
+    id: "chakhchoukha",
+    name: "Chakhchoukha (Algerian Torn Bread Stew)",
+    tribeSlug: "chaoui",
+    tribeName: "Chaoui/Algerian Berber",
+    category: "special",
+    description: "Traditional Algerian dish of hand-torn flatbread soaked in spiced tomato and lamb stew. A Berber culinary masterpiece from the Aurès Mountains.",
+    culturalSignificance: "Chakhchoukha is the pride of the Chaoui Berbers of eastern Algeria. It's served at weddings, Eid celebrations, and to honor guests. Making the rougag (flatbread) is an art passed from mother to daughter.",
+    historicalContext: "This dish originated with the Chaoui Berbers of the Aurès Mountains, predating Arab arrival in North Africa. The combination of torn bread with meat stew reflects nomadic cooking traditions where bread was the universal staple.",
+    youtubeVideoId: "3-QkqCbAMlU",
+    prepTime: "1 hour",
+    cookTime: "2 hours",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Lamb", amount: "1 kg", notes: "Cut into pieces" },
+      { item: "Chickpeas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Onions", amount: "2 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "4", notes: "Blended" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Ras el hanout", amount: "1 tablespoon" },
+      { item: "Dried red chilies", amount: "2" },
+      { item: "Olive oil", amount: "4 tablespoons" },
+      { item: "For rougag: semolina flour", amount: "3 cups" },
+      { item: "For rougag: water, salt, oil", amount: "As needed" }
+    ],
+    instructions: [
+      "Make rougag: mix semolina with water and salt to form dough. Roll very thin and cook on griddle.",
+      "Brown lamb in olive oil in large pot.",
+      "Add onions and cook until softened.",
+      "Add tomatoes, tomato paste, spices, and soaked chickpeas.",
+      "Add water to cover and simmer 1.5-2 hours until lamb is falling-off-bone tender.",
+      "Tear cooled rougag into small pieces by hand.",
+      "Steam the torn bread briefly to soften.",
+      "Place bread in large serving dish, ladle stew over generously.",
+      "The bread should absorb the sauce. Serve family-style."
+    ],
+    tips: [
+      "The rougag should be paper-thin - this takes practice",
+      "The bread must absorb the sauce but not become mushy",
+      "Traditionally eaten with hands from a communal dish"
+    ]
+  },
+  {
+    id: "berber-couscous",
+    name: "Couscous Royal (Berber Seven-Vegetable Couscous)",
+    tribeSlug: "amazigh",
+    tribeName: "Amazigh/Berber",
+    category: "special",
+    description: "The Berber masterpiece - steamed semolina grains served with seven vegetables and lamb, representing abundance and blessing.",
+    culturalSignificance: "Couscous is sacred to Berber culture. The seven vegetables represent completeness and blessing. Friday couscous is a family tradition across North Africa, and the dish was inscribed on UNESCO's Intangible Cultural Heritage list.",
+    historicalContext: "Couscous originated with the Berbers of North Africa over 1,000 years ago. The hand-rolling technique and steaming process are uniquely Berber inventions. The dish spread across the Maghreb and to Europe through trade and migration.",
+    youtubeVideoId: "DPTp8WkPu3M",
+    prepTime: "45 minutes",
+    cookTime: "2.5 hours",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Couscous (medium grain)", amount: "500g" },
+      { item: "Lamb shoulder", amount: "1 kg", notes: "Cut into large pieces" },
+      { item: "Onions", amount: "2 large" },
+      { item: "Carrots", amount: "4" },
+      { item: "Turnips", amount: "3" },
+      { item: "Zucchini", amount: "3" },
+      { item: "Pumpkin", amount: "500g", notes: "Cubed" },
+      { item: "Cabbage", amount: "1/4 head" },
+      { item: "Chickpeas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Ras el hanout", amount: "1 tablespoon" },
+      { item: "Butter", amount: "100g" },
+      { item: "Olive oil", amount: "4 tablespoons" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "In couscoussier bottom, brown lamb in oil with onions.",
+      "Add tomato paste, spices, chickpeas, and water to cover.",
+      "Bring to boil, then simmer for 1 hour.",
+      "Meanwhile, prepare couscous: moisten with salted water, rake with fingers.",
+      "Place couscous in steamer top, steam uncovered for 20 minutes.",
+      "Transfer to bowl, add butter, rake again to separate grains.",
+      "Add harder vegetables (turnips, carrots) to stew.",
+      "Steam couscous second time for 15 minutes.",
+      "Add remaining vegetables to stew.",
+      "Steam couscous third time, then butter generously.",
+      "Mound couscous on platter, arrange meat and vegetables on top.",
+      "Serve broth in separate bowl for moistening."
+    ],
+    tips: [
+      "Traditional couscous is steamed 3 times for perfect texture",
+      "Never let vegetables overcook - they should hold shape",
+      "The broth is served separately so each person can add as desired"
+    ]
+  }
+];
+
 // Combine all recipes
 recipes.push(...beverageRecipes);
 recipes.push(...centralAfricanRecipes);
 recipes.push(...eastAfricanRecipes);
 recipes.push(...southernAfricanRecipes);
 recipes.push(...westAfricanRecipes);
+recipes.push(...northAfricanRecipes);
 
 // Get similar recipes from other tribes (same category)
 export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {
