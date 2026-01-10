@@ -14600,6 +14600,1300 @@
       "sources": [{ "name": "Ethnologue - Manza", "url": "https://www.ethnologue.com/language/mzv" }],
       "description": "The Mandjia are an agricultural people of western CAR, closely related to the Gbaya linguistically and culturally.",
       "relatedTribes": ["gbaya", "banda", "ngbaka", "mboum"]
+    },
+    {
+      "id": "amazigh",
+      "name": "Amazigh (Berber)",
+      "slug": "amazigh",
+      "slugAliases": ["berber", "imazighen"],
+      "youtubeVideoId": "J0VKxfE5z0U",
+      "languageVideoId": "aUb-kP8NKPM",
+      "countries": ["MA", "DZ", "TN", "LY", "EG", "ML", "NE"],
+      "region": "North Africa (Atlas Mountains, Sahara)",
+      "population": "~25-30 million",
+      "populationPercent": "Varies by country",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 31.5, "lng": -5.5 },
+      "counties": ["Atlas Mountains", "Rif", "Kabylie", "Aurès", "Siwa", "Tuareg regions"],
+      "namePrefixes": ["Am", "Az", "Ou", "It", "Ma", "Ta", "Iz"],
+      "commonNames": {
+        "female": ["Fatima", "Dihya", "Tiziri", "Tanina", "Lalla", "Tamazight", "Tilelli", "Tafukt", "Yelli", "Numidia", "Tassadit", "Tanirt", "Malika", "Aicha", "Wardia"],
+        "male": ["Amazigh", "Massinissa", "Yugurtha", "Amayas", "Aksil", "Ziri", "Idir", "Mokrane", "Sifax", "Juba", "Tacfarinas", "Ameziane", "Mohend", "Mohand", "Lounes"]
+      },
+      "timeBasedNames": {
+        "night": ["Tiziri (moonlight)", "Ayur (moon)"],
+        "morning": ["Tafukt (sun)", "Aghbalou (spring)"],
+        "day": ["Izem (lion)", "Itri (star)"],
+        "evening": ["Amellal (white)", "Awzal (dusk)"]
+      },
+      "stereotypes": [
+        "Fiercely independent and proud",
+        "Excellent artisans and craftspeople",
+        "Hospitable mountain people",
+        "Strong preservation of ancient culture",
+        "Skilled traders and merchants",
+        "Resistant to foreign domination"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Protectors of family honor",
+          "Skilled horsemen and warriors historically",
+          "Expected to provide for extended family",
+          "Guardians of tribal traditions"
+        ],
+        "female": [
+          "Keepers of cultural traditions and language",
+          "Expert weavers and artisans",
+          "Historically more visible in public than Arab women",
+          "Strong role in family decision-making"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men handled livestock, trade, and external affairs. Warriors defended mountain territories. Craftsmen produced leather and metalwork.",
+          "female": "Women managed households, wove famous Berber carpets, made pottery, and maintained cultural traditions through songs and stories."
+        },
+        "modern": {
+          "male": "Modern Amazigh men work in tourism, trade, agriculture, and increasingly professional fields. Many are activists for Amazigh cultural rights.",
+          "female": "Amazigh women are prominent in cooperative businesses (argan oil, carpets), education, and cultural preservation. Growing presence in politics."
+        }
+      },
+      "culturalTraits": [
+        "Tifinagh script - ancient Berber alphabet",
+        "Famous Berber carpets with symbolic patterns",
+        "Traditional Imilchil marriage festival",
+        "Kasbahs - fortified clay buildings",
+        "Ahwash and Ahidous collective dances",
+        "Strong oral poetry tradition (Izlan)"
+      ],
+      "funFacts": [
+        "The Amazigh are the indigenous people of North Africa, predating Arab arrival by millennia",
+        "Queen Dihya (Kahina) led resistance against Arab conquest in the 7th century",
+        "Tifinagh script is one of the oldest writing systems still in use",
+        "Morocco recognized Amazigh as an official language in 2011 constitution",
+        "Yennayer (Amazigh New Year) is now a national holiday in Algeria and Morocco"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous (Seksu)", "Tagine (slow-cooked stew)", "Khobz (flatbread)", "Amlou (almond butter)"],
+        "beverages": ["Mint tea (Atay)", "Buttermilk (Leben)", "Fruit juices"],
+        "specialDishes": ["Mechoui (roasted lamb)", "Harira (soup)", "Tanjia (slow-cooked meat)", "Rfissa (festive dish)"],
+        "description": "Amazigh cuisine features slow-cooked tagines, couscous with seven vegetables, and hearty mountain foods. Argan oil is a distinctive ingredient in southern Morocco."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch, evening meal with family",
+        "mainMealTime": "Lunch (main meal) with family gathering for dinner",
+        "eatingStyle": "Communal from shared tagine or couscous dish, eaten with right hand",
+        "genderRules": "Men and women may eat separately in traditional settings, honored guests eat with family head",
+        "taboos": ["Pork forbidden (Islamic influence)", "Eating with left hand", "Wasting bread"],
+        "specialOccasions": "Mechoui for weddings and festivals, couscous on Fridays, special dishes for Yennayer",
+        "hospitality": "Three glasses of mint tea tradition - 'First glass is gentle like life, second is strong like love, third is bitter like death'"
+      },
+      "traditionalDance": "Ahwash and Ahidous - collective dances with drums and singing",
+      "religion": "Islam (predominantly Sunni, some Ibadi), with pre-Islamic traditions surviving",
+      "traditionalReligion": {
+        "name": "Amazigh Traditional Beliefs",
+        "supremeDeity": "Yakush (pre-Islamic supreme god), now Allah under Islam",
+        "spirits": ["Belief in djinn", "Sacred springs and mountains", "Ancestor veneration"],
+        "practices": ["Pilgrimage to saints' tombs (marabouts)", "Seasonal festivals like Yennayer", "Traditional healing with herbs"],
+        "beliefs": "Syncretism of Islam with pre-Islamic nature worship, belief in baraka (divine blessing), sacred groves and mountains"
+      },
+      "history": {
+        "origin": "The Amazigh are indigenous to North Africa, with presence dating back at least 10,000 years. Ancient Egyptians depicted them as 'Libyans.' They created powerful kingdoms including Numidia and Mauretania.",
+        "colonialEra": "Resisted French colonization fiercely. The Rif War (1921-1926) under Abd el-Krim against Spain/France was major. France's 'Berber Policy' attempted to divide Arabs and Berbers.",
+        "independence": "After independence, Arabization policies marginalized Amazigh identity. The Berber Spring (1980) in Algeria marked renewed activism. 2011 Arab Spring brought recognition in Morocco.",
+        "keyEvents": [
+          "Numidian Kingdom under Massinissa (202-148 BCE)",
+          "Jugurthine War against Rome (112-106 BCE)",
+          "Queen Dihya's resistance (7th century)",
+          "Rif War against Spain/France (1921-1926)",
+          "Berber Spring (1980)",
+          "Official recognition in Morocco (2011)"
+        ],
+        "conflicts": [
+          {
+            "name": "Jugurthine War",
+            "period": "112-106 BCE",
+            "description": "King Jugurtha's resistance against Roman expansion. Showcased Berber guerrilla tactics that frustrated Roman legions.",
+            "outcome": "Roman victory, but established Berber reputation for fierce resistance"
+          },
+          {
+            "name": "Arab Conquest Resistance",
+            "period": "670-710 CE",
+            "description": "Led by Queen Dihya (Kahina), the Amazigh resisted Arab-Muslim armies for decades. Dihya ruled a Berber kingdom and died fighting.",
+            "outcome": "Eventually conquered, but Berbers maintained distinct identity and later led their own Islamic dynasties"
+          },
+          {
+            "name": "Rif War",
+            "period": "1921-1926",
+            "description": "Abd el-Krim led Rif Berbers against Spanish and French colonial forces. Created the Republic of the Rif. Used innovative guerrilla warfare.",
+            "outcome": "Defeated by combined Franco-Spanish force of 500,000 troops. Abd el-Krim became anti-colonial hero."
+          },
+          {
+            "name": "Berber Spring",
+            "period": "1980",
+            "description": "Mass protests in Kabylie (Algeria) after authorities banned a lecture on Amazigh poetry. Marked rebirth of Amazigh cultural movement.",
+            "outcome": "Sparked ongoing Amazigh rights movement leading to eventual recognition"
+          },
+          {
+            "name": "Black Spring",
+            "period": "2001",
+            "description": "Deadly riots in Kabylie after gendarmes killed a student. 126 people died. Led to recognition of Tamazight as national language.",
+            "outcome": "Tamazight recognized as national language (2002), official language (2016)"
+          }
+        ]
+      },
+      "tradeHistory": {
+        "historical": "Controlled trans-Saharan trade routes carrying gold, salt, and slaves. Berber traders linked sub-Saharan Africa to Mediterranean. Amazigh caravans were vital to West African empires.",
+        "modern": "Tourism, argan oil cooperatives, handicrafts (carpets, pottery, leather), agriculture. Significant remittances from diaspora in Europe.",
+        "partners": ["Arab traders", "West African kingdoms", "Mediterranean merchants", "European colonial powers"]
+      },
+      "independenceHistory": {
+        "colonialPower": "France and Spain",
+        "resistance": "Fierce resistance throughout. Abd el-Krim's Rif Republic (1921-1926) was model for anti-colonial movements worldwide. Kabyle Berbers prominent in Algerian independence struggle.",
+        "independence": "Part of Morocco (1956), Algeria (1962), Tunisia (1956), Libya (1951). Post-independence Arabization marginalized Berber identity until recent recognition.",
+        "keyFigures": ["Abd el-Krim", "Mohand Said Oumeri", "Hocine Ait Ahmed", "Lounès Matoub"]
+      },
+      "religiousHistory": {
+        "traditional": "Pre-Islamic beliefs included worship of natural features (mountains, springs), sun and moon gods, and ancestor spirits. Tifinagh inscriptions at sacred sites.",
+        "christianity": "North Africa was major early Christian center. St. Augustine was Berber. Christianity largely disappeared after Arab conquest except in small communities.",
+        "islam": "Adopted Islam 7th-8th centuries but maintained distinct practices. Berbers founded major Islamic dynasties (Almoravids, Almohads). Sufi traditions strong.",
+        "current": "Predominantly Sunni Muslim with Ibadi communities (Mzab). Pre-Islamic practices survive in festivals and saint veneration."
+      },
+      "language": {
+        "name": "Tamazight (Berber languages)",
+        "speakers": "~25-30 million across dialects",
+        "greeting": "Azul",
+        "greetingMeaning": "Hello / Peace",
+        "additionalGreetings": [
+          { "phrase": "Azul fellawen", "meaning": "Hello to you (plural)" },
+          { "phrase": "Manzakin?", "meaning": "How are you?" },
+          { "phrase": "Labas", "meaning": "Fine/Good" },
+          { "phrase": "Tanemmirt", "meaning": "Thank you" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Amek tettiliḍ?", "meaning": "How are you?" },
+          { "phrase": "D acu i kem-yuran?", "meaning": "What is your name?" },
+          { "phrase": "Ur ttruḥuɣ ara", "meaning": "I won't go" }
+        ],
+        "family": "Berber (Afroasiatic)",
+        "writingSystem": "Tifinagh script (ancient), Arabic script, Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Massinissa", "role": "King of Numidia (238-148 BCE)", "wikipedia": "https://en.wikipedia.org/wiki/Masinissa" },
+        { "name": "Queen Dihya (Kahina)", "role": "Berber warrior queen who resisted Arab conquest", "wikipedia": "https://en.wikipedia.org/wiki/Kahina" },
+        { "name": "Jugurtha", "role": "King of Numidia who fought Rome", "wikipedia": "https://en.wikipedia.org/wiki/Jugurtha" },
+        { "name": "Abd el-Krim", "role": "Leader of Rif War against Spain/France", "wikipedia": "https://en.wikipedia.org/wiki/Abd_el-Krim" },
+        { "name": "Zinedine Zidane", "role": "French footballer of Kabyle Berber origin", "wikipedia": "https://en.wikipedia.org/wiki/Zinedine_Zidane" },
+        { "name": "Lounès Matoub", "role": "Kabyle singer and activist", "wikipedia": "https://en.wikipedia.org/wiki/Loun%C3%A8s_Matoub" },
+        { "name": "St. Augustine", "role": "Christian theologian (Berber origin)", "wikipedia": "https://en.wikipedia.org/wiki/Augustine_of_Hippo" }
+      ],
+      "sources": [
+        { "name": "Ethnologue - Berber languages", "url": "https://www.ethnologue.com/subgroup/16" },
+        { "name": "Wikipedia - Berber people", "url": "https://en.wikipedia.org/wiki/Berbers" }
+      ],
+      "description": "The Amazigh (Berbers) are the indigenous people of North Africa, inhabiting the region from Egypt to the Atlantic and from the Mediterranean to the Sahara for over 10,000 years. They maintain a distinct language, culture, and identity despite centuries of Arab and European influence.",
+      "relatedTribes": ["tuareg", "kabyle", "riffian", "chaoui", "mzab", "siwi"]
+    },
+    {
+      "id": "kabyle",
+      "name": "Kabyle",
+      "slug": "kabyle",
+      "youtubeVideoId": "kH5Z7YQXJOU",
+      "languageVideoId": "aUb-kP8NKPM",
+      "countries": ["DZ"],
+      "region": "Kabylie (Northern Algeria)",
+      "population": "~6-7 million",
+      "populationPercent": "~15% of Algeria",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 36.7, "lng": 4.5 },
+      "counties": ["Tizi Ouzou", "Béjaïa", "Bouira", "Boumerdès", "Bordj Bou Arréridj"],
+      "namePrefixes": ["At", "Ou", "Ait", "Si", "Mohand"],
+      "commonNames": {
+        "female": ["Djamila", "Malika", "Lynda", "Samira", "Nacéra", "Farida", "Louiza", "Tassadit", "Dahbia", "Nadia", "Karima", "Houria", "Yasmina", "Katia", "Sabrina"],
+        "male": ["Mohand", "Saïd", "Mouloud", "Amar", "Idir", "Karim", "Rabah", "Madjid", "Mokrane", "Lounis", "Djamel", "Hamid", "Belaid", "Massinissa", "Aksil"]
+      },
+      "timeBasedNames": {
+        "night": ["Tiziri", "Ayur"],
+        "morning": ["Aghbalou", "Tafukt"],
+        "day": ["Itri"],
+        "evening": ["Amellal"]
+      },
+      "stereotypes": [
+        "Proud and independent-minded",
+        "Strong cultural identity",
+        "Politically active and vocal",
+        "Hard-working and entrepreneurial",
+        "Known for education and intellectualism",
+        "Fierce defenders of Berber identity"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be providers and protectors",
+          "Strong sense of honor (nif)",
+          "Politically engaged and activist",
+          "Guardians of family reputation"
+        ],
+        "female": [
+          "Keepers of cultural traditions",
+          "Strong presence in education and professions",
+          "Maintain household and family bonds",
+          "Increasingly politically active"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men worked in agriculture, olive cultivation, and trade. Many migrated to France for work. Defended village and family honor.",
+          "female": "Women managed households, wove textiles, made pottery, and maintained cultural traditions through songs and stories."
+        },
+        "modern": {
+          "male": "Many Kabyle men are professionals, entrepreneurs, and activists. Strong presence in media, arts, and politics. Diaspora in France significant.",
+          "female": "Kabyle women are prominent in education, medicine, and business. Strong feminist tradition compared to other Algerian regions."
+        }
+      },
+      "culturalTraits": [
+        "Strong oral tradition and poetry (Izlan)",
+        "Village assemblies (Tajmaât) for governance",
+        "Distinctive music with flute and drum",
+        "Famous pottery and jewelry making",
+        "Olive oil production central to economy",
+        "Strong diaspora communities in France"
+      ],
+      "funFacts": [
+        "Kabylie has the highest literacy rate in Algeria",
+        "The Berber Spring (1980) began in Kabylie, sparking Amazigh cultural renaissance",
+        "Kabyle singer Lounès Matoub was a martyr for Berber identity",
+        "Zinedine Zidane's parents are Kabyle from the village of Aguemoune",
+        "Kabyle villages traditionally governed by democratic assemblies long before modern democracy"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous with vegetables", "Aghrum (flatbread)", "Berkoukes (pasta grains)", "Olive oil"],
+        "beverages": ["Mint tea", "Coffee", "Buttermilk"],
+        "specialDishes": ["Seksu (couscous with seven vegetables)", "Tharifth (thick soup)", "Beignets with honey"],
+        "description": "Kabyle cuisine centers on couscous, olive oil, and fresh vegetables from mountain gardens. Fig and olive trees are sacred to Kabyle culture."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch, family dinner",
+        "mainMealTime": "Lunch traditionally, now dinner for working families",
+        "eatingStyle": "Communal from shared plate, eaten with hands or bread",
+        "genderRules": "Traditional separation at meals, modernizing rapidly",
+        "taboos": ["Pork forbidden", "Wasting bread considered sinful"],
+        "specialOccasions": "Couscous for weddings, special dishes for Yennayer (Berber New Year)",
+        "hospitality": "Three glasses of tea tradition, food always offered to guests"
+      },
+      "traditionalDance": "Achewiq (women's songs) and folk dances with bendirs (drums)",
+      "religion": "Islam (Sunni), with secularist traditions in politics",
+      "traditionalReligion": {
+        "name": "Pre-Islamic Kabyle beliefs",
+        "supremeDeity": "Belief in spirits and natural forces, now Islamic practices",
+        "spirits": ["Belief in djinn", "Sacred springs (tala)", "Ancestral spirits"],
+        "practices": ["Saint veneration", "Seasonal festivals", "Traditional medicine"],
+        "beliefs": "Syncretic Islam with pre-Islamic elements, strong secularist tradition post-independence"
+      },
+      "history": {
+        "origin": "Kabyles are Amazigh people who have inhabited the Tell Atlas mountains of Algeria for millennia. They resisted Roman, Vandal, Byzantine, and Arab conquests from their mountain strongholds.",
+        "colonialEra": "Fiercely resisted French colonization (1830-1962). The Mokrani Revolt (1871) was major uprising. Kabyles were prominent in FLN independence struggle but also in secular democratic movements.",
+        "independence": "After independence (1962), Kabyle intellectuals challenged Arabization policies. The Berber Spring (1980) and Black Spring (2001) were watershed moments for Amazigh rights.",
+        "keyEvents": [
+          "Mokrani Revolt against France (1871)",
+          "FLN independence war (1954-1962)",
+          "Berber Spring uprising (1980)",
+          "Assassination of Lounès Matoub (1998)",
+          "Black Spring riots (2001)",
+          "Tamazight recognized as official language (2016)"
+        ],
+        "conflicts": [
+          {
+            "name": "Mokrani Revolt",
+            "period": "1871-1872",
+            "description": "Major uprising against French colonization led by Mohamed El Mokrani and Sheikh El Haddad. Involved 250,000 Kabyles. Brutal French repression followed.",
+            "outcome": "Crushed by France. Mass land confiscation, deportations, and impoverishment of Kabylie."
+          },
+          {
+            "name": "Algerian War of Independence",
+            "period": "1954-1962",
+            "description": "Kabyles heavily involved in FLN struggle. Wilaya III (Kabylie) was key resistance zone. Abane Ramdane and Krim Belkacem were Kabyle leaders.",
+            "outcome": "Independence achieved, but Kabyle leaders marginalized by Arabist faction."
+          },
+          {
+            "name": "Berber Spring",
+            "period": "April 1980",
+            "description": "Mass protests after authorities banned a lecture by Mouloud Mammeri on Kabyle poetry. University strikes and demonstrations spread across Kabylie.",
+            "outcome": "Sparked modern Amazigh cultural movement. Eventually led to official recognition."
+          },
+          {
+            "name": "Black Spring",
+            "period": "April-June 2001",
+            "description": "126 killed when gendarmes shot protesters after a student's death in custody. Largest riots in Algerian history. Aarouch movement emerged.",
+            "outcome": "Tamazight recognized as national language (2002), later official (2016)."
+          }
+        ]
+      },
+      "tradeHistory": {
+        "historical": "Kabyles traded olive oil, pottery, and handicrafts with lowland Arabs and across the Mediterranean. Known as skilled craftsmen and merchants.",
+        "modern": "Olive oil production, handicrafts, small business. Massive migration to France since 1900s - remittances vital to region.",
+        "partners": ["Arab traders", "French colony", "European diaspora markets"]
+      },
+      "independenceHistory": {
+        "colonialPower": "France (1830-1962)",
+        "resistance": "Constant resistance from 1830. Mokrani Revolt (1871) was massive. Kabyles provided many FLN leaders and fighters. Also secular opposition to post-independence Arabization.",
+        "independence": "Algeria independent 1962. Kabyles continue struggle for cultural rights and regional autonomy.",
+        "keyFigures": ["Mohamed El Mokrani", "Abane Ramdane", "Krim Belkacem", "Hocine Ait Ahmed", "Ferhat Mehenni"]
+      },
+      "religiousHistory": {
+        "traditional": "Pre-Islamic beliefs in spirits, sacred places, and ancestor veneration.",
+        "christianity": "North Africa was early Christian center. Few traces remain in Kabylie, though small Christian community exists today.",
+        "islam": "Islamized 7th-8th centuries. Sufi brotherhoods influential. Strong secularist political tradition since independence.",
+        "current": "Predominantly Sunni Muslim but with significant secularist tradition. Small but growing Christian minority."
+      },
+      "language": {
+        "name": "Taqbaylit (Kabyle)",
+        "speakers": "~6-7 million",
+        "greeting": "Azul",
+        "greetingMeaning": "Hello / Peace",
+        "additionalGreetings": [
+          { "phrase": "Azul fellawen", "meaning": "Hello to you all" },
+          { "phrase": "Amek tettiliḍ?", "meaning": "How are you?" },
+          { "phrase": "Lḥemdullah", "meaning": "Fine (praise God)" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Tanemmirt", "meaning": "Thank you" },
+          { "phrase": "Ur gziɣ ara", "meaning": "I don't know" },
+          { "phrase": "Anida telliḍ?", "meaning": "Where are you?" }
+        ],
+        "family": "Berber (Afroasiatic)",
+        "writingSystem": "Latin alphabet (common), Tifinagh, Arabic script"
+      },
+      "famousPeople": [
+        { "name": "Zinedine Zidane", "role": "French footballer, one of the greatest players ever", "wikipedia": "https://en.wikipedia.org/wiki/Zinedine_Zidane" },
+        { "name": "Lounès Matoub", "role": "Singer and Berber activist, martyred 1998", "wikipedia": "https://en.wikipedia.org/wiki/Loun%C3%A8s_Matoub" },
+        { "name": "Hocine Ait Ahmed", "role": "Independence fighter and opposition leader", "wikipedia": "https://en.wikipedia.org/wiki/Hocine_A%C3%AFt_Ahmed" },
+        { "name": "Mouloud Feraoun", "role": "Author and educator", "wikipedia": "https://en.wikipedia.org/wiki/Mouloud_Feraoun" },
+        { "name": "Karim Benzema", "role": "French footballer of Kabyle origin", "wikipedia": "https://en.wikipedia.org/wiki/Karim_Benzema" }
+      ],
+      "sources": [
+        { "name": "Ethnologue - Kabyle", "url": "https://www.ethnologue.com/language/kab" },
+        { "name": "Wikipedia - Kabyle people", "url": "https://en.wikipedia.org/wiki/Kabyle_people" }
+      ],
+      "description": "The Kabyle are the largest Amazigh group in Algeria, inhabiting the mountainous Kabylie region. Known for their fierce independence, strong cultural identity, and prominent role in both the independence struggle and the Amazigh rights movement.",
+      "relatedTribes": ["amazigh", "chaoui", "mzab", "tuareg"]
+    },
+    {
+      "id": "egyptian-arab",
+      "name": "Egyptian Arab",
+      "slug": "egyptian-arab",
+      "slugAliases": ["egyptian", "masri"],
+      "youtubeVideoId": "rCMGdPnZl1Y",
+      "languageVideoId": "DkqKuPr8xVU",
+      "countries": ["EG"],
+      "region": "Egypt (Nile Valley, Delta, Urban centers)",
+      "population": "~102 million",
+      "populationPercent": "~90% of Egypt",
+      "genderRatio": { "male": 51, "female": 49 },
+      "mapCoordinates": { "lat": 30.0, "lng": 31.2 },
+      "counties": ["Cairo", "Alexandria", "Giza", "Luxor", "Aswan", "Nile Delta"],
+      "namePrefixes": ["Abd", "Abu", "El-", "Al-", "Mu", "Ah"],
+      "commonNames": {
+        "female": ["Fatma", "Aisha", "Mariam", "Nour", "Hagar", "Salma", "Dina", "Sara", "Layla", "Amira", "Nadia", "Heba", "Rania", "Yasmin", "Noha"],
+        "male": ["Mohamed", "Ahmed", "Mahmoud", "Ali", "Omar", "Youssef", "Hassan", "Ibrahim", "Khaled", "Tarek", "Amr", "Moustafa", "Karim", "Sherif", "Tamer"]
+      },
+      "timeBasedNames": {
+        "night": ["Layla (night)"],
+        "morning": ["Sabah (morning)", "Fajr (dawn)"],
+        "day": ["Shams (sun)"],
+        "evening": ["Asr (afternoon)"]
+      },
+      "stereotypes": [
+        "Humorous and witty",
+        "Hospitable and family-oriented",
+        "Passionate about football",
+        "Proud of ancient heritage",
+        "Skilled negotiators and traders",
+        "Known for distinctive Arabic dialect"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be providers and family heads",
+          "Protective of family honor",
+          "Sociable and humorous",
+          "Football enthusiasts"
+        ],
+        "female": [
+          "Traditionally homemakers, now professionals",
+          "Strong influence in family decisions",
+          "Education increasingly valued",
+          "Navigating tradition and modernity"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men worked as farmers, merchants, and craftsmen. Expected to provide for family and protect family honor. Elders made community decisions.",
+          "female": "Women managed households, raised children, and maintained family bonds. Rural women worked in agriculture. Urban women often secluded."
+        },
+        "modern": {
+          "male": "Egyptian men work in all sectors. Strong presence in arts, media, and sports. Family provider role remains important culturally.",
+          "female": "Egyptian women increasingly in workforce, education, and public life. Still navigate traditional expectations. Urban-rural divide significant."
+        }
+      },
+      "culturalTraits": [
+        "Rich oral tradition of jokes and stories",
+        "Famous film and music industry (Hollywood of the Middle East)",
+        "Strong coffee and tea culture (ahwa)",
+        "Passionate football (soccer) culture",
+        "Ancient Pharaonic heritage pride",
+        "Ramadan as major cultural event"
+      ],
+      "funFacts": [
+        "Egyptian Arabic is the most widely understood Arabic dialect due to Egypt's film industry",
+        "Egypt has over 100 pyramids, not just the famous three at Giza",
+        "The Egyptian Museum in Cairo has over 120,000 items from ancient Egypt",
+        "Umm Kulthum is considered the greatest Arab singer ever - her funeral drew millions",
+        "Mahfouz became the only Arab to win the Nobel Prize for Literature"
+      ],
+      "traditionalFood": {
+        "staples": ["Ful medames (fava beans)", "Koshari (rice, lentils, pasta)", "Aish baladi (flatbread)", "Molokhia (jute leaf stew)"],
+        "beverages": ["Egyptian tea (shai)", "Turkish coffee (ahwa)", "Karkade (hibiscus)", "Fresh sugarcane juice"],
+        "specialDishes": ["Mahshi (stuffed vegetables)", "Fattah (festive lamb)", "Hawawshi (meat pie)", "Umm Ali (dessert)"],
+        "description": "Egyptian cuisine features hearty, affordable dishes like ful and koshari. Meat is for special occasions. Bread (aish, meaning 'life') is sacred. Street food culture is vibrant."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch (family), light dinner",
+        "mainMealTime": "Lunch after noon prayers, eaten with family",
+        "eatingStyle": "Communal plates with bread for scooping, right hand only",
+        "genderRules": "Men may eat separately when guests present, women serve then eat",
+        "taboos": ["Pork forbidden", "Alcohol avoided by religious", "Left hand not used"],
+        "specialOccasions": "Fattah for Eid, massive Ramadan iftar meals, Kahk cookies for Eid",
+        "hospitality": "Guests offered tea/coffee and food immediately, refusing is insulting"
+      },
+      "traditionalDance": "Raqs Sharqi (belly dance), Tahtib (stick dance), Tannoura (Sufi spinning)",
+      "religion": "Islam (predominantly Sunni, ~90%), Coptic Christianity (~10%)",
+      "traditionalReligion": {
+        "name": "Ancient Egyptian Religion (historical)",
+        "supremeDeity": "Now primarily Islam. Historically worshipped Ra, Osiris, Isis, and hundreds of deities.",
+        "spirits": ["Belief in djinn in Islamic context", "Some folk beliefs survive"],
+        "practices": ["Islamic five pillars", "Coptic liturgy", "Saint veneration"],
+        "beliefs": "Egypt was center of ancient polytheism before Christianity (1st century) and Islam (7th century). Folk practices and amulets still common."
+      },
+      "history": {
+        "origin": "Egyptians are descended from ancient Egyptians who built the pyramids, mixed with Arab settlers after the 7th century Islamic conquest. The Nile River civilization dates back 5,000+ years.",
+        "colonialEra": "Ottoman rule (1517-1867), then British occupation (1882-1952). The 1919 Revolution and 1952 Free Officers Movement ended foreign control.",
+        "independence": "Nominal independence 1922, full sovereignty 1952 under Nasser. Nationalization of Suez Canal (1956) was landmark. Sadat's peace with Israel (1979) transformed region.",
+        "keyEvents": [
+          "Ancient Pharaonic civilization (~3100 BCE-30 BCE)",
+          "Arab-Islamic conquest (641 CE)",
+          "Ottoman rule (1517-1867)",
+          "British occupation (1882-1952)",
+          "1952 Revolution",
+          "Suez Crisis (1956)",
+          "Six-Day War (1967)",
+          "Camp David Accords (1978)",
+          "Arab Spring revolution (2011)"
+        ],
+        "conflicts": [
+          {
+            "name": "Suez Crisis",
+            "period": "1956",
+            "description": "After Nasser nationalized the Suez Canal, Britain, France, and Israel invaded. US and USSR pressure forced their withdrawal. Made Nasser a hero.",
+            "outcome": "Egyptian victory diplomatically. Nasser became pan-Arab leader. End of British/French colonial influence in Middle East."
+          },
+          {
+            "name": "Six-Day War",
+            "period": "June 1967",
+            "description": "Israel defeated Egypt, Syria, and Jordan in six days. Egypt lost Sinai Peninsula. National trauma that shaped Egyptian psyche.",
+            "outcome": "Devastating defeat. Sinai occupied until 1982. Shattered pan-Arab unity."
+          },
+          {
+            "name": "October War (Yom Kippur)",
+            "period": "October 1973",
+            "description": "Egypt crossed Suez Canal in surprise attack, initially succeeding before Israeli counterattack. Restored Egyptian pride.",
+            "outcome": "Military stalemate but political victory. Led to Camp David peace process. Sinai returned."
+          },
+          {
+            "name": "Arab Spring Revolution",
+            "period": "January-February 2011",
+            "description": "18 days of mass protests in Tahrir Square toppled Mubarak's 30-year rule. 'Bread, freedom, social justice' demands.",
+            "outcome": "Mubarak overthrown. Brief Morsi presidency. Military rule returned under Sisi (2013)."
+          }
+        ]
+      },
+      "tradeHistory": {
+        "historical": "Egypt controlled ancient trade routes between Africa, Asia, and Mediterranean. The Suez Canal (1869) made Egypt crucial to global trade. Cotton was 'white gold' export.",
+        "modern": "Tourism, Suez Canal revenues, remittances from Gulf, cotton and textiles, natural gas. Major trade partner with EU and Gulf states.",
+        "partners": ["Gulf states", "European Union", "USA", "China", "African neighbors"]
+      },
+      "independenceHistory": {
+        "colonialPower": "Britain (1882-1952)",
+        "resistance": "1919 Revolution led by Saad Zaghloul. Ongoing nationalist movements. 1952 Free Officers coup ended monarchy and British influence.",
+        "independence": "Nominal 1922, full 1952. Republic declared. Nasser's nationalization of Suez Canal (1956) was definitive break.",
+        "keyFigures": ["Saad Zaghloul", "Gamal Abdel Nasser", "Anwar Sadat", "Hosni Mubarak", "Mohamed Morsi"]
+      },
+      "religiousHistory": {
+        "traditional": "Ancient Egyptian polytheism for 3000+ years. Worship of Ra, Osiris, Isis, Horus, and hundreds of deities.",
+        "christianity": "Christianity arrived 1st century (St. Mark). Egypt was major early Christian center. Coptic Church preserves ancient traditions. ~10% Christian today.",
+        "islam": "Arab conquest 641 CE. Gradual conversion over centuries. Al-Azhar (970 CE) became preeminent Sunni institution. Now ~90% Muslim.",
+        "current": "Predominantly Sunni Muslim. Coptic Christian minority (~10%). Al-Azhar in Cairo is world's leading Sunni authority."
+      },
+      "language": {
+        "name": "Egyptian Arabic (Masri)",
+        "speakers": "~100 million",
+        "greeting": "Salaam aleikum / Ahlan",
+        "greetingMeaning": "Peace be upon you / Hello",
+        "additionalGreetings": [
+          { "phrase": "Izayyak/Izayyik", "meaning": "How are you? (m/f)" },
+          { "phrase": "El-hamdulillah", "meaning": "Fine (praise God)" },
+          { "phrase": "Ahlan wa sahlan", "meaning": "Welcome" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Shukran", "meaning": "Thank you" },
+          { "phrase": "Ma'a salama", "meaning": "Goodbye" },
+          { "phrase": "Insha'Allah", "meaning": "God willing" }
+        ],
+        "family": "Semitic (Afroasiatic)",
+        "writingSystem": "Arabic script"
+      },
+      "famousPeople": [
+        { "name": "Umm Kulthum", "role": "Legendary singer, 'Star of the East'", "wikipedia": "https://en.wikipedia.org/wiki/Umm_Kulthum" },
+        { "name": "Gamal Abdel Nasser", "role": "President, pan-Arab leader", "wikipedia": "https://en.wikipedia.org/wiki/Gamal_Abdel_Nasser" },
+        { "name": "Naguib Mahfouz", "role": "Nobel Prize-winning author", "wikipedia": "https://en.wikipedia.org/wiki/Naguib_Mahfouz" },
+        { "name": "Mohamed Salah", "role": "Football star, Liverpool FC", "wikipedia": "https://en.wikipedia.org/wiki/Mohamed_Salah" },
+        { "name": "Anwar Sadat", "role": "President, peace with Israel", "wikipedia": "https://en.wikipedia.org/wiki/Anwar_Sadat" },
+        { "name": "Ahmed Zewail", "role": "Nobel Prize chemist", "wikipedia": "https://en.wikipedia.org/wiki/Ahmed_Zewail" }
+      ],
+      "sources": [
+        { "name": "Ethnologue - Egyptian Arabic", "url": "https://www.ethnologue.com/language/arz" },
+        { "name": "Wikipedia - Egyptians", "url": "https://en.wikipedia.org/wiki/Egyptians" }
+      ],
+      "description": "Egyptian Arabs are the people of Egypt, heirs to both the ancient Pharaonic civilization and Arab-Islamic culture. With 100+ million people, they are the largest Arab nation, known for their humor, hospitality, and rich cultural production.",
+      "relatedTribes": ["nubian", "siwi", "bedouin", "saidi"]
+    },
+    {
+      "id": "nubian",
+      "name": "Nubian",
+      "slug": "nubian",
+      "youtubeVideoId": "E6e8kxAC0Xw",
+      "languageVideoId": "kq1lxlmVI4M",
+      "countries": ["EG", "SD"],
+      "region": "Southern Egypt and Northern Sudan (Nile Valley)",
+      "population": "~3 million",
+      "populationPercent": "~3% of Egypt, varies in Sudan",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 22.5, "lng": 31.8 },
+      "counties": ["Aswan Governorate", "Northern State (Sudan)", "River Nile State (Sudan)"],
+      "namePrefixes": ["Kash", "Mer", "Fadl", "Abd"],
+      "commonNames": {
+        "female": ["Fatima", "Nafisa", "Khadija", "Amina", "Halima", "Sakina", "Suad", "Aisha", "Maryam", "Hawa"],
+        "male": ["Fadlallah", "Merghani", "Kashif", "Osman", "Idris", "Mahdi", "Wad", "Taha", "Hamza", "Adil"]
+      },
+      "timeBasedNames": {
+        "night": ["Layla"],
+        "morning": ["Sabah", "Nour"],
+        "day": ["Shams"],
+        "evening": ["Gharib"]
+      },
+      "stereotypes": [
+        "Exceptionally honest and trustworthy",
+        "Warm and hospitable",
+        "Proud of ancient heritage",
+        "Resilient despite displacement",
+        "Known for distinctive architecture",
+        "Strong community bonds"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Hardworking and honest",
+          "Often work in service industries in Cairo",
+          "Strong sense of community duty",
+          "Protective of family honor"
+        ],
+        "female": [
+          "Keepers of Nubian culture and language",
+          "Strong household managers",
+          "Known for beautiful traditional dress",
+          "Maintain community through displacement"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men worked as farmers along the Nile, fishermen, and traders. Many migrated to Cairo for work, sending remittances home.",
+          "female": "Women managed households, raised children, maintained cultural traditions, and produced handicrafts. Strong matrilineal influences."
+        },
+        "modern": {
+          "male": "Many Nubian men work in hospitality, security, and service industries. Some have achieved prominence in arts and politics. Diaspora communities active.",
+          "female": "Nubian women increasingly educated and professionally active. Maintain cultural identity through language and traditions despite displacement."
+        }
+      },
+      "culturalTraits": [
+        "Distinctive colorful architecture with painted houses",
+        "Ancient history as Kush Kingdom rivaling Egypt",
+        "Nubian wrestling (Nuba wrestling)",
+        "Unique Nubian languages (Nobiin, Kenzi)",
+        "Strong hospitality tradition",
+        "Date palm cultivation along Nile"
+      ],
+      "funFacts": [
+        "Nubian pharaohs ruled ancient Egypt during the 25th Dynasty",
+        "Over 100,000 Nubians were displaced by the Aswan High Dam in the 1960s",
+        "Nubian houses are traditionally painted with bright colors and symbols",
+        "Nubians in Cairo are stereotypically trusted - often work as doormen (bowab)",
+        "The ancient Kingdom of Kush had more pyramids than Egypt"
+      ],
+      "traditionalFood": {
+        "staples": ["Ful Nubian (spiced fava beans)", "Kisra (fermented bread)", "Gurassa (millet bread)", "Date dishes"],
+        "beverages": ["Karkade (hibiscus)", "Coffee ceremonies", "Date juice"],
+        "specialDishes": ["Shiyata (spiced fish)", "Dakwa (porridge)", "Nubian wedding dishes"],
+        "description": "Nubian cuisine blends Egyptian and Sudanese influences, featuring spiced beans, fish from the Nile, date-based sweets, and distinctive fermented breads."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Breakfast, main lunch, light dinner",
+        "mainMealTime": "Lunch with extended family",
+        "eatingStyle": "Communal from shared bowls, right hand with bread",
+        "genderRules": "Traditional separation at meals, guests honored",
+        "taboos": ["Pork forbidden", "Alcohol avoided"],
+        "specialOccasions": "Elaborate wedding feasts, Eid celebrations, Nubian festivals",
+        "hospitality": "Legendary hospitality - guests treated as blessings"
+      },
+      "traditionalDance": "Nubian dances with drums and distinctive hip movements",
+      "religion": "Islam (Sunni), with some syncretic practices",
+      "traditionalReligion": {
+        "name": "Ancient Nubian Religion (historical)",
+        "supremeDeity": "Now Islam. Historically worshipped Amun, Isis, Apedemak (lion god). Christianity 6th-14th centuries before Islam.",
+        "spirits": ["Nile spirits", "Ancestor veneration", "Some pre-Islamic practices survive"],
+        "practices": ["Islamic practices", "Some traditional rituals at weddings/births"],
+        "beliefs": "Ancient polytheism, then Coptic Christianity (6th century), then Islam (14th century). Folk practices persist."
+      },
+      "history": {
+        "origin": "Nubians are among the world's oldest civilizations, with roots dating back 10,000+ years. The Kingdom of Kush (2500 BCE-350 CE) rivaled Egypt. Nubian pharaohs conquered and ruled Egypt during the 25th Dynasty.",
+        "colonialEra": "Under Egyptian/Ottoman then British control. Marginalized as 'southern' people. Traditional lands increasingly affected by dam projects.",
+        "independence": "Part of Egypt and Sudan at independence. The Aswan High Dam (1960s) flooded ancient Nubia, displacing 100,000+ people. Ongoing struggle for recognition and return.",
+        "keyEvents": [
+          "Kingdom of Kush (2500 BCE-350 CE)",
+          "25th Dynasty - Nubian Pharaohs rule Egypt (747-656 BCE)",
+          "Christianization (6th century CE)",
+          "Islamization (14th century)",
+          "British-Egyptian Sudan (1899-1956)",
+          "Aswan High Dam displacement (1960s)",
+          "Ongoing return movement"
+        ],
+        "conflicts": [
+          {
+            "name": "Egyptian-Nubian Wars (Ancient)",
+            "period": "Multiple periods",
+            "description": "Centuries of warfare and trade between Egypt and Kush. Nubians both invaded Egypt and were conquered by it. Nubians eventually conquered Egypt as 25th Dynasty.",
+            "outcome": "Complex relationship of conquest, trade, and cultural exchange."
+          },
+          {
+            "name": "Aswan Dam Displacement",
+            "period": "1960s",
+            "description": "Aswan High Dam flooded ancient Nubian homeland. Over 100,000 Nubians forcibly relocated. 44 villages submerged. Cultural trauma continues.",
+            "outcome": "Permanent displacement. Loss of homeland. Ongoing campaign for return rights."
+          },
+          {
+            "name": "Nubian Land Rights Movement",
+            "period": "2011-present",
+            "description": "Post-revolution activism for return to ancestral lands, constitutional recognition, and cultural rights. Some activists imprisoned.",
+            "outcome": "2014 constitution mentions Nubian rights but implementation limited. Struggle continues."
+          }
+        ]
+      },
+      "tradeHistory": {
+        "historical": "Ancient Nubia was gateway between Africa and Mediterranean. Traded gold, ivory, ebony, and slaves northward. Controlled Nile trade routes.",
+        "modern": "Tourism in Aswan, handicrafts, date cultivation. Many work in Cairo service industries. Diaspora remittances important.",
+        "partners": ["Ancient Egypt", "Mediterranean civilizations", "African interior kingdoms"]
+      },
+      "independenceHistory": {
+        "colonialPower": "Egypt (part of Egypt) / Britain (Sudan)",
+        "resistance": "Nubian identity movements ongoing. Post-2011 activism for land rights. No separate independence but internal autonomy demands.",
+        "independence": "Part of Egypt and Sudan at independence. Focus now on cultural recognition and return to ancestral lands.",
+        "keyFigures": ["Haggag Oddoul", "Various Nubian rights activists"]
+      },
+      "religiousHistory": {
+        "traditional": "Ancient Nubian polytheism worshipping Amun, Apedemak, and other gods. Built numerous pyramids and temples.",
+        "christianity": "Coptic Christianity from 6th century CE. Nubian Christian kingdoms (Nobatia, Makuria, Alodia) flourished for 800 years.",
+        "islam": "Gradual Islamization from 14th century. Now predominantly Sunni Muslim. Some syncretic practices survive.",
+        "current": "Predominantly Sunni Muslim with some folk practices. Small Christian minority."
+      },
+      "language": {
+        "name": "Nubian languages (Nobiin, Kenzi-Dongolawi)",
+        "speakers": "~500,000-1 million",
+        "greeting": "Mattor",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Aygi wéne?", "meaning": "How are you?" },
+          { "phrase": "Ayig adda", "meaning": "I am fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Kadis", "meaning": "Thank you" },
+          { "phrase": "Owwa", "meaning": "Yes" },
+          { "phrase": "Mmanna", "meaning": "No" }
+        ],
+        "family": "Nilo-Saharan (Eastern Sudanic)",
+        "writingSystem": "Old Nubian script (historical), Arabic script, Latin alphabet"
+      },
+      "famousPeople": [
+        { "name": "Taharqa", "role": "Pharaoh of Egypt and Kush (25th Dynasty)", "wikipedia": "https://en.wikipedia.org/wiki/Taharqa" },
+        { "name": "Haggag Oddoul", "role": "Writer and Nubian rights activist", "wikipedia": "https://en.wikipedia.org/wiki/Haggag_Hassan_Oddoul" },
+        { "name": "Mohamed Mounir", "role": "Singer 'The King' (part Nubian heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Mohamed_Mounir" }
+      ],
+      "sources": [
+        { "name": "Ethnologue - Nobiin", "url": "https://www.ethnologue.com/language/fia" },
+        { "name": "Wikipedia - Nubian people", "url": "https://en.wikipedia.org/wiki/Nubian_people" }
+      ],
+      "description": "The Nubians are an ancient people of the Nile Valley in southern Egypt and northern Sudan. Heirs to the Kingdom of Kush that once rivaled Egypt, they maintain a distinct identity despite displacement by the Aswan High Dam.",
+      "relatedTribes": ["egyptian-arab", "beja", "sudanese-arab"]
+    },
+    {
+      "id": "moroccan-arab",
+      "name": "Moroccan Arab",
+      "slug": "moroccan-arab",
+      "slugAliases": ["moroccan", "maghrebi"],
+      "youtubeVideoId": "yYz-CgQNLks",
+      "languageVideoId": "xb-qGqiXB3Y",
+      "countries": ["MA"],
+      "region": "Morocco (Plains, coastal cities, Saharan regions)",
+      "population": "~25 million",
+      "populationPercent": "~60-65% of Morocco",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 33.9, "lng": -6.9 },
+      "counties": ["Casablanca", "Rabat", "Fez", "Marrakech", "Tangier", "Oujda"],
+      "namePrefixes": ["Abd", "El-", "Ben", "Bou", "Si"],
+      "commonNames": {
+        "female": ["Fatima", "Khadija", "Meryem", "Aicha", "Salma", "Hind", "Nadia", "Laila", "Zineb", "Houda", "Loubna", "Naima", "Samira", "Amina", "Hanane"],
+        "male": ["Mohamed", "Youssef", "Ahmed", "Hamid", "Hassan", "Omar", "Rachid", "Driss", "Mustapha", "Brahim", "Abdellah", "Karim", "Said", "Jamal", "Aziz"]
+      },
+      "timeBasedNames": {
+        "night": ["Laila (night)"],
+        "morning": ["Sabah (morning)", "Nour (light)"],
+        "day": ["Shams (sun)"],
+        "evening": ["Maghrib (sunset/west)"]
+      },
+      "stereotypes": [
+        "Warm and hospitable",
+        "Skilled negotiators and traders",
+        "Proud of royal traditions",
+        "Known for culinary excellence",
+        "Passionate about football",
+        "Strong family values"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Expected to be providers and family heads",
+          "Sociable and hospitable",
+          "Protective of family honor",
+          "Strong café culture participation"
+        ],
+        "female": [
+          "Traditionally homemakers, increasingly professionals",
+          "Experts in Moroccan cuisine",
+          "Maintain family and social connections",
+          "Navigating modernity with tradition"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men worked as farmers, craftsmen, traders, and merchants. Expected to provide for family and manage external affairs. Strong café culture.",
+          "female": "Women managed elaborate households, raised children, and excelled in cuisine. Urban elite women more secluded historically."
+        },
+        "modern": {
+          "male": "Moroccan men work in diverse sectors. Café culture remains strong. Family provider role important but evolving.",
+          "female": "Major advances in women's workforce participation. 2004 Moudawana reforms improved women's rights. Education rates rising rapidly."
+        }
+      },
+      "culturalTraits": [
+        "Elaborate tea ceremony (mint tea)",
+        "Famous souks (markets) and medinas",
+        "Distinctive architecture (riads, zellige tiles)",
+        "Rich handicraft traditions",
+        "Gnawa music and Sufi traditions",
+        "Royal traditions and ceremonies"
+      ],
+      "funFacts": [
+        "Morocco's King Mohammed VI is descended from Prophet Muhammad",
+        "Moroccan mint tea is called 'Berber whiskey' humorously",
+        "Fez is home to the world's oldest university (Al-Qarawiyyin, 859 CE)",
+        "Morocco is the world's largest exporter of sardines",
+        "The 2022 World Cup team was first African team to reach semifinals"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous", "Tagine", "Msemmen (flatbread)", "Harira (soup)"],
+        "beverages": ["Mint tea (Atay b'naana)", "Fresh orange juice", "Coffee"],
+        "specialDishes": ["Pastilla (sweet-savory pie)", "Mechoui (roasted lamb)", "Rfissa", "Tanjia (Marrakech specialty)"],
+        "description": "Moroccan cuisine is one of the world's most diverse, blending Arab, Berber, Andalusian, and African influences. Tagines, couscous, and the ritual of mint tea define Moroccan hospitality."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch, dinner with family",
+        "mainMealTime": "Lunch (main meal), family gathering for dinner",
+        "eatingStyle": "Communal from tagine or couscous platter, right hand, bread for scooping",
+        "genderRules": "May eat separately in traditional homes, guests eat with host",
+        "taboos": ["Pork and alcohol forbidden", "Left hand not used", "Wasting bread sinful"],
+        "specialOccasions": "Couscous on Fridays, mechoui for celebrations, elaborate Ramadan iftars",
+        "hospitality": "Three glasses of mint tea, food always offered, refusal is offensive"
+      },
+      "traditionalDance": "Gnawa trance music, Chaabi, Andalusian classical",
+      "religion": "Islam (Sunni Maliki, near 100%)",
+      "traditionalReligion": {
+        "name": "Moroccan Islam",
+        "supremeDeity": "Allah (Sunni Islam)",
+        "spirits": ["Belief in djinn", "Baraka (divine blessing)", "Saints' tombs (zaouias)"],
+        "practices": ["Five pillars", "Sufi brotherhoods (Gnawa, Tijaniyya)", "Marabout veneration"],
+        "beliefs": "Maliki Sunni Islam with Sufi traditions. Strong belief in baraka (blessing). Saint veneration common."
+      },
+      "history": {
+        "origin": "Moroccan Arabs descend from Arab settlers who arrived with Islamic conquest (7th-8th centuries) and mixed with indigenous Berbers. Andalusian Muslims added after Spanish Reconquista. Arab identity dominant in plains and cities.",
+        "colonialEra": "French and Spanish protectorates (1912-1956). Sultan Mohammed V symbol of resistance. Rif War (1921-26) major conflict. Independence movement led by Istiqlal party.",
+        "independence": "Independence 1956. Mohammed V became king. Western Sahara conflict ongoing since 1975. Gradual democratization under Mohammed VI (1999-present).",
+        "keyEvents": [
+          "Islamic conquest (681-710 CE)",
+          "Almoravid Empire (1040-1147)",
+          "Almohad Empire (1121-1269)",
+          "Marinid Dynasty (1244-1465)",
+          "Saadian Dynasty - defeated Portuguese (1554-1659)",
+          "French/Spanish protectorates (1912)",
+          "Independence (1956)",
+          "Green March into Western Sahara (1975)"
+        ],
+        "conflicts": [
+          {
+            "name": "Battle of the Three Kings",
+            "period": "1578",
+            "description": "Moroccan forces defeated Portuguese King Sebastian at Alcácer Quibir. Three kings died. Ended Portuguese ambitions in Morocco.",
+            "outcome": "Moroccan independence preserved. Portugal weakened, soon annexed by Spain."
+          },
+          {
+            "name": "Rif War",
+            "period": "1921-1926",
+            "description": "Abd el-Krim's Rif Berbers vs Spain and France. Created short-lived Republic of the Rif. Innovative guerrilla warfare.",
+            "outcome": "Defeated by combined forces. But inspired anti-colonial movements worldwide."
+          },
+          {
+            "name": "Independence Struggle",
+            "period": "1944-1956",
+            "description": "Istiqlal party and Sultan Mohammed V led independence movement. 1953 French exiled the Sultan, sparking uprising.",
+            "outcome": "Independence 1956. Mohammed V returned as hero-king."
+          },
+          {
+            "name": "Western Sahara Conflict",
+            "period": "1975-present",
+            "description": "Morocco claims Western Sahara after Spanish withdrawal. Green March of 350,000 Moroccans. Polisario Front seeks independence.",
+            "outcome": "Ongoing. Morocco controls most territory. UN seeks referendum but status remains disputed."
+          }
+        ]
+      },
+      "tradeHistory": {
+        "historical": "Morocco controlled western trans-Saharan trade. Gold, slaves, salt routes. Major ports like Essaouira connected Africa to Europe. Famous for leather, textiles.",
+        "modern": "Phosphates (world's largest reserves), agriculture, textiles, automotive manufacturing, tourism. Major trade with EU and Africa.",
+        "partners": ["European Union", "Sub-Saharan Africa", "Gulf states", "USA", "China"]
+      },
+      "independenceHistory": {
+        "colonialPower": "France (protectorate 1912-1956), Spain (northern zone)",
+        "resistance": "Constant from 1912. Rif War showed fierce resistance. Sultan Mohammed V became independence symbol. Istiqlal party organized movement.",
+        "independence": "March 2, 1956 from France, April 7 from Spain. Retained monarchy. Hassan II consolidated power. Mohammed VI modernizing since 1999.",
+        "keyFigures": ["Sultan Mohammed V", "Allal al-Fassi", "Mehdi Ben Barka", "King Hassan II", "King Mohammed VI"]
+      },
+      "religiousHistory": {
+        "traditional": "Pre-Islamic Berber religions with nature worship.",
+        "christianity": "Roman North Africa was Christian. Largely disappeared after Islamic conquest, small expatriate community today.",
+        "islam": "Islamized from 7th century. Idrisid dynasty (788) was first Islamic. Almoravids, Almohads spread puritanical Islam. Maliki school dominant.",
+        "current": "Near 100% Sunni Muslim (Maliki school). Sufi traditions (Gnawa, Tijaniyya). King is 'Commander of the Faithful.'"
+      },
+      "language": {
+        "name": "Moroccan Arabic (Darija)",
+        "speakers": "~25-30 million",
+        "greeting": "Salaam / La bas?",
+        "greetingMeaning": "Peace / How are you?",
+        "additionalGreetings": [
+          { "phrase": "Kif dayr/dayra?", "meaning": "How are you? (m/f)" },
+          { "phrase": "La bas, hamdullah", "meaning": "Fine, praise God" },
+          { "phrase": "Marhba", "meaning": "Welcome" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Shukran", "meaning": "Thank you" },
+          { "phrase": "B'slama", "meaning": "Goodbye" },
+          { "phrase": "Inch'Allah", "meaning": "God willing" }
+        ],
+        "family": "Semitic (Afroasiatic)",
+        "writingSystem": "Arabic script"
+      },
+      "famousPeople": [
+        { "name": "King Mohammed VI", "role": "Current King of Morocco", "wikipedia": "https://en.wikipedia.org/wiki/Mohammed_VI_of_Morocco" },
+        { "name": "Hassan II", "role": "King of Morocco (1961-1999)", "wikipedia": "https://en.wikipedia.org/wiki/Hassan_II_of_Morocco" },
+        { "name": "Saad Lamjarred", "role": "Pop singer", "wikipedia": "https://en.wikipedia.org/wiki/Saad_Lamjarred" },
+        { "name": "Hakim Ziyech", "role": "Footballer", "wikipedia": "https://en.wikipedia.org/wiki/Hakim_Ziyech" },
+        { "name": "Fatima Mernissi", "role": "Feminist writer and sociologist", "wikipedia": "https://en.wikipedia.org/wiki/Fatima_Mernissi" }
+      ],
+      "sources": [
+        { "name": "Ethnologue - Moroccan Arabic", "url": "https://www.ethnologue.com/language/ary" },
+        { "name": "Wikipedia - Moroccans", "url": "https://en.wikipedia.org/wiki/Moroccans" }
+      ],
+      "description": "Moroccan Arabs form the majority of Morocco's population, blending Arab and Berber heritage. They are known for their distinctive dialect (Darija), elaborate cuisine, hospitality traditions, and the country's unique royal heritage.",
+      "relatedTribes": ["amazigh", "riffian", "sahrawi"]
+    },
+    {
+      "id": "tunisian-arab",
+      "name": "Tunisian Arab",
+      "slug": "tunisian-arab",
+      "slugAliases": ["tunisian"],
+      "youtubeVideoId": "zfBbEJVJJEk",
+      "languageVideoId": "GxGAfN7gV5Y",
+      "countries": ["TN"],
+      "region": "Tunisia (Coastal cities, Sahel, interior)",
+      "population": "~11.5 million",
+      "populationPercent": "~98% of Tunisia",
+      "genderRatio": { "male": 50, "female": 50 },
+      "mapCoordinates": { "lat": 36.8, "lng": 10.2 },
+      "counties": ["Tunis", "Sfax", "Sousse", "Kairouan", "Bizerte", "Gabès"],
+      "namePrefixes": ["Abd", "Ben", "Bou", "Si", "El-"],
+      "commonNames": {
+        "female": ["Fatma", "Amel", "Rim", "Sonia", "Leila", "Olfa", "Dorra", "Monia", "Hend", "Nesrine", "Asma", "Ines", "Lina", "Mariem", "Chaima"],
+        "male": ["Mohamed", "Ahmed", "Karim", "Fedi", "Hamdi", "Nabil", "Slim", "Hedi", "Tarek", "Bilel", "Amine", "Nizar", "Moez", "Anis", "Yassine"]
+      },
+      "timeBasedNames": {
+        "night": ["Layla"],
+        "morning": ["Sabah", "Nour"],
+        "day": ["Shams"],
+        "evening": ["Asr"]
+      },
+      "stereotypes": [
+        "Progressive and educated",
+        "Strong women's rights tradition",
+        "Mediterranean lifestyle",
+        "Hospitable and warm",
+        "Francophone cultural influence",
+        "Moderate religious practice"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Educated and cosmopolitan",
+          "Family-oriented but progressive",
+          "Café culture participants",
+          "Increasingly sharing domestic duties"
+        ],
+        "female": [
+          "Most progressive in Arab world",
+          "High education and workforce participation",
+          "Strong legal rights",
+          "Leaders in arts and professions"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men worked in agriculture, trade, crafts. Coastal men in fishing and maritime trade. Provided for families.",
+          "female": "Women managed households. Urban women had more seclusion. Rural women worked in agriculture alongside men."
+        },
+        "modern": {
+          "male": "Tunisian men in diverse professions. Sharing domestic roles more than other Arab countries. Café culture remains strong.",
+          "female": "Tunisian women among most liberated in Arab world. High education rates. Strong legal rights since 1956 Personal Status Code. President Kais Saied's wife, former constitutional law professor, shows progress."
+        }
+      },
+      "culturalTraits": [
+        "Strong French cultural influence",
+        "Mediterranean lifestyle and cuisine",
+        "Progressive gender policies since 1956",
+        "Rich Andalusian musical heritage",
+        "Famous for ceramics and textiles",
+        "Café and beach culture"
+      ],
+      "funFacts": [
+        "Tunisia was the first Arab country to abolish polygamy (1956)",
+        "The Tunisian revolution (2010-2011) sparked the entire Arab Spring",
+        "Ancient Carthage was in modern Tunisia and rivaled Rome",
+        "Tunisia has the highest percentage of women in parliament in the Arab world",
+        "Tunisian Arabic includes many French and Berber words"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous", "Brik (fried pastry with egg)", "Lablabi (chickpea soup)", "Slata Mechouia (grilled salad)"],
+        "beverages": ["Mint tea", "Turkish coffee", "Boukha (fig spirit)", "Citronnade"],
+        "specialDishes": ["Couscous with fish", "Ojja (eggs with tomato)", "Merguez sausages", "Makroudh (date pastry)"],
+        "description": "Tunisian cuisine blends Mediterranean, Arab, Berber, and French influences. Harissa (hot chili paste) is ubiquitous. Couscous with fish is a coastal specialty."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch, light dinner",
+        "mainMealTime": "Lunch with family, especially on Sundays",
+        "eatingStyle": "Communal from shared dishes, mix of hand and utensils",
+        "genderRules": "More mixed eating than other Arab countries, especially in cities",
+        "taboos": ["Pork forbidden by most", "Alcohol consumption varies by religious practice"],
+        "specialOccasions": "Couscous for weddings, elaborate Ramadan tables",
+        "hospitality": "Guests offered tea/coffee and food, elaborate hospitality tradition"
+      },
+      "traditionalDance": "Mezwed (folk music), Malouf (Andalusian classical)",
+      "religion": "Islam (Sunni Maliki, ~98%), small Jewish and Christian minorities",
+      "traditionalReligion": {
+        "name": "Tunisian Islam",
+        "supremeDeity": "Allah (Sunni Islam)",
+        "spirits": ["Belief in djinn", "Marabout saints", "Baraka tradition"],
+        "practices": ["Five pillars", "Sufi traditions", "Saint tomb visits"],
+        "beliefs": "Maliki Sunni Islam with moderate, tolerant tradition. Secularism strong since Bourguiba. Constitution guarantees religious freedom."
+      },
+      "history": {
+        "origin": "Tunisians descend from Berbers, Phoenicians (Carthage), Romans, Arabs, Turks, and Andalusian refugees. Arab identity dominant after Islamic conquest (7th century). Mix of civilizations unique.",
+        "colonialEra": "French protectorate (1881-1956). Relatively less violent colonization than Algeria. Habib Bourguiba led independence movement.",
+        "independence": "Independence March 20, 1956. Bourguiba became president, implemented radical modernization and women's rights. Ben Ali dictatorship (1987-2011) ended by revolution.",
+        "keyEvents": [
+          "Carthaginian civilization (814 BCE-146 BCE)",
+          "Roman province of Africa (146 BCE-439 CE)",
+          "Arab-Islamic conquest (670 CE)",
+          "Ottoman rule (1574-1881)",
+          "French protectorate (1881-1956)",
+          "Independence under Bourguiba (1956)",
+          "Personal Status Code (1956)",
+          "Jasmine Revolution (2010-2011)",
+          "Arab Spring origin (2011)"
+        ],
+        "conflicts": [
+          {
+            "name": "Punic Wars",
+            "period": "264-146 BCE",
+            "description": "Three wars between Carthage (Tunisia) and Rome. Hannibal famously crossed Alps with elephants. Rome eventually destroyed Carthage.",
+            "outcome": "Carthage destroyed (146 BCE). Tunisia became Roman province of Africa."
+          },
+          {
+            "name": "Independence Struggle",
+            "period": "1952-1956",
+            "description": "Neo-Destour party under Bourguiba led independence movement. French repression included internment camps. Relatively peaceful transition.",
+            "outcome": "Independence March 1956. Bourguiba became first president."
+          },
+          {
+            "name": "Jasmine Revolution",
+            "period": "December 2010-January 2011",
+            "description": "Mohamed Bouazizi's self-immolation sparked protests that toppled Ben Ali after 23 years. First successful Arab Spring revolution.",
+            "outcome": "Ben Ali fled. Democratic transition. New constitution 2014. Nobel Peace Prize to civil society groups."
+          },
+          {
+            "name": "Post-Revolution Terrorism",
+            "period": "2015-2019",
+            "description": "ISIS attacks on Bardo Museum (22 killed) and Sousse beach (38 killed) threatened tourism and democracy.",
+            "outcome": "Security forces defeated militants. Democracy survived though tested."
+          }
+        ]
+      },
+      "tradeHistory": {
+        "historical": "Carthage was Mediterranean trading power. Tunisia key in trans-Saharan trade. French colonial economy focused on agriculture and phosphates.",
+        "modern": "Tourism, phosphates, textiles, olive oil, automotive parts. Strong trade with EU (especially France, Italy).",
+        "partners": ["European Union", "France", "Italy", "Libya", "Germany"]
+      },
+      "independenceHistory": {
+        "colonialPower": "France (protectorate 1881-1956)",
+        "resistance": "Neo-Destour party under Bourguiba. Relatively peaceful compared to Algeria. General strikes and civil resistance.",
+        "independence": "March 20, 1956. Bourguiba became president. Radical modernization: abolished monarchy, women's rights, secular state.",
+        "keyFigures": ["Habib Bourguiba", "Farhat Hached", "Zine El Abidine Ben Ali", "Mohamed Bouazizi"]
+      },
+      "religiousHistory": {
+        "traditional": "Pre-Islamic Berber and Punic religions.",
+        "christianity": "Major early Christian center. St. Cyprian of Carthage. Largely disappeared after Islamic conquest.",
+        "islam": "Islamized from 7th century. Kairouan was first Islamic city in Africa, holy city. Maliki school dominant. Moderate tradition.",
+        "current": "~98% Sunni Muslim. Small Jewish community (Djerba). Secular constitution guarantees religious freedom."
+      },
+      "language": {
+        "name": "Tunisian Arabic (Tounsi/Derja)",
+        "speakers": "~11 million",
+        "greeting": "Aslema",
+        "greetingMeaning": "Hello / Peace",
+        "additionalGreetings": [
+          { "phrase": "Chneya ħwalek?", "meaning": "How are you?" },
+          { "phrase": "Labess, hamdullah", "meaning": "Fine, praise God" },
+          { "phrase": "Marhba bik", "meaning": "Welcome" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Yaatik essaha", "meaning": "Thank you (God give you health)" },
+          { "phrase": "Beslema", "meaning": "Goodbye" },
+          { "phrase": "Inshallah", "meaning": "God willing" }
+        ],
+        "family": "Semitic (Afroasiatic)",
+        "writingSystem": "Arabic script, Latin for informal"
+      },
+      "famousPeople": [
+        { "name": "Habib Bourguiba", "role": "Father of Independence, first President", "wikipedia": "https://en.wikipedia.org/wiki/Habib_Bourguiba" },
+        { "name": "Ibn Khaldun", "role": "Father of sociology (14th century)", "wikipedia": "https://en.wikipedia.org/wiki/Ibn_Khaldun" },
+        { "name": "Ons Jabeur", "role": "Tennis champion, first Arab Grand Slam finalist", "wikipedia": "https://en.wikipedia.org/wiki/Ons_Jabeur" },
+        { "name": "Claudia Cardinale", "role": "Actress (born in Tunisia)", "wikipedia": "https://en.wikipedia.org/wiki/Claudia_Cardinale" }
+      ],
+      "sources": [
+        { "name": "Ethnologue - Tunisian Arabic", "url": "https://www.ethnologue.com/language/aeb" },
+        { "name": "Wikipedia - Tunisians", "url": "https://en.wikipedia.org/wiki/Tunisians" }
+      ],
+      "description": "Tunisian Arabs are the people of Tunisia, known for their progressive society, Mediterranean culture, and historic role as birthplace of the Arab Spring. Tunisia pioneered women's rights in the Arab world and maintains a tolerant, moderate Islamic tradition.",
+      "relatedTribes": ["amazigh", "libyan-arab", "maltese"]
+    },
+    {
+      "id": "chaoui",
+      "name": "Chaoui",
+      "slug": "chaoui",
+      "slugAliases": ["shawiya", "aures-berber"],
+      "youtubeVideoId": "vqVf3LglB4k",
+      "languageVideoId": "fEi3FYkHPgY",
+      "countries": ["DZ"],
+      "region": "Aurès Mountains (Eastern Algeria)",
+      "population": "~3-4 million",
+      "populationPercent": "~8% of Algeria",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 35.1, "lng": 6.6 },
+      "counties": ["Batna", "Khenchela", "Tébessa", "Oum El Bouaghi", "Biskra"],
+      "namePrefixes": ["Ben", "Amar", "Mas", "Zid"],
+      "commonNames": {
+        "female": ["Djamila", "Louiza", "Fatma", "Houria", "Malika", "Naima", "Zohra", "Warda", "Lamia", "Hadjira"],
+        "male": ["Amar", "Mostefa", "Bachir", "Salah", "Ali", "Djamel", "Belkacem", "Larbi", "Messaoud", "Tahar"]
+      },
+      "timeBasedNames": {
+        "night": ["Tiziri"],
+        "morning": ["Tafukt"],
+        "day": ["Itri"],
+        "evening": ["Amellal"]
+      },
+      "stereotypes": [
+        "Fierce and proud warriors",
+        "Strong traditional values",
+        "Excellent horsemen",
+        "Guardians of mountain homeland",
+        "Resilient and independent",
+        "Known for revolutionary spirit"
+      ],
+      "genderStereotypes": {
+        "male": [
+          "Fierce defenders of homeland",
+          "Strong sense of honor",
+          "Traditional values",
+          "Warriors and farmers"
+        ],
+        "female": [
+          "Legendary warrior women (Kahina, Fatma N'Soumer)",
+          "Keepers of traditions",
+          "Strong and resilient",
+          "Producers of handicrafts"
+        ]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men defended mountain territory, farmed terraces, herded livestock. Known as fierce warriors who resisted all invaders.",
+          "female": "Women managed households, wove textiles, maintained traditions. Chaoui women were notably free and powerful - Queen Dihya (Kahina) is their ancestor."
+        },
+        "modern": {
+          "male": "Many work in cities but maintain connection to homeland. Military and security careers common. Pride in warrior heritage.",
+          "female": "Increasing education and professional work. Maintain strong identity. Handicraft cooperatives preserve traditions."
+        }
+      },
+      "culturalTraits": [
+        "Mountain fortress villages",
+        "Distinctive Chaoui music (Rahaba)",
+        "Traditional carpet weaving",
+        "Warrior heritage against Romans, Arabs, Turks, French",
+        "Distinctive dress and jewelry",
+        "Strong oral traditions"
+      ],
+      "funFacts": [
+        "Queen Dihya (Kahina) who resisted Arab conquest was likely Chaoui",
+        "The Aurès Mountains were the last region of Algeria to be conquered by France",
+        "The Algerian Revolution began in the Aurès on November 1, 1954",
+        "Chaoui women never wore the veil, maintaining pre-Islamic traditions",
+        "The ancient Numidian kings Massinissa and Jugurtha were from this region"
+      ],
+      "traditionalFood": {
+        "staples": ["Couscous", "Chakhchoukha (torn bread with stew)", "Aghrum (bread)", "Mountain herbs"],
+        "beverages": ["Mint tea", "Buttermilk", "Mountain spring water"],
+        "specialDishes": ["Chakhchoukha (signature dish)", "M'tewem (lamb with tomato)", "Rechta (noodles)"],
+        "description": "Chaoui cuisine features hearty mountain dishes. Chakhchoukha - torn flatbread with meat and chickpea stew - is the signature dish, traditionally made for celebrations."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Light breakfast, main lunch, family dinner",
+        "mainMealTime": "Lunch",
+        "eatingStyle": "Communal from shared dishes",
+        "genderRules": "Less strict separation than lowland Arabs",
+        "taboos": ["Pork forbidden"],
+        "specialOccasions": "Chakhchoukha for weddings and celebrations",
+        "hospitality": "Strong hospitality tradition, guests honored"
+      },
+      "traditionalDance": "Rahaba - collective dance with drums and flutes",
+      "religion": "Islam (Sunni), with pre-Islamic traditions surviving",
+      "traditionalReligion": {
+        "name": "Chaoui Traditional Beliefs",
+        "supremeDeity": "Now Islam, historically Amazigh nature gods",
+        "spirits": ["Mountain spirits", "Sacred springs", "Ancestor veneration"],
+        "practices": ["Islamic practices", "Some traditional festivals", "Saint veneration"],
+        "beliefs": "Syncretic Islam with pre-Islamic mountain traditions. Sacred places in mountains."
+      },
+      "history": {
+        "origin": "The Chaoui are Amazigh people who have inhabited the Aurès Mountains since ancient times. They are descendants of the Numidians who built kingdoms that rivaled Rome. Queen Dihya (Kahina) is their most famous ancestor.",
+        "colonialEra": "Last region of Algeria to fall to French (1850s). Fierce resistance led by figures like Fatma N'Soumer. Aurès was birthplace of Algerian Revolution (November 1, 1954).",
+        "independence": "Crucial role in independence war. Aurès was first wilayas to revolt. Many Chaoui leaders in FLN. Mostefa Ben Boulaïd led initial uprising.",
+        "keyEvents": [
+          "Numidian Kingdom era",
+          "Queen Dihya's resistance (7th century)",
+          "Ottoman era (16th-19th centuries)",
+          "French conquest (1850s)",
+          "Resistance of Fatma N'Soumer",
+          "Start of Revolution (November 1, 1954)",
+          "Independence (1962)"
+        ],
+        "conflicts": [
+          {
+            "name": "Dihya's Resistance",
+            "period": "680s-700s CE",
+            "description": "Queen Dihya (Kahina), likely Chaoui, led Berber resistance against Arab conquest. Ruled a kingdom and defeated Arab armies before finally being killed.",
+            "outcome": "Eventually defeated but became legendary symbol of Berber resistance."
+          },
+          {
+            "name": "French Conquest of Aurès",
+            "period": "1845-1879",
+            "description": "French struggled to conquer mountainous Aurès. Multiple expeditions needed. Resistance led by local leaders.",
+            "outcome": "Eventually conquered but Aurès remained restive. Chaoui never fully pacified."
+          },
+          {
+            "name": "Algerian Revolution Launch",
+            "period": "November 1, 1954",
+            "description": "Revolution began with coordinated attacks in Aurès led by Mostefa Ben Boulaïd. Aurès became Zone 1. Fierce guerrilla warfare.",
+            "outcome": "Aurès was revolutionary heartland. Independence achieved 1962."
+          }
+        ]
+      },
+      "tradeHistory": {
+        "historical": "Mountain people traded with Saharan caravans and coastal cities. Known for wool, livestock, and date production from oases.",
+        "modern": "Agriculture, livestock, some mining. Many migrate to cities for work. Handicrafts for tourist market.",
+        "partners": ["Saharan traders", "Coastal Algerians", "French colonial economy"]
+      },
+      "independenceHistory": {
+        "colonialPower": "France (1830-1962, fully conquered 1850s)",
+        "resistance": "Constant from French arrival. Aurès was birthplace of revolution. Mostefa Ben Boulaïd led 'Toussaint Rouge' (Red All Saints' Day) attacks November 1, 1954.",
+        "independence": "July 5, 1962. Aurès suffered heavy losses in war. Many Chaoui leaders in independent Algeria.",
+        "keyFigures": ["Queen Dihya (Kahina)", "Fatma N'Soumer", "Mostefa Ben Boulaïd", "Larbi Ben M'hidi", "Krim Belkacem"]
+      },
+      "religiousHistory": {
+        "traditional": "Pre-Islamic Amazigh religions with nature worship, ancestor veneration.",
+        "christianity": "Some Christianity in Roman era. St. Augustine era. Largely disappeared.",
+        "islam": "Islamized after Dihya's defeat (early 8th century). Maintained distinct traditions.",
+        "current": "Sunni Muslim with syncretic elements. Less strict than lowland Arabs historically."
+      },
+      "language": {
+        "name": "Tachawit (Shawiya)",
+        "speakers": "~3-4 million",
+        "greeting": "Azul",
+        "greetingMeaning": "Hello / Peace",
+        "additionalGreetings": [
+          { "phrase": "Amek tellid?", "meaning": "How are you?" },
+          { "phrase": "Labas", "meaning": "Fine" }
+        ],
+        "commonPhrases": [
+          { "phrase": "Tanemmirt", "meaning": "Thank you" },
+          { "phrase": "Awah", "meaning": "Yes" }
+        ],
+        "family": "Berber (Afroasiatic)",
+        "writingSystem": "Tifinagh, Latin, Arabic"
+      },
+      "famousPeople": [
+        { "name": "Queen Dihya (Kahina)", "role": "Berber warrior queen", "wikipedia": "https://en.wikipedia.org/wiki/Kahina" },
+        { "name": "Mostefa Ben Boulaïd", "role": "Father of Algerian Revolution", "wikipedia": "https://en.wikipedia.org/wiki/Mostefa_Ben_Boula%C3%AFd" },
+        { "name": "Fatma N'Soumer", "role": "19th century resistance leader", "wikipedia": "https://en.wikipedia.org/wiki/Lalla_Fatma_N%27Soumer" },
+        { "name": "Cheb Khaled", "role": "King of Rai music (Chaoui heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Khaled_(musician)" }
+      ],
+      "sources": [
+        { "name": "Ethnologue - Tachawit", "url": "https://www.ethnologue.com/language/shy" },
+        { "name": "Wikipedia - Chaoui people", "url": "https://en.wikipedia.org/wiki/Chaoui_people" }
+      ],
+      "description": "The Chaoui are an Amazigh people of the Aurès Mountains in eastern Algeria. Known for their fierce warrior tradition, they produced legendary resistance figures from Queen Dihya to the leaders who launched Algeria's independence war.",
+      "relatedTribes": ["amazigh", "kabyle", "mzab", "tuareg"]
     }
   ]
 }
