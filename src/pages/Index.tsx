@@ -155,7 +155,7 @@ const Index = () => {
                       {flag}
                     </span>)}
                 </div>
-                <img src={logo} alt="TribeGuess - Tribe Guesser Logo" className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle" width={128} height={128} />
+                <img src={logo} alt="TribeGuess - Tribe Guesser Logo" className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle" width={128} height={128} loading="eager" fetchPriority="high" decoding="async" />
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
                 Guess Her <span className="gradient-gold-text glow-tribe">Tribe</span>
