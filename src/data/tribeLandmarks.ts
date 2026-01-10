@@ -2212,6 +2212,53 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       description: "Forested highlands of the Nyanga Province, traditional Punu homeland. Contains waterfalls, sacred groves, and ancestral burial sites.",
       coordinates: { lat: -2.5, lng: 11.2 }
     }
+  ],
+
+  // ============ ANGOLA ============
+  kimbundu: [
+    {
+      name: "Mbanza Kongo",
+      type: "historical",
+      description: "Ancient capital of the Kongo Kingdom, UNESCO World Heritage Site. Center of one of Africa's most powerful pre-colonial states, with Kimbundu cultural connections.",
+      coordinates: { lat: -6.27, lng: 14.25 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/M%27banza-Kongo",
+      unescoStatus: "world-heritage"
+    },
+    {
+      name: "Luanda Old Town",
+      type: "historical",
+      description: "Historic center of Luanda, founded 1575 on Kimbundu territory. Contains colonial architecture and markets reflecting centuries of Kimbundu-Portuguese interaction.",
+      coordinates: { lat: -8.84, lng: 13.23 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Luanda"
+    },
+    {
+      name: "Fortress of São Miguel",
+      type: "historical",
+      description: "16th-century Portuguese fortress overlooking Luanda Bay. Symbol of colonial rule and Kimbundu resistance. Now houses the Museum of the Armed Forces.",
+      coordinates: { lat: -8.82, lng: 13.22 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Fortress_of_S%C3%A3o_Miguel"
+    },
+    {
+      name: "Dondo",
+      type: "historical",
+      description: "Historic Kimbundu town on the Cuanza River. Important trading post during the slave trade era and center of traditional Kimbundu culture.",
+      coordinates: { lat: -9.69, lng: 14.43 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Dondo,_Angola"
+    },
+    {
+      name: "Cuanza River",
+      type: "natural",
+      description: "Major river central to Kimbundu history and spirituality. Traditional fishing grounds and historic route for slave trade. Sacred in Kimbundu cosmology.",
+      coordinates: { lat: -9.37, lng: 13.16 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Cuanza_River"
+    },
+    {
+      name: "Pungo Andongo",
+      type: "sacred",
+      description: "Dramatic rock formations sacred to the Kimbundu people. Site of Queen Nzinga's legendary resistance against Portuguese forces in the 17th century.",
+      coordinates: { lat: -9.67, lng: 15.58 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Pungo_Andongo"
+    }
   ]
 };
 
