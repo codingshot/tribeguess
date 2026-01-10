@@ -4,6 +4,8 @@ import { Footer } from '@/components/Footer';
 import { GuessForm } from '@/components/GuessForm';
 import { TribeResultCard } from '@/components/TribeResultCard';
 import { TopTribesCarousel } from '@/components/TopTribesCarousel';
+import { FeaturedBlogsCarousel } from '@/components/FeaturedBlogsCarousel';
+import { FeaturedRecipesCarousel } from '@/components/FeaturedRecipesCarousel';
 import { GlobalOriginCard } from '@/components/GlobalOriginCard';
 import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
 import { Globe, ArrowRight, Lightbulb } from 'lucide-react';
@@ -184,6 +186,12 @@ const Index = () => {
             
             {/* Top Tribes Carousel */}
             <TopTribesCarousel />
+            
+            {/* Featured Blogs Carousel */}
+            <FeaturedBlogsCarousel />
+            
+            {/* Featured Recipes Carousel */}
+            <FeaturedRecipesCarousel />
             
             <aside className="mt-8 sm:mt-10 p-3 sm:p-4 bg-secondary/50 rounded-xl max-w-md mx-auto">
               <p className="text-xs text-muted-foreground">

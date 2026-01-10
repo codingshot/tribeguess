@@ -421,25 +421,25 @@ The following regions have limited or no tribal coverage:
 | 🇸🇸 South Sudan | Dinka (detailed), Nuer, Shilluk, Azande | Major gaps |
 | 🇸🇩 Sudan | Beja, Nubians (detailed), Fur | Limited coverage |
 
-#### Central Africa
-| Country | Missing Tribes | Notes |
-|---------|---------------|-------|
-| 🇨🇩 DR Congo | Luba, Mongo, Kongo (detailed), Twa | Need full cultural profiles |
-| 🇨🇬 Congo-Brazzaville | Bakongo, Mbochi, Sangha | No entries |
-| 🇹🇩 Chad | Sara, Arabs, Gorane | Basic Toubou only |
-| 🇨🇫 CAR | Gbaya, Banda, Mandjia | No entries |
-| 🇬🇦 Gabon | Fang (detailed), Punu, Myene | Basic entries |
-| 🇬🇶 Equatorial Guinea | Bubi, Fang (EG variant) | Basic entries |
-| 🇦🇴 Angola | Ovimbundu, Kimbundu, Bakongo | No entries |
+#### Central Africa ✅ RECENTLY EXPANDED
+| Country | Status | Notes |
+|---------|--------|-------|
+| 🇨🇩 DR Congo | ✅ Added | Luba, Mongo, Kongo, Bakongo with full profiles |
+| 🇨🇬 Congo-Brazzaville | ✅ Added | Mbochi profile added |
+| 🇹🇩 Chad | Partial | Toubou, Zaghawa added; Sara, Arabs needed |
+| 🇨🇫 CAR | ✅ Added | Gbaya, Banda, Mandjia profiles added |
+| 🇬🇦 Gabon | ✅ Added | Fang, Punu, Myene, Mitsogo profiles |
+| 🇬🇶 Equatorial Guinea | ✅ Added | Bubi, Fang profiles |
+| 🇦🇴 Angola | ❌ Missing | Ovimbundu, Kimbundu, Bakongo needed |
 
-#### North Africa
-| Country | Missing Tribes | Notes |
-|---------|---------------|-------|
-| 🇪🇬 Egypt | Nubian (Egyptian), Bedouin, Berber | No entries |
-| 🇱🇾 Libya | Berber/Amazigh, Tuareg (LY), Toubou (LY) | No entries |
-| 🇹🇳 Tunisia | Berber/Amazigh (Tunisian) | No entries |
-| 🇩🇿 Algeria | Kabyle, Chaoui, Mozabite, Tuareg (DZ) | No entries |
-| 🇲🇦 Morocco | Berber/Amazigh (Moroccan), Sahrawi | No entries |
+#### North Africa ✅ RECENTLY ADDED
+| Country | Status | Notes |
+|---------|--------|-------|
+| 🇪🇬 Egypt | ✅ Added | Egyptian Arab, Nubian profiles with full cultural data |
+| 🇱🇾 Libya | ❌ Missing | Berber/Amazigh, Tuareg (LY), Toubou (LY) needed |
+| 🇹🇳 Tunisia | ✅ Added | Tunisian Arab profile with history and conflicts |
+| 🇩🇿 Algeria | ✅ Added | Amazigh, Kabyle, Chaoui profiles with detailed history |
+| 🇲🇦 Morocco | ✅ Added | Moroccan Arab, Amazigh profiles |
 
 ### 🟡 Incomplete Tribe Profiles (Medium Priority)
 
