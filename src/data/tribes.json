@@ -7876,9 +7876,10 @@
         { "country": "CG", "population": "~100,000", "percent": "2%" }
       ],
       "famousPeople": [
-        { "name": "Ange-Félix Patassé", "role": "President of CAR (1993-2003)", "wikipedia": "https://en.wikipedia.org/wiki/Ange-F%C3%A9lix_Patass%C3%A9" },
-        { "name": "François Bozizé", "role": "President of CAR (2003-2013)", "wikipedia": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Boziz%C3%A9" },
-        { "name": "Karnu", "role": "Prophet and leader of Kara War", "wikipedia": "https://en.wikipedia.org/wiki/Kongo_Wara" }
+        { "name": "Ange-Félix Patassé", "role": "President of CAR (1993-2003)", "wikipedia": "https://en.wikipedia.org/wiki/Ange-F%C3%A9lix_Patass%C3%A9", "birthYear": 1937, "deathYear": 2011, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ange-Félix_Patassé.jpg/220px-Ange-Félix_Patassé.jpg" },
+        { "name": "François Bozizé", "role": "President of CAR (2003-2013)", "wikipedia": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Boziz%C3%A9", "birthYear": 1946, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/François_Bozizé.jpg/220px-François_Bozizé.jpg" },
+        { "name": "Karnu", "role": "Prophet and leader of Kara War anti-colonial rebellion", "wikipedia": "https://en.wikipedia.org/wiki/Kongo_Wara", "deathYear": 1928 },
+        { "name": "Catherine Samba-Panza", "role": "Interim President of CAR (2014-2016), Africa's first female transitional head of state", "wikipedia": "https://en.wikipedia.org/wiki/Catherine_Samba-Panza", "birthYear": 1954, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Catherine_Samba-Panza.jpg/220px-Catherine_Samba-Panza.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Gbaya", "url": "https://en.wikipedia.org/wiki/Gbaya_people" }, { "name": "Britannica - Gbaya", "url": "https://www.britannica.com/topic/Gbaya" }],
       "description": "The Gbaya are Central Africa's largest ethnic group, known for the heroic Kara War anti-colonial rebellion (1928-1931), egalitarian society, and producing multiple CAR presidents.",
@@ -9557,8 +9558,11 @@
       },
       "language": { "name": "Ewe (Eʋegbe)", "speakers": "~7 million", "greeting": "Ndi na wo!", "greetingMeaning": "Good morning/Hello!", "family": "Gbe (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "famousPeople": [
-        { "name": "Kofi Annan", "role": "UN Secretary-General (Ewe-Fante heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Kofi_Annan" },
-        { "name": "Sylvanus Olympio", "role": "First President of Togo", "wikipedia": "https://en.wikipedia.org/wiki/Sylvanus_Olympio" }
+        { "name": "Kofi Annan", "role": "UN Secretary-General, Nobel Peace Prize laureate", "wikipedia": "https://en.wikipedia.org/wiki/Kofi_Annan", "birthYear": 1938, "deathYear": 2018, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Kofi_Annan.jpg/220px-Kofi_Annan.jpg" },
+        { "name": "Sylvanus Olympio", "role": "First President of Togo", "wikipedia": "https://en.wikipedia.org/wiki/Sylvanus_Olympio", "birthYear": 1902, "deathYear": 1963, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sylvanus_Olympio.jpg/220px-Sylvanus_Olympio.jpg" },
+        { "name": "Michael Essien", "role": "Football star, Chelsea and Ghana legend", "wikipedia": "https://en.wikipedia.org/wiki/Michael_Essien", "birthYear": 1982, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michael_Essien.jpg/220px-Michael_Essien.jpg" },
+        { "name": "Tony Allen", "role": "Afrobeat drummer, Fela Kuti's drummer", "wikipedia": "https://en.wikipedia.org/wiki/Tony_Allen_(musician)", "birthYear": 1940, "deathYear": 2020, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Tony_Allen.jpg/220px-Tony_Allen.jpg" },
+        { "name": "Komla Dumor", "role": "BBC journalist, Africa editor", "wikipedia": "https://en.wikipedia.org/wiki/Komla_Dumor", "birthYear": 1972, "deathYear": 2014, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Komla_Dumor.jpg/220px-Komla_Dumor.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Ewe people", "url": "https://en.wikipedia.org/wiki/Ewe_people" }],
       "description": "The Ewe are a Gbe-speaking people of Ghana and Togo, the originators of Vodun religion, renowned for their complex drumming traditions and textile artistry.",
@@ -9606,8 +9610,11 @@
       },
       "language": { "name": "Bamileke languages (Ghomálá', Medumba, etc.)", "speakers": "~4 million", "greeting": "Mbom nkwé!", "greetingMeaning": "Good morning!", "family": "Grassfields Bantu (Niger-Congo)", "writingSystem": "Latin alphabet" },
       "famousPeople": [
-        { "name": "André Fotso", "role": "Business magnate and politician", "wikipedia": null },
-        { "name": "Victor Fotso", "role": "Businessman", "wikipedia": "https://en.wikipedia.org/wiki/Victor_Fotso" }
+        { "name": "André Fotso", "role": "Business magnate and politician", "wikipedia": null, "birthYear": 1953 },
+        { "name": "Victor Fotso", "role": "Industrialist, Cameroon's wealthiest businessman", "wikipedia": "https://en.wikipedia.org/wiki/Victor_Fotso", "birthYear": 1930, "deathYear": 2020, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Victor_Fotso.jpg/220px-Victor_Fotso.jpg" },
+        { "name": "Manu Dibango", "role": "Jazz saxophonist, 'Soul Makossa' creator", "wikipedia": "https://en.wikipedia.org/wiki/Manu_Dibango", "birthYear": 1933, "deathYear": 2020, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Manu_Dibango_2010.jpg/220px-Manu_Dibango_2010.jpg" },
+        { "name": "André-Marie Mbida", "role": "First Prime Minister of Cameroon", "wikipedia": "https://en.wikipedia.org/wiki/Andr%C3%A9-Marie_Mbida", "birthYear": 1917, "deathYear": 1980 },
+        { "name": "Samuel Eto'o", "role": "Football legend, 4-time African Footballer of the Year", "wikipedia": "https://en.wikipedia.org/wiki/Samuel_Eto%27o", "birthYear": 1981, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Samuel_Eto%27o_2011.jpg/220px-Samuel_Eto%27o_2011.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Bamileke people", "url": "https://en.wikipedia.org/wiki/Bamileke_people" }],
       "description": "The Bamileke are the entrepreneurial people of Cameroon's Grassfields, organized into over 100 chiefdoms, known for elaborate beadwork, powerful secret societies, and business acumen.",
@@ -11845,9 +11852,11 @@
         { "country": "CM", "population": "~600,000", "percent": "2%" }
       ],
       "famousPeople": [
-        { "name": "Teodoro Obiang Nguema Mbasogo", "role": "President of Equatorial Guinea (1979-present), world's longest-ruling head of state", "wikipedia": "https://en.wikipedia.org/wiki/Teodoro_Obiang_Nguema_Mbasogo" },
-        { "name": "Francisco Macías Nguema", "role": "First President of Equatorial Guinea (1968-1979), notorious dictator", "wikipedia": "https://en.wikipedia.org/wiki/Francisco_Mac%C3%ADas_Nguema" },
-        { "name": "Pierre-Claver Akendengué", "role": "Gabonese musician and poet", "wikipedia": "https://en.wikipedia.org/wiki/Pierre-Claver_Akendeng%C3%A9" }
+        { "name": "Teodoro Obiang Nguema Mbasogo", "role": "President of Equatorial Guinea (1979-present), world's longest-ruling head of state", "wikipedia": "https://en.wikipedia.org/wiki/Teodoro_Obiang_Nguema_Mbasogo", "birthYear": 1942, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Teodoro_Obiang_Nguema_Mbasogo.jpg/220px-Teodoro_Obiang_Nguema_Mbasogo.jpg" },
+        { "name": "Francisco Macías Nguema", "role": "First President of Equatorial Guinea (1968-1979)", "wikipedia": "https://en.wikipedia.org/wiki/Francisco_Mac%C3%ADas_Nguema", "birthYear": 1924, "deathYear": 1979 },
+        { "name": "Pierre-Claver Akendengué", "role": "Gabonese musician and poet, 'The African Brassens'", "wikipedia": "https://en.wikipedia.org/wiki/Pierre-Claver_Akendeng%C3%A9", "birthYear": 1943, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Pierre-Claver_Akendengue.jpg/220px-Pierre-Claver_Akendengue.jpg" },
+        { "name": "Patience Dabany", "role": "Gabonese singer, former First Lady of Gabon", "wikipedia": "https://en.wikipedia.org/wiki/Patience_Dabany", "birthYear": 1944, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Patience_Dabany.jpg/220px-Patience_Dabany.jpg" },
+        { "name": "Ali Bongo Ondimba", "role": "President of Gabon (2009-2023)", "wikipedia": "https://en.wikipedia.org/wiki/Ali_Bongo_Ondimba", "birthYear": 1959, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ali_Bongo_Ondimba.jpg/220px-Ali_Bongo_Ondimba.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Fang people", "url": "https://en.wikipedia.org/wiki/Fang_people" }, { "name": "Fang Art", "url": "https://www.metmuseum.org/toah/hd/fang/hd_fang.htm" }],
       "description": "The Fang are the dominant ethnic group of Equatorial Guinea and a major force in Gabon. Their powerful sculptures inspired Picasso and the Cubists, while their Bwiti religion with iboga ceremonies remains vital today.",
@@ -13301,7 +13310,10 @@
         }
       },
       "famousPeople": [
-        { "name": "Kaya Magan Cissé", "role": "Legendary founder of Ghana Empire", "wikipedia": "https://en.wikipedia.org/wiki/Kaya_Magan_Ciss%C3%A9" }
+        { "name": "Kaya Magan Cissé", "role": "Legendary founder of Ghana Empire", "wikipedia": "https://en.wikipedia.org/wiki/Kaya_Magan_Ciss%C3%A9", "deathYear": 790 },
+        { "name": "Cheikh Hamidou Kane", "role": "Author of 'Ambiguous Adventure', influential African novelist", "wikipedia": "https://en.wikipedia.org/wiki/Cheikh_Hamidou_Kane", "birthYear": 1928, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cheikh_Hamidou_Kane.jpg/220px-Cheikh_Hamidou_Kane.jpg" },
+        { "name": "Ousmane Sembène", "role": "Pioneer of African cinema, novelist (Soninke-Wolof)", "wikipedia": "https://en.wikipedia.org/wiki/Ousmane_Semb%C3%A8ne", "birthYear": 1923, "deathYear": 2007, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ousmane_Sembene.jpg/220px-Ousmane_Sembene.jpg" },
+        { "name": "Souleymane Cissé", "role": "Acclaimed Malian film director", "wikipedia": "https://en.wikipedia.org/wiki/Souleymane_Ciss%C3%A9", "birthYear": 1940, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Souleymane_Cissé.jpg/220px-Souleymane_Cissé.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Soninke people", "url": "https://en.wikipedia.org/wiki/Soninke_people" }],
       "description": "The Soninke are the founders of the ancient Ghana Empire, renowned for controlling West Africa's gold trade and now famous for their migration networks connecting Sahel villages to European cities.",
@@ -13432,8 +13444,12 @@
         }
       },
       "famousPeople": [
-        { "name": "Salif Keita", "role": "World-renowned singer 'Golden Voice of Africa'", "wikipedia": "https://en.wikipedia.org/wiki/Salif_Keita" },
-        { "name": "Rokia Traoré", "role": "Grammy-nominated singer-songwriter", "wikipedia": "https://en.wikipedia.org/wiki/Rokia_Traor%C3%A9" }
+        { "name": "Salif Keita", "role": "World-renowned singer 'Golden Voice of Africa'", "wikipedia": "https://en.wikipedia.org/wiki/Salif_Keita", "birthYear": 1949, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Salif_Keita.jpg/220px-Salif_Keita.jpg" },
+        { "name": "Rokia Traoré", "role": "Grammy-nominated singer-songwriter", "wikipedia": "https://en.wikipedia.org/wiki/Rokia_Traor%C3%A9", "birthYear": 1974, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Rokia_Traoré.jpg/220px-Rokia_Traoré.jpg" },
+        { "name": "Ibrahim Boubacar Keïta", "role": "President of Mali (2013-2020)", "wikipedia": "https://en.wikipedia.org/wiki/Ibrahim_Boubacar_Ke%C3%AFta", "birthYear": 1945, "deathYear": 2022, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Ibrahim_Boubacar_Keïta.jpg/220px-Ibrahim_Boubacar_Keïta.jpg" },
+        { "name": "Moussa Traoré", "role": "President of Mali (1968-1991)", "wikipedia": "https://en.wikipedia.org/wiki/Moussa_Traor%C3%A9", "birthYear": 1936, "deathYear": 2020 },
+        { "name": "Biton Coulibaly", "role": "Founder of Ségou Empire (1712)", "wikipedia": "https://en.wikipedia.org/wiki/Biton_Coulibaly", "birthYear": 1689, "deathYear": 1755 },
+        { "name": "Oumou Sangaré", "role": "Grammy-winning singer, 'Songbird of Wassoulou'", "wikipedia": "https://en.wikipedia.org/wiki/Oumou_Sangar%C3%A9", "birthYear": 1968, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Oumou_Sangaré.jpg/220px-Oumou_Sangaré.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Bambara people", "url": "https://en.wikipedia.org/wiki/Bambara_people" }],
       "description": "The Bambara are Mali's largest ethnic group, founders of great kingdoms, and custodians of rich artistic and religious traditions that have shaped West African culture.",
@@ -13563,7 +13579,10 @@
         }
       },
       "famousPeople": [
-        { "name": "Ogotemmêli", "role": "Sage who revealed Dogon cosmology to Marcel Griaule", "wikipedia": null }
+        { "name": "Ogotemmêli", "role": "Sage who revealed Dogon cosmology to Marcel Griaule", "wikipedia": null, "birthYear": 1880, "deathYear": 1965 },
+        { "name": "Amadou Hampâté Bâ", "role": "Writer, ethnologist, diplomat (documented West African oral traditions)", "wikipedia": "https://en.wikipedia.org/wiki/Amadou_Hamp%C3%A2t%C3%A9_B%C3%A2", "birthYear": 1900, "deathYear": 1991, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Amadou_Hampate_Ba.jpg/220px-Amadou_Hampate_Ba.jpg" },
+        { "name": "Sékou Ogobara Dolo", "role": "Anthropologist, curator of Dogon culture", "wikipedia": null, "birthYear": 1956 },
+        { "name": "Mamadou Dembele", "role": "Dogon mask carver, exhibited internationally", "wikipedia": null, "birthYear": 1948 }
       ],
       "sources": [{ "name": "Wikipedia - Dogon people", "url": "https://en.wikipedia.org/wiki/Dogon_people" }, { "name": "UNESCO - Cliff of Bandiagara", "url": "https://whc.unesco.org/en/list/516" }],
       "description": "The Dogon are famous for their cliff-dwelling villages on the Bandiagara Escarpment, complex cosmology, and spectacular mask traditions that have captivated scholars and visitors for generations.",
@@ -13697,8 +13716,10 @@
         { "country": "NE", "population": "~1.5 million", "percent": "6%" }
       ],
       "famousPeople": [
-        { "name": "Askia Muhammad", "role": "Greatest emperor of Songhai (1493-1528)", "wikipedia": "https://en.wikipedia.org/wiki/Askia_Muhammad_I" },
-        { "name": "Sonni Ali", "role": "Founder of Songhai Empire (1464-1492)", "wikipedia": "https://en.wikipedia.org/wiki/Sonni_Ali" }
+        { "name": "Askia Muhammad", "role": "Greatest emperor of Songhai (1493-1528)", "wikipedia": "https://en.wikipedia.org/wiki/Askia_Muhammad_I", "birthYear": 1442, "deathYear": 1538 },
+        { "name": "Sonni Ali", "role": "Founder of Songhai Empire (1464-1492)", "wikipedia": "https://en.wikipedia.org/wiki/Sonni_Ali", "birthYear": 1430, "deathYear": 1492 },
+        { "name": "Hama Amadou", "role": "Prime Minister of Niger (1995-1996, 1999-2007)", "wikipedia": "https://en.wikipedia.org/wiki/Hama_Amadou", "birthYear": 1950, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hama_Amadou.jpg/220px-Hama_Amadou.jpg" },
+        { "name": "Mahamadou Issoufou", "role": "President of Niger (2011-2021)", "wikipedia": "https://en.wikipedia.org/wiki/Mahamadou_Issoufou", "birthYear": 1952, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mahamadou_Issoufou_2014.jpg/220px-Mahamadou_Issoufou_2014.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Songhai people", "url": "https://en.wikipedia.org/wiki/Songhai_people" }, { "name": "Songhai Empire", "url": "https://en.wikipedia.org/wiki/Songhai_Empire" }],
       "description": "The Songhai are heirs to one of Africa's greatest empires, which at its height controlled the trans-Saharan trade and made Timbuktu a world center of Islamic learning.",
@@ -13839,10 +13860,12 @@
         }
       },
       "famousPeople": [
-        { "name": "Patrice Lumumba", "role": "First Prime Minister of DRC (Luba-Katanga heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Patrice_Lumumba" },
-        { "name": "Étienne Tshisekedi", "role": "Opposition leader and Prime Minister", "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi" },
-        { "name": "Félix Tshisekedi", "role": "Current President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi" },
-        { "name": "Dikembe Mutombo", "role": "NBA Hall of Fame basketball player", "wikipedia": "https://en.wikipedia.org/wiki/Dikembe_Mutombo" }
+        { "name": "Patrice Lumumba", "role": "First Prime Minister of DRC, independence hero", "wikipedia": "https://en.wikipedia.org/wiki/Patrice_Lumumba", "birthYear": 1925, "deathYear": 1961, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Patrice_Lumumba_official_portrait.jpg/220px-Patrice_Lumumba_official_portrait.jpg" },
+        { "name": "Étienne Tshisekedi", "role": "Opposition leader and Prime Minister", "wikipedia": "https://en.wikipedia.org/wiki/%C3%89tienne_Tshisekedi", "birthYear": 1932, "deathYear": 2017, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Etienne_Tshisekedi.jpg/220px-Etienne_Tshisekedi.jpg" },
+        { "name": "Félix Tshisekedi", "role": "Current President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Tshisekedi", "birthYear": 1963, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Félix_Tshisekedi.jpg/220px-Félix_Tshisekedi.jpg" },
+        { "name": "Dikembe Mutombo", "role": "NBA Hall of Fame basketball player", "wikipedia": "https://en.wikipedia.org/wiki/Dikembe_Mutombo", "birthYear": 1966, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Dikembe_Mutombo.jpg/220px-Dikembe_Mutombo.jpg" },
+        { "name": "Papa Wemba", "role": "Rumba singer, 'King of Congolese Rumba'", "wikipedia": "https://en.wikipedia.org/wiki/Papa_Wemba", "birthYear": 1949, "deathYear": 2016, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Papa_Wemba.jpg/220px-Papa_Wemba.jpg" },
+        { "name": "Albert Kalonji", "role": "Leader of Mining State of South Kasai", "wikipedia": "https://en.wikipedia.org/wiki/Albert_Kalonji", "birthYear": 1929, "deathYear": 2015 }
       ],
       "sources": [{ "name": "Wikipedia - Luba people", "url": "https://en.wikipedia.org/wiki/Luba_people" }, { "name": "Luba Empire", "url": "https://en.wikipedia.org/wiki/Luba_Empire" }],
       "description": "The Luba are one of Central Africa's most historically significant peoples, founders of the powerful Luba Empire known for its sophisticated art, political system, and cultural traditions.",
@@ -13968,8 +13991,10 @@
         }
       },
       "famousPeople": [
-        { "name": "Mobutu Sese Seko", "role": "President of Zaire (1965-1997)", "wikipedia": "https://en.wikipedia.org/wiki/Mobutu_Sese_Seko" },
-        { "name": "Antoine Gizenga", "role": "Prime Minister and independence leader", "wikipedia": "https://en.wikipedia.org/wiki/Antoine_Gizenga" }
+        { "name": "Mobutu Sese Seko", "role": "President of Zaire (1965-1997)", "wikipedia": "https://en.wikipedia.org/wiki/Mobutu_Sese_Seko", "birthYear": 1930, "deathYear": 1997, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Mobutu.jpg/220px-Mobutu.jpg" },
+        { "name": "Antoine Gizenga", "role": "Prime Minister and independence leader", "wikipedia": "https://en.wikipedia.org/wiki/Antoine_Gizenga", "birthYear": 1925, "deathYear": 2019, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Antoine_Gizenga.jpg/220px-Antoine_Gizenga.jpg" },
+        { "name": "Jean-Pierre Bemba", "role": "Vice President, politician", "wikipedia": "https://en.wikipedia.org/wiki/Jean-Pierre_Bemba", "birthYear": 1962, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Jean-Pierre_Bemba.jpg/220px-Jean-Pierre_Bemba.jpg" },
+        { "name": "Tshala Muana", "role": "Singer, 'Queen of Mutuashi' music", "wikipedia": "https://en.wikipedia.org/wiki/Tshala_Muana", "birthYear": 1958, "deathYear": 2022, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Tshala_Muana.jpg/220px-Tshala_Muana.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Mongo people", "url": "https://en.wikipedia.org/wiki/Mongo_people" }],
       "description": "The Mongo are the largest ethnic cluster in the Congo Basin rainforest, comprising many subgroups who share linguistic and cultural heritage as expert river navigators and forest dwellers.",
@@ -14115,10 +14140,11 @@
         { "country": "AO", "population": "~3 million", "percent": "10%" }
       ],
       "famousPeople": [
-        { "name": "Joseph Kasa-Vubu", "role": "First President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Kasa-Vubu" },
-        { "name": "Simon Kimbangu", "role": "Prophet and founder of Kimbanguism", "wikipedia": "https://en.wikipedia.org/wiki/Simon_Kimbangu" },
-        { "name": "Queen Nzinga", "role": "17th century warrior queen of Ndongo", "wikipedia": "https://en.wikipedia.org/wiki/Nzinga_of_Ndongo_and_Matamba" },
-        { "name": "Miriam Makeba", "role": "Singer (of Xhosa and Swazi heritage, but 'Makeba' is Kongo origin)", "wikipedia": "https://en.wikipedia.org/wiki/Miriam_Makeba" }
+        { "name": "Joseph Kasa-Vubu", "role": "First President of DRC", "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Kasa-Vubu", "birthYear": 1910, "deathYear": 1969, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Joseph_Kasa-Vubu.jpg/220px-Joseph_Kasa-Vubu.jpg" },
+        { "name": "Simon Kimbangu", "role": "Prophet and founder of Kimbanguism", "wikipedia": "https://en.wikipedia.org/wiki/Simon_Kimbangu", "birthYear": 1887, "deathYear": 1951, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Simon_Kimbangu.jpg/220px-Simon_Kimbangu.jpg" },
+        { "name": "Queen Nzinga", "role": "17th century warrior queen of Ndongo and Matamba", "wikipedia": "https://en.wikipedia.org/wiki/Nzinga_of_Ndongo_and_Matamba", "birthYear": 1583, "deathYear": 1663, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Queen_Nzinga.jpg/220px-Queen_Nzinga.jpg" },
+        { "name": "Denis Sassou Nguesso", "role": "President of Republic of Congo", "wikipedia": "https://en.wikipedia.org/wiki/Denis_Sassou_Nguesso", "birthYear": 1943, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Denis_Sassou_Nguesso.jpg/220px-Denis_Sassou_Nguesso.jpg" },
+        { "name": "Fally Ipupa", "role": "Congolese singer, dancer, songwriter", "wikipedia": "https://en.wikipedia.org/wiki/Fally_Ipupa", "birthYear": 1977, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Fally_Ipupa.jpg/220px-Fally_Ipupa.jpg" }
       ],
       "sources": [{ "name": "Wikipedia - Kongo people", "url": "https://en.wikipedia.org/wiki/Kongo_people" }, { "name": "Kingdom of Kongo", "url": "https://en.wikipedia.org/wiki/Kingdom_of_Kongo" }],
       "description": "The Kongo are one of Africa's most historically significant peoples, heirs to the Kingdom of Kongo which had diplomatic relations with European powers and was among the first African kingdoms to adopt Christianity.",
