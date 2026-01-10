@@ -7943,6 +7943,351 @@ const eastAfricanRecipes: Recipe[] = [
       "Don't pierce the chilies unless you want it very spicy",
       "This soup is even better the next day"
     ]
+  },
+  // ============ MORE KENYAN & HORN TRIBES ============
+  {
+    id: "meru-mukimo",
+    name: "Meru Mukimo (Mashed Peas and Potatoes)",
+    tribeSlug: "meru",
+    tribeName: "Meru",
+    category: "staple",
+    description: "The Meru version of the famous highland mashed dish, combining peas, potatoes, and maize with local greens.",
+    culturalSignificance: "Mukimo is central to Meru celebrations and everyday meals. The green color symbolizes fertility and the abundance of Mount Kenya's slopes.",
+    historicalContext: "The Meru people settled on Mount Kenya's eastern slopes, developing agricultural traditions similar to their Kikuyu neighbors but with distinctive variations.",
+    youtubeVideoId: "5cuGbmPtLGE",
+    prepTime: "30 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Potatoes", amount: "1 kg", notes: "Peeled and cubed" },
+      { item: "Green peas", amount: "2 cups" },
+      { item: "Maize kernels", amount: "1 cup" },
+      { item: "Pumpkin leaves or spinach", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Butter", amount: "2 tablespoons" }
+    ],
+    instructions: [
+      "Boil peas until soft (about 1 hour if dried).",
+      "Boil potatoes in salted water until tender.",
+      "Boil maize kernels until soft.",
+      "Steam pumpkin leaves until wilted.",
+      "Combine all ingredients and mash together.",
+      "Add butter and continue mashing until smooth.",
+      "Season with salt and serve hot."
+    ],
+    tips: [
+      "The dish should be thoroughly mashed with no lumps",
+      "Traditional preparation uses a wooden pestle",
+      "Serve with nyama choma or stew"
+    ]
+  },
+  {
+    id: "embu-irio",
+    name: "Embu Irio (Mashed Vegetables)",
+    tribeSlug: "embu",
+    tribeName: "Embu",
+    category: "staple",
+    description: "The Embu version of the Central Kenya mashed dish, featuring local varieties of peas and beans.",
+    culturalSignificance: "Irio is everyday food for the Embu, eaten with most meals. It's a hearty dish that sustained farmers working the fertile slopes of Mount Kenya.",
+    historicalContext: "The Embu people are closely related to the Kikuyu and Meru, sharing agricultural traditions on Mount Kenya's southeastern slopes.",
+    youtubeVideoId: "5cuGbmPtLGE",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Potatoes", amount: "1 kg" },
+      { item: "Green peas or njahi (lablab beans)", amount: "2 cups" },
+      { item: "Maize", amount: "1 cup" },
+      { item: "Pumpkin leaves", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak and boil beans until tender.",
+      "Boil potatoes separately until soft.",
+      "Cook maize until tender.",
+      "Steam pumpkin leaves briefly.",
+      "Combine all and mash together thoroughly.",
+      "Season with salt and serve."
+    ],
+    tips: [
+      "Njahi beans give a distinctive purple tinge",
+      "Can be served with soured milk",
+      "Leftovers can be fried for breakfast"
+    ]
+  },
+  {
+    id: "taita-mboga",
+    name: "Taita Mboga (Traditional Greens)",
+    tribeSlug: "taita",
+    tribeName: "Taita",
+    category: "staple",
+    description: "Traditional Taita leafy greens cooked with coconut milk and spices, reflecting the tribe's coastal highland position.",
+    culturalSignificance: "The Taita Hills provided abundant wild greens that became central to their cuisine. The addition of coconut shows coastal trade influence.",
+    historicalContext: "The Taita settled in the hills bearing their name, developing a cuisine that bridges coastal and highland traditions.",
+    youtubeVideoId: "O2VkjZH3d4k",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Mixed greens (spinach, kale)", amount: "500g" },
+      { item: "Coconut milk", amount: "1 cup" },
+      { item: "Onion", amount: "1 medium" },
+      { item: "Tomatoes", amount: "2" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Wash and chop greens finely.",
+      "Sauté onion until soft.",
+      "Add tomatoes and cook until soft.",
+      "Add greens and stir.",
+      "Pour in coconut milk.",
+      "Simmer until greens are tender.",
+      "Season and serve with ugali."
+    ],
+    tips: [
+      "Don't overcook - greens should stay vibrant",
+      "Fresh coconut milk is best",
+      "Can add groundnuts for protein"
+    ]
+  },
+  {
+    id: "teso-atap",
+    name: "Atap (Teso Millet Bread)",
+    tribeSlug: "teso",
+    tribeName: "Teso",
+    category: "staple",
+    description: "Traditional Teso millet bread, a dense flatbread that was the staple food before maize became common.",
+    culturalSignificance: "Atap was the original staple of the Teso people before colonial introduction of maize. It represents their agricultural heritage.",
+    historicalContext: "The Teso are Nilotic people who spread from Uganda into western Kenya. Millet cultivation was central to their traditional economy.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "30 minutes",
+    cookTime: "20 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Millet flour", amount: "3 cups" },
+      { item: "Water", amount: "1.5 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Mix millet flour with salt.",
+      "Gradually add water, kneading to form stiff dough.",
+      "Divide into balls and flatten into thick discs.",
+      "Cook on dry griddle until browned on both sides.",
+      "Serve with meat stew or vegetables."
+    ],
+    tips: [
+      "The bread should be dense but not dry",
+      "Traditional version uses stone-ground millet",
+      "Can be stored for several days"
+    ]
+  },
+  {
+    id: "mijikenda-wali",
+    name: "Wali wa Nazi (Mijikenda Coconut Rice)",
+    tribeSlug: "mijikenda",
+    tribeName: "Mijikenda",
+    category: "staple",
+    description: "Fragrant rice cooked in coconut milk, the signature dish of Kenya's nine coastal tribes known collectively as Mijikenda.",
+    culturalSignificance: "Coconut rice is everyday food along the Kenyan coast. The Mijikenda's access to coconut palms made this a staple.",
+    historicalContext: "The Mijikenda ('Nine Tribes') have lived on Kenya's coast for centuries, developing a cuisine rich in coconut and seafood.",
+    youtubeVideoId: "I3XTDXy1BfI",
+    prepTime: "10 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Rice", amount: "2 cups" },
+      { item: "Coconut milk", amount: "2 cups" },
+      { item: "Water", amount: "1 cup" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Cardamom pods", amount: "3" }
+    ],
+    instructions: [
+      "Wash rice thoroughly.",
+      "Combine coconut milk and water in pot.",
+      "Add cardamom and salt, bring to boil.",
+      "Add rice, stir once.",
+      "Reduce heat to low, cover tightly.",
+      "Cook 20 minutes until rice is fluffy.",
+      "Fluff with fork and serve."
+    ],
+    tips: [
+      "Use thick first-press coconut milk for richest flavor",
+      "Don't stir after adding rice",
+      "Serve with fish curry or meat stew"
+    ]
+  },
+  {
+    id: "nuer-wal",
+    name: "Wal (Nuer Sorghum Porridge)",
+    tribeSlug: "nuer",
+    tribeName: "Nuer",
+    category: "staple",
+    description: "Traditional sorghum porridge of the Nuer people of South Sudan, eaten with soured milk or meat.",
+    culturalSignificance: "Wal is the daily staple of the Nuer, a cattle-herding people who supplement their milk diet with sorghum during harvest.",
+    historicalContext: "The Nuer, like their Dinka neighbors, are Nilotic pastoralists. Sorghum cultivation provides the grain base for their otherwise cattle-centered diet.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "5 minutes",
+    cookTime: "30 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Sorghum flour", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Soured milk", amount: "For serving" }
+    ],
+    instructions: [
+      "Bring water to boil.",
+      "Gradually add sorghum flour, stirring constantly.",
+      "Reduce heat and continue stirring.",
+      "Cook until thick and pulls away from sides.",
+      "Shape into mound.",
+      "Serve with soured milk or meat stew."
+    ],
+    tips: [
+      "Consistency should be very thick",
+      "Traditionally eaten with fingers",
+      "Fermented milk is the traditional accompaniment"
+    ]
+  },
+  {
+    id: "mursi-sorghum",
+    name: "Mursi Sorghum Balls",
+    tribeSlug: "mursi",
+    tribeName: "Mursi",
+    category: "staple",
+    description: "Simple sorghum dough balls made by the Mursi people of Ethiopia's Omo Valley, eaten with stews or blood.",
+    culturalSignificance: "The Mursi are agro-pastoralists, growing sorghum along the Omo River. This simple preparation is their daily bread.",
+    historicalContext: "The Mursi, famous for women's lip plates, maintain traditional food ways in one of Africa's most remote regions.",
+    youtubeVideoId: "K8h1QGwTJQc",
+    prepTime: "10 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Sorghum flour", amount: "2 cups" },
+      { item: "Boiling water", amount: "1.5 cups" },
+      { item: "Salt", amount: "Pinch" }
+    ],
+    instructions: [
+      "Boil water with salt.",
+      "Remove from heat and add sorghum flour.",
+      "Stir vigorously until dough forms.",
+      "Knead briefly when cool enough to handle.",
+      "Form into small balls.",
+      "Serve with stew, vegetables, or cattle blood."
+    ],
+    tips: [
+      "Work quickly while dough is hot",
+      "Balls should be dense and firm",
+      "Traditional preparation uses grinding stones"
+    ]
+  },
+  {
+    id: "hamar-honey",
+    name: "Hamar Honey Wine",
+    tribeSlug: "hamar",
+    tribeName: "Hamar",
+    category: "beverage",
+    description: "Traditional honey mead made by the Hamar people, served at ceremonies including the famous bull jumping ritual.",
+    culturalSignificance: "Honey wine is central to Hamar celebrations. It's served during the Ukuli (bull jumping) ceremony that marks a boy's transition to manhood.",
+    historicalContext: "The Hamar of the Omo Valley are cattle herders who also keep bees. Honey is highly prized for ceremonial drinks.",
+    youtubeVideoId: "9DvQbJf9LuY",
+    prepTime: "30 minutes",
+    cookTime: "Fermentation: 5-7 days",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Wild honey", amount: "1 kg" },
+      { item: "Water", amount: "4 liters" },
+      { item: "Gesho (buckthorn bark)", amount: "100g", notes: "Traditional fermenting agent" }
+    ],
+    instructions: [
+      "Dissolve honey in warm water.",
+      "Add gesho bark or leaves.",
+      "Pour into fermenting gourd or container.",
+      "Cover loosely and store in warm place.",
+      "Ferment for 5-7 days, tasting daily.",
+      "Strain and serve when desired sweetness/strength reached."
+    ],
+    tips: [
+      "Wild forest honey gives best flavor",
+      "Longer fermentation = stronger drink",
+      "Traditionally served in calabash gourds"
+    ]
+  },
+  {
+    id: "karo-fish",
+    name: "Karo Grilled Omo Fish",
+    tribeSlug: "karo",
+    tribeName: "Karo",
+    category: "special",
+    description: "Fresh fish from the Omo River grilled simply over coals. The Karo practice flood-retreat farming and fishing.",
+    culturalSignificance: "The Karo, famous for their body painting, live along the Omo River and rely on its fish for protein.",
+    historicalContext: "With only about 1,500 members, the Karo are one of Africa's smallest tribes. They combine fishing with flood-retreat agriculture.",
+    youtubeVideoId: "kUPsklj3o3s",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Whole river fish", amount: "2 large" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Hot peppers", amount: "Optional" }
+    ],
+    instructions: [
+      "Clean and gut fish, leaving whole.",
+      "Score sides with diagonal cuts.",
+      "Rub with salt inside and out.",
+      "Build hot coal fire.",
+      "Grill fish over coals, turning once.",
+      "Fish is done when flesh flakes easily.",
+      "Serve immediately with sorghum porridge."
+    ],
+    tips: [
+      "Fresh fish is essential - same-day catch",
+      "Hot coals, not flames, for even cooking",
+      "Simple seasoning lets fish flavor shine"
+    ]
+  },
+  {
+    id: "ogiek-honey",
+    name: "Ogiek Forest Honey",
+    tribeSlug: "ogiek",
+    tribeName: "Ogiek",
+    category: "special",
+    description: "Wild forest honey harvested by the Ogiek, Kenya's indigenous forest-dwelling people and master beekeepers.",
+    culturalSignificance: "Honey is the heart of Ogiek culture and economy. They are expert beekeepers who have harvested Mau Forest honey for centuries.",
+    historicalContext: "The Ogiek won a landmark human rights case in 2017 for their ancestral forest lands. Honey gathering remains central to their identity.",
+    youtubeVideoId: "lBZnL1fSz54",
+    prepTime: "Varies (harvest)",
+    cookTime: "None",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Wild beehives", amount: "In forest trees" },
+      { item: "Traditional climbing vines", amount: "For tree climbing" },
+      { item: "Smoking materials", amount: "To calm bees" }
+    ],
+    instructions: [
+      "Locate wild bee colonies in tall forest trees.",
+      "Climb using traditional vine techniques.",
+      "Use smoke to calm bees.",
+      "Carefully extract honeycomb.",
+      "Descend with honey in bark containers.",
+      "Process: strain honey from comb.",
+      "Store in calabash gourds."
+    ],
+    tips: [
+      "Ogiek traditional knowledge is passed through generations",
+      "Best honey harvested during specific seasons",
+      "Sustainable practices ensure bee colony survival"
+    ]
   }
 ];
 
@@ -8518,6 +8863,146 @@ const southernAfricanRecipes: Recipe[] = [
       "Oil must be right temperature - too hot burns outside before inside cooks",
       "Don't crowd the pot - fry 2-3 at a time",
       "Best eaten fresh and warm"
+    ]
+  },
+  // ============ BASOTHO & SWAZI RECIPES ============
+  {
+    id: "papa-le-moroho",
+    name: "Papa le Moroho (Basotho Pap with Greens)",
+    tribeSlug: "basotho",
+    tribeName: "Basotho",
+    category: "staple",
+    description: "The national dish of Lesotho - stiff maize porridge served with wild spinach. Simple, nutritious, and deeply traditional.",
+    culturalSignificance: "Papa (pap) is the foundation of Basotho cuisine. Eaten at every meal, it represents sustenance and community in the mountain kingdom.",
+    historicalContext: "The Basotho settled in the Maloti Mountains under King Moshoeshoe I. Their cuisine adapted to the harsh highland environment with hearty, warming dishes.",
+    youtubeVideoId: "Y0FvV8yHHVE",
+    prepTime: "10 minutes",
+    cookTime: "30 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Maize meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Wild spinach (moroho)", amount: "500g" },
+      { item: "Onion", amount: "1" },
+      { item: "Tomato", amount: "1" }
+    ],
+    instructions: [
+      "Boil water with salt.",
+      "Gradually add maize meal, stirring constantly.",
+      "Cook on low heat 25 minutes, stirring often.",
+      "For moroho: Sauté onion, add tomato.",
+      "Add washed greens and cook until wilted.",
+      "Season with salt.",
+      "Serve papa with moroho on the side."
+    ],
+    tips: [
+      "Papa should be stiff enough to shape",
+      "Traditional moroho uses wild mountain greens",
+      "Can add peanut butter to greens for richness"
+    ]
+  },
+  {
+    id: "likhobe",
+    name: "Likhobe (Basotho Samp and Beans)",
+    tribeSlug: "basotho",
+    tribeName: "Basotho",
+    category: "staple",
+    description: "Hearty Basotho dish of samp (crushed maize) cooked with beans. A warming, protein-rich staple for cold mountain winters.",
+    culturalSignificance: "Likhobe is comfort food in Lesotho, providing sustenance during the cold winter months in the highlands.",
+    historicalContext: "Samp (likhobe) was introduced to Southern Africa centuries ago. The Basotho adopted it enthusiastically, adding beans for protein.",
+    youtubeVideoId: "fE0DuXu53Pk",
+    prepTime: "8 hours (soaking)",
+    cookTime: "3 hours",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Samp (crushed maize)", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Sugar beans", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Butter", amount: "2 tablespoons", notes: "Optional" }
+    ],
+    instructions: [
+      "Soak samp and beans separately overnight.",
+      "Drain and rinse both.",
+      "Combine in large pot, cover with fresh water.",
+      "Bring to boil, then reduce to simmer.",
+      "Cook 2-3 hours until both are tender.",
+      "Add salt and butter if using.",
+      "Serve hot as main dish or side."
+    ],
+    tips: [
+      "Long soaking reduces cooking time",
+      "Add more water as needed during cooking",
+      "Traditionally eaten with meat or gravy"
+    ]
+  },
+  {
+    id: "sishwala",
+    name: "Sishwala (Swazi Thick Porridge)",
+    tribeSlug: "swazi",
+    tribeName: "Swazi",
+    category: "staple",
+    description: "Traditional Swazi thick maize porridge, the foundation of every Swazi meal. Similar to pap but with distinctive preparation.",
+    culturalSignificance: "Sishwala is central to Swazi food culture. No ceremony or celebration is complete without it. It's the food that binds Swazi families together.",
+    historicalContext: "The Swazi Kingdom is one of Africa's last absolute monarchies. Traditional food ways, including sishwala, remain central to national identity.",
+    youtubeVideoId: "Y0FvV8yHHVE",
+    prepTime: "5 minutes",
+    cookTime: "25 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "White maize meal", amount: "2 cups" },
+      { item: "Water", amount: "4 cups" },
+      { item: "Salt", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Bring water to rolling boil.",
+      "Add salt.",
+      "Slowly pour in maize meal while stirring vigorously.",
+      "Reduce heat and continue stirring.",
+      "Cook 20-25 minutes until thick and smooth.",
+      "Shape into mound on serving plate.",
+      "Serve with meat, vegetables, or sour milk."
+    ],
+    tips: [
+      "Constant stirring prevents lumps",
+      "Should be thicker than breakfast porridge",
+      "Traditional Swazi serve with emasi (soured milk)"
+    ]
+  },
+  {
+    id: "emasi-emabele",
+    name: "Emasi Emabele (Swazi Soured Milk with Sorghum)",
+    tribeSlug: "swazi",
+    tribeName: "Swazi",
+    category: "beverage",
+    description: "Traditional Swazi fermented milk mixed with sorghum meal. A nutritious drink-food that's been sustaining Swazis for generations.",
+    culturalSignificance: "Emasi is deeply valued in Swazi culture. Cattle are central to Swazi wealth, and their milk products are treasured.",
+    historicalContext: "Like many African cattle cultures, the Swazi developed sophisticated milk fermentation. Emasi keeps without refrigeration and is highly nutritious.",
+    youtubeVideoId: "oNDwxXWM5To",
+    prepTime: "2-3 days (fermentation)",
+    cookTime: "None",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Fresh whole milk", amount: "2 liters" },
+      { item: "Sorghum flour", amount: "2 tablespoons", notes: "Optional" },
+      { item: "Calabash gourd", amount: "For fermenting", notes: "Traditional container" }
+    ],
+    instructions: [
+      "Pour fresh milk into clean calabash or container.",
+      "Cover loosely and leave at room temperature.",
+      "Let ferment 2-3 days until thick and sour.",
+      "Shake or stir well before serving.",
+      "Can mix in sorghum flour for thickness.",
+      "Serve cold as drink or with sishwala."
+    ],
+    tips: [
+      "Traditional calabash imparts unique flavor",
+      "Consistency should be like thick buttermilk",
+      "Fermentation time varies with temperature"
     ]
   }
 ];
