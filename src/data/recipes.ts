@@ -4643,7 +4643,7 @@ export const recipes: Recipe[] = [
     description: "Rich soup made from palm fruit extract. The signature dish of the Niger Delta peoples.",
     culturalSignificance: "Banga soup represents Ijaw mastery of the palm tree - they use every part. It's served at important ceremonies and is a source of cultural pride.",
     historicalContext: "The Ijaw have lived in the Niger Delta for thousands of years, developing a unique riverine culture. Banga soup showcases their indigenous use of palm fruit, distinct from palm oil processing.",
-    youtubeVideoId: "Vu7y0aD8lqw",
+    youtubeVideoId: "a52Hmi_w57g",
     prepTime: "1 hour",
     cookTime: "1.5 hours",
     servings: 8,
@@ -6254,7 +6254,7 @@ export const recipes: Recipe[] = [
     description: "Creamy chickpea flour stew spiced with berbere. The everyday comfort food of Ethiopian fasting and beyond.",
     culturalSignificance: "Shiro is eaten on fasting days (no meat/dairy) but loved every day. It's affordable, nutritious, and universally beloved across Ethiopia.",
     historicalContext: "During the many fasting periods of Ethiopian Orthodox Christianity (over 200 days a year), shiro became essential. It provides protein from legumes during meat-free periods.",
-    youtubeVideoId: "WjJJ0zxGHjg",
+    youtubeVideoId: "L4Rw0ZkwMOA",
     prepTime: "10 minutes",
     cookTime: "30 minutes",
     servings: 4,
@@ -6284,6 +6284,267 @@ export const recipes: Recipe[] = [
       "Constant stirring prevents lumps",
       "Should be thick but pourable",
       "Drizzle with oil before serving for traditional finish"
+    ]
+  },
+
+  // ============ SOMALI RECIPES (Horn of Africa) ============
+  {
+    id: "somali-bariis",
+    name: "Bariis Iskukaris (Somali Rice)",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "special",
+    description: "Fragrant Somali spiced rice with meat, featuring xawaash (Somali spice blend). The centerpiece of Somali celebrations and family gatherings.",
+    culturalSignificance: "Bariis is served at every Somali celebration - weddings, Eid, and family gatherings. The xawaash spice blend is passed down through generations, and each family has their own secret recipe.",
+    historicalContext: "Somali cuisine reflects centuries of trade across the Indian Ocean. Spices from India, Arabia, and East Africa blend into xawaash. Basmati rice became central to Somali food through these ancient trade connections with South Asia.",
+    youtubeVideoId: "gOKGCiGqmlI",
+    prepTime: "1 hour (soaking)",
+    cookTime: "45 minutes",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Basmati rice", amount: "3 cups", notes: "Washed and soaked for 1 hour" },
+      { item: "Beef or goat", amount: "500g", notes: "Cubed" },
+      { item: "Onion", amount: "2 large", notes: "Sliced" },
+      { item: "Xawaash spice", amount: "2-3 tablespoons", notes: "Somali spice blend" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "1 tablespoon", notes: "Minced" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Cardamom pods", amount: "4-5" },
+      { item: "Cinnamon stick", amount: "1" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Soak rice in water for at least 1 hour, then drain.",
+      "In a large pot, brown meat with onions in oil until golden.",
+      "Add garlic, ginger, and cook until fragrant.",
+      "Add xawaash, cumin, cardamom, cinnamon, and tomato paste. Stir well.",
+      "Add water to cover meat and simmer until tender (30-40 minutes).",
+      "Parboil rice separately until half-cooked. Drain.",
+      "Layer rice over the meat mixture.",
+      "Add more water if needed (should come just below rice level).",
+      "Cover tightly and cook on low heat until rice is done (15-20 minutes).",
+      "Fluff gently and serve with banana and salad."
+    ],
+    tips: [
+      "The bottom layer (xabag) should be slightly crispy - this is the prized part",
+      "Xawaash can be made at home with cumin, coriander, turmeric, cardamom, cinnamon, and cloves",
+      "Traditionally served with banana slices on the side"
+    ],
+    variations: [
+      "Bariis iyo Digaag (with chicken)",
+      "Bariis iyo Hilib Ari (with goat meat)"
+    ]
+  },
+  {
+    id: "somali-suqaar",
+    name: "Suqaar (Somali Sautéed Meat)",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "special",
+    description: "Tender cubed beef or chicken sautéed with vegetables and Somali spices. A quick, flavorful dish served with rice or flatbread.",
+    culturalSignificance: "Suqaar is everyday Somali comfort food - quick to prepare but packed with flavor. It's served at breakfast with canjeero or at dinner with rice.",
+    historicalContext: "Suqaar showcases the Somali mastery of meat preparation. As pastoral nomads, Somalis developed numerous techniques for cooking beef, goat, and camel, each highlighting the quality of their livestock.",
+    youtubeVideoId: "psABYXyNlTQ",
+    prepTime: "15 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Beef or chicken", amount: "500g", notes: "Cubed small" },
+      { item: "Onion", amount: "1 large", notes: "Diced" },
+      { item: "Bell pepper", amount: "1", notes: "Diced" },
+      { item: "Tomatoes", amount: "2 medium", notes: "Chopped" },
+      { item: "Garlic", amount: "3 cloves", notes: "Minced" },
+      { item: "Xawaash spice", amount: "1 tablespoon" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Coriander powder", amount: "1 teaspoon" },
+      { item: "Vegetable oil", amount: "3 tablespoons" },
+      { item: "Fresh cilantro", amount: "For garnish" },
+      { item: "Salt and pepper", amount: "To taste" }
+    ],
+    instructions: [
+      "Season meat with xawaash, cumin, coriander, salt, and pepper.",
+      "Heat oil in a large pan over high heat.",
+      "Add meat and sear until browned on all sides.",
+      "Add onion and garlic, cook until softened.",
+      "Add bell pepper and tomatoes.",
+      "Reduce heat and cook until vegetables are tender and sauce thickens.",
+      "Garnish with fresh cilantro.",
+      "Serve with rice, canjeero, or chapati."
+    ],
+    tips: [
+      "Cut meat into small, uniform pieces for even cooking",
+      "High heat is key for good sear",
+      "Can add potatoes or carrots for a heartier dish"
+    ]
+  },
+  {
+    id: "somali-canjeero",
+    name: "Canjeero (Somali Flatbread)",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "staple",
+    description: "Spongy, fermented flatbread similar to Ethiopian injera but sweeter. The foundation of Somali breakfast.",
+    culturalSignificance: "Canjeero is eaten every morning in Somali households, typically with tea, honey, and butter (subag). It's a symbol of Somali hospitality.",
+    historicalContext: "While similar to Ethiopian injera, Somali canjeero has a distinct sweeter taste and is made with different flour blends. It reflects the shared culinary heritage of the Horn of Africa while maintaining Somali identity.",
+    youtubeVideoId: "upwo318A830",
+    prepTime: "12 hours (fermentation)",
+    cookTime: "30 minutes",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "All-purpose flour", amount: "2 cups" },
+      { item: "Cornmeal", amount: "1/2 cup" },
+      { item: "Yeast", amount: "1 teaspoon" },
+      { item: "Sugar", amount: "2 tablespoons" },
+      { item: "Warm water", amount: "3 cups" },
+      { item: "Salt", amount: "1/2 teaspoon" }
+    ],
+    instructions: [
+      "Mix flour, cornmeal, yeast, and sugar in a large bowl.",
+      "Gradually add warm water, whisking until smooth batter forms.",
+      "Cover and let ferment overnight (8-12 hours) at room temperature.",
+      "The next day, add salt and mix. Batter should be bubbly.",
+      "Heat a non-stick pan over medium heat.",
+      "Pour batter in a thin layer, starting from the center.",
+      "Cover and cook until the top is set and bubbly (don't flip).",
+      "Remove and stack on a plate. Serve with honey and butter."
+    ],
+    tips: [
+      "The longer fermentation gives more tangy flavor",
+      "Batter should be thinner than pancake batter",
+      "Cook only on one side - the bubbles create the signature texture"
+    ]
+  },
+
+  // ============ OROMO RECIPES (Ethiopia) ============
+  {
+    id: "oromo-kitfo",
+    name: "Kitfo (Ethiopian Raw Beef)",
+    tribeSlug: "oromo",
+    tribeName: "Oromo",
+    category: "special",
+    description: "Minced raw beef seasoned with mitmita (chili spice) and niter kibbeh (spiced butter). Ethiopia's beloved delicacy, especially treasured by the Gurage but enjoyed nationwide.",
+    culturalSignificance: "Kitfo is associated with celebrations and special occasions. Eating it raw (leb leb) is traditional, though it can be lightly cooked (kitfo betam leb leb). It's considered a dish of honor served to important guests.",
+    historicalContext: "Kitfo has been part of Ethiopian cuisine for centuries, particularly among the Gurage people. The dish represents Ethiopian cattle-herding traditions and the cultural significance of beef. The berbere and niter kibbeh that season it reflect Ethiopia's ancient spice trade.",
+    youtubeVideoId: "xyDaVnScJe4",
+    prepTime: "20 minutes",
+    cookTime: "10 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Fresh lean beef", amount: "500g", notes: "Very freshly minced" },
+      { item: "Niter kibbeh (spiced butter)", amount: "1/2 cup", notes: "Melted" },
+      { item: "Mitmita", amount: "2 tablespoons", notes: "Ethiopian chili spice" },
+      { item: "Korerima (Ethiopian cardamom)", amount: "1 teaspoon", notes: "Ground" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Ensure beef is extremely fresh - buy from a trusted butcher.",
+      "Mince the beef very finely or have the butcher do it.",
+      "Warm the niter kibbeh until just melted - not hot.",
+      "In a warm bowl, combine the minced beef with warm butter.",
+      "Add mitmita, korerima, and salt.",
+      "Mix gently but thoroughly.",
+      "For raw (leb leb): Serve immediately in a clay pot.",
+      "For light cooked: Warm briefly in a pan, keeping it rare.",
+      "Serve with ayib (Ethiopian cottage cheese), gomen, and injera."
+    ],
+    tips: [
+      "Freshness is critical - the beef should be ground the same day",
+      "The butter should be warm, not hot, to avoid cooking the meat",
+      "Traditional serving is in a clay pot (gan) to keep it warm"
+    ]
+  },
+
+  // ============ TIGRINYA/ERITREAN RECIPES ============
+  {
+    id: "eritrean-zigni",
+    name: "Tsebhi Zigni (Eritrean Spicy Beef Stew)",
+    tribeSlug: "tigrinya",
+    tribeName: "Tigrinya",
+    category: "special",
+    description: "Rich, spicy beef stew made with berbere spice and tomatoes. Eritrea's most beloved dish, similar to Ethiopian doro wet but made with beef.",
+    culturalSignificance: "Zigni is the heart of Eritrean cuisine, served at holidays, weddings, and Sunday family meals. Making good zigni is a mark of culinary skill.",
+    historicalContext: "While sharing roots with Ethiopian cuisine, Eritrean zigni developed its own character during Italian colonial influence and Eritrea's unique history. The dish reflects centuries of highland cattle-herding traditions.",
+    youtubeVideoId: "uPvmhQkCLFQ",
+    prepTime: "20 minutes",
+    cookTime: "2 hours",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef", amount: "1 kg", notes: "Cubed" },
+      { item: "Red onions", amount: "4 large", notes: "Finely diced" },
+      { item: "Berbere spice", amount: "4 tablespoons" },
+      { item: "Tomato paste", amount: "3 tablespoons" },
+      { item: "Niter kibbeh (spiced butter)", amount: "1/2 cup" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "1 tablespoon", notes: "Grated" },
+      { item: "Beef stock", amount: "2 cups" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Dry-cook onions in a heavy pot over medium heat, stirring constantly for 15-20 minutes until deeply browned (no oil needed).",
+      "Add niter kibbeh and continue cooking for 5 minutes.",
+      "Add berbere and tomato paste, cook for 5 minutes.",
+      "Add garlic and ginger, cook for 2 minutes.",
+      "Add beef pieces and brown on all sides.",
+      "Add stock, cover, and simmer for 1.5-2 hours until beef is tender.",
+      "Adjust seasoning and serve with injera."
+    ],
+    tips: [
+      "The key is dry-cooking onions until deeply caramelized",
+      "Berbere spice is essential - no substitutes",
+      "The stew should be thick and rich, not watery"
+    ]
+  },
+
+  // ============ DJIBOUTI/AFAR RECIPES ============
+  {
+    id: "djibouti-fah-fah",
+    name: "Fah-Fah (Djibouti Lamb Soup)",
+    tribeSlug: "afar",
+    tribeName: "Afar",
+    category: "special",
+    description: "Hearty lamb or goat soup with vegetables and spices. Djibouti's national comfort food, often served with flatbread.",
+    culturalSignificance: "Fah-fah is everyday food in Djibouti and the Afar region, nourishing families in the harsh desert climate. It's served at breakfast, for lunch, and as a restorative meal.",
+    historicalContext: "The Afar people have thrived in one of Earth's hottest regions for millennia. Fah-fah reflects their pastoral traditions and the importance of lamb and goat in their diet. The soup provides essential hydration and nutrition in the desert.",
+    youtubeVideoId: "rSBRekdNG0g",
+    prepTime: "15 minutes",
+    cookTime: "1.5 hours",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Lamb or goat", amount: "500g", notes: "On the bone" },
+      { item: "Onion", amount: "2 medium", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Chopped" },
+      { item: "Potatoes", amount: "2 large", notes: "Cubed" },
+      { item: "Carrots", amount: "2 medium", notes: "Sliced" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Coriander", amount: "1 teaspoon" },
+      { item: "Fresh cilantro", amount: "For garnish" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "8 cups" }
+    ],
+    instructions: [
+      "In a large pot, combine lamb with water and bring to boil.",
+      "Skim any foam that rises to the surface.",
+      "Add onion, garlic, cumin, and coriander.",
+      "Simmer for 45 minutes until meat starts to become tender.",
+      "Add tomatoes, potatoes, and carrots.",
+      "Continue cooking for 30-45 minutes until vegetables are soft.",
+      "Season with salt.",
+      "Garnish with fresh cilantro.",
+      "Serve hot with lahoh (flatbread) or rice."
+    ],
+    tips: [
+      "Bone-in meat gives the best flavor",
+      "The soup should be brothier than a stew",
+      "Some add green chili for extra heat"
     ]
   }
 ];
