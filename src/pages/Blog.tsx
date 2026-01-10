@@ -146,49 +146,51 @@ const Blog = () => {
             )}
           </div>
           
-          {/* Region Filter */}
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-muted-foreground flex items-center gap-1.5">
+          {/* Region Filter - Horizontal Scroll */}
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-muted-foreground flex items-center gap-1.5 shrink-0">
               <Globe className="w-4 h-4" />
               Region:
             </span>
-            <button
-              onClick={() => handleRegionChange('')}
-              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                !selectedRegion 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-              }`}
-            >
-              All Regions
-            </button>
-            {allRegions.map(region => (
+            <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-hide">
               <button
-                key={region}
-                onClick={() => handleRegionChange(region)}
-                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                  selectedRegion === region 
+                onClick={() => handleRegionChange('')}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors whitespace-nowrap shrink-0 ${
+                  !selectedRegion 
                     ? 'bg-primary text-primary-foreground' 
                     : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                 }`}
               >
-                {region}
+                All
               </button>
-            ))}
+              {allRegions.map(region => (
+                <button
+                  key={region}
+                  onClick={() => handleRegionChange(region)}
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors whitespace-nowrap shrink-0 ${
+                    selectedRegion === region 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                >
+                  {region}
+                </button>
+              ))}
+            </div>
           </div>
           
-          {/* Tag Filters */}
-          <div className="flex flex-wrap items-start gap-2">
-            <span className="text-sm text-muted-foreground flex items-center gap-1.5 py-1">
+          {/* Tag Filters - Horizontal Scroll */}
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-muted-foreground flex items-center gap-1.5 shrink-0">
               <Filter className="w-4 h-4" />
               Topics:
             </span>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-hide">
               {allTags.slice(0, 15).map(tag => (
                 <button
                   key={tag}
                   onClick={() => toggleTag(tag)}
-                  className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium transition-colors ${
+                  className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap shrink-0 ${
                     selectedTags.includes(tag)
                       ? 'bg-primary text-primary-foreground'
                       : 'bg-secondary/50 text-secondary-foreground hover:bg-secondary'
