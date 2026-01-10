@@ -2212,6 +2212,184 @@ export const tribeLandmarks: Record<string, CulturalLandmark[]> = {
       description: "Forested highlands of the Nyanga Province, traditional Punu homeland. Contains waterfalls, sacred groves, and ancestral burial sites.",
       coordinates: { lat: -2.5, lng: 11.2 }
     }
+  ],
+
+  // ============ ANGOLA ============
+  ovimbundu: [
+    {
+      name: "Huambo City",
+      type: "historical",
+      description: "Capital of Huambo Province and historic center of Ovimbundu culture. Known as Nova Lisboa during colonial times, it was a major trading hub and UNITA stronghold.",
+      coordinates: { lat: -12.78, lng: 15.73 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Huambo"
+    },
+    {
+      name: "Bailundo Kingdom Capital",
+      type: "historical",
+      description: "Historic seat of the Bailundo Kingdom, one of the most powerful Ovimbundu states. The kingdom resisted Portuguese colonialism and the 1902 revolt started here.",
+      coordinates: { lat: -12.27, lng: 15.82 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bailundo"
+    },
+    {
+      name: "Central Highlands Plateau",
+      type: "natural",
+      description: "The fertile central plateau of Angola, homeland of the Ovimbundu. One of Africa's most productive agricultural regions with temperate climate at 1,700m altitude.",
+      coordinates: { lat: -12.5, lng: 15.5 }
+    },
+    {
+      name: "Benguela Railway",
+      type: "historical",
+      description: "Historic railway connecting the central highlands to the Atlantic port of Benguela. Built on ancient Ovimbundu trade routes that once reached both oceans.",
+      coordinates: { lat: -12.58, lng: 13.40 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Benguela_Railway"
+    },
+    {
+      name: "Cuito Mission",
+      type: "sacred",
+      description: "Protestant mission station established by American Congregationalists in the 1880s. Center of Ovimbundu conversion to Christianity and education.",
+      coordinates: { lat: -12.39, lng: 16.94 }
+    }
+  ],
+
+  kimbundu: [
+    {
+      name: "Queen Nzinga Statue (Luanda)",
+      type: "historical",
+      description: "Monument to Queen Nzinga in Luanda's Largo da Rainha Ginga. Honors the legendary Mbundu warrior queen who resisted Portuguese colonization for 40 years.",
+      coordinates: { lat: -8.84, lng: 13.24 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Nzinga_of_Ndongo_and_Matamba"
+    },
+    {
+      name: "Fortress of São Miguel",
+      type: "historical",
+      description: "Portuguese fortress in Luanda built in 1576. Now houses the Museum of Armed Forces and symbolizes the colonial history the Mbundu resisted.",
+      coordinates: { lat: -8.82, lng: 13.23 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Fortress_of_S%C3%A3o_Miguel"
+    },
+    {
+      name: "Pungo Andongo (Black Rocks)",
+      type: "sacred",
+      description: "Dramatic rock formations in Malanje Province. Sacred site associated with Queen Nzinga. Legend says she left her footprint in the rocks.",
+      coordinates: { lat: -9.67, lng: 15.58 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Pungo_Andongo"
+    },
+    {
+      name: "Kwanza River",
+      type: "natural",
+      description: "Angola's second-longest river flowing through the Mbundu heartland. The Ndongo kingdom controlled its banks. Angola's currency is named after it.",
+      coordinates: { lat: -9.34, lng: 14.12 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Cuanza_River"
+    },
+    {
+      name: "Malanje",
+      type: "historical",
+      description: "Historic city in the Mbundu heartland. Traditional center of the Ndongo Kingdom and later an important colonial trading post.",
+      coordinates: { lat: -9.54, lng: 16.34 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Malanje"
+    }
+  ],
+
+  // ============ SOUTH SUDAN ============
+  dinka: [
+    {
+      name: "Bor Town",
+      type: "historical",
+      description: "Major Dinka town in Jonglei State. Birthplace of John Garang, founder of the SPLA. Site of significant conflict during civil wars.",
+      coordinates: { lat: 6.21, lng: 31.56 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bor,_South_Sudan"
+    },
+    {
+      name: "Sudd Wetlands",
+      type: "natural",
+      description: "One of the world's largest wetlands, formed where the Nile spreads across South Sudan. Dinka cattle camps follow the seasonal flooding for grazing.",
+      coordinates: { lat: 7.5, lng: 30.5 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Sudd"
+    },
+    {
+      name: "Rumbek",
+      type: "historical",
+      description: "Major town in Lakes State and center of Dinka Agar culture. Was the capital of South Sudan during the civil war when John Garang led the SPLA.",
+      coordinates: { lat: 6.80, lng: 29.68 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Rumbek"
+    },
+    {
+      name: "Abyei",
+      type: "historical",
+      description: "Disputed border region between Sudan and South Sudan. Traditional Dinka Ngok territory. Subject of ongoing territorial disputes.",
+      coordinates: { lat: 9.59, lng: 28.44 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Abyei"
+    },
+    {
+      name: "Wau",
+      type: "historical",
+      description: "Major city in Western Bahr el Ghazal, historically a Dinka stronghold. Important trading center and site of colonial-era infrastructure.",
+      coordinates: { lat: 7.70, lng: 28.00 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Wau,_South_Sudan"
+    }
+  ],
+
+  nuer: [
+    {
+      name: "Bentiu",
+      type: "historical",
+      description: "Capital of Unity State and center of Nuer territory. Site of major oil fields and severe conflict during 2013-2018 civil war.",
+      coordinates: { lat: 9.26, lng: 29.83 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Bentiu"
+    },
+    {
+      name: "Lou Nuer Territory",
+      type: "natural",
+      description: "Traditional grazing lands of the Lou Nuer in Jonglei State. Seasonal cattle camps follow the flooding of the Nile tributaries.",
+      coordinates: { lat: 8.5, lng: 32.0 }
+    },
+    {
+      name: "Nasir",
+      type: "historical",
+      description: "Town in Upper Nile State. Site of the 1991 SPLA split when Riek Machar formed the 'Nasir faction.' Important in Nuer political history.",
+      coordinates: { lat: 8.60, lng: 33.06 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Nasir,_South_Sudan"
+    },
+    {
+      name: "Ngundeng's Mound (Deng Kur)",
+      type: "sacred",
+      description: "Massive earthen mound built by Prophet Ngundeng Bong in the 19th century. Sacred site for Nuer traditional religion. The mound is several meters high.",
+      coordinates: { lat: 8.2, lng: 31.8 }
+    },
+    {
+      name: "Leer",
+      type: "historical",
+      description: "Town in Unity State, birthplace of Riek Machar. Suffered extensive destruction during the civil war. Center of Nuer political identity.",
+      coordinates: { lat: 8.30, lng: 30.13 }
+    }
+  ],
+
+  shilluk: [
+    {
+      name: "Fashoda (Kodok)",
+      type: "historical",
+      description: "Historic capital of the Shilluk Kingdom and seat of the Reth (king). Site of the 1898 Fashoda Incident between France and Britain.",
+      coordinates: { lat: 9.88, lng: 32.12 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Kodok"
+    },
+    {
+      name: "Malakal",
+      type: "historical",
+      description: "Capital of Upper Nile State and largest city in Shilluk territory. Important trading center on the White Nile. Severely damaged in civil war.",
+      coordinates: { lat: 9.53, lng: 31.66 },
+      wikipediaUrl: "https://en.wikipedia.org/wiki/Malakal"
+    },
+    {
+      name: "Royal Shrine of Nyikang",
+      type: "sacred",
+      description: "Sacred shrine at Fashoda where the spirit of Nyikang, the legendary first Reth, is believed to reside. Central to Shilluk traditional religion.",
+      coordinates: { lat: 9.90, lng: 32.10 }
+    },
+    {
+      name: "Shilluk Strip (White Nile)",
+      type: "natural",
+      description: "The narrow strip along the western bank of the White Nile that is the traditional Shilluk homeland. One of Africa's most densely settled river corridors.",
+      coordinates: { lat: 10.0, lng: 32.0 }
+    }
   ]
 };
 

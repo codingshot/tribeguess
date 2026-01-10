@@ -15950,6 +15950,693 @@
       ],
       "description": "The Chaoui are an Amazigh people of the Aurès Mountains in eastern Algeria. Known for their fierce warrior tradition, they produced legendary resistance figures from Queen Dihya to the leaders who launched Algeria's independence war.",
       "relatedTribes": ["amazigh", "kabyle", "mzab", "tuareg"]
+    },
+
+    {
+      "id": "ovimbundu",
+      "name": "Ovimbundu",
+      "slug": "ovimbundu",
+      "youtubeVideoId": "JnSF9M3FYuE",
+      "countries": ["AO"],
+      "region": "Central Highlands of Angola",
+      "population": "~6 million",
+      "populationPercent": "37% of Angola",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -12.5, "lng": 15.5 },
+      "latSpan": 4,
+      "lngSpan": 5,
+      "counties": ["Huambo", "Bié", "Benguela", "Cuanza Sul"],
+      "namePrefixes": ["Mba", "Ngu", "Chi", "Sa", "Ka"],
+      "commonNames": {
+        "female": ["Catarina", "Maria", "Josefa", "Ana", "Esperança", "Madalena", "Rosa", "Fernanda", "Teresa"],
+        "male": ["Jonas", "José", "Manuel", "António", "Francisco", "Isaías", "Samuel", "Daniel", "Paulo"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Skilled traders and merchants",
+        "Strong work ethic",
+        "Agricultural expertise",
+        "Political resistance leaders",
+        "Community-oriented"
+      ],
+      "genderStereotypes": {
+        "male": ["Traders and businessmen", "Farmers", "Political leaders"],
+        "female": ["Market traders", "Agricultural workers", "Family managers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men led caravans in the legendary long-distance trade networks, hunted, and managed cattle. Elders held political power.",
+          "female": "Women dominated local markets, managed agriculture, and held significant economic power in household decisions."
+        },
+        "modern": {
+          "male": "Men work in agriculture, commerce, and increasingly urban professions. Many were soldiers in the civil war.",
+          "female": "Women continue strong market traditions and are prominent in small business. Education is increasingly accessible."
+        }
+      },
+      "culturalTraits": [
+        "Long-distance trading heritage",
+        "Strong Protestant Christian influence",
+        "Complex marriage traditions",
+        "Agricultural innovation",
+        "Powerful kingdoms (Bailundo, Bié)",
+        "Resistance to Portuguese colonialism"
+      ],
+      "funFacts": [
+        "Ovimbundu traders once walked thousands of kilometers to the Atlantic and Indian Ocean coasts",
+        "They were among the first Africans to adopt Protestant Christianity, becoming evangelists themselves",
+        "The Bailundo Kingdom was one of Africa's most powerful pre-colonial states",
+        "Ovimbundu caravans connected Central Africa's copper and ivory to global trade",
+        "Jonas Savimbi, UNITA leader, was Ovimbundu and fought a 27-year civil war"
+      ],
+      "traditionalFood": {
+        "staples": ["Funge (cassava porridge)", "Corn", "Beans", "Sweet potato", "Palm oil"],
+        "beverages": ["Palm wine", "Corn beer (kimbombo)", "Coffee"],
+        "specialDishes": ["Calulu (fish/meat with vegetables)", "Muamba de galinha (chicken moamba)", "Funge com peixe"],
+        "description": "Ovimbundu cuisine reflects Portuguese influence and highland agriculture. Funge (cassava porridge) with calulu (vegetable stew with fish) is the signature meal."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening meals",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating, funge eaten by hand",
+        "genderRules": "Men and women may eat separately for formal occasions",
+        "taboos": ["Certain clan totems forbidden"],
+        "specialOccasions": "Goat and cattle for celebrations, palm wine for ceremonies",
+        "hospitality": "Guests always offered food and drink"
+      },
+      "traditionalDance": "Olundongo and Kahita dances at festivals",
+      "religion": "Christianity (Protestant majority), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Ovimbundu Traditional Religion",
+        "supremeDeity": "Suku (Creator God)",
+        "spirits": ["Olosande (ancestors)", "Ondele (nature spirits)"],
+        "practices": ["Ancestor veneration", "Divination", "Agricultural rituals", "Healing ceremonies"],
+        "beliefs": "Suku created all things. Ancestors intervene in daily life. Diviners communicate with spiritual realm.",
+        "religiousHistory": {
+          "christianityIntroduced": "1880s by American Congregationalists",
+          "introducedBy": "American Board of Commissioners for Foreign Missions",
+          "conversionProcess": "Rapid adoption of Protestantism. Ovimbundu became evangelists spreading Christianity across Angola.",
+          "sources": ["Wikipedia - Ovimbundu"]
+        }
+      },
+      "history": {
+        "origin": "The Ovimbundu emerged on the Angolan Central Plateau, establishing powerful kingdoms including Bailundo, Bié, and Wambu by the 17th century. They became Africa's greatest long-distance traders.",
+        "colonialEra": "Portuguese colonialism disrupted traditional trade. Forced labor (contrato system) was brutal. Ovimbundu resisted through rebellions and eventually joined the independence struggle.",
+        "independence": "Many Ovimbundu supported UNITA during the independence war and 27-year civil war (1975-2002). The conflict devastated the highlands.",
+        "keyEvents": ["Rise of Bailundo Kingdom (17th century)", "Peak of caravan trade (19th century)", "Portuguese pacification campaigns (early 1900s)", "Independence (1975)", "Civil war (1975-2002)"]
+      },
+      "tradeHistory": {
+        "historical": "Ovimbundu were Africa's premier long-distance traders. Caravans of thousands traveled to both Atlantic (Benguela) and Indian Ocean (via Zambezi), trading ivory, wax, and slaves for cloth and guns.",
+        "modern": "Agriculture (corn, coffee), cattle, and commerce. The central highlands are Angola's breadbasket.",
+        "keyGoods": ["Ivory", "Beeswax", "Rubber", "Slaves (historical)", "Corn", "Coffee"],
+        "tradePartners": ["Portuguese", "Lunda", "Chokwe", "Lozi", "British (indirectly)"]
+      },
+      "independenceHistory": {
+        "resistance": "Bailundo Revolt (1902) against Portuguese forced labor was brutally suppressed. UNITA represented Ovimbundu interests in independence and civil war.",
+        "role": "UNITA, led by Jonas Savimbi, fought Portuguese colonialism and then MPLA government. Ovimbundu were UNITA's base.",
+        "keyFigures": ["Jonas Savimbi", "King Ekwikwi II of Bailundo"],
+        "postIndependence": "Civil war devastated Ovimbundu highlands. Since peace (2002), reconstruction and reconciliation continue."
+      },
+      "language": {
+        "name": "Umbundu",
+        "speakers": "~6 million",
+        "greeting": "Wapolele",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Oye wenda?", "meaning": "How are you?" },
+          { "phrase": "Ondyiye", "meaning": "I am fine" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Atlantic-Congo",
+          "branch": "Bantu",
+          "subBranch": "Umbundu group",
+          "speakers": "~6 million",
+          "relatedLanguages": ["Kimbundu", "Kikongo", "Chokwe", "Lunda"]
+        }
+      },
+      "famousPeople": [
+        { "name": "Jonas Savimbi", "role": "UNITA founder and leader", "wikipedia": "https://en.wikipedia.org/wiki/Jonas_Savimbi", "birthYear": 1934, "deathYear": 2002 },
+        { "name": "Isaías Samakuva", "role": "UNITA leader (2003-2019)", "wikipedia": "https://en.wikipedia.org/wiki/Isa%C3%ADas_Samakuva", "birthYear": 1946 },
+        { "name": "Ekwikwi II", "role": "King of Bailundo during 1902 revolt", "wikipedia": "https://en.wikipedia.org/wiki/Bailundo" }
+      ],
+      "sources": [{ "name": "Wikipedia - Ovimbundu people", "url": "https://en.wikipedia.org/wiki/Ovimbundu_people" }],
+      "description": "The Ovimbundu are Angola's largest ethnic group, renowned for their historic long-distance trading networks that connected Central Africa to both oceans. Their kingdoms resisted Portuguese colonialism, and they played a central role in Angola's civil war.",
+      "relatedTribes": ["kimbundu", "kongo", "chokwe", "lunda"]
+    },
+
+    {
+      "id": "kimbundu",
+      "name": "Mbundu (Kimbundu)",
+      "slug": "kimbundu",
+      "slugAliases": ["mbundu", "ambundu"],
+      "youtubeVideoId": "E_bYmL8BO8I",
+      "countries": ["AO"],
+      "region": "North-Central Angola",
+      "population": "~3 million",
+      "populationPercent": "25% of Angola",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -9.0, "lng": 14.5 },
+      "latSpan": 3,
+      "lngSpan": 4,
+      "counties": ["Luanda", "Malanje", "Cuanza Norte", "Cuanza Sul"],
+      "namePrefixes": ["Nz", "Nga", "Ngu", "Ki", "Mu"],
+      "commonNames": {
+        "female": ["Nzinga", "Ngola", "Ana", "Maria", "Josefina", "Isabel", "Conceição", "Luísa"],
+        "male": ["Agostinho", "José Eduardo", "João", "Paulo", "Pedro", "António", "Lourenço", "Manuel"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Politically dominant in Angola",
+        "Urban and educated",
+        "Strong warrior heritage",
+        "Revolutionary leaders",
+        "Portuguese cultural influence"
+      ],
+      "genderStereotypes": {
+        "male": ["Political leaders", "Military commanders", "Urban professionals"],
+        "female": ["Market traders", "Political activists", "Education pioneers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men were warriors, hunters, and political leaders. The Ndongo kingdom had powerful male leaders but also legendary queens.",
+          "female": "Women held significant power - Queen Nzinga is the most famous example. Women managed agriculture and local trade."
+        },
+        "modern": {
+          "male": "Mbundu men dominate Angolan politics, military, and urban professions. MPLA leadership is heavily Mbundu.",
+          "female": "Women are increasingly in education and professions. Political representation is growing."
+        }
+      },
+      "culturalTraits": [
+        "Warrior tradition (Ndongo kingdom)",
+        "Strong matrilineal elements",
+        "Portuguese-Creole culture blend",
+        "Urban concentration in Luanda",
+        "Political dominance post-independence",
+        "Rich musical tradition (semba, kuduro)"
+      ],
+      "funFacts": [
+        "Queen Nzinga, one of Africa's greatest warrior queens, was Mbundu - she fought Portuguese colonizers for 40 years",
+        "The word 'Angola' comes from 'Ngola', the Mbundu title for king",
+        "Kimbundu gave Portuguese many words including 'samba', 'moleque', and 'capoeira'",
+        "Luanda, Angola's capital, is in the Mbundu heartland",
+        "All of Angola's post-independence presidents have been Mbundu or had strong Mbundu connections"
+      ],
+      "traditionalFood": {
+        "staples": ["Funge (cassava)", "Rice", "Palm oil", "Fish", "Beans"],
+        "beverages": ["Palm wine", "Portuguese-style coffee", "Beer"],
+        "specialDishes": ["Moamba de galinha", "Calulu de peixe", "Funge", "Mufete (grilled fish)"],
+        "description": "Mbundu cuisine blends Angolan and Portuguese traditions. Luanda's coast means fish is central. Moamba (palm nut sauce) is iconic."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 3,
+        "mealPattern": "Urban patterns with breakfast, lunch, dinner",
+        "mainMealTime": "Lunch",
+        "eatingStyle": "Mix of traditional (communal, hand-eating) and Portuguese (individual plates, utensils)",
+        "genderRules": "Less strict than rural areas",
+        "taboos": ["Fewer traditional taboos in urbanized communities"],
+        "specialOccasions": "Cabidela (blood stew) for celebrations, Portuguese-influenced sweets",
+        "hospitality": "Urban hospitality, coffee culture"
+      },
+      "traditionalDance": "Semba, Kuduro, Rebita",
+      "religion": "Christianity (Catholic majority), Traditional beliefs",
+      "traditionalReligion": {
+        "name": "Mbundu Traditional Religion",
+        "supremeDeity": "Nzambi a Mpungu (Creator God)",
+        "spirits": ["Kilundas (ancestors)", "Nature spirits"],
+        "practices": ["Ancestor veneration", "Divination", "Healing rituals"],
+        "beliefs": "Similar to Kongo beliefs. Nzambi is supreme creator. Ancestors guide and protect.",
+        "religiousHistory": {
+          "christianityIntroduced": "1500s by Portuguese",
+          "introducedBy": "Portuguese missionaries",
+          "conversionProcess": "Long coexistence of Christianity and traditional beliefs. Urban Mbundu largely Catholic today.",
+          "sources": ["Wikipedia - Mbundu people"]
+        }
+      },
+      "history": {
+        "origin": "The Mbundu established the Ndongo Kingdom by the 16th century, with powerful ngolas (kings). They were among the first Africans to encounter Portuguese colonizers (1575).",
+        "colonialEra": "Queen Nzinga resisted Portuguese for 40 years (1620s-1660s). Colonial period brought brutal forced labor, slavery, and coffee plantations. Mbundu became urban and educated.",
+        "independence": "MPLA, with strong Mbundu support, led independence struggle. Civil war (1975-2002) was partly ethnic conflict. MPLA has ruled since independence.",
+        "keyEvents": ["Ndongo Kingdom rise (16th century)", "Portuguese arrival (1575)", "Queen Nzinga's resistance (1620s-1660s)", "Colonial forced labor", "Independence (1975)", "Civil war (1975-2002)"]
+      },
+      "tradeHistory": {
+        "historical": "Mbundu were intermediaries in slave trade (reluctantly and as captives). Later involved in coffee, palm oil, and rubber trade.",
+        "modern": "Oil industry, government, services. Luanda is economic center of Angola.",
+        "keyGoods": ["Slaves (historical)", "Coffee", "Palm products", "Rubber", "Oil (modern)"],
+        "tradePartners": ["Portuguese", "Dutch", "British", "Ovimbundu caravans"]
+      },
+      "independenceHistory": {
+        "resistance": "Queen Nzinga's legendary 40-year resistance. Later revolts suppressed. MPLA led modern independence movement.",
+        "role": "MPLA, with Mbundu base, fought Portuguese and then UNITA. Agostinho Neto (Mbundu) was first president.",
+        "keyFigures": ["Queen Nzinga", "Agostinho Neto", "José Eduardo dos Santos", "João Lourenço"],
+        "postIndependence": "MPLA has governed continuously. Oil wealth concentrated. Reconstruction after civil war."
+      },
+      "language": {
+        "name": "Kimbundu",
+        "speakers": "~3 million",
+        "greeting": "Kiambote",
+        "greetingMeaning": "Hello / Greetings",
+        "additionalGreetings": [
+          { "phrase": "Wazekele?", "meaning": "How are you?" },
+          { "phrase": "Ndizekele", "meaning": "I am well" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Atlantic-Congo",
+          "branch": "Bantu",
+          "subBranch": "Kimbundu group",
+          "speakers": "~3 million",
+          "relatedLanguages": ["Umbundu", "Kikongo", "Chokwe"]
+        }
+      },
+      "famousPeople": [
+        { "name": "Queen Nzinga", "role": "Warrior queen of Ndongo and Matamba", "wikipedia": "https://en.wikipedia.org/wiki/Nzinga_of_Ndongo_and_Matamba", "birthYear": 1583, "deathYear": 1663 },
+        { "name": "Agostinho Neto", "role": "First President of Angola, poet", "wikipedia": "https://en.wikipedia.org/wiki/Agostinho_Neto", "birthYear": 1922, "deathYear": 1979 },
+        { "name": "José Eduardo dos Santos", "role": "President of Angola (1979-2017)", "wikipedia": "https://en.wikipedia.org/wiki/Jos%C3%A9_Eduardo_dos_Santos", "birthYear": 1942, "deathYear": 2022 },
+        { "name": "João Lourenço", "role": "Current President of Angola", "wikipedia": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Louren%C3%A7o", "birthYear": 1954 }
+      ],
+      "sources": [{ "name": "Wikipedia - Mbundu people", "url": "https://en.wikipedia.org/wiki/Mbundu_people" }],
+      "description": "The Mbundu are Angola's second-largest ethnic group, historically dominant in the Ndongo Kingdom and modern Angola's political landscape. Queen Nzinga's legendary resistance and the MPLA's rule have made them central to Angolan identity.",
+      "relatedTribes": ["ovimbundu", "kongo", "chokwe"]
+    },
+
+    {
+      "id": "dinka",
+      "name": "Dinka (Jieng)",
+      "slug": "dinka",
+      "slugAliases": ["jieng"],
+      "youtubeVideoId": "HQ_cGvlXJuw",
+      "countries": ["SS"],
+      "region": "South Sudan - Bahr el Ghazal & Upper Nile",
+      "population": "~4.5 million",
+      "populationPercent": "36% of South Sudan",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 8.0, "lng": 28.5 },
+      "latSpan": 6,
+      "lngSpan": 8,
+      "counties": ["Lakes", "Warrap", "Northern Bahr el Ghazal", "Unity", "Jonglei"],
+      "namePrefixes": ["Deng", "Kuol", "Bol", "Mach", "Atem", "Ajang"],
+      "commonNames": {
+        "female": ["Nyandeng", "Achol", "Abuk", "Alek", "Athieng", "Ayen", "Akech", "Nyanlong"],
+        "male": ["Deng", "Kuol", "Bol", "Mach", "Atem", "Ajang", "Majok", "Majak", "Mayen", "Garang"]
+      },
+      "timeBasedNames": {
+        "morning": ["Akolda"],
+        "evening": ["Acuil"]
+      },
+      "stereotypes": [
+        "Tallest people on Earth",
+        "Proud cattle herders",
+        "Fierce warriors",
+        "Strong cultural identity",
+        "Political dominance in South Sudan"
+      ],
+      "genderStereotypes": {
+        "male": ["Tall and proud warriors", "Cattle experts", "Political leaders"],
+        "female": ["Tall and beautiful", "Hard workers", "Keepers of traditions"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men tend cattle, which are central to Dinka identity. Cattle determine a man's status, are used for bride wealth, and are subjects of poetry and song.",
+          "female": "Women manage agriculture (sorghum, millet), children, and household. Girls fetch water and grind grain. Marriage requires cattle bride price."
+        },
+        "modern": {
+          "male": "Many educated Dinka men work in government, military, and professions. Cattle remain culturally important even for urbanized Dinka.",
+          "female": "Increasing education for girls. Women's roles expanding but traditional patterns persist, especially in rural areas."
+        }
+      },
+      "culturalTraits": [
+        "Cattle-centered culture (cattle determine status, marriage, identity)",
+        "Tallest people globally (average male height 1.9m/6'3\")",
+        "Facial scarification (forehead marks)",
+        "Age-set social system",
+        "Rich oral poetry and song tradition",
+        "Strong belief in Nhialic (God)"
+      ],
+      "funFacts": [
+        "Dinka are among the tallest people on Earth - average male height is 6'3\" (1.9m)",
+        "Cattle are so important that Dinka compose love songs to their favorite oxen",
+        "Dinka warriors traditionally remove six lower front teeth as a rite of passage",
+        "Former NBA player Manute Bol (7'7\") and model Alek Wek are Dinka",
+        "The name 'Dinka' was given by outsiders; they call themselves 'Jieng' (people)"
+      ],
+      "traditionalFood": {
+        "staples": ["Sorghum porridge (asida)", "Millet", "Milk", "Beef", "Fish"],
+        "beverages": ["Cow's milk", "Sorghum beer", "Buttermilk"],
+        "specialDishes": ["Asida (sorghum porridge)", "Kisra (sorghum bread)", "Dried fish", "Beef stews"],
+        "description": "Dinka diet is centered on cattle products (milk, blood, meat) and grains. Milk is consumed daily; meat is for special occasions. Sorghum porridge is the staple."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening meals",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating from shared dishes",
+        "genderRules": "Men and women often eat separately. Meat distributed by seniority.",
+        "taboos": ["Certain cattle not eaten (ceremonial)", "Restrictions for new mothers"],
+        "specialOccasions": "Cattle slaughtered for weddings, funerals, and ceremonies",
+        "hospitality": "Guests given milk and food. Hospitality is sacred duty."
+      },
+      "traditionalDance": "Bul dance - energetic jumping and singing, mimics cattle behavior",
+      "religion": "Christianity, Dinka Traditional Religion",
+      "traditionalReligion": {
+        "name": "Dinka Traditional Religion",
+        "supremeDeity": "Nhialic (God of the Sky)",
+        "spirits": ["Jak (spirits)", "Yath (ancestors)", "Deng (rain god)"],
+        "practices": ["Cattle sacrifice", "Ancestor veneration", "Divination by spear masters", "Rain-making ceremonies"],
+        "beliefs": "Nhialic is the supreme creator. Jak spirits can possess people. Spear masters (beny bith) have spiritual authority. Cattle connect living and dead.",
+        "religiousHistory": {
+          "christianityIntroduced": "1900s by missionaries",
+          "introducedBy": "British missionaries",
+          "conversionProcess": "Gradual Christian adoption, especially since civil war. Many syncretize Christianity with traditional beliefs.",
+          "sources": ["Wikipedia - Dinka people", "Wikipedia - Dinka religion"]
+        }
+      },
+      "history": {
+        "origin": "The Dinka migrated from the Gezira region (Sudan) to their current lands over centuries, displacing earlier inhabitants. They established cattle-herding lifestyle on the Nile floodplains.",
+        "colonialEra": "Anglo-Egyptian Sudan period (1899-1956) brought minimal change. British policy kept south isolated. Christianity and education slowly introduced.",
+        "independence": "Dinka were central to both Sudanese civil wars (1955-1972, 1983-2005). John Garang led SPLA to autonomy, then independence (2011). Dinka dominate South Sudan government.",
+        "keyEvents": ["Migration to current lands (centuries ago)", "British colonialism (1899-1956)", "First civil war (1955-1972)", "Second civil war (1983-2005)", "South Sudan independence (2011)", "Civil war (2013-2018)"]
+      },
+      "tradeHistory": {
+        "historical": "Dinka traded cattle, ivory, and grain with neighbors. Arab slave raiders devastated communities in 19th century.",
+        "modern": "Cattle trade, oil (in Dinka territory), aid economy.",
+        "keyGoods": ["Cattle", "Ivory (historical)", "Grain", "Oil (modern)"],
+        "tradePartners": ["Nuer", "Arab traders", "Ethiopian merchants"]
+      },
+      "independenceHistory": {
+        "resistance": "Constant resistance to Arab and northern domination. Two civil wars (1955-72, 1983-2005) killed millions. Dinka formed SPLA backbone.",
+        "role": "John Garang (Dinka) led SPLA. Salva Kiir (Dinka) became first president of South Sudan.",
+        "keyFigures": ["John Garang", "Salva Kiir", "William Deng Nhial", "Kerubino Kwanyin Bol"],
+        "postIndependence": "South Sudan independent 2011. Civil war 2013-2018 partly along ethnic lines (Dinka-Nuer). Fragile peace since 2018."
+      },
+      "language": {
+        "name": "Dinka (Thuɔŋjäŋ)",
+        "speakers": "~4.5 million",
+        "greeting": "Yin ci bɛ̈i?",
+        "greetingMeaning": "How are you?",
+        "additionalGreetings": [
+          { "phrase": "Yin apei", "meaning": "You are well" },
+          { "phrase": "Athin", "meaning": "Thank you" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Nilotic",
+          "branch": "Western Nilotic",
+          "subBranch": "Dinka-Nuer group",
+          "speakers": "~4.5 million",
+          "relatedLanguages": ["Nuer", "Shilluk", "Luo"]
+        }
+      },
+      "famousPeople": [
+        { "name": "John Garang", "role": "SPLA founder, South Sudan's founding father", "wikipedia": "https://en.wikipedia.org/wiki/John_Garang", "birthYear": 1945, "deathYear": 2005 },
+        { "name": "Salva Kiir", "role": "First President of South Sudan", "wikipedia": "https://en.wikipedia.org/wiki/Salva_Kiir_Mayardit", "birthYear": 1951 },
+        { "name": "Manute Bol", "role": "NBA player and activist (7'7\")", "wikipedia": "https://en.wikipedia.org/wiki/Manute_Bol", "birthYear": 1962, "deathYear": 2010 },
+        { "name": "Alek Wek", "role": "Supermodel", "wikipedia": "https://en.wikipedia.org/wiki/Alek_Wek", "birthYear": 1977 },
+        { "name": "Ger Duany", "role": "Actor and model, former child soldier", "wikipedia": "https://en.wikipedia.org/wiki/Ger_Duany", "birthYear": 1978 }
+      ],
+      "sources": [{ "name": "Wikipedia - Dinka people", "url": "https://en.wikipedia.org/wiki/Dinka_people" }],
+      "description": "The Dinka are South Sudan's largest ethnic group and one of Africa's most distinctive peoples. Known as the world's tallest people, they maintain a cattle-centered culture and have been central to South Sudan's struggle for independence.",
+      "relatedTribes": ["nuer", "shilluk", "acholi", "luo"]
+    },
+
+    {
+      "id": "nuer",
+      "name": "Nuer",
+      "slug": "nuer",
+      "slugAliases": ["naath"],
+      "youtubeVideoId": "vDpJCFdY4cE",
+      "countries": ["SS", "ET"],
+      "region": "South Sudan and Western Ethiopia",
+      "population": "~3.5 million",
+      "populationPercent": "15% of South Sudan",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": 8.5, "lng": 31.0 },
+      "latSpan": 4,
+      "lngSpan": 5,
+      "counties": ["Unity", "Upper Nile", "Jonglei", "Gambela (Ethiopia)"],
+      "namePrefixes": ["Gat", "Nya", "Ruach", "Kuoth", "Bul"],
+      "commonNames": {
+        "female": ["Nyakim", "Nyaduoth", "Nyariek", "Nyachol", "Nyaluak", "Nyading", "Nyatiop"],
+        "male": ["Gatluak", "Gatkuoth", "Ruach", "Ruai", "Tut", "Riek", "Koang", "Kuol", "Jal", "Duop"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Fierce warriors",
+        "Tall and proud",
+        "Cattle-loving like Dinka rivals",
+        "Egalitarian society",
+        "Strong fighters"
+      ],
+      "genderStereotypes": {
+        "male": ["Fierce warriors", "Cattle herders", "Proud and independent"],
+        "female": ["Hard-working", "Strong", "Keepers of household"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men herd cattle, fish, and fight. Nuer men are famous warriors. Status comes from cattle wealth. Six facial scars (gaar) mark initiation.",
+          "female": "Women manage agriculture, children, and household. Milk cows (men don't milk). Marriage requires bride wealth in cattle."
+        },
+        "modern": {
+          "male": "Many displaced by war. Some educated in diaspora. Cattle remain central identity even for urban Nuer.",
+          "female": "Women bear heavy burden during wars. Some in diaspora become educated professionals."
+        }
+      },
+      "culturalTraits": [
+        "Cattle-centered culture (rivals Dinka in this)",
+        "Egalitarian society (no chiefs traditionally)",
+        "Six horizontal forehead scars (gaar) for men",
+        "Leopard-skin priests mediate disputes",
+        "Age-set social system",
+        "Famous for resistance to central authority"
+      ],
+      "funFacts": [
+        "E.E. Evans-Pritchard's classic anthropology study 'The Nuer' made them famous in academia",
+        "Nuer traditionally had no chiefs - leopard-skin priests mediated disputes",
+        "Nuer warriors mark their faces with six horizontal scars during initiation",
+        "Riek Machar, vice president of South Sudan, is Nuer",
+        "Nuer names often reflect cattle colors: 'Gatkuoth' means 'son of God/rain'"
+      ],
+      "traditionalFood": {
+        "staples": ["Sorghum porridge", "Milk", "Fish", "Millet", "Beef"],
+        "beverages": ["Milk", "Sorghum beer", "Buttermilk"],
+        "specialDishes": ["Asida (porridge)", "Dried fish", "Blood and milk mixture"],
+        "description": "Like Dinka cousins, Nuer diet centers on cattle products and sorghum. Fish from Nile and swamps is important. Milk is staple; meat for ceremonies."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening meals",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal from shared dishes",
+        "genderRules": "Separation of men and women for eating",
+        "taboos": ["Certain fish forbidden for some clans"],
+        "specialOccasions": "Cattle sacrifice for ceremonies",
+        "hospitality": "Guests offered milk, expected to share food"
+      },
+      "traditionalDance": "Dance with spears and shields, jumping competitions",
+      "religion": "Christianity, Nuer Traditional Religion",
+      "traditionalReligion": {
+        "name": "Nuer Traditional Religion",
+        "supremeDeity": "Kuoth Nhial (God of Sky)",
+        "spirits": ["Kuoth (spirits)", "Ancestors (Gatluak)"],
+        "practices": ["Cattle sacrifice", "Ancestor veneration", "Divination", "Leopard-skin priests mediate disputes"],
+        "beliefs": "Kuoth is supreme but distant. Spirits (kuoth) affect daily life. Leopard-skin priests have sacred authority to mediate and curse/bless.",
+        "religiousHistory": {
+          "christianityIntroduced": "1900s by missionaries",
+          "introducedBy": "American Presbyterian missionaries",
+          "conversionProcess": "Christianity adopted especially since civil war. Many blend Christian and traditional beliefs.",
+          "sources": ["Wikipedia - Nuer people"]
+        }
+      },
+      "history": {
+        "origin": "Nuer expanded from their homeland in the 19th century, conquering territory from Dinka and Anuak. They are close relatives of Dinka, speaking a similar Nilotic language.",
+        "colonialEra": "British Sudan period brought limited contact. Nuer resisted taxation and authority. 1920s-1930s British 'Nuer Expeditions' tried to subdue them.",
+        "independence": "Nuer joined SPLA against Khartoum but had internal splits. 1991 Nuer faction under Riek Machar split from Dinka-led SPLA. Tensions continue.",
+        "keyEvents": ["19th century expansion", "British expeditions (1920s-30s)", "First civil war (1955-1972)", "SPLA split (1991)", "South Sudan independence (2011)", "2013-2018 civil war"]
+      },
+      "tradeHistory": {
+        "historical": "Cattle raiding and trade with neighbors. Ivory trade. Victimized by 19th century slave raids.",
+        "modern": "Cattle trade, oil (in Nuer territory), humanitarian aid.",
+        "keyGoods": ["Cattle", "Fish", "Ivory (historical)", "Oil (modern)"],
+        "tradePartners": ["Dinka", "Ethiopian groups", "Arab traders"]
+      },
+      "independenceHistory": {
+        "resistance": "Resisted British pacification. Joined southern resistance in both civil wars. 1991 split under Riek Machar created lasting Dinka-Nuer tensions.",
+        "role": "Nuer were major SPLA fighters. Riek Machar led Nuer faction, later became VP. 2013 civil war partly Dinka-Nuer conflict.",
+        "keyFigures": ["Riek Machar", "Peter Gadet", "Prophet Ngundeng Bong"],
+        "postIndependence": "2013 civil war displaced millions of Nuer. 2018 peace fragile. Riek Machar VP in unity government."
+      },
+      "language": {
+        "name": "Nuer (Thok Nath)",
+        "speakers": "~1.5 million",
+        "greeting": "Mali",
+        "greetingMeaning": "Hello",
+        "additionalGreetings": [
+          { "phrase": "Cieng in?", "meaning": "How are you?" },
+          { "phrase": "Ca mi kuene", "meaning": "I am fine" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Nilotic",
+          "branch": "Western Nilotic",
+          "subBranch": "Dinka-Nuer group",
+          "speakers": "~1.5 million",
+          "relatedLanguages": ["Dinka", "Shilluk", "Luo"]
+        }
+      },
+      "populationByCountry": [
+        { "country": "SS", "population": "~2.5 million", "percent": "15%" },
+        { "country": "ET", "population": "~300,000", "percent": "0.3%" }
+      ],
+      "famousPeople": [
+        { "name": "Riek Machar", "role": "Vice President of South Sudan", "wikipedia": "https://en.wikipedia.org/wiki/Riek_Machar", "birthYear": 1952 },
+        { "name": "Prophet Ngundeng Bong", "role": "19th century prophet and leader", "wikipedia": "https://en.wikipedia.org/wiki/Ngundeng_Bong", "birthYear": 1830, "deathYear": 1906 },
+        { "name": "Luol Deng", "role": "NBA All-Star basketball player", "wikipedia": "https://en.wikipedia.org/wiki/Luol_Deng", "birthYear": 1985 }
+      ],
+      "sources": [{ "name": "Wikipedia - Nuer people", "url": "https://en.wikipedia.org/wiki/Nuer_people" }],
+      "description": "The Nuer are a major Nilotic people of South Sudan and Ethiopia, famous for their cattle culture, egalitarian society without traditional chiefs, and fierce warrior tradition. Their complex relationship with the Dinka has shaped South Sudan's history.",
+      "relatedTribes": ["dinka", "shilluk", "anuak", "luo"]
+    },
+
+    {
+      "id": "shilluk",
+      "name": "Shilluk (Chollo)",
+      "slug": "shilluk",
+      "slugAliases": ["chollo"],
+      "youtubeVideoId": "X9jPNjD9qKE",
+      "countries": ["SS"],
+      "region": "Upper Nile, South Sudan",
+      "population": "~500,000",
+      "populationPercent": "4% of South Sudan",
+      "genderRatio": { "male": 49, "female": 51 },
+      "mapCoordinates": { "lat": 10.0, "lng": 32.0 },
+      "latSpan": 2,
+      "lngSpan": 2,
+      "counties": ["Upper Nile (Fashoda area)", "Malakal"],
+      "namePrefixes": ["Okwaj", "Oyay", "Nyakwar", "Akoc"],
+      "commonNames": {
+        "female": ["Nyakwar", "Akong", "Adut", "Ayen", "Achol", "Nyawal"],
+        "male": ["Okwaj", "Oyay", "Okwajo", "Akoc", "Okelo", "Ochan", "Lam", "Lul"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Proud royal tradition",
+        "Sacred kingship",
+        "River people",
+        "Farmers and fishers",
+        "Strong cultural identity"
+      ],
+      "genderStereotypes": {
+        "male": ["Fishermen and farmers", "Warriors", "Courtiers of the Reth"],
+        "female": ["Agricultural workers", "Potters", "Family managers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men fish, herd, and serve the Reth (king). The king was considered divine. Age-sets organized male society.",
+          "female": "Women farm, manage households, and produce pottery. Some women held ritual roles at court."
+        },
+        "modern": {
+          "male": "Shilluk men work in various sectors. Many displaced by war. The Reth still holds cultural authority.",
+          "female": "Women's roles expanding with education. Traditional skills remain valued."
+        }
+      },
+      "culturalTraits": [
+        "Divine kingship (Reth) - one of Africa's oldest",
+        "Royal capital at Fashoda",
+        "River-oriented lifestyle",
+        "Elaborate royal rituals",
+        "Ancestor veneration centered on Nyikang",
+        "Distinctive scarification patterns"
+      ],
+      "funFacts": [
+        "The Shilluk king (Reth) was considered divine and could be ritually killed if he weakened",
+        "Nyikang, the legendary first king, is worshipped as a god-hero",
+        "Fashoda (now Kodok) was the Shilluk capital and site of the 1898 Fashoda Incident between France and Britain",
+        "The Shilluk are one of the few Nilotic peoples with a centralized monarchy",
+        "Shilluk kings are believed to be vessels for the spirit of Nyikang"
+      ],
+      "traditionalFood": {
+        "staples": ["Sorghum porridge", "Fish", "Durra (sorghum)", "Milk"],
+        "beverages": ["Sorghum beer (marisa)", "Milk"],
+        "specialDishes": ["Asida (porridge)", "Dried and smoked fish", "Fish stews"],
+        "description": "Shilluk diet combines farming (sorghum) with Nile fishing. Fish is more prominent than for other Nilotic groups. Royal feasts featured special foods."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Morning and evening",
+        "mainMealTime": "Evening",
+        "eatingStyle": "Communal eating",
+        "genderRules": "Men and women eat separately",
+        "taboos": ["Royal restrictions", "Clan-specific food taboos"],
+        "specialOccasions": "Cattle and goats for royal ceremonies",
+        "hospitality": "Guests well-treated, especially at royal court"
+      },
+      "traditionalDance": "Royal dances and Nyikang commemorations",
+      "religion": "Shilluk Traditional Religion, Christianity",
+      "traditionalReligion": {
+        "name": "Shilluk Traditional Religion",
+        "supremeDeity": "Juok (Creator God)",
+        "spirits": ["Nyikang (deified first king)", "Ancestors"],
+        "practices": ["King worship", "Nyikang shrine rituals", "Cattle sacrifice", "Divination"],
+        "beliefs": "Juok is the supreme god but Nyikang, the legendary first king, is the focus of worship. Each Reth embodies Nyikang's spirit. Divine kingship is central.",
+        "religiousHistory": {
+          "christianityIntroduced": "Early 1900s",
+          "introducedBy": "Christian missionaries",
+          "conversionProcess": "Some conversion but traditional beliefs remain strong, especially regarding kingship.",
+          "sources": ["Wikipedia - Shilluk people"]
+        }
+      },
+      "history": {
+        "origin": "The Shilluk trace their origin to Nyikang, legendary first king who led them from the south. They established a kingdom along the White Nile with the capital at Fashoda by the 15th century.",
+        "colonialEra": "The 1898 Fashoda Incident (France vs. Britain) put Shilluk lands on the world stage. Under Anglo-Egyptian Sudan, the Reth retained some authority.",
+        "independence": "Shilluk joined southern resistance. Their lands were battlegrounds in civil wars. Malakal city changed hands repeatedly.",
+        "keyEvents": ["Nyikang's legendary migration", "Kingdom establishment (15th century)", "Fashoda Incident (1898)", "Civil wars", "South Sudan independence (2011)"]
+      },
+      "tradeHistory": {
+        "historical": "Shilluk controlled Nile trade. Taxed traders. Exchanged ivory, grain, and cattle.",
+        "modern": "Fishing, agriculture. Malakal was important trading town.",
+        "keyGoods": ["Ivory (historical)", "Grain", "Cattle", "Fish"],
+        "tradePartners": ["Arab traders", "Ethiopian merchants", "Other Nilotic groups"]
+      },
+      "independenceHistory": {
+        "resistance": "Fought against Mahdist forces and later joined southern resistance. Lam Akol (Shilluk) was a key political figure.",
+        "role": "Shilluk participated in both civil wars. Upper Nile was heavily contested.",
+        "keyFigures": ["Lam Akol", "Various Reths (kings)"],
+        "postIndependence": "Malakal devastated in 2013-2018 war. Shilluk displaced. Reth continues as cultural figurehead."
+      },
+      "language": {
+        "name": "Shilluk (Dhøg Cøllø)",
+        "speakers": "~500,000",
+        "greeting": "Ber",
+        "greetingMeaning": "Good / Hello",
+        "additionalGreetings": [
+          { "phrase": "Ber in?", "meaning": "How are you?" }
+        ],
+        "family": "Nilotic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Nilotic",
+          "branch": "Western Nilotic",
+          "subBranch": "Luo group",
+          "speakers": "~500,000",
+          "relatedLanguages": ["Dinka", "Nuer", "Dholuo", "Anuak"]
+        }
+      },
+      "famousPeople": [
+        { "name": "Lam Akol", "role": "Politician and SPLM leader", "wikipedia": "https://en.wikipedia.org/wiki/Lam_Akol", "birthYear": 1950 },
+        { "name": "Nyikang", "role": "Legendary first king (deified)", "wikipedia": "https://en.wikipedia.org/wiki/Nyikang" }
+      ],
+      "sources": [{ "name": "Wikipedia - Shilluk people", "url": "https://en.wikipedia.org/wiki/Shilluk_people" }],
+      "description": "The Shilluk are a Nilotic people of South Sudan known for their ancient divine kingship tradition. The Reth (king) is believed to embody the spirit of Nyikang, the legendary founder, making Shilluk one of Africa's most fascinating monarchies.",
+      "relatedTribes": ["dinka", "nuer", "anuak", "acholi"]
     }
   ]
 }
