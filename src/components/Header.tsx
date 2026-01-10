@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Shuffle, Search, BookOpen, FileText } from 'lucide-react';
+import { Shuffle, Search, BookOpen, FileText, Users } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import { getAllTribes } from '@/lib/tribeDetection';
 
@@ -62,6 +62,18 @@ export function Header() {
             >
               <BookOpen className="w-4 h-4" />
               <span className="hidden sm:inline">Learn</span>
+            </Link>
+            <Link
+              to="/people"
+              className={`flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 touch-manipulation ${
+                isActive('/people') || isActive('/person')
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+              }`}
+              aria-current={isActive('/people') || isActive('/person') ? 'page' : undefined}
+            >
+              <Users className="w-4 h-4" />
+              <span className="hidden sm:inline">People</span>
             </Link>
             <Link
               to="/blog"

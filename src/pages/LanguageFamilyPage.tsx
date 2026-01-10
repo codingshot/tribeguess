@@ -133,7 +133,10 @@ export default function LanguageFamilyPage() {
           </nav>
 
           {/* Hero Section */}
+          {/* Hero Section */}
           <section className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${family.color} p-6 md:p-10 mb-8`}>
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/25" />
             <div className="relative z-10">
               <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-0">
                 <Languages className="w-3 h-3 mr-1" />

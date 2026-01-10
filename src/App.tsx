@@ -23,6 +23,8 @@ import Quiz from "./pages/Quiz";
 import LanguagesIndex from "./pages/LanguagesIndex";
 import LanguageFamilyPage from "./pages/LanguageFamilyPage";
 import GlobalOrigins from "./pages/GlobalOrigins";
+import People from "./pages/People";
+import PersonPage from "./pages/PersonPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +56,8 @@ const App = () => (
             <Route path="/languages" element={<LanguagesIndex />} />
             <Route path="/languages/:familySlug" element={<LanguageFamilyPage />} />
             <Route path="/global-origins" element={<GlobalOrigins />} />
+            <Route path="/people" element={<People />} />
+            <Route path="/person/:slug" element={<PersonPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
