@@ -1,10 +1,25 @@
 // Traditional African Recipes - Fact-checked from culinary sources
+
+// Region definitions for filtering
+export type RecipeRegion = 'east' | 'west' | 'southern' | 'central' | 'north' | 'horn';
+
+export const recipeRegions: { id: RecipeRegion; name: string; emoji: string }[] = [
+  { id: 'east', name: 'East Africa', emoji: '🇰🇪' },
+  { id: 'west', name: 'West Africa', emoji: '🇳🇬' },
+  { id: 'southern', name: 'Southern Africa', emoji: '🇿🇦' },
+  { id: 'central', name: 'Central Africa', emoji: '🇨🇩' },
+  { id: 'north', name: 'North Africa', emoji: '🇲🇦' },
+  { id: 'horn', name: 'Horn of Africa', emoji: '🇪🇹' }
+];
+
 export interface Recipe {
   id: string;
   name: string;
   tribeSlug: string;
   tribeName: string;
   category: 'staple' | 'beverage' | 'special' | 'snack';
+  region?: RecipeRegion; // Region for filtering
+  country?: string; // ISO country code
   description: string;
   culturalSignificance: string;
   historicalContext?: string; // Additional historical information
@@ -6583,6 +6598,20 @@ export const getRecipeTribeNames = (): { slug: string; name: string }[] => {
   return Array.from(tribes.entries()).map(([slug, name]) => ({ slug, name })).sort((a, b) => a.name.localeCompare(b.name));
 };
 
+// Get recipes filtered by region
+export const getRecipesByRegion = (region: RecipeRegion): Recipe[] => {
+  return recipes.filter(recipe => recipe.region === region);
+};
+
+// Get all unique countries from recipes
+export const getRecipeCountries = (): string[] => {
+  const countries = new Set<string>();
+  recipes.forEach(recipe => {
+    if (recipe.country) countries.add(recipe.country);
+  });
+  return Array.from(countries).sort();
+};
+
 // Search recipes by query
 export const searchRecipes = (query: string): Recipe[] => {
   const normalizedQuery = query.toLowerCase();
@@ -10100,6 +10129,8 @@ const northAfricanRecipes: Recipe[] = [
     tribeSlug: "moroccan-arab",
     tribeName: "Moroccan Arab",
     category: "special",
+    region: "north",
+    country: "MA",
     description: "Slow-cooked lamb stew with dried fruits, nuts, and aromatic spices, cooked in the iconic cone-shaped tagine pot.",
     culturalSignificance: "Tagine is central to Moroccan hospitality. The clay pot's design allows steam to condense and return to the dish, creating incredibly tender meat. Served at celebrations and family gatherings.",
     historicalContext: "The tagine cooking method dates back to the 8th century when the Berbers of Morocco developed the distinctive cone-shaped pot. The dish evolved with Arab, Andalusian, and Ottoman influences, incorporating spices from the trans-Saharan trade routes.",
@@ -10150,6 +10181,8 @@ const northAfricanRecipes: Recipe[] = [
     tribeSlug: "egyptian-arab",
     tribeName: "Egyptian Arab",
     category: "staple",
+    region: "north",
+    country: "EG",
     description: "Egypt's national dish - layers of rice, lentils, macaroni, and chickpeas topped with spicy tomato sauce and crispy fried onions.",
     culturalSignificance: "Koshari is Egypt's beloved street food, found in dedicated koshari shops throughout Cairo. It's affordable, filling, and represents Egyptian ingenuity in creating a complete protein from humble ingredients.",
     historicalContext: "Koshari emerged in 19th century Cairo, combining Indian rice dishes brought by British soldiers (khichdi), Italian pasta from Mediterranean trade, and local Egyptian ingredients. It became the poor man's feast and national comfort food.",
@@ -10195,6 +10228,8 @@ const northAfricanRecipes: Recipe[] = [
     tribeSlug: "tunisian-arab",
     tribeName: "Tunisian Arab",
     category: "snack",
+    region: "north",
+    country: "TN",
     description: "Crispy fried pastry triangles filled with a runny egg, tuna, capers, and parsley. Tunisia's iconic street food.",
     culturalSignificance: "Brik is Tunisia's most famous appetizer, eaten with hands while carefully avoiding the runny yolk spilling. Traditionally served during Ramadan and at special occasions.",
     historicalContext: "Brik comes from the Turkish börek, introduced during Ottoman rule. Tunisians made it their own by adding the signature runny egg. The malsouka pastry sheets are uniquely North African, related to Moroccan warka.",
@@ -10237,6 +10272,8 @@ const northAfricanRecipes: Recipe[] = [
     tribeSlug: "chaoui",
     tribeName: "Chaoui/Algerian Berber",
     category: "special",
+    region: "north",
+    country: "DZ",
     description: "Traditional Algerian dish of hand-torn flatbread soaked in spiced tomato and lamb stew. A Berber culinary masterpiece from the Aurès Mountains.",
     culturalSignificance: "Chakhchoukha is the pride of the Chaoui Berbers of eastern Algeria. It's served at weddings, Eid celebrations, and to honor guests. Making the rougag (flatbread) is an art passed from mother to daughter.",
     historicalContext: "This dish originated with the Chaoui Berbers of the Aurès Mountains, predating Arab arrival in North Africa. The combination of torn bread with meat stew reflects nomadic cooking traditions where bread was the universal staple.",
@@ -10280,6 +10317,8 @@ const northAfricanRecipes: Recipe[] = [
     tribeSlug: "amazigh",
     tribeName: "Amazigh/Berber",
     category: "special",
+    region: "north",
+    country: "MA",
     description: "The Berber masterpiece - steamed semolina grains served with seven vegetables and lamb, representing abundance and blessing.",
     culturalSignificance: "Couscous is sacred to Berber culture. The seven vegetables represent completeness and blessing. Friday couscous is a family tradition across North Africa, and the dish was inscribed on UNESCO's Intangible Cultural Heritage list.",
     historicalContext: "Couscous originated with the Berbers of North Africa over 1,000 years ago. The hand-rolling technique and steaming process are uniquely Berber inventions. The dish spread across the Maghreb and to Europe through trade and migration.",
@@ -10323,6 +10362,409 @@ const northAfricanRecipes: Recipe[] = [
       "Never let vegetables overcook - they should hold shape",
       "The broth is served separately so each person can add as desired"
     ]
+  },
+  // NEW NORTH AFRICAN RECIPES
+  {
+    id: "shakshuka",
+    name: "Shakshuka (North African Eggs in Tomato)",
+    tribeSlug: "tunisian-arab",
+    tribeName: "Tunisian Arab",
+    category: "special",
+    region: "north",
+    country: "TN",
+    description: "Eggs poached in a spiced tomato and pepper sauce with cumin, paprika, and cayenne. A beloved breakfast across North Africa and the Middle East.",
+    culturalSignificance: "Shakshuka originated in Tunisia and spread throughout the Maghreb and Levant. It's a communal dish, served in the pan with bread for dipping. Every family has their own recipe.",
+    historicalContext: "The name comes from the Berber word for 'mixture.' Ottoman influence spread the dish across the Mediterranean. Jewish immigrants brought it to Israel where it became a national dish.",
+    youtubeVideoId: "mnWY6ONR_Cg",
+    prepTime: "10 minutes",
+    cookTime: "25 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Eggs", amount: "6" },
+      { item: "Tomatoes", amount: "6 large", notes: "Crushed or canned" },
+      { item: "Red bell pepper", amount: "1", notes: "Diced" },
+      { item: "Onion", amount: "1 large", notes: "Diced" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Paprika", amount: "1 teaspoon" },
+      { item: "Cayenne pepper", amount: "1/2 teaspoon" },
+      { item: "Olive oil", amount: "3 tablespoons" },
+      { item: "Fresh parsley", amount: "For garnish" },
+      { item: "Feta cheese", amount: "Optional, crumbled" }
+    ],
+    instructions: [
+      "Heat olive oil in large skillet over medium heat.",
+      "Sauté onion and bell pepper until soft, about 5 minutes.",
+      "Add garlic and cook 1 minute until fragrant.",
+      "Add cumin, paprika, and cayenne, stir to coat.",
+      "Pour in crushed tomatoes, season with salt and pepper.",
+      "Simmer 10-15 minutes until sauce thickens.",
+      "Make 6 wells in the sauce and crack an egg into each.",
+      "Cover and cook 5-8 minutes until whites are set but yolks runny.",
+      "Garnish with parsley and feta if using. Serve with crusty bread."
+    ],
+    tips: [
+      "Don't stir after adding eggs - they should stay intact",
+      "Cover with lid for faster egg cooking",
+      "Serve directly in the pan for authenticity"
+    ]
+  },
+  {
+    id: "moroccan-harira",
+    name: "Harira (Moroccan Ramadan Soup)",
+    tribeSlug: "moroccan-arab",
+    tribeName: "Moroccan Arab",
+    category: "special",
+    region: "north",
+    country: "MA",
+    description: "Rich, hearty soup with lentils, chickpeas, tomatoes, and lamb, traditionally served to break the fast during Ramadan.",
+    culturalSignificance: "Harira is Morocco's most important soup, essential during Ramadan. It's served at sunset with dates and chebakia pastries. The soup represents hospitality and blessing.",
+    historicalContext: "Harira dates back centuries in Morocco. The recipe was refined over generations, with each region adding local touches. It's believed to have Andalusian influences from Moorish Spain.",
+    youtubeVideoId: "5B_u_kFPVxk",
+    prepTime: "20 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Lamb", amount: "300g", notes: "Cubed" },
+      { item: "Chickpeas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Lentils", amount: "1/2 cup" },
+      { item: "Tomatoes", amount: "4 large", notes: "Blended" },
+      { item: "Onion", amount: "1 large", notes: "Grated" },
+      { item: "Celery", amount: "3 stalks", notes: "Chopped with leaves" },
+      { item: "Fresh coriander", amount: "1 bunch", notes: "Chopped" },
+      { item: "Fresh parsley", amount: "1 bunch", notes: "Chopped" },
+      { item: "Flour", amount: "3 tablespoons", notes: "For thickening" },
+      { item: "Ginger", amount: "1 teaspoon" },
+      { item: "Turmeric", amount: "1 teaspoon" },
+      { item: "Cinnamon", amount: "1/2 teaspoon" },
+      { item: "Vermicelli", amount: "1/2 cup" },
+      { item: "Lemon juice", amount: "2 tablespoons" }
+    ],
+    instructions: [
+      "In large pot, combine lamb, onion, ginger, turmeric, cinnamon with 2L water.",
+      "Bring to boil, skim foam, then add chickpeas. Simmer 45 minutes.",
+      "Add lentils, celery, half the herbs. Cook 20 more minutes.",
+      "Add blended tomatoes and cook 15 minutes.",
+      "Mix flour with 1 cup water to make slurry, stir into soup to thicken.",
+      "Add vermicelli and remaining herbs.",
+      "Simmer 10 minutes until vermicelli is cooked.",
+      "Season with salt, pepper, and lemon juice before serving."
+    ],
+    tips: [
+      "The soup should be thick and hearty, not watery",
+      "Fresh herbs are essential - don't substitute dried",
+      "Serve with dates and honey-dipped chebakia"
+    ]
+  },
+  {
+    id: "algerian-chorba",
+    name: "Chorba Frik (Algerian Wheat Soup)",
+    tribeSlug: "algerian-arab",
+    tribeName: "Algerian Arab",
+    category: "special",
+    region: "north",
+    country: "DZ",
+    description: "Hearty lamb soup with freekeh (green wheat), chickpeas, and aromatic spices. Algeria's beloved Ramadan soup.",
+    culturalSignificance: "Chorba is central to Algerian Ramadan traditions. The freekeh (smoked green wheat) gives it a distinctive smoky flavor. Every region has its variation.",
+    historicalContext: "Chorba has Ottoman origins but was transformed with local Algerian ingredients. Freekeh has been used in North Africa for millennia, prized for its nutritional value.",
+    youtubeVideoId: "qr3zVHc6YNM",
+    prepTime: "15 minutes",
+    cookTime: "1.5 hours",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Lamb", amount: "500g", notes: "On the bone" },
+      { item: "Freekeh (green wheat)", amount: "1/2 cup" },
+      { item: "Chickpeas", amount: "1/2 cup", notes: "Soaked overnight" },
+      { item: "Onion", amount: "1 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "3", notes: "Grated" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Fresh coriander", amount: "1/2 bunch" },
+      { item: "Fresh mint", amount: "1/4 bunch" },
+      { item: "Cinnamon stick", amount: "1" },
+      { item: "Ras el hanout", amount: "1 teaspoon" },
+      { item: "Olive oil", amount: "3 tablespoons" },
+      { item: "Lemon wedges", amount: "For serving" }
+    ],
+    instructions: [
+      "Brown lamb in olive oil in large pot.",
+      "Add onion and cook until softened.",
+      "Add tomatoes, tomato paste, spices, and 2L water.",
+      "Add soaked chickpeas and bring to boil.",
+      "Simmer 45 minutes until chickpeas are tender.",
+      "Add freekeh and cook 30 more minutes.",
+      "Add fresh herbs in last 5 minutes.",
+      "Season with salt and serve with lemon wedges."
+    ],
+    tips: [
+      "Rinse freekeh well before adding",
+      "The soup thickens as it sits - add water when reheating",
+      "Serve with crusty bread (khobz)"
+    ]
+  },
+  {
+    id: "tunisian-lablabi",
+    name: "Lablabi (Tunisian Chickpea Soup)",
+    tribeSlug: "tunisian-arab",
+    tribeName: "Tunisian Arab",
+    category: "staple",
+    region: "north",
+    country: "TN",
+    description: "Humble but beloved chickpea soup with stale bread, olive oil, harissa, and a poached egg. Tunisia's ultimate comfort food and hangover cure.",
+    culturalSignificance: "Lablabi is Tunisia's working-class breakfast, sold in dedicated shops from dawn. It's cheap, filling, and customizable. The bread-soaking tradition reflects anti-waste culture.",
+    historicalContext: "Lablabi emerged as a poor man's dish but became beloved across all social classes. The combination of chickpeas and bread has sustained Tunisians for centuries.",
+    youtubeVideoId: "laBE5q6_5_w",
+    prepTime: "10 minutes",
+    cookTime: "15 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Chickpeas", amount: "2 cans", notes: "Or 2 cups cooked" },
+      { item: "Stale bread", amount: "4 slices", notes: "Torn into pieces" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Harissa paste", amount: "2 tablespoons", notes: "Adjust to taste" },
+      { item: "Cumin", amount: "1 teaspoon" },
+      { item: "Eggs", amount: "4", notes: "Poached or soft-boiled" },
+      { item: "Olive oil", amount: "4 tablespoons" },
+      { item: "Lemon juice", amount: "2 tablespoons" },
+      { item: "Capers", amount: "2 tablespoons", notes: "Optional" },
+      { item: "Tuna", amount: "1 can", notes: "Optional" }
+    ],
+    instructions: [
+      "Heat chickpeas in their liquid with cumin and half the garlic.",
+      "Bring to simmer and cook 10 minutes.",
+      "Place torn bread in serving bowls.",
+      "Ladle hot chickpeas and broth over bread.",
+      "Top with poached egg, harissa, remaining garlic.",
+      "Drizzle generously with olive oil and lemon juice.",
+      "Add capers and tuna if using."
+    ],
+    tips: [
+      "The bread should be stale - fresh bread gets too mushy",
+      "Mix harissa into broth for even distribution",
+      "Customize with your preferred toppings"
+    ]
+  },
+  {
+    id: "moroccan-bastilla",
+    name: "Bastilla (Moroccan Pigeon Pie)",
+    tribeSlug: "moroccan-arab",
+    tribeName: "Moroccan Arab",
+    category: "special",
+    region: "north",
+    country: "MA",
+    description: "Elaborate layered pastry with spiced pigeon (or chicken), almonds, eggs, and cinnamon, wrapped in paper-thin warqa and dusted with sugar. Morocco's most prestigious dish.",
+    culturalSignificance: "Bastilla is the crown jewel of Moroccan cuisine, served only at the most important celebrations - weddings, births, and royal feasts. Making it is an art passed through generations.",
+    historicalContext: "Bastilla originated in Moorish Andalusia and came to Morocco with the expulsion of Muslims from Spain in 1492. The sweet-savory combination reflects the sophisticated Andalusian court cuisine.",
+    youtubeVideoId: "P6sE8r8jfDA",
+    prepTime: "1.5 hours",
+    cookTime: "1 hour",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Chicken or pigeon", amount: "1.5 kg", notes: "Bone-in pieces" },
+      { item: "Onions", amount: "3 large", notes: "Grated" },
+      { item: "Eggs", amount: "8" },
+      { item: "Almonds", amount: "300g", notes: "Blanched" },
+      { item: "Warqa or phyllo", amount: "20 sheets" },
+      { item: "Fresh parsley", amount: "1 bunch" },
+      { item: "Fresh coriander", amount: "1 bunch" },
+      { item: "Saffron", amount: "1/2 teaspoon" },
+      { item: "Cinnamon", amount: "2 tablespoons" },
+      { item: "Powdered sugar", amount: "1/2 cup" },
+      { item: "Butter", amount: "150g", notes: "Melted" },
+      { item: "Ginger", amount: "1 teaspoon" }
+    ],
+    instructions: [
+      "Poach chicken with onions, saffron, ginger, and herbs until very tender.",
+      "Shred meat and reduce cooking liquid until thick.",
+      "Scramble eggs in the reduced liquid until creamy.",
+      "Toast and chop almonds, mix with cinnamon and powdered sugar.",
+      "Layer phyllo in buttered pan, brushing each sheet with butter.",
+      "Add shredded chicken, then egg mixture, then almond mixture.",
+      "Top with more phyllo layers, brushing with butter.",
+      "Fold edges and bake at 180°C/350°F for 30-40 minutes until golden.",
+      "Dust with powdered sugar and cinnamon lattice pattern."
+    ],
+    tips: [
+      "Keep phyllo covered with damp towel while working",
+      "The filling should be well-seasoned - it needs to balance the sweet topping",
+      "Traditionally made with pigeon but chicken is common today"
+    ]
+  },
+  {
+    id: "algerian-rechta",
+    name: "Rechta (Algerian Wedding Noodles)",
+    tribeSlug: "algerian-arab",
+    tribeName: "Algerian Arab",
+    category: "special",
+    region: "north",
+    country: "DZ",
+    description: "Hand-made thin noodles served with chicken in a fragrant cinnamon and saffron sauce. Algeria's traditional wedding dish.",
+    culturalSignificance: "Rechta is Algeria's most prestigious dish, essential at weddings and major celebrations. Making the thin noodles by hand is an art that takes years to master.",
+    historicalContext: "Rechta has Ottoman origins but became uniquely Algerian. The dish represents prosperity and celebration. Traditional families still make the noodles by hand for important occasions.",
+    youtubeVideoId: "G8fgGdLXv9E",
+    prepTime: "2 hours",
+    cookTime: "1.5 hours",
+    servings: 10,
+    difficulty: "hard",
+    ingredients: [
+      { item: "For noodles: semolina flour", amount: "500g" },
+      { item: "For noodles: water, salt, oil", amount: "As needed" },
+      { item: "Chicken", amount: "1.5 kg", notes: "Cut into pieces" },
+      { item: "Chickpeas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Turnips", amount: "3", notes: "Quartered" },
+      { item: "Onion", amount: "2 large", notes: "Grated" },
+      { item: "Cinnamon sticks", amount: "2" },
+      { item: "Saffron", amount: "1/2 teaspoon" },
+      { item: "Butter", amount: "100g" },
+      { item: "Pepper", amount: "1 tablespoon", notes: "White or black" }
+    ],
+    instructions: [
+      "Make noodles: mix semolina with water and salt, knead, roll thin, cut into strips.",
+      "Dry noodles on cloth or steam briefly.",
+      "Brown chicken pieces in butter with onion.",
+      "Add water, chickpeas, cinnamon, saffron, pepper.",
+      "Simmer 1 hour, add turnips in last 20 minutes.",
+      "Steam noodles over the stew or cook in salted water.",
+      "Arrange noodles on platter, top with chicken and vegetables.",
+      "Ladle sauce generously over everything."
+    ],
+    tips: [
+      "Hand-made noodles have superior texture to store-bought",
+      "The sauce should be cinnamon-forward and golden from saffron",
+      "Serve with extra sauce on the side"
+    ]
+  },
+  {
+    id: "tunisian-makroudh",
+    name: "Makroudh (Tunisian Date Cookies)",
+    tribeSlug: "tunisian-arab",
+    tribeName: "Tunisian Arab",
+    category: "snack",
+    region: "north",
+    country: "TN",
+    description: "Diamond-shaped semolina cookies filled with date paste, fried, and dipped in honey syrup. Tunisia's beloved Eid sweet.",
+    culturalSignificance: "Makroudh is essential during Eid celebrations and weddings. Kairouan, Tunisia's holy city, is famous for making the best makroudh in the country.",
+    historicalContext: "Makroudh predates Arab arrival in North Africa - it's believed to be of Berber origin. The combination of semolina, dates, and honey reflects ancient Mediterranean traditions.",
+    youtubeVideoId: "GNpFqSN3GV8",
+    prepTime: "1 hour",
+    cookTime: "30 minutes",
+    servings: 30,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Semolina", amount: "500g", notes: "Fine grain" },
+      { item: "Butter", amount: "150g", notes: "Melted" },
+      { item: "Orange blossom water", amount: "2 tablespoons" },
+      { item: "Dates", amount: "400g", notes: "Pitted" },
+      { item: "Cinnamon", amount: "1 teaspoon" },
+      { item: "Honey", amount: "1 cup" },
+      { item: "Vegetable oil", amount: "For frying" },
+      { item: "Sesame seeds", amount: "Optional, for garnish" }
+    ],
+    instructions: [
+      "Mix semolina with melted butter and orange blossom water. Rest 30 minutes.",
+      "Process dates with cinnamon until smooth paste.",
+      "Roll semolina dough into logs, flatten, fill with date paste, roll and seal.",
+      "Cut into diamond shapes at an angle.",
+      "Make decorative fork marks on top.",
+      "Fry in oil at 170°C/340°F until golden brown.",
+      "Drain and immediately dip in warm honey.",
+      "Cool on rack. Store in airtight container."
+    ],
+    tips: [
+      "The dough should be well-rested before rolling",
+      "Fry at medium heat - too hot and outside burns before inside cooks",
+      "Dip in honey while still warm so it absorbs"
+    ]
+  },
+  {
+    id: "moroccan-msemen",
+    name: "Msemen (Moroccan Square Pancakes)",
+    tribeSlug: "moroccan-arab",
+    tribeName: "Moroccan Arab",
+    category: "snack",
+    region: "north",
+    country: "MA",
+    description: "Flaky, buttery square pancakes with crispy layers. Morocco's beloved breakfast bread, served with honey and butter.",
+    culturalSignificance: "Msemen is eaten at breakfast throughout Morocco. The folding technique creates dozens of flaky layers. Street vendors sell them hot from the griddle.",
+    historicalContext: "Msemen is related to Indian paratha and reflects ancient connections along trade routes. The technique of folding to create layers spread across the Arab world from South Asia.",
+    youtubeVideoId: "rY8qzQk4VGg",
+    prepTime: "1 hour",
+    cookTime: "30 minutes",
+    servings: 10,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Semolina", amount: "1 cup" },
+      { item: "All-purpose flour", amount: "1 cup" },
+      { item: "Salt", amount: "1 teaspoon" },
+      { item: "Sugar", amount: "1 tablespoon" },
+      { item: "Yeast", amount: "1 teaspoon" },
+      { item: "Warm water", amount: "1 cup" },
+      { item: "Butter", amount: "100g", notes: "Softened" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Honey", amount: "For serving" }
+    ],
+    instructions: [
+      "Mix semolina, flour, salt, sugar, and yeast. Add water to form soft dough.",
+      "Knead 10 minutes until smooth and elastic.",
+      "Divide into 10 balls, oil them, cover and rest 30 minutes.",
+      "Oil work surface. Stretch each ball into thin square.",
+      "Spread with butter, fold into thirds horizontally, then thirds vertically.",
+      "Flatten gently into square shape.",
+      "Cook on oiled griddle over medium heat until golden on both sides.",
+      "Serve hot with butter and honey."
+    ],
+    tips: [
+      "Keep dough well-oiled to prevent sticking",
+      "Stretch dough as thin as possible for maximum layers",
+      "Cook on medium heat to allow layers to cook through"
+    ]
+  },
+  {
+    id: "algerian-maktouba",
+    name: "Maktouba (Algerian Upside-Down Rice)",
+    tribeSlug: "algerian-arab",
+    tribeName: "Algerian Arab",
+    category: "special",
+    region: "north",
+    country: "DZ",
+    description: "Layered rice dish with fried eggplant, lamb, and tomato sauce, flipped upside-down for presentation. Algeria's festive one-pot meal.",
+    culturalSignificance: "Maktouba (meaning 'upside-down') is a celebratory dish for holidays and family gatherings. The dramatic flip reveals beautiful layers.",
+    historicalContext: "Maktouba has Levantine origins (maqluba) but became popular in Algeria during Ottoman times. Each North African country adapted it to local tastes.",
+    youtubeVideoId: "h_8KzT2qQ3w",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 8,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Rice", amount: "2 cups" },
+      { item: "Lamb", amount: "500g", notes: "Cubed" },
+      { item: "Eggplant", amount: "2 large", notes: "Sliced and fried" },
+      { item: "Tomatoes", amount: "4", notes: "Sliced" },
+      { item: "Onion", amount: "2", notes: "Sliced" },
+      { item: "Tomato paste", amount: "2 tablespoons" },
+      { item: "Ras el hanout", amount: "1 tablespoon" },
+      { item: "Vegetable oil", amount: "1/2 cup" },
+      { item: "Chicken broth", amount: "4 cups" }
+    ],
+    instructions: [
+      "Fry eggplant slices until golden. Set aside on paper towels.",
+      "Brown lamb in same pot. Add onions and cook until soft.",
+      "Add tomato paste and spices, cook 2 minutes.",
+      "Layer in large pot: tomato slices, fried eggplant, lamb mixture.",
+      "Top with washed rice.",
+      "Pour hot broth over, it should cover rice by 1 inch.",
+      "Cover tightly and cook on low 30-40 minutes until rice is done.",
+      "Let rest 5 minutes, then flip onto serving platter."
+    ],
+    tips: [
+      "Don't stir after layering - let it cook undisturbed",
+      "The bottom layer becomes the top - arrange nicely",
+      "Serve immediately after flipping"
+    ]
   }
 ];
 
@@ -10333,6 +10775,103 @@ recipes.push(...eastAfricanRecipes);
 recipes.push(...southernAfricanRecipes);
 recipes.push(...westAfricanRecipes);
 recipes.push(...northAfricanRecipes);
+
+// Auto-assign regions to recipes based on tribe patterns
+const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> = {
+  // East Africa
+  'kikuyu': { region: 'east', country: 'KE' },
+  'luo': { region: 'east', country: 'KE' },
+  'kamba': { region: 'east', country: 'KE' },
+  'kalenjin': { region: 'east', country: 'KE' },
+  'meru': { region: 'east', country: 'KE' },
+  'embu': { region: 'east', country: 'KE' },
+  'taita': { region: 'east', country: 'KE' },
+  'teso': { region: 'east', country: 'KE' },
+  'mijikenda': { region: 'east', country: 'KE' },
+  'maasai': { region: 'east', country: 'KE' },
+  'baganda': { region: 'east', country: 'UG' },
+  'banyankole': { region: 'east', country: 'UG' },
+  'acholi': { region: 'east', country: 'UG' },
+  'chagga': { region: 'east', country: 'TZ' },
+  'sukuma': { region: 'east', country: 'TZ' },
+  'haya': { region: 'east', country: 'TZ' },
+  'swahili': { region: 'east', country: 'TZ' },
+  'banyarwanda': { region: 'east', country: 'RW' },
+  // Horn of Africa
+  'oromo': { region: 'horn', country: 'ET' },
+  'amhara': { region: 'horn', country: 'ET' },
+  'tigrinya': { region: 'horn', country: 'ER' },
+  'afar': { region: 'horn', country: 'ET' },
+  'somali': { region: 'horn', country: 'SO' },
+  'mursi': { region: 'horn', country: 'ET' },
+  'hamar': { region: 'horn', country: 'ET' },
+  'karo': { region: 'horn', country: 'ET' },
+  'nuer': { region: 'horn', country: 'SS' },
+  // West Africa
+  'yoruba': { region: 'west', country: 'NG' },
+  'igbo': { region: 'west', country: 'NG' },
+  'hausa': { region: 'west', country: 'NG' },
+  'fulani': { region: 'west', country: 'NG' },
+  'akan': { region: 'west', country: 'GH' },
+  'ashanti': { region: 'west', country: 'GH' },
+  'ewe': { region: 'west', country: 'GH' },
+  'wolof': { region: 'west', country: 'SN' },
+  'mandinka': { region: 'west', country: 'SN' },
+  'bambara': { region: 'west', country: 'ML' },
+  'dogon': { region: 'west', country: 'ML' },
+  'tuareg': { region: 'west', country: 'ML' },
+  'songhai': { region: 'west', country: 'NE' },
+  // Central Africa
+  'luba': { region: 'central', country: 'CD' },
+  'mongo': { region: 'central', country: 'CD' },
+  'kongo': { region: 'central', country: 'CD' },
+  'bakongo': { region: 'central', country: 'CD' },
+  'fang': { region: 'central', country: 'GA' },
+  'bamileke': { region: 'central', country: 'CM' },
+  'gbaya': { region: 'central', country: 'CF' },
+  'banda': { region: 'central', country: 'CF' },
+  'sara': { region: 'central', country: 'TD' },
+  'ovimbundu': { region: 'central', country: 'AO' },
+  'chokwe': { region: 'central', country: 'AO' },
+  'mbundu': { region: 'central', country: 'AO' },
+  'lunda': { region: 'central', country: 'AO' },
+  // Southern Africa
+  'zulu': { region: 'southern', country: 'ZA' },
+  'xhosa': { region: 'southern', country: 'ZA' },
+  'sotho': { region: 'southern', country: 'ZA' },
+  'tswana': { region: 'southern', country: 'BW' },
+  'ndebele': { region: 'southern', country: 'ZA' },
+  'shona': { region: 'southern', country: 'ZW' },
+  'san': { region: 'southern', country: 'BW' },
+  'himba': { region: 'southern', country: 'NA' },
+  'herero': { region: 'southern', country: 'NA' },
+  'basotho': { region: 'southern', country: 'LS' },
+  'swazi': { region: 'southern', country: 'SZ' },
+  'chewa': { region: 'southern', country: 'MW' },
+  'makonde': { region: 'southern', country: 'MZ' },
+  'yao': { region: 'southern', country: 'MW' },
+  'lozi': { region: 'southern', country: 'ZM' },
+  'ngoni': { region: 'southern', country: 'MW' },
+  'tumbuka': { region: 'southern', country: 'MW' },
+  // North Africa
+  'amazigh': { region: 'north', country: 'MA' },
+  'moroccan-arab': { region: 'north', country: 'MA' },
+  'algerian-arab': { region: 'north', country: 'DZ' },
+  'tunisian-arab': { region: 'north', country: 'TN' },
+  'egyptian-arab': { region: 'north', country: 'EG' },
+  'kabyle': { region: 'north', country: 'DZ' },
+  'chaoui': { region: 'north', country: 'DZ' },
+  'nubian': { region: 'north', country: 'SD' },
+  'toubou': { region: 'north', country: 'TD' }
+};
+
+// Apply region mappings to recipes that don't have them
+recipes.forEach(recipe => {
+  if (!recipe.region && tribeToRegion[recipe.tribeSlug]) {
+    recipe.region = tribeToRegion[recipe.tribeSlug].region;
+    recipe.country = tribeToRegion[recipe.tribeSlug].country;
+  }
+});
 
 // Get similar recipes from other tribes (same category)
 export const getSimilarRecipes = (recipeId: string, limit: number = 4): Recipe[] => {
