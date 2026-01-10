@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllTribes, getCountries } from '@/lib/tribeDetection';
 import { ChevronRight, Users, MapPin, Globe, SlidersHorizontal, ArrowUpDown, Check } from 'lucide-react';
@@ -30,7 +30,7 @@ interface Tribe {
 
 type SortOption = 'population' | 'name' | 'region';
 
-export function TopTribesCarousel() {
+export const TopTribesCarousel = memo(function TopTribesCarousel() {
   const allTribes = getAllTribes() as Tribe[];
   const countries = getCountries();
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
@@ -259,4 +259,4 @@ export function TopTribesCarousel() {
       </Carousel>
     </section>
   );
-}
+});

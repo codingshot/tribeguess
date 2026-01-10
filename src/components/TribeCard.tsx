@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Users, ChevronRight } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';
@@ -15,7 +16,7 @@ interface TribeCardProps {
   };
 }
 
-export function TribeCard({ tribe }: TribeCardProps) {
+export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
   return (
     <Link
       to={`/learn/${tribe.slug}`}
@@ -74,4 +75,4 @@ export function TribeCard({ tribe }: TribeCardProps) {
       </ul>
     </Link>
   );
-}
+});

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, UtensilsCrossed, Clock, Users } from 'lucide-react';
 import {
@@ -9,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { recipes, Recipe } from '@/data/recipes';
 
-export function FeaturedRecipesCarousel() {
+export const FeaturedRecipesCarousel = memo(function FeaturedRecipesCarousel() {
   // Get featured recipes (variety of tribes)
   const featuredRecipes = recipes.slice(0, 15);
 
@@ -104,4 +105,4 @@ export function FeaturedRecipesCarousel() {
       </Carousel>
     </section>
   );
-}
+});
