@@ -368,11 +368,11 @@
         "writingSystem": "Latin alphabet with special characters"
       },
       "famousPeople": [
-        { "name": "Jomo Kenyatta", "role": "First President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Jomo_Kenyatta" },
-        { "name": "Wangari Maathai", "role": "Nobel Peace Prize Laureate 2004", "wikipedia": "https://en.wikipedia.org/wiki/Wangari_Maathai" },
-        { "name": "Ngũgĩ wa Thiong'o", "role": "Author & Playwright", "wikipedia": "https://en.wikipedia.org/wiki/Ng%C5%A9g%C4%A9_wa_Thiong%27o" },
-        { "name": "Mwai Kibaki", "role": "Third President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki" },
-        { "name": "Dedan Kimathi", "role": "Mau Mau Leader", "wikipedia": "https://en.wikipedia.org/wiki/Dedan_Kimathi" }
+        { "name": "Jomo Kenyatta", "role": "First President of Kenya", "birth": 1897, "death": 1978, "wikipedia": "https://en.wikipedia.org/wiki/Jomo_Kenyatta", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Jomo_Kenyatta_1978.jpg/220px-Jomo_Kenyatta_1978.jpg" },
+        { "name": "Wangari Maathai", "role": "Nobel Peace Prize Laureate 2004", "birth": 1940, "death": 2011, "wikipedia": "https://en.wikipedia.org/wiki/Wangari_Maathai", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wangari_Maathai_portrait_by_Martin_Rowe.jpg/220px-Wangari_Maathai_portrait_by_Martin_Rowe.jpg" },
+        { "name": "Ngũgĩ wa Thiong'o", "role": "Author & Playwright", "birth": 1938, "wikipedia": "https://en.wikipedia.org/wiki/Ng%C5%A9g%C4%A9_wa_Thiong%27o", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Ngugi_wa_Thiong%27o%2C_2018_%28cropped%29.jpg/220px-Ngugi_wa_Thiong%27o%2C_2018_%28cropped%29.jpg" },
+        { "name": "Mwai Kibaki", "role": "Third President of Kenya", "birth": 1931, "death": 2022, "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mwai_Kibaki%2C_October_2003.jpg/220px-Mwai_Kibaki%2C_October_2003.jpg" },
+        { "name": "Dedan Kimathi", "role": "Mau Mau Leader", "birth": 1920, "death": 1957, "wikipedia": "https://en.wikipedia.org/wiki/Dedan_Kimathi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dedan_Kimathi.jpg/220px-Dedan_Kimathi.jpg" }
       ],
       "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise.",
       "relatedTribes": ["meru", "embu"],
@@ -519,11 +519,11 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Barack Obama Sr.", "role": "Father of 44th US President", "wikipedia": "https://en.wikipedia.org/wiki/Barack_Obama_Sr." },
-        { "name": "Raila Odinga", "role": "Former Prime Minister & Political Leader", "wikipedia": "https://en.wikipedia.org/wiki/Raila_Odinga" },
-        { "name": "Lupita Nyong'o", "role": "Oscar-winning Actress", "wikipedia": "https://en.wikipedia.org/wiki/Lupita_Nyong%27o" },
-        { "name": "Jaramogi Oginga Odinga", "role": "First Vice President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Jaramogi_Oginga_Odinga" },
-        { "name": "Tom Mboya", "role": "Independence Hero & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya" }
+        { "name": "Barack Obama Sr.", "role": "Father of 44th US President", "birth": 1936, "death": 1982, "wikipedia": "https://en.wikipedia.org/wiki/Barack_Obama_Sr.", "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/BarackObamasnr.jpg/220px-BarackObamasnr.jpg" },
+        { "name": "Raila Odinga", "role": "Former Prime Minister & Political Leader", "birth": 1945, "wikipedia": "https://en.wikipedia.org/wiki/Raila_Odinga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Raila_Odinga_%282022%29.jpg/220px-Raila_Odinga_%282022%29.jpg" },
+        { "name": "Lupita Nyong'o", "role": "Oscar-winning Actress", "birth": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Lupita_Nyong%27o", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lupita_Nyong%27o_at_the_2024_Met_Gala.jpg/220px-Lupita_Nyong%27o_at_the_2024_Met_Gala.jpg" },
+        { "name": "Jaramogi Oginga Odinga", "role": "First Vice President of Kenya", "birth": 1911, "death": 1994, "wikipedia": "https://en.wikipedia.org/wiki/Jaramogi_Oginga_Odinga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Oginga_Odinga.jpg/220px-Oginga_Odinga.jpg" },
+        { "name": "Tom Mboya", "role": "Independence Hero & Politician", "birth": 1930, "death": 1969, "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tom_Mboya.jpg/220px-Tom_Mboya.jpg" }
       ],
       "description": "The Luo (Joluo) are the fourth-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region.",
       "relatedTribes": ["luhya", "kisii"],
@@ -662,11 +662,11 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Masinde Muliro", "role": "Independence Hero & Politician", "wikipedia": "https://en.wikipedia.org/wiki/Masinde_Muliro" },
-        { "name": "Victor Wanyama", "role": "Football Star (Spurs, Montreal)", "wikipedia": "https://en.wikipedia.org/wiki/Victor_Wanyama" },
-        { "name": "Michael Olunga", "role": "Footballer (Kenya Top Scorer)", "wikipedia": "https://en.wikipedia.org/wiki/Michael_Olunga" },
-        { "name": "Michael Kijana Wamalwa", "role": "8th Vice President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Michael_Kijana_Wamalwa" },
-        { "name": "Musalia Mudavadi", "role": "Prime Cabinet Secretary", "wikipedia": "https://en.wikipedia.org/wiki/Musalia_Mudavadi" }
+        { "name": "Masinde Muliro", "role": "Independence Hero & Politician", "birth": 1922, "death": 1992, "wikipedia": "https://en.wikipedia.org/wiki/Masinde_Muliro" },
+        { "name": "Victor Wanyama", "role": "Football Star (Spurs, Montreal)", "birth": 1991, "wikipedia": "https://en.wikipedia.org/wiki/Victor_Wanyama", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Victor_Wanyama_2018-02-04_1.jpg/220px-Victor_Wanyama_2018-02-04_1.jpg" },
+        { "name": "Michael Olunga", "role": "Footballer (Kenya Top Scorer)", "birth": 1994, "wikipedia": "https://en.wikipedia.org/wiki/Michael_Olunga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/20190324_Michael_Olunga_2.jpg/220px-20190324_Michael_Olunga_2.jpg" },
+        { "name": "Michael Kijana Wamalwa", "role": "8th Vice President of Kenya", "birth": 1944, "death": 2003, "wikipedia": "https://en.wikipedia.org/wiki/Michael_Kijana_Wamalwa" },
+        { "name": "Musalia Mudavadi", "role": "Prime Cabinet Secretary", "birth": 1960, "wikipedia": "https://en.wikipedia.org/wiki/Musalia_Mudavadi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Musalia_Mudavadi.png/220px-Musalia_Mudavadi.png" }
       ],
       "description": "The Luhya (Abaluyia) are the second-largest ethnic group in Kenya, comprising 18 sub-tribes including Bukusu, Maragoli, and Wanga. They are known for their agricultural prowess and hospitality.",
       "relatedTribes": ["luo", "kisii", "teso"],
@@ -949,12 +949,12 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Eliud Kipchoge", "role": "Greatest Marathon Runner Ever", "wikipedia": "https://en.wikipedia.org/wiki/Eliud_Kipchoge" },
-        { "name": "William Ruto", "role": "5th President of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/William_Ruto" },
-        { "name": "David Rudisha", "role": "800m World Record Holder", "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha" },
-        { "name": "Daniel arap Moi", "role": "2nd President of Kenya (1978-2002)", "wikipedia": "https://en.wikipedia.org/wiki/Daniel_arap_Moi" },
-        { "name": "Faith Kipyegon", "role": "1500m World Record Holder", "wikipedia": "https://en.wikipedia.org/wiki/Faith_Kipyegon" },
-        { "name": "Koitalel Arap Samoei", "role": "Nandi Resistance Leader", "wikipedia": "https://en.wikipedia.org/wiki/Koitalel_arap_Samoei" }
+        { "name": "Eliud Kipchoge", "role": "Greatest Marathon Runner Ever", "birth": 1984, "wikipedia": "https://en.wikipedia.org/wiki/Eliud_Kipchoge", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Eliud_Kipchoge_2018.jpg/220px-Eliud_Kipchoge_2018.jpg" },
+        { "name": "William Ruto", "role": "5th President of Kenya", "birth": 1966, "wikipedia": "https://en.wikipedia.org/wiki/William_Ruto", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/WilliamRuto2021_%28cropped%29.jpg/220px-WilliamRuto2021_%28cropped%29.jpg" },
+        { "name": "David Rudisha", "role": "800m World Record Holder", "birth": 1988, "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/David_Rudisha_-_Rio_2016.jpg/220px-David_Rudisha_-_Rio_2016.jpg" },
+        { "name": "Daniel arap Moi", "role": "2nd President of Kenya (1978-2002)", "birth": 1924, "death": 2020, "wikipedia": "https://en.wikipedia.org/wiki/Daniel_arap_Moi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Daniel_arap_Moi_1979b.jpg/220px-Daniel_arap_Moi_1979b.jpg" },
+        { "name": "Faith Kipyegon", "role": "1500m World Record Holder", "birth": 1994, "wikipedia": "https://en.wikipedia.org/wiki/Faith_Kipyegon", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Faith_Kipyegon_%28cropped%29.jpg/220px-Faith_Kipyegon_%28cropped%29.jpg" },
+        { "name": "Koitalel Arap Samoei", "role": "Nandi Resistance Leader", "birth": 1860, "death": 1905, "wikipedia": "https://en.wikipedia.org/wiki/Koitalel_arap_Samoei" }
       ],
       "description": "The Kalenjin are famous worldwide for producing exceptional long-distance runners. They comprise several sub-groups including Nandi, Kipsigis, Keiyo, and Tugen, traditionally residing in the Rift Valley highlands.",
       "relatedTribes": ["maasai", "turkana", "samburu"],
@@ -4330,11 +4330,11 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Shaka Zulu", "role": "Founder of Zulu Kingdom", "wikipedia": "https://en.wikipedia.org/wiki/Shaka" },
-        { "name": "Mangosuthu Buthelezi", "role": "Political Leader & Prince", "wikipedia": "https://en.wikipedia.org/wiki/Mangosuthu_Buthelezi" },
-        { "name": "Ladysmith Black Mambazo", "role": "Grammy-Winning Choir", "wikipedia": "https://en.wikipedia.org/wiki/Ladysmith_Black_Mambazo" },
-        { "name": "Jacob Zuma", "role": "Former President of South Africa", "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Zuma" },
-        { "name": "Misuzulu kaZwelithini", "role": "Current Zulu King", "wikipedia": "https://en.wikipedia.org/wiki/Misuzulu_kaZwelithini" }
+        { "name": "Shaka Zulu", "role": "Founder of Zulu Kingdom", "birth": 1787, "death": 1828, "wikipedia": "https://en.wikipedia.org/wiki/Shaka", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Shaka_Zulu_1824.jpg/220px-Shaka_Zulu_1824.jpg" },
+        { "name": "Mangosuthu Buthelezi", "role": "Political Leader & Prince", "birth": 1928, "death": 2023, "wikipedia": "https://en.wikipedia.org/wiki/Mangosuthu_Buthelezi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Mangosuthu_Buthelezi%2C_2011_%28cropped%29.jpg/220px-Mangosuthu_Buthelezi%2C_2011_%28cropped%29.jpg" },
+        { "name": "Ladysmith Black Mambazo", "role": "Grammy-Winning Choir", "wikipedia": "https://en.wikipedia.org/wiki/Ladysmith_Black_Mambazo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ladysmith_Black_Mambazo_Roskilde_2012.jpg/220px-Ladysmith_Black_Mambazo_Roskilde_2012.jpg" },
+        { "name": "Jacob Zuma", "role": "Former President of South Africa", "birth": 1942, "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Zuma", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Jacob_Zuma_2010_%28cropped%29.jpg/220px-Jacob_Zuma_2010_%28cropped%29.jpg" },
+        { "name": "Misuzulu kaZwelithini", "role": "Current Zulu King", "birth": 1974, "wikipedia": "https://en.wikipedia.org/wiki/Misuzulu_kaZwelithini" }
       ],
       "description": "The Zulu are South Africa's largest ethnic group, known for Shaka's warrior kingdom, distinctive culture, and isicathamiya music tradition.",
       "relatedTribes": ["xhosa", "swazi", "ndebele"],
@@ -4474,11 +4474,11 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Nelson Mandela", "role": "Anti-Apartheid Leader & President", "wikipedia": "https://en.wikipedia.org/wiki/Nelson_Mandela" },
-        { "name": "Miriam Makeba", "role": "'Mama Africa' Singer", "wikipedia": "https://en.wikipedia.org/wiki/Miriam_Makeba" },
-        { "name": "Thabo Mbeki", "role": "Second President of South Africa", "wikipedia": "https://en.wikipedia.org/wiki/Thabo_Mbeki" },
-        { "name": "Oliver Tambo", "role": "ANC Leader", "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Tambo" },
-        { "name": "Winnie Madikizela-Mandela", "role": "Anti-Apartheid Activist", "wikipedia": "https://en.wikipedia.org/wiki/Winnie_Madikizela-Mandela" }
+        { "name": "Nelson Mandela", "role": "Anti-Apartheid Leader & President", "birth": 1918, "death": 2013, "wikipedia": "https://en.wikipedia.org/wiki/Nelson_Mandela", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/220px-Nelson_Mandela_1994.jpg" },
+        { "name": "Miriam Makeba", "role": "'Mama Africa' Singer", "birth": 1932, "death": 2008, "wikipedia": "https://en.wikipedia.org/wiki/Miriam_Makeba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Miriam_Makeba_1969.jpg/220px-Miriam_Makeba_1969.jpg" },
+        { "name": "Thabo Mbeki", "role": "Second President of South Africa", "birth": 1942, "wikipedia": "https://en.wikipedia.org/wiki/Thabo_Mbeki", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Thabo_Mbeki%2C_2009.jpg/220px-Thabo_Mbeki%2C_2009.jpg" },
+        { "name": "Oliver Tambo", "role": "ANC Leader", "birth": 1917, "death": 1993, "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Tambo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Oliver_Tambo_1985.jpg/220px-Oliver_Tambo_1985.jpg" },
+        { "name": "Winnie Madikizela-Mandela", "role": "Anti-Apartheid Activist", "birth": 1936, "death": 2018, "wikipedia": "https://en.wikipedia.org/wiki/Winnie_Madikizela-Mandela", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Winnie_Mandela_1998.jpg/220px-Winnie_Mandela_1998.jpg" }
       ],
       "description": "The Xhosa are a major South African group known for click consonants, initiation traditions, and producing many anti-apartheid leaders including Nelson Mandela.",
       "relatedTribes": ["zulu", "ndebele", "swazi"],
