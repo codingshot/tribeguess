@@ -472,27 +472,46 @@ Tribes lacking verified GPS landmarks in `tribeLandmarks.ts`:
 
 ### 🟡 Recipe Audit - Missing Fields
 
-**Recipes Missing YouTube Video IDs** (Need cooking tutorial links):
+**Broken YouTube Video IDs** (Verified January 2026):
 
-| Recipe | Tribe | Status |
+| Video ID | Status | Used In | Replacement |
+|----------|--------|---------|-------------|
+| `Ys1i6rXKp1Q` | ❌ Unavailable | Chikwanga, Funge, Chokwe recipes | `CJSs3Op2iu0` (Pondu/Saka-saka) |
+| `y4fCVmL9Wgo` | ❌ Unavailable | 10+ Nshima/porridge recipes | `XinrsmLFkp0` (Zambian Nshima) |
+| `qPNxS3z2ckM` | ❌ Unavailable | Liboke, Ngombo, Mukua, Daraba | `q7aQ--A76lo` (Congolese cooking) |
+| `1NxD3Hp_L_U` | ❌ Unavailable | African greens recipes | `y2JsmDDgVu0` (African Spinach Stew) |
+
+**Working Video IDs** (Verified):
+
+| Video ID | Recipe | Status |
+|----------|--------|--------|
+| `5cuGbmPtLGE` | Mukimo | ✅ Working |
+| `lie8xwHRG44` | Omena | ✅ Working |
+| `siv6d9f4kx4` | Nyama Choma | ✅ Working |
+| `jDbUg4f9EFw` | Jollof Rice | ✅ Working |
+| `2oRDGbJtNJA` | Injera | ✅ Working |
+
+### 🟡 Missing Recipes by Region
+
+| Category | Needed |
+|----------|--------|
+| Sahel Cuisine | Thiakry (Senegal), Dégué (Mali), Millet couscous |
+| Central African | Palm wine (detailed), More DRC dishes |
+| Horn of Africa | Kitcha (Eritrea), More Somali variations |
+| Beverages | Palm wine regions, Hibiscus drinks, Baobab juice |
+
+### ✅ Recently Added Recipes
+
+| Recipe | Tribe | Region |
 |--------|-------|--------|
-| Osaroi (Blood and Milk) | Maasai | ⚠️ No video |
-| Pap en Vleis | Zulu | ⚠️ No video |
-| Romazava | Merina | ⚠️ No video |
-| Ravitoto | Merina | ⚠️ No video |
-| Koba | Merina | ⚠️ No video |
-| Eghajira (Tuareg Cheese) | Tuareg | ⚠️ No video |
-| Otjize Butter | Himba | ⚠️ No video |
-| Oshifima | Himba | ⚠️ No video |
-| Omakere | Himba | ⚠️ No video |
-
-**Recipes Missing Historical Context**:
-
-| Category | Count | Notes |
-|----------|-------|-------|
-| Staple porridges | ~15 | Most nshima/ugali variants lack historicalContext |
-| Beverages | ~8 | Fermented drinks need brewing history |
-| Snacks | ~5 | Need cultural occasion info |
+| Shakshuka | Tunisian Arab | North Africa |
+| Harira | Moroccan Arab | North Africa |
+| Chorba Frik | Algerian | North Africa |
+| Funge | Ovimbundu | Central/Angola |
+| Calulu | Ovimbundu | Central/Angola |
+| Muamba de Galinha | Ovimbundu | Central/Angola |
+| Chikuanga | Chokwe | Central Africa |
+| 30+ Central African recipes | Various | Central/Southern |
 
 ### 🟡 Missing Recipes by Region
 
