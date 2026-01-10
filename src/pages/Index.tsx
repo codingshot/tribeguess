@@ -185,13 +185,19 @@ const Index = () => {
             </div>
             
             {/* Top Tribes Carousel */}
-            <TopTribesCarousel />
+            <div className="content-auto-lg">
+              <TopTribesCarousel />
+            </div>
             
             {/* Featured Blogs Carousel */}
-            <FeaturedBlogsCarousel />
+            <div className="content-auto">
+              <FeaturedBlogsCarousel />
+            </div>
             
             {/* Featured Recipes Carousel */}
-            <FeaturedRecipesCarousel />
+            <div className="content-auto">
+              <FeaturedRecipesCarousel />
+            </div>
             
             <aside className="mt-8 sm:mt-10 p-3 sm:p-4 bg-secondary/50 rounded-xl max-w-md mx-auto">
               <p className="text-xs text-muted-foreground">
