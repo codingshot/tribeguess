@@ -12,6 +12,7 @@ export interface Person {
   countries: string[];
   category: string;
   birthYear?: number;
+  deathYear?: number;
 }
 
 // Category detection from role
@@ -126,7 +127,8 @@ export function getAllPeople(): Person[] {
           tribeSlug: tribe.slug,
           countries: tribe.countries || [],
           category: detectCategory(person.role),
-          birthYear: extractBirthYear(person.role),
+          birthYear: person.birth,
+          deathYear: person.death,
         });
       });
     }

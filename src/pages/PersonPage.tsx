@@ -161,10 +161,15 @@ export default function PersonPage() {
                       {countryInfo.map(c => `${c?.flag} ${c?.name}`).join(', ')}
                     </div>
                     
-                    {person.birthYear && (
+                    {(person.birthYear || person.deathYear) && (
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Calendar className="w-4 h-4" />
-                        Born {person.birthYear}
+                        {person.birthYear && person.deathYear 
+                          ? `${person.birthYear} – ${person.deathYear}`
+                          : person.birthYear 
+                            ? `Born ${person.birthYear}`
+                            : `Died ${person.deathYear}`
+                        }
                       </div>
                     )}
                   </div>
