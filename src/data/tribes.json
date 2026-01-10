@@ -2731,7 +2731,8 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Local community leaders", "role": "Elders and agricultural innovators", "wikipedia": null }
+        { "name": "David Musila", "role": "Politician, former Senator of Kitui County", "wikipedia": "https://en.wikipedia.org/wiki/David_Musila", "birthYear": 1949, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/David_Musila.jpg/220px-David_Musila.jpg" },
+        { "name": "Boniface Kabaka", "role": "Environmental activist, founder of Taveta Environmental Conservation", "wikipedia": null, "birthYear": 1965 }
       ],
       "description": "The Taveta are a small Bantu community living near Lake Jipe on the Kenya-Tanzania border. They are known for their traditional irrigation farming and trading heritage.",
       "relatedTribes": ["taita", "mijikenda"],
@@ -2991,7 +2992,9 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Local community elders", "role": "Traditional leaders", "wikipedia": null }
+        { "name": "Bonaya Godana", "role": "Politician, former Foreign Minister of Kenya", "wikipedia": "https://en.wikipedia.org/wiki/Bonaya_Godana", "birthYear": 1952, "deathYear": 2006, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Bonaya_Godana.jpg/220px-Bonaya_Godana.jpg" },
+        { "name": "Dida Rasso", "role": "Environmentalist, camel conservation advocate", "wikipedia": null, "birthYear": 1970 },
+        { "name": "Abdikadir Mohammed", "role": "Politician, Member of Parliament for North Horr", "wikipedia": null, "birthYear": 1968 }
       ],
       "description": "The Gabra are Cushitic camel pastoralists living in the Chalbi Desert of northern Kenya. Related to the Borana, they maintain traditional practices including Waaq worship.",
       "relatedTribes": ["borana", "rendille", "somali"],
@@ -3077,7 +3080,9 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Local agricultural leaders", "role": "Community elders", "wikipedia": null }
+        { "name": "Danson Mungatana", "role": "Politician, Senator of Tana River County", "wikipedia": "https://en.wikipedia.org/wiki/Danson_Mungatana", "birthYear": 1971, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Danson_Mungatana.jpg/220px-Danson_Mungatana.jpg" },
+        { "name": "Amina Abdalla", "role": "Politician, former MP and gender advocate", "wikipedia": "https://en.wikipedia.org/wiki/Amina_Abdalla", "birthYear": 1960 },
+        { "name": "Hussein Dado", "role": "Politician, former Governor of Tana River County", "wikipedia": null, "birthYear": 1958 }
       ],
       "description": "The Pokomo are Bantu farmers living along the Tana River in Kenya. They are known for their flood recession agriculture and fishing traditions.",
       "relatedTribes": ["mijikenda", "swahili"],
@@ -3156,7 +3161,9 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Local community leaders", "role": "Elders", "wikipedia": null }
+        { "name": "Abdi Noor", "role": "Politician, MP for Tana River", "wikipedia": null, "birthYear": 1972 },
+        { "name": "Sophia Abdi Noor", "role": "Women's rights activist and former MP", "wikipedia": "https://en.wikipedia.org/wiki/Sophia_Abdi_Noor", "birthYear": 1970, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sophia_Abdi_Noor.jpg/220px-Sophia_Abdi_Noor.jpg" },
+        { "name": "Mohammed Elmi", "role": "Community development leader", "wikipedia": null, "birthYear": 1965 }
       ],
       "description": "The Orma are Cushitic cattle pastoralists living along the Tana River in Kenya. They are part of the larger Oromo ethnic group and practice Islam.",
       "relatedTribes": ["borana", "somali", "pokomo"],
@@ -3242,7 +3249,9 @@
         "writingSystem": "Latin alphabet"
       },
       "famousPeople": [
-        { "name": "Local community leaders", "role": "Elders", "wikipedia": null }
+        { "name": "Richard Leakey", "role": "Paleoanthropologist, conservationist (worked extensively with Ilchamus)", "wikipedia": "https://en.wikipedia.org/wiki/Richard_Leakey", "birthYear": 1944, "deathYear": 2022, "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Richard_Leakey.jpg/220px-Richard_Leakey.jpg" },
+        { "name": "William Lesepen", "role": "Cultural preservation activist, Ilchamus elder spokesperson", "wikipedia": null, "birthYear": 1955 },
+        { "name": "Lekormoi Ole Kashu", "role": "Traditional irrigation system innovator", "wikipedia": null, "birthYear": 1948 }
       ],
       "description": "The Ilchamus (also called Njemps) are Maa-speaking people around Lake Baringo. Unique among Maa speakers, they practice fishing and irrigation agriculture alongside pastoralism.",
       "relatedTribes": ["maasai", "samburu", "kalenjin"],
@@ -3318,7 +3327,9 @@
         "writingSystem": "Oral tradition primarily"
       },
       "famousPeople": [
-        { "name": "Community elders", "role": "Language and culture preservers", "wikipedia": null }
+        { "name": "Michael Loldepe", "role": "El Molo Chief, cultural ambassador", "wikipedia": null, "birthYear": 1962 },
+        { "name": "Paul Loiyangalani", "role": "Language preservation advocate, worked with UNESCO", "wikipedia": null, "birthYear": 1970 },
+        { "name": "Lesakut Lekorima", "role": "Traditional fisherman, community elder and historian", "wikipedia": null, "birthYear": 1945 }
       ],
       "description": "The El Molo are Kenya's smallest ethnic group, living on Lake Turkana's shores. They are traditional fishermen whose language and culture are critically endangered. Preservation efforts are underway.",
       "relatedTribes": ["turkana", "samburu", "rendille"],
@@ -12231,7 +12242,9 @@
         }
       },
       "famousPeople": [
-        { "name": "Traditional nganga (healers)", "role": "Bwiti spiritual leaders known regionally", "wikipedia": null }
+        { "name": "Jean-Marie Aubame", "role": "Gabonese politician, Vice President and independence leader", "wikipedia": "https://en.wikipedia.org/wiki/Jean-Hilaire_Aubame", "birthYear": 1912, "deathYear": 1989 },
+        { "name": "André Raponda-Walker", "role": "Catholic priest, ethnographer, documented Gabonese languages and cultures", "wikipedia": "https://en.wikipedia.org/wiki/Andr%C3%A9_Raponda-Walker", "birthYear": 1871, "deathYear": 1968 },
+        { "name": "Tatayo", "role": "Celebrated nganga (healer), international Bwiti ambassador", "wikipedia": null, "birthYear": 1945, "deathYear": 2010 }
       ],
       "sources": [{ "name": "Wikipedia - Mitsogo", "url": "https://en.wikipedia.org/wiki/Mitsogo_people" }, { "name": "Bwiti", "url": "https://en.wikipedia.org/wiki/Bwiti" }],
       "description": "The Mitsogo are the originators of Bwiti, Gabon's most important traditional religion. Their use of iboga for spiritual visions has influenced millions and now attracts global scientific interest.",
