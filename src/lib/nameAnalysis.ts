@@ -66,13 +66,13 @@ function buildPrefixPatterns(): Record<string, { tribe: string; tribeName: strin
     'kar': [{ tribe: 'kikuyu', tribeName: 'Kikuyu', weight: 0.86 }],
     'mur': [{ tribe: 'kikuyu', tribeName: 'Kikuyu', weight: 0.84 }],
     'git': [{ tribe: 'kikuyu', tribeName: 'Kikuyu', weight: 0.88 }],
-    'kib': [{ tribe: 'kikuyu', tribeName: 'Kikuyu', weight: 0.82 }],
+    'kib': [{ tribe: 'kikuyu', tribeName: 'Kikuyu', weight: 0.82 }, { tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.90 }],
     
     // Luhya patterns
     'naf': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.95 }],
     'waf': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.95 }],
     'nek': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.92 }],
-    'was': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.90 }],
+    'was': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.90 }, { tribe: 'baganda', tribeName: 'Baganda', weight: 0.86 }],
     'wen': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.88 }],
     'buk': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.92 }],
     'mal': [{ tribe: 'luhya', tribeName: 'Luhya', weight: 0.85 }],
@@ -83,7 +83,7 @@ function buildPrefixPatterns(): Record<string, { tribe: string; tribeName: strin
     'kip': [{ tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.96 }],
     'chep': [{ tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.96 }],
     'jer': [{ tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.92 }],
-    'kib': [{ tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.90 }],
+    // 'kib' moved to Kikuyu patterns with Kalenjin included
     'kos': [{ tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.88 }],
     'rot': [{ tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.90 }],
     'ber': [{ tribe: 'kalenjin', tribeName: 'Kalenjin', weight: 0.85 }],
@@ -161,7 +161,7 @@ function buildPrefixPatterns(): Record<string, { tribe: string; tribeName: strin
     'run': [{ tribe: 'shona', tribeName: 'Shona', weight: 0.88 }],
     'tat': [{ tribe: 'shona', tribeName: 'Shona', weight: 0.90 }],
     'tak': [{ tribe: 'shona', tribeName: 'Shona', weight: 0.86 }],
-    'tin': [{ tribe: 'shona', tribeName: 'Shona', weight: 0.88 }],
+    'tin': [{ tribe: 'shona', tribeName: 'Shona', weight: 0.88 }, { tribe: 'tuareg', tribeName: 'Tuareg', weight: 0.90 }],
     'zvi': [{ tribe: 'shona', tribeName: 'Shona', weight: 0.90 }],
     
     // Dinka patterns
@@ -259,7 +259,7 @@ function buildPrefixPatterns(): Record<string, { tribe: string; tribeName: strin
     'nana': [{ tribe: 'akan', tribeName: 'Akan', weight: 0.92 }],
     
     // Tuareg patterns
-    'tin': [{ tribe: 'tuareg', tribeName: 'Tuareg', weight: 0.90 }],
+    // 'tin' moved to Shona patterns with Tuareg included
     'mou': [{ tribe: 'tuareg', tribeName: 'Tuareg', weight: 0.86 }],
     'agh': [{ tribe: 'tuareg', tribeName: 'Tuareg', weight: 0.92 }],
     'elm': [{ tribe: 'tuareg', tribeName: 'Tuareg', weight: 0.88 }],
@@ -296,7 +296,7 @@ function buildPrefixPatterns(): Record<string, { tribe: string; tribeName: strin
     'nak': [{ tribe: 'baganda', tribeName: 'Baganda', weight: 0.94 }],
     'sse': [{ tribe: 'baganda', tribeName: 'Baganda', weight: 0.92 }],
     'mus': [{ tribe: 'baganda', tribeName: 'Baganda', weight: 0.88 }],
-    'was': [{ tribe: 'baganda', tribeName: 'Baganda', weight: 0.86 }],
+    // 'was' moved to Luhya patterns with Baganda included
     'nam': [{ tribe: 'baganda', tribeName: 'Baganda', weight: 0.88 }],
     'nab': [{ tribe: 'baganda', tribeName: 'Baganda', weight: 0.90 }],
     'lwe': [{ tribe: 'baganda', tribeName: 'Baganda', weight: 0.86 }],
