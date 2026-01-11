@@ -1,4 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
+import { useMemo } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { GuessForm } from '@/components/GuessForm';
@@ -7,8 +8,10 @@ import { TopTribesCarousel } from '@/components/TopTribesCarousel';
 import { FeaturedBlogsCarousel } from '@/components/FeaturedBlogsCarousel';
 import { FeaturedRecipesCarousel } from '@/components/FeaturedRecipesCarousel';
 import { GlobalOriginCard } from '@/components/GlobalOriginCard';
+import { NameAnalysisCard } from '@/components/NameAnalysisCard';
 import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
-import { Globe, ArrowRight, Lightbulb } from 'lucide-react';
+import { analyzeNameBreakdown, findSimilarNames, getGlobalMatches } from '@/lib/nameAnalysis';
+import { ArrowRight, Lightbulb } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Index = () => {
@@ -114,6 +117,25 @@ const Index = () => {
   } catch (e) {
     console.error('Detection error:', e);
   }
+
+  // Compute name analysis data
+  const nameAnalysis = useMemo(() => {
+    if (!nameQuery) return null;
+    
+    const breakdown = analyzeNameBreakdown(nameQuery);
+    const similarNames = findSimilarNames(nameQuery);
+    const globalMatches = getGlobalMatches(nameQuery);
+    const topConfidence = results?.predictions[0]?.confidence || 0;
+    const hasResults = results?.predictions && results.predictions.length > 0;
+    
+    return {
+      breakdown,
+      similarNames,
+      globalMatches,
+      hasResults,
+      topConfidence
+    };
+  }, [nameQuery, results]);
   return <div className="min-h-screen bg-background">
       <Header />
       
@@ -251,6 +273,18 @@ const Index = () => {
               </div>
             )}
             
+            {/* Name Analysis Card - breakdown, global matches, and similar names */}
+            {nameAnalysis && (
+              <NameAnalysisCard
+                inputName={results.inputName}
+                breakdown={nameAnalysis.breakdown}
+                similarNames={nameAnalysis.similarNames}
+                globalMatches={nameAnalysis.globalMatches}
+                hasResults={nameAnalysis.hasResults}
+                topConfidence={nameAnalysis.topConfidence}
+              />
+            )}
+            
             {/* Global Origin Card - show when non-African origin detected */}
             {results.globalOrigin && (results.globalOrigin.isNonAfrican || results.globalOrigin.religion) && (
               <GlobalOriginCard
@@ -263,11 +297,14 @@ const Index = () => {
               />
             )}
             
-            <div className="space-y-3 sm:space-y-4">
-              {results.predictions.map((prediction, index) => <TribeResultCard key={prediction.tribe.id} result={prediction} rank={index + 1} inputName={results.inputName} />)}
-            </div>
-            
-            {results.predictions.length > 0}
+            {/* Tribe Result Cards */}
+            {results.predictions.length > 0 && (
+              <div className="space-y-3 sm:space-y-4">
+                {results.predictions.map((prediction, index) => (
+                  <TribeResultCard key={prediction.tribe.id} result={prediction} rank={index + 1} inputName={results.inputName} />
+                ))}
+              </div>
+            )}
             
             <aside className="mt-6 sm:mt-8 p-3 sm:p-4 bg-secondary/50 rounded-xl">
               <p className="text-xs text-muted-foreground text-center">
