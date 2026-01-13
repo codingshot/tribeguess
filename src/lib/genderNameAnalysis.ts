@@ -570,7 +570,7 @@ export function getNameHistory(name: string): NameHistoryData {
 /**
  * Calculate popularity trends across decades and regions
  */
-function calculatePopularityTrends(
+export function calculatePopularityTrends(
   name: string, 
   peakEra: NameEra, 
   trend: NameHistoryData['namingTrend']

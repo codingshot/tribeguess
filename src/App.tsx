@@ -26,6 +26,7 @@ import GlobalOrigins from "./pages/GlobalOrigins";
 import People from "./pages/People";
 import PersonPage from "./pages/PersonPage";
 import Docs from "./pages/Docs";
+import NamesGallery from "./pages/NamesGallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
             <Route path="/people" element={<People />} />
             <Route path="/person/:slug" element={<PersonPage />} />
             <Route path="/docs" element={<Docs />} />
+            <Route path="/names" element={<NamesGallery />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

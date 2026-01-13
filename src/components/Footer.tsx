@@ -57,6 +57,9 @@ export function Footer() {
               <Link to="/quiz" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 🎯 Culture Quiz
               </Link>
+              <Link to="/names" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                📊 Names Gallery
+              </Link>
             </nav>
           </div>
           
