@@ -1,6 +1,28 @@
 import tribesData from '@/data/tribes.json';
 import globalTribeNames from '@/data/globalTribeNames.json';
 import { detectGlobalOrigin } from './globalOrigins';
+import { 
+  findPhoneticMatches, 
+  trackHistoricalOrigins,
+  soundex,
+  metaphone,
+  africanPhonetic,
+  phoneticLevenshtein,
+  type PhoneticMatch,
+  type HistoricalOrigin
+} from './phoneticMatching';
+
+// Re-export phonetic functions for external use
+export { 
+  findPhoneticMatches, 
+  trackHistoricalOrigins,
+  soundex,
+  metaphone,
+  africanPhonetic,
+  phoneticLevenshtein,
+  type PhoneticMatch,
+  type HistoricalOrigin
+};
 
 export interface NameBreakdown {
   fullName: string;
@@ -8,6 +30,7 @@ export interface NameBreakdown {
   suffix?: { text: string; tribes: { name: string; percentage: number }[] };
   root?: { text: string; meaning?: string };
   religiousIndicator?: { type: string; note: string };
+  phoneticCode?: { soundex: string; metaphone: string; african: string };
 }
 
 export interface SimilarName {
@@ -15,6 +38,7 @@ export interface SimilarName {
   tribe: string;
   tribeSlug: string;
   similarity: number;
+  matchType?: 'exact' | 'pattern' | 'phonetic' | 'fuzzy';
 }
 
 export interface GlobalMatch {
@@ -313,74 +337,109 @@ export function analyzeNameBreakdown(name: string): NameBreakdown {
     }
   }
   
+  // Add phonetic codes to breakdown
+  breakdown.phoneticCode = {
+    soundex: soundex(name),
+    metaphone: metaphone(name),
+    african: africanPhonetic(name)
+  };
+  
   return breakdown;
 }
 
 /**
- * Find similar names in the database - optimized with early termination
+ * Find similar names using multiple matching strategies - optimized
+ * Combines: exact prefix/suffix, phonetic algorithms, and fuzzy matching
  */
-export function findSimilarNames(inputName: string, limit: number = 6): SimilarName[] {
+export function findSimilarNames(inputName: string, limit: number = 8): SimilarName[] {
   const normalized = inputName.toLowerCase().trim();
   const similarNames: SimilarName[] = [];
-  const minSimilarity = 0.4;
+  const seen = new Set<string>();
+  const minSimilarity = 0.35;
   
-  // First check the global names cache for fast matches
+  // 1. EXACT PATTERN MATCHES - fastest path
   const nameCache = buildNameCache();
   for (const [cachedName, info] of nameCache) {
-    if (cachedName === normalized) continue;
+    if (cachedName === normalized || seen.has(cachedName)) continue;
     
     const similarity = calculateSimilarityFast(normalized, cachedName);
     if (similarity > minSimilarity) {
-      // Get tribe info from tribes.json
       const tribe = tribesData.tribes.find(t => t.id === info.tribe || t.name.toLowerCase() === info.tribe);
       if (tribe) {
+        seen.add(cachedName);
         similarNames.push({
           name: cachedName.charAt(0).toUpperCase() + cachedName.slice(1),
           tribe: tribe.name,
           tribeSlug: tribe.slug || tribe.id,
-          similarity
+          similarity,
+          matchType: 'pattern'
         });
       }
     }
   }
   
-  // Also check tribe common names for broader coverage
-  for (const tribe of tribesData.tribes) {
-    const allNames = [
-      ...(tribe.commonNames?.female || []),
-      ...(tribe.commonNames?.male || [])
-    ];
+  // 2. PHONETIC MATCHES - finds spelling variations
+  const phoneticMatches = findPhoneticMatches(inputName, Math.max(5, limit - similarNames.length));
+  for (const match of phoneticMatches) {
+    const nameLower = match.name.toLowerCase();
+    if (nameLower === normalized || seen.has(nameLower)) continue;
     
-    for (const name of allNames) {
-      const nameLower = name.toLowerCase();
-      if (nameLower === normalized) continue;
+    const tribe = tribesData.tribes.find(t => 
+      t.id === match.tribe || 
+      t.name.toLowerCase() === match.tribe.toLowerCase()
+    );
+    
+    if (tribe) {
+      seen.add(nameLower);
+      similarNames.push({
+        name: match.name,
+        tribe: tribe.name,
+        tribeSlug: tribe.slug || tribe.id,
+        similarity: match.similarity,
+        matchType: 'phonetic'
+      });
+    }
+  }
+  
+  // 3. TRIBES.JSON BACKUP - for names not in globalTribeNames
+  if (similarNames.length < limit) {
+    for (const tribe of tribesData.tribes) {
+      const allNames = [
+        ...(tribe.commonNames?.female || []),
+        ...(tribe.commonNames?.male || [])
+      ];
       
-      // Skip if already added from cache
-      if (similarNames.some(s => s.name.toLowerCase() === nameLower)) continue;
-      
-      const similarity = calculateSimilarityFast(normalized, nameLower);
-      if (similarity > minSimilarity) {
-        similarNames.push({
-          name,
-          tribe: tribe.name,
-          tribeSlug: tribe.slug || tribe.id,
-          similarity
-        });
+      for (const name of allNames) {
+        const nameLower = name.toLowerCase();
+        if (nameLower === normalized || seen.has(nameLower)) continue;
+        
+        // Use phonetic Levenshtein for better fuzzy matching
+        const similarity = phoneticLevenshtein(normalized, nameLower);
+        if (similarity > minSimilarity) {
+          seen.add(nameLower);
+          similarNames.push({
+            name,
+            tribe: tribe.name,
+            tribeSlug: tribe.slug || tribe.id,
+            similarity,
+            matchType: 'fuzzy'
+          });
+        }
       }
     }
   }
   
-  // Sort and dedupe
-  const seen = new Set<string>();
+  // Sort by similarity and return top results
   return similarNames
     .sort((a, b) => b.similarity - a.similarity)
-    .filter(s => {
-      const key = s.name.toLowerCase();
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    })
     .slice(0, limit);
+}
+
+/**
+ * Get historical origin tracking for a name
+ */
+export function getHistoricalOrigins(inputName: string): HistoricalOrigin[] {
+  return trackHistoricalOrigins(inputName);
 }
 
 /**
