@@ -1,402 +1,645 @@
 {
   "_metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-01-11",
-    "description": "Global index of tribe names, prefixes, suffixes, and patterns for name detection",
-    "source": "Compiled from ethnographic studies, census data, and linguistic research"
+    "version": "2.0.0",
+    "lastUpdated": "2025-01-13",
+    "description": "Comprehensive global index of tribe names, prefixes, suffixes, and patterns for name detection across Africa",
+    "source": "Compiled from ethnographic studies, census data, linguistic research, and cultural archives",
+    "totalTribes": 85,
+    "totalNames": 2500
   },
   "prefixPatterns": {
     "eastAfrica": {
       "luo": {
-        "prefixes": ["achi", "odhi", "oti", "ony", "omu", "owi", "ayo", "aja", "ope"],
+        "prefixes": ["achi", "odhi", "oti", "ony", "omu", "owi", "ayo", "aja", "ope", "owu", "ogen", "okal", "owir", "ojal", "ombe"],
         "weight": 0.92,
         "notes": "Luo prefixes often indicate birth circumstances, gender, or time of day"
       },
       "kikuyu": {
-        "prefixes": ["wan", "njo", "kam", "mum", "nge", "wai", "nga", "kar", "mur", "git"],
+        "prefixes": ["wan", "njo", "kam", "mum", "nge", "wai", "nga", "kar", "mur", "git", "ndu", "kig", "gat", "mwa", "thu"],
         "weight": 0.88,
         "notes": "Kikuyu prefixes often relate to clan names or geographic origins"
       },
       "luhya": {
-        "prefixes": ["naf", "waf", "nek", "was", "wen", "buk", "mal", "sim", "omu", "kha"],
+        "prefixes": ["naf", "waf", "nek", "was", "wen", "buk", "mal", "sim", "omu", "kha", "ind", "wek", "muk", "ngu", "wat"],
         "weight": 0.90,
         "notes": "Luhya prefixes vary by sub-tribe (Bukusu, Maragoli, etc.)"
       },
       "kalenjin": {
-        "prefixes": ["kip", "chep", "jer", "kib", "kos", "rot", "ber", "kir", "tan", "che"],
+        "prefixes": ["kip", "chep", "jer", "kib", "kos", "rot", "ber", "kir", "tan", "che", "kei", "koe", "kil", "bar", "lel"],
         "weight": 0.94,
         "notes": "Kip- for males, Chep- for females is distinctive Kalenjin pattern"
       },
       "maasai": {
-        "prefixes": ["ole", "eng", "nai", "ole", "par", "sen", "lei", "loi", "sai", "nto"],
+        "prefixes": ["ole", "eng", "nai", "par", "sen", "lei", "loi", "sai", "nto", "lai", "ole", "nka", "mol", "sip", "kar"],
         "weight": 0.93,
         "notes": "Ole- means 'son of' in Maasai naming tradition"
       },
       "swahili": {
-        "prefixes": ["mwa", "ali", "ham", "sal", "has", "fat", "ras", "bak", "jum"],
+        "prefixes": ["mwa", "ali", "ham", "sal", "has", "fat", "ras", "bak", "jum", "moh", "abd", "oma", "sul", "azi", "mar"],
         "weight": 0.85,
         "notes": "Swahili names blend Bantu and Arabic influences"
+      },
+      "mijikenda": {
+        "prefixes": ["kai", "mwa", "dza", "chi", "kar", "kaz", "mbi", "nzi", "tsa", "hen"],
+        "weight": 0.84,
+        "notes": "Mijikenda includes Giriama, Digo, Duruma and other coastal groups"
+      },
+      "meru": {
+        "prefixes": ["mun", "nki", "git", "mwi", "nti", "nth", "kar", "mur", "kia", "njo"],
+        "weight": 0.86,
+        "notes": "Meru names share roots with neighboring Kikuyu"
+      },
+      "embu": {
+        "prefixes": ["mun", "njo", "iru", "kin", "ndi", "wam", "kai", "mut", "git", "nya"],
+        "weight": 0.85,
+        "notes": "Embu from Mt. Kenya region"
+      },
+      "pokot": {
+        "prefixes": ["che", "lom", "rop", "lor", "tar", "ptu", "lop", "sek", "kam", "kot"],
+        "weight": 0.87,
+        "notes": "Pokot are part of Kalenjin linguistic group"
+      },
+      "turkana": {
+        "prefixes": ["eka", "lod", "ere", "aka", "eko", "eto", "esi", "nak", "lok", "ngo"],
+        "weight": 0.88,
+        "notes": "Turkana are Nilotic pastoralists of northwest Kenya"
+      },
+      "samburu": {
+        "prefixes": ["lep", "loi", "lku", "nka", "lng", "lta", "lma", "lol", "ldu", "lso"],
+        "weight": 0.86,
+        "notes": "Samburu are closely related to Maasai"
       }
     },
     "westAfrica": {
       "yoruba": {
-        "prefixes": ["ade", "ola", "olu", "omo", "ayo", "ife", "bab", "oba", "olu", "tit", "kem"],
+        "prefixes": ["ade", "ola", "olu", "omo", "ayo", "ife", "bab", "oba", "tit", "kem", "ojo", "odu", "ore", "ope", "owo"],
         "weight": 0.91,
         "notes": "Yoruba prefixes often indicate royalty (Ade=crown) or destiny"
       },
       "igbo": {
-        "prefixes": ["chi", "nne", "obi", "nwa", "udo", "eze", "ada", "uch", "kem", "nna"],
+        "prefixes": ["chi", "nne", "obi", "nwa", "udo", "eze", "ada", "uch", "kem", "nna", "ije", "ogb", "ifu", "olu", "ony"],
         "weight": 0.90,
         "notes": "Chi- relates to personal deity/destiny in Igbo cosmology"
       },
       "hausa": {
-        "prefixes": ["abd", "muh", "ali", "bab", "dan", "mai", "mal", "ibr", "gar"],
+        "prefixes": ["abd", "muh", "ali", "bab", "dan", "mai", "mal", "ibr", "gar", "yak", "sad", "amu", "sul", "ish", "umi"],
         "weight": 0.88,
         "notes": "Hausa prefixes heavily influenced by Islamic naming"
       },
       "akan": {
-        "prefixes": ["kof", "kwa", "ama", "aba", "yaa", "kwo", "afi", "adj", "kob", "nana"],
+        "prefixes": ["kof", "kwa", "ama", "aba", "yaa", "kwo", "afi", "adj", "kob", "nana", "obe", "asa", "aku", "efe", "afo"],
         "weight": 0.92,
         "notes": "Akan day-names are distinctive (Kofi=Friday-born male)"
       },
       "ewe": {
-        "prefixes": ["kof", "afi", "kom", "dzo", "ame", "gbe", "ago", "sen", "tog"],
+        "prefixes": ["kof", "afi", "kom", "dzo", "ame", "gbe", "ago", "sen", "tog", "fia", "yaw", "kos", "ebo", "kud", "ata"],
         "weight": 0.87,
         "notes": "Ewe names often reflect circumstances of birth"
       },
       "fulani": {
-        "prefixes": ["abd", "ama", "sai", "mod", "oum", "ibr", "mam", "alh"],
+        "prefixes": ["abd", "ama", "sai", "mod", "oum", "ibr", "mam", "alh", "uss", "jib", "dem", "bel", "adi", "bok", "gor"],
         "weight": 0.86,
         "notes": "Fulani prefixes blend Islamic and pastoral traditions"
       },
       "wolof": {
-        "prefixes": ["oum", "ama", "fat", "abd", "mam", "ous", "bou", "mod", "bab"],
+        "prefixes": ["oum", "ama", "fat", "abd", "mam", "ous", "bou", "mod", "bab", "nde", "thi", "djo", "sar", "dia", "ndi"],
         "weight": 0.85,
         "notes": "Wolof names often include caste and family lineage markers"
       },
       "bambara": {
-        "prefixes": ["sek", "mod", "mam", "sou", "ama", "bak", "fod", "kar", "sidi"],
+        "prefixes": ["sek", "mod", "mam", "sou", "ama", "bak", "fod", "kar", "sidi", "nia", "san", "kon", "dia", "dji", "kan"],
         "weight": 0.84,
         "notes": "Bambara/Bamana names reflect Mande cultural values"
       },
       "mandinka": {
-        "prefixes": ["lan", "kar", "mod", "fod", "mam", "ama", "bak", "sek", "dem"],
+        "prefixes": ["lan", "kar", "mod", "fod", "mam", "ama", "bak", "sek", "dem", "jal", "kam", "sou", "dja", "tou", "sai"],
         "weight": 0.85,
         "notes": "Mandinka griot traditions influence naming patterns"
+      },
+      "dogon": {
+        "prefixes": ["ama", "ogo", "yen", "dyo", "ban", "pil", "ada", "dom", "tir", "sag", "gue", "and", "tem", "end", "oud"],
+        "weight": 0.89,
+        "notes": "Dogon names reflect their cosmological beliefs about Sirius star system"
+      },
+      "senufo": {
+        "prefixes": ["kol", "sek", "yeo", "sil", "kon", "sou", "kou", "tra", "dja", "zan", "tie", "nap", "kas", "naf", "nje"],
+        "weight": 0.83,
+        "notes": "Senufo span Ivory Coast, Mali, and Burkina Faso"
+      },
+      "mossi": {
+        "prefixes": ["wed", "rag", "nab", "kou", "oue", "saa", "tao", "zon", "yel", "tam", "kab", "kom", "bao", "sam", "awa"],
+        "weight": 0.84,
+        "notes": "Mossi of Burkina Faso with ancient kingdom traditions"
+      },
+      "fon": {
+        "prefixes": ["dan", "gbe", "ayi", "kpe", "hou", "ago", "dji", "zin", "afi", "tol", "sog", "hue", "adj", "kof", "bad"],
+        "weight": 0.86,
+        "notes": "Fon names connected to Vodun spiritual traditions"
+      },
+      "songhai": {
+        "prefixes": ["mam", "sou", "hac", "mal", "alh", "fod", "abd", "asc", "bou", "dia", "isa", "son", "moh", "ask", "zin"],
+        "weight": 0.82,
+        "notes": "Songhai Empire heritage in Niger River region"
+      },
+      "mende": {
+        "prefixes": ["kon", "kai", "faw", "sie", "jam", "gbu", "kpe", "ndo", "baw", "fan", "jus", "mass", "san", "tom", "bun"],
+        "weight": 0.84,
+        "notes": "Mende of Sierra Leone with Poro society traditions"
+      },
+      "temne": {
+        "prefixes": ["san", "bai", "kai", "yek", "bom", "kom", "kar", "ser", "alm", "pak", "dum", "sam", "tab", "rog", "ale"],
+        "weight": 0.83,
+        "notes": "Temne are Sierra Leone's second-largest ethnic group"
+      },
+      "kru": {
+        "prefixes": ["gba", "toe", "wle", "nyo", "kla", "due", "gbe", "zog", "weh", "bah", "glo", "gee", "tur", "sio", "ney"],
+        "weight": 0.81,
+        "notes": "Kru seafaring people of Liberia and Ivory Coast"
       }
     },
     "southernAfrica": {
       "zulu": {
-        "prefixes": ["sbu", "tho", "sip", "siz", "nko", "mdu", "lin", "muz", "zan", "nhl"],
+        "prefixes": ["sbu", "tho", "sip", "siz", "nko", "mdu", "lin", "muz", "zan", "nhl", "mbo", "bhe", "mth", "ndi", "lun"],
         "weight": 0.92,
         "notes": "Zulu names often relate to circumstances or parental hopes"
       },
       "xhosa": {
-        "prefixes": ["tha", "sip", "lin", "nom", "lun", "zan", "vuy", "nol", "and", "sih"],
+        "prefixes": ["tha", "sip", "lin", "nom", "lun", "zan", "vuy", "nol", "and", "sih", "luy", "mzi", "cwe", "xol", "nku"],
         "weight": 0.91,
         "notes": "Xhosa names include click consonants in pronunciation"
       },
       "ndebele": {
-        "prefixes": ["sbu", "nko", "tho", "mdu", "sip", "lin", "tha", "mah"],
+        "prefixes": ["sbu", "nko", "tho", "mdu", "sip", "lin", "tha", "mah", "sik", "nhl", "bhe", "mzi", "gwa", "mth", "mbo"],
         "weight": 0.88,
         "notes": "Ndebele names share roots with Zulu traditions"
       },
       "sotho": {
-        "prefixes": ["mot", "pal", "leb", "tsh", "mam", "ntso", "mpo", "kea", "rea"],
+        "prefixes": ["mot", "pal", "leb", "tsh", "mam", "ntso", "mpo", "kea", "rea", "thu", "let", "mof", "lit", "ntl", "kho"],
         "weight": 0.89,
         "notes": "Sotho names often begin with 'M' for people"
       },
       "tswana": {
-        "prefixes": ["tsh", "gao", "mot", "mos", "mpo", "teb", "pal", "kea", "mog"],
+        "prefixes": ["tsh", "gao", "mot", "mos", "mpo", "teb", "pal", "kea", "mog", "gor", "bog", "kga", "sel", "bop", "oab"],
         "weight": 0.88,
         "notes": "Tswana names share linguistic roots with Sotho"
       },
       "shona": {
-        "prefixes": ["chi", "tai", "muk", "ten", "run", "sim", "tat", "tak", "tin", "zvi"],
+        "prefixes": ["chi", "tai", "muk", "ten", "run", "sim", "tat", "tak", "tin", "zvi", "nyo", "ton", "far", "mur", "mai"],
         "weight": 0.90,
         "notes": "Shona names often express gratitude or hope"
       },
       "venda": {
-        "prefixes": ["mub", "mas", "ndi", "tal", "tha", "azi", "fha", "luf"],
+        "prefixes": ["mub", "mas", "ndi", "tal", "tha", "azi", "fha", "luf", "muv", "phi", "mut", "nwa", "mat", "tsh", "dzi"],
         "weight": 0.86,
         "notes": "Venda names reflect Limpopo region heritage"
       },
       "tsonga": {
-        "prefixes": ["xik", "rhi", "mhi", "hla", "nwa", "ent", "mun", "has"],
+        "prefixes": ["xik", "rhi", "mhi", "hla", "nwa", "ent", "mun", "has", "sas", "van", "max", "mav", "gum", "cha", "ris"],
         "weight": 0.85,
         "notes": "Tsonga names span South Africa and Mozambique"
+      },
+      "himba": {
+        "prefixes": ["kau", "tji", "ngu", "mba", "oma", "omu", "ovu", "ond", "kat", "mut", "kan", "han", "hia", "her", "nda"],
+        "weight": 0.88,
+        "notes": "Himba are semi-nomadic pastoralists of Namibia"
+      },
+      "herero": {
+        "prefixes": ["tji", "oma", "omu", "ohi", "oka", "ova", "ond", "omb", "ung", "kam", "kat", "mba", "ngu", "ong", "oru"],
+        "weight": 0.87,
+        "notes": "Herero share linguistic roots with Himba"
+      },
+      "san": {
+        "prefixes": ["gao", "nla", "tso", "kwe", "gwe", "xei", "nui", "qua", "kai", "nho", "twa", "hai", "dom", "koe", "xam"],
+        "weight": 0.85,
+        "notes": "San (Bushmen) names feature click consonants"
+      },
+      "nama": {
+        "prefixes": ["abe", "hen", "wit", "gai", "kai", "koe", "nai", "hot", "ari", "beu", "dam", "has", "gor", "tsu", "ora"],
+        "weight": 0.84,
+        "notes": "Nama are Khoikhoi people of Namibia"
+      },
+      "ovambo": {
+        "prefixes": ["ndj", "osh", "nak", "nah", "omo", "osh", "esh", "iya", "onj", "uup", "nde", "ipw", "mwe", "ong", "ung"],
+        "weight": 0.86,
+        "notes": "Ovambo are Namibia's largest ethnic group"
+      },
+      "swazi": {
+        "prefixes": ["sip", "nko", "tho", "mdu", "lin", "bhe", "zan", "dun", "fun", "msh", "bom", "nda", "mth", "cel", "dvo"],
+        "weight": 0.87,
+        "notes": "Swazi names share Nguni linguistic roots"
       }
     },
     "centralAfrica": {
       "kongo": {
-        "prefixes": ["nzi", "mfu", "nsu", "mak", "kim", "lut", "nku", "mba", "nta"],
+        "prefixes": ["nzi", "mfu", "nsu", "mak", "kim", "lut", "nku", "mba", "nta", "ndo", "kin", "nso", "tad", "mub", "nse"],
         "weight": 0.89,
         "notes": "Kongo names reflect ancient kingdom heritage"
       },
       "kimbundu": {
-        "prefixes": ["ngo", "nzi", "mba", "joa", "luk", "mfu", "ngi", "kam", "nda"],
+        "prefixes": ["ngo", "nzi", "mba", "joa", "luk", "mfu", "ngi", "kam", "nda", "nzu", "kia", "lue", "njo", "kat", "kas"],
         "weight": 0.88,
         "notes": "Kimbundu is Angola's second-largest ethnic group"
       },
       "ovimbundu": {
-        "prefixes": ["sav", "tch", "chi", "umb", "lon", "njo", "sip", "mba", "kat"],
+        "prefixes": ["sav", "tch", "chi", "umb", "lon", "njo", "sip", "mba", "kat", "kai", "mbi", "san", "nje", "kal", "kan"],
         "weight": 0.90,
         "notes": "Ovimbundu are Angola's largest ethnic group"
       },
       "luba": {
-        "prefixes": ["kas", "muk", "cib", "ngo", "kab", "tsh", "mwe", "sha", "mul"],
+        "prefixes": ["kas", "muk", "cib", "ngo", "kab", "tsh", "mwe", "sha", "mul", "lup", "kak", "mut", "ngw", "tum", "kal"],
         "weight": 0.87,
         "notes": "Luba Empire was one of Central Africa's great states"
       },
       "mongo": {
-        "prefixes": ["bok", "ilo", "wen", "nku", "lom", "ise", "bon", "bal", "bos"],
+        "prefixes": ["bok", "ilo", "wen", "nku", "lom", "ise", "bon", "bal", "bos", "lok", "bof", "nse", "ekw", "lib", "ifk"],
         "weight": 0.86,
         "notes": "Mongo people dominate the Congo Basin region"
       },
       "fang": {
-        "prefixes": ["ngo", "obi", "ess", "mba", "nze", "eko", "ond", "eye", "ebe"],
+        "prefixes": ["ngo", "obi", "ess", "mba", "nze", "eko", "ond", "eye", "ebe", "ngu", "aba", "mve", "nko", "ond", "zue"],
         "weight": 0.87,
         "notes": "Fang span Gabon, Cameroon, and Equatorial Guinea"
       },
       "bamileke": {
-        "prefixes": ["fon", "nch", "tam", "ngu", "djo", "tio", "kam", "tch", "fot"],
+        "prefixes": ["fon", "nch", "tam", "ngu", "djo", "tio", "kam", "tch", "fot", "kem", "nde", "ndi", "tso", "met", "fog"],
         "weight": 0.88,
         "notes": "Bamileke are known for powerful chieftaincies"
       },
       "gbaya": {
-        "prefixes": ["gba", "dou", "ndo", "war", "yam", "kpa", "dja", "gbo", "nza"],
+        "prefixes": ["gba", "dou", "ndo", "war", "yam", "kpa", "dja", "gbo", "nza", "gor", "zim", "bel", "kar", "tuo", "gam"],
         "weight": 0.84,
         "notes": "Gbaya led major anti-colonial uprising (Kara War)"
+      },
+      "pygmy": {
+        "prefixes": ["efe", "mbu", "aka", "bak", "wal", "twa", "bat", "bed", "bay", "nge", "bab", "sua", "ase", "mbz", "ika"],
+        "weight": 0.82,
+        "notes": "Pygmy groups include Mbuti, Aka, Baka, and Twa"
+      },
+      "teke": {
+        "prefixes": ["nko", "ong", "ngi", "mbe", "mpo", "nsa", "mba", "obi", "nzi", "bwe", "lal", "mfu", "nku", "man", "gom"],
+        "weight": 0.83,
+        "notes": "Teke Kingdom straddled Congo and Gabon"
+      },
+      "lingala": {
+        "prefixes": ["mos", "mob", "lob", "bol", "bok", "nze", "mab", "lil", "ndo", "mba", "bik", "bon", "ekw", "ens", "ise"],
+        "weight": 0.84,
+        "notes": "Lingala is a lingua franca of the Congo Basin"
+      },
+      "azande": {
+        "prefixes": ["gbu", "nza", "ban", "mbo", "ngi", "gba", "ngu", "yam", "rik", "mba", "ngb", "azn", "zen", "avi", "gib"],
+        "weight": 0.85,
+        "notes": "Azande known for their kingdom and oracles"
+      },
+      "lunda": {
+        "prefixes": ["mwa", "kan", "muk", "chi", "sha", "kal", "kap", "mbu", "nda", "tch", "mul", "nso", "lub", "lun", "kas"],
+        "weight": 0.86,
+        "notes": "Lunda Empire spanned Angola, DRC, and Zambia"
+      },
+      "chokwe": {
+        "prefixes": ["chi", "mwa", "tch", "kas", "mub", "ngu", "sam", "tsh", "kan", "sak", "fun", "kal", "ngo", "mwi", "tan"],
+        "weight": 0.85,
+        "notes": "Chokwe known for their art and masks"
+      },
+      "mangbetu": {
+        "prefixes": ["neb", "nab", "oka", "azi", "mun", "aku", "ond", "ngu", "mba", "tub", "ekb", "eng", "and", "abo", "ame"],
+        "weight": 0.83,
+        "notes": "Mangbetu known for their distinctive elongated skulls tradition"
       }
     },
     "northAfrica": {
       "amazigh": {
-        "prefixes": ["mas", "ama", "tin", "ait", "idr", "bra", "moh", "you", "fat", "zou"],
+        "prefixes": ["mas", "ama", "tin", "ait", "idr", "bra", "moh", "you", "fat", "zou", "ism", "lah", "abd", "azi", "med"],
         "weight": 0.88,
         "notes": "Amazigh (Berber) names use Tifinagh script"
       },
       "kabyle": {
-        "prefixes": ["mas", "ama", "lou", "moh", "bel", "ait", "ous", "sal", "kar"],
+        "prefixes": ["mas", "ama", "lou", "moh", "bel", "ait", "ous", "sal", "kar", "mez", "khe", "fer", "bou", "ham", "kad"],
         "weight": 0.87,
         "notes": "Kabyle are Algeria's largest Berber group"
       },
       "tuareg": {
-        "prefixes": ["ama", "tin", "mou", "agh", "elm", "akh", "ada", "inl", "tam"],
+        "prefixes": ["ama", "tin", "mou", "agh", "elm", "akh", "ada", "inl", "tam", "kel", "att", "ama", "aza", "ili", "oul"],
         "weight": 0.86,
         "notes": "Tuareg are known as 'blue people' of the Sahara"
       },
       "coptic": {
-        "prefixes": ["gir", "bis", "yus", "mik", "bou", "she", "abo", "mak", "pho"],
+        "prefixes": ["gir", "bis", "yus", "mik", "bou", "she", "abo", "mak", "pho", "tha", "sim", "mar", "kyr", "pet", "pah"],
         "weight": 0.82,
         "notes": "Coptic names preserve ancient Egyptian heritage"
       },
       "nubian": {
-        "prefixes": ["moh", "ahm", "abd", "ibr", "fat", "sir", "oma", "has", "azi"],
+        "prefixes": ["moh", "ahm", "abd", "ibr", "fat", "sir", "oma", "has", "azi", "mah", "sal", "tah", "nub", "kam", "kus"],
         "weight": 0.83,
         "notes": "Nubian culture spans Egypt and Sudan"
+      },
+      "toubou": {
+        "prefixes": ["gou", "daz", "tch", "erd", "bou", "kim", "yus", "ahm", "oma", "mah", "djo", "moh", "hat", "ali", "cha"],
+        "weight": 0.81,
+        "notes": "Toubou are nomads of the Sahara Desert"
+      },
+      "beja": {
+        "prefixes": ["moh", "ahm", "abd", "oma", "ibr", "sal", "has", "mah", "ali", "ism", "sul", "yus", "mum", "tah", "ami"],
+        "weight": 0.82,
+        "notes": "Beja are the Cushitic people of Sudan and Eritrea"
       }
     },
     "hornOfAfrica": {
       "somali": {
-        "prefixes": ["abd", "fat", "moh", "ali", "has", "mar", "fay", "ama", "fay", "caa"],
+        "prefixes": ["abd", "fat", "moh", "ali", "has", "mar", "fay", "ama", "caa", "war", "xus", "nuu", "gul", "jib", "dah"],
         "weight": 0.91,
         "notes": "Somali names often include Abdi- (servant of God)"
       },
       "oromo": {
-        "prefixes": ["gal", "tol", "cha", "bad", "lam", "gob", "mul", "bor", "gur", "wat"],
+        "prefixes": ["gal", "tol", "cha", "bad", "lam", "gob", "mul", "bor", "gur", "wat", "jir", "aba", "kun", "obo", "tur"],
         "weight": 0.89,
         "notes": "Oromo are Ethiopia's largest ethnic group"
       },
       "amhara": {
-        "prefixes": ["hab", "ber", "get", "tes", "ale", "kif", "yoh", "sol", "geb", "mes"],
+        "prefixes": ["hab", "ber", "get", "tes", "ale", "kif", "yoh", "sol", "geb", "mes", "zew", "gir", "neg", "tek", "and"],
         "weight": 0.88,
         "notes": "Amhara names use the Ge'ez/Amharic script"
       },
       "tigrinya": {
-        "prefixes": ["tek", "ber", "sem", "geb", "had", "kif", "wol", "abi", "zer"],
+        "prefixes": ["tek", "ber", "sem", "geb", "had", "kif", "wol", "abi", "zer", "awh", "sel", "mik", "fit", "mul", "ats"],
         "weight": 0.87,
         "notes": "Tigrinya speakers span Eritrea and Ethiopia"
       },
       "afar": {
-        "prefixes": ["ali", "moh", "ahm", "ibr", "has", "fay", "abd", "sal"],
+        "prefixes": ["ali", "moh", "ahm", "ibr", "has", "fay", "abd", "sal", "hub", "dji", "oma", "tur", "gal", "yay", "ayd"],
         "weight": 0.84,
         "notes": "Afar are known for salt trading in the Danakil"
       },
       "dinka": {
-        "prefixes": ["den", "mab", "bol", "gat", "ath", "may", "rin", "aku", "ach", "agu"],
+        "prefixes": ["den", "mab", "bol", "gat", "ath", "may", "rin", "aku", "ach", "agu", "cha", "luo", "mou", "tie", "abi"],
         "weight": 0.93,
         "notes": "Dinka are South Sudan's largest ethnic group"
       },
       "nuer": {
-        "prefixes": ["gat", "rie", "kua", "nyi", "dho", "rue", "tut", "lam", "tha", "wic"],
+        "prefixes": ["gat", "rie", "kua", "nyi", "dho", "rue", "tut", "lam", "tha", "wic", "bul", "kuo", "duo", "kun", "pub"],
         "weight": 0.92,
         "notes": "Nuer share Nilotic heritage with Dinka"
       },
       "shilluk": {
-        "prefixes": ["nyi", "ret", "adi", "oko", "ago", "dho", "aja", "odo", "ale"],
+        "prefixes": ["nyi", "ret", "adi", "oko", "ago", "dho", "aja", "odo", "ale", "aye", "ath", "awo", "oko", "ola", "otu"],
         "weight": 0.88,
         "notes": "Shilluk have a unique divine kingship tradition"
+      },
+      "mursi": {
+        "prefixes": ["kur", "nga", "ole", "bar", "cha", "wor", "bia", "bay", "kom", "ber", "ali", "zit", "dhi", "gul", "mur"],
+        "weight": 0.83,
+        "notes": "Mursi known for their lip plates tradition"
+      },
+      "suri": {
+        "prefixes": ["kor", "kom", "bar", "nga", "bor", "gol", "tok", "cha", "sur", "ber", "bal", "ula", "dum", "tul", "gab"],
+        "weight": 0.82,
+        "notes": "Suri are related to Mursi in Omo Valley"
+      },
+      "hamer": {
+        "prefixes": ["min", "kai", "ber", "hai", "gen", "bel", "dom", "yim", "bal", "mar", "gol", "gab", "aye", "bid", "ham"],
+        "weight": 0.81,
+        "notes": "Hamer known for their bull-jumping ceremony"
+      },
+      "anuak": {
+        "prefixes": ["oca", "ojo", "opi", "oja", "odi", "oth", "olu", "ota", "ogo", "oti", "owo", "ote", "onu", "omu", "ole"],
+        "weight": 0.84,
+        "notes": "Anuak live in Ethiopia and South Sudan"
       }
     },
     "greatLakes": {
       "hutu": {
-        "prefixes": ["hab", "niy", "nda", "uwa", "muk", "nku", "ruk", "gat", "nta"],
+        "prefixes": ["hab", "niy", "nda", "uwa", "muk", "nku", "ruk", "gat", "nta", "ntw", "ruz", "nzi", "nse", "nsh", "ngi"],
         "weight": 0.87,
         "notes": "Hutu naming reflects Kinyarwanda traditions"
       },
       "tutsi": {
-        "prefixes": ["kag", "niy", "uwa", "muk", "gas", "nku", "ruk", "biz", "nta"],
+        "prefixes": ["kag", "niy", "uwa", "muk", "gas", "nku", "ruk", "biz", "nta", "ntw", "gat", "nzi", "umb", "bur", "shi"],
         "weight": 0.87,
         "notes": "Tutsi share language with Hutu (Kinyarwanda)"
       },
       "baganda": {
-        "prefixes": ["nak", "sse", "muk", "mus", "kat", "was", "nam", "nab", "lwe"],
+        "prefixes": ["nak", "sse", "muk", "mus", "kat", "was", "nam", "nab", "lwe", "omu", "nse", "ssa", "kir", "mwa", "gom"],
         "weight": 0.90,
         "notes": "Baganda clans each have totemic names"
       },
       "banyankole": {
-        "prefixes": ["mus", "kak", "ash", "nta", "muh", "tus", "nyo", "ruh", "nku"],
+        "prefixes": ["mus", "kak", "ash", "nta", "muh", "tus", "nyo", "ruh", "nku", "ntu", "bag", "bai", "mba", "nya", "aga"],
         "weight": 0.86,
         "notes": "Banyankole are pastoralists in western Uganda"
+      },
+      "twa": {
+        "prefixes": ["gas", "muk", "rut", "nda", "ntu", "mut", "nza", "ngi", "mus", "bwa", "rwa", "kit", "hab", "ntw", "nse"],
+        "weight": 0.83,
+        "notes": "Twa are the original inhabitants of Rwanda and Burundi"
+      },
+      "haya": {
+        "prefixes": ["kag", "buk", "nsh", "mug", "muk", "omu", "rwa", "kya", "rut", "kas", "bai", "nyi", "nku", "nda", "gom"],
+        "weight": 0.85,
+        "notes": "Haya of Tanzania known for early iron smelting"
+      },
+      "sukuma": {
+        "prefixes": ["ngu", "msh", "suk", "mag", "mas", "nse", "kas", "bus", "buh", "muz", "shi", "nza", "nko", "luk", "ndo"],
+        "weight": 0.85,
+        "notes": "Sukuma are Tanzania's largest ethnic group"
+      },
+      "chagga": {
+        "prefixes": ["kib", "mbu", "nde", "mki", "mfa", "mri", "kwa", "mso", "lya", "nda", "kya", "nko", "mwa", "tem", "lae"],
+        "weight": 0.86,
+        "notes": "Chagga live on the slopes of Mt. Kilimanjaro"
+      },
+      "gogo": {
+        "prefixes": ["mny", "nhu", "msu", "nyo", "msa", "sek", "chn", "ngo", "ndu", "mgo", "ige", "mka", "mpo", "mkw", "cha"],
+        "weight": 0.84,
+        "notes": "Gogo are agro-pastoralists of central Tanzania"
+      },
+      "hehe": {
+        "prefixes": ["mwa", "mgh", "nge", "mha", "mba", "mtu", "nda", "mku", "kul", "lup", "mfi", "ngu", "mse", "nyu", "mbe"],
+        "weight": 0.83,
+        "notes": "Hehe resisted German colonial rule"
+      }
+    },
+    "sahelRegion": {
+      "tukulor": {
+        "prefixes": ["abd", "mam", "ous", "dem", "dia", "thi", "bou", "aly", "moh", "ibr", "sal", "ama", "sou", "sek", "sai"],
+        "weight": 0.84,
+        "notes": "Tukulor are related to Fulani along the Senegal River"
+      },
+      "kanuri": {
+        "prefixes": ["sheh", "alh", "kai", "zar", "lam", "bus", "mas", "gon", "muh", "gam", "yar", "mus", "mai", "aba", "mah"],
+        "weight": 0.85,
+        "notes": "Kanuri founded the Kanem-Bornu Empire"
+      },
+      "sara": {
+        "prefixes": ["dji", "ngo", "mad", "mou", "nay", "nba", "tam", "gar", "mba", "dja", "kem", "bek", "sal", "yak", "nda"],
+        "weight": 0.82,
+        "notes": "Sara are the largest ethnic group in Chad"
+      },
+      "zaghawa": {
+        "prefixes": ["dok", "erd", "mah", "ahm", "ibr", "ali", "moh", "oma", "abd", "sul", "deb", "djb", "ish", "kou", "abe"],
+        "weight": 0.81,
+        "notes": "Zaghawa span Chad, Sudan, and Libya"
       }
     }
   },
   "suffixPatterns": {
     "eastAfrica": {
       "luo": {
-        "suffixes": ["ambo", "ieno", "iambo", "tieno", "chieng", "uongo", "rieko", "yore", "tore"],
+        "suffixes": ["ambo", "ieno", "iambo", "tieno", "chieng", "uongo", "rieko", "yore", "tore", "ombe", "oduol", "onyango", "owuor", "ogada"],
         "weight": 0.91
       },
       "kikuyu": {
-        "suffixes": ["iku", "eri", "iri", "angi", "ingi", "ongi", "uchi", "uthi", "itho", "umba"],
+        "suffixes": ["iku", "eri", "iri", "angi", "ingi", "ongi", "uchi", "uthi", "itho", "umba", "guku", "anga", "unga", "inja"],
         "weight": 0.88
       },
       "luhya": {
-        "suffixes": ["ula", "esa", "oshi", "inga", "anga", "echi", "alo", "eli", "usi"],
+        "suffixes": ["ula", "esa", "oshi", "inga", "anga", "echi", "alo", "eli", "usi", "uchi", "oshi", "embe", "enya", "ambi"],
         "weight": 0.89
       },
       "kalenjin": {
-        "suffixes": ["oge", "yot", "ich", "otich", "soi", "bett", "sang", "rono", "korir", "tanui"],
+        "suffixes": ["oge", "yot", "ich", "otich", "soi", "bett", "sang", "rono", "korir", "tanui", "limo", "toror", "ruto", "chemjor"],
         "weight": 0.94
       },
       "maasai": {
-        "suffixes": ["oni", "ashi", "esia", "serian", "engai", "arama", "upaki", "iani"],
+        "suffixes": ["oni", "ashi", "esia", "serian", "engai", "arama", "upaki", "iani", "isho", "aika", "onka", "aitai", "ayian"],
         "weight": 0.91
       }
     },
     "westAfrica": {
       "yoruba": {
-        "suffixes": ["tunde", "wale", "kemi", "funmi", "wole", "dele", "kola", "yemi", "bola", "sola"],
+        "suffixes": ["tunde", "wale", "kemi", "funmi", "wole", "dele", "kola", "yemi", "bola", "sola", "yinka", "mide", "folake", "kunle"],
         "weight": 0.93
       },
       "igbo": {
-        "suffixes": ["emeka", "nneka", "amaka", "chukwu", "nweze", "okwu", "nkem", "ugochi", "chidi"],
+        "suffixes": ["emeka", "nneka", "amaka", "chukwu", "nweze", "okwu", "nkem", "ugochi", "chidi", "dimma", "kachi", "ifeoma", "nonso"],
         "weight": 0.94
       },
       "hausa": {
-        "suffixes": ["amin", "bala", "audu", "uman", "sani", "deen", "ullah", "rahim", "rauf"],
+        "suffixes": ["amin", "bala", "audu", "uman", "sani", "deen", "ullah", "rahim", "rauf", "akwai", "bakin", "mai", "garba"],
         "weight": 0.87
       },
       "akan": {
-        "suffixes": ["ame", "nana", "mensah", "quame", "atta", "ansu", "twum", "boateng", "asante"],
+        "suffixes": ["ame", "nana", "mensah", "quame", "atta", "ansu", "twum", "boateng", "asante", "ampofo", "adjei", "afriyie"],
         "weight": 0.90
       },
       "ewe": {
-        "suffixes": ["gbe", "fia", "ame", "evi", "fafa", "awo", "anyo", "tse", "agbe"],
+        "suffixes": ["gbe", "fia", "ame", "evi", "fafa", "awo", "anyo", "tse", "agbe", "wor", "dzi", "akplo", "kpe"],
         "weight": 0.86
+      },
+      "dogon": {
+        "suffixes": ["lou", "ogo", "gou", "djo", "dou", "mou", "nou", "sou", "tou", "pou", "ago", "amba", "ongo"],
+        "weight": 0.88
+      },
+      "fulani": {
+        "suffixes": ["ado", "ido", "udo", "llo", "llo", "ngo", "mbo", "nde", "awo", "ejo", "rgo", "ndo", "kou"],
+        "weight": 0.85
+      },
+      "wolof": {
+        "suffixes": ["aye", "iaye", "oye", "ene", "ane", "ine", "our", "all", "ene", "ome", "aye", "ine", "one"],
+        "weight": 0.84
       }
     },
     "southernAfrica": {
       "zulu": {
-        "suffixes": ["swe", "lele", "mbali", "nkosi", "dwa", "iswe", "ngane", "thando", "banzi"],
+        "suffixes": ["swe", "lele", "mbali", "nkosi", "dwa", "iswe", "ngane", "thando", "banzi", "phiwe", "ngani", "nhlanhla"],
         "weight": 0.91
       },
       "xhosa": {
-        "suffixes": ["isa", "ndwe", "thando", "vusa", "leli", "onga", "lumko", "lizo", "vuyo"],
+        "suffixes": ["isa", "ndwe", "thando", "vusa", "leli", "onga", "lumko", "lizo", "vuyo", "phelo", "etha", "anga"],
         "weight": 0.90
       },
       "shona": {
-        "suffixes": ["dai", "ishe", "mai", "guta", "fira", "onga", "enda", "isai", "ofa"],
+        "suffixes": ["dai", "ishe", "mai", "guta", "fira", "onga", "enda", "isai", "ofa", "anai", "eiro", "asha"],
         "weight": 0.89
       },
       "sotho": {
-        "suffixes": ["elo", "ane", "hle", "edi", "atso", "ofo", "abo", "idi", "aleli"],
+        "suffixes": ["elo", "ane", "hle", "edi", "atso", "ofo", "abo", "idi", "aleli", "oane", "oeng", "ello"],
         "weight": 0.88
       },
       "tswana": {
-        "suffixes": ["gao", "edi", "atsi", "ofe", "ame", "abo", "ogile", "ole", "alelo"],
+        "suffixes": ["gao", "edi", "atsi", "ofe", "ame", "abo", "ogile", "ole", "alelo", "itse", "otse", "atla"],
         "weight": 0.87
+      },
+      "himba": {
+        "suffixes": ["vie", "era", "ira", "ara", "ini", "isa", "ina", "eka", "ava", "una", "epa", "uta"],
+        "weight": 0.86
+      },
+      "san": {
+        "suffixes": ["ao", "ui", "oa", "ei", "ai", "ou", "au", "iu", "ea", "ia", "ua", "oe"],
+        "weight": 0.84
       }
     },
     "centralAfrica": {
       "kongo": {
-        "suffixes": ["inga", "anda", "emba", "engo", "ongo", "ela", "ila", "ulu", "anga"],
+        "suffixes": ["inga", "anda", "emba", "engo", "ongo", "ela", "ila", "ulu", "anga", "unda", "amba", "imba"],
         "weight": 0.88
       },
       "kimbundu": {
-        "suffixes": ["anda", "ela", "ongo", "ila", "emba", "engo", "unga", "anga", "ole"],
+        "suffixes": ["anda", "ela", "ongo", "ila", "emba", "engo", "unga", "anga", "ole", "inje", "ombe", "ambo"],
         "weight": 0.87
       },
       "ovimbundu": {
-        "suffixes": ["undu", "imbi", "anda", "ongo", "ela", "ila", "emba", "engo", "ulu"],
+        "suffixes": ["undu", "imbi", "anda", "ongo", "ela", "ila", "emba", "engo", "ulu", "amba", "ombe", "anga"],
         "weight": 0.89
       },
       "luba": {
-        "suffixes": ["ongo", "anga", "enda", "ila", "ela", "umba", "amba", "ingi", "ashi"],
+        "suffixes": ["ongo", "anga", "enda", "ila", "ela", "umba", "amba", "ingi", "ashi", "enge", "enye", "imba"],
         "weight": 0.86
       },
       "fang": {
-        "suffixes": ["ong", "ang", "ouma", "ema", "ala", "olo", "ene", "ane", "essa"],
+        "suffixes": ["ong", "ang", "ouma", "ema", "ala", "olo", "ene", "ane", "essa", "assa", "osse", "inne"],
         "weight": 0.85
+      },
+      "pygmy": {
+        "suffixes": ["li", "di", "ni", "ti", "ki", "si", "bi", "mi", "pi", "fi", "gi", "ri"],
+        "weight": 0.80
       }
     },
     "northAfrica": {
       "amazigh": {
-        "suffixes": ["irt", "ouch", "ane", "ini", "ifa", "ina", "aya", "iza", "ssa"],
+        "suffixes": ["irt", "ouch", "ane", "ini", "ifa", "ina", "aya", "iza", "ssa", "lla", "oui", "ani"],
         "weight": 0.86
       },
       "tuareg": {
-        "suffixes": ["ina", "oua", "ene", "afa", "aga", "ada", "ela", "ila", "assa"],
+        "suffixes": ["ina", "oua", "ene", "afa", "aga", "ada", "ela", "ila", "assa", "essa", "olla", "alla"],
         "weight": 0.84
       },
       "nubian": {
-        "suffixes": ["din", "een", "oud", "iya", "awi", "ani", "ata", "ina", "oon"],
+        "suffixes": ["din", "een", "oud", "iya", "awi", "ani", "ata", "ina", "oon", "aan", "iin", "uun"],
         "weight": 0.82
       }
     },
     "hornOfAfrica": {
       "somali": {
-        "suffixes": ["ddin", "llah", "xad", "aan", "iyo", "aad", "oow", "iin", "aal"],
+        "suffixes": ["ddin", "llah", "xad", "aan", "iyo", "aad", "oow", "iin", "aal", "eed", "ood", "uud"],
         "weight": 0.90
       },
       "oromo": {
-        "suffixes": ["ssa", "cha", "taa", "oma", "uma", "afa", "efa", "ita", "uta"],
+        "suffixes": ["ssa", "cha", "taa", "oma", "uma", "afa", "efa", "ita", "uta", "ina", "ana", "ona"],
         "weight": 0.88
       },
       "amhara": {
-        "suffixes": ["ish", "work", "maryam", "selassie", "nega", "kidan", "hiwot", "genet"],
+        "suffixes": ["ish", "work", "maryam", "selassie", "nega", "kidan", "hiwot", "genet", "mariam", "berhan"],
         "weight": 0.87
       },
       "dinka": {
-        "suffixes": ["bior", "uol", "ath", "dit", "iel", "iak", "lek", "awan", "kuei"],
+        "suffixes": ["bior", "uol", "ath", "dit", "iel", "iak", "lek", "awan", "kuei", "mac", "arol", "achuil"],
         "weight": 0.92
       },
       "nuer": {
-        "suffixes": ["uoth", "luak", "iech", "uong", "ieny", "uol", "ang", "ath", "iel"],
+        "suffixes": ["uoth", "luak", "iech", "uong", "ieny", "uol", "ang", "ath", "iel", "eak", "oak", "uak"],
         "weight": 0.91
       },
       "shilluk": {
-        "suffixes": ["kang", "ong", "eth", "ilo", "ayo", "odo", "elo", "ara", "oko"],
+        "suffixes": ["kang", "ong", "eth", "ilo", "ayo", "odo", "elo", "ara", "oko", "alo", "elo", "uko"],
         "weight": 0.87
       }
     },
     "greatLakes": {
       "banyarwanda": {
-        "suffixes": ["imana", "ugaba", "neza", "ango", "ombe", "ungu", "amba", "enzi", "anzi"],
+        "suffixes": ["imana", "ugaba", "neza", "ango", "ombe", "ungu", "amba", "enzi", "anzi", "ongo", "inga", "unga"],
         "weight": 0.89
       },
       "baganda": {
-        "suffixes": ["mwe", "enyi", "onya", "yiga", "ajja", "unda", "anda", "amba", "anga"],
+        "suffixes": ["mwe", "enyi", "onya", "yiga", "ajja", "unda", "anda", "amba", "anga", "inja", "onja", "unja"],
         "weight": 0.88
       }
     }
@@ -423,7 +666,7 @@
       "female": ["Nomvula", "Lindiwe", "Zanele", "Thandi", "Nompumelelo", "Sibongile", "Nokuthula", "Ntombi", "Zinhle", "Nonhlanhla", "Duduzile", "Ayanda", "Mbali", "Nozipho", "Thandiwe", "Sindiswa", "Bongiwe", "Ntombizonke", "Phumzile", "Nomusa"]
     },
     "xhosa": {
-      "male": ["Thamsanqa", "Andile", "Lungile", "Siyabulela", "Luvuyo", "Mzwandile", "Thobela", "Loyiso", "Xolani", "Unathi", "Aphiwe", "Siphokazi", "Mandisi", "Luyolo", "Chumani", "Sivuyile", "Akhona", "Anele", "Yandisa", "Luvo"],
+      "male": ["Thamsanqa", "Andile", "Lungile", "Siyabulela", "Luvuyo", "Mzwandile", "Thobela", "Loyiso", "Xolani", "Unathi", "Aphiwe", "Mandisi", "Luyolo", "Chumani", "Sivuyile", "Akhona", "Anele", "Yandisa", "Luvo", "Siphokazi"],
       "female": ["Nolitha", "Nomalanga", "Zoleka", "Yoliswa", "Nomakhosazana", "Lulama", "Nosipho", "Anathi", "Vuyelwa", "Zukiswa", "Noluthando", "Siphosethu", "Buyiswa", "Zimasa", "Nozuko", "Sinazo", "Nomfundo", "Olwethu", "Sonwabile", "Asanda"]
     },
     "dinka": {
@@ -435,12 +678,12 @@
       "female": ["Nyawal", "Nyakuoth", "Nyaguang", "Nyadak", "Nyaruach", "Nyamuch", "Nyajoik", "Nyaduoth", "Nyakui", "Nyariek", "Nyabuony", "Nyalat", "Nyagiech", "Nyachuol", "Nyagak", "Nyakong", "Nyawech", "Nyakuar", "Nyawut", "Nyachan"]
     },
     "shilluk": {
-      "male": ["Nyikang", "Reth", "Odak", "Agieng", "Okelo", "Dhel", "Ajwok", "Ochan", "Odongo", "Akol", "Adwok", "Nyarwai", "Odar", "Oloo", "Othow", "Otong", "Owiny", "Ochan", "Okullo", "Onek"],
-      "female": ["Achieng", "Ayok", "Adok", "Akol", "Ajak", "Aluel", "Akwai", "Anyieth", "Athok", "Adut", "Abuk", "Akuei", "Aluel", "Atong", "Awut", "Achol", "Ayen", "Amou", "Athieng", "Adeng"]
+      "male": ["Nyikang", "Reth", "Odak", "Agieng", "Okelo", "Dhel", "Ajwok", "Ochan", "Odongo", "Akol", "Adwok", "Nyarwai", "Odar", "Oloo", "Othow", "Otong", "Owiny", "Okullo", "Onek", "Oriang"],
+      "female": ["Achieng", "Ayok", "Adok", "Akol", "Ajak", "Aluel", "Akwai", "Anyieth", "Athok", "Adut", "Abuk", "Akuei", "Atong", "Awut", "Achol", "Ayen", "Amou", "Athieng", "Adeng", "Anyuon"]
     },
     "kimbundu": {
       "male": ["Nzinga", "Ngola", "Mbemba", "Kiluanje", "Ndongo", "Lukeni", "Jaga", "Kafuche", "Kamamba", "Ngunza", "Kasanje", "Njinga", "Mbangu", "Kongo", "Musuri", "Matamba", "Mbandi", "Ndambi", "Ngolome", "Kilombo"],
-      "female": ["Nzinga", "Njinga", "Ndongo", "Kambi", "Mukambi", "Temba", "Kifunji", "Kasinda", "Njila", "Kasuki", "Mbande", "Ngola", "Lukombo", "Malamba", "Matamba", "Ndala", "Kina", "Kifunji", "Kabinda", "Kalunga"]
+      "female": ["Nzinga", "Njinga", "Ndongo", "Kambi", "Mukambi", "Temba", "Kifunji", "Kasinda", "Njila", "Kasuki", "Mbande", "Ngola", "Lukombo", "Malamba", "Matamba", "Ndala", "Kina", "Kabinda", "Kalunga", "Kulaxingo"]
     },
     "ovimbundu": {
       "male": ["Savimbi", "Tchivela", "Ngangula", "Kalandula", "Undjamba", "Ekuikui", "Chingufo", "Mbalundu", "Kandala", "Chitombo", "Hombe", "Sanjamba", "Cipala", "Citonga", "Wambu", "Ndunduma", "Kalupeteka", "Singombelo", "Mbulu", "Chakussanga"],
@@ -461,6 +704,50 @@
     "oromo": {
       "male": ["Galata", "Tolosa", "Chaltu", "Badhaasa", "Lamessa", "Gobena", "Mulugeta", "Borena", "Gurmessa", "Waqjira", "Daba", "Lelisa", "Jirata", "Nagasa", "Kumsa", "Teshome", "Dinsa", "Hora", "Feyisa", "Legese"],
       "female": ["Caaltuu", "Bontu", "Lalisaa", "Hawwii", "Biiftuu", "Gammadaa", "Saartuu", "Ayantu", "Darartu", "Bilisee", "Nagartii", "Toltu", "Urjii", "Hawani", "Boonee", "Abarraa", "Foosiyaa", "Guddinee", "Warqitu", "Jaalannee"]
+    },
+    "dogon": {
+      "male": ["Amadou", "Ogobara", "Yengurou", "Dyongo", "Bandougou", "Pillou", "Adamou", "Dommo", "Tirou", "Sagou", "Guedou", "Andou", "Tembou", "Endou", "Oudou", "Sekou", "Modibo", "Ambagou", "Pounagou", "Angele"],
+      "female": ["Yassine", "Pama", "Sadio", "Hawa", "Tennin", "Aminata", "Kadiatou", "Maiga", "Penda", "Sira", "Nana", "Adama", "Fanta", "Awa", "Oumou", "Rokia", "Safiatou", "Mariam", "Aissata", "Fatoumata"]
+    },
+    "fulani": {
+      "male": ["Amadou", "Saidou", "Modibo", "Oumar", "Ibrahim", "Mamadou", "Alhadji", "Ussmanu", "Jibril", "Demba", "Belko", "Adama", "Bokar", "Gorko", "Samba", "Hamidou", "Abdoulaye", "Moussa", "Boubacar", "Issa"],
+      "female": ["Aminata", "Hawa", "Mariama", "Fati", "Djeneba", "Kadiatou", "Fatoumata", "Oumou", "Aissatou", "Binta", "Ramatoulaye", "Dienaba", "Sadio", "Penda", "Coumba", "Nene", "Djelo", "Mamou", "Salimata", "Tennin"]
+    },
+    "wolof": {
+      "male": ["Ousmane", "Amadou", "Fatou", "Abdoulaye", "Mamadou", "Ibrahima", "Boubacar", "Modou", "Babacar", "Cheikh", "Doudou", "Mbaye", "Pape", "Momar", "Serigne", "Issa", "Youssou", "Demba", "Assane", "Malick"],
+      "female": ["Fatou", "Aminata", "Khady", "Mame", "Ndèye", "Awa", "Mariama", "Aissatou", "Dieynaba", "Rokhaya", "Coumba", "Seynabou", "Oumou", "Sokhna", "Aby", "Kiné", "Binta", "Astou", "Ndeye", "Fama"]
+    },
+    "himba": {
+      "male": ["Kaujaha", "Tjimbua", "Nguava", "Mbangu", "Omahonga", "Omuhimba", "Ovita", "Ondumbo", "Katjangua", "Mutjise", "Kanene", "Handjaba", "Hiakuako", "Hererua", "Ndarara", "Ruhozu", "Mbinge", "Kovava", "Thipura", "Hemba"],
+      "female": ["Tjiposa", "Kavari", "Nguvaura", "Mbouapua", "Omutjandje", "Otjize", "Mukamui", "Kambonde", "Katjiku", "Njavera", "Mukuandero", "Tjitereke", "Omba", "Marike", "Nyama", "Mukuavi", "Njambi", "Kaeka", "Tjituka", "Vehiku"]
+    },
+    "san": {
+      "male": ["Gaoxare", "Nlao", "Tso", "Kwepe", "Gwei", "Xeina", "Nui", "Quame", "Kaice", "Nhoma", "Twa", "Haice", "Doma", "Koe", "Xam", "Naro", "Gana", "Gwi", "Haiom", "Ncoakhoe"],
+      "female": ["Dikhao", "Nai", "Khoe", "Gao", "Tsamkxao", "Xoina", "Nuisa", "Gaoxa", "Khwe", "Tcao", "Nama", "Tsamko", "Nuni", "Kaisa", "Gau", "Tsau", "Haise", "Xhose", "Koba", "Gona"]
+    },
+    "hausa": {
+      "male": ["Abdullahi", "Muhammad", "Aliyu", "Baba", "Danladi", "Maitama", "Malam", "Ibrahim", "Garba", "Yakubu", "Saddiq", "Aminu", "Sulaiman", "Ishaq", "Umar", "Audu", "Sanusi", "Hamza", "Nasir", "Suleiman"],
+      "female": ["Amina", "Fatima", "Hadiza", "Zainab", "Maryam", "Aisha", "Hafsat", "Halima", "Hauwa", "Sadiya", "Khadija", "Salamatu", "Bilkisu", "Rahama", "Jamila", "Hussaina", "Umma", "Binta", "Safiya", "Rabi"]
+    },
+    "akan": {
+      "male": ["Kofi", "Kwame", "Kwadwo", "Kweku", "Yaw", "Kobina", "Kwasi", "Akwasi", "Nana", "Osei", "Asante", "Kojo", "Afari", "Adjei", "Annan", "Boateng", "Mensah", "Appiah", "Opoku", "Agyeman"],
+      "female": ["Ama", "Abena", "Akua", "Yaa", "Afia", "Afua", "Adwoa", "Akosua", "Efua", "Nana", "Asantewaa", "Adoma", "Afriyie", "Boatemaa", "Serwaa", "Achiaa", "Amponsah", "Maame", "Abenaa", "Akos"]
+    },
+    "tuareg": {
+      "male": ["Amoud", "Tinariwen", "Moussa", "Aghali", "Elmeki", "Akhmad", "Adaoui", "Inlal", "Tamasheq", "Kelkel", "Attaher", "Amadou", "Aziz", "Illiad", "Oulad", "Moulay", "Kel", "Ahoulou", "Tagmart", "Albaka"],
+      "female": ["Tintou", "Amoudou", "Ouma", "Eneke", "Agha", "Adama", "Elhamdou", "Ilham", "Assalia", "Tachfia", "Lamina", "Oumaya", "Aziza", "Fadimata", "Hinnou", "Taleb", "Zeinab", "Khadija", "Lalla", "Tella"]
+    },
+    "baganda": {
+      "male": ["Nakato", "Ssemakula", "Mukasa", "Musoke", "Kateregga", "Waswa", "Namuganza", "Nabirye", "Lweza", "Omusisi", "Nsegiyunva", "Ssalongo", "Kirigwa", "Mwanga", "Gombya", "Jjunju", "Kanyike", "Ssengooba", "Kizza", "Bukenya"],
+      "female": ["Nakabugo", "Ssewanyana", "Namusisi", "Nassiwa", "Katende", "Wasswa", "Namuddu", "Nalwanga", "Lwanga", "Omukasa", "Nambatya", "Nalunga", "Kironde", "Mwagale", "Gomba", "Jjuuko", "Kanyingo", "Ssenga", "Kiiza", "Bukenya"]
+    },
+    "swahili": {
+      "male": ["Mwamba", "Ali", "Hamisi", "Salim", "Hassan", "Fataki", "Rashid", "Bakari", "Juma", "Mohamed", "Abdalla", "Omar", "Suleiman", "Azizi", "Mariam", "Saidi", "Musa", "Yusuf", "Kassim", "Sharif"],
+      "female": ["Mwanaisha", "Fatuma", "Zuhura", "Salma", "Halima", "Khadija", "Amina", "Mariamu", "Asha", "Rehema", "Zaina", "Jamila", "Hadija", "Mwajuma", "Safia", "Aziza", "Nasra", "Saida", "Tatu", "Mwanakombo"]
+    },
+    "shona": {
+      "male": ["Chipo", "Tapiwa", "Mukudzei", "Tendai", "Runako", "Simba", "Tatenda", "Takudzwa", "Tinashe", "Zvipo", "Farai", "Kudakwashe", "Tafadzwa", "Nyasha", "Munyaradzi", "Tinotenda", "Kudzai", "Takunda", "Ngoni", "Tanaka"],
+      "female": ["Chiedza", "Tariro", "Rudo", "Rutendo", "Nyaradzo", "Shamiso", "Tsitsi", "Tinotenda", "Rufaro", "Tendai", "Memory", "Precious", "Beauty", "Patience", "Tendayi", "Makanaka", "Vimbai", "Tafadzwa", "Rumbi", "Anesu"]
     }
   },
   "religiousPatterns": {
@@ -468,19 +755,19 @@
       "prefixes": ["abdul", "abd", "abu", "umm", "ibn", "al", "bin", "bint", "muhammad", "ahmad", "fatim", "khadij", "ali", "omar", "hussei", "ibrahim", "ismail", "yusuf", "musa"],
       "suffixes": ["allah", "din", "uddin", "ullah", "rahim", "rahman", "akbar", "deen", "amin", "anwar"],
       "commonPatterns": ["abdul-", "-ullah", "-uddin", "al-", "abu-", "umm-"],
-      "tribes": ["somali", "hausa", "fulani", "wolof", "tuareg", "swahili", "nubian", "berber"]
+      "tribes": ["somali", "hausa", "fulani", "wolof", "tuareg", "swahili", "nubian", "berber", "kanuri", "toubou"]
     },
     "christian": {
       "prefixes": ["grace", "faith", "hope", "blessing", "divine", "mercy", "glory", "gift", "god", "jesus", "mary", "john", "peter", "paul", "joy"],
       "suffixes": ["grace", "faith", "blessing", "love", "joy", "victor", "victory", "peace"],
       "commonPatterns": ["god-", "christ-", "-blessed"],
-      "tribes": ["kikuyu", "yoruba", "igbo", "akan", "shona", "zulu", "xhosa"]
+      "tribes": ["kikuyu", "yoruba", "igbo", "akan", "shona", "zulu", "xhosa", "baganda", "chagga", "sukuma"]
     },
     "traditional": {
-      "prefixes": ["chi", "ogun", "oya", "sango", "ifa", "nana", "amma", "nyame", "modimo", "unkulunkulu"],
+      "prefixes": ["chi", "ogun", "oya", "sango", "ifa", "nana", "amma", "nyame", "modimo", "unkulunkulu", "mwari", "ngai"],
       "suffixes": ["maka", "chi", "orisha", "nyame"],
       "commonPatterns": ["ancestor-", "spirit-", "earth-"],
-      "tribes": ["yoruba", "igbo", "akan", "dogon", "maasai", "himba", "san"]
+      "tribes": ["yoruba", "igbo", "akan", "dogon", "maasai", "himba", "san", "shona", "zulu", "dinka"]
     }
   },
   "globalOrigins": {
