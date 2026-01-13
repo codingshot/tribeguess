@@ -39,6 +39,7 @@ export interface NameHistoryData {
   namingTrend: 'rising' | 'stable' | 'declining' | 'cyclical' | 'classic';
   culturalSignificance: string[];
   famousNamesakes: FamousNamesake[];
+  popularityTrends?: PopularityTrends;
 }
 
 export interface NamePopularityPeriod {
@@ -67,6 +68,33 @@ export interface FamousNamesake {
   death?: number;
   description: string;
   region: string;
+}
+
+// New popularity trends interface
+export interface PopularityTrends {
+  byDecade: DecadePopularity[];
+  byRegion: RegionalPopularity[];
+  overallRank: number;
+  peakDecade: string;
+  currentPopularity: 'very_high' | 'high' | 'moderate' | 'low' | 'rare';
+  trendDirection: 'rising' | 'stable' | 'declining';
+  percentageChange: number; // vs previous decade
+}
+
+export interface DecadePopularity {
+  decade: string;
+  year: number;
+  popularity: number; // 0-100
+  rank?: number;
+  births?: string; // estimated births per million
+}
+
+export interface RegionalPopularity {
+  region: string;
+  countries: string[];
+  popularity: number; // 0-100
+  rank?: number;
+  culturalNote?: string;
 }
 
 // ============= GENDER PATTERNS =============
@@ -519,6 +547,9 @@ export function getNameHistory(name: string): NameHistoryData {
   // Get famous namesakes
   const namesakes = FAMOUS_NAMESAKES[normalized] || [];
   
+  // Calculate popularity trends
+  const popularityTrends = calculatePopularityTrends(normalized, peakEra, namingTrend);
+  
   return {
     name,
     peakPopularity: {
@@ -531,7 +562,164 @@ export function getNameHistory(name: string): NameHistoryData {
     estimatedAgeRange,
     namingTrend,
     culturalSignificance: peakEra.characteristics,
-    famousNamesakes: namesakes
+    famousNamesakes: namesakes,
+    popularityTrends
+  };
+}
+
+/**
+ * Calculate popularity trends across decades and regions
+ */
+function calculatePopularityTrends(
+  name: string, 
+  peakEra: NameEra, 
+  trend: NameHistoryData['namingTrend']
+): PopularityTrends {
+  const normalized = name.toLowerCase();
+  
+  // Decade popularity data
+  const decades: DecadePopularity[] = [
+    { decade: '1960s', year: 1960, popularity: 0, births: '0' },
+    { decade: '1970s', year: 1970, popularity: 0, births: '0' },
+    { decade: '1980s', year: 1980, popularity: 0, births: '0' },
+    { decade: '1990s', year: 1990, popularity: 0, births: '0' },
+    { decade: '2000s', year: 2000, popularity: 0, births: '0' },
+    { decade: '2010s', year: 2010, popularity: 0, births: '0' },
+    { decade: '2020s', year: 2020, popularity: 0, births: '0' }
+  ];
+  
+  // Calculate popularity for each decade based on era overlap
+  decades.forEach(decade => {
+    const decadeStart = decade.year;
+    const decadeEnd = decade.year + 9;
+    const eraStart = peakEra.yearRange[0];
+    const eraEnd = peakEra.yearRange[1];
+    
+    // Check if this decade overlaps with peak era
+    if (decadeStart <= eraEnd && decadeEnd >= eraStart) {
+      const overlap = Math.min(decadeEnd, eraEnd) - Math.max(decadeStart, eraStart);
+      decade.popularity = Math.min(95, 40 + (overlap / 10) * 20);
+    } else if (decadeStart > eraEnd) {
+      // Post-peak era - declining or stable
+      const yearsAfterPeak = decadeStart - eraEnd;
+      decade.popularity = Math.max(5, 60 - yearsAfterPeak * 1.5);
+    } else {
+      // Pre-peak era
+      const yearsBeforePeak = eraStart - decadeEnd;
+      decade.popularity = Math.max(5, 30 - yearsBeforePeak * 0.5);
+    }
+    
+    // Add rank based on popularity
+    decade.rank = decade.popularity > 80 ? Math.floor(Math.random() * 20) + 1 :
+                  decade.popularity > 60 ? Math.floor(Math.random() * 50) + 20 :
+                  decade.popularity > 40 ? Math.floor(Math.random() * 100) + 50 :
+                  Math.floor(Math.random() * 200) + 100;
+    
+    // Estimate births per million
+    const birthsPerMillion = Math.round(decade.popularity * 50);
+    decade.births = birthsPerMillion > 1000 ? `${(birthsPerMillion / 1000).toFixed(1)}K` : `${birthsPerMillion}`;
+  });
+  
+  // Boost specific decades for known names
+  const modernNames = ['jaylen', 'zion', 'amara', 'zuri', 'nia', 'imani', 'malik'];
+  const classicNames = ['muhammad', 'mohamed', 'fatima', 'amina', 'ibrahim'];
+  const independenceNames = ['jomo', 'kwame', 'julius', 'nelson', 'winnie'];
+  
+  if (modernNames.includes(normalized)) {
+    decades[5].popularity = 85; // 2010s
+    decades[6].popularity = 95; // 2020s
+    decades[4].popularity = 50; // 2000s
+  } else if (classicNames.includes(normalized)) {
+    decades.forEach(d => d.popularity = Math.max(d.popularity, 70)); // Always popular
+  } else if (independenceNames.includes(normalized)) {
+    decades[0].popularity = 90; // 1960s
+    decades[1].popularity = 85; // 1970s
+    decades[2].popularity = 60; // 1980s
+  }
+  
+  // Regional popularity
+  const regions: RegionalPopularity[] = [
+    { 
+      region: 'East Africa', 
+      countries: ['Kenya', 'Tanzania', 'Uganda', 'Rwanda'], 
+      popularity: 50,
+      culturalNote: 'Swahili and Bantu naming traditions'
+    },
+    { 
+      region: 'West Africa', 
+      countries: ['Nigeria', 'Ghana', 'Senegal', 'Mali'], 
+      popularity: 50,
+      culturalNote: 'Yoruba, Igbo, and Hausa influences'
+    },
+    { 
+      region: 'North Africa', 
+      countries: ['Egypt', 'Morocco', 'Tunisia', 'Algeria'], 
+      popularity: 30,
+      culturalNote: 'Arabic and Berber traditions'
+    },
+    { 
+      region: 'Southern Africa', 
+      countries: ['South Africa', 'Zimbabwe', 'Botswana', 'Zambia'], 
+      popularity: 40,
+      culturalNote: 'Zulu, Xhosa, and Tswana patterns'
+    },
+    { 
+      region: 'Central Africa', 
+      countries: ['DRC', 'Cameroon', 'Congo', 'CAR'], 
+      popularity: 35,
+      culturalNote: 'Bantu and Pygmy heritage'
+    },
+    { 
+      region: 'Horn of Africa', 
+      countries: ['Ethiopia', 'Somalia', 'Eritrea', 'Djibouti'], 
+      popularity: 45,
+      culturalNote: 'Cushitic and Semitic naming'
+    }
+  ];
+  
+  // Adjust regional popularity based on name patterns
+  if (/^(kip|chep|ole|nai)/.test(normalized)) {
+    regions[0].popularity = 95; // East Africa
+  } else if (/^(ade|olu|chuk|nne|chi)/.test(normalized) || normalized.endsWith('ola')) {
+    regions[1].popularity = 95; // West Africa
+  } else if (/^(abd|muhammad|ahmed|fatima|aisha)/.test(normalized) || normalized.endsWith('din')) {
+    regions[2].popularity = 90; // North Africa
+    regions[1].popularity = 70; // Also West Africa (Sahel)
+  } else if (/^(nko|thab|sip|mand)/.test(normalized) || normalized.endsWith('zwe') || normalized.endsWith('ndi')) {
+    regions[3].popularity = 90; // Southern Africa
+  } else if (/^(amadou|mamadou|ousmane|ibrahima)/.test(normalized)) {
+    regions[1].popularity = 95; // West Africa (Sahel)
+    regions[4].popularity = 60; // Central Africa
+  }
+  
+  // Add ranks to regions
+  regions.forEach(r => {
+    r.rank = r.popularity > 80 ? Math.floor(Math.random() * 10) + 1 :
+             r.popularity > 60 ? Math.floor(Math.random() * 30) + 10 :
+             r.popularity > 40 ? Math.floor(Math.random() * 50) + 30 :
+             Math.floor(Math.random() * 100) + 50;
+  });
+  
+  // Calculate overall metrics
+  const peakDecade = decades.reduce((max, d) => d.popularity > max.popularity ? d : max).decade;
+  const latestPopularity = decades[decades.length - 1].popularity;
+  const previousPopularity = decades[decades.length - 2].popularity;
+  const percentageChange = previousPopularity > 0 
+    ? Math.round(((latestPopularity - previousPopularity) / previousPopularity) * 100)
+    : 0;
+  
+  return {
+    byDecade: decades,
+    byRegion: regions.sort((a, b) => b.popularity - a.popularity),
+    overallRank: Math.floor(Math.random() * 500) + 1,
+    peakDecade,
+    currentPopularity: latestPopularity > 80 ? 'very_high' :
+                       latestPopularity > 60 ? 'high' :
+                       latestPopularity > 40 ? 'moderate' :
+                       latestPopularity > 20 ? 'low' : 'rare',
+    trendDirection: percentageChange > 10 ? 'rising' :
+                    percentageChange < -10 ? 'declining' : 'stable',
+    percentageChange
   };
 }
 
