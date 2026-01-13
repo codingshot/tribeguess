@@ -1,6 +1,70 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Clock, Sparkles, HelpCircle, ChevronDown, ChevronUp, MapPin, Users, Heart, Globe } from 'lucide-react';
+import { Search, Clock, Sparkles, HelpCircle, ChevronDown, ChevronUp, MapPin, Users, Heart, Globe, Shuffle } from 'lucide-react';
+
+// Random names by country for the "Try Random" feature
+const RANDOM_NAMES_BY_COUNTRY: Record<string, string[]> = {
+  'ALL': [
+    'Wanjiku', 'Adaeze', 'Amahoro', 'Fatima', 'Thandiwe', 'Akosua', 'Tigist', 'Nakato',
+    'Chiamaka', 'Ngozi', 'Achieng', 'Nafula', 'Onyango', 'Kipkoech', 'Kofi', 'Kwame',
+    'Okonkwo', 'Chukwuemeka', 'Mandela', 'Amara', 'Zuri', 'Imani', 'Sekou', 'Amadou',
+    'Mamadou', 'Ousmane', 'Moussa', 'Ibrahim', 'Hassan', 'Aisha', 'Halima', 'Mariama'
+  ],
+  'KE': [
+    'Wanjiku', 'Achieng', 'Nafula', 'Nyambura', 'Wangari', 'Otieno', 'Kipkoech', 'Kimani',
+    'Muthoni', 'Njeri', 'Wairimu', 'Onyango', 'Odhiambo', 'Chebet', 'Jeptoo', 'Korir',
+    'Mutiso', 'Mwende', 'Kaluki', 'Nduta', 'Gathoni', 'Wambui', 'Nyokabi', 'Karanja'
+  ],
+  'NG': [
+    'Adaeze', 'Chiamaka', 'Ngozi', 'Chukwuemeka', 'Okonkwo', 'Adebayo', 'Oluwaseun',
+    'Funmilayo', 'Adesola', 'Ifeanyi', 'Emeka', 'Obioma', 'Nneka', 'Chioma', 'Amaka',
+    'Chidi', 'Uche', 'Tunde', 'Segun', 'Yinka', 'Folake', 'Adunni', 'Bola', 'Sade'
+  ],
+  'GH': [
+    'Akosua', 'Abena', 'Yaa', 'Kofi', 'Kwame', 'Ama', 'Adwoa', 'Afua', 'Akua', 'Afia',
+    'Kwaku', 'Kojo', 'Kwadwo', 'Yaw', 'Nana', 'Efua', 'Esi', 'Adjoa', 'Araba', 'Ekua'
+  ],
+  'ZA': [
+    'Thandiwe', 'Nomvula', 'Lindiwe', 'Sipho', 'Themba', 'Bongani', 'Mpho', 'Lerato',
+    'Thabo', 'Sibongile', 'Nkosi', 'Zodwa', 'Nandi', 'Zinhle', 'Mandla', 'Siyanda'
+  ],
+  'ET': [
+    'Tigist', 'Meron', 'Bethlehem', 'Haile', 'Selam', 'Senait', 'Tedros', 'Bereket',
+    'Yohannes', 'Abebe', 'Tsehay', 'Alemitu', 'Biruk', 'Dagmawit', 'Eyerusalem', 'Mahlet'
+  ],
+  'TZ': [
+    'Neema', 'Zawadi', 'Hadija', 'Baraka', 'Furaha', 'Amani', 'Zainab', 'Mwanaisha',
+    'Jumanne', 'Juma', 'Ramadhani', 'Salome', 'Happiness', 'Goodluck', 'Rehema', 'Upendo'
+  ],
+  'UG': [
+    'Nakato', 'Babirye', 'Nassali', 'Namusoke', 'Waswa', 'Kato', 'Ssemanda', 'Nankya',
+    'Kiconco', 'Asiimwe', 'Tumusiime', 'Namugera', 'Opio', 'Adong', 'Auma', 'Okello'
+  ],
+  'RW': [
+    'Uwimana', 'Amahoro', 'Ingabire', 'Mugisha', 'Ndayisaba', 'Mukamana', 'Habimana',
+    'Ishimwe', 'Niyonzima', 'Tuyishime', 'Uwase', 'Dusabe', 'Nshimiye', 'Gahima'
+  ],
+  'SN': [
+    'Fatou', 'Aminata', 'Mariama', 'Ousmane', 'Mamadou', 'Moussa', 'Cheikh', 'Abdoulaye',
+    'Aissatou', 'Coumba', 'Ndèye', 'Seydou', 'Ibrahima', 'Modou', 'Astou', 'Awa'
+  ],
+  'ML': [
+    'Amadou', 'Oumar', 'Boubacar', 'Fatoumata', 'Kadiatou', 'Oumou', 'Sekou', 'Bakary',
+    'Issa', 'Djénéba', 'Mariam', 'Salif', 'Modibo', 'Mahamadou', 'Fanta', 'Rokia'
+  ],
+  'CD': [
+    'Kabila', 'Mutombo', 'Lukaku', 'Mvuemba', 'Nzinga', 'Lumumba', 'Mobutu', 'Kasongo',
+    'Tshisekedi', 'Wemba', 'Mukendi', 'Ngalula', 'Mbeki', 'Kalala', 'Ilunga', 'Kazadi'
+  ],
+  'CM': [
+    'Ngono', 'Mbarga', 'Fofana', 'Biya', 'Eto\'o', 'Milla', 'Onana', 'Aboubakar',
+    'Nchout', 'Bella', 'Ekambi', 'Tchamba', 'Biloa', 'Ntamack', 'Mboma', 'Manga'
+  ],
+  'SO': [
+    'Abdi', 'Mohamed', 'Farah', 'Asha', 'Halima', 'Hussein', 'Ahmed', 'Fatima',
+    'Sahra', 'Khadija', 'Omar', 'Ali', 'Yusuf', 'Hassan', 'Ayan', 'Hodan'
+  ]
+};
 import { getCountries, Country } from '@/lib/tribeDetection';
 
 interface GuessFormProps {
@@ -201,20 +265,41 @@ export function GuessForm({
         </div>
       </div>
 
-      {/* Advanced Mode Toggle */}
-      <button
-        type="button"
-        onClick={() => setAdvancedMode(!advancedMode)}
-        className="w-full flex items-center justify-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors touch-manipulation"
-      >
-        {advancedMode ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-        {advancedMode ? 'Hide' : 'Show'} Advanced Clues
-        {hasAdvancedClues && !advancedMode && (
-          <span className="bg-primary/20 text-primary text-xs px-2 py-0.5 rounded-full">
-            {[region, build, personality, timeOfBirth].filter(Boolean).length} added
-          </span>
-        )}
-      </button>
+      {/* Random Name & Advanced Mode Toggle Row */}
+      <div className="flex items-center justify-center gap-3">
+        {/* Random Name Button */}
+        <button
+          type="button"
+          onClick={() => {
+            const names = RANDOM_NAMES_BY_COUNTRY[country] || RANDOM_NAMES_BY_COUNTRY['ALL'];
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            setName(randomName);
+          }}
+          className="flex items-center gap-1.5 px-3 py-2 text-sm text-primary hover:text-primary/80 hover:bg-primary/10 rounded-lg transition-colors touch-manipulation"
+          aria-label="Try a random name"
+        >
+          <Shuffle className="w-4 h-4" />
+          <span className="hidden sm:inline">Random</span>
+          <span className="sm:hidden">{selectedCountry?.flag || '🌍'}</span>
+        </button>
+
+        <span className="text-muted-foreground/30">|</span>
+
+        {/* Advanced Mode Toggle */}
+        <button
+          type="button"
+          onClick={() => setAdvancedMode(!advancedMode)}
+          className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors touch-manipulation"
+        >
+          {advancedMode ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+          {advancedMode ? 'Hide' : 'Show'} Advanced Clues
+          {hasAdvancedClues && !advancedMode && (
+            <span className="bg-primary/20 text-primary text-xs px-2 py-0.5 rounded-full">
+              {[region, build, personality, timeOfBirth].filter(Boolean).length} added
+            </span>
+          )}
+        </button>
+      </div>
 
       {advancedMode && (
         <div className="space-y-4 animate-fade-in pt-2 border-t border-border">
