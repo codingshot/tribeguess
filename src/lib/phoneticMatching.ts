@@ -488,44 +488,108 @@ export function trackHistoricalOrigins(inputName: string): HistoricalOrigin[] {
     tribeMatches.set(match.tribe, existing);
   }
   
-  // Map tribes to their regions
-  const tribeRegions: Record<string, { region: string; migrations?: string[] }> = {
-    // East Africa
-    'luo': { region: 'East Africa - Nilotic', migrations: ['Bahr el Ghazal', 'Northern Uganda', 'Western Kenya'] },
-    'kikuyu': { region: 'East Africa - Bantu', migrations: ['Congo Basin', 'Great Lakes', 'Mt. Kenya'] },
-    'maasai': { region: 'East Africa - Nilotic', migrations: ['Nile Valley', 'Great Rift Valley'] },
-    'kalenjin': { region: 'East Africa - Nilotic', migrations: ['Nile Valley', 'Ethiopian Highlands'] },
+  // Comprehensive tribe regions with migration history and time periods
+  const tribeRegions: Record<string, { region: string; migrations?: string[]; timePeriod?: string }> = {
+    // East Africa - Nilotic Migrations
+    'luo': { region: 'East Africa - Nilotic', migrations: ['Bahr el Ghazal → Northern Uganda → Western Kenya'], timePeriod: '15th-17th century' },
+    'kikuyu': { region: 'East Africa - Bantu', migrations: ['Congo Basin → Great Lakes → Mt. Kenya region'], timePeriod: '12th-16th century' },
+    'maasai': { region: 'East Africa - Nilotic', migrations: ['Nile Valley → Ethiopian Highlands → Great Rift Valley'], timePeriod: '15th-18th century' },
+    'kalenjin': { region: 'East Africa - Nilotic', migrations: ['Nile Valley → Ethiopian Highlands → Kenya Highlands'], timePeriod: '10th-15th century' },
+    'luhya': { region: 'East Africa - Bantu', migrations: ['Great Lakes → Western Kenya'], timePeriod: '14th-17th century' },
+    'turkana': { region: 'East Africa - Nilotic', migrations: ['Ethiopian Highlands → Lake Turkana Basin'], timePeriod: '17th-18th century' },
+    'samburu': { region: 'East Africa - Nilotic', migrations: ['Related to Maasai, northern Kenya'], timePeriod: '16th-18th century' },
+    'pokot': { region: 'East Africa - Nilotic', migrations: ['Kalenjin subgroup, Rift Valley'], timePeriod: '15th-17th century' },
+    'embu': { region: 'East Africa - Bantu', migrations: ['Related to Kikuyu, Mt. Kenya'], timePeriod: '14th-16th century' },
+    'meru': { region: 'East Africa - Bantu', migrations: ['Related to Kikuyu, northeastern Mt. Kenya'], timePeriod: '14th-16th century' },
+    'mijikenda': { region: 'East Africa - Bantu', migrations: ['Shungwaya → Kenya Coast'], timePeriod: '16th-17th century' },
+    'swahili': { region: 'East Africa - Bantu/Arab', migrations: ['Bantu-Arab coastal synthesis'], timePeriod: '8th-15th century' },
     
-    // West Africa
-    'yoruba': { region: 'West Africa - Niger-Congo', migrations: ['Ancient Ife', 'Oyo Empire'] },
-    'igbo': { region: 'West Africa - Niger-Congo' },
-    'hausa': { region: 'West Africa - Chadic', migrations: ['Trans-Saharan routes'] },
-    'fulani': { region: 'Sahel - Atlantic', migrations: ['Senegal', 'Nigeria', 'Chad'] },
-    'wolof': { region: 'West Africa - Atlantic' },
-    'dogon': { region: 'Sahel - Dogon', migrations: ['Mandé region', 'Bandiagara'] },
+    // West Africa - Niger-Congo & Sahel
+    'yoruba': { region: 'West Africa - Niger-Congo', migrations: ['Ancient Ife → Oyo Empire expansion'], timePeriod: '11th-19th century' },
+    'igbo': { region: 'West Africa - Niger-Congo', migrations: ['Nri Kingdom heartland → Southeast Nigeria'], timePeriod: '9th century onwards' },
+    'hausa': { region: 'West Africa - Chadic', migrations: ['Trans-Saharan trade routes, Hausa city-states'], timePeriod: '7th-19th century' },
+    'fulani': { region: 'Sahel - Atlantic', migrations: ['Senegal River → Nigeria → Chad, pastoral migration'], timePeriod: '8th-19th century' },
+    'wolof': { region: 'West Africa - Atlantic', migrations: ['Jolof Empire, Senegal River Valley'], timePeriod: '14th-19th century' },
+    'dogon': { region: 'Sahel - Dogon', migrations: ['Mandé region → Bandiagara Escarpment'], timePeriod: '13th-15th century' },
+    'akan': { region: 'West Africa - Kwa', migrations: ['Ashanti Empire, Gold Coast'], timePeriod: '13th-19th century' },
+    'ewe': { region: 'West Africa - Gbe', migrations: ['Tado → Notsie → Ghana/Togo Coast'], timePeriod: '12th-17th century' },
+    'bambara': { region: 'West Africa - Mande', migrations: ['Bambara Empire, Mali'], timePeriod: '17th-19th century' },
+    'mandinka': { region: 'West Africa - Mande', migrations: ['Mali Empire, griot traditions'], timePeriod: '13th-16th century' },
+    'senufo': { region: 'West Africa - Gur', migrations: ['Ivory Coast, Mali, Burkina Faso'], timePeriod: '15th century onwards' },
+    'mossi': { region: 'West Africa - Gur', migrations: ['Mossi Kingdoms, Burkina Faso'], timePeriod: '11th-15th century' },
+    'fon': { region: 'West Africa - Gbe', migrations: ['Dahomey Kingdom, Benin'], timePeriod: '17th-19th century' },
+    'songhai': { region: 'West Africa - Nilo-Saharan', migrations: ['Songhai Empire, Niger River'], timePeriod: '15th-16th century' },
+    'kanuri': { region: 'Sahel - Saharan', migrations: ['Kanem-Bornu Empire, Lake Chad'], timePeriod: '9th-19th century' },
+    'tukulor': { region: 'Sahel - Atlantic', migrations: ['Senegal River, Futa Toro'], timePeriod: '11th century onwards' },
+    'mende': { region: 'West Africa - Mande', migrations: ['Sierra Leone, Poro societies'], timePeriod: '16th century onwards' },
+    'temne': { region: 'West Africa - Atlantic', migrations: ['Sierra Leone coast'], timePeriod: '15th century onwards' },
     
-    // Southern Africa
-    'zulu': { region: 'Southern Africa - Nguni', migrations: ['Great Lakes', 'Mfecane'] },
-    'xhosa': { region: 'Southern Africa - Nguni', migrations: ['Great Lakes', 'Eastern Cape'] },
-    'shona': { region: 'Southern Africa - Shona', migrations: ['Great Zimbabwe'] },
-    'himba': { region: 'Southern Africa - Herero', migrations: ['Great Lakes', 'Angola'] },
-    'san': { region: 'Southern Africa - Khoisan', migrations: ['Indigenous - 20,000+ years'] },
+    // Southern Africa - Bantu Expansion & Nguni Migrations
+    'zulu': { region: 'Southern Africa - Nguni', migrations: ['Great Lakes → Mfecane/Difaqane dispersal'], timePeriod: '16th-19th century' },
+    'xhosa': { region: 'Southern Africa - Nguni', migrations: ['Great Lakes → Eastern Cape'], timePeriod: '15th-18th century' },
+    'shona': { region: 'Southern Africa - Shona', migrations: ['Great Zimbabwe civilization'], timePeriod: '11th-15th century' },
+    'ndebele': { region: 'Southern Africa - Nguni', migrations: ['Mfecane, split from Zulu'], timePeriod: '19th century' },
+    'sotho': { region: 'Southern Africa - Sotho-Tswana', migrations: ['Great Lakes → Highveld'], timePeriod: '14th-17th century' },
+    'tswana': { region: 'Southern Africa - Sotho-Tswana', migrations: ['Related to Sotho, Botswana'], timePeriod: '14th-17th century' },
+    'swazi': { region: 'Southern Africa - Nguni', migrations: ['Nguni migration, Eswatini'], timePeriod: '15th-18th century' },
+    'venda': { region: 'Southern Africa - Venda', migrations: ['Great Lakes → Limpopo'], timePeriod: '12th-17th century' },
+    'tsonga': { region: 'Southern Africa - Tswa-Ronga', migrations: ['Mozambique → South Africa'], timePeriod: '16th-19th century' },
+    'himba': { region: 'Southern Africa - Herero', migrations: ['Great Lakes → Angola → Namibia'], timePeriod: '16th-19th century' },
+    'herero': { region: 'Southern Africa - Herero', migrations: ['Great Lakes → Namibia'], timePeriod: '16th-18th century' },
+    'san': { region: 'Southern Africa - Khoisan', migrations: ['Indigenous - 20,000+ years, oldest lineage'], timePeriod: 'Prehistoric' },
+    'nama': { region: 'Southern Africa - Khoikhoi', migrations: ['Indigenous Khoikhoi, Namibia'], timePeriod: 'Prehistoric-present' },
+    'ovambo': { region: 'Southern Africa - Bantu', migrations: ['Bantu expansion, northern Namibia'], timePeriod: '14th-16th century' },
     
-    // Central Africa
-    'kongo': { region: 'Central Africa - Bantu', migrations: ['Bantu Expansion', 'Kongo Kingdom'] },
-    'luba': { region: 'Central Africa - Bantu', migrations: ['Luba Empire'] },
-    'fang': { region: 'Central Africa - Bantu' },
+    // Central Africa - Bantu Heartland
+    'kongo': { region: 'Central Africa - Bantu', migrations: ['Bantu Expansion origin → Kongo Kingdom'], timePeriod: '14th-19th century' },
+    'luba': { region: 'Central Africa - Bantu', migrations: ['Luba Empire, DRC'], timePeriod: '15th-19th century' },
+    'fang': { region: 'Central Africa - Bantu', migrations: ['Cameroon → Gabon → Equatorial Guinea'], timePeriod: '18th-19th century' },
+    'kimbundu': { region: 'Central Africa - Bantu', migrations: ['Ndongo Kingdom, Angola'], timePeriod: '15th-17th century' },
+    'ovimbundu': { region: 'Central Africa - Bantu', migrations: ['Central Highlands, Angola'], timePeriod: '15th-17th century' },
+    'mongo': { region: 'Central Africa - Bantu', migrations: ['Congo Basin rainforest'], timePeriod: 'Ancient' },
+    'bamileke': { region: 'Central Africa - Semi-Bantu', migrations: ['Cameroon Grassfields'], timePeriod: '14th century onwards' },
+    'gbaya': { region: 'Central Africa - Ubangian', migrations: ['CAR, Cameroon'], timePeriod: '18th-19th century' },
+    'pygmy': { region: 'Central Africa - Central Sudanic', migrations: ['Indigenous forest peoples'], timePeriod: 'Prehistoric' },
+    'teke': { region: 'Central Africa - Bantu', migrations: ['Teke Kingdom, Congo'], timePeriod: '17th-19th century' },
+    'lingala': { region: 'Central Africa - Bantu', migrations: ['Congo River trade language'], timePeriod: '19th-20th century' },
+    'azande': { region: 'Central Africa - Zande', migrations: ['Azande Kingdom, DRC/CAR/South Sudan'], timePeriod: '18th-19th century' },
+    'lunda': { region: 'Central Africa - Bantu', migrations: ['Lunda Empire, Angola/DRC/Zambia'], timePeriod: '16th-19th century' },
+    'chokwe': { region: 'Central Africa - Bantu', migrations: ['Chokwe expansion, Angola/DRC'], timePeriod: '17th-19th century' },
+    'mangbetu': { region: 'Central Africa - Central Sudanic', migrations: ['Mangbetu Kingdom, DRC'], timePeriod: '18th-19th century' },
     
-    // Horn of Africa
-    'somali': { region: 'Horn of Africa - Cushitic', migrations: ['Arabian Peninsula influence'] },
-    'oromo': { region: 'Horn of Africa - Cushitic' },
-    'amhara': { region: 'Horn of Africa - Semitic', migrations: ['Aksumite Empire'] },
-    'dinka': { region: 'East Africa - Nilotic', migrations: ['Sudd region'] },
-    'nuer': { region: 'East Africa - Nilotic' },
+    // Horn of Africa - Cushitic & Semitic
+    'somali': { region: 'Horn of Africa - Cushitic', migrations: ['Arabian Peninsula influence, pastoral expansion'], timePeriod: '7th century onwards' },
+    'oromo': { region: 'Horn of Africa - Cushitic', migrations: ['Southern Ethiopian expansion'], timePeriod: '16th century onwards' },
+    'amhara': { region: 'Horn of Africa - Semitic', migrations: ['Aksumite Empire → Ethiopian Highlands'], timePeriod: '1st century onwards' },
+    'tigrinya': { region: 'Horn of Africa - Semitic', migrations: ['Aksumite heritage, Eritrea/Ethiopia'], timePeriod: '1st century onwards' },
+    'afar': { region: 'Horn of Africa - Cushitic', migrations: ['Danakil Depression, salt trade'], timePeriod: 'Ancient' },
+    'dinka': { region: 'East Africa - Nilotic', migrations: ['Sudd region, South Sudan'], timePeriod: '10th century onwards' },
+    'nuer': { region: 'East Africa - Nilotic', migrations: ['Related to Dinka, South Sudan'], timePeriod: '15th century onwards' },
+    'shilluk': { region: 'East Africa - Nilotic', migrations: ['Shilluk Kingdom, Upper Nile'], timePeriod: '15th century onwards' },
+    'mursi': { region: 'Horn of Africa - Surmic', migrations: ['Omo Valley, Ethiopia'], timePeriod: 'Ancient' },
+    'hamer': { region: 'Horn of Africa - South Omotic', migrations: ['Omo Valley, Ethiopia'], timePeriod: 'Ancient' },
+    'anuak': { region: 'East Africa - Nilotic', migrations: ['Ethiopia/South Sudan border'], timePeriod: '17th century onwards' },
     
-    // North Africa
-    'amazigh': { region: 'North Africa - Berber' },
-    'tuareg': { region: 'Sahara - Berber', migrations: ['Trans-Saharan trade routes'] },
+    // North Africa - Berber & Arab
+    'amazigh': { region: 'North Africa - Berber', migrations: ['Indigenous to North Africa'], timePeriod: 'Prehistoric' },
+    'kabyle': { region: 'North Africa - Berber', migrations: ['Kabylie mountains, Algeria'], timePeriod: 'Ancient' },
+    'tuareg': { region: 'Sahara - Berber', migrations: ['Trans-Saharan trade routes, desert nomads'], timePeriod: '5th century onwards' },
+    'nubian': { region: 'North Africa - Nilo-Saharan', migrations: ['Ancient Nubia, Nile Valley'], timePeriod: '3000 BCE onwards' },
+    'coptic': { region: 'North Africa - Afroasiatic', migrations: ['Ancient Egyptian heritage'], timePeriod: '1st century onwards' },
+    'beja': { region: 'North Africa - Cushitic', migrations: ['Red Sea Hills, Sudan/Eritrea'], timePeriod: 'Ancient' },
+    'toubou': { region: 'Sahara - Saharan', migrations: ['Tibesti Mountains, Chad/Libya'], timePeriod: 'Ancient' },
+    
+    // Great Lakes Region
+    'hutu': { region: 'Great Lakes - Bantu', migrations: ['Bantu expansion, Rwanda/Burundi'], timePeriod: '11th century onwards' },
+    'tutsi': { region: 'Great Lakes - Bantu', migrations: ['Pastoral migration, Rwanda/Burundi'], timePeriod: '14th-15th century' },
+    'baganda': { region: 'Great Lakes - Bantu', migrations: ['Buganda Kingdom, Uganda'], timePeriod: '14th century onwards' },
+    'banyankole': { region: 'Great Lakes - Bantu', migrations: ['Nkore Kingdom, Uganda'], timePeriod: '15th century onwards' },
+    'twa': { region: 'Great Lakes - Pygmy', migrations: ['Indigenous forest people'], timePeriod: 'Prehistoric' },
+    'haya': { region: 'Great Lakes - Bantu', migrations: ['Haya Kingdoms, Tanzania'], timePeriod: '15th century onwards' },
+    'sukuma': { region: 'Great Lakes - Bantu', migrations: ['Lake Victoria region, Tanzania'], timePeriod: '15th century onwards' },
+    'chagga': { region: 'Great Lakes - Bantu', migrations: ['Mt. Kilimanjaro slopes'], timePeriod: '14th century onwards' },
+    'gogo': { region: 'Great Lakes - Bantu', migrations: ['Central Tanzania'], timePeriod: '16th century onwards' },
+    'hehe': { region: 'Great Lakes - Bantu', migrations: ['Southern Highlands, Tanzania'], timePeriod: '18th-19th century' },
   };
   
   for (const [tribe, matches] of tribeMatches) {
@@ -536,7 +600,8 @@ export function trackHistoricalOrigins(inputName: string): HistoricalOrigin[] {
         name: inputName,
         tribe,
         originRegion: info.region,
-        migrationPath: info.migrations,
+        migrationPath: info.migrations ? [info.migrations].flat() : undefined,
+        timePeriod: info.timePeriod,
         confidence: bestMatch.similarity * 100
       });
     }
