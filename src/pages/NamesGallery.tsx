@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '@/components/Header';
@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Search, TrendingUp, TrendingDown, Minus, Users, Globe, Calendar,
   Filter, ChevronDown, ArrowRight, Sparkles, BarChart3, LineChart,
-  MapPin, Heart, Clock, X, Plus, ArrowUpDown
+  MapPin, Heart, Clock, X, Plus, ArrowUpDown, Wand2, Trophy, Star
 } from 'lucide-react';
 import {
   AreaChart, Area, LineChart as RechartsLineChart, Line, XAxis, YAxis, 
@@ -28,6 +28,10 @@ import {
   GenderAnalysis,
   NameHistoryData
 } from '@/lib/genderNameAnalysis';
+import { NameGenerator } from '@/components/NameGenerator';
+import { NameOfTheDay } from '@/components/NameOfTheDay';
+import { TopNamesLeaderboard } from '@/components/TopNamesLeaderboard';
+import { NameExportButton } from '@/components/NameExportButton';
 
 // Extended name database for gallery browsing
 const GALLERY_NAMES = {
@@ -101,7 +105,8 @@ export default function NamesGallery() {
   const [compareName2, setCompareName2] = useState(searchParams.get('compare2') || '');
   const [showComparison, setShowComparison] = useState(false);
   
-  const [activeTab, setActiveTab] = useState<'browse' | 'compare' | 'trends'>('browse');
+  const [activeTab, setActiveTab] = useState<'browse' | 'compare' | 'trends' | 'generator' | 'leaderboard'>('browse');
+  const comparisonRef = useRef<HTMLDivElement>(null);
 
   // Generate all name data
   const allNames = useMemo(() => {
@@ -264,7 +269,7 @@ export default function NamesGallery() {
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-primary/10 via-background to-accent/5 py-8 sm:py-12">
             <div className="container mx-auto px-4">
-              <div className="text-center max-w-3xl mx-auto">
+              <div className="text-center max-w-3xl mx-auto mb-8">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                   African Names <span className="text-primary">Gallery</span>
                 </h1>
@@ -289,6 +294,11 @@ export default function NamesGallery() {
                   </Badge>
                 </div>
               </div>
+              
+              {/* Name of the Day */}
+              <div className="max-w-2xl mx-auto">
+                <NameOfTheDay />
+              </div>
             </div>
           </section>
 
@@ -296,16 +306,24 @@ export default function NamesGallery() {
           <section className="py-8">
             <div className="container mx-auto px-4">
               <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as typeof activeTab)} className="space-y-6">
-                <TabsList className="grid w-full max-w-lg mx-auto grid-cols-3">
-                  <TabsTrigger value="browse" className="flex items-center gap-2">
+                <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-5">
+                  <TabsTrigger value="browse" className="flex items-center gap-1">
                     <Search className="w-4 h-4" />
                     <span className="hidden sm:inline">Browse</span>
                   </TabsTrigger>
-                  <TabsTrigger value="compare" className="flex items-center gap-2">
+                  <TabsTrigger value="generator" className="flex items-center gap-1">
+                    <Wand2 className="w-4 h-4" />
+                    <span className="hidden sm:inline">Generate</span>
+                  </TabsTrigger>
+                  <TabsTrigger value="compare" className="flex items-center gap-1">
                     <BarChart3 className="w-4 h-4" />
                     <span className="hidden sm:inline">Compare</span>
                   </TabsTrigger>
-                  <TabsTrigger value="trends" className="flex items-center gap-2">
+                  <TabsTrigger value="leaderboard" className="flex items-center gap-1">
+                    <Trophy className="w-4 h-4" />
+                    <span className="hidden sm:inline">Top 10</span>
+                  </TabsTrigger>
+                  <TabsTrigger value="trends" className="flex items-center gap-1">
                     <LineChart className="w-4 h-4" />
                     <span className="hidden sm:inline">Trends</span>
                   </TabsTrigger>
@@ -470,16 +488,29 @@ export default function NamesGallery() {
                   )}
                 </TabsContent>
 
+                {/* Generator Tab */}
+                <TabsContent value="generator" className="space-y-6">
+                  <NameGenerator />
+                </TabsContent>
+
                 {/* Compare Tab */}
                 <TabsContent value="compare" className="space-y-6">
                   <Card>
-                    <CardHeader>
+                    <CardHeader className="flex flex-row items-center justify-between">
                       <CardTitle className="flex items-center gap-2">
                         <BarChart3 className="w-5 h-5" />
                         Compare Names Side-by-Side
                       </CardTitle>
+                      {(compareName1 || compareName2) && (
+                        <NameExportButton 
+                          elementRef={comparisonRef} 
+                          fileName={`${compareName1}-vs-${compareName2}`}
+                          title={`${compareName1} vs ${compareName2} Comparison`}
+                        />
+                      )
+                      }
                     </CardHeader>
-                    <CardContent>
+                    <CardContent ref={comparisonRef}
                       <div className="grid gap-4 sm:grid-cols-2 mb-6">
                         <div>
                           <label className="text-sm font-medium mb-2 block">First Name</label>
@@ -611,6 +642,11 @@ export default function NamesGallery() {
                       )}
                     </CardContent>
                   </Card>
+                </TabsContent>
+
+                {/* Leaderboard Tab */}
+                <TabsContent value="leaderboard" className="space-y-6">
+                  <TopNamesLeaderboard />
                 </TabsContent>
 
                 {/* Trends Tab */}
