@@ -1,9 +1,9 @@
-import { AlertCircle, Sparkles, Globe, Search, ArrowRight, Puzzle, BarChart3, MapPin, Users, BookOpen, TrendingUp, ChevronDown, ChevronUp, User, Calendar, Clock, Award } from 'lucide-react';
+import { AlertCircle, Sparkles, Globe, Search, ArrowRight, Puzzle, BarChart3, MapPin, Users, BookOpen, TrendingUp, ChevronDown, ChevronUp, User, Calendar, Clock, Award, TrendingDown, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useMemo } from 'react';
 import { MigrationTimeline } from './MigrationTimeline';
 import type { CrossCulturalMatch, ReligiousContext, PopularityData } from '@/lib/fullNameAnalysis';
-import { analyzeGender, getNameHistory, type GenderAnalysis, type NameHistoryData } from '@/lib/genderNameAnalysis';
+import { analyzeGender, getNameHistory, type GenderAnalysis, type NameHistoryData, type PopularityTrends } from '@/lib/genderNameAnalysis';
 import { cn } from '@/lib/utils';
 
 export interface NameBreakdown {
@@ -59,6 +59,7 @@ export function NameAnalysisCard({
   const [showCrossCultural, setShowCrossCultural] = useState(false);
   const [showGenderDetails, setShowGenderDetails] = useState(false);
   const [showHistoryDetails, setShowHistoryDetails] = useState(false);
+  const [showPopularityTrends, setShowPopularityTrends] = useState(false);
   
   // Analyze gender and history for the input name
   const genderAnalysis = useMemo(() => analyzeGender(inputName), [inputName]);
@@ -399,6 +400,190 @@ export function NameAnalysisCard({
           </div>
         )}
       </div>
+
+      {/* Popularity Trends Card */}
+      {nameHistory.popularityTrends && (
+        <div className="p-4 bg-gradient-to-r from-cyan-50/50 to-sky-50/50 dark:from-cyan-950/20 dark:to-sky-950/20 rounded-xl border border-cyan-200 dark:border-cyan-800">
+          <button 
+            onClick={() => setShowPopularityTrends(!showPopularityTrends)}
+            className="w-full flex items-center justify-between gap-2"
+          >
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+              <h3 className="text-sm font-semibold text-foreground">Popularity Trends</h3>
+              <span className={cn(
+                "px-2 py-0.5 rounded-full text-xs font-medium",
+                nameHistory.popularityTrends.trendDirection === 'rising' 
+                  ? "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300"
+                  : nameHistory.popularityTrends.trendDirection === 'declining'
+                  ? "bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300"
+                  : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+              )}>
+                {nameHistory.popularityTrends.trendDirection === 'rising' ? '↑' : 
+                 nameHistory.popularityTrends.trendDirection === 'declining' ? '↓' : '→'} 
+                {' '}{nameHistory.popularityTrends.percentageChange > 0 ? '+' : ''}{nameHistory.popularityTrends.percentageChange}%
+              </span>
+            </div>
+            {showPopularityTrends ? (
+              <ChevronUp className="w-4 h-4 text-muted-foreground" />
+            ) : (
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            )}
+          </button>
+          
+          {/* Quick Stats Row */}
+          <div className="mt-3 grid grid-cols-3 gap-2">
+            <div className="p-2 bg-background rounded-lg text-center">
+              <div className="text-xs text-muted-foreground">Peak Decade</div>
+              <div className="text-sm font-bold text-cyan-600 dark:text-cyan-400">
+                {nameHistory.popularityTrends.peakDecade}
+              </div>
+            </div>
+            <div className="p-2 bg-background rounded-lg text-center">
+              <div className="text-xs text-muted-foreground">Current</div>
+              <div className={cn(
+                "text-xs font-medium capitalize",
+                nameHistory.popularityTrends.currentPopularity === 'very_high' ? "text-green-600 dark:text-green-400" :
+                nameHistory.popularityTrends.currentPopularity === 'high' ? "text-blue-600 dark:text-blue-400" :
+                nameHistory.popularityTrends.currentPopularity === 'moderate' ? "text-yellow-600 dark:text-yellow-400" :
+                "text-gray-600 dark:text-gray-400"
+              )}>
+                {nameHistory.popularityTrends.currentPopularity.replace('_', ' ')}
+              </div>
+            </div>
+            <div className="p-2 bg-background rounded-lg text-center">
+              <div className="text-xs text-muted-foreground">Overall Rank</div>
+              <div className="text-sm font-bold text-foreground">
+                #{nameHistory.popularityTrends.overallRank}
+              </div>
+            </div>
+          </div>
+
+          {showPopularityTrends && (
+            <div className="mt-4 space-y-4 animate-fade-in">
+              {/* Decade-by-Decade Chart */}
+              <div>
+                <div className="flex items-center gap-1.5 text-xs font-medium text-foreground mb-3">
+                  <BarChart3 className="w-3 h-3" />
+                  Popularity by Decade
+                </div>
+                <div className="space-y-2">
+                  {nameHistory.popularityTrends.byDecade.map((decade, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <span className="text-xs text-muted-foreground w-12">{decade.decade}</span>
+                      <div className="flex-1 h-5 bg-secondary rounded-full overflow-hidden relative">
+                        <div 
+                          className={cn(
+                            "h-full rounded-full transition-all duration-500",
+                            decade.popularity > 80 ? "bg-gradient-to-r from-cyan-500 to-blue-500" :
+                            decade.popularity > 60 ? "bg-gradient-to-r from-cyan-400 to-sky-400" :
+                            decade.popularity > 40 ? "bg-cyan-400/70" :
+                            "bg-cyan-400/40"
+                          )}
+                          style={{ width: `${decade.popularity}%` }}
+                        />
+                        <span className="absolute inset-0 flex items-center justify-center text-[10px] font-medium text-foreground/70">
+                          {decade.popularity > 30 ? `${decade.popularity}%` : ''}
+                        </span>
+                      </div>
+                      <span className="text-[10px] text-muted-foreground w-10 text-right">
+                        {decade.births}/M
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-2 text-[10px] text-muted-foreground text-center">
+                  Estimated births per million population
+                </p>
+              </div>
+
+              {/* Regional Popularity */}
+              <div>
+                <div className="flex items-center gap-1.5 text-xs font-medium text-foreground mb-3">
+                  <MapPin className="w-3 h-3" />
+                  Regional Popularity
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {nameHistory.popularityTrends.byRegion.map((region, i) => (
+                    <div key={i} className="p-2 bg-background rounded-lg">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs font-medium text-foreground">{region.region}</span>
+                        <div className="flex items-center gap-1">
+                          <span className={cn(
+                            "text-xs font-bold",
+                            region.popularity > 80 ? "text-green-600 dark:text-green-400" :
+                            region.popularity > 60 ? "text-blue-600 dark:text-blue-400" :
+                            region.popularity > 40 ? "text-yellow-600 dark:text-yellow-400" :
+                            "text-gray-600 dark:text-gray-400"
+                          )}>
+                            {region.popularity}%
+                          </span>
+                          {region.rank && (
+                            <span className="text-[10px] text-muted-foreground">
+                              #{region.rank}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <div className="w-full h-1.5 bg-secondary rounded-full overflow-hidden mb-1">
+                        <div 
+                          className={cn(
+                            "h-full rounded-full",
+                            region.popularity > 80 ? "bg-green-500" :
+                            region.popularity > 60 ? "bg-blue-500" :
+                            region.popularity > 40 ? "bg-yellow-500" :
+                            "bg-gray-400"
+                          )}
+                          style={{ width: `${region.popularity}%` }}
+                        />
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] text-muted-foreground">
+                          {region.countries.slice(0, 3).join(', ')}
+                        </span>
+                      </div>
+                      {region.culturalNote && (
+                        <p className="text-[10px] text-cyan-600 dark:text-cyan-400 mt-1 italic">
+                          {region.culturalNote}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Trend Insight */}
+              <div className="p-3 bg-cyan-100/50 dark:bg-cyan-900/20 rounded-lg">
+                <div className="flex items-start gap-2">
+                  {nameHistory.popularityTrends.trendDirection === 'rising' ? (
+                    <TrendingUp className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5" />
+                  ) : nameHistory.popularityTrends.trendDirection === 'declining' ? (
+                    <TrendingDown className="w-4 h-4 text-orange-600 dark:text-orange-400 mt-0.5" />
+                  ) : (
+                    <Minus className="w-4 h-4 text-gray-600 dark:text-gray-400 mt-0.5" />
+                  )}
+                  <div>
+                    <p className="text-xs font-medium text-foreground">
+                      {nameHistory.popularityTrends.trendDirection === 'rising' 
+                        ? `"${inputName}" is gaining popularity!`
+                        : nameHistory.popularityTrends.trendDirection === 'declining'
+                        ? `"${inputName}" has become less common in recent years`
+                        : `"${inputName}" maintains steady popularity`}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {nameHistory.popularityTrends.trendDirection === 'rising' 
+                        ? 'This name saw increased usage in the 2010s-2020s, possibly influenced by cultural pride movements and African diaspora identity.'
+                        : nameHistory.popularityTrends.trendDirection === 'declining'
+                        ? 'While less common today, this name carries rich historical significance and may experience a revival.'
+                        : 'This timeless name has remained consistently popular across generations and regions.'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
       {(religiousContext || crossCulturalMatches.length > 0) && (
         <div className="p-4 bg-gradient-to-r from-emerald-50/50 to-teal-50/50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800">
           <button 
