@@ -36,6 +36,18 @@ export {
   type PopularityData
 } from './fullNameAnalysis';
 
+// Re-export gender and history analysis
+export {
+  analyzeGender,
+  getNameHistory,
+  analyzeNameWithGenderAndHistory,
+  type GenderAnalysis,
+  type GenderCue,
+  type NameHistoryData,
+  type AgeEstimate,
+  type FamousNamesake
+} from './genderNameAnalysis';
+
 export interface NameBreakdown {
   fullName: string;
   prefix?: { text: string; tribes: { name: string; percentage: number }[] };

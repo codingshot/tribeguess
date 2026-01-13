@@ -1,8 +1,10 @@
-import { AlertCircle, Sparkles, Globe, Search, ArrowRight, Puzzle, BarChart3, MapPin, Users, BookOpen, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
+import { AlertCircle, Sparkles, Globe, Search, ArrowRight, Puzzle, BarChart3, MapPin, Users, BookOpen, TrendingUp, ChevronDown, ChevronUp, User, Calendar, Clock, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { MigrationTimeline } from './MigrationTimeline';
 import type { CrossCulturalMatch, ReligiousContext, PopularityData } from '@/lib/fullNameAnalysis';
+import { analyzeGender, getNameHistory, type GenderAnalysis, type NameHistoryData } from '@/lib/genderNameAnalysis';
+import { cn } from '@/lib/utils';
 
 export interface NameBreakdown {
   fullName: string;
@@ -55,11 +57,32 @@ export function NameAnalysisCard({
   const showWeakResults = topConfidence >= 30 && topConfidence < 60;
   const [showTimeline, setShowTimeline] = useState(false);
   const [showCrossCultural, setShowCrossCultural] = useState(false);
+  const [showGenderDetails, setShowGenderDetails] = useState(false);
+  const [showHistoryDetails, setShowHistoryDetails] = useState(false);
+  
+  // Analyze gender and history for the input name
+  const genderAnalysis = useMemo(() => analyzeGender(inputName), [inputName]);
+  const nameHistory = useMemo(() => getNameHistory(inputName), [inputName]);
   
   // Get Muslim name regions from religious context
   const muslimRegions = religiousContext?.religion === 'muslim' || religiousContext?.religion === 'mixed'
     ? religiousContext.africanTribesWithReligion
     : [];
+  
+  // Gender background gradient based on analysis
+  const genderGradient = genderAnalysis.detectedGender === 'male' 
+    ? 'from-blue-50/50 to-sky-50/50 dark:from-blue-950/20 dark:to-sky-950/20'
+    : genderAnalysis.detectedGender === 'female'
+    ? 'from-pink-50/50 to-rose-50/50 dark:from-pink-950/20 dark:to-rose-950/20'
+    : 'from-purple-50/50 to-violet-50/50 dark:from-purple-950/20 dark:to-violet-950/20';
+  
+  const genderBorder = genderAnalysis.detectedGender === 'male'
+    ? 'border-blue-200 dark:border-blue-800'
+    : genderAnalysis.detectedGender === 'female'
+    ? 'border-pink-200 dark:border-pink-800'
+    : 'border-purple-200 dark:border-purple-800';
+  
+  const genderIcon = genderAnalysis.detectedGender === 'male' ? '♂️' : genderAnalysis.detectedGender === 'female' ? '♀️' : '⚥';
   
   return (
     <div className="mb-6 space-y-4 animate-fade-in">
@@ -159,7 +182,223 @@ export function NameAnalysisCard({
         </div>
       )}
 
-      {/* Muslim Name Popularity & Cross-Cultural Patterns */}
+      {/* Gender Analysis Card */}
+      {genderAnalysis.genderCues.length > 0 && (
+        <div className={cn("p-4 rounded-xl border", `bg-gradient-to-r ${genderGradient}`, genderBorder)}>
+          <button 
+            onClick={() => setShowGenderDetails(!showGenderDetails)}
+            className="w-full flex items-center justify-between gap-2"
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-lg">{genderIcon}</span>
+              <h3 className="text-sm font-semibold text-foreground">Gender Analysis</h3>
+              <span className={cn(
+                "px-2 py-0.5 rounded-full text-xs font-medium",
+                genderAnalysis.detectedGender === 'male' 
+                  ? "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300"
+                  : genderAnalysis.detectedGender === 'female'
+                  ? "bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300"
+                  : "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300"
+              )}>
+                {genderAnalysis.pronoun}
+              </span>
+            </div>
+            {showGenderDetails ? (
+              <ChevronUp className="w-4 h-4 text-muted-foreground" />
+            ) : (
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            )}
+          </button>
+          
+          {/* Summary */}
+          <div className="mt-3 flex items-center gap-3 flex-wrap">
+            <div className="flex items-center gap-1.5">
+              <User className="w-3.5 h-3.5 text-muted-foreground" />
+              <span className="text-xs text-muted-foreground">
+                Likely <span className="font-medium text-foreground capitalize">{genderAnalysis.detectedGender}</span>
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <BarChart3 className="w-3.5 h-3.5 text-muted-foreground" />
+              <span className="text-xs text-muted-foreground">
+                <span className="font-medium text-foreground">{genderAnalysis.genderConfidence}%</span> confidence
+              </span>
+            </div>
+            {genderAnalysis.alternativeGender && (
+              <div className="text-xs text-muted-foreground">
+                (sometimes {genderAnalysis.alternativeGender.gender}: {genderAnalysis.alternativeGender.percentage}%)
+              </div>
+            )}
+          </div>
+
+          {showGenderDetails && (
+            <div className="mt-4 space-y-3 animate-fade-in">
+              {/* Gender Cues */}
+              <div>
+                <div className="flex items-center gap-1.5 text-xs font-medium text-foreground mb-2">
+                  <Sparkles className="w-3 h-3" />
+                  Gender Indicators
+                </div>
+                <div className="space-y-2">
+                  {genderAnalysis.genderCues.map((cue, i) => (
+                    <div key={i} className="p-2 bg-background rounded-lg">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs font-medium text-foreground">
+                          {cue.indicator}
+                        </span>
+                        <span className={cn(
+                          "text-xs px-1.5 py-0.5 rounded",
+                          cue.suggestsGender === 'male' 
+                            ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                            : cue.suggestsGender === 'female'
+                            ? "bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300"
+                            : "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300"
+                        )}>
+                          {cue.confidence}% → {cue.suggestsGender}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{cue.explanation}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Name History & Age Estimation Card */}
+      <div className="p-4 bg-gradient-to-r from-indigo-50/50 to-violet-50/50 dark:from-indigo-950/20 dark:to-violet-950/20 rounded-xl border border-indigo-200 dark:border-indigo-800">
+        <button 
+          onClick={() => setShowHistoryDetails(!showHistoryDetails)}
+          className="w-full flex items-center justify-between gap-2"
+        >
+          <div className="flex items-center gap-2">
+            <Calendar className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+            <h3 className="text-sm font-semibold text-foreground">Name History & Age Estimate</h3>
+          </div>
+          {showHistoryDetails ? (
+            <ChevronUp className="w-4 h-4 text-muted-foreground" />
+          ) : (
+            <ChevronDown className="w-4 h-4 text-muted-foreground" />
+          )}
+        </button>
+        
+        {/* Quick Stats */}
+        <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <div className="p-2 bg-background rounded-lg text-center">
+            <div className="text-xs text-muted-foreground">Peak Era</div>
+            <div className="text-xs font-medium text-foreground truncate" title={nameHistory.peakPopularity.era}>
+              {nameHistory.peakPopularity.era.split('(')[0].trim()}
+            </div>
+          </div>
+          <div className="p-2 bg-background rounded-lg text-center">
+            <div className="text-xs text-muted-foreground">Likely Age</div>
+            <div className="text-sm font-bold text-indigo-600 dark:text-indigo-400">
+              {nameHistory.estimatedAgeRange.mostCommonAge > 0 
+                ? `~${nameHistory.estimatedAgeRange.mostCommonAge} yrs`
+                : 'Timeless'}
+            </div>
+          </div>
+          <div className="p-2 bg-background rounded-lg text-center">
+            <div className="text-xs text-muted-foreground">Generation</div>
+            <div className="text-xs font-medium text-foreground truncate">
+              {nameHistory.estimatedAgeRange.generationLabel}
+            </div>
+          </div>
+          <div className="p-2 bg-background rounded-lg text-center">
+            <div className="text-xs text-muted-foreground">Trend</div>
+            <div className={cn(
+              "text-xs font-medium capitalize",
+              nameHistory.namingTrend === 'rising' ? "text-green-600 dark:text-green-400" :
+              nameHistory.namingTrend === 'declining' ? "text-orange-600 dark:text-orange-400" :
+              "text-foreground"
+            )}>
+              {nameHistory.namingTrend === 'rising' ? '📈' : nameHistory.namingTrend === 'declining' ? '📉' : '📊'} {nameHistory.namingTrend}
+            </div>
+          </div>
+        </div>
+
+        {showHistoryDetails && (
+          <div className="mt-4 space-y-4 animate-fade-in">
+            {/* Born Between */}
+            <div className="p-3 bg-background rounded-lg">
+              <div className="flex items-center gap-1.5 text-xs font-medium text-foreground mb-2">
+                <Clock className="w-3 h-3" />
+                Birth Year Estimate
+              </div>
+              <p className="text-xs text-muted-foreground">
+                People named <span className="font-medium text-foreground">{inputName}</span> were most commonly born between{' '}
+                <span className="font-medium text-indigo-600 dark:text-indigo-400">
+                  {nameHistory.estimatedAgeRange.likelyBornBetween.start}
+                </span> and{' '}
+                <span className="font-medium text-indigo-600 dark:text-indigo-400">
+                  {nameHistory.estimatedAgeRange.likelyBornBetween.end}
+                </span>.
+              </p>
+              <div className="mt-2 flex items-center gap-1">
+                <span className="text-xs text-muted-foreground">Confidence:</span>
+                <div className="w-16 h-1.5 bg-secondary rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-indigo-500 rounded-full"
+                    style={{ width: `${nameHistory.estimatedAgeRange.confidence}%` }}
+                  />
+                </div>
+                <span className="text-xs text-muted-foreground">{nameHistory.estimatedAgeRange.confidence}%</span>
+              </div>
+            </div>
+
+            {/* Cultural Significance */}
+            {nameHistory.culturalSignificance.length > 0 && (
+              <div>
+                <div className="flex items-center gap-1.5 text-xs font-medium text-foreground mb-2">
+                  <Globe className="w-3 h-3" />
+                  Cultural Context
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {nameHistory.culturalSignificance.map((sig, i) => (
+                    <span key={i} className="px-2 py-0.5 bg-background rounded text-xs text-muted-foreground">
+                      {sig}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Famous Namesakes */}
+            {nameHistory.famousNamesakes.length > 0 && (
+              <div>
+                <div className="flex items-center gap-1.5 text-xs font-medium text-foreground mb-2">
+                  <Award className="w-3 h-3" />
+                  Famous Namesakes
+                </div>
+                <div className="space-y-2">
+                  {nameHistory.famousNamesakes.map((person, i) => (
+                    <div key={i} className="p-2 bg-background rounded-lg">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-medium text-foreground">{person.name}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {person.birth}{person.death ? ` - ${person.death}` : ''}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5">{person.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Peak Era Reason */}
+            {nameHistory.peakPopularity.peakReason && (
+              <div className="p-2 bg-indigo-100/50 dark:bg-indigo-900/20 rounded-lg">
+                <p className="text-xs text-indigo-700 dark:text-indigo-300">
+                  <span className="font-medium">Why this era?</span> {nameHistory.peakPopularity.peakReason}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
       {(religiousContext || crossCulturalMatches.length > 0) && (
         <div className="p-4 bg-gradient-to-r from-emerald-50/50 to-teal-50/50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800">
           <button 
