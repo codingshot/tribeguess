@@ -1,5 +1,8 @@
-import { AlertCircle, Sparkles, Globe, Search, ArrowRight, Puzzle, BarChart3 } from 'lucide-react';
+import { AlertCircle, Sparkles, Globe, Search, ArrowRight, Puzzle, BarChart3, MapPin, Users, BookOpen, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { MigrationTimeline } from './MigrationTimeline';
+import type { CrossCulturalMatch, ReligiousContext, PopularityData } from '@/lib/fullNameAnalysis';
 
 export interface NameBreakdown {
   fullName: string;
@@ -7,6 +10,7 @@ export interface NameBreakdown {
   suffix?: { text: string; tribes: { name: string; percentage: number }[] };
   root?: { text: string; meaning?: string };
   religiousIndicator?: { type: string; note: string };
+  phoneticCodes?: { soundex: string; metaphone: string; african: string };
 }
 
 export interface SimilarName {
@@ -29,6 +33,10 @@ interface NameAnalysisCardProps {
   globalMatches: GlobalMatch[];
   hasResults: boolean;
   topConfidence: number;
+  crossCulturalMatches?: CrossCulturalMatch[];
+  religiousContext?: ReligiousContext;
+  popularityData?: PopularityData;
+  detectedTribe?: string;
 }
 
 export function NameAnalysisCard({ 
@@ -37,10 +45,21 @@ export function NameAnalysisCard({
   similarNames, 
   globalMatches, 
   hasResults,
-  topConfidence 
+  topConfidence,
+  crossCulturalMatches = [],
+  religiousContext,
+  popularityData,
+  detectedTribe
 }: NameAnalysisCardProps) {
   const showNoResults = !hasResults || topConfidence < 30;
   const showWeakResults = topConfidence >= 30 && topConfidence < 60;
+  const [showTimeline, setShowTimeline] = useState(false);
+  const [showCrossCultural, setShowCrossCultural] = useState(false);
+  
+  // Get Muslim name regions from religious context
+  const muslimRegions = religiousContext?.religion === 'muslim' || religiousContext?.religion === 'mixed'
+    ? religiousContext.africanTribesWithReligion
+    : [];
   
   return (
     <div className="mb-6 space-y-4 animate-fade-in">
@@ -86,6 +105,26 @@ export function NameAnalysisCard({
             )}
           </div>
           
+          {/* Phonetic Codes */}
+          {breakdown.phoneticCodes && (
+            <div className="mt-6 mb-3 p-2 bg-secondary/50 rounded-lg">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
+                <span className="font-medium">Phonetic Codes:</span>
+              </div>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="px-2 py-0.5 bg-background rounded font-mono">
+                  <span className="text-muted-foreground">Soundex:</span> {breakdown.phoneticCodes.soundex}
+                </span>
+                <span className="px-2 py-0.5 bg-background rounded font-mono">
+                  <span className="text-muted-foreground">Metaphone:</span> {breakdown.phoneticCodes.metaphone}
+                </span>
+                <span className="px-2 py-0.5 bg-background rounded font-mono">
+                  <span className="text-muted-foreground">African:</span> {breakdown.phoneticCodes.african}
+                </span>
+              </div>
+            </div>
+          )}
+          
           {/* Percentage breakdown row */}
           <div className="mt-6 space-y-2">
             <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground mb-2">
@@ -115,6 +154,162 @@ export function NameAnalysisCard({
                 <span className="text-purple-600 dark:text-purple-400">🕊️ {breakdown.religiousIndicator.type}</span>
                 <span className="text-purple-500/80 dark:text-purple-300/80">{breakdown.religiousIndicator.note}</span>
               </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Muslim Name Popularity & Cross-Cultural Patterns */}
+      {(religiousContext || crossCulturalMatches.length > 0) && (
+        <div className="p-4 bg-gradient-to-r from-emerald-50/50 to-teal-50/50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800">
+          <button 
+            onClick={() => setShowCrossCultural(!showCrossCultural)}
+            className="w-full flex items-center justify-between gap-2 mb-2"
+          >
+            <div className="flex items-center gap-2">
+              <Users className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <h3 className="text-sm font-semibold text-foreground">Cross-Cultural & Religious Context</h3>
+            </div>
+            {showCrossCultural ? (
+              <ChevronUp className="w-4 h-4 text-muted-foreground" />
+            ) : (
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            )}
+          </button>
+          
+          {/* Religious context summary */}
+          {religiousContext && (
+            <div className="mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-background rounded-lg text-xs">
+                <span className={religiousContext.religion === 'muslim' ? '🕌' : religiousContext.religion === 'christian' ? '⛪' : '🌍'}>
+                  {religiousContext.religion === 'muslim' ? '🕌' : religiousContext.religion === 'christian' ? '⛪' : '🌍'}
+                </span>
+                <span className="font-medium text-foreground capitalize">{religiousContext.religion} Heritage</span>
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">{religiousContext.note}</p>
+            </div>
+          )}
+
+          {showCrossCultural && (
+            <div className="space-y-4 animate-fade-in">
+              {/* Muslim tribes with this name pattern */}
+              {muslimRegions.length > 0 && (
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-300 mb-2">
+                    <MapPin className="w-3 h-3" />
+                    Popular Among These African Muslim Communities
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {muslimRegions.slice(0, 6).map((tribe, i) => (
+                      <Link
+                        key={i}
+                        to={`/learn/${tribe.tribe.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="inline-flex items-center gap-1.5 px-2 py-1 bg-background rounded-lg text-xs hover:bg-secondary transition-colors"
+                      >
+                        <span className="font-medium text-foreground">{tribe.tribe}</span>
+                        <span className="text-muted-foreground">{tribe.percentage}% Muslim</span>
+                        <span className="text-emerald-600 dark:text-emerald-400">
+                          ({tribe.countries.slice(0, 2).join(', ')})
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Cross-cultural matches */}
+              {crossCulturalMatches.length > 0 && (
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-medium text-teal-700 dark:text-teal-300 mb-2">
+                    <Globe className="w-3 h-3" />
+                    Cross-Cultural Name Patterns
+                  </div>
+                  <div className="space-y-2">
+                    {crossCulturalMatches.slice(0, 3).map((match, i) => (
+                      <div key={i} className="p-2 bg-background rounded-lg">
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-xs font-medium text-foreground">{match.originCulture}</span>
+                          <span className="text-xs px-1.5 py-0.5 bg-teal-100 dark:bg-teal-900/40 rounded text-teal-700 dark:text-teal-300">
+                            {match.popularity}% popular
+                          </span>
+                        </div>
+                        <p className="text-xs text-muted-foreground mb-1.5">{match.historicalNote}</p>
+                        <div className="flex flex-wrap gap-1">
+                          {match.africanTribes.slice(0, 4).map((tribe, j) => (
+                            <Link
+                              key={j}
+                              to={`/learn/${tribe.toLowerCase().replace(/\s+/g, '-')}`}
+                              className="text-xs px-1.5 py-0.5 bg-secondary rounded hover:text-primary transition-colors"
+                            >
+                              {tribe}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Popularity trends */}
+              {popularityData && (popularityData.firstName.regions.length > 0 || popularityData.lastName.regions.length > 0) && (
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-medium text-foreground mb-2">
+                    <TrendingUp className="w-3 h-3" />
+                    Regional Popularity
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {popularityData.firstName.regions.slice(0, 4).map((region, i) => (
+                      <div key={i} className="flex items-center justify-between p-1.5 bg-background rounded text-xs">
+                        <span className="text-muted-foreground">{region.region}</span>
+                        <div className="flex items-center gap-1">
+                          <div className="w-12 h-1.5 bg-secondary rounded-full overflow-hidden">
+                            <div 
+                              className="h-full bg-primary rounded-full"
+                              style={{ width: `${region.popularity}%` }}
+                            />
+                          </div>
+                          <span className="text-foreground font-medium">{region.popularity}%</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Migration Timeline */}
+      {detectedTribe && (
+        <div className="p-4 bg-gradient-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/30 dark:to-orange-950/30 rounded-xl border border-amber-200 dark:border-amber-800">
+          <button 
+            onClick={() => setShowTimeline(!showTimeline)}
+            className="w-full flex items-center justify-between gap-2"
+          >
+            <div className="flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+              <h3 className="text-sm font-semibold text-foreground">Migration History & Name Origins</h3>
+            </div>
+            {showTimeline ? (
+              <ChevronUp className="w-4 h-4 text-muted-foreground" />
+            ) : (
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            )}
+          </button>
+          
+          <p className="mt-2 text-xs text-muted-foreground">
+            Explore how {detectedTribe} naming patterns evolved through historical migrations.
+          </p>
+          
+          {showTimeline && (
+            <div className="mt-4 animate-fade-in">
+              <MigrationTimeline 
+                highlightTribe={detectedTribe}
+                showOnlyRelated={false}
+                className="max-h-[400px] overflow-y-auto"
+              />
             </div>
           )}
         </div>
