@@ -24,6 +24,18 @@ export {
   type HistoricalOrigin
 };
 
+// Re-export full name analysis
+export { 
+  analyzeFullName, 
+  isMuslimName,
+  muslimNamePopularityByRegion,
+  crossCulturalPatterns,
+  type FullNameAnalysis,
+  type CrossCulturalMatch,
+  type ReligiousContext,
+  type PopularityData
+} from './fullNameAnalysis';
+
 export interface NameBreakdown {
   fullName: string;
   prefix?: { text: string; tribes: { name: string; percentage: number }[] };
