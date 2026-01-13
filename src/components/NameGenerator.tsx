@@ -305,7 +305,7 @@ export function NameGenerator() {
                     <option key={key} value={key}>{label}</option>
                   ))}
                 </select>
-            </div>
+              </div>
 
               {/* Tribe Filter */}
               <div>
@@ -443,14 +443,15 @@ export function NameGenerator() {
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(name)}
-                        className="opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        {copiedName === name ? (
-                          <Check className="w-4 h-4 text-green-500" />
-                        ) : (
-                          <Copy className="w-4 h-4" />
-                        )}
-                      </Button>
+                          className="opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          {copiedName === name ? (
+                            <Check className="w-4 h-4 text-green-500" />
+                          ) : (
+                            <Copy className="w-4 h-4" />
+                          )}
+                        </Button>
+                      </div>
                     </div>
                     
                     <div className="mt-3 pt-3 border-t flex gap-2">
