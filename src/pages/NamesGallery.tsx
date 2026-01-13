@@ -34,6 +34,7 @@ import { TopNamesLeaderboard } from '@/components/TopNamesLeaderboard';
 import { NameExportButton } from '@/components/NameExportButton';
 import { FavoriteNamesList } from '@/components/FavoriteNamesList';
 import { SocialShareCard } from '@/components/SocialShareCard';
+import { NameSearchDropdown } from '@/components/NameSearchDropdown';
 import { useFavoriteNames } from '@/hooks/useFavoriteNames';
 
 // Extended name database for gallery browsing
@@ -110,7 +111,7 @@ export default function NamesGallery() {
   
   const [activeTab, setActiveTab] = useState<'browse' | 'compare' | 'trends' | 'generator' | 'leaderboard'>('browse');
   const comparisonRef = useRef<HTMLDivElement>(null);
-  const { toggleFavorite, isFavorite } = useFavoriteNames();
+  const { toggleFavorite, isFavorite, favorites } = useFavoriteNames();
 
   // Handler for favorites quick compare
   const handleFavoritesCompare = (name1: string, name2: string) => {
@@ -522,58 +523,53 @@ export default function NamesGallery() {
                       }
                     </CardHeader>
                     <CardContent ref={comparisonRef}>
-                      <div className="grid gap-4 sm:grid-cols-2 mb-6">
-                        <div>
-                          <label className="text-sm font-medium mb-2 block">First Name</label>
-                          <div className="relative">
-                            <Input
-                              placeholder="Enter first name..."
-                              value={compareName1}
-                              onChange={(e) => {
-                                setCompareName1(e.target.value);
-                                updateParams('compare1', e.target.value);
-                              }}
-                              className="pr-8"
-                            />
-                            {compareName1 && (
-                              <button
-                                onClick={() => {
-                                  setCompareName1('');
-                                  updateParams('compare1', '');
-                                }}
-                                className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                              >
-                                <X className="w-4 h-4" />
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium mb-2 block">Second Name</label>
-                          <div className="relative">
-                            <Input
-                              placeholder="Enter second name..."
-                              value={compareName2}
-                              onChange={(e) => {
-                                setCompareName2(e.target.value);
-                                updateParams('compare2', e.target.value);
-                              }}
-                              className="pr-8"
-                            />
-                            {compareName2 && (
-                              <button
-                                onClick={() => {
-                                  setCompareName2('');
-                                  updateParams('compare2', '');
-                                }}
-                                className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                              >
-                                <X className="w-4 h-4" />
-                              </button>
-                            )}
-                          </div>
-                        </div>
+                      {/* Favorites Quick Compare */}
+                      <FavoriteNamesList 
+                        onCompare={handleFavoritesCompare}
+                      />
+                      
+                      <div className="grid gap-4 sm:grid-cols-2 mb-6 mt-4">
+                        <NameSearchDropdown
+                          value={compareName1}
+                          onChange={(val) => {
+                            setCompareName1(val);
+                            updateParams('compare1', val);
+                          }}
+                          placeholder="Select or type first name..."
+                          label="First Name"
+                          favorites={favorites.map(f => f.name)}
+                        />
+                        <NameSearchDropdown
+                          value={compareName2}
+                          onChange={(val) => {
+                            setCompareName2(val);
+                            updateParams('compare2', val);
+                          }}
+                          placeholder="Select or type second name..."
+                          label="Second Name"
+                          favorites={favorites.map(f => f.name)}
+                        />
                       </div>
+                      
+                      {/* Social Share Card */}
+                      {compareName1 && compareName2 && comparisonData?.data1 && comparisonData?.data2 && (
+                        <div className="mb-6">
+                          <SocialShareCard
+                            name1={{
+                              name: compareName1,
+                              gender: comparisonData.data1.gender,
+                              trends: comparisonData.data1.trends,
+                              region: comparisonData.data1.region
+                            }}
+                            name2={{
+                              name: compareName2,
+                              gender: comparisonData.data2.gender,
+                              trends: comparisonData.data2.trends,
+                              region: comparisonData.data2.region
+                            }}
+                          />
+                        </div>
+                      )}
 
                       {/* Comparison Chart */}
                       {comparisonData && (compareName1 || compareName2) && (

@@ -134,6 +134,25 @@ const guides: GuideSection[] = [
     route: "/religions"
   },
   {
+    id: "names",
+    title: "Names Gallery & Compare",
+    description: "Browse, compare, and analyze African names. Features favorites, name generator, leaderboards, and social sharing tools.",
+    screenshot: "/docs/screenshot-names.png",
+    icon: <Sparkles className="w-5 h-5" />,
+    steps: [
+      "Browse names by region, gender, decade, or trend",
+      "Use the Compare tab to analyze two names side-by-side",
+      "Search the dropdown to quickly find names from the database",
+      "Save favorites and generate social share cards"
+    ],
+    tips: [
+      "Favorites appear first in the dropdown for quick access",
+      "The Name Generator filters by tribe and language family",
+      "Export comparisons as 1200×630 social images"
+    ],
+    route: "/names"
+  },
+  {
     id: "quiz",
     title: "Cultural Quizzes",
     description: "Test your knowledge with 15+ quiz categories, daily challenges, achievement system, and flashcard learning mode.",
