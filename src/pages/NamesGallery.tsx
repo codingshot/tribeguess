@@ -510,7 +510,7 @@ export default function NamesGallery() {
                       )
                       }
                     </CardHeader>
-                    <CardContent ref={comparisonRef}
+                    <CardContent ref={comparisonRef}>
                       <div className="grid gap-4 sm:grid-cols-2 mb-6">
                         <div>
                           <label className="text-sm font-medium mb-2 block">First Name</label>
