@@ -32,6 +32,9 @@ import { NameGenerator } from '@/components/NameGenerator';
 import { NameOfTheDay } from '@/components/NameOfTheDay';
 import { TopNamesLeaderboard } from '@/components/TopNamesLeaderboard';
 import { NameExportButton } from '@/components/NameExportButton';
+import { FavoriteNamesList } from '@/components/FavoriteNamesList';
+import { SocialShareCard } from '@/components/SocialShareCard';
+import { useFavoriteNames } from '@/hooks/useFavoriteNames';
 
 // Extended name database for gallery browsing
 const GALLERY_NAMES = {
@@ -107,6 +110,14 @@ export default function NamesGallery() {
   
   const [activeTab, setActiveTab] = useState<'browse' | 'compare' | 'trends' | 'generator' | 'leaderboard'>('browse');
   const comparisonRef = useRef<HTMLDivElement>(null);
+  const { toggleFavorite, isFavorite } = useFavoriteNames();
+
+  // Handler for favorites quick compare
+  const handleFavoritesCompare = (name1: string, name2: string) => {
+    setCompareName1(name1);
+    setCompareName2(name2);
+    setActiveTab('compare');
+  };
 
   // Generate all name data
   const allNames = useMemo(() => {
