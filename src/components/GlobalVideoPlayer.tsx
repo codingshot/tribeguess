@@ -644,263 +644,129 @@ export function GlobalVideoPlayer() {
       {/* Player Bar */}
       <div 
         ref={containerRef}
-        className={cn(
-          "fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-lg transition-all duration-300",
-          isMini ? "h-14" : "h-20 sm:h-24"
-        )}
+        className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-lg h-12"
       >
         <div className="container mx-auto px-2 sm:px-4 h-full">
-          <div className={cn(
-            "flex items-center gap-2 sm:gap-4 h-full",
-            isMini && "gap-1 sm:gap-2"
-          )}>
-            {/* Left: Video Info */}
-            <div className={cn(
-              "flex items-center gap-2 sm:gap-3 min-w-0 flex-1",
-              isMini && "max-w-[30%]"
-            )}>
-              {currentVideo ? (
-                <>
-                  {!videoVisible && playbackMeta.thumbnailUrl && (
-                    <img 
-                      src={playbackMeta.thumbnailUrl} 
-                      alt="" 
-                      className={cn(
-                        "rounded object-cover flex-shrink-0 cursor-pointer",
-                        isMini ? "w-10 h-6" : "w-14 h-10 sm:w-16 sm:h-12"
-                      )}
-                      onClick={() => {
-                        toggleVideoVisible();
-                        setVideoMode('center');
-                      }}
-                    />
-                  )}
-                  <div className="min-w-0 flex-1">
-                    <p className={cn(
-                      "font-medium truncate",
-                      isMini ? "text-xs" : "text-sm"
-                    )}>
-                      {playbackMeta.title || 'Playing...'}
-                    </p>
-                    {!isMini && playbackMeta.originLabel && (
-                      <Link 
-                        to={playbackMeta.originUrl || '#'}
-                        className="text-xs text-muted-foreground hover:text-primary truncate flex items-center gap-1"
-                      >
-                        <ExternalLink className="h-3 w-3" />
-                        {playbackMeta.originLabel}
-                      </Link>
-                    )}
-                    {/* Tribe tags in player bar */}
-                    {!isMini && playbackMeta.tribeNames && playbackMeta.tribeNames.length > 0 && (
-                      <div className="flex gap-1 mt-0.5">
-                        {playbackMeta.tribeNames.slice(0, 2).map((tribeName, idx) => {
-                          const tribeId = playbackMeta.tribeIds?.[idx];
-                          return (
-                            <Link
-                              key={`bar-${tribeName}-${idx}`}
-                              to={tribeId ? `/learn/${tribeId}` : `/learn?q=${encodeURIComponent(tribeName)}`}
-                            >
-                              <Badge 
-                                variant="outline" 
-                                className="text-[10px] px-1.5 py-0 h-4 hover:bg-primary/10 cursor-pointer"
-                              >
-                                {tribeName}
-                              </Badge>
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                </>
-              ) : (
-                <div className="flex items-center gap-2">
-                  <Video className="h-5 w-5 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">TribeGuess Video Player</span>
-                </div>
-              )}
-            </div>
+          <div className="flex items-center gap-2 h-full">
+            {/* Thumbnail */}
+            {currentVideo && !videoVisible && playbackMeta.thumbnailUrl && (
+              <img 
+                src={playbackMeta.thumbnailUrl} 
+                alt="" 
+                className="w-10 h-7 rounded object-cover flex-shrink-0 cursor-pointer"
+                onClick={() => {
+                  toggleVideoVisible();
+                  setVideoMode('center');
+                }}
+              />
+            )}
             
-            {/* Center: Controls */}
-            <div className={cn(
-              "flex flex-col items-center gap-1",
-              isMini ? "flex-row gap-1" : "min-w-[200px] sm:min-w-[300px]"
-            )}>
-              <div className="flex items-center gap-1 sm:gap-2">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className={cn("h-8 w-8", isMini && "h-7 w-7")}
-                  onClick={previousVideo}
-                  disabled={!currentVideo}
-                >
-                  <SkipBack className="h-4 w-4" />
-                </Button>
-                
-                <Button
-                  variant="default"
-                  size="icon"
-                  className={cn(
-                    "rounded-full",
-                    isMini ? "h-8 w-8" : "h-10 w-10"
-                  )}
-                  onClick={togglePlay}
-                >
-                  {isLoading ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  ) : isPlaying ? (
-                    <Pause className="h-4 w-4" />
-                  ) : (
-                    <Play className="h-4 w-4 ml-0.5" />
-                  )}
-                </Button>
-                
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className={cn("h-8 w-8", isMini && "h-7 w-7")}
-                  onClick={nextVideo}
-                >
-                  <SkipForward className="h-4 w-4" />
-                </Button>
-                
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className={cn(
-                    "h-8 w-8",
-                    isMini && "h-7 w-7",
-                    isRepeat && "text-primary"
-                  )}
-                  onClick={toggleRepeat}
-                >
-                  <Repeat className="h-4 w-4" />
-                </Button>
-                
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className={cn("h-8 w-8", isMini && "h-7 w-7")}
-                  onClick={playRandom}
-                  title="Play random video"
-                >
-                  <Shuffle className="h-4 w-4" />
-                </Button>
-              </div>
-              
-              {/* Progress bar */}
-              {!isMini && currentVideo && (
-                <div className="flex items-center gap-2 w-full">
-                  <span className="text-xs text-muted-foreground w-10 text-right">
-                    {formatTime(currentTime)}
-                  </span>
-                  <Slider
-                    value={[sliderValue]}
-                    max={duration || 100}
-                    step={1}
-                    onValueChange={handleSliderChange}
-                    onValueCommit={handleSliderCommit}
-                    onPointerDown={() => setIsDragging(true)}
-                    className="flex-1"
-                  />
-                  <span className="text-xs text-muted-foreground w-10">
-                    {formatTime(duration)}
-                  </span>
-                </div>
-              )}
-            </div>
-            
-            {/* Right: Extra Controls */}
-            <div className={cn(
-              "flex items-center gap-1 sm:gap-2",
-              isMini ? "gap-0.5" : ""
-            )}>
-              {/* Volume */}
-              <div className="hidden sm:flex items-center gap-1">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8"
-                  onClick={toggleMute}
-                >
-                  {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-                </Button>
-                {!isMini && (
-                  <Slider
-                    value={[isMuted ? 0 : volume]}
-                    max={100}
-                    step={1}
-                    onValueChange={(v) => setVolume(v[0])}
-                    className="w-20"
-                  />
+            {/* Play controls */}
+            <div className="flex items-center gap-0.5">
+              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={previousVideo}>
+                <SkipBack className="h-3.5 w-3.5" />
+              </Button>
+              <Button variant="default" size="icon" className="h-8 w-8 rounded-full" onClick={togglePlay}>
+                {isLoading ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : isPlaying ? (
+                  <Pause className="h-4 w-4" />
+                ) : (
+                  <Play className="h-4 w-4 ml-0.5" />
                 )}
-              </div>
+              </Button>
+              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={nextVideo}>
+                <SkipForward className="h-3.5 w-3.5" />
+              </Button>
+            </div>
+            
+            {/* Time & Progress */}
+            <span className="text-xs text-muted-foreground w-8 text-right hidden sm:block">
+              {formatTime(currentTime)}
+            </span>
+            <Slider
+              value={[sliderValue]}
+              max={duration || 100}
+              step={1}
+              onValueChange={handleSliderChange}
+              onValueCommit={handleSliderCommit}
+              onPointerDown={() => setIsDragging(true)}
+              className="flex-1 min-w-[60px]"
+            />
+            <span className="text-xs text-muted-foreground w-8 hidden sm:block">
+              {formatTime(duration)}
+            </span>
+            
+            {/* Title & Tribe tags */}
+            <div className="hidden md:flex items-center gap-2 min-w-0 max-w-[200px]">
+              <p className="text-xs font-medium truncate">
+                {playbackMeta.title || 'Playing...'}
+              </p>
+              {playbackMeta.tribeNames && playbackMeta.tribeNames.length > 0 && (
+                <Link
+                  to={playbackMeta.tribeIds?.[0] ? `/learn/${playbackMeta.tribeIds[0]}` : `/learn?q=${encodeURIComponent(playbackMeta.tribeNames[0])}`}
+                >
+                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-4 hover:bg-primary/10 cursor-pointer">
+                    {playbackMeta.tribeNames[0]}
+                  </Badge>
+                </Link>
+              )}
+            </div>
+            
+            {/* Right controls */}
+            <div className="flex items-center gap-0.5">
+              {/* Volume */}
+              <Button variant="ghost" size="icon" className="h-7 w-7 hidden sm:flex" onClick={toggleMute}>
+                {isMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
+              </Button>
               
-              {/* Speed control in bar */}
+              {/* Speed */}
               <Button
                 variant="ghost"
                 size="icon"
-                className={cn(
-                  "h-8 w-8 hidden sm:flex",
-                  playbackSpeed !== 1 && "text-primary"
-                )}
+                className={cn("h-7 w-7 hidden sm:flex", playbackSpeed !== 1 && "text-primary")}
                 onClick={cyclePlaybackSpeed}
-                title={`Playback speed: ${playbackSpeed}x (click to cycle)`}
+                title={`Speed: ${playbackSpeed}x`}
               >
-                <span className="text-xs font-bold">{playbackSpeed}x</span>
+                <span className="text-[10px] font-bold">{playbackSpeed}x</span>
+              </Button>
+              
+              {/* Repeat */}
+              <Button variant="ghost" size="icon" className={cn("h-7 w-7", isRepeat && "text-primary")} onClick={toggleRepeat}>
+                <Repeat className="h-3.5 w-3.5" />
+              </Button>
+              
+              {/* Shuffle */}
+              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={playRandom} title="Shuffle">
+                <Shuffle className="h-3.5 w-3.5" />
               </Button>
               
               {/* Video toggle */}
               <Button
                 variant="ghost"
                 size="icon"
-                className={cn("h-8 w-8", videoVisible && "text-primary")}
+                className={cn("h-7 w-7", videoVisible && "text-primary")}
                 onClick={() => {
-                  if (!videoVisible) {
-                    setVideoMode('center');
-                  }
+                  if (!videoVisible) setVideoMode('center');
                   toggleVideoVisible();
                 }}
-                title={videoVisible ? "Hide video" : "Show video"}
               >
-                {videoVisible ? <Video className="h-4 w-4" /> : <VideoOff className="h-4 w-4" />}
+                {videoVisible ? <Video className="h-3.5 w-3.5" /> : <VideoOff className="h-3.5 w-3.5" />}
               </Button>
               
               {/* Queue */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className={cn("h-8 w-8 relative", queueVisible && "text-primary")}
-                onClick={toggleQueueVisible}
-              >
-                <List className="h-4 w-4" />
+              <Button variant="ghost" size="icon" className={cn("h-7 w-7 relative", queueVisible && "text-primary")} onClick={toggleQueueVisible}>
+                <List className="h-3.5 w-3.5" />
                 {queue.length > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+                  <span className="absolute -top-0.5 -right-0.5 bg-primary text-primary-foreground text-[8px] rounded-full h-3.5 w-3.5 flex items-center justify-center">
                     {queue.length}
                   </span>
                 )}
               </Button>
               
-              {/* Minimize player bar */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8"
-                onClick={toggleMini}
-              >
-                {isMini ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-              </Button>
-              
-              {/* Close player */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 hover:text-destructive"
-                onClick={closePlayer}
-                title="Close player"
-              >
-                <X className="h-4 w-4" />
+              {/* Close */}
+              <Button variant="ghost" size="icon" className="h-7 w-7 hover:text-destructive" onClick={closePlayer}>
+                <X className="h-3.5 w-3.5" />
               </Button>
             </div>
           </div>
@@ -908,10 +774,7 @@ export function GlobalVideoPlayer() {
       </div>
       
       {/* Spacer for fixed player */}
-      <div className={cn(
-        "transition-all duration-300",
-        isMini ? "h-14" : "h-20 sm:h-24"
-      )} />
+      <div className="h-12" />
     </>
   );
 }
