@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play, TrendingUp } from 'lucide-react';
+import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play, TrendingUp, ListPlus } from 'lucide-react';
 import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo, getTribeLandmarks } from '@/lib/tribeDetection';
 import { findReligionByName } from '@/data/traditionalReligions';
 import { Header } from '@/components/Header';
@@ -15,6 +15,8 @@ import { PopulationPieChart } from '@/components/PopulationPieChart';
 import { TribeFamilyTree } from '@/components/TribeFamilyTree';
 import { CulturalLandmarks } from '@/components/CulturalLandmarks';
 import { findRecipeByName } from '@/data/recipes';
+import { VideoPlayButton } from '@/components/VideoPlayButton';
+import { Button } from '@/components/ui/button';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -174,17 +176,29 @@ const TribePage = () => {
                   <p className="text-sm text-muted-foreground mb-3">
                     Discover the rich cultural heritage of the {tribe.name} people through this documentary video.
                   </p>
-                  <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${(tribe as any).youtubeVideoId}?rel=0`}
-                      title={`${tribe.name} Culture Documentary`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg bg-muted group cursor-pointer">
+                    <img 
+                      src={`https://img.youtube.com/vi/${(tribe as any).youtubeVideoId}/maxresdefault.jpg`}
+                      alt={`${tribe.name} Culture Documentary`}
+                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center gap-3">
+                      <VideoPlayButton
+                        youtubeId={(tribe as any).youtubeVideoId}
+                        title={`${tribe.name} Culture & Traditions`}
+                        sourceType="TRIBE_PAGE"
+                        tribeId={tribe.id}
+                        tribeName={tribe.name}
+                        originUrl={`/learn/${tribe.slug}`}
+                        originLabel={`${tribe.name} Tribe Page`}
+                        category="documentary"
+                        variant="overlay"
+                      />
+                    </div>
                   </div>
                   <p className="text-xs text-muted-foreground mt-2 italic">
-                    📺 Video content is sourced from YouTube for educational purposes.
+                    📺 Click to play in the global video player. Video content sourced from YouTube.
                   </p>
                 </section>
               )}
@@ -425,17 +439,29 @@ const TribePage = () => {
                         <Play className="w-4 h-4 text-red-500" />
                         Learn {language.name} Pronunciation
                       </h3>
-                      <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
-                        <iframe
-                          src={`https://www.youtube.com/embed/${(tribe as any).languageVideoId}?rel=0`}
-                          title={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="absolute inset-0 w-full h-full"
+                      <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md bg-muted group cursor-pointer">
+                        <img 
+                          src={`https://img.youtube.com/vi/${(tribe as any).languageVideoId}/maxresdefault.jpg`}
+                          alt={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
+                          className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                          loading="lazy"
                         />
+                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center gap-3">
+                          <VideoPlayButton
+                            youtubeId={(tribe as any).languageVideoId}
+                            title={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
+                            sourceType="TRIBE_LANGUAGE"
+                            tribeId={tribe.id}
+                            tribeName={tribe.name}
+                            originUrl={`/learn/${tribe.slug}`}
+                            originLabel={`${tribe.name} Language`}
+                            category="language"
+                            variant="overlay"
+                          />
+                        </div>
                       </div>
                       <p className="text-xs text-muted-foreground mt-2 italic">
-                        🎓 Educational video for learning {language.name} greetings and pronunciation.
+                        🎓 Click to play in the global video player.
                       </p>
                     </div>
                   )}

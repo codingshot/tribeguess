@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getRecipeById, getRecipesByTribe, getAllRecipes, type Recipe } from '@/data/recipes';
-import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed, Languages } from 'lucide-react';
+import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed, Languages, ListPlus } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { useMemo } from 'react';
 import { getAllTribes } from '@/lib/tribeDetection';
 import languageFamiliesData from '@/data/languageFamilies.json';
+import { VideoPlayButton } from '@/components/VideoPlayButton';
 
 const categoryEmoji: Record<string, string> = {
   staple: '🍚',
@@ -242,15 +243,30 @@ export default function RecipePage() {
             <h2 className="font-semibold text-lg mb-4 flex items-center gap-2">
               <Play className="w-5 h-5 text-red-600" /> Video Tutorial
             </h2>
-            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
-              <iframe
-                src={`https://www.youtube.com/embed/${recipe.youtubeVideoId}`}
-                title={`How to make ${recipe.name}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
+            <div className="aspect-video rounded-lg overflow-hidden bg-muted relative group cursor-pointer">
+              <img 
+                src={`https://img.youtube.com/vi/${recipe.youtubeVideoId}/maxresdefault.jpg`}
+                alt={`How to make ${recipe.name}`}
+                className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                loading="lazy"
               />
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center gap-3">
+                <VideoPlayButton
+                  youtubeId={recipe.youtubeVideoId}
+                  title={`How to Cook ${recipe.name}`}
+                  sourceType="RECIPE"
+                  tribeId={recipe.tribeSlug}
+                  tribeName={recipe.tribeName}
+                  originUrl={`/recipe/${recipe.id}`}
+                  originLabel={`${recipe.name} Recipe`}
+                  category="recipe"
+                  variant="overlay"
+                />
+              </div>
             </div>
+            <p className="text-xs text-muted-foreground mt-2 italic">
+              📺 Click to play in the global video player.
+            </p>
           </section>
         )}
 

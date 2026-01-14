@@ -85,13 +85,11 @@ export function GlobalVideoPlayer() {
     playerRef,
     setPlayerState,
     playNow,
-    hasPlayer,
   } = useGlobalVideoPlayer();
   
   const containerRef = useRef<HTMLDivElement>(null);
   const playerContainerRef = useRef<HTMLDivElement>(null);
   const [ytReady, setYtReady] = useState(false);
-  const [showPlayer, setShowPlayer] = useState(true);
   const [sliderValue, setSliderValue] = useState(0);
   
   // Load YouTube API
@@ -222,8 +220,8 @@ export function GlobalVideoPlayer() {
     setIsDragging(false);
   }, [seekTo, setIsDragging]);
   
-  // Don't render if no current video and not mini mode
-  if (!showPlayer) return null;
+  // Don't render if no current video is playing
+  if (!currentVideo) return null;
   
   return (
     <>
@@ -452,16 +450,6 @@ export function GlobalVideoPlayer() {
                 {isMini ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
               </Button>
               
-              {/* Close */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8"
-                onClick={() => setShowPlayer(false)}
-                title="Hide player"
-              >
-                <X className="h-4 w-4" />
-              </Button>
             </div>
           </div>
         </div>
