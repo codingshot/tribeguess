@@ -93,28 +93,26 @@ export function VideoPlayButton({
   
   if (variant === 'overlay') {
     return (
-      <div className={cn(
-        "absolute inset-0 bg-black/40 flex items-center justify-center gap-2 opacity-0 hover:opacity-100 transition-opacity",
-        className
-      )}>
+      <>
         <Button
           size="icon"
-          className="h-12 w-12 rounded-full"
+          className="h-14 w-14 rounded-full bg-primary hover:bg-primary/90 shadow-lg"
           onClick={handlePlay}
         >
-          <Play className="h-6 w-6" />
+          <Play className="h-7 w-7" />
         </Button>
         {showAddToQueue && (
           <Button
             variant="secondary"
             size="icon"
-            className="h-10 w-10 rounded-full"
+            className="h-11 w-11 rounded-full shadow-lg"
             onClick={handleAddToQueue}
+            title="Add to queue"
           >
             <ListPlus className="h-5 w-5" />
           </Button>
         )}
-      </div>
+      </>
     );
   }
   
