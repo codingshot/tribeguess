@@ -4,7 +4,7 @@ import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 import { 
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, 
   Repeat, List, Minimize2, Maximize2, Video, VideoOff,
-  X, ChevronUp, ChevronDown, ExternalLink, Loader2
+  X, ChevronUp, ChevronDown, ExternalLink, Loader2, Shuffle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -98,6 +98,8 @@ export function GlobalVideoPlayer() {
     playerRef,
     setPlayerState,
     playNow,
+    playRandom,
+    closePlayer,
   } = useGlobalVideoPlayer();
   
   const containerRef = useRef<HTMLDivElement>(null);
@@ -391,6 +393,16 @@ export function GlobalVideoPlayer() {
                 >
                   <Repeat className="h-4 w-4" />
                 </Button>
+                
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className={cn("h-8 w-8", isMini && "h-7 w-7")}
+                  onClick={playRandom}
+                  title="Play random video"
+                >
+                  <Shuffle className="h-4 w-4" />
+                </Button>
               </div>
               
               {/* Progress bar */}
@@ -477,6 +489,16 @@ export function GlobalVideoPlayer() {
                 {isMini ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
               </Button>
               
+              {/* Close player */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 hover:text-destructive"
+                onClick={closePlayer}
+                title="Close player"
+              >
+                <X className="h-4 w-4" />
+              </Button>
             </div>
           </div>
         </div>
