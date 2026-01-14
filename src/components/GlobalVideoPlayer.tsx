@@ -18,6 +18,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
 
 // YouTube IFrame API loader
 declare global {
@@ -715,10 +720,30 @@ export function GlobalVideoPlayer() {
             
             {/* Right controls */}
             <div className="flex items-center gap-0.5">
-              {/* Volume */}
-              <Button variant="ghost" size="icon" className="h-7 w-7 hidden sm:flex" onClick={toggleMute}>
-                {isMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
-              </Button>
+              {/* Volume with hover slider */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="ghost" size="icon" className="h-7 w-7 hidden sm:flex" onClick={toggleMute}>
+                    {isMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent 
+                  side="top" 
+                  align="center" 
+                  className="w-10 h-32 p-2 flex flex-col items-center gap-2"
+                  onOpenAutoFocus={(e) => e.preventDefault()}
+                >
+                  <Slider
+                    orientation="vertical"
+                    value={[isMuted ? 0 : volume]}
+                    max={100}
+                    step={1}
+                    onValueChange={(v) => setVolume(v[0])}
+                    className="h-20"
+                  />
+                  <span className="text-[10px] text-muted-foreground">{isMuted ? 0 : volume}%</span>
+                </PopoverContent>
+              </Popover>
               
               {/* Speed */}
               <Button
