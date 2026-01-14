@@ -70,8 +70,13 @@ export function isValidYoutubeId(id: string): boolean {
   return /^[a-zA-Z0-9_-]{11}$/.test(id);
 }
 
-// Check if video is playable (async validation)
-export async function validateYoutubeVideo(videoId: string): Promise<{ valid: boolean; title?: string }> {
+// Check if video is playable and get metadata (async validation)
+export async function validateYoutubeVideo(videoId: string): Promise<{ 
+  valid: boolean; 
+  title?: string;
+  duration?: string;
+  durationSeconds?: number;
+}> {
   try {
     // Using noembed.com for quick validation without API key
     const response = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`);
@@ -83,12 +88,61 @@ export async function validateYoutubeVideo(videoId: string): Promise<{ valid: bo
     
     return { 
       valid: true, 
-      title: data.title 
+      title: data.title,
     };
   } catch {
     // If fetch fails, assume valid (fail open for offline/blocked scenarios)
     return { valid: true };
   }
+}
+
+// Cache for video durations
+const videoDurationCache = new Map<string, number>();
+
+// Get video duration using YouTube oEmbed (limited info) or img trick
+export async function getVideoDuration(videoId: string): Promise<number | null> {
+  if (videoDurationCache.has(videoId)) {
+    return videoDurationCache.get(videoId)!;
+  }
+  
+  try {
+    // Try to get duration from YouTube's thumbnail - if it loads, video exists
+    const img = new Image();
+    img.src = `https://img.youtube.com/vi/${videoId}/0.jpg`;
+    
+    return new Promise((resolve) => {
+      img.onload = () => {
+        // Video exists but we can't get duration without API key
+        // Return null to indicate video is valid but duration unknown
+        resolve(null);
+      };
+      img.onerror = () => {
+        resolve(null);
+      };
+      // Timeout after 3 seconds
+      setTimeout(() => resolve(null), 3000);
+    });
+  } catch {
+    return null;
+  }
+}
+
+// Batch validate videos
+export async function validateVideos(videoIds: string[]): Promise<Map<string, boolean>> {
+  const results = new Map<string, boolean>();
+  
+  const validations = await Promise.all(
+    videoIds.map(async (id) => {
+      const result = await validateYoutubeVideo(id);
+      return { id, valid: result.valid };
+    })
+  );
+  
+  validations.forEach(({ id, valid }) => {
+    results.set(id, valid);
+  });
+  
+  return results;
 }
 
 // Get all videos from all sources

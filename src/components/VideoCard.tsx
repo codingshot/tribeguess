@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, ListPlus, ExternalLink, Clock } from 'lucide-react';
+import { Play, ListPlus, ExternalLink, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 import { VideoItem, getYoutubeThumbnail } from '@/lib/videoAggregation';
+import { useVideoValidation } from '@/hooks/useVideoValidation';
 import { cn } from '@/lib/utils';
 
 interface VideoCardProps {
@@ -22,13 +23,16 @@ const categoryColors: Record<string, string> = {
 
 export function VideoCard({ video, compact = false, showOrigin = true }: VideoCardProps) {
   const { playNow, addToQueue } = useGlobalVideoPlayer();
+  const { valid, loading } = useVideoValidation(video.youtubeId);
   
   const handlePlay = () => {
+    if (!valid && !loading) return;
     playNow(video);
   };
   
   const handleAddToQueue = (e: React.MouseEvent) => {
     e.stopPropagation();
+    if (!valid && !loading) return;
     addToQueue(video, { dedupeByYoutubeId: true });
   };
   
@@ -76,9 +80,15 @@ export function VideoCard({ video, compact = false, showOrigin = true }: VideoCa
   }
   
   return (
-    <Card className="overflow-hidden group hover:shadow-lg transition-shadow">
+    <Card className={cn(
+      "overflow-hidden group hover:shadow-lg transition-shadow",
+      !valid && !loading && "opacity-50"
+    )}>
       <div 
-        className="relative aspect-video cursor-pointer"
+        className={cn(
+          "relative aspect-video",
+          valid || loading ? "cursor-pointer" : "cursor-not-allowed"
+        )}
         onClick={handlePlay}
       >
         <img 
@@ -87,13 +97,26 @@ export function VideoCard({ video, compact = false, showOrigin = true }: VideoCa
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-          <div className="flex items-center gap-2">
-            <Button size="icon" className="h-12 w-12 rounded-full">
-              <Play className="h-6 w-6" />
-            </Button>
+        
+        {/* Loading/Invalid overlay */}
+        {loading ? (
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <Loader2 className="h-6 w-6 text-white animate-spin" />
           </div>
-        </div>
+        ) : !valid ? (
+          <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-1">
+            <AlertCircle className="h-8 w-8 text-red-400" />
+            <span className="text-xs text-red-300">Unavailable</span>
+          </div>
+        ) : (
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="flex items-center gap-2">
+              <Button size="icon" className="h-12 w-12 rounded-full">
+                <Play className="h-6 w-6" />
+              </Button>
+            </div>
+          </div>
+        )}
         
         {/* Category badge */}
         {video.category && (
@@ -140,9 +163,10 @@ export function VideoCard({ video, compact = false, showOrigin = true }: VideoCa
             size="sm" 
             className="flex-1 h-8 text-xs"
             onClick={handlePlay}
+            disabled={!valid && !loading}
           >
             <Play className="h-3 w-3 mr-1" />
-            Play Now
+            {!valid && !loading ? 'Unavailable' : 'Play Now'}
           </Button>
           <Button 
             variant="outline" 
@@ -150,6 +174,7 @@ export function VideoCard({ video, compact = false, showOrigin = true }: VideoCa
             className="h-8 w-8"
             onClick={handleAddToQueue}
             title="Add to Queue"
+            disabled={!valid && !loading}
           >
             <ListPlus className="h-4 w-4" />
           </Button>

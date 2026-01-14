@@ -240,6 +240,56 @@ export function GlobalVideoPlayer() {
     }
   }, [currentVideo, playbackMeta, togglePlay, previousVideo, nextVideo]);
   
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't trigger if user is typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+      }
+      
+      if (!currentVideo) return;
+      
+      switch (e.code) {
+        case 'Space':
+          e.preventDefault();
+          togglePlay();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          seekTo(Math.max(0, currentTime - 10));
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          seekTo(Math.min(duration, currentTime + 10));
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          setVolume(Math.min(100, volume + 10));
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          setVolume(Math.max(0, volume - 10));
+          break;
+        case 'KeyM':
+          e.preventDefault();
+          toggleMute();
+          break;
+        case 'KeyN':
+          e.preventDefault();
+          nextVideo();
+          break;
+        case 'Escape':
+          e.preventDefault();
+          closePlayer();
+          break;
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentVideo, togglePlay, seekTo, currentTime, duration, setVolume, volume, toggleMute, nextVideo, closePlayer]);
+  
   const handleSliderChange = useCallback((value: number[]) => {
     setSliderValue(value[0]);
   }, []);
