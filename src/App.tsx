@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { GlobalVideoPlayerProvider } from "@/contexts/GlobalVideoPlayerContext";
+import { GlobalVideoPlayer } from "@/components/GlobalVideoPlayer";
 import Index from "./pages/Index";
 import Learn from "./pages/Learn";
 import TribePage from "./pages/TribePage";
@@ -27,6 +29,7 @@ import People from "./pages/People";
 import PersonPage from "./pages/PersonPage";
 import Docs from "./pages/Docs";
 import NamesGallery from "./pages/NamesGallery";
+import VideoGallery from "./pages/VideoGallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,37 +38,41 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/learn" element={<Learn />} />
-            <Route path="/learn/:slug" element={<TribePage />} />
-            <Route path="/random" element={<RandomTribe />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/recipes" element={<Recipes />} />
-            <Route path="/recipe/:id" element={<RecipePage />} />
-            <Route path="/religions" element={<ReligionsPage />} />
-            <Route path="/religion/:id" element={<ReligionDetailPage />} />
-            <Route path="/religion-compare" element={<ReligionCompare />} />
-            <Route path="/religion-timeline" element={<ReligionTimeline />} />
-            <Route path="/ingredient/:id" element={<IngredientPage />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/languages" element={<LanguagesIndex />} />
-            <Route path="/languages/:familySlug" element={<LanguageFamilyPage />} />
-            <Route path="/global-origins" element={<GlobalOrigins />} />
-            <Route path="/people" element={<People />} />
-            <Route path="/person/:slug" element={<PersonPage />} />
-            <Route path="/docs" element={<Docs />} />
-            <Route path="/names" element={<NamesGallery />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <GlobalVideoPlayerProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/learn" element={<Learn />} />
+              <Route path="/learn/:slug" element={<TribePage />} />
+              <Route path="/random" element={<RandomTribe />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/recipes" element={<Recipes />} />
+              <Route path="/recipe/:id" element={<RecipePage />} />
+              <Route path="/religions" element={<ReligionsPage />} />
+              <Route path="/religion/:id" element={<ReligionDetailPage />} />
+              <Route path="/religion-compare" element={<ReligionCompare />} />
+              <Route path="/religion-timeline" element={<ReligionTimeline />} />
+              <Route path="/ingredient/:id" element={<IngredientPage />} />
+              <Route path="/quiz" element={<Quiz />} />
+              <Route path="/languages" element={<LanguagesIndex />} />
+              <Route path="/languages/:familySlug" element={<LanguageFamilyPage />} />
+              <Route path="/global-origins" element={<GlobalOrigins />} />
+              <Route path="/people" element={<People />} />
+              <Route path="/person/:slug" element={<PersonPage />} />
+              <Route path="/docs" element={<Docs />} />
+              <Route path="/names" element={<NamesGallery />} />
+              <Route path="/video-gallery" element={<VideoGallery />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <GlobalVideoPlayer />
+          </BrowserRouter>
+        </GlobalVideoPlayerProvider>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
