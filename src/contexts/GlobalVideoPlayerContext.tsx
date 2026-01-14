@@ -205,6 +205,18 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
   
   // Actions
   const playNow = useCallback((video: VideoItem, opts?: PlayOptions) => {
+    // If there's a current video playing, move it to front of queue
+    if (currentVideo && currentVideo.youtubeId !== video.youtubeId) {
+      setQueue(prev => {
+        // Don't add if already in queue
+        const filtered = prev.filter(v => v.youtubeId !== currentVideo.youtubeId);
+        return [currentVideo, ...filtered].slice(0, MAX_QUEUE_SIZE);
+      });
+    }
+    
+    // Remove the new video from queue if it was there
+    setQueue(prev => prev.filter(v => v.youtubeId !== video.youtubeId));
+    
     setCurrentVideo(video);
     setIsPlaying(true);
     setIsLoading(true);
@@ -217,7 +229,7 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     });
     
     toast.success(`Now playing: ${video.title || 'Video'}`);
-  }, []);
+  }, [currentVideo]);
   
   const addToQueue = useCallback((video: VideoItem, opts?: AddQueueOptions) => {
     setQueue(prev => {
