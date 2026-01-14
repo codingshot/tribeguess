@@ -702,16 +702,27 @@ export function GlobalVideoPlayer() {
               {formatTime(duration)}
             </span>
             
-            {/* Title & Tribe tags */}
-            <div className="hidden md:flex items-center gap-2 min-w-0 max-w-[200px]">
-              <p className="text-xs font-medium truncate">
-                {playbackMeta.title || 'Playing...'}
-              </p>
+            {/* Title, Origin & Tribe tags */}
+            <div className="hidden md:flex items-center gap-2 min-w-0 max-w-[280px]">
+              <div className="min-w-0 flex-1">
+                <p className="text-xs font-medium truncate">
+                  {playbackMeta.title || 'Playing...'}
+                </p>
+                {playbackMeta.originLabel && (
+                  <Link 
+                    to={playbackMeta.originUrl || '#'}
+                    className="text-[10px] text-muted-foreground hover:text-primary truncate flex items-center gap-0.5"
+                  >
+                    <ExternalLink className="h-2.5 w-2.5 flex-shrink-0" />
+                    <span className="truncate">{playbackMeta.originLabel}</span>
+                  </Link>
+                )}
+              </div>
               {playbackMeta.tribeNames && playbackMeta.tribeNames.length > 0 && (
                 <Link
                   to={playbackMeta.tribeIds?.[0] ? `/learn/${playbackMeta.tribeIds[0]}` : `/learn?q=${encodeURIComponent(playbackMeta.tribeNames[0])}`}
                 >
-                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-4 hover:bg-primary/10 cursor-pointer">
+                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-4 hover:bg-primary/10 cursor-pointer flex-shrink-0">
                     {playbackMeta.tribeNames[0]}
                   </Badge>
                 </Link>
