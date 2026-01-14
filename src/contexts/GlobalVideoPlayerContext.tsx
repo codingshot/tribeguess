@@ -43,11 +43,13 @@ interface GlobalVideoPlayerContextType {
   isLoading: boolean;
   
   playNow: (video: VideoItem, opts?: PlayOptions) => void;
+  playRandom: () => void;
   addToQueue: (video: VideoItem, opts?: AddQueueOptions) => void;
   addManyToQueue: (videos: VideoItem[], opts?: AddQueueOptions) => void;
   
   removeFromQueue: (videoId: string) => void;
   clearQueue: () => void;
+  closePlayer: () => void;
   
   togglePlay: () => void;
   nextVideo: () => void;
@@ -271,6 +273,29 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     toast.info('Queue cleared');
   }, []);
   
+  const closePlayer = useCallback(() => {
+    if (playerRef.current) {
+      try {
+        playerRef.current.stopVideo?.();
+        playerRef.current.destroy?.();
+      } catch {}
+      playerRef.current = null;
+    }
+    setCurrentVideo(null);
+    setIsPlaying(false);
+    setIsLoading(false);
+    setCurrentTime(0);
+    setDuration(0);
+    localStorage.removeItem(STORAGE_KEYS.currentVideo);
+  }, []);
+  
+  const playRandom = useCallback(() => {
+    const fallback = findUnplayedFallbackVideo(playedVideos);
+    if (fallback) {
+      playNow(fallback);
+    }
+  }, [playedVideos, playNow]);
+  
   const togglePlay = useCallback(() => {
     if (!currentVideo && queue.length > 0) {
       // Play first from queue
@@ -383,10 +408,12 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     isPlaying,
     isLoading,
     playNow,
+    playRandom,
     addToQueue,
     addManyToQueue,
     removeFromQueue,
     clearQueue,
+    closePlayer,
     togglePlay,
     nextVideo,
     previousVideo,

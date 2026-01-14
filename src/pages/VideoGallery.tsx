@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Play, Grid, List } from 'lucide-react';
 import { Header } from '@/components/Header';
@@ -12,10 +13,20 @@ import { getAllVideos, getVideoTribes, searchVideos } from '@/lib/videoAggregati
 import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 
 export default function VideoGallery() {
-  const [query, setQuery] = useState('');
-  const [category, setCategory] = useState('all');
-  const [tribeFilter, setTribeFilter] = useState('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState(searchParams.get('q') || '');
+  const [category, setCategory] = useState(searchParams.get('category') || 'all');
+  const [tribeFilter, setTribeFilter] = useState(searchParams.get('tribe') || 'all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  
+  // Sync URL params
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (query) params.set('q', query);
+    if (category !== 'all') params.set('category', category);
+    if (tribeFilter !== 'all') params.set('tribe', tribeFilter);
+    setSearchParams(params, { replace: true });
+  }, [query, category, tribeFilter, setSearchParams]);
   
   const { addManyToQueue } = useGlobalVideoPlayer();
   const tribes = useMemo(() => getVideoTribes(), []);
@@ -51,14 +62,45 @@ export default function VideoGallery() {
             <p className="text-muted-foreground">
               Explore {stats.total} videos about African culture, recipes, and languages
             </p>
-            <div className="flex justify-center gap-2 mt-3">
-              <Badge variant="secondary">{stats.documentaries} Documentaries</Badge>
-              <Badge variant="secondary">{stats.recipes} Recipes</Badge>
-              <Badge variant="secondary">{stats.languages} Languages</Badge>
+            <div className="flex justify-center gap-2 mt-4">
+              <Button
+                variant={category === 'all' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategory('all')}
+              >
+                All ({stats.total})
+              </Button>
+              <Button
+                variant={category === 'documentary' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategory('documentary')}
+                className="gap-1"
+              >
+                <span className="w-2 h-2 rounded-full bg-blue-500" />
+                Documentaries ({stats.documentaries})
+              </Button>
+              <Button
+                variant={category === 'recipe' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategory('recipe')}
+                className="gap-1"
+              >
+                <span className="w-2 h-2 rounded-full bg-green-500" />
+                Recipes ({stats.recipes})
+              </Button>
+              <Button
+                variant={category === 'language' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategory('language')}
+                className="gap-1"
+              >
+                <span className="w-2 h-2 rounded-full bg-purple-500" />
+                Languages ({stats.languages})
+              </Button>
             </div>
           </div>
           
-          {/* Filters */}
+          {/* Search & Filters */}
           <div className="flex flex-wrap gap-3 mb-6">
             <div className="relative flex-1 min-w-[200px]">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -70,21 +112,9 @@ export default function VideoGallery() {
               />
             </div>
             
-            <Select value={category} onValueChange={setCategory}>
-              <SelectTrigger className="w-[140px]">
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                <SelectItem value="documentary">Documentary</SelectItem>
-                <SelectItem value="recipe">Recipe</SelectItem>
-                <SelectItem value="language">Language</SelectItem>
-              </SelectContent>
-            </Select>
-            
             <Select value={tribeFilter} onValueChange={setTribeFilter}>
               <SelectTrigger className="w-[160px]">
-                <SelectValue placeholder="Tribe" />
+                <SelectValue placeholder="Filter by Tribe" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Tribes</SelectItem>
