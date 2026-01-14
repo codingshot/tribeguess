@@ -27,6 +27,7 @@ declare global {
 
 // Shared YouTube API state
 let ytApiReady = false;
+let ytApiLoading = false;
 const ytApiCallbacks: (() => void)[] = [];
 
 function ensureYouTubeApi(): Promise<void> {
@@ -47,6 +48,9 @@ function ensureYouTubeApi(): Promise<void> {
       return;
     }
     
+    // Already loading
+    if (ytApiLoading) return;
+    
     // Check if script exists but not loaded yet
     const existingScript = document.querySelector('script[src="https://www.youtube.com/iframe_api"]');
     if (existingScript) {
@@ -54,10 +58,13 @@ function ensureYouTubeApi(): Promise<void> {
       return;
     }
     
+    ytApiLoading = true;
+    
     // Load the script
     const existingReady = window.onYouTubeIframeAPIReady;
     window.onYouTubeIframeAPIReady = () => {
       ytApiReady = true;
+      ytApiLoading = false;
       existingReady?.();
       ytApiCallbacks.forEach(cb => cb());
       ytApiCallbacks.length = 0;
@@ -71,7 +78,9 @@ function ensureYouTubeApi(): Promise<void> {
 }
 
 // Preload YouTube API
-ensureYouTubeApi();
+if (typeof window !== 'undefined') {
+  ensureYouTubeApi();
+}
 
 export function InlineVideoPlayer({
   youtubeId,
@@ -87,11 +96,12 @@ export function InlineVideoPlayer({
   const containerRef = useRef<HTMLDivElement>(null);
   const playerContainerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<any>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isInlinePlayback, setIsInlinePlayback] = useState(false);
   const [showThumbnail, setShowThumbnail] = useState(true);
   const [ytReady, setYtReady] = useState(false);
+  const [hasError, setHasError] = useState(false);
   
-  const { playNow, addToQueue } = useGlobalVideoPlayer();
+  const { playNow, addToQueue, currentVideo } = useGlobalVideoPlayer();
   
   const video: VideoItem = {
     id: `inline-${youtubeId}`,
@@ -107,35 +117,35 @@ export function InlineVideoPlayer({
     category,
   };
   
+  // Check if this video is currently playing in global player
+  const isPlayingInGlobal = currentVideo?.youtubeId === youtubeId;
+  
   // Check if YouTube API is ready
   useEffect(() => {
     if (window.YT?.Player) {
       setYtReady(true);
     } else {
-      ensureYouTubeApi().then(() => setYtReady(true));
+      ensureYouTubeApi().then(() => setYtReady(true)).catch(() => setHasError(true));
     }
   }, []);
   
   // Handle scroll - transfer to global player when out of view
   useEffect(() => {
-    if (!isPlaying || !containerRef.current) return;
+    if (!isInlinePlayback || !containerRef.current) return;
     
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting && isPlaying) {
+          if (!entry.isIntersecting && isInlinePlayback && playerRef.current) {
             // Transfer to global player
-            const currentTime = playerRef.current?.getCurrentTime?.() || 0;
             playNow({ ...video, id: `global-${youtubeId}` });
             
             // Clean up inline player
-            if (playerRef.current) {
-              try {
-                playerRef.current.destroy();
-              } catch {}
-              playerRef.current = null;
-            }
-            setIsPlaying(false);
+            try {
+              playerRef.current?.destroy?.();
+            } catch {}
+            playerRef.current = null;
+            setIsInlinePlayback(false);
             setShowThumbnail(true);
           }
         });
@@ -146,12 +156,35 @@ export function InlineVideoPlayer({
     observer.observe(containerRef.current);
     
     return () => observer.disconnect();
-  }, [isPlaying, video, playNow, youtubeId]);
+  }, [isInlinePlayback, video, playNow, youtubeId]);
+  
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (playerRef.current) {
+        try {
+          playerRef.current.destroy?.();
+        } catch {}
+        playerRef.current = null;
+      }
+    };
+  }, []);
   
   const handlePlay = useCallback(() => {
-    if (!ytReady || !playerContainerRef.current) return;
+    if (!ytReady || !playerContainerRef.current) {
+      // Fallback to global player if YT API not ready
+      playNow(video);
+      return;
+    }
+    
+    if (!window.YT?.Player) {
+      // Fallback to global player
+      playNow(video);
+      return;
+    }
     
     setShowThumbnail(false);
+    setHasError(false);
     
     // Create unique player ID
     const playerId = `inline-player-${youtubeId}-${Date.now()}`;
@@ -164,37 +197,48 @@ export function InlineVideoPlayer({
       playerContainerRef.current.appendChild(playerDiv);
     }
     
-    playerRef.current = new window.YT.Player(playerId, {
-      height: '100%',
-      width: '100%',
-      videoId: youtubeId,
-      playerVars: {
-        playsinline: 1,
-        controls: 1,
-        rel: 0,
-        modestbranding: 1,
-        autoplay: 1,
-      },
-      events: {
-        onReady: (event: any) => {
-          event.target.playVideo();
+    try {
+      playerRef.current = new window.YT.Player(playerId, {
+        height: '100%',
+        width: '100%',
+        videoId: youtubeId,
+        playerVars: {
+          playsinline: 1,
+          controls: 1,
+          rel: 0,
+          modestbranding: 1,
+          autoplay: 1,
         },
-        onStateChange: (event: any) => {
-          const state = event.data;
-          if (state === window.YT.PlayerState.PLAYING) {
-            setIsPlaying(true);
-          } else if (state === window.YT.PlayerState.PAUSED || 
-                     state === window.YT.PlayerState.ENDED) {
-            setIsPlaying(false);
+        events: {
+          onReady: (event: any) => {
+            try {
+              event.target.playVideo();
+            } catch {}
+          },
+          onStateChange: (event: any) => {
+            try {
+              const state = event.data;
+              if (state === window.YT?.PlayerState?.PLAYING) {
+                setIsInlinePlayback(true);
+              } else if (state === window.YT?.PlayerState?.PAUSED || 
+                         state === window.YT?.PlayerState?.ENDED) {
+                setIsInlinePlayback(false);
+              }
+            } catch {}
+          },
+          onError: () => {
+            setShowThumbnail(true);
+            setIsInlinePlayback(false);
+            setHasError(true);
           }
-        },
-        onError: () => {
-          setShowThumbnail(true);
-          setIsPlaying(false);
         }
-      }
-    });
-  }, [ytReady, youtubeId]);
+      });
+    } catch (err) {
+      // Fallback to global player on error
+      setHasError(true);
+      playNow(video);
+    }
+  }, [ytReady, youtubeId, playNow, video]);
   
   const handleAddToQueue = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -210,16 +254,44 @@ export function InlineVideoPlayer({
     // Clean up inline player
     if (playerRef.current) {
       try {
-        playerRef.current.destroy();
+        playerRef.current.destroy?.();
       } catch {}
       playerRef.current = null;
     }
-    setIsPlaying(false);
+    setIsInlinePlayback(false);
     setShowThumbnail(true);
   };
   
   if (!isValidYoutubeId(youtubeId)) {
     return null;
+  }
+  
+  // If this video is playing in global player, show a message
+  if (isPlayingInGlobal && !isInlinePlayback) {
+    return (
+      <div 
+        ref={containerRef}
+        className={cn("relative w-full aspect-video rounded-lg overflow-hidden bg-muted", className)}
+      >
+        <img 
+          src={getYoutubeThumbnail(youtubeId)}
+          alt={title || 'Video thumbnail'}
+          className="w-full h-full object-cover opacity-50"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center gap-2">
+          <p className="text-white text-sm font-medium">Playing in global player</p>
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={handleAddToQueue}
+          >
+            <ListPlus className="h-4 w-4 mr-1" />
+            Add to queue
+          </Button>
+        </div>
+      </div>
+    );
   }
   
   return (
@@ -253,11 +325,16 @@ export function InlineVideoPlayer({
               <ListPlus className="h-5 w-5" />
             </Button>
           </div>
+          {hasError && (
+            <div className="absolute bottom-2 left-2 right-2 text-center text-xs text-white bg-black/60 rounded px-2 py-1">
+              Video unavailable - try global player
+            </div>
+          )}
         </>
       ) : (
         <>
           <div ref={playerContainerRef} className="w-full h-full" />
-          {isPlaying && (
+          {isInlinePlayback && (
             <div className="absolute top-2 right-2 flex gap-1">
               <Button
                 variant="secondary"
