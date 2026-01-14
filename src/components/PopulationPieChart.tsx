@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { getCountries } from '@/lib/tribeDetection';
 
@@ -84,7 +84,7 @@ const COLORS = [
   'hsl(330, 81%, 60%)', // Pink
 ];
 
-export function PopulationPieChart({ populationByCountry, diaspora, tribeName, type = 'country' }: PopulationPieChartProps) {
+export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartProps>(function PopulationPieChart({ populationByCountry, diaspora, tribeName, type = 'country' }, ref) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const countries = getCountries();
   
@@ -187,7 +187,7 @@ export function PopulationPieChart({ populationByCountry, diaspora, tribeName, t
     : `${tribeName} Global Diaspora`;
 
   return (
-    <div className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
+    <div ref={ref} className="mt-4 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
       <h3 className="text-sm font-semibold mb-3 text-center">
         {title}
       </h3>
@@ -235,4 +235,4 @@ export function PopulationPieChart({ populationByCountry, diaspora, tribeName, t
       </p>
     </div>
   );
-}
+});
