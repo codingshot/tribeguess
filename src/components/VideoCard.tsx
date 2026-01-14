@@ -121,11 +121,17 @@ export function VideoCard({ video, compact = false, showOrigin = true }: VideoCa
           {video.title}
         </h3>
         
-        <div className="flex items-center gap-2 mb-3">
-          {video.tribeNames?.slice(0, 2).map((name, i) => (
-            <Badge key={i} variant="outline" className="text-xs">
-              {name}
-            </Badge>
+        <div className="flex flex-wrap items-center gap-1.5 mb-3">
+          {video.tribeIds?.slice(0, 2).map((id, i) => (
+            <Link 
+              key={id} 
+              to={`/learn/${id}`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Badge variant="outline" className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+                {video.tribeNames?.[i] || id}
+              </Badge>
+            </Link>
           ))}
         </div>
         

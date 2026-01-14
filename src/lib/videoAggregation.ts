@@ -139,12 +139,20 @@ export function getAllVideos(): VideoItem[] {
     }
   });
   
-  // Collect recipe videos
+  // Collect recipe videos - use youtubeId as part of key to ensure uniqueness
+  const seenYoutubeIds = new Set<string>();
+  
   recipes.forEach((recipe) => {
     if (recipe.youtubeVideoId && isValidYoutubeId(recipe.youtubeVideoId)) {
+      // Skip if we've already added this youtubeId
+      if (seenYoutubeIds.has(recipe.youtubeVideoId)) {
+        return;
+      }
+      seenYoutubeIds.add(recipe.youtubeVideoId);
+      
       const tribe = tribes.find(t => t.slug === recipe.tribeSlug);
       videos.push({
-        id: `recipe-${recipe.id}`,
+        id: `recipe-${recipe.id}-${recipe.youtubeVideoId}`,
         youtube: recipe.youtubeVideoId,
         youtubeId: recipe.youtubeVideoId,
         title: `How to Cook ${recipe.name}`,
