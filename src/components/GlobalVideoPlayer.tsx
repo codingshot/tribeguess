@@ -315,29 +315,28 @@ export function GlobalVideoPlayer() {
           isMini ? "h-14" : "h-20 sm:h-24"
         )}
       >
-        {/* Floating Video Window */}
-        {videoVisible && currentVideo && (
+      {/* Floating Video Window - Always mounted, visibility controlled by CSS */}
+        {currentVideo && (
           <div className={cn(
             "absolute bg-black rounded-lg overflow-hidden shadow-2xl border border-border transition-all",
-            isMini 
-              ? "w-24 h-14 -top-16 right-4" 
-              : "w-48 h-28 sm:w-64 sm:h-36 -top-32 sm:-top-40 right-4"
+            videoVisible
+              ? isMini 
+                ? "w-32 h-20 -top-24 right-4" 
+                : "w-80 h-48 sm:w-96 sm:h-56 lg:w-[480px] lg:h-72 -top-52 sm:-top-60 lg:-top-80 right-4"
+              : "w-1 h-1 -top-[9999px] left-0 opacity-0 pointer-events-none"
           )}>
             <div ref={playerContainerRef} className="w-full h-full" />
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-1 right-1 h-6 w-6 bg-black/50 hover:bg-black/70 text-white"
-              onClick={toggleVideoVisible}
-            >
-              <X className="h-3 w-3" />
-            </Button>
+            {videoVisible && (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-1 right-1 h-6 w-6 bg-black/50 hover:bg-black/70 text-white"
+                onClick={toggleVideoVisible}
+              >
+                <X className="h-3 w-3" />
+              </Button>
+            )}
           </div>
-        )}
-        
-        {/* Hidden player container when video not visible */}
-        {!videoVisible && currentVideo && (
-          <div ref={playerContainerRef} className="absolute -top-[9999px] left-0 w-1 h-1 overflow-hidden" />
         )}
         
         <div className="container mx-auto px-2 sm:px-4 h-full">
