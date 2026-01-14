@@ -60,6 +60,9 @@ export function Footer() {
               <Link to="/names" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 📊 Names Gallery
               </Link>
+              <Link to="/video-gallery" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                🎬 Video Gallery
+              </Link>
             </nav>
           </div>
           
