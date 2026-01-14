@@ -14,10 +14,14 @@ const STORAGE_KEYS = {
   videoVisible: 'tribeguess_video_visible',
   playerMini: 'tribeguess_player_mini',
   queueVisible: 'tribeguess_queue_visible',
+  playbackSpeed: 'tribeguess_playback_speed',
 };
 
 const MAX_PLAYED_HISTORY = 50;
 const MAX_QUEUE_SIZE = 100;
+
+export const PLAYBACK_SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] as const;
+export type PlaybackSpeed = typeof PLAYBACK_SPEEDS[number];
 
 interface PlayOptions {
   fromOrigin?: boolean;
@@ -34,6 +38,8 @@ interface PlaybackMeta {
   thumbnailUrl?: string;
   originUrl?: string;
   originLabel?: string;
+  tribeIds?: string[];
+  tribeNames?: string[];
 }
 
 interface GlobalVideoPlayerContextType {
@@ -65,6 +71,10 @@ interface GlobalVideoPlayerContextType {
   isRepeat: boolean;
   toggleAutoplayNext: () => void;
   isAutoplayNext: boolean;
+  
+  playbackSpeed: PlaybackSpeed;
+  setPlaybackSpeed: (speed: PlaybackSpeed) => void;
+  cyclePlaybackSpeed: () => void;
   
   reorderQueue: (from: number, to: number) => void;
   
@@ -149,6 +159,9 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
   const [queueVisible, setQueueVisible] = useState(() => 
     safeJSONParse(STORAGE_KEYS.queueVisible, false)
   );
+  const [playbackSpeed, setPlaybackSpeedState] = useState<PlaybackSpeed>(() => 
+    safeJSONParse(STORAGE_KEYS.playbackSpeed, 1) as PlaybackSpeed
+  );
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -194,6 +207,10 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     localStorage.setItem(STORAGE_KEYS.queueVisible, JSON.stringify(queueVisible));
   }, [queueVisible]);
   
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.playbackSpeed, JSON.stringify(playbackSpeed));
+  }, [playbackSpeed]);
+  
   // Playback meta
   const playbackMeta: PlaybackMeta = {
     title: currentVideo?.title,
@@ -201,6 +218,8 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     thumbnailUrl: currentVideo?.thumbnailUrl || (currentVideo?.youtubeId ? getYoutubeThumbnail(currentVideo.youtubeId) : undefined),
     originUrl: currentVideo?.originUrl,
     originLabel: currentVideo?.originLabel,
+    tribeIds: currentVideo?.tribeIds,
+    tribeNames: currentVideo?.tribeNames,
   };
   
   // Actions
@@ -407,6 +426,29 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     setQueueVisible(prev => !prev);
   }, []);
   
+  const setPlaybackSpeed = useCallback((speed: PlaybackSpeed) => {
+    setPlaybackSpeedState(speed);
+    if (playerRef.current?.setPlaybackRate) {
+      try {
+        playerRef.current.setPlaybackRate(speed);
+      } catch {}
+    }
+  }, []);
+  
+  const cyclePlaybackSpeed = useCallback(() => {
+    setPlaybackSpeedState(prev => {
+      const currentIndex = PLAYBACK_SPEEDS.indexOf(prev);
+      const nextIndex = (currentIndex + 1) % PLAYBACK_SPEEDS.length;
+      const newSpeed = PLAYBACK_SPEEDS[nextIndex];
+      if (playerRef.current?.setPlaybackRate) {
+        try {
+          playerRef.current.setPlaybackRate(newSpeed);
+        } catch {}
+      }
+      return newSpeed;
+    });
+  }, []);
+  
   const setPlayerState = useCallback((state: { duration?: number; currentTime?: number; isPlaying?: boolean; isLoading?: boolean }) => {
     if (state.duration !== undefined) setDuration(state.duration);
     if (state.currentTime !== undefined && !isDragging) setCurrentTime(state.currentTime);
@@ -438,6 +480,9 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     isRepeat,
     toggleAutoplayNext,
     isAutoplayNext,
+    playbackSpeed,
+    setPlaybackSpeed,
+    cyclePlaybackSpeed,
     reorderQueue,
     isMini,
     toggleMini,

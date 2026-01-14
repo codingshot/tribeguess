@@ -1,16 +1,23 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
+import { useGlobalVideoPlayer, PLAYBACK_SPEEDS } from '@/contexts/GlobalVideoPlayerContext';
 import { 
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, 
   Repeat, List, Minimize2, Maximize2, Video, VideoOff,
   X, ChevronUp, ChevronDown, ExternalLink, Loader2, Shuffle,
-  PictureInPicture2, Expand
+  PictureInPicture2, Expand, Gauge, GripVertical
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
+import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { VideoQueueDrawer } from './VideoQueueDrawer';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 // YouTube IFrame API loader
 declare global {
@@ -114,10 +121,18 @@ export function GlobalVideoPlayer() {
     playNow,
     playRandom,
     closePlayer,
+    playbackSpeed,
+    setPlaybackSpeed,
+    cyclePlaybackSpeed,
   } = useGlobalVideoPlayer();
   
   const [videoMode, setVideoMode] = useState<VideoMode>('center');
   const [isPiPActive, setIsPiPActive] = useState(false);
+  
+  // Drag state for PiP/mini mode
+  const [dragPosition, setDragPosition] = useState({ x: 0, y: 0 });
+  const [isDraggingPlayer, setIsDraggingPlayer] = useState(false);
+  const dragStartRef = useRef({ x: 0, y: 0, posX: 0, posY: 0 });
   
   const containerRef = useRef<HTMLDivElement>(null);
   const playerContainerRef = useRef<HTMLDivElement>(null);
@@ -171,6 +186,8 @@ export function GlobalVideoPlayer() {
                 try {
                   event.target.setVolume(volume);
                   if (isMuted) event.target.mute();
+                  // Apply playback speed
+                  event.target.setPlaybackRate?.(playbackSpeed);
                   event.target.playVideo();
                   setPlayerState({ isLoading: false });
                 } catch {}
@@ -234,7 +251,7 @@ export function GlobalVideoPlayer() {
         playerRef.current = null;
       }
     };
-  }, [ytReady, currentVideo?.youtubeId, isRepeat]);
+  }, [ytReady, currentVideo?.youtubeId, isRepeat, playbackSpeed]);
   
   // Update current time
   useEffect(() => {
@@ -344,13 +361,11 @@ export function GlobalVideoPlayer() {
   // Picture-in-Picture handler
   const togglePiP = useCallback(async () => {
     try {
-      const iframe = playerContainerRef.current?.querySelector('iframe');
-      if (!iframe) return;
-      
       // PiP isn't directly available for iframes, so we'll simulate with a floating mini mode
       if (videoMode === 'pip') {
         setVideoMode('center');
         setIsPiPActive(false);
+        setDragPosition({ x: 0, y: 0 });
       } else {
         setVideoMode('pip');
         setIsPiPActive(true);
@@ -370,11 +385,67 @@ export function GlobalVideoPlayer() {
   
   const minimizeToCorner = useCallback(() => {
     setVideoMode('mini');
+    setDragPosition({ x: 0, y: 0 });
   }, []);
   
   const expandToCenter = useCallback(() => {
     setVideoMode('center');
+    setDragPosition({ x: 0, y: 0 });
   }, []);
+  
+  // Drag handlers for mini/pip mode
+  const handleDragStart = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    if (videoMode !== 'mini' && videoMode !== 'pip') return;
+    
+    e.preventDefault();
+    setIsDraggingPlayer(true);
+    
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+    
+    dragStartRef.current = {
+      x: clientX,
+      y: clientY,
+      posX: dragPosition.x,
+      posY: dragPosition.y,
+    };
+  }, [videoMode, dragPosition]);
+  
+  const handleDragMove = useCallback((e: MouseEvent | TouchEvent) => {
+    if (!isDraggingPlayer) return;
+    
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+    
+    const deltaX = clientX - dragStartRef.current.x;
+    const deltaY = clientY - dragStartRef.current.y;
+    
+    setDragPosition({
+      x: dragStartRef.current.posX + deltaX,
+      y: dragStartRef.current.posY + deltaY,
+    });
+  }, [isDraggingPlayer]);
+  
+  const handleDragEnd = useCallback(() => {
+    setIsDraggingPlayer(false);
+  }, []);
+  
+  // Add drag event listeners
+  useEffect(() => {
+    if (isDraggingPlayer) {
+      window.addEventListener('mousemove', handleDragMove);
+      window.addEventListener('mouseup', handleDragEnd);
+      window.addEventListener('touchmove', handleDragMove);
+      window.addEventListener('touchend', handleDragEnd);
+      
+      return () => {
+        window.removeEventListener('mousemove', handleDragMove);
+        window.removeEventListener('mouseup', handleDragEnd);
+        window.removeEventListener('touchmove', handleDragMove);
+        window.removeEventListener('touchend', handleDragEnd);
+      };
+    }
+  }, [isDraggingPlayer, handleDragMove, handleDragEnd]);
   
   // Don't render if no current video is playing
   if (!currentVideo) return null;
@@ -389,13 +460,25 @@ export function GlobalVideoPlayer() {
       case 'fullscreen':
         return "fixed inset-0 w-full h-full z-[100] rounded-none";
       case 'mini':
-        return "fixed bottom-28 right-4 w-64 h-40 sm:w-80 sm:h-48 z-50";
       case 'pip':
-        return "fixed bottom-28 right-4 w-80 h-48 sm:w-96 sm:h-56 z-50 cursor-move";
+        return "fixed z-50";
       case 'center':
       default:
         return "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-4xl aspect-video z-50";
     }
+  };
+  
+  // Get positioning styles for draggable modes
+  const getDragStyles = (): React.CSSProperties => {
+    if (videoMode === 'mini' || videoMode === 'pip') {
+      return {
+        right: `${16 - dragPosition.x}px`,
+        bottom: `${112 - dragPosition.y}px`,
+        width: videoMode === 'pip' ? '384px' : '320px',
+        height: videoMode === 'pip' ? '224px' : '192px',
+      };
+    }
+    return {};
   };
   
   return (
@@ -413,15 +496,58 @@ export function GlobalVideoPlayer() {
       
       {/* Video Container */}
       {currentVideo && (
-        <div className={cn(
-          "bg-black rounded-lg overflow-hidden shadow-2xl border border-border transition-all duration-300",
-          getVideoContainerClasses()
-        )}>
+        <div 
+          className={cn(
+            "bg-black rounded-lg overflow-hidden shadow-2xl border border-border transition-all duration-300",
+            getVideoContainerClasses(),
+            (videoMode === 'mini' || videoMode === 'pip') && "cursor-move"
+          )}
+          style={getDragStyles()}
+        >
+          {/* Drag Handle for mini/pip modes */}
+          {videoVisible && (videoMode === 'mini' || videoMode === 'pip') && (
+            <div 
+              className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-black/60 to-transparent z-10 cursor-move flex items-center justify-center"
+              onMouseDown={handleDragStart}
+              onTouchStart={handleDragStart}
+            >
+              <GripVertical className="h-4 w-4 text-white/70" />
+            </div>
+          )}
+          
           <div ref={playerContainerRef} className="w-full h-full" />
           
           {/* Video Controls Overlay */}
           {videoVisible && (
             <div className="absolute top-2 right-2 flex items-center gap-1">
+              {/* Speed Control */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 bg-black/50 hover:bg-black/70 text-white"
+                    title={`Playback speed: ${playbackSpeed}x`}
+                  >
+                    <span className="text-xs font-bold">{playbackSpeed}x</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="min-w-[80px]">
+                  {PLAYBACK_SPEEDS.map((speed) => (
+                    <DropdownMenuItem
+                      key={speed}
+                      onClick={() => setPlaybackSpeed(speed)}
+                      className={cn(
+                        "cursor-pointer",
+                        playbackSpeed === speed && "bg-primary/10 text-primary font-medium"
+                      )}
+                    >
+                      {speed}x
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               {/* PiP Button */}
               <Button
                 variant="ghost"
@@ -489,6 +615,29 @@ export function GlobalVideoPlayer() {
               </Button>
             </div>
           )}
+          
+          {/* Tribe Tags at bottom */}
+          {videoVisible && playbackMeta.tribeNames && playbackMeta.tribeNames.length > 0 && videoMode !== 'mini' && (
+            <div className="absolute bottom-2 left-2 flex flex-wrap gap-1 max-w-[60%]">
+              {playbackMeta.tribeNames.slice(0, 3).map((tribeName, idx) => {
+                const tribeId = playbackMeta.tribeIds?.[idx];
+                return (
+                  <Link
+                    key={`${tribeName}-${idx}`}
+                    to={tribeId ? `/learn/${tribeId}` : `/learn?q=${encodeURIComponent(tribeName)}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Badge 
+                      variant="secondary" 
+                      className="bg-black/70 hover:bg-black/90 text-white text-xs cursor-pointer"
+                    >
+                      {tribeName}
+                    </Badge>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
       )}
       
@@ -541,6 +690,27 @@ export function GlobalVideoPlayer() {
                         <ExternalLink className="h-3 w-3" />
                         {playbackMeta.originLabel}
                       </Link>
+                    )}
+                    {/* Tribe tags in player bar */}
+                    {!isMini && playbackMeta.tribeNames && playbackMeta.tribeNames.length > 0 && (
+                      <div className="flex gap-1 mt-0.5">
+                        {playbackMeta.tribeNames.slice(0, 2).map((tribeName, idx) => {
+                          const tribeId = playbackMeta.tribeIds?.[idx];
+                          return (
+                            <Link
+                              key={`bar-${tribeName}-${idx}`}
+                              to={tribeId ? `/learn/${tribeId}` : `/learn?q=${encodeURIComponent(tribeName)}`}
+                            >
+                              <Badge 
+                                variant="outline" 
+                                className="text-[10px] px-1.5 py-0 h-4 hover:bg-primary/10 cursor-pointer"
+                              >
+                                {tribeName}
+                              </Badge>
+                            </Link>
+                          );
+                        })}
+                      </div>
                     )}
                   </div>
                 </>
@@ -666,6 +836,20 @@ export function GlobalVideoPlayer() {
                   />
                 )}
               </div>
+              
+              {/* Speed control in bar */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "h-8 w-8 hidden sm:flex",
+                  playbackSpeed !== 1 && "text-primary"
+                )}
+                onClick={cyclePlaybackSpeed}
+                title={`Playback speed: ${playbackSpeed}x (click to cycle)`}
+              >
+                <span className="text-xs font-bold">{playbackSpeed}x</span>
+              </Button>
               
               {/* Video toggle */}
               <Button
