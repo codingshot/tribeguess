@@ -15,7 +15,7 @@ import { PopulationPieChart } from '@/components/PopulationPieChart';
 import { TribeFamilyTree } from '@/components/TribeFamilyTree';
 import { CulturalLandmarks } from '@/components/CulturalLandmarks';
 import { findRecipeByName } from '@/data/recipes';
-import { VideoPlayButton } from '@/components/VideoPlayButton';
+import { InlineVideoPlayer } from '@/components/InlineVideoPlayer';
 import { Button } from '@/components/ui/button';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -176,29 +176,19 @@ const TribePage = () => {
                   <p className="text-sm text-muted-foreground mb-3">
                     Discover the rich cultural heritage of the {tribe.name} people through this documentary video.
                   </p>
-                  <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg bg-muted group cursor-pointer">
-                    <img 
-                      src={`https://img.youtube.com/vi/${(tribe as any).youtubeVideoId}/maxresdefault.jpg`}
-                      alt={`${tribe.name} Culture Documentary`}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center gap-3">
-                      <VideoPlayButton
-                        youtubeId={(tribe as any).youtubeVideoId}
-                        title={`${tribe.name} Culture & Traditions`}
-                        sourceType="TRIBE_PAGE"
-                        tribeId={tribe.id}
-                        tribeName={tribe.name}
-                        originUrl={`/learn/${tribe.slug}`}
-                        originLabel={`${tribe.name} Tribe Page`}
-                        category="documentary"
-                        variant="overlay"
-                      />
-                    </div>
-                  </div>
+                  <InlineVideoPlayer
+                    youtubeId={(tribe as any).youtubeVideoId}
+                    title={`${tribe.name} Culture & Traditions`}
+                    sourceType="TRIBE_PAGE"
+                    tribeId={tribe.id}
+                    tribeName={tribe.name}
+                    originUrl={`/learn/${tribe.slug}`}
+                    originLabel={`${tribe.name} Tribe Page`}
+                    category="documentary"
+                    className="shadow-lg"
+                  />
                   <p className="text-xs text-muted-foreground mt-2 italic">
-                    📺 Click to play in the global video player. Video content sourced from YouTube.
+                    📺 Click play to watch. Scroll away to continue in the global player.
                   </p>
                 </section>
               )}
@@ -439,29 +429,19 @@ const TribePage = () => {
                         <Play className="w-4 h-4 text-red-500" />
                         Learn {language.name} Pronunciation
                       </h3>
-                      <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md bg-muted group cursor-pointer">
-                        <img 
-                          src={`https://img.youtube.com/vi/${(tribe as any).languageVideoId}/maxresdefault.jpg`}
-                          alt={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
-                          className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center gap-3">
-                          <VideoPlayButton
-                            youtubeId={(tribe as any).languageVideoId}
-                            title={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
-                            sourceType="TRIBE_LANGUAGE"
-                            tribeId={tribe.id}
-                            tribeName={tribe.name}
-                            originUrl={`/learn/${tribe.slug}`}
-                            originLabel={`${tribe.name} Language`}
-                            category="language"
-                            variant="overlay"
-                          />
-                        </div>
-                      </div>
+                      <InlineVideoPlayer
+                        youtubeId={(tribe as any).languageVideoId}
+                        title={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
+                        sourceType="TRIBE_LANGUAGE"
+                        tribeId={tribe.id}
+                        tribeName={tribe.name}
+                        originUrl={`/learn/${tribe.slug}`}
+                        originLabel={`${tribe.name} Language`}
+                        category="language"
+                        className="shadow-md"
+                      />
                       <p className="text-xs text-muted-foreground mt-2 italic">
-                        🎓 Click to play in the global video player.
+                        🎓 Scroll away to continue watching in the global player.
                       </p>
                     </div>
                   )}
