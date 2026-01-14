@@ -4,7 +4,8 @@ import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 import { 
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, 
   Repeat, List, Minimize2, Maximize2, Video, VideoOff,
-  X, ChevronUp, ChevronDown, ExternalLink, Loader2, Shuffle
+  X, ChevronUp, ChevronDown, ExternalLink, Loader2, Shuffle,
+  PictureInPicture2, Expand
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -68,6 +69,8 @@ function formatTime(seconds: number): string {
   return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
+type VideoMode = 'center' | 'mini' | 'fullscreen' | 'pip';
+
 export function GlobalVideoPlayer() {
   const {
     currentVideo,
@@ -101,6 +104,9 @@ export function GlobalVideoPlayer() {
     playRandom,
     closePlayer,
   } = useGlobalVideoPlayer();
+  
+  const [videoMode, setVideoMode] = useState<VideoMode>('center');
+  const [isPiPActive, setIsPiPActive] = useState(false);
   
   const containerRef = useRef<HTMLDivElement>(null);
   const playerContainerRef = useRef<HTMLDivElement>(null);
@@ -281,14 +287,22 @@ export function GlobalVideoPlayer() {
           break;
         case 'Escape':
           e.preventDefault();
-          closePlayer();
+          if (videoMode === 'fullscreen') {
+            setVideoMode('center');
+          } else {
+            closePlayer();
+          }
+          break;
+        case 'KeyF':
+          e.preventDefault();
+          setVideoMode(videoMode === 'fullscreen' ? 'center' : 'fullscreen');
           break;
       }
     };
     
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentVideo, togglePlay, seekTo, currentTime, duration, setVolume, volume, toggleMute, nextVideo, closePlayer]);
+  }, [currentVideo, togglePlay, seekTo, currentTime, duration, setVolume, volume, toggleMute, nextVideo, closePlayer, videoMode]);
   
   const handleSliderChange = useCallback((value: number[]) => {
     setSliderValue(value[0]);
@@ -299,13 +313,156 @@ export function GlobalVideoPlayer() {
     setIsDragging(false);
   }, [seekTo, setIsDragging]);
   
+  // Picture-in-Picture handler
+  const togglePiP = useCallback(async () => {
+    try {
+      const iframe = playerContainerRef.current?.querySelector('iframe');
+      if (!iframe) return;
+      
+      // PiP isn't directly available for iframes, so we'll simulate with a floating mini mode
+      if (videoMode === 'pip') {
+        setVideoMode('center');
+        setIsPiPActive(false);
+      } else {
+        setVideoMode('pip');
+        setIsPiPActive(true);
+      }
+    } catch (err) {
+      console.error('PiP error:', err);
+    }
+  }, [videoMode]);
+  
+  const toggleFullscreen = useCallback(() => {
+    if (videoMode === 'fullscreen') {
+      setVideoMode('center');
+    } else {
+      setVideoMode('fullscreen');
+    }
+  }, [videoMode]);
+  
+  const minimizeToCorner = useCallback(() => {
+    setVideoMode('mini');
+  }, []);
+  
+  const expandToCenter = useCallback(() => {
+    setVideoMode('center');
+  }, []);
+  
   // Don't render if no current video is playing
   if (!currentVideo) return null;
+  
+  // Get video container classes based on mode
+  const getVideoContainerClasses = () => {
+    if (!videoVisible) {
+      return "w-1 h-1 -top-[9999px] left-0 opacity-0 pointer-events-none";
+    }
+    
+    switch (videoMode) {
+      case 'fullscreen':
+        return "fixed inset-0 w-full h-full z-[100] rounded-none";
+      case 'mini':
+        return "fixed bottom-28 right-4 w-64 h-40 sm:w-80 sm:h-48 z-50";
+      case 'pip':
+        return "fixed bottom-28 right-4 w-80 h-48 sm:w-96 sm:h-56 z-50 cursor-move";
+      case 'center':
+      default:
+        return "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-4xl aspect-video z-50";
+    }
+  };
   
   return (
     <>
       {/* Video Queue Drawer */}
       <VideoQueueDrawer />
+      
+      {/* Backdrop for center/fullscreen mode */}
+      {videoVisible && (videoMode === 'center' || videoMode === 'fullscreen') && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-40"
+          onClick={() => setVideoMode('mini')}
+        />
+      )}
+      
+      {/* Video Container */}
+      {currentVideo && (
+        <div className={cn(
+          "bg-black rounded-lg overflow-hidden shadow-2xl border border-border transition-all duration-300",
+          getVideoContainerClasses()
+        )}>
+          <div ref={playerContainerRef} className="w-full h-full" />
+          
+          {/* Video Controls Overlay */}
+          {videoVisible && (
+            <div className="absolute top-2 right-2 flex items-center gap-1">
+              {/* PiP Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "h-8 w-8 bg-black/50 hover:bg-black/70 text-white",
+                  isPiPActive && "text-primary"
+                )}
+                onClick={togglePiP}
+                title="Picture-in-Picture"
+              >
+                <PictureInPicture2 className="h-4 w-4" />
+              </Button>
+              
+              {/* Fullscreen Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 bg-black/50 hover:bg-black/70 text-white"
+                onClick={toggleFullscreen}
+                title={videoMode === 'fullscreen' ? "Exit fullscreen" : "Fullscreen"}
+              >
+                {videoMode === 'fullscreen' ? (
+                  <Minimize2 className="h-4 w-4" />
+                ) : (
+                  <Expand className="h-4 w-4" />
+                )}
+              </Button>
+              
+              {/* Minimize to corner */}
+              {videoMode !== 'mini' && videoMode !== 'pip' && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 bg-black/50 hover:bg-black/70 text-white"
+                  onClick={minimizeToCorner}
+                  title="Minimize"
+                >
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              )}
+              
+              {/* Expand from corner */}
+              {(videoMode === 'mini' || videoMode === 'pip') && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 bg-black/50 hover:bg-black/70 text-white"
+                  onClick={expandToCenter}
+                  title="Expand"
+                >
+                  <Maximize2 className="h-4 w-4" />
+                </Button>
+              )}
+              
+              {/* Close/Hide Video */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 bg-black/50 hover:bg-black/70 text-white"
+                onClick={toggleVideoVisible}
+                title="Hide video"
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+          )}
+        </div>
+      )}
       
       {/* Player Bar */}
       <div 
@@ -315,30 +472,6 @@ export function GlobalVideoPlayer() {
           isMini ? "h-14" : "h-20 sm:h-24"
         )}
       >
-      {/* Floating Video Window - Always mounted, visibility controlled by CSS */}
-        {currentVideo && (
-          <div className={cn(
-            "absolute bg-black rounded-lg overflow-hidden shadow-2xl border border-border transition-all",
-            videoVisible
-              ? isMini 
-                ? "w-32 h-20 -top-24 right-4" 
-                : "w-80 h-48 sm:w-96 sm:h-56 lg:w-[480px] lg:h-72 -top-52 sm:-top-60 lg:-top-80 right-4"
-              : "w-1 h-1 -top-[9999px] left-0 opacity-0 pointer-events-none"
-          )}>
-            <div ref={playerContainerRef} className="w-full h-full" />
-            {videoVisible && (
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-1 right-1 h-6 w-6 bg-black/50 hover:bg-black/70 text-white"
-                onClick={toggleVideoVisible}
-              >
-                <X className="h-3 w-3" />
-              </Button>
-            )}
-          </div>
-        )}
-        
         <div className="container mx-auto px-2 sm:px-4 h-full">
           <div className={cn(
             "flex items-center gap-2 sm:gap-4 h-full",
@@ -356,9 +489,13 @@ export function GlobalVideoPlayer() {
                       src={playbackMeta.thumbnailUrl} 
                       alt="" 
                       className={cn(
-                        "rounded object-cover flex-shrink-0",
+                        "rounded object-cover flex-shrink-0 cursor-pointer",
                         isMini ? "w-10 h-6" : "w-14 h-10 sm:w-16 sm:h-12"
                       )}
+                      onClick={() => {
+                        toggleVideoVisible();
+                        setVideoMode('center');
+                      }}
                     />
                   )}
                   <div className="min-w-0 flex-1">
@@ -507,7 +644,12 @@ export function GlobalVideoPlayer() {
                 variant="ghost"
                 size="icon"
                 className={cn("h-8 w-8", videoVisible && "text-primary")}
-                onClick={toggleVideoVisible}
+                onClick={() => {
+                  if (!videoVisible) {
+                    setVideoMode('center');
+                  }
+                  toggleVideoVisible();
+                }}
                 title={videoVisible ? "Hide video" : "Show video"}
               >
                 {videoVisible ? <Video className="h-4 w-4" /> : <VideoOff className="h-4 w-4" />}
@@ -528,7 +670,7 @@ export function GlobalVideoPlayer() {
                 )}
               </Button>
               
-              {/* Minimize */}
+              {/* Minimize player bar */}
               <Button
                 variant="ghost"
                 size="icon"
