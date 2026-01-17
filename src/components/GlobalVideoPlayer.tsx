@@ -5,8 +5,14 @@ import {
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, 
   Repeat, List, Minimize2, Maximize2, Video, VideoOff,
   X, ChevronUp, ChevronDown, ExternalLink, Loader2, Shuffle,
-  PictureInPicture2, Expand, Gauge, GripVertical
+  PictureInPicture2, Expand, Gauge, GripVertical, Keyboard, Info
 } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
@@ -668,9 +674,16 @@ export function GlobalVideoPlayer() {
             
             {/* Play controls */}
             <div className="flex items-center gap-0.5">
-              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={previousVideo}>
-                <SkipBack className="h-3.5 w-3.5" />
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-7 w-7" onClick={previousVideo}>
+                      <SkipBack className="h-3.5 w-3.5" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="text-xs">Previous</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               <Button variant="default" size="icon" className="h-8 w-8 rounded-full" onClick={togglePlay}>
                 {isLoading ? (
                   <Loader2 className="h-4 w-4 animate-spin" />
@@ -680,9 +693,16 @@ export function GlobalVideoPlayer() {
                   <Play className="h-4 w-4 ml-0.5" />
                 )}
               </Button>
-              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={nextVideo}>
-                <SkipForward className="h-3.5 w-3.5" />
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-7 w-7" onClick={nextVideo}>
+                      <SkipForward className="h-3.5 w-3.5" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="text-xs">Next (N)</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
             
             {/* Time & Progress */}
@@ -731,6 +751,40 @@ export function GlobalVideoPlayer() {
             
             {/* Right controls */}
             <div className="flex items-center gap-0.5">
+              {/* Keyboard shortcuts tooltip */}
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-7 w-7 hidden sm:flex text-muted-foreground hover:text-foreground">
+                      <Keyboard className="h-3.5 w-3.5" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="w-56 p-3">
+                    <div className="space-y-2">
+                      <p className="font-semibold text-xs mb-2 flex items-center gap-1">
+                        <Keyboard className="h-3 w-3" /> Keyboard Shortcuts
+                      </p>
+                      <div className="grid grid-cols-2 gap-1 text-[11px]">
+                        <span className="text-muted-foreground">Space</span>
+                        <span>Play/Pause</span>
+                        <span className="text-muted-foreground">← / →</span>
+                        <span>Seek ±10s</span>
+                        <span className="text-muted-foreground">↑ / ↓</span>
+                        <span>Volume ±10%</span>
+                        <span className="text-muted-foreground">M</span>
+                        <span>Mute/Unmute</span>
+                        <span className="text-muted-foreground">N</span>
+                        <span>Next Video</span>
+                        <span className="text-muted-foreground">F</span>
+                        <span>Fullscreen</span>
+                        <span className="text-muted-foreground">Esc</span>
+                        <span>Exit/Close</span>
+                      </div>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              
               {/* Volume with hover slider */}
               <Popover>
                 <PopoverTrigger asChild>
@@ -768,14 +822,28 @@ export function GlobalVideoPlayer() {
               </Button>
               
               {/* Repeat */}
-              <Button variant="ghost" size="icon" className={cn("h-7 w-7", isRepeat && "text-primary")} onClick={toggleRepeat}>
-                <Repeat className="h-3.5 w-3.5" />
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className={cn("h-7 w-7", isRepeat && "text-primary")} onClick={toggleRepeat}>
+                      <Repeat className="h-3.5 w-3.5" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="text-xs">{isRepeat ? 'Repeat On' : 'Repeat Off'}</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               
               {/* Shuffle */}
-              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={playRandom} title="Shuffle">
-                <Shuffle className="h-3.5 w-3.5" />
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-7 w-7" onClick={playRandom}>
+                      <Shuffle className="h-3.5 w-3.5" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="text-xs">Play Random</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               
               {/* Video toggle */}
               <Button
