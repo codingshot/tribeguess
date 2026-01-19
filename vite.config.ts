@@ -198,10 +198,12 @@ export default defineConfig(({ mode }) => ({
     mode === "production" && sitemapGenerator(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.png', 'favicon.ico', 'robots.txt', 'og-image.png'],
+      includeAssets: ['favicon.png', 'favicon.ico', 'robots.txt'],
       manifest: false, // Use custom manifest from public/manifest.json
       workbox: {
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB limit
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+        globIgnores: ['**/og-image.png'], // Exclude large OG image from precache
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
