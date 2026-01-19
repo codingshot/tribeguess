@@ -1,0 +1,75 @@
+{
+  "name": "TribeGuess - African Names & Heritage",
+  "short_name": "TribeGuess",
+  "description": "Discover African tribal names, their meanings, cultural heritage, and origins. Explore 350+ tribes, recipes, languages, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#d97706",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle", "reference"],
+  "screenshots": [
+    {
+      "src": "/docs/screenshot-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Home - Name Search"
+    },
+    {
+      "src": "/docs/screenshot-tribe.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tribe Details"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Names",
+      "short_name": "Search",
+      "description": "Search for African tribal names",
+      "url": "/",
+      "icons": [{ "src": "/favicon.png", "sizes": "64x64" }]
+    },
+    {
+      "name": "Browse Tribes",
+      "short_name": "Tribes",
+      "url": "/learn",
+      "icons": [{ "src": "/favicon.png", "sizes": "64x64" }]
+    },
+    {
+      "name": "Recipes",
+      "short_name": "Recipes",
+      "url": "/recipes",
+      "icons": [{ "src": "/favicon.png", "sizes": "64x64" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
