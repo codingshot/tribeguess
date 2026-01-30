@@ -166,7 +166,7 @@ export function VideoQueueDrawer() {
   if (!queueVisible) return null;
   
   return (
-    <div className="fixed bottom-24 right-4 w-80 sm:w-96 max-h-[60vh] bg-background border border-border rounded-lg shadow-2xl z-50 flex flex-col">
+    <div className="fixed bottom-16 right-4 w-80 sm:w-96 max-h-[60vh] bg-background border border-border rounded-lg shadow-2xl z-[65] flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between p-3 border-b">
         <h3 className="font-semibold">Video Queue</h3>

@@ -655,7 +655,8 @@ export function GlobalVideoPlayer() {
       {/* Player Bar */}
       <div 
         ref={containerRef}
-        className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-lg h-12"
+        className="fixed bottom-0 left-0 right-0 z-[60] bg-background border-t border-border shadow-lg h-12"
+        style={{ pointerEvents: 'auto' }}
       >
         <div className="container mx-auto px-2 sm:px-4 h-full">
           <div className="flex items-center gap-2 h-full">
@@ -674,14 +675,14 @@ export function GlobalVideoPlayer() {
             
             {/* Play controls */}
             <div className="flex items-center gap-0.5">
-              <TooltipProvider>
+              <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button variant="ghost" size="icon" className="h-7 w-7" onClick={previousVideo}>
                       <SkipBack className="h-3.5 w-3.5" />
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs">Previous</TooltipContent>
+                  <TooltipContent side="top" className="text-xs z-[70]">Previous</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
               <Button variant="default" size="icon" className="h-8 w-8 rounded-full" onClick={togglePlay}>
@@ -693,14 +694,14 @@ export function GlobalVideoPlayer() {
                   <Play className="h-4 w-4 ml-0.5" />
                 )}
               </Button>
-              <TooltipProvider>
+              <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button variant="ghost" size="icon" className="h-7 w-7" onClick={nextVideo}>
                       <SkipForward className="h-3.5 w-3.5" />
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs">Next (N)</TooltipContent>
+                  <TooltipContent side="top" className="text-xs z-[70]">Next (N)</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             </div>
@@ -750,16 +751,16 @@ export function GlobalVideoPlayer() {
             </div>
             
             {/* Right controls */}
-            <div className="flex items-center gap-0.5">
+            <div className="flex items-center gap-0.5" style={{ pointerEvents: 'auto' }}>
               {/* Keyboard shortcuts tooltip */}
-              <TooltipProvider>
+              <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button variant="ghost" size="icon" className="h-7 w-7 hidden sm:flex text-muted-foreground hover:text-foreground">
                       <Keyboard className="h-3.5 w-3.5" />
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent side="top" className="w-56 p-3">
+                  <TooltipContent side="top" className="w-56 p-3 z-[70]">
                     <div className="space-y-2">
                       <p className="font-semibold text-xs mb-2 flex items-center gap-1">
                         <Keyboard className="h-3 w-3" /> Keyboard Shortcuts
@@ -788,14 +789,22 @@ export function GlobalVideoPlayer() {
               {/* Volume with hover slider */}
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-7 w-7 hidden sm:flex" onClick={toggleMute}>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="h-7 w-7 hidden sm:flex" 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleMute();
+                    }}
+                  >
                     {isMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent 
                   side="top" 
                   align="center" 
-                  className="w-10 h-32 p-2 flex flex-col items-center gap-2"
+                  className="w-10 h-32 p-2 flex flex-col items-center gap-2 z-[70]"
                   onOpenAutoFocus={(e) => e.preventDefault()}
                 >
                   <Slider
@@ -815,33 +824,52 @@ export function GlobalVideoPlayer() {
                 variant="ghost"
                 size="icon"
                 className={cn("h-7 w-7 hidden sm:flex", playbackSpeed !== 1 && "text-primary")}
-                onClick={cyclePlaybackSpeed}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  cyclePlaybackSpeed();
+                }}
                 title={`Speed: ${playbackSpeed}x`}
               >
                 <span className="text-[10px] font-bold">{playbackSpeed}x</span>
               </Button>
               
               {/* Repeat */}
-              <TooltipProvider>
+              <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="ghost" size="icon" className={cn("h-7 w-7", isRepeat && "text-primary")} onClick={toggleRepeat}>
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className={cn("h-7 w-7", isRepeat && "text-primary")} 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleRepeat();
+                      }}
+                    >
                       <Repeat className="h-3.5 w-3.5" />
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs">{isRepeat ? 'Repeat On' : 'Repeat Off'}</TooltipContent>
+                  <TooltipContent side="top" className="text-xs z-[70]">{isRepeat ? 'Repeat On' : 'Repeat Off'}</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
               
               {/* Shuffle */}
-              <TooltipProvider>
+              <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-7 w-7" onClick={playRandom}>
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className="h-7 w-7" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        playRandom();
+                      }}
+                    >
                       <Shuffle className="h-3.5 w-3.5" />
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs">Play Random</TooltipContent>
+                  <TooltipContent side="top" className="text-xs z-[70]">Play Random</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
               
@@ -850,7 +878,8 @@ export function GlobalVideoPlayer() {
                 variant="ghost"
                 size="icon"
                 className={cn("h-7 w-7", videoVisible && "text-primary")}
-                onClick={() => {
+                onClick={(e) => {
+                  e.stopPropagation();
                   if (!videoVisible) setVideoMode('center');
                   toggleVideoVisible();
                 }}
@@ -859,17 +888,40 @@ export function GlobalVideoPlayer() {
               </Button>
               
               {/* Queue */}
-              <Button variant="ghost" size="icon" className={cn("h-7 w-7 relative", queueVisible && "text-primary")} onClick={toggleQueueVisible}>
-                <List className="h-3.5 w-3.5" />
-                {queue.length > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 bg-primary text-primary-foreground text-[8px] rounded-full h-3.5 w-3.5 flex items-center justify-center">
-                    {queue.length}
-                  </span>
-                )}
-              </Button>
+              <TooltipProvider delayDuration={100}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className={cn("h-7 w-7 relative", queueVisible && "text-primary")} 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleQueueVisible();
+                      }}
+                    >
+                      <List className="h-3.5 w-3.5" />
+                      {queue.length > 0 && (
+                        <span className="absolute -top-0.5 -right-0.5 bg-primary text-primary-foreground text-[8px] rounded-full h-3.5 w-3.5 flex items-center justify-center">
+                          {queue.length}
+                        </span>
+                      )}
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="text-xs z-[70]">Queue ({queue.length})</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               
               {/* Close */}
-              <Button variant="ghost" size="icon" className="h-7 w-7 hover:text-destructive" onClick={closePlayer}>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="h-7 w-7 hover:text-destructive" 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closePlayer();
+                }}
+              >
                 <X className="h-3.5 w-3.5" />
               </Button>
             </div>
