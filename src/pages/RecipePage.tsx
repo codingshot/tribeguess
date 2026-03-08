@@ -136,28 +136,60 @@ export default function RecipePage() {
     "description": recipe.description,
     "author": {
       "@type": "Organization",
-      "name": "TribeGuess"
+      "name": "TribeGuess",
+      "url": "https://tribeguess.com"
     },
+    "datePublished": "2025-01-01",
     "prepTime": `PT${parseInt(recipe.prepTime) || 15}M`,
     "cookTime": `PT${parseInt(recipe.cookTime) || 30}M`,
     "totalTime": `PT${(parseInt(recipe.prepTime) || 15) + (parseInt(recipe.cookTime) || 30)}M`,
-    "recipeYield": recipe.servings,
-    "recipeCategory": recipe.category,
+    "recipeYield": `${recipe.servings} servings`,
+    "recipeCategory": recipe.category === 'staple' ? 'Main Course' : recipe.category === 'beverage' ? 'Beverage' : recipe.category === 'snack' ? 'Snack' : 'Main Course',
     "recipeCuisine": `${recipe.tribeName} African`,
-    "recipeIngredient": recipe.ingredients,
+    "recipeIngredient": recipe.ingredients.map(i => `${i.amount} ${i.item}${i.notes ? ` (${i.notes})` : ''}`),
     "recipeInstructions": recipe.instructions.map((step, i) => ({
       "@type": "HowToStep",
       "position": i + 1,
       "text": step
     })),
-    "keywords": `${recipe.name}, ${recipe.tribeName} food, African recipe, traditional African cuisine, ${recipe.category}`,
+    "keywords": `${recipe.name}, ${recipe.localName || ''}, ${recipe.tribeName} food, African recipe, traditional African cuisine, ${recipe.category}`.replace(', ,', ','),
+    ...(recipe.nutritionalInfo && {
+      "nutrition": {
+        "@type": "NutritionInformation",
+        ...(recipe.nutritionalInfo.calories && { "calories": recipe.nutritionalInfo.calories }),
+        ...(recipe.nutritionalInfo.protein && { "proteinContent": recipe.nutritionalInfo.protein }),
+        ...(recipe.nutritionalInfo.carbs && { "carbohydrateContent": recipe.nutritionalInfo.carbs }),
+        ...(recipe.nutritionalInfo.fat && { "fatContent": recipe.nutritionalInfo.fat }),
+        ...(recipe.nutritionalInfo.fiber && { "fiberContent": recipe.nutritionalInfo.fiber })
+      }
+    }),
+    ...(recipe.dietaryInfo && {
+      "suitableForDiet": recipe.dietaryInfo.map(d => 
+        d.toLowerCase().includes('vegan') ? 'https://schema.org/VeganDiet' :
+        d.toLowerCase().includes('vegetarian') ? 'https://schema.org/VegetarianDiet' :
+        d.toLowerCase().includes('gluten') ? 'https://schema.org/GlutenFreeDiet' : undefined
+      ).filter(Boolean)
+    }),
     ...(recipe.youtubeVideoId && {
       "video": {
         "@type": "VideoObject",
         "name": `How to make ${recipe.name}`,
-        "embedUrl": `https://www.youtube.com/embed/${recipe.youtubeVideoId}`
+        "description": `Video tutorial: ${recipe.description}`,
+        "thumbnailUrl": `https://img.youtube.com/vi/${recipe.youtubeVideoId}/hqdefault.jpg`,
+        "embedUrl": `https://www.youtube.com/embed/${recipe.youtubeVideoId}`,
+        "uploadDate": "2025-01-01"
       }
     })
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Recipes", "item": "https://tribeguess.com/recipes" },
+      { "@type": "ListItem", "position": 2, "name": recipe.tribeName, "item": `https://tribeguess.com/learn/${recipe.tribeSlug}` },
+      { "@type": "ListItem", "position": 3, "name": recipe.name, "item": `https://tribeguess.com/recipe/${recipe.id}` }
+    ]
   };
 
   return (
