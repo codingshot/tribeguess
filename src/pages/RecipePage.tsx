@@ -414,6 +414,22 @@ export default function RecipePage() {
                 </ul>
               </div>
             )}
+
+            {/* Serving Suggestions */}
+            {recipe.servingSuggestions && recipe.servingSuggestions.length > 0 && (
+              <div className="mt-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center gap-2">
+                  <Utensils className="w-4 h-4" /> Serving Suggestions
+                </h3>
+                <ul className="space-y-1">
+                  {recipe.servingSuggestions.map((suggestion, index) => (
+                    <li key={index} className="text-sm text-green-700 dark:text-green-300 flex items-start gap-2">
+                      <span>→</span> {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
