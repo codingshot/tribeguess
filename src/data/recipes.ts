@@ -12143,16 +12143,16 @@ const wave3Recipes: Recipe[] = [
     difficulty: 'medium',
     youtubeVideoId: '',
     ingredients: [
-      { item: 'Beef or chicken', amount: '500g', category: 'protein' },
-      { item: 'Smooth peanut butter', amount: '1 cup', category: 'legume' },
-      { item: 'Tomato paste', amount: '3 tbsp', category: 'sauce' },
-      { item: 'Onion', amount: '2 large', category: 'vegetable' },
-      { item: 'Pumpkin or sweet potato', amount: '2 cups cubed', category: 'vegetable' },
-      { item: 'Habanero pepper', amount: '1 whole', category: 'spice' },
-      { item: 'Vegetable oil', amount: '3 tbsp', category: 'oil' },
-      { item: 'White rice', amount: '2 cups', category: 'grain' },
-      { item: 'Water', amount: '3 cups', category: 'liquid' },
-      { item: 'Salt', amount: 'To taste', category: 'seasoning' }
+      { item: 'Beef or chicken', amount: '500g' },
+      { item: 'Smooth peanut butter', amount: '1 cup' },
+      { item: 'Tomato paste', amount: '3 tbsp' },
+      { item: 'Onion', amount: '2 large' },
+      { item: 'Pumpkin or sweet potato', amount: '2 cups cubed' },
+      { item: 'Habanero pepper', amount: '1 whole' },
+      { item: 'Vegetable oil', amount: '3 tbsp' },
+      { item: 'White rice', amount: '2 cups' },
+      { item: 'Water', amount: '3 cups' },
+      { item: 'Salt', amount: 'To taste' }
     ],
     instructions: [
       'Season meat with salt and brown in oil until golden. Set aside.',
