@@ -12068,13 +12068,13 @@ const wave3Recipes: Recipe[] = [
     difficulty: 'easy',
     youtubeVideoId: '',
     ingredients: [
-      { item: 'White maize meal (mealie meal)', amount: '3 cups', category: 'grain' },
-      { item: 'Water', amount: '5 cups', category: 'liquid' },
-      { item: 'Dried bream fish', amount: '300g', category: 'protein' },
-      { item: 'Tomatoes', amount: '3 medium', category: 'vegetable' },
-      { item: 'Onion', amount: '1 large', category: 'vegetable' },
-      { item: 'Cooking oil', amount: '2 tbsp', category: 'oil' },
-      { item: 'Salt', amount: 'To taste', category: 'seasoning' }
+      { item: 'White maize meal (mealie meal)', amount: '3 cups' },
+      { item: 'Water', amount: '5 cups' },
+      { item: 'Dried bream fish', amount: '300g' },
+      { item: 'Tomatoes', amount: '3 medium' },
+      { item: 'Onion', amount: '1 large' },
+      { item: 'Cooking oil', amount: '2 tbsp' },
+      { item: 'Salt', amount: 'To taste' }
     ],
     instructions: [
       'Soak dried fish in warm water for 20 minutes, then debone and flake.',
