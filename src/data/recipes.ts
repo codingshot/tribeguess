@@ -58,22 +58,23 @@ export const recipes: Recipe[] = [
   {
     id: "mukimo",
     name: "Mũkimo",
+    localName: "Mũkimo wa Ithiĩ",
     tribeSlug: "kikuyu",
     tribeName: "Kikuyu",
     category: "staple",
     description: "A traditional Kikuyu mashed dish combining potatoes, green peas, maize, and pumpkin leaves. The national dish of the Kikuyu people.",
-    culturalSignificance: "Mũkimo is the signature dish of the Kikuyu people, served at celebrations, family gatherings, and important ceremonies. The green color from pumpkin leaves represents fertility and prosperity.",
-    historicalContext: "Mũkimo has been central to Kikuyu agriculture for centuries, developed when the tribe settled in the fertile Central Highlands of Kenya around the 16th century. The dish evolved from indigenous crops grown on the slopes of Mount Kenya. During colonial times, it became a symbol of cultural identity and resistance, as the Kikuyu maintained their food traditions despite European influence.",
+    culturalSignificance: "Mũkimo is the signature dish of the Kikuyu people, served at celebrations, family gatherings, and important ceremonies. The green color from pumpkin leaves represents fertility and prosperity. No Kikuyu wedding is complete without mũkimo.",
+    historicalContext: "Mũkimo has been central to Kikuyu agriculture for centuries, developed when the tribe settled in the fertile Central Highlands of Kenya around the 16th century. The dish evolved from indigenous crops grown on the slopes of Mount Kenya. During colonial times, it became a symbol of cultural identity and resistance, as the Kikuyu maintained their food traditions despite European influence. The Mau Mau fighters sustained themselves on mũkimo during the independence struggle.",
     youtubeVideoId: "5cuGbmPtLGE",
     prepTime: "30 minutes",
     cookTime: "45 minutes",
     servings: 6,
     difficulty: "medium",
     ingredients: [
-      { item: "Potatoes", amount: "1 kg", notes: "Peeled and cubed" },
-      { item: "Green peas", amount: "2 cups", notes: "Fresh or dried (soak overnight if dried)" },
-      { item: "Maize kernels", amount: "1 cup", notes: "Fresh or canned" },
-      { item: "Pumpkin leaves (or spinach)", amount: "2 cups", notes: "Chopped" },
+      { item: "Potatoes", amount: "1 kg", notes: "Peeled and cubed", substitution: "Sweet potatoes for a sweeter version" },
+      { item: "Green peas", amount: "2 cups", notes: "Fresh or dried (soak overnight if dried)", substitution: "Black-eyed peas" },
+      { item: "Maize kernels", amount: "1 cup", notes: "Fresh or canned", substitution: "Hominy corn" },
+      { item: "Pumpkin leaves (or spinach)", amount: "2 cups", notes: "Chopped", substitution: "Kale or collard greens" },
       { item: "Salt", amount: "To taste" },
       { item: "Butter or cooking oil", amount: "2 tablespoons" }
     ],
@@ -85,17 +86,36 @@ export const recipes: Recipe[] = [
       "Drain all vegetables, reserving some potato water.",
       "Combine all ingredients in a large pot and mash together using a wooden spoon or potato masher.",
       "Add butter and continue mashing until you get a smooth, green-speckled mixture.",
-      "Add reserved potato water if too dry. Season with salt."
+      "Add reserved potato water if too dry. Season with salt.",
+      "Shape into a mound on a serving plate — the traditional presentation."
     ],
     tips: [
       "The key to good mũkimo is thorough mashing - no lumps should remain",
       "Traditional mũkimo uses a special wooden pestle called 'mũthi'",
-      "Serve with nyama choma (roasted meat) or stew"
+      "Serve with nyama choma (roasted meat) or stew",
+      "Leftover mũkimo can be fried the next day for a crispy version"
     ],
     variations: [
       "Some regions add beans instead of peas",
-      "Butternut squash can substitute for pumpkin leaves"
-    ]
+      "Butternut squash can substitute for pumpkin leaves",
+      "Coastal version uses cassava instead of potatoes",
+      "Modern versions add onions and garlic for extra flavor"
+    ],
+    servingSuggestions: [
+      "Nyama choma (grilled meat) with kachumbari salad",
+      "Beef or chicken stew",
+      "Roasted goat ribs",
+      "Steamed vegetables and avocado"
+    ],
+    nutritionalInfo: {
+      calories: "~320 kcal",
+      protein: "10g",
+      carbs: "55g",
+      fat: "8g",
+      fiber: "7g",
+      notes: "High in complex carbohydrates and plant protein from peas"
+    },
+    dietaryInfo: ["Vegetarian", "Gluten-free", "High-fiber", "Dairy-free (if using oil)"]
   },
   {
     id: "githeri",
