@@ -525,7 +525,10 @@
         { "name": "Raila Odinga", "role": "Former Prime Minister & Political Leader", "birth": 1945, "wikipedia": "https://en.wikipedia.org/wiki/Raila_Odinga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Raila_Odinga_%282022%29.jpg/220px-Raila_Odinga_%282022%29.jpg" },
         { "name": "Lupita Nyong'o", "role": "Oscar-winning Actress", "birth": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Lupita_Nyong%27o", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lupita_Nyong%27o_at_the_2024_Met_Gala.jpg/220px-Lupita_Nyong%27o_at_the_2024_Met_Gala.jpg" },
         { "name": "Jaramogi Oginga Odinga", "role": "First Vice President of Kenya", "birth": 1911, "death": 1994, "wikipedia": "https://en.wikipedia.org/wiki/Jaramogi_Oginga_Odinga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Oginga_Odinga.jpg/220px-Oginga_Odinga.jpg" },
-        { "name": "Tom Mboya", "role": "Independence Hero & Politician", "birth": 1930, "death": 1969, "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tom_Mboya.jpg/220px-Tom_Mboya.jpg" }
+        { "name": "Tom Mboya", "role": "Independence Hero & Politician", "birth": 1930, "death": 1969, "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tom_Mboya.jpg/220px-Tom_Mboya.jpg" },
+        { "name": "Ayub Ogada", "role": "Nyatiti Musician & Cultural Ambassador", "birth": 1956, "death": 2019, "wikipedia": "https://en.wikipedia.org/wiki/Ayub_Ogada" },
+        { "name": "Suzanna Owiyo", "role": "Afro-Jazz Singer & Songwriter", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Suzanna_Owiyo" },
+        { "name": "Gor Mahia", "role": "Legendary Luo Warrior & Folk Hero", "wikipedia": "https://en.wikipedia.org/wiki/Gor_Mahia" }
       ],
       "description": "The Luo (Joluo) are the fourth-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region.",
       "relatedTribes": ["luhya", "kisii"],
