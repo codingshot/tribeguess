@@ -3953,7 +3953,10 @@
         ],
         "communities": ["Historic communities in Sudan from trade and pilgrimage", "Growing community in UK and USA"],
         "associations": ["Hausa Foundation", "Arewa House"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/hausa/hausa-market.jpg", "caption": "Hausa emirate architecture with traditional market scene in Kano", "credit": "AI Generated" }
+      ]
     },
 
     {
