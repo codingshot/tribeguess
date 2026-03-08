@@ -12215,6 +12215,47 @@ const wave3Recipes: Recipe[] = [
 
 recipes.push(...wave3Recipes);
 
+// ============ TONGA (ZAMBIA) RECIPES ============
+recipes.push({
+  id: "kapenta-with-nshima",
+  name: "Kapenta with Nshima",
+  localName: "Kapenta a Nshima",
+  tribeSlug: "tonga-zambia",
+  tribeName: "Tonga",
+  category: "staple",
+  region: "southern",
+  country: "ZM",
+  description: "Tiny dried sardine-like fish fried with tomatoes and onions, served with thick maize porridge. The everyday meal of the Zambezi Valley.",
+  culturalSignificance: "Kapenta fishing on Lake Kariba became the Tonga's new livelihood after their ancestral farmland was flooded by the dam. This dish represents resilience and adaptation.",
+  historicalContext: "Kapenta (Limnothrissa miodon) was introduced to Lake Kariba from Lake Tanganyika in the 1960s and became a protein revolution for displaced Tonga communities.",
+  prepTime: "10 minutes",
+  cookTime: "30 minutes",
+  servings: 4,
+  difficulty: "easy",
+  ingredients: [
+    { item: "Dried kapenta fish", amount: "300g", notes: "Small dried sardines", substitution: "Dried anchovies or whitebait" },
+    { item: "Mealie meal (maize flour)", amount: "4 cups", notes: "For nshima" },
+    { item: "Tomatoes", amount: "3 medium", notes: "Diced" },
+    { item: "Onion", amount: "1 large", notes: "Sliced" },
+    { item: "Cooking oil", amount: "3 tbsp" },
+    { item: "Salt", amount: "To taste" },
+    { item: "Water", amount: "6 cups", notes: "For nshima" }
+  ],
+  instructions: [
+    "Rinse kapenta in cold water to remove excess salt and sand. Drain well.",
+    "Heat oil in a pan. Fry onions until golden.",
+    "Add tomatoes and cook until soft and saucy (5 minutes).",
+    "Add kapenta and stir gently. Cook for 10 minutes until crispy-tender.",
+    "Season with salt. Set aside.",
+    "For nshima: Boil 4 cups water. Mix 1 cup mealie meal with 2 cups cold water, pour into boiling water.",
+    "Stir continuously. Gradually add remaining mealie meal, stirring vigorously until thick and smooth.",
+    "Cover and cook on low heat for 5 minutes. Serve nshima with kapenta relish."
+  ],
+  tips: ["Don't over-wash the kapenta — some natural salt adds flavor", "Nshima should be firm enough to roll into balls", "Add green vegetables (rape or pumpkin leaves) as a side relish"],
+  servingSuggestions: ["Chibwantu (fermented maize drink)", "Pumpkin leaf relish", "Fresh lemon wedges"],
+  nutritionalInfo: { calories: "~450 kcal", protein: "28g", carbs: "55g", fat: "14g", fiber: "4g", notes: "Kapenta is an excellent source of calcium (eaten whole with bones) and omega-3 fatty acids." },
+  dietaryInfo: ["Gluten-free", "High-protein", "Dairy-free", "High-calcium"]
+});
 // Auto-assign regions to recipes based on tribe patterns
 const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> = {
   // East Africa
@@ -12310,7 +12351,8 @@ const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> =
   'bassa': { region: 'west', country: 'LR' },
   'bemba': { region: 'southern', country: 'ZM' },
   'ovambo': { region: 'southern', country: 'NA' },
-  'ndebele-sa': { region: 'southern', country: 'ZA' }
+  'ndebele-sa': { region: 'southern', country: 'ZA' },
+  'tonga-zambia': { region: 'southern', country: 'ZM' }
 };
 
 // Apply region mappings to recipes that don't have them
