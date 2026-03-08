@@ -2997,7 +2997,35 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'hamis_n': [{ tribe: 'nubi', weight: 0.8 }],
   'rashi_n': [{ tribe: 'nubi', weight: 0.7 }],
 
+  // ============ ETHIOPIA - Mursi prefixes ============
+  'kork': [{ tribe: 'mursi', weight: 0.95 }],
+  'olis': [{ tribe: 'mursi', weight: 0.95 }],
+  'bitt': [{ tribe: 'mursi', weight: 0.9 }],
+  'barg': [{ tribe: 'mursi', weight: 0.95 }],
+  'nank': [{ tribe: 'mursi', weight: 0.95 }],
 
+  // ============ ETHIOPIA - Gurage prefixes ============
+  'work': [{ tribe: 'gurage', weight: 0.85 }, { tribe: 'amhara', weight: 0.15 }],
+  'boga': [{ tribe: 'gurage', weight: 0.9 }],
+  'mesh': [{ tribe: 'gurage', weight: 0.9 }],
+  'birt': [{ tribe: 'gurage', weight: 0.9 }],
+
+  // ============ NIGER - Wodaabe prefixes ============
+  'bour': [{ tribe: 'wodaabe', weight: 0.85 }],
+  'ouma': [{ tribe: 'wodaabe', weight: 0.85 }],
+  'djib': [{ tribe: 'wodaabe', weight: 0.9 }],
+
+  // ============ ALGERIA - Kabyle name prefixes ============
+  'mohan': [{ tribe: 'kabyle', weight: 0.9 }],
+  'mokra': [{ tribe: 'kabyle', weight: 0.95 }],
+  'massi': [{ tribe: 'kabyle', weight: 0.95 }],
+  'aksi': [{ tribe: 'kabyle', weight: 0.95 }],
+  'louni': [{ tribe: 'kabyle', weight: 0.9 }],
+  'tassa': [{ tribe: 'kabyle', weight: 0.95 }],
+  'dahbi': [{ tribe: 'kabyle', weight: 0.95 }],
+  'nacer': [{ tribe: 'kabyle', weight: 0.9 }],
+
+  // ============ UGANDA - Karamojong prefixes ============
   'lomo': [{ tribe: 'karamojong', weight: 0.95 }],
   'lokw': [{ tribe: 'karamojong', weight: 0.95 }],
   'loty': [{ tribe: 'karamojong', weight: 0.9 }],
