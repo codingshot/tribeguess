@@ -27,12 +27,13 @@ export interface VideoItem {
 
 // Fallback videos for when queue is empty
 export const VIBE_VIDEOS: string[] = [
-  'FjM9nOFglDM', // African music
-  'dOJM5pQR6GA', // African dance
-  'Z5a-oNPD2sw', // African culture
-  'gv7Q7IBHrk4', // Kikuyu documentary
+  'c-T7_mJTOkI', // Kikuyu documentary
   '8yN643vymPg', // Luo documentary
-  'K_G_9h-UEWU', // Maasai documentary
+  'GsDCFDLOQFo', // Maasai documentary
+  '_W1cHwldsCI', // Yoruba documentary
+  't9F3eIJgD2I', // Igbo documentary
+  'Jh5VQYwJfNY', // Zulu documentary
+  'N_K8TvdIoPM', // Shona documentary
 ];
 
 export function getYoutubeId(url: string): string {
@@ -161,47 +162,55 @@ export async function validateVideos(videoIds: string[]): Promise<Map<string, bo
 export function getAllVideos(): VideoItem[] {
   const videos: VideoItem[] = [];
   const tribes = tribesData.tribes as any[];
-  
+  const seenIds = new Set<string>(); // Dedupe by generated video ID
   // Collect tribe videos
   tribes.forEach((tribe) => {
     // Culture documentary video
     if (tribe.youtubeVideoId && isValidYoutubeId(tribe.youtubeVideoId)) {
-      videos.push({
-        id: `tribe-culture-${tribe.id}`,
-        youtube: tribe.youtubeVideoId,
-        youtubeId: tribe.youtubeVideoId,
-        title: `${tribe.name} Culture & Traditions`,
-        description: tribe.description?.substring(0, 200),
-        thumbnailUrl: getYoutubeThumbnail(tribe.youtubeVideoId),
-        sourceType: 'TRIBE_PAGE',
-        tribeIds: [tribe.id],
-        tribeNames: [tribe.name],
-        tags: ['culture', 'documentary', 'traditions'],
-        originUrl: `/learn/${tribe.slug}`,
-        originLabel: `${tribe.name} Tribe Page`,
-        category: 'documentary',
-        region: tribe.region
-      });
+      const videoId = `tribe-culture-${tribe.id}-${tribe.youtubeVideoId}`;
+      if (!seenIds.has(videoId)) {
+        seenIds.add(videoId);
+        videos.push({
+          id: videoId,
+          youtube: tribe.youtubeVideoId,
+          youtubeId: tribe.youtubeVideoId,
+          title: `${tribe.name} Culture & Traditions`,
+          description: tribe.description?.substring(0, 200),
+          thumbnailUrl: getYoutubeThumbnail(tribe.youtubeVideoId),
+          sourceType: 'TRIBE_PAGE',
+          tribeIds: [tribe.id],
+          tribeNames: [tribe.name],
+          tags: ['culture', 'documentary', 'traditions'],
+          originUrl: `/learn/${tribe.slug}`,
+          originLabel: `${tribe.name} Tribe Page`,
+          category: 'documentary',
+          region: tribe.region
+        });
+      }
     }
     
     // Language tutorial video
     if (tribe.languageVideoId && isValidYoutubeId(tribe.languageVideoId)) {
-      videos.push({
-        id: `tribe-language-${tribe.id}`,
-        youtube: tribe.languageVideoId,
-        youtubeId: tribe.languageVideoId,
-        title: `Learn ${tribe.language?.name || tribe.name} Language`,
-        description: `Language tutorial for the ${tribe.name} people`,
-        thumbnailUrl: getYoutubeThumbnail(tribe.languageVideoId),
-        sourceType: 'TRIBE_LANGUAGE',
-        tribeIds: [tribe.id],
-        tribeNames: [tribe.name],
-        tags: ['language', 'tutorial', 'learning'],
-        originUrl: `/learn/${tribe.slug}`,
-        originLabel: `${tribe.name} Language`,
-        category: 'language',
-        region: tribe.region
-      });
+      const videoId = `tribe-language-${tribe.id}-${tribe.languageVideoId}`;
+      if (!seenIds.has(videoId)) {
+        seenIds.add(videoId);
+        videos.push({
+          id: videoId,
+          youtube: tribe.languageVideoId,
+          youtubeId: tribe.languageVideoId,
+          title: `Learn ${tribe.language?.name || tribe.name} Language`,
+          description: `Language tutorial for the ${tribe.name} people`,
+          thumbnailUrl: getYoutubeThumbnail(tribe.languageVideoId),
+          sourceType: 'TRIBE_LANGUAGE',
+          tribeIds: [tribe.id],
+          tribeNames: [tribe.name],
+          tags: ['language', 'tutorial', 'learning'],
+          originUrl: `/learn/${tribe.slug}`,
+          originLabel: `${tribe.name} Language`,
+          category: 'language',
+          region: tribe.region
+        });
+      }
     }
   });
   
