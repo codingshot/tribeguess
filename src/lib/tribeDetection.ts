@@ -2234,7 +2234,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   
   // ============ Zambia - Lozi prefixes ============
   'mubi': [{ tribe: 'lozi', weight: 0.98 }],
-  'nasi': [{ tribe: 'lozi', weight: 0.95 }],
+  'nasi_l': [{ tribe: 'lozi', weight: 0.95 }],
   'lubi': [{ tribe: 'lozi', weight: 0.95 }],
   'inon': [{ tribe: 'lozi', weight: 0.98 }],
   'mwan_l': [{ tribe: 'lozi', weight: 0.95 }],
