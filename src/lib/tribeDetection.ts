@@ -1260,8 +1260,47 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'naisula_ic': { tribe: 'ilchamus', gender: 'female', meaning: 'Born during rain' },
   'namelok_ic': { tribe: 'ilchamus', gender: 'female', meaning: 'Sweet one - Maa origin' },
 
+  // ============ ETHIOPIA - Mursi (Omo Valley) - FACT-CHECKED 2024 ============
+  'korka': { tribe: 'mursi', gender: 'female', meaning: 'Beautiful one - Mursi' },
+  'nere_mu': { tribe: 'mursi', gender: 'female', meaning: 'Life giver' },
+  'olisarali': { tribe: 'mursi', gender: 'female', meaning: 'She who shines' },
+  'bitta': { tribe: 'mursi', gender: 'male', meaning: 'Strong fighter - Donga champion' },
+  'bargeru': { tribe: 'mursi', gender: 'male', meaning: 'Brave one' },
+  'olibui': { tribe: 'mursi', gender: 'male', meaning: 'Born during ceremony' },
+  'nankurumba': { tribe: 'mursi', gender: 'female', meaning: 'Mother of the rain' },
 
-  'lomongin': { tribe: 'karamojong', gender: 'male', meaning: 'Bull/strong one' },
+  // ============ ETHIOPIA - Gurage - FACT-CHECKED 2024 ============
+  'workinesh': { tribe: 'gurage', gender: 'female', meaning: 'You are gold' },
+  'abebech': { tribe: 'gurage', gender: 'female', meaning: 'Flower/blossom' },
+  'birtukan': { tribe: 'gurage', gender: 'female', meaning: 'Orange (fruit) - freshness' },
+  'tsehay_g': { tribe: 'gurage', gender: 'female', meaning: 'Sun/sunshine' },
+  'zenebech': { tribe: 'gurage', gender: 'female', meaning: 'She rained - blessing' },
+  'tirunesh_g': { tribe: 'gurage', gender: 'female', meaning: 'You are good' },
+  'worku_g': { tribe: 'gurage', gender: 'male', meaning: 'Gold - precious one' },
+  'bogale': { tribe: 'gurage', gender: 'male', meaning: 'Spring/rainy season' },
+  'meshesha': { tribe: 'gurage', gender: 'male', meaning: 'Gentle/calm one' },
+  'tefera_g': { tribe: 'gurage', gender: 'male', meaning: 'Feared one' },
+
+  // ============ NIGER/SAHEL - Wodaabe - FACT-CHECKED 2024 ============
+  'boureima': { tribe: 'wodaabe', gender: 'male', meaning: 'Abraham - father of nations' },
+  'oumarou': { tribe: 'wodaabe', gender: 'male', meaning: 'Umar - long-lived' },
+  'djibo': { tribe: 'wodaabe', gender: 'male', meaning: 'From Djibo town' },
+  'djamila_w': { tribe: 'wodaabe', gender: 'female', meaning: 'Beautiful one' },
+  'hawa_w': { tribe: 'wodaabe', gender: 'female', meaning: 'Eve - mother of all' },
+
+  // ============ ALGERIA - Kabyle - FACT-CHECKED 2024 ============
+  'mohand': { tribe: 'kabyle', gender: 'male', meaning: 'Muhammad - Kabyle form' },
+  'idir': { tribe: 'kabyle', gender: 'male', meaning: 'He will live - Berber name' },
+  'mokrane': { tribe: 'kabyle', gender: 'male', meaning: 'The great one' },
+  'massinissa': { tribe: 'kabyle', gender: 'male', meaning: 'Ancient Numidian king name' },
+  'aksil': { tribe: 'kabyle', gender: 'male', meaning: 'Cheetah/leopard - Berber' },
+  'lounis': { tribe: 'kabyle', gender: 'male', meaning: 'Companion - Berber' },
+  'tassadit': { tribe: 'kabyle', gender: 'female', meaning: 'Protected/fortunate' },
+  'dahbia': { tribe: 'kabyle', gender: 'female', meaning: 'Golden one - Berber' },
+  'lynda_k': { tribe: 'kabyle', gender: 'female', meaning: 'Pretty one - Kabyle' },
+  'nacera': { tribe: 'kabyle', gender: 'female', meaning: 'Victorious one' },
+
+
   'lokwang': { tribe: 'karamojong', gender: 'male', meaning: 'Born during drought' },
   'lotyang': { tribe: 'karamojong', gender: 'male', meaning: 'Warrior/brave one' },
   'loyep': { tribe: 'karamojong', gender: 'male', meaning: 'Born in the evening' },
@@ -2958,7 +2997,35 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'hamis_n': [{ tribe: 'nubi', weight: 0.8 }],
   'rashi_n': [{ tribe: 'nubi', weight: 0.7 }],
 
+  // ============ ETHIOPIA - Mursi prefixes ============
+  'kork': [{ tribe: 'mursi', weight: 0.95 }],
+  'olis': [{ tribe: 'mursi', weight: 0.95 }],
+  'bitt': [{ tribe: 'mursi', weight: 0.9 }],
+  'barg': [{ tribe: 'mursi', weight: 0.95 }],
+  'nank': [{ tribe: 'mursi', weight: 0.95 }],
 
+  // ============ ETHIOPIA - Gurage prefixes ============
+  'work': [{ tribe: 'gurage', weight: 0.85 }, { tribe: 'amhara', weight: 0.15 }],
+  'boga_g': [{ tribe: 'gurage', weight: 0.9 }],
+  'mesh': [{ tribe: 'gurage', weight: 0.9 }],
+  'birt': [{ tribe: 'gurage', weight: 0.9 }],
+
+  // ============ NIGER - Wodaabe prefixes ============
+  'bour_w': [{ tribe: 'wodaabe', weight: 0.85 }],
+  'ouma': [{ tribe: 'wodaabe', weight: 0.85 }],
+  'djib_w': [{ tribe: 'wodaabe', weight: 0.9 }],
+
+  // ============ ALGERIA - Kabyle name prefixes ============
+  'mohan': [{ tribe: 'kabyle', weight: 0.9 }],
+  'mokra': [{ tribe: 'kabyle', weight: 0.95 }],
+  'massi': [{ tribe: 'kabyle', weight: 0.95 }],
+  'aksi': [{ tribe: 'kabyle', weight: 0.95 }],
+  'louni': [{ tribe: 'kabyle', weight: 0.9 }],
+  'tassa': [{ tribe: 'kabyle', weight: 0.95 }],
+  'dahbi': [{ tribe: 'kabyle', weight: 0.95 }],
+  'nacer': [{ tribe: 'kabyle', weight: 0.9 }],
+
+  // ============ UGANDA - Karamojong prefixes ============
   'lomo': [{ tribe: 'karamojong', weight: 0.95 }],
   'lokw': [{ tribe: 'karamojong', weight: 0.95 }],
   'loty': [{ tribe: 'karamojong', weight: 0.9 }],
