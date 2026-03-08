@@ -154,7 +154,26 @@ export const recipes: Recipe[] = [
       "Adding a pinch of baking soda helps soften the maize faster",
       "This dish improves with reheating - make a large batch",
       "Serve with avocado for a complete protein meal"
-    ]
+    ],
+    variations: [
+      "Add diced carrots and cabbage for extra vegetables",
+      "Stir in curry powder for a spiced version popular in Nairobi",
+      "Use canned beans and corn for a quick weeknight version"
+    ],
+    servingSuggestions: [
+      "Sliced avocado and kachumbari salad",
+      "Chapati or ugali on the side",
+      "Grilled sausages or nyama choma"
+    ],
+    nutritionalInfo: {
+      calories: "~280 kcal",
+      protein: "12g",
+      carbs: "48g",
+      fat: "6g",
+      fiber: "9g",
+      notes: "Excellent source of complementary plant proteins (maize + beans = complete amino acids)"
+    },
+    dietaryInfo: ["Vegan", "Gluten-free", "High-fiber", "High-protein"]
   },
   {
     id: "mutura",
