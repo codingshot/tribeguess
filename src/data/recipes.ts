@@ -12185,15 +12185,15 @@ const wave3Recipes: Recipe[] = [
     difficulty: 'hard',
     youtubeVideoId: '',
     ingredients: [
-      { item: 'Cassava leaves (fresh or frozen)', amount: '1 kg', category: 'vegetable' },
-      { item: 'Palm oil (red)', amount: '1/2 cup', category: 'oil' },
-      { item: 'Smoked fish or dried fish', amount: '200g', category: 'protein' },
-      { item: 'Raw peanut paste', amount: '1/2 cup', category: 'legume' },
-      { item: 'Onion', amount: '1 large', category: 'vegetable' },
-      { item: 'Garlic', amount: '3 cloves', category: 'spice' },
-      { item: 'Eggplant (small, African variety)', amount: '2', category: 'vegetable' },
-      { item: 'Salt', amount: 'To taste', category: 'seasoning' },
-      { item: 'Water', amount: '2 cups', category: 'liquid' }
+      { item: 'Cassava leaves (fresh or frozen)', amount: '1 kg' },
+      { item: 'Palm oil (red)', amount: '1/2 cup' },
+      { item: 'Smoked fish or dried fish', amount: '200g' },
+      { item: 'Raw peanut paste', amount: '1/2 cup' },
+      { item: 'Onion', amount: '1 large' },
+      { item: 'Garlic', amount: '3 cloves' },
+      { item: 'Eggplant (small, African variety)', amount: '2' },
+      { item: 'Salt', amount: 'To taste' },
+      { item: 'Water', amount: '2 cups' }
     ],
     instructions: [
       'If using fresh cassava leaves, pound them in a mortar until very fine (or blend in food processor).',
