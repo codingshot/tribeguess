@@ -11494,6 +11494,301 @@ const northAfricanRecipes: Recipe[] = [
   }
 ];
 
+// Horn of Africa recipes
+const hornAfricanRecipes: Recipe[] = [
+  {
+    id: "suqaar",
+    name: "Suqaar",
+    localName: "سقار",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "staple",
+    region: "horn",
+    country: "SO",
+    description: "A quick Somali stir-fry of cubed meat with vegetables and spices, often served for breakfast or lunch with canjeero (flatbread).",
+    culturalSignificance: "Suqaar is everyday home cooking in Somalia — quick, nutritious, and endlessly adaptable. It's the dish that Somali mothers teach daughters first, and the comfort food of the Somali diaspora worldwide.",
+    historicalContext: "The dish reflects Somalia's position on ancient trade routes — cumin from Arabia, coriander from India, and turmeric from Southeast Asia all feature. The name comes from the Arabic 'saqar' meaning small pieces.",
+    youtubeVideoId: "QT1GdH5F7Wc",
+    prepTime: "15 minutes",
+    cookTime: "20 minutes",
+    servings: 4,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Beef or goat meat", amount: "500g", notes: "Cut into small cubes", substitution: "Chicken breast" },
+      { item: "Onion", amount: "1 large", notes: "Diced" },
+      { item: "Green pepper", amount: "1", notes: "Diced" },
+      { item: "Tomato", amount: "2 medium", notes: "Diced" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Cumin", amount: "1 tsp" },
+      { item: "Coriander powder", amount: "1 tsp" },
+      { item: "Turmeric", amount: "½ tsp" },
+      { item: "Vegetable oil", amount: "3 tbsp" },
+      { item: "Salt and pepper", amount: "To taste" },
+      { item: "Fresh cilantro", amount: "Handful", notes: "Chopped for garnish" }
+    ],
+    instructions: [
+      "Heat oil in a large pan over medium-high heat.",
+      "Season meat cubes with salt, pepper, cumin, coriander, and turmeric.",
+      "Add meat to hot oil and sear until browned on all sides, about 5 minutes.",
+      "Add diced onion and garlic, cook until softened.",
+      "Add green pepper and tomatoes, stir well.",
+      "Cover and cook on medium heat for 10-12 minutes until meat is tender.",
+      "Remove lid and cook until excess liquid evaporates.",
+      "Garnish with fresh cilantro and serve with canjeero or rice."
+    ],
+    tips: [
+      "Don't overcrowd the pan when searing — work in batches for better browning",
+      "For breakfast suqaar, scramble eggs into the meat at the end",
+      "Adjust spice levels to taste — some families add xawaash (Somali spice blend)"
+    ],
+    variations: [
+      "Batar Suqaar: Made with liver instead of regular meat",
+      "Vegetable Suqaar: Potatoes and carrots replace meat for a vegetarian version",
+      "Egg Suqaar: Scrambled eggs mixed in, popular for breakfast"
+    ],
+    servingSuggestions: ["Canjeero (Somali flatbread)", "Basmati rice", "Banana on the side", "Hot Somali tea"],
+    nutritionalInfo: {
+      calories: "~350 kcal",
+      protein: "32g",
+      carbs: "12g",
+      fat: "18g",
+      fiber: "3g",
+      notes: "High protein, moderate fat. Spices add anti-inflammatory benefits."
+    },
+    dietaryInfo: ["Gluten-free", "Dairy-free", "High-protein", "Halal"]
+  },
+  {
+    id: "kitfo",
+    name: "Kitfo",
+    localName: "ክትፎ",
+    tribeSlug: "gurage",
+    tribeName: "Gurage",
+    category: "special",
+    region: "horn",
+    country: "ET",
+    description: "Ethiopian steak tartare — finely minced raw beef seasoned with mitmita spice and niter kibbeh (spiced clarified butter). A beloved delicacy of the Gurage people.",
+    culturalSignificance: "Kitfo is the crown jewel of Gurage cuisine and a point of immense pride. It's served at weddings, holidays, and celebrations. Refusing kitfo at a Gurage gathering is considered an insult.",
+    historicalContext: "The Gurage have prepared kitfo for centuries, originally as a warrior's meal — raw meat provided quick energy without the need for fire. The dish spread to become one of Ethiopia's most celebrated foods.",
+    youtubeVideoId: "7rGKQlXbkiI",
+    prepTime: "20 minutes",
+    cookTime: "5 minutes",
+    servings: 4,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Lean beef", amount: "500g", notes: "Freshest possible, hand-minced", substitution: "None — quality fresh beef is essential" },
+      { item: "Niter kibbeh (spiced butter)", amount: "4 tbsp", notes: "Melted", substitution: "Regular clarified butter + cardamom" },
+      { item: "Mitmita spice", amount: "2 tbsp", notes: "Ethiopian chili blend", substitution: "Cayenne + cardamom + clove blend" },
+      { item: "Korerima (Ethiopian cardamom)", amount: "½ tsp" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Ayib (Ethiopian cottage cheese)", amount: "1 cup", notes: "For serving", substitution: "Ricotta cheese" },
+      { item: "Gomen (collard greens)", amount: "2 cups", notes: "Cooked, for serving" }
+    ],
+    instructions: [
+      "Using a very sharp knife, mince the beef extremely finely (or ask your butcher).",
+      "Warm the niter kibbeh until just melted — do not overheat.",
+      "Mix the minced beef with melted niter kibbeh.",
+      "Add mitmita, korerima, and salt. Mix gently but thoroughly.",
+      "For leb leb (lightly warmed): briefly warm in a pan for 1-2 minutes.",
+      "Serve immediately on a plate with ayib and gomen on the side.",
+      "Traditionally served on injera (fermented flatbread)."
+    ],
+    tips: [
+      "Meat must be extremely fresh — buy from a trusted butcher on the day of preparation",
+      "Traditional kitfo is served raw (tire) but leb leb (lightly cooked) is also popular",
+      "The quality of niter kibbeh makes or breaks the dish"
+    ],
+    variations: [
+      "Tire: Completely raw — the most traditional way",
+      "Leb Leb: Lightly warmed but still pink",
+      "Yebesele: Fully cooked — for those who prefer cooked meat"
+    ],
+    servingSuggestions: ["Injera", "Ayib (cottage cheese)", "Gomen (collard greens)", "Tej (honey wine)"],
+    nutritionalInfo: {
+      calories: "~420 kcal",
+      protein: "35g",
+      carbs: "2g",
+      fat: "30g",
+      fiber: "0g",
+      notes: "Extremely high in protein and B12. Spiced butter provides healthy fats and fat-soluble vitamins."
+    },
+    dietaryInfo: ["Gluten-free", "Low-carb", "Keto-friendly", "High-protein"]
+  },
+  {
+    id: "zigni",
+    name: "Zigni",
+    localName: "ዝግኒ",
+    tribeSlug: "tigrinya",
+    tribeName: "Tigrinya",
+    category: "staple",
+    region: "horn",
+    country: "ER",
+    description: "Eritrean spicy beef stew made with berbere spice, tomatoes, and onions. The national comfort food of Eritrea.",
+    culturalSignificance: "Zigni is to Eritrea what injera is to Ethiopia — inseparable from daily life. Every Eritrean family has their own recipe passed down through generations. It's the centerpiece of every celebration.",
+    historicalContext: "Eritrean cuisine developed distinctly from Ethiopian during Italian colonial influence (1890-1941), incorporating tomato paste and different spice ratios. Zigni reflects this unique culinary identity.",
+    youtubeVideoId: "nP0t8f0LGDI",
+    prepTime: "20 minutes",
+    cookTime: "90 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Beef", amount: "700g", notes: "Cut into chunks", substitution: "Lamb or chicken" },
+      { item: "Onions", amount: "4 large", notes: "Finely diced — the base of the stew" },
+      { item: "Tomato paste", amount: "3 tbsp" },
+      { item: "Berbere spice", amount: "3 tbsp", substitution: "Paprika + cayenne + fenugreek + cardamom" },
+      { item: "Garlic", amount: "6 cloves", notes: "Minced" },
+      { item: "Ginger", amount: "1 inch", notes: "Grated" },
+      { item: "Niter kibbeh", amount: "3 tbsp", substitution: "Ghee + spices" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "2 cups" }
+    ],
+    instructions: [
+      "Dry-fry diced onions in a large pot over medium heat until deeply caramelized (20-30 min). Do NOT add oil.",
+      "Add tomato paste and berbere spice, stir for 5 minutes.",
+      "Add garlic and ginger, cook 2 minutes.",
+      "Add niter kibbeh and stir well.",
+      "Add beef chunks and brown on all sides.",
+      "Add water, bring to a boil, then reduce to a simmer.",
+      "Cover and cook for 60-90 minutes until meat is very tender.",
+      "The sauce should be thick and rich. Adjust seasoning.",
+      "Serve on injera."
+    ],
+    tips: [
+      "The key is caramelizing onions without oil — this creates the deep red-brown base",
+      "Don't rush the onion step — it's the foundation of all Eritrean stews",
+      "Berbere intensity varies by brand — start with less and add more"
+    ],
+    nutritionalInfo: {
+      calories: "~380 kcal",
+      protein: "30g",
+      carbs: "15g",
+      fat: "22g",
+      fiber: "4g",
+      notes: "Berbere spice contains anti-inflammatory compounds. Slow-cooked onions are rich in prebiotic fiber."
+    },
+    dietaryInfo: ["Gluten-free", "Dairy-free option", "High-protein"]
+  }
+];
+
+// Additional West African recipes
+const additionalWestAfricanRecipes: Recipe[] = [
+  {
+    id: "thieboudienne",
+    name: "Thiéboudienne",
+    localName: "Ceebu Jën",
+    tribeSlug: "wolof",
+    tribeName: "Wolof",
+    category: "staple",
+    region: "west",
+    country: "SN",
+    description: "Senegal's national dish — a magnificent one-pot rice and fish dish with stuffed fish, vegetables, and tamarind-tomato sauce. UNESCO Intangible Cultural Heritage since 2021.",
+    culturalSignificance: "Thiéboudienne is the soul of Senegalese cuisine. Invented in the 19th century by Penda Mbaye of Saint-Louis, it's eaten for lunch across the country. Families gather around a single large platter, eating with their right hand.",
+    historicalContext: "When French colonizers introduced broken rice to Senegal, the Wolof people transformed it into an art form. The dish reflects Senegal's fishing heritage and agricultural traditions. Its UNESCO recognition in 2021 cemented its status as a world culinary treasure.",
+    youtubeVideoId: "K6_7gx8WdPE",
+    prepTime: "45 minutes",
+    cookTime: "90 minutes",
+    servings: 8,
+    difficulty: "hard",
+    ingredients: [
+      { item: "Whole fish (thiof/grouper)", amount: "1 large", notes: "Scored and stuffed", substitution: "Red snapper or sea bass" },
+      { item: "Broken rice", amount: "500g", notes: "Washed", substitution: "Long-grain rice" },
+      { item: "Tomato paste", amount: "4 tbsp" },
+      { item: "Onions", amount: "3 large", notes: "Sliced" },
+      { item: "Cassava", amount: "200g", notes: "Peeled and chunked" },
+      { item: "Eggplant", amount: "1 medium" },
+      { item: "Cabbage", amount: "¼ head" },
+      { item: "Carrots", amount: "2 large" },
+      { item: "Sweet potato", amount: "1 medium" },
+      { item: "Tamarind paste", amount: "2 tbsp", substitution: "Lime juice" },
+      { item: "Dried fish (guedj)", amount: "50g", notes: "Fermented dried fish" },
+      { item: "Scotch bonnet", amount: "2", notes: "Whole" },
+      { item: "Parsley & garlic stuffing (rof)", amount: "4 tbsp" },
+      { item: "Vegetable oil", amount: "½ cup" }
+    ],
+    instructions: [
+      "Make the rof stuffing: blend parsley, garlic, scotch bonnet, and salt. Stuff into fish scores.",
+      "Fry the stuffed fish in oil until golden. Set aside.",
+      "In the same oil, fry onions until golden. Add tomato paste and cook 5 min.",
+      "Add water (about 8 cups), tamarind, dried fish, and bring to a boil.",
+      "Add hard vegetables first (cassava, carrots, sweet potato). Cook 15 min.",
+      "Add softer vegetables (eggplant, cabbage). Cook 10 more minutes.",
+      "Remove all vegetables and fish. Keep warm.",
+      "Add washed rice to the broth. Cook covered on low heat for 25-30 minutes.",
+      "The rice should absorb all the liquid and form a crust (xoon) on the bottom.",
+      "Mound rice on a large platter. Arrange vegetables and fish on top.",
+      "Serve family-style with the xoon (crispy bottom) broken and distributed."
+    ],
+    tips: [
+      "The xoon (crispy rice bottom) is the most prized part — don't skip it",
+      "Use the freshest fish possible — it makes all the difference",
+      "Cook rice on very low heat to get even cooking and good crust"
+    ],
+    variations: [
+      "Thiéboudienne rouge: Made with tomato paste (most common)",
+      "Thiéboudienne blanc: White version without tomato paste",
+      "Thiéboudienne au poulet: Chicken version for non-fish eaters"
+    ],
+    servingSuggestions: ["Lime wedges", "Extra scotch bonnet sauce (kaani)", "Bissap juice (hibiscus)"],
+    nutritionalInfo: {
+      calories: "~550 kcal",
+      protein: "28g",
+      carbs: "65g",
+      fat: "18g",
+      fiber: "6g",
+      notes: "Complete meal with protein from fish, complex carbs from rice, vitamins from diverse vegetables."
+    },
+    dietaryInfo: ["Gluten-free", "Dairy-free", "UNESCO Heritage"]
+  },
+  {
+    id: "waakye",
+    name: "Waakye",
+    localName: "Waakye",
+    tribeSlug: "akan",
+    tribeName: "Akan / Ga",
+    category: "staple",
+    region: "west",
+    country: "GH",
+    description: "Ghana's beloved street food — rice and beans cooked with millet leaf stalks that give a distinctive burgundy color, served with an array of accompaniments.",
+    culturalSignificance: "Waakye is Ghana's great equalizer — eaten by everyone from market women to business executives. Street vendors serve it in banana leaves, and every neighborhood has a favorite waakye seller.",
+    historicalContext: "Originally a Hausa dish that spread across Ghana, waakye represents the cultural fusion of northern and southern Ghana. The use of sorghum leaves for coloring is a uniquely Ghanaian innovation.",
+    youtubeVideoId: "KXW6Jkv0qZQ",
+    prepTime: "30 minutes",
+    cookTime: "60 minutes",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Rice", amount: "2 cups" },
+      { item: "Black-eyed peas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Dried millet stalks (waakye leaves)", amount: "2-3 stalks", substitution: "Baking soda (¼ tsp) for color" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "6 cups" }
+    ],
+    instructions: [
+      "Boil soaked beans in water with millet stalks for 30 minutes until half-cooked.",
+      "Add washed rice to the pot.",
+      "Add more water if needed — liquid should cover rice by 1 inch.",
+      "Cook covered on low heat until rice and beans are tender, about 25-30 minutes.",
+      "The millet stalks will turn the rice a beautiful burgundy-brown.",
+      "Remove millet stalks before serving.",
+      "Serve with shito (pepper sauce), gari (cassava flakes), spaghetti, and protein."
+    ],
+    tips: [
+      "Soak beans overnight for even cooking",
+      "Don't stir too much — let the rice steam",
+      "Traditional accompaniments include fried plantain, boiled eggs, and wele (cow skin)"
+    ],
+    servingSuggestions: ["Shito (hot pepper sauce)", "Gari (cassava flakes)", "Fried plantain", "Boiled eggs", "Spaghetti"],
+    nutritionalInfo: {
+      calories: "~320 kcal",
+      protein: "12g",
+      carbs: "58g",
+      fat: "3g",
+      fiber: "8g",
+      notes: "Complete protein when rice and beans are combined. High in fiber and iron."
+    },
+    dietaryInfo: ["Vegan", "Gluten-free", "High-fiber"]
+  }
+];
+
 
 // Combine all recipes
 recipes.push(...beverageRecipes);
@@ -11502,6 +11797,8 @@ recipes.push(...eastAfricanRecipes);
 recipes.push(...southernAfricanRecipes);
 recipes.push(...westAfricanRecipes);
 recipes.push(...northAfricanRecipes);
+recipes.push(...hornAfricanRecipes);
+recipes.push(...additionalWestAfricanRecipes);
 
 // Auto-assign regions to recipes based on tribe patterns
 const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> = {

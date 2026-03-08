@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'sonner';
 import { useGlobalVideoPlayer, PLAYBACK_SPEEDS } from '@/contexts/GlobalVideoPlayerContext';
 import { 
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, 
@@ -227,10 +228,24 @@ export function GlobalVideoPlayer() {
                   }
                 } catch {}
               },
-              onError: () => {
+              onError: (event: any) => {
                 if (!isMounted) return;
+                const errorCode = event?.data;
+                const errorMessages: Record<number, string> = {
+                  2: 'Invalid video ID',
+                  5: 'Video cannot be played in embedded player',
+                  100: 'Video not found or removed',
+                  101: 'Video owner does not allow embedded playback',
+                  150: 'Video owner does not allow embedded playback',
+                };
+                const msg = errorMessages[errorCode] || 'Video playback error';
+                console.warn(`[VideoPlayer] Error ${errorCode} for ${currentVideo?.youtubeId}: ${msg}`);
+                toast.error(msg, { duration: 3000 });
                 setPlayerState({ isLoading: false, isPlaying: false });
-                nextVideo();
+                // Auto-skip to next after a brief delay
+                setTimeout(() => {
+                  if (isMounted) nextVideo();
+                }, 1500);
               }
             }
           });
@@ -262,7 +277,8 @@ export function GlobalVideoPlayer() {
         playerRef.current = null;
       }
     };
-  }, [ytReady, currentVideo?.youtubeId, isRepeat, playbackSpeed]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ytReady, currentVideo?.youtubeId]);
   
   // Update current time
   useEffect(() => {
@@ -930,7 +946,7 @@ export function GlobalVideoPlayer() {
       </div>
       
       {/* Spacer for fixed player */}
-      <div className="h-12" />
+      <div className="h-12" aria-hidden="true" />
     </>
   );
 }
