@@ -28,7 +28,9 @@ export interface BlogPost {
   sources?: Source[];
 }
 
-export const blogPosts: BlogPost[] = [
+import { generateTribeBlogs } from '@/lib/tribeBlogGenerator';
+
+const manualBlogPosts: BlogPost[] = [
   {
     slug: "kenyan-naming-traditions-birth-time",
     title: "How Kenyan Names Reveal the Time You Were Born",
