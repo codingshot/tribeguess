@@ -2296,7 +2296,10 @@
         ],
         "communities": ["Strong presence in Gulf states with historic trade ties", "Historic ties to Oman dating back centuries", "Community in New York area with Swahili cultural centers"],
         "associations": ["Swahili Cultural Society", "Kenya Coast Diaspora UK"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/swahili/swahili-coast.jpg", "caption": "Swahili coast dhow sailing at sunset near Zanzibar with carved wooden door", "credit": "AI Generated" }
+      ]
     },
     {
       "id": "borana",
