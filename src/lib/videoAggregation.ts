@@ -161,7 +161,7 @@ export async function validateVideos(videoIds: string[]): Promise<Map<string, bo
 export function getAllVideos(): VideoItem[] {
   const videos: VideoItem[] = [];
   const tribes = tribesData.tribes as any[];
-  
+  const seenIds = new Set<string>(); // Dedupe by generated video ID
   // Collect tribe videos
   tribes.forEach((tribe) => {
     // Culture documentary video
