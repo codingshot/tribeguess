@@ -4362,7 +4362,9 @@
         { "name": "Mangosuthu Buthelezi", "role": "Political Leader & Prince", "birth": 1928, "death": 2023, "wikipedia": "https://en.wikipedia.org/wiki/Mangosuthu_Buthelezi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Mangosuthu_Buthelezi%2C_2011_%28cropped%29.jpg/220px-Mangosuthu_Buthelezi%2C_2011_%28cropped%29.jpg" },
         { "name": "Ladysmith Black Mambazo", "role": "Grammy-Winning Choir", "wikipedia": "https://en.wikipedia.org/wiki/Ladysmith_Black_Mambazo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ladysmith_Black_Mambazo_Roskilde_2012.jpg/220px-Ladysmith_Black_Mambazo_Roskilde_2012.jpg" },
         { "name": "Jacob Zuma", "role": "Former President of South Africa", "birth": 1942, "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Zuma", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Jacob_Zuma_2010_%28cropped%29.jpg/220px-Jacob_Zuma_2010_%28cropped%29.jpg" },
-        { "name": "Misuzulu kaZwelithini", "role": "Current Zulu King", "birth": 1974, "wikipedia": "https://en.wikipedia.org/wiki/Misuzulu_kaZwelithini" }
+        { "name": "Misuzulu kaZwelithini", "role": "Current Zulu King", "birth": 1974, "wikipedia": "https://en.wikipedia.org/wiki/Misuzulu_kaZwelithini" },
+        { "name": "Thandiswa Mazwai", "role": "Post-Apartheid Music Icon", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Thandiswa_Mazwai" },
+        { "name": "Esther Mahlangu", "role": "Ndebele-Zulu Visual Artist (BMW Art Car)", "birth": 1935, "wikipedia": "https://en.wikipedia.org/wiki/Esther_Mahlangu" }
       ],
       "description": "The Zulu are South Africa's largest ethnic group, known for Shaka's warrior kingdom, distinctive culture, and isicathamiya music tradition.",
       "relatedTribes": ["xhosa", "swazi", "ndebele"],
