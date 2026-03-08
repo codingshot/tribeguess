@@ -3641,7 +3641,10 @@
         { "name": "Obafemi Awolowo", "role": "Nigerian Statesman & Premier", "birth": 1909, "death": 1987, "wikipedia": "https://en.wikipedia.org/wiki/Obafemi_Awolowo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Obafemi_Awolowo.jpg/220px-Obafemi_Awolowo.jpg" },
         { "name": "King Sunny Ade", "role": "Jùjú Music Legend", "birth": 1946, "wikipedia": "https://en.wikipedia.org/wiki/King_Sunny_Ade", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/King_Sunny_Ade.jpg/220px-King_Sunny_Ade.jpg" },
         { "name": "Wizkid", "role": "Grammy-winning Afrobeats Star", "birth": 1990, "wikipedia": "https://en.wikipedia.org/wiki/Wizkid", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/WizKid_2012.jpg/220px-WizKid_2012.jpg" },
-        { "name": "Sade Adu", "role": "Grammy-winning Singer-Songwriter", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/Sade_Adu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sade_Adu.jpg/220px-Sade_Adu.jpg" }
+        { "name": "Sade Adu", "role": "Grammy-winning Singer-Songwriter", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/Sade_Adu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sade_Adu.jpg/220px-Sade_Adu.jpg" },
+        { "name": "Davido", "role": "Afrobeats Superstar & Philanthropist", "birth": 1992, "wikipedia": "https://en.wikipedia.org/wiki/Davido", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Davido_2018.jpg/220px-Davido_2018.jpg" },
+        { "name": "Tems", "role": "Grammy-winning Singer & Songwriter", "birth": 1995, "wikipedia": "https://en.wikipedia.org/wiki/Tems_(singer)" },
+        { "name": "Nike Davies-Okundaye", "role": "Textile Artist & Adire Master", "birth": 1951, "wikipedia": "https://en.wikipedia.org/wiki/Nike_Davies-Okundaye" }
       ],
       "description": "The Yoruba are one of Africa's largest ethnic groups, known for rich culture, art, mythology, and a sophisticated pre-colonial civilization centered at Ile-Ife.",
       "relatedTribes": ["igbo", "hausa"],
