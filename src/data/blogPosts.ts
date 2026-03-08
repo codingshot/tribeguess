@@ -1852,7 +1852,6 @@ const manualBlogPosts: BlogPost[] = [
       { title: "Traditional African Beers - Cambridge Nutrition", url: "https://www.cambridge.org/" },
       { title: "African Fermented Foods and Microbiome - Nature Reviews" }
     ]
-  }
   },
 
   // NEW BLOG POST: African Superfoods
