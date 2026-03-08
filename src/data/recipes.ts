@@ -11904,19 +11904,20 @@ const newTribesRecipes: Recipe[] = [
     tribeName: 'Bemba',
     category: 'staple',
     description: 'A hearty Zambian groundnut stew with leafy greens, served over nshima. This is one of the most beloved Bemba dishes, combining the richness of peanuts with nutritious vegetables.',
-    servings: '6',
+    culturalSignificance: 'Ifisashi is the quintessential Bemba comfort food, eaten at daily meals and celebrations alike. The groundnut base provides essential protein in a cuisine where meat was historically scarce.',
+    servings: 6,
     prepTime: '15 minutes',
     cookTime: '30 minutes',
     difficulty: 'easy',
     ingredients: [
-      '2 cups pounded groundnuts (peanut butter)',
-      '1 large bunch of pumpkin leaves or spinach, chopped',
-      '2 medium tomatoes, chopped',
-      '1 medium onion, diced',
-      '2 tablespoons vegetable oil',
-      '1 teaspoon salt',
-      '1/2 teaspoon chili flakes (optional)',
-      '2 cups water'
+      { item: 'Pounded groundnuts (peanut butter)', amount: '2 cups', substitution: 'Smooth peanut butter' },
+      { item: 'Pumpkin leaves or spinach', amount: '1 large bunch', notes: 'Chopped', substitution: 'Kale or collard greens' },
+      { item: 'Tomatoes', amount: '2 medium', notes: 'Chopped' },
+      { item: 'Onion', amount: '1 medium', notes: 'Diced' },
+      { item: 'Vegetable oil', amount: '2 tablespoons' },
+      { item: 'Salt', amount: '1 teaspoon' },
+      { item: 'Chili flakes', amount: '1/2 teaspoon', notes: 'Optional' },
+      { item: 'Water', amount: '2 cups' }
     ],
     instructions: [
       'Heat oil in a pot and sauté onion until translucent.',
@@ -11928,7 +11929,6 @@ const newTribesRecipes: Recipe[] = [
       'Season with salt and chili. Serve hot over nshima.'
     ],
     tips: ['Fresh pumpkin leaves give the most authentic flavor', 'The sauce should be thick enough to coat a spoon'],
-    history: 'Ifisashi is a cornerstone of Bemba cuisine, reflecting the ingenuity of using groundnuts as a protein-rich sauce base. It has been a staple for centuries, using whatever greens are available from the garden or wild.',
     nutritionalInfo: { calories: '~380 kcal', protein: '16g', carbs: '22g', fat: '28g', fiber: '5g', notes: 'Excellent source of plant protein from groundnuts. Rich in iron from leafy greens.' },
     dietaryInfo: ['Vegan', 'Gluten-free', 'High-protein']
   },
