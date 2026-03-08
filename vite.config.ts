@@ -40,11 +40,15 @@ function sitemapGenerator(): Plugin {
           { loc: '/people', priority: 0.8 },
           { loc: '/quiz', priority: 0.8 },
           { loc: '/blog', priority: 0.8 },
+          { loc: '/video-gallery', priority: 0.7 },
           { loc: '/docs', priority: 0.7 },
           { loc: '/random', priority: 0.6 },
           { loc: '/privacy', priority: 0.3 },
           { loc: '/terms', priority: 0.3 },
         ];
+
+        // Also add tribe-blog slugs
+        const tribeBlogEntries: SitemapEntry[] = [];
         
         for (const page of staticPages) {
           entries.push({
