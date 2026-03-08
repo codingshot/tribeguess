@@ -12310,7 +12310,8 @@ const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> =
   'bassa': { region: 'west', country: 'LR' },
   'bemba': { region: 'southern', country: 'ZM' },
   'ovambo': { region: 'southern', country: 'NA' },
-  'ndebele-sa': { region: 'southern', country: 'ZA' }
+  'ndebele-sa': { region: 'southern', country: 'ZA' },
+  'tonga-zambia': { region: 'southern', country: 'ZM' }
 };
 
 // Apply region mappings to recipes that don't have them
