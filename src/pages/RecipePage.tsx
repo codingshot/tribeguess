@@ -212,16 +212,26 @@ export default function RecipePage() {
             <span className="text-2xl">{categoryEmoji[recipe.category]}</span>
             <Badge variant="outline" className="capitalize">{recipe.category}</Badge>
             <Badge className={difficultyColor[recipe.difficulty]}>{recipe.difficulty}</Badge>
+            {recipe.dietaryInfo?.map((info, i) => (
+              <Badge key={i} variant="secondary" className="text-xs">
+                <Leaf className="w-3 h-3 mr-1" />{info}
+              </Badge>
+            ))}
           </div>
           
-          <h1 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-3">
+          <h1 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-1">
             {recipe.name}
           </h1>
+          {recipe.localName && (
+            <p className="text-sm text-muted-foreground italic mb-3">
+              Local name: <span className="font-medium text-foreground">{recipe.localName}</span>
+            </p>
+          )}
           
           <p className="text-lg text-muted-foreground mb-4">{recipe.description}</p>
 
           {/* Quick Stats */}
-          <div className="flex flex-wrap gap-4 text-sm">
+          <div className="flex flex-wrap gap-3 text-sm">
             <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1.5 rounded-full">
               <Clock className="w-4 h-4 text-primary" />
               <span>Prep: {recipe.prepTime}</span>
