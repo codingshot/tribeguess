@@ -11978,24 +11978,24 @@ const newTribesRecipes: Recipe[] = [
     tribeName: 'Ewe',
     category: 'staple',
     description: 'The iconic Ewe dish: smooth corn dough balls (akple) served with a rich okra soup (fetri detsi). This is the most representative meal of the Ewe people of Ghana and Togo.',
-    servings: '4',
+    culturalSignificance: 'Akple is the staple food of the Ewe people, eaten daily across the Volta Region and Togo. Making akple well — with the right texture and consistency — is a mark of culinary skill and cultural pride.',
+    servings: 4,
     prepTime: '20 minutes',
     cookTime: '40 minutes',
     difficulty: 'medium',
     ingredients: [
-      '2 cups corn dough (fermented)',
-      '1 cup cassava dough',
-      '3 cups water',
-      '--- For Fetri Detsi ---',
-      '300g fresh okra, sliced',
-      '200g smoked fish, deboned',
-      '100g dried shrimp',
-      '3 medium tomatoes, blended',
-      '1 large onion, chopped',
-      '3 tablespoons palm oil',
-      '2 fresh chili peppers',
-      '1 teaspoon salt',
-      '1 tablespoon dawadawa (locust bean paste)'
+      { item: 'Corn dough (fermented)', amount: '2 cups' },
+      { item: 'Cassava dough', amount: '1 cup' },
+      { item: 'Water', amount: '3 cups' },
+      { item: 'Fresh okra', amount: '300g', notes: 'Sliced' },
+      { item: 'Smoked fish', amount: '200g', notes: 'Deboned' },
+      { item: 'Dried shrimp', amount: '100g' },
+      { item: 'Tomatoes', amount: '3 medium', notes: 'Blended' },
+      { item: 'Onion', amount: '1 large', notes: 'Chopped' },
+      { item: 'Palm oil', amount: '3 tablespoons' },
+      { item: 'Fresh chili peppers', amount: '2' },
+      { item: 'Salt', amount: '1 teaspoon' },
+      { item: 'Dawadawa (locust bean paste)', amount: '1 tablespoon', substitution: 'Fermented soybean paste' }
     ],
     instructions: [
       'Mix corn dough and cassava dough with 1 cup water to make a smooth batter.',
@@ -12011,7 +12011,6 @@ const newTribesRecipes: Recipe[] = [
       'Serve akple in balls with fetri detsi poured alongside.'
     ],
     tips: ['The akple must be stirred with great force - traditionally a sign of a good cook', 'Fermented corn dough gives the authentic sour tang'],
-    history: 'Akple is the staple food of the Ewe people, eaten daily across the Volta Region and Togo. The fermented corn dough gives it a distinctive sour taste that pairs perfectly with the rich, mucilaginous okra soup. Making akple well is a mark of culinary skill.',
     nutritionalInfo: { calories: '~420 kcal', protein: '22g', carbs: '52g', fat: '14g', fiber: '6g', notes: 'High protein from smoked fish and shrimp. Okra provides fiber and vitamins.' },
     dietaryInfo: ['Gluten-free', 'High-protein']
   }
