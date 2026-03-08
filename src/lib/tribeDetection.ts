@@ -3261,6 +3261,54 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'koum': [{ tribe: 'mandjia', weight: 0.9 }],
   'dakp': [{ tribe: 'mandjia', weight: 0.95 }],
   'yang_mj': [{ tribe: 'mandjia', weight: 0.9 }],
+
+  // ============ GHANA - Fante prefixes (Cape Coast) ============
+  'efua': [{ tribe: 'fante', weight: 0.98 }],
+  'arab': [{ tribe: 'fante', weight: 0.95 }],
+  'esi_ft': [{ tribe: 'fante', weight: 0.95 }],
+  'kobi': [{ tribe: 'fante', weight: 0.98 }],
+  'kwek': [{ tribe: 'fante', weight: 0.98 }],
+  'ekow': [{ tribe: 'fante', weight: 0.98 }],
+  'fiif': [{ tribe: 'fante', weight: 0.98 }],
+  'papa_ft': [{ tribe: 'fante', weight: 0.9 }],
+  'mens': [{ tribe: 'fante', weight: 0.95 }],
+  'sarb': [{ tribe: 'fante', weight: 0.98 }],
+
+  // ============ GHANA - Ga-Adangbe prefixes (Greater Accra) ============
+  'nii_ga': [{ tribe: 'ga_adangbe', weight: 0.98 }],
+  'naa_ga': [{ tribe: 'ga_adangbe', weight: 0.95 }],
+  'tett': [{ tribe: 'ga_adangbe', weight: 0.98 }],
+  'okyn': [{ tribe: 'ga_adangbe', weight: 0.98 }],
+  'odar': [{ tribe: 'ga_adangbe', weight: 0.98 }],
+  'nort': [{ tribe: 'ga_adangbe', weight: 0.98 }],
+  'quar': [{ tribe: 'ga_adangbe', weight: 0.98 }],
+  'amar_ga': [{ tribe: 'ga_adangbe', weight: 0.95 }],
+  'ashi': [{ tribe: 'ga_adangbe', weight: 0.95 }],
+  'dede': [{ tribe: 'ga_adangbe', weight: 0.9 }],
+  'kosh': [{ tribe: 'ga_adangbe', weight: 0.98 }],
+
+  // ============ CAMEROON - Douala/Sawa prefixes ============
+  'mbel_dl': [{ tribe: 'douala', weight: 0.98 }],
+  'dika': [{ tribe: 'douala', weight: 0.98 }],
+  'lobe_dl': [{ tribe: 'douala', weight: 0.95 }],
+  'mang_dl': [{ tribe: 'douala', weight: 0.95 }],
+  'bell_dl': [{ tribe: 'douala', weight: 0.98 }],
+  'akwa_dl': [{ tribe: 'douala', weight: 0.98 }],
+  'deid': [{ tribe: 'douala', weight: 0.98 }],
+  'eyid': [{ tribe: 'douala', weight: 0.98 }],
+  'mban_dl': [{ tribe: 'douala', weight: 0.95 }],
+  'mund_dl': [{ tribe: 'douala', weight: 0.95 }],
+
+  // ============ KENYA - Tharaka/Mbeere prefixes ============
+  'muthe': [{ tribe: 'tharaka', weight: 0.9 }, { tribe: 'meru', weight: 0.1 }],
+  'kaber': [{ tribe: 'tharaka', weight: 0.95 }],
+  'mutem': [{ tribe: 'tharaka', weight: 0.95 }],
+  'ireri': [{ tribe: 'mbeere', weight: 0.9 }, { tribe: 'embu', weight: 0.1 }],
+  'cianj': [{ tribe: 'mbeere', weight: 0.95 }],
+  'kagen': [{ tribe: 'mbeere', weight: 0.9 }],
+
+  // ============ KENYA - Suba prefixes (Lake Victoria) ============
+  'odhia': [{ tribe: 'suba', weight: 0.7 }, { tribe: 'luo', weight: 0.3 }],
 };
 
 // Suffix patterns for additional matching
