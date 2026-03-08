@@ -3006,7 +3006,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
 
   // ============ ETHIOPIA - Gurage prefixes ============
   'work': [{ tribe: 'gurage', weight: 0.85 }, { tribe: 'amhara', weight: 0.15 }],
-  'boga': [{ tribe: 'gurage', weight: 0.9 }],
+  'boga_g': [{ tribe: 'gurage', weight: 0.9 }],
   'mesh': [{ tribe: 'gurage', weight: 0.9 }],
   'birt': [{ tribe: 'gurage', weight: 0.9 }],
 
