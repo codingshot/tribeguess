@@ -227,10 +227,24 @@ export function GlobalVideoPlayer() {
                   }
                 } catch {}
               },
-              onError: () => {
+              onError: (event: any) => {
                 if (!isMounted) return;
+                const errorCode = event?.data;
+                const errorMessages: Record<number, string> = {
+                  2: 'Invalid video ID',
+                  5: 'Video cannot be played in embedded player',
+                  100: 'Video not found or removed',
+                  101: 'Video owner does not allow embedded playback',
+                  150: 'Video owner does not allow embedded playback',
+                };
+                const msg = errorMessages[errorCode] || 'Video playback error';
+                console.warn(`[VideoPlayer] Error ${errorCode} for ${currentVideo?.youtubeId}: ${msg}`);
+                toast.error(msg, { duration: 3000 });
                 setPlayerState({ isLoading: false, isPlaying: false });
-                nextVideo();
+                // Auto-skip to next after a brief delay
+                setTimeout(() => {
+                  if (isMounted) nextVideo();
+                }, 1500);
               }
             }
           });
