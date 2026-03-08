@@ -315,7 +315,7 @@ export const recipes: Recipe[] = [
     description: "A traditional Maasai drink combining fresh cow's blood with milk. Reserved for warriors and special occasions.",
     culturalSignificance: "This drink is sacred to the Maasai and traditionally consumed by warriors (morans) for strength. Blood is drawn from live cattle without killing them, showing the Maasai's sustainable relationship with their herds.",
     historicalContext: "The Maasai have practiced sustainable blood harvesting for centuries. A small incision is made in the cow's jugular vein, blood is collected, and the wound heals. This provides protein and iron without slaughtering the animal, reflecting the Maasai philosophy that cattle are too valuable to kill casually.",
-    youtubeVideoId: "cRvcIyVXWIw",
+    youtubeVideoId: "cP4UMYBEyzY",
     prepTime: "10 minutes",
     cookTime: "5 minutes",
     servings: 2,
