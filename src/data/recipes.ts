@@ -6699,6 +6699,16 @@ export const getAllRecipes = (): Recipe[] => {
   return deduplicateRecipes(recipes);
 };
 
+// Helper function to find recipe by food name (for linking from food list)
+export const findRecipeByName = (name: string, tribeSlug: string): Recipe | undefined => {
+  const normalizedName = name.toLowerCase();
+  return deduplicateRecipes(recipes).find(recipe => 
+    recipe.tribeSlug === tribeSlug && 
+    (recipe.name.toLowerCase().includes(normalizedName) || 
+     normalizedName.includes(recipe.name.toLowerCase().split(' ')[0]))
+  );
+};
+
 // Get all unique tribe names from recipes
 export const getRecipeTribeNames = (): { slug: string; name: string }[] => {
   const tribes = new Map<string, string>();
