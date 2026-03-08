@@ -9691,9 +9691,12 @@
       },
       "language": { "name": "Sesotho", "speakers": "~8 million", "greeting": "Lumela!", "greetingMeaning": "Hello!", "family": "Bantu (Niger-Congo) - Sotho-Tswana group", "writingSystem": "Latin alphabet" },
       "famousPeople": [
-        { "name": "King Moshoeshoe I", "role": "Founder of the Sotho nation", "wikipedia": "https://en.wikipedia.org/wiki/Moshoeshoe_I" },
-        { "name": "Cyril Ramaphosa", "role": "President of South Africa (Sotho-Venda heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Cyril_Ramaphosa" },
-        { "name": "Thomas Mofolo", "role": "Author of Chaka", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mofolo" }
+        { "name": "King Moshoeshoe I", "role": "Founder & First King of the Sotho Nation", "birth": 1786, "death": 1870, "wikipedia": "https://en.wikipedia.org/wiki/Moshoeshoe_I", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Moshoeshoe.jpg/220px-Moshoeshoe.jpg" },
+        { "name": "Thomas Mofolo", "role": "Pioneer African Novelist (Author of Chaka)", "birth": 1876, "death": 1948, "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mofolo" },
+        { "name": "Ntsu Mokhehle", "role": "First Democratically Elected PM of Lesotho", "birth": 1918, "death": 1999, "wikipedia": "https://en.wikipedia.org/wiki/Ntsu_Mokhehle", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ntsu_Mokhehle.jpg/220px-Ntsu_Mokhehle.jpg" },
+        { "name": "Letsie III", "role": "Current King of Lesotho", "birth": 1963, "wikipedia": "https://en.wikipedia.org/wiki/Letsie_III", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Letsie_III.jpg/220px-Letsie_III.jpg" },
+        { "name": "Thomas Mokoena", "role": "South African Football Legend", "birth": 1980, "wikipedia": "https://en.wikipedia.org/wiki/Aaron_Mokoena", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Aaron_Mokoena_2010.jpg/220px-Aaron_Mokoena_2010.jpg" },
+        { "name": "Mpho Tutu van Furth", "role": "Activist & Daughter of Desmond Tutu", "birth": 1963, "wikipedia": "https://en.wikipedia.org/wiki/Mpho_Tutu_van_Furth" }
       ],
       "populationByCountry": [
         { "country": "ZA", "population": "~4.5 million", "percent": "7.9%" },
