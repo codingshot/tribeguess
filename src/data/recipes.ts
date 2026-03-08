@@ -12,9 +12,19 @@ export const recipeRegions: { id: RecipeRegion; name: string; emoji: string }[] 
   { id: 'horn', name: 'Horn of Africa', emoji: '🇪🇹' }
 ];
 
+export interface NutritionalInfo {
+  calories?: string;
+  protein?: string;
+  carbs?: string;
+  fat?: string;
+  fiber?: string;
+  notes?: string;
+}
+
 export interface Recipe {
   id: string;
   name: string;
+  localName?: string; // Name in local language
   tribeSlug: string;
   tribeName: string;
   category: 'staple' | 'beverage' | 'special' | 'snack';
@@ -31,10 +41,14 @@ export interface Recipe {
     item: string;
     amount: string;
     notes?: string;
+    substitution?: string; // Alternative ingredient
   }[];
   instructions: string[];
   tips?: string[];
   variations?: string[];
+  servingSuggestions?: string[]; // What to serve with
+  nutritionalInfo?: NutritionalInfo; // Per serving estimates
+  dietaryInfo?: string[]; // e.g., "Gluten-free", "Vegan", "High-protein"
   imageUrl?: string;
   youtubeVideoId?: string; // YouTube video ID for cooking tutorial
 }
