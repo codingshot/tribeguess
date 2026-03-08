@@ -350,26 +350,29 @@ export const recipes: Recipe[] = [
   {
     id: "jollof-rice",
     name: "Jollof Rice",
+    localName: "Jollof / Ọrẹ",
     tribeSlug: "yoruba",
     tribeName: "Yoruba",
     category: "special",
+    region: "west",
+    country: "NG",
     description: "Nigeria's most famous rice dish - a one-pot meal of rice cooked in a rich tomato sauce with spices. The Yoruba claim the best version.",
-    culturalSignificance: "Jollof is the centerpiece of Nigerian celebrations - from weddings to naming ceremonies. The 'Jollof Wars' between Nigeria and Ghana continue to this day.",
-    historicalContext: "Jollof rice originated from the Wolof people of Senegal and Gambia in the 14th century, spreading across West Africa through trade routes. The dish evolved differently in each region - Nigerian Jollof uses tomatoes and peppers, while Senegalese thieboudienne uses more vegetables. The trans-Atlantic slave trade carried Jollof to the Americas, influencing dishes like Louisiana jambalaya.",
+    culturalSignificance: "Jollof is the centerpiece of Nigerian celebrations - from weddings to naming ceremonies. The 'Jollof Wars' between Nigeria and Ghana continue to this day. No party is complete without 'party jollof' — the smoky, slightly burnt version cooked over firewood for hundreds of guests.",
+    historicalContext: "Jollof rice originated from the Wolof people of Senegal and Gambia in the 14th century, spreading across West Africa through trade routes. The dish evolved differently in each region - Nigerian Jollof uses tomatoes and peppers, while Senegalese thieboudienne uses more vegetables. The trans-Atlantic slave trade carried Jollof to the Americas, influencing dishes like Louisiana jambalaya and Charleston red rice.",
     youtubeVideoId: "jDbUg4f9EFw",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
     difficulty: "medium",
     ingredients: [
-      { item: "Long-grain rice", amount: "3 cups", notes: "Washed and drained" },
+      { item: "Long-grain rice", amount: "3 cups", notes: "Washed and drained", substitution: "Basmati or jasmine rice" },
       { item: "Tomatoes", amount: "6 large", notes: "Blended" },
       { item: "Tomato paste", amount: "3 tablespoons" },
       { item: "Red bell peppers", amount: "2", notes: "Blended" },
-      { item: "Scotch bonnet peppers", amount: "2", notes: "Blended" },
+      { item: "Scotch bonnet peppers", amount: "2", notes: "Blended", substitution: "Habanero peppers" },
       { item: "Onions", amount: "2 large", notes: "1 blended, 1 sliced" },
       { item: "Vegetable oil", amount: "1/2 cup" },
-      { item: "Chicken stock", amount: "4 cups" },
+      { item: "Chicken stock", amount: "4 cups", substitution: "Vegetable stock for vegan version" },
       { item: "Thyme", amount: "1 teaspoon" },
       { item: "Curry powder", amount: "1 teaspoon" },
       { item: "Bay leaves", amount: "3" },
@@ -378,25 +381,44 @@ export const recipes: Recipe[] = [
     instructions: [
       "Blend tomatoes, bell peppers, scotch bonnet, and one onion until smooth.",
       "Heat oil in a large pot and fry sliced onions until golden.",
-      "Add tomato paste and fry for 2 minutes.",
+      "Add tomato paste and fry for 2 minutes until darkened.",
       "Pour in the blended tomato mixture (ata rodo).",
-      "Cook on high heat, stirring constantly until oil floats on top (about 20 minutes).",
+      "Cook on high heat, stirring constantly until oil floats on top (about 20 minutes). This step is crucial — undercooked tomato base ruins the dish.",
       "Add chicken stock, thyme, curry, bay leaves, salt, and seasoning.",
       "Bring to a boil, then add washed rice.",
       "Stir once, reduce heat to very low, cover tightly with foil then lid.",
       "Cook for 30-40 minutes without opening until rice is done.",
-      "Fluff with a fork. The bottom should have some crispy 'party jollof' (burnt bits)."
+      "Fluff with a fork. The bottom should have some crispy 'party jollof' (burnt bits).",
+      "Let rest 5 minutes before serving to allow flavors to meld."
     ],
     tips: [
-      "'Party Jollof' (slightly burnt bottom) is highly prized",
+      "'Party Jollof' (slightly burnt bottom) is highly prized — don't discard it!",
       "Cook on very low heat after adding rice for best results",
-      "Some add a bay leaf to absorb the tomato 'raw' taste"
+      "Some add a bay leaf to absorb the tomato 'raw' taste",
+      "For smoky jollof, place tin foil with hot coals inside the pot briefly before serving"
     ],
     variations: [
-      "Add fried plantains on the side",
-      "Mix in cooked chicken or beef",
-      "Smoky jollof is made on firewood"
-    ]
+      "Add fried plantains on the side for a classic combination",
+      "Mix in cooked chicken or beef for a heartier version",
+      "Smoky jollof is made on firewood — the gold standard at Nigerian parties",
+      "Ghanaian version uses more tomato paste and less blended tomatoes",
+      "Senegalese original (thieboudienne) is a fish-based version"
+    ],
+    servingSuggestions: [
+      "Fried plantain (dodo) and coleslaw",
+      "Grilled chicken or fried turkey (peppered turkey)",
+      "Moi moi (steamed bean pudding) on the side",
+      "Chilled zobo (hibiscus) drink"
+    ],
+    nutritionalInfo: {
+      calories: "~420 kcal",
+      protein: "8g",
+      carbs: "62g",
+      fat: "16g",
+      fiber: "3g",
+      notes: "Rich in lycopene from tomatoes; add protein by serving with meat"
+    },
+    dietaryInfo: ["Gluten-free", "Dairy-free", "Can be made vegan"]
   },
   {
     id: "egusi-soup",

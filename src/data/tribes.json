@@ -1371,8 +1371,10 @@
       "famousPeople": [
         { "name": "George Saitoti", "role": "Former Vice President of Kenya", "birth": 1945, "death": 2012, "wikipedia": "https://en.wikipedia.org/wiki/George_Saitoti", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/George_Saitoti.jpg/220px-George_Saitoti.jpg" },
         { "name": "William ole Ntimama", "role": "Prominent Politician & Maasai Leader", "birth": 1932, "death": 2016, "wikipedia": "https://en.wikipedia.org/wiki/William_ole_Ntimama", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/William_ole_Ntimama.jpg/220px-William_ole_Ntimama.jpg" },
-        { "name": "David Rudisha", "role": "800m World Record (Maasai heritage)", "birth": 1988, "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/David_Rudisha_2012.jpg/220px-David_Rudisha_2012.jpg" },
-        { "name": "Edward Lowassa", "role": "Former Tanzania PM (Tanzanian Maasai)", "birth": 1953, "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Edward_Lowassa_%28cropped%29.jpg/220px-Edward_Lowassa_%28cropped%29.jpg" }
+        { "name": "David Rudisha", "role": "800m World Record Holder (Olympic Gold)", "birth": 1988, "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/David_Rudisha_2012.jpg/220px-David_Rudisha_2012.jpg" },
+        { "name": "Edward Lowassa", "role": "Former Tanzania PM (Tanzanian Maasai)", "birth": 1953, "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Edward_Lowassa_%28cropped%29.jpg/220px-Edward_Lowassa_%28cropped%29.jpg" },
+        { "name": "Ledama ole Kina", "role": "Senator for Narok County", "birth": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Ledama_ole_Kina" },
+        { "name": "Tipis ole Tipis", "role": "Pioneer Maasai Politician & Minister", "birth": 1934, "death": 2004, "wikipedia": "https://en.wikipedia.org/wiki/John_Keen" }
       ],
       "description": "The Maasai are one of the most internationally recognized African tribes, known for their distinctive customs, dress, and residence in wildlife-rich areas. They are semi-nomadic pastoralists who have maintained their traditions despite modernization.",
       "relatedTribes": ["samburu", "kalenjin", "turkana"],
