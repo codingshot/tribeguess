@@ -52,44 +52,60 @@ const TribePage = () => {
   const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
   const seoTitle = `${tribe.name} Tribe - Culture, Names & History | TribeGuess`;
   const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${tribe.population}), and famous ${tribe.name} personalities.`;
+  const seoKeywords = [tribe.name, `${tribe.name} tribe`, `${tribe.name} culture`, `${tribe.name} names`, `${tribe.name} history`, countryNames, 'African tribe'].join(', ');
+
+  // Rich structured data for AI engines
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": `${tribe.name} Tribe - Culture, Names & History`,
+        "description": seoDescription,
+        "author": { "@type": "Organization", "name": "TribeGuess", "url": "https://tribeguess.com" },
+        "publisher": { "@type": "Organization", "name": "TribeGuess", "logo": { "@type": "ImageObject", "url": "https://tribeguess.com/favicon.png" } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://tribeguess.com/learn/${tribe.slug}` },
+        "about": { "@type": "Thing", "name": `${tribe.name} people`, "description": tribe.description },
+        "keywords": seoKeywords,
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tribeguess.com" },
+          { "@type": "ListItem", "position": 2, "name": "Tribes", "item": "https://tribeguess.com/learn" },
+          { "@type": "ListItem", "position": 3, "name": tribe.name, "item": `https://tribeguess.com/learn/${tribe.slug}` },
+        ]
+      },
+      ...(tribe.funFacts?.length ? [{
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": `What are the ${tribe.name} people known for?`, "acceptedAnswer": { "@type": "Answer", "text": tribe.description || tribe.funFacts?.[0] } },
+          { "@type": "Question", "name": `Where do the ${tribe.name} live?`, "acceptedAnswer": { "@type": "Answer", "text": `The ${tribe.name} people are found in ${countryNames}, primarily in ${tribe.region || 'their traditional homeland'}.` } },
+          ...(language ? [{ "@type": "Question", "name": `What language do the ${tribe.name} speak?`, "acceptedAnswer": { "@type": "Answer", "text": `The ${tribe.name} speak ${language.name || 'their own language'} with approximately ${language.speakers || 'many'} speakers.` } }] : []),
+          { "@type": "Question", "name": `What is the population of the ${tribe.name}?`, "acceptedAnswer": { "@type": "Answer", "text": `The ${tribe.name} have a population of approximately ${tribe.population || 'several million'}.` } },
+        ]
+      }] : [])
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={seoKeywords} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://tribeguess.com/learn/${tribe.slug}`} />
+        <meta property="og:site_name" content="TribeGuess" />
         <link rel="canonical" href={`https://tribeguess.com/learn/${tribe.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": `${tribe.name} Tribe - Culture, Names & History`,
-            "description": seoDescription,
-            "author": {
-              "@type": "Organization",
-              "name": "TribeGuess"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "TribeGuess"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": `https://tribeguess.com/learn/${tribe.slug}`
-            },
-            "about": {
-              "@type": "Thing",
-              "name": `${tribe.name} people`,
-              "description": tribe.description
-            }
-          })}
+          {JSON.stringify(structuredData)}
         </script>
       </Helmet>
       <Header />

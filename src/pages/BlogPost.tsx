@@ -28,31 +28,32 @@ const BlogPost = () => {
     );
   }
   
-  // Generate JSON-LD structured data
+  // Generate JSON-LD structured data with rich schema
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "description": post.excerpt,
-    "author": {
-      "@type": "Organization",
-      "name": "TribeGuess"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "TribeGuess",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tribeguess.com/favicon.png"
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.excerpt,
+        "author": { "@type": "Organization", "name": "TribeGuess", "url": "https://tribeguess.com" },
+        "publisher": { "@type": "Organization", "name": "TribeGuess", "logo": { "@type": "ImageObject", "url": "https://tribeguess.com/favicon.png" } },
+        "datePublished": post.publishDate,
+        "dateModified": post.publishDate,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://tribeguess.com/blog/${post.slug}` },
+        "keywords": post.tags.join(", "),
+        "articleSection": post.region,
+        "inLanguage": "en",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tribeguess.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tribeguess.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://tribeguess.com/blog/${post.slug}` },
+        ]
       }
-    },
-    "datePublished": post.publishDate,
-    "dateModified": post.publishDate,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://tribeguess.com/blog/${post.slug}`
-    },
-    "keywords": post.tags.join(", ")
+    ]
   };
 
   // Extract footnotes from content
@@ -98,6 +99,7 @@ const BlogPost = () => {
         <title>{post.seoTitle}</title>
         <meta name="description" content={post.seoDescription} />
         <meta name="keywords" content={post.tags.join(", ")} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={`https://tribeguess.com/blog/${post.slug}`} />
         
         {/* Open Graph */}
@@ -105,6 +107,12 @@ const BlogPost = () => {
         <meta property="og:description" content={post.seoDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://tribeguess.com/blog/${post.slug}`} />
+        <meta property="og:site_name" content="TribeGuess" />
+        <meta property="article:published_time" content={post.publishDate} />
+        <meta property="article:section" content={post.region} />
+        {post.tags.map((tag, i) => (
+          <meta key={i} property="article:tag" content={tag} />
+        ))}
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

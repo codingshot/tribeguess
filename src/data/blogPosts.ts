@@ -28,7 +28,9 @@ export interface BlogPost {
   sources?: Source[];
 }
 
-export const blogPosts: BlogPost[] = [
+import { generateTribeBlogs } from '@/lib/tribeBlogGenerator';
+
+const manualBlogPosts: BlogPost[] = [
   {
     slug: "kenyan-naming-traditions-birth-time",
     title: "How Kenyan Names Reveal the Time You Were Born",
@@ -1852,3 +1854,10 @@ export const blogPosts: BlogPost[] = [
     ]
   }
 ];
+
+// Generate blog posts for all tribes that don't have a manual one
+const existingSlugs = new Set(manualBlogPosts.map(p => p.slug));
+const tribeBlogPosts = generateTribeBlogs(existingSlugs);
+
+// Export combined: manual posts first, then auto-generated tribe posts
+export const blogPosts: BlogPost[] = [...manualBlogPosts, ...tribeBlogPosts];
