@@ -70,7 +70,7 @@ export function isValidYoutubeId(id: string): boolean {
   return /^[a-zA-Z0-9_-]{11}$/.test(id);
 }
 
-// Check if video is playable and get metadata (async validation)
+// Check if video is playable and get metadata (async validation with timeout)
 export async function validateYoutubeVideo(videoId: string): Promise<{ 
   valid: boolean; 
   title?: string;
@@ -78,11 +78,23 @@ export async function validateYoutubeVideo(videoId: string): Promise<{
   durationSeconds?: number;
 }> {
   try {
-    // Using noembed.com for quick validation without API key
-    const response = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000); // 5s timeout
+    
+    const response = await fetch(
+      `https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`,
+      { signal: controller.signal }
+    );
+    clearTimeout(timeout);
+    
+    if (!response.ok) {
+      return { valid: true }; // Fail open on HTTP errors
+    }
+    
     const data = await response.json();
     
     if (data.error) {
+      console.warn(`[VideoAudit] Invalid video ${videoId}: ${data.error}`);
       return { valid: false };
     }
     
@@ -90,8 +102,8 @@ export async function validateYoutubeVideo(videoId: string): Promise<{
       valid: true, 
       title: data.title,
     };
-  } catch {
-    // If fetch fails, assume valid (fail open for offline/blocked scenarios)
+  } catch (err) {
+    // If fetch fails (timeout, network error), assume valid (fail open)
     return { valid: true };
   }
 }
