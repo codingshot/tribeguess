@@ -28,31 +28,32 @@ const BlogPost = () => {
     );
   }
   
-  // Generate JSON-LD structured data
+  // Generate JSON-LD structured data with rich schema
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "description": post.excerpt,
-    "author": {
-      "@type": "Organization",
-      "name": "TribeGuess"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "TribeGuess",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tribeguess.com/favicon.png"
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.excerpt,
+        "author": { "@type": "Organization", "name": "TribeGuess", "url": "https://tribeguess.com" },
+        "publisher": { "@type": "Organization", "name": "TribeGuess", "logo": { "@type": "ImageObject", "url": "https://tribeguess.com/favicon.png" } },
+        "datePublished": post.publishDate,
+        "dateModified": post.publishDate,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://tribeguess.com/blog/${post.slug}` },
+        "keywords": post.tags.join(", "),
+        "articleSection": post.region,
+        "inLanguage": "en",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tribeguess.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tribeguess.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://tribeguess.com/blog/${post.slug}` },
+        ]
       }
-    },
-    "datePublished": post.publishDate,
-    "dateModified": post.publishDate,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://tribeguess.com/blog/${post.slug}`
-    },
-    "keywords": post.tags.join(", ")
+    ]
   };
 
   // Extract footnotes from content
