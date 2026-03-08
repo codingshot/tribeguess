@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Languages, Users, MessageCircle, MapPin, ArrowRight, GitBranch } from 'lucide-react';
 import languageFamiliesData from '@/data/languageFamilies.json';
+import LanguageFamilyMigrationTree from '@/components/LanguageFamilyMigrationTree';
 
 export default function LanguagesIndex() {
   return (
