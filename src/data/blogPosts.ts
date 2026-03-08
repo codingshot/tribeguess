@@ -1853,6 +1853,184 @@ const manualBlogPosts: BlogPost[] = [
       { title: "African Fermented Foods and Microbiome - Nature Reviews" }
     ]
   }
+  },
+
+  // NEW BLOG POST: African Superfoods
+  {
+    slug: "african-superfoods-ancient-nutrition",
+    title: "10 African Superfoods the World Is Just Discovering",
+    seoTitle: "African Superfoods: Ancient Nutrition Secrets the World Is Discovering | TribeGuess",
+    seoDescription: "From baobab to moringa, teff to fonio — discover 10 African superfoods that have nourished tribes for centuries and are now trending globally.",
+    excerpt: "Africa's ancient foods are becoming global health trends. Discover the superfoods that African tribes have known about for centuries.",
+    emoji: "🥑",
+    gradient: "bg-gradient-to-br from-green-500 to-emerald-700",
+    region: "Pan-African",
+    readTime: "7 min read",
+    publishDate: "2026-03-05",
+    tags: ["nutrition", "superfoods", "African cuisine", "health", "traditional food"],
+    relatedTribes: [
+      { name: "Maasai", slug: "maasai" },
+      { name: "Amhara", slug: "amhara" },
+      { name: "Wolof", slug: "wolof" },
+      { name: "San", slug: "san" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "While the Western wellness industry chases the latest superfood trends, African communities have been eating these nutrient-dense foods for millennia. From the Sahel to the Cape, African superfoods are finally getting the global recognition they deserve.",
+          "These aren't exotic novelties — they're staple foods that have sustained some of the world's healthiest and most resilient populations for centuries."
+        ]
+      },
+      {
+        heading: "Baobab: The Tree of Life",
+        icon: "🌳",
+        paragraphs: [
+          "The baobab fruit contains 6 times more vitamin C than oranges, twice the calcium of milk, and is rich in antioxidants. The Wolof people of Senegal make 'bouye' — a creamy baobab juice that's a daily staple.",
+          "Every part of the baobab tree is used: the fruit for nutrition, leaves for cooking, bark for rope, and the hollow trunks as water storage."
+        ],
+        list: [
+          "Vitamin C: 6x more than oranges",
+          "Calcium: 2x more than milk",
+          "Rich in potassium, magnesium, and iron",
+          "Natural prebiotic fiber for gut health"
+        ]
+      },
+      {
+        heading: "Teff: Ethiopia's Tiny Powerhouse",
+        icon: "🌾",
+        paragraphs: [
+          "Teff is the world's smallest grain but packs enormous nutrition. The Amhara and Tigray people have cultivated it for 5,000+ years to make injera flatbread. Teff is naturally gluten-free and high in protein.",
+          "Ethiopian runners credit teff for their endurance — it's high in iron and complex carbohydrates that release energy slowly."
+        ],
+        list: [
+          "Complete protein with all essential amino acids",
+          "Naturally gluten-free",
+          "High in iron (prevents anemia common in runners)",
+          "Resistant starch supports blood sugar control"
+        ],
+        highlight: "Ethiopia's dominance in distance running is partly attributed to teff's nutritional profile — it's the perfect endurance fuel."
+      },
+      {
+        heading: "Moringa: The Miracle Tree",
+        icon: "🌿",
+        paragraphs: [
+          "Called the 'miracle tree' across West Africa, moringa leaves contain 7 times the vitamin C of oranges, 4 times the calcium of milk, and 2 times the protein of yogurt. The Hausa people use it in soups and porridges.",
+          "Moringa grows in poor soil with little water, making it a natural solution for malnutrition in arid regions."
+        ]
+      },
+      {
+        heading: "Fonio: Africa's Ancient Grain Renaissance",
+        icon: "✨",
+        paragraphs: [
+          "Fonio is the oldest cultivated cereal in Africa, grown by the Bambara and Dogon peoples of Mali for 5,000 years. It's gluten-free, cooks in 5 minutes, and has a delicate, nutty flavor.",
+          "Chef Pierre Thiam has championed fonio globally, and it's now available in specialty stores worldwide. The Dogon consider it the 'seed of the universe'."
+        ]
+      },
+      {
+        heading: "Mongongo Nuts: The San People's Superfood",
+        icon: "🥜",
+        paragraphs: [
+          "The San (Bushmen) of the Kalahari have relied on mongongo nuts for thousands of years. These nuts contain more protein than most nuts, are rich in vitamin E, and have exceptional antioxidant properties.",
+          "Research shows that the San's traditional diet — rich in mongongo nuts, wild tubers, and lean game — may be one of the healthiest diets ever studied."
+        ]
+      },
+      {
+        heading: "Other African Superfoods to Watch",
+        icon: "🔥",
+        paragraphs: [
+          "Africa's food biodiversity is the richest on earth, and many more superfoods are gaining attention."
+        ],
+        list: [
+          "Amaranth — High-protein grain used by the Kikuyu and many East African tribes",
+          "Hibiscus (Bissap) — Antioxidant-rich drink beloved across West Africa",
+          "Tiger Nuts — Ancient tubers from Nigeria, high in fiber and prebiotics",
+          "Shea Butter — Not just for skin; eaten as cooking fat across the Sahel",
+          "Tamarind — Used in Somali and Swahili cooking, rich in B vitamins"
+        ]
+      }
+    ],
+    sources: [
+      { title: "Baobab Nutritional Analysis - Journal of Food Science", url: "https://www.sciencedirect.com/" },
+      { title: "Teff and Ethiopian Athletes - Sports Nutrition Review" },
+      { title: "Moringa Oleifera - WHO Traditional Medicine Database" },
+      { title: "Fonio Revival - Pierre Thiam, 'The Fonio Cookbook'" }
+    ]
+  },
+
+  // NEW BLOG POST: African Music and Identity
+  {
+    slug: "african-music-tribal-identity",
+    title: "How Music Defines Tribal Identity Across Africa",
+    seoTitle: "African Music & Tribal Identity: From Mbira to Mbalax | TribeGuess",
+    seoDescription: "Explore how music shapes ethnic identity across Africa — from Shona mbira ceremonies to Wolof sabar drums, Yoruba talking drums to Maasai chanting.",
+    excerpt: "Music in Africa isn't entertainment — it's identity, history, and spiritual practice woven into sound.",
+    emoji: "🎵",
+    gradient: "bg-gradient-to-br from-purple-500 to-indigo-700",
+    region: "Pan-African",
+    readTime: "8 min read",
+    publishDate: "2026-03-02",
+    tags: ["music", "culture", "identity", "mbira", "drums", "African arts"],
+    relatedTribes: [
+      { name: "Shona", slug: "shona" },
+      { name: "Wolof", slug: "wolof" },
+      { name: "Yoruba", slug: "yoruba" },
+      { name: "Maasai", slug: "maasai" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "In Africa, music is never just music. It's a passport, a prayer, a protest, and a party — often all at once. Every ethnic group has developed distinctive musical traditions that serve as sonic fingerprints of identity.",
+          "From the thumb pianos of Zimbabwe to the talking drums of Nigeria, African music carries cultural DNA that connects modern people to ancient roots."
+        ]
+      },
+      {
+        heading: "Shona Mbira: Speaking to the Ancestors",
+        icon: "🎹",
+        paragraphs: [
+          "The mbira (thumb piano) is sacred to the Shona people of Zimbabwe. During bira ceremonies, mbira music opens a channel between the living and ancestor spirits (vadzimu). Players can perform all night, entering trance states.",
+          "Thomas Mapfumo electrified mbira music to create Chimurenga — revolutionary music that fueled Zimbabwe's liberation war. Oliver 'Tuku' Mtukudzi created his own genre blending mbira with jazz and Afro-pop."
+        ],
+        highlight: "Christian missionaries banned the mbira, calling it 'the devil's instrument.' Despite centuries of suppression, the Shona kept it alive in secret."
+      },
+      {
+        heading: "Wolof Sabar Drums: The Heartbeat of Senegal",
+        icon: "🥁",
+        paragraphs: [
+          "Sabar drumming is inseparable from Wolof identity. These tall, slender drums produce sharp, high-pitched sounds that drive the explosive sabar dance. Drum phrases encode messages — a skilled drummer can 'speak' in rhythm.",
+          "Youssou N'Dour took Wolof mbalax music worldwide, blending sabar rhythms with modern production. His song '7 Seconds' (with Neneh Cherry) became a global hit."
+        ]
+      },
+      {
+        heading: "Yoruba Talking Drums: When Drums Speak",
+        icon: "🪘",
+        paragraphs: [
+          "The Yoruba dundun (talking drum) can replicate the tonal patterns of the Yoruba language — literally speaking through rhythm. Master drummers communicate proverbs, warnings, and praise songs.",
+          "This tradition influenced music across the African diaspora. You can hear its echoes in Cuban rumba, Brazilian samba, and American jazz."
+        ]
+      },
+      {
+        heading: "Maasai Vocal Music: No Instruments Needed",
+        icon: "🎤",
+        paragraphs: [
+          "Unlike most African musical traditions, the Maasai use no instruments. Their music consists entirely of vocal harmonies, call-and-response chanting, and deep guttural throat singing. Warriors compete in jumping dances (adumu) where height shows strength.",
+          "Maasai musical tradition challenges the Western assumption that 'real' music requires instruments."
+        ]
+      },
+      {
+        heading: "Music as Resistance",
+        icon: "✊",
+        paragraphs: [
+          "Across Africa, music has been a weapon against oppression. Fela Kuti's Afrobeat challenged Nigerian military rule. Miriam Makeba's Xhosa songs fought apartheid. Hugh Masekela's jazz trumpet became the sound of liberation.",
+          "Today, artists like Burna Boy (Igbo), Tems (Yoruba), and Davido (Yoruba) carry forward this tradition — their global success bringing African musical DNA to the world stage."
+        ]
+      }
+    ],
+    sources: [
+      { title: "Turino, T. (2000) Nationalists, Cosmopolitans, and Popular Music in Zimbabwe" },
+      { title: "Charry, E. (2000) Mande Music: Traditional & Modern Music of the Maninka & Mandinka" },
+      { title: "Euba, A. (1990) Yorùbá Drumming: The Dùndún Tradition" }
+    ]
+  }
 ];
 
 // Generate blog posts for all tribes that don't have a manual one

@@ -11252,8 +11252,248 @@ const northAfricanRecipes: Recipe[] = [
       "The bottom layer becomes the top - arrange nicely",
       "Serve immediately after flipping"
     ]
+  },
+
+  // ============ SOMALI - BARIIS ISKUKARIS ============
+  {
+    id: "bariis-iskukaris",
+    name: "Bariis Iskukaris (Somali Spiced Rice)",
+    localName: "Bariis Iskukaris",
+    tribeSlug: "somali",
+    tribeName: "Somali",
+    category: "staple",
+    region: "horn",
+    country: "SO",
+    description: "Fragrant one-pot rice dish cooked with meat, xawaash spice blend, and caramelized sugar giving it a golden color. The centerpiece of Somali celebrations.",
+    culturalSignificance: "Bariis iskukaris is the crown jewel of Somali cuisine, served at weddings, Eid celebrations, and family gatherings. The quality of a family's bariis reflects their hospitality and cooking skill.",
+    historicalContext: "Somali cuisine was shaped by centuries of trade along the Indian Ocean coast. Spices like cardamom, cinnamon, and cumin came through ancient trade routes. Bariis iskukaris blends these imported spices with indigenous Somali cooking techniques, creating a dish that tells the story of Somali maritime trade history.",
+    youtubeVideoId: "bSarNgoid3s",
+    prepTime: "30 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "medium",
+    ingredients: [
+      { item: "Basmati rice", amount: "3 cups", notes: "Washed and soaked 20 minutes", substitution: "Long grain rice" },
+      { item: "Goat or lamb", amount: "500g", notes: "Cut into chunks", substitution: "Chicken thighs" },
+      { item: "Onion", amount: "2 large", notes: "Diced" },
+      { item: "Tomatoes", amount: "3 medium", notes: "Pureed" },
+      { item: "Xawaash spice mix", amount: "2 tablespoons", notes: "Cumin, coriander, cardamom, cinnamon, turmeric, black pepper, cloves", substitution: "Ras el hanout" },
+      { item: "Sugar", amount: "2 tablespoons", notes: "For caramelizing" },
+      { item: "Vegetable oil", amount: "1/4 cup" },
+      { item: "Garlic", amount: "4 cloves", notes: "Minced" },
+      { item: "Cilantro", amount: "1/2 cup", notes: "For garnish" },
+      { item: "Raisins", amount: "1/4 cup", notes: "Optional" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Hot water", amount: "4 cups" }
+    ],
+    instructions: [
+      "Heat oil in a large pot. Add sugar and let it caramelize to golden brown.",
+      "Add onions and cook until deeply golden, about 8 minutes.",
+      "Add garlic and xawaash spice mix, stir for 1 minute until fragrant.",
+      "Add meat pieces and brown on all sides, about 5 minutes.",
+      "Pour in tomato puree and cook until oil separates, about 10 minutes.",
+      "Add hot water, salt, and bring to a boil. Simmer until meat is tender, about 30 minutes.",
+      "Remove meat and set aside. Measure remaining broth (should be about 4 cups, add water if needed).",
+      "Drain soaked rice and add to the pot with broth.",
+      "Bring to boil, then reduce heat to lowest. Cover tightly with foil then lid.",
+      "Cook for 20 minutes without lifting lid.",
+      "Place meat on top of rice, cover again, and steam for 5 more minutes.",
+      "Fluff with fork, scatter raisins and cilantro. Serve with banana on the side."
+    ],
+    tips: [
+      "Don't stir the rice once covered - let steam do the work",
+      "The caramelized sugar gives the authentic golden color and subtle sweetness",
+      "Make your own xawaash: equal parts cumin, coriander, cardamom, and turmeric, half parts cinnamon and cloves",
+      "Serve with a banana and a glass of camel milk for the traditional Somali experience"
+    ],
+    variations: [
+      "Chicken bariis - use chicken pieces instead of goat, reduces cook time",
+      "Vegetarian version with chickpeas and mixed vegetables",
+      "Add saffron strands for an extra luxurious version",
+      "Some families add a layer of sliced potatoes at the bottom for crispy hashwa"
+    ],
+    servingSuggestions: [
+      "Banana (essential Somali side)",
+      "Salad with lime dressing",
+      "Muufo (Somali flatbread)",
+      "Camel milk or spiced tea"
+    ],
+    nutritionalInfo: {
+      calories: "~450 kcal",
+      protein: "22g",
+      carbs: "58g",
+      fat: "14g",
+      fiber: "3g",
+      notes: "Complete meal with protein from meat and carbs from rice. Xawaash spices contain anti-inflammatory compounds."
+    },
+    dietaryInfo: ["Gluten-free", "Dairy-free", "High-protein"]
+  },
+
+  // ============ CHAGGA (TANZANIA) RECIPES ============
+  {
+    id: "ndizi-nyama",
+    name: "Ndizi na Nyama (Banana Stew)",
+    localName: "Ndizi na Nyama",
+    tribeSlug: "chagga",
+    tribeName: "Chagga",
+    category: "staple",
+    region: "east",
+    country: "TZ",
+    description: "A hearty stew of green bananas cooked with beef in a rich tomato sauce. The signature dish of the Chagga people from the slopes of Mount Kilimanjaro.",
+    culturalSignificance: "Bananas are central to Chagga identity - they cultivate over 20 varieties on the volcanic slopes of Kilimanjaro. This stew represents everyday Chagga life, connecting agriculture to the dinner table.",
+    historicalContext: "The Chagga developed intensive banana farming systems on Kilimanjaro's fertile volcanic slopes over 500 years ago. Their banana groves (vihamba) are recognized as a traditional agroforestry system. Ndizi na nyama evolved as bananas became the dominant crop.",
+    youtubeVideoId: "QzZJxQ1K95o",
+    prepTime: "20 minutes",
+    cookTime: "45 minutes",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Green bananas (plantains)", amount: "6 large", notes: "Peeled and halved", substitution: "Green plantains" },
+      { item: "Beef", amount: "500g", notes: "Cut into chunks" },
+      { item: "Onion", amount: "2 large", notes: "Chopped" },
+      { item: "Tomatoes", amount: "4 medium", notes: "Chopped" },
+      { item: "Coconut milk", amount: "1 cup", notes: "Optional for coastal variation" },
+      { item: "Garlic", amount: "3 cloves", notes: "Minced" },
+      { item: "Cooking oil", amount: "3 tablespoons" },
+      { item: "Salt and pepper", amount: "To taste" },
+      { item: "Fresh cilantro", amount: "For garnish" }
+    ],
+    instructions: [
+      "Heat oil and brown beef pieces on all sides. Remove and set aside.",
+      "In the same pot, sauté onions until golden.",
+      "Add garlic and cook 1 minute.",
+      "Add tomatoes and cook until they break down into a sauce.",
+      "Return beef to pot, add 2 cups water, and simmer 20 minutes.",
+      "Add green bananas and more water to cover.",
+      "Simmer until bananas are tender and stew thickens, about 20 minutes.",
+      "Add coconut milk if using, season with salt and pepper.",
+      "Garnish with cilantro and serve hot."
+    ],
+    tips: [
+      "Green bananas stain hands - rub oil on hands before peeling",
+      "Don't overcook bananas - they should hold their shape",
+      "Kilimanjaro bananas have a distinctive flavor; green plantains are the closest substitute"
+    ],
+    nutritionalInfo: {
+      calories: "~380 kcal",
+      protein: "20g",
+      carbs: "45g",
+      fat: "12g",
+      fiber: "5g",
+      notes: "Green bananas are rich in resistant starch - a prebiotic that feeds gut bacteria"
+    },
+    dietaryInfo: ["Gluten-free", "Dairy-free"]
+  },
+
+  // ============ TSWANA (BOTSWANA) - ADDITIONAL ============
+  {
+    id: "dikgobe",
+    name: "Dikgobe (Bean and Samp Stew)",
+    localName: "Dikgobe",
+    tribeSlug: "tswana",
+    tribeName: "Tswana",
+    category: "staple",
+    region: "southern",
+    country: "BW",
+    description: "A nutritious pot of beans, samp (dried corn kernels), and sometimes peanuts - Botswana's most beloved traditional dish.",
+    culturalSignificance: "Dikgobe is the ultimate comfort food of the Tswana people. It's slow-cooked in large pots and shared communally. The dish represents the agrarian roots of Tswana society.",
+    historicalContext: "Before colonization, the Tswana were skilled farmers in the semi-arid Kalahari region. Dikgobe evolved as a way to combine drought-resistant crops into a complete protein meal. It sustained communities through dry seasons.",
+    prepTime: "12 hours (soaking)",
+    cookTime: "3 hours",
+    servings: 8,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Dried samp (hominy)", amount: "2 cups", notes: "Soaked overnight" },
+      { item: "Sugar beans or cowpeas", amount: "1 cup", notes: "Soaked overnight" },
+      { item: "Peanuts", amount: "1/2 cup", notes: "Raw, shelled" },
+      { item: "Salt", amount: "To taste" },
+      { item: "Water", amount: "8 cups" }
+    ],
+    instructions: [
+      "Drain soaked samp and beans. Place in a large pot.",
+      "Add fresh water to cover by 3 inches.",
+      "Bring to a boil, then reduce heat to a gentle simmer.",
+      "Cook for 2 hours, stirring occasionally and adding water as needed.",
+      "Add peanuts and continue cooking for another hour.",
+      "The dish is ready when samp and beans are soft and creamy.",
+      "Season with salt. The consistency should be thick like porridge.",
+      "Serve hot in communal bowls."
+    ],
+    tips: [
+      "Patience is key - low and slow cooking creates the best texture",
+      "Leftovers taste even better the next day",
+      "Some add a spoonful of peanut butter for extra richness"
+    ],
+    nutritionalInfo: {
+      calories: "~310 kcal",
+      protein: "14g",
+      carbs: "50g",
+      fat: "6g",
+      fiber: "10g",
+      notes: "Complete plant protein from beans + corn combination. Peanuts add healthy fats."
+    },
+    dietaryInfo: ["Vegan", "Gluten-free", "High-fiber", "High-protein"]
+  },
+
+  // ============ BAMBARA (MALI) RECIPES ============
+  {
+    id: "tigadegena",
+    name: "Tigadèguèna (Peanut Butter Stew)",
+    localName: "Tigadèguèna",
+    tribeSlug: "bambara",
+    tribeName: "Bambara",
+    category: "staple",
+    region: "west",
+    country: "ML",
+    description: "A rich, creamy peanut butter stew with meat and vegetables - the beloved national dish of Mali and cornerstone of Bambara cuisine.",
+    culturalSignificance: "Tigadèguèna means 'peanut butter sauce' in Bambara. It's the dish that every Malian mother teaches her daughter to cook. Sharing this stew from a communal bowl is an act of social bonding.",
+    historicalContext: "Peanuts were introduced to West Africa from South America in the 16th century via Portuguese traders. The Bambara people ingeniously incorporated them into their existing cuisine, creating what became Mali's most iconic dish.",
+    youtubeVideoId: "6kL0fVk3JXw",
+    prepTime: "20 minutes",
+    cookTime: "1 hour",
+    servings: 6,
+    difficulty: "easy",
+    ingredients: [
+      { item: "Chicken or lamb", amount: "500g", notes: "Cut into pieces" },
+      { item: "Natural peanut butter", amount: "1 cup", notes: "Smooth, unsweetened", substitution: "Groundnut paste" },
+      { item: "Tomato paste", amount: "3 tablespoons" },
+      { item: "Onion", amount: "2 large", notes: "Chopped" },
+      { item: "Okra", amount: "6 pieces", notes: "Optional" },
+      { item: "Eggplant", amount: "1 medium", notes: "Cubed" },
+      { item: "Sweet potato", amount: "1 large", notes: "Cubed" },
+      { item: "Scotch bonnet pepper", amount: "1", notes: "Whole, for flavor" },
+      { item: "Vegetable oil", amount: "3 tablespoons" },
+      { item: "Salt", amount: "To taste" }
+    ],
+    instructions: [
+      "Brown meat pieces in oil. Remove and set aside.",
+      "Sauté onions until golden in the same pot.",
+      "Add tomato paste and cook 2 minutes.",
+      "Return meat, add 4 cups water, and bring to a boil.",
+      "Simmer until meat is half-cooked, about 20 minutes.",
+      "Dissolve peanut butter in 1 cup warm water. Add to pot.",
+      "Add sweet potato, eggplant, and whole pepper.",
+      "Simmer on low heat for 30 minutes, stirring occasionally to prevent sticking.",
+      "The sauce should be thick and creamy. Adjust salt.",
+      "Serve over white rice or with tô (millet/sorghum porridge)."
+    ],
+    tips: [
+      "Stir frequently once peanut butter is added - it burns easily",
+      "Use natural peanut butter without sugar for authentic taste",
+      "The whole scotch bonnet adds flavor without too much heat - don't pierce it"
+    ],
+    nutritionalInfo: {
+      calories: "~480 kcal",
+      protein: "28g",
+      carbs: "30g",
+      fat: "28g",
+      fiber: "6g",
+      notes: "Peanuts provide protein, healthy fats, and niacin. Sweet potato adds vitamin A."
+    },
+    dietaryInfo: ["Gluten-free", "Dairy-free", "High-protein"]
   }
 ];
+
 
 // Combine all recipes
 recipes.push(...beverageRecipes);
