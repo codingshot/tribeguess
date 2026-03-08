@@ -12034,10 +12034,10 @@ const wave3Recipes: Recipe[] = [
     difficulty: 'medium',
     youtubeVideoId: '',
     ingredients: [
-      { item: 'Beef (bone-in cuts like leg or ribs)', amount: '1.5 kg', category: 'protein' },
-      { item: 'Water', amount: 'To cover', category: 'liquid' },
-      { item: 'Salt', amount: 'To taste', category: 'seasoning' },
-      { item: 'Onion (optional, modern)', amount: '1 large', category: 'vegetable' }
+      { item: 'Beef (bone-in cuts like leg or ribs)', amount: '1.5 kg' },
+      { item: 'Water', amount: 'To cover' },
+      { item: 'Salt', amount: 'To taste' },
+      { item: 'Onion (optional, modern)', amount: '1 large' }
     ],
     instructions: [
       'Place bone-in beef in a large pot with just enough water to cover.',
