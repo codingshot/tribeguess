@@ -15,24 +15,42 @@ class VideoPlayerErrorBoundary extends React.Component<
   { children: React.ReactNode },
   { hasError: boolean }
 > {
+  private recoverTimer: ReturnType<typeof setTimeout> | null = null;
+
   constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError() {
     return { hasError: true };
   }
+
   componentDidCatch(error: Error) {
     console.warn('[VideoPlayer] Recovered from crash:', error.message);
     // Clear potentially corrupted video state
     try {
       localStorage.removeItem('tribeguess_current_video');
     } catch {}
+
+    // Auto-recover after 2s
+    if (!this.recoverTimer) {
+      this.recoverTimer = setTimeout(() => {
+        this.setState({ hasError: false });
+        this.recoverTimer = null;
+      }, 2000);
+    }
   }
+
+  componentWillUnmount() {
+    if (this.recoverTimer) {
+      clearTimeout(this.recoverTimer);
+      this.recoverTimer = null;
+    }
+  }
+
   render() {
     if (this.state.hasError) {
-      // Auto-recover after 2s
-      setTimeout(() => this.setState({ hasError: false }), 2000);
       return null;
     }
     return this.props.children;
