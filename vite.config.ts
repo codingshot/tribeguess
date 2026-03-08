@@ -72,11 +72,21 @@ function sitemapGenerator(): Plugin {
                   changefreq: 'monthly',
                   priority: 0.8
                 });
+                // Auto-generated tribe blog post
+                tribeBlogEntries.push({
+                  loc: `/blog/tribe-${tribe.slug}`,
+                  lastmod: TODAY,
+                  changefreq: 'monthly',
+                  priority: 0.7
+                });
               }
             }
           }
-          console.log(`   ✓ ${tribesData.tribes?.length || 0} tribes`);
+          console.log(`   ✓ ${tribesData.tribes?.length || 0} tribes + blog posts`);
         }
+        
+        // Add tribe blog entries
+        entries.push(...tribeBlogEntries);
         
         // Load blog posts
         const blogPath = path.resolve(__dirname, 'src/data/blogPosts.json');
