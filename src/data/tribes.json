@@ -4650,10 +4650,15 @@
       },
       "famousPeople": [
         { "name": "Robert Mugabe", "role": "First Prime Minister/President of Zimbabwe", "birth": 1924, "death": 2019, "wikipedia": "https://en.wikipedia.org/wiki/Robert_Mugabe", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Robert_Mugabe_May_2015_%28cropped%29.jpg/220px-Robert_Mugabe_May_2015_%28cropped%29.jpg" },
-        { "name": "Thomas Mapfumo", "role": "'Lion of Zimbabwe' Musician", "birth": 1945, "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mapfumo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Thomas_mapfumo.jpg/220px-Thomas_mapfumo.jpg" },
-        { "name": "Stella Chiweshe", "role": "Mbira Queen", "birth": 1946, "death": 2023, "wikipedia": "https://en.wikipedia.org/wiki/Stella_Chiweshe", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Stella_chiweshe_2006.jpg/220px-Stella_chiweshe_2006.jpg" },
-        { "name": "Herbert Chitepo", "role": "Liberation War Hero", "birth": 1923, "death": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Herbert_Chitepo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Herbert_Chitepo.jpg/220px-Herbert_Chitepo.jpg" },
-        { "name": "Tendai Biti", "role": "Political Leader", "birth": 1966, "wikipedia": "https://en.wikipedia.org/wiki/Tendai_Biti", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tendai_Biti_-_World_Economic_Forum_on_Africa_2012.jpg/220px-Tendai_Biti_-_World_Economic_Forum_on_Africa_2012.jpg" }
+        { "name": "Thomas Mapfumo", "role": "'Lion of Zimbabwe' Chimurenga Musician", "birth": 1945, "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mapfumo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Thomas_mapfumo.jpg/220px-Thomas_mapfumo.jpg" },
+        { "name": "Oliver Mtukudzi", "role": "Legendary Tuku Music Creator & UNICEF Ambassador", "birth": 1952, "death": 2019, "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Mtukudzi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Oliver_Mtukudzi.jpg/220px-Oliver_Mtukudzi.jpg" },
+        { "name": "Stella Chiweshe", "role": "Mbira Queen - International Mbira Master", "birth": 1946, "death": 2023, "wikipedia": "https://en.wikipedia.org/wiki/Stella_Chiweshe", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Stella_chiweshe_2006.jpg/220px-Stella_chiweshe_2006.jpg" },
+        { "name": "Herbert Chitepo", "role": "First Black Zimbabwean Barrister & Liberation Hero", "birth": 1923, "death": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Herbert_Chitepo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Herbert_Chitepo.jpg/220px-Herbert_Chitepo.jpg" },
+        { "name": "Tendai Biti", "role": "Political Leader & Former Finance Minister", "birth": 1966, "wikipedia": "https://en.wikipedia.org/wiki/Tendai_Biti", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tendai_Biti_-_World_Economic_Forum_on_Africa_2012.jpg/220px-Tendai_Biti_-_World_Economic_Forum_on_Africa_2012.jpg" },
+        { "name": "Emmerson Mnangagwa", "role": "President of Zimbabwe", "birth": 1942, "wikipedia": "https://en.wikipedia.org/wiki/Emmerson_Mnangagwa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Emmerson_Mnangagwa_2017.jpg/220px-Emmerson_Mnangagwa_2017.jpg" },
+        { "name": "Tsitsi Dangarembga", "role": "Award-Winning Author (Nervous Conditions)", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/Tsitsi_Dangarembga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Tsitsi_Dangarembga_%282021%29.jpg/220px-Tsitsi_Dangarembga_%282021%29.jpg" },
+        { "name": "Charles Mungoshi", "role": "Novelist & Poet (Coming of the Dry Season)", "birth": 1947, "death": 2019, "wikipedia": "https://en.wikipedia.org/wiki/Charles_Mungoshi" },
+        { "name": "Jah Prayzah", "role": "Contemporary Musician & Cultural Icon", "birth": 1987, "wikipedia": "https://en.wikipedia.org/wiki/Jah_Prayzah", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Jah_Prayzah_2019.jpg/220px-Jah_Prayzah_2019.jpg" }
       ],
       "description": "The Shona are Zimbabwe's largest ethnic group, builders of Great Zimbabwe, and known for stone sculpture, mbira music, and agricultural traditions.",
       "relatedTribes": ["ndebele", "tonga", "kalanga"],
@@ -4926,11 +4931,15 @@
         "writingSystem": "Ge'ez script (Ethiopic)"
       },
       "famousPeople": [
-        { "name": "Haile Selassie", "role": "Last Emperor of Ethiopia", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie" },
-        { "name": "Menelik II", "role": "Emperor who defeated Italy at Adwa", "wikipedia": "https://en.wikipedia.org/wiki/Menelik_II" },
-        { "name": "Tedros Adhanom", "role": "WHO Director-General", "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom" },
-        { "name": "Tewodros II", "role": "Emperor & Unifier", "wikipedia": "https://en.wikipedia.org/wiki/Tewodros_II" },
-        { "name": "Mengistu Haile Mariam", "role": "Former Head of State", "wikipedia": "https://en.wikipedia.org/wiki/Mengistu_Haile_Mariam" }
+        { "name": "Haile Selassie", "role": "Last Emperor of Ethiopia & Pan-African Icon", "birth": 1892, "death": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Haile_Selassie_in_full_dress.jpg/220px-Haile_Selassie_in_full_dress.jpg" },
+        { "name": "Menelik II", "role": "Emperor who defeated Italy at Battle of Adwa (1896)", "birth": 1844, "death": 1913, "wikipedia": "https://en.wikipedia.org/wiki/Menelik_II", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Menelik_II_of_Ethiopia.jpg/220px-Menelik_II_of_Ethiopia.jpg" },
+        { "name": "Tewodros II", "role": "Emperor & Unifier of Ethiopia", "birth": 1818, "death": 1868, "wikipedia": "https://en.wikipedia.org/wiki/Tewodros_II", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Theodore_II_of_Ethiopia.jpg/220px-Theodore_II_of_Ethiopia.jpg" },
+        { "name": "Tedros Adhanom", "role": "WHO Director-General", "birth": 1965, "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Tedros_Adhanom_Ghebreyesus_-_AI_for_Good_Global_Summit_2018.jpg/220px-Tedros_Adhanom_Ghebreyesus_-_AI_for_Good_Global_Summit_2018.jpg" },
+        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Peace Prize 2019", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Abiy_Ahmed_2019.jpg/220px-Abiy_Ahmed_2019.jpg" },
+        { "name": "Mengistu Haile Mariam", "role": "Former Head of State (Derg regime)", "birth": 1937, "wikipedia": "https://en.wikipedia.org/wiki/Mengistu_Haile_Mariam", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mengistu_Haile_Mariam_3.jpg/220px-Mengistu_Haile_Mariam_3.jpg" },
+        { "name": "Tilahun Gessesse", "role": "Voice of Ethiopia - Legendary Singer", "birth": 1940, "death": 2009, "wikipedia": "https://en.wikipedia.org/wiki/Tilahun_Gessesse", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tilahun_Gessesse.jpg/220px-Tilahun_Gessesse.jpg" },
+        { "name": "Aster Aweke", "role": "International Ethiopian Singer", "birth": 1961, "wikipedia": "https://en.wikipedia.org/wiki/Aster_Aweke", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Aster_Aweke.jpg/220px-Aster_Aweke.jpg" },
+        { "name": "Empress Taytu Betul", "role": "Empress of Ethiopia & Battle of Adwa Heroine", "birth": 1851, "death": 1918, "wikipedia": "https://en.wikipedia.org/wiki/Taytu_Betul", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Taytu_Betul.jpg/220px-Taytu_Betul.jpg" }
       ],
       "description": "The Amhara are a major Ethiopian ethnic group known for Orthodox Christianity, the ancient Ge'ez script, imperial heritage, and elaborate coffee ceremony tradition.",
       "relatedTribes": ["tigray", "oromo", "gurage"],
@@ -9682,9 +9691,12 @@
       },
       "language": { "name": "Sesotho", "speakers": "~8 million", "greeting": "Lumela!", "greetingMeaning": "Hello!", "family": "Bantu (Niger-Congo) - Sotho-Tswana group", "writingSystem": "Latin alphabet" },
       "famousPeople": [
-        { "name": "King Moshoeshoe I", "role": "Founder of the Sotho nation", "wikipedia": "https://en.wikipedia.org/wiki/Moshoeshoe_I" },
-        { "name": "Cyril Ramaphosa", "role": "President of South Africa (Sotho-Venda heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Cyril_Ramaphosa" },
-        { "name": "Thomas Mofolo", "role": "Author of Chaka", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mofolo" }
+        { "name": "King Moshoeshoe I", "role": "Founder & First King of the Sotho Nation", "birth": 1786, "death": 1870, "wikipedia": "https://en.wikipedia.org/wiki/Moshoeshoe_I", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Moshoeshoe.jpg/220px-Moshoeshoe.jpg" },
+        { "name": "Thomas Mofolo", "role": "Pioneer African Novelist (Author of Chaka)", "birth": 1876, "death": 1948, "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Mofolo" },
+        { "name": "Ntsu Mokhehle", "role": "First Democratically Elected PM of Lesotho", "birth": 1918, "death": 1999, "wikipedia": "https://en.wikipedia.org/wiki/Ntsu_Mokhehle", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ntsu_Mokhehle.jpg/220px-Ntsu_Mokhehle.jpg" },
+        { "name": "Letsie III", "role": "Current King of Lesotho", "birth": 1963, "wikipedia": "https://en.wikipedia.org/wiki/Letsie_III", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Letsie_III.jpg/220px-Letsie_III.jpg" },
+        { "name": "Thomas Mokoena", "role": "South African Football Legend", "birth": 1980, "wikipedia": "https://en.wikipedia.org/wiki/Aaron_Mokoena", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Aaron_Mokoena_2010.jpg/220px-Aaron_Mokoena_2010.jpg" },
+        { "name": "Mpho Tutu van Furth", "role": "Activist & Daughter of Desmond Tutu", "birth": 1963, "wikipedia": "https://en.wikipedia.org/wiki/Mpho_Tutu_van_Furth" }
       ],
       "populationByCountry": [
         { "country": "ZA", "population": "~4.5 million", "percent": "7.9%" },
