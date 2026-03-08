@@ -17570,6 +17570,154 @@
       "sources": [{ "name": "Wikipedia - Kongo people", "url": "https://en.wikipedia.org/wiki/Kongo_people" }, { "name": "Wikipedia - Kingdom of Kongo", "url": "https://en.wikipedia.org/wiki/Kingdom_of_Kongo" }],
       "description": "The Kongo people founded one of Africa's greatest kingdoms, which at its height controlled vast territories across modern-day DRC, Congo-Brazzaville, and Angola. Their early contact with Portuguese explorers, pioneering adoption of Christianity, and rich artistic traditions make them one of Central Africa's most historically significant peoples.",
       "relatedTribes": ["luba", "lunda", "teke", "mbundu"]
+    },
+    {
+      "id": "tonga-zambia",
+      "name": "Tonga (Batonga)",
+      "slug": "tonga-zambia",
+      "slugAliases": ["batonga", "tonga-zambia-zimbabwe", "batoka", "toka"],
+      "youtubeVideoId": "7N9fRnb_1Ko",
+      "countries": ["ZM", "ZW", "MZ"],
+      "region": "Southern Zambia & Northern Zimbabwe",
+      "population": "~2.5 million",
+      "populationPercent": "~14% (Zambia)",
+      "genderRatio": { "male": 48, "female": 52 },
+      "mapCoordinates": { "lat": -16.5, "lng": 28.0 },
+      "latSpan": 4,
+      "lngSpan": 5,
+      "counties": ["Southern Province (Zambia)", "Matabeleland North (Zimbabwe)", "Tete Province (Mozambique)"],
+      "namePrefixes": ["Mu", "Si", "Chi", "Na", "Ma"],
+      "commonNames": {
+        "female": ["Mutinta", "Nasilele", "Choolwe", "Siamoonga", "Mapenzi", "Mainza", "Namakau", "Siabana", "Muchindu", "Siankuku"],
+        "male": ["Simataa", "Mudenda", "Siamunyanga", "Mainza", "Siachitema", "Munyama", "Sichone", "Mweetwa", "Siamunene", "Choongo"]
+      },
+      "timeBasedNames": {},
+      "stereotypes": [
+        "Displaced by Kariba Dam",
+        "Cattle herders and farmers",
+        "Rain-making ceremonies",
+        "Strong ancestral traditions",
+        "Resilient survivors"
+      ],
+      "genderStereotypes": {
+        "male": ["Cattle herders", "Rain-makers", "Farmers and fishers"],
+        "female": ["Agricultural experts", "Pottery makers", "Basket weavers"]
+      },
+      "genderRoles": {
+        "traditional": {
+          "male": "Men managed cattle (central to wealth and bride-price), led rain-making ceremonies, and were responsible for clearing land. Elders held judicial authority through village councils.",
+          "female": "Women were the primary farmers, managing crops of millet, sorghum, and maize. They also excelled in pottery and basket weaving. Matrilineal inheritance gave women significant property rights."
+        },
+        "modern": {
+          "male": "Tonga men work in farming, fishing (Lake Kariba), and increasingly urban professions. Many maintain cattle herding traditions.",
+          "female": "Women continue agricultural traditions and are increasingly in education and business. Tonga women's pottery is recognized as cultural heritage."
+        }
+      },
+      "culturalTraits": [
+        "Displaced by Kariba Dam construction (1958) — one of Africa's largest forced relocations",
+        "Rain-making ceremonies (lwiindi) are central to spiritual life",
+        "Cattle are central to wealth, bride-price, and social status",
+        "No centralized chief system — governed by village headmen",
+        "Strong ancestor veneration and spirit medium traditions",
+        "Distinctive scarification patterns"
+      ],
+      "funFacts": [
+        "57,000 Tonga were forcibly relocated when Kariba Dam flooded their homeland in 1958",
+        "The Tonga have no paramount chief — they're one of Africa's most egalitarian societies",
+        "Tonga rain-making ceremonies (lwiindi) attract thousands and are now a national festival",
+        "Lake Kariba, built on Tonga land, is the world's largest man-made reservoir by volume",
+        "The Nyami Nyami river god legend comes from Tonga beliefs about the Zambezi"
+      ],
+      "traditionalFood": {
+        "staples": ["Nshima (maize porridge)", "Sorghum", "Millet", "Fish (Lake Kariba)", "Sweet potatoes"],
+        "beverages": ["Chibwantu (sweet fermented drink)", "Munkoyo (root beer)", "Seven days (fermented maize)"],
+        "specialDishes": ["Nshima with bream fish", "Dried kapenta fish with vegetables", "Pumpkin leaves relish"],
+        "description": "Tonga cuisine centers on nshima with fish from Lake Kariba and the Zambezi. Kapenta (small dried fish) is a protein staple, and traditional fermented drinks remain popular."
+      },
+      "eatingCustoms": {
+        "mealsPerDay": 2,
+        "mealPattern": "Light morning meal, main evening nshima",
+        "mainMealTime": "Evening with extended family",
+        "eatingStyle": "Communal eating, nshima rolled into balls by hand, shared relish",
+        "genderRules": "Men eat first traditionally, guests given best portions",
+        "taboos": ["Clan totems cannot be eaten", "Certain fish avoided by pregnant women"],
+        "specialOccasions": "Cattle slaughtered for major ceremonies, beer brewed for lwiindi festivals",
+        "hospitality": "Visitors always offered food and chibwantu — refusing is considered rude"
+      },
+      "traditionalDance": "Budima dance — vigorous dance performed at funerals and ceremonies",
+      "religion": "Christianity (~70%), Traditional religion (~30%)",
+      "traditionalReligion": {
+        "name": "Tonga Traditional Religion",
+        "supremeDeity": "Leza (supreme creator god, associated with rain and thunder)",
+        "spirits": ["Basangu (ancestral spirits)", "Masabe (nature spirits)", "Nyami Nyami (Zambezi river spirit)"],
+        "practices": ["Lwiindi rain-making ceremony", "Spirit mediums (basangu) channel ancestors", "Funeral rites with budima dance", "Offerings at sacred groves", "Divination by ng'anga"],
+        "beliefs": "Leza created the world and sends rain; ancestral spirits guide the living through mediums; Nyami Nyami protects the Zambezi; harmony with spirits ensures good harvests; the lwiindi ceremony must be performed annually."
+      },
+      "history": {
+        "origin": "The Tonga are one of the oldest Bantu groups in southern Zambia, having settled along the Zambezi Valley and surrounding plateau for over 900 years. Unlike many neighbors, they never formed centralized kingdoms.",
+        "colonialEra": "British colonial rule (Northern Rhodesia) disrupted Tonga life. The devastating forced relocation for Kariba Dam (1958) displaced 57,000 Tonga from their ancestral Zambezi Valley homeland.",
+        "independence": "Post-independence Zambia saw continued marginalization of the Tonga. Southern Province remains underdeveloped. Tonga political representation has grown since the 2000s.",
+        "keyEvents": ["Settlement along Zambezi (pre-1000 CE)", "British colonization (1890s)", "Kariba Dam forced relocation (1958)", "Independence (1964)", "Lwiindi ceremony revival", "Growing political representation (2000s)"]
+      },
+      "tradeHistory": {
+        "historical": "Tonga traded cattle, grain, and ironwork with neighboring peoples. The Zambezi River was a major trade route. Ivory trade with Portuguese and Arab merchants.",
+        "modern": "Fishing (Lake Kariba kapenta industry), cattle ranching, maize farming, and increasingly tourism around Kariba.",
+        "partners": ["Lozi", "Ila", "Ndebele", "Portuguese traders (historical)"]
+      },
+      "independenceHistory": {
+        "colonialPower": "British (Northern Rhodesia)",
+        "resistance": "Tonga resisted Kariba Dam relocation with protests. Harry Mwanga Nkumbula, a Tonga, led the African National Congress (ANC) in Northern Rhodesia.",
+        "independence": "Zambia independent October 24, 1964. Tonga have been influential in opposition politics.",
+        "keyFigures": ["Harry Mwanga Nkumbula", "Mainza Chona (VP of Zambia)", "Hakainde Hichilema (President of Zambia)"]
+      },
+      "religiousHistory": {
+        "traditional": "Tonga traditional religion centered on Leza (rain god) and basangu (ancestral spirits). Rain-making ceremonies were the most important rituals.",
+        "christianity": "Missionaries arrived in the early 1900s. Christianity spread rapidly, especially after Kariba displacement disrupted traditional structures.",
+        "current": "Majority Christian (various denominations) with strong continuation of traditional practices, especially lwiindi ceremonies."
+      },
+      "language": {
+        "name": "Chitonga (Tonga)",
+        "speakers": "~2 million",
+        "greeting": "Mwapoleni mukwai",
+        "greetingMeaning": "How are you, friend?",
+        "additionalGreetings": [
+          { "phrase": "Kabotu", "meaning": "I am fine" },
+          { "phrase": "Ndatumba", "meaning": "Thank you" }
+        ],
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Zone M (Tonga-Ila group)",
+          "speakers": "~2 million",
+          "relatedLanguages": ["Ila", "Lenje", "Soli", "Toka-Leya"],
+          "migrationHistory": "Tonga languages form a distinct group within Southern Bantu, with speakers settled in the Zambezi region for nearly a millennium"
+        }
+      },
+      "populationByCountry": [
+        { "country": "ZM", "population": "~2M", "percent": "14%" },
+        { "country": "ZW", "population": "~400K", "percent": "3%" },
+        { "country": "MZ", "population": "~100K", "percent": "0.3%" }
+      ],
+      "famousPeople": [
+        { "name": "Hakainde Hichilema", "role": "President of Zambia (2021-present)", "wikipedia": "https://en.wikipedia.org/wiki/Hakainde_Hichilema" },
+        { "name": "Harry Mwanga Nkumbula", "role": "Father of Zambian nationalism, ANC leader", "wikipedia": "https://en.wikipedia.org/wiki/Harry_Nkumbula" },
+        { "name": "Mainza Chona", "role": "Vice President of Zambia (1970-1973)", "wikipedia": "https://en.wikipedia.org/wiki/Mainza_Chona" }
+      ],
+      "names": [
+        { "name": "Mutinta", "gender": "female", "meaning": "The chosen one" },
+        { "name": "Simataa", "gender": "male", "meaning": "The one who stands firm" },
+        { "name": "Choolwe", "gender": "female", "meaning": "Blessing" },
+        { "name": "Mudenda", "gender": "male", "meaning": "Traveler / Wanderer" },
+        { "name": "Mainza", "gender": "unisex", "meaning": "Harvest season" },
+        { "name": "Mweetwa", "gender": "male", "meaning": "The one who was called" },
+        { "name": "Namakau", "gender": "female", "meaning": "Of the cattle" },
+        { "name": "Choongo", "gender": "male", "meaning": "Hunter" }
+      ],
+      "sources": [{ "name": "Wikipedia - Tonga people", "url": "https://en.wikipedia.org/wiki/Tonga_people_(Zambia_and_Zimbabwe)" }, { "name": "Zambia Tourism - Lwiindi", "url": "https://www.zambia.co.zm" }],
+      "description": "The Tonga are one of Zambia's largest ethnic groups, famous for their egalitarian society without chiefs, rain-making lwiindi ceremonies, and the traumatic displacement by Kariba Dam. Their current president, Hakainde Hichilema, is the first Tonga to lead Zambia.",
+      "relatedTribes": ["lozi", "bemba", "ila", "ndebele"]
     }
   ]
 }
