@@ -1854,3 +1854,10 @@ const manualBlogPosts: BlogPost[] = [
     ]
   }
 ];
+
+// Generate blog posts for all tribes that don't have a manual one
+const existingSlugs = new Set(manualBlogPosts.map(p => p.slug));
+const tribeBlogPosts = generateTribeBlogs(existingSlugs);
+
+// Export combined: manual posts first, then auto-generated tribe posts
+export const blogPosts: BlogPost[] = [...manualBlogPosts, ...tribeBlogPosts];
