@@ -2606,7 +2606,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   
   // ============ Zambia - Bemba prefixes ============
   'chil': [{ tribe: 'bemba', weight: 0.95 }],
-  'mwen': [{ tribe: 'bemba', weight: 0.95 }],
+  'mwen_b': [{ tribe: 'bemba', weight: 0.95 }],
   'kabi': [{ tribe: 'bemba', weight: 0.95 }],
   'kapw': [{ tribe: 'bemba', weight: 0.98 }],
   'chim_b': [{ tribe: 'bemba', weight: 0.95 }],
