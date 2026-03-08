@@ -2029,6 +2029,162 @@ const manualBlogPosts: BlogPost[] = [
       { title: "Charry, E. (2000) Mande Music: Traditional & Modern Music of the Maninka & Mandinka" },
       { title: "Euba, A. (1990) Yorùbá Drumming: The Dùndún Tradition" }
     ]
+  },
+
+  // NEW BLOG POST: African Wedding Traditions
+  {
+    slug: "african-wedding-traditions-across-tribes",
+    title: "Wedding Traditions Across Africa: From Lobola to Kolanut Ceremonies",
+    seoTitle: "African Wedding Traditions by Tribe: Lobola, Dowry & Rituals | TribeGuess",
+    seoDescription: "Discover the rich diversity of African wedding traditions — from Zulu lobola negotiations to Yoruba kolanut ceremonies, Maasai bride price, and Igbo wine-carrying rituals.",
+    excerpt: "African weddings are not just about two people — they unite entire families, clans, and communities through elaborate rituals that have survived centuries.",
+    emoji: "💍",
+    gradient: "bg-gradient-to-br from-rose-400 to-pink-600",
+    region: "Pan-African",
+    readTime: "10 min read",
+    publishDate: "2026-03-05",
+    tags: ["weddings", "culture", "traditions", "family", "ceremonies"],
+    relatedTribes: [
+      { name: "Zulu", slug: "zulu" },
+      { name: "Yoruba", slug: "yoruba" },
+      { name: "Maasai", slug: "maasai" },
+      { name: "Igbo", slug: "igbo" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "In Africa, marriage is never just between two individuals — it's a covenant between families, clans, and sometimes entire communities. Wedding traditions across the continent are as diverse as its 3,000+ ethnic groups, yet they share common threads: family negotiation, spiritual blessing, and elaborate celebration.",
+          "These traditions have survived colonialism, modernization, and urbanization. Today, many African couples blend traditional ceremonies with Western-style weddings, creating uniquely layered celebrations."
+        ]
+      },
+      {
+        heading: "Zulu Lobola: The Art of Negotiation",
+        icon: "🐄",
+        paragraphs: [
+          "Among the Zulu people of South Africa, lobola (bride price) is a sophisticated negotiation between families. Traditionally paid in cattle, modern lobola often involves cash equivalents. The process can take weeks of back-and-forth negotiations.",
+          "Lobola is not 'buying' a bride — it's a gesture of respect and gratitude to the bride's family. It also creates a bond between families. The number of cattle reflects the bride's education, beauty, and family status."
+        ],
+        list: [
+          "Negotiations start with the groom's family sending a delegation (abakhongi)",
+          "The bride's family initially refuses to acknowledge the visitors — a ritual of respect",
+          "Bride price typically ranges from 8-12 cattle (or cash equivalent)",
+          "A woman with a university degree commands higher lobola — education is valued",
+          "The umembeso ceremony follows, where the groom gifts the bride's family with blankets and clothing"
+        ],
+        highlight: "In modern South Africa, lobola can range from R50,000 to R200,000+. Some couples negotiate over WhatsApp, but traditional families insist on in-person delegation."
+      },
+      {
+        heading: "Yoruba Traditional Wedding: The Engagement Letter",
+        icon: "📜",
+        paragraphs: [
+          "Yoruba weddings in Nigeria are theatrical productions involving costume changes, dance-offs, and elaborate rituals. The traditional wedding (igbeyawo) begins with a formal letter of introduction from the groom's family.",
+          "The ceremony involves the groom prostrating before the bride's family (dobale), the breaking of kola nuts for blessings, and the bride searching for her groom among his friends while being sprayed with money by guests."
+        ]
+      },
+      {
+        heading: "Igbo Wine-Carrying Ceremony",
+        icon: "🍷",
+        paragraphs: [
+          "The Igbo igba nkwu (wine carrying) ceremony is one of Nigeria's most beautiful wedding traditions. The bride carries a cup of palm wine through the crowd to find her groom. When she finds him and he drinks, the marriage is sealed.",
+          "Before this, the groom's family presents a detailed list of items to the bride's family — including yams, palm wine, goats, and fabric. Modern lists may include cash equivalents."
+        ]
+      },
+      {
+        heading: "Maasai: A Community Celebration",
+        icon: "🏡",
+        paragraphs: [
+          "Maasai weddings are community events where the entire village participates. The father of the bride blesses her by spitting on her head (a sign of respect in Maasai culture). The bride then leaves without looking back — looking back is believed to bring bad luck.",
+          "Maasai women shave their heads and dress in beaded jewelry made specifically for their wedding day."
+        ]
+      },
+      {
+        heading: "Modern African Weddings: Blending Old and New",
+        icon: "✨",
+        paragraphs: [
+          "Today's African weddings often span multiple days — a traditional ceremony (Saturday), a white wedding (Sunday), and a reception (Monday). This 'double wedding' tradition allows couples to honor their heritage while embracing modernity.",
+          "African wedding fashion has gone global, with designers like Deola Sagoe (Nigeria) and David Tlale (South Africa) creating couture that celebrates African textiles and silhouettes on the world stage."
+        ]
+      }
+    ],
+    sources: [
+      { title: "Zulu Lobola Customs - South African Cultural Observatory" },
+      { title: "Yoruba Wedding Traditions - Journal of African Cultural Studies" },
+      { title: "Igbo Marriage Customs - Southeastern Nigerian Heritage Foundation" }
+    ]
+  },
+
+  // NEW BLOG POST: African Languages Dying
+  {
+    slug: "endangered-african-languages-preservation",
+    title: "The Race to Save Africa's Disappearing Languages",
+    seoTitle: "Endangered African Languages: 500+ at Risk of Extinction | TribeGuess",
+    seoDescription: "Over 500 African languages face extinction. Learn about the communities fighting to preserve their linguistic heritage and why each lost language is an irreplaceable cultural loss.",
+    excerpt: "Africa holds a third of the world's languages, but hundreds are disappearing. Each one that dies takes with it a unique way of understanding the world.",
+    emoji: "🗣️",
+    gradient: "bg-gradient-to-br from-teal-500 to-emerald-700",
+    region: "Pan-African",
+    readTime: "9 min read",
+    publishDate: "2026-03-07",
+    tags: ["languages", "preservation", "culture", "education", "endangered"],
+    relatedTribes: [
+      { name: "San", slug: "san" },
+      { name: "Hadza", slug: "hadza" },
+      { name: "Ogiek", slug: "ogiek" },
+      { name: "Khoi", slug: "khoi" }
+    ],
+    content: [
+      {
+        paragraphs: [
+          "Africa is home to over 2,000 languages — roughly a third of all human languages. But this extraordinary linguistic diversity is under severe threat. UNESCO classifies over 500 African languages as endangered, with some spoken by fewer than 100 people.",
+          "When a language dies, humanity loses more than words. We lose a unique knowledge system — medicinal plant names, ecological wisdom, mathematical concepts, and philosophical frameworks that exist nowhere else."
+        ]
+      },
+      {
+        heading: "Click Languages: A Window Into Human Origins",
+        icon: "👅",
+        paragraphs: [
+          "The Khoisan click languages of southern Africa are among the oldest in the world, with some linguists believing they represent the original sounds of human speech. The San (Bushmen) languages contain up to 164 distinct sounds — more than any other language family.",
+          "Yet many click languages have fewer than 1,000 speakers. N|uu, once spoken across South Africa's Northern Cape, had only 3 fluent speakers as of 2020. When they pass, an entire linguistic universe disappears."
+        ],
+        highlight: "The ǃXóõ language has 164 consonants — the most of any known language. Learning it requires mastering 83 different click sounds."
+      },
+      {
+        heading: "Why Languages Die in Africa",
+        icon: "⚠️",
+        paragraphs: [
+          "Colonial language policies forced English, French, and Portuguese as languages of education and governance. Children were punished for speaking indigenous languages in school. This created generations who associated their mother tongue with shame.",
+          "Urbanization accelerates the loss. When young people move to cities, they adopt dominant languages (Swahili, Hausa, Yoruba) to survive economically. Their children may never learn their ancestral language."
+        ],
+        list: [
+          "Colonial education policies that punished indigenous language use",
+          "Urbanization pulling young people away from rural linguistic communities",
+          "Media and technology overwhelmingly in European or major African languages",
+          "Stigma associated with 'minority' languages",
+          "Lack of written forms for many languages"
+        ]
+      },
+      {
+        heading: "Digital Preservation Efforts",
+        icon: "💻",
+        paragraphs: [
+          "Technology is now being used to fight language death. Projects like Google's Endangered Languages Project, the Endangered Languages Archive at SOAS London, and local African initiatives are recording and digitizing threatened languages.",
+          "Kenyan developer Moses Gitari created an app for the Ogiek language. In South Africa, the !Xun and Khwe communities are building digital dictionaries. In Nigeria, apps teach Igala and Tiv to diaspora youth."
+        ]
+      },
+      {
+        heading: "What's Lost When a Language Dies",
+        icon: "💔",
+        paragraphs: [
+          "The San languages contain thousands of words for plants, animals, and ecological relationships — knowledge that Western science is only now discovering. Hadza contains concepts of time and space that don't exist in any European language.",
+          "Each language represents a unique solution to the puzzle of human existence. When the last speaker dies, we lose not just words, but an irreplaceable way of being human."
+        ]
+      }
+    ],
+    sources: [
+      { title: "UNESCO Atlas of the World's Languages in Danger", url: "https://www.unesco.org/" },
+      { title: "Ethnologue - Languages of Africa", url: "https://www.ethnologue.com/" },
+      { title: "The Cambridge Handbook of Endangered Languages" }
+    ]
   }
 ];
 

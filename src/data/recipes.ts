@@ -11797,6 +11797,8 @@ recipes.push(...eastAfricanRecipes);
 recipes.push(...southernAfricanRecipes);
 recipes.push(...westAfricanRecipes);
 recipes.push(...northAfricanRecipes);
+recipes.push(...hornAfricanRecipes);
+recipes.push(...additionalWestAfricanRecipes);
 
 // Auto-assign regions to recipes based on tribe patterns
 const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> = {
