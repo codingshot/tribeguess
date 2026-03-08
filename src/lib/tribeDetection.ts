@@ -1304,7 +1304,7 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'salim_p': { tribe: 'pokomo', gender: 'male', meaning: 'Safe/peaceful' },
   'omar_p': { tribe: 'pokomo', gender: 'male', meaning: 'Flourishing one' },
   'hassan_p': { tribe: 'pokomo', gender: 'male', meaning: 'Handsome/good' },
-  'mwanaisha': { tribe: 'pokomo', gender: 'female', meaning: 'Lady of life' },
+  'mwanaisha_p': { tribe: 'pokomo', gender: 'female', meaning: 'Lady of life' },
   'zahra_p': { tribe: 'pokomo', gender: 'female', meaning: 'Flower - blooming one' },
   'fatuma_p': { tribe: 'pokomo', gender: 'female', meaning: 'One who weans - motherly' },
   'halima_p': { tribe: 'pokomo', gender: 'female', meaning: 'Gentle, mild-tempered' },
