@@ -11895,6 +11895,124 @@ const newTribesRecipes: Recipe[] = [
     tips: ['Stir boule in one direction for best texture', 'The sauce should be thick and mucilaginous from the okra'],
     nutritionalInfo: { calories: '~310 kcal', protein: '14g', carbs: '48g', fat: '8g', fiber: '6g', notes: 'High in protein from dried fish. Okra provides excellent fiber and vitamins.' },
     dietaryInfo: ['Gluten-free', 'High-protein']
+  },
+  {
+    id: 'ifisashi',
+    name: 'Ifisashi',
+    localName: 'Ifisashi',
+    tribeSlug: 'bemba',
+    tribeName: 'Bemba',
+    category: 'staple',
+    description: 'A hearty Zambian groundnut stew with leafy greens, served over nshima. This is one of the most beloved Bemba dishes, combining the richness of peanuts with nutritious vegetables.',
+    culturalSignificance: 'Ifisashi is the quintessential Bemba comfort food, eaten at daily meals and celebrations alike. The groundnut base provides essential protein in a cuisine where meat was historically scarce.',
+    servings: 6,
+    prepTime: '15 minutes',
+    cookTime: '30 minutes',
+    difficulty: 'easy',
+    ingredients: [
+      { item: 'Pounded groundnuts (peanut butter)', amount: '2 cups', substitution: 'Smooth peanut butter' },
+      { item: 'Pumpkin leaves or spinach', amount: '1 large bunch', notes: 'Chopped', substitution: 'Kale or collard greens' },
+      { item: 'Tomatoes', amount: '2 medium', notes: 'Chopped' },
+      { item: 'Onion', amount: '1 medium', notes: 'Diced' },
+      { item: 'Vegetable oil', amount: '2 tablespoons' },
+      { item: 'Salt', amount: '1 teaspoon' },
+      { item: 'Chili flakes', amount: '1/2 teaspoon', notes: 'Optional' },
+      { item: 'Water', amount: '2 cups' }
+    ],
+    instructions: [
+      'Heat oil in a pot and sauté onion until translucent.',
+      'Add tomatoes and cook until softened, about 5 minutes.',
+      'Mix groundnut paste with 2 cups of water until smooth.',
+      'Pour groundnut mixture into the pot and stir well.',
+      'Bring to a gentle boil, then add chopped greens.',
+      'Simmer for 15-20 minutes until greens are tender and sauce is thick.',
+      'Season with salt and chili. Serve hot over nshima.'
+    ],
+    tips: ['Fresh pumpkin leaves give the most authentic flavor', 'The sauce should be thick enough to coat a spoon'],
+    nutritionalInfo: { calories: '~380 kcal', protein: '16g', carbs: '22g', fat: '28g', fiber: '5g', notes: 'Excellent source of plant protein from groundnuts. Rich in iron from leafy greens.' },
+    dietaryInfo: ['Vegan', 'Gluten-free', 'High-protein']
+  },
+  {
+    id: 'oshifima-with-spinach',
+    name: 'Oshifima with Dried Spinach',
+    localName: 'Oshifima nomboga',
+    tribeSlug: 'ovambo',
+    tribeName: 'Ovambo',
+    category: 'staple',
+    description: 'The quintessential Ovambo meal: pearl millet porridge (oshifima) served with a savory dried spinach relish. Mahangu (pearl millet) is the traditional grain of northern Namibia.',
+    culturalSignificance: 'Oshifima is the daily bread of the Ovambo people. Every homestead grows mahangu, and preparing oshifima is a fundamental skill. It represents sustenance, tradition, and the agricultural identity of northern Namibia.',
+    servings: 4,
+    prepTime: '10 minutes',
+    cookTime: '25 minutes',
+    difficulty: 'easy',
+    ingredients: [
+      { item: 'Mahangu (pearl millet) flour', amount: '3 cups', substitution: 'Maize meal' },
+      { item: 'Water', amount: '4 cups' },
+      { item: 'Salt', amount: '1/2 teaspoon' },
+      { item: 'Dried spinach (ombidi) or fresh spinach', amount: '200g', notes: 'For the relish' },
+      { item: 'Onion', amount: '1 medium', notes: 'Chopped' },
+      { item: 'Tomatoes', amount: '2 medium', notes: 'Chopped' },
+      { item: 'Vegetable oil', amount: '2 tablespoons' },
+      { item: 'Chili', amount: '1/4 teaspoon', notes: 'Optional' }
+    ],
+    instructions: [
+      'Bring 4 cups of water to a boil in a heavy pot.',
+      'Gradually add mahangu flour while stirring constantly with a wooden spoon.',
+      'Keep stirring vigorously to prevent lumps - the mixture will become very thick.',
+      'Reduce heat, cover, and cook for 10-15 minutes, stirring occasionally.',
+      'For the relish: heat oil and sauté onion until golden.',
+      'Add tomatoes and cook until softened.',
+      'Add dried spinach (soaked and drained) or fresh spinach.',
+      'Cook for 10 minutes until tender. Season with salt and chili.',
+      'Serve oshifima in a mound with spinach relish alongside.'
+    ],
+    tips: ['Traditional mahangu gives a nutty, earthy flavor - maize meal can substitute', 'The porridge should be firm enough to hold its shape'],
+    nutritionalInfo: { calories: '~340 kcal', protein: '10g', carbs: '62g', fat: '7g', fiber: '8g', notes: 'Pearl millet is highly nutritious with more iron and zinc than maize. Drought-resistant crop.' },
+    dietaryInfo: ['Vegan', 'Gluten-free', 'High-fiber']
+  },
+  {
+    id: 'akple-with-fetri-detsi',
+    name: 'Akple with Fetri Detsi',
+    localName: 'Akple kple Fetri Detsi',
+    tribeSlug: 'ewe',
+    tribeName: 'Ewe',
+    category: 'staple',
+    description: 'The iconic Ewe dish: smooth corn dough balls (akple) served with a rich okra soup (fetri detsi). This is the most representative meal of the Ewe people of Ghana and Togo.',
+    culturalSignificance: 'Akple is the staple food of the Ewe people, eaten daily across the Volta Region and Togo. Making akple well — with the right texture and consistency — is a mark of culinary skill and cultural pride.',
+    servings: 4,
+    prepTime: '20 minutes',
+    cookTime: '40 minutes',
+    difficulty: 'medium',
+    ingredients: [
+      { item: 'Corn dough (fermented)', amount: '2 cups' },
+      { item: 'Cassava dough', amount: '1 cup' },
+      { item: 'Water', amount: '3 cups' },
+      { item: 'Fresh okra', amount: '300g', notes: 'Sliced' },
+      { item: 'Smoked fish', amount: '200g', notes: 'Deboned' },
+      { item: 'Dried shrimp', amount: '100g' },
+      { item: 'Tomatoes', amount: '3 medium', notes: 'Blended' },
+      { item: 'Onion', amount: '1 large', notes: 'Chopped' },
+      { item: 'Palm oil', amount: '3 tablespoons' },
+      { item: 'Fresh chili peppers', amount: '2' },
+      { item: 'Salt', amount: '1 teaspoon' },
+      { item: 'Dawadawa (locust bean paste)', amount: '1 tablespoon', substitution: 'Fermented soybean paste' }
+    ],
+    instructions: [
+      'Mix corn dough and cassava dough with 1 cup water to make a smooth batter.',
+      'Boil remaining 2 cups of water in a heavy pot.',
+      'Pour half the batter into boiling water, stirring constantly.',
+      'Cook while stirring until it begins to thicken.',
+      'Add remaining batter gradually, stirring vigorously with a wooden spatula.',
+      'Continue stirring until very thick and pulls away from pot sides. Cover and steam 5 minutes.',
+      'For the soup: heat palm oil and fry onions until golden.',
+      'Add blended tomatoes and cook for 10 minutes.',
+      'Add smoked fish, dried shrimp, dawadawa, and chili.',
+      'Add sliced okra and 1 cup water. Simmer for 15 minutes.',
+      'Serve akple in balls with fetri detsi poured alongside.'
+    ],
+    tips: ['The akple must be stirred with great force - traditionally a sign of a good cook', 'Fermented corn dough gives the authentic sour tang'],
+    nutritionalInfo: { calories: '~420 kcal', protein: '22g', carbs: '52g', fat: '14g', fiber: '6g', notes: 'High protein from smoked fish and shrimp. Okra provides fiber and vitamins.' },
+    dietaryInfo: ['Gluten-free', 'High-protein']
   }
 ];
 
@@ -11992,7 +12110,9 @@ const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> =
   'toubou': { region: 'north', country: 'TD' },
   // New tribes
   'senufo': { region: 'west', country: 'CI' },
-  'bassa': { region: 'west', country: 'LR' }
+  'bassa': { region: 'west', country: 'LR' },
+  'bemba': { region: 'southern', country: 'ZM' },
+  'ovambo': { region: 'southern', country: 'NA' }
 };
 
 // Apply region mappings to recipes that don't have them
