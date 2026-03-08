@@ -3542,6 +3542,46 @@ const suffixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'ondo_gy': [{ tribe: 'gbaya', weight: 0.85 }],
   'emba_g': [{ tribe: 'gbaya', weight: 0.9 }],
   'ebou': [{ tribe: 'gbaya', weight: 0.95 }],
+  
+  // ============ Eritrea/Ethiopia - Tigrinya suffixes ============
+  'eket': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'omon': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'iam': [{ tribe: 'tigrinya', weight: 0.9 }],
+  'mhar': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'uwam': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'hret': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'dist': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'nait': [{ tribe: 'tigrinya', weight: 0.95 }],
+  
+  // ============ South Africa - Pedi suffixes ============
+  'atse': [{ tribe: 'pedi', weight: 0.95 }],
+  'lodi': [{ tribe: 'pedi', weight: 0.98 }],
+  'hego': [{ tribe: 'pedi', weight: 0.95 }],
+  'gadi': [{ tribe: 'pedi', weight: 0.95 }],
+  'habo': [{ tribe: 'pedi', weight: 0.9 }],
+  'tome': [{ tribe: 'pedi', weight: 0.85 }],
+  'adji': [{ tribe: 'pedi', weight: 0.98 }],
+  'siba': [{ tribe: 'pedi', weight: 0.9 }],
+  
+  // ============ Zambia - Lozi suffixes ============
+  'iana': [{ tribe: 'lozi', weight: 0.85 }],
+  'lele': [{ tribe: 'lozi', weight: 0.9 }],
+  'inda_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'onge': [{ tribe: 'lozi', weight: 0.95 }],
+  'wina': [{ tribe: 'lozi', weight: 0.95 }],
+  'indi': [{ tribe: 'lozi', weight: 0.85 }],
+  'lena': [{ tribe: 'lozi', weight: 0.9 }],
+  
+  // ============ Zambia - Tonga suffixes ============
+  'enda': [{ tribe: 'tonga-zambia', weight: 0.9 }],
+  'enya': [{ tribe: 'tonga-zambia', weight: 0.85 }],
+  'mbwe': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'jaye': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'akau': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'olwe': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'onde': [{ tribe: 'tonga-zambia', weight: 0.9 }],
+  'anje': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'tele': [{ tribe: 'tonga-zambia', weight: 0.85 }],
 };
 
 // ============ DETECTION ENGINE JUSTIFICATION ============
