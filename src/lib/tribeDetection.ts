@@ -3573,7 +3573,7 @@ const suffixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'lena': [{ tribe: 'lozi', weight: 0.9 }],
   
   // ============ Zambia - Tonga suffixes ============
-  'enda': [{ tribe: 'tonga-zambia', weight: 0.9 }],
+  'enda_tz': [{ tribe: 'tonga-zambia', weight: 0.9 }],
   'enya': [{ tribe: 'tonga-zambia', weight: 0.85 }],
   'mbwe': [{ tribe: 'tonga-zambia', weight: 0.98 }],
   'jaye': [{ tribe: 'tonga-zambia', weight: 0.98 }],
