@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getRecipeById, getRecipesByTribe, getAllRecipes, type Recipe } from '@/data/recipes';
-import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed, Languages, ListPlus } from 'lucide-react';
+import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed, Languages, ListPlus, Leaf, Heart, Utensils, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -136,52 +136,94 @@ export default function RecipePage() {
     "description": recipe.description,
     "author": {
       "@type": "Organization",
-      "name": "TribeGuess"
+      "name": "TribeGuess",
+      "url": "https://tribeguess.com"
     },
+    "datePublished": "2025-01-01",
     "prepTime": `PT${parseInt(recipe.prepTime) || 15}M`,
     "cookTime": `PT${parseInt(recipe.cookTime) || 30}M`,
     "totalTime": `PT${(parseInt(recipe.prepTime) || 15) + (parseInt(recipe.cookTime) || 30)}M`,
-    "recipeYield": recipe.servings,
-    "recipeCategory": recipe.category,
+    "recipeYield": `${recipe.servings} servings`,
+    "recipeCategory": recipe.category === 'staple' ? 'Main Course' : recipe.category === 'beverage' ? 'Beverage' : recipe.category === 'snack' ? 'Snack' : 'Main Course',
     "recipeCuisine": `${recipe.tribeName} African`,
-    "recipeIngredient": recipe.ingredients,
+    "recipeIngredient": recipe.ingredients.map(i => `${i.amount} ${i.item}${i.notes ? ` (${i.notes})` : ''}`),
     "recipeInstructions": recipe.instructions.map((step, i) => ({
       "@type": "HowToStep",
       "position": i + 1,
       "text": step
     })),
-    "keywords": `${recipe.name}, ${recipe.tribeName} food, African recipe, traditional African cuisine, ${recipe.category}`,
+    "keywords": `${recipe.name}, ${recipe.localName || ''}, ${recipe.tribeName} food, African recipe, traditional African cuisine, ${recipe.category}`.replace(', ,', ','),
+    ...(recipe.nutritionalInfo && {
+      "nutrition": {
+        "@type": "NutritionInformation",
+        ...(recipe.nutritionalInfo.calories && { "calories": recipe.nutritionalInfo.calories }),
+        ...(recipe.nutritionalInfo.protein && { "proteinContent": recipe.nutritionalInfo.protein }),
+        ...(recipe.nutritionalInfo.carbs && { "carbohydrateContent": recipe.nutritionalInfo.carbs }),
+        ...(recipe.nutritionalInfo.fat && { "fatContent": recipe.nutritionalInfo.fat }),
+        ...(recipe.nutritionalInfo.fiber && { "fiberContent": recipe.nutritionalInfo.fiber })
+      }
+    }),
+    ...(recipe.dietaryInfo && {
+      "suitableForDiet": recipe.dietaryInfo.map(d => 
+        d.toLowerCase().includes('vegan') ? 'https://schema.org/VeganDiet' :
+        d.toLowerCase().includes('vegetarian') ? 'https://schema.org/VegetarianDiet' :
+        d.toLowerCase().includes('gluten') ? 'https://schema.org/GlutenFreeDiet' : undefined
+      ).filter(Boolean)
+    }),
     ...(recipe.youtubeVideoId && {
       "video": {
         "@type": "VideoObject",
         "name": `How to make ${recipe.name}`,
-        "embedUrl": `https://www.youtube.com/embed/${recipe.youtubeVideoId}`
+        "description": `Video tutorial: ${recipe.description}`,
+        "thumbnailUrl": `https://img.youtube.com/vi/${recipe.youtubeVideoId}/hqdefault.jpg`,
+        "embedUrl": `https://www.youtube.com/embed/${recipe.youtubeVideoId}`,
+        "uploadDate": "2025-01-01"
       }
     })
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Recipes", "item": "https://tribeguess.com/recipes" },
+      { "@type": "ListItem", "position": 2, "name": recipe.tribeName, "item": `https://tribeguess.com/learn/${recipe.tribeSlug}` },
+      { "@type": "ListItem", "position": 3, "name": recipe.name, "item": `https://tribeguess.com/recipe/${recipe.id}` }
+    ]
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>{recipe.name} - Traditional {recipe.tribeName} Recipe | African Cuisine | TribeGuess</title>
-        <meta name="description" content={`Learn how to make ${recipe.name}, a traditional ${recipe.tribeName} dish from Africa. ${recipe.description} Prep time: ${recipe.prepTime}, Serves: ${recipe.servings}.`} />
-        <meta name="keywords" content={`${recipe.name}, ${recipe.tribeName} recipe, African food, traditional cuisine, ${recipe.category}, how to cook ${recipe.name}`} />
+        <meta name="description" content={`Learn how to make ${recipe.name}${recipe.localName ? ` (${recipe.localName})` : ''}, a traditional ${recipe.tribeName} dish from Africa. ${recipe.description.slice(0, 120)} Prep: ${recipe.prepTime}, Serves: ${recipe.servings}.`} />
+        <meta name="keywords" content={`${recipe.name}, ${recipe.localName || ''}, ${recipe.tribeName} recipe, African food, traditional cuisine, ${recipe.category}, how to cook ${recipe.name}, ${recipe.dietaryInfo?.join(', ') || ''}`} />
         <link rel="canonical" href={`https://tribeguess.com/recipe/${recipe.id}`} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         
         {/* Open Graph */}
         <meta property="og:title" content={`${recipe.name} - ${recipe.tribeName} Traditional Recipe`} />
-        <meta property="og:description" content={`Authentic ${recipe.tribeName} recipe: ${recipe.description}`} />
+        <meta property="og:description" content={`Authentic ${recipe.tribeName} recipe: ${recipe.description.slice(0, 200)}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://tribeguess.com/recipe/${recipe.id}`} />
+        {recipe.youtubeVideoId && (
+          <meta property="og:image" content={`https://img.youtube.com/vi/${recipe.youtubeVideoId}/hqdefault.jpg`} />
+        )}
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${recipe.name} - ${recipe.tribeName} Recipe`} />
-        <meta name="twitter:description" content={recipe.description} />
+        <meta name="twitter:description" content={recipe.description.slice(0, 200)} />
+        {recipe.youtubeVideoId && (
+          <meta name="twitter:image" content={`https://img.youtube.com/vi/${recipe.youtubeVideoId}/hqdefault.jpg`} />
+        )}
         
-        {/* JSON-LD Schema */}
+        {/* JSON-LD Schemas */}
         <script type="application/ld+json">
           {JSON.stringify(recipeSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 
@@ -212,16 +254,26 @@ export default function RecipePage() {
             <span className="text-2xl">{categoryEmoji[recipe.category]}</span>
             <Badge variant="outline" className="capitalize">{recipe.category}</Badge>
             <Badge className={difficultyColor[recipe.difficulty]}>{recipe.difficulty}</Badge>
+            {recipe.dietaryInfo?.map((info, i) => (
+              <Badge key={i} variant="secondary" className="text-xs">
+                <Leaf className="w-3 h-3 mr-1" />{info}
+              </Badge>
+            ))}
           </div>
           
-          <h1 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-3">
+          <h1 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-1">
             {recipe.name}
           </h1>
+          {recipe.localName && (
+            <p className="text-sm text-muted-foreground italic mb-3">
+              Local name: <span className="font-medium text-foreground">{recipe.localName}</span>
+            </p>
+          )}
           
           <p className="text-lg text-muted-foreground mb-4">{recipe.description}</p>
 
           {/* Quick Stats */}
-          <div className="flex flex-wrap gap-4 text-sm">
+          <div className="flex flex-wrap gap-3 text-sm">
             <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1.5 rounded-full">
               <Clock className="w-4 h-4 text-primary" />
               <span>Prep: {recipe.prepTime}</span>
@@ -300,8 +352,8 @@ export default function RecipePage() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Ingredients */}
           <div className="md:col-span-1">
-            <div className="bg-card border border-border rounded-lg p-4 sticky top-4">
-              <h2 className="font-semibold text-lg mb-4 flex items-center gap-2">
+            <div className="bg-card border border-border rounded-lg p-4 sticky top-4 space-y-4">
+              <h2 className="font-semibold text-lg flex items-center gap-2">
                 <ChefHat className="w-5 h-5" /> Ingredients
               </h2>
               <ul className="space-y-2">
@@ -314,10 +366,52 @@ export default function RecipePage() {
                       {ing.notes && (
                         <span className="text-muted-foreground text-xs block">({ing.notes})</span>
                       )}
+                      {ing.substitution && (
+                        <span className="text-xs text-green-600 dark:text-green-400 block mt-0.5">↳ Sub: {ing.substitution}</span>
+                      )}
                     </div>
                   </li>
                 ))}
               </ul>
+
+              {/* Nutritional Info */}
+              {recipe.nutritionalInfo && (
+                <div className="pt-3 border-t border-border">
+                  <h3 className="font-medium text-sm mb-2 flex items-center gap-1.5">
+                    <Heart className="w-4 h-4 text-red-500" /> Nutrition (per serving)
+                  </h3>
+                  <div className="grid grid-cols-2 gap-1.5 text-xs">
+                    {recipe.nutritionalInfo.calories && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Calories:</span> {recipe.nutritionalInfo.calories}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.protein && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Protein:</span> {recipe.nutritionalInfo.protein}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.carbs && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Carbs:</span> {recipe.nutritionalInfo.carbs}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.fat && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Fat:</span> {recipe.nutritionalInfo.fat}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.fiber && (
+                      <div className="bg-secondary/50 rounded px-2 py-1 col-span-2">
+                        <span className="font-medium">Fiber:</span> {recipe.nutritionalInfo.fiber}
+                      </div>
+                    )}
+                  </div>
+                  {recipe.nutritionalInfo.notes && (
+                    <p className="text-xs text-muted-foreground mt-1.5 italic">{recipe.nutritionalInfo.notes}</p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 
@@ -357,6 +451,22 @@ export default function RecipePage() {
                   {recipe.variations.map((variation, index) => (
                     <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
                       <span className="text-primary">•</span> {variation}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Serving Suggestions */}
+            {recipe.servingSuggestions && recipe.servingSuggestions.length > 0 && (
+              <div className="mt-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center gap-2">
+                  <Utensils className="w-4 h-4" /> Serving Suggestions
+                </h3>
+                <ul className="space-y-1">
+                  {recipe.servingSuggestions.map((suggestion, index) => (
+                    <li key={index} className="text-sm text-green-700 dark:text-green-300 flex items-start gap-2">
+                      <span>→</span> {suggestion}
                     </li>
                   ))}
                 </ul>

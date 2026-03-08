@@ -1371,8 +1371,10 @@
       "famousPeople": [
         { "name": "George Saitoti", "role": "Former Vice President of Kenya", "birth": 1945, "death": 2012, "wikipedia": "https://en.wikipedia.org/wiki/George_Saitoti", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/George_Saitoti.jpg/220px-George_Saitoti.jpg" },
         { "name": "William ole Ntimama", "role": "Prominent Politician & Maasai Leader", "birth": 1932, "death": 2016, "wikipedia": "https://en.wikipedia.org/wiki/William_ole_Ntimama", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/William_ole_Ntimama.jpg/220px-William_ole_Ntimama.jpg" },
-        { "name": "David Rudisha", "role": "800m World Record (Maasai heritage)", "birth": 1988, "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/David_Rudisha_2012.jpg/220px-David_Rudisha_2012.jpg" },
-        { "name": "Edward Lowassa", "role": "Former Tanzania PM (Tanzanian Maasai)", "birth": 1953, "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Edward_Lowassa_%28cropped%29.jpg/220px-Edward_Lowassa_%28cropped%29.jpg" }
+        { "name": "David Rudisha", "role": "800m World Record Holder (Olympic Gold)", "birth": 1988, "wikipedia": "https://en.wikipedia.org/wiki/David_Rudisha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/David_Rudisha_2012.jpg/220px-David_Rudisha_2012.jpg" },
+        { "name": "Edward Lowassa", "role": "Former Tanzania PM (Tanzanian Maasai)", "birth": 1953, "wikipedia": "https://en.wikipedia.org/wiki/Edward_Lowassa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Edward_Lowassa_%28cropped%29.jpg/220px-Edward_Lowassa_%28cropped%29.jpg" },
+        { "name": "Ledama ole Kina", "role": "Senator for Narok County", "birth": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Ledama_ole_Kina" },
+        { "name": "Tipis ole Tipis", "role": "Pioneer Maasai Politician & Minister", "birth": 1934, "death": 2004, "wikipedia": "https://en.wikipedia.org/wiki/John_Keen" }
       ],
       "description": "The Maasai are one of the most internationally recognized African tribes, known for their distinctive customs, dress, and residence in wildlife-rich areas. They are semi-nomadic pastoralists who have maintained their traditions despite modernization.",
       "relatedTribes": ["samburu", "kalenjin", "turkana"],
@@ -3928,8 +3930,11 @@
         { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "birth": 1754, "death": 1817, "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Uthman_dan_Fodio.png/220px-Uthman_dan_Fodio.png" },
         { "name": "Ahmadu Bello", "role": "Premier of Northern Nigeria", "birth": 1910, "death": 1966, "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ahmadu_Bello.jpg/220px-Ahmadu_Bello.jpg" },
         { "name": "Aminu Kano", "role": "Politician & Social Reformer", "birth": 1920, "death": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Aminu_Kano", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Aminu_Kano.jpg/220px-Aminu_Kano.jpg" },
-        { "name": "Sani Abacha", "role": "Military Head of State", "birth": 1943, "death": 1998, "wikipedia": "https://en.wikipedia.org/wiki/Sani_Abacha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/General_Sani_Abacha.jpg/220px-General_Sani_Abacha.jpg" },
-        { "name": "Nana Asma'u", "role": "Scholar, Poet & Educator", "birth": 1793, "death": 1864, "wikipedia": "https://en.wikipedia.org/wiki/Nana_Asma%27u", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nana_Asmau.jpg/220px-Nana_Asmau.jpg" }
+        { "name": "Nana Asma'u", "role": "Scholar, Poet & Educator (19th century)", "birth": 1793, "death": 1864, "wikipedia": "https://en.wikipedia.org/wiki/Nana_Asma%27u", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nana_Asmau.jpg/220px-Nana_Asmau.jpg" },
+        { "name": "Mamman Shata", "role": "Legendary Hausa Musician & Griot", "birth": 1923, "death": 1999, "wikipedia": "https://en.wikipedia.org/wiki/Mamman_Shata" },
+        { "name": "Ali Jita", "role": "Award-winning Hausa Pop Musician", "birth": 1985, "wikipedia": "https://en.wikipedia.org/wiki/Ali_Jita" },
+        { "name": "Dan Maraya Jos", "role": "Iconic One-string Guitar Musician", "birth": 1946, "death": 2014, "wikipedia": "https://en.wikipedia.org/wiki/Dan_Maraya_Jos" },
+        { "name": "Queen Amina of Zaria", "role": "Warrior Queen of Zazzau", "birth": 1533, "death": 1610, "wikipedia": "https://en.wikipedia.org/wiki/Queen_Amina", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Amina_of_Zaria.jpg/220px-Amina_of_Zaria.jpg" }
       ],
       "description": "The Hausa are one of Africa's largest ethnic groups, known for trade, Islamic scholarship, and city-state civilization. Their language serves as a lingua franca across West Africa.",
       "relatedTribes": ["fulani", "kanuri"],
@@ -4785,11 +4790,13 @@
         "writingSystem": "Latin alphabet (Qubee)"
       },
       "famousPeople": [
-        { "name": "Abebe Bikila", "role": "Olympic Marathon Legend", "birth": 1932, "death": 1973, "wikipedia": "https://en.wikipedia.org/wiki/Abebe_Bikila", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Abebe_Bikila_1968c.jpg/220px-Abebe_Bikila_1968c.jpg" },
-        { "name": "Haile Gebrselassie", "role": "Distance Running Legend", "birth": 1973, "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Haile_Gebrselassie_2008-06-26.jpg/220px-Haile_Gebrselassie_2008-06-26.jpg" },
-        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Laureate", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Abiy_Ahmed_%28cropped%29.jpg/220px-Abiy_Ahmed_%28cropped%29.jpg" },
-        { "name": "Tirunesh Dibaba", "role": "Olympic Champion Runner", "birth": 1985, "wikipedia": "https://en.wikipedia.org/wiki/Tirunesh_Dibaba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tirunesh_Dibaba_2012.jpg/220px-Tirunesh_Dibaba_2012.jpg" },
-        { "name": "Kenenisa Bekele", "role": "Distance Running Champion", "birth": 1982, "wikipedia": "https://en.wikipedia.org/wiki/Kenenisa_Bekele", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kenenisa_Bekele_2017.jpg/220px-Kenenisa_Bekele_2017.jpg" }
+        { "name": "Abebe Bikila", "role": "Olympic Marathon Legend (ran barefoot)", "birth": 1932, "death": 1973, "wikipedia": "https://en.wikipedia.org/wiki/Abebe_Bikila", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Abebe_Bikila_1968c.jpg/220px-Abebe_Bikila_1968c.jpg" },
+        { "name": "Haile Gebrselassie", "role": "Distance Running Legend (26 World Records)", "birth": 1973, "wikipedia": "https://en.wikipedia.org/wiki/Haile_Gebrselassie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Haile_Gebrselassie_2008-06-26.jpg/220px-Haile_Gebrselassie_2008-06-26.jpg" },
+        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Laureate 2019", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Abiy_Ahmed_%28cropped%29.jpg/220px-Abiy_Ahmed_%28cropped%29.jpg" },
+        { "name": "Tirunesh Dibaba", "role": "Triple Olympic Gold Runner ('Baby Faced Destroyer')", "birth": 1985, "wikipedia": "https://en.wikipedia.org/wiki/Tirunesh_Dibaba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tirunesh_Dibaba_2012.jpg/220px-Tirunesh_Dibaba_2012.jpg" },
+        { "name": "Kenenisa Bekele", "role": "Distance Running Champion (5K & 10K WR)", "birth": 1982, "wikipedia": "https://en.wikipedia.org/wiki/Kenenisa_Bekele", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kenenisa_Bekele_2017.jpg/220px-Kenenisa_Bekele_2017.jpg" },
+        { "name": "Hachalu Hundessa", "role": "Iconic Oromo Musician & Activist", "birth": 1986, "death": 2020, "wikipedia": "https://en.wikipedia.org/wiki/Hachalu_Hundessa", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Hachalu_Hundessa.jpg/220px-Hachalu_Hundessa.jpg" },
+        { "name": "Derartu Tulu", "role": "First Black African Woman Olympic Gold (1992)", "birth": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Derartu_Tulu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Derartu_Tulu_2009.jpg/220px-Derartu_Tulu_2009.jpg" }
       ],
       "description": "The Oromo are Ethiopia's largest ethnic group, known for the Gadaa democratic system, coffee culture, and producing world-class distance runners.",
       "relatedTribes": ["amhara", "somali", "afar"],
