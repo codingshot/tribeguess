@@ -11992,7 +11992,10 @@ const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> =
   'toubou': { region: 'north', country: 'TD' },
   // New tribes
   'senufo': { region: 'west', country: 'CI' },
-  'bassa': { region: 'west', country: 'LR' }
+  'bassa': { region: 'west', country: 'LR' },
+  'bemba': { region: 'southern', country: 'ZM' },
+  'ovambo': { region: 'southern', country: 'NA' },
+  'ewe': { region: 'west', country: 'GH' }
 };
 
 // Apply region mappings to recipes that don't have them
