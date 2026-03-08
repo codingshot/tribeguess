@@ -102,6 +102,11 @@ function formatTime(seconds: number): string {
 type VideoMode = 'center' | 'mini' | 'fullscreen' | 'pip';
 
 export function GlobalVideoPlayer() {
+  const ctx = useGlobalVideoPlayerSafe();
+  
+  // If context is not available (error boundary recovery), render nothing
+  if (!ctx) return null;
+  
   const {
     currentVideo,
     queue,
@@ -136,7 +141,7 @@ export function GlobalVideoPlayer() {
     playbackSpeed,
     setPlaybackSpeed,
     cyclePlaybackSpeed,
-  } = useGlobalVideoPlayer();
+  } = ctx;
   
   const [videoMode, setVideoMode] = useState<VideoMode>('center');
   const [isPiPActive, setIsPiPActive] = useState(false);
