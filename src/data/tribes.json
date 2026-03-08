@@ -4931,11 +4931,15 @@
         "writingSystem": "Ge'ez script (Ethiopic)"
       },
       "famousPeople": [
-        { "name": "Haile Selassie", "role": "Last Emperor of Ethiopia", "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie" },
-        { "name": "Menelik II", "role": "Emperor who defeated Italy at Adwa", "wikipedia": "https://en.wikipedia.org/wiki/Menelik_II" },
-        { "name": "Tedros Adhanom", "role": "WHO Director-General", "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom" },
-        { "name": "Tewodros II", "role": "Emperor & Unifier", "wikipedia": "https://en.wikipedia.org/wiki/Tewodros_II" },
-        { "name": "Mengistu Haile Mariam", "role": "Former Head of State", "wikipedia": "https://en.wikipedia.org/wiki/Mengistu_Haile_Mariam" }
+        { "name": "Haile Selassie", "role": "Last Emperor of Ethiopia & Pan-African Icon", "birth": 1892, "death": 1975, "wikipedia": "https://en.wikipedia.org/wiki/Haile_Selassie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Haile_Selassie_in_full_dress.jpg/220px-Haile_Selassie_in_full_dress.jpg" },
+        { "name": "Menelik II", "role": "Emperor who defeated Italy at Battle of Adwa (1896)", "birth": 1844, "death": 1913, "wikipedia": "https://en.wikipedia.org/wiki/Menelik_II", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Menelik_II_of_Ethiopia.jpg/220px-Menelik_II_of_Ethiopia.jpg" },
+        { "name": "Tewodros II", "role": "Emperor & Unifier of Ethiopia", "birth": 1818, "death": 1868, "wikipedia": "https://en.wikipedia.org/wiki/Tewodros_II", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Theodore_II_of_Ethiopia.jpg/220px-Theodore_II_of_Ethiopia.jpg" },
+        { "name": "Tedros Adhanom", "role": "WHO Director-General", "birth": 1965, "wikipedia": "https://en.wikipedia.org/wiki/Tedros_Adhanom", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Tedros_Adhanom_Ghebreyesus_-_AI_for_Good_Global_Summit_2018.jpg/220px-Tedros_Adhanom_Ghebreyesus_-_AI_for_Good_Global_Summit_2018.jpg" },
+        { "name": "Abiy Ahmed", "role": "Prime Minister of Ethiopia & Nobel Peace Prize 2019", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Abiy_Ahmed", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Abiy_Ahmed_2019.jpg/220px-Abiy_Ahmed_2019.jpg" },
+        { "name": "Mengistu Haile Mariam", "role": "Former Head of State (Derg regime)", "birth": 1937, "wikipedia": "https://en.wikipedia.org/wiki/Mengistu_Haile_Mariam", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mengistu_Haile_Mariam_3.jpg/220px-Mengistu_Haile_Mariam_3.jpg" },
+        { "name": "Tilahun Gessesse", "role": "Voice of Ethiopia - Legendary Singer", "birth": 1940, "death": 2009, "wikipedia": "https://en.wikipedia.org/wiki/Tilahun_Gessesse", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tilahun_Gessesse.jpg/220px-Tilahun_Gessesse.jpg" },
+        { "name": "Aster Aweke", "role": "International Ethiopian Singer", "birth": 1961, "wikipedia": "https://en.wikipedia.org/wiki/Aster_Aweke", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Aster_Aweke.jpg/220px-Aster_Aweke.jpg" },
+        { "name": "Empress Taytu Betul", "role": "Empress of Ethiopia & Battle of Adwa Heroine", "birth": 1851, "death": 1918, "wikipedia": "https://en.wikipedia.org/wiki/Taytu_Betul", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Taytu_Betul.jpg/220px-Taytu_Betul.jpg" }
       ],
       "description": "The Amhara are a major Ethiopian ethnic group known for Orthodox Christianity, the ancient Ge'ez script, imperial heritage, and elaborate coffee ceremony tradition.",
       "relatedTribes": ["tigray", "oromo", "gurage"],
