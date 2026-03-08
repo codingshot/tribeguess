@@ -2902,6 +2902,24 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'hiye': [{ tribe: 'rendille', weight: 0.95 }],
   'safi': [{ tribe: 'rendille', weight: 0.7 }, { tribe: 'coastal', weight: 0.3 }],
 
+  // ============ KENYA - Borana prefixes ============
+  'guyo': [{ tribe: 'borana', weight: 0.9 }, { tribe: 'gabra', weight: 0.1 }],
+  'daba': [{ tribe: 'borana', weight: 0.95 }],
+  'wari': [{ tribe: 'borana', weight: 0.85 }, { tribe: 'gabra', weight: 0.15 }],
+  'mamo': [{ tribe: 'borana', weight: 0.9 }],
+  'sora_b': [{ tribe: 'borana', weight: 0.9 }],
+
+  // ============ KENYA - Gabra prefixes ============
+  'goli': [{ tribe: 'gabra', weight: 0.95 }],
+
+  // ============ KENYA - Pokomo prefixes ============
+  'mwal': [{ tribe: 'pokomo', weight: 0.85 }, { tribe: 'coastal', weight: 0.15 }],
+
+  // ============ KENYA - Orma prefixes ============
+  'huka': [{ tribe: 'orma', weight: 0.95 }],
+  'roba': [{ tribe: 'orma', weight: 0.9 }],
+  'ayan': [{ tribe: 'orma', weight: 0.85 }],
+
   // ============ MADAGASCAR - Merina prefixes (Central Highlands) ============
   'rako': [{ tribe: 'merina', weight: 0.98 }],
   'rand': [{ tribe: 'merina', weight: 0.95 }],
