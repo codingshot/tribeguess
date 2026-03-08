@@ -310,8 +310,8 @@ export default function RecipePage() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Ingredients */}
           <div className="md:col-span-1">
-            <div className="bg-card border border-border rounded-lg p-4 sticky top-4">
-              <h2 className="font-semibold text-lg mb-4 flex items-center gap-2">
+            <div className="bg-card border border-border rounded-lg p-4 sticky top-4 space-y-4">
+              <h2 className="font-semibold text-lg flex items-center gap-2">
                 <ChefHat className="w-5 h-5" /> Ingredients
               </h2>
               <ul className="space-y-2">
@@ -324,10 +324,52 @@ export default function RecipePage() {
                       {ing.notes && (
                         <span className="text-muted-foreground text-xs block">({ing.notes})</span>
                       )}
+                      {ing.substitution && (
+                        <span className="text-xs text-green-600 dark:text-green-400 block mt-0.5">↳ Sub: {ing.substitution}</span>
+                      )}
                     </div>
                   </li>
                 ))}
               </ul>
+
+              {/* Nutritional Info */}
+              {recipe.nutritionalInfo && (
+                <div className="pt-3 border-t border-border">
+                  <h3 className="font-medium text-sm mb-2 flex items-center gap-1.5">
+                    <Heart className="w-4 h-4 text-red-500" /> Nutrition (per serving)
+                  </h3>
+                  <div className="grid grid-cols-2 gap-1.5 text-xs">
+                    {recipe.nutritionalInfo.calories && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Calories:</span> {recipe.nutritionalInfo.calories}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.protein && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Protein:</span> {recipe.nutritionalInfo.protein}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.carbs && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Carbs:</span> {recipe.nutritionalInfo.carbs}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.fat && (
+                      <div className="bg-secondary/50 rounded px-2 py-1">
+                        <span className="font-medium">Fat:</span> {recipe.nutritionalInfo.fat}
+                      </div>
+                    )}
+                    {recipe.nutritionalInfo.fiber && (
+                      <div className="bg-secondary/50 rounded px-2 py-1 col-span-2">
+                        <span className="font-medium">Fiber:</span> {recipe.nutritionalInfo.fiber}
+                      </div>
+                    )}
+                  </div>
+                  {recipe.nutritionalInfo.notes && (
+                    <p className="text-xs text-muted-foreground mt-1.5 italic">{recipe.nutritionalInfo.notes}</p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 
