@@ -27,14 +27,13 @@ export interface VideoItem {
 
 // Fallback videos for when queue is empty
 export const VIBE_VIDEOS: string[] = [
-  'FjM9nOFglDM', // African music
-  'dOJM5pQR6GA', // African dance
-  'Z5a-oNPD2sw', // African culture
   'c-T7_mJTOkI', // Kikuyu documentary
   '8yN643vymPg', // Luo documentary
   'GsDCFDLOQFo', // Maasai documentary
   '_W1cHwldsCI', // Yoruba documentary
   't9F3eIJgD2I', // Igbo documentary
+  'Jh5VQYwJfNY', // Zulu documentary
+  'N_K8TvdIoPM', // Shona documentary
 ];
 
 export function getYoutubeId(url: string): string {
