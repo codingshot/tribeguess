@@ -8,6 +8,36 @@ import { HelmetProvider } from "react-helmet-async";
 import { GlobalVideoPlayerProvider } from "@/contexts/GlobalVideoPlayerContext";
 import { GlobalVideoPlayer } from "@/components/GlobalVideoPlayer";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
+import React from "react";
+
+// Error boundary to prevent video player crashes from breaking the whole app
+class VideoPlayerErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error: Error) {
+    console.warn('[VideoPlayer] Recovered from crash:', error.message);
+    // Clear potentially corrupted video state
+    try {
+      localStorage.removeItem('tribeguess_current_video');
+    } catch {}
+  }
+  render() {
+    if (this.state.hasError) {
+      // Auto-recover after 2s
+      setTimeout(() => this.setState({ hasError: false }), 2000);
+      return null;
+    }
+    return this.props.children;
+  }
+}
 import { warmSearchIndexes } from "@/lib/searchEngine";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 
