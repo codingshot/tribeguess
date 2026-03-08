@@ -30,9 +30,11 @@ export const VIBE_VIDEOS: string[] = [
   'FjM9nOFglDM', // African music
   'dOJM5pQR6GA', // African dance
   'Z5a-oNPD2sw', // African culture
-  'gv7Q7IBHrk4', // Kikuyu documentary
+  'c-T7_mJTOkI', // Kikuyu documentary
   '8yN643vymPg', // Luo documentary
-  'K_G_9h-UEWU', // Maasai documentary
+  'GsDCFDLOQFo', // Maasai documentary
+  '_W1cHwldsCI', // Yoruba documentary
+  't9F3eIJgD2I', // Igbo documentary
 ];
 
 export function getYoutubeId(url: string): string {
