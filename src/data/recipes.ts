@@ -6671,24 +6671,32 @@ export const getRecipesByTribe = (tribeSlug: string): Recipe[] => {
   return recipes.filter(recipe => recipe.tribeSlug === tribeSlug);
 };
 
-// Helper function to get recipe by ID
+// Deduplicate recipes by id, keeping the most detailed version
+function deduplicateRecipes(recipeList: Recipe[]): Recipe[] {
+  const seen = new Map<string, Recipe>();
+  for (const recipe of recipeList) {
+    const existing = seen.get(recipe.id);
+    if (!existing) {
+      seen.set(recipe.id, recipe);
+    } else {
+      const existingScore = (existing.nutritionalInfo ? 10 : 0) + (existing.historicalContext ? 5 : 0) + (existing.variations?.length || 0) + (existing.description?.length || 0);
+      const newScore = (recipe.nutritionalInfo ? 10 : 0) + (recipe.historicalContext ? 5 : 0) + (recipe.variations?.length || 0) + (recipe.description?.length || 0);
+      if (newScore > existingScore) {
+        seen.set(recipe.id, recipe);
+      }
+    }
+  }
+  return Array.from(seen.values());
+}
+
+// Helper function to get recipe by ID (returns most detailed version)
 export const getRecipeById = (id: string): Recipe | undefined => {
-  return recipes.find(recipe => recipe.id === id);
+  return deduplicateRecipes(recipes).find(recipe => recipe.id === id);
 };
 
-// Helper function to find recipe by food name (for linking from food list)
-export const findRecipeByName = (name: string, tribeSlug: string): Recipe | undefined => {
-  const normalizedName = name.toLowerCase();
-  return recipes.find(recipe => 
-    recipe.tribeSlug === tribeSlug && 
-    (recipe.name.toLowerCase().includes(normalizedName) || 
-     normalizedName.includes(recipe.name.toLowerCase().split(' ')[0]))
-  );
-};
-
-// Get all recipes
+// Get all recipes (deduplicated)
 export const getAllRecipes = (): Recipe[] => {
-  return recipes;
+  return deduplicateRecipes(recipes);
 };
 
 // Get all unique tribe names from recipes
