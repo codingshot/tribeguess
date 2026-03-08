@@ -127,7 +127,9 @@ const App = () => {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
-              <GlobalVideoPlayer />
+              <VideoPlayerErrorBoundary>
+                <GlobalVideoPlayer />
+              </VideoPlayerErrorBoundary>
               <PWAInstallPrompt />
             </BrowserRouter>
           </GlobalVideoPlayerProvider>
