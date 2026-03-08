@@ -11940,21 +11940,20 @@ const newTribesRecipes: Recipe[] = [
     tribeName: 'Ovambo',
     category: 'staple',
     description: 'The quintessential Ovambo meal: pearl millet porridge (oshifima) served with a savory dried spinach relish. Mahangu (pearl millet) is the traditional grain of northern Namibia.',
-    servings: '4',
+    culturalSignificance: 'Oshifima is the daily bread of the Ovambo people. Every homestead grows mahangu, and preparing oshifima is a fundamental skill. It represents sustenance, tradition, and the agricultural identity of northern Namibia.',
+    servings: 4,
     prepTime: '10 minutes',
     cookTime: '25 minutes',
     difficulty: 'easy',
     ingredients: [
-      '3 cups mahangu (pearl millet) flour',
-      '4 cups water',
-      '1/2 teaspoon salt',
-      '--- For the spinach relish ---',
-      '200g dried spinach (ombidi) or fresh spinach',
-      '1 medium onion, chopped',
-      '2 medium tomatoes, chopped',
-      '2 tablespoons vegetable oil',
-      '1/2 teaspoon salt',
-      '1/4 teaspoon chili (optional)'
+      { item: 'Mahangu (pearl millet) flour', amount: '3 cups', substitution: 'Maize meal' },
+      { item: 'Water', amount: '4 cups' },
+      { item: 'Salt', amount: '1/2 teaspoon' },
+      { item: 'Dried spinach (ombidi) or fresh spinach', amount: '200g', notes: 'For the relish' },
+      { item: 'Onion', amount: '1 medium', notes: 'Chopped' },
+      { item: 'Tomatoes', amount: '2 medium', notes: 'Chopped' },
+      { item: 'Vegetable oil', amount: '2 tablespoons' },
+      { item: 'Chili', amount: '1/4 teaspoon', notes: 'Optional' }
     ],
     instructions: [
       'Bring 4 cups of water to a boil in a heavy pot.',
@@ -11968,7 +11967,6 @@ const newTribesRecipes: Recipe[] = [
       'Serve oshifima in a mound with spinach relish alongside.'
     ],
     tips: ['Traditional mahangu gives a nutty, earthy flavor - maize meal can substitute', 'The porridge should be firm enough to hold its shape'],
-    history: 'Oshifima is the daily bread of the Ovambo people. Mahangu (pearl millet) has been cultivated in northern Namibia for centuries, perfectly adapted to the semi-arid climate. Every Ovambo homestead grows mahangu.',
     nutritionalInfo: { calories: '~340 kcal', protein: '10g', carbs: '62g', fat: '7g', fiber: '8g', notes: 'Pearl millet is highly nutritious with more iron and zinc than maize. Drought-resistant crop.' },
     dietaryInfo: ['Vegan', 'Gluten-free', 'High-fiber']
   },
