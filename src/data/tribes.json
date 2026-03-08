@@ -17326,7 +17326,10 @@
       ],
       "sources": [{ "name": "Wikipedia - Tswana people", "url": "https://en.wikipedia.org/wiki/Tswana_people" }, { "name": "Ethnologue - Setswana", "url": "https://www.ethnologue.com/language/tsn" }],
       "description": "The Tswana are a Bantu-speaking people of southern Africa, forming the majority population of Botswana. Famous for their democratic kgotla system, cattle culture, and the remarkable story of three chiefs who saved their nation from colonization, the Tswana have built one of Africa's most successful democracies.",
-      "relatedTribes": ["sotho", "ndebele", "zulu", "san"]
+      "relatedTribes": ["sotho", "ndebele", "zulu", "san"],
+      "gallery": [
+        { "url": "/tribes/tswana/tswana-ceremony.jpg", "caption": "Tswana women performing traditional dance in colorful beadwork", "credit": "AI Generated" }
+      ]
     },
     {
       "id": "lozi",
