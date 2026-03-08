@@ -374,7 +374,9 @@
         { "name": "Mwai Kibaki", "role": "Third President of Kenya", "birth": 1931, "death": 2022, "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mwai_Kibaki%2C_October_2003.jpg/220px-Mwai_Kibaki%2C_October_2003.jpg" },
         { "name": "Dedan Kimathi", "role": "Mau Mau Liberation Hero", "birth": 1920, "death": 1957, "wikipedia": "https://en.wikipedia.org/wiki/Dedan_Kimathi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dedan_Kimathi.jpg/220px-Dedan_Kimathi.jpg" },
         { "name": "Uhuru Kenyatta", "role": "Fourth President of Kenya", "birth": 1961, "wikipedia": "https://en.wikipedia.org/wiki/Uhuru_Kenyatta", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Uhuru_Kenyatta_2015.jpg/220px-Uhuru_Kenyatta_2015.jpg" },
-        { "name": "Catherine Ndereba", "role": "Marathon Legend - 'Catherine the Great'", "birth": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Catherine_Ndereba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Catherine_Ndereba.jpg/220px-Catherine_Ndereba.jpg" }
+        { "name": "Catherine Ndereba", "role": "Marathon Legend - 'Catherine the Great'", "birth": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Catherine_Ndereba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Catherine_Ndereba.jpg/220px-Catherine_Ndereba.jpg" },
+        { "name": "Joseph Kamaru", "role": "Legendary Kikuyu Musician (3000+ songs)", "birth": 1939, "death": 2018, "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Kamaru" },
+        { "name": "Samidoh", "role": "Mugithi Musician & Cultural Icon", "birth": 1989, "wikipedia": "https://en.wikipedia.org/wiki/Samidoh" }
       ],
       "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise.",
       "relatedTribes": ["meru", "embu"],
@@ -525,7 +527,10 @@
         { "name": "Raila Odinga", "role": "Former Prime Minister & Political Leader", "birth": 1945, "wikipedia": "https://en.wikipedia.org/wiki/Raila_Odinga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Raila_Odinga_%282022%29.jpg/220px-Raila_Odinga_%282022%29.jpg" },
         { "name": "Lupita Nyong'o", "role": "Oscar-winning Actress", "birth": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Lupita_Nyong%27o", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lupita_Nyong%27o_at_the_2024_Met_Gala.jpg/220px-Lupita_Nyong%27o_at_the_2024_Met_Gala.jpg" },
         { "name": "Jaramogi Oginga Odinga", "role": "First Vice President of Kenya", "birth": 1911, "death": 1994, "wikipedia": "https://en.wikipedia.org/wiki/Jaramogi_Oginga_Odinga", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Oginga_Odinga.jpg/220px-Oginga_Odinga.jpg" },
-        { "name": "Tom Mboya", "role": "Independence Hero & Politician", "birth": 1930, "death": 1969, "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tom_Mboya.jpg/220px-Tom_Mboya.jpg" }
+        { "name": "Tom Mboya", "role": "Independence Hero & Politician", "birth": 1930, "death": 1969, "wikipedia": "https://en.wikipedia.org/wiki/Tom_Mboya", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tom_Mboya.jpg/220px-Tom_Mboya.jpg" },
+        { "name": "Ayub Ogada", "role": "Nyatiti Musician & Cultural Ambassador", "birth": 1956, "death": 2019, "wikipedia": "https://en.wikipedia.org/wiki/Ayub_Ogada" },
+        { "name": "Suzanna Owiyo", "role": "Afro-Jazz Singer & Songwriter", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Suzanna_Owiyo" },
+        { "name": "Gor Mahia", "role": "Legendary Luo Warrior & Folk Hero", "wikipedia": "https://en.wikipedia.org/wiki/Gor_Mahia" }
       ],
       "description": "The Luo (Joluo) are the fourth-largest ethnic group in Kenya, known for their rich cultural heritage, political activism, and musical traditions. They traditionally live around Lake Victoria in Nyanza region.",
       "relatedTribes": ["luhya", "kisii"],
@@ -3636,7 +3641,10 @@
         { "name": "Obafemi Awolowo", "role": "Nigerian Statesman & Premier", "birth": 1909, "death": 1987, "wikipedia": "https://en.wikipedia.org/wiki/Obafemi_Awolowo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Obafemi_Awolowo.jpg/220px-Obafemi_Awolowo.jpg" },
         { "name": "King Sunny Ade", "role": "Jùjú Music Legend", "birth": 1946, "wikipedia": "https://en.wikipedia.org/wiki/King_Sunny_Ade", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/King_Sunny_Ade.jpg/220px-King_Sunny_Ade.jpg" },
         { "name": "Wizkid", "role": "Grammy-winning Afrobeats Star", "birth": 1990, "wikipedia": "https://en.wikipedia.org/wiki/Wizkid", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/WizKid_2012.jpg/220px-WizKid_2012.jpg" },
-        { "name": "Sade Adu", "role": "Grammy-winning Singer-Songwriter", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/Sade_Adu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sade_Adu.jpg/220px-Sade_Adu.jpg" }
+        { "name": "Sade Adu", "role": "Grammy-winning Singer-Songwriter", "birth": 1959, "wikipedia": "https://en.wikipedia.org/wiki/Sade_Adu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sade_Adu.jpg/220px-Sade_Adu.jpg" },
+        { "name": "Davido", "role": "Afrobeats Superstar & Philanthropist", "birth": 1992, "wikipedia": "https://en.wikipedia.org/wiki/Davido", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Davido_2018.jpg/220px-Davido_2018.jpg" },
+        { "name": "Tems", "role": "Grammy-winning Singer & Songwriter", "birth": 1995, "wikipedia": "https://en.wikipedia.org/wiki/Tems_(singer)" },
+        { "name": "Nike Davies-Okundaye", "role": "Textile Artist & Adire Master", "birth": 1951, "wikipedia": "https://en.wikipedia.org/wiki/Nike_Davies-Okundaye" }
       ],
       "description": "The Yoruba are one of Africa's largest ethnic groups, known for rich culture, art, mythology, and a sophisticated pre-colonial civilization centered at Ile-Ife.",
       "relatedTribes": ["igbo", "hausa"],
@@ -3778,7 +3786,10 @@
         { "name": "Chukwuemeka Ojukwu", "role": "Biafran Leader", "birth": 1933, "death": 2011, "wikipedia": "https://en.wikipedia.org/wiki/Chukwuemeka_Odumegwu_Ojukwu", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Odumegwu_Ojukwu.jpg/220px-Odumegwu_Ojukwu.jpg" },
         { "name": "Philip Emeagwali", "role": "Computer Scientist", "birth": 1954, "wikipedia": "https://en.wikipedia.org/wiki/Philip_Emeagwali", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Philip_Emeagwali.jpg/220px-Philip_Emeagwali.jpg" },
         { "name": "Ngozi Okonjo-Iweala", "role": "WTO Director-General", "birth": 1954, "wikipedia": "https://en.wikipedia.org/wiki/Ngozi_Okonjo-Iweala", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ngozi_Okonjo-Iweala_at_GAVI.jpg/220px-Ngozi_Okonjo-Iweala_at_GAVI.jpg" },
-        { "name": "Chimamanda Ngozi Adichie", "role": "Award-winning Author", "birth": 1977, "wikipedia": "https://en.wikipedia.org/wiki/Chimamanda_Ngozi_Adichie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Chimamanda_Ngozi_Adichie_9386.jpg/220px-Chimamanda_Ngozi_Adichie_9386.jpg" }
+        { "name": "Chimamanda Ngozi Adichie", "role": "Award-winning Author", "birth": 1977, "wikipedia": "https://en.wikipedia.org/wiki/Chimamanda_Ngozi_Adichie", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Chimamanda_Ngozi_Adichie_9386.jpg/220px-Chimamanda_Ngozi_Adichie_9386.jpg" },
+        { "name": "Burna Boy", "role": "Grammy-winning Afrobeats Star", "birth": 1991, "wikipedia": "https://en.wikipedia.org/wiki/Burna_Boy", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Burna_Boy_2019.jpg/220px-Burna_Boy_2019.jpg" },
+        { "name": "Flavour N'abania", "role": "Highlife & Afrobeats Singer", "birth": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Flavour_N%27abania" },
+        { "name": "Ben Enwonwu", "role": "Pioneer Modern African Artist", "birth": 1917, "death": 1994, "wikipedia": "https://en.wikipedia.org/wiki/Ben_Enwonwu" }
       ],
       "description": "The Igbo are a major Nigerian ethnic group known for entrepreneurship, decentralized governance, and rich cultural traditions including masquerades and the kola nut ceremony.",
       "relatedTribes": ["yoruba", "ibibio"],
@@ -4351,7 +4362,9 @@
         { "name": "Mangosuthu Buthelezi", "role": "Political Leader & Prince", "birth": 1928, "death": 2023, "wikipedia": "https://en.wikipedia.org/wiki/Mangosuthu_Buthelezi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Mangosuthu_Buthelezi%2C_2011_%28cropped%29.jpg/220px-Mangosuthu_Buthelezi%2C_2011_%28cropped%29.jpg" },
         { "name": "Ladysmith Black Mambazo", "role": "Grammy-Winning Choir", "wikipedia": "https://en.wikipedia.org/wiki/Ladysmith_Black_Mambazo", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ladysmith_Black_Mambazo_Roskilde_2012.jpg/220px-Ladysmith_Black_Mambazo_Roskilde_2012.jpg" },
         { "name": "Jacob Zuma", "role": "Former President of South Africa", "birth": 1942, "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Zuma", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Jacob_Zuma_2010_%28cropped%29.jpg/220px-Jacob_Zuma_2010_%28cropped%29.jpg" },
-        { "name": "Misuzulu kaZwelithini", "role": "Current Zulu King", "birth": 1974, "wikipedia": "https://en.wikipedia.org/wiki/Misuzulu_kaZwelithini" }
+        { "name": "Misuzulu kaZwelithini", "role": "Current Zulu King", "birth": 1974, "wikipedia": "https://en.wikipedia.org/wiki/Misuzulu_kaZwelithini" },
+        { "name": "Thandiswa Mazwai", "role": "Post-Apartheid Music Icon", "birth": 1976, "wikipedia": "https://en.wikipedia.org/wiki/Thandiswa_Mazwai" },
+        { "name": "Esther Mahlangu", "role": "Ndebele-Zulu Visual Artist (BMW Art Car)", "birth": 1935, "wikipedia": "https://en.wikipedia.org/wiki/Esther_Mahlangu" }
       ],
       "description": "The Zulu are South Africa's largest ethnic group, known for Shaka's warrior kingdom, distinctive culture, and isicathamiya music tradition.",
       "relatedTribes": ["xhosa", "swazi", "ndebele"],
