@@ -17241,6 +17241,337 @@
       "sources": [{ "name": "Wikipedia - Ovambo people", "url": "https://en.wikipedia.org/wiki/Ovambo_people" }, { "name": "Kunzaar - Oshiwambo Tribe", "url": "https://kunzaar.com.ng/oshiwambo-tribe-of-namibia/" }],
       "description": "The Ovambo are Namibia's largest ethnic group, making up half the population. Their eight kingdoms, matrilineal traditions, Omagongo festival, and leadership of the independence struggle define them as the backbone of modern Namibia.",
       "relatedTribes": ["herero", "himba", "san", "kwangali"]
+    },
+    {
+      "id": "tswana",
+      "name": "Tswana (Batswana)",
+      "slug": "tswana",
+      "slugAliases": ["batswana", "setswana", "motswana"],
+      "youtubeVideoId": "EnNoyTHn9PI",
+      "languageVideoId": "82Kgf1XzwGk",
+      "countries": ["Botswana", "South Africa", "Namibia"],
+      "region": "Southern Africa",
+      "population": "~6 million",
+      "language": {
+        "name": "Setswana",
+        "family": "Bantu",
+        "speakers": "~5 million",
+        "writingSystem": "Latin alphabet",
+        "lineage": ["Niger-Congo", "Atlantic-Congo", "Volta-Congo", "Benue-Congo", "Bantoid", "Southern Bantu", "Sotho-Tswana", "Tswana"]
+      },
+      "greeting": "Dumela",
+      "greetingMeaning": "Hello / Greetings",
+      "stereotype": "Known for their democratic traditions through the kgotla (public assembly), elaborate wedding ceremonies, and cattle culture. The Tswana pioneered early forms of democratic governance in pre-colonial Africa.",
+      "eating": {
+        "mealsPerDay": "3 meals",
+        "mainFoods": ["Bogobe (sorghum porridge)", "Seswaa (pounded meat)", "Morogo (wild spinach)", "Dikgobe (bean and corn mix)", "Magwinya (fat cakes)"],
+        "taboos": "Certain clans avoid eating their totem animal (e.g., Bakwena clan avoids crocodile)",
+        "hospitality": "Guests are always offered water first, then food. Refusing food is considered disrespectful."
+      },
+      "tradeHistory": {
+        "historical": "Major cattle traders across southern Africa. Controlled trade routes between the interior and coastal regions.",
+        "modern": "Diamond and cattle industries dominate. Botswana is one of Africa's most prosperous economies.",
+        "partners": ["Zulu", "Sotho", "Ndebele", "Shona"]
+      },
+      "independenceHistory": {
+        "colonialPower": "British (Bechuanaland Protectorate)",
+        "resistance": "Three dikgosi (chiefs) traveled to London in 1895 to prevent Cecil Rhodes from annexing their land — and succeeded.",
+        "independence": "Botswana gained independence in 1966 under Seretse Khama. Became one of Africa's most stable democracies."
+      },
+      "religiousHistory": {
+        "traditional": "Belief in Modimo (supreme being) and badimo (ancestral spirits). Rain-making ceremonies (go phekola pula) are central.",
+        "christianity": "Introduced by LMS missionaries in 1816. Robert Moffat and David Livingstone were key figures.",
+        "current": "Majority Christian with strong traditional beliefs maintained."
+      },
+      "coordinates": { "lat": -22.3, "lng": 27.1 },
+      "populationByCountry": [
+        { "country": "BW", "population": "~1.5M", "percent": "79%" },
+        { "country": "ZA", "population": "~4M", "percent": "7%" },
+        { "country": "NA", "population": "~80K", "percent": "3%" }
+      ],
+      "famousPeople": [
+        { "name": "Seretse Khama", "role": "First President of Botswana (1966-1980), transformed economy", "wikipedia": "https://en.wikipedia.org/wiki/Seretse_Khama" },
+        { "name": "Ruth Williams Khama", "role": "First Lady of Botswana, interracial marriage icon", "wikipedia": "https://en.wikipedia.org/wiki/Ruth_Williams_Khama" },
+        { "name": "Festus Mogae", "role": "Third President of Botswana, Ibrahim Prize laureate", "wikipedia": "https://en.wikipedia.org/wiki/Festus_Mogae" },
+        { "name": "Mpule Kwelagobe", "role": "Miss Universe 1999", "wikipedia": "https://en.wikipedia.org/wiki/Mpule_Kwelagobe" },
+        { "name": "Unity Dow", "role": "First female High Court judge in Botswana, author", "wikipedia": "https://en.wikipedia.org/wiki/Unity_Dow" }
+      ],
+      "names": [
+        { "name": "Kagiso", "gender": "unisex", "meaning": "Peace" },
+        { "name": "Kefilwe", "gender": "female", "meaning": "I have been given" },
+        { "name": "Tshepiso", "gender": "unisex", "meaning": "Promise" },
+        { "name": "Motheo", "gender": "male", "meaning": "Foundation" },
+        { "name": "Naledi", "gender": "female", "meaning": "Star" },
+        { "name": "Tumelo", "gender": "unisex", "meaning": "Faith" },
+        { "name": "Kealeboga", "gender": "unisex", "meaning": "I am thankful" },
+        { "name": "Lesedi", "gender": "female", "meaning": "Light" },
+        { "name": "Boipelo", "gender": "female", "meaning": "Pride / Joy" },
+        { "name": "Thato", "gender": "unisex", "meaning": "Will / Desire" }
+      ],
+      "sources": [{ "name": "Wikipedia - Tswana people", "url": "https://en.wikipedia.org/wiki/Tswana_people" }, { "name": "Ethnologue - Setswana", "url": "https://www.ethnologue.com/language/tsn" }],
+      "description": "The Tswana are a Bantu-speaking people of southern Africa, forming the majority population of Botswana. Famous for their democratic kgotla system, cattle culture, and the remarkable story of three chiefs who saved their nation from colonization, the Tswana have built one of Africa's most successful democracies.",
+      "relatedTribes": ["sotho", "ndebele", "zulu", "san"]
+    },
+    {
+      "id": "lozi",
+      "name": "Lozi (Barotse)",
+      "slug": "lozi",
+      "slugAliases": ["barotse", "silozi", "barotseland"],
+      "youtubeVideoId": "M-ZYQKZzfVA",
+      "countries": ["Zambia", "Namibia", "Zimbabwe", "Botswana"],
+      "region": "Southern Africa",
+      "population": "~1.5 million",
+      "language": {
+        "name": "Silozi",
+        "family": "Bantu",
+        "speakers": "~700,000",
+        "writingSystem": "Latin alphabet",
+        "lineage": ["Niger-Congo", "Atlantic-Congo", "Volta-Congo", "Benue-Congo", "Bantoid", "Southern Bantu", "Sotho-Tswana", "Lozi"]
+      },
+      "greeting": "Mulumbe",
+      "greetingMeaning": "Greetings / Peace",
+      "stereotype": "Renowned for the spectacular Kuomboka ceremony — the royal barge procession when the Litunga (king) moves from the floodplain to higher ground. Known for their sophisticated floodplain management system.",
+      "eating": {
+        "mealsPerDay": "2-3 meals",
+        "mainFoods": ["Nshima (maize porridge)", "Fish from the Zambezi floodplain", "Bream", "Wild rice", "Cassava", "Sweet potatoes"],
+        "taboos": "The Litunga's food must be prepared separately. Certain fish species are reserved for royalty.",
+        "hospitality": "Visitors are greeted with clapping and offered the best food. Meals are shared communally."
+      },
+      "tradeHistory": {
+        "historical": "Controlled trade along the Zambezi River. Traded cattle, fish, and canoes with neighboring peoples.",
+        "modern": "Fishing, cattle herding, and rice cultivation in the floodplains.",
+        "partners": ["Tonga", "Ila", "Bemba", "Tswana"]
+      },
+      "independenceHistory": {
+        "colonialPower": "British (Northern Rhodesia)",
+        "resistance": "Maintained semi-autonomous status under colonial rule through the Barotseland Agreement of 1964.",
+        "independence": "Joined Zambia at independence in 1964. The Barotseland Agreement remains a contested political issue."
+      },
+      "religiousHistory": {
+        "traditional": "Belief in Nyambe (creator god). The Litunga serves as both political and spiritual leader.",
+        "christianity": "Paris Evangelical Missionary Society arrived in 1886. François Coillard was a key missionary.",
+        "current": "Christianity is predominant, with traditional beliefs maintained in royal ceremonies."
+      },
+      "coordinates": { "lat": -15.4, "lng": 23.2 },
+      "populationByCountry": [
+        { "country": "ZM", "population": "~1.2M", "percent": "6%" },
+        { "country": "NA", "population": "~100K", "percent": "4%" }
+      ],
+      "famousPeople": [
+        { "name": "Lewanika", "role": "Paramount Chief of Barotseland (1878-1916), modernizer", "wikipedia": "https://en.wikipedia.org/wiki/Lewanika" },
+        { "name": "Lubosi Imwiko II", "role": "Current Litunga (King) of Barotseland", "wikipedia": "https://en.wikipedia.org/wiki/Lubosi_Imwiko_II" },
+        { "name": "Inonge Wina", "role": "First female Vice President of Zambia", "wikipedia": "https://en.wikipedia.org/wiki/Inonge_Wina" }
+      ],
+      "names": [
+        { "name": "Mubiana", "gender": "male", "meaning": "From the river" },
+        { "name": "Nasilele", "gender": "female", "meaning": "Water lily" },
+        { "name": "Lubinda", "gender": "male", "meaning": "To be called" },
+        { "name": "Inonge", "gender": "female", "meaning": "Beautiful one" },
+        { "name": "Mwanawina", "gender": "male", "meaning": "Child of the chief" },
+        { "name": "Nakatindi", "gender": "female", "meaning": "Born during harvest" }
+      ],
+      "sources": [{ "name": "Wikipedia - Lozi people", "url": "https://en.wikipedia.org/wiki/Lozi_people" }, { "name": "101 Last Tribes", "url": "https://www.101lasttribes.com/tribes/lozi.html" }],
+      "description": "The Lozi are a Bantu-speaking people of western Zambia, famous for the Kuomboka ceremony — one of Africa's most spectacular royal events. Their kingdom of Barotseland, centered on the Zambezi floodplain, has maintained its cultural identity and royal traditions for centuries.",
+      "relatedTribes": ["bemba", "tonga", "tswana", "ovambo"]
+    },
+    {
+      "id": "ndebele-sa",
+      "name": "Ndebele (South Africa)",
+      "slug": "ndebele",
+      "slugAliases": ["amandebele", "ndebele-south-africa", "isindebele"],
+      "youtubeVideoId": "O4H9Tdgvh-w",
+      "countries": ["South Africa", "Zimbabwe"],
+      "region": "Southern Africa",
+      "population": "~2.5 million",
+      "language": {
+        "name": "isiNdebele / Northern Ndebele",
+        "family": "Bantu",
+        "speakers": "~1.6 million",
+        "writingSystem": "Latin alphabet",
+        "lineage": ["Niger-Congo", "Atlantic-Congo", "Volta-Congo", "Benue-Congo", "Bantoid", "Southern Bantu", "Nguni", "Ndebele"]
+      },
+      "greeting": "Lotjhani",
+      "greetingMeaning": "Hello / Greetings",
+      "stereotype": "Globally celebrated for their stunning geometric house paintings, elaborate beadwork, and brass neck rings (dzilla). Ndebele women are among Africa's most renowned artists.",
+      "eating": {
+        "mealsPerDay": "3 meals",
+        "mainFoods": ["Isitshwala (stiff porridge)", "Umfino (wild greens)", "Amasi (fermented milk)", "Inyama (meat)", "Umbhako (steamed bread)"],
+        "taboos": "Certain foods are restricted during mourning periods. Young brides observe food restrictions.",
+        "hospitality": "Guests are welcomed with traditional beer (utshwala) and the best cuts of meat."
+      },
+      "tradeHistory": {
+        "historical": "Traded beadwork, cattle, and agricultural products with neighboring Nguni and Sotho groups.",
+        "modern": "Ndebele art has become globally recognized. Esther Mahlangu's art appears on BMW cars and international galleries.",
+        "partners": ["Zulu", "Sotho", "Pedi", "Tswana"]
+      },
+      "independenceHistory": {
+        "colonialPower": "British / Boer (Transvaal Republic)",
+        "resistance": "Chief Nyabela led fierce resistance against Boer forces in the 1880s, enduring a prolonged siege at Mapoch's Cave.",
+        "independence": "Part of South Africa's democratic transition in 1994. Ndebele cultural identity experienced a renaissance."
+      },
+      "religiousHistory": {
+        "traditional": "Belief in amadlozi (ancestral spirits) and uNkulunkulu (supreme being). Initiation ceremonies are central.",
+        "christianity": "Berlin Missionary Society active from the 1860s.",
+        "current": "Christianity predominant with strong traditional beliefs, especially around initiation rites."
+      },
+      "coordinates": { "lat": -25.0, "lng": 29.4 },
+      "populationByCountry": [
+        { "country": "ZA", "population": "~1.1M", "percent": "2%" },
+        { "country": "ZW", "population": "~1.5M", "percent": "10%" }
+      ],
+      "famousPeople": [
+        { "name": "Esther Mahlangu", "role": "World-renowned Ndebele artist, painted BMW Art Car", "wikipedia": "https://en.wikipedia.org/wiki/Esther_Mahlangu" },
+        { "name": "Chief Nyabela", "role": "Ndzundza Ndebele chief who resisted Boer colonization", "wikipedia": "https://en.wikipedia.org/wiki/Nyabela" },
+        { "name": "Francina Ndimande", "role": "Ndebele master painter and cultural ambassador", "wikipedia": "https://en.wikipedia.org/wiki/Francina_Ndimande" }
+      ],
+      "names": [
+        { "name": "Thabile", "gender": "female", "meaning": "Joyful" },
+        { "name": "Siyabonga", "gender": "male", "meaning": "We are thankful" },
+        { "name": "Nomusa", "gender": "female", "meaning": "Mercy / Grace" },
+        { "name": "Mthokozisi", "gender": "male", "meaning": "Bringer of joy" },
+        { "name": "Lindiwe", "gender": "female", "meaning": "Awaited one" },
+        { "name": "Sipho", "gender": "male", "meaning": "Gift" },
+        { "name": "Nothando", "gender": "female", "meaning": "Love" },
+        { "name": "Bongani", "gender": "male", "meaning": "Be thankful" }
+      ],
+      "sources": [{ "name": "Wikipedia - Ndebele people (South Africa)", "url": "https://en.wikipedia.org/wiki/Ndebele_people_(South_Africa)" }, { "name": "South African History Online", "url": "https://www.sahistory.org.za/article/ndebele" }],
+      "description": "The Ndebele of South Africa are world-famous for their striking geometric house paintings and elaborate beadwork. Their art is a powerful expression of cultural identity that survived colonial oppression and apartheid, making them one of Africa's most visually iconic peoples.",
+      "relatedTribes": ["zulu", "xhosa", "sotho", "tswana"]
+    },
+    {
+      "id": "mandinka",
+      "name": "Mandinka (Mandingo)",
+      "slug": "mandinka",
+      "slugAliases": ["mandingo", "malinke", "manding", "maninka"],
+      "youtubeVideoId": "OMI3J4HLey8",
+      "languageVideoId": "IzNSU0PPbck",
+      "countries": ["Gambia", "Guinea", "Mali", "Senegal", "Guinea-Bissau", "Sierra Leone", "Liberia", "Ivory Coast", "Burkina Faso"],
+      "region": "West Africa",
+      "population": "~11 million",
+      "language": {
+        "name": "Mandinka",
+        "family": "Mande",
+        "speakers": "~7 million",
+        "writingSystem": "Latin alphabet, N'Ko script, Arabic script",
+        "lineage": ["Niger-Congo", "Mande", "Western Mande", "Manding", "Mandinka"]
+      },
+      "greeting": "I be di?",
+      "greetingMeaning": "How are you? / Are you well?",
+      "stereotype": "Descendants of the great Mali Empire. Known for their griots (oral historians/musicians), the kora instrument, and powerful warrior traditions. Kunta Kinte from 'Roots' was Mandinka.",
+      "eating": {
+        "mealsPerDay": "3 meals",
+        "mainFoods": ["Domoda (groundnut stew)", "Benachin (Jollof rice)", "Chere (millet couscous)", "Supakanja (okra stew)", "Nyambé (palm oil stew)"],
+        "taboos": "Pork is avoided by Muslim Mandinka. Eating alone is discouraged — meals are communal.",
+        "hospitality": "The Mandinka concept of 'teranga' (hospitality) means visitors must always be fed. Three cups of attaya (tea) are offered."
+      },
+      "tradeHistory": {
+        "historical": "Founded and controlled the Mali Empire (1235-1600), one of the richest empires in history. Trans-Saharan gold and salt trade.",
+        "modern": "Groundnut farming, trade, and artisanal crafts. Many Mandinka are successful merchants across West Africa.",
+        "partners": ["Wolof", "Fulani", "Bambara", "Soninke"]
+      },
+      "independenceHistory": {
+        "colonialPower": "British (Gambia), French (Guinea, Mali, Senegal)",
+        "resistance": "Samori Ture led major resistance against French colonial forces (1882-1898), building the Wassoulou Empire.",
+        "independence": "Mandinka played key roles in independence movements across multiple West African nations."
+      },
+      "religiousHistory": {
+        "traditional": "Traditional Mandinka religion involved belief in spirits, ancestor worship, and sacred groves.",
+        "islam": "Islam arrived via trans-Saharan trade routes in the 13th century. Mansa Musa's famous pilgrimage to Mecca in 1324.",
+        "current": "Over 95% Muslim. Traditional practices like masquerade ceremonies persist alongside Islam."
+      },
+      "coordinates": { "lat": 13.5, "lng": -16.0 },
+      "populationByCountry": [
+        { "country": "GM", "population": "~800K", "percent": "34%" },
+        { "country": "GN", "population": "~3M", "percent": "22%" },
+        { "country": "ML", "population": "~3M", "percent": "14%" },
+        { "country": "SN", "population": "~700K", "percent": "4%" }
+      ],
+      "famousPeople": [
+        { "name": "Mansa Musa", "role": "Emperor of Mali Empire, richest person in history", "wikipedia": "https://en.wikipedia.org/wiki/Mansa_Musa" },
+        { "name": "Sundiata Keita", "role": "Founder of the Mali Empire (1235)", "wikipedia": "https://en.wikipedia.org/wiki/Sundiata_Keita" },
+        { "name": "Samori Ture", "role": "Founder of Wassoulou Empire, anti-colonial resistance leader", "wikipedia": "https://en.wikipedia.org/wiki/Samori_Ture" },
+        { "name": "Toumani Diabaté", "role": "Grammy-winning kora virtuoso", "wikipedia": "https://en.wikipedia.org/wiki/Toumani_Diabat%C3%A9" },
+        { "name": "Yahya Jammeh", "role": "President of Gambia (1994-2017)", "wikipedia": "https://en.wikipedia.org/wiki/Yahya_Jammeh" }
+      ],
+      "names": [
+        { "name": "Lamin", "gender": "male", "meaning": "Trustworthy / Faithful" },
+        { "name": "Fatou", "gender": "female", "meaning": "Named after Fatima, daughter of Prophet Muhammad" },
+        { "name": "Ousman", "gender": "male", "meaning": "Third caliph Uthman" },
+        { "name": "Mariama", "gender": "female", "meaning": "Named after Mary / Maryam" },
+        { "name": "Kunta", "gender": "male", "meaning": "Heritage / Tradition" },
+        { "name": "Binta", "gender": "female", "meaning": "With God" },
+        { "name": "Demba", "gender": "male", "meaning": "First-born son" },
+        { "name": "Kumba", "gender": "female", "meaning": "First-born daughter" }
+      ],
+      "sources": [{ "name": "Wikipedia - Mandinka people", "url": "https://en.wikipedia.org/wiki/Mandinka_people" }, { "name": "Ethnologue - Mandinka", "url": "https://www.ethnologue.com/language/mnk" }],
+      "description": "The Mandinka are one of West Africa's largest and most historically significant peoples, descendants of the mighty Mali Empire. Their griots preserve centuries of oral history, the kora is one of Africa's most beautiful instruments, and figures like Mansa Musa and Sundiata Keita shaped world history.",
+      "relatedTribes": ["bambara", "wolof", "fulani", "soninke"]
+    },
+    {
+      "id": "bakongo",
+      "name": "Kongo (Bakongo)",
+      "slug": "bakongo",
+      "slugAliases": ["kongo", "kikongo", "kongolese"],
+      "youtubeVideoId": "9eTDvnZlkSU",
+      "countries": ["Democratic Republic of Congo", "Republic of Congo", "Angola"],
+      "region": "Central Africa",
+      "population": "~12 million",
+      "language": {
+        "name": "Kikongo",
+        "family": "Bantu",
+        "speakers": "~7 million",
+        "writingSystem": "Latin alphabet",
+        "lineage": ["Niger-Congo", "Atlantic-Congo", "Volta-Congo", "Benue-Congo", "Bantoid", "Southern Bantu", "Kikongo"]
+      },
+      "greeting": "Mbote",
+      "greetingMeaning": "Hello / Good day",
+      "stereotype": "Founders of the powerful Kingdom of Kongo (1390-1914), one of the most sophisticated states in pre-colonial Africa. Known for their artistic metalwork, textile traditions, and early adoption of Christianity.",
+      "eating": {
+        "mealsPerDay": "2-3 meals",
+        "mainFoods": ["Fufu (cassava dough)", "Saka-saka (cassava leaves)", "Mwambe (palm nut stew)", "Makayabu (salted fish)", "Pondu (cassava leaf stew)"],
+        "taboos": "Food offerings to ancestors are common. Certain animals are avoided by specific clans.",
+        "hospitality": "Visitors are offered palm wine and food. Eating together signifies trust and friendship."
+      },
+      "tradeHistory": {
+        "historical": "The Kingdom of Kongo traded copper, iron, ivory, and later became tragically central to the Atlantic slave trade.",
+        "modern": "Agriculture, mining, and trade between the three Congo countries and Angola.",
+        "partners": ["Luba", "Lunda", "Teke", "Mbundu"]
+      },
+      "independenceHistory": {
+        "colonialPower": "Portuguese (Angola), Belgian (DRC), French (Republic of Congo)",
+        "resistance": "Kimpa Vita (Dona Beatriz) led a religious resistance movement in 1704. Simon Kimbangu founded a church in 1921 that resisted Belgian rule.",
+        "independence": "Kongo people played central roles in independence movements in all three countries."
+      },
+      "religiousHistory": {
+        "traditional": "Belief in Nzambi a Mpungu (supreme god) and nkisi (spiritual objects). Complex cosmology of the living and dead.",
+        "christianity": "One of the earliest African peoples to adopt Christianity — King Nzinga a Nkuwu was baptized in 1491.",
+        "current": "Predominantly Christian. Kimbanguist Church has millions of followers. Traditional practices persist."
+      },
+      "coordinates": { "lat": -4.5, "lng": 15.3 },
+      "populationByCountry": [
+        { "country": "CD", "population": "~5M", "percent": "6%" },
+        { "country": "CG", "population": "~3M", "percent": "48%" },
+        { "country": "AO", "population": "~4M", "percent": "13%" }
+      ],
+      "famousPeople": [
+        { "name": "Kimpa Vita", "role": "Prophetess and resistance leader (1684-1706)", "wikipedia": "https://en.wikipedia.org/wiki/Kimpa_Vita" },
+        { "name": "Simon Kimbangu", "role": "Founded Kimbanguist Church, anti-colonial spiritual leader", "wikipedia": "https://en.wikipedia.org/wiki/Simon_Kimbangu" },
+        { "name": "Patrice Lumumba", "role": "First Prime Minister of independent Congo (Tetela-Kongo heritage)", "wikipedia": "https://en.wikipedia.org/wiki/Patrice_Lumumba" },
+        { "name": "Agostinho Neto", "role": "First President of Angola, poet", "wikipedia": "https://en.wikipedia.org/wiki/Agostinho_Neto" }
+      ],
+      "names": [
+        { "name": "Nzinga", "gender": "female", "meaning": "Spirited / Courageous" },
+        { "name": "Lukeni", "gender": "male", "meaning": "Founder / Pioneer" },
+        { "name": "Mpanzu", "gender": "male", "meaning": "Wisdom" },
+        { "name": "Nsona", "gender": "female", "meaning": "Born on Sunday" },
+        { "name": "Vita", "gender": "unisex", "meaning": "War / Struggle" },
+        { "name": "Kimpa", "gender": "female", "meaning": "Spirit / Divine" },
+        { "name": "Ntinu", "gender": "male", "meaning": "King / Ruler" },
+        { "name": "Mbala", "gender": "male", "meaning": "Strong one" }
+      ],
+      "sources": [{ "name": "Wikipedia - Kongo people", "url": "https://en.wikipedia.org/wiki/Kongo_people" }, { "name": "Wikipedia - Kingdom of Kongo", "url": "https://en.wikipedia.org/wiki/Kingdom_of_Kongo" }],
+      "description": "The Kongo people founded one of Africa's greatest kingdoms, which at its height controlled vast territories across modern-day DRC, Congo-Brazzaville, and Angola. Their early contact with Portuguese explorers, pioneering adoption of Christianity, and rich artistic traditions make them one of Central Africa's most historically significant peoples.",
+      "relatedTribes": ["luba", "lunda", "teke", "mbundu"]
     }
   ]
 }

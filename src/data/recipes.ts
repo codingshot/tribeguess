@@ -12018,6 +12018,203 @@ const newTribesRecipes: Recipe[] = [
 
 recipes.push(...newTribesRecipes);
 
+// ==================== Wave 3: Tswana, Lozi, Ndebele, Mandinka, Kongo recipes ====================
+const wave3Recipes: Recipe[] = [
+  {
+    id: 'seswaa',
+    name: 'Seswaa',
+    localName: 'Seswaa / Chotlho',
+    tribeSlug: 'tswana',
+    tribeName: 'Tswana',
+    category: 'staple',
+    description: 'Botswana\'s national dish — slow-cooked, pounded beef that falls apart into tender shreds. Traditionally prepared for celebrations, weddings, and funerals.',
+    servings: 6,
+    prepTime: '20 min',
+    cookTime: '3-4 hours',
+    difficulty: 'medium',
+    youtubeVideoId: '',
+    ingredients: [
+      { item: 'Beef (bone-in cuts like leg or ribs)', amount: '1.5 kg', category: 'protein' },
+      { item: 'Water', amount: 'To cover', category: 'liquid' },
+      { item: 'Salt', amount: 'To taste', category: 'seasoning' },
+      { item: 'Onion (optional, modern)', amount: '1 large', category: 'vegetable' }
+    ],
+    instructions: [
+      'Place bone-in beef in a large pot with just enough water to cover.',
+      'Bring to a boil, then reduce to a slow simmer.',
+      'Cook for 3-4 hours until the meat is extremely tender and falls off the bone.',
+      'Remove bones from the pot.',
+      'Using two forks or a wooden pestle, pound and shred the meat in the pot.',
+      'Continue cooking until excess liquid evaporates and meat is dry-ish but tender.',
+      'Season with salt. Traditionally NO other spices are added.',
+      'Serve with bogobe (sorghum or maize porridge) and morogo (wild spinach).'
+    ],
+    tips: ['The key is patience — low and slow cooking is essential', 'Traditional seswaa uses only salt, no other seasonings', 'Goat can be substituted for beef'],
+    culturalSignificance: 'Seswaa is the centerpiece of every major Tswana celebration. Its preparation is a communal activity, often done by men at weddings and funerals.',
+    nutritionalInfo: { calories: '~380 kcal', protein: '42g', carbs: '0g', fat: '22g', fiber: '0g', notes: 'High protein, zero carb. Traditionally paired with starchy bogobe for balance.' },
+    dietaryInfo: ['Gluten-free', 'Low-carb', 'High-protein']
+  },
+  {
+    id: 'nshima-zambia',
+    name: 'Nshima with Dried Fish',
+    localName: 'Nshima ne Inswi',
+    tribeSlug: 'lozi',
+    tribeName: 'Lozi',
+    category: 'staple',
+    description: 'The Lozi staple — thick maize porridge served with dried bream fish from the Zambezi floodplains, a cornerstone of Barotseland cuisine.',
+    servings: 4,
+    prepTime: '15 min',
+    cookTime: '40 min',
+    difficulty: 'easy',
+    youtubeVideoId: '',
+    ingredients: [
+      { item: 'White maize meal (mealie meal)', amount: '3 cups', category: 'grain' },
+      { item: 'Water', amount: '5 cups', category: 'liquid' },
+      { item: 'Dried bream fish', amount: '300g', category: 'protein' },
+      { item: 'Tomatoes', amount: '3 medium', category: 'vegetable' },
+      { item: 'Onion', amount: '1 large', category: 'vegetable' },
+      { item: 'Cooking oil', amount: '2 tbsp', category: 'oil' },
+      { item: 'Salt', amount: 'To taste', category: 'seasoning' }
+    ],
+    instructions: [
+      'Soak dried fish in warm water for 20 minutes, then debone and flake.',
+      'Boil 5 cups water in a heavy pot.',
+      'Mix 1 cup mealie meal with cold water to make a thin paste. Add to boiling water, stirring.',
+      'Cook on medium heat for 10 minutes, stirring occasionally.',
+      'Gradually add remaining mealie meal, stirring vigorously with a wooden stick (umuko).',
+      'Cook until thick and pulls away from pot sides. Cover and steam 5 minutes.',
+      'For relish: fry onions in oil, add chopped tomatoes, cook until soft.',
+      'Add flaked fish and simmer for 10 minutes. Season with salt.',
+      'Serve nshima in balls with fish relish.'
+    ],
+    tips: ['The nshima must be very thick — it should hold its shape when scooped', 'Zambezi bream is traditional but any dried fish works'],
+    culturalSignificance: 'Fish from the Zambezi floodplains is central to Lozi identity. The annual Kuomboka ceremony celebrates the relationship between the Lozi and their floodplain ecosystem.',
+    nutritionalInfo: { calories: '~390 kcal', protein: '28g', carbs: '48g', fat: '10g', fiber: '3g', notes: 'Excellent protein from dried fish. Maize provides energy.' },
+    dietaryInfo: ['Gluten-free', 'High-protein']
+  },
+  {
+    id: 'isitshwala-ndebele',
+    name: 'Isitshwala with Umfino',
+    localName: 'Isitshwala ne-Umfino',
+    tribeSlug: 'ndebele',
+    tribeName: 'Ndebele',
+    category: 'staple',
+    description: 'The Ndebele staple — stiff maize porridge paired with umfino, a nutritious dish of wild greens cooked with peanuts, passed down through generations of Ndebele women.',
+    servings: 4,
+    prepTime: '15 min',
+    cookTime: '35 min',
+    difficulty: 'easy',
+    youtubeVideoId: '',
+    ingredients: [
+      { item: 'White maize meal', amount: '3 cups', category: 'grain' },
+      { item: 'Water', amount: '5 cups', category: 'liquid' },
+      { item: 'Wild spinach or amaranth leaves', amount: '500g', category: 'vegetable' },
+      { item: 'Raw peanuts', amount: '1 cup', category: 'legume' },
+      { item: 'Salt', amount: 'To taste', category: 'seasoning' }
+    ],
+    instructions: [
+      'Boil water in a heavy pot.',
+      'Mix 1 cup maize meal with cold water to make a paste. Stir into boiling water.',
+      'Cook for 10 minutes on medium heat.',
+      'Gradually add remaining maize meal, stirring vigorously until very thick.',
+      'Cover and steam on low heat for 5 minutes.',
+      'For umfino: wash and chop wild greens.',
+      'Pound peanuts into a coarse paste.',
+      'Boil greens in salted water for 10 minutes. Drain excess water.',
+      'Stir in peanut paste and cook for another 5 minutes.',
+      'Serve isitshwala with umfino alongside.'
+    ],
+    tips: ['Wild amaranth or imifino gives the most authentic flavor', 'Peanuts add protein and a creamy richness to the greens'],
+    culturalSignificance: 'Ndebele women traditionally prepared umfino from wild-harvested greens, a practice connected to their deep knowledge of local plants and seasons.',
+    nutritionalInfo: { calories: '~350 kcal', protein: '14g', carbs: '50g', fat: '12g', fiber: '8g', notes: 'Wild greens are rich in iron, calcium, and vitamins A and C. Peanuts add healthy fats.' },
+    dietaryInfo: ['Vegan', 'Gluten-free', 'High-fiber']
+  },
+  {
+    id: 'domoda',
+    name: 'Domoda',
+    localName: 'Domoda / Tigadegena',
+    tribeSlug: 'mandinka',
+    tribeName: 'Mandinka',
+    category: 'staple',
+    description: 'The Mandinka groundnut stew — creamy, rich peanut sauce with meat and vegetables served over rice. One of the most beloved dishes across The Gambia and West Africa.',
+    servings: 6,
+    prepTime: '20 min',
+    cookTime: '1 hour',
+    difficulty: 'medium',
+    youtubeVideoId: '',
+    ingredients: [
+      { item: 'Beef or chicken', amount: '500g', category: 'protein' },
+      { item: 'Smooth peanut butter', amount: '1 cup', category: 'legume' },
+      { item: 'Tomato paste', amount: '3 tbsp', category: 'sauce' },
+      { item: 'Onion', amount: '2 large', category: 'vegetable' },
+      { item: 'Pumpkin or sweet potato', amount: '2 cups cubed', category: 'vegetable' },
+      { item: 'Habanero pepper', amount: '1 whole', category: 'spice' },
+      { item: 'Vegetable oil', amount: '3 tbsp', category: 'oil' },
+      { item: 'White rice', amount: '2 cups', category: 'grain' },
+      { item: 'Water', amount: '3 cups', category: 'liquid' },
+      { item: 'Salt', amount: 'To taste', category: 'seasoning' }
+    ],
+    instructions: [
+      'Season meat with salt and brown in oil until golden. Set aside.',
+      'Fry onions in the same pot until translucent.',
+      'Add tomato paste and cook for 3 minutes.',
+      'Dissolve peanut butter in 2 cups warm water. Add to pot.',
+      'Return meat to pot. Add remaining water.',
+      'Bring to a boil, then reduce to simmer for 30 minutes.',
+      'Add pumpkin/sweet potato cubes and whole habanero (don\'t pierce it).',
+      'Simmer for 20 more minutes until vegetables are tender.',
+      'Cook rice separately. Remove habanero before serving.',
+      'Serve domoda over white rice.'
+    ],
+    tips: ['Keep the habanero whole for flavor without too much heat', 'Use natural peanut butter for the most authentic taste', 'The stew should be thick and creamy, not watery'],
+    culturalSignificance: 'Domoda is the most popular dish in The Gambia and a source of national pride. It represents Mandinka hospitality — always made in generous quantities to share.',
+    nutritionalInfo: { calories: '~520 kcal', protein: '32g', carbs: '42g', fat: '26g', fiber: '5g', notes: 'Peanut butter provides healthy fats and protein. Sweet potato adds vitamins A and C.' },
+    dietaryInfo: ['Gluten-free', 'High-protein']
+  },
+  {
+    id: 'saka-saka',
+    name: 'Saka-Saka',
+    localName: 'Saka-Saka / Pondu',
+    tribeSlug: 'bakongo',
+    tribeName: 'Kongo',
+    category: 'staple',
+    description: 'The quintessential Kongo dish — cassava leaves pounded and slow-cooked with palm oil, dried fish, and peanuts. A staple across both Congos and Angola.',
+    servings: 6,
+    prepTime: '30 min',
+    cookTime: '2 hours',
+    difficulty: 'hard',
+    youtubeVideoId: '',
+    ingredients: [
+      { item: 'Cassava leaves (fresh or frozen)', amount: '1 kg', category: 'vegetable' },
+      { item: 'Palm oil (red)', amount: '1/2 cup', category: 'oil' },
+      { item: 'Smoked fish or dried fish', amount: '200g', category: 'protein' },
+      { item: 'Raw peanut paste', amount: '1/2 cup', category: 'legume' },
+      { item: 'Onion', amount: '1 large', category: 'vegetable' },
+      { item: 'Garlic', amount: '3 cloves', category: 'spice' },
+      { item: 'Eggplant (small, African variety)', amount: '2', category: 'vegetable' },
+      { item: 'Salt', amount: 'To taste', category: 'seasoning' },
+      { item: 'Water', amount: '2 cups', category: 'liquid' }
+    ],
+    instructions: [
+      'If using fresh cassava leaves, pound them in a mortar until very fine (or blend in food processor).',
+      'Boil pounded cassava leaves in water for 30 minutes. Drain and squeeze out water.',
+      'In a large pot, heat palm oil. Fry onions and garlic until fragrant.',
+      'Add tomatoes and cook until soft.',
+      'Add cassava leaves, smoked fish, and 2 cups water.',
+      'Stir in peanut paste and diced eggplant.',
+      'Simmer on low heat for 1.5 hours, stirring occasionally.',
+      'Add salt to taste. The dish should be thick and rich.',
+      'Serve with fufu (cassava dough) or rice.'
+    ],
+    tips: ['Frozen cassava leaves are a good substitute — available in African stores', 'The long cooking time is essential to remove bitterness from cassava leaves', 'Red palm oil gives the dish its characteristic color and flavor'],
+    culturalSignificance: 'Saka-saka is the soul food of the Kongo people, eaten daily across both Congos and northern Angola. It represents connection to the land and ancestral foodways.',
+    nutritionalInfo: { calories: '~380 kcal', protein: '22g', carbs: '18g', fat: '28g', fiber: '10g', notes: 'Cassava leaves are exceptionally rich in protein for a leaf vegetable. Palm oil provides vitamin A.' },
+    dietaryInfo: ['Gluten-free', 'High-fiber', 'Dairy-free']
+  }
+];
+
+recipes.push(...wave3Recipes);
+
 // Auto-assign regions to recipes based on tribe patterns
 const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> = {
   // East Africa
