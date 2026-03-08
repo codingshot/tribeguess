@@ -755,7 +755,7 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'matome': { tribe: 'pedi', gender: 'male', meaning: 'Chief/leader' },
   'modjadji': { tribe: 'pedi', gender: 'female', meaning: 'Rain queen' },
   'phuti': { tribe: 'pedi', gender: 'male', meaning: 'Duiker (antelope)' },
-  'maropeng': { tribe: 'pedi', gender: 'unisex', meaning: 'Place of origin/return' },
+  'maropeng': { tribe: 'pedi', gender: 'male', meaning: 'Place of origin/return' },
   'lesiba': { tribe: 'pedi', gender: 'male', meaning: 'Musical instrument/whistle' },
 
   // ============ ZAMBIA - Lozi (Barotse) - Source: Lozi Royal Archives ============
