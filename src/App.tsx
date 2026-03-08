@@ -38,6 +38,7 @@ const PersonPage = lazy(() => import("./pages/PersonPage"));
 const Docs = lazy(() => import("./pages/Docs"));
 const NamesGallery = lazy(() => import("./pages/NamesGallery"));
 const VideoGallery = lazy(() => import("./pages/VideoGallery"));
+const TribeCompare = lazy(() => import("./pages/TribeCompare"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
