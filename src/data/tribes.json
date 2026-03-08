@@ -16669,6 +16669,324 @@
       "sources": [{ "name": "Wikipedia - Shilluk people", "url": "https://en.wikipedia.org/wiki/Shilluk_people" }],
       "description": "The Shilluk are a Nilotic people of South Sudan known for their ancient divine kingship tradition. The Reth (king) is believed to embody the spirit of Nyikang, the legendary founder, making Shilluk one of Africa's most fascinating monarchies.",
       "relatedTribes": ["dinka", "nuer", "anuak", "acholi"]
+    },
+    {
+      "id": "senufo",
+      "name": "Senufo",
+      "slug": "senufo",
+      "countries": ["CI", "ML", "BF"],
+      "region": "Ivory Coast, Mali, Burkina Faso",
+      "macroRegion": "west",
+      "population": "~3.5 million",
+      "youtubeVideoId": "Bz6sCzQJbWk",
+      "stereotype": "Known for their elaborate Poro initiation societies, sacred masks, and exceptional woodcarving traditions",
+      "stereotypes": ["Master woodcarvers", "Poro society", "Sacred masks"],
+      "names": [
+        { "name": "Yeo", "meaning": "Born in the morning", "gender": "male" },
+        { "name": "Soro", "meaning": "Strong warrior", "gender": "male" },
+        { "name": "Nawa", "meaning": "Gift from ancestors", "gender": "female" },
+        { "name": "Kone", "meaning": "Noble lineage", "gender": "male" },
+        { "name": "Silue", "meaning": "Blessed one", "gender": "female" }
+      ],
+      "eatingCustoms": {
+        "mealsPerDay": "2-3 meals",
+        "mainFoods": "Millet, yams, rice, groundnuts, shea butter, baobab leaves",
+        "taboos": "Certain totemic animals forbidden by clan",
+        "hospitality": "Visitors welcomed with water and kola nuts before meals"
+      },
+      "tradeHistory": {
+        "historical": "Key participants in trans-Saharan gold and kola nut trade routes",
+        "modern": "Cotton farming, woodcarving exports, and shea butter production",
+        "partners": "Dyula, Bambara, Mossi"
+      },
+      "independenceHistory": {
+        "resistance": "Resisted French colonial expansion in the late 19th century",
+        "role": "Maintained cultural autonomy through secretive Poro societies during colonization",
+        "keyFigures": ["Péléforo Gbon Coulibaly"],
+        "postIndependence": "Integrated into Ivorian, Malian, and Burkinabé national frameworks while preserving cultural identity"
+      },
+      "religiousHistory": {
+        "traditional": "Complex cosmology centered on Kolotyolo (supreme deity) and ancestral spirits. Poro society manages spiritual education over 7-year cycles.",
+        "christianity": "Catholic and Protestant missions from early 20th century",
+        "current": "Mix of traditional beliefs, Islam in northern areas, and Christianity"
+      },
+      "language": {
+        "name": "Senufo (Supyire, Cebaara)",
+        "speakers": "~3.5 million",
+        "greeting": "A ni wula",
+        "greetingMeaning": "Good morning",
+        "family": "Atlantic-Congo (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Atlantic-Congo",
+          "branch": "Senufo",
+          "subBranch": "Suppire-Mamara",
+          "speakers": "~3.5 million",
+          "relatedLanguages": ["Supyire", "Cebaara", "Mamara", "Karaboro"]
+        }
+      },
+      "famousPeople": [
+        { "name": "Péléforo Gbon Coulibaly", "role": "Chief of Korhogo, key colonial-era leader", "wikipedia": "https://en.wikipedia.org/wiki/P%C3%A9l%C3%A9foro_Gbon_Coulibaly", "birthYear": 1864 }
+      ],
+      "sources": [{ "name": "Wikipedia - Senufo people", "url": "https://en.wikipedia.org/wiki/Senufo_people" }],
+      "description": "The Senufo are a West African people spanning Ivory Coast, Mali, and Burkina Faso, renowned for their Poro initiation society, magnificent mask traditions, and exceptional woodcarving. Their art is among the most celebrated in African art history.",
+      "relatedTribes": ["bambara", "dyula", "mossi", "lobi"]
+    },
+    {
+      "id": "bassa",
+      "name": "Bassa",
+      "slug": "bassa",
+      "countries": ["LR", "SL"],
+      "region": "Central Liberia, Sierra Leone",
+      "macroRegion": "west",
+      "population": "~800,000",
+      "youtubeVideoId": "qfNBp2X2kAA",
+      "stereotype": "Creators of the unique Vah script, known for rice cultivation and their Sande society traditions",
+      "stereotypes": ["Vah script creators", "Rice farmers", "Sande society"],
+      "names": [
+        { "name": "Togba", "meaning": "Great chief", "gender": "male" },
+        { "name": "Garmai", "meaning": "Brave woman", "gender": "female" },
+        { "name": "Kpannah", "meaning": "Strong one", "gender": "male" },
+        { "name": "Musu", "meaning": "Beautiful", "gender": "female" },
+        { "name": "Zubah", "meaning": "Born during harvest", "gender": "male" }
+      ],
+      "eatingCustoms": {
+        "mealsPerDay": "2 main meals",
+        "mainFoods": "Rice (staple), cassava, palm oil, fish, pepper soup, fufu",
+        "taboos": "Certain clans avoid specific bush meat",
+        "hospitality": "Guests always offered the best portion of rice and soup"
+      },
+      "tradeHistory": {
+        "historical": "Traded rice, palm oil, and camwood with European merchants along the coast",
+        "modern": "Rubber farming, rice cultivation, small-scale mining",
+        "partners": "Kpelle, Kru, Vai"
+      },
+      "independenceHistory": {
+        "resistance": "Resisted Americo-Liberian domination and fought for indigenous rights",
+        "role": "Central to Liberian political movements for indigenous representation",
+        "keyFigures": ["Thomas Faulkner"],
+        "postIndependence": "Active in Liberian civil society and post-war reconstruction"
+      },
+      "religiousHistory": {
+        "traditional": "Belief in a supreme creator Gala and ancestral spirits. Sande and Poro societies manage spiritual initiation.",
+        "christianity": "Significant Christian conversion from 19th century missions",
+        "current": "Christianity predominant with traditional practices maintained"
+      },
+      "language": {
+        "name": "Bassa",
+        "speakers": "~800,000",
+        "greeting": "Seh",
+        "greetingMeaning": "Hello",
+        "family": "Kru (Niger-Congo)",
+        "writingSystem": "Vah script (unique), Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Kru",
+          "branch": "Western Kru",
+          "subBranch": "Bassa",
+          "speakers": "~800,000",
+          "relatedLanguages": ["Grebo", "Kru", "Bete"]
+        }
+      },
+      "famousPeople": [
+        { "name": "Thomas Faulkner", "role": "Politician and presidential candidate", "wikipedia": "https://en.wikipedia.org/wiki/Thomas_J._R._Faulkner", "birthYear": 1882 }
+      ],
+      "sources": [{ "name": "Wikipedia - Bassa people", "url": "https://en.wikipedia.org/wiki/Bassa_people_(Liberia)" }],
+      "description": "The Bassa are a major ethnic group in Liberia known for creating the Vah writing system — one of the few indigenous African scripts. They are skilled rice farmers and maintain rich traditions through the Sande and Poro societies.",
+      "relatedTribes": ["kpelle", "kru", "vai", "mende"]
+    },
+    {
+      "id": "sara",
+      "name": "Sara",
+      "slug": "sara",
+      "countries": ["TD", "CF"],
+      "region": "Southern Chad, Central African Republic",
+      "macroRegion": "central",
+      "population": "~4 million",
+      "youtubeVideoId": "yTq2q2GIDSI",
+      "stereotype": "Chad's largest ethnic group, known for their scarification traditions, farming prowess, and resistance to slave raids",
+      "stereotypes": ["Chad's largest group", "Master farmers", "Scarification tradition"],
+      "names": [
+        { "name": "Mbaïtoloum", "meaning": "God is good", "gender": "male" },
+        { "name": "Ndouba", "meaning": "Strong spirit", "gender": "male" },
+        { "name": "Koudou", "meaning": "Born at dawn", "gender": "female" },
+        { "name": "Madjitoloum", "meaning": "Trust in God", "gender": "male" },
+        { "name": "Neloumta", "meaning": "Daughter of the land", "gender": "female" }
+      ],
+      "eatingCustoms": {
+        "mealsPerDay": "2-3 meals",
+        "mainFoods": "Millet, sorghum, peanuts, sesame, okra, dried fish, boule (thick porridge)",
+        "taboos": "Some clans avoid eating certain animals linked to their totems",
+        "hospitality": "Bili-bili (millet beer) is always offered to guests as a sign of welcome"
+      },
+      "tradeHistory": {
+        "historical": "Targeted by slave raiders from the north. Developed defensive settlement patterns.",
+        "modern": "Cotton farming (Chad's main export crop), cattle herding, fishing",
+        "partners": "Mbum, Massa, Ngambay"
+      },
+      "independenceHistory": {
+        "resistance": "Fiercely resisted both Arab slave raids and French colonial forced labor",
+        "role": "Sara soldiers were heavily recruited by France during both World Wars",
+        "keyFigures": ["François Tombalbaye", "Félix Malloum"],
+        "postIndependence": "François Tombalbaye became Chad's first president. Sara dominated early post-independence politics."
+      },
+      "religiousHistory": {
+        "traditional": "Belief in Nuba (supreme being) and ancestral spirits. Initiation rites (Yondo) are central to Sara identity.",
+        "christianity": "Significant Christian adoption from French missionary period",
+        "current": "Predominantly Christian with traditional practices; Islam minority in northern areas"
+      },
+      "language": {
+        "name": "Sara (Ngambay, Sar)",
+        "speakers": "~4 million",
+        "greeting": "Laafia",
+        "greetingMeaning": "Peace / Hello",
+        "family": "Central Sudanic (Nilo-Saharan)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Nilo-Saharan",
+          "family": "Central Sudanic",
+          "branch": "Sara-Bongo-Bagirmi",
+          "subBranch": "Sara",
+          "speakers": "~4 million",
+          "relatedLanguages": ["Ngambay", "Sar", "Mbay", "Kaba"]
+        }
+      },
+      "famousPeople": [
+        { "name": "François Tombalbaye", "role": "First president of Chad (1960-1975)", "wikipedia": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Tombalbaye", "birthYear": 1918 },
+        { "name": "Félix Malloum", "role": "President of Chad (1975-1979)", "wikipedia": "https://en.wikipedia.org/wiki/F%C3%A9lix_Malloum", "birthYear": 1932 }
+      ],
+      "sources": [{ "name": "Wikipedia - Sara people", "url": "https://en.wikipedia.org/wiki/Sara_people" }],
+      "description": "The Sara are Chad's largest ethnic group, concentrated in the fertile south. Known for their agricultural prowess, scarification traditions, and fierce historical resistance to slave raids from the north. They produced Chad's first two presidents.",
+      "relatedTribes": ["mbum", "massa", "ngambay"]
+    },
+    {
+      "id": "khoisan-san",
+      "name": "San (Bushmen)",
+      "slug": "san",
+      "countries": ["BW", "NA", "ZA", "AO", "ZW"],
+      "region": "Kalahari Desert (Botswana, Namibia, South Africa)",
+      "macroRegion": "southern",
+      "population": "~100,000",
+      "youtubeVideoId": "E6Kh3ayP_Gs",
+      "stereotype": "One of the world's oldest peoples, master trackers and hunter-gatherers with click languages and ancient rock art",
+      "stereotypes": ["Oldest living people", "Click languages", "Rock art masters"],
+      "names": [
+        { "name": "N!xau", "meaning": "Named with clicks — meaning varies", "gender": "male" },
+        { "name": "Gao", "meaning": "Water", "gender": "male" },
+        { "name": "Nisa", "meaning": "Life", "gender": "female" },
+        { "name": "Toma", "meaning": "Hunter", "gender": "male" },
+        { "name": "Debe", "meaning": "Star", "gender": "female" }
+      ],
+      "eatingCustoms": {
+        "mealsPerDay": "Varies — traditional hunter-gatherer rhythm, 1-2 main meals",
+        "mainFoods": "Mongongo nuts, tsamma melon, tubers, wild game (eland, gemsbok), berries, insects",
+        "taboos": "Certain animals reserved for specific family groups",
+        "hospitality": "Sharing is the highest virtue — all food is communally distributed regardless of who gathered it"
+      },
+      "tradeHistory": {
+        "historical": "Traded ostrich eggshell beads, animal skins, and honey with Bantu-speaking neighbors",
+        "modern": "Eco-tourism, crafts, traditional tracking guides for conservation",
+        "partners": "Tswana, Herero, Nama"
+      },
+      "independenceHistory": {
+        "resistance": "Displaced by Bantu migrations and European colonization. Fought for land rights in the Central Kalahari.",
+        "role": "Long marginalized, the San have fought landmark legal battles for ancestral land access",
+        "keyFigures": ["Roy Sesana"],
+        "postIndependence": "Won a 2006 Botswana High Court ruling affirming their right to live on ancestral lands in the Central Kalahari Game Reserve"
+      },
+      "religiousHistory": {
+        "traditional": "Belief in //Gauwa (supreme being) and spirits of the dead. Trance healing dances are central to spiritual life — healers enter altered states to cure illness and communicate with spirits.",
+        "christianity": "Limited missionary influence compared to other groups",
+        "current": "Predominantly traditional beliefs with some Christian influence"
+      },
+      "language": {
+        "name": "!Kung, Khoe, Tuu (multiple click languages)",
+        "speakers": "~100,000 across all San languages",
+        "greeting": "!Kae",
+        "greetingMeaning": "Hello",
+        "family": "Khoisan",
+        "writingSystem": "Latin alphabet with click consonant symbols (!, //, ǂ, ǁ)",
+        "linguisticLineage": {
+          "phylum": "Khoisan",
+          "family": "Kx'a / Tuu / Khoe-Kwadi",
+          "branch": "Multiple unrelated families",
+          "subBranch": "!Kung, ǂHoan, Taa",
+          "speakers": "~100,000",
+          "relatedLanguages": ["Juǀʼhoan", "!Xóõ", "Naro", "Khoekhoe"]
+        }
+      },
+      "famousPeople": [
+        { "name": "N!xau ǂToma", "role": "Actor in 'The Gods Must Be Crazy'", "wikipedia": "https://en.wikipedia.org/wiki/N!xau", "birthYear": 1944 },
+        { "name": "Roy Sesana", "role": "San rights activist, Right Livelihood Award winner", "wikipedia": "https://en.wikipedia.org/wiki/Roy_Sesana", "birthYear": 1949 }
+      ],
+      "sources": [{ "name": "Wikipedia - San people", "url": "https://en.wikipedia.org/wiki/San_people" }],
+      "description": "The San (Bushmen) are one of the oldest peoples on Earth, with a continuous cultural history spanning over 20,000 years. They are master trackers, possess extraordinary ecological knowledge, and speak click languages that are among the most phonetically complex in the world. Their rock art, found across Southern Africa, is a UNESCO treasure.",
+      "relatedTribes": ["khoekhoe", "tswana", "herero", "nama"]
+    },
+    {
+      "id": "chewa",
+      "name": "Chewa",
+      "slug": "chewa",
+      "countries": ["MW", "MZ", "ZM", "ZW"],
+      "region": "Central Malawi, Mozambique, Zambia",
+      "macroRegion": "southern",
+      "population": "~6 million",
+      "youtubeVideoId": "qDkK9IQXP-M",
+      "stereotype": "Malawi's largest group, known for the Gule Wamkulu masked dance (UNESCO heritage) and matrilineal traditions",
+      "stereotypes": ["Gule Wamkulu dance", "Matrilineal society", "Malawi's largest group"],
+      "names": [
+        { "name": "Chimwemwe", "meaning": "Joy/happiness", "gender": "male" },
+        { "name": "Mphatso", "meaning": "Gift", "gender": "female" },
+        { "name": "Chisomo", "meaning": "Grace", "gender": "male" },
+        { "name": "Tawonga", "meaning": "We are thankful", "gender": "male" },
+        { "name": "Zione", "meaning": "It is well", "gender": "female" }
+      ],
+      "eatingCustoms": {
+        "mealsPerDay": "2-3 meals",
+        "mainFoods": "Nsima (thick maize porridge), relish (ndiwo), dried fish (usipa), pumpkin leaves, groundnuts",
+        "taboos": "Pregnant women avoid certain foods like eggs in some areas",
+        "hospitality": "Nsima is always shared communally; refusing food is considered rude"
+      },
+      "tradeHistory": {
+        "historical": "Major ivory and slave trade route participants; traded salt, iron, and cloth across central-east Africa",
+        "modern": "Tobacco farming, maize agriculture, fishing on Lake Malawi",
+        "partners": "Yao, Ngoni, Tumbuka, Lomwe"
+      },
+      "independenceHistory": {
+        "resistance": "Resisted Portuguese slave raids and later British colonial taxation",
+        "role": "Chewa formed the backbone of Malawian nationalism",
+        "keyFigures": ["Hastings Kamuzu Banda"],
+        "postIndependence": "Hastings Banda, a Chewa, became Malawi's first president (1966-1994), ruling as 'President for Life'"
+      },
+      "religiousHistory": {
+        "traditional": "Belief in Chiuta (supreme deity) and ancestral spirits. Gule Wamkulu masked ritual connects the living with the dead through elaborate performances.",
+        "christianity": "Scottish Presbyterian missions from 1870s; strong Catholic presence",
+        "current": "Predominantly Christian with Gule Wamkulu maintained as cultural-spiritual practice"
+      },
+      "language": {
+        "name": "Chichewa (Chewa/Nyanja)",
+        "speakers": "~12 million",
+        "greeting": "Moni",
+        "greetingMeaning": "Hello",
+        "family": "Bantu (Niger-Congo)",
+        "writingSystem": "Latin alphabet",
+        "linguisticLineage": {
+          "phylum": "Niger-Congo",
+          "family": "Bantu",
+          "branch": "Southern Bantu",
+          "subBranch": "Zone N (Nyanja group)",
+          "speakers": "~12 million",
+          "relatedLanguages": ["Tumbuka", "Sena", "Lomwe", "Yao"]
+        }
+      },
+      "famousPeople": [
+        { "name": "Hastings Kamuzu Banda", "role": "First president of Malawi (1966-1994)", "wikipedia": "https://en.wikipedia.org/wiki/Hastings_Kamuzu_Banda", "birthYear": 1898 },
+        { "name": "Joyce Banda", "role": "First female president of Malawi (2012-2014)", "wikipedia": "https://en.wikipedia.org/wiki/Joyce_Banda", "birthYear": 1950 }
+      ],
+      "sources": [{ "name": "Wikipedia - Chewa people", "url": "https://en.wikipedia.org/wiki/Chewa_people" }],
+      "description": "The Chewa are the largest ethnic group in Malawi and one of the most significant Bantu peoples in southeastern Africa. They are renowned for the Gule Wamkulu — a UNESCO-recognized masked dance tradition — and their matrilineal social structure where lineage and inheritance pass through the mother's line.",
+      "relatedTribes": ["yao", "ngoni", "tumbuka", "lomwe"]
     }
   ]
 }

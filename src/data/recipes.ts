@@ -11818,6 +11818,88 @@ recipes.push(...northAfricanRecipes);
 recipes.push(...hornAfricanRecipes);
 recipes.push(...additionalWestAfricanRecipes);
 
+// New tribe recipes
+const newTribesRecipes: Recipe[] = [
+  {
+    id: 'nsima-chewa',
+    name: 'Nsima with Ndiwo',
+    localName: 'Nsima ndi Ndiwo',
+    tribeSlug: 'chewa',
+    tribeName: 'Chewa',
+    category: 'staple',
+    region: 'southern',
+    country: 'MW',
+    description: 'Nsima is a thick maize porridge that is the heart of every Chewa meal, served with ndiwo (relish) made from vegetables, beans, or dried fish.',
+    culturalSignificance: 'Nsima is not just food — it is identity. For the Chewa, sharing nsima from the same plate symbolizes family unity. A meal without nsima is not considered a meal.',
+    historicalContext: 'Maize was introduced to Africa by Portuguese traders in the 16th century and gradually replaced millet and sorghum as the dominant staple across southern Africa.',
+    prepTime: '10 minutes',
+    cookTime: '25 minutes',
+    servings: 4,
+    difficulty: 'easy',
+    ingredients: [
+      { item: 'White maize flour (ufa)', amount: '2 cups', notes: 'Fine-ground' },
+      { item: 'Water', amount: '4 cups' },
+      { item: 'Pumpkin leaves (nkhwani)', amount: '2 cups', substitution: 'Spinach or collard greens' },
+      { item: 'Tomatoes', amount: '2 medium, chopped' },
+      { item: 'Onion', amount: '1, diced' },
+      { item: 'Groundnut flour', amount: '2 tbsp', notes: 'For thickening the relish' },
+      { item: 'Salt', amount: 'To taste' }
+    ],
+    instructions: [
+      'Boil 4 cups of water in a heavy pot.',
+      'Add 1 cup of maize flour while stirring to make a thin porridge. Cook for 5 minutes.',
+      'Gradually add the remaining flour, stirring vigorously with a wooden spoon (mthiko) until very thick and pulls away from the pot.',
+      'Cover and cook on low heat for 5 minutes. Shape into a mound on a plate.',
+      'For ndiwo: sauté onion, add tomatoes, then pumpkin leaves. Stir in groundnut flour dissolved in water. Simmer 10 minutes.',
+      'Serve nsima with ndiwo on the side. Eat with your hands — pinch off a piece, roll it, and dip into the relish.'
+    ],
+    tips: ['Use a strong wooden spoon — stirring nsima is a workout!', 'The consistency should be firm enough to hold its shape'],
+    servingSuggestions: ['Dried fish (usipa)', 'Beans in groundnut sauce', 'Chicken stew'],
+    nutritionalInfo: { calories: '~290 kcal', protein: '8g', carbs: '55g', fat: '5g', fiber: '4g', notes: 'Good source of carbohydrates and B vitamins when paired with groundnut relish' },
+    dietaryInfo: ['Vegan', 'Gluten-free']
+  },
+  {
+    id: 'boule-sara',
+    name: 'Boule with Gombo Sauce',
+    localName: 'Boule na sauce gombo',
+    tribeSlug: 'sara',
+    tribeName: 'Sara',
+    category: 'staple',
+    region: 'central',
+    country: 'TD',
+    description: 'Boule is a thick millet or sorghum porridge — the Sara staple — served with a rich okra (gombo) sauce made with dried fish and dawadawa seasoning.',
+    culturalSignificance: 'Boule is the center of Sara communal life. Men and women eat from separate bowls, but the act of sharing boule cements family and village bonds.',
+    historicalContext: 'Millet has been cultivated in the Sahel for over 4,000 years. The Sara perfected millet-based cuisine as their primary caloric source in the semi-arid south of Chad.',
+    prepTime: '15 minutes',
+    cookTime: '30 minutes',
+    servings: 4,
+    difficulty: 'medium',
+    ingredients: [
+      { item: 'Millet flour', amount: '2 cups', substitution: 'Sorghum flour' },
+      { item: 'Water', amount: '5 cups' },
+      { item: 'Fresh okra', amount: '300g, sliced' },
+      { item: 'Dried fish', amount: '100g', notes: 'Soaked and deboned' },
+      { item: 'Dawadawa (locust bean seasoning)', amount: '1 tbsp', substitution: 'Bouillon cube' },
+      { item: 'Palm oil', amount: '2 tbsp' },
+      { item: 'Onion', amount: '1, diced' },
+      { item: 'Salt and chili pepper', amount: 'To taste' }
+    ],
+    instructions: [
+      'Boil 5 cups of water. Gradually whisk in millet flour, stirring constantly to prevent lumps.',
+      'Cook on medium heat, stirring vigorously for 15-20 minutes until very thick and smooth.',
+      'In a separate pot, heat palm oil and sauté onion until golden.',
+      'Add sliced okra and cook for 5 minutes until softened.',
+      'Add dried fish, dawadawa, chili, and 1 cup of water. Simmer for 10 minutes.',
+      'Serve boule in a mound with gombo sauce poured over or alongside.'
+    ],
+    tips: ['Stir boule in one direction for best texture', 'The sauce should be thick and mucilaginous from the okra'],
+    nutritionalInfo: { calories: '~310 kcal', protein: '14g', carbs: '48g', fat: '8g', fiber: '6g', notes: 'High in protein from dried fish. Okra provides excellent fiber and vitamins.' },
+    dietaryInfo: ['Gluten-free', 'High-protein']
+  }
+];
+
+recipes.push(...newTribesRecipes);
+
 // Auto-assign regions to recipes based on tribe patterns
 const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> = {
   // East Africa
@@ -11907,7 +11989,10 @@ const tribeToRegion: Record<string, { region: RecipeRegion; country: string }> =
   'kabyle': { region: 'north', country: 'DZ' },
   'chaoui': { region: 'north', country: 'DZ' },
   'nubian': { region: 'north', country: 'SD' },
-  'toubou': { region: 'north', country: 'TD' }
+  'toubou': { region: 'north', country: 'TD' },
+  // New tribes
+  'senufo': { region: 'west', country: 'CI' },
+  'bassa': { region: 'west', country: 'LR' }
 };
 
 // Apply region mappings to recipes that don't have them
