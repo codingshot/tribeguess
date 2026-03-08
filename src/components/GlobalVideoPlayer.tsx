@@ -276,7 +276,8 @@ export function GlobalVideoPlayer() {
         playerRef.current = null;
       }
     };
-  }, [ytReady, currentVideo?.youtubeId, isRepeat, playbackSpeed]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ytReady, currentVideo?.youtubeId]);
   
   // Update current time
   useEffect(() => {
