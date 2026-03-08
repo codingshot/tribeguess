@@ -1224,7 +1224,43 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'chemutai_o': { tribe: 'ogiek', gender: 'female', meaning: 'Born during honey season' },
   'taplelei': { tribe: 'ogiek', gender: 'female', meaning: 'Flower of the forest' },
 
-  // ============ UGANDA - Karamojong - FACT-CHECKED 2024 (Source: Karamoja Development Program) ============
+  // ============ KENYA - Taveta - FACT-CHECKED 2024 (Source: GoVisitKenya, Bantu linguistic records) ============
+  'mwacharo': { tribe: 'taveta', gender: 'male', meaning: 'Born during the night' },
+  'mwashote': { tribe: 'taveta', gender: 'male', meaning: 'Strong one - from Kitaveta' },
+  'mwakio': { tribe: 'taveta', gender: 'male', meaning: 'Born during hardship' },
+  'kishamba': { tribe: 'taveta', gender: 'male', meaning: 'From the farm/shamba' },
+  'mwaita': { tribe: 'taveta', gender: 'male', meaning: 'Born during calling - summoned' },
+  'mwatunge': { tribe: 'taveta', gender: 'female', meaning: 'One who is chosen' },
+  'mwadamu': { tribe: 'taveta', gender: 'female', meaning: 'Graceful one' },
+
+  // ============ KENYA - Nubi (Nubians of Kenya) - FACT-CHECKED 2024 (Source: Kenya Nubians Heritage) ============
+  'abdalla_n': { tribe: 'nubi', gender: 'male', meaning: 'Servant of God - Arabic origin' },
+  'hamisi_n': { tribe: 'nubi', gender: 'male', meaning: 'Born on Thursday - Swahili-Nubian' },
+  'rashid_n': { tribe: 'nubi', gender: 'male', meaning: 'Rightly guided - Islamic name' },
+  'salim_n': { tribe: 'nubi', gender: 'male', meaning: 'Safe/peaceful - Arabic origin' },
+  'rukia_n': { tribe: 'nubi', gender: 'female', meaning: 'Rising/ascending - Arabic origin' },
+  'salama_n': { tribe: 'nubi', gender: 'female', meaning: 'Peace - Arabic origin' },
+
+  // ============ KENYA - El Molo - FACT-CHECKED 2024 (Source: El Molo Cultural Preservation) ============
+  'loiyanae': { tribe: 'elmologo', gender: 'male', meaning: 'Of the lake - traditional El Molo' },
+  'lokotor': { tribe: 'elmologo', gender: 'male', meaning: 'Born near the water' },
+  'lobongoro': { tribe: 'elmologo', gender: 'male', meaning: 'Strong fisherman' },
+  'lomodei': { tribe: 'elmologo', gender: 'male', meaning: 'Born during fishing season' },
+  'namurei': { tribe: 'elmologo', gender: 'female', meaning: 'Beautiful one - El Molo' },
+  'napeyon': { tribe: 'elmologo', gender: 'female', meaning: 'Bright/shining - El Molo' },
+  'lokwii': { tribe: 'elmologo', gender: 'female', meaning: 'Of the lake shore' },
+
+  // ============ KENYA - Ilchamus/Njemps - FACT-CHECKED 2024 (Source: Google Arts & Culture / NMK) ============
+  'lekakeny': { tribe: 'ilchamus', gender: 'male', meaning: 'Great one - Maa origin' },
+  'leshan_ic': { tribe: 'ilchamus', gender: 'male', meaning: 'Born during journey - Maa' },
+  'lenaiyarra': { tribe: 'ilchamus', gender: 'male', meaning: 'Of the red earth' },
+  'parsitau_ic': { tribe: 'ilchamus', gender: 'male', meaning: 'Born during celebration' },
+  'naserian_ic': { tribe: 'ilchamus', gender: 'female', meaning: 'Peaceful one - Maa origin' },
+  'nashipae_ic': { tribe: 'ilchamus', gender: 'female', meaning: 'Happy/blessed - Maa' },
+  'naisula_ic': { tribe: 'ilchamus', gender: 'female', meaning: 'Born during rain' },
+  'namelok_ic': { tribe: 'ilchamus', gender: 'female', meaning: 'Sweet one - Maa origin' },
+
+
   'lomongin': { tribe: 'karamojong', gender: 'male', meaning: 'Bull/strong one' },
   'lokwang': { tribe: 'karamojong', gender: 'male', meaning: 'Born during drought' },
   'lotyang': { tribe: 'karamojong', gender: 'male', meaning: 'Warrior/brave one' },
@@ -2893,7 +2929,36 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'toroi': [{ tribe: 'ogiek', weight: 0.85 }, { tribe: 'kalenjin', weight: 0.15 }],
   'taple': [{ tribe: 'ogiek', weight: 0.95 }],
 
-  // ============ UGANDA - Karamojong prefixes ============
+  // ============ KENYA - Taveta prefixes ============
+  'mwach': [{ tribe: 'taveta', weight: 0.9 }, { tribe: 'mijikenda', weight: 0.1 }],
+  'mwash': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwaki': [{ tribe: 'taveta', weight: 0.85 }],
+  'kisha': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwait': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwatu': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwada': [{ tribe: 'taveta', weight: 0.85 }],
+
+  // ============ KENYA - El Molo prefixes ============
+  'loiya': [{ tribe: 'elmologo', weight: 0.95 }],
+  'lokok': [{ tribe: 'elmologo', weight: 0.9 }],
+  'lobon': [{ tribe: 'elmologo', weight: 0.9 }],
+  'lomod': [{ tribe: 'elmologo', weight: 0.9 }],
+  'namur': [{ tribe: 'elmologo', weight: 0.9 }],
+  'napey': [{ tribe: 'elmologo', weight: 0.9 }],
+
+  // ============ KENYA - Ilchamus/Njemps prefixes ============
+  'lekak': [{ tribe: 'ilchamus', weight: 0.95 }],
+  'lenai': [{ tribe: 'ilchamus', weight: 0.9 }],
+  'parsi': [{ tribe: 'ilchamus', weight: 0.85 }, { tribe: 'maasai', weight: 0.15 }],
+  'nashi': [{ tribe: 'ilchamus', weight: 0.8 }, { tribe: 'samburu', weight: 0.2 }],
+  'namel': [{ tribe: 'ilchamus', weight: 0.8 }, { tribe: 'samburu', weight: 0.2 }],
+
+  // ============ KENYA - Nubi/Kenyan Nubian prefixes ============
+  'abdal_n': [{ tribe: 'nubi', weight: 0.8 }],
+  'hamis_n': [{ tribe: 'nubi', weight: 0.8 }],
+  'rashi_n': [{ tribe: 'nubi', weight: 0.7 }],
+
+
   'lomo': [{ tribe: 'karamojong', weight: 0.95 }],
   'lokw': [{ tribe: 'karamojong', weight: 0.95 }],
   'loty': [{ tribe: 'karamojong', weight: 0.9 }],

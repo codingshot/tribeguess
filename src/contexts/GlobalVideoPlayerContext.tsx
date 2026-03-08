@@ -113,6 +113,11 @@ export function useGlobalVideoPlayer() {
   return context;
 }
 
+// Safe version that returns null instead of throwing - for error boundary recovery
+export function useGlobalVideoPlayerSafe() {
+  return useContext(GlobalVideoPlayerContext);
+}
+
 // Helper to safely parse JSON from localStorage
 function safeJSONParse<T>(key: string, fallback: T): T {
   try {

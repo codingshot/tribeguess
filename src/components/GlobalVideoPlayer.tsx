@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
-import { useGlobalVideoPlayer, PLAYBACK_SPEEDS } from '@/contexts/GlobalVideoPlayerContext';
+import { useGlobalVideoPlayerSafe, PLAYBACK_SPEEDS } from '@/contexts/GlobalVideoPlayerContext';
 import { 
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, 
   Repeat, List, Minimize2, Maximize2, Video, VideoOff,
@@ -102,6 +102,15 @@ function formatTime(seconds: number): string {
 type VideoMode = 'center' | 'mini' | 'fullscreen' | 'pip';
 
 export function GlobalVideoPlayer() {
+  const ctx = useGlobalVideoPlayerSafe();
+  
+  // If context is not available (error boundary recovery), render nothing
+  if (!ctx) return null;
+  
+  return <GlobalVideoPlayerInner ctx={ctx} />;
+}
+
+function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof useGlobalVideoPlayerSafe>> }) {
   const {
     currentVideo,
     queue,
@@ -136,7 +145,7 @@ export function GlobalVideoPlayer() {
     playbackSpeed,
     setPlaybackSpeed,
     cyclePlaybackSpeed,
-  } = useGlobalVideoPlayer();
+  } = ctx;
   
   const [videoMode, setVideoMode] = useState<VideoMode>('center');
   const [isPiPActive, setIsPiPActive] = useState(false);
