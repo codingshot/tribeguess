@@ -3807,7 +3807,10 @@
         ],
         "communities": ["Strong community in Houston, Texas with cultural organizations", "Active community in London"],
         "associations": ["Igbo World Assembly", "Ndi Igbo Congress"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/igbo/igbo-masquerade.jpg", "caption": "Igbo Mmanwu masquerade dancer in elaborate wooden mask and raffia costume", "credit": "AI Generated" }
+      ]
     },
 
     {
