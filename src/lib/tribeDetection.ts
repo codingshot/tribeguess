@@ -751,7 +751,7 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'mashego': { tribe: 'pedi', gender: 'male', meaning: 'Grace/blessing' },
   'ramokgopa': { tribe: 'pedi', gender: 'male', meaning: 'Of the Mokgopa clan' },
   'mokgadi': { tribe: 'pedi', gender: 'female', meaning: 'Queen/ruler' },
-  'lethabo': { tribe: 'pedi', gender: 'unisex', meaning: 'Happiness' },
+  'lethabo': { tribe: 'pedi', gender: 'male', meaning: 'Happiness' },
   'matome': { tribe: 'pedi', gender: 'male', meaning: 'Chief/leader' },
   'modjadji': { tribe: 'pedi', gender: 'female', meaning: 'Rain queen' },
   'phuti': { tribe: 'pedi', gender: 'male', meaning: 'Duiker (antelope)' },
