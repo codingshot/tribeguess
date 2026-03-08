@@ -12106,11 +12106,11 @@ const wave3Recipes: Recipe[] = [
     difficulty: 'easy',
     youtubeVideoId: '',
     ingredients: [
-      { item: 'White maize meal', amount: '3 cups', category: 'grain' },
-      { item: 'Water', amount: '5 cups', category: 'liquid' },
-      { item: 'Wild spinach or amaranth leaves', amount: '500g', category: 'vegetable' },
-      { item: 'Raw peanuts', amount: '1 cup', category: 'legume' },
-      { item: 'Salt', amount: 'To taste', category: 'seasoning' }
+      { item: 'White maize meal', amount: '3 cups' },
+      { item: 'Water', amount: '5 cups' },
+      { item: 'Wild spinach or amaranth leaves', amount: '500g' },
+      { item: 'Raw peanuts', amount: '1 cup' },
+      { item: 'Salt', amount: 'To taste' }
     ],
     instructions: [
       'Boil water in a heavy pot.',
