@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'sonner';
 import { useGlobalVideoPlayer, PLAYBACK_SPEEDS } from '@/contexts/GlobalVideoPlayerContext';
 import { 
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, 
