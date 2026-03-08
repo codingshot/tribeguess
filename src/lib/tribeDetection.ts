@@ -739,7 +739,7 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'luwam': { tribe: 'tigrinya', gender: 'female', meaning: 'Peaceful/calm' },
   'freweini': { tribe: 'tigrinya', gender: 'female', meaning: 'Seed/fruit' },
   'mihret': { tribe: 'tigrinya', gender: 'female', meaning: 'Mercy/compassion' },
-  'kidist': { tribe: 'tigrinya', gender: 'female', meaning: 'Saint/holy one' },
+  'kidist_t': { tribe: 'tigrinya', gender: 'female', meaning: 'Saint/holy one' },
   'tsige': { tribe: 'tigrinya', gender: 'female', meaning: 'Grace/flower' },
 
   // ============ SOUTH AFRICA - Pedi (Northern Sotho) - Source: Pedi Cultural Authority ============
