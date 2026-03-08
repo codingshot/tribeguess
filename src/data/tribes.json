@@ -3660,7 +3660,10 @@
         ],
         "communities": ["Large Yoruba population in Bahia, Brazil with preserved cultural traditions", "Strong community in Houston, Texas"],
         "associations": ["Egbe Omo Yoruba (Yoruba descendants)", "Yoruba One"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/yoruba/yoruba-culture.jpg", "caption": "Yoruba woman in traditional aso-oke fabric with gele headwrap and bronze sculptures", "credit": "AI Generated" }
+      ]
     },
 
     {
