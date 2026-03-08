@@ -196,24 +196,34 @@ export default function RecipePage() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>{recipe.name} - Traditional {recipe.tribeName} Recipe | African Cuisine | TribeGuess</title>
-        <meta name="description" content={`Learn how to make ${recipe.name}, a traditional ${recipe.tribeName} dish from Africa. ${recipe.description} Prep time: ${recipe.prepTime}, Serves: ${recipe.servings}.`} />
-        <meta name="keywords" content={`${recipe.name}, ${recipe.tribeName} recipe, African food, traditional cuisine, ${recipe.category}, how to cook ${recipe.name}`} />
+        <meta name="description" content={`Learn how to make ${recipe.name}${recipe.localName ? ` (${recipe.localName})` : ''}, a traditional ${recipe.tribeName} dish from Africa. ${recipe.description.slice(0, 120)} Prep: ${recipe.prepTime}, Serves: ${recipe.servings}.`} />
+        <meta name="keywords" content={`${recipe.name}, ${recipe.localName || ''}, ${recipe.tribeName} recipe, African food, traditional cuisine, ${recipe.category}, how to cook ${recipe.name}, ${recipe.dietaryInfo?.join(', ') || ''}`} />
         <link rel="canonical" href={`https://tribeguess.com/recipe/${recipe.id}`} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         
         {/* Open Graph */}
         <meta property="og:title" content={`${recipe.name} - ${recipe.tribeName} Traditional Recipe`} />
-        <meta property="og:description" content={`Authentic ${recipe.tribeName} recipe: ${recipe.description}`} />
+        <meta property="og:description" content={`Authentic ${recipe.tribeName} recipe: ${recipe.description.slice(0, 200)}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://tribeguess.com/recipe/${recipe.id}`} />
+        {recipe.youtubeVideoId && (
+          <meta property="og:image" content={`https://img.youtube.com/vi/${recipe.youtubeVideoId}/hqdefault.jpg`} />
+        )}
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${recipe.name} - ${recipe.tribeName} Recipe`} />
-        <meta name="twitter:description" content={recipe.description} />
+        <meta name="twitter:description" content={recipe.description.slice(0, 200)} />
+        {recipe.youtubeVideoId && (
+          <meta name="twitter:image" content={`https://img.youtube.com/vi/${recipe.youtubeVideoId}/hqdefault.jpg`} />
+        )}
         
-        {/* JSON-LD Schema */}
+        {/* JSON-LD Schemas */}
         <script type="application/ld+json">
           {JSON.stringify(recipeSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 
