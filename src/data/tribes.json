@@ -4967,7 +4967,10 @@
         ],
         "communities": ["Large Ethiopian community in Washington DC area", "Beta Israel (Ethiopian Jews) in Israel"],
         "associations": ["Ethiopian Community Association of Greater Washington"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/amhara/amhara-lalibela.jpg", "caption": "Rock-hewn church of Lalibela with Ethiopian Orthodox priest holding ceremonial cross", "credit": "AI Generated" }
+      ]
     },
 
     {
