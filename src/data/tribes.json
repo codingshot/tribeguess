@@ -3930,8 +3930,11 @@
         { "name": "Usman dan Fodio", "role": "Founder of Sokoto Caliphate", "birth": 1754, "death": 1817, "wikipedia": "https://en.wikipedia.org/wiki/Usman_dan_Fodio", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Uthman_dan_Fodio.png/220px-Uthman_dan_Fodio.png" },
         { "name": "Ahmadu Bello", "role": "Premier of Northern Nigeria", "birth": 1910, "death": 1966, "wikipedia": "https://en.wikipedia.org/wiki/Ahmadu_Bello", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ahmadu_Bello.jpg/220px-Ahmadu_Bello.jpg" },
         { "name": "Aminu Kano", "role": "Politician & Social Reformer", "birth": 1920, "death": 1983, "wikipedia": "https://en.wikipedia.org/wiki/Aminu_Kano", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Aminu_Kano.jpg/220px-Aminu_Kano.jpg" },
-        { "name": "Sani Abacha", "role": "Military Head of State", "birth": 1943, "death": 1998, "wikipedia": "https://en.wikipedia.org/wiki/Sani_Abacha", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/General_Sani_Abacha.jpg/220px-General_Sani_Abacha.jpg" },
-        { "name": "Nana Asma'u", "role": "Scholar, Poet & Educator", "birth": 1793, "death": 1864, "wikipedia": "https://en.wikipedia.org/wiki/Nana_Asma%27u", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nana_Asmau.jpg/220px-Nana_Asmau.jpg" }
+        { "name": "Nana Asma'u", "role": "Scholar, Poet & Educator (19th century)", "birth": 1793, "death": 1864, "wikipedia": "https://en.wikipedia.org/wiki/Nana_Asma%27u", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Nana_Asmau.jpg/220px-Nana_Asmau.jpg" },
+        { "name": "Mamman Shata", "role": "Legendary Hausa Musician & Griot", "birth": 1923, "death": 1999, "wikipedia": "https://en.wikipedia.org/wiki/Mamman_Shata" },
+        { "name": "Ali Jita", "role": "Award-winning Hausa Pop Musician", "birth": 1985, "wikipedia": "https://en.wikipedia.org/wiki/Ali_Jita" },
+        { "name": "Dan Maraya Jos", "role": "Iconic One-string Guitar Musician", "birth": 1946, "death": 2014, "wikipedia": "https://en.wikipedia.org/wiki/Dan_Maraya_Jos" },
+        { "name": "Queen Amina of Zaria", "role": "Warrior Queen of Zazzau", "birth": 1533, "death": 1610, "wikipedia": "https://en.wikipedia.org/wiki/Queen_Amina", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Amina_of_Zaria.jpg/220px-Amina_of_Zaria.jpg" }
       ],
       "description": "The Hausa are one of Africa's largest ethnic groups, known for trade, Islamic scholarship, and city-state civilization. Their language serves as a lingua franca across West Africa.",
       "relatedTribes": ["fulani", "kanuri"],
