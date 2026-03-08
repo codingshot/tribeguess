@@ -374,7 +374,9 @@
         { "name": "Mwai Kibaki", "role": "Third President of Kenya", "birth": 1931, "death": 2022, "wikipedia": "https://en.wikipedia.org/wiki/Mwai_Kibaki", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mwai_Kibaki%2C_October_2003.jpg/220px-Mwai_Kibaki%2C_October_2003.jpg" },
         { "name": "Dedan Kimathi", "role": "Mau Mau Liberation Hero", "birth": 1920, "death": 1957, "wikipedia": "https://en.wikipedia.org/wiki/Dedan_Kimathi", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dedan_Kimathi.jpg/220px-Dedan_Kimathi.jpg" },
         { "name": "Uhuru Kenyatta", "role": "Fourth President of Kenya", "birth": 1961, "wikipedia": "https://en.wikipedia.org/wiki/Uhuru_Kenyatta", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Uhuru_Kenyatta_2015.jpg/220px-Uhuru_Kenyatta_2015.jpg" },
-        { "name": "Catherine Ndereba", "role": "Marathon Legend - 'Catherine the Great'", "birth": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Catherine_Ndereba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Catherine_Ndereba.jpg/220px-Catherine_Ndereba.jpg" }
+        { "name": "Catherine Ndereba", "role": "Marathon Legend - 'Catherine the Great'", "birth": 1972, "wikipedia": "https://en.wikipedia.org/wiki/Catherine_Ndereba", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Catherine_Ndereba.jpg/220px-Catherine_Ndereba.jpg" },
+        { "name": "Joseph Kamaru", "role": "Legendary Kikuyu Musician (3000+ songs)", "birth": 1939, "death": 2018, "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Kamaru" },
+        { "name": "Samidoh", "role": "Mugithi Musician & Cultural Icon", "birth": 1989, "wikipedia": "https://en.wikipedia.org/wiki/Samidoh" }
       ],
       "description": "The Kikuyu (Gĩkũyũ) are the largest ethnic group in Kenya, traditionally inhabiting the fertile Central Highlands around Mount Kenya. They are known for their entrepreneurial spirit and agricultural expertise.",
       "relatedTribes": ["meru", "embu"],
