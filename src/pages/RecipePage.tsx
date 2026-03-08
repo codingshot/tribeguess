@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getRecipeById, getRecipesByTribe, getAllRecipes, type Recipe } from '@/data/recipes';
-import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed, Languages, ListPlus } from 'lucide-react';
+import { ArrowLeft, Clock, Users, ChefHat, Flame, Search, BookOpen, Play, History, UtensilsCrossed, Languages, ListPlus, Leaf, Heart, Utensils, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
