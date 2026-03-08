@@ -722,7 +722,66 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'kouyate': { tribe: 'mandinka', gender: 'male', meaning: 'Ancient griot family' },
   'diabate': { tribe: 'mandinka', gender: 'male', meaning: 'Praise singer family' },
 
-  // ============ GHANA - Additional Akan names not in Ashanti section ============
+  // ============ ERITREA/ETHIOPIA - Tigrinya - Source: Eritrean Cultural Archives ============
+  'bereket': { tribe: 'tigrinya', gender: 'male', meaning: 'Blessing' },
+  'haben': { tribe: 'tigrinya', gender: 'male', meaning: 'Pride' },
+  'dawit_t': { tribe: 'tigrinya', gender: 'male', meaning: 'David - beloved one' },
+  'yonas': { tribe: 'tigrinya', gender: 'male', meaning: 'Jonas/Jonah - dove' },
+  'filmon': { tribe: 'tigrinya', gender: 'male', meaning: 'He who loves' },
+  'biniam': { tribe: 'tigrinya', gender: 'male', meaning: 'Benjamin - son of the right hand' },
+  'nahom': { tribe: 'tigrinya', gender: 'male', meaning: 'Comfort' },
+  'robel': { tribe: 'tigrinya', gender: 'male', meaning: 'Strong/mighty' },
+  'senait': { tribe: 'tigrinya', gender: 'female', meaning: 'Beautiful/radiant' },
+  'eden_t': { tribe: 'tigrinya', gender: 'female', meaning: 'Paradise/Garden of Eden' },
+  'rahel_t': { tribe: 'tigrinya', gender: 'female', meaning: 'Rachel - ewe/innocent' },
+  'hanna_t': { tribe: 'tigrinya', gender: 'female', meaning: 'Hannah - grace/favor' },
+  'semhar': { tribe: 'tigrinya', gender: 'female', meaning: 'Beauty/red' },
+  'luwam': { tribe: 'tigrinya', gender: 'female', meaning: 'Peaceful/calm' },
+  'freweini': { tribe: 'tigrinya', gender: 'female', meaning: 'Seed/fruit' },
+  'mihret': { tribe: 'tigrinya', gender: 'female', meaning: 'Mercy/compassion' },
+  'kidist_t': { tribe: 'tigrinya', gender: 'female', meaning: 'Saint/holy one' },
+  'tsige': { tribe: 'tigrinya', gender: 'female', meaning: 'Grace/flower' },
+
+  // ============ SOUTH AFRICA - Pedi (Northern Sotho) - Source: Pedi Cultural Authority ============
+  'mpho': { tribe: 'pedi', gender: 'female', meaning: 'Gift' },
+  'thabo_p': { tribe: 'pedi', gender: 'male', meaning: 'Joy/happiness' },
+  'kgotso': { tribe: 'pedi', gender: 'male', meaning: 'Peace' },
+  'mahlatse': { tribe: 'pedi', gender: 'female', meaning: 'Luck/fortune' },
+  'mahlodi': { tribe: 'pedi', gender: 'female', meaning: 'Tears (of joy)' },
+  'mashego': { tribe: 'pedi', gender: 'male', meaning: 'Grace/blessing' },
+  'ramokgopa': { tribe: 'pedi', gender: 'male', meaning: 'Of the Mokgopa clan' },
+  'mokgadi': { tribe: 'pedi', gender: 'female', meaning: 'Queen/ruler' },
+  'lethabo': { tribe: 'pedi', gender: 'male', meaning: 'Happiness' },
+  'matome': { tribe: 'pedi', gender: 'male', meaning: 'Chief/leader' },
+  'modjadji': { tribe: 'pedi', gender: 'female', meaning: 'Rain queen' },
+  'phuti': { tribe: 'pedi', gender: 'male', meaning: 'Duiker (antelope)' },
+  'maropeng': { tribe: 'pedi', gender: 'male', meaning: 'Place of origin/return' },
+  'lesiba': { tribe: 'pedi', gender: 'male', meaning: 'Musical instrument/whistle' },
+
+  // ============ ZAMBIA - Lozi (Barotse) - Source: Lozi Royal Archives ============
+  'mubiana': { tribe: 'lozi', gender: 'male', meaning: 'From the river' },
+  'nasilele': { tribe: 'lozi', gender: 'female', meaning: 'Water lily' },
+  'lubinda': { tribe: 'lozi', gender: 'male', meaning: 'To be called' },
+  'inonge': { tribe: 'lozi', gender: 'female', meaning: 'Beautiful one' },
+  'mwanawina': { tribe: 'lozi', gender: 'male', meaning: 'Child of the chief' },
+  'nakatindi': { tribe: 'lozi', gender: 'female', meaning: 'Born during harvest' },
+  'lewanika': { tribe: 'lozi', gender: 'male', meaning: 'Conqueror/winner' },
+  'mulena': { tribe: 'lozi', gender: 'male', meaning: 'Chief/king' },
+  'namuso': { tribe: 'lozi', gender: 'female', meaning: 'Royalty' },
+  'sipalo': { tribe: 'lozi', gender: 'male', meaning: 'Strong warrior' },
+
+  // ============ ZAMBIA - Tonga - Source: Tonga Cultural Heritage ============
+  'mudenda': { tribe: 'tonga-zambia', gender: 'male', meaning: 'Traveler/wanderer' },
+  'mwenya': { tribe: 'tonga-zambia', gender: 'male', meaning: 'Owner/master' },
+  'munkombwe': { tribe: 'tonga-zambia', gender: 'male', meaning: 'Born during drought' },
+  'syamujaye': { tribe: 'tonga-zambia', gender: 'male', meaning: 'Rain-maker' },
+  'namakau': { tribe: 'tonga-zambia', gender: 'female', meaning: 'Born by the water' },
+  'choolwe': { tribe: 'tonga-zambia', gender: 'female', meaning: 'Blessed one' },
+  'hamusonde': { tribe: 'tonga-zambia', gender: 'male', meaning: 'One who waits' },
+  'munsanje': { tribe: 'tonga-zambia', gender: 'male', meaning: 'From the floodplain' },
+  'bbuku': { tribe: 'tonga-zambia', gender: 'male', meaning: 'Spirit/ancestral' },
+  'simatele': { tribe: 'tonga-zambia', gender: 'male', meaning: 'Fisherman' },
+
   'kojo': { tribe: 'akan', gender: 'male', meaning: 'Born on Monday' },
   'kwesi': { tribe: 'akan', gender: 'male', meaning: 'Born on Sunday' },
   'kweku': { tribe: 'akan', gender: 'male', meaning: 'Born on Wednesday' },
@@ -2145,6 +2204,58 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'sego': [{ tribe: 'tswana', weight: 0.9 }],
   'orab': [{ tribe: 'tswana', weight: 0.95 }],
   
+  // ============ Eritrea/Ethiopia - Tigrinya prefixes ============
+  'bere': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'habe': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'film': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'bini': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'naho': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'robe': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'sena_t': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'semh': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'luwa': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'frew': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'mihr': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'kidi': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'tsig': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'yona': [{ tribe: 'tigrinya', weight: 0.9 }, { tribe: 'amhara', weight: 0.1 }],
+  
+  // ============ South Africa - Pedi (Northern Sotho) prefixes ============
+  'mahl': [{ tribe: 'pedi', weight: 0.98 }],
+  'mash_p': [{ tribe: 'pedi', weight: 0.95 }],
+  'ramo': [{ tribe: 'pedi', weight: 0.98 }],
+  'mokg': [{ tribe: 'pedi', weight: 0.98 }],
+  'leth': [{ tribe: 'pedi', weight: 0.95 }],
+  'mato': [{ tribe: 'pedi', weight: 0.95 }],
+  'modj': [{ tribe: 'pedi', weight: 0.98 }],
+  'phut': [{ tribe: 'pedi', weight: 0.95 }],
+  'maro': [{ tribe: 'pedi', weight: 0.9 }],
+  'lesi': [{ tribe: 'pedi', weight: 0.95 }],
+  
+  // ============ Zambia - Lozi prefixes ============
+  'mubi': [{ tribe: 'lozi', weight: 0.98 }],
+  'nasi_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'lubi': [{ tribe: 'lozi', weight: 0.95 }],
+  'inon': [{ tribe: 'lozi', weight: 0.98 }],
+  'mwan_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'naka_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'lewa': [{ tribe: 'lozi', weight: 0.98 }],
+  'mule': [{ tribe: 'lozi', weight: 0.9 }],
+  'namu_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'sipa': [{ tribe: 'lozi', weight: 0.95 }],
+  
+  // ============ Zambia - Tonga prefixes ============
+  'mude': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'mwen': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'munk': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'syam': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'nama_tz': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'choo': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'hamu': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'muns': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'bbuk': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'sima_tz': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  
   // ============ South Africa - Venda prefixes ============
   'mash': [{ tribe: 'venda', weight: 0.95 }],
   'tend_v': [{ tribe: 'venda', weight: 0.9 }],
@@ -2495,7 +2606,7 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   
   // ============ Zambia - Bemba prefixes ============
   'chil': [{ tribe: 'bemba', weight: 0.95 }],
-  'mwen': [{ tribe: 'bemba', weight: 0.95 }],
+  'mwen_b': [{ tribe: 'bemba', weight: 0.95 }],
   'kabi': [{ tribe: 'bemba', weight: 0.95 }],
   'kapw': [{ tribe: 'bemba', weight: 0.98 }],
   'chim_b': [{ tribe: 'bemba', weight: 0.95 }],
@@ -3431,6 +3542,46 @@ const suffixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'ondo_gy': [{ tribe: 'gbaya', weight: 0.85 }],
   'emba_g': [{ tribe: 'gbaya', weight: 0.9 }],
   'ebou': [{ tribe: 'gbaya', weight: 0.95 }],
+  
+  // ============ Eritrea/Ethiopia - Tigrinya suffixes ============
+  'eket': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'omon': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'iam': [{ tribe: 'tigrinya', weight: 0.9 }],
+  'mhar': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'uwam': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'hret': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'dist': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'nait': [{ tribe: 'tigrinya', weight: 0.95 }],
+  
+  // ============ South Africa - Pedi suffixes ============
+  'atse': [{ tribe: 'pedi', weight: 0.95 }],
+  'lodi': [{ tribe: 'pedi', weight: 0.98 }],
+  'hego': [{ tribe: 'pedi', weight: 0.95 }],
+  'gadi': [{ tribe: 'pedi', weight: 0.95 }],
+  'habo': [{ tribe: 'pedi', weight: 0.9 }],
+  'tome': [{ tribe: 'pedi', weight: 0.85 }],
+  'adji': [{ tribe: 'pedi', weight: 0.98 }],
+  'siba': [{ tribe: 'pedi', weight: 0.9 }],
+  
+  // ============ Zambia - Lozi suffixes ============
+  'iana': [{ tribe: 'lozi', weight: 0.85 }],
+  'lele': [{ tribe: 'lozi', weight: 0.9 }],
+  'inda_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'onge': [{ tribe: 'lozi', weight: 0.95 }],
+  'wina': [{ tribe: 'lozi', weight: 0.95 }],
+  'indi': [{ tribe: 'lozi', weight: 0.85 }],
+  'lena': [{ tribe: 'lozi', weight: 0.9 }],
+  
+  // ============ Zambia - Tonga suffixes ============
+  'enda_tz': [{ tribe: 'tonga-zambia', weight: 0.9 }],
+  'enya': [{ tribe: 'tonga-zambia', weight: 0.85 }],
+  'mbwe': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'jaye': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'akau': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'olwe': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'onde': [{ tribe: 'tonga-zambia', weight: 0.9 }],
+  'anje': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'tele': [{ tribe: 'tonga-zambia', weight: 0.85 }],
 };
 
 // ============ DETECTION ENGINE JUSTIFICATION ============
