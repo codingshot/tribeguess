@@ -3011,9 +3011,9 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'birt': [{ tribe: 'gurage', weight: 0.9 }],
 
   // ============ NIGER - Wodaabe prefixes ============
-  'bour': [{ tribe: 'wodaabe', weight: 0.85 }],
+  'bour_w': [{ tribe: 'wodaabe', weight: 0.85 }],
   'ouma': [{ tribe: 'wodaabe', weight: 0.85 }],
-  'djib': [{ tribe: 'wodaabe', weight: 0.9 }],
+  'djib_w': [{ tribe: 'wodaabe', weight: 0.9 }],
 
   // ============ ALGERIA - Kabyle name prefixes ============
   'mohan': [{ tribe: 'kabyle', weight: 0.9 }],
