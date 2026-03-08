@@ -214,7 +214,16 @@ export const recipes: Recipe[] = [
       "Don't overstuff - the sausage will burst during cooking",
       "Grilling over charcoal adds authentic smoky flavor",
       "Always ensure thorough cooking for food safety"
-    ]
+    ],
+    nutritionalInfo: {
+      calories: "~220 kcal",
+      protein: "18g",
+      carbs: "3g",
+      fat: "15g",
+      fiber: "0g",
+      notes: "Rich in iron from blood, high in protein. Organ meats provide B12 and zinc."
+    },
+    dietaryInfo: ["Gluten-free", "High-protein", "Keto-friendly"]
   },
 
   // ============ LUO RECIPES ============
