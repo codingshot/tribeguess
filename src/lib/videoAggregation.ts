@@ -166,22 +166,26 @@ export function getAllVideos(): VideoItem[] {
   tribes.forEach((tribe) => {
     // Culture documentary video
     if (tribe.youtubeVideoId && isValidYoutubeId(tribe.youtubeVideoId)) {
-      videos.push({
-        id: `tribe-culture-${tribe.id}`,
-        youtube: tribe.youtubeVideoId,
-        youtubeId: tribe.youtubeVideoId,
-        title: `${tribe.name} Culture & Traditions`,
-        description: tribe.description?.substring(0, 200),
-        thumbnailUrl: getYoutubeThumbnail(tribe.youtubeVideoId),
-        sourceType: 'TRIBE_PAGE',
-        tribeIds: [tribe.id],
-        tribeNames: [tribe.name],
-        tags: ['culture', 'documentary', 'traditions'],
-        originUrl: `/learn/${tribe.slug}`,
-        originLabel: `${tribe.name} Tribe Page`,
-        category: 'documentary',
-        region: tribe.region
-      });
+      const videoId = `tribe-culture-${tribe.id}-${tribe.youtubeVideoId}`;
+      if (!seenIds.has(videoId)) {
+        seenIds.add(videoId);
+        videos.push({
+          id: videoId,
+          youtube: tribe.youtubeVideoId,
+          youtubeId: tribe.youtubeVideoId,
+          title: `${tribe.name} Culture & Traditions`,
+          description: tribe.description?.substring(0, 200),
+          thumbnailUrl: getYoutubeThumbnail(tribe.youtubeVideoId),
+          sourceType: 'TRIBE_PAGE',
+          tribeIds: [tribe.id],
+          tribeNames: [tribe.name],
+          tags: ['culture', 'documentary', 'traditions'],
+          originUrl: `/learn/${tribe.slug}`,
+          originLabel: `${tribe.name} Tribe Page`,
+          category: 'documentary',
+          region: tribe.region
+        });
+      }
     }
     
     // Language tutorial video
