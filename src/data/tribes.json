@@ -2296,7 +2296,10 @@
         ],
         "communities": ["Strong presence in Gulf states with historic trade ties", "Historic ties to Oman dating back centuries", "Community in New York area with Swahili cultural centers"],
         "associations": ["Swahili Cultural Society", "Kenya Coast Diaspora UK"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/swahili/swahili-coast.jpg", "caption": "Swahili coast dhow sailing at sunset near Zanzibar with carved wooden door", "credit": "AI Generated" }
+      ]
     },
     {
       "id": "borana",
@@ -3660,7 +3663,10 @@
         ],
         "communities": ["Large Yoruba population in Bahia, Brazil with preserved cultural traditions", "Strong community in Houston, Texas"],
         "associations": ["Egbe Omo Yoruba (Yoruba descendants)", "Yoruba One"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/yoruba/yoruba-culture.jpg", "caption": "Yoruba woman in traditional aso-oke fabric with gele headwrap and bronze sculptures", "credit": "AI Generated" }
+      ]
     },
 
     {
@@ -3804,7 +3810,10 @@
         ],
         "communities": ["Strong community in Houston, Texas with cultural organizations", "Active community in London"],
         "associations": ["Igbo World Assembly", "Ndi Igbo Congress"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/igbo/igbo-masquerade.jpg", "caption": "Igbo Mmanwu masquerade dancer in elaborate wooden mask and raffia costume", "credit": "AI Generated" }
+      ]
     },
 
     {
@@ -3947,7 +3956,10 @@
         ],
         "communities": ["Historic communities in Sudan from trade and pilgrimage", "Growing community in UK and USA"],
         "associations": ["Hausa Foundation", "Arewa House"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/hausa/hausa-market.jpg", "caption": "Hausa emirate architecture with traditional market scene in Kano", "credit": "AI Generated" }
+      ]
     },
 
     {
@@ -4096,7 +4108,10 @@
         ],
         "communities": ["Large Fulani community in France from former French colonies"],
         "associations": ["Tabital Pulaaku International"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/fulani/fulani-herder.jpg", "caption": "Fulani nomadic herder with cattle at sunset in the Sahel grasslands", "credit": "AI Generated" }
+      ]
     },
 
     {
@@ -4952,7 +4967,10 @@
         ],
         "communities": ["Large Ethiopian community in Washington DC area", "Beta Israel (Ethiopian Jews) in Israel"],
         "associations": ["Ethiopian Community Association of Greater Washington"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/amhara/amhara-lalibela.jpg", "caption": "Rock-hewn church of Lalibela with Ethiopian Orthodox priest holding ceremonial cross", "credit": "AI Generated" }
+      ]
     },
 
     {
@@ -17308,7 +17326,10 @@
       ],
       "sources": [{ "name": "Wikipedia - Tswana people", "url": "https://en.wikipedia.org/wiki/Tswana_people" }, { "name": "Ethnologue - Setswana", "url": "https://www.ethnologue.com/language/tsn" }],
       "description": "The Tswana are a Bantu-speaking people of southern Africa, forming the majority population of Botswana. Famous for their democratic kgotla system, cattle culture, and the remarkable story of three chiefs who saved their nation from colonization, the Tswana have built one of Africa's most successful democracies.",
-      "relatedTribes": ["sotho", "ndebele", "zulu", "san"]
+      "relatedTribes": ["sotho", "ndebele", "zulu", "san"],
+      "gallery": [
+        { "url": "/tribes/tswana/tswana-ceremony.jpg", "caption": "Tswana women performing traditional dance in colorful beadwork", "credit": "AI Generated" }
+      ]
     },
     {
       "id": "lozi",
@@ -17503,7 +17524,10 @@
       ],
       "sources": [{ "name": "Wikipedia - Mandinka people", "url": "https://en.wikipedia.org/wiki/Mandinka_people" }, { "name": "Ethnologue - Mandinka", "url": "https://www.ethnologue.com/language/mnk" }],
       "description": "The Mandinka are one of West Africa's largest and most historically significant peoples, descendants of the mighty Mali Empire. Their griots preserve centuries of oral history, the kora is one of Africa's most beautiful instruments, and figures like Mansa Musa and Sundiata Keita shaped world history.",
-      "relatedTribes": ["bambara", "wolof", "fulani", "soninke"]
+      "relatedTribes": ["bambara", "wolof", "fulani", "soninke"],
+      "gallery": [
+        { "url": "/tribes/mandinka/mandinka-griot.jpg", "caption": "Mandinka griot musician playing kora under a baobab tree at sunset", "credit": "AI Generated" }
+      ]
     },
     {
       "id": "bakongo",
