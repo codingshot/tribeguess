@@ -107,6 +107,10 @@ export function GlobalVideoPlayer() {
   // If context is not available (error boundary recovery), render nothing
   if (!ctx) return null;
   
+  return <GlobalVideoPlayerInner ctx={ctx} />;
+}
+
+function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof useGlobalVideoPlayerSafe>> }) {
   const {
     currentVideo,
     queue,
