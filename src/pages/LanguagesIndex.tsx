@@ -149,6 +149,11 @@ export default function LanguagesIndex() {
             </div>
           </section>
 
+          {/* Migration Tree Visualization */}
+          <section className="mt-12">
+            <LanguageFamilyMigrationTree />
+          </section>
+
           {/* Did You Know Section */}
           <section className="mt-12 p-6 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/20">
             <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
