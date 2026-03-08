@@ -190,22 +190,26 @@ export function getAllVideos(): VideoItem[] {
     
     // Language tutorial video
     if (tribe.languageVideoId && isValidYoutubeId(tribe.languageVideoId)) {
-      videos.push({
-        id: `tribe-language-${tribe.id}`,
-        youtube: tribe.languageVideoId,
-        youtubeId: tribe.languageVideoId,
-        title: `Learn ${tribe.language?.name || tribe.name} Language`,
-        description: `Language tutorial for the ${tribe.name} people`,
-        thumbnailUrl: getYoutubeThumbnail(tribe.languageVideoId),
-        sourceType: 'TRIBE_LANGUAGE',
-        tribeIds: [tribe.id],
-        tribeNames: [tribe.name],
-        tags: ['language', 'tutorial', 'learning'],
-        originUrl: `/learn/${tribe.slug}`,
-        originLabel: `${tribe.name} Language`,
-        category: 'language',
-        region: tribe.region
-      });
+      const videoId = `tribe-language-${tribe.id}-${tribe.languageVideoId}`;
+      if (!seenIds.has(videoId)) {
+        seenIds.add(videoId);
+        videos.push({
+          id: videoId,
+          youtube: tribe.languageVideoId,
+          youtubeId: tribe.languageVideoId,
+          title: `Learn ${tribe.language?.name || tribe.name} Language`,
+          description: `Language tutorial for the ${tribe.name} people`,
+          thumbnailUrl: getYoutubeThumbnail(tribe.languageVideoId),
+          sourceType: 'TRIBE_LANGUAGE',
+          tribeIds: [tribe.id],
+          tribeNames: [tribe.name],
+          tags: ['language', 'tutorial', 'learning'],
+          originUrl: `/learn/${tribe.slug}`,
+          originLabel: `${tribe.name} Language`,
+          category: 'language',
+          region: tribe.region
+        });
+      }
     }
   });
   
