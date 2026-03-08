@@ -743,7 +743,7 @@ const nameDatabase: Record<string, { tribe: string; gender: 'male' | 'female'; m
   'tsige': { tribe: 'tigrinya', gender: 'female', meaning: 'Grace/flower' },
 
   // ============ SOUTH AFRICA - Pedi (Northern Sotho) - Source: Pedi Cultural Authority ============
-  'mpho': { tribe: 'pedi', gender: 'unisex', meaning: 'Gift' },
+  'mpho': { tribe: 'pedi', gender: 'female', meaning: 'Gift' },
   'thabo_p': { tribe: 'pedi', gender: 'male', meaning: 'Joy/happiness' },
   'kgotso': { tribe: 'pedi', gender: 'male', meaning: 'Peace' },
   'mahlatse': { tribe: 'pedi', gender: 'unisex', meaning: 'Luck/fortune' },
