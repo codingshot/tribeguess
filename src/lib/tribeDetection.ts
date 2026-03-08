@@ -2929,7 +2929,36 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'toroi': [{ tribe: 'ogiek', weight: 0.85 }, { tribe: 'kalenjin', weight: 0.15 }],
   'taple': [{ tribe: 'ogiek', weight: 0.95 }],
 
-  // ============ UGANDA - Karamojong prefixes ============
+  // ============ KENYA - Taveta prefixes ============
+  'mwach': [{ tribe: 'taveta', weight: 0.9 }, { tribe: 'mijikenda', weight: 0.1 }],
+  'mwash': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwaki': [{ tribe: 'taveta', weight: 0.85 }],
+  'kisha': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwait': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwatu': [{ tribe: 'taveta', weight: 0.9 }],
+  'mwada': [{ tribe: 'taveta', weight: 0.85 }],
+
+  // ============ KENYA - El Molo prefixes ============
+  'loiya': [{ tribe: 'elmologo', weight: 0.95 }],
+  'lokok': [{ tribe: 'elmologo', weight: 0.9 }],
+  'lobon': [{ tribe: 'elmologo', weight: 0.9 }],
+  'lomod': [{ tribe: 'elmologo', weight: 0.9 }],
+  'namur': [{ tribe: 'elmologo', weight: 0.9 }],
+  'napey': [{ tribe: 'elmologo', weight: 0.9 }],
+
+  // ============ KENYA - Ilchamus/Njemps prefixes ============
+  'lekak': [{ tribe: 'ilchamus', weight: 0.95 }],
+  'lenai': [{ tribe: 'ilchamus', weight: 0.9 }],
+  'parsi': [{ tribe: 'ilchamus', weight: 0.85 }, { tribe: 'maasai', weight: 0.15 }],
+  'nashi': [{ tribe: 'ilchamus', weight: 0.8 }, { tribe: 'samburu', weight: 0.2 }],
+  'namel': [{ tribe: 'ilchamus', weight: 0.8 }, { tribe: 'samburu', weight: 0.2 }],
+
+  // ============ KENYA - Nubi/Kenyan Nubian prefixes ============
+  'abdal_n': [{ tribe: 'nubi', weight: 0.8 }],
+  'hamis_n': [{ tribe: 'nubi', weight: 0.8 }],
+  'rashi_n': [{ tribe: 'nubi', weight: 0.7 }],
+
+
   'lomo': [{ tribe: 'karamojong', weight: 0.95 }],
   'lokw': [{ tribe: 'karamojong', weight: 0.95 }],
   'loty': [{ tribe: 'karamojong', weight: 0.9 }],
