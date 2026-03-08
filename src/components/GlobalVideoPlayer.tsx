@@ -945,7 +945,7 @@ export function GlobalVideoPlayer() {
       </div>
       
       {/* Spacer for fixed player */}
-      <div className="h-12" />
+      <div className="h-12" aria-hidden="true" />
     </>
   );
 }
