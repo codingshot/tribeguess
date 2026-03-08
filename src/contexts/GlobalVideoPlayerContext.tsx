@@ -117,8 +117,19 @@ export function useGlobalVideoPlayer() {
 function safeJSONParse<T>(key: string, fallback: T): T {
   try {
     const stored = localStorage.getItem(key);
-    return stored ? JSON.parse(stored) : fallback;
+    if (!stored) return fallback;
+    const parsed = JSON.parse(stored);
+    // Validate video objects have required fields
+    if (key === STORAGE_KEYS.currentVideo && parsed && !parsed.youtubeId) {
+      localStorage.removeItem(key);
+      return fallback;
+    }
+    if (key === STORAGE_KEYS.queue && Array.isArray(parsed)) {
+      return parsed.filter((v: any) => v && v.youtubeId) as unknown as T;
+    }
+    return parsed;
   } catch {
+    try { localStorage.removeItem(key); } catch {}
     return fallback;
   }
 }
