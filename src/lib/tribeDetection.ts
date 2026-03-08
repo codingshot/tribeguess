@@ -2204,6 +2204,58 @@ const prefixPatterns: Record<string, { tribe: string; weight: number }[]> = {
   'sego': [{ tribe: 'tswana', weight: 0.9 }],
   'orab': [{ tribe: 'tswana', weight: 0.95 }],
   
+  // ============ Eritrea/Ethiopia - Tigrinya prefixes ============
+  'bere': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'habe': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'film': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'bini': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'naho': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'robe': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'sena_t': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'semh': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'luwa': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'frew': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'mihr': [{ tribe: 'tigrinya', weight: 0.98 }],
+  'kidi': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'tsig': [{ tribe: 'tigrinya', weight: 0.95 }],
+  'yona': [{ tribe: 'tigrinya', weight: 0.9 }, { tribe: 'amhara', weight: 0.1 }],
+  
+  // ============ South Africa - Pedi (Northern Sotho) prefixes ============
+  'mahl': [{ tribe: 'pedi', weight: 0.98 }],
+  'mash_p': [{ tribe: 'pedi', weight: 0.95 }],
+  'ramo': [{ tribe: 'pedi', weight: 0.98 }],
+  'mokg': [{ tribe: 'pedi', weight: 0.98 }],
+  'leth': [{ tribe: 'pedi', weight: 0.95 }],
+  'mato': [{ tribe: 'pedi', weight: 0.95 }],
+  'modj': [{ tribe: 'pedi', weight: 0.98 }],
+  'phut': [{ tribe: 'pedi', weight: 0.95 }],
+  'maro': [{ tribe: 'pedi', weight: 0.9 }],
+  'lesi': [{ tribe: 'pedi', weight: 0.95 }],
+  
+  // ============ Zambia - Lozi prefixes ============
+  'mubi': [{ tribe: 'lozi', weight: 0.98 }],
+  'nasi': [{ tribe: 'lozi', weight: 0.95 }],
+  'lubi': [{ tribe: 'lozi', weight: 0.95 }],
+  'inon': [{ tribe: 'lozi', weight: 0.98 }],
+  'mwan_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'naka_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'lewa': [{ tribe: 'lozi', weight: 0.98 }],
+  'mule': [{ tribe: 'lozi', weight: 0.9 }],
+  'namu_l': [{ tribe: 'lozi', weight: 0.95 }],
+  'sipa': [{ tribe: 'lozi', weight: 0.95 }],
+  
+  // ============ Zambia - Tonga prefixes ============
+  'mude': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'mwen': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'munk': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'syam': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'nama_tz': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'choo': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'hamu': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  'muns': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'bbuk': [{ tribe: 'tonga-zambia', weight: 0.98 }],
+  'sima_tz': [{ tribe: 'tonga-zambia', weight: 0.95 }],
+  
   // ============ South Africa - Venda prefixes ============
   'mash': [{ tribe: 'venda', weight: 0.95 }],
   'tend_v': [{ tribe: 'venda', weight: 0.9 }],
