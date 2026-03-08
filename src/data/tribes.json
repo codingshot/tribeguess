@@ -4105,7 +4105,10 @@
         ],
         "communities": ["Large Fulani community in France from former French colonies"],
         "associations": ["Tabital Pulaaku International"]
-      }
+      },
+      "gallery": [
+        { "url": "/tribes/fulani/fulani-herder.jpg", "caption": "Fulani nomadic herder with cattle at sunset in the Sahel grasslands", "credit": "AI Generated" }
+      ]
     },
 
     {
