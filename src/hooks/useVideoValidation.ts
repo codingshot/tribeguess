@@ -5,9 +5,11 @@ interface VideoStatus {
   valid: boolean;
   loading: boolean;
   title?: string;
+  error?: string;
 }
 
 const videoStatusCache = new Map<string, VideoStatus>();
+const recentlyReportedErrors = new Set<string>();
 
 export function useVideoValidation(youtubeId: string): VideoStatus {
   const [status, setStatus] = useState<VideoStatus>(() => {
