@@ -154,7 +154,7 @@ const App = () => {
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/learn" element={<Learn />} />
-                  <Route path="/learn/:slug" element={<TribePage />} />
+                  <Route path="/learn/:slug" element={<PageErrorBoundary><TribePage /></PageErrorBoundary>} />
                   <Route path="/random" element={<RandomTribe />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/privacy" element={<Privacy />} />
