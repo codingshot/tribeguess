@@ -816,7 +816,7 @@ const TribePage = () => {
                 </section>
               )}
               
-              {tribe.culturalTraits && (
+              {Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.length > 0 && (
                 <section>
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Cultural Traits</h2>
                   <ul className="space-y-1.5 sm:space-y-2">
