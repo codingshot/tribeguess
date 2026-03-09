@@ -56,6 +56,44 @@ class VideoPlayerErrorBoundary extends React.Component<
     return this.props.children;
   }
 }
+
+// Error boundary for page-level crashes (prevents white screens)
+class PageErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error) {
+    console.error('[PageErrorBoundary] Caught render crash:', error.message);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-background flex items-center justify-center p-4">
+          <div className="text-center max-w-md">
+            <h1 className="text-2xl font-bold text-foreground mb-2">Something went wrong</h1>
+            <p className="text-muted-foreground mb-4">This page encountered an error. Try going back or visiting another page.</p>
+            <div className="flex gap-2 justify-center">
+              <button onClick={() => window.history.back()} className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium">Go Back</button>
+              <button onClick={() => { this.setState({ hasError: false, error: null }); window.location.href = '/learn'; }} className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg text-sm font-medium">Browse Tribes</button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 import { warmSearchIndexes } from "@/lib/searchEngine";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 
@@ -118,7 +156,7 @@ const App = () => {
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/learn" element={<Learn />} />
-                  <Route path="/learn/:slug" element={<TribePage />} />
+                  <Route path="/learn/:slug" element={<PageErrorBoundary><TribePage /></PageErrorBoundary>} />
                   <Route path="/random" element={<RandomTribe />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/privacy" element={<Privacy />} />

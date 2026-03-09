@@ -331,6 +331,7 @@ const TribePage = () => {
                             <p className="text-xs sm:text-sm text-muted-foreground">Countries</p>
                           </div>
                         )}
+                        {tribe.genderRatio && (
                         <div className="p-3 bg-secondary rounded-lg text-center">
                           <p className="text-xl sm:text-2xl font-bold">
                             <span className="text-blue-600">{tribe.genderRatio.male}%</span>
@@ -339,6 +340,7 @@ const TribePage = () => {
                           </p>
                           <p className="text-xs sm:text-sm text-muted-foreground">Male / Female</p>
                         </div>
+                        )}
                       </div>
                       
                       {/* Multi-country population breakdown with pie chart */}
@@ -366,11 +368,13 @@ const TribePage = () => {
                         </>
                       )}
                       
+                      {tribe.counties && tribe.counties.length > 0 && (
                       <div className="mt-3">
                         <p className="text-sm text-muted-foreground">
                           <strong>Main Regions:</strong> {tribe.counties.join(', ')}
                         </p>
                       </div>
+                      )}
                     </>
                   );
                 })()}
@@ -685,6 +689,7 @@ const TribePage = () => {
                 );
               })()}
               
+              {tribe.stereotypes && tribe.stereotypes.length > 0 && (
               <section>
                 <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
                   <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
@@ -699,6 +704,7 @@ const TribePage = () => {
                   ))}
                 </ul>
               </section>
+              )}
               
               {/* Gender Stereotypes & Roles Section */}
               {((tribe as any).genderStereotypes || (tribe as any).genderRoles) && (
@@ -782,12 +788,14 @@ const TribePage = () => {
                 </section>
               )}
               
+              {tribe.commonNames && (
               <NameSearch
-                femaleNames={tribe.commonNames.female}
-                maleNames={tribe.commonNames.male}
+                femaleNames={tribe.commonNames.female || []}
+                maleNames={tribe.commonNames.male || []}
                 tribeName={tribe.name}
                 nameDatabase={getNameDatabase()}
               />
+              )}
               
               {tribe.timeBasedNames && Object.keys(tribe.timeBasedNames).length > 0 && (
                 <section>
@@ -980,7 +988,7 @@ const TribePage = () => {
                     )}
                     
                     {/* Food Taboos */}
-                    {(tribe as any).eatingCustoms.taboos && (tribe as any).eatingCustoms.taboos.length > 0 && (
+                    {Array.isArray((tribe as any).eatingCustoms.taboos) && (tribe as any).eatingCustoms.taboos.length > 0 && (
                       <div className="p-4 bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 rounded-lg border border-red-200 dark:border-red-800">
                         <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
                           <span>🚫</span> Food Taboos & Restrictions
