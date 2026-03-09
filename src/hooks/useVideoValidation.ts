@@ -129,3 +129,23 @@ export function getInvalidVideoIds(): string[] {
   });
   return invalid;
 }
+
+// Export broken video report for debugging/maintenance
+export function generateBrokenVideoReport(): { youtubeId: string; error: string }[] {
+  const report: { youtubeId: string; error: string }[] = [];
+  videoStatusCache.forEach((status, id) => {
+    if (!status.valid && !status.loading) {
+      report.push({
+        youtubeId: id,
+        error: status.error || 'Unknown error',
+      });
+    }
+  });
+  return report;
+}
+
+// Clear cache (useful for testing)
+export function clearVideoValidationCache(): void {
+  videoStatusCache.clear();
+  recentlyReportedErrors.clear();
+}
