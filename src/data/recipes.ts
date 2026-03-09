@@ -9777,7 +9777,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Kimbundu-style fish and vegetable stew with dried and fresh fish, palm oil, and gimboa leaves - a Luanda specialty.",
     culturalSignificance: "The coastal Kimbundu have access to fresh Atlantic fish, making their calulu distinct from inland versions. It's served at weddings and celebrations.",
     historicalContext: "Luanda was founded in Kimbundu territory in 1575. Their calulu blends Portuguese and indigenous influences, representing centuries of cultural fusion.",
-    youtubeVideoId: "wWDv2t4bU8U",
+    youtubeVideoId: "Djonn-S4OiU",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
