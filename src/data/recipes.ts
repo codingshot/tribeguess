@@ -9133,7 +9133,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Tiny dried fish from Lake Kariba, cooked with tomatoes and groundnuts. A protein staple of southern Africa.",
     culturalSignificance: "Matemba (kapenta) from Lake Kariba feeds millions across Zimbabwe and Zambia. It's affordable protein that's sustained communities through hard times.",
     historicalContext: "Kapenta were introduced to Lake Kariba in the 1960s from Lake Tanganyika. The small sardine-like fish thrived and created a new fishing industry. Today it's a dietary cornerstone.",
-    youtubeVideoId: "cxj0vDYL6K8",
+    youtubeVideoId: "bVzODxhs3Hc",
     prepTime: "10 minutes",
     cookTime: "20 minutes",
     servings: 4,
