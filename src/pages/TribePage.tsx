@@ -687,6 +687,7 @@ const TribePage = () => {
                 );
               })()}
               
+              {tribe.stereotypes && tribe.stereotypes.length > 0 && (
               <section>
                 <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
                   <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
@@ -701,6 +702,7 @@ const TribePage = () => {
                   ))}
                 </ul>
               </section>
+              )}
               
               {/* Gender Stereotypes & Roles Section */}
               {((tribe as any).genderStereotypes || (tribe as any).genderRoles) && (
