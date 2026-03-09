@@ -24,17 +24,36 @@ const categoryColors: Record<string, string> = {
 
 export function VideoCard({ video, compact = false, showOrigin = true }: VideoCardProps) {
   const { playNow, addToQueue } = useGlobalVideoPlayer();
-  const { valid, loading } = useVideoValidation(video.youtubeId);
+  const { valid, loading, error } = useVideoValidation(video.youtubeId);
   
   const handlePlay = () => {
-    if (!valid && !loading) return;
+    if (!valid && !loading) {
+      toast.error('Video Unavailable', {
+        description: `This video cannot be played. ${error || 'It may have been removed or set to private.'}`,
+      });
+      return;
+    }
     playNow(video);
   };
   
   const handleAddToQueue = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!valid && !loading) return;
+    if (!valid && !loading) {
+      toast.error('Video Unavailable', {
+        description: 'Cannot add unavailable video to queue',
+      });
+      return;
+    }
     addToQueue(video, { dedupeByYoutubeId: true });
+  };
+
+  const handleReportIssue = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const issueUrl = `https://github.com/TribeGuess/tribeguess/issues/new?template=data_video_issue.yml&title=[Video+Issue]:+${encodeURIComponent(video.title || 'Untitled')}&video_id=${video.youtubeId}&location=${encodeURIComponent(video.originLabel || '')}&url=${encodeURIComponent(window.location.origin + (video.originUrl || ''))}`;
+    window.open(issueUrl, '_blank');
+    toast.success('Opening issue form', {
+      description: 'Thank you for helping improve our content!',
+    });
   };
   
   if (compact) {
