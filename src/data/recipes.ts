@@ -615,7 +615,7 @@ export const recipes: Recipe[] = [
     description: "South Africa's iconic combination of maize porridge (pap) served with grilled meat and tomato-onion relish.",
     culturalSignificance: "Pap (called uphuthu by Zulus) is the South African staff of life. Every braai (BBQ) includes pap - it's inseparable from South African identity.",
     historicalContext: "Maize was introduced to Africa by Portuguese traders in the 16th century. South African communities adopted it wholeheartedly, and pap became the symbol of unity across racial lines during and after apartheid. Today it remains essential at every South African gathering.",
-    youtubeVideoId: "8l4M0nNdFQw",
+    youtubeVideoId: "FtONP1xN8BM",
     prepTime: "10 minutes",
     cookTime: "40 minutes",
     servings: 6,
