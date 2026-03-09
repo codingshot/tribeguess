@@ -9864,7 +9864,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Coconut rice cooked with spiced beans - the everyday food of the Makonde people of southeastern Tanzania.",
     culturalSignificance: "This dish reflects the Makonde's coastal influences while maintaining their plateau traditions.",
     historicalContext: "The Makonde are renowned for their wood carving traditions. Living on the Makonde Plateau, they developed cuisine that blends coastal and inland ingredients.",
-    youtubeVideoId: "1KvdLQ_RWaQ",
+    youtubeVideoId: "TBW9Z2O8_EI",
     prepTime: "30 minutes",
     cookTime: "45 minutes",
     servings: 6,
