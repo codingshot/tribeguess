@@ -240,16 +240,48 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
               onError: (event: any) => {
                 if (!isMounted) return;
                 const errorCode = event?.data;
-                const errorMessages: Record<number, string> = {
-                  2: 'Invalid video ID',
-                  5: 'Video cannot be played in embedded player',
-                  100: 'Video not found or removed',
-                  101: 'Video owner does not allow embedded playback',
-                  150: 'Video owner does not allow embedded playback',
+                const errorMessages: Record<number, { title: string; description: string }> = {
+                  2: {
+                    title: 'Invalid Video ID',
+                    description: 'This video ID format is invalid'
+                  },
+                  5: {
+                    title: 'HTML5 Player Error',
+                    description: 'Video cannot be played in embedded player'
+                  },
+                  100: {
+                    title: 'Video Not Found',
+                    description: 'This video has been removed or is unavailable'
+                  },
+                  101: {
+                    title: 'Embedding Disabled',
+                    description: 'Video owner does not allow embedded playback'
+                  },
+                  150: {
+                    title: 'Embedding Disabled',
+                    description: 'Video owner does not allow embedded playback'
+                  },
                 };
-                const msg = errorMessages[errorCode] || 'Video playback error';
-                console.warn(`[VideoPlayer] Error ${errorCode} for ${currentVideo?.youtubeId}: ${msg}`);
-                toast.error(msg, { duration: 3000 });
+                
+                const error = errorMessages[errorCode] || { 
+                  title: 'Playback Error', 
+                  description: 'Unable to play this video' 
+                };
+                
+                console.warn(`[VideoPlayer] Error ${errorCode} for ${currentVideo?.youtubeId}:`, error);
+                
+                toast.error(error.title, { 
+                  description: `${error.description}. Skipping to next video...`,
+                  duration: 3500,
+                  action: currentVideo ? {
+                    label: 'Report',
+                    onClick: () => {
+                      const issueUrl = `https://github.com/TribeGuess/tribeguess/issues/new?template=data_video_issue.yml&title=[Video+Issue]:+${encodeURIComponent(currentVideo.title || 'Untitled')}&video_id=${currentVideo.youtubeId}&error=${encodeURIComponent(`Error ${errorCode}: ${error.title}`)}`;
+                      window.open(issueUrl, '_blank');
+                    }
+                  } : undefined
+                });
+                
                 setPlayerState({ isLoading: false, isPlaying: false });
                 // Auto-skip to next after a brief delay
                 setTimeout(() => {
