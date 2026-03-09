@@ -9504,7 +9504,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Angola's national chicken dish - tender chicken cooked in palm nut sauce with okra and spices. Rich, creamy, and unforgettable.",
     culturalSignificance: "Muamba is Angola's national dish, served at every celebration. The Ovimbundu version from the highlands is particularly prized.",
     historicalContext: "Palm oil and palm nut sauce are ancient African ingredients. Portuguese colonizers spread the dish's fame globally, but Angolans perfected the recipe.",
-    youtubeVideoId: "fLK6YYQn7Zs",
+    youtubeVideoId: "J2H8G-MGQJ4",
     prepTime: "20 minutes",
     cookTime: "1 hour",
     servings: 6,
