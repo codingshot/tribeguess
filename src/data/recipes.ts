@@ -11360,7 +11360,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "A hearty stew of green bananas cooked with beef in a rich tomato sauce. The signature dish of the Chagga people from the slopes of Mount Kilimanjaro.",
     culturalSignificance: "Bananas are central to Chagga identity - they cultivate over 20 varieties on the volcanic slopes of Kilimanjaro. This stew represents everyday Chagga life, connecting agriculture to the dinner table.",
     historicalContext: "The Chagga developed intensive banana farming systems on Kilimanjaro's fertile volcanic slopes over 500 years ago. Their banana groves (vihamba) are recognized as a traditional agroforestry system. Ndizi na nyama evolved as bananas became the dominant crop.",
-    youtubeVideoId: "QzZJxQ1K95o",
+    youtubeVideoId: "j3aZxrx9qx8",
     prepTime: "20 minutes",
     cookTime: "45 minutes",
     servings: 6,
