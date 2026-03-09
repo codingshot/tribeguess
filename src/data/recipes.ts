@@ -10974,7 +10974,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Hearty lamb soup with freekeh (green wheat), chickpeas, and aromatic spices. Algeria's beloved Ramadan soup.",
     culturalSignificance: "Chorba is central to Algerian Ramadan traditions. The freekeh (smoked green wheat) gives it a distinctive smoky flavor. Every region has its variation.",
     historicalContext: "Chorba has Ottoman origins but was transformed with local Algerian ingredients. Freekeh has been used in North Africa for millennia, prized for its nutritional value.",
-    youtubeVideoId: "qr3zVHc6YNM",
+    youtubeVideoId: "2z6IldJl_lQ",
     prepTime: "15 minutes",
     cookTime: "1.5 hours",
     servings: 8,
