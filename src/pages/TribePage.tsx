@@ -331,6 +331,7 @@ const TribePage = () => {
                             <p className="text-xs sm:text-sm text-muted-foreground">Countries</p>
                           </div>
                         )}
+                        {tribe.genderRatio && (
                         <div className="p-3 bg-secondary rounded-lg text-center">
                           <p className="text-xl sm:text-2xl font-bold">
                             <span className="text-blue-600">{tribe.genderRatio.male}%</span>
@@ -339,6 +340,7 @@ const TribePage = () => {
                           </p>
                           <p className="text-xs sm:text-sm text-muted-foreground">Male / Female</p>
                         </div>
+                        )}
                       </div>
                       
                       {/* Multi-country population breakdown with pie chart */}
