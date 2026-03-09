@@ -7801,7 +7801,7 @@ const eastAfricanRecipes: Recipe[] = [
     description: "Kenya's national dish - goat or beef roasted over charcoal until crispy outside and juicy inside. Simple seasoning lets the meat shine.",
     culturalSignificance: "Nyama choma is Kenya's social food. Friends gather at 'nyama choma joints' to share meat, conversation, and cold drinks. It transcends all ethnic and class boundaries.",
     historicalContext: "Roasting meat over fire is ancient, but nyama choma as a social institution developed in urban Kenya. It became the great equalizer - a space where all Kenyans gather regardless of background.",
-    youtubeVideoId: "mP8gS8U4wFU",
+    youtubeVideoId: "P5eGWFCjReA",
     prepTime: "10 minutes",
     cookTime: "1-2 hours",
     servings: 6,
