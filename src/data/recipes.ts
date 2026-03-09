@@ -10542,7 +10542,7 @@ const westAfricanRecipes: Recipe[] = [
     description: "Rich, creamy stew with meat simmered in peanut sauce with vegetables. Senegal's comfort food, eaten across West Africa.",
     culturalSignificance: "Mafé embodies Senegalese teranga (hospitality). It's a communal dish, served on a large platter for the family to share. Every grandmother has her secret recipe.",
     historicalContext: "Mafé developed from the peanut (groundnut) cultivation brought to West Africa. Senegal became a major groundnut producer under French colonialism. The stew combines African and imported ingredients.",
-    youtubeVideoId: "dMW3oTjYGfo",
+    youtubeVideoId: "LU7McMoh7pU",
     prepTime: "20 minutes",
     cookTime: "1 hour",
     servings: 6,
