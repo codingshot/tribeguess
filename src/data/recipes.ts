@@ -10926,7 +10926,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Rich, hearty soup with lentils, chickpeas, tomatoes, and lamb, traditionally served to break the fast during Ramadan.",
     culturalSignificance: "Harira is Morocco's most important soup, essential during Ramadan. It's served at sunset with dates and chebakia pastries. The soup represents hospitality and blessing.",
     historicalContext: "Harira dates back centuries in Morocco. The recipe was refined over generations, with each region adding local touches. It's believed to have Andalusian influences from Moorish Spain.",
-    youtubeVideoId: "5B_u_kFPVxk",
+    youtubeVideoId: "tVFRrxtbfXo",
     prepTime: "20 minutes",
     cookTime: "1.5 hours",
     servings: 8,
