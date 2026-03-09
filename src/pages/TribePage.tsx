@@ -816,7 +816,7 @@ const TribePage = () => {
                 </section>
               )}
               
-              {tribe.culturalTraits && (
+              {Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.length > 0 && (
                 <section>
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Cultural Traits</h2>
                   <ul className="space-y-1.5 sm:space-y-2">
@@ -1059,9 +1059,11 @@ const TribePage = () => {
                               <p className="font-medium text-foreground text-sm">{country.country}</p>
                               <p className="text-xs font-semibold text-primary">{country.population}</p>
                             </div>
+                            {country.cities && country.cities.length > 0 && (
                             <p className="text-xs text-muted-foreground">
                               📍 {country.cities.join(', ')}
                             </p>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -1069,6 +1071,7 @@ const TribePage = () => {
                   )}
                   
                   <div className="space-y-3">
+                    {tribe.diaspora.communities && tribe.diaspora.communities.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Notable Communities</h3>
                       <ul className="space-y-1">
@@ -1080,6 +1083,8 @@ const TribePage = () => {
                         ))}
                       </ul>
                     </div>
+                    )}
+                    {tribe.diaspora.associations && tribe.diaspora.associations.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Diaspora Organizations</h3>
                       <ul className="flex flex-wrap gap-2">
@@ -1090,6 +1095,7 @@ const TribePage = () => {
                         ))}
                       </ul>
                     </div>
+                    )}
                   </div>
                 </section>
               )}

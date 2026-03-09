@@ -153,10 +153,11 @@ const App = () => {
             <Sonner />
             <BrowserRouter>
               <Suspense fallback={<LazyFallback />}>
+                <PageErrorBoundary>
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/learn" element={<Learn />} />
-                  <Route path="/learn/:slug" element={<PageErrorBoundary><TribePage /></PageErrorBoundary>} />
+                  <Route path="/learn/:slug" element={<TribePage />} />
                   <Route path="/random" element={<RandomTribe />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/privacy" element={<Privacy />} />
@@ -182,6 +183,7 @@ const App = () => {
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
+                </PageErrorBoundary>
               </Suspense>
               <VideoPlayerErrorBoundary>
                 <GlobalVideoPlayer />
