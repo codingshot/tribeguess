@@ -7634,7 +7634,7 @@ const eastAfricanRecipes: Recipe[] = [
     description: "Finely minced raw beef seasoned with mitmita spice and niter kibbeh (spiced butter). Ethiopia's most celebrated raw meat dish.",
     culturalSignificance: "Kitfo is the signature dish of the Gurage people and is considered one of Ethiopia's finest foods. It's served at special occasions and in dedicated 'kitfo houses' across the country.",
     historicalContext: "The Gurage people of southwestern Ethiopia developed kitfo as their signature contribution to Ethiopian cuisine. Raw meat dishes have ancient roots in Ethiopian culture, possibly dating to times when cooking fires would reveal location to enemies.",
-    youtubeVideoId: "J0V5yB0nAi4",
+    youtubeVideoId: "CHBPmFtVqJw",
     prepTime: "30 minutes",
     cookTime: "10 minutes (for butter)",
     servings: 4,
