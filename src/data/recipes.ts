@@ -9820,7 +9820,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Kimbundu-style chicken stewed in groundnut (peanut) sauce - a variation of the classic moamba using peanuts instead of palm nuts.",
     culturalSignificance: "The Kimbundu were major groundnut cultivators. This variation of moamba showcases their agricultural heritage.",
     historicalContext: "Groundnuts arrived in Angola from Brazil via Portuguese traders. The Kimbundu quickly adopted them, creating this fusion of indigenous and New World ingredients.",
-    youtubeVideoId: "fLK6YYQn7Zs",
+    youtubeVideoId: "J2H8G-MGQJ4",
     prepTime: "20 minutes",
     cookTime: "1 hour",
     servings: 6,
