@@ -9461,7 +9461,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Angola's beloved dried fish stew with okra, sweet potato leaves, and palm oil. A celebration dish with complex flavors.",
     culturalSignificance: "Calulu is served at weddings, funerals, and family celebrations. It represents the essence of Angolan comfort food and hospitality.",
     historicalContext: "Calulu combines indigenous vegetables with dried fish traditions. The Ovimbundu adapted coastal recipes for their inland highlands, creating this iconic dish.",
-    youtubeVideoId: "wWDv2t4bU8U",
+    youtubeVideoId: "Djonn-S4OiU",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
