@@ -9013,7 +9013,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Braided dough deep-fried and soaked in cold syrup. Sticky, sweet, and addictively crispy.",
     culturalSignificance: "Koeksisters are the Afrikaner contribution to South African sweets. Sunday markets and church fundraisers are incomplete without them.",
     historicalContext: "Adapted from the Dutch 'koeksister.' The Cape Malay version (koesister) is different - spiced and coated in coconut. The Afrikaner version is braided and syrup-soaked.",
-    youtubeVideoId: "Jj8pCnAVWYg",
+    youtubeVideoId: "twkCJDzubM8",
     prepTime: "2 hours (including resting)",
     cookTime: "30 minutes",
     servings: 24,
