@@ -11587,7 +11587,7 @@ const hornAfricanRecipes: Recipe[] = [
     description: "Ethiopian steak tartare — finely minced raw beef seasoned with mitmita spice and niter kibbeh (spiced clarified butter). A beloved delicacy of the Gurage people.",
     culturalSignificance: "Kitfo is the crown jewel of Gurage cuisine and a point of immense pride. It's served at weddings, holidays, and celebrations. Refusing kitfo at a Gurage gathering is considered an insult.",
     historicalContext: "The Gurage have prepared kitfo for centuries, originally as a warrior's meal — raw meat provided quick energy without the need for fire. The dish spread to become one of Ethiopia's most celebrated foods.",
-    youtubeVideoId: "7rGKQlXbkiI",
+    youtubeVideoId: "ymKH4cNs0I4",
     prepTime: "20 minutes",
     cookTime: "5 minutes",
     servings: 4,
