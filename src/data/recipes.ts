@@ -10738,7 +10738,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Crispy fried pastry triangles filled with a runny egg, tuna, capers, and parsley. Tunisia's iconic street food.",
     culturalSignificance: "Brik is Tunisia's most famous appetizer, eaten with hands while carefully avoiding the runny yolk spilling. Traditionally served during Ramadan and at special occasions.",
     historicalContext: "Brik comes from the Turkish börek, introduced during Ottoman rule. Tunisians made it their own by adding the signature runny egg. The malsouka pastry sheets are uniquely North African, related to Moroccan warka.",
-    youtubeVideoId: "oQk_4Tf7YpU",
+    youtubeVideoId: "OV9EgaE80O8",
     prepTime: "20 minutes",
     cookTime: "10 minutes",
     servings: 4,
