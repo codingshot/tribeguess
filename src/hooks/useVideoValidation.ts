@@ -98,7 +98,16 @@ export function useMultipleVideoValidation(youtubeIds: string[]): Map<string, Vi
             valid: result.valid,
             loading: false,
             title: result.title,
+            error: !result.valid ? 'Video unavailable or removed' : undefined,
           };
+          
+          // Log broken videos in batch validation
+          if (!result.valid && !recentlyReportedErrors.has(id)) {
+            console.warn(`[VideoAudit] Broken video in batch: ${id}`);
+            recentlyReportedErrors.add(id);
+            setTimeout(() => recentlyReportedErrors.delete(id), 300000);
+          }
+          
           videoStatusCache.set(id, status);
           newStatuses.set(id, status);
         });
