@@ -8608,7 +8608,7 @@ const eastAfricanRecipes: Recipe[] = [
     description: "Traditional honey mead made by the Hamar people, served at ceremonies including the famous bull jumping ritual.",
     culturalSignificance: "Honey wine is central to Hamar celebrations. It's served during the Ukuli (bull jumping) ceremony that marks a boy's transition to manhood.",
     historicalContext: "The Hamar of the Omo Valley are cattle herders who also keep bees. Honey is highly prized for ceremonial drinks.",
-    youtubeVideoId: "9DvQbJf9LuY",
+    youtubeVideoId: "CSizduflu2o",
     prepTime: "30 minutes",
     cookTime: "Fermentation: 5-7 days",
     servings: 10,
