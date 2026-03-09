@@ -7755,7 +7755,7 @@ const eastAfricanRecipes: Recipe[] = [
     description: "Fragrant rice cooked with meat and a blend of spices including cumin, cardamom, and cinnamon. The Swahili coast's signature rice dish.",
     culturalSignificance: "Pilau is the celebration rice of the Swahili coast. No wedding, Eid, or major event is complete without it. The skill of making perfect pilau is a mark of culinary mastery.",
     historicalContext: "Pilau came to East Africa via Indian Ocean trade routes, blending Persian, Indian, and Arab influences with African ingredients. It represents centuries of cultural exchange on the Swahili coast.",
-    youtubeVideoId: "I3XTDXy1BfI",
+    youtubeVideoId: "pm4TgsV7PfQ",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
