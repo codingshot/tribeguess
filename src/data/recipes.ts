@@ -9094,7 +9094,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Namibia's famous street food - beef grilled on open drums and chopped into bite-size pieces. Served with spicy relish.",
     culturalSignificance: "Kapana is Namibia's great equalizer - everyone from workers to executives crowds around kapana grills in townships. It's the heartbeat of Namibian street culture.",
     historicalContext: "Kapana emerged in Namibia's informal settlements as an affordable, social way to eat meat. The tradition spread nationwide and is now a beloved national institution with dedicated kapana markets.",
-    youtubeVideoId: "YXk0RDzuv_c",
+    youtubeVideoId: "jWkDJk50Nh8",
     prepTime: "10 minutes",
     cookTime: "15 minutes",
     servings: 6,
