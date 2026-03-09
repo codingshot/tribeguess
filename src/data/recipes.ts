@@ -541,7 +541,7 @@ export const recipes: Recipe[] = [
     category: "staple",
     description: "Soft rice pudding formed into balls, the staple accompaniment to Hausa soups like miyan kuka and miyan taushe.",
     culturalSignificance: "Tuwo is the Hausa equivalent of ugali or fufu - the starchy base that accompanies every meal. Rice is the preferred grain in Northern Nigeria.",
-    youtubeVideoId: "IxrFPQ7xLbE",
+    youtubeVideoId: "BKUgOBK_ii8",
     prepTime: "5 minutes",
     cookTime: "30 minutes",
     servings: 4,
