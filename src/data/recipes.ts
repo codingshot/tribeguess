@@ -11526,7 +11526,7 @@ const hornAfricanRecipes: Recipe[] = [
     description: "A quick Somali stir-fry of cubed meat with vegetables and spices, often served for breakfast or lunch with canjeero (flatbread).",
     culturalSignificance: "Suqaar is everyday home cooking in Somalia — quick, nutritious, and endlessly adaptable. It's the dish that Somali mothers teach daughters first, and the comfort food of the Somali diaspora worldwide.",
     historicalContext: "The dish reflects Somalia's position on ancient trade routes — cumin from Arabia, coriander from India, and turmeric from Southeast Asia all feature. The name comes from the Arabic 'saqar' meaning small pieces.",
-    youtubeVideoId: "QT1GdH5F7Wc",
+    youtubeVideoId: "SPEO76vgQp8",
     prepTime: "15 minutes",
     cookTime: "20 minutes",
     servings: 4,
