@@ -40,7 +40,19 @@ export function useVideoValidation(youtubeId: string): VideoStatus {
         valid: result.valid,
         loading: false,
         title: result.title,
+        error: !result.valid ? 'Video unavailable or removed' : undefined,
       };
+      
+      // Log broken videos for maintainers (console only, not intrusive)
+      if (!result.valid && !recentlyReportedErrors.has(youtubeId)) {
+        console.warn(`[VideoAudit] Broken video detected: ${youtubeId}`, {
+          youtubeUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
+          suggestion: 'Consider replacing this video ID in the data files'
+        });
+        recentlyReportedErrors.add(youtubeId);
+        // Clear from recent after 5 minutes to allow re-checking
+        setTimeout(() => recentlyReportedErrors.delete(youtubeId), 300000);
+      }
       
       videoStatusCache.set(youtubeId, newStatus);
       setStatus(newStatus);
