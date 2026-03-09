@@ -8756,7 +8756,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "South Africa's national dish - spiced minced meat with an egg custard topping. A Cape Malay masterpiece combining Indonesian, Dutch, and African influences.",
     culturalSignificance: "Bobotie represents South Africa's multicultural heritage. It's comfort food served at family gatherings and has become a symbol of the 'rainbow nation' cuisine.",
     historicalContext: "Brought to the Cape by Indonesian slaves and political exiles in the 17th century, bobotie evolved by combining Malay spices with Dutch techniques. The name may come from 'botok' (Indonesian steamed meat dish).",
-    youtubeVideoId: "Sz9RY_MoH2c",
+    youtubeVideoId: "nEMLgtRnwsg",
     prepTime: "20 minutes",
     cookTime: "45 minutes",
     servings: 6,
