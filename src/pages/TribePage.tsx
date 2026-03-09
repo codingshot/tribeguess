@@ -1059,9 +1059,11 @@ const TribePage = () => {
                               <p className="font-medium text-foreground text-sm">{country.country}</p>
                               <p className="text-xs font-semibold text-primary">{country.population}</p>
                             </div>
+                            {country.cities && country.cities.length > 0 && (
                             <p className="text-xs text-muted-foreground">
                               📍 {country.cities.join(', ')}
                             </p>
+                            )}
                           </div>
                         ))}
                       </div>
