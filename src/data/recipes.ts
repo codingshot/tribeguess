@@ -11110,7 +11110,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Hand-made thin noodles served with chicken in a fragrant cinnamon and saffron sauce. Algeria's traditional wedding dish.",
     culturalSignificance: "Rechta is Algeria's most prestigious dish, essential at weddings and major celebrations. Making the thin noodles by hand is an art that takes years to master.",
     historicalContext: "Rechta has Ottoman origins but became uniquely Algerian. The dish represents prosperity and celebration. Traditional families still make the noodles by hand for important occasions.",
-    youtubeVideoId: "G8fgGdLXv9E",
+    youtubeVideoId: "y9Yhn_BdZZM",
     prepTime: "2 hours",
     cookTime: "1.5 hours",
     servings: 10,
