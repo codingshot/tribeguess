@@ -11466,7 +11466,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "A rich, creamy peanut butter stew with meat and vegetables - the beloved national dish of Mali and cornerstone of Bambara cuisine.",
     culturalSignificance: "Tigadèguèna means 'peanut butter sauce' in Bambara. It's the dish that every Malian mother teaches her daughter to cook. Sharing this stew from a communal bowl is an act of social bonding.",
     historicalContext: "Peanuts were introduced to West Africa from South America in the 16th century via Portuguese traders. The Bambara people ingeniously incorporated them into their existing cuisine, creating what became Mali's most iconic dish.",
-    youtubeVideoId: "6kL0fVk3JXw",
+    youtubeVideoId: "UOorPVtWPQ8",
     prepTime: "20 minutes",
     cookTime: "1 hour",
     servings: 6,
