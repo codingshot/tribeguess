@@ -10827,7 +10827,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "The Berber masterpiece - steamed semolina grains served with seven vegetables and lamb, representing abundance and blessing.",
     culturalSignificance: "Couscous is sacred to Berber culture. The seven vegetables represent completeness and blessing. Friday couscous is a family tradition across North Africa, and the dish was inscribed on UNESCO's Intangible Cultural Heritage list.",
     historicalContext: "Couscous originated with the Berbers of North Africa over 1,000 years ago. The hand-rolling technique and steaming process are uniquely Berber inventions. The dish spread across the Maghreb and to Europe through trade and migration.",
-    youtubeVideoId: "DPTp8WkPu3M",
+    youtubeVideoId: "GfNRbVquluA",
     prepTime: "45 minutes",
     cookTime: "2.5 hours",
     servings: 10,
