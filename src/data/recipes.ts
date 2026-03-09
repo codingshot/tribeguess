@@ -1839,7 +1839,7 @@ export const recipes: Recipe[] = [
     description: "Traditional Himba clarified butter used both as food and mixed with ochre for the famous red skin paste.",
     culturalSignificance: "Butter is sacred to the Himba, processed near the holy fire. Otjize (the red paste) protects skin from harsh sun and insects while symbolizing the earth's red blood.",
     historicalContext: "The Himba have maintained their pastoral lifestyle in Namibia's Kunene region for centuries. Butter-making near the sacred fire connects daily food production to spiritual practice, a tradition that has survived despite modernization.",
-    youtubeVideoId: "7nS1JYQQ-BU",
+    youtubeVideoId: "kVcdrL5bwSc",
     prepTime: "20 minutes",
     cookTime: "1 hour",
     servings: 8,
