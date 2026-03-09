@@ -77,6 +77,7 @@ export async function validateYoutubeVideo(videoId: string): Promise<{
   title?: string;
   duration?: string;
   durationSeconds?: number;
+  errorType?: 'removed' | 'private' | 'restricted' | 'network' | 'unknown';
 }> {
   try {
     const controller = new AbortController();
@@ -89,14 +90,29 @@ export async function validateYoutubeVideo(videoId: string): Promise<{
     clearTimeout(timeout);
     
     if (!response.ok) {
-      return { valid: true }; // Fail open on HTTP errors
+      // Network or service error - fail open to avoid false positives
+      if (response.status >= 500) {
+        return { valid: true, errorType: 'network' };
+      }
+      return { valid: true }; // Fail open on client errors too
     }
     
     const data = await response.json();
     
     if (data.error) {
-      console.warn(`[VideoAudit] Invalid video ${videoId}: ${data.error}`);
-      return { valid: false };
+      const errorMsg = data.error.toLowerCase();
+      let errorType: 'removed' | 'private' | 'restricted' | 'unknown' = 'unknown';
+      
+      if (errorMsg.includes('not found') || errorMsg.includes('removed')) {
+        errorType = 'removed';
+      } else if (errorMsg.includes('private')) {
+        errorType = 'private';
+      } else if (errorMsg.includes('unavailable') || errorMsg.includes('restricted')) {
+        errorType = 'restricted';
+      }
+      
+      console.warn(`[VideoAudit] Invalid video ${videoId}: ${data.error} (type: ${errorType})`);
+      return { valid: false, errorType };
     }
     
     return { 
@@ -105,7 +121,11 @@ export async function validateYoutubeVideo(videoId: string): Promise<{
     };
   } catch (err) {
     // If fetch fails (timeout, network error), assume valid (fail open)
-    return { valid: true };
+    // This prevents temporary network issues from marking videos as broken
+    if (err instanceof Error && err.name === 'AbortError') {
+      console.warn(`[VideoAudit] Validation timeout for ${videoId} - assuming valid`);
+    }
+    return { valid: true, errorType: 'network' };
   }
 }
 

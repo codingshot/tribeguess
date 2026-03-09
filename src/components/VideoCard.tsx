@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, ListPlus, ExternalLink, AlertCircle, Loader2 } from 'lucide-react';
+import { Play, ListPlus, ExternalLink, AlertCircle, Loader2, Flag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,6 +8,7 @@ import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 import { VideoItem, getYoutubeThumbnail } from '@/lib/videoAggregation';
 import { useVideoValidation } from '@/hooks/useVideoValidation';
 import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 interface VideoCardProps {
   video: VideoItem;
@@ -23,17 +24,36 @@ const categoryColors: Record<string, string> = {
 
 export function VideoCard({ video, compact = false, showOrigin = true }: VideoCardProps) {
   const { playNow, addToQueue } = useGlobalVideoPlayer();
-  const { valid, loading } = useVideoValidation(video.youtubeId);
+  const { valid, loading, error } = useVideoValidation(video.youtubeId);
   
   const handlePlay = () => {
-    if (!valid && !loading) return;
+    if (!valid && !loading) {
+      toast.error('Video Unavailable', {
+        description: `This video cannot be played. ${error || 'It may have been removed or set to private.'}`,
+      });
+      return;
+    }
     playNow(video);
   };
   
   const handleAddToQueue = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!valid && !loading) return;
+    if (!valid && !loading) {
+      toast.error('Video Unavailable', {
+        description: 'Cannot add unavailable video to queue',
+      });
+      return;
+    }
     addToQueue(video, { dedupeByYoutubeId: true });
+  };
+
+  const handleReportIssue = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const issueUrl = `https://github.com/TribeGuess/tribeguess/issues/new?template=data_video_issue.yml&title=[Video+Issue]:+${encodeURIComponent(video.title || 'Untitled')}&video_id=${video.youtubeId}&location=${encodeURIComponent(video.originLabel || '')}&url=${encodeURIComponent(window.location.origin + (video.originUrl || ''))}`;
+    window.open(issueUrl, '_blank');
+    toast.success('Opening issue form', {
+      description: 'Thank you for helping improve our content!',
+    });
   };
   
   if (compact) {
@@ -104,9 +124,18 @@ export function VideoCard({ video, compact = false, showOrigin = true }: VideoCa
             <Loader2 className="h-6 w-6 text-white animate-spin" />
           </div>
         ) : !valid ? (
-          <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-1">
+          <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2 p-4">
             <AlertCircle className="h-8 w-8 text-red-400" />
-            <span className="text-xs text-red-300">Unavailable</span>
+            <span className="text-xs text-red-300 text-center font-medium">Video Unavailable</span>
+            <Button 
+              size="sm" 
+              variant="secondary" 
+              className="h-7 text-xs mt-1"
+              onClick={handleReportIssue}
+            >
+              <Flag className="h-3 w-3 mr-1" />
+              Report Issue
+            </Button>
           </div>
         ) : (
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">

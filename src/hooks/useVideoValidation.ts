@@ -5,9 +5,11 @@ interface VideoStatus {
   valid: boolean;
   loading: boolean;
   title?: string;
+  error?: string;
 }
 
 const videoStatusCache = new Map<string, VideoStatus>();
+const recentlyReportedErrors = new Set<string>();
 
 export function useVideoValidation(youtubeId: string): VideoStatus {
   const [status, setStatus] = useState<VideoStatus>(() => {
@@ -38,7 +40,19 @@ export function useVideoValidation(youtubeId: string): VideoStatus {
         valid: result.valid,
         loading: false,
         title: result.title,
+        error: !result.valid ? 'Video unavailable or removed' : undefined,
       };
+      
+      // Log broken videos for maintainers (console only, not intrusive)
+      if (!result.valid && !recentlyReportedErrors.has(youtubeId)) {
+        console.warn(`[VideoAudit] Broken video detected: ${youtubeId}`, {
+          youtubeUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
+          suggestion: 'Consider replacing this video ID in the data files'
+        });
+        recentlyReportedErrors.add(youtubeId);
+        // Clear from recent after 5 minutes to allow re-checking
+        setTimeout(() => recentlyReportedErrors.delete(youtubeId), 300000);
+      }
       
       videoStatusCache.set(youtubeId, newStatus);
       setStatus(newStatus);
@@ -84,7 +98,16 @@ export function useMultipleVideoValidation(youtubeIds: string[]): Map<string, Vi
             valid: result.valid,
             loading: false,
             title: result.title,
+            error: !result.valid ? 'Video unavailable or removed' : undefined,
           };
+          
+          // Log broken videos in batch validation
+          if (!result.valid && !recentlyReportedErrors.has(id)) {
+            console.warn(`[VideoAudit] Broken video in batch: ${id}`);
+            recentlyReportedErrors.add(id);
+            setTimeout(() => recentlyReportedErrors.delete(id), 300000);
+          }
+          
           videoStatusCache.set(id, status);
           newStatuses.set(id, status);
         });
@@ -105,4 +128,24 @@ export function getInvalidVideoIds(): string[] {
     }
   });
   return invalid;
+}
+
+// Export broken video report for debugging/maintenance
+export function generateBrokenVideoReport(): { youtubeId: string; error: string }[] {
+  const report: { youtubeId: string; error: string }[] = [];
+  videoStatusCache.forEach((status, id) => {
+    if (!status.valid && !status.loading) {
+      report.push({
+        youtubeId: id,
+        error: status.error || 'Unknown error',
+      });
+    }
+  });
+  return report;
+}
+
+// Clear cache (useful for testing)
+export function clearVideoValidationCache(): void {
+  videoStatusCache.clear();
+  recentlyReportedErrors.clear();
 }
