@@ -10639,7 +10639,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Slow-cooked lamb stew with dried fruits, nuts, and aromatic spices, cooked in the iconic cone-shaped tagine pot.",
     culturalSignificance: "Tagine is central to Moroccan hospitality. The clay pot's design allows steam to condense and return to the dish, creating incredibly tender meat. Served at celebrations and family gatherings.",
     historicalContext: "The tagine cooking method dates back to the 8th century when the Berbers of Morocco developed the distinctive cone-shaped pot. The dish evolved with Arab, Andalusian, and Ottoman influences, incorporating spices from the trans-Saharan trade routes.",
-    youtubeVideoId: "y9k6uSd4LKE",
+    youtubeVideoId: "JgFBLytKTDs",
     prepTime: "30 minutes",
     cookTime: "2 hours",
     servings: 6,
