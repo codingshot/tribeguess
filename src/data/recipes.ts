@@ -8972,7 +8972,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Air-dried, cured meat - South Africa's answer to jerky, but softer and more flavorful. A national obsession.",
     culturalSignificance: "Biltong is South Africa's favorite snack. Found everywhere from supermarkets to sports stadiums. Making biltong at home is a cherished tradition.",
     historicalContext: "Dutch settlers (Voortrekkers) needed to preserve meat for their Great Trek inland. They adapted indigenous curing techniques with vinegar and spices. The tradition continues.",
-    youtubeVideoId: "oaYjgxBD4fI",
+    youtubeVideoId: "_JBA8p4QG7k",
     prepTime: "30 minutes",
     cookTime: "5-7 days (drying)",
     servings: 20,
