@@ -11154,7 +11154,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Diamond-shaped semolina cookies filled with date paste, fried, and dipped in honey syrup. Tunisia's beloved Eid sweet.",
     culturalSignificance: "Makroudh is essential during Eid celebrations and weddings. Kairouan, Tunisia's holy city, is famous for making the best makroudh in the country.",
     historicalContext: "Makroudh predates Arab arrival in North Africa - it's believed to be of Berber origin. The combination of semolina, dates, and honey reflects ancient Mediterranean traditions.",
-    youtubeVideoId: "GNpFqSN3GV8",
+    youtubeVideoId: "hRLlWwciaLI",
     prepTime: "1 hour",
     cookTime: "30 minutes",
     servings: 30,
