@@ -61,6 +61,7 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
         {tribe.description}
       </p>
       
+      {tribe.stereotypes && tribe.stereotypes.length > 0 && (
       <ul className="flex flex-wrap gap-1 sm:gap-1.5" aria-label="Top stereotypes">
         {tribe.stereotypes.slice(0, 2).map((stereotype, i) => (
           <li key={i} className="badge-tribe text-xs">
@@ -73,6 +74,7 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
           </li>
         )}
       </ul>
+      )}
     </Link>
   );
 });
