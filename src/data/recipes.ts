@@ -9059,7 +9059,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Botswana's national dish - beef slow-cooked until tender, then pounded and shredded. Simple yet deeply satisfying.",
     culturalSignificance: "Seswaa is essential at all Botswana celebrations - weddings, funerals, and national holidays. It represents community and tradition, cooked in large pots over open fires.",
     historicalContext: "The Tswana people developed seswaa as a way to make tough beef tender. Cattle are central to Tswana culture and wealth. The dish honors this relationship with beef at its most basic and delicious.",
-    youtubeVideoId: "0qJk1mG0O4c",
+    youtubeVideoId: "EsYsag_zJvw",
     prepTime: "15 minutes",
     cookTime: "4 hours",
     servings: 10,
