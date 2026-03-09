@@ -11239,7 +11239,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Layered rice dish with fried eggplant, lamb, and tomato sauce, flipped upside-down for presentation. Algeria's festive one-pot meal.",
     culturalSignificance: "Maktouba (meaning 'upside-down') is a celebratory dish for holidays and family gatherings. The dramatic flip reveals beautiful layers.",
     historicalContext: "Maktouba has Levantine origins (maqluba) but became popular in Algeria during Ottoman times. Each North African country adapted it to local tastes.",
-    youtubeVideoId: "h_8KzT2qQ3w",
+    youtubeVideoId: "t6h_lGk7JAg",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
