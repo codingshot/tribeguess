@@ -10504,7 +10504,7 @@ const westAfricanRecipes: Recipe[] = [
     description: "Ripe plantain cubes marinated in ginger and spices, then deep-fried until caramelized and crispy. Ghana's favorite street snack.",
     culturalSignificance: "Kelewele is Ghana's beloved street food, found at every corner. It's the perfect accompaniment to roasted peanuts and served at parties and celebrations.",
     historicalContext: "Plantains came to Africa from Southeast Asia centuries ago. Ghanaians developed kelewele as a way to add excitement to the fruit. The ginger-spice blend is distinctively Ghanaian.",
-    youtubeVideoId: "6hVmR2hVt3U",
+    youtubeVideoId: "KiswFHPyMrg",
     prepTime: "20 minutes",
     cookTime: "15 minutes",
     servings: 4,
