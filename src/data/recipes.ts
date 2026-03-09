@@ -10782,7 +10782,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Traditional Algerian dish of hand-torn flatbread soaked in spiced tomato and lamb stew. A Berber culinary masterpiece from the Aurès Mountains.",
     culturalSignificance: "Chakhchoukha is the pride of the Chaoui Berbers of eastern Algeria. It's served at weddings, Eid celebrations, and to honor guests. Making the rougag (flatbread) is an art passed from mother to daughter.",
     historicalContext: "This dish originated with the Chaoui Berbers of the Aurès Mountains, predating Arab arrival in North Africa. The combination of torn bread with meat stew reflects nomadic cooking traditions where bread was the universal staple.",
-    youtubeVideoId: "3-QkqCbAMlU",
+    youtubeVideoId: "u1XeJAv_Okc",
     prepTime: "1 hour",
     cookTime: "2 hours",
     servings: 8,
