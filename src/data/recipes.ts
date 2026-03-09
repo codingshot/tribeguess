@@ -11196,7 +11196,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Flaky, buttery square pancakes with crispy layers. Morocco's beloved breakfast bread, served with honey and butter.",
     culturalSignificance: "Msemen is eaten at breakfast throughout Morocco. The folding technique creates dozens of flaky layers. Street vendors sell them hot from the griddle.",
     historicalContext: "Msemen is related to Indian paratha and reflects ancient connections along trade routes. The technique of folding to create layers spread across the Arab world from South Asia.",
-    youtubeVideoId: "rY8qzQk4VGg",
+    youtubeVideoId: "aRk3wYgkdBg",
     prepTime: "1 hour",
     cookTime: "30 minutes",
     servings: 10,
