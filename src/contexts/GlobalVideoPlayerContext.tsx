@@ -364,19 +364,17 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
       const next = queue[0];
       setQueue(prev => prev.slice(1));
       playNow(next);
-    } else if (isAutoplayNext) {
-      // Find unplayed fallback
+    } else {
+      // Queue empty — pick a random unplayed video from the full gallery
       const fallback = findUnplayedFallbackVideo(playedVideos);
       if (fallback) {
         playNow(fallback);
       } else {
         setIsPlaying(false);
-        toast.info('Queue empty');
+        toast.info('No more videos to play');
       }
-    } else {
-      setIsPlaying(false);
     }
-  }, [queue, isAutoplayNext, playedVideos, playNow]);
+  }, [queue, playedVideos, playNow]);
   
   const previousVideo = useCallback(() => {
     // Seek to start
