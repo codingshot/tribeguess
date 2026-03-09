@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Filter, Play, Grid, List } from 'lucide-react';
+import { Search, Filter, Play, Grid, List, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { VideoCard } from '@/components/VideoCard';
@@ -12,12 +12,14 @@ import { Badge } from '@/components/ui/badge';
 import { getAllVideos, getVideoTribes, searchVideos } from '@/lib/videoAggregation';
 import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 
+const PAGE_SIZE = 30;
+
 export default function VideoGallery() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('q') || '');
   const [category, setCategory] = useState(searchParams.get('category') || 'all');
   const [tribeFilter, setTribeFilter] = useState(searchParams.get('tribe') || 'all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [page, setPage] = useState(1);
   
   // Sync URL params
   useEffect(() => {
@@ -25,8 +27,14 @@ export default function VideoGallery() {
     if (query) params.set('q', query);
     if (category !== 'all') params.set('category', category);
     if (tribeFilter !== 'all') params.set('tribe', tribeFilter);
+    if (page > 1) params.set('page', String(page));
     setSearchParams(params, { replace: true });
-  }, [query, category, tribeFilter, setSearchParams]);
+  }, [query, category, tribeFilter, page, setSearchParams]);
+
+  // Reset page when filters change
+  useEffect(() => {
+    setPage(1);
+  }, [query, category, tribeFilter]);
   
   const { addManyToQueue } = useGlobalVideoPlayer();
   const tribes = useMemo(() => getVideoTribes(), []);
@@ -38,6 +46,12 @@ export default function VideoGallery() {
       tribeIds: tribeFilter !== 'all' ? [tribeFilter] : undefined,
     });
   }, [query, category, tribeFilter]);
+
+  const totalPages = Math.ceil(filteredVideos.length / PAGE_SIZE);
+  const paginatedVideos = useMemo(() => {
+    const start = (page - 1) * PAGE_SIZE;
+    return filteredVideos.slice(start, start + PAGE_SIZE);
+  }, [filteredVideos, page]);
   
   const stats = useMemo(() => ({
     total: allVideos.length,
@@ -45,6 +59,13 @@ export default function VideoGallery() {
     recipes: allVideos.filter(v => v.category === 'recipe').length,
     languages: allVideos.filter(v => v.category === 'language').length,
   }), [allVideos]);
+
+  // Read initial page from URL
+  useEffect(() => {
+    const urlPage = parseInt(searchParams.get('page') || '1', 10);
+    if (urlPage > 0 && urlPage !== page) setPage(urlPage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -134,10 +155,16 @@ export default function VideoGallery() {
               Add Top 10
             </Button>
           </div>
+
+          {/* Results count */}
+          <div className="flex items-center justify-between mb-4 text-sm text-muted-foreground">
+            <span>Showing {((page - 1) * PAGE_SIZE) + 1}–{Math.min(page * PAGE_SIZE, filteredVideos.length)} of {filteredVideos.length} videos</span>
+            {totalPages > 1 && <span>Page {page} of {totalPages}</span>}
+          </div>
           
           {/* Results */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
-            {filteredVideos.map(video => (
+            {paginatedVideos.map(video => (
               <VideoCard key={video.id} video={video} />
             ))}
           </div>
@@ -147,6 +174,53 @@ export default function VideoGallery() {
               <p>No videos found</p>
               <Button variant="link" onClick={() => { setQuery(''); setCategory('all'); setTribeFilter('all'); }}>
                 Clear filters
+              </Button>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-8">
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={page <= 1}
+                onClick={() => { setPage(p => p - 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              >
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                Previous
+              </Button>
+              {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => {
+                let pageNum: number;
+                if (totalPages <= 7) {
+                  pageNum = i + 1;
+                } else if (page <= 4) {
+                  pageNum = i + 1;
+                } else if (page >= totalPages - 3) {
+                  pageNum = totalPages - 6 + i;
+                } else {
+                  pageNum = page - 3 + i;
+                }
+                return (
+                  <Button
+                    key={pageNum}
+                    variant={pageNum === page ? 'default' : 'outline'}
+                    size="sm"
+                    className="w-9"
+                    onClick={() => { setPage(pageNum); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  >
+                    {pageNum}
+                  </Button>
+                );
+              })}
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={page >= totalPages}
+                onClick={() => { setPage(p => p + 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              >
+                Next
+                <ChevronRight className="h-4 w-4 ml-1" />
               </Button>
             </div>
           )}
