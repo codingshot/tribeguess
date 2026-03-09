@@ -55,6 +55,8 @@ class VideoPlayerErrorBoundary extends React.Component<
     }
     return this.props.children;
   }
+}
+
 // Error boundary for page-level crashes (prevents white screens)
 class PageErrorBoundary extends React.Component<
   { children: React.ReactNode },
