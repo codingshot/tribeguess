@@ -8243,7 +8243,7 @@ const eastAfricanRecipes: Recipe[] = [
     description: "Fragrant rice cooked in coconut milk, the signature dish of Kenya's nine coastal tribes known collectively as Mijikenda.",
     culturalSignificance: "Coconut rice is everyday food along the Kenyan coast. The Mijikenda's access to coconut palms made this a staple.",
     historicalContext: "The Mijikenda ('Nine Tribes') have lived on Kenya's coast for centuries, developing a cuisine rich in coconut and seafood.",
-    youtubeVideoId: "I3XTDXy1BfI",
+    youtubeVideoId: "TBW9Z2O8_EI",
     prepTime: "10 minutes",
     cookTime: "25 minutes",
     servings: 6,
