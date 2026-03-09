@@ -10469,7 +10469,7 @@ const westAfricanRecipes: Recipe[] = [
     description: "Smooth, stretchy dough made from pounded cassava and plantain. Ghana's beloved staple, served with light soup or palm nut soup.",
     culturalSignificance: "Fufu is the soul of Ghanaian cuisine. Eating fufu is an art - you pinch, dip in soup, and swallow without chewing. Sunday fufu is a family tradition.",
     historicalContext: "Fufu likely developed when cassava arrived from the Americas in the 16th century. Ghanaians perfected the cassava-plantain combination. The pounding creates the distinctive stretch.",
-    youtubeVideoId: "uRbLLx5eoHU",
+    youtubeVideoId: "xYjUo2qqAMs",
     prepTime: "20 minutes",
     cookTime: "45 minutes",
     servings: 6,
