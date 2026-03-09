@@ -10880,7 +10880,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Eggs poached in a spiced tomato and pepper sauce with cumin, paprika, and cayenne. A beloved breakfast across North Africa and the Middle East.",
     culturalSignificance: "Shakshuka originated in Tunisia and spread throughout the Maghreb and Levant. It's a communal dish, served in the pan with bread for dipping. Every family has their own recipe.",
     historicalContext: "The name comes from the Berber word for 'mixture.' Ottoman influence spread the dish across the Mediterranean. Jewish immigrants brought it to Israel where it became a national dish.",
-    youtubeVideoId: "mnWY6ONR_Cg",
+    youtubeVideoId: "pf3If_Qfyd4",
     prepTime: "10 minutes",
     cookTime: "25 minutes",
     servings: 4,
