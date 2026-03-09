@@ -7925,7 +7925,7 @@ const eastAfricanRecipes: Recipe[] = [
     description: "Ful beans scrambled with eggs, tomatoes, and spices. The heartiest Eritrean breakfast combining two morning staples.",
     culturalSignificance: "Shahan ful is the 'complete breakfast' in Eritrea, combining protein from beans and eggs. Popular in Asmara's cafes, it represents the Italian influence on Eritrean urban cuisine.",
     historicalContext: "During Italian colonization, Eritrean cooks adapted local ful with European egg preparations. The result is uniquely Eritrean - a fusion that predates modern fusion cuisine by a century.",
-    youtubeVideoId: "2oRYO3YzL0k",
+    youtubeVideoId: "k8ZnJntmaM8",
     prepTime: "10 minutes",
     cookTime: "15 minutes",
     servings: 4,
