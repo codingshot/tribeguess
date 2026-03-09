@@ -8843,7 +8843,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Spicy vegetable relish originating from township cooking. Essential braai and pap accompaniment.",
     culturalSignificance: "Chakalaka emerged from gold mine hostels and townships. It's now beloved nationwide as the perfect spicy side for pap and braai.",
     historicalContext: "Created by mine workers who combined available vegetables with spices. Each family and region has its own recipe. The name possibly comes from a Zulu or Tsonga word.",
-    youtubeVideoId: "Tq-KV7s0VvA",
+    youtubeVideoId: "U4driexsnt4",
     prepTime: "15 minutes",
     cookTime: "25 minutes",
     servings: 8,
