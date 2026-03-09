@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, ListPlus, ExternalLink, AlertCircle, Loader2 } from 'lucide-react';
+import { Play, ListPlus, ExternalLink, AlertCircle, Loader2, Flag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,6 +8,7 @@ import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 import { VideoItem, getYoutubeThumbnail } from '@/lib/videoAggregation';
 import { useVideoValidation } from '@/hooks/useVideoValidation';
 import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 interface VideoCardProps {
   video: VideoItem;
