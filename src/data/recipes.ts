@@ -11643,7 +11643,7 @@ const hornAfricanRecipes: Recipe[] = [
     description: "Eritrean spicy beef stew made with berbere spice, tomatoes, and onions. The national comfort food of Eritrea.",
     culturalSignificance: "Zigni is to Eritrea what injera is to Ethiopia — inseparable from daily life. Every Eritrean family has their own recipe passed down through generations. It's the centerpiece of every celebration.",
     historicalContext: "Eritrean cuisine developed distinctly from Ethiopian during Italian colonial influence (1890-1941), incorporating tomato paste and different spice ratios. Zigni reflects this unique culinary identity.",
-    youtubeVideoId: "nP0t8f0LGDI",
+    youtubeVideoId: "XwbQZCLroSA",
     prepTime: "20 minutes",
     cookTime: "90 minutes",
     servings: 6,
