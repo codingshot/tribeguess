@@ -10431,7 +10431,7 @@ const westAfricanRecipes: Recipe[] = [
     description: "Thinly sliced beef or chicken coated in spicy peanut spice (yaji) and grilled over charcoal. Nigeria's beloved street food.",
     culturalSignificance: "Suya is Nigeria's national street food, originally from the Hausa people. Suya spots come alive at night across Nigeria. It transcends ethnic boundaries.",
     historicalContext: "Suya originated with Hausa cattle herders in Northern Nigeria. The spice blend (yaji) was developed to preserve and flavor meat. Today it's found across West Africa and beyond.",
-    youtubeVideoId: "6nT0bWmLdkI",
+    youtubeVideoId: "6xRZqFDs2N8",
     prepTime: "30 minutes (plus marinating)",
     cookTime: "15 minutes",
     servings: 8,
