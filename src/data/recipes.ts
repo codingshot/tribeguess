@@ -10691,7 +10691,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Egypt's national dish - layers of rice, lentils, macaroni, and chickpeas topped with spicy tomato sauce and crispy fried onions.",
     culturalSignificance: "Koshari is Egypt's beloved street food, found in dedicated koshari shops throughout Cairo. It's affordable, filling, and represents Egyptian ingenuity in creating a complete protein from humble ingredients.",
     historicalContext: "Koshari emerged in 19th century Cairo, combining Indian rice dishes brought by British soldiers (khichdi), Italian pasta from Mediterranean trade, and local Egyptian ingredients. It became the poor man's feast and national comfort food.",
-    youtubeVideoId: "qE9TmaNJQog",
+    youtubeVideoId: "y0d2ZMZBW4Y",
     prepTime: "30 minutes",
     cookTime: "1 hour",
     servings: 8,
