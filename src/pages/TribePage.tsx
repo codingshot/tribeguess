@@ -1071,6 +1071,7 @@ const TribePage = () => {
                   )}
                   
                   <div className="space-y-3">
+                    {tribe.diaspora.communities && tribe.diaspora.communities.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Notable Communities</h3>
                       <ul className="space-y-1">
@@ -1082,6 +1083,8 @@ const TribePage = () => {
                         ))}
                       </ul>
                     </div>
+                    )}
+                    {tribe.diaspora.associations && tribe.diaspora.associations.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Diaspora Organizations</h3>
                       <ul className="flex flex-wrap gap-2">
@@ -1092,6 +1095,7 @@ const TribePage = () => {
                         ))}
                       </ul>
                     </div>
+                    )}
                   </div>
                 </section>
               )}
