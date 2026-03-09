@@ -11063,7 +11063,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Elaborate layered pastry with spiced pigeon (or chicken), almonds, eggs, and cinnamon, wrapped in paper-thin warqa and dusted with sugar. Morocco's most prestigious dish.",
     culturalSignificance: "Bastilla is the crown jewel of Moroccan cuisine, served only at the most important celebrations - weddings, births, and royal feasts. Making it is an art passed through generations.",
     historicalContext: "Bastilla originated in Moorish Andalusia and came to Morocco with the expulsion of Muslims from Spain in 1492. The sweet-savory combination reflects the sophisticated Andalusian court cuisine.",
-    youtubeVideoId: "P6sE8r8jfDA",
+    youtubeVideoId: "pM0Cd_T-sjk",
     prepTime: "1.5 hours",
     cookTime: "1 hour",
     servings: 10,
