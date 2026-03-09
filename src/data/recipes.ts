@@ -10397,7 +10397,7 @@ const westAfricanRecipes: Recipe[] = [
     description: "Smooth, stretchy dough made from boiled yams pounded to perfection. The most prestigious Nigerian staple, served with rich soups.",
     culturalSignificance: "Pounded yam is considered the 'king' of Nigerian swallows. Serving it signals celebration and respect for guests. No proper Yoruba ceremony is complete without it.",
     historicalContext: "Yams have been cultivated in West Africa for over 10,000 years. Pounding yams was traditionally women's work - the rhythmic sound of pestles was the heartbeat of village life. The yam is so important that festivals (New Yam Festival) celebrate its harvest.",
-    youtubeVideoId: "Z4nqLzj6zso",
+    youtubeVideoId: "GNvb7jLbEME",
     prepTime: "20 minutes",
     cookTime: "40 minutes",
     servings: 6,
