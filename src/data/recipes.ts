@@ -9246,7 +9246,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "Deep-fried bread dough - crispy outside, fluffy inside. Filled with mince or spread with jam.",
     culturalSignificance: "Vetkoek is beloved street food and home comfort. Every South African knows the joy of a hot vetkoek. Markets and food stalls across the country serve them.",
     historicalContext: "Dutch settlers brought fried bread traditions. The Afrikaans name means 'fat cake.' Similar to American doughnuts but typically savory. Now embraced by all South Africans.",
-    youtubeVideoId: "LRO_YiU8h9A",
+    youtubeVideoId: "VzKPc4xcV2Q",
     prepTime: "2 hours (including rising)",
     cookTime: "20 minutes",
     servings: 12,
