@@ -8885,7 +8885,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "A hollowed-out bread loaf filled with curry. Durban's famous street food with Indian origins.",
     culturalSignificance: "Invented by Durban's Indian community, bunny chow is now loved by all South Africans. It's portable, filling, and perfectly combines Indian curry with bread.",
     historicalContext: "Created in Durban in the 1940s, possibly to serve curry to workers who couldn't use plates. 'Bunny' may come from 'bania' (Indian merchant caste). It became iconic street food.",
-    youtubeVideoId: "U8E8Y8XPVAU",
+    youtubeVideoId: "WoDj2_kEnaI",
     prepTime: "30 minutes",
     cookTime: "1.5 hours",
     servings: 4,
