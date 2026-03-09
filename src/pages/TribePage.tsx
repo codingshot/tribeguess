@@ -784,12 +784,14 @@ const TribePage = () => {
                 </section>
               )}
               
+              {tribe.commonNames && (
               <NameSearch
-                femaleNames={tribe.commonNames.female}
-                maleNames={tribe.commonNames.male}
+                femaleNames={tribe.commonNames.female || []}
+                maleNames={tribe.commonNames.male || []}
                 tribeName={tribe.name}
                 nameDatabase={getNameDatabase()}
               />
+              )}
               
               {tribe.timeBasedNames && Object.keys(tribe.timeBasedNames).length > 0 && (
                 <section>
