@@ -10587,7 +10587,7 @@ const westAfricanRecipes: Recipe[] = [
     description: "Senegal's national dish - fish stuffed with herbs, cooked with vegetables, and served on tomato-stained rice. A one-pot masterpiece.",
     culturalSignificance: "Thieboudienne is Senegal's national dish, inscribed on UNESCO's Intangible Cultural Heritage list. It represents Senegalese teranga (hospitality) and communal eating.",
     historicalContext: "Thieboudienne originated in Saint-Louis, Senegal in the 19th century. It combines local fishing traditions with rice introduced through trade. The dish is served on a large platter for family sharing.",
-    youtubeVideoId: "2p3qGD2K8yU",
+    youtubeVideoId: "r7Zdp2TpmAA",
     prepTime: "30 minutes",
     cookTime: "1.5 hours",
     servings: 8,
