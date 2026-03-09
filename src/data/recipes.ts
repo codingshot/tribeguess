@@ -11768,7 +11768,7 @@ const additionalWestAfricanRecipes: Recipe[] = [
     description: "Ghana's beloved street food — rice and beans cooked with millet leaf stalks that give a distinctive burgundy color, served with an array of accompaniments.",
     culturalSignificance: "Waakye is Ghana's great equalizer — eaten by everyone from market women to business executives. Street vendors serve it in banana leaves, and every neighborhood has a favorite waakye seller.",
     historicalContext: "Originally a Hausa dish that spread across Ghana, waakye represents the cultural fusion of northern and southern Ghana. The use of sorghum leaves for coloring is a uniquely Ghanaian innovation.",
-    youtubeVideoId: "KXW6Jkv0qZQ",
+    youtubeVideoId: "5RlLRtf8YLo",
     prepTime: "30 minutes",
     cookTime: "60 minutes",
     servings: 6,
