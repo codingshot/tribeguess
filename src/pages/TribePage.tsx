@@ -368,11 +368,13 @@ const TribePage = () => {
                         </>
                       )}
                       
+                      {tribe.counties && tribe.counties.length > 0 && (
                       <div className="mt-3">
                         <p className="text-sm text-muted-foreground">
                           <strong>Main Regions:</strong> {tribe.counties.join(', ')}
                         </p>
                       </div>
+                      )}
                     </>
                   );
                 })()}
