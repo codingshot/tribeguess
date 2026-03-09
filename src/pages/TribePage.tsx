@@ -277,13 +277,19 @@ const TribePage = () => {
                         </div>
                       )}
                       
-                      <TribeMap 
-                        lat={tribe.mapCoordinates.lat} 
-                        lng={tribe.mapCoordinates.lng} 
-                        tribeName={tribe.name}
-                        counties={tribe.counties}
-                        countries={countries}
-                      />
+                      {tribe.mapCoordinates?.lat != null && tribe.mapCoordinates?.lng != null ? (
+                        <TribeMap 
+                          lat={tribe.mapCoordinates.lat} 
+                          lng={tribe.mapCoordinates.lng} 
+                          tribeName={tribe.name}
+                          counties={tribe.counties}
+                          countries={countries}
+                        />
+                      ) : (
+                        <div className="p-3 bg-secondary/50 rounded-lg border border-border text-sm text-muted-foreground">
+                          Map coordinates are unavailable for this tribe.
+                        </div>
+                      )}
                     </>
                   );
                 })()}
