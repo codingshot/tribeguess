@@ -988,7 +988,7 @@ const TribePage = () => {
                     )}
                     
                     {/* Food Taboos */}
-                    {(tribe as any).eatingCustoms.taboos && (tribe as any).eatingCustoms.taboos.length > 0 && (
+                    {Array.isArray((tribe as any).eatingCustoms.taboos) && (tribe as any).eatingCustoms.taboos.length > 0 && (
                       <div className="p-4 bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 rounded-lg border border-red-200 dark:border-red-800">
                         <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
                           <span>🚫</span> Food Taboos & Restrictions
