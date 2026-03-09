@@ -11701,7 +11701,7 @@ const additionalWestAfricanRecipes: Recipe[] = [
     description: "Senegal's national dish — a magnificent one-pot rice and fish dish with stuffed fish, vegetables, and tamarind-tomato sauce. UNESCO Intangible Cultural Heritage since 2021.",
     culturalSignificance: "Thiéboudienne is the soul of Senegalese cuisine. Invented in the 19th century by Penda Mbaye of Saint-Louis, it's eaten for lunch across the country. Families gather around a single large platter, eating with their right hand.",
     historicalContext: "When French colonizers introduced broken rice to Senegal, the Wolof people transformed it into an art form. The dish reflects Senegal's fishing heritage and agricultural traditions. Its UNESCO recognition in 2021 cemented its status as a world culinary treasure.",
-    youtubeVideoId: "K6_7gx8WdPE",
+    youtubeVideoId: "r7Zdp2TpmAA",
     prepTime: "45 minutes",
     cookTime: "90 minutes",
     servings: 8,
