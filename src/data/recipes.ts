@@ -11020,7 +11020,7 @@ const northAfricanRecipes: Recipe[] = [
     description: "Humble but beloved chickpea soup with stale bread, olive oil, harissa, and a poached egg. Tunisia's ultimate comfort food and hangover cure.",
     culturalSignificance: "Lablabi is Tunisia's working-class breakfast, sold in dedicated shops from dawn. It's cheap, filling, and customizable. The bread-soaking tradition reflects anti-waste culture.",
     historicalContext: "Lablabi emerged as a poor man's dish but became beloved across all social classes. The combination of chickpeas and bread has sustained Tunisians for centuries.",
-    youtubeVideoId: "laBE5q6_5_w",
+    youtubeVideoId: "E3EUZSvreEM",
     prepTime: "10 minutes",
     cookTime: "15 minutes",
     servings: 4,
