@@ -8713,7 +8713,7 @@ const southernAfricanRecipes: Recipe[] = [
     description: "More than just a barbecue - braai is South Africa's national pastime. Meat grilled over wood coals, bringing people together across all cultures.",
     culturalSignificance: "Braai transcends race and class in South Africa. Heritage Day (September 24) is informally called 'National Braai Day.' The braai is where South Africans bond.",
     historicalContext: "While grilling meat is ancient, South African braai culture developed from Dutch, British, and African traditions merging. The word 'braai' is Afrikaans. Every group has their style, but the social ritual is shared.",
-    youtubeVideoId: "3mQzv-Gc5SU",
+    youtubeVideoId: "q-lO5TDjQco",
     prepTime: "30 minutes",
     cookTime: "1-2 hours",
     servings: 8,
