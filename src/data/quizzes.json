@@ -669,48 +669,255 @@
   ],
   "flashcardSets": [
     {
-      "id": "greetings",
-      "title": "African Greetings",
-      "description": "Learn how to say hello in different African languages",
+      "id": "greetings-east",
+      "title": "East African Greetings",
+      "description": "Hello in Swahili, Kikuyu, Luo, Kalenjin & more",
+      "category": "greetings",
+      "region": "East Africa",
       "cards": [
         { "front": "Hello in Swahili", "back": "Jambo / Habari", "tribe": "Swahili" },
-        { "front": "Hello in Zulu", "back": "Sawubona (I see you)", "tribe": "Zulu" },
-        { "front": "Hello in Yoruba", "back": "Bawo ni", "tribe": "Yoruba" },
-        { "front": "Hello in Amharic", "back": "Selam / Tena yistilign", "tribe": "Amhara" },
-        { "front": "Hello in Hausa", "back": "Sannu", "tribe": "Hausa" },
         { "front": "Hello in Kikuyu", "back": "Wĩmwega", "tribe": "Kikuyu" },
+        { "front": "Hello in Luo", "back": "Misawa / Ber", "tribe": "Luo" },
+        { "front": "Hello in Kalenjin", "back": "Chamgei", "tribe": "Kalenjin" },
+        { "front": "Hello in Maasai", "back": "Sopa!", "tribe": "Maasai" },
+        { "front": "Hello in Kamba", "back": "Wĩa mwĩa", "tribe": "Kamba" },
+        { "front": "Hello in Luhya", "back": "Mulembe", "tribe": "Luhya" },
+        { "front": "Hello in Luganda", "back": "Oli otya?", "tribe": "Baganda" },
+        { "front": "Hello in Kinyarwanda", "back": "Muraho", "tribe": "Banyarwanda" },
+        { "front": "Hello in Kirundi", "back": "Amahoro", "tribe": "Barundi" }
+      ]
+    },
+    {
+      "id": "greetings-west",
+      "title": "West African Greetings",
+      "description": "Hello in Yoruba, Igbo, Hausa, Wolof & more",
+      "category": "greetings",
+      "region": "West Africa",
+      "cards": [
+        { "front": "Hello in Yoruba", "back": "Bawo ni / E karo (morning)", "tribe": "Yoruba" },
+        { "front": "Hello in Igbo", "back": "Ndewo / Kedu", "tribe": "Igbo" },
+        { "front": "Hello in Hausa", "back": "Sannu / Ina kwana", "tribe": "Hausa" },
+        { "front": "Hello in Wolof", "back": "Nanga def?", "tribe": "Wolof" },
+        { "front": "Hello in Akan/Twi", "back": "Ete sen?", "tribe": "Akan" },
+        { "front": "Hello in Fulani", "back": "On jaaraama", "tribe": "Fulani" },
+        { "front": "Hello in Mandinka", "back": "I be di?", "tribe": "Mandinka" },
+        { "front": "Hello in Ewe", "back": "Ŋdi / Ŋdi na wò", "tribe": "Ewe" }
+      ]
+    },
+    {
+      "id": "greetings-south",
+      "title": "Southern African Greetings",
+      "description": "Hello in Zulu, Xhosa, Sotho, Tswana & more",
+      "category": "greetings",
+      "region": "Southern Africa",
+      "cards": [
+        { "front": "Hello in Zulu", "back": "Sawubona (I see you)", "tribe": "Zulu" },
+        { "front": "Hello in Xhosa", "back": "Molo (singular) / Molweni (plural)", "tribe": "Xhosa" },
+        { "front": "Hello in Sotho", "back": "Dumela", "tribe": "Sotho" },
+        { "front": "Hello in Tswana", "back": "Dumela (singular) / Dumelang (plural)", "tribe": "Tswana" },
+        { "front": "Hello in Shona", "back": "Mhoro / Makadii", "tribe": "Shona" },
+        { "front": "Hello in Ndebele", "back": "Lotjhani", "tribe": "Ndebele" },
+        { "front": "Hello in Venda", "back": "Ndaa (to elder) / Aa (response)", "tribe": "Venda" },
+        { "front": "Hello in Swazi", "back": "Sawubona", "tribe": "Swazi" }
+      ]
+    },
+    {
+      "id": "greetings-north-horn",
+      "title": "North & Horn of Africa Greetings",
+      "description": "Hello in Amharic, Arabic, Somali, Tigrinya & more",
+      "category": "greetings",
+      "region": "North & Horn",
+      "cards": [
+        { "front": "Hello in Amharic", "back": "Selam / Tena yistilign", "tribe": "Amhara" },
+        { "front": "Hello in Tigrinya", "back": "Selam / Kemey alekha?", "tribe": "Tigray" },
         { "front": "Hello in Somali", "back": "Assalamu alaykum / Nabad", "tribe": "Somali" },
-        { "front": "Hello in Xhosa", "back": "Molo (singular) / Molweni (plural)", "tribe": "Xhosa" }
+        { "front": "Hello in Oromo", "back": "Akkam / Nagaa", "tribe": "Oromo" },
+        { "front": "Hello in Arabic (North Africa)", "back": "As-salaam alaykum / Marhaba", "tribe": "Arab" },
+        { "front": "Hello in Tamazight (Berber)", "back": "Azul", "tribe": "Berber" },
+        { "front": "Hello in Afar", "back": "Assalamu alaykum / Tanammerta", "tribe": "Afar" },
+        { "front": "Hello in Nubian", "back": "Eri / Matti", "tribe": "Nubian" }
       ]
     },
     {
-      "id": "tribal-foods",
-      "title": "Traditional Foods",
-      "description": "Match foods to their tribes of origin",
+      "id": "tribes-east",
+      "title": "East African Tribes",
+      "description": "Key facts about Kikuyu, Luo, Maasai, Kalenjin & more",
+      "category": "tribes",
+      "region": "East Africa",
       "cards": [
-        { "front": "Mũkimo - Mashed potatoes with greens", "back": "Kikuyu (Kenya)", "tribe": "Kikuyu" },
-        { "front": "Jollof Rice - Spiced tomato rice", "back": "Originated with Wolof (Senegal)", "tribe": "Wolof" },
-        { "front": "Injera - Sourdough flatbread", "back": "Amhara/Ethiopian", "tribe": "Amhara" },
-        { "front": "Bobotie - Spiced meat with egg custard", "back": "Cape Malay (South Africa)", "tribe": "Cape Malay" },
-        { "front": "Suya - Spiced grilled meat", "back": "Hausa (Nigeria)", "tribe": "Hausa" },
-        { "front": "Thieboudienne - Fish and rice", "back": "Wolof/Senegalese", "tribe": "Wolof" },
-        { "front": "Omena - Dried silver fish", "back": "Luo (Kenya)", "tribe": "Luo" },
-        { "front": "Sadza/Pap - Maize porridge", "back": "Shona/Zulu (Southern Africa)", "tribe": "Zulu" }
+        { "front": "Largest ethnic group in Kenya", "back": "Kikuyu (~8.1 million)", "tribe": "Kikuyu" },
+        { "front": "Nilotic tribe known for time-based naming", "back": "Luo — Otieno = born at night", "tribe": "Luo" },
+        { "front": "Semi-nomadic herders known for the Adumu (jumping dance)", "back": "Maasai — Kenya & Tanzania", "tribe": "Maasai" },
+        { "front": "Tribe that dominates long-distance running", "back": "Kalenjin — 75%+ of marathon champions", "tribe": "Kalenjin" },
+        { "front": "Largest ethnic group in Uganda", "back": "Baganda — Kingdom of Buganda", "tribe": "Baganda" },
+        { "front": "Famous for the 'Kanga' cloth culture", "back": "Swahili — Coastal East Africa", "tribe": "Swahili" },
+        { "front": "Tribe with a pastoralist warrior culture in Northern Kenya", "back": "Samburu — related to the Maasai", "tribe": "Samburu" },
+        { "front": "People known for Bwola dance (UNESCO heritage)", "back": "Acholi — Northern Uganda", "tribe": "Acholi" },
+        { "front": "Tribe known for skilled wood carving (Akamba)", "back": "Kamba — Eastern Kenya", "tribe": "Kamba" },
+        { "front": "People who speak Kinyarwanda", "back": "Banyarwanda — Hutu, Tutsi, Twa", "tribe": "Banyarwanda" }
       ]
     },
     {
-      "id": "famous-people",
+      "id": "tribes-west",
+      "title": "West African Tribes",
+      "description": "Key facts about Yoruba, Igbo, Hausa, Mandinka & more",
+      "category": "tribes",
+      "region": "West Africa",
+      "cards": [
+        { "front": "Largest ethnic group in Nigeria (~44M)", "back": "Yoruba — Southwest Nigeria", "tribe": "Yoruba" },
+        { "front": "People known for the Igwe (king) and masquerade festivals", "back": "Igbo — Southeast Nigeria", "tribe": "Igbo" },
+        { "front": "Largest ethnic group in West Africa (~80M)", "back": "Hausa — Northern Nigeria & Niger", "tribe": "Hausa" },
+        { "front": "Descendants of the Mali Empire, famous for griots & kora", "back": "Mandinka — Gambia, Guinea, Mali", "tribe": "Mandinka" },
+        { "front": "Nomadic cattle herders spread across 15+ countries", "back": "Fulani — World's largest nomadic group", "tribe": "Fulani" },
+        { "front": "People of the Ashanti Empire & golden stool", "back": "Akan/Ashanti — Ghana", "tribe": "Akan" },
+        { "front": "People known for Jollof rice origin", "back": "Wolof — Senegal & Gambia", "tribe": "Wolof" },
+        { "front": "Empire that controlled Timbuktu & the Niger River", "back": "Songhai — Mali & Niger", "tribe": "Songhai" }
+      ]
+    },
+    {
+      "id": "tribes-south",
+      "title": "Southern African Tribes",
+      "description": "Key facts about Zulu, Xhosa, Sotho, San & more",
+      "category": "tribes",
+      "region": "Southern Africa",
+      "cards": [
+        { "front": "Largest ethnic group in South Africa (10M+)", "back": "Zulu — KwaZulu-Natal", "tribe": "Zulu" },
+        { "front": "Nelson Mandela's tribe, known for click consonants", "back": "Xhosa — Eastern Cape", "tribe": "Xhosa" },
+        { "front": "People known for kgotla (democratic assembly)", "back": "Tswana — Botswana & South Africa", "tribe": "Tswana" },
+        { "front": "Africa's oldest inhabitants, master trackers", "back": "San (Bushmen) — Kalahari Desert", "tribe": "San" },
+        { "front": "Ndebele women famous for geometric house paintings", "back": "Ndebele — South Africa & Zimbabwe", "tribe": "Ndebele" },
+        { "front": "Kingdom with the spectacular Kuomboka ceremony", "back": "Lozi — Zambia (Barotseland)", "tribe": "Lozi" },
+        { "front": "Warrior empire built by Shaka", "back": "Zulu — Defeated British at Isandlwana (1879)", "tribe": "Zulu" },
+        { "front": "Cover themselves with red ochre (otjize)", "back": "Himba — Northern Namibia", "tribe": "Himba" }
+      ]
+    },
+    {
+      "id": "tribes-central-north",
+      "title": "Central & North African Tribes",
+      "description": "Key facts about Amhara, Oromo, Kongo, Luba & more",
+      "category": "tribes",
+      "region": "Central & North",
+      "cards": [
+        { "front": "Founded the Aksumite Empire, unique alphabet", "back": "Amhara — Ethiopia (Ge'ez script)", "tribe": "Amhara" },
+        { "front": "Largest ethnic group in Ethiopia (~40M)", "back": "Oromo — Gadaa democratic system", "tribe": "Oromo" },
+        { "front": "Founded the Kingdom of Kongo (1390)", "back": "Kongo (Bakongo) — DRC, Congo, Angola", "tribe": "Kongo" },
+        { "front": "Nomadic blue-veiled 'people of the desert'", "back": "Tuareg — Sahara (Mali, Niger, Libya)", "tribe": "Tuareg" },
+        { "front": "Founded the Kanem-Bornu Empire (8th century)", "back": "Kanuri — Nigeria, Niger, Chad", "tribe": "Kanuri" },
+        { "front": "Known for pygmy forest communities", "back": "Mbuti — Congo rainforest", "tribe": "Mbuti" },
+        { "front": "Indigenous North Africans, Amazigh people", "back": "Berber — Morocco, Algeria, Libya, Tunisia", "tribe": "Berber" },
+        { "front": "People of the Luba Empire (Central Africa)", "back": "Luba — Democratic Republic of Congo", "tribe": "Luba" }
+      ]
+    },
+    {
+      "id": "recipes-east",
+      "title": "East African Recipes",
+      "description": "Traditional dishes from Kenya, Tanzania, Uganda & Ethiopia",
+      "category": "recipes",
+      "region": "East Africa",
+      "cards": [
+        { "front": "Mashed potatoes, peas, maize & pumpkin leaves", "back": "Mũkimo — Kikuyu (Kenya)", "tribe": "Kikuyu" },
+        { "front": "Stiff maize flour porridge, eaten by hand", "back": "Ugali — Eaten across East Africa", "tribe": "Swahili" },
+        { "front": "Deep-fried dough triangles filled with meat", "back": "Samosa — Swahili coast influence", "tribe": "Swahili" },
+        { "front": "Sourdough flatbread made from teff flour", "back": "Injera — Amhara/Ethiopian", "tribe": "Amhara" },
+        { "front": "Slow-cooked spicy chicken stew", "back": "Doro Wot — Ethiopian signature dish", "tribe": "Amhara" },
+        { "front": "Steamed rice with spices, cardamom & ghee", "back": "Pilau — Swahili coast", "tribe": "Swahili" },
+        { "front": "Dried silver fish, fried with tomatoes", "back": "Omena — Luo (Kenya)", "tribe": "Luo" },
+        { "front": "Banana/plantain stew with groundnuts", "back": "Matoke — Baganda (Uganda)", "tribe": "Baganda" },
+        { "front": "Fermented porridge, sour and tangy", "back": "Uji — Kenya & Tanzania", "tribe": "Multiple" },
+        { "front": "Spiced rice dish with coconut milk", "back": "Biriani — Swahili coast", "tribe": "Swahili" }
+      ]
+    },
+    {
+      "id": "recipes-west",
+      "title": "West African Recipes",
+      "description": "Traditional dishes from Nigeria, Ghana, Senegal & more",
+      "category": "recipes",
+      "region": "West Africa",
+      "cards": [
+        { "front": "Spiced tomato rice — most debated dish in Africa", "back": "Jollof Rice — Wolof (Senegal) origin", "tribe": "Wolof" },
+        { "front": "Melon seed soup with leafy vegetables", "back": "Egusi Soup — Yoruba/Igbo (Nigeria)", "tribe": "Yoruba" },
+        { "front": "Spiced grilled meat on skewers", "back": "Suya — Hausa (Nigeria)", "tribe": "Hausa" },
+        { "front": "Fermented cassava dough, pounded", "back": "Fufu — West & Central Africa", "tribe": "Akan" },
+        { "front": "Groundnut (peanut) stew with rice", "back": "Domoda — Mandinka (Gambia)", "tribe": "Mandinka" },
+        { "front": "Fish and rice, Senegal's national dish", "back": "Thieboudienne — Wolof (Senegal)", "tribe": "Wolof" },
+        { "front": "Fried bean cakes/fritters", "back": "Akara — Yoruba (Nigeria)", "tribe": "Yoruba" },
+        { "front": "Spicy pepper soup with goat or fish", "back": "Pepper Soup — Nigerian", "tribe": "Multiple" }
+      ]
+    },
+    {
+      "id": "recipes-south",
+      "title": "Southern African Recipes",
+      "description": "Traditional dishes from South Africa, Zambia, Zimbabwe & more",
+      "category": "recipes",
+      "region": "Southern Africa",
+      "cards": [
+        { "front": "Stiff maize porridge, staple across Southern Africa", "back": "Pap/Sadza — Zulu/Shona", "tribe": "Zulu" },
+        { "front": "Spiced minced meat with egg custard topping", "back": "Bobotie — Cape Malay (South Africa)", "tribe": "Cape Malay" },
+        { "front": "Dried cured meat strips (like jerky)", "back": "Biltong — South African", "tribe": "Multiple" },
+        { "front": "Pounded beef, slow-cooked until shredded", "back": "Seswaa — Tswana (Botswana)", "tribe": "Tswana" },
+        { "front": "Groundnut and vegetable stew", "back": "Ifisashi — Bemba (Zambia)", "tribe": "Bemba" },
+        { "front": "Grilled sausage (boerewors) on a roll", "back": "Boerewors Roll — South African braai culture", "tribe": "Multiple" },
+        { "front": "Pearl millet porridge with sour milk", "back": "Oshifima — Ovambo (Namibia)", "tribe": "Ovambo" },
+        { "front": "Maize and bean one-pot dish", "back": "Umngqusho — Xhosa (South Africa)", "tribe": "Xhosa" }
+      ]
+    },
+    {
+      "id": "famous-africans",
       "title": "Famous Africans & Their Tribes",
-      "description": "Learn about notable people and their ethnic backgrounds",
+      "description": "Notable historical and modern African figures",
+      "category": "famous",
+      "region": "All Africa",
       "cards": [
-        { "front": "Nelson Mandela", "back": "Xhosa (South Africa) - Anti-apartheid leader", "tribe": "Xhosa" },
-        { "front": "Wangari Maathai", "back": "Kikuyu (Kenya) - Nobel Peace Prize 2004", "tribe": "Kikuyu" },
-        { "front": "Fela Kuti", "back": "Yoruba (Nigeria) - Afrobeat pioneer", "tribe": "Yoruba" },
-        { "front": "Miriam Makeba", "back": "Xhosa (South Africa) - 'Mama Africa'", "tribe": "Xhosa" },
-        { "front": "Mo Farah", "back": "Somali - Olympic champion runner", "tribe": "Somali" },
-        { "front": "Eliud Kipchoge", "back": "Kalenjin (Kenya) - Marathon world record", "tribe": "Kalenjin" },
-        { "front": "Chimamanda Ngozi Adichie", "back": "Igbo (Nigeria) - Author", "tribe": "Igbo" },
-        { "front": "Haile Selassie", "back": "Amhara (Ethiopia) - Emperor", "tribe": "Amhara" }
+        { "front": "Nelson Mandela", "back": "Xhosa (South Africa) — Anti-apartheid leader, first Black president", "tribe": "Xhosa" },
+        { "front": "Wangari Maathai", "back": "Kikuyu (Kenya) — Nobel Peace Prize 2004, Green Belt Movement", "tribe": "Kikuyu" },
+        { "front": "Fela Kuti", "back": "Yoruba (Nigeria) — Invented Afrobeat, political activist", "tribe": "Yoruba" },
+        { "front": "Miriam Makeba", "back": "Xhosa (South Africa) — 'Mama Africa', Pata Pata", "tribe": "Xhosa" },
+        { "front": "Eliud Kipchoge", "back": "Kalenjin (Kenya) — First sub-2hr marathon", "tribe": "Kalenjin" },
+        { "front": "Chimamanda Ngozi Adichie", "back": "Igbo (Nigeria) — 'We Should All Be Feminists'", "tribe": "Igbo" },
+        { "front": "Haile Selassie", "back": "Amhara (Ethiopia) — Last Emperor, Rastafari icon", "tribe": "Amhara" },
+        { "front": "Mansa Musa", "back": "Mandinka (Mali) — Richest person in history", "tribe": "Mandinka" },
+        { "front": "Shaka Zulu", "back": "Zulu (South Africa) — Military genius, Zulu Empire founder", "tribe": "Zulu" },
+        { "front": "Nzinga of Ndongo", "back": "Mbundu (Angola) — Anti-Portuguese resistance queen", "tribe": "Mbundu" },
+        { "front": "Lupita Nyong'o", "back": "Luo (Kenya) — Oscar-winning actress", "tribe": "Luo" },
+        { "front": "Mo Farah", "back": "Somali (UK-born) — Olympic champion runner", "tribe": "Somali" }
+      ]
+    },
+    {
+      "id": "name-meanings",
+      "title": "African Name Meanings",
+      "description": "Discover what popular African names mean",
+      "category": "names",
+      "region": "All Africa",
+      "cards": [
+        { "front": "Wanjiku", "back": "Of the Mugumo tree — Kikuyu (one of 9 clan mothers)", "tribe": "Kikuyu" },
+        { "front": "Otieno", "back": "Born at night — Luo (Kenya)", "tribe": "Luo" },
+        { "front": "Adaeze", "back": "King's daughter / Princess — Igbo (Nigeria)", "tribe": "Igbo" },
+        { "front": "Kofi", "back": "Born on Friday — Akan day-naming (Ghana)", "tribe": "Akan" },
+        { "front": "Thandiwe", "back": "Beloved — Zulu/Xhosa (South Africa)", "tribe": "Zulu" },
+        { "front": "Amani", "back": "Peace — Swahili (used across East Africa)", "tribe": "Swahili" },
+        { "front": "Nzinga", "back": "Beauty / Courage — Kongo (Angola)", "tribe": "Kongo" },
+        { "front": "Kipkoech", "back": "Born in the morning — Kalenjin (Kenya)", "tribe": "Kalenjin" },
+        { "front": "Kagiso", "back": "Peace — Tswana (Botswana)", "tribe": "Tswana" },
+        { "front": "Amahoro", "back": "Peace — Kinyarwanda (Rwanda)", "tribe": "Banyarwanda" },
+        { "front": "Fatou / Fatima", "back": "Named after Prophet's daughter — Mandinka/Muslim Africa", "tribe": "Mandinka" },
+        { "front": "Sipho", "back": "Gift — Zulu (South Africa)", "tribe": "Zulu" }
+      ]
+    },
+    {
+      "id": "music-instruments",
+      "title": "African Instruments & Music",
+      "description": "Traditional instruments and music genres across Africa",
+      "category": "music",
+      "region": "All Africa",
+      "cards": [
+        { "front": "21-string harp from West Africa", "back": "Kora — Mandinka griots", "tribe": "Mandinka" },
+        { "front": "Talking drum that mimics tonal languages", "back": "Dundun — Yoruba (Nigeria)", "tribe": "Yoruba" },
+        { "front": "Thumb piano used in bira ceremonies", "back": "Mbira — Shona (Zimbabwe)", "tribe": "Shona" },
+        { "front": "Goblet drum played across West Africa", "back": "Djembe — Mandinka/Mali origin", "tribe": "Mandinka" },
+        { "front": "South African genre blending house + Zulu rhythms", "back": "Amapiano — South Africa (global hit)", "tribe": "Multiple" },
+        { "front": "Afrobeat genre pioneer's home country", "back": "Nigeria — Fela Kuti (Yoruba)", "tribe": "Yoruba" },
+        { "front": "Tuareg desert blues electric guitar music", "back": "Tishoumaren — Tuareg (Mali/Niger)", "tribe": "Tuareg" },
+        { "front": "Ethiopian pentatonic music scale system", "back": "Kiñit — Ethiopian (Amhara/Tigray)", "tribe": "Amhara" }
       ]
     }
   ]
