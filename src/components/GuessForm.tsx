@@ -274,6 +274,11 @@ export function GuessForm({
             const names = RANDOM_NAMES_BY_COUNTRY[country] || RANDOM_NAMES_BY_COUNTRY['ALL'];
             const randomName = names[Math.floor(Math.random() * names.length)];
             setName(randomName);
+            // Auto-navigate with the random name
+            const params = new URLSearchParams();
+            params.set('name', randomName);
+            if (country) params.set('country', country);
+            navigate(`/?${params.toString()}`);
           }}
           className="flex items-center gap-1.5 px-3 py-2 text-sm text-primary hover:text-primary/80 hover:bg-primary/10 rounded-lg transition-colors touch-manipulation"
           aria-label="Try a random name"

@@ -8339,7 +8339,7 @@
       "id": "kanuri",
       "name": "Kanuri",
       "slug": "kanuri",
-      "youtubeVideoId": "WyTABUd913c",
+      "youtubeVideoId": "vylawPq2cdM",
       "languageVideoId": "p6uz7fJpihQ",
       "countries": ["NG", "NE", "TD", "CM"],
       "region": "Borno State, Nigeria; Lake Chad Basin",
@@ -10989,7 +10989,7 @@
       "id": "gurage",
       "name": "Gurage",
       "slug": "gurage",
-      "youtubeVideoId": "QpzS7GCT8gY",
+      "youtubeVideoId": "TS8lulsTRks",
       "countries": ["ET"],
       "region": "South-Central Ethiopia (Gurage Zone)",
       "population": "~2.5 million",
@@ -11362,7 +11362,7 @@
       "name": "Tigre",
       "slug": "tigre",
       "slugAliases": ["tigre-people"],
-      "youtubeVideoId": "TQpU7mGqr9c",
+      "youtubeVideoId": "1hn4sfxw4wA",
       "countries": ["ER", "SD"],
       "region": "Eritrea (lowlands) and eastern Sudan",
       "population": "~2 million",
@@ -12197,7 +12197,7 @@
       "name": "Mitsogo",
       "slug": "mitsogo",
       "slugAliases": ["tsogo", "ghetsogo"],
-      "youtubeVideoId": "5cVgVdvDM9k",
+      "youtubeVideoId": "4M2oOaBhBlQ",
       "countries": ["GA"],
       "region": "Central Gabon (Ngounié Province)",
       "population": "~15,000",
@@ -12324,7 +12324,7 @@
       "name": "Punu",
       "slug": "punu",
       "slugAliases": ["bapunu", "pounou"],
-      "youtubeVideoId": "LNR3Kqz8nBs",
+      "youtubeVideoId": "w3bYgK44b00",
       "countries": ["GA", "CG"],
       "region": "Southern Gabon, Northern Congo",
       "population": "~250,000",
@@ -13653,7 +13653,7 @@
       "name": "Songhai",
       "slug": "songhai",
       "slugAliases": ["songhay", "sonrai"],
-      "youtubeVideoId": "3K3aY3rBw-c",
+      "youtubeVideoId": "1g4xs-6-yAg",
       "countries": ["ML", "NE", "BJ", "NG"],
       "region": "Niger River Bend, Mali-Niger",
       "population": "~3.5 million",
@@ -15465,7 +15465,7 @@
       "name": "Moroccan Arab",
       "slug": "moroccan-arab",
       "slugAliases": ["moroccan", "maghrebi"],
-      "youtubeVideoId": "yYz-CgQNLks",
+      "youtubeVideoId": "sqZh8D2-CFY",
       "languageVideoId": "6ooa9ol4lv4",
       "countries": ["MA"],
       "region": "Morocco (Plains, coastal cities, Saharan regions)",
@@ -17275,7 +17275,7 @@
       "slugAliases": ["batswana", "setswana", "motswana"],
       "youtubeVideoId": "EnNoyTHn9PI",
       "languageVideoId": "82Kgf1XzwGk",
-      "countries": ["Botswana", "South Africa", "Namibia"],
+      "countries": ["BW", "ZA", "NA"],
       "region": "Southern Africa",
       "population": "~6 million",
       "language": {
@@ -17309,7 +17309,7 @@
         "christianity": "Introduced by LMS missionaries in 1816. Robert Moffat and David Livingstone were key figures.",
         "current": "Majority Christian with strong traditional beliefs maintained."
       },
-      "coordinates": { "lat": -22.3, "lng": 27.1 },
+      "mapCoordinates": { "lat": -22.3, "lng": 27.1 },
       "populationByCountry": [
         { "country": "BW", "population": "~1.5M", "percent": "79%" },
         { "country": "ZA", "population": "~4M", "percent": "7%" },
@@ -17347,7 +17347,7 @@
       "slug": "lozi",
       "slugAliases": ["barotse", "silozi", "barotseland"],
       "youtubeVideoId": "M-ZYQKZzfVA",
-      "countries": ["Zambia", "Namibia", "Zimbabwe", "Botswana"],
+      "countries": ["ZM", "NA", "ZW", "BW"],
       "region": "Southern Africa",
       "population": "~1.5 million",
       "language": {
@@ -17381,7 +17381,7 @@
         "christianity": "Paris Evangelical Missionary Society arrived in 1886. François Coillard was a key missionary.",
         "current": "Christianity is predominant, with traditional beliefs maintained in royal ceremonies."
       },
-      "coordinates": { "lat": -15.4, "lng": 23.2 },
+      "mapCoordinates": { "lat": -15.4, "lng": 23.2 },
       "populationByCountry": [
         { "country": "ZM", "population": "~1.2M", "percent": "6%" },
         { "country": "NA", "population": "~100K", "percent": "4%" }
@@ -17409,7 +17409,7 @@
       "slug": "ndebele",
       "slugAliases": ["amandebele", "ndebele-south-africa", "isindebele"],
       "youtubeVideoId": "O4H9Tdgvh-w",
-      "countries": ["South Africa", "Zimbabwe"],
+      "countries": ["ZA", "ZW"],
       "region": "Southern Africa",
       "population": "~2.5 million",
       "language": {
@@ -17443,7 +17443,7 @@
         "christianity": "Berlin Missionary Society active from the 1860s.",
         "current": "Christianity predominant with strong traditional beliefs, especially around initiation rites."
       },
-      "coordinates": { "lat": -25.0, "lng": 29.4 },
+      "mapCoordinates": { "lat": -25.0, "lng": 29.4 },
       "populationByCountry": [
         { "country": "ZA", "population": "~1.1M", "percent": "2%" },
         { "country": "ZW", "population": "~1.5M", "percent": "10%" }
@@ -17474,7 +17474,7 @@
       "slugAliases": ["mandingo", "malinke", "manding", "maninka"],
       "youtubeVideoId": "OMI3J4HLey8",
       "languageVideoId": "IzNSU0PPbck",
-      "countries": ["Gambia", "Guinea", "Mali", "Senegal", "Guinea-Bissau", "Sierra Leone", "Liberia", "Ivory Coast", "Burkina Faso"],
+      "countries": ["GM", "GN", "ML", "SN", "GW", "SL", "LR", "CI", "BF"],
       "region": "West Africa",
       "population": "~11 million",
       "language": {
@@ -17508,7 +17508,7 @@
         "islam": "Islam arrived via trans-Saharan trade routes in the 13th century. Mansa Musa's famous pilgrimage to Mecca in 1324.",
         "current": "Over 95% Muslim. Traditional practices like masquerade ceremonies persist alongside Islam."
       },
-      "coordinates": { "lat": 13.5, "lng": -16.0 },
+      "mapCoordinates": { "lat": 13.5, "lng": -16.0 },
       "populationByCountry": [
         { "country": "GM", "population": "~800K", "percent": "34%" },
         { "country": "GN", "population": "~3M", "percent": "22%" },
@@ -17545,7 +17545,7 @@
       "slug": "bakongo",
       "slugAliases": ["kongo", "kikongo", "kongolese"],
       "youtubeVideoId": "9eTDvnZlkSU",
-      "countries": ["Democratic Republic of Congo", "Republic of Congo", "Angola"],
+      "countries": ["CD", "CG", "AO"],
       "region": "Central Africa",
       "population": "~12 million",
       "language": {
@@ -17579,7 +17579,7 @@
         "christianity": "One of the earliest African peoples to adopt Christianity — King Nzinga a Nkuwu was baptized in 1491.",
         "current": "Predominantly Christian. Kimbanguist Church has millions of followers. Traditional practices persist."
       },
-      "coordinates": { "lat": -4.5, "lng": 15.3 },
+      "mapCoordinates": { "lat": -4.5, "lng": 15.3 },
       "populationByCountry": [
         { "country": "CD", "population": "~5M", "percent": "6%" },
         { "country": "CG", "population": "~3M", "percent": "48%" },
