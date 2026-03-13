@@ -17309,7 +17309,7 @@
         "christianity": "Introduced by LMS missionaries in 1816. Robert Moffat and David Livingstone were key figures.",
         "current": "Majority Christian with strong traditional beliefs maintained."
       },
-      "coordinates": { "lat": -22.3, "lng": 27.1 },
+      "mapCoordinates": { "lat": -22.3, "lng": 27.1 },
       "populationByCountry": [
         { "country": "BW", "population": "~1.5M", "percent": "79%" },
         { "country": "ZA", "population": "~4M", "percent": "7%" },
