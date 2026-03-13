@@ -17579,7 +17579,7 @@
         "christianity": "One of the earliest African peoples to adopt Christianity — King Nzinga a Nkuwu was baptized in 1491.",
         "current": "Predominantly Christian. Kimbanguist Church has millions of followers. Traditional practices persist."
       },
-      "coordinates": { "lat": -4.5, "lng": 15.3 },
+      "mapCoordinates": { "lat": -4.5, "lng": 15.3 },
       "populationByCountry": [
         { "country": "CD", "population": "~5M", "percent": "6%" },
         { "country": "CG", "population": "~3M", "percent": "48%" },
