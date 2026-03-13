@@ -67,7 +67,7 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
 
   // Timer effect
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval>;
     if (isPlaying && timeRemaining > 0 && !showExplanation && !showResults) {
       interval = setInterval(() => {
         setTimeRemaining((prev) => {

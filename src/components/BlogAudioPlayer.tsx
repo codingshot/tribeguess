@@ -47,7 +47,7 @@ export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
   const [progress, setProgress] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
-  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const progressIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const totalCharsRef = useRef(0);
   const spokenCharsRef = useRef(0);
 

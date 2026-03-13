@@ -69,7 +69,7 @@ export default function QuizPage() {
 
   // Timer effect
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval>;
     if (gameMode === 'quiz' && timeRemaining > 0 && !showExplanation) {
       interval = setInterval(() => {
         setTimeRemaining((prev) => {

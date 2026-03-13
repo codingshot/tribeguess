@@ -809,7 +809,7 @@ export default function ReligionTimeline() {
 
   // Animation effect for timeline slider with variable speed
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval>;
     if (isAnimating && viewMode === 'map') {
       interval = setInterval(() => {
         setTimelineYear(prev => {
