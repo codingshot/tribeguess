@@ -17381,7 +17381,7 @@
         "christianity": "Paris Evangelical Missionary Society arrived in 1886. François Coillard was a key missionary.",
         "current": "Christianity is predominant, with traditional beliefs maintained in royal ceremonies."
       },
-      "coordinates": { "lat": -15.4, "lng": 23.2 },
+      "mapCoordinates": { "lat": -15.4, "lng": 23.2 },
       "populationByCountry": [
         { "country": "ZM", "population": "~1.2M", "percent": "6%" },
         { "country": "NA", "population": "~100K", "percent": "4%" }
