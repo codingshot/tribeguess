@@ -17508,7 +17508,7 @@
         "islam": "Islam arrived via trans-Saharan trade routes in the 13th century. Mansa Musa's famous pilgrimage to Mecca in 1324.",
         "current": "Over 95% Muslim. Traditional practices like masquerade ceremonies persist alongside Islam."
       },
-      "coordinates": { "lat": 13.5, "lng": -16.0 },
+      "mapCoordinates": { "lat": 13.5, "lng": -16.0 },
       "populationByCountry": [
         { "country": "GM", "population": "~800K", "percent": "34%" },
         { "country": "GN", "population": "~3M", "percent": "22%" },
