@@ -17443,7 +17443,7 @@
         "christianity": "Berlin Missionary Society active from the 1860s.",
         "current": "Christianity predominant with strong traditional beliefs, especially around initiation rites."
       },
-      "coordinates": { "lat": -25.0, "lng": 29.4 },
+      "mapCoordinates": { "lat": -25.0, "lng": 29.4 },
       "populationByCountry": [
         { "country": "ZA", "population": "~1.1M", "percent": "2%" },
         { "country": "ZW", "population": "~1.5M", "percent": "10%" }
