@@ -4173,8 +4173,15 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   
   const { timeOfBirth, region, build, personality, country } = opts;
   
+  // Input validation - reject empty, too short, or too long names
+  const trimmed = (name || '').trim();
+  if (trimmed.length < 1 || trimmed.length > 100) {
+    return { predictions: [], inputName: trimmed || name, timeOfBirth };
+  }
+  
   // Normalize name: lowercase, trim, remove extra spaces and special characters
-  const normalizedName = name.toLowerCase().trim().replace(/\s+/g, '').replace(/['-]/g, '');
+  // Use normalize('NFD') to handle accented chars properly
+  const normalizedName = trimmed.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '').replace(/['-]/g, '');
   
   // Also check common spelling variations
   const nameVariations = [
@@ -4760,8 +4767,9 @@ export interface CountrySuggestion {
 }
 
 export function getCountrySuggestions(name: string, currentCountry: string): CountrySuggestion[] {
-  const normalizedName = name.toLowerCase().trim().replace(/[^a-z]/g, '');
-  if (normalizedName.length < 2) return [];
+  // Normalize: strip accents properly, keep only letters
+  const normalizedName = (name || '').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, '');
+  if (normalizedName.length < 2 || normalizedName.length > 50) return [];
   
   const allTribes = getAllTribes();
   const countries = getCountries();

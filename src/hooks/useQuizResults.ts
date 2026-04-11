@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-
+import { safeReadStorage, safeWriteStorage, validateQuizResults, validateQuizStats } from '@/lib/dataValidation';
 export interface QuizResult {
   quizId: string;
   quizTitle: string;
@@ -52,41 +52,34 @@ export function useQuizResults() {
   const [results, setResults] = useState<QuizResult[]>([]);
   const [stats, setStats] = useState<QuizStats>(defaultStats);
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount with validation
   useEffect(() => {
-    try {
-      const savedResults = localStorage.getItem(STORAGE_KEY);
-      const savedStats = localStorage.getItem(STATS_KEY);
-      
-      if (savedResults) {
-        setResults(JSON.parse(savedResults));
-      }
-      if (savedStats) {
-        setStats(JSON.parse(savedStats));
-      }
-    } catch (error) {
-      console.error('Error loading quiz results:', error);
-    }
+    const loadedResults = safeReadStorage<QuizResult[]>(
+      STORAGE_KEY,
+      (data) => validateQuizResults(data) as QuizResult[] | null,
+      []
+    );
+    const loadedStats = safeReadStorage<QuizStats>(
+      STATS_KEY,
+      (data) => validateQuizStats(data) as unknown as QuizStats | null,
+      defaultStats
+    );
+    setResults(loadedResults);
+    setStats(loadedStats);
   }, []);
 
   // Save results to localStorage
   const saveResults = useCallback((newResults: QuizResult[]) => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newResults));
-      setResults(newResults);
-    } catch (error) {
-      console.error('Error saving quiz results:', error);
-    }
+    // Cap stored results at 200
+    const capped = newResults.slice(-200);
+    safeWriteStorage(STORAGE_KEY, capped);
+    setResults(capped);
   }, []);
 
   // Save stats to localStorage
   const saveStats = useCallback((newStats: QuizStats) => {
-    try {
-      localStorage.setItem(STATS_KEY, JSON.stringify(newStats));
-      setStats(newStats);
-    } catch (error) {
-      console.error('Error saving quiz stats:', error);
-    }
+    safeWriteStorage(STATS_KEY, newStats);
+    setStats(newStats);
   }, []);
 
   // Add a new quiz result

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Clock, Sparkles, HelpCircle, ChevronDown, ChevronUp, MapPin, Users, Heart, Globe, Shuffle } from 'lucide-react';
+import { validateNameInput } from '@/lib/dataValidation';
 
 // Random names by country for the "Try Random" feature
 const RANDOM_NAMES_BY_COUNTRY: Record<string, string[]> = {
@@ -139,14 +140,11 @@ export function GuessForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmedName = name.trim();
-    if (!trimmedName) return;
-    
-    const namePattern = /^[a-zA-ZÀ-ÿ\u0100-\u024F\s\-']+$/;
-    if (!namePattern.test(trimmedName)) return;
+    const { valid, sanitized } = validateNameInput(name);
+    if (!valid || !sanitized) return;
     
     const params = new URLSearchParams();
-    params.set('name', trimmedName.slice(0, 50));
+    params.set('name', sanitized);
     if (country) params.set('country', country);
     if (timeOfBirth) params.set('time', timeOfBirth);
     if (region) params.set('region', region);

@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
+import { safeReadStorage, safeWriteStorage, validateFavorites, sanitizeTextInput } from '@/lib/dataValidation';
 
 const STORAGE_KEY = 'tribeguess-favorite-names';
+const MAX_FAVORITES = 500;
 
 export interface FavoriteName {
   name: string;
@@ -13,33 +15,31 @@ export interface FavoriteName {
 export function useFavoriteNames() {
   const [favorites, setFavorites] = useState<FavoriteName[]>([]);
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount with validation
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        setFavorites(JSON.parse(stored));
-      }
-    } catch (error) {
-      console.error('Failed to load favorites:', error);
-    }
+    const loaded = safeReadStorage<FavoriteName[]>(
+      STORAGE_KEY,
+      (data) => validateFavorites(data) as FavoriteName[] | null,
+      []
+    );
+    setFavorites(loaded);
   }, []);
 
   // Save to localStorage whenever favorites change
   useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-    } catch (error) {
-      console.error('Failed to save favorites:', error);
-    }
+    safeWriteStorage(STORAGE_KEY, favorites);
   }, [favorites]);
 
   const addFavorite = useCallback((name: string, metadata?: Partial<Omit<FavoriteName, 'name' | 'addedAt'>>) => {
+    const sanitized = sanitizeTextInput(name, 100);
+    if (!sanitized) return;
+    
     setFavorites(prev => {
-      if (prev.some(f => f.name.toLowerCase() === name.toLowerCase())) {
+      if (prev.length >= MAX_FAVORITES) return prev; // Cap
+      if (prev.some(f => f.name.toLowerCase() === sanitized.toLowerCase())) {
         return prev;
       }
-      return [...prev, { name, addedAt: Date.now(), ...metadata }];
+      return [...prev, { name: sanitized, addedAt: Date.now(), ...metadata }];
     });
   }, []);
 

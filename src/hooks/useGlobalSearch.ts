@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { getAllTribes } from '@/lib/tribeDetection';
+import { sanitizeSearchQuery, safeArray } from '@/lib/dataValidation';
 import { blogPosts, BlogPost } from '@/data/blogPosts';
 
 export interface SearchResult {
@@ -14,21 +15,22 @@ export interface SearchResult {
 
 export function useGlobalSearch(query: string): SearchResult[] {
   return useMemo(() => {
-    if (!query || query.length < 2) return [];
+    const sanitized = sanitizeSearchQuery(query, 100);
+    if (!sanitized || sanitized.length < 2) return [];
     
-    const searchLower = query.toLowerCase();
+    const searchLower = sanitized.toLowerCase();
     const results: SearchResult[] = [];
     
     // Search tribes
     const tribes = getAllTribes();
     tribes.forEach(tribe => {
-      const matchesName = tribe.name.toLowerCase().includes(searchLower);
-      const matchesDescription = tribe.description.toLowerCase().includes(searchLower);
-      const matchesRegion = tribe.region.toLowerCase().includes(searchLower);
+      const matchesName = (tribe.name || '').toLowerCase().includes(searchLower);
+      const matchesDescription = (tribe.description || '').toLowerCase().includes(searchLower);
+      const matchesRegion = (tribe.region || '').toLowerCase().includes(searchLower);
       const matchesNames = [
-        ...tribe.commonNames.male,
-        ...tribe.commonNames.female
-      ].some(n => n.toLowerCase().includes(searchLower));
+        ...safeArray<string>(tribe.commonNames?.male),
+        ...safeArray<string>(tribe.commonNames?.female)
+      ].some(n => typeof n === 'string' && n.toLowerCase().includes(searchLower));
       
       if (matchesName || matchesDescription || matchesRegion || matchesNames) {
         results.push({

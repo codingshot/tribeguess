@@ -12,16 +12,18 @@ import { NameAnalysisCard } from '@/components/NameAnalysisCard';
 import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
 import { analyzeNameBreakdown, findSimilarNames, getGlobalMatches } from '@/lib/nameAnalysis';
 import { ArrowRight, Lightbulb } from 'lucide-react';
+import { sanitizeTextInput, isValidCountryCode } from '@/lib/dataValidation';
 import logo from '@/assets/logo.png';
 
 const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const nameQuery = searchParams.get('name') || '';
-  const timeQuery = searchParams.get('time') || '';
-  const regionQuery = searchParams.get('region') || '';
-  const buildQuery = searchParams.get('build') || '';
-  const personalityQuery = searchParams.get('personality') || '';
-  const countryQuery = searchParams.get('country') || 'KE';
+  const nameQuery = sanitizeTextInput(searchParams.get('name') || '', 50);
+  const timeQuery = sanitizeTextInput(searchParams.get('time') || '', 20);
+  const regionQuery = sanitizeTextInput(searchParams.get('region') || '', 30);
+  const buildQuery = sanitizeTextInput(searchParams.get('build') || '', 30);
+  const personalityQuery = sanitizeTextInput(searchParams.get('personality') || '', 30);
+  const rawCountry = searchParams.get('country') || 'KE';
+  const countryQuery = isValidCountryCode(rawCountry) ? rawCountry : 'KE';
 
   // Use country from URL directly - no local state needed
   const selectedCountry = countryQuery;
