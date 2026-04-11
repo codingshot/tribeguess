@@ -90,7 +90,7 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
           <span>Common Stereotypes</span>
         </div>
         <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Common stereotypes">
-          {tribe.stereotypes.slice(0, 4).map((stereotype, i) => (
+          {(tribe.stereotypes || []).slice(0, 4).map((stereotype, i) => (
             <li key={i} className="badge-tribe text-xs">
               {stereotype}
             </li>
