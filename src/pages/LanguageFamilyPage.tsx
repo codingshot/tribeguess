@@ -269,7 +269,7 @@ export default function LanguageFamilyPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">{family.overview}</p>
+                    <p className="text-muted-foreground leading-relaxed">{family.overview || family.description || 'Overview data is being compiled for this language family.'}</p>
                   </CardContent>
                 </Card>
 
