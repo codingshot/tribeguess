@@ -77,7 +77,9 @@ export default function LanguagesIndex() {
             <h2 className="text-2xl font-semibold">Explore Language Families</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
-              {languageFamiliesData.languageFamilies.map((family) => (
+              {languageFamiliesData.languageFamilies
+                .filter(family => family && family.id && family.slug && family.name)
+                .map((family) => (
                 <Link 
                   key={family.id}
                   to={`/languages/${family.slug}`}
@@ -85,12 +87,12 @@ export default function LanguagesIndex() {
                 >
                   <Card className="h-full hover:border-primary/50 transition-all duration-300 overflow-hidden">
                     {/* Gradient Header */}
-                    <div className={`h-24 bg-gradient-to-br ${family.color} relative`}>
+                    <div className={`h-24 bg-gradient-to-br ${family.color || 'from-gray-500 to-gray-600'} relative`}>
                       <div className="absolute inset-0 bg-black/10" />
                       <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-xl font-bold text-white">{family.name}</h3>
-                        {family.alternateNames.length > 0 && (
-                          <p className="text-xs text-white/70">
+                        <h3 className="text-xl font-bold text-white truncate">{family.name}</h3>
+                        {Array.isArray(family.alternateNames) && family.alternateNames.length > 0 && (
+                          <p className="text-xs text-white/70 truncate">
                             Also: {family.alternateNames.slice(0, 2).join(', ')}
                           </p>
                         )}
@@ -99,29 +101,30 @@ export default function LanguagesIndex() {
                     
                     <CardContent className="pt-4">
                       <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                        {family.description}
+                        {family.description || 'Explore this language family and its branches.'}
                       </p>
                       
                       {/* Stats Row */}
                       <div className="grid grid-cols-3 gap-2 mb-4">
                         <div className="text-center p-2 bg-muted/50 rounded-lg">
-                          <p className="text-sm font-semibold">{family.totalSpeakers}</p>
+                          <p className="text-sm font-semibold truncate">{family.totalSpeakers || '—'}</p>
                           <p className="text-xs text-muted-foreground">Speakers</p>
                         </div>
                         <div className="text-center p-2 bg-muted/50 rounded-lg">
-                          <p className="text-sm font-semibold">{family.numberOfLanguages}</p>
+                          <p className="text-sm font-semibold">{family.numberOfLanguages || '—'}</p>
                           <p className="text-xs text-muted-foreground">Languages</p>
                         </div>
                         <div className="text-center p-2 bg-muted/50 rounded-lg">
-                          <p className="text-sm font-semibold">{family.subFamilies.length}</p>
+                          <p className="text-sm font-semibold">{Array.isArray(family.subFamilies) ? family.subFamilies.length : 0}</p>
                           <p className="text-xs text-muted-foreground">Branches</p>
                         </div>
                       </div>
 
                       {/* Sub-families Preview */}
+                      {Array.isArray(family.subFamilies) && family.subFamilies.length > 0 && (
                       <div className="flex flex-wrap gap-1 mb-3">
                         {family.subFamilies.slice(0, 4).map((sub, i) => (
-                          <Badge key={i} variant="secondary" className="text-xs">
+                          <Badge key={i} variant="secondary" className="text-xs max-w-[140px] truncate">
                             {sub.name}
                           </Badge>
                         ))}
@@ -131,13 +134,14 @@ export default function LanguagesIndex() {
                           </Badge>
                         )}
                       </div>
+                      )}
 
                       {/* CTA */}
                       <div className="flex items-center justify-between pt-2 border-t border-border">
-                        <span className="text-xs text-muted-foreground">
-                          {family.geographicSpread.split(' - ')[0]}
+                        <span className="text-xs text-muted-foreground truncate max-w-[60%]">
+                          {(family.geographicSpread || '').split(' - ')[0] || 'Africa'}
                         </span>
-                        <span className="text-primary text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                        <span className="text-primary text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all flex-shrink-0">
                           Explore
                           <ArrowRight className="w-4 h-4" />
                         </span>
