@@ -452,7 +452,9 @@ const TribePage = () => {
                   <Book className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   About
                 </h2>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{tribe.description}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                  {tribe.description || `Information about the ${tribe.name} people is being compiled. Check back soon for a detailed cultural profile.`}
+                </p>
               </section>
               
               {/* Cultural Landmarks Section */}
