@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Clock, Sparkles, HelpCircle, ChevronDown, ChevronUp, MapPin, Users, Heart, Globe, Shuffle } from 'lucide-react';
 import { validateNameInput } from '@/lib/dataValidation';
+import { CountryFlag } from '@/components/CountryFlag';
 
 // Random names by country for the "Try Random" feature
 const RANDOM_NAMES_BY_COUNTRY: Record<string, string[]> = {
@@ -283,7 +284,7 @@ export function GuessForm({
         >
           <Shuffle className="w-4 h-4" />
           <span className="hidden sm:inline">Random</span>
-          <span className="sm:hidden">{selectedCountry?.flag || '🌍'}</span>
+          <span className="sm:hidden"><CountryFlag code={country || 'ALL'} size={16} /></span>
         </button>
 
         <span className="text-muted-foreground/30">|</span>
