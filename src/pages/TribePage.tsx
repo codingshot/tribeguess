@@ -20,25 +20,85 @@ import { Button } from '@/components/ui/button';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const tribe = slug ? getTribeBySlug(slug) : null;
   const allTribes = getAllTribes();
+
+  // Sanitize slug: lowercase, trim, remove control chars, limit length
+  const sanitizedSlug = (slug || '')
+    .toLowerCase()
+    .trim()
+    .slice(0, 100)
+    .replace(/[^a-z0-9\-_]/g, '');
+  
+  const tribe = sanitizedSlug ? getTribeBySlug(sanitizedSlug) : null;
   const [showCountryList, setShowCountryList] = React.useState(false);
 
   // Reset country list when tribe changes
   React.useEffect(() => {
     setShowCountryList(false);
-  }, [slug]);
+  }, [sanitizedSlug]);
   
   if (!tribe) {
+    // Try to find close matches for the slug
+    const suggestions = sanitizedSlug ? allTribes
+      .filter(t => {
+        const s = t.slug?.toLowerCase() || '';
+        const n = t.name?.toLowerCase() || '';
+        return s.includes(sanitizedSlug) || sanitizedSlug.includes(s) ||
+               n.includes(sanitizedSlug) || sanitizedSlug.includes(n) ||
+               // Check slug aliases
+               ((t as any).slugAliases || []).some((alias: string) => 
+                 alias.toLowerCase().includes(sanitizedSlug) || sanitizedSlug.includes(alias.toLowerCase())
+               );
+      })
+      .slice(0, 4) : [];
+
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="container mx-auto px-4 py-12 text-center">
-          <p className="text-muted-foreground text-lg mb-4">Tribe not found</p>
-          <Link to="/learn" className="text-primary hover:underline">
-            ← Back to all tribes
-          </Link>
+        <Helmet>
+          <title>Tribe Not Found | TribeGuess</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+        <div className="container mx-auto px-4 py-12 text-center max-w-lg">
+          <div className="text-6xl mb-4">🔍</div>
+          <h1 className="text-xl font-bold text-foreground mb-2">Tribe Not Found</h1>
+          <p className="text-muted-foreground text-sm mb-6">
+            {sanitizedSlug 
+              ? `We couldn't find a tribe matching "${sanitizedSlug.slice(0, 40)}${sanitizedSlug.length > 40 ? '…' : ''}".`
+              : 'No tribe was specified.'}
+          </p>
+          
+          {suggestions.length > 0 && (
+            <div className="mb-6">
+              <p className="text-sm text-muted-foreground mb-3">Did you mean one of these?</p>
+              <div className="flex flex-col gap-2">
+                {suggestions.map(t => (
+                  <Link
+                    key={t.id}
+                    to={`/learn/${t.slug}`}
+                    className="p-3 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors text-left flex items-center justify-between"
+                  >
+                    <div>
+                      <span className="font-medium text-foreground">{t.name}</span>
+                      <span className="text-xs text-muted-foreground ml-2">{t.region || 'Africa'}</span>
+                    </div>
+                    <ArrowLeft className="w-4 h-4 text-muted-foreground rotate-180" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link to="/learn" className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm">
+              Browse all tribes
+            </Link>
+            <Link to="/random" className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors text-sm">
+              Try a random tribe
+            </Link>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -53,11 +113,13 @@ const TribePage = () => {
   const tradeHistory = (tribe as any).tradeHistory;
   const independenceHistory = (tribe as any).independenceHistory;
   
-  // SEO metadata
+  // SEO metadata - safe fallbacks for missing data
   const countries = (tribe as any).countries as string[] | undefined;
   const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
+  const safeDescription = (tribe.description || `Learn about the ${tribe.name} people`).slice(0, 300);
+  const safePopulation = tribe.population || 'data unavailable';
   const seoTitle = `${tribe.name} Tribe - Culture, Names & History | TribeGuess`;
-  const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${tribe.population}), and famous ${tribe.name} personalities.`;
+  const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${safePopulation}), and famous ${tribe.name} personalities.`.slice(0, 160);
   const seoKeywords = [tribe.name, `${tribe.name} tribe`, `${tribe.name} culture`, `${tribe.name} names`, `${tribe.name} history`, countryNames, 'African tribe'].join(', ');
 
   // Rich structured data for AI engines
@@ -390,7 +452,9 @@ const TribePage = () => {
                   <Book className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   About
                 </h2>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{tribe.description}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                  {tribe.description || `Information about the ${tribe.name} people is being compiled. Check back soon for a detailed cultural profile.`}
+                </p>
               </section>
               
               {/* Cultural Landmarks Section */}
@@ -426,14 +490,19 @@ const TribePage = () => {
                     Language & Greetings
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-3 mb-4">
+                    {language.name && (
                     <div>
                       <p className="text-sm text-muted-foreground">Language Name</p>
                       <p className="font-semibold text-foreground">{language.name}</p>
                     </div>
+                    )}
+                    {language.speakers && (
                     <div>
                       <p className="text-sm text-muted-foreground">Speakers</p>
                       <p className="font-semibold text-foreground">{language.speakers}</p>
                     </div>
+                    )}
+                    {language.greeting && (
                     <div>
                       <p className="text-sm text-muted-foreground">Main Greeting</p>
                       <p className="font-semibold text-primary text-lg">"{language.greeting}"</p>
@@ -441,6 +510,8 @@ const TribePage = () => {
                         <p className="text-xs text-muted-foreground">({language.greetingMeaning})</p>
                       )}
                     </div>
+                    )}
+                    {language.family && (
                     <div>
                       <p className="text-sm text-muted-foreground">Language Family</p>
                       <Link 
@@ -451,6 +522,7 @@ const TribePage = () => {
                         <ExternalLink className="w-3 h-3" />
                       </Link>
                     </div>
+                    )}
                   </div>
                   
                   {/* Language Learning Video */}
@@ -1203,6 +1275,46 @@ const TribePage = () => {
                         </Link>
                       );
                     })}
+                  </div>
+                </section>
+              )}
+              
+              {/* Exploration fallback when no related tribes */}
+              {relatedTribesData.length === 0 && (
+                <section className="border-t border-border pt-6">
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-3">Continue Exploring</h2>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Discover more about Africa's diverse ethnic groups and their cultures.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {tribe.region && (
+                      <Link 
+                        to={`/learn?region=${encodeURIComponent(tribe.region)}`}
+                        className="px-3 py-2 bg-secondary hover:bg-secondary/80 rounded-lg text-sm transition-colors"
+                      >
+                        More from {tribe.region} →
+                      </Link>
+                    )}
+                    {language?.family && (
+                      <Link 
+                        to={`/learn?languageFamily=${encodeURIComponent(language.family)}`}
+                        className="px-3 py-2 bg-secondary hover:bg-secondary/80 rounded-lg text-sm transition-colors"
+                      >
+                        {language.family} speakers →
+                      </Link>
+                    )}
+                    <Link 
+                      to="/learn"
+                      className="px-3 py-2 bg-secondary hover:bg-secondary/80 rounded-lg text-sm transition-colors"
+                    >
+                      Browse all tribes →
+                    </Link>
+                    <Link 
+                      to="/random"
+                      className="px-3 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm transition-colors"
+                    >
+                      🎲 Random tribe
+                    </Link>
                   </div>
                 </section>
               )}
