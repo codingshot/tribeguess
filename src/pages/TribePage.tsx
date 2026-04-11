@@ -644,7 +644,7 @@ const TribePage = () => {
                 if (!religionInfo && !tribeReligion) return null;
                 
                 const getReligionEmoji = (religion: string) => {
-                  switch (religion.toLowerCase()) {
+                  switch ((religion || '').toLowerCase()) {
                     case 'christian': return '✝️';
                     case 'muslim': return '☪️';
                     case 'traditional': return '🌍';
@@ -655,7 +655,7 @@ const TribePage = () => {
                 };
                 
                 const getReligionColor = (religion: string) => {
-                  switch (religion.toLowerCase()) {
+                  switch ((religion || '').toLowerCase()) {
                     case 'christian': return 'bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-200';
                     case 'muslim': return 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200';
                     case 'traditional': return 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200';
@@ -1204,13 +1204,14 @@ const TribePage = () => {
                       }
                       
                       // Check religion
-                      const currentReligion = (tribe as any).religion;
-                      const relatedReligion = (related as any).religion;
+                      const currentReligion = typeof (tribe as any).religion === 'string' ? (tribe as any).religion : '';
+                      const relatedReligion = typeof (related as any).religion === 'string' ? (related as any).religion : '';
                       if (currentReligion && relatedReligion) {
                         const getReligionType = (r: string) => {
-                          if (r.toLowerCase().includes('islam') || r.toLowerCase().includes('muslim')) return 'islam';
-                          if (r.toLowerCase().includes('christian') || r.toLowerCase().includes('orthodox')) return 'christian';
-                          if (r.toLowerCase().includes('traditional')) return 'traditional';
+                          const rl = r.toLowerCase();
+                          if (rl.includes('islam') || rl.includes('muslim')) return 'islam';
+                          if (rl.includes('christian') || rl.includes('orthodox')) return 'christian';
+                          if (rl.includes('traditional')) return 'traditional';
                           return null;
                         };
                         const currType = getReligionType(currentReligion);
@@ -1221,10 +1222,10 @@ const TribePage = () => {
                       }
                       
                       // Check for shared stereotypes
-                      const currentStereotypes = tribe.stereotypes || [];
-                      const relatedStereotypes = related.stereotypes || [];
-                      const sharedStereotypes = currentStereotypes.filter((s: string) => 
-                        relatedStereotypes.some((rs: string) => 
+                      const currentStereotypes = (tribe.stereotypes || []).filter((s): s is string => typeof s === 'string' && s.length > 0);
+                      const relatedStereotypes = (related.stereotypes || []).filter((s): s is string => typeof s === 'string' && s.length > 0);
+                      const sharedStereotypes = currentStereotypes.filter((s) => 
+                        relatedStereotypes.some((rs) => 
                           s.toLowerCase().includes(rs.toLowerCase().split(' ')[0]) ||
                           rs.toLowerCase().includes(s.toLowerCase().split(' ')[0])
                         )
