@@ -82,7 +82,7 @@ const TribePage = () => {
           { "@type": "ListItem", "position": 3, "name": tribe.name, "item": `https://tribeguess.com/learn/${tribe.slug}` },
         ]
       },
-      ...(tribe.funFacts?.length ? [{
+      ...(Array.isArray(tribe.funFacts) && tribe.funFacts.length ? [{
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": `What are the ${tribe.name} people known for?`, "acceptedAnswer": { "@type": "Answer", "text": tribe.description || tribe.funFacts?.[0] } },
