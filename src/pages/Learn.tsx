@@ -75,7 +75,7 @@ const Learn = () => {
   const countryFilter = rawCountry === 'ALL' || validCountryCodes.has(rawCountry) ? rawCountry : 'ALL';
   
   const viewMode = safeEnumParam(searchParams.get('view'), VALID_VIEW_MODES, 'grid');
-  const sortOrder = safeEnumParam(searchParams.get('sort'), VALID_SORT_ORDERS, '' as any) || '';
+  const sortOrder = safeEnumParam(searchParams.get('sort'), VALID_SORT_ORDERS, '' as 'pop-asc' | 'pop-desc' | 'name-asc' | 'name-desc') || '';
   
   const rawLanguageFamily = safeTextParam(searchParams.get('languageFamily'), 100);
   const languageFamilyFilter = rawLanguageFamily;
@@ -138,7 +138,7 @@ const Learn = () => {
   // Filter regions based on selected country's tribes
   const regions = useMemo(() => {
     const countryTribes = tribes.filter(t => {
-      const tribeCountries = (t as any).countries || ['KE'];
+      const tribeCountries = t.countries || ['KE'];
       return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
     });
     const uniqueRegions = [...new Set(countryTribes.map(t => t.region))];
@@ -148,7 +148,7 @@ const Learn = () => {
   // Country-specific stats
   const countryStats = useMemo(() => {
     const countryTribes = tribes.filter(t => {
-      const tribeCountries = (t as any).countries || ['KE'];
+      const tribeCountries = t.countries || ['KE'];
       return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
     });
     
@@ -212,7 +212,7 @@ const Learn = () => {
         (tribe.language?.family?.toLowerCase().includes(languageFamilyFilter.toLowerCase()));
       
       // Filter by country
-      const tribeCountries = (tribe as any).countries || ['KE'];
+      const tribeCountries = tribe.countries || ['KE'];
       
       let matchesCountry = true;
       if (selectedCountries.length > 0) {
