@@ -6,6 +6,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Search, X, ChevronDown, Star, User, Users } from 'lucide-react';
 import { analyzeGender } from '@/lib/genderNameAnalysis';
 import { cn } from '@/lib/utils';
+import { normalizeForSearch } from '@/lib/dataValidation';
 
 // Extended name database for searching
 const ALL_NAMES = {
@@ -83,11 +84,11 @@ export function NameSearchDropdown({
 
   // Filtered names
   const filteredNames = useMemo(() => {
-    if (!search) return allNamesData;
-    const query = search.toLowerCase();
+    if (!search.trim()) return allNamesData;
+    const queryNorm = normalizeForSearch(search);
     return allNamesData.filter(n => 
-      n.name.toLowerCase().includes(query) ||
-      n.region.toLowerCase().includes(query)
+      normalizeForSearch(n.name).includes(queryNorm) ||
+      normalizeForSearch(n.region).includes(queryNorm)
     );
   }, [allNamesData, search]);
 
