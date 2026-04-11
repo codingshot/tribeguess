@@ -140,20 +140,20 @@ const Learn = () => {
   
   const filteredTribes = useMemo(() => {
     let result = tribes.filter(tribe => {
-      const searchLower = searchQuery.toLowerCase();
+      const searchLower = (searchQuery || '').toLowerCase().slice(0, 100);
       
-      // Enhanced search - check more fields
+      // Enhanced search - check more fields with null safety
       const matchesSearch = !searchQuery || 
-        tribe.name.toLowerCase().includes(searchLower) ||
-        tribe.description.toLowerCase().includes(searchLower) ||
-        tribe.region.toLowerCase().includes(searchLower) ||
-        tribe.stereotypes.some(s => s.toLowerCase().includes(searchLower)) ||
-        tribe.commonNames.female.some(n => n.toLowerCase().includes(searchLower)) ||
-        tribe.commonNames.male.some(n => n.toLowerCase().includes(searchLower)) ||
+        (tribe.name || '').toLowerCase().includes(searchLower) ||
+        (tribe.description || '').toLowerCase().includes(searchLower) ||
+        (tribe.region || '').toLowerCase().includes(searchLower) ||
+        (Array.isArray(tribe.stereotypes) && tribe.stereotypes.some(s => typeof s === 'string' && s.toLowerCase().includes(searchLower))) ||
+        (Array.isArray(tribe.commonNames?.female) && tribe.commonNames.female.some(n => typeof n === 'string' && n.toLowerCase().includes(searchLower))) ||
+        (Array.isArray(tribe.commonNames?.male) && tribe.commonNames.male.some(n => typeof n === 'string' && n.toLowerCase().includes(searchLower))) ||
         (tribe.language?.name?.toLowerCase().includes(searchLower)) ||
-        (tribe.funFacts?.some(f => f.toLowerCase().includes(searchLower))) ||
-        (tribe.culturalTraits?.some(t => t.toLowerCase().includes(searchLower))) ||
-        (tribe.famousPeople?.some(p => p.name.toLowerCase().includes(searchLower)));
+        (Array.isArray(tribe.funFacts) && tribe.funFacts.some(f => typeof f === 'string' && f.toLowerCase().includes(searchLower))) ||
+        (Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.some(t => typeof t === 'string' && t.toLowerCase().includes(searchLower))) ||
+        (Array.isArray(tribe.famousPeople) && tribe.famousPeople.some(p => p && typeof p.name === 'string' && p.name.toLowerCase().includes(searchLower)));
       
       const matchesRegion = !regionFilter || tribe.region === regionFilter;
       
