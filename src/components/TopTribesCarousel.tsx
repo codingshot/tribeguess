@@ -1,7 +1,8 @@
 import { useState, useMemo, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllTribes, getCountries } from '@/lib/tribeDetection';
-import { ChevronRight, Users, MapPin, Globe, SlidersHorizontal, ArrowUpDown, Check } from 'lucide-react';
+import { ChevronRight, Users, MapPin, Globe, ArrowUpDown } from 'lucide-react';
+import { CountryFlag } from '@/components/CountryFlag';
 import {
   Carousel,
   CarouselContent,
@@ -35,14 +36,6 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
   const countries = getCountries();
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>('population');
-  
-  const countryFlags: Record<string, string> = {
-    KE: '🇰🇪', NG: '🇳🇬', GH: '🇬🇭', ZA: '🇿🇦', ET: '🇪🇹', TZ: '🇹🇿', 
-    UG: '🇺🇬', CD: '🇨🇩', SN: '🇸🇳', ER: '🇪🇷', RW: '🇷🇼', CM: '🇨🇲',
-    ZW: '🇿🇼', ZM: '🇿🇲', MW: '🇲🇼', AO: '🇦🇴', MZ: '🇲🇿', BW: '🇧🇼',
-    NA: '🇳🇦', SS: '🇸🇸', SD: '🇸🇩', ML: '🇲🇱', BF: '🇧🇫', CI: '🇨🇮',
-    SO: '🇸🇴', BI: '🇧🇮', CG: '🇨🇬', TG: '🇹🇬', BJ: '🇧🇯', LS: '🇱🇸'
-  };
 
   // Parse population for sorting
   const parsePopulation = (pop: string): number => {
@@ -57,14 +50,12 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
   const displayedTribes = useMemo(() => {
     let filtered = [...allTribes];
     
-    // Filter by selected countries
     if (selectedCountries.length > 0) {
       filtered = filtered.filter(tribe => 
         tribe.countries?.some(code => selectedCountries.includes(code))
       );
     }
     
-    // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'name':
@@ -77,7 +68,6 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
       }
     });
     
-    // Deduplicate by ID (multi-country tribes can appear twice)
     const seen = new Set<string>();
     const deduped = filtered.filter(t => {
       if (seen.has(t.id)) return false;
@@ -100,7 +90,6 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
     setSelectedCountries([]);
   };
 
-  // Get popular countries for the dropdown
   const popularCountries = countries.filter(c => 
     ['KE', 'NG', 'GH', 'ZA', 'ET', 'TZ', 'UG', 'CD', 'SN', 'CM', 'ZW', 'RW'].includes(c.code)
   );
@@ -150,10 +139,12 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm" className="h-8 gap-1 text-xs">
                 {selectedCountries.length > 0 ? (
-                  <>
-                    {selectedCountries.slice(0, 2).map(code => countryFlags[code] || '🌍').join('')}
+                  <span className="flex items-center gap-1">
+                    {selectedCountries.slice(0, 2).map(code => (
+                      <CountryFlag key={code} code={code} size={14} />
+                    ))}
                     {selectedCountries.length > 2 && <span>+{selectedCountries.length - 2}</span>}
-                  </>
+                  </span>
                 ) : (
                   <>
                     <Globe className="w-3 h-3" />
@@ -182,7 +173,10 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
                   checked={selectedCountries.includes(country.code)}
                   onCheckedChange={() => toggleCountry(country.code)}
                 >
-                  {country.flag} {country.name}
+                  <span className="flex items-center gap-2">
+                    <CountryFlag code={country.code} size={14} label={country.name} />
+                    {country.name}
+                  </span>
                 </DropdownMenuCheckboxItem>
               ))}
             </DropdownMenuContent>
@@ -207,10 +201,11 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
               <button
                 key={code}
                 onClick={() => toggleCountry(code)}
-                className="inline-flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary rounded-full text-xs hover:bg-primary/20 transition-colors"
+                className="inline-flex items-center gap-1.5 px-2 py-1 bg-primary/10 text-primary rounded-full text-xs hover:bg-primary/20 transition-colors"
               >
-                {country?.flag} {country?.name}
-                <span className="ml-1">×</span>
+                <CountryFlag code={code} size={12} label={country?.name} />
+                {country?.name}
+                <span className="ml-0.5">×</span>
               </button>
             );
           })}
@@ -240,32 +235,36 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
                 to={`/learn/${tribe.slug}`}
                 className="block group"
               >
-                <div className="bg-card border border-border rounded-xl p-3 sm:p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-300 h-full">
-                  {/* Country Flags */}
-                  <div className="flex gap-1 mb-2">
-                    {tribe.countries?.slice(0, 3).map((code) => (
-                      <span key={code} className="text-lg" title={code}>
-                        {countryFlags[code] || '🌍'}
-                      </span>
-                    ))}
-                  </div>
-                  
+                <div className="relative bg-card border border-border rounded-xl p-3 hover:shadow-lg hover:border-primary/30 transition-all duration-300 h-full">
                   {/* Tribe Name */}
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1 text-sm sm:text-base">
+                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1 text-sm sm:text-base pr-8">
                     {tribe.name}
                   </h3>
                   
-                  {/* Region */}
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
-                    <MapPin className="w-3 h-3 flex-shrink-0" />
-                    <span className="line-clamp-1">{tribe.region || 'Africa'}</span>
+                  {/* Region + Population in one line */}
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground mt-1">
+                    <span className="flex items-center gap-0.5 truncate">
+                      <MapPin className="w-3 h-3 flex-shrink-0" />
+                      <span className="truncate">{tribe.region || 'Africa'}</span>
+                    </span>
+                    <span className="text-border">·</span>
+                    <span className="flex items-center gap-0.5 flex-shrink-0">
+                      <Users className="w-3 h-3" />
+                      {tribe.population || '—'}
+                    </span>
                   </div>
                   
-                  {/* Population */}
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
-                    <Users className="w-3 h-3 flex-shrink-0" />
-                    <span>{tribe.population || 'Population data unavailable'}</span>
-                  </div>
+                  {/* Country Flags - bottom right corner */}
+                  {tribe.countries && tribe.countries.length > 0 && (
+                    <div className="absolute bottom-2.5 right-2.5 flex items-center gap-0.5">
+                      {tribe.countries.slice(0, 3).map((code) => (
+                        <CountryFlag key={code} code={code} size={12} label={code} />
+                      ))}
+                      {tribe.countries.length > 3 && (
+                        <span className="text-[10px] text-muted-foreground ml-0.5">+{tribe.countries.length - 3}</span>
+                      )}
+                    </div>
+                  )}
                 </div>
               </Link>
             </CarouselItem>

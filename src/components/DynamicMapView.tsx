@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { CountryFlag } from '@/components/CountryFlag';
 import { Link } from 'react-router-dom';
 import { MapPin, Users, Compass, Info, ExternalLink, Globe, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';
@@ -436,7 +437,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
           <div className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-primary" />
             <h3 className="font-heading font-semibold text-foreground">
-              {countryInfo?.flag} {baseBounds.name} Tribal Territories
+              <CountryFlag code={countryInfo?.code || ''} size={18} label={countryInfo?.name} /> {baseBounds.name} Tribal Territories
             </h3>
             {zoomLevel !== 1 && (
               <span className="text-xs text-muted-foreground ml-2">({Math.round(zoomLevel * 100)}% zoom)</span>
@@ -604,7 +605,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
         {/* Country Label */}
         <div className="absolute top-3 left-3 bg-background/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg border border-border z-40">
           <div className="flex items-center gap-2">
-            {countryInfo && <span className="text-xl">{countryInfo.flag}</span>}
+            {countryInfo && <CountryFlag code={countryInfo.code} size={22} label={countryInfo.name} />}
             <div>
               <p className="text-sm font-bold text-foreground">{baseBounds.name}</p>
               <p className="text-[10px] text-muted-foreground">Tribal Territories</p>

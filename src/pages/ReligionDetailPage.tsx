@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { CountryFlag, getCodeFromName } from '@/components/CountryFlag';
 import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -41,7 +42,7 @@ export default function ReligionDetailPage() {
 
   // Prepare chart data
   const countryChartData = religion.countryBreakdown.map(item => ({
-    name: `${item.flag} ${item.country}`,
+    name: `${item.country}`,
     value: item.percentage,
     country: item.country
   }));
@@ -357,7 +358,7 @@ export default function ReligionDetailPage() {
                             className="w-3 h-3 rounded-full" 
                             style={{ backgroundColor: PIE_COLORS[i % PIE_COLORS.length] }}
                           />
-                          {item.flag} {item.country}
+                          <CountryFlag code={getCodeFromName(item.country)} size={14} label={item.country} /> {item.country}
                         </span>
                         <span className="font-medium">{item.percentage}%</span>
                       </div>

@@ -1,7 +1,8 @@
-import { memo, useMemo } from 'react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Users, ChevronRight } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';
+import { CountryFlag } from '@/components/CountryFlag';
 
 // Cache countries list outside component to avoid re-calling on every render
 let cachedCountries: ReturnType<typeof getCountries> | null = null;
@@ -36,15 +37,15 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
           <div className="flex items-center gap-1.5 mb-0.5">
             {/* Country Flags */}
             {tribe.countries && tribe.countries.length > 0 && (
-              <div className="flex -space-x-1">
+              <div className="flex items-center gap-0.5">
                 {tribe.countries.slice(0, 3).map(code => {
                   const country = countries.find(c => c.code === code);
-                  return country ? (
-                    <span key={code} className="text-sm" title={country.name}>{country.flag}</span>
-                  ) : null;
+                  return (
+                    <CountryFlag key={code} code={code} size={14} label={country?.name} />
+                  );
                 })}
                 {tribe.countries.length > 3 && (
-                  <span className="text-xs text-muted-foreground">+{tribe.countries.length - 3}</span>
+                  <span className="text-xs text-muted-foreground ml-0.5">+{tribe.countries.length - 3}</span>
                 )}
               </div>
             )}

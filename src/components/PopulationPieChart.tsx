@@ -1,6 +1,7 @@
 import { useState, forwardRef } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { getCountries } from '@/lib/tribeDetection';
+import { CountryFlag, getCodeFromName } from '@/components/CountryFlag';
 
 interface PopulationByCountry {
   country: string;
@@ -42,34 +43,19 @@ const formatPopulation = (value: number): string => {
   return value.toString();
 };
 
-// Emoji flags for major diaspora countries
-const diasporaFlags: Record<string, string> = {
-  'United States': '🇺🇸',
-  'USA': '🇺🇸',
-  'United Kingdom': '🇬🇧',
-  'UK': '🇬🇧',
-  'Canada': '🇨🇦',
-  'Germany': '🇩🇪',
-  'France': '🇫🇷',
-  'Australia': '🇦🇺',
-  'South Africa': '🇿🇦',
-  'Tanzania': '🇹🇿',
-  'Uganda': '🇺🇬',
-  'Kenya': '🇰🇪',
-  'Ethiopia': '🇪🇹',
-  'Nigeria': '🇳🇬',
-  'Ghana': '🇬🇭',
-  'Netherlands': '🇳🇱',
-  'Belgium': '🇧🇪',
-  'Sweden': '🇸🇪',
-  'Norway': '🇳🇴',
-  'Italy': '🇮🇹',
-  'Spain': '🇪🇸',
-  'UAE': '🇦🇪',
-  'Saudi Arabia': '🇸🇦',
-  'China': '🇨🇳',
-  'India': '🇮🇳',
-  'Brazil': '🇧🇷',
+// Country code map for diaspora countries (name → ISO code)
+const diasporaCountryCodes: Record<string, string> = {
+  'United States': 'US', 'USA': 'US',
+  'United Kingdom': 'GB', 'UK': 'GB',
+  'Canada': 'CA', 'Germany': 'DE', 'France': 'FR',
+  'Australia': 'AU', 'South Africa': 'ZA',
+  'Tanzania': 'TZ', 'Uganda': 'UG', 'Kenya': 'KE',
+  'Ethiopia': 'ET', 'Nigeria': 'NG', 'Ghana': 'GH',
+  'Netherlands': 'NL', 'Belgium': 'BE',
+  'Sweden': 'SE', 'Norway': 'NO',
+  'Italy': 'IT', 'Spain': 'ES',
+  'UAE': 'AE', 'Saudi Arabia': 'SA',
+  'China': 'CN', 'India': 'IN', 'Brazil': 'BR',
 };
 
 // Color palette for countries
@@ -96,7 +82,7 @@ export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartP
         
         return {
           name: countryObj?.name || item.country,
-          flag: countryObj?.flag || '🌍',
+          countryCode: countryObj?.code || item.country,
           code: item.country,
           value: population,
           displayValue: item.population,
@@ -108,11 +94,11 @@ export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartP
     : diaspora
       ? diaspora.map((item, index) => {
           const population = parsePopulation(item.population);
-          const flag = diasporaFlags[item.country] || '🌍';
+          const countryCode = diasporaCountryCodes[item.country] || '';
           
           return {
             name: item.country,
-            flag,
+            countryCode,
             code: item.country,
             value: population,
             displayValue: item.population,
@@ -139,7 +125,7 @@ export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartP
       return (
         <div className="bg-popover border border-border rounded-lg shadow-lg p-3 min-w-[180px] z-50">
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-xl">{data.flag}</span>
+            <CountryFlag code={data.countryCode} size={20} label={data.name} />
             <span className="font-semibold text-foreground">{data.name}</span>
           </div>
           <div className="text-sm text-muted-foreground space-y-0.5">
@@ -172,7 +158,7 @@ export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartP
           onMouseLeave={() => setActiveIndex(null)}
           onClick={() => setActiveIndex(activeIndex === index ? null : index)}
         >
-          <span>{entry.flag}</span>
+          <CountryFlag code={entry.countryCode} size={14} label={entry.name} />
           <span className="font-medium">{entry.name}</span>
           <span className="text-muted-foreground">({formatPopulation(entry.value)})</span>
         </button>

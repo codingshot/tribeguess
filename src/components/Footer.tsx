@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 import { recipes } from '@/data/recipes';
+import { CountryFlag } from '@/components/CountryFlag';
 
 export function Footer() {
   // Get a random recipe ID for the link
@@ -70,29 +71,29 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-3 text-sm">Regions</h3>
             <nav className="flex flex-col gap-2">
-              <Link to="/learn?country=KE" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇰🇪 Kenya
+              <Link to="/learn?country=KE" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="KE" size={14} label="Kenya" /> Kenya
               </Link>
-              <Link to="/learn?country=NG" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇳🇬 Nigeria
+              <Link to="/learn?country=NG" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="NG" size={14} label="Nigeria" /> Nigeria
               </Link>
-              <Link to="/learn?country=ET" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇪🇹 Ethiopia
+              <Link to="/learn?country=ET" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="ET" size={14} label="Ethiopia" /> Ethiopia
               </Link>
-              <Link to="/learn?country=ZA" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇿🇦 South Africa
+              <Link to="/learn?country=ZA" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="ZA" size={14} label="South Africa" /> South Africa
               </Link>
-              <Link to="/learn?country=GH" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇬🇭 Ghana
+              <Link to="/learn?country=GH" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="GH" size={14} label="Ghana" /> Ghana
               </Link>
-              <Link to="/learn?country=TZ" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇹🇿 Tanzania
+              <Link to="/learn?country=TZ" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="TZ" size={14} label="Tanzania" /> Tanzania
               </Link>
-              <Link to="/learn?country=EG" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇪🇬 Egypt
+              <Link to="/learn?country=EG" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="EG" size={14} label="Egypt" /> Egypt
               </Link>
-              <Link to="/learn?country=MA" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                🇲🇦 Morocco
+              <Link to="/learn?country=MA" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="MA" size={14} label="Morocco" /> Morocco
               </Link>
             </nav>
           </div>
