@@ -523,7 +523,6 @@ const TribePage = () => {
                       </Link>
                     </div>
                     )}
-                    </div>
                   </div>
                   
                   {/* Language Learning Video */}
