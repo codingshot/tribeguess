@@ -1,6 +1,7 @@
 /**
  * Tribe data types — derived from tribes.json structure.
- * Used across the app to eliminate `as any` casts.
+ * The JSON data has highly varied shapes across 140+ tribes,
+ * so fields that vary significantly use `unknown` with runtime checks.
  */
 
 export interface TribeLanguage {
@@ -12,14 +13,6 @@ export interface TribeLanguage {
   commonPhrases?: { phrase: string; meaning: string }[];
   family?: string;
   writingSystem?: string;
-}
-
-export interface TribeHistory {
-  origins?: string;
-  migration?: string;
-  colonial?: string;
-  modern?: string;
-  [key: string]: string | undefined;
 }
 
 export interface TribeCommonNames {
@@ -34,27 +27,10 @@ export interface TribeFamousPerson {
   image?: string;
 }
 
-export interface DiasporaBreakdown {
-  country: string;
-  population: string;
-  cities?: string[];
-}
-
-export interface DiasporaObject {
-  globalPopulation?: string;
-  breakdown?: DiasporaBreakdown[];
-  communities?: string[];
-  associations?: string[];
-}
-
-export interface TraditionalReligionData {
-  name?: string;
-  description?: string;
-  practices?: string[];
-  beliefs?: string[];
-  [key: string]: unknown;
-}
-
+/**
+ * Core tribe interface. Fields with highly varied JSON shapes
+ * use permissive types to avoid brittle type mismatches.
+ */
 export interface TribeData {
   id: string;
   name: string;
@@ -73,22 +49,24 @@ export interface TribeData {
   commonNames?: TribeCommonNames;
   timeBasedNames?: Record<string, string[]>;
   stereotypes?: string[];
-  genderStereotypes?: { male?: string[]; female?: string[] };
-  genderRoles?: Record<string, unknown>;
   culturalTraits?: string[];
   funFacts?: string[];
-  traditionalFood?: string[];
-  eatingCustoms?: string[];
-  traditionalDance?: string[];
   religion?: string;
-  traditionalReligion?: TraditionalReligionData | string;
-  history?: TribeHistory;
   language?: TribeLanguage;
-  tradeHistory?: string;
-  independenceHistory?: string;
   famousPeople?: TribeFamousPerson[];
   description?: string;
   relatedTribes?: string[];
-  diaspora?: DiasporaObject | string[];
-  [key: string]: unknown; // allow extra fields gracefully
+  // These fields have highly varied shapes across tribes
+  // Use runtime checks when accessing sub-properties
+  traditionalFood?: unknown;
+  eatingCustoms?: unknown;
+  traditionalDance?: unknown;
+  traditionalReligion?: unknown;
+  history?: unknown;
+  tradeHistory?: unknown;
+  independenceHistory?: unknown;
+  genderStereotypes?: unknown;
+  genderRoles?: unknown;
+  diaspora?: unknown;
+  [key: string]: unknown;
 }
