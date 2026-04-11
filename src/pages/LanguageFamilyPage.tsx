@@ -145,7 +145,7 @@ export default function LanguageFamilyPage() {
     
     // Match on sub-families
     const matchesSub = !matchesFamily && Array.from(subFamilyNames).some(name => 
-      name.length > 2 && tribeFamily.includes(name)
+      typeof name === 'string' && name.length > 2 && tribeFamily.includes(name)
     );
     
     if (matchesFamily || matchesSub) {
