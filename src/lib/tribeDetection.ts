@@ -12,7 +12,7 @@ export interface GlobalOriginInfo {
 }
 
 export interface TribeResult {
-  tribe: typeof tribesData.tribes[0];
+  tribe: import('@/types/tribe').TribeData;
   confidence: number;
   matchReason: string;
   matchDetails?: string[];
