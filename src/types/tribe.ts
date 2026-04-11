@@ -74,7 +74,7 @@ export interface TribeData {
   timeBasedNames?: Record<string, string[]>;
   stereotypes?: string[];
   genderStereotypes?: { male?: string[]; female?: string[] };
-  genderRoles?: { male?: string; female?: string };
+  genderRoles?: Record<string, unknown>;
   culturalTraits?: string[];
   funFacts?: string[];
   traditionalFood?: string[];
