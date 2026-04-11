@@ -12,7 +12,7 @@ export interface GlobalOriginInfo {
 }
 
 export interface TribeResult {
-  tribe: typeof tribesData.tribes[0];
+  tribe: import('@/types/tribe').TribeData;
   confidence: number;
   matchReason: string;
   matchDetails?: string[];
@@ -4638,14 +4638,14 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   };
 }
 
-export function getAllTribes() {
+export function getAllTribes(): import('@/types/tribe').TribeData[] {
   const tribes = (tribesData as any).tribes || [];
 
   const mergeArrays = <T,>(a: T[] = [], b: T[] = []) => {
-    return Array.from(new Set([...a, ...b].filter(Boolean as any)));
+    return Array.from(new Set([...a, ...b].filter(Boolean as unknown as (v: T) => v is T)));
   };
 
-  const mergeByKey = <T extends Record<string, any>>(a: T[] = [], b: T[] = [], key: keyof T) => {
+  const mergeByKey = <T extends Record<string, unknown>>(a: T[] = [], b: T[] = [], key: keyof T) => {
     const map = new Map<string, T>();
     for (const item of [...a, ...b]) {
       const k = String(item?.[key] ?? '');
@@ -4703,7 +4703,7 @@ export function getAllTribes() {
 export function getTribesByCountry(countryCode: string) {
   const tribes = getAllTribes();
   if (!countryCode || countryCode === 'ALL') return tribes;
-  return tribes.filter(t => (t.countries as string[] | undefined)?.includes(countryCode));
+  return tribes.filter(t => t.countries?.includes(countryCode));
 }
 
 export function getTribeById(id: string) {

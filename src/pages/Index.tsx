@@ -86,10 +86,10 @@ const Index = () => {
 
     // Prefer female names first (app copy is "Guess Her") then add male names
     for (const t of tribes) {
-      all.push(...(t as any)?.commonNames?.female || []);
+      all.push(...(t.commonNames?.female || []));
     }
     for (const t of tribes) {
-      all.push(...(t as any)?.commonNames?.male || []);
+      all.push(...(t.commonNames?.male || []));
     }
 
     const unique = Array.from(new Set(all.map(n => String(n).trim()).filter(Boolean)));

@@ -17,9 +17,9 @@ interface TribeCardProps {
     slug: string;
     name: string;
     region: string;
-    population: string;
-    description: string;
-    stereotypes: string[];
+    population?: string;
+    description?: string;
+    stereotypes?: string[];
     countries?: string[];
   };
 }
@@ -61,14 +61,18 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" aria-hidden="true" />
       </header>
       
+      {tribe.population && (
       <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
         <Users className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
         <span>{tribe.population}</span>
       </div>
+      )}
       
+      {tribe.description && (
       <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 mb-2 sm:mb-3">
         {tribe.description}
       </p>
+      )}
       
       {tribe.stereotypes && tribe.stereotypes.length > 0 && (
       <ul className="flex flex-wrap gap-1 sm:gap-1.5" aria-label="Top stereotypes">

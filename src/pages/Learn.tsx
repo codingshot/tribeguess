@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
+import { CountryFlag } from '@/components/CountryFlag';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
 import { normalizeForSearch } from '@/lib/dataValidation';
 import tribesData from '@/data/tribes.json';
@@ -75,7 +76,7 @@ const Learn = () => {
   const countryFilter = rawCountry === 'ALL' || validCountryCodes.has(rawCountry) ? rawCountry : 'ALL';
   
   const viewMode = safeEnumParam(searchParams.get('view'), VALID_VIEW_MODES, 'grid');
-  const sortOrder = safeEnumParam(searchParams.get('sort'), VALID_SORT_ORDERS, '' as any) || '';
+  const sortOrder = safeEnumParam(searchParams.get('sort'), VALID_SORT_ORDERS, '' as 'pop-asc' | 'pop-desc' | 'name-asc' | 'name-desc') || '';
   
   const rawLanguageFamily = safeTextParam(searchParams.get('languageFamily'), 100);
   const languageFamilyFilter = rawLanguageFamily;
@@ -138,7 +139,7 @@ const Learn = () => {
   // Filter regions based on selected country's tribes
   const regions = useMemo(() => {
     const countryTribes = tribes.filter(t => {
-      const tribeCountries = (t as any).countries || ['KE'];
+      const tribeCountries = t.countries || ['KE'];
       return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
     });
     const uniqueRegions = [...new Set(countryTribes.map(t => t.region))];
@@ -148,17 +149,18 @@ const Learn = () => {
   // Country-specific stats
   const countryStats = useMemo(() => {
     const countryTribes = tribes.filter(t => {
-      const tribeCountries = (t as any).countries || ['KE'];
+      const tribeCountries = t.countries || ['KE'];
       return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
     });
     
     const population = countryTribes.reduce((acc, t) => {
-      const numMatch = t.population.match(/[\d.]+/);
+      const pop = t.population || '';
+      const numMatch = pop.match(/[\d.]+/);
       if (!numMatch) return acc;
       const num = parseFloat(numMatch[0]);
-      if (t.population.toLowerCase().includes('million')) {
+      if (pop.toLowerCase().includes('million')) {
         return acc + num * 1000000;
-      } else if (t.population.toLowerCase().includes('thousand') || t.population.toLowerCase().includes(',000')) {
+      } else if (pop.toLowerCase().includes('thousand') || pop.toLowerCase().includes(',000')) {
         return acc + num * 1000;
       }
       return acc + num;
@@ -212,7 +214,7 @@ const Learn = () => {
         (tribe.language?.family?.toLowerCase().includes(languageFamilyFilter.toLowerCase()));
       
       // Filter by country
-      const tribeCountries = (tribe as any).countries || ['KE'];
+      const tribeCountries = tribe.countries || ['KE'];
       
       let matchesCountry = true;
       if (selectedCountries.length > 0) {
@@ -830,7 +832,7 @@ const Learn = () => {
           {viewMode === 'list' && (
             <section aria-label="List of African tribes" className="space-y-2">
               {filteredTribes.map((tribe, index) => {
-                const tribeCountries = (tribe as any).countries || ['KE'];
+                const tribeCountries = tribe.countries || ['KE'];
                 return (
                   <Link
                     key={tribe.id}
@@ -842,7 +844,7 @@ const Learn = () => {
                       {tribeCountries.slice(0, 2).map((code: string) => {
                         const country = countries.find(c => c.code === code);
                         return country ? (
-                          <span key={code} className="text-lg" title={country.name}>{country.flag}</span>
+                          <CountryFlag key={code} code={code} size={20} label={country.name} />
                         ) : null;
                       })}
                       {tribeCountries.length > 2 && (
@@ -862,14 +864,16 @@ const Learn = () => {
                     </div>
 
                     {/* Population */}
+                    {tribe.population && (
                     <div className="text-right hidden sm:block">
                       <span className="text-sm font-medium text-foreground">{tribe.population}</span>
                       <p className="text-xs text-muted-foreground">population</p>
                     </div>
+                    )}
 
                     {/* Badges */}
                     <div className="hidden md:flex gap-1">
-                      {tribe.stereotypes.slice(0, 1).map((s, i) => (
+                      {(tribe.stereotypes || []).slice(0, 1).map((s, i) => (
                         <span key={i} className="badge-tribe text-xs">{s}</span>
                       ))}
                     </div>

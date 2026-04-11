@@ -5,7 +5,7 @@ import { CountryFlag } from '@/components/CountryFlag';
 
 export function Footer() {
   // Get a random recipe ID for the link
-  const randomRecipeId = recipes[Math.floor(Math.random() * recipes.length)]?.id;
+  const randomRecipeId = recipes.length > 0 ? recipes[Math.floor(Math.random() * recipes.length)]?.id : undefined;
 
   return (
     <footer className="border-t border-border bg-background/50">
