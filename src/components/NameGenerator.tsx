@@ -170,6 +170,7 @@ export function NameGenerator() {
   }, [filters]);
 
   const generateNames = useCallback(() => {
+    if (isGenerating) return; // Prevent rapid double-clicks
     setIsGenerating(true);
     
     // Simulate generation delay for effect
@@ -179,12 +180,17 @@ export function NameGenerator() {
       setGeneratedNames(selected);
       setIsGenerating(false);
     }, 500);
-  }, [availableNames]);
+  }, [availableNames, isGenerating]);
 
   const copyToClipboard = async (name: string) => {
-    await navigator.clipboard.writeText(name);
-    setCopiedName(name);
-    setTimeout(() => setCopiedName(null), 2000);
+    try {
+      await navigator.clipboard.writeText(name);
+      setCopiedName(name);
+      setTimeout(() => setCopiedName(null), 2000);
+    } catch {
+      // Clipboard API may fail in insecure contexts - silent fallback
+      console.warn('Clipboard API unavailable');
+    }
   };
 
   const updateFilter = (key: keyof GeneratorFilters, value: string) => {

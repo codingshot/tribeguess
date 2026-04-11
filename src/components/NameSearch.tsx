@@ -19,9 +19,12 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedName, setSelectedName] = useState<NameInfo | null>(null);
 
+  const safeFemaleNames = Array.isArray(femaleNames) ? femaleNames.filter(n => typeof n === 'string') : [];
+  const safeMaleNames = Array.isArray(maleNames) ? maleNames.filter(n => typeof n === 'string') : [];
+
   const allNames = useMemo(() => {
     const names: NameInfo[] = [];
-    femaleNames.forEach(name => {
+    safeFemaleNames.forEach(name => {
       const dbEntry = nameDatabase[name.toLowerCase()];
       names.push({
         name,
@@ -29,7 +32,7 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
         meaning: dbEntry?.meaning
       });
     });
-    maleNames.forEach(name => {
+    safeMaleNames.forEach(name => {
       const dbEntry = nameDatabase[name.toLowerCase()];
       names.push({
         name,
@@ -38,17 +41,17 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
       });
     });
     return names;
-  }, [femaleNames, maleNames, nameDatabase]);
+  }, [safeFemaleNames, safeMaleNames, nameDatabase]);
 
   const filteredNames = useMemo(() => {
-    if (!searchQuery) return { female: femaleNames.slice(0, 10), male: maleNames.slice(0, 10) };
+    if (!searchQuery) return { female: safeFemaleNames.slice(0, 10), male: safeMaleNames.slice(0, 10) };
     
-    const query = searchQuery.toLowerCase();
+    const query = searchQuery.toLowerCase().slice(0, 100);
     return {
-      female: femaleNames.filter(n => n.toLowerCase().includes(query)),
-      male: maleNames.filter(n => n.toLowerCase().includes(query))
+      female: safeFemaleNames.filter(n => n.toLowerCase().includes(query)),
+      male: safeMaleNames.filter(n => n.toLowerCase().includes(query))
     };
-  }, [searchQuery, femaleNames, maleNames]);
+  }, [searchQuery, safeFemaleNames, safeMaleNames]);
 
   const handleNameClick = (name: string, gender: 'male' | 'female') => {
     const dbEntry = nameDatabase[name.toLowerCase()];
@@ -71,8 +74,9 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
         <input
           type="text"
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={(e) => setSearchQuery(e.target.value.slice(0, 100))}
           placeholder="Search names..."
+          maxLength={100}
           className="w-full pl-10 pr-10 py-2 rounded-lg bg-secondary border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
         />
         {searchQuery && (

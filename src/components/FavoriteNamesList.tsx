@@ -127,7 +127,9 @@ function FavoriteItem({
       <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
         <span className="text-xs text-muted-foreground mr-2 flex items-center">
           <Clock className="w-3 h-3 mr-1" />
-          {formatDistanceToNow(favorite.addedAt, { addSuffix: true })}
+          {typeof favorite.addedAt === 'number' && favorite.addedAt > 0
+            ? formatDistanceToNow(favorite.addedAt, { addSuffix: true })
+            : 'Recently'}
         </span>
         
         {onAnalyze && (

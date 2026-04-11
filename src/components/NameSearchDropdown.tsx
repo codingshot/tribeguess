@@ -184,7 +184,8 @@ export function NameSearchDropdown({
               <Input
                 ref={inputRef}
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => setSearch(e.target.value.slice(0, 100))}
+                maxLength={100}
                 placeholder="Search names..."
                 className="pl-8 h-9"
                 onKeyDown={(e) => {
@@ -237,13 +238,13 @@ export function NameSearchDropdown({
           </ScrollArea>
           
           {/* Quick entry footer */}
-          {search && !filteredNames.find(n => n.name.toLowerCase() === search.toLowerCase()) && (
+          {search && search.trim().length >= 2 && search.trim().length <= 50 && !filteredNames.find(n => n.name.toLowerCase() === search.toLowerCase()) && (
             <div className="border-t p-2">
               <button
-                onClick={() => handleSelect(search)}
+                onClick={() => handleSelect(search.trim().slice(0, 50))}
                 className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded bg-primary/10 hover:bg-primary/20 text-sm transition-colors"
               >
-                <span>Use "{search}" as custom name</span>
+                <span>Use "{search.trim().slice(0, 50)}" as custom name</span>
               </button>
             </div>
           )}
