@@ -402,42 +402,43 @@ const Learn = () => {
               {/* View Toggle + Advanced Filters + Info - Same row */}
               <div className="flex items-center justify-center gap-2 mt-2 lg:mt-0 flex-shrink-0">
               {/* Compact View Toggle with Active State */}
-              <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0">
+              <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0" role="group" aria-label="View mode">
                 <button
                   onClick={() => toggleViewMode('grid')}
-                  className={`p-1.5 rounded-md transition-all ${
+                  className={`p-2 rounded-md transition-all touch-manipulation ${
                     viewMode === 'grid' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
-                  title="Grid view"
+                  aria-label="Grid view"
                   aria-pressed={viewMode === 'grid'}
                 >
                   <LayoutGrid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => toggleViewMode('list')}
-                  className={`p-1.5 rounded-md transition-all ${
+                  className={`p-2 rounded-md transition-all touch-manipulation ${
                     viewMode === 'list' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
-                  title="List view"
+                  aria-label="List view"
                   aria-pressed={viewMode === 'list'}
                 >
                   <List className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => toggleViewMode('map')}
-                  className={`p-1.5 rounded-md transition-all ${
+                  className={`p-2 rounded-md transition-all touch-manipulation ${
                     viewMode === 'map' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
-                  title="Map view"
+                  aria-label="Map view"
                   aria-pressed={viewMode === 'map'}
                 >
                   <MapIcon className="w-4 h-4" />
+                </button>
                 </button>
               </div>
 
