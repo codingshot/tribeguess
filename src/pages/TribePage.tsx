@@ -1106,32 +1106,37 @@ const TribePage = () => {
               )}
               
               {/* Diaspora Section */}
-              {tribe.diaspora && (
+              {tribe.diaspora && typeof tribe.diaspora === 'object' && !Array.isArray(tribe.diaspora) && (
+                (() => {
+                  const diaspora = tribe.diaspora as { globalPopulation?: string; breakdown?: { country: string; population: string; cities?: string[] }[]; communities?: string[]; associations?: string[] };
+                  return (
                 <section className="border-t border-border pt-6">
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                     Global Diaspora
                   </h2>
+                  {diaspora.globalPopulation && (
                   <div className="p-4 bg-secondary rounded-lg mb-4">
-                    <p className="text-2xl font-bold text-primary mb-1">{tribe.diaspora.globalPopulation}</p>
+                    <p className="text-2xl font-bold text-primary mb-1">{diaspora.globalPopulation}</p>
                     <p className="text-sm text-muted-foreground">Estimated global diaspora population</p>
                   </div>
+                  )}
                   
                   {/* Diaspora Pie Chart */}
-                  {(tribe.diaspora as any).breakdown && (tribe.diaspora as any).breakdown.length >= 2 && (
+                  {diaspora.breakdown && diaspora.breakdown.length >= 2 && (
                     <PopulationPieChart 
-                      diaspora={(tribe.diaspora as any).breakdown}
+                      diaspora={diaspora.breakdown}
                       tribeName={tribe.name}
                       type="diaspora"
                     />
                   )}
                   
                   {/* Country Breakdown Cards */}
-                  {(tribe.diaspora as any).breakdown && (
+                  {diaspora.breakdown && (
                     <div className="mb-4 mt-4">
                       <h3 className="text-sm font-medium text-foreground mb-3">Population by Country</h3>
                       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                        {(tribe.diaspora as any).breakdown.map((country: { country: string; population: string; cities: string[] }, i: number) => (
+                        {diaspora.breakdown.map((country, i: number) => (
                           <div key={i} className="p-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors">
                             <div className="flex items-center justify-between mb-1">
                               <p className="font-medium text-foreground text-sm">{country.country}</p>
@@ -1149,11 +1154,11 @@ const TribePage = () => {
                   )}
                   
                   <div className="space-y-3">
-                    {tribe.diaspora.communities && tribe.diaspora.communities.length > 0 && (
+                    {diaspora.communities && diaspora.communities.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Notable Communities</h3>
                       <ul className="space-y-1">
-                        {tribe.diaspora.communities.map((community, i) => (
+                        {diaspora.communities.map((community, i) => (
                           <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                             {community}
@@ -1162,11 +1167,11 @@ const TribePage = () => {
                       </ul>
                     </div>
                     )}
-                    {tribe.diaspora.associations && tribe.diaspora.associations.length > 0 && (
+                    {diaspora.associations && diaspora.associations.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-foreground mb-2">Diaspora Organizations</h3>
                       <ul className="flex flex-wrap gap-2">
-                        {tribe.diaspora.associations.map((assoc, i) => (
+                        {diaspora.associations.map((assoc, i) => (
                           <li key={i} className="badge-tribe text-xs">
                             {assoc}
                           </li>
@@ -1176,6 +1181,8 @@ const TribePage = () => {
                     )}
                   </div>
                 </section>
+                  );
+                })()
               )}
               
               {/* Related Tribes */}
