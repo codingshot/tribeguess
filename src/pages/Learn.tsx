@@ -669,48 +669,51 @@ const Learn = () => {
             
             {/* Active Filters + Clear Filters Row */}
             {hasFilters && (
-              <div className="flex flex-wrap items-center justify-between gap-2 mt-3 p-2 bg-secondary/50 rounded-lg">
+              <div className="flex flex-wrap items-center justify-between gap-2 mt-3 p-2 bg-secondary/50 rounded-lg" role="region" aria-label="Active filters">
                 <div className="flex flex-wrap items-center gap-1.5">
                   <span className="text-xs text-muted-foreground mr-1">Active:</span>
                   {macroRegionFilter && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Globe className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Globe className="w-3 h-3" aria-hidden="true" />
                       {macroRegions.find(r => r.id === macroRegionFilter)?.name || macroRegionFilter}
                       <button 
                         onClick={() => handleMacroRegionChange('')}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${macroRegions.find(r => r.id === macroRegionFilter)?.name || 'region'} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {countryFilter && countryFilter !== 'ALL' && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
                       <span className="text-sm">{countries.find(c => c.code === countryFilter)?.flag}</span>
                       {countries.find(c => c.code === countryFilter)?.name || countryFilter}
                       <button 
                         onClick={() => handleCountryChange('ALL')}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${countries.find(c => c.code === countryFilter)?.name || 'country'} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {regionFilter && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Layers className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Layers className="w-3 h-3" aria-hidden="true" />
                       {regionFilter}
                       <button 
                         onClick={() => handleRegionChange('')}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${regionFilter} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {searchQuery && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Search className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Search className="w-3 h-3" aria-hidden="true" />
                       "{searchQuery}"
                       <button 
                         onClick={() => {
@@ -719,15 +722,16 @@ const Learn = () => {
                           params.delete('search');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label="Remove search filter"
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {sortOrder && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <ArrowUpDown className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <ArrowUpDown className="w-3 h-3" aria-hidden="true" />
                       {sortOrder === 'pop-asc' ? 'Pop ↑' : sortOrder === 'pop-desc' ? 'Pop ↓' : sortOrder === 'name-asc' ? 'A-Z' : 'Z-A'}
                       <button 
                         onClick={() => {
@@ -735,14 +739,15 @@ const Learn = () => {
                           params.delete('sort');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label="Remove sort filter"
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {selectedCountries.length > 0 && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
                       <span className="flex items-center gap-0.5">
                         {selectedCountries.slice(0, 3).map(code => (
                           <span key={code} className="text-sm">{countries.find(c => c.code === code)?.flag}</span>
@@ -756,35 +761,38 @@ const Learn = () => {
                           params.delete('countries');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label="Remove countries filter"
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {languageFamilyFilter && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Languages className="w-3 h-3" />
-                      {languageFamilyFilter}
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Languages className="w-3 h-3" aria-hidden="true" />
+                      <span className="max-w-[120px] truncate">{languageFamilyFilter}</span>
                       <button 
                         onClick={() => {
                           const params = new URLSearchParams(searchParams);
                           params.delete('languageFamily');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${languageFamilyFilter} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
-                  <span className="text-xs text-muted-foreground ml-2">
+                  <span className="text-xs text-muted-foreground ml-2" aria-live="polite">
                     ({filteredTribes.length} of {tribes.length})
                   </span>
                 </div>
                 <button
                   onClick={clearFilters}
-                  className="text-xs text-primary hover:underline touch-manipulation py-1 flex items-center gap-1"
+                  className="text-xs text-primary hover:underline touch-manipulation py-2 px-2 flex items-center gap-1"
+                  aria-label="Clear all filters"
                 >
                   <X className="w-3 h-3" />
                   Clear all
