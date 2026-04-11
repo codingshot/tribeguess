@@ -1,4 +1,5 @@
 import { useMemo, useEffect } from 'react';
+import { CountryFlag } from '@/components/CountryFlag';
 import { Helmet } from 'react-helmet-async';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -195,10 +196,12 @@ export default function People() {
                   <SelectValue placeholder="Country" />
                 </SelectTrigger>
                 <SelectContent className="bg-background border shadow-lg">
-                  <SelectItem value="ALL">🌍 All Africa</SelectItem>
+                  <SelectItem value="ALL">
+                    <span className="flex items-center gap-2"><CountryFlag code="ALL" size={14} /> All Africa</span>
+                  </SelectItem>
                   {countries.map(c => (
                     <SelectItem key={c.code} value={c.code}>
-                      {c.flag} {c.name}
+                      <span className="flex items-center gap-2"><CountryFlag code={c.code} size={14} label={c.name} /> {c.name}</span>
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -254,10 +257,9 @@ interface PersonCardProps {
 
 function PersonCard({ person, onCategoryClick }: PersonCardProps) {
   const countries = useMemo(() => getCountries(), []);
-  const countryFlags = person.countries
-    .map(code => countries.find(c => c.code === code)?.flag)
-    .filter(Boolean)
-    .join(' ');
+  const countryFlagElements = person.countries.map(code => (
+    <CountryFlag key={code} code={code} size={14} label={countries.find(c => c.code === code)?.name} />
+  ));
 
   return (
     <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30 group">
