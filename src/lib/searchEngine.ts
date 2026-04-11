@@ -6,6 +6,7 @@
 import tribesData from '@/data/tribes.json';
 import globalTribeNames from '@/data/globalTribeNames.json';
 import { soundex, metaphone, africanPhonetic } from './phoneticMatching';
+import { normalizeForSearch } from './dataValidation';
 
 // Types
 export interface SearchResult {
@@ -262,7 +263,7 @@ function levenshteinFast(s1: string, s2: string, maxDist: number = 3): number {
  * Main search function - uses tiered approach for speed
  */
 export function searchNames(query: string, limit: number = 20): SearchResult[] {
-  const normalized = query.toLowerCase().trim();
+  const normalized = normalizeForSearch(query);
   if (normalized.length < 1) return [];
   
   const results: SearchResult[] = [];
