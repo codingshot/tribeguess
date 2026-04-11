@@ -166,10 +166,13 @@ export default function LanguageFamilyPage() {
     return `${year} CE`;
   };
 
-  // Get timeline progress for visualization
+  // Get timeline progress for visualization — safe against empty timeline
+  const timelineArr = Array.isArray(family.timeline) ? family.timeline : [];
   const getTimelineProgress = (year: number) => {
-    const minYear = Math.min(...family.timeline.map((t: TimelineEvent) => t.year));
-    const maxYear = Math.max(...family.timeline.map((t: TimelineEvent) => t.year));
+    if (timelineArr.length === 0) return 0;
+    const minYear = Math.min(...timelineArr.map((t: TimelineEvent) => t.year));
+    const maxYear = Math.max(...timelineArr.map((t: TimelineEvent) => t.year));
+    if (maxYear === minYear) return 50;
     return ((year - minYear) / (maxYear - minYear)) * 100;
   };
 
