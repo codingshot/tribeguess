@@ -17,9 +17,9 @@ interface TribeCardProps {
     slug: string;
     name: string;
     region: string;
-    population: string;
-    description: string;
-    stereotypes: string[];
+    population?: string;
+    description?: string;
+    stereotypes?: string[];
     countries?: string[];
   };
 }

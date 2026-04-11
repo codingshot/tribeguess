@@ -9,10 +9,10 @@ interface Tribe {
   name: string;
   slug: string;
   region: string;
-  population: string;
-  populationPercent: string;
-  mapCoordinates: { lat: number; lng: number };
-  counties: string[];
+  population?: string;
+  populationPercent?: string;
+  mapCoordinates?: { lat: number; lng: number };
+  counties?: string[];
   countries?: string[];
 }
 
