@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { Play, Volume2, Loader2 } from 'lucide-react';
 
 interface AudioGreetingProps {
@@ -273,7 +273,7 @@ const languageVoiceMap: Record<string, string> = {
   "Tachelhit": "ar-MA",
   "Shilha": "ar-MA",
   
-  // Additional Nilotic (not already listed)
+  // Additional Nilotic
   "Maasai": "sw-KE",
   "Turkana": "sw-KE",
   "Dinka": "en-US",
@@ -285,6 +285,8 @@ const languageVoiceMap: Record<string, string> = {
 
 // Get phonetic pronunciation or generate a simple one
 function getPhonetic(phrase: string): string {
+  if (!phrase) return '';
+  
   // Check exact match first
   if (phoneticMappings[phrase]) {
     return phoneticMappings[phrase];
@@ -303,33 +305,28 @@ function getPhonetic(phrase: string): string {
 }
 
 function generateBasicPhonetic(phrase: string): string {
-  // Simple phonetic generation for unknown phrases
+  if (!phrase) return '';
   return phrase
     .toLowerCase()
-    // Handle special characters
     .replace(/ĩ/g, 'ee')
     .replace(/ũ/g, 'oo')
     .replace(/ọ/g, 'oh')
     .replace(/ẹ/g, 'eh')
     .replace(/ɛ/g, 'eh')
     .replace(/ɔ/g, 'aw')
-    // Break into syllables
     .replace(/ng/g, 'ng-')
     .replace(/mb/g, 'm-b')
     .replace(/nd/g, 'n-d')
     .replace(/nj/g, 'n-j')
-    // Add hyphens between consonant clusters
     .split(' ')
     .join(' · ');
 }
 
 function getVoiceLocale(languageName?: string, languageFamily?: string): string {
-  // Try exact language match
   if (languageName && languageVoiceMap[languageName]) {
     return languageVoiceMap[languageName];
   }
   
-  // Default mapping by family
   if (languageFamily) {
     if (languageFamily.includes('Bantu')) return 'sw-KE';
     if (languageFamily.includes('Nilotic')) return 'sw-KE';
@@ -338,7 +335,7 @@ function getVoiceLocale(languageName?: string, languageFamily?: string): string 
     if (languageFamily.includes('Cushitic')) return 'so-SO';
   }
   
-  return 'sw-KE'; // Default to Swahili
+  return 'sw-KE';
 }
 
 export function AudioGreeting({ 
@@ -351,39 +348,57 @@ export function AudioGreeting({
 }: AudioGreetingProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const loadingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const displayPhonetic = phonetic || getPhonetic(phrase);
   const voiceLocale = getVoiceLocale(languageName, languageFamily);
 
-  const playAudio = async () => {
-    if (!('speechSynthesis' in window)) {
-      console.warn('Speech synthesis not supported');
+  const cleanup = useCallback(() => {
+    if (loadingTimeoutRef.current) {
+      clearTimeout(loadingTimeoutRef.current);
+      loadingTimeoutRef.current = null;
+    }
+  }, []);
+
+  const playAudio = useCallback(async () => {
+    if (!('speechSynthesis' in window) || !phrase) {
       return;
     }
 
     // Cancel any ongoing speech
     window.speechSynthesis.cancel();
+    cleanup();
     
     setIsLoading(true);
+
+    // Safety timeout — if speech never starts, reset state
+    loadingTimeoutRef.current = setTimeout(() => {
+      setIsLoading(false);
+      setIsPlaying(false);
+    }, 3000);
 
     // Wait for voices to be loaded
     let voices = window.speechSynthesis.getVoices();
     if (voices.length === 0) {
       await new Promise<void>((resolve) => {
-        window.speechSynthesis.onvoiceschanged = () => {
+        const handler = () => {
           voices = window.speechSynthesis.getVoices();
+          window.speechSynthesis.removeEventListener('voiceschanged', handler);
           resolve();
         };
-        setTimeout(resolve, 500); // Timeout fallback
+        window.speechSynthesis.addEventListener('voiceschanged', handler);
+        setTimeout(() => {
+          window.speechSynthesis.removeEventListener('voiceschanged', handler);
+          resolve();
+        }, 500);
       });
     }
 
-    // Find best matching voice - prioritize African/non-Western voices
+    // Find best matching voice
     const targetLocale = voiceLocale;
     const localeParts = targetLocale.split('-');
     
-    // Priority order: exact match > Swahili > African English > any African locale > non-US English > fallback
-    let selectedVoice = 
+    const selectedVoice = 
       voices.find(v => v.lang === targetLocale) ||
       voices.find(v => v.lang.startsWith(localeParts[0])) ||
       voices.find(v => v.lang === 'sw-KE' || v.lang === 'sw-TZ' || v.lang.startsWith('sw')) ||
@@ -393,18 +408,16 @@ export function AudioGreeting({
       voices.find(v => v.lang.startsWith('en-')) ||
       voices[0];
 
-    // Log selected voice for debugging
-    console.log('Audio: Using voice', selectedVoice?.name, selectedVoice?.lang, 'for', phrase);
-
     const utterance = new SpeechSynthesisUtterance(phrase);
-    utterance.voice = selectedVoice;
-    utterance.rate = 0.65; // Slightly slower for better clarity
-    utterance.pitch = 1.0;
-    utterance.volume = 1.0;
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
+    }
+    utterance.rate = 0.65;
     utterance.pitch = 1.0;
     utterance.volume = 1.0;
 
     utterance.onstart = () => {
+      cleanup();
       setIsLoading(false);
       setIsPlaying(true);
     };
@@ -413,13 +426,18 @@ export function AudioGreeting({
       setIsPlaying(false);
     };
 
-    utterance.onerror = () => {
+    utterance.onerror = (event) => {
+      cleanup();
       setIsLoading(false);
       setIsPlaying(false);
+      // Only warn for genuine errors, not user-initiated cancellation
+      if (event.error !== 'interrupted' && event.error !== 'canceled') {
+        console.warn('AudioGreeting: playback error', event.error);
+      }
     };
 
     window.speechSynthesis.speak(utterance);
-  };
+  }, [phrase, voiceLocale, cleanup]);
 
   const sizeClasses = {
     sm: {
@@ -427,7 +445,7 @@ export function AudioGreeting({
       phrase: 'text-sm',
       phonetic: 'text-xs',
       meaning: 'text-xs',
-      button: 'p-1.5',
+      button: 'p-1.5 min-w-[28px] min-h-[28px]',
       icon: 'w-3 h-3',
     },
     md: {
@@ -435,7 +453,7 @@ export function AudioGreeting({
       phrase: 'text-base',
       phonetic: 'text-sm',
       meaning: 'text-sm',
-      button: 'p-2',
+      button: 'p-2 min-w-[36px] min-h-[36px]',
       icon: 'w-4 h-4',
     },
     lg: {
@@ -443,7 +461,7 @@ export function AudioGreeting({
       phrase: 'text-xl',
       phonetic: 'text-base',
       meaning: 'text-sm',
-      button: 'p-3',
+      button: 'p-3 min-w-[44px] min-h-[44px]',
       icon: 'w-5 h-5',
     },
   };
@@ -457,9 +475,11 @@ export function AudioGreeting({
           <p className={`font-semibold text-primary ${classes.phrase}`}>
             "{phrase}"
           </p>
-          <span className={`text-muted-foreground italic font-mono ${classes.phonetic}`}>
-            [{displayPhonetic}]
-          </span>
+          {displayPhonetic && (
+            <span className={`text-muted-foreground italic font-mono ${classes.phonetic}`}>
+              [{displayPhonetic}]
+            </span>
+          )}
         </div>
         <p className={`text-muted-foreground ${classes.meaning}`}>
           {meaning}
@@ -468,11 +488,11 @@ export function AudioGreeting({
       <button 
         onClick={playAudio}
         disabled={isPlaying || isLoading}
-        className={`rounded-full transition-all flex-shrink-0 ${classes.button} ${
+        className={`rounded-full transition-all flex-shrink-0 touch-manipulation ${classes.button} ${
           isPlaying 
             ? 'bg-primary text-primary-foreground animate-pulse' 
             : 'bg-primary/10 hover:bg-primary/20 text-primary'
-        }`}
+        } focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`}
         title={`Listen to "${phrase}" pronunciation`}
         aria-label={`Play pronunciation of ${phrase}`}
       >
@@ -498,12 +518,12 @@ export function MainGreeting({
 }: Omit<AudioGreetingProps, 'size'>) {
   return (
     <AudioGreeting 
-      phrase={phrase}
+      phrase={phrase} 
       meaning={meaning}
       phonetic={phonetic}
       languageFamily={languageFamily}
       languageName={languageName}
-      size="lg"
+      size="lg" 
     />
   );
 }
