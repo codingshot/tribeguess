@@ -211,13 +211,13 @@ export default function LanguageFamilyPage() {
               <h1 className="text-3xl md:text-5xl font-serif font-bold text-white mb-3">
                 {family.name}
               </h1>
-              {family.alternateNames.length > 0 && (
+              {Array.isArray(family.alternateNames) && family.alternateNames.length > 0 && (
                 <p className="text-white/80 mb-4 text-sm">
                   Also known as: {family.alternateNames.join(', ')}
                 </p>
               )}
               <p className="text-white/90 max-w-2xl text-lg mb-6">
-                {family.description}
+                {family.description || 'Explore this language family and its branches.'}
               </p>
               
               {/* Quick Stats */}
