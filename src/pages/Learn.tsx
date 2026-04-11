@@ -830,7 +830,7 @@ const Learn = () => {
           {viewMode === 'list' && (
             <section aria-label="List of African tribes" className="space-y-2">
               {filteredTribes.map((tribe, index) => {
-                const tribeCountries = (tribe as any).countries || ['KE'];
+                const tribeCountries = tribe.countries || ['KE'];
                 return (
                   <Link
                     key={tribe.id}
@@ -842,7 +842,7 @@ const Learn = () => {
                       {tribeCountries.slice(0, 2).map((code: string) => {
                         const country = countries.find(c => c.code === code);
                         return country ? (
-                          <span key={code} className="text-lg" title={country.name}>{country.flag}</span>
+                          <CountryFlag key={code} code={code} size={20} label={country.name} />
                         ) : null;
                       })}
                       {tribeCountries.length > 2 && (
@@ -862,14 +862,16 @@ const Learn = () => {
                     </div>
 
                     {/* Population */}
+                    {tribe.population && (
                     <div className="text-right hidden sm:block">
                       <span className="text-sm font-medium text-foreground">{tribe.population}</span>
                       <p className="text-xs text-muted-foreground">population</p>
                     </div>
+                    )}
 
                     {/* Badges */}
                     <div className="hidden md:flex gap-1">
-                      {tribe.stereotypes.slice(0, 1).map((s, i) => (
+                      {(tribe.stereotypes || []).slice(0, 1).map((s, i) => (
                         <span key={i} className="badge-tribe text-xs">{s}</span>
                       ))}
                     </div>
