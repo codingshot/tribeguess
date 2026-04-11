@@ -12,6 +12,7 @@ import { NameAnalysisCard } from '@/components/NameAnalysisCard';
 import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions, getAllTribes } from '@/lib/tribeDetection';
 import { analyzeNameBreakdown, findSimilarNames, getGlobalMatches } from '@/lib/nameAnalysis';
 import { ArrowRight, Lightbulb, Brain, BookOpen, Shuffle, Search, Languages } from 'lucide-react';
+import { CountryFlag } from '@/components/CountryFlag';
 import { sanitizeTextInput, isValidCountryCode } from '@/lib/dataValidation';
 import logo from '@/assets/logo.png';
 
@@ -77,7 +78,7 @@ const Index = () => {
 
   const countryLabel =
     countryAdjectives[activeCountry] || activeCountryInfo?.name || 'African';
-  const countryFlag = activeCountry === 'ALL' ? '🌍' : (activeCountryInfo?.flag || '🇰🇪');
+  const countryCode = activeCountry === 'ALL' ? 'ALL' : activeCountry;
 
   const popularNames = (() => {
     const tribes = getTribesByCountry(activeCountry);
@@ -172,11 +173,11 @@ const Index = () => {
                       to { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
                     }
                   `}</style>
-                  {['🇰🇪', '🇳🇬', '🇬🇭', '🇿🇦', '🇪🇹', '🇹🇿', '🇺🇬', '🇨🇩', '🇸🇳', '🇪🇷'].map((flag, i) => <span key={flag} className="absolute text-xl sm:text-2xl opacity-35" style={{
+                  {['KE', 'NG', 'GH', 'ZA', 'ET', 'TZ', 'UG', 'CD', 'SN', 'ER'].map((code, i) => <span key={code} className="absolute opacity-35" style={{
                 animation: `orbit 15s linear infinite`,
                 animationDelay: `${-i * 1.5}s`
               }}>
-                      {flag}
+                      <CountryFlag code={code} size={20} />
                     </span>)}
                 </div>
                 <img src={logo} alt="TribeGuess - Tribe Guesser Logo" className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle" width={128} height={128} loading="eager" fetchPriority="high" decoding="async" />
@@ -192,8 +193,8 @@ const Index = () => {
             <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} onCountryChange={handleCountryChange} />
             
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-3 sm:mb-4">
-                Try some popular {countryFlag} {countryLabel} names:
+              <p className="text-sm text-muted-foreground mb-3 sm:mb-4 flex items-center justify-center gap-1.5">
+                Try some popular <CountryFlag code={countryCode} size={16} /> {countryLabel} names:
               </p>
               <nav aria-label="Example names" className="flex flex-wrap justify-center gap-2">
                 {popularNames.map((name) => (
@@ -279,7 +280,7 @@ const Index = () => {
                       href={`/?name=${encodeURIComponent(nameQuery)}&country=${suggestion.country.code}`}
                       className="inline-flex items-center gap-2 px-3 py-2 bg-white dark:bg-amber-900/50 rounded-lg border border-amber-200 dark:border-amber-700 hover:border-amber-400 dark:hover:border-amber-500 transition-colors group"
                     >
-                      <span className="text-lg">{suggestion.country.flag}</span>
+                      <CountryFlag code={suggestion.country.code} size={20} label={suggestion.country.name} />
                       <div className="text-left">
                         <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
                           Try {suggestion.country.name}
