@@ -61,7 +61,7 @@ export function useQuizResults() {
     );
     const loadedStats = safeReadStorage<QuizStats>(
       STATS_KEY,
-      (data) => validateQuizStats(data) as QuizStats | null,
+      (data) => validateQuizStats(data) as unknown as QuizStats | null,
       defaultStats
     );
     setResults(loadedResults);
