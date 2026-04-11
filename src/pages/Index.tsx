@@ -141,7 +141,7 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="container mx-auto px-4 py-6 sm:py-8">
+      <main id="main-content" className="container mx-auto px-4 py-6 sm:py-8">
         {!results ?
       // Landing view
       <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in">

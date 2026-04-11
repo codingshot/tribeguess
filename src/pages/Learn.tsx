@@ -341,7 +341,7 @@ const Learn = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="container mx-auto px-4 py-6 sm:py-8">
+      <main id="main-content" className="container mx-auto px-4 py-6 sm:py-8">
         <div className="animate-fade-in">
           <header className="text-center mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 sm:mb-3">
@@ -402,39 +402,39 @@ const Learn = () => {
               {/* View Toggle + Advanced Filters + Info - Same row */}
               <div className="flex items-center justify-center gap-2 mt-2 lg:mt-0 flex-shrink-0">
               {/* Compact View Toggle with Active State */}
-              <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0">
+              <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0" role="group" aria-label="View mode">
                 <button
                   onClick={() => toggleViewMode('grid')}
-                  className={`p-1.5 rounded-md transition-all ${
+                  className={`p-2 rounded-md transition-all touch-manipulation ${
                     viewMode === 'grid' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
-                  title="Grid view"
+                  aria-label="Grid view"
                   aria-pressed={viewMode === 'grid'}
                 >
                   <LayoutGrid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => toggleViewMode('list')}
-                  className={`p-1.5 rounded-md transition-all ${
+                  className={`p-2 rounded-md transition-all touch-manipulation ${
                     viewMode === 'list' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
-                  title="List view"
+                  aria-label="List view"
                   aria-pressed={viewMode === 'list'}
                 >
                   <List className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => toggleViewMode('map')}
-                  className={`p-1.5 rounded-md transition-all ${
+                  className={`p-2 rounded-md transition-all touch-manipulation ${
                     viewMode === 'map' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
-                  title="Map view"
+                  aria-label="Map view"
                   aria-pressed={viewMode === 'map'}
                 >
                   <MapIcon className="w-4 h-4" />
@@ -599,18 +599,20 @@ const Learn = () => {
               </Select>
               
               {/* Country Flags - Horizontal scroll on mobile */}
-              <div className="flex items-center gap-1 overflow-x-auto max-w-[200px] sm:max-w-none scrollbar-hide">
+              <div className="flex items-center gap-1.5 overflow-x-auto max-w-[220px] sm:max-w-none scrollbar-hide">
                 <TooltipProvider>
                   {(macroRegionFilter ? filteredCountries.slice(0, 6) : countries.slice(0, 6)).map(country => (
                     <Tooltip key={country.code} delayDuration={300}>
                       <TooltipTrigger asChild>
                         <button
                           onClick={() => handleCountryChange(country.code)}
-                          className={`px-1 py-0.5 rounded text-sm transition-all shrink-0 ${
+                          className={`flex items-center justify-center w-9 h-9 sm:w-8 sm:h-8 rounded-lg text-sm transition-all shrink-0 touch-manipulation ${
                             countryFilter === country.code
-                              ? 'bg-primary text-primary-foreground ring-1 ring-primary/50' 
+                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/50' 
                               : 'bg-secondary/80 hover:bg-secondary'
                           }`}
+                          aria-label={`Filter by ${country.name}`}
+                          aria-pressed={countryFilter === country.code}
                         >
                           {country.flag}
                         </button>
@@ -625,13 +627,15 @@ const Learn = () => {
                       <TooltipTrigger asChild>
                         <button
                           onClick={() => handleCountryChange('ALL')}
-                          className={`px-1 py-0.5 rounded transition-all shrink-0 ${
+                          className={`flex items-center justify-center w-9 h-9 sm:w-8 sm:h-8 rounded-lg transition-all shrink-0 touch-manipulation ${
                             countryFilter === 'ALL'
-                              ? 'bg-primary text-primary-foreground ring-1 ring-primary/50' 
+                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/50' 
                               : 'bg-secondary/80 hover:bg-secondary'
                           }`}
+                          aria-label="Show all countries"
+                          aria-pressed={countryFilter === 'ALL'}
                         >
-                          <Globe className="w-3.5 h-3.5" />
+                          <Globe className="w-4 h-4" />
                         </button>
                       </TooltipTrigger>
                       <TooltipContent side="bottom" className="text-xs">
@@ -665,48 +669,51 @@ const Learn = () => {
             
             {/* Active Filters + Clear Filters Row */}
             {hasFilters && (
-              <div className="flex flex-wrap items-center justify-between gap-2 mt-3 p-2 bg-secondary/50 rounded-lg">
+              <div className="flex flex-wrap items-center justify-between gap-2 mt-3 p-2 bg-secondary/50 rounded-lg" role="region" aria-label="Active filters">
                 <div className="flex flex-wrap items-center gap-1.5">
                   <span className="text-xs text-muted-foreground mr-1">Active:</span>
                   {macroRegionFilter && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Globe className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Globe className="w-3 h-3" aria-hidden="true" />
                       {macroRegions.find(r => r.id === macroRegionFilter)?.name || macroRegionFilter}
                       <button 
                         onClick={() => handleMacroRegionChange('')}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${macroRegions.find(r => r.id === macroRegionFilter)?.name || 'region'} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {countryFilter && countryFilter !== 'ALL' && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
                       <span className="text-sm">{countries.find(c => c.code === countryFilter)?.flag}</span>
                       {countries.find(c => c.code === countryFilter)?.name || countryFilter}
                       <button 
                         onClick={() => handleCountryChange('ALL')}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${countries.find(c => c.code === countryFilter)?.name || 'country'} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {regionFilter && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Layers className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Layers className="w-3 h-3" aria-hidden="true" />
                       {regionFilter}
                       <button 
                         onClick={() => handleRegionChange('')}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${regionFilter} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {searchQuery && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Search className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Search className="w-3 h-3" aria-hidden="true" />
                       "{searchQuery}"
                       <button 
                         onClick={() => {
@@ -715,15 +722,16 @@ const Learn = () => {
                           params.delete('search');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label="Remove search filter"
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {sortOrder && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <ArrowUpDown className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <ArrowUpDown className="w-3 h-3" aria-hidden="true" />
                       {sortOrder === 'pop-asc' ? 'Pop ↑' : sortOrder === 'pop-desc' ? 'Pop ↓' : sortOrder === 'name-asc' ? 'A-Z' : 'Z-A'}
                       <button 
                         onClick={() => {
@@ -731,14 +739,15 @@ const Learn = () => {
                           params.delete('sort');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label="Remove sort filter"
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {selectedCountries.length > 0 && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
                       <span className="flex items-center gap-0.5">
                         {selectedCountries.slice(0, 3).map(code => (
                           <span key={code} className="text-sm">{countries.find(c => c.code === code)?.flag}</span>
@@ -752,35 +761,38 @@ const Learn = () => {
                           params.delete('countries');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label="Remove countries filter"
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
                   {languageFamilyFilter && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded-full">
-                      <Languages className="w-3 h-3" />
-                      {languageFamilyFilter}
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
+                      <Languages className="w-3 h-3" aria-hidden="true" />
+                      <span className="max-w-[120px] truncate">{languageFamilyFilter}</span>
                       <button 
                         onClick={() => {
                           const params = new URLSearchParams(searchParams);
                           params.delete('languageFamily');
                           setSearchParams(params);
                         }}
-                        className="ml-0.5 hover:bg-primary/30 rounded-full p-0.5"
+                        className="ml-0.5 hover:bg-primary/30 rounded-full p-1 touch-manipulation"
+                        aria-label={`Remove ${languageFamilyFilter} filter`}
                       >
-                        <X className="w-2.5 h-2.5" />
+                        <X className="w-3 h-3" />
                       </button>
                     </span>
                   )}
-                  <span className="text-xs text-muted-foreground ml-2">
+                  <span className="text-xs text-muted-foreground ml-2" aria-live="polite">
                     ({filteredTribes.length} of {tribes.length})
                   </span>
                 </div>
                 <button
                   onClick={clearFilters}
-                  className="text-xs text-primary hover:underline touch-manipulation py-1 flex items-center gap-1"
+                  className="text-xs text-primary hover:underline touch-manipulation py-2 px-2 flex items-center gap-1"
+                  aria-label="Clear all filters"
                 >
                   <X className="w-3 h-3" />
                   Clear all

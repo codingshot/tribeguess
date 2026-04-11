@@ -23,7 +23,7 @@ export default function LanguagesIndex() {
 
       <Header />
       
-      <main className="min-h-screen bg-background pt-20 pb-12">
+      <main id="main-content" className="min-h-screen bg-background pt-20 pb-12">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <section className="text-center mb-12">
