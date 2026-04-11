@@ -178,7 +178,7 @@ const TribePage = () => {
       </Helmet>
       <Header />
       
-      <main className="container mx-auto px-4 py-6 sm:py-8">
+      <main id="main-content" className="container mx-auto px-4 py-6 sm:py-8">
         <article className="animate-fade-in max-w-4xl mx-auto">
           <nav className="mb-4 sm:mb-6">
             <Link 

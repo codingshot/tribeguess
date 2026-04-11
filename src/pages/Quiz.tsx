@@ -234,7 +234,7 @@ export default function QuizPage() {
 
       <Header />
       
-      <main className="min-h-screen bg-background pt-20 pb-12">
+      <main id="main-content" className="min-h-screen bg-background pt-20 pb-12">
         <div className="container mx-auto px-3 sm:px-4">
           {/* Menu Mode */}
           {gameMode === 'menu' && (
@@ -688,6 +688,10 @@ export default function QuizPage() {
               <div
                 className="relative min-h-[200px] sm:min-h-[240px] cursor-pointer select-none"
                 onClick={() => setIsFlipped(!isFlipped)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped(!isFlipped); } }}
+                tabIndex={0}
+                role="button"
+                aria-label={isFlipped ? 'Showing answer. Press to see question.' : 'Showing question. Press to reveal answer.'}
               >
                 <Card className={`absolute inset-0 flex items-center justify-center p-4 sm:p-6 transition-all duration-500 ${isFlipped ? 'opacity-0 pointer-events-none scale-95' : 'opacity-100'}`}>
                   <CardContent className="text-center w-full">
