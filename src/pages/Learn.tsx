@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
+import { normalizeForSearch } from '@/lib/dataValidation';
 import tribesData from '@/data/tribes.json';
 import {
   Select,
