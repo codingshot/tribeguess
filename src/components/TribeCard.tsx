@@ -38,7 +38,7 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
             {tribe.countries && tribe.countries.length > 0 && (
               <div className="flex -space-x-1">
                 {tribe.countries.slice(0, 3).map(code => {
-                  const country = getCountries().find(c => c.code === code);
+                  const country = countries.find(c => c.code === code);
                   return country ? (
                     <span key={code} className="text-sm" title={country.name}>{country.flag}</span>
                   ) : null;
