@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { CountryFlag } from '@/components/CountryFlag';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '@/components/Header';
@@ -160,7 +161,14 @@ export default function PersonPage() {
                     
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <MapPin className="w-4 h-4" />
-                      {countryInfo.map(c => `${c?.flag} ${c?.name}`).join(', ')}
+                      <span className="flex items-center gap-2 flex-wrap">
+                        {countryInfo.map(c => c ? (
+                          <span key={c.code} className="inline-flex items-center gap-1">
+                            <CountryFlag code={c.code} size={16} label={c.name} />
+                            {c.name}
+                          </span>
+                        ) : null)}
+                      </span>
                     </div>
                     
                     {(person.birthYear || person.deathYear) && (

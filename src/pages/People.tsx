@@ -319,7 +319,7 @@ function PersonCard({ person, onCategoryClick }: PersonCardProps) {
           >
             {person.tribeName}
           </Link>
-          <span className="text-muted-foreground">{countryFlags}</span>
+          <span className="flex items-center gap-1">{countryFlagElements}</span>
         </div>
       </CardContent>
     </Card>
