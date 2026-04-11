@@ -208,6 +208,26 @@ const Index = () => {
               </nav>
             </div>
             
+            {/* Quick Discovery CTAs */}
+            <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 max-w-lg mx-auto">
+              <Link to="/learn" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Search className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">{getAllTribes().length}+ Tribes</span>
+              </Link>
+              <Link to="/quiz" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Brain className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Quiz</span>
+              </Link>
+              <Link to="/random" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Shuffle className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Random</span>
+              </Link>
+              <Link to="/languages" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Languages className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Languages</span>
+              </Link>
+            </div>
+            
             {/* Top Tribes Carousel */}
             <div className="content-auto-lg">
               <TopTribesCarousel />
