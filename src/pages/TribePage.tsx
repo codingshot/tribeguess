@@ -644,7 +644,7 @@ const TribePage = () => {
                 if (!religionInfo && !tribeReligion) return null;
                 
                 const getReligionEmoji = (religion: string) => {
-                  switch (religion.toLowerCase()) {
+                  switch ((religion || '').toLowerCase()) {
                     case 'christian': return '✝️';
                     case 'muslim': return '☪️';
                     case 'traditional': return '🌍';
@@ -655,7 +655,7 @@ const TribePage = () => {
                 };
                 
                 const getReligionColor = (religion: string) => {
-                  switch (religion.toLowerCase()) {
+                  switch ((religion || '').toLowerCase()) {
                     case 'christian': return 'bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-200';
                     case 'muslim': return 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200';
                     case 'traditional': return 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200';
