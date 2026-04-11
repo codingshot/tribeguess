@@ -207,7 +207,7 @@ const TribePage = () => {
                         to={`/learn?country=${code}`}
                         className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 hover:bg-white/30 transition-colors text-xs sm:text-sm font-medium"
                       >
-                        <span>{country.flag}</span>
+                        <CountryFlag code={code} size={16} label={country.name} />
                         <span>{country.name}</span>
                       </Link>
                     ) : null;
@@ -303,7 +303,7 @@ const TribePage = () => {
                                   title={c.name}
                                   aria-label={c.name}
                                 >
-                                  {c.flag}
+                                  <CountryFlag code={c.code} size={18} label={c.name} />
                                 </span>
                               ))}
                               {countryObjects.length > 3 && (
@@ -336,7 +336,7 @@ const TribePage = () => {
                                 to={`/learn?country=${c.code}`}
                                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background hover:bg-primary/10 transition-colors text-sm border border-border hover:border-primary/30"
                               >
-                                <span className="text-lg">{c.flag}</span>
+                                <CountryFlag code={c.code} size={20} label={c.name} />
                                 <span className="font-medium">{c.name}</span>
                               </Link>
                             ))}
@@ -423,7 +423,7 @@ const TribePage = () => {
                               return (
                                 <div key={item.country} className="p-2 bg-background/60 rounded-lg text-center border border-border hover:border-primary/30 transition-colors">
                                   <div className="flex items-center justify-center gap-1 mb-1">
-                                    <span className="text-lg">{countryObj?.flag || '🌍'}</span>
+                                    <CountryFlag code={item.country} size={18} label={countryObj?.name} />
                                     <span className="text-xs font-medium">{countryObj?.name || item.country}</span>
                                   </div>
                                   <p className="text-sm font-bold text-primary">{item.population}</p>

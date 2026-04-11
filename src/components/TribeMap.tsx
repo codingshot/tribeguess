@@ -356,7 +356,7 @@ export const TribeMap = forwardRef<HTMLDivElement, TribeMapProps>(function Tribe
         {/* Country flag badge */}
         {primaryCountry && (
           <div className="absolute top-2 right-2 bg-background/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow-lg border border-border z-10">
-            <span className="text-lg">{primaryCountry.flag}</span>
+            <CountryFlag code={primaryCountry.code} size={22} label={primaryCountry.name} />
           </div>
         )}
         
@@ -438,7 +438,7 @@ export const TribeMap = forwardRef<HTMLDivElement, TribeMapProps>(function Tribe
                     key={code} 
                     className="inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-muted rounded-full text-muted-foreground"
                   >
-                    <span>{country.flag}</span>
+                    <CountryFlag code={code} size={14} label={country.name} />
                     <span>{country.name}</span>
                   </span>
                 ) : null;
