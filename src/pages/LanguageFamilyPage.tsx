@@ -282,7 +282,7 @@ export default function LanguageFamilyPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {family.characteristics.map((char, i) => (
+                    {(family.characteristics || []).map((char, i) => (
                       <div key={i} className="border-l-2 border-primary/30 pl-3">
                         <h4 className="font-semibold text-sm">{char.name}</h4>
                         <p className="text-sm text-muted-foreground">{char.description}</p>
