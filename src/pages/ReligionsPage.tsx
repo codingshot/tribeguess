@@ -54,7 +54,7 @@ export default function ReligionsPage() {
   const [selectedTribe, setSelectedTribe] = useState(searchParams.get('tribe') || 'all');
   const [compareSelection, setCompareSelection] = useState<string[]>([]);
   
-  const allTribes = getAllTribes() as TribeWithReligion[];
+  const allTribes = getAllTribes() as unknown as TribeWithReligion[];
   
   // Filter tribes with traditional religion data
   const tribesWithReligion = allTribes.filter(t => t.traditionalReligion);
