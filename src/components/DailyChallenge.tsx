@@ -123,10 +123,9 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
       setSelectedAnswer(null);
       setShowExplanation(false);
     } else {
-      // Challenge complete
+      // Challenge complete - answers already includes all responses from handleAnswer
       const timeTaken = Math.round((Date.now() - startTime) / 1000);
-      const score = answers.filter((a) => a.isCorrect).length + 
-        (selectedAnswer === dailyQuestions[currentQuestion].correctAnswer ? 1 : 0);
+      const score = answers.filter((a) => a.isCorrect).length;
       
       const result: DailyChallengeResult = {
         date: new Date().toISOString().split('T')[0],

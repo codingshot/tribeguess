@@ -154,28 +154,21 @@ export default function QuizPage() {
       setSelectedAnswer(null);
       setShowExplanation(false);
     } else {
+      // answers already includes all responses from handleAnswer - no need to push again
       const timeTaken = Math.round((Date.now() - quizStartTime) / 1000);
-      const finalAnswers = [...answers];
-      if (selectedAnswer !== null) {
-        const currentQ = selectedQuiz.questions[currentQuestion];
-        finalAnswers.push({
-          questionId: currentQ.id,
-          selectedAnswer,
-          correctAnswer: currentQ.correctAnswer,
-          isCorrect: selectedAnswer === currentQ.correctAnswer,
-        });
-      }
+      const totalQ = selectedQuiz.questions.length;
+      const correctCount = answers.filter((a) => a.isCorrect).length;
       
       const result: QuizResult = {
         quizId: selectedQuiz.id,
         quizTitle: selectedQuiz.title,
         categoryId: selectedQuiz.categoryId,
-        score: finalAnswers.filter((a) => a.isCorrect).length,
-        totalQuestions: selectedQuiz.questions.length,
-        percentage: Math.round((finalAnswers.filter((a) => a.isCorrect).length / selectedQuiz.questions.length) * 100),
+        score: correctCount,
+        totalQuestions: totalQ,
+        percentage: totalQ > 0 ? Math.round((correctCount / totalQ) * 100) : 0,
         timeTaken,
         completedAt: new Date().toISOString(),
-        answers: finalAnswers,
+        answers,
       };
       
       addResult(result);
@@ -526,7 +519,7 @@ export default function QuizPage() {
           )}
 
           {/* Quiz Mode */}
-          {gameMode === 'quiz' && selectedQuiz && (
+          {gameMode === 'quiz' && selectedQuiz && selectedQuiz.questions.length > 0 && (
             <div className="max-w-2xl mx-auto px-1">
               {/* Quiz Header */}
               <div className="flex items-center justify-between mb-4 sm:mb-6">

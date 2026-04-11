@@ -14,6 +14,7 @@ export interface FavoriteName {
 
 export function useFavoriteNames() {
   const [favorites, setFavorites] = useState<FavoriteName[]>([]);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   // Load from localStorage on mount with validation
   useEffect(() => {
@@ -23,12 +24,15 @@ export function useFavoriteNames() {
       []
     );
     setFavorites(loaded);
+    setHasLoaded(true);
   }, []);
 
-  // Save to localStorage whenever favorites change
+  // Save to localStorage only after initial load (prevents overwriting with empty array)
   useEffect(() => {
-    safeWriteStorage(STORAGE_KEY, favorites);
-  }, [favorites]);
+    if (hasLoaded) {
+      safeWriteStorage(STORAGE_KEY, favorites);
+    }
+  }, [favorites, hasLoaded]);
 
   const addFavorite = useCallback((name: string, metadata?: Partial<Omit<FavoriteName, 'name' | 'addedAt'>>) => {
     const sanitized = sanitizeTextInput(name, 100);
