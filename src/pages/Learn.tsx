@@ -179,7 +179,16 @@ const Learn = () => {
   }, [countryFilter]);
   
   const filteredTribes = useMemo(() => {
+    // Validate regionFilter against actual available regions
+    const validRegions = new Set(regions);
+    const effectiveRegion = validRegions.has(regionFilter) ? regionFilter : '';
+    
+    const seen = new Set<string>();
     let result = tribes.filter(tribe => {
+      // Deduplicate by tribe id
+      if (seen.has(tribe.id)) return false;
+      seen.add(tribe.id);
+      
       const searchLower = (searchQuery || '').toLowerCase().slice(0, 100);
       
       // Enhanced search - check more fields with null safety
@@ -195,23 +204,21 @@ const Learn = () => {
         (Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.some(t => typeof t === 'string' && t.toLowerCase().includes(searchLower))) ||
         (Array.isArray(tribe.famousPeople) && tribe.famousPeople.some(p => p && typeof p.name === 'string' && p.name.toLowerCase().includes(searchLower)));
       
-      const matchesRegion = !regionFilter || tribe.region === regionFilter;
+      const matchesRegion = !effectiveRegion || tribe.region === effectiveRegion;
       
-      // Filter by language family
+      // Filter by language family - case-insensitive
       const matchesLanguageFamily = !languageFamilyFilter || 
         (tribe.language?.family?.toLowerCase().includes(languageFamilyFilter.toLowerCase()));
       
-      // Filter by country - check if tribe has countries array and includes selected country
-      const tribeCountries = (tribe as any).countries || ['KE']; // Default to Kenya if not specified
+      // Filter by country
+      const tribeCountries = (tribe as any).countries || ['KE'];
       
-      // Multi-select countries from advanced filter
       let matchesCountry = true;
       if (selectedCountries.length > 0) {
         matchesCountry = tribeCountries.some((code: string) => selectedCountries.includes(code));
       } else if (countryFilter && countryFilter !== 'ALL') {
         matchesCountry = tribeCountries.includes(countryFilter);
       } else if (macroRegionFilter) {
-        // When macro region is set, show tribes from any country in that region
         const regionCountryCodes = countries.filter(c => c.region === macroRegionFilter).map(c => c.code);
         matchesCountry = tribeCountries.some((code: string) => regionCountryCodes.includes(code));
       }
@@ -224,7 +231,7 @@ const Learn = () => {
       countryFilter === 'ALL' &&
       !macroRegionFilter &&
       selectedCountries.length === 0 &&
-      !regionFilter &&
+      !effectiveRegion &&
       !languageFamilyFilter &&
       !searchQuery &&
       !sortOrder;
@@ -240,7 +247,7 @@ const Learn = () => {
     }
 
     return result;
-  }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder, languageFamilyFilter]);
+  }, [tribes, searchQuery, regionFilter, regions, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder, languageFamilyFilter]);
   // handleSearch removed - now using live search
   
   const handleRegionChange = (region: string) => {
