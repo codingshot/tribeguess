@@ -15,11 +15,15 @@ export function Header() {
   };
 
   const handleRandomTribe = () => {
-    const tribes = getAllTribes();
+    const tribes = getAllTribes().filter(t => 
+      t.slug && t.name && t.region && t.description && t.description.length > 10
+    );
     if (tribes.length > 0) {
       const randomIndex = Math.floor(Math.random() * tribes.length);
       const randomTribe = tribes[randomIndex];
       navigate(`/learn/${randomTribe.slug}`);
+    } else {
+      navigate('/learn');
     }
     setMobileMenuOpen(false);
   };

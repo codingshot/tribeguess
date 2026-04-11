@@ -1204,13 +1204,14 @@ const TribePage = () => {
                       }
                       
                       // Check religion
-                      const currentReligion = (tribe as any).religion;
-                      const relatedReligion = (related as any).religion;
+                      const currentReligion = typeof (tribe as any).religion === 'string' ? (tribe as any).religion : '';
+                      const relatedReligion = typeof (related as any).religion === 'string' ? (related as any).religion : '';
                       if (currentReligion && relatedReligion) {
                         const getReligionType = (r: string) => {
-                          if (r.toLowerCase().includes('islam') || r.toLowerCase().includes('muslim')) return 'islam';
-                          if (r.toLowerCase().includes('christian') || r.toLowerCase().includes('orthodox')) return 'christian';
-                          if (r.toLowerCase().includes('traditional')) return 'traditional';
+                          const rl = r.toLowerCase();
+                          if (rl.includes('islam') || rl.includes('muslim')) return 'islam';
+                          if (rl.includes('christian') || rl.includes('orthodox')) return 'christian';
+                          if (rl.includes('traditional')) return 'traditional';
                           return null;
                         };
                         const currType = getReligionType(currentReligion);
@@ -1221,10 +1222,10 @@ const TribePage = () => {
                       }
                       
                       // Check for shared stereotypes
-                      const currentStereotypes = tribe.stereotypes || [];
-                      const relatedStereotypes = related.stereotypes || [];
-                      const sharedStereotypes = currentStereotypes.filter((s: string) => 
-                        relatedStereotypes.some((rs: string) => 
+                      const currentStereotypes = (tribe.stereotypes || []).filter((s): s is string => typeof s === 'string' && s.length > 0);
+                      const relatedStereotypes = (related.stereotypes || []).filter((s): s is string => typeof s === 'string' && s.length > 0);
+                      const sharedStereotypes = currentStereotypes.filter((s) => 
+                        relatedStereotypes.some((rs) => 
                           s.toLowerCase().includes(rs.toLowerCase().split(' ')[0]) ||
                           rs.toLowerCase().includes(s.toLowerCase().split(' ')[0])
                         )
