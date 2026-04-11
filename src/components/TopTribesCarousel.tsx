@@ -77,7 +77,15 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
       }
     });
     
-    return filtered.slice(0, 20);
+    // Deduplicate by ID (multi-country tribes can appear twice)
+    const seen = new Set<string>();
+    const deduped = filtered.filter(t => {
+      if (seen.has(t.id)) return false;
+      seen.add(t.id);
+      return true;
+    });
+    
+    return deduped.slice(0, 20);
   }, [allTribes, selectedCountries, sortBy]);
 
   const toggleCountry = (code: string) => {
@@ -209,10 +217,19 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
         </div>
       )}
       
+      {displayedTribes.length === 0 ? (
+        <div className="text-center py-8 px-4 bg-card border border-border rounded-xl">
+          <Users className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
+          <p className="text-sm text-muted-foreground mb-2">No tribes found for the selected countries.</p>
+          <button onClick={clearFilters} className="text-sm text-primary hover:underline">
+            Clear filters
+          </button>
+        </div>
+      ) : (
       <Carousel
         opts={{
           align: "start",
-          loop: true,
+          loop: displayedTribes.length > 3,
         }}
         className="w-full"
       >
@@ -241,13 +258,13 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
                   {/* Region */}
                   <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
                     <MapPin className="w-3 h-3 flex-shrink-0" />
-                    <span className="line-clamp-1">{tribe.region}</span>
+                    <span className="line-clamp-1">{tribe.region || 'Africa'}</span>
                   </div>
                   
                   {/* Population */}
                   <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
                     <Users className="w-3 h-3 flex-shrink-0" />
-                    <span>{tribe.population}</span>
+                    <span>{tribe.population || 'Population data unavailable'}</span>
                   </div>
                 </div>
               </Link>
@@ -257,6 +274,7 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
         <CarouselPrevious className="hidden sm:flex -left-4" />
         <CarouselNext className="hidden sm:flex -right-4" />
       </Carousel>
+      )}
     </section>
   );
 });

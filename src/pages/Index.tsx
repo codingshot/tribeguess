@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { useMemo } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -9,9 +9,9 @@ import { FeaturedBlogsCarousel } from '@/components/FeaturedBlogsCarousel';
 import { FeaturedRecipesCarousel } from '@/components/FeaturedRecipesCarousel';
 import { GlobalOriginCard } from '@/components/GlobalOriginCard';
 import { NameAnalysisCard } from '@/components/NameAnalysisCard';
-import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
+import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions, getAllTribes } from '@/lib/tribeDetection';
 import { analyzeNameBreakdown, findSimilarNames, getGlobalMatches } from '@/lib/nameAnalysis';
-import { ArrowRight, Lightbulb } from 'lucide-react';
+import { ArrowRight, Lightbulb, Brain, BookOpen, Shuffle, Search, Languages } from 'lucide-react';
 import { sanitizeTextInput, isValidCountryCode } from '@/lib/dataValidation';
 import logo from '@/assets/logo.png';
 
