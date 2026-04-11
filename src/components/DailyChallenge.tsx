@@ -100,15 +100,17 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
   };
 
   const handleAnswer = (answerIndex: number) => {
-    if (showExplanation) return;
+    if (showExplanation) return; // Prevent double-click / rapid clicks
     
     const currentQ = dailyQuestions[currentQuestion];
+    if (!currentQ) return; // Guard against missing question
+    
     const isCorrect = answerIndex === currentQ.correctAnswer;
     
     setSelectedAnswer(answerIndex);
     setShowExplanation(true);
-    setAnswers([...answers, {
-      questionId: currentQ.id,
+    setAnswers(prev => [...prev, {
+      questionId: currentQ.id || `q-${currentQuestion}`,
       selectedAnswer: answerIndex,
       correctAnswer: currentQ.correctAnswer,
       isCorrect,
@@ -286,8 +288,20 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
     );
   }
 
-  // Playing state
+  // Playing state - guard against out-of-bounds
   const currentQ = dailyQuestions[currentQuestion];
+  if (!currentQ || !currentQ.options || !Array.isArray(currentQ.options)) {
+    return (
+      <Card className="border-destructive/30">
+        <CardContent className="pt-6 text-center">
+          <p className="text-muted-foreground">Unable to load question. Please try again.</p>
+          <Button className="mt-4" onClick={() => { setIsPlaying(false); setShowResults(false); }}>
+            Back to Start
+          </Button>
+        </CardContent>
+      </Card>
+    );
+  }
   
   return (
     <div className="space-y-4">

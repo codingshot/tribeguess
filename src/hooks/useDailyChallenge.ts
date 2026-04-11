@@ -66,26 +66,52 @@ export function useDailyChallenge() {
   // Get today's date string
   const getTodayString = () => new Date().toISOString().split('T')[0];
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount with validation
   useEffect(() => {
     try {
       const savedResults = localStorage.getItem(DAILY_RESULTS_KEY);
       const savedStats = localStorage.getItem(DAILY_STATS_KEY);
       const savedAchievements = localStorage.getItem(DAILY_ACHIEVEMENTS_KEY);
       
-      if (savedResults) setResults(JSON.parse(savedResults));
-      if (savedStats) {
-        const parsedStats = JSON.parse(savedStats);
-        // Check if streak should be reset (missed a day)
-        const updatedStats = checkStreakContinuity(parsedStats);
-        setStats(updatedStats);
-        if (updatedStats !== parsedStats) {
-          localStorage.setItem(DAILY_STATS_KEY, JSON.stringify(updatedStats));
+      if (savedResults) {
+        const parsed = JSON.parse(savedResults);
+        if (Array.isArray(parsed)) {
+          // Validate each result has required fields and cap at 365
+          const validated = parsed
+            .filter((r: any) => r && typeof r.date === 'string' && typeof r.score === 'number' && typeof r.totalQuestions === 'number')
+            .slice(-365);
+          setResults(validated);
         }
       }
-      if (savedAchievements) setUnlockedAchievements(JSON.parse(savedAchievements));
+      if (savedStats) {
+        const parsedStats = JSON.parse(savedStats);
+        if (parsedStats && typeof parsedStats === 'object' && typeof parsedStats.totalDaysPlayed === 'number') {
+          // Clamp numeric values to sane ranges
+          parsedStats.currentStreak = Math.max(0, Math.min(parsedStats.currentStreak || 0, 9999));
+          parsedStats.longestStreak = Math.max(0, Math.min(parsedStats.longestStreak || 0, 9999));
+          parsedStats.totalDaysPlayed = Math.max(0, Math.min(parsedStats.totalDaysPlayed || 0, 99999));
+          const updatedStats = checkStreakContinuity(parsedStats);
+          setStats(updatedStats);
+          if (updatedStats !== parsedStats) {
+            localStorage.setItem(DAILY_STATS_KEY, JSON.stringify(updatedStats));
+          }
+        }
+      }
+      if (savedAchievements) {
+        const parsed = JSON.parse(savedAchievements);
+        if (Array.isArray(parsed)) {
+          // Only keep valid achievement IDs
+          const validIds = dailyAchievements.map(a => a.id);
+          setUnlockedAchievements(parsed.filter((id: unknown) => typeof id === 'string' && validIds.includes(id)));
+        }
+      }
     } catch (error) {
-      console.error('Error loading daily challenge data:', error);
+      console.warn('[DailyChallenge] Error loading data, resetting:', error);
+      try {
+        localStorage.removeItem(DAILY_RESULTS_KEY);
+        localStorage.removeItem(DAILY_STATS_KEY);
+        localStorage.removeItem(DAILY_ACHIEVEMENTS_KEY);
+      } catch {}
     }
   }, []);
 

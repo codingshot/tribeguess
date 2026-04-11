@@ -279,14 +279,21 @@ export function TopNamesLeaderboard() {
         </div>
 
         {/* SEO-friendly summary */}
-        <div className="mt-6 p-4 rounded-lg bg-muted/50 text-sm text-muted-foreground">
-          <p>
-            <strong>Top African Names {filters.decade}:</strong> This leaderboard shows the most popular 
-            {filters.gender !== 'overall' ? ` ${filters.gender}` : ''} African names of the {filters.decade}. 
-            Names like {topNames[0]?.name}, {topNames[1]?.name}, and {topNames[2]?.name} continue to 
-            be favorites across the continent, reflecting both traditional heritage and modern trends.
-          </p>
-        </div>
+        {topNames.length >= 3 && (
+          <div className="mt-6 p-4 rounded-lg bg-muted/50 text-sm text-muted-foreground">
+            <p>
+              <strong>Top African Names {filters.decade}:</strong> This leaderboard shows the most popular 
+              {filters.gender !== 'overall' ? ` ${filters.gender}` : ''} African names of the {filters.decade}. 
+              Names like {topNames[0]?.name}, {topNames[1]?.name}, and {topNames[2]?.name} continue to 
+              be favorites across the continent, reflecting both traditional heritage and modern trends.
+            </p>
+          </div>
+        )}
+        {topNames.length === 0 && (
+          <div className="mt-6 p-4 rounded-lg bg-muted/50 text-center text-muted-foreground">
+            <p>No names found for this combination of filters.</p>
+          </div>
+        )}
       </CardContent>
       
       {/* Add CSS animation */}
