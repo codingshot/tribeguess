@@ -341,7 +341,7 @@ const Learn = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="container mx-auto px-4 py-6 sm:py-8">
+      <main id="main-content" className="container mx-auto px-4 py-6 sm:py-8">
         <div className="animate-fade-in">
           <header className="text-center mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 sm:mb-3">
@@ -599,18 +599,20 @@ const Learn = () => {
               </Select>
               
               {/* Country Flags - Horizontal scroll on mobile */}
-              <div className="flex items-center gap-1 overflow-x-auto max-w-[200px] sm:max-w-none scrollbar-hide">
+              <div className="flex items-center gap-1.5 overflow-x-auto max-w-[220px] sm:max-w-none scrollbar-hide">
                 <TooltipProvider>
                   {(macroRegionFilter ? filteredCountries.slice(0, 6) : countries.slice(0, 6)).map(country => (
                     <Tooltip key={country.code} delayDuration={300}>
                       <TooltipTrigger asChild>
                         <button
                           onClick={() => handleCountryChange(country.code)}
-                          className={`px-1 py-0.5 rounded text-sm transition-all shrink-0 ${
+                          className={`flex items-center justify-center w-9 h-9 sm:w-8 sm:h-8 rounded-lg text-sm transition-all shrink-0 touch-manipulation ${
                             countryFilter === country.code
-                              ? 'bg-primary text-primary-foreground ring-1 ring-primary/50' 
+                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/50' 
                               : 'bg-secondary/80 hover:bg-secondary'
                           }`}
+                          aria-label={`Filter by ${country.name}`}
+                          aria-pressed={countryFilter === country.code}
                         >
                           {country.flag}
                         </button>
@@ -625,13 +627,15 @@ const Learn = () => {
                       <TooltipTrigger asChild>
                         <button
                           onClick={() => handleCountryChange('ALL')}
-                          className={`px-1 py-0.5 rounded transition-all shrink-0 ${
+                          className={`flex items-center justify-center w-9 h-9 sm:w-8 sm:h-8 rounded-lg transition-all shrink-0 touch-manipulation ${
                             countryFilter === 'ALL'
-                              ? 'bg-primary text-primary-foreground ring-1 ring-primary/50' 
+                              ? 'bg-primary text-primary-foreground ring-2 ring-primary/50' 
                               : 'bg-secondary/80 hover:bg-secondary'
                           }`}
+                          aria-label="Show all countries"
+                          aria-pressed={countryFilter === 'ALL'}
                         >
-                          <Globe className="w-3.5 h-3.5" />
+                          <Globe className="w-4 h-4" />
                         </button>
                       </TooltipTrigger>
                       <TooltipContent side="bottom" className="text-xs">

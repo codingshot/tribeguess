@@ -167,6 +167,21 @@
     overflow: hidden;
   }
 
+  /* Hide scrollbar but keep scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Minimum touch target helper */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
   /* Content visibility optimizations for off-screen content */
   .content-auto {
     content-visibility: auto;
@@ -187,6 +202,18 @@
     content-visibility: auto;
     contain-intrinsic-size: auto 1200px;
   }
+}
+
+/* Skip to content link for keyboard users */
+.skip-to-content {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:text-sm focus:font-medium;
+}
+
+/* Global focus-visible ring for custom interactive elements */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 @keyframes fadeIn {

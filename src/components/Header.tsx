@@ -43,6 +43,7 @@ export function Header() {
   
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <a href="#main-content" className="skip-to-content">Skip to main content</a>
       <div className="container mx-auto px-3 sm:px-4 py-2.5 sm:py-3">
         <nav className="flex items-center justify-between gap-2" aria-label="Main navigation">
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group shrink-0" aria-label="TribeGuess home">
