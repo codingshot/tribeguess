@@ -1,4 +1,5 @@
 import React from 'react';
+import { CountryFlag } from '@/components/CountryFlag';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play, TrendingUp, ListPlus } from 'lucide-react';

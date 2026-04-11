@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { CountryFlag } from '@/components/CountryFlag';
 import { Link } from 'react-router-dom';
 import { MapPin, Users, Compass, Info, ExternalLink, Globe, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';

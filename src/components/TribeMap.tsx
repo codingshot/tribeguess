@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import { CountryFlag } from '@/components/CountryFlag';
 import { MapPin, ExternalLink } from 'lucide-react';
 import { getCountries } from '@/lib/tribeDetection';
 
