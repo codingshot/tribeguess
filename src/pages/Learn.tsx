@@ -154,12 +154,13 @@ const Learn = () => {
     });
     
     const population = countryTribes.reduce((acc, t) => {
-      const numMatch = t.population.match(/[\d.]+/);
+      const pop = t.population || '';
+      const numMatch = pop.match(/[\d.]+/);
       if (!numMatch) return acc;
       const num = parseFloat(numMatch[0]);
-      if (t.population.toLowerCase().includes('million')) {
+      if (pop.toLowerCase().includes('million')) {
         return acc + num * 1000000;
-      } else if (t.population.toLowerCase().includes('thousand') || t.population.toLowerCase().includes(',000')) {
+      } else if (pop.toLowerCase().includes('thousand') || pop.toLowerCase().includes(',000')) {
         return acc + num * 1000;
       }
       return acc + num;
