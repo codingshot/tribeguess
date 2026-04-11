@@ -1279,6 +1279,46 @@ const TribePage = () => {
                 </section>
               )}
               
+              {/* Exploration fallback when no related tribes */}
+              {relatedTribesData.length === 0 && (
+                <section className="border-t border-border pt-6">
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-3">Continue Exploring</h2>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Discover more about Africa's diverse ethnic groups and their cultures.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {tribe.region && (
+                      <Link 
+                        to={`/learn?region=${encodeURIComponent(tribe.region)}`}
+                        className="px-3 py-2 bg-secondary hover:bg-secondary/80 rounded-lg text-sm transition-colors"
+                      >
+                        More from {tribe.region} →
+                      </Link>
+                    )}
+                    {language?.family && (
+                      <Link 
+                        to={`/learn?languageFamily=${encodeURIComponent(language.family)}`}
+                        className="px-3 py-2 bg-secondary hover:bg-secondary/80 rounded-lg text-sm transition-colors"
+                      >
+                        {language.family} speakers →
+                      </Link>
+                    )}
+                    <Link 
+                      to="/learn"
+                      className="px-3 py-2 bg-secondary hover:bg-secondary/80 rounded-lg text-sm transition-colors"
+                    >
+                      Browse all tribes →
+                    </Link>
+                    <Link 
+                      to="/random"
+                      className="px-3 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm transition-colors"
+                    >
+                      🎲 Random tribe
+                    </Link>
+                  </div>
+                </section>
+              )}
+              
               {/* Sources & References Section */}
               <section className="border-t border-border pt-6">
                 <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
