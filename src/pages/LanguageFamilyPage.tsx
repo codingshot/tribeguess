@@ -52,12 +52,15 @@ export default function LanguageFamilyPage() {
         <main className="min-h-screen bg-background pt-20 pb-12">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-2xl font-bold mb-4">Language Family Not Found</h1>
-            <p className="text-muted-foreground mb-6">The language family you're looking for doesn't exist.</p>
-            <Link to="/learn">
+            <p className="text-muted-foreground mb-6">The language family you're looking for doesn't exist in our database.</p>
+            <Link to="/languages">
               <Button>
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Tribes
+                Back to Languages
               </Button>
+            </Link>
+            <Link to="/learn" className="block mt-3 text-primary hover:underline text-sm">
+              or Browse All Tribes
             </Link>
           </div>
         </main>

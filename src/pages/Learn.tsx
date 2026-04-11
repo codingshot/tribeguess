@@ -317,7 +317,7 @@ const Learn = () => {
                   type="text"
                   value={localSearch}
                   onChange={(e) => {
-                    const value = e.target.value;
+                    const value = e.target.value.slice(0, 100);
                     setLocalSearch(value);
                     // Live search - update URL as user types
                     const params = new URLSearchParams(searchParams);
@@ -326,10 +326,13 @@ const Learn = () => {
                     } else {
                       params.delete('search');
                     }
-                    setSearchParams(params);
+                    setSearchParams(params, { replace: true });
                   }}
                   placeholder="Search tribes, names, or characteristics"
                   className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
+                  maxLength={100}
+                  autoComplete="off"
+                  spellCheck="false"
                 />
                 {localSearch && (
                   <button
