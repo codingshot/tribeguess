@@ -20,25 +20,85 @@ import { Button } from '@/components/ui/button';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const tribe = slug ? getTribeBySlug(slug) : null;
   const allTribes = getAllTribes();
+
+  // Sanitize slug: lowercase, trim, remove control chars, limit length
+  const sanitizedSlug = (slug || '')
+    .toLowerCase()
+    .trim()
+    .slice(0, 100)
+    .replace(/[^a-z0-9\-_]/g, '');
+  
+  const tribe = sanitizedSlug ? getTribeBySlug(sanitizedSlug) : null;
   const [showCountryList, setShowCountryList] = React.useState(false);
 
   // Reset country list when tribe changes
   React.useEffect(() => {
     setShowCountryList(false);
-  }, [slug]);
+  }, [sanitizedSlug]);
   
   if (!tribe) {
+    // Try to find close matches for the slug
+    const suggestions = sanitizedSlug ? allTribes
+      .filter(t => {
+        const s = t.slug?.toLowerCase() || '';
+        const n = t.name?.toLowerCase() || '';
+        return s.includes(sanitizedSlug) || sanitizedSlug.includes(s) ||
+               n.includes(sanitizedSlug) || sanitizedSlug.includes(n) ||
+               // Check slug aliases
+               ((t as any).slugAliases || []).some((alias: string) => 
+                 alias.toLowerCase().includes(sanitizedSlug) || sanitizedSlug.includes(alias.toLowerCase())
+               );
+      })
+      .slice(0, 4) : [];
+
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="container mx-auto px-4 py-12 text-center">
-          <p className="text-muted-foreground text-lg mb-4">Tribe not found</p>
-          <Link to="/learn" className="text-primary hover:underline">
-            ← Back to all tribes
-          </Link>
+        <Helmet>
+          <title>Tribe Not Found | TribeGuess</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+        <div className="container mx-auto px-4 py-12 text-center max-w-lg">
+          <div className="text-6xl mb-4">🔍</div>
+          <h1 className="text-xl font-bold text-foreground mb-2">Tribe Not Found</h1>
+          <p className="text-muted-foreground text-sm mb-6">
+            {sanitizedSlug 
+              ? `We couldn't find a tribe matching "${sanitizedSlug.slice(0, 40)}${sanitizedSlug.length > 40 ? '…' : ''}".`
+              : 'No tribe was specified.'}
+          </p>
+          
+          {suggestions.length > 0 && (
+            <div className="mb-6">
+              <p className="text-sm text-muted-foreground mb-3">Did you mean one of these?</p>
+              <div className="flex flex-col gap-2">
+                {suggestions.map(t => (
+                  <Link
+                    key={t.id}
+                    to={`/learn/${t.slug}`}
+                    className="p-3 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors text-left flex items-center justify-between"
+                  >
+                    <div>
+                      <span className="font-medium text-foreground">{t.name}</span>
+                      <span className="text-xs text-muted-foreground ml-2">{t.region || 'Africa'}</span>
+                    </div>
+                    <ArrowLeft className="w-4 h-4 text-muted-foreground rotate-180" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link to="/learn" className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm">
+              Browse all tribes
+            </Link>
+            <Link to="/random" className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors text-sm">
+              Try a random tribe
+            </Link>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
