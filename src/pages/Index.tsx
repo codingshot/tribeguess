@@ -320,11 +320,25 @@ const Index = () => {
             )}
             
             {/* Tribe Result Cards */}
-            {results.predictions.length > 0 && (
+            {results.predictions.length > 0 ? (
               <div className="space-y-3 sm:space-y-4">
                 {results.predictions.map((prediction, index) => (
                   <TribeResultCard key={prediction.tribe.id} result={prediction} rank={index + 1} inputName={results.inputName} />
                 ))}
+              </div>
+            ) : (
+              <div className="text-center py-8 px-4 bg-card border border-border rounded-xl">
+                <Search className="w-8 h-8 mx-auto mb-3 text-muted-foreground" />
+                <p className="text-foreground font-medium mb-1">No tribal matches found</p>
+                <p className="text-sm text-muted-foreground mb-4">
+                  We couldn't find a strong match for "{results.inputName}" in our database.
+                  Try a different spelling, or explore tribes directly.
+                </p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  <Link to="/learn" className="text-sm text-primary hover:underline font-medium">Browse All Tribes</Link>
+                  <span className="text-muted-foreground">•</span>
+                  <Link to="/random" className="text-sm text-primary hover:underline font-medium">Try Random Tribe</Link>
+                </div>
               </div>
             )}
             
