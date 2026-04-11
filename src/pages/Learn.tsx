@@ -32,22 +32,66 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 
+// Allowed enum values for query param validation
+const VALID_VIEW_MODES = ['grid', 'list', 'map'] as const;
+const VALID_SORT_ORDERS = ['pop-asc', 'pop-desc', 'name-asc', 'name-desc'] as const;
+
+/** Validate and sanitize a query param against an allow-list, returning fallback if invalid */
+function safeEnumParam<T extends string>(raw: string | null, allowed: readonly T[], fallback: T): T {
+  if (raw !== null && (allowed as readonly string[]).includes(raw)) return raw as T;
+  return fallback;
+}
+
+/** Sanitize a free-text query param: trim, limit length, strip control chars */
+function safeTextParam(raw: string | null, maxLength = 100): string {
+  if (raw === null) return '';
+  return raw.trim().slice(0, maxLength).replace(/[\x00-\x1F\x7F]/g, '').replace(/\s+/g, ' ');
+}
+
 const Learn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const searchQuery = searchParams.get('search') || '';
-  const regionFilter = searchParams.get('region') || '';
-  const macroRegionFilter = searchParams.get('macroRegion') || '';
-  const countryFilter = searchParams.get('country') || 'ALL'; // Default to all countries
-  const viewMode = searchParams.get('view') || 'grid';
-  const languageFamilyFilter = searchParams.get('languageFamily') || '';
+
+  // Pre-load stable data references
+  const tribes = getAllTribes();
+  const allCountries = getCountries();
+  const macroRegions = tribesData.regions || [];
   
-  const sortOrder = searchParams.get('sort') || '';
-  const selectedCountries = searchParams.get('countries')?.split(',').filter(Boolean) || [];
+  // Build valid code sets once for validation
+  const validCountryCodes = useMemo(() => new Set(allCountries.map(c => c.code)), [allCountries]);
+  const validMacroRegionIds = useMemo(() => new Set(macroRegions.map(r => r.id)), [macroRegions]);
+
+  // ============= VALIDATED QUERY PARAMS =============
+  const searchQuery = safeTextParam(searchParams.get('search'), 100);
+  
+  const rawRegion = safeTextParam(searchParams.get('region'), 80);
+  // Region is validated against dynamic list in filteredTribes below
+  const regionFilter = rawRegion;
+  
+  const rawMacroRegion = searchParams.get('macroRegion') || '';
+  const macroRegionFilter = validMacroRegionIds.has(rawMacroRegion) ? rawMacroRegion : '';
+  
+  const rawCountry = searchParams.get('country') || 'ALL';
+  const countryFilter = rawCountry === 'ALL' || validCountryCodes.has(rawCountry) ? rawCountry : 'ALL';
+  
+  const viewMode = safeEnumParam(searchParams.get('view'), VALID_VIEW_MODES, 'grid');
+  const sortOrder = safeEnumParam(searchParams.get('sort'), VALID_SORT_ORDERS, '' as any) || '';
+  
+  const rawLanguageFamily = safeTextParam(searchParams.get('languageFamily'), 100);
+  const languageFamilyFilter = rawLanguageFamily;
+  
+  // Validate multi-country selection: reject unknown codes
+  const selectedCountries = useMemo(() => {
+    const raw = searchParams.get('countries')?.split(',').filter(Boolean) || [];
+    return raw.filter(code => validCountryCodes.has(code));
+  }, [searchParams, validCountryCodes]);
   
   const [localSearch, setLocalSearch] = useState(searchQuery);
   const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
   const [tempSort, setTempSort] = useState(sortOrder);
   const [tempCountries, setTempCountries] = useState<string[]>(selectedCountries);
+  
+  // Alias for backward compat in template
+  const countries = allCountries;
   
   // Sync localSearch with URL when searchQuery changes
   useEffect(() => {
@@ -61,10 +105,6 @@ const Learn = () => {
       setTempCountries(selectedCountries.length > 0 ? selectedCountries : []);
     }
   }, [advancedFiltersOpen]);
-  
-  const tribes = getAllTribes();
-  const countries = getCountries();
-  const macroRegions = tribesData.regions || [];
 
   // Parse population string to number
   const parsePopulation = (pop: string): number => {
@@ -139,7 +179,16 @@ const Learn = () => {
   }, [countryFilter]);
   
   const filteredTribes = useMemo(() => {
+    // Validate regionFilter against actual available regions
+    const validRegions = new Set(regions);
+    const effectiveRegion = validRegions.has(regionFilter) ? regionFilter : '';
+    
+    const seen = new Set<string>();
     let result = tribes.filter(tribe => {
+      // Deduplicate by tribe id
+      if (seen.has(tribe.id)) return false;
+      seen.add(tribe.id);
+      
       const searchLower = (searchQuery || '').toLowerCase().slice(0, 100);
       
       // Enhanced search - check more fields with null safety
@@ -155,23 +204,21 @@ const Learn = () => {
         (Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.some(t => typeof t === 'string' && t.toLowerCase().includes(searchLower))) ||
         (Array.isArray(tribe.famousPeople) && tribe.famousPeople.some(p => p && typeof p.name === 'string' && p.name.toLowerCase().includes(searchLower)));
       
-      const matchesRegion = !regionFilter || tribe.region === regionFilter;
+      const matchesRegion = !effectiveRegion || tribe.region === effectiveRegion;
       
-      // Filter by language family
+      // Filter by language family - case-insensitive
       const matchesLanguageFamily = !languageFamilyFilter || 
         (tribe.language?.family?.toLowerCase().includes(languageFamilyFilter.toLowerCase()));
       
-      // Filter by country - check if tribe has countries array and includes selected country
-      const tribeCountries = (tribe as any).countries || ['KE']; // Default to Kenya if not specified
+      // Filter by country
+      const tribeCountries = (tribe as any).countries || ['KE'];
       
-      // Multi-select countries from advanced filter
       let matchesCountry = true;
       if (selectedCountries.length > 0) {
         matchesCountry = tribeCountries.some((code: string) => selectedCountries.includes(code));
       } else if (countryFilter && countryFilter !== 'ALL') {
         matchesCountry = tribeCountries.includes(countryFilter);
       } else if (macroRegionFilter) {
-        // When macro region is set, show tribes from any country in that region
         const regionCountryCodes = countries.filter(c => c.region === macroRegionFilter).map(c => c.code);
         matchesCountry = tribeCountries.some((code: string) => regionCountryCodes.includes(code));
       }
@@ -184,7 +231,7 @@ const Learn = () => {
       countryFilter === 'ALL' &&
       !macroRegionFilter &&
       selectedCountries.length === 0 &&
-      !regionFilter &&
+      !effectiveRegion &&
       !languageFamilyFilter &&
       !searchQuery &&
       !sortOrder;
@@ -200,7 +247,7 @@ const Learn = () => {
     }
 
     return result;
-  }, [tribes, searchQuery, regionFilter, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder, languageFamilyFilter]);
+  }, [tribes, searchQuery, regionFilter, regions, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder, languageFamilyFilter]);
   // handleSearch removed - now using live search
   
   const handleRegionChange = (region: string) => {
@@ -822,14 +869,30 @@ const Learn = () => {
           )}
           
           {filteredTribes.length === 0 && (
-            <div className="text-center py-8 sm:py-12">
-              <p className="text-muted-foreground mb-2 text-sm sm:text-base">No tribes found matching your criteria</p>
-              <button
-                onClick={clearFilters}
-                className="text-primary hover:underline touch-manipulation p-2"
-              >
-                Clear filters
-              </button>
+            <div className="text-center py-12 sm:py-16 px-4">
+              <div className="max-w-md mx-auto">
+                <Users className="w-12 h-12 text-muted-foreground/40 mx-auto mb-4" />
+                <h2 className="text-lg font-semibold text-foreground mb-2">No tribes match your filters</h2>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {searchQuery 
+                    ? `No results for "${searchQuery.slice(0, 40)}${searchQuery.length > 40 ? '…' : ''}". Try a different spelling or broader search.`
+                    : 'The current combination of filters returned no results. Try removing some filters or broadening your search.'}
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+                  <button
+                    onClick={clearFilters}
+                    className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm"
+                  >
+                    Clear all filters
+                  </button>
+                  <Link 
+                    to="/random"
+                    className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors text-sm"
+                  >
+                    Try a random tribe
+                  </Link>
+                </div>
+              </div>
             </div>
           )}
         </div>
