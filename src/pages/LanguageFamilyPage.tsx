@@ -41,27 +41,80 @@ interface Phrase {
 
 export default function LanguageFamilyPage() {
   const { familySlug } = useParams<{ familySlug: string }>();
-  const family = languageFamiliesData.languageFamilies.find(f => f.slug === familySlug);
+  
+  // Sanitize slug: lowercase, trim, strip non-URL chars, limit length
+  const sanitizedSlug = (familySlug || '')
+    .toLowerCase()
+    .trim()
+    .slice(0, 100)
+    .replace(/[^a-z0-9\-_]/g, '');
+  
+  const family = languageFamiliesData.languageFamilies.find(
+    f => f.slug === sanitizedSlug || f.id === sanitizedSlug
+  );
   
   const allTribes = getAllTribes();
   
   if (!family) {
+    // Fuzzy suggestions: check if slug partially matches any family name/slug/alternateNames
+    const suggestions = sanitizedSlug ? languageFamiliesData.languageFamilies.filter(f => {
+      const s = sanitizedSlug;
+      return f.slug.includes(s) || s.includes(f.slug) ||
+        f.name.toLowerCase().includes(s) || s.includes(f.name.toLowerCase()) ||
+        (Array.isArray(f.alternateNames) && f.alternateNames.some(
+          (alt: string) => alt.toLowerCase().includes(s) || s.includes(alt.toLowerCase())
+        ));
+    }).slice(0, 3) : [];
+
     return (
       <>
         <Header />
+        <Helmet>
+          <title>Language Family Not Found | TribeGuess</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <main className="min-h-screen bg-background pt-20 pb-12">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-2xl font-bold mb-4">Language Family Not Found</h1>
-            <p className="text-muted-foreground mb-6">The language family you're looking for doesn't exist in our database.</p>
-            <Link to="/languages">
-              <Button>
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Languages
-              </Button>
-            </Link>
-            <Link to="/learn" className="block mt-3 text-primary hover:underline text-sm">
-              or Browse All Tribes
-            </Link>
+          <div className="container mx-auto px-4 text-center max-w-lg">
+            <div className="text-5xl mb-4">🗣️</div>
+            <h1 className="text-xl font-bold mb-2">Language Family Not Found</h1>
+            <p className="text-muted-foreground text-sm mb-6">
+              {sanitizedSlug
+                ? `We couldn't find a language family matching "${sanitizedSlug.slice(0, 40)}${sanitizedSlug.length > 40 ? '…' : ''}".`
+                : 'No language family was specified.'}
+            </p>
+            
+            {suggestions.length > 0 && (
+              <div className="mb-6">
+                <p className="text-sm text-muted-foreground mb-3">Did you mean one of these?</p>
+                <div className="flex flex-col gap-2">
+                  {suggestions.map(f => (
+                    <Link
+                      key={f.id}
+                      to={`/languages/${f.slug}`}
+                      className="p-3 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors text-left flex items-center justify-between"
+                    >
+                      <div>
+                        <span className="font-medium text-foreground">{f.name}</span>
+                        <span className="text-xs text-muted-foreground ml-2">{f.totalSpeakers} speakers</span>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-muted-foreground" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link to="/languages">
+                <Button>
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  All Language Families
+                </Button>
+              </Link>
+              <Link to="/learn" className="text-primary hover:underline text-sm">
+                Browse All Tribes
+              </Link>
+            </div>
           </div>
         </main>
         <Footer />
@@ -69,27 +122,37 @@ export default function LanguageFamilyPage() {
     );
   }
 
-  // Find tribes that belong to this language family with improved matching
+  // Find tribes that belong to this language family - precise matching with deduplication
+  const seen = new Set<string>();
+  const familyNameLower = family.name.toLowerCase();
+  const familyIdLower = family.id.toLowerCase();
+  const subFamilyNames = new Set(
+    (family.subFamilies || []).flatMap((sf: SubFamily) => [
+      sf.slug.toLowerCase(),
+      sf.name.toLowerCase(),
+      ...sf.notableLanguages.map(l => l.toLowerCase().split('/')[0].split('(')[0].trim())
+    ])
+  );
+
   const relatedTribes = allTribes.filter(tribe => {
+    if (seen.has(tribe.id)) return false;
     const tribeFamily = (tribe as any).language?.family?.toLowerCase() || '';
-    const familyId = family.id.toLowerCase();
-    const familyName = family.name.toLowerCase();
+    if (!tribeFamily) return false;
     
-    // Direct match on family id or name
-    if (tribeFamily.includes(familyId) || tribeFamily.includes(familyName)) return true;
+    // Exact or substring match on family id/name
+    const matchesFamily = tribeFamily === familyIdLower || tribeFamily === familyNameLower ||
+      tribeFamily.includes(familyIdLower) || tribeFamily.includes(familyNameLower);
     
     // Match on sub-families
-    return family.subFamilies.some((sf: SubFamily) => {
-      const subFamilySlug = sf.slug.toLowerCase();
-      const subFamilyName = sf.name.toLowerCase();
-      if (tribeFamily.includes(subFamilySlug) || tribeFamily.includes(subFamilyName)) return true;
-      
-      // Match on notable languages within sub-family
-      return sf.notableLanguages.some(lang => {
-        const langName = lang.toLowerCase().split('/')[0].split('(')[0].trim();
-        return tribeFamily.includes(langName);
-      });
-    });
+    const matchesSub = !matchesFamily && Array.from(subFamilyNames).some(name => 
+      name.length > 2 && tribeFamily.includes(name)
+    );
+    
+    if (matchesFamily || matchesSub) {
+      seen.add(tribe.id);
+      return true;
+    }
+    return false;
   });
 
   // Find related recipes from tribes that speak this language family
