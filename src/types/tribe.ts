@@ -34,6 +34,27 @@ export interface TribeFamousPerson {
   image?: string;
 }
 
+export interface DiasporaBreakdown {
+  country: string;
+  population: string;
+  cities?: string[];
+}
+
+export interface DiasporaObject {
+  globalPopulation?: string;
+  breakdown?: DiasporaBreakdown[];
+  communities?: string[];
+  associations?: string[];
+}
+
+export interface TraditionalReligionData {
+  name?: string;
+  description?: string;
+  practices?: string[];
+  beliefs?: string[];
+  [key: string]: unknown;
+}
+
 export interface TribeData {
   id: string;
   name: string;
@@ -60,7 +81,7 @@ export interface TribeData {
   eatingCustoms?: string[];
   traditionalDance?: string[];
   religion?: string;
-  traditionalReligion?: string;
+  traditionalReligion?: TraditionalReligionData | string;
   history?: TribeHistory;
   language?: TribeLanguage;
   tradeHistory?: string;
@@ -68,6 +89,6 @@ export interface TribeData {
   famousPeople?: TribeFamousPerson[];
   description?: string;
   relatedTribes?: string[];
-  diaspora?: string[];
+  diaspora?: DiasporaObject | string[];
   [key: string]: unknown; // allow extra fields gracefully
 }
