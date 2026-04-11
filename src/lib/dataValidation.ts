@@ -3,6 +3,24 @@
  * Every data entry/exit point should use these helpers.
  */
 
+// ============= UNICODE NORMALIZATION =============
+
+/**
+ * Normalize a string for search comparison:
+ * - NFD decompose then strip combining diacritical marks
+ * - lowercase
+ * - collapse whitespace
+ * This allows "Ndèye" to match "Ndeye", "Djénéba" to match "Djeneba", etc.
+ */
+export function normalizeForSearch(input: string): string {
+  return input
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
 // ============= INPUT SANITIZATION =============
 
 /** Sanitize a search/name string: trim, limit length, strip control chars */

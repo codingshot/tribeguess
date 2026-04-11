@@ -1,4 +1,5 @@
 import { useState, useMemo, forwardRef } from 'react';
+import { normalizeForSearch } from '@/lib/dataValidation';
 import { Search, X, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -44,12 +45,12 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
   }, [safeFemaleNames, safeMaleNames, nameDatabase]);
 
   const filteredNames = useMemo(() => {
-    if (!searchQuery) return { female: safeFemaleNames.slice(0, 10), male: safeMaleNames.slice(0, 10) };
+    if (!searchQuery.trim()) return { female: safeFemaleNames.slice(0, 10), male: safeMaleNames.slice(0, 10) };
     
-    const query = searchQuery.toLowerCase().slice(0, 100);
+    const queryNorm = normalizeForSearch(searchQuery.slice(0, 100));
     return {
-      female: safeFemaleNames.filter(n => n.toLowerCase().includes(query)),
-      male: safeMaleNames.filter(n => n.toLowerCase().includes(query))
+      female: safeFemaleNames.filter(n => normalizeForSearch(n).includes(queryNorm)),
+      male: safeMaleNames.filter(n => normalizeForSearch(n).includes(queryNorm))
     };
   }, [searchQuery, safeFemaleNames, safeMaleNames]);
 

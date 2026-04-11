@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
+import { normalizeForSearch } from '@/lib/dataValidation';
 import tribesData from '@/data/tribes.json';
 import {
   Select,
@@ -189,20 +190,20 @@ const Learn = () => {
       if (seen.has(tribe.id)) return false;
       seen.add(tribe.id);
       
-      const searchLower = (searchQuery || '').toLowerCase().slice(0, 100);
+      const searchNorm = normalizeForSearch((searchQuery || '').slice(0, 100));
       
-      // Enhanced search - check more fields with null safety
+      // Enhanced search with diacritic-normalized matching
       const matchesSearch = !searchQuery || 
-        (tribe.name || '').toLowerCase().includes(searchLower) ||
-        (tribe.description || '').toLowerCase().includes(searchLower) ||
-        (tribe.region || '').toLowerCase().includes(searchLower) ||
-        (Array.isArray(tribe.stereotypes) && tribe.stereotypes.some(s => typeof s === 'string' && s.toLowerCase().includes(searchLower))) ||
-        (Array.isArray(tribe.commonNames?.female) && tribe.commonNames.female.some(n => typeof n === 'string' && n.toLowerCase().includes(searchLower))) ||
-        (Array.isArray(tribe.commonNames?.male) && tribe.commonNames.male.some(n => typeof n === 'string' && n.toLowerCase().includes(searchLower))) ||
-        (tribe.language?.name?.toLowerCase().includes(searchLower)) ||
-        (Array.isArray(tribe.funFacts) && tribe.funFacts.some(f => typeof f === 'string' && f.toLowerCase().includes(searchLower))) ||
-        (Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.some(t => typeof t === 'string' && t.toLowerCase().includes(searchLower))) ||
-        (Array.isArray(tribe.famousPeople) && tribe.famousPeople.some(p => p && typeof p.name === 'string' && p.name.toLowerCase().includes(searchLower)));
+        normalizeForSearch(tribe.name || '').includes(searchNorm) ||
+        normalizeForSearch(tribe.description || '').includes(searchNorm) ||
+        normalizeForSearch(tribe.region || '').includes(searchNorm) ||
+        (Array.isArray(tribe.stereotypes) && tribe.stereotypes.some(s => typeof s === 'string' && normalizeForSearch(s).includes(searchNorm))) ||
+        (Array.isArray(tribe.commonNames?.female) && tribe.commonNames.female.some(n => typeof n === 'string' && normalizeForSearch(n).includes(searchNorm))) ||
+        (Array.isArray(tribe.commonNames?.male) && tribe.commonNames.male.some(n => typeof n === 'string' && normalizeForSearch(n).includes(searchNorm))) ||
+        (tribe.language?.name && normalizeForSearch(tribe.language.name).includes(searchNorm)) ||
+        (Array.isArray(tribe.funFacts) && tribe.funFacts.some(f => typeof f === 'string' && normalizeForSearch(f).includes(searchNorm))) ||
+        (Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.some(t => typeof t === 'string' && normalizeForSearch(t).includes(searchNorm))) ||
+        (Array.isArray(tribe.famousPeople) && tribe.famousPeople.some(p => p && typeof p.name === 'string' && normalizeForSearch(p.name).includes(searchNorm)));
       
       const matchesRegion = !effectiveRegion || tribe.region === effectiveRegion;
       
