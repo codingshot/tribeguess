@@ -307,9 +307,9 @@ export default function LanguageFamilyPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-sm mb-2">Historical Scripts</h4>
-                      <p className="text-muted-foreground text-sm">{family.writingSystem.historical}</p>
+                      <p className="text-muted-foreground text-sm">{family.writingSystem?.historical || 'Information not available'}</p>
                       <h4 className="font-semibold text-sm mt-4 mb-2">Modern Writing</h4>
-                      <p className="text-muted-foreground text-sm">{family.writingSystem.modern}</p>
+                      <p className="text-muted-foreground text-sm">{family.writingSystem?.modern || 'Information not available'}</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-sm mb-3">Script Examples</h4>
@@ -377,7 +377,7 @@ export default function LanguageFamilyPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-sm mb-2">Diaspora Influence</h4>
-                      <p className="text-sm text-muted-foreground">{family.historicalInfluence.diasporaInfluence}</p>
+                      <p className="text-sm text-muted-foreground">{family.historicalInfluence?.diasporaInfluence || 'Information not available'}</p>
                     </div>
                   </div>
                 </CardContent>
