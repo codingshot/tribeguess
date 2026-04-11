@@ -113,11 +113,13 @@ const TribePage = () => {
   const tradeHistory = (tribe as any).tradeHistory;
   const independenceHistory = (tribe as any).independenceHistory;
   
-  // SEO metadata
+  // SEO metadata - safe fallbacks for missing data
   const countries = (tribe as any).countries as string[] | undefined;
   const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
+  const safeDescription = (tribe.description || `Learn about the ${tribe.name} people`).slice(0, 300);
+  const safePopulation = tribe.population || 'data unavailable';
   const seoTitle = `${tribe.name} Tribe - Culture, Names & History | TribeGuess`;
-  const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${tribe.population}), and famous ${tribe.name} personalities.`;
+  const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${safePopulation}), and famous ${tribe.name} personalities.`.slice(0, 160);
   const seoKeywords = [tribe.name, `${tribe.name} tribe`, `${tribe.name} culture`, `${tribe.name} names`, `${tribe.name} history`, countryNames, 'African tribe'].join(', ');
 
   // Rich structured data for AI engines
