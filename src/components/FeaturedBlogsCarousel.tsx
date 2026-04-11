@@ -77,11 +77,13 @@ const BlogCardCarousel = memo(function BlogCardCarousel({ post, formatDate }: { 
       className="group block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full"
     >
       {/* Gradient Header with Emoji */}
-      <div className={`h-28 ${post.gradient} flex items-center justify-center relative`}>
-        <span className="text-4xl">{post.emoji}</span>
+      <div className={`h-28 ${post.gradient || 'bg-gradient-to-br from-primary/30 to-accent/30'} flex items-center justify-center relative`}>
+        <span className="text-4xl">{post.emoji || '📖'}</span>
+        {post.publishDate && (
         <span className="absolute top-2 right-2 px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-full text-xs text-white">
           {formatDate(post.publishDate)}
         </span>
+        )}
       </div>
       
       {/* Content */}
@@ -101,15 +103,18 @@ const BlogCardCarousel = memo(function BlogCardCarousel({ post, formatDate }: { 
         
         {/* Title */}
         <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
-          {post.title}
+          {post.title || 'Untitled Article'}
         </h3>
         
         {/* Excerpt */}
+        {post.excerpt && (
         <p className="text-xs text-muted-foreground line-clamp-2 mb-3">
           {post.excerpt}
         </p>
+        )}
         
         {/* Tags */}
+        {Array.isArray(post.tags) && post.tags.length > 0 && (
         <div className="flex flex-wrap gap-1">
           {post.tags.slice(0, 2).map((tag) => (
             <span 
@@ -121,6 +126,7 @@ const BlogCardCarousel = memo(function BlogCardCarousel({ post, formatDate }: { 
             </span>
           ))}
         </div>
+        )}
       </div>
     </Link>
   );

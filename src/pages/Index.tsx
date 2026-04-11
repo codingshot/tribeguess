@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { useMemo } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -9,9 +9,9 @@ import { FeaturedBlogsCarousel } from '@/components/FeaturedBlogsCarousel';
 import { FeaturedRecipesCarousel } from '@/components/FeaturedRecipesCarousel';
 import { GlobalOriginCard } from '@/components/GlobalOriginCard';
 import { NameAnalysisCard } from '@/components/NameAnalysisCard';
-import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions } from '@/lib/tribeDetection';
+import { detectTribe, getCountries, getTribesByCountry, getCountrySuggestions, getAllTribes } from '@/lib/tribeDetection';
 import { analyzeNameBreakdown, findSimilarNames, getGlobalMatches } from '@/lib/nameAnalysis';
-import { ArrowRight, Lightbulb } from 'lucide-react';
+import { ArrowRight, Lightbulb, Brain, BookOpen, Shuffle, Search, Languages } from 'lucide-react';
 import { sanitizeTextInput, isValidCountryCode } from '@/lib/dataValidation';
 import logo from '@/assets/logo.png';
 
@@ -208,6 +208,26 @@ const Index = () => {
               </nav>
             </div>
             
+            {/* Quick Discovery CTAs */}
+            <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 max-w-lg mx-auto">
+              <Link to="/learn" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Search className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">{getAllTribes().length}+ Tribes</span>
+              </Link>
+              <Link to="/quiz" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Brain className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Quiz</span>
+              </Link>
+              <Link to="/random" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Shuffle className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Random</span>
+              </Link>
+              <Link to="/languages" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+                <Languages className="w-5 h-5 text-primary" />
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Languages</span>
+              </Link>
+            </div>
+            
             {/* Top Tribes Carousel */}
             <div className="content-auto-lg">
               <TopTribesCarousel />
@@ -300,11 +320,25 @@ const Index = () => {
             )}
             
             {/* Tribe Result Cards */}
-            {results.predictions.length > 0 && (
+            {results.predictions.length > 0 ? (
               <div className="space-y-3 sm:space-y-4">
                 {results.predictions.map((prediction, index) => (
                   <TribeResultCard key={prediction.tribe.id} result={prediction} rank={index + 1} inputName={results.inputName} />
                 ))}
+              </div>
+            ) : (
+              <div className="text-center py-8 px-4 bg-card border border-border rounded-xl">
+                <Search className="w-8 h-8 mx-auto mb-3 text-muted-foreground" />
+                <p className="text-foreground font-medium mb-1">No tribal matches found</p>
+                <p className="text-sm text-muted-foreground mb-4">
+                  We couldn't find a strong match for "{results.inputName}" in our database.
+                  Try a different spelling, or explore tribes directly.
+                </p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  <Link to="/learn" className="text-sm text-primary hover:underline font-medium">Browse All Tribes</Link>
+                  <span className="text-muted-foreground">•</span>
+                  <Link to="/random" className="text-sm text-primary hover:underline font-medium">Try Random Tribe</Link>
+                </div>
               </div>
             )}
             
