@@ -22,6 +22,12 @@ const TribePage = () => {
   const navigate = useNavigate();
   const tribe = slug ? getTribeBySlug(slug) : null;
   const allTribes = getAllTribes();
+  const [showCountryList, setShowCountryList] = React.useState(false);
+
+  // Reset country list when tribe changes
+  React.useEffect(() => {
+    setShowCountryList(false);
+  }, [slug]);
   
   if (!tribe) {
     return (
@@ -211,13 +217,12 @@ const TribePage = () => {
 
               {/* Map Section */}
               <section>
-                {(() => {
+              {(() => {
                   const countries = (tribe as any).countries as string[] | undefined;
                   const isMultiCountry = countries && countries.length > 1;
                   const primaryCountry = countries?.[0] || 'KE';
                   const countryObj = getCountries().find(c => c.code === primaryCountry);
                   const countryName = countryObj?.name || 'Kenya';
-                  const [showCountryList, setShowCountryList] = React.useState(false);
                   
                   const countryObjects = countries?.map(code => getCountries().find(c => c.code === code)).filter(Boolean) || [];
                   

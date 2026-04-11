@@ -142,7 +142,7 @@ export function GuessForm({
     const trimmedName = name.trim();
     if (!trimmedName) return;
     
-    const namePattern = /^[a-zA-Z\s\-']+$/;
+    const namePattern = /^[a-zA-ZÀ-ÿ\u0100-\u024F\s\-']+$/;
     if (!namePattern.test(trimmedName)) return;
     
     const params = new URLSearchParams();
