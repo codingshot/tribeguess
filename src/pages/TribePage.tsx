@@ -490,14 +490,19 @@ const TribePage = () => {
                     Language & Greetings
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-3 mb-4">
+                    {language.name && (
                     <div>
                       <p className="text-sm text-muted-foreground">Language Name</p>
                       <p className="font-semibold text-foreground">{language.name}</p>
                     </div>
+                    )}
+                    {language.speakers && (
                     <div>
                       <p className="text-sm text-muted-foreground">Speakers</p>
                       <p className="font-semibold text-foreground">{language.speakers}</p>
                     </div>
+                    )}
+                    {language.greeting && (
                     <div>
                       <p className="text-sm text-muted-foreground">Main Greeting</p>
                       <p className="font-semibold text-primary text-lg">"{language.greeting}"</p>
@@ -505,6 +510,8 @@ const TribePage = () => {
                         <p className="text-xs text-muted-foreground">({language.greetingMeaning})</p>
                       )}
                     </div>
+                    )}
+                    {language.family && (
                     <div>
                       <p className="text-sm text-muted-foreground">Language Family</p>
                       <Link 
@@ -514,6 +521,8 @@ const TribePage = () => {
                         {language.family}
                         <ExternalLink className="w-3 h-3" />
                       </Link>
+                    </div>
+                    )}
                     </div>
                   </div>
                   
