@@ -314,7 +314,7 @@ export default function LanguageFamilyPage() {
                     <div>
                       <h4 className="font-semibold text-sm mb-3">Script Examples</h4>
                       <div className="space-y-3">
-                        {family.writingSystem.examples.map((ex, i) => (
+                        {(family.writingSystem?.examples || []).map((ex, i) => (
                           <div key={i} className="p-3 bg-muted/50 rounded-lg">
                             <p className="text-xs text-muted-foreground mb-1">{ex.script}</p>
                             <p className="text-xl font-medium">{ex.text}</p>
@@ -339,7 +339,7 @@ export default function LanguageFamilyPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="grid md:grid-cols-2 gap-2">
-                    {family.uniqueFeatures.map((feature, i) => (
+                    {(family.uniqueFeatures || []).map((feature, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
                         <span className="text-primary mt-1">✦</span>
                         <span className="text-muted-foreground">{feature}</span>
@@ -362,7 +362,7 @@ export default function LanguageFamilyPage() {
                     <div>
                       <h4 className="font-semibold text-sm mb-2">Major Empires & Kingdoms</h4>
                       <div className="flex flex-wrap gap-1">
-                        {family.historicalInfluence.empires.map((empire, i) => (
+                        {(family.historicalInfluence?.empires || []).map((empire, i) => (
                           <Badge key={i} variant="outline" className="text-xs">{empire}</Badge>
                         ))}
                       </div>
@@ -370,7 +370,7 @@ export default function LanguageFamilyPage() {
                     <div>
                       <h4 className="font-semibold text-sm mb-2">Cultural Exports</h4>
                       <div className="flex flex-wrap gap-1">
-                        {family.historicalInfluence.culturalExports.map((exp, i) => (
+                        {(family.historicalInfluence?.culturalExports || []).map((exp, i) => (
                           <Badge key={i} variant="secondary" className="text-xs">{exp}</Badge>
                         ))}
                       </div>
@@ -393,7 +393,7 @@ export default function LanguageFamilyPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-4">
-                    {family.distantCousins.map((cousin, i) => (
+                    {(family.distantCousins || []).map((cousin, i) => (
                       <div key={i} className="p-3 bg-muted/30 rounded-lg border border-border">
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline">{cousin.family}</Badge>
@@ -421,7 +421,7 @@ export default function LanguageFamilyPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid sm:grid-cols-2 gap-4">
-                    {family.commonPhrases.map((phrase: Phrase, i: number) => (
+                    {(family.commonPhrases || []).map((phrase: Phrase, i: number) => (
                       <div 
                         key={i} 
                         className="p-4 bg-gradient-to-br from-primary/5 to-transparent rounded-xl border border-primary/20 hover:border-primary/40 transition-colors"
@@ -460,7 +460,7 @@ export default function LanguageFamilyPage() {
                     <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/20" />
                     
                     <div className="space-y-6">
-                      {family.timeline.map((event: TimelineEvent, i: number) => (
+                      {(family.timeline || []).map((event: TimelineEvent, i: number) => (
                         <div key={i} className="relative flex gap-4 pl-10">
                           {/* Timeline dot */}
                           <div className="absolute left-2.5 w-4 h-4 rounded-full bg-primary border-4 border-background" />
