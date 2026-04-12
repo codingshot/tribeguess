@@ -156,7 +156,7 @@ export default function TribesIndex() {
                 {tribeCountries.slice(0, 20).map(c => (
                   <Link
                     key={c.code}
-                    to={`/tribes?country=${c.code}`}
+                    to={`/country/${countryCodeToSlug(c.code)}`}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary/80 rounded-full text-xs font-medium transition-colors"
                   >
                     <CountryFlag code={c.code} size={14} label={c.name} />
