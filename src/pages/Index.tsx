@@ -329,7 +329,7 @@ const Index = () => {
             )}
             
             {/* Global Origin Card */}
-            {results.globalOrigin && (results.globalOrigin.isNonAfrican || results.globalOrigin.religion) && (
+            {results.globalOrigin && (results.globalOrigin.isNonAfrican || results.globalOrigin.religion || results.globalOrigin.westernMapping?.found) && (
               <GlobalOriginCard
                 origins={results.globalOrigin.origins}
                 inputName={results.inputName}
@@ -337,6 +337,7 @@ const Index = () => {
                 religiousNote={results.globalOrigin.religiousNote}
                 religiousTribes={results.globalOrigin.religiousTribes}
                 confidence={results.globalOrigin.confidence}
+                westernMapping={results.globalOrigin.westernMapping}
               />
             )}
             
@@ -376,6 +377,7 @@ const Index = () => {
                   isFavorite={isFavorite(results.inputName)}
                   onToggleFavorite={() => toggleFavorite(results.inputName, { tribe: results.predictions[0].tribe.name })}
                   relatedNames={relatedNames}
+                  muslimEquivalents={results.globalOrigin?.westernMapping?.muslimEquivalents}
                 />
               </div>
             )}

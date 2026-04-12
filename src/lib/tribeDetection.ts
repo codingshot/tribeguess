@@ -1,6 +1,7 @@
 import tribesData from '@/data/tribes.json';
 import { tribeLandmarks, CulturalLandmark } from '@/data/tribeLandmarks';
 import { detectGlobalOrigin, getAfricanTribesByReligion, GlobalOrigin } from './globalOrigins';
+import { detectWesternName, WesternNameResult } from './westernNameDetection';
 
 export interface GlobalOriginInfo {
   isNonAfrican: boolean;
@@ -9,6 +10,7 @@ export interface GlobalOriginInfo {
   religiousNote?: string;
   religiousTribes: string[];
   confidence: number;
+  westernMapping?: WesternNameResult;
 }
 
 export interface TribeResult {
@@ -4617,16 +4619,36 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   
   // Detect global (non-African) origins
   const globalOriginResult = detectGlobalOrigin(name);
+  const westernResult = detectWesternName(name);
   let globalOriginInfo: GlobalOriginInfo | undefined;
   
-  if (globalOriginResult.isNonAfrican || globalOriginResult.religion) {
-    const religiousTribes = globalOriginResult.religion 
-      ? getAfricanTribesByReligion(globalOriginResult.religion as 'muslim' | 'christian')
+  if (globalOriginResult.isNonAfrican || globalOriginResult.religion || westernResult.found) {
+    // If western mapping found, enhance religion detection
+    let religion = globalOriginResult.religion;
+    let religiousNote = globalOriginResult.religiousNote;
+    
+    if (!religion && westernResult.found && westernResult.mapping) {
+      const cat = westernResult.mapping.category;
+      if (cat.startsWith('biblical')) {
+        religion = 'christian';
+        religiousNote = `"${name}" is a Biblical name with deep Christian significance.`;
+      } else if (cat.startsWith('western')) {
+        religion = 'christian';
+        religiousNote = `"${name}" is a Western/Christian-origin name.`;
+      }
+    }
+    
+    const religiousTribes = religion 
+      ? getAfricanTribesByReligion(religion as 'muslim' | 'christian')
       : [];
     
     globalOriginInfo = {
       ...globalOriginResult,
-      religiousTribes
+      religion,
+      religiousNote,
+      religiousTribes,
+      confidence: westernResult.found ? Math.max(globalOriginResult.confidence, 85) : globalOriginResult.confidence,
+      westernMapping: westernResult.found ? westernResult : undefined,
     };
   }
   

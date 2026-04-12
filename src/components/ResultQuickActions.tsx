@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Copy, Check, Share2, Heart, HeartOff, RotateCcw, Users, Utensils, BookOpen, Shuffle, ArrowRight, Scale } from 'lucide-react';
+import { Copy, Check, Share2, Heart, HeartOff, Users, Utensils, BookOpen, Shuffle, ArrowRight, Scale, Repeat2 } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { CountryFlag } from './CountryFlag';
@@ -12,6 +12,7 @@ interface ResultQuickActionsProps {
   isFavorite: boolean;
   onToggleFavorite: () => void;
   relatedNames?: string[];
+  muslimEquivalents?: string[];
 }
 
 export function ResultQuickActions({
@@ -22,6 +23,7 @@ export function ResultQuickActions({
   isFavorite,
   onToggleFavorite,
   relatedNames = [],
+  muslimEquivalents = [],
 }: ResultQuickActionsProps) {
   const [copied, setCopied] = useState(false);
 
@@ -116,6 +118,26 @@ export function ResultQuickActions({
           Compare tribes
         </Link>
       </div>
+
+      {/* Muslim Equivalents */}
+      {muslimEquivalents.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          <p className="text-xs text-muted-foreground flex items-center gap-1 w-full">
+            <Repeat2 className="w-3 h-3" />
+            Try the Muslim equivalent:
+          </p>
+          {muslimEquivalents.slice(0, 3).map(eq => (
+            <a
+              key={eq}
+              href={`/?name=${encodeURIComponent(eq)}&country=ALL`}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900 transition-colors"
+            >
+              ☪️ {eq.charAt(0).toUpperCase() + eq.slice(1)}
+              <ArrowRight className="w-3 h-3" />
+            </a>
+          ))}
+        </div>
+      )}
 
       {/* Try Related Names */}
       {relatedNames.length > 0 && (
