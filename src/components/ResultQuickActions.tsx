@@ -137,7 +137,7 @@ export function ResultQuickActions({
             </a>
           ))}
         </div>
-      )
+      )}
 
       {/* Try Related Names */}
       {relatedNames.length > 0 && (
