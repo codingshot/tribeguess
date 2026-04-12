@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Copy, Check, Share2, Heart, HeartOff, RotateCcw, Users, Utensils, BookOpen, Shuffle, ArrowRight, Scale } from 'lucide-react';
+import { Copy, Check, Share2, Heart, HeartOff, Users, Utensils, BookOpen, Shuffle, ArrowRight, Scale, Repeat2 } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { CountryFlag } from './CountryFlag';
@@ -12,6 +12,7 @@ interface ResultQuickActionsProps {
   isFavorite: boolean;
   onToggleFavorite: () => void;
   relatedNames?: string[];
+  muslimEquivalents?: string[];
 }
 
 export function ResultQuickActions({
@@ -22,6 +23,7 @@ export function ResultQuickActions({
   isFavorite,
   onToggleFavorite,
   relatedNames = [],
+  muslimEquivalents = [],
 }: ResultQuickActionsProps) {
   const [copied, setCopied] = useState(false);
 
