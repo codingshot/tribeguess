@@ -34,6 +34,7 @@ export function Header() {
     { path: '/', label: 'Guess', icon: Sparkles, mobileOnly: false },
     { path: '/learn', label: 'Learn', icon: BookOpen, mobileOnly: false },
     { path: '/blog', label: 'Blog', icon: FileText, mobileOnly: false },
+    { path: '/tribes', label: 'All Tribes', icon: Globe, mobileOnly: true },
     { path: '/recipes', label: 'Recipes', icon: ChefHat, mobileOnly: true },
     { path: '/religions', label: 'Religions', icon: Church, mobileOnly: true },
     { path: '/languages', label: 'Languages', icon: Languages, mobileOnly: true },
