@@ -175,10 +175,10 @@ export default function TribesIndex() {
                 <MapPin className="w-4 h-4" /> Browse by Region
               </h2>
               <div className="flex flex-wrap gap-2">
-                {uniqueRegions.map(r => (
+                {['East Africa', 'West Africa', 'Southern Africa', 'Central Africa', 'Horn of Africa', 'North Africa', 'Sahel'].map(r => (
                   <Link
                     key={r}
-                    to={`/tribes?region=${encodeURIComponent(r)}`}
+                    to={`/region/${regionToSlug(r)}`}
                     className="px-3 py-1.5 bg-secondary hover:bg-secondary/80 rounded-full text-xs font-medium transition-colors"
                   >
                     {r}
