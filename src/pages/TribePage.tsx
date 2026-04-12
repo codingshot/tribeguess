@@ -152,9 +152,9 @@ const TribePage = () => {
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://africantribenames.com/learn/${tribe.slug}`} />
-        <meta property="og:site_name" content="African Tribe Names" />
-        <link rel="canonical" href={`https://africantribenames.com/learn/${tribe.slug}`} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
