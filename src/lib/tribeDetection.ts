@@ -4411,7 +4411,7 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   
   // 8. Check common names in tribes (use country-filtered tribes)
   for (const tribe of countryTribes) {
-    const allNames = [...tribe.commonNames.female, ...tribe.commonNames.male].map(n => n.toLowerCase());
+    const allNames = [...(tribe.commonNames?.female || []), ...(tribe.commonNames?.male || [])].map(n => n.toLowerCase());
     for (const tribeName of allNames) {
       if (normalizedName === tribeName) {
         if (!tribeScores[tribe.id]) {
