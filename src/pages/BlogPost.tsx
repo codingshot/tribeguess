@@ -8,6 +8,7 @@ import { BlogAudioPlayer } from '@/components/BlogAudioPlayer';
 import { ShareButton } from '@/components/ShareButton';
 import { RelatedBlogs } from '@/components/RelatedBlogs';
 import { processTextWithTribeLinks } from '@/lib/tribeLinks';
+import { ViralCTAs } from '@/components/ViralCTAs';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -292,6 +293,9 @@ const BlogPost = () => {
 
           {/* Related Blogs */}
           <RelatedBlogs currentPost={post} />
+
+          {/* Viral CTAs */}
+          <ViralCTAs className="mt-8" />
         </article>
       </main>
 

@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { ViralCTAs } from '@/components/ViralCTAs';
 import { CountryFlag, getCodeFromName } from '@/components/CountryFlag';
 import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -461,6 +462,8 @@ export default function ReligionDetailPage() {
               </Card>
             </div>
           </div>
+
+          <ViralCTAs className="mt-8" />
         </main>
 
         <Footer />

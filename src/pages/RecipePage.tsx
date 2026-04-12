@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useMemo } from 'react';
+import { ViralCTAs } from '@/components/ViralCTAs';
 import { getAllTribes } from '@/lib/tribeDetection';
 import languageFamiliesData from '@/data/languageFamilies.json';
 import { InlineVideoPlayer } from '@/components/InlineVideoPlayer';
@@ -538,6 +539,8 @@ export default function RecipePage() {
             </Link>
           </Button>
         </div>
+
+        <ViralCTAs tribeName={recipe.tribeName} tribeSlug={recipe.tribeSlug} className="mt-8" />
       </main>
 
       <Footer />

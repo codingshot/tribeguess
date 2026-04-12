@@ -12,6 +12,7 @@ import {
   Calendar, Briefcase, Globe, ChevronRight 
 } from 'lucide-react';
 import { getPersonBySlug, getPeopleByTribe, type Person } from '@/lib/peopleUtils';
+import { ViralCTAs } from '@/components/ViralCTAs';
 import { getCountries } from '@/lib/tribeDetection';
 
 const CATEGORY_ICONS: Record<string, string> = {
@@ -308,6 +309,8 @@ export default function PersonPage() {
               </CardContent>
             </Card>
           )}
+
+          <ViralCTAs tribeName={person.tribeName} tribeSlug={person.tribeSlug} className="mt-8" />
 
           {/* Back to list */}
           <div className="mt-8 text-center">
