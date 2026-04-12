@@ -599,7 +599,7 @@ const TribePage = () => {
               
               {/* History Section */}
               {history && (
-                <section className="border-t border-border pt-6">
+                <section id="history" className="border-t border-border pt-6">
                   <h2 className="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
                     <History className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                     History & Origins
