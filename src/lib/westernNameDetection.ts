@@ -3,7 +3,7 @@
  * into TribeGuess detection pipeline for cross-faith tribal context.
  */
 
-import { christianToMuslimNameMapping, westernNameVariants, categoryToWesternKeys } from '@/data/nameMappingData';
+import { christianToMuslimNameMapping, westernNameVariants, categoryToWesternKeys, muslimNameToWesternKeys } from '@/data/nameMappingData';
 import type { NameMapping, NameMappingCategory } from '@/data/nameMappingData';
 
 export interface WesternNameResult {
@@ -12,6 +12,8 @@ export interface WesternNameResult {
   resolvedFrom?: string; // If resolved via variant/nickname
   mapping?: NameMapping;
   muslimEquivalents: string[];
+  westernEquivalents?: string[]; // For reverse lookup (Muslim name → Western)
+  isReverseLookup?: boolean; // True when user searched a Muslim name
   christianTribes: string[];
   muslimTribes: string[];
   relatedNames: string[];
