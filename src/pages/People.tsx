@@ -110,14 +110,14 @@ export default function People() {
           content={`Discover ${allPeople.length}+ notable people from African tribes. Explore politicians, athletes, artists, activists and more with their tribal heritage and biographies.`} 
         />
         <meta name="keywords" content="famous africans, african celebrities, african politicians, african athletes, african musicians, african tribal heritage" />
-        <link rel="canonical" href="https://tribeguess.com/people" />
+        <link rel="canonical" href="https://africantribenames.com/people" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "Famous African People",
             "description": `Directory of ${allPeople.length}+ notable people from African tribes`,
-            "url": "https://tribeguess.com/people",
+            "url": "https://africantribenames.com/people",
             "numberOfItems": allPeople.length,
           })}
         </script>

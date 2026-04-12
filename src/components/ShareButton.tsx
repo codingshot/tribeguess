@@ -18,7 +18,7 @@ export const ShareButton = ({ title, url, description = '' }: ShareButtonProps) 
   const [copied, setCopied] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const fullUrl = url.startsWith('http') ? url : `https://tribeguess.com${url}`;
+  const fullUrl = url.startsWith('http') ? url : `https://africantribenames.com${url}`;
   const encodedUrl = encodeURIComponent(fullUrl);
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);

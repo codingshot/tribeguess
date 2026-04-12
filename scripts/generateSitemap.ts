@@ -15,7 +15,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const SITE_URL = 'https://tribeguess.com';
+const SITE_URL = 'https://africantribenames.com';
 const TODAY = new Date().toISOString().split('T')[0];
 
 interface SitemapEntry {

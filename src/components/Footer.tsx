@@ -69,31 +69,31 @@ export function Footer() {
           
           {/* Regions */}
           <div>
-            <h3 className="font-semibold text-foreground mb-3 text-sm">Regions</h3>
+            <h3 className="font-semibold text-foreground mb-3 text-sm">By Country</h3>
             <nav className="flex flex-col gap-2">
-              <Link to="/learn?country=KE" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="KE" size={14} label="Kenya" /> Kenya
+              <Link to="/country/kenya" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="KE" size={14} label="Kenya" /> Tribes in Kenya
               </Link>
-              <Link to="/learn?country=NG" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="NG" size={14} label="Nigeria" /> Nigeria
+              <Link to="/country/nigeria" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="NG" size={14} label="Nigeria" /> Tribes in Nigeria
               </Link>
-              <Link to="/learn?country=ET" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="ET" size={14} label="Ethiopia" /> Ethiopia
+              <Link to="/country/ethiopia" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="ET" size={14} label="Ethiopia" /> Tribes in Ethiopia
               </Link>
-              <Link to="/learn?country=ZA" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="ZA" size={14} label="South Africa" /> South Africa
+              <Link to="/country/south-africa" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="ZA" size={14} label="South Africa" /> Tribes in South Africa
               </Link>
-              <Link to="/learn?country=GH" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="GH" size={14} label="Ghana" /> Ghana
+              <Link to="/country/ghana" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="GH" size={14} label="Ghana" /> Tribes in Ghana
               </Link>
-              <Link to="/learn?country=TZ" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="TZ" size={14} label="Tanzania" /> Tanzania
+              <Link to="/country/tanzania" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+                <CountryFlag code="TZ" size={14} label="Tanzania" /> Tribes in Tanzania
               </Link>
-              <Link to="/learn?country=EG" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="EG" size={14} label="Egypt" /> Egypt
+              <Link to="/region/east-africa" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                → East Africa Tribes
               </Link>
-              <Link to="/learn?country=MA" className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5">
-                <CountryFlag code="MA" size={14} label="Morocco" /> Morocco
+              <Link to="/region/west-africa" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                → West Africa Tribes
               </Link>
             </nav>
           </div>

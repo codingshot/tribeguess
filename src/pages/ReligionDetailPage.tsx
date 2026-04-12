@@ -56,15 +56,15 @@ export default function ReligionDetailPage() {
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://tribeguess.com/religion/${religion.id}`} />
+        <link rel="canonical" href={`https://africantribenames.com/religion/${religion.id}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": religion.name,
             "description": seoDescription,
-            "author": { "@type": "Organization", "name": "TribeGuess" },
-            "publisher": { "@type": "Organization", "name": "TribeGuess" },
+            "author": { "@type": "Organization", "name": "African Tribe Names" },
+            "publisher": { "@type": "Organization", "name": "African Tribe Names" },
             "about": {
               "@type": "Thing",
               "name": religion.name,

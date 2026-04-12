@@ -202,13 +202,13 @@ const Docs = () => {
           content="Complete user guide for TribeGuess. Learn how to search African names, explore 300+ tribes, discover recipes, take quizzes, and explore African cultural heritage." 
         />
         <meta name="keywords" content="TribeGuess guide, African tribes tutorial, name search help, cultural heritage documentation, African recipes guide" />
-        <link rel="canonical" href="https://tribeguess.com/docs" />
+        <link rel="canonical" href="https://africantribenames.com/docs" />
         
         {/* Open Graph */}
         <meta property="og:title" content="User Guide & Documentation | TribeGuess" />
         <meta property="og:description" content="Complete user guide for exploring African tribal heritage with TribeGuess." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tribeguess.com/docs" />
+        <meta property="og:url" content="https://africantribenames.com/docs" />
         <meta property="og:image" content="/docs/screenshot-home.png" />
         
         {/* Twitter */}
@@ -228,7 +228,7 @@ const Docs = () => {
               "position": index + 1,
               "name": guide.title,
               "text": guide.description,
-              "image": `https://tribeguess.com${guide.screenshot}`
+              "image": `https://africantribenames.com${guide.screenshot}`
             }))
           })}
         </script>

@@ -126,6 +126,8 @@ const NamesGallery = lazy(() => import("./pages/NamesGallery"));
 const VideoGallery = lazy(() => import("./pages/VideoGallery"));
 const TribeCompare = lazy(() => import("./pages/TribeCompare"));
 const TribesIndex = lazy(() => import("./pages/TribesIndex"));
+const CountryTribes = lazy(() => import("./pages/CountryTribes"));
+const RegionTribes = lazy(() => import("./pages/RegionTribes"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -182,6 +184,8 @@ const App = () => {
                   <Route path="/video-gallery" element={<VideoGallery />} />
                   <Route path="/compare" element={<TribeCompare />} />
                   <Route path="/tribes" element={<TribesIndex />} />
+                  <Route path="/country/:countrySlug" element={<CountryTribes />} />
+                  <Route path="/region/:regionSlug" element={<RegionTribes />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>

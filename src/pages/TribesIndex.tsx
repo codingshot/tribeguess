@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { getAllTribes, getCountries } from '@/lib/tribeDetection';
 import { Search, Users, MapPin, Languages, Globe, ArrowRight, Sparkles } from 'lucide-react';
 import { ViralCTAs } from '@/components/ViralCTAs';
+import { countryCodeToSlug, regionToSlug, canonical } from '@/lib/seoConstants';
 import type { TribeData } from '@/types/tribe';
 
 export default function TribesIndex() {
@@ -91,15 +92,15 @@ export default function TribesIndex() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": seoTitle.replace(' | TribeGuess', ''),
+    "name": seoTitle.replace(' | African Tribe Names', ''),
     "description": seoDesc,
-    "url": "https://tribeguess.com/tribes",
+    "url": canonical("/tribes"),
     "numberOfItems": filteredTribes.length,
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tribeguess.com" },
-        { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": "https://tribeguess.com/tribes" },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": canonical("/") },
+        { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": canonical("/tribes") },
       ]
     }
   };
@@ -109,7 +110,7 @@ export default function TribesIndex() {
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDesc} />
-        <link rel="canonical" href={`https://tribeguess.com/tribes${activeFilter ? `?${searchParams.toString()}` : ''}`} />
+        <link rel="canonical" href={`https://africantribenames.com/tribes${activeFilter ? `?${searchParams.toString()}` : ''}`} />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDesc} />
@@ -155,7 +156,7 @@ export default function TribesIndex() {
                 {tribeCountries.slice(0, 20).map(c => (
                   <Link
                     key={c.code}
-                    to={`/tribes?country=${c.code}`}
+                    to={`/country/${countryCodeToSlug(c.code)}`}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary/80 rounded-full text-xs font-medium transition-colors"
                   >
                     <CountryFlag code={c.code} size={14} label={c.name} />
@@ -174,10 +175,10 @@ export default function TribesIndex() {
                 <MapPin className="w-4 h-4" /> Browse by Region
               </h2>
               <div className="flex flex-wrap gap-2">
-                {uniqueRegions.map(r => (
+                {['East Africa', 'West Africa', 'Southern Africa', 'Central Africa', 'Horn of Africa', 'North Africa', 'Sahel'].map(r => (
                   <Link
                     key={r}
-                    to={`/tribes?region=${encodeURIComponent(r)}`}
+                    to={`/region/${regionToSlug(r)}`}
                     className="px-3 py-1.5 bg-secondary hover:bg-secondary/80 rounded-full text-xs font-medium transition-colors"
                   >
                     {r}

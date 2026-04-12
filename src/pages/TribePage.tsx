@@ -130,6 +130,7 @@ const TribePage = () => {
   // Generate FAQ structured data from the comprehensive FAQ component
   const faqSchema = generateFAQStructuredData(tribe, countryNames);
 
+  const SITE_URL = 'https://africantribenames.com';
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -137,18 +138,18 @@ const TribePage = () => {
         "@type": "Article",
         "headline": `${tribe.name} Tribe: Culture, Names, History & Traditions`,
         "description": seoDescription,
-        "author": { "@type": "Organization", "name": "TribeGuess", "url": "https://tribeguess.com" },
-        "publisher": { "@type": "Organization", "name": "TribeGuess", "logo": { "@type": "ImageObject", "url": "https://tribeguess.com/favicon.png" } },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://tribeguess.com/learn/${tribe.slug}` },
+        "author": { "@type": "Organization", "name": "African Tribe Names", "url": SITE_URL },
+        "publisher": { "@type": "Organization", "name": "African Tribe Names", "logo": { "@type": "ImageObject", "url": `${SITE_URL}/favicon.png` } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/learn/${tribe.slug}` },
         "about": { "@type": "Thing", "name": `${tribe.name} people`, "description": tribe.description },
         "keywords": seoKeywords,
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tribeguess.com" },
-          { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": "https://tribeguess.com/tribes" },
-          { "@type": "ListItem", "position": 3, "name": tribe.name, "item": `https://tribeguess.com/learn/${tribe.slug}` },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+          { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": `${SITE_URL}/tribes` },
+          { "@type": "ListItem", "position": 3, "name": tribe.name, "item": `${SITE_URL}/learn/${tribe.slug}` },
         ]
       },
       ...(faqSchema ? [faqSchema] : [])
@@ -164,9 +165,9 @@ const TribePage = () => {
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://tribeguess.com/learn/${tribe.slug}`} />
-        <meta property="og:site_name" content="TribeGuess" />
-        <link rel="canonical" href={`https://tribeguess.com/learn/${tribe.slug}`} />
+        <meta property="og:url" content={`https://africantribenames.com/learn/${tribe.slug}`} />
+        <meta property="og:site_name" content="African Tribe Names" />
+        <link rel="canonical" href={`https://africantribenames.com/learn/${tribe.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />

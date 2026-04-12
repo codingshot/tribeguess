@@ -33,15 +33,15 @@ export default function IngredientPage() {
     "description": ingredient.description,
     "author": {
       "@type": "Organization",
-      "name": "TribeGuess"
+      "name": "African Tribe Names"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "TribeGuess"
+      "name": "African Tribe Names"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://tribeguess.com/ingredient/${ingredient.id}`
+      "@id": `https://africantribenames.com/ingredient/${ingredient.id}`
     },
     "keywords": `${ingredient.name}, African ingredients, ${ingredient.category}, traditional food, ${ingredient.localNames.map(ln => ln.name).join(', ')}`
   };
@@ -54,13 +54,13 @@ export default function IngredientPage() {
         <title>{ingredient.name} - Traditional African Ingredient | Health Benefits & Uses | TribeGuess</title>
         <meta name="description" content={`${ingredient.description} Used by ${tribesUsingIngredient}. Learn about varieties, health benefits, and culinary uses of ${ingredient.name} in African cuisine.`} />
         <meta name="keywords" content={`${ingredient.name}, African ingredient, ${ingredient.category}, traditional food, health benefits, ${ingredient.localNames.map(ln => ln.name).join(', ')}`} />
-        <link rel="canonical" href={`https://tribeguess.com/ingredient/${ingredient.id}`} />
+        <link rel="canonical" href={`https://africantribenames.com/ingredient/${ingredient.id}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={`${ingredient.name} - African Ingredient Guide`} />
         <meta property="og:description" content={ingredient.description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://tribeguess.com/ingredient/${ingredient.id}`} />
+        <meta property="og:url" content={`https://africantribenames.com/ingredient/${ingredient.id}`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />
