@@ -25,6 +25,7 @@ export function ResultQuickActions({
   onToggleFavorite,
   relatedNames = [],
   muslimEquivalents = [],
+  westernEquivalents = [],
 }: ResultQuickActionsProps) {
   const [copied, setCopied] = useState(false);
 
