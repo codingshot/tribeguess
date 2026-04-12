@@ -195,7 +195,7 @@ export default function RecipePage() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{recipe.name} - Traditional {recipe.tribeName} Recipe | African Cuisine | TribeGuess</title>
+        <title>{recipe.name} ({recipe.tribeName} Recipe): Ingredients, History & How to Cook | TribeGuess</title>
         <meta name="description" content={`Learn how to make ${recipe.name}${recipe.localName ? ` (${recipe.localName})` : ''}, a traditional ${recipe.tribeName} dish from Africa. ${recipe.description.slice(0, 120)} Prep: ${recipe.prepTime}, Serves: ${recipe.servings}.`} />
         <meta name="keywords" content={`${recipe.name}, ${recipe.localName || ''}, ${recipe.tribeName} recipe, African food, traditional cuisine, ${recipe.category}, how to cook ${recipe.name}, ${recipe.dietaryInfo?.join(', ') || ''}`} />
         <link rel="canonical" href={`https://tribeguess.com/recipe/${recipe.id}`} />
