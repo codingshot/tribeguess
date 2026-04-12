@@ -243,6 +243,12 @@ export function GuessForm({
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Escape') {
+                    setName('');
+                    (e.target as HTMLInputElement).blur();
+                  }
+                }}
                 placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
                 className="input-tribal text-base w-full py-3 sm:py-2.5 pr-3 pl-3"
                 autoFocus
@@ -250,7 +256,18 @@ export function GuessForm({
                 autoComplete="off"
                 autoCapitalize="words"
                 spellCheck="false"
+                enterKeyHint="search"
               />
+              {name.trim().length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setName('')}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground transition-colors touch-manipulation"
+                  aria-label="Clear name"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+              )}
             </div>
             <button
               type="submit"
