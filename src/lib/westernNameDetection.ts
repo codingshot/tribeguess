@@ -139,7 +139,17 @@ export function detectWesternName(name: string): WesternNameResult {
   }
 
   // 4. Reverse lookup: user searched a Muslim name → find Western equivalents
-  if (!mapping) {
+  // Skip for very common Muslim names that are self-standing (not primarily "equivalents")
+  const commonMuslimNames = new Set([
+    'muhammad', 'mohammed', 'ahmed', 'ali', 'omar', 'fatima', 'aisha', 'khadija',
+    'zainab', 'hassan', 'hussein', 'mustafa', 'mahmoud', 'abdallah', 'abdullah',
+    'bilal', 'hamza', 'khalid', 'rashid', 'faisal', 'ismail', 'idris', 'umar',
+    'uthman', 'zaid', 'amina', 'huda', 'samira', 'yasmin', 'rania', 'hanan',
+    'lubna', 'zahra', 'sumaya', 'asma', 'halima', 'nafisa', 'ruqayya', 'safiya',
+    'noor', 'layla', 'karim', 'salim', 'tariq', 'yusuf', 'musa', 'isa',
+  ]);
+  
+  if (!mapping && !commonMuslimNames.has(normalized)) {
     const westernKeys = muslimNameToWesternKeys.get(normalized);
     if (westernKeys && westernKeys.length > 0) {
       // Find the best non-African mapping
@@ -169,8 +179,8 @@ export function detectWesternName(name: string): WesternNameResult {
         }
       }
     }
-    return empty;
   }
+  if (!mapping) return empty;
 
   // Get related names from same category (up to 6)
   const sameCat = categoryToWesternKeys.get(mapping.category) ?? [];
