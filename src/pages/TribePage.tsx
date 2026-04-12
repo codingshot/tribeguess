@@ -870,6 +870,7 @@ const TribePage = () => {
                 tribeName={tribe.name}
                 nameDatabase={getNameDatabase()}
               />
+              </div>
               )}
               
               {tribe.timeBasedNames && Object.keys(tribe.timeBasedNames).length > 0 && (
