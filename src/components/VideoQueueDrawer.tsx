@@ -149,7 +149,7 @@ export function VideoQueueDrawer() {
       }
       markdown += `   - Watch: https://youtube.com/watch?v=${video.youtubeId}\n`;
       if (video.originUrl) {
-        markdown += `   - Source: https://tribeguess.com${video.originUrl}\n`;
+        markdown += `   - Source: https://africantribenames.com${video.originUrl}\n`;
       }
       markdown += '\n';
     });

@@ -95,15 +95,15 @@ const Blog = () => {
     "@type": "CollectionPage",
     "name": "African Tribes & Culture Blog",
     "description": "Explore fascinating facts about African tribes, naming traditions, cultural heritage, and ethnic diversity across the continent.",
-    "url": "https://tribeguess.com/blog",
-    "publisher": { "@type": "Organization", "name": "TribeGuess" },
+    "url": "https://africantribenames.com/blog",
+    "publisher": { "@type": "Organization", "name": "African Tribe Names" },
     "numberOfItems": blogPosts.length,
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": filteredPosts.slice(0, 20).map((post, i) => ({
         "@type": "ListItem",
         "position": i + 1,
-        "url": `https://tribeguess.com/blog/${post.slug}`,
+        "url": `https://africantribenames.com/blog/${post.slug}`,
         "name": post.title
       }))
     }
@@ -116,12 +116,12 @@ const Blog = () => {
         <meta name="description" content="Explore fascinating facts about African tribes, naming traditions, cultural heritage, and ethnic diversity across the continent." />
         <meta name="keywords" content="African tribes blog, African culture, tribal traditions, African names, ethnic groups Africa" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-        <link rel="canonical" href="https://tribeguess.com/blog" />
+        <link rel="canonical" href="https://africantribenames.com/blog" />
         <meta property="og:title" content="African Tribes & Culture Blog | TribeGuess" />
         <meta property="og:description" content="Explore fascinating facts about African tribes, naming traditions, cultural heritage, and ethnic diversity." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tribeguess.com/blog" />
-        <meta property="og:site_name" content="TribeGuess" />
+        <meta property="og:url" content="https://africantribenames.com/blog" />
+        <meta property="og:site_name" content="African Tribe Names" />
         <script type="application/ld+json">
           {JSON.stringify(blogListSchema)}
         </script>

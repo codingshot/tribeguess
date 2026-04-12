@@ -137,8 +137,8 @@ export default function RecipePage() {
     "description": recipe.description,
     "author": {
       "@type": "Organization",
-      "name": "TribeGuess",
-      "url": "https://tribeguess.com"
+      "name": "African Tribe Names",
+      "url": "https://africantribenames.com"
     },
     "datePublished": "2025-01-01",
     "prepTime": `PT${parseInt(recipe.prepTime) || 15}M`,
@@ -187,9 +187,9 @@ export default function RecipePage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Recipes", "item": "https://tribeguess.com/recipes" },
-      { "@type": "ListItem", "position": 2, "name": recipe.tribeName, "item": `https://tribeguess.com/learn/${recipe.tribeSlug}` },
-      { "@type": "ListItem", "position": 3, "name": recipe.name, "item": `https://tribeguess.com/recipe/${recipe.id}` }
+      { "@type": "ListItem", "position": 1, "name": "Recipes", "item": "https://africantribenames.com/recipes" },
+      { "@type": "ListItem", "position": 2, "name": recipe.tribeName, "item": `https://africantribenames.com/learn/${recipe.tribeSlug}` },
+      { "@type": "ListItem", "position": 3, "name": recipe.name, "item": `https://africantribenames.com/recipe/${recipe.id}` }
     ]
   };
 
@@ -199,14 +199,14 @@ export default function RecipePage() {
         <title>{recipe.name} ({recipe.tribeName} Recipe): Ingredients, History & How to Cook | TribeGuess</title>
         <meta name="description" content={`Learn how to make ${recipe.name}${recipe.localName ? ` (${recipe.localName})` : ''}, a traditional ${recipe.tribeName} dish from Africa. ${recipe.description.slice(0, 120)} Prep: ${recipe.prepTime}, Serves: ${recipe.servings}.`} />
         <meta name="keywords" content={`${recipe.name}, ${recipe.localName || ''}, ${recipe.tribeName} recipe, African food, traditional cuisine, ${recipe.category}, how to cook ${recipe.name}, ${recipe.dietaryInfo?.join(', ') || ''}`} />
-        <link rel="canonical" href={`https://tribeguess.com/recipe/${recipe.id}`} />
+        <link rel="canonical" href={`https://africantribenames.com/recipe/${recipe.id}`} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         
         {/* Open Graph */}
         <meta property="og:title" content={`${recipe.name} - ${recipe.tribeName} Traditional Recipe`} />
         <meta property="og:description" content={`Authentic ${recipe.tribeName} recipe: ${recipe.description.slice(0, 200)}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://tribeguess.com/recipe/${recipe.id}`} />
+        <meta property="og:url" content={`https://africantribenames.com/recipe/${recipe.id}`} />
         {recipe.youtubeVideoId && (
           <meta property="og:image" content={`https://img.youtube.com/vi/${recipe.youtubeVideoId}/hqdefault.jpg`} />
         )}

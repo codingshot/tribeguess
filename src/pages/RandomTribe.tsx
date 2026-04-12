@@ -85,13 +85,13 @@ export default function RandomTribe() {
           content="Explore African cultural heritage by discovering a random tribe. Learn about their traditions, naming conventions, history, and famous people from across the continent." 
         />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://tribeguess.com/random" />
+        <link rel="canonical" href="https://africantribenames.com/random" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Discover a Random African Tribe | TribeGuess" />
         <meta property="og:description" content="Explore African cultural heritage by discovering a random tribe. Learn about traditions, naming conventions, and history." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tribeguess.com/random" />
+        <meta property="og:url" content="https://africantribenames.com/random" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

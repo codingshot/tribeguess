@@ -160,7 +160,7 @@ export function getSitemapStats() {
 /**
  * Generate sitemap XML string
  */
-export function generateSitemapXML(baseUrl: string = 'https://tribeguess.com'): string {
+export function generateSitemapXML(baseUrl: string = 'https://africantribenames.com'): string {
   const urls = getAllSitemapUrls();
   
   const header = `<?xml version="1.0" encoding="UTF-8"?>

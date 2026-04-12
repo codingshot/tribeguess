@@ -185,7 +185,7 @@ export default function LanguageFamilyPage() {
           content={`Explore the ${family.name} language family with ${family.totalSpeakers} speakers across ${family.numberOfLanguages} languages. Learn common phrases, history, and related African tribes.`} 
         />
         <meta name="keywords" content={`${family.name}, African languages, ${family.subFamilies.map((s: SubFamily) => s.name).join(', ')}, language family, African linguistics`} />
-        <link rel="canonical" href={`https://tribeguess.com/languages/${family.slug}`} />
+        <link rel="canonical" href={`https://africantribenames.com/languages/${family.slug}`} />
       </Helmet>
 
       <Header />

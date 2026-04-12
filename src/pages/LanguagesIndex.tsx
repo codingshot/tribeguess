@@ -18,7 +18,7 @@ export default function LanguagesIndex() {
           content="Explore Africa's diverse language families including Niger-Congo, Afroasiatic, Nilo-Saharan, and Khoisan. Learn common phrases, history, and discover related tribes." 
         />
         <meta name="keywords" content="African languages, Niger-Congo, Bantu, Afroasiatic, Cushitic, Semitic, Nilo-Saharan, Khoisan, language families, African linguistics" />
-        <link rel="canonical" href="https://tribeguess.com/languages" />
+        <link rel="canonical" href="https://africantribenames.com/languages" />
       </Helmet>
 
       <Header />
