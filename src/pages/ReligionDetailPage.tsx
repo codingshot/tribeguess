@@ -37,8 +37,8 @@ export default function ReligionDetailPage() {
     );
   }
 
-  const seoTitle = `${religion.name} - Traditional African Religion | TribeGuess`;
-  const seoDescription = `Learn about ${religion.name}: ${religion.estimatedFollowers} followers, supreme deity ${religion.supremeDeity.name}, core tenets, rituals, and how to join this ${religion.region} tradition.`;
+  const seoTitle = `${religion.name}: Beliefs, Rituals & Spiritual Practices | TribeGuess`;
+  const seoDescription = `Explore ${religion.name} - ${religion.estimatedFollowers} followers. Learn about supreme deity ${religion.supremeDeity.name}, core beliefs, rituals, ceremonies, and how to join this ${religion.region} tradition.`;
 
   // Prepare chart data
   const countryChartData = religion.countryBreakdown.map(item => ({

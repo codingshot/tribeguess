@@ -72,10 +72,10 @@ export default function PersonPage() {
   return (
     <>
       <Helmet>
-        <title>{person.name} | {person.tribeName} Tribe | Famous Africans | TribeGuess</title>
+        <title>{person.name} | Famous {person.tribeName} People | TribeGuess</title>
         <meta 
           name="description" 
-          content={`${person.name} - ${person.role}. Learn about this notable figure from the ${person.tribeName} tribe and their contributions.`} 
+          content={`${person.name} - ${person.role}. Notable figure from the ${person.tribeName} tribe. Discover their contributions and tribal heritage.`} 
         />
         <meta name="keywords" content={`${person.name}, ${person.tribeName}, ${person.category}, famous africans, african heritage`} />
         <link rel="canonical" href={`https://tribeguess.com/person/${person.id}`} />

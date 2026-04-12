@@ -29,6 +29,7 @@ interface SitemapEntry {
 const staticPages: SitemapEntry[] = [
   { loc: '/', lastmod: TODAY, changefreq: 'weekly', priority: 1.0 },
   { loc: '/learn', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
+  { loc: '/tribes', lastmod: TODAY, changefreq: 'weekly', priority: 0.95 },
   { loc: '/names', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/recipes', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/languages', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
@@ -39,6 +40,8 @@ const staticPages: SitemapEntry[] = [
   { loc: '/people', lastmod: TODAY, changefreq: 'weekly', priority: 0.8 },
   { loc: '/quiz', lastmod: TODAY, changefreq: 'weekly', priority: 0.8 },
   { loc: '/blog', lastmod: TODAY, changefreq: 'weekly', priority: 0.8 },
+  { loc: '/compare', lastmod: TODAY, changefreq: 'monthly', priority: 0.7 },
+  { loc: '/video-gallery', lastmod: TODAY, changefreq: 'weekly', priority: 0.7 },
   { loc: '/docs', lastmod: TODAY, changefreq: 'monthly', priority: 0.7 },
   { loc: '/random', lastmod: TODAY, changefreq: 'monthly', priority: 0.6 },
   { loc: '/privacy', lastmod: TODAY, changefreq: 'yearly', priority: 0.3 },

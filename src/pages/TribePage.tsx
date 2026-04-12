@@ -18,6 +18,9 @@ import { CulturalLandmarks } from '@/components/CulturalLandmarks';
 import { findRecipeByName } from '@/data/recipes';
 import { InlineVideoPlayer } from '@/components/InlineVideoPlayer';
 import { Button } from '@/components/ui/button';
+import { TribeFAQSection, generateFAQStructuredData } from '@/components/TribeFAQSection';
+import { TribeInternalLinks } from '@/components/TribeInternalLinks';
+import { ViralCTAs } from '@/components/ViralCTAs';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -119,17 +122,20 @@ const TribePage = () => {
   const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
   const safeDescription = (tribe.description || `Learn about the ${tribe.name} people`).slice(0, 300);
   const safePopulation = tribe.population || 'data unavailable';
-  const seoTitle = `${tribe.name} Tribe - Culture, Names & History | TribeGuess`;
+  const seoTitle = `${tribe.name} Tribe: Culture, Names, History & Traditions | TribeGuess`;
   const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${safePopulation}), and famous ${tribe.name} personalities.`.slice(0, 160);
-  const seoKeywords = [tribe.name, `${tribe.name} tribe`, `${tribe.name} culture`, `${tribe.name} names`, `${tribe.name} history`, countryNames, 'African tribe'].join(', ');
+  const seoKeywords = [tribe.name, `${tribe.name} tribe`, `${tribe.name} culture`, `${tribe.name} names`, `${tribe.name} history`, `${tribe.name} traditions`, `${tribe.name} language`, countryNames, 'African tribe'].join(', ');
 
   // Rich structured data for AI engines
+  // Generate FAQ structured data from the comprehensive FAQ component
+  const faqSchema = generateFAQStructuredData(tribe, countryNames);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Article",
-        "headline": `${tribe.name} Tribe - Culture, Names & History`,
+        "headline": `${tribe.name} Tribe: Culture, Names, History & Traditions`,
         "description": seoDescription,
         "author": { "@type": "Organization", "name": "TribeGuess", "url": "https://tribeguess.com" },
         "publisher": { "@type": "Organization", "name": "TribeGuess", "logo": { "@type": "ImageObject", "url": "https://tribeguess.com/favicon.png" } },
@@ -141,19 +147,11 @@ const TribePage = () => {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tribeguess.com" },
-          { "@type": "ListItem", "position": 2, "name": "Tribes", "item": "https://tribeguess.com/learn" },
+          { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": "https://tribeguess.com/tribes" },
           { "@type": "ListItem", "position": 3, "name": tribe.name, "item": `https://tribeguess.com/learn/${tribe.slug}` },
         ]
       },
-      ...(Array.isArray(tribe.funFacts) && tribe.funFacts.length ? [{
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": `What are the ${tribe.name} people known for?`, "acceptedAnswer": { "@type": "Answer", "text": tribe.description || tribe.funFacts?.[0] } },
-          { "@type": "Question", "name": `Where do the ${tribe.name} live?`, "acceptedAnswer": { "@type": "Answer", "text": `The ${tribe.name} people are found in ${countryNames}, primarily in ${tribe.region || 'their traditional homeland'}.` } },
-          ...(language ? [{ "@type": "Question", "name": `What language do the ${tribe.name} speak?`, "acceptedAnswer": { "@type": "Answer", "text": `The ${tribe.name} speak ${language.name || 'their own language'} with approximately ${language.speakers || 'many'} speakers.` } }] : []),
-          { "@type": "Question", "name": `What is the population of the ${tribe.name}?`, "acceptedAnswer": { "@type": "Answer", "text": `The ${tribe.name} have a population of approximately ${tribe.population || 'several million'}.` } },
-        ]
-      }] : [])
+      ...(faqSchema ? [faqSchema] : [])
     ]
   };
 
@@ -1328,6 +1326,15 @@ const TribePage = () => {
                 </section>
               )}
               
+              {/* Internal Links Hub */}
+              <TribeInternalLinks tribe={tribe} />
+
+              {/* FAQ Section */}
+              <TribeFAQSection tribe={tribe} countryNames={countryNames} />
+
+              {/* Viral CTAs */}
+              <ViralCTAs tribeName={tribe.name} tribeSlug={tribe.slug} />
+
               {/* Sources & References Section */}
               <section className="border-t border-border pt-6">
                 <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
