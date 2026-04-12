@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://tribeguess.com/sitemap.xml
+Sitemap: https://africantribenames.com/sitemap.xml
