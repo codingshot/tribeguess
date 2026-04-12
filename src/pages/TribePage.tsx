@@ -237,6 +237,16 @@ const TribePage = () => {
             </header>
             
             <div className="p-4 sm:p-6 space-y-6 sm:space-y-8">
+              {/* Featured Snippet Intro */}
+              <TribeIntroSnippet tribe={tribe} countryNames={countryNames} />
+
+              {/* Quick Jump Links */}
+              <TribeQuickLinks
+                tribe={tribe}
+                hasReligion={!!(tribe as any).religion || !!(tribe as any).traditionalReligion}
+                hasFood={!!(tribe as any).traditionalFood}
+                hasPeople={!!(tribe.famousPeople && tribe.famousPeople.length > 0)}
+              />
               {/* YouTube Culture Video Section */}
               {(tribe as any).youtubeVideoId && (
                 <section className="bg-gradient-to-r from-red-500/10 to-red-600/5 dark:from-red-900/20 dark:to-red-950/10 rounded-xl p-4 border border-red-200 dark:border-red-800">
