@@ -8,6 +8,9 @@ import { findReligionByName } from '@/data/traditionalReligions';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TribeMap } from '@/components/TribeMap';
+import { TribeIntroSnippet, TribeQuickLinks } from '@/components/TribeContentSections';
+import { tribeTitles, tribeMetaDescriptions, buildTribeArticleLD, buildTribeBreadcrumbLD } from '@/lib/tribeSeoTemplates';
+import { canonical, SITE_NAME, SITE_DOMAIN } from '@/lib/seoConstants';
 import { ImageGallery } from '@/components/ImageGallery';
 import { PersonCard } from '@/components/PersonCard';
 import { NameSearch } from '@/components/NameSearch';
@@ -120,38 +123,22 @@ const TribePage = () => {
   // SEO metadata - safe fallbacks for missing data
   const countries = (tribe as any).countries as string[] | undefined;
   const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
-  const safeDescription = (tribe.description || `Learn about the ${tribe.name} people`).slice(0, 300);
   const safePopulation = tribe.population || 'data unavailable';
-  const seoTitle = `${tribe.name} Tribe: Culture, Names, History & Traditions | TribeGuess`;
-  const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${safePopulation}), and famous ${tribe.name} personalities.`.slice(0, 160);
+  const seoTitle = tribeTitles.main(tribe.name);
+  const seoDescription = tribeMetaDescriptions.main(tribe.name, countryNames, safePopulation);
   const seoKeywords = [tribe.name, `${tribe.name} tribe`, `${tribe.name} culture`, `${tribe.name} names`, `${tribe.name} history`, `${tribe.name} traditions`, `${tribe.name} language`, countryNames, 'African tribe'].join(', ');
+  const canonicalUrl = canonical(`/learn/${tribe.slug}`);
 
-  // Rich structured data for AI engines
-  // Generate FAQ structured data from the comprehensive FAQ component
+  // Detect if this page is loaded via a slug alias
+  const isSlugAlias = sanitizedSlug !== tribe.slug;
+
+  // Rich structured data
   const faqSchema = generateFAQStructuredData(tribe, countryNames);
-
-  const SITE_URL = 'https://africantribenames.com';
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Article",
-        "headline": `${tribe.name} Tribe: Culture, Names, History & Traditions`,
-        "description": seoDescription,
-        "author": { "@type": "Organization", "name": "African Tribe Names", "url": SITE_URL },
-        "publisher": { "@type": "Organization", "name": "African Tribe Names", "logo": { "@type": "ImageObject", "url": `${SITE_URL}/favicon.png` } },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/learn/${tribe.slug}` },
-        "about": { "@type": "Thing", "name": `${tribe.name} people`, "description": tribe.description },
-        "keywords": seoKeywords,
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-          { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": `${SITE_URL}/tribes` },
-          { "@type": "ListItem", "position": 3, "name": tribe.name, "item": `${SITE_URL}/learn/${tribe.slug}` },
-        ]
-      },
+      buildTribeArticleLD(tribe, countryNames),
+      buildTribeBreadcrumbLD(tribe),
       ...(faqSchema ? [faqSchema] : [])
     ]
   };
