@@ -444,7 +444,7 @@ const TribePage = () => {
                 })()}
               </section>
               
-              <section>
+              <section id="overview">
                 <h2 className="text-lg sm:text-xl font-semibold mb-2 flex items-center gap-2">
                   <Book className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   About
@@ -481,7 +481,7 @@ const TribePage = () => {
               
               {/* Language Section */}
               {language && (
-                <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-4">
+                <section id="language" className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-4">
                   <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     <Languages className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                     Language & Greetings
@@ -905,9 +905,7 @@ const TribePage = () => {
               )}
               
               {tribe.famousPeople && tribe.famousPeople.length > 0 && (
-                <section>
-                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
-                    👤 Notable People
+                <section id="people">
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-2">
                     {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia?: string | null; image?: string; birth?: number; death?: number }>).map((person, i) => (
@@ -933,9 +931,7 @@ const TribePage = () => {
               
               {/* Traditional Food Section */}
               {(tribe as any).traditionalFood && typeof (tribe as any).traditionalFood === 'object' && (
-                <section className="border-t border-border pt-6">
-                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
-                    🍲 Traditional Cuisine
+                <section id="food" className="border-t border-border pt-6">
                   </h2>
                   <p className="text-sm text-muted-foreground mb-4">{(tribe as any).traditionalFood.description}</p>
                   <div className="grid sm:grid-cols-3 gap-4">
