@@ -863,6 +863,7 @@ const TribePage = () => {
               )}
               
               {tribe.commonNames && (
+              <div id="names">
               <NameSearch
                 femaleNames={tribe.commonNames.female || []}
                 maleNames={tribe.commonNames.male || []}
