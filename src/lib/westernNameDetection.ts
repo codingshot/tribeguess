@@ -138,7 +138,39 @@ export function detectWesternName(name: string): WesternNameResult {
     }
   }
 
-  if (!mapping) return empty;
+  // 4. Reverse lookup: user searched a Muslim name → find Western equivalents
+  if (!mapping) {
+    const westernKeys = muslimNameToWesternKeys.get(normalized);
+    if (westernKeys && westernKeys.length > 0) {
+      // Find the best non-African mapping
+      for (const wk of westernKeys) {
+        const candidate = christianToMuslimNameMapping[wk];
+        if (candidate && !africanCategories.has(candidate.category)) {
+          const catLabel = categoryLabels[candidate.category] || candidate.category.replace(/-/g, ' ');
+          const gender = getGender(candidate.category);
+          const westernNames = westernKeys
+            .filter(k => !k.includes('_'))
+            .slice(0, 4)
+            .map(k => k.charAt(0).toUpperCase() + k.slice(1));
+          
+          return {
+            found: true,
+            canonicalName: normalized,
+            isReverseLookup: true,
+            mapping: candidate,
+            muslimEquivalents: [normalized],
+            westernEquivalents: westernNames,
+            christianTribes: christianTribes.slice(0, 8),
+            muslimTribes: muslimTribes.slice(0, 8),
+            relatedNames: westernNames,
+            categoryLabel: catLabel,
+            genderHint: gender,
+          };
+        }
+      }
+    }
+    return empty;
+  }
 
   // Get related names from same category (up to 6)
   const sameCat = categoryToWesternKeys.get(mapping.category) ?? [];
