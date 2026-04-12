@@ -93,14 +93,15 @@ export function detectWesternName(name: string): WesternNameResult {
 
   // Categories that are African tribal — should NOT trigger western detection
   const africanCategories = new Set([
-    'african-male', 'african-female', 'yoruba-male', 'yoruba-female',
-    'igbo-male', 'igbo-female', 'hausa-male', 'hausa-female',
-    'akan-male', 'akan-female', 'zulu-male', 'zulu-female',
-    'somali-male', 'somali-female', 'swahili-male', 'swahili-female',
-    'amhara-male', 'amhara-female', 'shona-male', 'shona-female',
-    'wolof-male', 'wolof-female', 'fulani-male', 'fulani-female',
-    'mandinka-male', 'mandinka-female', 'tswana-male', 'tswana-female',
-    'ethiopian-male', 'ethiopian-female', 'malagasy-male', 'malagasy-female',
+    'african-male', 'african-female', 'tribal-male', 'tribal-female',
+    'yoruba-male', 'yoruba-female', 'igbo-male', 'igbo-female',
+    'hausa-male', 'hausa-female', 'akan-male', 'akan-female',
+    'zulu-male', 'zulu-female', 'somali-male', 'somali-female',
+    'swahili-male', 'swahili-female', 'amhara-male', 'amhara-female',
+    'shona-male', 'shona-female', 'wolof-male', 'wolof-female',
+    'fulani-male', 'fulani-female', 'mandinka-male', 'mandinka-female',
+    'tswana-male', 'tswana-female', 'ethiopian-male', 'ethiopian-female',
+    'malagasy-male', 'malagasy-female',
   ]);
 
   // 1. Direct lookup
