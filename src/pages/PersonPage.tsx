@@ -73,13 +73,14 @@ export default function PersonPage() {
   return (
     <>
       <Helmet>
-        <title>{person.name} | Famous {person.tribeName} People | TribeGuess</title>
+        <title>{person.name} — Famous {person.tribeName} Person | African Tribe Names</title>
         <meta 
           name="description" 
           content={`${person.name} - ${person.role}. Notable figure from the ${person.tribeName} tribe. Discover their contributions and tribal heritage.`} 
         />
         <meta name="keywords" content={`${person.name}, ${person.tribeName}, ${person.category}, famous africans, african heritage`} />
         <link rel="canonical" href={`https://africantribenames.com/person/${person.id}`} />
+        <meta property="og:site_name" content="African Tribe Names" />
         <meta property="og:title" content={`${person.name} | ${person.tribeName} Tribe`} />
         <meta property="og:description" content={person.role} />
         <meta property="og:type" content="profile" />

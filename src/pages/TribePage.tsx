@@ -8,6 +8,9 @@ import { findReligionByName } from '@/data/traditionalReligions';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TribeMap } from '@/components/TribeMap';
+import { TribeIntroSnippet, TribeQuickLinks } from '@/components/TribeContentSections';
+import { tribeTitles, tribeMetaDescriptions, buildTribeArticleLD, buildTribeBreadcrumbLD } from '@/lib/tribeSeoTemplates';
+import { canonical, SITE_NAME, SITE_DOMAIN } from '@/lib/seoConstants';
 import { ImageGallery } from '@/components/ImageGallery';
 import { PersonCard } from '@/components/PersonCard';
 import { NameSearch } from '@/components/NameSearch';
@@ -120,38 +123,22 @@ const TribePage = () => {
   // SEO metadata - safe fallbacks for missing data
   const countries = (tribe as any).countries as string[] | undefined;
   const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
-  const safeDescription = (tribe.description || `Learn about the ${tribe.name} people`).slice(0, 300);
   const safePopulation = tribe.population || 'data unavailable';
-  const seoTitle = `${tribe.name} Tribe: Culture, Names, History & Traditions | TribeGuess`;
-  const seoDescription = `Learn about the ${tribe.name} people of ${countryNames}. Discover traditional names, cultural practices, population (${safePopulation}), and famous ${tribe.name} personalities.`.slice(0, 160);
+  const seoTitle = tribeTitles.main(tribe.name);
+  const seoDescription = tribeMetaDescriptions.main(tribe.name, countryNames, safePopulation);
   const seoKeywords = [tribe.name, `${tribe.name} tribe`, `${tribe.name} culture`, `${tribe.name} names`, `${tribe.name} history`, `${tribe.name} traditions`, `${tribe.name} language`, countryNames, 'African tribe'].join(', ');
+  const canonicalUrl = canonical(`/learn/${tribe.slug}`);
 
-  // Rich structured data for AI engines
-  // Generate FAQ structured data from the comprehensive FAQ component
+  // Detect if this page is loaded via a slug alias
+  const isSlugAlias = sanitizedSlug !== tribe.slug;
+
+  // Rich structured data
   const faqSchema = generateFAQStructuredData(tribe, countryNames);
-
-  const SITE_URL = 'https://africantribenames.com';
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Article",
-        "headline": `${tribe.name} Tribe: Culture, Names, History & Traditions`,
-        "description": seoDescription,
-        "author": { "@type": "Organization", "name": "African Tribe Names", "url": SITE_URL },
-        "publisher": { "@type": "Organization", "name": "African Tribe Names", "logo": { "@type": "ImageObject", "url": `${SITE_URL}/favicon.png` } },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/learn/${tribe.slug}` },
-        "about": { "@type": "Thing", "name": `${tribe.name} people`, "description": tribe.description },
-        "keywords": seoKeywords,
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-          { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": `${SITE_URL}/tribes` },
-          { "@type": "ListItem", "position": 3, "name": tribe.name, "item": `${SITE_URL}/learn/${tribe.slug}` },
-        ]
-      },
+      buildTribeArticleLD(tribe, countryNames),
+      buildTribeBreadcrumbLD(tribe),
       ...(faqSchema ? [faqSchema] : [])
     ]
   };
@@ -165,9 +152,9 @@ const TribePage = () => {
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://africantribenames.com/learn/${tribe.slug}`} />
-        <meta property="og:site_name" content="African Tribe Names" />
-        <link rel="canonical" href={`https://africantribenames.com/learn/${tribe.slug}`} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
@@ -250,6 +237,16 @@ const TribePage = () => {
             </header>
             
             <div className="p-4 sm:p-6 space-y-6 sm:space-y-8">
+              {/* Featured Snippet Intro */}
+              <TribeIntroSnippet tribe={tribe} countryNames={countryNames} />
+
+              {/* Quick Jump Links */}
+              <TribeQuickLinks
+                tribe={tribe}
+                hasReligion={!!(tribe as any).religion || !!(tribe as any).traditionalReligion}
+                hasFood={!!(tribe as any).traditionalFood}
+                hasPeople={!!(tribe.famousPeople && tribe.famousPeople.length > 0)}
+              />
               {/* YouTube Culture Video Section */}
               {(tribe as any).youtubeVideoId && (
                 <section className="bg-gradient-to-r from-red-500/10 to-red-600/5 dark:from-red-900/20 dark:to-red-950/10 rounded-xl p-4 border border-red-200 dark:border-red-800">
@@ -447,7 +444,7 @@ const TribePage = () => {
                 })()}
               </section>
               
-              <section>
+              <section id="overview">
                 <h2 className="text-lg sm:text-xl font-semibold mb-2 flex items-center gap-2">
                   <Book className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                   About
@@ -484,7 +481,7 @@ const TribePage = () => {
               
               {/* Language Section */}
               {language && (
-                <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-4">
+                <section id="language" className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-4">
                   <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     <Languages className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                     Language & Greetings
@@ -602,7 +599,7 @@ const TribePage = () => {
               
               {/* History Section */}
               {history && (
-                <section className="border-t border-border pt-6">
+                <section id="history" className="border-t border-border pt-6">
                   <h2 className="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
                     <History className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                     History & Origins
@@ -665,7 +662,7 @@ const TribePage = () => {
                 };
                 
                 return (
-                  <section className="border-t border-border pt-6">
+                  <section id="religion" className="border-t border-border pt-6">
                     <h2 className="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
                       <Church className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
                       Religious Influence
@@ -866,12 +863,14 @@ const TribePage = () => {
               )}
               
               {tribe.commonNames && (
+              <div id="names">
               <NameSearch
                 femaleNames={tribe.commonNames.female || []}
                 maleNames={tribe.commonNames.male || []}
                 tribeName={tribe.name}
                 nameDatabase={getNameDatabase()}
               />
+              </div>
               )}
               
               {tribe.timeBasedNames && Object.keys(tribe.timeBasedNames).length > 0 && (
@@ -908,7 +907,7 @@ const TribePage = () => {
               )}
               
               {tribe.famousPeople && tribe.famousPeople.length > 0 && (
-                <section>
+                <section id="people">
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
                     👤 Notable People
                   </h2>
@@ -936,7 +935,7 @@ const TribePage = () => {
               
               {/* Traditional Food Section */}
               {(tribe as any).traditionalFood && typeof (tribe as any).traditionalFood === 'object' && (
-                <section className="border-t border-border pt-6">
+                <section id="food" className="border-t border-border pt-6">
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     🍲 Traditional Cuisine
                   </h2>
@@ -1331,7 +1330,9 @@ const TribePage = () => {
               <TribeInternalLinks tribe={tribe} />
 
               {/* FAQ Section */}
-              <TribeFAQSection tribe={tribe} countryNames={countryNames} />
+              <div id="faq">
+                <TribeFAQSection tribe={tribe} countryNames={countryNames} />
+              </div>
 
               {/* Viral CTAs */}
               <ViralCTAs tribeName={tribe.name} tribeSlug={tribe.slug} />
