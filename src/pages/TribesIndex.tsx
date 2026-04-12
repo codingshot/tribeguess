@@ -110,7 +110,7 @@ export default function TribesIndex() {
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDesc} />
-        <link rel="canonical" href={`https://tribeguess.com/tribes${activeFilter ? `?${searchParams.toString()}` : ''}`} />
+        <link rel="canonical" href={`https://africantribenames.com/tribes${activeFilter ? `?${searchParams.toString()}` : ''}`} />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDesc} />
