@@ -119,6 +119,26 @@ export function ResultQuickActions({
         </Link>
       </div>
 
+      {/* Muslim Equivalents */}
+      {muslimEquivalents.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          <p className="text-xs text-muted-foreground flex items-center gap-1 w-full">
+            <Repeat2 className="w-3 h-3" />
+            Try the Muslim equivalent:
+          </p>
+          {muslimEquivalents.slice(0, 3).map(eq => (
+            <a
+              key={eq}
+              href={`/?name=${encodeURIComponent(eq)}&country=ALL`}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900 transition-colors"
+            >
+              ☪️ {eq.charAt(0).toUpperCase() + eq.slice(1)}
+              <ArrowRight className="w-3 h-3" />
+            </a>
+          ))}
+        </div>
+      )
+
       {/* Try Related Names */}
       {relatedNames.length > 0 && (
         <div>
