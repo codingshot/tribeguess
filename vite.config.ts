@@ -15,7 +15,7 @@ function sitemapGenerator(): Plugin {
       
       try {
         const TODAY = new Date().toISOString().split('T')[0];
-        const SITE_URL = 'https://tribeguess.com';
+        const SITE_URL = 'https://africantribenames.com';
         
         interface SitemapEntry {
           loc: string;
@@ -30,6 +30,7 @@ function sitemapGenerator(): Plugin {
         const staticPages = [
           { loc: '/', priority: 1.0 },
           { loc: '/learn', priority: 0.9 },
+          { loc: '/tribes', priority: 0.95 },
           { loc: '/names', priority: 0.9 },
           { loc: '/recipes', priority: 0.9 },
           { loc: '/languages', priority: 0.9 },
@@ -40,12 +41,19 @@ function sitemapGenerator(): Plugin {
           { loc: '/people', priority: 0.8 },
           { loc: '/quiz', priority: 0.8 },
           { loc: '/blog', priority: 0.8 },
+          { loc: '/compare', priority: 0.7 },
           { loc: '/video-gallery', priority: 0.7 },
           { loc: '/docs', priority: 0.7 },
           { loc: '/random', priority: 0.6 },
           { loc: '/privacy', priority: 0.3 },
           { loc: '/terms', priority: 0.3 },
         ];
+
+        // Region pages
+        const regionSlugs = ['east-africa', 'west-africa', 'southern-africa', 'central-africa', 'horn-of-africa', 'north-africa', 'sahel', 'indian-ocean-islands'];
+        for (const slug of regionSlugs) {
+          staticPages.push({ loc: `/region/${slug}`, priority: 0.85 });
+        }
 
         // Also add tribe-blog slugs
         const tribeBlogEntries: SitemapEntry[] = [];
