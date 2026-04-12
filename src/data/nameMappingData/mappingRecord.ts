@@ -3149,9 +3149,6 @@ export const christianToMuslimNameMapping: Record<string, NameMapping> = {
   // ===========================
   // NIGERIAN — IGBO NEW ADDITIONS
   // ===========================
-  "chukwuemeka_ig": { muslimNames: ["shukr", "hamid"], meaning: "God Has Done Great Things", connection: "Chukwuemeka = God has been generous; Hamid means praiseworthy", popularIn: ["NG"], category: "igbo-male", trend: "classic" },
-  "nneka_ig": { muslimNames: ["umm", "amira"], meaning: "Mother Is Supreme", connection: "Nneka = mother is greatest; honoring motherhood — Islam's highest honor", popularIn: ["NG"], category: "igbo-female", trend: "classic", culturalNote: "Reflects Igbo culture's deep reverence for mothers" },
-  "obinna_ig": { muslimNames: ["rabb", "abdallah"], meaning: "Father's Heart", connection: "Obinna = heart of the father; Abdallah = servant of God the Father", popularIn: ["NG"], category: "igbo-male", trend: "classic" },
 
   // ===========================
   // CONGOLESE / LINGALA
@@ -3168,9 +3165,6 @@ export const christianToMuslimNameMapping: Record<string, NameMapping> = {
   // ===========================
   // SIKH / PUNJABI — NEW ADDITIONS
   // ===========================
-  "harpreet_pn": { muslimNames: ["rashid", "muhibb"], meaning: "One Who Loves God", connection: "Harpreet = God's love; Muhibb means one who loves", popularIn: ["IN"], category: "punjabi-male", trend: "classic" },
-  "gurleen_pn": { muslimNames: ["noor", "ilham"], meaning: "Absorbed in the Guru", connection: "Gurleen = absorbed in divine teacher; Ilham means inspiration", popularIn: ["IN"], category: "punjabi-female", trend: "rising" },
-  "jasmine_pn": { muslimNames: ["yasmin"], meaning: "Jasmine Flower", connection: "Jasmine/Yasmin — identical flower name across cultures", popularIn: ["IN", "GB"], category: "punjabi-female", trend: "classic", culturalNote: "Cross-cultural name — popular in South Asia, Middle East, and West" },
 
   // ===========================
   // GREEK — NEW ADDITIONS
@@ -3182,39 +3176,26 @@ export const christianToMuslimNameMapping: Record<string, NameMapping> = {
   // ===========================
   // DUTCH — NEW ADDITIONS
   // ===========================
-  "bram_nl": { muslimNames: ["ibrahim"], meaning: "Father of Many", connection: "Bram = Dutch Abraham; Ibrahim is the Islamic form", popularIn: ["NL", "BE"], category: "dutch-male", trend: "classic", culturalNote: "#1 name in Netherlands for years" },
-  "daan_nl": { muslimNames: ["danyal"], meaning: "God Is My Judge", connection: "Daan = Dutch Daniel; Danyal is the Arabic form", popularIn: ["NL"], category: "dutch-male", trend: "classic" },
-  "femke_nl": { muslimNames: ["amina", "salima"], meaning: "Peace", connection: "Femke = peace; Amina means safe/peaceful", popularIn: ["NL"], category: "dutch-female", trend: "classic" },
-  "sanne_nl": { muslimNames: ["sawsan", "susan"], meaning: "Lily", connection: "Sanne = Dutch Susanna/lily; Sawsan means lily in Arabic", popularIn: ["NL"], category: "dutch-female", trend: "declining" },
 
   // ===========================
   // SCANDINAVIAN — NEW ADDITIONS
   // ===========================
   "soren_sc": { muslimNames: ["shadid", "qawi"], meaning: "Stern, Severe", connection: "Søren = severe/stern; Shadid means intense/strong", popularIn: ["DK"], category: "scandinavian-male", trend: "classic" },
   "leif_sc": { muslimNames: ["warith", "khalaf"], meaning: "Heir, Descendant", connection: "Leif = heir/beloved; Warith means inheritor", popularIn: ["NO", "SE"], category: "scandinavian-male", trend: "declining", culturalNote: "Viking heritage name — Leif Erikson" },
-  "ingrid_sc": { muslimNames: ["jamila", "hasna"], meaning: "Beautiful", connection: "Ingrid = beautiful/fair; Jamila means beautiful", popularIn: ["NO", "SE"], category: "scandinavian-female", trend: "classic", culturalNote: "Iconic Scandinavian name — Ingrid Bergman" },
-  "sigrid_sc": { muslimNames: ["nasira", "safiya"], meaning: "Victory Beauty", connection: "Sigrid = victory + beauty; Nasira means victorious", popularIn: ["NO", "SE"], category: "scandinavian-female", trend: "rising" },
 
   // ===========================
   // ITALIAN — NEW ADDITIONS
   // ===========================
   "luca_it": { muslimNames: ["noor", "luqman"], meaning: "Bringer of Light", connection: "Luca = light; Noor means divine light, Luqman is the wise", popularIn: ["IT", "DE"], category: "italian-male", trend: "rising", culturalNote: "Top-10 in Italy, Germany, and Switzerland" },
   "giulia_it": { muslimNames: ["shaba", "ahlam"], meaning: "Youthful", connection: "Giulia = youthful; Shaba means youthfulness", popularIn: ["IT"], category: "italian-female", trend: "classic" },
-  "aurora_it": { muslimNames: ["fajr", "subh"], meaning: "Dawn", connection: "Aurora = dawn goddess; Fajr means dawn — the first prayer", popularIn: ["IT", "ES"], category: "italian-female", trend: "rising", culturalNote: "#1 baby name in Italy" },
 
   // ===========================
   // FRENCH — NEW ADDITIONS
   // ===========================
-  "louis_fr": { muslimNames: ["malik", "sultaan"], meaning: "Famous Warrior King", connection: "Louis = famous warrior; Malik means king/sovereign", popularIn: ["FR", "BE"], category: "french-male", trend: "rising", culturalNote: "Royal French name — re-entered top-5 in France" },
-  "camille_fr": { muslimNames: ["kamila"], meaning: "Perfect, Complete", connection: "Camille = perfect; Kamila means perfect/complete — near-identical!", popularIn: ["FR"], category: "french-female", trend: "classic" },
-  "chloe_fr": { muslimNames: ["rabii", "khadra"], meaning: "Green Shoot", connection: "Chloe = young green shoot; Khadra means green, Rabii means spring", popularIn: ["FR", "GB"], category: "french-female", trend: "rising" },
 
   // ===========================
   // GERMAN — NEW ADDITIONS
   // ===========================
-  "felix_de": { muslimNames: ["sa'id", "mubarak"], meaning: "Happy, Lucky", connection: "Felix = happy/fortunate; Sa'id means happy", popularIn: ["DE", "AT"], category: "german-male", trend: "classic" },
-  "emilia_de": { muslimNames: ["amila", "juhd"], meaning: "Industrious", connection: "Emilia = striving; Amila means hopeful/aspiring", popularIn: ["DE", "PL"], category: "german-female", trend: "rising", culturalNote: "#1 baby name in Germany 2020–2024" },
-  "mila_de": { muslimNames: ["jamila", "rahima"], meaning: "Gracious", connection: "Mila = gracious/dear; Jamila means beautiful", popularIn: ["DE", "NL"], category: "german-female", trend: "rising", culturalNote: "Top-10 across Europe and North America" },
 
   // ===========================
   // MALAGASY — NEW ADDITIONS
@@ -3238,12 +3219,10 @@ export const christianToMuslimNameMapping: Record<string, NameMapping> = {
   // KURDISH — NEW ADDITIONS
   // ===========================
   "rojan_ku": { muslimNames: ["shams", "noor"], meaning: "Bright Day, Sun", connection: "Rojan = bright day; Shams means sun", popularIn: ["IQ", "TR"], category: "kurdish-female", trend: "rising" },
-  "azad_ku": { muslimNames: ["hurr", "tahrir"], meaning: "Free", connection: "Azad = free; Hurr means free — same concept in both languages", popularIn: ["IQ", "IR"], category: "kurdish-male", trend: "classic", culturalNote: "Used across Kurdish, Persian, and Urdu cultures" },
 
   // ===========================
   // AMAZIGH / BERBER — NEW
   // ===========================
-  "massinissa_az": { muslimNames: ["mu'izz", "nasir"], meaning: "Their Lord", connection: "Massinissa = great Numidian king; Mu'izz means one who honors", popularIn: ["DZ"], category: "amazigh-male", trend: "rising", culturalNote: "Revival of Amazigh heritage names in North Africa" },
   "dihya_az": { muslimNames: ["zahra", "malika"], meaning: "Beautiful Gazelle", connection: "Dihya = legendary Amazigh queen; Malika means queen", popularIn: ["DZ", "MA"], category: "amazigh-female", trend: "rising" },
 
   // ===========================
@@ -3268,7 +3247,6 @@ export const christianToMuslimNameMapping: Record<string, NameMapping> = {
   // GEORGIAN — NEW
   // ===========================
   "giorgi_ge": { muslimNames: ["jibreel", "jamal"], meaning: "Farmer", connection: "Giorgi = Georgian George; connected through earth/beauty themes", popularIn: ["GE"], category: "georgian-male", trend: "classic", culturalNote: "Most popular Georgian male name — patron saint of Georgia" },
-  "nino_ge": { muslimNames: ["da'iya", "huda"], meaning: "Guide", connection: "Nino = patron saint who brought Christianity to Georgia; Huda means guide", popularIn: ["GE"], category: "georgian-female", trend: "classic" },
 
   // ===========================
   // ARMENIAN — NEW
@@ -3280,8 +3258,6 @@ export const christianToMuslimNameMapping: Record<string, NameMapping> = {
   // PERSIAN — NEW ADDITIONS
   // ===========================
   "kourosh_pr": { muslimNames: ["malik", "amir"], meaning: "Sun, Throne", connection: "Kourosh (Cyrus) = the great king; Malik means king", popularIn: ["IR"], category: "persian-male", trend: "classic", culturalNote: "Cyrus the Great is honored in the Quran as Dhul-Qarnayn by some scholars" },
-  "shirin_pr": { muslimNames: ["halwa", "latifa"], meaning: "Sweet, Pleasant", connection: "Shirin = sweet; Latifa means gentle/pleasant", popularIn: ["IR", "AF"], category: "persian-female", trend: "classic", culturalNote: "Legendary beauty from Khosrow and Shirin" },
-  "dariush_pr": { muslimNames: ["amir", "sultaan"], meaning: "He Who Holds Firm the Good", connection: "Dariush (Darius) = maintains goodness; Amir means ruler", popularIn: ["IR"], category: "persian-male", trend: "classic" },
 
   // ===========================
   // TURKISH — NEW ADDITIONS
