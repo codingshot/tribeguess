@@ -71,6 +71,18 @@ function sitemapGenerator(): Plugin {
         const tribesPath = path.resolve(__dirname, 'src/data/tribes.json');
         if (fs.existsSync(tribesPath)) {
           const tribesData = JSON.parse(fs.readFileSync(tribesPath, 'utf-8'));
+          const countrySlugsMap: Record<string, string> = {
+            KE:'kenya',NG:'nigeria',GH:'ghana',ZA:'south-africa',ET:'ethiopia',TZ:'tanzania',
+            UG:'uganda',CD:'dr-congo',SN:'senegal',CM:'cameroon',RW:'rwanda',BI:'burundi',
+            SO:'somalia',ER:'eritrea',SD:'sudan',SS:'south-sudan',MW:'malawi',ZM:'zambia',
+            ZW:'zimbabwe',BW:'botswana',NA:'namibia',AO:'angola',MZ:'mozambique',
+            LS:'lesotho',SZ:'eswatini',MG:'madagascar',CF:'central-african-republic',
+            CG:'congo',GA:'gabon',TD:'chad',ML:'mali',NE:'niger',BF:'burkina-faso',
+            CI:'ivory-coast',BJ:'benin',TG:'togo',LY:'libya',MR:'mauritania',DZ:'algeria',
+            MA:'morocco',TN:'tunisia',EG:'egypt',GN:'guinea',SL:'sierra-leone',LR:'liberia',
+            DJ:'djibouti',KM:'comoros',GQ:'equatorial-guinea',GM:'gambia',
+          };
+          const countryCodesUsed = new Set<string>();
           if (tribesData.tribes) {
             for (const tribe of tribesData.tribes) {
               if (tribe.slug) {
@@ -80,7 +92,6 @@ function sitemapGenerator(): Plugin {
                   changefreq: 'monthly',
                   priority: 0.8
                 });
-                // Auto-generated tribe blog post
                 tribeBlogEntries.push({
                   loc: `/blog/tribe-${tribe.slug}`,
                   lastmod: TODAY,
@@ -88,9 +99,23 @@ function sitemapGenerator(): Plugin {
                   priority: 0.7
                 });
               }
+              // Collect countries
+              if (tribe.countries) {
+                for (const c of tribe.countries) countryCodesUsed.add(c);
+              }
             }
           }
-          console.log(`   ✓ ${tribesData.tribes?.length || 0} tribes + blog posts`);
+          // Add country pages
+          for (const code of countryCodesUsed) {
+            const slug = countrySlugsMap[code] || code.toLowerCase();
+            entries.push({
+              loc: `/country/${slug}`,
+              lastmod: TODAY,
+              changefreq: 'weekly',
+              priority: 0.85
+            });
+          }
+          console.log(`   ✓ ${tribesData.tribes?.length || 0} tribes + ${countryCodesUsed.size} country pages`);
         }
         
         // Add tribe blog entries
