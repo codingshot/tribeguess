@@ -13,6 +13,7 @@ interface ResultQuickActionsProps {
   onToggleFavorite: () => void;
   relatedNames?: string[];
   muslimEquivalents?: string[];
+  westernEquivalents?: string[];
 }
 
 export function ResultQuickActions({

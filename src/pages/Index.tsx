@@ -377,7 +377,16 @@ const Index = () => {
                   isFavorite={isFavorite(results.inputName)}
                   onToggleFavorite={() => toggleFavorite(results.inputName, { tribe: results.predictions[0].tribe.name })}
                   relatedNames={relatedNames}
-                  muslimEquivalents={results.globalOrigin?.westernMapping?.muslimEquivalents}
+                  muslimEquivalents={
+                    results.globalOrigin?.westernMapping?.isReverseLookup 
+                      ? undefined 
+                      : results.globalOrigin?.westernMapping?.muslimEquivalents
+                  }
+                  westernEquivalents={
+                    results.globalOrigin?.westernMapping?.isReverseLookup 
+                      ? results.globalOrigin?.westernMapping?.westernEquivalents 
+                      : undefined
+                  }
                 />
               </div>
             )}
