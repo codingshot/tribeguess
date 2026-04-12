@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { getAllTribes, getCountries } from '@/lib/tribeDetection';
 import { Search, Users, MapPin, Languages, Globe, ArrowRight, Sparkles } from 'lucide-react';
 import { ViralCTAs } from '@/components/ViralCTAs';
+import { countryCodeToSlug, regionToSlug, canonical } from '@/lib/seoConstants';
 import type { TribeData } from '@/types/tribe';
 
 export default function TribesIndex() {
@@ -91,15 +92,15 @@ export default function TribesIndex() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": seoTitle.replace(' | TribeGuess', ''),
+    "name": seoTitle.replace(' | African Tribe Names', ''),
     "description": seoDesc,
-    "url": "https://tribeguess.com/tribes",
+    "url": canonical("/tribes"),
     "numberOfItems": filteredTribes.length,
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tribeguess.com" },
-        { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": "https://tribeguess.com/tribes" },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": canonical("/") },
+        { "@type": "ListItem", "position": 2, "name": "All Tribes", "item": canonical("/tribes") },
       ]
     }
   };
