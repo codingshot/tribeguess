@@ -265,7 +265,7 @@ export function GuessForm({
                 id="name-input"
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => handleNameChange(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') {
                     setName('');
