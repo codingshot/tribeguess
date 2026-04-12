@@ -1330,7 +1330,9 @@ const TribePage = () => {
               <TribeInternalLinks tribe={tribe} />
 
               {/* FAQ Section */}
-              <TribeFAQSection tribe={tribe} countryNames={countryNames} />
+              <div id="faq">
+                <TribeFAQSection tribe={tribe} countryNames={countryNames} />
+              </div>
 
               {/* Viral CTAs */}
               <ViralCTAs tribeName={tribe.name} tribeSlug={tribe.slug} />

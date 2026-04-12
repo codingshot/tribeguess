@@ -180,13 +180,38 @@ function sitemapGenerator(): Plugin {
           const idMatches = [...religionsContent.matchAll(/^\s+id:\s*["']([^"']+)["']/gm)];
           for (const match of idMatches) {
             entries.push({
-              loc: `/religions/${match[1]}`,
+              loc: `/religion/${match[1]}`,
               lastmod: TODAY,
               changefreq: 'monthly',
               priority: 0.7
             });
           }
           console.log(`   ✓ ${idMatches.length} religions`);
+        }
+
+        // Load person pages from tribes' famousPeople
+        if (fs.existsSync(tribesPath)) {
+          const tribesData2 = JSON.parse(fs.readFileSync(tribesPath, 'utf-8'));
+          const personSlugs = new Set<string>();
+          if (tribesData2.tribes) {
+            for (const tribe of tribesData2.tribes) {
+              if (tribe.famousPeople) {
+                for (const person of tribe.famousPeople) {
+                  const slug = person.name?.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                  if (slug) personSlugs.add(slug);
+                }
+              }
+            }
+          }
+          for (const slug of personSlugs) {
+            entries.push({
+              loc: `/person/${slug}`,
+              lastmod: TODAY,
+              changefreq: 'monthly',
+              priority: 0.6
+            });
+          }
+          console.log(`   ✓ ${personSlugs.size} person pages`);
         }
         
         // Load ingredients (extract IDs from TS file)
