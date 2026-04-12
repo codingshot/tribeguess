@@ -61,22 +61,40 @@ export function GlobalOriginCard({
           <div className="flex items-center gap-2 mb-2">
             <Repeat2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span className="font-semibold text-sm sm:text-base text-emerald-800 dark:text-emerald-200">
-              This Name in Islam
+              {wm.isReverseLookup ? 'This Name in Christianity/Western Culture' : 'This Name in Islam'}
             </span>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
-            <div className="p-2 bg-white/60 dark:bg-black/20 rounded-md">
-              <div className="text-xs text-muted-foreground mb-1">{wm.categoryLabel} Origin</div>
-              <div className="font-bold text-foreground capitalize">{wm.canonicalName.replace(/_[a-z]{2,3}$/, '')}</div>
-              <div className="text-xs text-muted-foreground">Meaning: {mapping.meaning}</div>
-            </div>
-            <div className="p-2 bg-white/60 dark:bg-black/20 rounded-md">
-              <div className="text-xs text-muted-foreground mb-1">☪️ Muslim Equivalent{wm.muslimEquivalents.length > 1 ? 's' : ''}</div>
-              <div className="font-bold text-foreground">
-                {wm.muslimEquivalents.map(n => n.charAt(0).toUpperCase() + n.slice(1)).join(', ')}
-              </div>
-            </div>
+            {wm.isReverseLookup ? (
+              <>
+                <div className="p-2 bg-white/60 dark:bg-black/20 rounded-md">
+                  <div className="text-xs text-muted-foreground mb-1">☪️ Muslim Name</div>
+                  <div className="font-bold text-foreground capitalize">{inputName}</div>
+                  <div className="text-xs text-muted-foreground">Meaning: {mapping.meaning}</div>
+                </div>
+                <div className="p-2 bg-white/60 dark:bg-black/20 rounded-md">
+                  <div className="text-xs text-muted-foreground mb-1">✝️ Western Equivalent{(wm.westernEquivalents?.length || 0) > 1 ? 's' : ''}</div>
+                  <div className="font-bold text-foreground">
+                    {(wm.westernEquivalents || []).join(', ')}
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="p-2 bg-white/60 dark:bg-black/20 rounded-md">
+                  <div className="text-xs text-muted-foreground mb-1">{wm.categoryLabel} Origin</div>
+                  <div className="font-bold text-foreground capitalize">{wm.canonicalName.replace(/_[a-z]{2,3}$/, '')}</div>
+                  <div className="text-xs text-muted-foreground">Meaning: {mapping.meaning}</div>
+                </div>
+                <div className="p-2 bg-white/60 dark:bg-black/20 rounded-md">
+                  <div className="text-xs text-muted-foreground mb-1">☪️ Muslim Equivalent{wm.muslimEquivalents.length > 1 ? 's' : ''}</div>
+                  <div className="font-bold text-foreground">
+                    {wm.muslimEquivalents.map(n => n.charAt(0).toUpperCase() + n.slice(1)).join(', ')}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
           
           <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300 mb-2">
@@ -89,11 +107,13 @@ export function GlobalOriginCard({
             </p>
           )}
 
-          {/* Quick search links for Muslim equivalents */}
+          {/* Quick search links */}
           <div className="mt-3 pt-2 border-t border-emerald-200 dark:border-emerald-700">
-            <p className="text-xs text-emerald-700 dark:text-emerald-300 mb-1.5">Try the Muslim equivalent:</p>
+            <p className="text-xs text-emerald-700 dark:text-emerald-300 mb-1.5">
+              {wm.isReverseLookup ? 'Try the Western equivalent:' : 'Try the Muslim equivalent:'}
+            </p>
             <div className="flex flex-wrap gap-1.5">
-              {wm.muslimEquivalents.slice(0, 3).map(eq => (
+              {(wm.isReverseLookup ? (wm.westernEquivalents || []) : wm.muslimEquivalents).slice(0, 3).map(eq => (
                 <a
                   key={eq}
                   href={`/?name=${encodeURIComponent(eq)}&country=ALL`}
