@@ -203,7 +203,7 @@ async function loadReligions(): Promise<SitemapEntry[]> {
     
     for (const match of idMatches) {
       entries.push({
-        loc: `/religions/${match[1]}`,
+        loc: `/religion/${match[1]}`,
         lastmod: TODAY,
         changefreq: 'monthly',
         priority: 0.7
