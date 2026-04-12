@@ -906,6 +906,8 @@ const TribePage = () => {
               
               {tribe.famousPeople && tribe.famousPeople.length > 0 && (
                 <section id="people">
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3 flex items-center gap-2">
+                    👤 Notable People
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-2">
                     {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia?: string | null; image?: string; birth?: number; death?: number }>).map((person, i) => (
@@ -932,6 +934,8 @@ const TribePage = () => {
               {/* Traditional Food Section */}
               {(tribe as any).traditionalFood && typeof (tribe as any).traditionalFood === 'object' && (
                 <section id="food" className="border-t border-border pt-6">
+                  <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+                    🍲 Traditional Cuisine
                   </h2>
                   <p className="text-sm text-muted-foreground mb-4">{(tribe as any).traditionalFood.description}</p>
                   <div className="grid sm:grid-cols-3 gap-4">
