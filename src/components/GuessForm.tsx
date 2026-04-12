@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Clock, Sparkles, HelpCircle, ChevronDown, ChevronUp, MapPin, Users, Heart, Globe, Shuffle } from 'lucide-react';
 import { validateNameInput } from '@/lib/dataValidation';
@@ -134,25 +134,48 @@ export function GuessForm({
   const [showTimeHelp, setShowTimeHelp] = useState(false);
   const [advancedMode, setAdvancedMode] = useState(false);
   const navigate = useNavigate();
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     setCountries(getCountries());
   }, []);
 
+  const navigateWithParams = useCallback((nameVal: string) => {
+    const params = new URLSearchParams();
+    const trimmed = nameVal.trim();
+    if (trimmed) {
+      params.set('name', trimmed);
+      if (country) params.set('country', country);
+      if (timeOfBirth) params.set('time', timeOfBirth);
+      if (region) params.set('region', region);
+      if (build) params.set('build', build);
+      if (personality) params.set('personality', personality);
+      navigate(`/?${params.toString()}`, { replace: true });
+    } else {
+      if (country) params.set('country', country);
+      navigate(`/?${params.toString()}`, { replace: true });
+    }
+  }, [country, timeOfBirth, region, build, personality, navigate]);
+
+  const handleNameChange = useCallback((value: string) => {
+    setName(value);
+    clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      navigateWithParams(value);
+    }, 250);
+  }, [navigateWithParams]);
+
+  // Cleanup debounce on unmount
+  useEffect(() => {
+    return () => clearTimeout(debounceRef.current);
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    clearTimeout(debounceRef.current);
     const { valid, sanitized } = validateNameInput(name);
     if (!valid || !sanitized) return;
-    
-    const params = new URLSearchParams();
-    params.set('name', sanitized);
-    if (country) params.set('country', country);
-    if (timeOfBirth) params.set('time', timeOfBirth);
-    if (region) params.set('region', region);
-    if (build) params.set('build', build);
-    if (personality) params.set('personality', personality);
-    
-    navigate(`/?${params.toString()}`);
+    navigateWithParams(sanitized);
   };
 
   const hasAdvancedClues = region || build || personality || timeOfBirth;
@@ -242,7 +265,7 @@ export function GuessForm({
                 id="name-input"
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => handleNameChange(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') {
                     setName('');
