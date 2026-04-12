@@ -89,16 +89,32 @@ export function detectWesternName(name: string): WesternNameResult {
 
   if (normalized.length < 2) return empty;
 
+  // Categories that are African tribal — should NOT trigger western detection
+  const africanCategories = new Set([
+    'african-male', 'african-female', 'yoruba-male', 'yoruba-female',
+    'igbo-male', 'igbo-female', 'hausa-male', 'hausa-female',
+    'akan-male', 'akan-female', 'zulu-male', 'zulu-female',
+    'somali-male', 'somali-female', 'swahili-male', 'swahili-female',
+    'amhara-male', 'amhara-female', 'shona-male', 'shona-female',
+    'wolof-male', 'wolof-female', 'fulani-male', 'fulani-female',
+    'mandinka-male', 'mandinka-female', 'tswana-male', 'tswana-female',
+    'ethiopian-male', 'ethiopian-female', 'malagasy-male', 'malagasy-female',
+  ]);
+
   // 1. Direct lookup
   let mapping = christianToMuslimNameMapping[normalized];
   let canonical = normalized;
   let resolvedFrom: string | undefined;
+
+  // Skip if it's an African-category name (handled by tribal detection)
+  if (mapping && africanCategories.has(mapping.category)) return empty;
 
   // 2. Try variant resolution
   if (!mapping) {
     const variant = westernNameVariants[normalized];
     if (variant) {
       mapping = christianToMuslimNameMapping[variant];
+      if (mapping && africanCategories.has(mapping.category)) return empty;
       if (mapping) {
         canonical = variant;
         resolvedFrom = normalized;
@@ -111,7 +127,9 @@ export function detectWesternName(name: string): WesternNameResult {
     for (const key of Object.keys(christianToMuslimNameMapping)) {
       const baseName = key.replace(/_[a-z]{2,3}$/, '');
       if (baseName === normalized) {
-        mapping = christianToMuslimNameMapping[key];
+        const candidate = christianToMuslimNameMapping[key];
+        if (africanCategories.has(candidate.category)) continue;
+        mapping = candidate;
         canonical = key;
         break;
       }
