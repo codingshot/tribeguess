@@ -58,7 +58,7 @@ export const FeaturedBlogsCarousel = memo(function FeaturedBlogsCarousel() {
       >
         <CarouselContent className="-ml-2 sm:-ml-4">
           {featuredPosts.map((post) => (
-            <CarouselItem key={post.slug} className="pl-2 sm:pl-4 basis-4/5 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+            <CarouselItem key={post.slug} className="pl-2 sm:pl-4 basis-[88%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
               <BlogCardCarousel post={post} formatDate={formatDate} />
             </CarouselItem>
           ))}
@@ -74,54 +74,48 @@ const BlogCardCarousel = memo(function BlogCardCarousel({ post, formatDate }: { 
   return (
     <Link
       to={`/blog/${post.slug}`}
-      className="group block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full"
+      className="group block card-landing-tile overflow-hidden hover:-translate-y-0.5 h-full flex flex-col"
     >
-      {/* Gradient Header with Emoji */}
-      <div className={`h-28 ${post.gradient || 'bg-gradient-to-br from-primary/30 to-accent/30'} flex items-center justify-center relative`}>
-        <span className="text-4xl">{post.emoji || '📖'}</span>
+      <div className={`h-32 sm:h-36 shrink-0 ${post.gradient || 'bg-gradient-to-br from-primary/30 to-accent/30'} flex items-center justify-center relative`}>
+        <span className="text-4xl sm:text-5xl" aria-hidden>{post.emoji || '📖'}</span>
         {post.publishDate && (
-        <span className="absolute top-2 right-2 px-2 py-0.5 bg-black/30 backdrop-blur-sm rounded-full text-xs text-white">
+        <span className="absolute top-3 right-3 px-2.5 py-1 bg-black/35 backdrop-blur-sm rounded-full text-xs text-white leading-none">
           {formatDate(post.publishDate)}
         </span>
         )}
       </div>
       
-      {/* Content */}
-      <div className="p-4">
-        {/* Meta Info */}
-        <div className="flex items-center gap-2 mb-2">
-          <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-            <Globe className="w-3 h-3" />
-            {post.region}
+      <div className="p-4 sm:p-5 flex flex-col flex-1 min-h-0">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-3 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5">
+            <Globe className="w-3.5 h-3.5 shrink-0" aria-hidden />
+            <span className="line-clamp-1">{post.region}</span>
           </span>
-          <span className="text-xs text-muted-foreground">•</span>
-          <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-            <Clock className="w-3 h-3" />
+          <span className="text-border hidden sm:inline" aria-hidden>•</span>
+          <span className="inline-flex items-center gap-1.5">
+            <Clock className="w-3.5 h-3.5 shrink-0" aria-hidden />
             {post.readTime}
           </span>
         </div>
         
-        {/* Title */}
-        <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+        <h3 className="font-serif text-base sm:text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-3 line-clamp-2 leading-snug tracking-tight">
           {post.title || 'Untitled Article'}
         </h3>
         
-        {/* Excerpt */}
         {post.excerpt && (
-        <p className="text-xs text-muted-foreground line-clamp-2 mb-3">
+        <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed mb-4 flex-1">
           {post.excerpt}
         </p>
         )}
         
-        {/* Tags */}
         {Array.isArray(post.tags) && post.tags.length > 0 && (
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-2 mt-auto">
           {post.tags.slice(0, 2).map((tag) => (
             <span 
               key={tag}
-              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary text-xs text-secondary-foreground"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary text-xs font-medium text-secondary-foreground leading-snug"
             >
-              <Tag className="w-2.5 h-2.5" />
+              <Tag className="w-3 h-3 shrink-0 opacity-70" aria-hidden />
               {tag}
             </span>
           ))}

@@ -139,7 +139,7 @@ const Index = () => {
       <main id="main-content" className="container mx-auto px-4 py-6 sm:py-8">
         {!results ? (
           // Landing view
-          <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in">
+          <section className="max-w-2xl mx-auto text-center py-8 sm:py-12 animate-fade-in sm:max-w-3xl">
             <style>{`
               @keyframes glowPulse {
                 0%, 100% { 
@@ -176,7 +176,7 @@ const Index = () => {
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
                 Guess Her <span className="gradient-gold-text glow-tribe">Tribe</span>
               </h1>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto px-2">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto px-2 text-balance leading-relaxed">
                 Enter a name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
               </p>
             </div>
@@ -204,22 +204,46 @@ const Index = () => {
             </div>
             
             {/* Quick Discovery CTAs */}
-            <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 max-w-lg mx-auto">
-              <Link to="/learn" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
-                <Search className="w-5 h-5 text-primary" />
-                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">{getAllTribes().length}+ Tribes</span>
+            <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl mx-auto">
+              <Link
+                to="/learn"
+                className="card-landing-tile flex flex-col items-center justify-center gap-2 min-h-[92px] sm:min-h-[100px] p-4 sm:p-5 text-center group touch-manipulation"
+              >
+                <Search className="w-6 h-6 text-primary shrink-0" aria-hidden />
+                <span className="text-xs sm:text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                  Browse tribes
+                </span>
+                <span className="text-[11px] sm:text-xs text-muted-foreground leading-tight">{getAllTribes().length}+ groups</span>
               </Link>
-              <Link to="/quiz" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
-                <Brain className="w-5 h-5 text-primary" />
-                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Quiz</span>
+              <Link
+                to="/quiz"
+                className="card-landing-tile flex flex-col items-center justify-center gap-2 min-h-[92px] sm:min-h-[100px] p-4 sm:p-5 text-center group touch-manipulation"
+              >
+                <Brain className="w-6 h-6 text-primary shrink-0" aria-hidden />
+                <span className="text-xs sm:text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                  Culture quiz
+                </span>
+                <span className="text-[11px] sm:text-xs text-muted-foreground leading-tight">Test your knowledge</span>
               </Link>
-              <Link to="/random" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
-                <Shuffle className="w-5 h-5 text-primary" />
-                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Random</span>
+              <Link
+                to="/random"
+                className="card-landing-tile flex flex-col items-center justify-center gap-2 min-h-[92px] sm:min-h-[100px] p-4 sm:p-5 text-center group touch-manipulation"
+              >
+                <Shuffle className="w-6 h-6 text-primary shrink-0" aria-hidden />
+                <span className="text-xs sm:text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                  Random tribe
+                </span>
+                <span className="text-[11px] sm:text-xs text-muted-foreground leading-tight">Surprise me</span>
               </Link>
-              <Link to="/languages" className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-md transition-all group">
-                <Languages className="w-5 h-5 text-primary" />
-                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Languages</span>
+              <Link
+                to="/languages"
+                className="card-landing-tile flex flex-col items-center justify-center gap-2 min-h-[92px] sm:min-h-[100px] p-4 sm:p-5 text-center group touch-manipulation"
+              >
+                <Languages className="w-6 h-6 text-primary shrink-0" aria-hidden />
+                <span className="text-xs sm:text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                  Languages
+                </span>
+                <span className="text-[11px] sm:text-xs text-muted-foreground leading-tight">Families & maps</span>
               </Link>
             </div>
             
@@ -233,10 +257,10 @@ const Index = () => {
               <FeaturedRecipesCarousel />
             </div>
             
-            <aside className="mt-8 sm:mt-10 p-3 sm:p-4 bg-secondary/50 rounded-xl max-w-md mx-auto">
-              <p className="text-xs text-muted-foreground">
-                ⚠️ <strong>Disclaimer:</strong> This tool is for entertainment and educational purposes only. 
-                Stereotypes presented are common perceptions and may not apply to individuals.
+            <aside className="mt-8 sm:mt-10 p-4 sm:p-5 bg-secondary/50 rounded-2xl max-w-lg mx-auto border border-border/60">
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed text-balance">
+                <strong className="text-foreground">Disclaimer:</strong> This tool is for entertainment and educational purposes only.
+                Stereotypes are common perceptions and may not apply to individuals.
               </p>
             </aside>
           </section>
@@ -391,10 +415,10 @@ const Index = () => {
               </div>
             )}
             
-            <aside className="mt-6 sm:mt-8 p-3 sm:p-4 bg-secondary/50 rounded-xl">
-              <p className="text-xs text-muted-foreground text-center">
-                ⚠️ <strong>Disclaimer:</strong> This tool is for entertainment and educational purposes only. 
-                Predictions are based on common naming patterns and may not be accurate for all names.
+            <aside className="mt-6 sm:mt-8 p-4 sm:p-5 bg-secondary/50 rounded-2xl border border-border/60 max-w-2xl mx-auto">
+              <p className="text-xs sm:text-sm text-muted-foreground text-center leading-relaxed text-balance">
+                <strong className="text-foreground">Disclaimer:</strong> For entertainment and educational use only.
+                Predictions use common naming patterns and may not be accurate for every name.
               </p>
             </aside>
           </section>

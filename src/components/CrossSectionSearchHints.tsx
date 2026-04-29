@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ChefHat, FileText, Users, User, Sparkles } from 'lucide-react';
+import { ChefHat, FileText, Users, User, Search } from 'lucide-react';
 import { getCrossSectionFallback, type UnifiedSearchHit } from '@/lib/globalUnifiedSearch';
 import { cn } from '@/lib/utils';
 
@@ -15,7 +15,7 @@ function kindIcon(kind: UnifiedSearchHit['kind']) {
     case 'name':
       return User;
     default:
-      return Sparkles;
+      return Search;
   }
 }
 

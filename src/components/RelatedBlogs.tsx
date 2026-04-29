@@ -26,8 +26,8 @@ export const RelatedBlogs = ({ currentPost, maxPosts = 3 }: RelatedBlogsProps) =
       score += matchingTags * 3;
 
       // Overlapping related tribes
-      const currentTribeSlugs = currentPost.relatedTribes.map(t => t.slug);
-      const matchingTribes = post.relatedTribes.filter(tribe =>
+      const currentTribeSlugs = (currentPost.relatedTribes ?? []).map(t => t.slug);
+      const matchingTribes = (post.relatedTribes ?? []).filter(tribe =>
         currentTribeSlugs.includes(tribe.slug)
       ).length;
       score += matchingTribes * 5;

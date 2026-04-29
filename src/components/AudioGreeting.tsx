@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { Play, Volume2, Loader2 } from 'lucide-react';
 
 interface AudioGreetingProps {
@@ -349,6 +349,27 @@ export function AudioGreeting({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const loadingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const mountedRef = useRef(true);
+  /** Bumps when a new play starts so stale async work (voice wait) cannot call speak() after cancel. */
+  const playGenerationRef = useRef(0);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        try {
+          window.speechSynthesis.cancel();
+        } catch {
+          /* ignore */
+        }
+      }
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current);
+        loadingTimeoutRef.current = null;
+      }
+    };
+  }, []);
 
   const displayPhonetic = phonetic || getPhonetic(phrase);
   const voiceLocale = getVoiceLocale(languageName, languageFamily);
@@ -361,46 +382,66 @@ export function AudioGreeting({
   }, []);
 
   const playAudio = useCallback(async () => {
-    if (!('speechSynthesis' in window) || !phrase) {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window) || !phrase) {
       return;
     }
 
+    const synth = window.speechSynthesis;
+    const generation = ++playGenerationRef.current;
+
     // Cancel any ongoing speech
-    window.speechSynthesis.cancel();
+    try {
+      synth.cancel();
+    } catch {
+      /* ignore */
+    }
     cleanup();
-    
+
     setIsLoading(true);
 
     // Safety timeout — if speech never starts, reset state
     loadingTimeoutRef.current = setTimeout(() => {
+      if (!mountedRef.current) return;
       setIsLoading(false);
       setIsPlaying(false);
     }, 3000);
 
     // Wait for voices to be loaded
-    let voices = window.speechSynthesis.getVoices();
+    let voices: SpeechSynthesisVoice[] = [];
+    try {
+      voices = synth.getVoices();
+    } catch {
+      voices = [];
+    }
     if (voices.length === 0) {
       await new Promise<void>((resolve) => {
         const handler = () => {
-          voices = window.speechSynthesis.getVoices();
-          window.speechSynthesis.removeEventListener('voiceschanged', handler);
+          try {
+            voices = synth.getVoices();
+          } catch {
+            voices = [];
+          }
+          synth.removeEventListener('voiceschanged', handler);
           resolve();
         };
-        window.speechSynthesis.addEventListener('voiceschanged', handler);
+        synth.addEventListener('voiceschanged', handler);
         setTimeout(() => {
-          window.speechSynthesis.removeEventListener('voiceschanged', handler);
+          synth.removeEventListener('voiceschanged', handler);
           resolve();
         }, 500);
       });
     }
 
+    if (!mountedRef.current || generation !== playGenerationRef.current) return;
+
     // Find best matching voice
     const targetLocale = voiceLocale;
     const localeParts = targetLocale.split('-');
-    
-    const selectedVoice = 
+    const langPrimary = localeParts[0]?.trim() || '';
+
+    const selectedVoice =
       voices.find(v => v.lang === targetLocale) ||
-      voices.find(v => v.lang.startsWith(localeParts[0])) ||
+      (langPrimary ? voices.find(v => v.lang.startsWith(langPrimary)) : undefined) ||
       voices.find(v => v.lang === 'sw-KE' || v.lang === 'sw-TZ' || v.lang.startsWith('sw')) ||
       voices.find(v => v.lang === 'en-KE' || v.lang === 'en-TZ' || v.lang === 'en-NG' || v.lang === 'en-ZA') ||
       voices.find(v => ['zu-ZA', 'xh-ZA', 'af-ZA', 'yo-NG', 'ha-NG', 'ig-NG', 'am-ET'].includes(v.lang)) ||
@@ -418,16 +459,19 @@ export function AudioGreeting({
 
     utterance.onstart = () => {
       cleanup();
+      if (!mountedRef.current) return;
       setIsLoading(false);
       setIsPlaying(true);
     };
 
     utterance.onend = () => {
+      if (!mountedRef.current) return;
       setIsPlaying(false);
     };
 
     utterance.onerror = (event) => {
       cleanup();
+      if (!mountedRef.current) return;
       setIsLoading(false);
       setIsPlaying(false);
       // Only warn for genuine errors, not user-initiated cancellation
@@ -436,7 +480,19 @@ export function AudioGreeting({
       }
     };
 
-    window.speechSynthesis.speak(utterance);
+    if (generation !== playGenerationRef.current) {
+      return;
+    }
+
+    try {
+      synth.speak(utterance);
+    } catch {
+      cleanup();
+      if (mountedRef.current) {
+        setIsLoading(false);
+        setIsPlaying(false);
+      }
+    }
   }, [phrase, voiceLocale, cleanup]);
 
   const sizeClasses = {

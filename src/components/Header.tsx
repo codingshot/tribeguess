@@ -44,15 +44,15 @@ export function Header() {
     { path: '/quiz', label: 'Culture Quiz', icon: HelpCircle, mobileOnly: true },
     { path: '/video-gallery', label: 'Video Gallery', icon: Video, mobileOnly: true },
     { path: '/global-origins', label: 'Global Origins', icon: Globe, mobileOnly: true },
-    { path: '/compare', label: 'Compare Tribes', icon: ArrowLeftRight, mobileOnly: true },
+    { path: '/compare', label: 'Compare', icon: ArrowLeftRight, mobileOnly: false },
   ];
   
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="sticky top-0 z-50 overflow-visible bg-background/80 backdrop-blur-md border-b border-border">
       <a href="#main-content" className="skip-to-content">Skip to main content</a>
       <div className="container mx-auto px-3 sm:px-4 py-2.5 sm:py-3">
         <nav
-          className="flex flex-wrap items-center gap-x-2 gap-y-2.5 sm:gap-x-3"
+          className="relative flex flex-wrap items-center gap-x-2 gap-y-2.5 overflow-visible sm:gap-x-3"
           aria-label="Main navigation"
         >
           <Link
@@ -67,7 +67,7 @@ export function Header() {
               width={40}
               height={40}
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
             />
             <span className="hidden sm:inline text-lg sm:text-xl font-bold text-foreground font-tribal tracking-wide">

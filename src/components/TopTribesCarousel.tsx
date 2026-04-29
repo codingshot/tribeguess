@@ -230,38 +230,32 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
       >
         <CarouselContent className="-ml-2 sm:-ml-4">
           {displayedTribes.map((tribe) => (
-            <CarouselItem key={tribe.id} className="pl-2 sm:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+            <CarouselItem key={tribe.id} className="pl-2 sm:pl-4 basis-[85%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
               <Link
                 to={`/learn/${tribe.slug}`}
-                className="block group"
+                className="block group h-full"
               >
-                <div className="relative bg-card border border-border rounded-xl p-3 hover:shadow-lg hover:border-primary/30 transition-all duration-300 h-full">
-                  {/* Tribe Name */}
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1 text-sm sm:text-base pr-8">
+                <div className="card-landing-tile flex flex-col min-h-[148px] sm:min-h-[156px] p-4 sm:p-5 h-full">
+                  <h3 className="font-serif font-semibold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base leading-snug line-clamp-2 pr-1">
                     {tribe.name}
                   </h3>
-                  
-                  {/* Region + Population in one line */}
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground mt-1">
-                    <span className="flex items-center gap-0.5 truncate">
-                      <MapPin className="w-3 h-3 flex-shrink-0" />
-                      <span className="truncate">{tribe.region || 'Africa'}</span>
-                    </span>
-                    <span className="text-border">·</span>
-                    <span className="flex items-center gap-0.5 flex-shrink-0">
-                      <Users className="w-3 h-3" />
-                      {tribe.population || '—'}
-                    </span>
+                  <div className="mt-3 space-y-2 text-xs text-muted-foreground flex-1">
+                    <p className="flex items-start gap-1.5 leading-relaxed">
+                      <MapPin className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" aria-hidden />
+                      <span className="line-clamp-2">{tribe.region || 'Africa'}</span>
+                    </p>
+                    <p className="flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5 flex-shrink-0" aria-hidden />
+                      <span className="line-clamp-1">{tribe.population || '—'}</span>
+                    </p>
                   </div>
-                  
-                  {/* Country Flags - bottom right corner */}
                   {tribe.countries && tribe.countries.length > 0 && (
-                    <div className="absolute bottom-2.5 right-2.5 flex items-center gap-0.5">
-                      {tribe.countries.slice(0, 3).map((code) => (
-                        <CountryFlag key={code} code={code} size={12} label={code} />
+                    <div className="mt-4 pt-3 border-t border-border/80 flex flex-wrap items-center gap-1 justify-end">
+                      {tribe.countries.slice(0, 4).map((code) => (
+                        <CountryFlag key={code} code={code} size={14} label={code} />
                       ))}
-                      {tribe.countries.length > 3 && (
-                        <span className="text-[10px] text-muted-foreground ml-0.5">+{tribe.countries.length - 3}</span>
+                      {tribe.countries.length > 4 && (
+                        <span className="text-[10px] text-muted-foreground">+{tribe.countries.length - 4}</span>
                       )}
                     </div>
                   )}

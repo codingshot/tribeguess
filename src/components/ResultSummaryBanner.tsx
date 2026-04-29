@@ -21,7 +21,7 @@ export function ResultSummaryBanner({
 
   return (
     <div className={cn(
-      "p-4 rounded-xl border mb-4 animate-scale-in",
+      "p-4 sm:p-5 rounded-2xl border mb-5 sm:mb-6 animate-scale-in",
       isStrong
         ? "bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border-green-200 dark:border-green-800"
         : isMedium
@@ -70,10 +70,10 @@ export function ResultSummaryBanner({
               {isStrong ? 'Strong Match!' : isMedium ? 'Likely Match' : 'Possible Match'}
             </span>
           </div>
-          <p className="text-xs text-muted-foreground">
-            "<strong className="text-foreground">{inputName}</strong>" most likely belongs to the{' '}
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            For <strong className="text-foreground">{inputName}</strong>, the closest match is the{' '}
             <strong className="text-foreground">{topTribeName}</strong> tribe
-            {totalMatches > 1 && ` (${totalMatches} possible matches)`}
+            {totalMatches > 1 && ` (${totalMatches} possible matches)`}.
           </p>
         </div>
 

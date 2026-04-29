@@ -144,11 +144,13 @@ function generateTribeBlogContent(tribe: any): ContentSection[] {
 export function generateTribeBlogs(existingSlugs: Set<string>): BlogPost[] {
   const tribes = tribesData.tribes as any[];
   const generated: BlogPost[] = [];
+  const seenGeneratedSlugs = new Set<string>();
 
   for (const tribe of tribes) {
     // Skip tribes that already have a dedicated blog or are referenced in existing blogs
     const blogSlug = `tribe-${tribe.slug}`;
     if (existingSlugs.has(blogSlug)) continue;
+    if (seenGeneratedSlugs.has(blogSlug)) continue;
 
     const regionName = getRegionName(tribe);
     const regionKey = getRegionKey(tribe);
@@ -163,6 +165,7 @@ export function generateTribeBlogs(existingSlugs: Set<string>): BlogPost[] {
       content.reduce((acc, s) => acc + s.paragraphs.join(' ').length + (s.list?.join(' ').length || 0), 0) / 1000
     )));
 
+    seenGeneratedSlugs.add(blogSlug);
     generated.push({
       slug: blogSlug,
       title: `The ${tribe.name} People: Culture, History & Traditions`,

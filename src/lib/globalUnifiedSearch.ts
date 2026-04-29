@@ -58,10 +58,17 @@ export function searchGlobalUnified(query: string, opts?: { limit?: number }): U
     return hits.length >= limit;
   };
 
-  const engineHits = searchNames(sanitized, 18);
+  // Name/tribe matches can crowd out blog and recipes; reserve slots for cross-type results.
+  const engineSlotBudget = Math.min(12, Math.max(3, limit - 6));
+  let engineUsed = 0;
+  const engineHits = searchNames(sanitized, 28);
+
   for (const e of engineHits) {
+    if (hits.length >= limit || engineUsed >= engineSlotBudget) break;
     const slug = e.tribeSlug;
     if (!slug) continue;
+
+    const lenBefore = hits.length;
 
     if (e.type === 'name') {
       if (
@@ -88,6 +95,8 @@ export function searchGlobalUnified(query: string, opts?: { limit?: number }): U
       )
         break;
     }
+
+    if (hits.length > lenBefore) engineUsed++;
   }
 
   let blogAdded = 0;

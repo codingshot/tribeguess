@@ -31,7 +31,9 @@ class VideoPlayerErrorBoundary extends React.Component<
     // Clear potentially corrupted video state
     try {
       localStorage.removeItem('tribeguess_current_video');
-    } catch {}
+    } catch {
+      /* localStorage may be unavailable */
+    }
 
     // Auto-recover after 2s
     if (!this.recoverTimer) {
@@ -182,6 +184,7 @@ const App = () => {
                   <Route path="/docs" element={<Docs />} />
                   <Route path="/names" element={<NamesGallery />} />
                   <Route path="/video-gallery" element={<VideoGallery />} />
+                  <Route path="/compare/:slugA/vs/:slugB" element={<TribeCompare />} />
                   <Route path="/compare" element={<TribeCompare />} />
                   <Route path="/tribes" element={<TribesIndex />} />
                   <Route path="/country/:countrySlug" element={<CountryTribes />} />

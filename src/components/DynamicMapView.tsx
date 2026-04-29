@@ -337,10 +337,10 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
       const lats = tribes.map(t => t.mapCoordinates.lat);
       const lngs = tribes.map(t => t.mapCoordinates.lng);
 
-      let minLat = Math.min(...lats);
-      let maxLat = Math.max(...lats);
-      let minLng = Math.min(...lngs);
-      let maxLng = Math.max(...lngs);
+      const minLat = Math.min(...lats);
+      const maxLat = Math.max(...lats);
+      const minLng = Math.min(...lngs);
+      const maxLng = Math.max(...lngs);
 
       const latRange = Math.max(2, maxLat - minLat);
       const lngRange = Math.max(2, maxLng - minLng);

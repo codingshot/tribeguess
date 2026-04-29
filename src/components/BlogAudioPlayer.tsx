@@ -40,6 +40,18 @@ const AFRICAN_VOICE_PREFERENCES: VoiceOption[] = [
 /** Maximum text length for a single utterance to avoid browser limits */
 const MAX_UTTERANCE_LENGTH = 4000;
 
+function getSynth(): SpeechSynthesis | null {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+  return window.speechSynthesis;
+}
+
+type PlayOptions = {
+  /** Skip resume path and start a new utterance (e.g. after changing voice while paused). */
+  forceRestart?: boolean;
+  /** Use this voice id instead of React state (state may not have flushed yet). */
+  voiceId?: string;
+};
+
 export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -50,7 +62,10 @@ export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
   const [progress, setProgress] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isSupported, setIsSupported] = useState(true);
+  /** Must reflect reality on first render: a follow-up effect would run too late and touch `speechSynthesis` before this flips. */
+  const [isSupported, setIsSupported] = useState(
+    () => typeof window !== 'undefined' && 'speechSynthesis' in window
+  );
   const [rate, setRate] = useState(0.9);
 
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -60,39 +75,53 @@ export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
   const totalCharsRef = useRef(0);
   const spokenCharsRef = useRef(0);
   const previousVolumeRef = useRef(0.8);
+  const progressResetTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Feature detection
+  // Feature detection (effects run only on client; still guard for unusual embeds)
   useEffect(() => {
-    if (!('speechSynthesis' in window)) {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
       setIsSupported(false);
     }
   }, []);
 
   // Load voices
   useEffect(() => {
-    if (!isSupported) return;
+    const synth = getSynth();
+    if (!isSupported || !synth) return;
 
     const loadVoices = () => {
-      const voices = speechSynthesis.getVoices();
-      setAvailableVoices(voices);
+      try {
+        setAvailableVoices(synth.getVoices());
+      } catch {
+        setAvailableVoices([]);
+      }
     };
 
     loadVoices();
-    speechSynthesis.addEventListener('voiceschanged', loadVoices);
+    synth.addEventListener('voiceschanged', loadVoices);
 
     return () => {
-      speechSynthesis.removeEventListener('voiceschanged', loadVoices);
+      synth.removeEventListener('voiceschanged', loadVoices);
     };
   }, [isSupported]);
 
   // Cleanup on unmount — stop any speech and clear intervals
   useEffect(() => {
     return () => {
-      if (isSupported) {
-        speechSynthesis.cancel();
+      const synth = getSynth();
+      if (isSupported && synth) {
+        try {
+          synth.cancel();
+        } catch {
+          /* ignore */
+        }
       }
       if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
       if (chromeResumeRef.current) clearInterval(chromeResumeRef.current);
+      if (progressResetTimeoutRef.current) {
+        clearTimeout(progressResetTimeoutRef.current);
+        progressResetTimeoutRef.current = null;
+      }
     };
   }, [isSupported]);
 
@@ -105,15 +134,41 @@ export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
       clearInterval(chromeResumeRef.current);
       chromeResumeRef.current = null;
     }
+    if (progressResetTimeoutRef.current) {
+      clearTimeout(progressResetTimeoutRef.current);
+      progressResetTimeoutRef.current = null;
+    }
   }, []);
 
+  // New article / plain-text payload — stop any in-flight speech so we never read stale text
+  useEffect(() => {
+    const synth = getSynth();
+    if (!synth || !isSupported) return;
+    try {
+      synth.cancel();
+    } catch {
+      /* ignore */
+    }
+    utteranceRef.current = null;
+    setIsPlaying(false);
+    setIsPaused(false);
+    setProgress(0);
+    setError(null);
+    spokenCharsRef.current = 0;
+    clearTimers();
+  }, [title, content, isSupported, clearTimers]);
+
   const getMatchingVoice = useCallback((targetLang: string): SpeechSynthesisVoice | null => {
+    if (!targetLang?.trim()) {
+      return availableVoices[0] ?? null;
+    }
     // Try exact match first
     let voice = availableVoices.find(v => v.lang === targetLang);
     if (voice) return voice;
 
     // Try language prefix match
     const langPrefix = targetLang.split('-')[0];
+    if (!langPrefix) return availableVoices[0] ?? null;
     voice = availableVoices.find(v => v.lang.startsWith(langPrefix));
     if (voice) return voice;
 
@@ -134,128 +189,207 @@ export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
       .trim();
   };
 
-  const handlePlay = useCallback(() => {
-    if (!isSupported) return;
+  const startProgressPollingAndChromeKeepAlive = useCallback(() => {
+    const synth = getSynth();
+    if (!synth) return;
 
-    setError(null);
+    if (progressIntervalRef.current) {
+      clearInterval(progressIntervalRef.current);
+      progressIntervalRef.current = null;
+    }
+    if (chromeResumeRef.current) {
+      clearInterval(chromeResumeRef.current);
+      chromeResumeRef.current = null;
+    }
 
-    if (isPaused) {
-      speechSynthesis.resume();
-      setIsPaused(false);
-      setIsPlaying(true);
-      // Restart Chrome keep-alive
-      chromeResumeRef.current = setInterval(() => {
-        if (speechSynthesis.speaking && !speechSynthesis.paused) {
-          speechSynthesis.pause();
-          speechSynthesis.resume();
+    progressIntervalRef.current = setInterval(() => {
+      if (synth.speaking && !synth.paused) {
+        if (spokenCharsRef.current === 0) {
+          spokenCharsRef.current += 12;
+          const denom = Math.max(1, totalCharsRef.current);
+          setProgress(Math.min((spokenCharsRef.current / denom) * 100, 99));
         }
-      }, 10000);
-      return;
-    }
-
-    // Stop any current speech
-    speechSynthesis.cancel();
-    clearTimers();
-
-    const cleanContent = cleanTextForSpeech(content);
-    // Truncate to avoid browser limits
-    const fullText = `${title}. ${cleanContent}`.slice(0, MAX_UTTERANCE_LENGTH);
-    totalCharsRef.current = fullText.length;
-    spokenCharsRef.current = 0;
-
-    const utterance = new SpeechSynthesisUtterance(fullText);
-    const voice = getMatchingVoice(selectedVoice);
-    
-    if (voice) {
-      utterance.voice = voice;
-    }
-
-    utterance.rate = rate;
-    utterance.pitch = 1;
-    utterance.volume = isMuted ? 0 : volume;
-
-    // Use boundary events for accurate progress tracking
-    utterance.onboundary = (event) => {
-      if (event.charIndex !== undefined) {
-        spokenCharsRef.current = event.charIndex;
-        const newProgress = Math.min((event.charIndex / totalCharsRef.current) * 100, 99);
-        setProgress(newProgress);
       }
-    };
+    }, 100);
 
-    utterance.onstart = () => {
-      setIsPlaying(true);
-      setIsPaused(false);
-      setError(null);
-
-      // Fallback progress estimation (boundary events may not fire on all browsers)
-      progressIntervalRef.current = setInterval(() => {
-        if (speechSynthesis.speaking && !speechSynthesis.paused) {
-          // Only use estimation if boundary events haven't fired
-          if (spokenCharsRef.current === 0) {
-            spokenCharsRef.current += 12;
-            const newProgress = Math.min((spokenCharsRef.current / totalCharsRef.current) * 100, 99);
-            setProgress(newProgress);
-          }
+    chromeResumeRef.current = setInterval(() => {
+      if (synth.speaking && !synth.paused) {
+        try {
+          synth.pause();
+          synth.resume();
+        } catch {
+          /* ignore */
         }
-      }, 100);
+      }
+    }, 10000);
+  }, []);
 
-      // Chrome bug: speech pauses silently after ~15s. Keep-alive workaround.
-      chromeResumeRef.current = setInterval(() => {
-        if (speechSynthesis.speaking && !speechSynthesis.paused) {
-          speechSynthesis.pause();
-          speechSynthesis.resume();
-        }
-      }, 10000);
-    };
-
-    utterance.onend = () => {
-      setIsPlaying(false);
-      setIsPaused(false);
-      setProgress(100);
-      clearTimers();
-      setTimeout(() => setProgress(0), 2000);
-    };
-
-    utterance.onerror = (event) => {
-      // 'interrupted' is expected when user stops/restarts — don't show error
-      if (event.error === 'interrupted' || event.error === 'canceled') {
+  const handlePlay = useCallback(
+    (opts?: PlayOptions) => {
+      if (!isSupported) return;
+      const synth = getSynth();
+      if (!synth) {
+        setIsSupported(false);
         return;
       }
-      setIsPlaying(false);
-      setIsPaused(false);
-      setError('Playback failed. Your browser may not support this voice.');
-      clearTimers();
-    };
 
-    utteranceRef.current = utterance;
-    speechSynthesis.speak(utterance);
-  }, [title, content, selectedVoice, getMatchingVoice, volume, isMuted, isPaused, rate, isSupported, clearTimers]);
+      setError(null);
+
+      const voiceKey = opts?.voiceId ?? selectedVoice;
+
+      if (isPaused && !opts?.forceRestart) {
+        // React "paused" but engine already finished / cleared — start fresh instead of noop resume
+        if (!synth.paused && !synth.speaking && !synth.pending) {
+          setIsPaused(false);
+          setIsPlaying(false);
+        } else {
+          try {
+            synth.resume();
+          } catch {
+            setError('Could not resume playback.');
+            return;
+          }
+          setIsPaused(false);
+          setIsPlaying(true);
+          startProgressPollingAndChromeKeepAlive();
+          return;
+        }
+      }
+
+      // Stop any current speech
+      try {
+        synth.cancel();
+      } catch {
+        /* ignore */
+      }
+      clearTimers();
+
+      const cleanContent = cleanTextForSpeech(typeof content === 'string' ? content : '');
+      const fullText = `${title}. ${cleanContent}`.slice(0, MAX_UTTERANCE_LENGTH).trim();
+      if (!fullText) {
+        setError('Nothing to read for this article.');
+        return;
+      }
+      totalCharsRef.current = fullText.length;
+      spokenCharsRef.current = 0;
+
+      const utterance = new SpeechSynthesisUtterance(fullText);
+      const voice = getMatchingVoice(voiceKey);
+
+      if (voice) {
+        utterance.voice = voice;
+      }
+
+      utterance.rate = rate;
+      utterance.pitch = 1;
+      utterance.volume = isMuted ? 0 : volume;
+
+      // Use boundary events for accurate progress tracking
+      utterance.onboundary = (event) => {
+        if (event.charIndex !== undefined) {
+          spokenCharsRef.current = event.charIndex;
+          const denom = Math.max(1, totalCharsRef.current);
+          const newProgress = Math.min((event.charIndex / denom) * 100, 99);
+          setProgress(newProgress);
+        }
+      };
+
+      utterance.onstart = () => {
+        setIsPlaying(true);
+        setIsPaused(false);
+        setError(null);
+        startProgressPollingAndChromeKeepAlive();
+      };
+
+      utterance.onend = () => {
+        utteranceRef.current = null;
+        setIsPlaying(false);
+        setIsPaused(false);
+        setProgress(100);
+        clearTimers();
+        progressResetTimeoutRef.current = setTimeout(() => {
+          progressResetTimeoutRef.current = null;
+          setProgress(0);
+        }, 2000);
+      };
+
+      utterance.onerror = (event) => {
+        utteranceRef.current = null;
+        setIsPlaying(false);
+        setIsPaused(false);
+        clearTimers();
+        if (event.error === 'interrupted' || event.error === 'canceled') {
+          return;
+        }
+        setError('Playback failed. Your browser may not support this voice.');
+      };
+
+      utteranceRef.current = utterance;
+      try {
+        synth.speak(utterance);
+      } catch {
+        setError('Playback failed to start.');
+        setIsPlaying(false);
+        setIsPaused(false);
+        clearTimers();
+        utteranceRef.current = null;
+      }
+    },
+  [
+    title,
+    content,
+    selectedVoice,
+    getMatchingVoice,
+    volume,
+    isMuted,
+    isPaused,
+    rate,
+    isSupported,
+    clearTimers,
+    startProgressPollingAndChromeKeepAlive,
+  ]);
 
   const handlePause = useCallback(() => {
-    if (speechSynthesis.speaking) {
-      speechSynthesis.pause();
-      setIsPaused(true);
-      setIsPlaying(false);
-      if (chromeResumeRef.current) {
-        clearInterval(chromeResumeRef.current);
-        chromeResumeRef.current = null;
-      }
+    const synth = getSynth();
+    if (!synth || (!synth.speaking && !synth.pending)) return;
+    try {
+      synth.pause();
+    } catch {
+      return;
+    }
+    setIsPaused(true);
+    setIsPlaying(false);
+    if (progressIntervalRef.current) {
+      clearInterval(progressIntervalRef.current);
+      progressIntervalRef.current = null;
+    }
+    if (chromeResumeRef.current) {
+      clearInterval(chromeResumeRef.current);
+      chromeResumeRef.current = null;
     }
   }, []);
 
   const handleStop = useCallback(() => {
-    speechSynthesis.cancel();
+    const synth = getSynth();
+    if (synth) {
+      try {
+        synth.cancel();
+      } catch {
+        /* ignore */
+      }
+    }
     setIsPlaying(false);
     setIsPaused(false);
     setProgress(0);
     setError(null);
     spokenCharsRef.current = 0;
+    utteranceRef.current = null;
     clearTimers();
   }, [clearTimers]);
 
   const handleVolumeChange = useCallback((value: number[]) => {
     const newVolume = value[0];
+    if (newVolume === undefined) return;
     setVolume(newVolume);
     setIsMuted(newVolume === 0);
     // Live-update volume on current utterance
@@ -283,17 +417,24 @@ export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
   }, [isMuted, volume]);
 
   const handleRateChange = useCallback((value: number[]) => {
-    setRate(value[0]);
+    const next = value[0];
+    if (next === undefined) return;
+    setRate(next);
     // Rate can't be changed live — user will hear the change on next play
   }, []);
 
-  const handleVoiceChange = useCallback((newVoice: string) => {
-    setSelectedVoice(newVoice);
-    // If currently playing, restart with new voice
-    if (isPlaying || isPaused) {
+  const handleVoiceChange = useCallback(
+    (newVoice: string) => {
+      const replay = isPlaying || isPaused;
+      setSelectedVoice(newVoice);
+      if (!replay) return;
       handleStop();
-    }
-  }, [isPlaying, isPaused, handleStop]);
+      requestAnimationFrame(() => {
+        handlePlay({ forceRestart: true, voiceId: newVoice });
+      });
+    },
+    [isPlaying, isPaused, handleStop, handlePlay]
+  );
 
   if (!isSupported) {
     return null; // Don't render the player if TTS is unavailable
@@ -334,7 +475,7 @@ export const BlogAudioPlayer = ({ title, content }: BlogAudioPlayerProps) => {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={handlePlay}
+                onClick={() => handlePlay()}
                 className="h-10 w-10 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 touch-manipulation"
                 aria-label={isPaused ? 'Resume article narration' : 'Play article narration'}
               >

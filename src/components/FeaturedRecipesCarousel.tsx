@@ -55,44 +55,40 @@ export const FeaturedRecipesCarousel = memo(function FeaturedRecipesCarousel() {
       >
         <CarouselContent className="-ml-2 sm:-ml-4">
           {featuredRecipes.map((recipe) => (
-            <CarouselItem key={recipe.id} className="pl-2 sm:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+            <CarouselItem key={recipe.id} className="pl-2 sm:pl-4 basis-[88%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
               <Link
                 to={`/recipe/${recipe.id}`}
                 className="block group h-full"
               >
-                <div className="bg-card border border-border rounded-xl p-3 sm:p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-300 h-full flex flex-col">
-                  {/* Category Emoji & Difficulty */}
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl">{categoryEmojis[recipe.category] || '🍽️'}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded-full capitalize ${difficultyColors[recipe.difficulty]}`}>
+                <div className="card-landing-tile p-4 sm:p-5 h-full flex flex-col min-h-[200px] sm:min-h-[210px]">
+                  <div className="flex items-start justify-between gap-2 mb-3">
+                    <span className="text-3xl leading-none" aria-hidden>{categoryEmojis[recipe.category] || '🍽️'}</span>
+                    <span className={`text-xs font-medium px-2.5 py-1 rounded-full capitalize shrink-0 ${difficultyColors[recipe.difficulty]}`}>
                       {recipe.difficulty}
                     </span>
                   </div>
                   
-                  {/* Recipe Name */}
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1 text-sm sm:text-base">
+                  <h3 className="font-serif font-semibold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base leading-snug line-clamp-2 pr-1">
                     {recipe.name}
                   </h3>
                   
-                  {/* Tribe */}
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {recipe.tribeName} cuisine
+                  <p className="text-sm text-muted-foreground mt-2 leading-snug">
+                    {recipe.tribeName}
+                    <span className="text-xs text-muted-foreground/80"> · traditional dish</span>
                   </p>
                   
-                  {/* Description */}
-                  <p className="text-xs text-muted-foreground mt-2 line-clamp-2 flex-grow">
+                  <p className="text-sm text-muted-foreground mt-3 line-clamp-3 leading-relaxed flex-1">
                     {recipe.description}
                   </p>
                   
-                  {/* Time & Servings */}
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground mt-3 pt-2 border-t border-border">
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground mt-4 pt-3 border-t border-border/80">
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 shrink-0" aria-hidden />
                       <span>{recipe.cookTime}</span>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Users className="w-3 h-3" />
-                      <span>{recipe.servings}</span>
+                    <div className="flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5 shrink-0" aria-hidden />
+                      <span>{recipe.servings} servings</span>
                     </div>
                   </div>
                 </div>

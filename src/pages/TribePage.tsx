@@ -2,7 +2,7 @@ import React from 'react';
 import { CountryFlag } from '@/components/CountryFlag';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play, TrendingUp, ListPlus } from 'lucide-react';
+import { ArrowLeft, ArrowLeftRight, MapPin, Users, Star, Book, Clock, Globe, UsersRound, Map, ExternalLink, History, Languages, UserCircle, UserCircle2, Church, Play, TrendingUp, ListPlus } from 'lucide-react';
 import { getTribeBySlug, getAllTribes, getNameDatabase, getCountries, getTribeReligiousInfo, getTribeLandmarks } from '@/lib/tribeDetection';
 import { findReligionByName } from '@/data/traditionalReligions';
 import { Header } from '@/components/Header';
@@ -24,6 +24,7 @@ import { Button } from '@/components/ui/button';
 import { TribeFAQSection, generateFAQStructuredData } from '@/components/TribeFAQSection';
 import { TribeInternalLinks } from '@/components/TribeInternalLinks';
 import { ViralCTAs } from '@/components/ViralCTAs';
+import { buildCompareVsPath } from '@/lib/tribeCompareUrl';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -233,6 +234,19 @@ const TribePage = () => {
                     <span>Trade History</span>
                   </div>
                 )}
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Button
+                  asChild
+                  variant="secondary"
+                  size="sm"
+                  className="touch-manipulation bg-white/20 hover:bg-white/30 text-primary-foreground border-0 shadow-none"
+                >
+                  <Link to={`/compare?tribes=${encodeURIComponent(tribe.slug)}`}>
+                    <ArrowLeftRight className="w-4 h-4 mr-2 shrink-0" aria-hidden />
+                    Quick compare
+                  </Link>
+                </Button>
               </div>
             </header>
             
@@ -1253,33 +1267,44 @@ const TribePage = () => {
                       }
                       
                       return (
-                        <Link
+                        <div
                           key={related.id}
-                          to={`/learn/${related.slug}`}
-                          className="p-4 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors group"
+                          className="p-4 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors group flex flex-col gap-2"
                         >
-                          <div className="flex items-center justify-between mb-2">
-                            <div>
-                              <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                                {related.name}
-                              </p>
-                              <p className="text-xs text-muted-foreground">{related.region}</p>
+                          <Link to={`/learn/${related.slug}`} className="block min-w-0">
+                            <div className="flex items-center justify-between mb-1">
+                              <div className="min-w-0">
+                                <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                                  {related.name}
+                                </p>
+                                <p className="text-xs text-muted-foreground">{related.region}</p>
+                              </div>
+                              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 ml-2" />
                             </div>
-                            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
+                            {similarities.length > 0 && (
+                              <div className="flex flex-wrap gap-1.5 mt-2">
+                                {similarities.slice(0, 3).map((sim, i) => (
+                                  <span
+                                    key={i}
+                                    className="px-2 py-0.5 text-[10px] bg-primary/10 text-primary rounded-full font-medium"
+                                  >
+                                    {sim}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                          </Link>
+                          <div className="flex justify-end pt-1 border-t border-border/60">
+                            <Link
+                              to={buildCompareVsPath(tribe.slug, related.slug)}
+                              className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline touch-manipulation"
+                              title={`Compare ${tribe.name} and ${related.name}`}
+                            >
+                              <ArrowLeftRight className="w-3.5 h-3.5" aria-hidden />
+                              Open side-by-side compare
+                            </Link>
                           </div>
-                          {similarities.length > 0 && (
-                            <div className="flex flex-wrap gap-1.5 mt-2">
-                              {similarities.slice(0, 3).map((sim, i) => (
-                                <span 
-                                  key={i} 
-                                  className="px-2 py-0.5 text-[10px] bg-primary/10 text-primary rounded-full font-medium"
-                                >
-                                  {sim}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </Link>
+                        </div>
                       );
                     })}
                   </div>

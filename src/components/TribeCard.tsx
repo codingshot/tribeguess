@@ -29,12 +29,12 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
   return (
     <Link
       to={`/learn/${tribe.slug}`}
-      className="card-tribe p-4 sm:p-5 group cursor-pointer block touch-manipulation"
+      className="card-tribe p-5 sm:p-6 group cursor-pointer block touch-manipulation"
       aria-label={`Learn about the ${tribe.name} tribe from ${tribe.region}`}
     >
-      <header className="flex items-start justify-between mb-2 sm:mb-3 gap-2">
+      <header className="flex items-start justify-between mb-3 sm:mb-4 gap-3">
         <div className="min-w-0">
-          <div className="flex items-center gap-1.5 mb-0.5">
+          <div className="flex items-center gap-1.5 mb-1">
             {/* Country Flags */}
             {tribe.countries && tribe.countries.length > 0 && (
               <div className="flex items-center gap-0.5">
@@ -49,12 +49,12 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
                 )}
               </div>
             )}
-            <h2 className="font-serif text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors truncate">
+            <h2 className="font-serif text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors truncate leading-snug">
               {tribe.name}
             </h2>
           </div>
-          <div className="flex items-center gap-1 text-muted-foreground text-xs sm:text-sm">
-            <MapPin className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+          <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm leading-relaxed">
+            <MapPin className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
             <span className="truncate">{tribe.region}</span>
           </div>
         </div>
@@ -62,20 +62,20 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
       </header>
       
       {tribe.population && (
-      <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
-        <Users className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+      <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
+        <Users className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
         <span>{tribe.population}</span>
       </div>
       )}
       
       {tribe.description && (
-      <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 mb-2 sm:mb-3">
+      <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 mb-3 sm:mb-4 leading-relaxed">
         {tribe.description}
       </p>
       )}
       
       {tribe.stereotypes && tribe.stereotypes.length > 0 && (
-      <ul className="flex flex-wrap gap-1 sm:gap-1.5" aria-label="Top stereotypes">
+      <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Top stereotypes">
         {tribe.stereotypes.slice(0, 2).map((stereotype, i) => (
           <li key={i} className="badge-tribe text-xs">
             {stereotype}

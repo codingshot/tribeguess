@@ -62,9 +62,10 @@ const BlogPost = () => {
   let footnoteIndex = 0;
   
   const processTextWithFootnotes = (text: string) => {
+    const raw = typeof text === 'string' ? text : String(text ?? '');
     // Match [^1] style footnote references
     const footnoteRegex = /\[\^(\d+)\]/g;
-    let processed = text.replace(footnoteRegex, (match, num) => {
+    let processed = raw.replace(footnoteRegex, (match, num) => {
       return `<sup class="text-primary cursor-pointer hover:underline">[${num}]</sup>`;
     });
     // Also process tribe name links
@@ -80,9 +81,9 @@ const BlogPost = () => {
         if (section.heading) {
           text += section.heading + '. ';
         }
-        text += section.paragraphs.join(' ');
-        if (section.list) {
-          text += ' ' + section.list.join('. ');
+        text += (section.paragraphs ?? []).join(' ');
+        if (section.list?.length) {
+          text += ' ' + section.list.map((item) => String(item ?? '')).join('. ');
         }
         if (section.highlight) {
           text += ' ' + section.highlight;
@@ -194,7 +195,7 @@ const BlogPost = () => {
                   </h2>
                 )}
                 
-                {section.paragraphs.map((paragraph, pIndex) => (
+                {(section.paragraphs ?? []).map((paragraph, pIndex) => (
                   <p 
                     key={pIndex} 
                     className="text-muted-foreground leading-relaxed mb-4"

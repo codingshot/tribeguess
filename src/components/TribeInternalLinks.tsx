@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, ChefHat, Church, Languages, ArrowRight, Globe, MapPin, Swords, BookOpen } from 'lucide-react';
+import { Users, ChefHat, Church, Languages, ArrowRight, Globe, MapPin, ArrowLeftRight, BookOpen } from 'lucide-react';
 import { getPeopleByTribe } from '@/lib/peopleUtils';
 import { getRecipesByTribe } from '@/data/recipes';
 import { findReligionByName } from '@/data/traditionalReligions';
@@ -56,9 +56,6 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
   const countries = useMemo(() => getCountries(), []);
   const countryCodes = ((tribe as any).countries || []) as string[];
   const primaryCountry = countryCodes[0] ? countries.find(c => c.code === countryCodes[0]) : null;
-
-  const hasLinks = people.length > 0 || recipes.length > 0 || religion || languageFamily || sameCountryTribes.length > 0 || sameLangTribes.length > 0;
-  if (!hasLinks) return null;
 
   return (
     <section className="border-t border-border pt-6">
@@ -171,26 +168,20 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
           </Link>
         )}
 
-        {/* Compare */}
-        {tribe.relatedTribes && tribe.relatedTribes.length > 0 && (
-          <Link
-            to={`/compare?tribes=${tribe.slug}`}
-            className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
-          >
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <Swords className="w-5 h-5 text-primary" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm group-hover:text-primary transition-colors">
-                Compare {tribe.name} with Other Tribes
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Side-by-side culture comparison
-              </p>
-            </div>
-            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
-          </Link>
-        )}
+        {/* Compare — opens compare tool with this tribe pre-filled */}
+        <Link
+          to={`/compare?tribes=${encodeURIComponent(tribe.slug)}`}
+          className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+        >
+          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+            <ArrowLeftRight className="w-5 h-5 text-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-medium text-sm group-hover:text-primary transition-colors">Quick tribe compare</p>
+            <p className="text-xs text-muted-foreground">Add more tribes and compare side by side</p>
+          </div>
+          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+        </Link>
 
         {/* Quiz */}
         <Link

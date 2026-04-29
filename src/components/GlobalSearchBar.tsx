@@ -34,6 +34,11 @@ export function GlobalSearchBar({ className }: { className?: string }) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    const trimmed = raw.trim();
+    if (!trimmed) {
+      setDebounced('');
+      return;
+    }
     const t = window.setTimeout(() => setDebounced(raw), DEBOUNCE_MS);
     return () => window.clearTimeout(t);
   }, [raw]);
@@ -43,11 +48,17 @@ export function GlobalSearchBar({ className }: { className?: string }) {
     [debounced]
   );
 
-  const canShowPanel = open && debounced.trim().length >= MIN_CHARS;
+  const showDropdown = open && debounced.trim().length >= MIN_CHARS;
 
   useEffect(() => {
     setActiveIndex(-1);
   }, [hits]);
+
+  useEffect(() => {
+    if (activeIndex < 0 || !showDropdown || hits.length === 0) return;
+    const el = document.getElementById(`global-search-hit-${activeIndex}`);
+    el?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }, [activeIndex, hits.length, showDropdown]);
 
   useEffect(() => {
     setOpen(false);
@@ -72,10 +83,13 @@ export function GlobalSearchBar({ className }: { className?: string }) {
   }, []);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (!canShowPanel || hits.length === 0) {
-      if (e.key === 'Escape') setOpen(false);
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      setOpen(false);
       return;
     }
+
+    if (!showDropdown || hits.length === 0) return;
 
     if (e.key === 'ArrowDown') {
       e.preventDefault();
@@ -83,10 +97,14 @@ export function GlobalSearchBar({ className }: { className?: string }) {
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
       setActiveIndex(i => (i <= 0 ? hits.length - 1 : i - 1));
-    } else if (e.key === 'Escape') {
+    } else if (e.key === 'Home') {
       e.preventDefault();
-      setOpen(false);
+      setActiveIndex(0);
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      setActiveIndex(hits.length - 1);
     } else if (e.key === 'Enter' && hits.length > 0) {
+      if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
       e.preventDefault();
       const idx = activeIndex >= 0 && activeIndex < hits.length ? activeIndex : 0;
       navigate(hits[idx].href);
@@ -95,7 +113,7 @@ export function GlobalSearchBar({ className }: { className?: string }) {
   };
 
   return (
-    <div ref={containerRef} className={cn('relative z-[60]', className)}>
+    <div ref={containerRef} className={cn('relative z-[60] overflow-visible', className)}>
       <label htmlFor="global-search" className="sr-only">
         Search names, tribes, blog, and recipes
       </label>
@@ -127,8 +145,13 @@ export function GlobalSearchBar({ className }: { className?: string }) {
             'placeholder:text-muted-foreground/80 touch-manipulation'
           )}
           aria-autocomplete="list"
-          aria-expanded={canShowPanel && hits.length > 0}
-          aria-controls="global-search-results"
+          aria-expanded={showDropdown}
+          aria-controls={showDropdown ? 'global-search-panel' : undefined}
+          aria-activedescendant={
+            showDropdown && hits.length > 0 && activeIndex >= 0
+              ? `global-search-hit-${activeIndex}`
+              : undefined
+          }
         />
         {raw && (
           <button
@@ -147,12 +170,12 @@ export function GlobalSearchBar({ className }: { className?: string }) {
         )}
       </div>
 
-      {canShowPanel && hits.length > 0 && (
+      {showDropdown && hits.length > 0 && (
         <div
-          id="global-search-results"
+          id="global-search-panel"
           role="listbox"
           aria-label="Search suggestions"
-          className="absolute left-0 right-0 top-[calc(100%+6px)] max-h-[min(70vh,320px)] overflow-y-auto rounded-xl border border-border bg-popover shadow-lg"
+          className="absolute left-0 right-0 top-[calc(100%+6px)] z-[70] max-h-[min(70vh,320px)] overflow-y-auto rounded-xl border border-border bg-popover shadow-lg"
         >
           {hits.map((hit, i) => {
             const Icon = hitIcon(hit.kind);
@@ -160,6 +183,7 @@ export function GlobalSearchBar({ className }: { className?: string }) {
             return (
               <Link
                 key={hit.id}
+                id={`global-search-hit-${i}`}
                 role="option"
                 aria-selected={active}
                 to={hit.href}
@@ -185,8 +209,13 @@ export function GlobalSearchBar({ className }: { className?: string }) {
         </div>
       )}
 
-      {canShowPanel && debounced.trim().length >= MIN_CHARS && hits.length === 0 && (
-        <div className="absolute left-0 right-0 top-[calc(100%+6px)] rounded-xl border border-border bg-popover px-3 py-4 text-center text-sm text-muted-foreground shadow-lg">
+      {showDropdown && hits.length === 0 && (
+        <div
+          id="global-search-panel"
+          role="status"
+          aria-live="polite"
+          className="absolute left-0 right-0 top-[calc(100%+6px)] z-[70] rounded-xl border border-border bg-popover px-3 py-4 text-center text-sm text-muted-foreground shadow-lg"
+        >
           No results — try another spelling or browse{' '}
           <Link to="/learn" className="text-primary underline-offset-2 hover:underline" onClick={() => setOpen(false)}>
             Learn

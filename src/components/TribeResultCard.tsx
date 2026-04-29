@@ -37,11 +37,11 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
 
   return (
     <article 
-      className={`card-tribe p-4 sm:p-6 ${isPrimary ? 'ring-2 ring-primary animate-scale-in' : 'animate-fade-in'}`}
+      className={`card-tribe p-5 sm:p-7 ${isPrimary ? 'ring-2 ring-primary animate-scale-in' : 'animate-fade-in'}`}
       style={{ animationDelay: `${rank * 100}ms` }}
       aria-label={`${tribe.name} tribe prediction with ${confidence}% confidence`}
     >
-      <header className="flex items-start justify-between mb-3 sm:mb-4 gap-2">
+      <header className="flex items-start justify-between mb-4 sm:mb-5 gap-3">
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           {isPrimary && (
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full gradient-gold flex items-center justify-center flex-shrink-0">
@@ -55,7 +55,7 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
             >
               {tribe.name}
             </Link>
-            <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm">
+            <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm mt-1 leading-relaxed">
               <MapPin className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
               <span className="truncate">{tribe.region}</span>
               {Array.isArray(tribe.countries) && tribe.countries.length > 0 && (
@@ -74,14 +74,14 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
       </header>
       
       {/* Reasoning Section */}
-      <div className="mb-3 sm:mb-4 p-3 bg-secondary/50 rounded-lg border border-border">
-        <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-foreground mb-2">
-          <Brain className="w-4 h-4 text-primary" aria-hidden="true" />
+      <div className="mb-4 sm:mb-5 p-4 bg-secondary/50 rounded-xl border border-border">
+        <div className="flex items-center gap-2 text-sm font-medium text-foreground mb-3">
+          <Brain className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
           <span>Why we think this</span>
         </div>
-        <ul className="space-y-1.5">
+        <ul className="space-y-2.5">
           {(matchDetails || [matchReason]).map((reason, i) => (
-            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
+            <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed">
               <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
               <span>{reason}</span>
             </li>
@@ -90,28 +90,28 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
       </div>
       
       {nameMeaning && (
-        <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-primary/5 rounded-lg border border-primary/20">
-          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-primary mb-1">
-            <Lightbulb className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
+        <div className="mb-4 sm:mb-5 p-4 bg-primary/5 rounded-xl border border-primary/20">
+          <div className="flex items-center gap-2 text-sm text-primary mb-2">
+            <Lightbulb className="w-4 h-4 shrink-0" aria-hidden="true" />
             <span className="font-medium">Name meaning</span>
           </div>
-          <p className="text-foreground text-sm sm:text-base">
+          <p className="text-foreground text-sm sm:text-base leading-relaxed">
             <strong>"{inputName}"</strong> means: {nameMeaning}
           </p>
         </div>
       )}
       
-      <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">{tribe.description}</p>
+      <p className="text-muted-foreground text-sm mb-4 sm:mb-5 line-clamp-3 leading-relaxed">{tribe.description}</p>
       
       {/* Stereotypes */}
-      <div className="mb-3 sm:mb-4">
-        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-foreground mb-2">
-          <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" aria-hidden="true" />
-          <span>Common Stereotypes</span>
+      <div className="mb-4 sm:mb-5">
+        <div className="flex items-center gap-2 text-sm font-medium text-foreground mb-3">
+          <Users className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+          <span>Common stereotypes</span>
         </div>
-        <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Common stereotypes">
+        <ul className="flex flex-wrap gap-2" aria-label="Common stereotypes">
           {(tribe.stereotypes || []).slice(0, 4).map((stereotype, i) => (
-            <li key={i} className="badge-tribe text-xs">
+            <li key={i} className="badge-tribe text-xs max-w-[min(100%,14rem)] whitespace-normal text-left leading-snug">
               {stereotype}
             </li>
           ))}

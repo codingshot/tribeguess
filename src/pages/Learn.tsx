@@ -344,7 +344,7 @@ const Learn = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main id="main-content" className="container mx-auto px-4 py-6 sm:py-8">
+      <main id="main-content" className="container mx-auto px-3 sm:px-4 py-5 sm:py-8">
         <div className="animate-fade-in">
           <header className="text-center mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 sm:mb-3">
@@ -356,13 +356,13 @@ const Learn = () => {
           </header>
           
           {/* Search and Filters - Inline Layout */}
-          <section className="max-w-4xl mx-auto mb-4" aria-label="Search and filters">
-            {/* Search Bar + Controls - Same row on desktop */}
-            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-3">
+          <section className="max-w-4xl mx-auto mb-3 sm:mb-4" aria-label="Search and filters">
+            {/* Mobile: one horizontal strip (scroll) = search + tools; desktop: search left, tools right */}
+            <div className="flex flex-nowrap items-center gap-2 min-w-0 overflow-x-auto overflow-y-visible pb-1 -mx-1 px-1 scrollbar-hide touch-pan-x sm:flex-wrap sm:overflow-x-visible sm:pb-0 sm:mx-0 sm:px-0 sm:touch-auto lg:gap-3">
               {/* Search Bar */}
-              <div className="relative flex-1">
+              <div className="relative flex-1 min-w-[min(100%,11rem)] sm:min-w-0 lg:max-w-none shrink sm:shrink-0 sm:w-full lg:w-auto lg:flex-1">
                 <label htmlFor="tribe-search" className="sr-only">Search tribes, names, or characteristics</label>
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Search className="absolute left-2.5 sm:left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
                 <input
                   id="tribe-search"
                   type="text"
@@ -379,8 +379,8 @@ const Learn = () => {
                     }
                     setSearchParams(params, { replace: true });
                   }}
-                  placeholder="Search tribes, names, or characteristics"
-                  className="input-tribal pl-9 pr-9 text-sm h-9 w-full"
+                  placeholder="Search tribes…"
+                  className="input-tribal pl-8 sm:pl-9 pr-8 sm:pr-9 text-sm h-9 w-full min-h-[44px] sm:min-h-0"
                   maxLength={100}
                   autoComplete="off"
                   spellCheck="false"
@@ -394,7 +394,7 @@ const Learn = () => {
                       params.delete('search');
                       setSearchParams(params);
                     }}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 touch-manipulation"
+                    className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1.5 touch-manipulation min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center"
                     aria-label="Clear search"
                   >
                     <X className="w-4 h-4" />
@@ -402,13 +402,13 @@ const Learn = () => {
                 )}
               </div>
               
-              {/* View Toggle + Advanced Filters + Info - Same row */}
-              <div className="flex items-center justify-center gap-2 mt-2 lg:mt-0 flex-shrink-0">
+              {/* View Toggle + Advanced Filters + Info */}
+              <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
               {/* Compact View Toggle with Active State */}
               <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5 flex-shrink-0" role="group" aria-label="View mode">
                 <button
                   onClick={() => toggleViewMode('grid')}
-                  className={`p-2 rounded-md transition-all touch-manipulation ${
+                  className={`p-2.5 sm:p-2 rounded-md transition-all touch-manipulation min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center ${
                     viewMode === 'grid' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
@@ -420,7 +420,7 @@ const Learn = () => {
                 </button>
                 <button
                   onClick={() => toggleViewMode('list')}
-                  className={`p-2 rounded-md transition-all touch-manipulation ${
+                  className={`p-2.5 sm:p-2 rounded-md transition-all touch-manipulation min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center ${
                     viewMode === 'list' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
@@ -432,7 +432,7 @@ const Learn = () => {
                 </button>
                 <button
                   onClick={() => toggleViewMode('map')}
-                  className={`p-2 rounded-md transition-all touch-manipulation ${
+                  className={`p-2.5 sm:p-2 rounded-md transition-all touch-manipulation min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center ${
                     viewMode === 'map' 
                       ? 'bg-primary text-primary-foreground shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
@@ -447,15 +447,15 @@ const Learn = () => {
               {/* Advanced Filters Button */}
               <Dialog open={advancedFiltersOpen} onOpenChange={setAdvancedFiltersOpen}>
                 <DialogTrigger asChild>
-                  <button className={`flex items-center justify-center gap-1.5 px-3 h-9 rounded-lg transition-colors flex-shrink-0 ${
+                  <button className={`flex items-center justify-center gap-1.5 px-2.5 sm:px-3 h-9 min-h-[44px] sm:min-h-[36px] rounded-lg transition-colors flex-shrink-0 touch-manipulation ${
                     hasAdvancedFilters 
                       ? 'bg-primary text-primary-foreground' 
                       : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                   }`}>
-                    <SlidersHorizontal className="w-4 h-4" />
-                    <span className="text-xs font-medium">Advanced</span>
+                    <SlidersHorizontal className="w-4 h-4 shrink-0" />
+                    <span className="text-xs font-medium hidden min-[400px]:inline">Advanced</span>
                     {hasAdvancedFilters && (
-                      <span className="w-2 h-2 rounded-full bg-primary-foreground" />
+                      <span className="w-2 h-2 rounded-full bg-primary-foreground shrink-0" />
                     )}
                   </button>
                 </DialogTrigger>
@@ -502,7 +502,7 @@ const Learn = () => {
                         <Flag className="w-4 h-4 text-muted-foreground" />
                         Filter by Countries
                       </label>
-                      <div className="grid grid-cols-3 gap-2 max-h-48 overflow-y-auto">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-48 overflow-y-auto touch-pan-y">
                         {countries.map(country => (
                           <label
                             key={country.code}
@@ -546,7 +546,7 @@ const Learn = () => {
                 <TooltipProvider>
                   <Tooltip delayDuration={100}>
                     <TooltipTrigger asChild>
-                      <button className="flex items-center justify-center gap-1.5 px-2 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0">
+                      <button className="flex items-center justify-center gap-1.5 px-2.5 h-9 min-h-[44px] sm:min-h-[36px] min-w-[44px] sm:min-w-0 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0 touch-manipulation">
                         <Info className="w-4 h-4" />
                       </button>
                     </TooltipTrigger>
@@ -569,11 +569,11 @@ const Learn = () => {
             </div>
             </div>
             
-            {/* Compact Filters Row - All in one line on mobile */}
-            <div className="flex flex-wrap items-center justify-center gap-1.5 mt-2">
+            {/* Geo filters: single scroll row on mobile (no wrap) */}
+            <div className="flex flex-nowrap items-center gap-2 mt-2 min-w-0 overflow-x-auto overflow-y-visible pb-1 -mx-1 px-1 scrollbar-hide touch-pan-x sm:flex-wrap sm:justify-center sm:overflow-x-visible sm:pb-0 sm:mx-0 sm:px-0 sm:touch-auto">
               {/* Macro Region Dropdown */}
               <Select value={macroRegionFilter || 'all'} onValueChange={(value) => handleMacroRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-auto min-w-[90px] h-7 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20 px-2">
+                <SelectTrigger className="h-9 min-h-[44px] sm:min-h-7 w-[7.75rem] sm:w-auto sm:min-w-[90px] shrink-0 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20 px-2 [&>span]:max-w-[4.5rem] sm:[&>span]:max-w-none">
                   <Globe className="w-3 h-3 mr-1 text-primary shrink-0" />
                   <SelectValue placeholder="Africa" />
                 </SelectTrigger>
@@ -589,7 +589,7 @@ const Learn = () => {
 
               {/* Region Filter Dropdown */}
               <Select value={regionFilter || 'all'} onValueChange={(value) => handleRegionChange(value === 'all' ? '' : value)}>
-                <SelectTrigger className="w-auto min-w-[80px] h-7 text-xs bg-background px-2">
+                <SelectTrigger className="h-9 min-h-[44px] sm:min-h-7 w-[7.25rem] sm:w-auto sm:min-w-[80px] shrink-0 text-xs bg-background px-2 [&>span]:max-w-[4rem] sm:[&>span]:max-w-none">
                   <Layers className="w-3 h-3 mr-1 text-muted-foreground shrink-0" />
                   <SelectValue placeholder="Region" />
                 </SelectTrigger>
@@ -602,7 +602,7 @@ const Learn = () => {
               </Select>
               
               {/* Country Flags - Horizontal scroll on mobile */}
-              <div className="flex items-center gap-1.5 overflow-x-auto max-w-[220px] sm:max-w-none scrollbar-hide">
+              <div className="flex items-center gap-1.5 overflow-x-auto min-w-0 flex-1 sm:flex-initial sm:max-w-none scrollbar-hide">
                 <TooltipProvider>
                   {(macroRegionFilter ? filteredCountries.slice(0, 6) : countries.slice(0, 6)).map(country => (
                     <Tooltip key={country.code} delayDuration={300}>
@@ -651,20 +651,21 @@ const Learn = () => {
             </div>
             
             {/* Quick Stats - Ultra compact */}
-            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-2 text-[10px] sm:text-xs text-muted-foreground">
-              <span className="flex items-center gap-0.5">
+            <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-4 mt-1.5 sm:mt-2 text-[10px] sm:text-xs text-muted-foreground overflow-x-auto scrollbar-hide px-1">
+              <span className="flex items-center gap-0.5 shrink-0">
                 <Users className="w-3 h-3 text-primary" />
                 <strong className="text-foreground">{countryStats.tribeCount}</strong>
+                <span className="hidden sm:inline">tribes</span>
               </span>
-              <span className="flex items-center gap-0.5">
+              <span className="flex items-center gap-0.5 shrink-0">
                 <TrendingUp className="w-3 h-3 text-primary" />
                 <strong className="text-foreground">~{formatPopulation(countryStats.population)}</strong>
               </span>
-              <span className="flex items-center gap-0.5 hidden xs:flex">
+              <span className="flex items-center gap-0.5 shrink-0 hidden min-[380px]:flex">
                 <MapPin className="w-3 h-3 text-primary" />
                 <strong className="text-foreground">{countryStats.regionCount}</strong>
               </span>
-              <span className="flex items-center gap-0.5 hidden sm:flex">
+              <span className="flex items-center gap-0.5 shrink-0 hidden sm:flex">
                 <Languages className="w-3 h-3 text-primary" />
                 <strong className="text-foreground">{countryStats.languageCount || '?'}</strong>
               </span>
@@ -672,9 +673,9 @@ const Learn = () => {
             
             {/* Active Filters + Clear Filters Row */}
             {hasFilters && (
-              <div className="flex flex-wrap items-center justify-between gap-2 mt-3 p-2 bg-secondary/50 rounded-lg" role="region" aria-label="Active filters">
-                <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="text-xs text-muted-foreground mr-1">Active:</span>
+              <div className="flex flex-col gap-2 min-[480px]:flex-row min-[480px]:items-center min-[480px]:justify-between mt-2 sm:mt-3 p-2 sm:p-2.5 bg-secondary/50 rounded-lg" role="region" aria-label="Active filters">
+                <div className="flex flex-nowrap items-center gap-1.5 min-w-0 overflow-x-auto pb-0.5 -mx-0.5 px-0.5 scrollbar-hide min-[480px]:flex-wrap min-[480px]:overflow-x-visible min-[480px]:pb-0">
+                  <span className="text-xs text-muted-foreground shrink-0">Active:</span>
                   {macroRegionFilter && (
                     <span className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs rounded-full">
                       <Globe className="w-3 h-3" aria-hidden="true" />
@@ -788,13 +789,13 @@ const Learn = () => {
                       </button>
                     </span>
                   )}
-                  <span className="text-xs text-muted-foreground ml-2" aria-live="polite">
-                    ({filteredTribes.length} of {tribes.length})
+                  <span className="text-xs text-muted-foreground shrink-0 whitespace-nowrap" aria-live="polite">
+                    ({filteredTribes.length}/{tribes.length})
                   </span>
                 </div>
                 <button
                   onClick={clearFilters}
-                  className="text-xs text-primary hover:underline touch-manipulation py-2 px-2 flex items-center gap-1"
+                  className="text-xs text-primary hover:underline touch-manipulation py-2 px-2 min-h-[44px] min-[480px]:min-h-0 flex items-center justify-center gap-1 shrink-0 self-end min-[480px]:self-auto rounded-md hover:bg-primary/10 w-full min-[480px]:w-auto"
                   aria-label="Clear all filters"
                 >
                   <X className="w-3 h-3" />

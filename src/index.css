@@ -120,7 +120,13 @@
   }
 
   .card-tribe {
-    @apply bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300;
+    @apply bg-card rounded-2xl border border-border shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  /* Dense marketing / carousel tiles — readable type + touch-friendly padding */
+  .card-landing-tile {
+    @apply bg-card rounded-2xl border border-border shadow-sm transition-all duration-300;
+    @apply hover:shadow-md hover:border-primary/25;
   }
 
   .btn-primary {
@@ -132,7 +138,7 @@
   }
 
   .badge-tribe {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-secondary-foreground;
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium leading-snug bg-secondary text-secondary-foreground;
   }
 
   .section-pattern {
