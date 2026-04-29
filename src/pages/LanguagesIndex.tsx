@@ -74,7 +74,7 @@ export default function LanguagesIndex() {
 
           {/* Language Families Grid */}
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">Explore Language Families</h2>
+            <h2 className="text-2xl font-semibold text-foreground">Explore Language Families</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               {languageFamiliesData.languageFamilies
@@ -88,11 +88,11 @@ export default function LanguagesIndex() {
                   <Card className="h-full hover:border-primary/50 transition-all duration-300 overflow-hidden">
                     {/* Gradient Header */}
                     <div className={`h-24 bg-gradient-to-br ${family.color || 'from-gray-500 to-gray-600'} relative`}>
-                      <div className="absolute inset-0 bg-black/10" />
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-xl font-bold text-white truncate">{family.name}</h3>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-black/10" aria-hidden />
+                      <div className="absolute bottom-4 left-4 right-4 z-10">
+                        <h3 className="text-xl font-bold text-white drop-shadow-sm truncate">{family.name}</h3>
                         {Array.isArray(family.alternateNames) && family.alternateNames.length > 0 && (
-                          <p className="text-xs text-white/70 truncate">
+                          <p className="text-xs text-white/90 truncate drop-shadow-sm">
                             Also: {family.alternateNames.slice(0, 2).join(', ')}
                           </p>
                         )}

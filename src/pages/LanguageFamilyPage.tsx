@@ -204,8 +204,8 @@ export default function LanguageFamilyPage() {
           {/* Hero Section */}
           {/* Hero Section */}
           <section className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${family.color} p-6 md:p-10 mb-8`}>
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/25" />
+            {/* Dark overlay so white hero type stays readable on light gradients */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-black/15" aria-hidden />
             <div className="relative z-10">
               <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-0">
                 <Languages className="w-3 h-3 mr-1" />
@@ -631,10 +631,13 @@ export default function LanguageFamilyPage() {
                   <Link
                     key={otherFamily.id}
                     to={`/languages/${otherFamily.slug}`}
-                    className={`p-4 rounded-xl bg-gradient-to-br ${otherFamily.color} text-white hover:opacity-90 transition-opacity`}
+                    className={`relative overflow-hidden p-4 rounded-xl bg-gradient-to-br ${otherFamily.color} text-white hover:opacity-95 transition-opacity`}
                   >
-                    <h3 className="font-semibold mb-1">{otherFamily.name}</h3>
-                    <p className="text-sm text-white/80">{otherFamily.totalSpeakers} speakers</p>
+                    <span className="absolute inset-0 bg-black/35" aria-hidden />
+                    <div className="relative z-10">
+                      <h3 className="font-semibold mb-1 drop-shadow-sm">{otherFamily.name}</h3>
+                      <p className="text-sm text-white/90 drop-shadow-sm">{otherFamily.totalSpeakers} speakers</p>
+                    </div>
                   </Link>
                 ))}
             </div>

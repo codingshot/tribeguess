@@ -1,27 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Search, X, ChefHat, FileText, Users, User } from 'lucide-react';
-import { searchGlobalUnified, type UnifiedSearchHit } from '@/lib/globalUnifiedSearch';
+import { Search, X } from 'lucide-react';
+import { searchGlobalUnified } from '@/lib/globalUnifiedSearch';
+import { UnifiedSearchHitLeading } from '@/components/UnifiedSearchHitLeading';
 import { sanitizeSearchQuery } from '@/lib/dataValidation';
 import { cn } from '@/lib/utils';
 
 const DEBOUNCE_MS = 220;
 const MIN_CHARS = 2;
-
-function hitIcon(kind: UnifiedSearchHit['kind']) {
-  switch (kind) {
-    case 'recipe':
-      return ChefHat;
-    case 'blog':
-      return FileText;
-    case 'tribe':
-      return Users;
-    case 'name':
-      return User;
-    default:
-      return Search;
-  }
-}
 
 export function GlobalSearchBar({ className }: { className?: string }) {
   const location = useLocation();
@@ -178,7 +164,6 @@ export function GlobalSearchBar({ className }: { className?: string }) {
           className="absolute left-0 right-0 top-[calc(100%+6px)] z-[70] max-h-[min(70vh,320px)] overflow-y-auto rounded-xl border border-border bg-popover shadow-lg"
         >
           {hits.map((hit, i) => {
-            const Icon = hitIcon(hit.kind);
             const active = i === activeIndex;
             return (
               <Link
@@ -194,9 +179,7 @@ export function GlobalSearchBar({ className }: { className?: string }) {
                   active ? 'bg-accent text-accent-foreground' : 'hover:bg-muted/80'
                 )}
               >
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-secondary">
-                  <Icon className="h-4 w-4 text-muted-foreground" aria-hidden />
-                </span>
+                <UnifiedSearchHitLeading hit={hit} />
                 <span className="min-w-0 flex-1">
                   <span className="block truncate font-medium text-foreground">{hit.title}</span>
                   {hit.subtitle && (

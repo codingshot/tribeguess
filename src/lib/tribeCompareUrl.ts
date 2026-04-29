@@ -33,6 +33,28 @@ export function serializeCompareTribes(slugs: string[]): string {
     .join(',');
 }
 
+/**
+ * Map alternate ids/slugs onto the canonical segment stored in URLs (first match wins).
+ * `aliases` entries: [canonicalOrAliasLower, ...sameTribeKeysLower].
+ */
+export function canonicalizeCompareSegments(
+  segments: string[],
+  aliases: ReadonlyMap<string, string>
+): string[] {
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const raw of segments) {
+    const k = raw.trim().toLowerCase().replace(/[^a-z0-9-]/g, '');
+    if (!k) continue;
+    const canon = aliases.get(k) ?? k;
+    if (seen.has(canon)) continue;
+    seen.add(canon);
+    out.push(canon);
+    if (out.length >= MAX_COMPARE_TRIBES) break;
+  }
+  return out;
+}
+
 /** Shareable path for exactly two tribes. */
 export function buildCompareVsPath(slugA: string, slugB: string): string {
   const a = slugA.trim().toLowerCase().replace(/[^a-z0-9-]/g, '');

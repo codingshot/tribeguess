@@ -1,23 +1,8 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ChefHat, FileText, Users, User, Search } from 'lucide-react';
 import { getCrossSectionFallback, type UnifiedSearchHit } from '@/lib/globalUnifiedSearch';
+import { UnifiedSearchHitLeading } from '@/components/UnifiedSearchHitLeading';
 import { cn } from '@/lib/utils';
-
-function kindIcon(kind: UnifiedSearchHit['kind']) {
-  switch (kind) {
-    case 'recipe':
-      return ChefHat;
-    case 'blog':
-      return FileText;
-    case 'tribe':
-      return Users;
-    case 'name':
-      return User;
-    default:
-      return Search;
-  }
-}
 
 function kindLabel(kind: UnifiedSearchHit['kind']): string {
   switch (kind) {
@@ -64,16 +49,13 @@ export function CrossSectionSearchHints({ query, className }: CrossSectionSearch
       </p>
       <ul className="space-y-2" role="list">
         {hits.map(hit => {
-          const Icon = kindIcon(hit.kind);
           return (
             <li key={hit.id}>
               <Link
                 to={hit.href}
                 className="flex items-start gap-3 rounded-lg px-2 py-2 hover:bg-muted/80 transition-colors touch-manipulation"
               >
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-secondary text-muted-foreground">
-                  <Icon className="h-4 w-4" aria-hidden />
-                </span>
+                <UnifiedSearchHitLeading hit={hit} />
                 <span className="min-w-0 flex-1">
                   <span className="text-xs font-semibold uppercase tracking-wide text-primary">
                     {kindLabel(hit.kind)}

@@ -28,6 +28,12 @@ describe('searchGlobalUnified', () => {
     expect(new Set(hrefs).size).toBe(hrefs.length);
   });
 
+  it('adds tribe thumbnail or flag metadata for engine hits when data exists', () => {
+    const tribeHit = searchGlobalUnified('yoruba', { limit: 24 }).find(h => h.kind === 'tribe' && h.title.toLowerCase() === 'yoruba');
+    expect(tribeHit).toBeDefined();
+    expect(Boolean(tribeHit?.thumbnailUrl || tribeHit?.flagCountryCode)).toBe(true);
+  });
+
   it('respects limit and still allows multiple result kinds', () => {
     const hits = searchGlobalUnified('rice', { limit: 20 });
     expect(hits.length).toBeLessThanOrEqual(20);

@@ -4,6 +4,7 @@ import {
   parseCompareTribeSlugs,
   serializeCompareTribes,
   buildCompareVsPath,
+  canonicalizeCompareSegments,
 } from '@/lib/tribeCompareUrl';
 
 const SLUGS = new Set(['yoruba', 'igbo', 'hausa', 'zulu', 'kikuyu']);
@@ -45,5 +46,20 @@ describe('buildCompareVsPath', () => {
 describe('parseCompareTribeSlugs — extra', () => {
   it('strips junk between valid slugs', () => {
     expect(parseCompareTribeSlugs('yoruba,,, igbo ', SLUGS)).toEqual(['yoruba', 'igbo']);
+  });
+});
+
+describe('canonicalizeCompareSegments', () => {
+  const aliases = new Map<string, string>([
+    ['hutu', 'banyarwanda'],
+    ['yoruba', 'yoruba'],
+  ]);
+
+  it('maps aliases to canonical slugs and dedupes', () => {
+    expect(canonicalizeCompareSegments(['hutu', 'igbo'], aliases)).toEqual(['banyarwanda', 'igbo']);
+  });
+
+  it('dedupes when two aliases resolve to the same canonical slug', () => {
+    expect(canonicalizeCompareSegments(['hutu', 'hutu'], aliases)).toEqual(['banyarwanda']);
   });
 });

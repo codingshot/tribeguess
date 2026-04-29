@@ -321,11 +321,12 @@ function FamilyNode({ family }: { family: LanguageFamilyNode }) {
   
   return (
     <Card className="overflow-hidden">
-      <div className={`h-16 bg-gradient-to-r ${family.color} flex items-center px-4 gap-3`}>
-        <span className="text-2xl">{family.icon}</span>
-        <div>
-          <h3 className="text-white font-bold text-lg">{family.name}</h3>
-          <p className="text-white/70 text-xs">{family.speakers} speakers</p>
+      <div className={`relative h-16 bg-gradient-to-r ${family.color} flex items-center px-4 gap-3`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" aria-hidden />
+        <span className="text-2xl relative z-10 drop-shadow-sm">{family.icon}</span>
+        <div className="relative z-10 min-w-0">
+          <h3 className="text-white font-bold text-lg drop-shadow-sm truncate">{family.name}</h3>
+          <p className="text-white/90 text-xs drop-shadow-sm">{family.speakers} speakers</p>
         </div>
       </div>
       <CardContent className="pt-4 space-y-3">

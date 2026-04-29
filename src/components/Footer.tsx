@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 import { recipes } from '@/data/recipes';
 import { CountryFlag } from '@/components/CountryFlag';
+import { getCuratedCompareFooterLinks } from '@/lib/tribeCompareSuggestions';
 
 export function Footer() {
   // Get a random recipe ID for the link
   const randomRecipeId = recipes.length > 0 ? recipes[Math.floor(Math.random() * recipes.length)]?.id : undefined;
+  const compareLinks = getCuratedCompareFooterLinks();
 
   return (
     <footer className="border-t border-border bg-background/50">
@@ -33,6 +35,9 @@ export function Footer() {
               </Link>
               <Link to="/learn" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Browse Tribes
+              </Link>
+              <Link to="/compare" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Compare Tribes
               </Link>
               <Link to="/people" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Famous People
@@ -64,6 +69,20 @@ export function Footer() {
               <Link to="/video-gallery" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 🎬 Video Gallery
               </Link>
+              <div className="pt-2 mt-1 border-t border-border/60">
+                <p className="text-xs font-semibold text-foreground/90 mb-2">Popular tribe comparisons</p>
+                <div className="flex flex-col gap-1.5">
+                  {compareLinks.map(({ href, label }) => (
+                    <Link
+                      key={href}
+                      to={href}
+                      className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </nav>
           </div>
           

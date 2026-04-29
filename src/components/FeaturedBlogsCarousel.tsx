@@ -91,7 +91,9 @@ const BlogCardCarousel = memo(function BlogCardCarousel({ post, formatDate }: { 
             <Globe className="w-3.5 h-3.5 shrink-0" aria-hidden />
             <span className="line-clamp-1">{post.region}</span>
           </span>
-          <span className="text-border hidden sm:inline" aria-hidden>•</span>
+          <span className="text-muted-foreground/50 hidden sm:inline" aria-hidden>
+            •
+          </span>
           <span className="inline-flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 shrink-0" aria-hidden />
             {post.readTime}

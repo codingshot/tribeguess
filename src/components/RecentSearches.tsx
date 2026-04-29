@@ -11,17 +11,18 @@ export function RecentSearches({ searches, onClear }: RecentSearchesProps) {
   if (searches.length === 0) return null;
 
   return (
-    <div className="mt-6 pt-4 border-t border-border">
-      <div className="flex items-center justify-between mb-3">
-        <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-          <Clock className="w-3.5 h-3.5" />
+    <div className="mt-6 pt-4 border-t border-border w-full max-w-md mx-auto text-left">
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <h2 className="text-sm font-semibold text-foreground flex items-center gap-1.5">
+          <Clock className="w-3.5 h-3.5 text-muted-foreground shrink-0" aria-hidden />
           Recent searches
-        </p>
+        </h2>
         <button
+          type="button"
           onClick={onClear}
-          className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 touch-manipulation"
+          className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 touch-manipulation shrink-0"
         >
-          <X className="w-3 h-3" />
+          <X className="w-3 h-3" aria-hidden />
           Clear
         </button>
       </div>
