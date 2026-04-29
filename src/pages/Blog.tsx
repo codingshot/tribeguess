@@ -6,6 +6,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { blogPosts, BlogPost } from '@/data/blogPosts';
 import { getAllBlogTags, getAllBlogRegions } from '@/hooks/useGlobalSearch';
+import { CrossSectionSearchHints } from '@/components/CrossSectionSearchHints';
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -256,9 +257,12 @@ const Blog = () => {
         ) : (
           <div className="text-center py-12">
             <p className="text-muted-foreground mb-4">No articles found matching your filters.</p>
+            {searchQuery.trim().length >= 2 && (
+              <CrossSectionSearchHints query={searchQuery} className="max-w-xl" />
+            )}
             <button
               onClick={clearFilters}
-              className="text-primary hover:underline"
+              className="mt-4 text-primary hover:underline"
             >
               Clear filters
             </button>

@@ -33,6 +33,7 @@ import {
 } from "@/components/ui/dialog";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
+import { CrossSectionSearchHints } from "@/components/CrossSectionSearchHints";
 
 // Allowed enum values for query param validation
 const VALID_VIEW_MODES = ['grid', 'list', 'map'] as const;
@@ -895,7 +896,10 @@ const Learn = () => {
                     ? `No results for "${searchQuery.slice(0, 40)}${searchQuery.length > 40 ? '…' : ''}". Try a different spelling or broader search.`
                     : 'The current combination of filters returned no results. Try removing some filters or broadening your search.'}
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+                {searchQuery.trim().length >= 2 && (
+                  <CrossSectionSearchHints query={searchQuery} className="max-w-xl" />
+                )}
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2">
                   <button
                     onClick={clearFilters}
                     className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm"

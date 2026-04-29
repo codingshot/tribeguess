@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Shuffle, Sparkles, BookOpen, FileText, Menu, X, ChefHat, Globe, Users, HelpCircle, Video, BookMarked, Church, Languages, ArrowLeftRight } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import { getAllTribes } from '@/lib/tribeDetection';
+import { GlobalSearchBar } from '@/components/GlobalSearchBar';
 
 export function Header() {
   const location = useLocation();
@@ -50,8 +51,15 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <a href="#main-content" className="skip-to-content">Skip to main content</a>
       <div className="container mx-auto px-3 sm:px-4 py-2.5 sm:py-3">
-        <nav className="flex items-center justify-between gap-2" aria-label="Main navigation">
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 group shrink-0" aria-label="TribeGuess home">
+        <nav
+          className="flex flex-wrap items-center gap-x-2 gap-y-2.5 sm:gap-x-3"
+          aria-label="Main navigation"
+        >
+          <Link
+            to="/"
+            className="order-1 flex shrink-0 items-center gap-2 sm:gap-3 group"
+            aria-label="TribeGuess home"
+          >
             <img 
               src={logo} 
               alt="TribeGuess" 
@@ -66,7 +74,34 @@ export function Header() {
               Tribe<span className="text-primary">Guess</span>
             </span>
           </Link>
-          
+
+          <div className="order-2 ml-auto flex shrink-0 items-center gap-1 sm:order-3 sm:ml-0">
+          {/* Mobile nav row */}
+          <div className="flex sm:hidden items-center gap-1">
+            {navLinks.filter(l => !l.mobileOnly).map(link => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 touch-manipulation ${
+                  isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog')))
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                }`}
+              >
+                <link.icon className="w-3.5 h-3.5" />
+                <span>{link.label}</span>
+              </Link>
+            ))}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="flex items-center justify-center w-9 h-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors touch-manipulation"
+              aria-label="Open menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
+
           {/* Desktop nav */}
           <div className="hidden sm:flex items-center gap-1 sm:gap-2">
             {navLinks.filter(l => !l.mobileOnly).map(link => (
@@ -93,32 +128,9 @@ export function Header() {
               <span className="md:hidden">Random</span>
             </button>
           </div>
-
-          {/* Mobile nav row */}
-          <div className="flex sm:hidden items-center gap-1">
-            {navLinks.filter(l => !l.mobileOnly).map(link => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 touch-manipulation ${
-                  isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog')))
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                }`}
-              >
-                <link.icon className="w-3.5 h-3.5" />
-                <span>{link.label}</span>
-              </Link>
-            ))}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex items-center justify-center w-9 h-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors touch-manipulation"
-              aria-label="Open menu"
-              aria-expanded={mobileMenuOpen}
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
           </div>
+
+          <GlobalSearchBar className="order-3 basis-full min-w-0 sm:order-2 sm:basis-0 sm:flex-1 sm:max-w-md lg:max-w-xl" />
         </nav>
       </div>
 

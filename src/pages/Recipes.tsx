@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { getAllRecipes, getRecipeTribeNames, recipeRegions, type Recipe, type RecipeRegion } from '@/data/recipes';
 import { getAllIngredients } from '@/data/ingredients';
+import { CrossSectionSearchHints } from '@/components/CrossSectionSearchHints';
 
 const categoryEmoji: Record<string, string> = {
   staple: '🍚',
@@ -349,7 +350,10 @@ export default function Recipes() {
           ) : (
             <div className="text-center py-8 sm:py-12">
               <p className="text-sm sm:text-base text-muted-foreground mb-4">No recipes found matching your criteria.</p>
-              <Button variant="outline" size="sm" onClick={clearFilters}>
+              {search.trim().length >= 2 && (
+                <CrossSectionSearchHints query={search} className="max-w-xl" />
+              )}
+              <Button variant="outline" size="sm" onClick={clearFilters} className="mt-4">
                 Clear filters
               </Button>
             </div>

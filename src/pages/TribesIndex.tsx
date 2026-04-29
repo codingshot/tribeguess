@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { getAllTribes, getCountries } from '@/lib/tribeDetection';
 import { Search, Users, MapPin, Languages, Globe, ArrowRight, Sparkles } from 'lucide-react';
 import { ViralCTAs } from '@/components/ViralCTAs';
+import { CrossSectionSearchHints } from '@/components/CrossSectionSearchHints';
 import { countryCodeToSlug, regionToSlug, canonical } from '@/lib/seoConstants';
 import type { TribeData } from '@/types/tribe';
 
@@ -270,7 +271,12 @@ export default function TribesIndex() {
         {filteredTribes.length === 0 && (
           <div className="text-center py-12">
             <p className="text-muted-foreground mb-4">No tribes found matching your criteria.</p>
-            <Link to="/tribes" className="text-primary hover:underline">View all tribes</Link>
+            {search.trim().length >= 2 && (
+              <CrossSectionSearchHints query={search} className="max-w-xl" />
+            )}
+            <Link to="/tribes" className="mt-4 inline-block text-primary hover:underline">
+              View all tribes
+            </Link>
           </div>
         )}
 
