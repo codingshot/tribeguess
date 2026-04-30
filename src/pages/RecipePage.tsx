@@ -142,9 +142,9 @@ export default function RecipePage() {
       "url": "https://africantribenames.com"
     },
     "datePublished": "2025-01-01",
-    "prepTime": `PT${parseInt(recipe.prepTime) || 15}M`,
-    "cookTime": `PT${parseInt(recipe.cookTime) || 30}M`,
-    "totalTime": `PT${(parseInt(recipe.prepTime) || 15) + (parseInt(recipe.cookTime) || 30)}M`,
+    "prepTime": `PT${parseInt(String(recipe.prepTime), 10) || 15}M`,
+    "cookTime": `PT${parseInt(String(recipe.cookTime), 10) || 30}M`,
+    "totalTime": `PT${(parseInt(String(recipe.prepTime), 10) || 15) + (parseInt(String(recipe.cookTime), 10) || 30)}M`,
     "recipeYield": `${recipe.servings} servings`,
     "recipeCategory": recipe.category === 'staple' ? 'Main Course' : recipe.category === 'beverage' ? 'Beverage' : recipe.category === 'snack' ? 'Snack' : 'Main Course',
     "recipeCuisine": `${recipe.tribeName} African`,
@@ -257,7 +257,7 @@ export default function RecipePage() {
             <Badge variant="outline" className="capitalize">{recipe.category}</Badge>
             <Badge className={difficultyColor[recipe.difficulty]}>{recipe.difficulty}</Badge>
             {recipe.dietaryInfo?.map((info, i) => (
-              <Badge key={i} variant="secondary" className="text-xs">
+              <Badge key={`${recipe.id}-diet-${i}-${info.slice(0, 32)}`} variant="secondary" className="text-xs">
                 <Leaf className="w-3 h-3 mr-1" />{info}
               </Badge>
             ))}

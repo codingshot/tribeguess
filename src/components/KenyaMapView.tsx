@@ -226,7 +226,8 @@ export function KenyaMapView({ tribes, selectedTribe, onTribeSelect }: KenyaMapV
           {tribes.map((tribe) => {
             const { x, y } = coordToSvg(tribe.mapCoordinates.lat, tribe.mapCoordinates.lng);
             const isActive = tribe.slug === activeId;
-            const popPercent = parseInt(tribe.populationPercent);
+            const rawPct = Number.parseInt(String(tribe.populationPercent ?? ''), 10);
+            const popPercent = Number.isFinite(rawPct) ? rawPct : 0;
             const radius = Math.max(8, Math.min(20, popPercent * 1.1));
             const color = getRegionColor(tribe.region);
             

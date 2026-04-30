@@ -121,7 +121,7 @@ export default function ReligionTimeline() {
 
         if (history.christianityIntroduced) {
           const yearMatch = history.christianityIntroduced.match(/\d{3,4}/);
-          const year = yearMatch ? parseInt(yearMatch[0]) : 1900;
+          const year = yearMatch ? parseInt(yearMatch[0], 10) : 1900;
           events.push({
             year,
             yearDisplay: history.christianityIntroduced,
@@ -138,7 +138,7 @@ export default function ReligionTimeline() {
 
         if (history.islamIntroduced) {
           const yearMatch = history.islamIntroduced.match(/\d{3,4}/);
-          const year = yearMatch ? parseInt(yearMatch[0]) : 700;
+          const year = yearMatch ? parseInt(yearMatch[0], 10) : 700;
           events.push({
             year,
             yearDisplay: history.islamIntroduced,

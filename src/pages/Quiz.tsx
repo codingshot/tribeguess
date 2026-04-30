@@ -190,7 +190,7 @@ export default function QuizPage() {
     if (!selectedQuiz) return;
     
     if (currentQuestion < selectedQuiz.questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+      setCurrentQuestion((q) => q + 1);
       setSelectedAnswer(null);
       setShowExplanation(false);
     } else {
@@ -592,10 +592,11 @@ export default function QuizPage() {
                 </CardHeader>
                 <CardContent className="space-y-2 sm:space-y-3">
                   {selectedQuiz.questions[currentQuestion].options.map((option, index) => {
+                    const q = selectedQuiz.questions[currentQuestion];
                     const isSelected = selectedAnswer === index;
-                    const isCorrect = index === selectedQuiz.questions[currentQuestion].correctAnswer;
+                    const isCorrect = index === q.correctAnswer;
                     const showResult = showExplanation;
-                    
+
                     let buttonClass = 'w-full justify-start text-left h-auto py-2.5 sm:py-3 px-3 sm:px-4 text-xs sm:text-sm';
                     if (showResult) {
                       if (isCorrect) {
@@ -606,10 +607,10 @@ export default function QuizPage() {
                     } else if (isSelected) {
                       buttonClass += ' border-primary';
                     }
-                    
+
                     return (
                       <Button
-                        key={index}
+                        key={`${q.id}-${currentQuestion}-${index}-${option.slice(0, 40)}`}
                         variant="outline"
                         className={buttonClass}
                         onClick={() => handleAnswer(index)}
@@ -758,7 +759,7 @@ export default function QuizPage() {
                   variant="outline"
                   className="flex-1 text-xs sm:text-sm"
                   disabled={currentCard === 0}
-                  onClick={(e) => { e.stopPropagation(); setCurrentCard(currentCard - 1); setIsFlipped(false); }}
+                  onClick={(e) => { e.stopPropagation(); setCurrentCard((c) => c - 1); setIsFlipped(false); }}
                 >
                   <ChevronLeft className="w-4 h-4 mr-0.5" />
                   Prev
@@ -766,7 +767,7 @@ export default function QuizPage() {
                 <Button
                   className="flex-1 text-xs sm:text-sm"
                   disabled={currentCard === shuffledCards.length - 1}
-                  onClick={(e) => { e.stopPropagation(); setCurrentCard(currentCard + 1); setIsFlipped(false); }}
+                  onClick={(e) => { e.stopPropagation(); setCurrentCard((c) => c + 1); setIsFlipped(false); }}
                 >
                   Next
                   <ChevronRight className="w-4 h-4 ml-0.5" />

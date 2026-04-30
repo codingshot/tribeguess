@@ -46,7 +46,7 @@ export function FavoriteNamesList({ onCompare, onAnalyze }: FavoriteNamesListPro
           <Badge variant="secondary" className="ml-2">{count}</Badge>
         </CardTitle>
         <div className="flex gap-2">
-          {favorites.length >= 2 && (
+          {favorites.length >= 2 && onCompare && (
             <Button 
               variant="outline" 
               size="sm" 

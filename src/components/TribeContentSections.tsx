@@ -82,7 +82,7 @@ export function TribeNamingSection({ tribe }: NamingProps) {
               <h3 className="text-sm font-medium text-foreground mb-2">Common Female Names</h3>
               <div className="flex flex-wrap gap-1.5">
                 {tribe.commonNames.female.slice(0, 12).map((name, i) => (
-                  <span key={i} className="px-2 py-0.5 bg-background rounded-full text-xs text-muted-foreground border border-border">
+                  <span key={`${tribe.id}-fn-${String(name)}-${i}`} className="px-2 py-0.5 bg-background rounded-full text-xs text-muted-foreground border border-border">
                     {name}
                   </span>
                 ))}
@@ -94,7 +94,7 @@ export function TribeNamingSection({ tribe }: NamingProps) {
               <h3 className="text-sm font-medium text-foreground mb-2">Common Male Names</h3>
               <div className="flex flex-wrap gap-1.5">
                 {tribe.commonNames.male.slice(0, 12).map((name, i) => (
-                  <span key={i} className="px-2 py-0.5 bg-background rounded-full text-xs text-muted-foreground border border-border">
+                  <span key={`${tribe.id}-mn-${String(name)}-${i}`} className="px-2 py-0.5 bg-background rounded-full text-xs text-muted-foreground border border-border">
                     {name}
                   </span>
                 ))}

@@ -94,7 +94,7 @@ export default function IngredientPage() {
               <CardHeader><CardTitle className="flex items-center gap-2"><Globe className="w-5 h-5 text-primary" />Local Names</CardTitle></CardHeader>
               <CardContent>
                 {ingredient.localNames.map((ln, i) => (
-                  <Link key={i} to={`/learn/${ln.tribeSlug}`} className="flex justify-between py-2 border-b border-border last:border-0 hover:text-primary">
+                  <Link key={`${ingredient.id}-ln-${ln.tribeSlug}-${i}`} to={`/learn/${ln.tribeSlug}`} className="flex justify-between py-2 border-b border-border last:border-0 hover:text-primary">
                     <span>{ln.tribe}</span><span className="font-medium">{ln.name}</span>
                   </Link>
                 ))}
@@ -106,7 +106,7 @@ export default function IngredientPage() {
               <CardContent>
                 <ul className="space-y-2">
                   {ingredient.healthBenefits.map((b, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <li key={`${ingredient.id}-hb-${i}-${b.slice(0, 40)}`} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />{b}
                     </li>
                   ))}
@@ -118,7 +118,7 @@ export default function IngredientPage() {
               <CardHeader><CardTitle>Varieties</CardTitle></CardHeader>
               <CardContent className="grid sm:grid-cols-2 gap-4">
                 {ingredient.varieties.map((v, i) => (
-                  <div key={i} className="p-3 bg-secondary rounded-lg">
+                  <div key={`${ingredient.id}-var-${i}-${v.name}`} className="p-3 bg-secondary rounded-lg">
                     <h4 className="font-medium text-primary">{v.name}</h4>
                     <p className="text-sm text-muted-foreground">{v.description}</p>
                     {v.regions && <p className="text-xs mt-1">📍 {v.regions.join(", ")}</p>}
@@ -132,7 +132,7 @@ export default function IngredientPage() {
               <CardContent>
                 <ul className="space-y-1">
                   {ingredient.culinaryUses.map((u, i) => (
-                    <li key={i} className="text-sm text-muted-foreground">• {u}</li>
+                    <li key={`${ingredient.id}-use-${i}-${u.slice(0, 40)}`} className="text-sm text-muted-foreground">• {u}</li>
                   ))}
                 </ul>
               </CardContent>
@@ -142,7 +142,7 @@ export default function IngredientPage() {
               <CardHeader><CardTitle className="flex items-center gap-2"><Users className="w-5 h-5 text-primary" />Tribes Using</CardTitle></CardHeader>
               <CardContent>
                 {ingredient.tribesUsing.map((t, i) => (
-                  <Link key={i} to={`/learn/${t.tribeSlug}`} className="block py-2 border-b border-border last:border-0 hover:text-primary">
+                  <Link key={`${ingredient.id}-tu-${t.tribeSlug}-${i}`} to={`/learn/${t.tribeSlug}`} className="block py-2 border-b border-border last:border-0 hover:text-primary">
                     <span className="font-medium">{t.tribeName}</span>
                     <p className="text-xs text-muted-foreground">{t.usage}</p>
                   </Link>

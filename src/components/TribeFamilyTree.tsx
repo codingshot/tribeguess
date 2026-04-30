@@ -212,7 +212,7 @@ export const TribeFamilyTree: React.FC<FamilyTreeProps> = ({ currentTribe, ethni
             <div className="grid gap-3">
               {ethnicComponents.map((component, i) => (
                 <div 
-                  key={i} 
+                  key={`${currentTribe.id}-ethnic-${i}-${component.name}`} 
                   className="p-3 bg-background/60 rounded-lg border border-border hover:border-primary/30 transition-colors"
                 >
                   <div className="flex items-start justify-between gap-2">

@@ -107,7 +107,6 @@ export default function NamesGallery() {
   // Comparison feature
   const [compareName1, setCompareName1] = useState(searchParams.get('compare1') || '');
   const [compareName2, setCompareName2] = useState(searchParams.get('compare2') || '');
-  const [showComparison, setShowComparison] = useState(false);
   
   const [activeTab, setActiveTab] = useState<'browse' | 'compare' | 'trends' | 'generator' | 'leaderboard'>('browse');
   const comparisonRef = useRef<HTMLDivElement>(null);
@@ -118,6 +117,9 @@ export default function NamesGallery() {
     setCompareName1(name1);
     setCompareName2(name2);
     setActiveTab('compare');
+    queueMicrotask(() => {
+      comparisonRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   };
 
   // Generate all name data
@@ -474,7 +476,7 @@ export default function NamesGallery() {
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {filteredNames.map((nameData) => (
                       <NameCard 
-                        key={nameData.name} 
+                        key={`${nameData.region}:${nameData.name}`} 
                         data={nameData}
                         onCompare={() => {
                           if (!compareName1) {

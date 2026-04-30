@@ -124,7 +124,7 @@ export default function LanguagesIndex() {
                       {Array.isArray(family.subFamilies) && family.subFamilies.length > 0 && (
                       <div className="flex flex-wrap gap-1 mb-3">
                         {family.subFamilies.slice(0, 4).map((sub, i) => (
-                          <Badge key={i} variant="secondary" className="text-xs max-w-[140px] truncate">
+                          <Badge key={`${family.slug}-sub-${sub.slug}-${i}`} variant="secondary" className="text-xs max-w-[140px] truncate">
                             {sub.name}
                           </Badge>
                         ))}

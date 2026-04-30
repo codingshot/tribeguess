@@ -579,7 +579,7 @@ const TribePage = () => {
                       <div className="grid sm:grid-cols-2 gap-2">
                         {language.additionalGreetings.map((g: { phrase: string; meaning: string }, i: number) => (
                           <AudioGreeting 
-                            key={i}
+                            key={`${tribe.id}-ag-more-${i}-${g.phrase.slice(0, 40)}`}
                             phrase={g.phrase}
                             meaning={g.meaning}
                             languageName={language.name}
@@ -598,7 +598,7 @@ const TribePage = () => {
                       <div className="grid sm:grid-cols-2 gap-2">
                         {language.commonPhrases.map((p: { phrase: string; meaning: string }, i: number) => (
                           <AudioGreeting 
-                            key={i}
+                            key={`${tribe.id}-ag-phrase-${i}-${p.phrase.slice(0, 40)}`}
                             phrase={p.phrase}
                             meaning={p.meaning}
                             languageName={language.name}
@@ -637,7 +637,7 @@ const TribePage = () => {
                         <h3 className="font-medium text-foreground mb-2">Key Historical Events</h3>
                         <div className="flex flex-wrap gap-2">
                           {history.keyEvents.map((event: string, i: number) => (
-                            <span key={i} className="px-3 py-1 bg-secondary rounded-full text-xs text-secondary-foreground">
+                            <span key={`${tribe.id}-hist-${i}-${event.slice(0, 48)}`} className="px-3 py-1 bg-secondary rounded-full text-xs text-secondary-foreground">
                               {event}
                             </span>
                           ))}
@@ -786,7 +786,7 @@ const TribePage = () => {
                 </h2>
                 <ul className="grid sm:grid-cols-2 gap-2">
                   {tribe.stereotypes.map((stereotype, i) => (
-                    <li key={i} className="flex items-center gap-2 p-2.5 sm:p-3 bg-secondary rounded-lg">
+                    <li key={`${tribe.id}-stereo-li-${i}-${String(stereotype).slice(0, 48)}`} className="flex items-center gap-2 p-2.5 sm:p-3 bg-secondary rounded-lg">
                       <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
                       <span className="text-xs sm:text-sm text-secondary-foreground">{stereotype}</span>
                     </li>
@@ -813,7 +813,7 @@ const TribePage = () => {
                         </div>
                         <ul className="space-y-2">
                           {tribe.genderStereotypes.male?.map((stereotype: string, i: number) => (
-                            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-blue-800 dark:text-blue-200">
+                            <li key={`${tribe.id}-gsm-${i}-${stereotype.slice(0, 48)}`} className="flex items-start gap-2 text-xs sm:text-sm text-blue-800 dark:text-blue-200">
                               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0" />
                               {stereotype}
                             </li>
@@ -828,7 +828,7 @@ const TribePage = () => {
                         </div>
                         <ul className="space-y-2">
                           {tribe.genderStereotypes.female?.map((stereotype: string, i: number) => (
-                            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-pink-800 dark:text-pink-200">
+                            <li key={`${tribe.id}-gsf-${i}-${stereotype.slice(0, 48)}`} className="flex items-start gap-2 text-xs sm:text-sm text-pink-800 dark:text-pink-200">
                               <span className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-1.5 flex-shrink-0" />
                               {stereotype}
                             </li>
@@ -912,7 +912,7 @@ const TribePage = () => {
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Cultural Traits</h2>
                   <ul className="space-y-1.5 sm:space-y-2">
                     {tribe.culturalTraits.map((trait, i) => (
-                      <li key={i} className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm">
+                      <li key={`trait-${i}-${String(trait).slice(0, 48)}`} className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" aria-hidden="true" />
                         {trait}
                       </li>
@@ -928,7 +928,11 @@ const TribePage = () => {
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-2">
                     {(tribe.famousPeople as Array<{ name: string; role: string; wikipedia?: string | null; image?: string; birth?: number; death?: number }>).map((person, i) => (
-                      <PersonCard key={i} person={person} tribeSlug={tribe.slug} />
+                      <PersonCard
+                        key={`${person.name}-${person.role}-${person.birth ?? ''}-${person.death ?? ''}-${i}`}
+                        person={person}
+                        tribeSlug={tribe.slug}
+                      />
                     ))}
                   </div>
                   <Link 
@@ -963,7 +967,7 @@ const TribePage = () => {
                           const foodName = food.split('(')[0].split('-')[0].trim();
                           const recipe = findRecipeByName(foodName, tribe.slug);
                           return (
-                            <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                            <li key={`${tribe.id}-food-${i}-${food.slice(0, 48)}`} className="text-xs text-muted-foreground flex items-center gap-2">
                               <span className="text-primary">•</span>
                               {recipe ? (
                                 <Link to={`/recipe/${recipe.id}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
@@ -982,7 +986,7 @@ const TribePage = () => {
                           const drinkName = drink.split('(')[0].split('-')[0].trim();
                           const recipe = findRecipeByName(drinkName, tribe.slug);
                           return (
-                            <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                            <li key={`${tribe.id}-bev-${i}-${drink.slice(0, 48)}`} className="text-xs text-muted-foreground flex items-center gap-2">
                               <span className="text-primary">•</span>
                               {recipe ? (
                                 <Link to={`/recipe/${recipe.id}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
@@ -1001,7 +1005,7 @@ const TribePage = () => {
                           const dishName = dish.split('(')[0].split('-')[0].trim();
                           const recipe = findRecipeByName(dishName, tribe.slug);
                           return (
-                            <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                            <li key={`${tribe.id}-dish-${i}-${dish.slice(0, 48)}`} className="text-xs text-muted-foreground flex items-center gap-2">
                               <span className="text-primary">•</span>
                               {recipe ? (
                                 <Link to={`/recipe/${recipe.id}`} className="hover:text-primary hover:underline cursor-pointer" title="View recipe">
@@ -1086,7 +1090,7 @@ const TribePage = () => {
                         </h3>
                         <ul className="space-y-1">
                           {tribe.eatingCustoms.taboos.map((taboo: string, i: number) => (
-                            <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                            <li key={`${tribe.id}-taboo-${i}-${taboo.slice(0, 48)}`} className="text-sm text-muted-foreground flex items-start gap-2">
                               <span className="text-red-500 mt-0.5">•</span>
                               {taboo}
                             </li>
@@ -1150,7 +1154,7 @@ const TribePage = () => {
                       <h3 className="text-sm font-medium text-foreground mb-3">Population by Country</h3>
                       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                         {diaspora.breakdown.map((country, i: number) => (
-                          <div key={i} className="p-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors">
+                          <div key={`${tribe.id}-dia-${country.country}-${i}`} className="p-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors">
                             <div className="flex items-center justify-between mb-1">
                               <p className="font-medium text-foreground text-sm">{country.country}</p>
                               <p className="text-xs font-semibold text-primary">{country.population}</p>
@@ -1172,7 +1176,7 @@ const TribePage = () => {
                       <h3 className="text-sm font-medium text-foreground mb-2">Notable Communities</h3>
                       <ul className="space-y-1">
                         {diaspora.communities.map((community, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                          <li key={`${tribe.id}-dcom-${i}-${String(community).slice(0, 48)}`} className="text-sm text-muted-foreground flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                             {community}
                           </li>
@@ -1185,7 +1189,7 @@ const TribePage = () => {
                       <h3 className="text-sm font-medium text-foreground mb-2">Diaspora Organizations</h3>
                       <ul className="flex flex-wrap gap-2">
                         {diaspora.associations.map((assoc, i) => (
-                          <li key={i} className="badge-tribe text-xs">
+                          <li key={`${tribe.id}-dassoc-${i}-${String(assoc).slice(0, 48)}`} className="badge-tribe text-xs">
                             {assoc}
                           </li>
                         ))}
@@ -1286,7 +1290,7 @@ const TribePage = () => {
                               <div className="flex flex-wrap gap-1.5 mt-2">
                                 {similarities.slice(0, 3).map((sim, i) => (
                                   <span
-                                    key={i}
+                                    key={`${related.id}-sim-${sim}-${i}`}
                                     className="px-2 py-0.5 text-[10px] bg-primary/10 text-primary rounded-full font-medium"
                                   >
                                     {sim}

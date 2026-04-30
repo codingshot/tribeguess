@@ -43,7 +43,7 @@ export function ReligionStatsDashboard() {
     const parseFollowers = (str: string): number => {
       const match = str.match(/~?(\d+)/);
       if (!match) return 0;
-      const num = parseInt(match[1]);
+      const num = parseInt(match[1], 10);
       if (str.includes('million')) return num * 1000000;
       if (str.includes('thousand')) return num * 1000;
       return num;
@@ -70,7 +70,7 @@ export function ReligionStatsDashboard() {
     const parseFollowers = (str: string): number => {
       const match = str.match(/~?(\d+)/);
       if (!match) return 0;
-      const num = parseInt(match[1]);
+      const num = parseInt(match[1], 10);
       if (str.includes('million')) return num * 1000000;
       if (str.includes('thousand')) return num * 1000;
       return num;
@@ -202,7 +202,7 @@ export function ReligionStatsDashboard() {
                     labelLine={false}
                   >
                     {regionStats.map((entry, i) => (
-                      <Cell key={i} fill={entry.color} />
+                      <Cell key={`region-pie-${entry.region}-${i}`} fill={entry.color} />
                     ))}
                   </Pie>
                   <Tooltip 
@@ -254,7 +254,7 @@ export function ReligionStatsDashboard() {
                   />
                   <Bar dataKey="followers" radius={[0, 4, 4, 0]}>
                     {followersByRegion.map((entry, i) => (
-                      <Cell key={i} fill={entry.color} />
+                      <Cell key={`followers-bar-${entry.region}-${i}`} fill={entry.color} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -290,8 +290,8 @@ export function ReligionStatsDashboard() {
                   }
                 />
                 <Bar dataKey="followers" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]}>
-                  {topReligions.map((_, i) => (
-                    <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
+                  {topReligions.map((entry, i) => (
+                    <Cell key={`top-rel-${entry.fullName}-${i}`} fill={PIE_COLORS[i % PIE_COLORS.length]} />
                   ))}
                 </Bar>
               </BarChart>

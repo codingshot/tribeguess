@@ -583,7 +583,7 @@ export function DynamicMapView({ tribes, selectedTribe, onTribeSelect, countryFi
                     fontSize: '9px',
                   }}
                 >
-                  {parseInt(tribe.populationPercent) > 5 ? tribe.populationPercent : ''}
+                  {Number.parseInt(String(tribe.populationPercent ?? '0'), 10) > 5 ? tribe.populationPercent : ''}
                 </div>
                 
                 {/* Name label */}

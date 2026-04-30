@@ -564,7 +564,7 @@ const Learn = () => {
                         </p>
                         <ul className="text-xs text-muted-foreground space-y-1.5">
                           {countryFacts.slice(0, 3).map((fact, index) => (
-                            <li key={index}>• {fact}</li>
+                            <li key={`cf-${index}-${String(fact).slice(0, 48)}`}>• {fact}</li>
                           ))}
                         </ul>
                       </div>
@@ -882,7 +882,7 @@ const Learn = () => {
                     {/* Badges */}
                     <div className="hidden md:flex gap-1">
                       {(tribe.stereotypes || []).slice(0, 1).map((s, i) => (
-                        <span key={i} className="badge-tribe text-xs">{s}</span>
+                        <span key={`${tribe.id}-st-${i}-${String(s).slice(0, 32)}`} className="badge-tribe text-xs">{s}</span>
                       ))}
                     </div>
 

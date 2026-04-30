@@ -312,6 +312,7 @@ export function GuessForm({
           type="button"
           onClick={() => {
             const names = RANDOM_NAMES_BY_COUNTRY[country] || RANDOM_NAMES_BY_COUNTRY['ALL'];
+            if (!names?.length) return;
             const randomName = names[Math.floor(Math.random() * names.length)];
             setName(randomName);
             // Auto-navigate with the random name

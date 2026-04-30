@@ -48,4 +48,15 @@ describe('TribeCompare', () => {
       expect(screen.getAllByRole('link', { name: /igbo/i }).length).toBeGreaterThanOrEqual(1);
     });
   });
+
+  /** Matches tribe page "Quick compare" link: `/compare?tribes=<slug>` with one slug pre-selected */
+  it('prefills one tribe from Quick compare URL (?tribes=single)', async () => {
+    renderAt('/compare?tribes=yoruba');
+
+    expect(await screen.findByRole('heading', { name: /compare tribes/i })).toBeTruthy();
+
+    await waitFor(() => {
+      expect(screen.getAllByRole('link', { name: /yoruba/i }).length).toBeGreaterThanOrEqual(1);
+    });
+  });
 });

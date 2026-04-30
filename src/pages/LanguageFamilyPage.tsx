@@ -286,7 +286,7 @@ export default function LanguageFamilyPage() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     {(family.characteristics || []).map((char, i) => (
-                      <div key={i} className="border-l-2 border-primary/30 pl-3">
+                      <div key={`${family.slug}-char-${i}-${char.name.slice(0, 40)}`} className="border-l-2 border-primary/30 pl-3">
                         <h4 className="font-semibold text-sm">{char.name}</h4>
                         <p className="text-sm text-muted-foreground">{char.description}</p>
                       </div>
@@ -315,7 +315,7 @@ export default function LanguageFamilyPage() {
                       <h4 className="font-semibold text-sm mb-3">Script Examples</h4>
                       <div className="space-y-3">
                         {(family.writingSystem?.examples || []).map((ex, i) => (
-                          <div key={i} className="p-3 bg-muted/50 rounded-lg">
+                          <div key={`${family.slug}-wex-${i}-${ex.script}-${ex.text.slice(0, 24)}`} className="p-3 bg-muted/50 rounded-lg">
                             <p className="text-xs text-muted-foreground mb-1">{ex.script}</p>
                             <p className="text-xl font-medium">{ex.text}</p>
                             <p className="text-sm text-muted-foreground">
@@ -340,7 +340,7 @@ export default function LanguageFamilyPage() {
                 <CardContent>
                   <ul className="grid md:grid-cols-2 gap-2">
                     {(family.uniqueFeatures || []).map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
+                      <li key={`${family.slug}-uf-${i}-${feature.slice(0, 48)}`} className="flex items-start gap-2 text-sm">
                         <span className="text-primary mt-1">✦</span>
                         <span className="text-muted-foreground">{feature}</span>
                       </li>
@@ -363,7 +363,7 @@ export default function LanguageFamilyPage() {
                       <h4 className="font-semibold text-sm mb-2">Major Empires & Kingdoms</h4>
                       <div className="flex flex-wrap gap-1">
                         {(family.historicalInfluence?.empires || []).map((empire, i) => (
-                          <Badge key={i} variant="outline" className="text-xs">{empire}</Badge>
+                          <Badge key={`${family.slug}-emp-${i}-${empire.slice(0, 32)}`} variant="outline" className="text-xs">{empire}</Badge>
                         ))}
                       </div>
                     </div>
@@ -371,7 +371,7 @@ export default function LanguageFamilyPage() {
                       <h4 className="font-semibold text-sm mb-2">Cultural Exports</h4>
                       <div className="flex flex-wrap gap-1">
                         {(family.historicalInfluence?.culturalExports || []).map((exp, i) => (
-                          <Badge key={i} variant="secondary" className="text-xs">{exp}</Badge>
+                          <Badge key={`${family.slug}-cex-${i}-${exp.slice(0, 32)}`} variant="secondary" className="text-xs">{exp}</Badge>
                         ))}
                       </div>
                     </div>
@@ -394,7 +394,7 @@ export default function LanguageFamilyPage() {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-4">
                     {(family.distantCousins || []).map((cousin, i) => (
-                      <div key={i} className="p-3 bg-muted/30 rounded-lg border border-border">
+                      <div key={`${family.slug}-cousin-${i}-${cousin.family.slice(0, 32)}`} className="p-3 bg-muted/30 rounded-lg border border-border">
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline">{cousin.family}</Badge>
                         </div>
@@ -423,7 +423,7 @@ export default function LanguageFamilyPage() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     {(family.commonPhrases || []).map((phrase: Phrase, i: number) => (
                       <div 
-                        key={i} 
+                        key={`${family.slug}-phrase-${i}-${phrase.language}-${phrase.phrase.slice(0, 24)}`} 
                         className="p-4 bg-gradient-to-br from-primary/5 to-transparent rounded-xl border border-primary/20 hover:border-primary/40 transition-colors"
                       >
                         <Badge variant="secondary" className="text-xs mb-3">{phrase.language}</Badge>
@@ -461,7 +461,7 @@ export default function LanguageFamilyPage() {
                     
                     <div className="space-y-6">
                       {(family.timeline || []).map((event: TimelineEvent, i: number) => (
-                        <div key={i} className="relative flex gap-4 pl-10">
+                        <div key={`${family.slug}-tl-${event.year}-${i}-${event.event.slice(0, 32)}`} className="relative flex gap-4 pl-10">
                           {/* Timeline dot */}
                           <div className="absolute left-2.5 w-4 h-4 rounded-full bg-primary border-4 border-background" />
                           
@@ -486,7 +486,7 @@ export default function LanguageFamilyPage() {
             <TabsContent value="subfamilies" className="space-y-6">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {family.subFamilies.map((sub: SubFamily, i: number) => (
-                  <Card key={i} className="hover:border-primary/50 transition-colors">
+                  <Card key={`${family.slug}-sub-${sub.slug}-${i}`} className="hover:border-primary/50 transition-colors">
                     <CardHeader className="pb-2">
                       <CardTitle className="text-lg flex items-center gap-2">
                         <GitBranch className="w-4 h-4 text-primary" />

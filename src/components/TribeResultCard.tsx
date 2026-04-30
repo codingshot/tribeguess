@@ -81,7 +81,7 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
         </div>
         <ul className="space-y-1.5">
           {(matchDetails || [matchReason]).map((reason, i) => (
-            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground leading-snug">
+            <li key={`r${rank}-why-${i}-${String(reason).slice(0, 48)}`} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground leading-snug">
               <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
               <span>{reason}</span>
             </li>
@@ -112,7 +112,7 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
           </span>
           <ul className="flex flex-wrap gap-1.5 flex-1 min-w-0 list-none p-0 m-0" aria-labelledby={`stereotypes-label-${rank}`}>
           {(tribe.stereotypes || []).slice(0, 4).map((stereotype, i) => (
-            <li key={i} className="badge-tribe-compact max-w-[min(100%,14rem)] whitespace-normal text-left">
+            <li key={`r${rank}-st-${i}-${String(stereotype).slice(0, 32)}`} className="badge-tribe-compact max-w-[min(100%,14rem)] whitespace-normal text-left">
               {stereotype}
             </li>
           ))}
@@ -135,7 +135,7 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
           {showMore && (
             <div className="mt-1.5 grid grid-cols-1 sm:grid-cols-2 gap-1 animate-fade-in">
               {quickFacts.map((fact, i) => (
-                <div key={i} className="text-[11px] sm:text-xs text-muted-foreground px-2 py-1 bg-secondary/30 rounded-md leading-snug">
+                <div key={`r${rank}-qf-${i}-${String(fact).slice(0, 48)}`} className="text-[11px] sm:text-xs text-muted-foreground px-2 py-1 bg-secondary/30 rounded-md leading-snug">
                   {fact}
                 </div>
               ))}

@@ -151,7 +151,7 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
                 const hasInfo = nameDatabase[name.toLowerCase()]?.meaning;
                 return (
                   <button
-                    key={i}
+                    key={`f-${name}-${i}`}
                     onClick={() => handleNameClick(name, 'female')}
                     className={`badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer text-xs sm:text-sm flex items-center gap-1 ${
                       hasInfo ? 'pr-1.5' : ''
@@ -180,7 +180,7 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
                 const hasInfo = nameDatabase[name.toLowerCase()]?.meaning;
                 return (
                   <button
-                    key={i}
+                    key={`m-${name}-${i}`}
                     onClick={() => handleNameClick(name, 'male')}
                     className={`badge-tribe hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer text-xs sm:text-sm flex items-center gap-1 ${
                       hasInfo ? 'pr-1.5' : ''

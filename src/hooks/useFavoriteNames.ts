@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { safeReadStorage, safeWriteStorage, validateFavorites, sanitizeTextInput } from '@/lib/dataValidation';
 
 const STORAGE_KEY = 'tribeguess-favorite-names';
@@ -14,6 +14,8 @@ export interface FavoriteName {
 
 export function useFavoriteNames() {
   const [favorites, setFavorites] = useState<FavoriteName[]>([]);
+  const favoritesRef = useRef(favorites);
+  favoritesRef.current = favorites;
   const [hasLoaded, setHasLoaded] = useState(false);
 
   // Load from localStorage on mount with validation
@@ -52,18 +54,22 @@ export function useFavoriteNames() {
   }, []);
 
   const toggleFavorite = useCallback((name: string, metadata?: Partial<Omit<FavoriteName, 'name' | 'addedAt'>>) => {
-    const isFav = favorites.some(f => f.name.toLowerCase() === name.toLowerCase());
+    const sanitized = sanitizeTextInput(name, 100);
+    if (!sanitized) return false;
+    const isFav = favoritesRef.current.some((f) => f.name.toLowerCase() === sanitized.toLowerCase());
     if (isFav) {
-      removeFavorite(name);
-    } else {
-      addFavorite(name, metadata);
+      removeFavorite(sanitized);
+      return false;
     }
-    return !isFav;
-  }, [favorites, addFavorite, removeFavorite]);
+    addFavorite(sanitized, metadata);
+    return true;
+  }, [addFavorite, removeFavorite]);
 
   const isFavorite = useCallback((name: string) => {
-    return favorites.some(f => f.name.toLowerCase() === name.toLowerCase());
-  }, [favorites]);
+    const s = sanitizeTextInput(name, 100);
+    if (!s) return false;
+    return favoritesRef.current.some((f) => f.name.toLowerCase() === s.toLowerCase());
+  }, []);
 
   const clearFavorites = useCallback(() => {
     setFavorites([]);

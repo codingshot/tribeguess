@@ -51,6 +51,7 @@ export function PersonCard({ person, tribeSlug }: PersonCardProps) {
             className="w-full h-full object-cover"
             onError={() => setImageError(true)}
             loading="lazy"
+            decoding="async"
           />
         </div>
       ) : (

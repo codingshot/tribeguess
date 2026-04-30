@@ -153,7 +153,7 @@ export function NameOfTheDay() {
             </h4>
             <ul className="text-sm text-muted-foreground space-y-1">
               {history.culturalSignificance.slice(0, 3).map((sig, i) => (
-                <li key={i} className="flex items-start gap-2">
+                <li key={`${todayName}-sig-${i}-${sig.slice(0, 40)}`} className="flex items-start gap-2">
                   <Sparkles className="w-3 h-3 mt-1 flex-shrink-0" />
                   {sig}
                 </li>
@@ -168,7 +168,7 @@ export function NameOfTheDay() {
             <h4 className="font-medium mb-2 text-sm">Famous Namesakes</h4>
             <div className="flex flex-wrap gap-2">
               {history.famousNamesakes.slice(0, 3).map((person, i) => (
-                <Badge key={i} variant="outline" className="text-xs">
+                <Badge key={`${todayName}-famous-${person.name}-${person.birth}-${i}`} variant="outline" className="text-xs">
                   {person.name} ({person.birth})
                 </Badge>
               ))}

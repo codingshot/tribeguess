@@ -133,7 +133,7 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
 
   const nextQuestion = () => {
     if (currentQuestion < dailyQuestions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+      setCurrentQuestion((q) => q + 1);
       setSelectedAnswer(null);
       setShowExplanation(false);
     } else {
@@ -356,7 +356,7 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
             
             return (
               <Button
-                key={index}
+                key={`${currentQ.id || 'q'}-${currentQuestion}-${index}-${option.slice(0, 40)}`}
                 variant="outline"
                 className={buttonClass}
                 onClick={() => handleAnswer(index)}

@@ -1,4 +1,4 @@
-import { useState, forwardRef } from 'react';
+import { useState, forwardRef, useEffect, useRef } from 'react';
 import { X, ChevronLeft, ChevronRight, ZoomIn, Images } from 'lucide-react';
 
 interface GalleryImage {
@@ -15,8 +15,7 @@ interface ImageGalleryProps {
 export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images, title = "Gallery" }, ref) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isGridView, setIsGridView] = useState(true);
-
-  if (!images || images.length === 0) return null;
+  const lightboxRef = useRef<HTMLDivElement>(null);
 
   const openLightbox = (index: number) => {
     setSelectedIndex(index);
@@ -29,22 +28,42 @@ export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images
   };
 
   const goNext = () => {
-    if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex + 1) % images.length);
-    }
+    setSelectedIndex((i) => {
+      if (i === null) return null;
+      return (i + 1) % images.length;
+    });
   };
 
   const goPrev = () => {
-    if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
-    }
+    setSelectedIndex((i) => {
+      if (i === null) return null;
+      return (i - 1 + images.length) % images.length;
+    });
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowRight') goNext();
-    if (e.key === 'ArrowLeft') goPrev();
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeLightbox();
+      return;
+    }
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      goNext();
+      return;
+    }
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      goPrev();
+    }
   };
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    lightboxRef.current?.focus();
+  }, [selectedIndex]);
+
+  if (!images || images.length === 0) return null;
 
   return (
     <section className="mt-6" ref={ref}>
@@ -60,7 +79,7 @@ export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
         {images.map((image, index) => (
           <button
-            key={index}
+            key={`${image.url}-${index}`}
             onClick={() => openLightbox(index)}
             className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer border border-border hover:border-primary transition-colors"
           >
@@ -86,12 +105,14 @@ export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images
       {/* Lightbox */}
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          ref={lightboxRef}
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center outline-none"
           onClick={closeLightbox}
           onKeyDown={handleKeyDown}
-          tabIndex={0}
+          tabIndex={-1}
           role="dialog"
           aria-modal="true"
+          aria-label={title}
         >
           <button
             onClick={closeLightbox}
@@ -143,7 +164,7 @@ export const ImageGallery = forwardRef<HTMLElement, ImageGalleryProps>(({ images
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 max-w-[90vw] overflow-x-auto p-2">
               {images.map((image, index) => (
                 <button
-                  key={index}
+                  key={`thumb-${image.url}-${index}`}
                   onClick={(e) => { e.stopPropagation(); setSelectedIndex(index); }}
                   className={`w-12 h-12 rounded flex-shrink-0 overflow-hidden border-2 transition-colors ${
                     index === selectedIndex ? 'border-primary' : 'border-transparent hover:border-white/50'

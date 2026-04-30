@@ -115,7 +115,7 @@ export function TribeFAQSection({ tribe, countryNames }: TribeFAQSectionProps) {
       </h2>
       <div className="space-y-2">
         {faqs.map((faq, i) => (
-          <div key={i} className="border border-border rounded-lg overflow-hidden">
+          <div key={`${tribe.id}-faq-${i}-${faq.question.slice(0, 48)}`} className="border border-border rounded-lg overflow-hidden">
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
               className="w-full flex items-center justify-between p-3 sm:p-4 text-left hover:bg-secondary/50 transition-colors"
