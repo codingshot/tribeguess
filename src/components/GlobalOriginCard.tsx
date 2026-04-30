@@ -32,20 +32,20 @@ export function GlobalOriginCard({
   const mapping = wm?.mapping;
   
   return (
-    <div className="card-tribe p-4 sm:p-6 border-2 border-amber-300 dark:border-amber-700 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 animate-fade-in">
+    <div className="card-tribe p-3 sm:p-5 border-2 border-amber-300 dark:border-amber-700 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 animate-fade-in">
       {/* Header */}
-      <div className="flex items-start gap-3 mb-4">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center flex-shrink-0">
-          <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+      <div className="flex items-start gap-2.5 sm:gap-3 mb-3">
+        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center flex-shrink-0">
+          <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
         </div>
-        <div>
-          <h3 className="font-display text-lg sm:text-xl font-bold text-foreground flex items-center gap-2">
-            {wm?.found ? 'Name Origin & Cross-Faith Context' : 'Global Name Origins'}
-            <span className="text-xs font-normal px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-800 text-amber-800 dark:text-amber-200">
-              {confidence}% match
+        <div className="min-w-0">
+          <h3 className="font-display text-base sm:text-lg font-bold text-foreground flex flex-wrap items-center gap-x-2 gap-y-1 leading-tight">
+            {wm?.found ? 'Name origin & cross-faith' : 'Global name origins'}
+            <span className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-800 text-amber-800 dark:text-amber-200 tabular-nums">
+              {confidence}%
             </span>
           </h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-snug mt-1">
             {wm?.found && wm.resolvedFrom
               ? `"${wm.resolvedFrom}" → "${wm.canonicalName}" (${wm.categoryLabel} origin)`
               : wm?.found

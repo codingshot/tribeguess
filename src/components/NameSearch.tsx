@@ -20,8 +20,14 @@ export const NameSearch = forwardRef<HTMLElement, NameSearchProps>(function Name
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedName, setSelectedName] = useState<NameInfo | null>(null);
 
-  const safeFemaleNames = Array.isArray(femaleNames) ? femaleNames.filter(n => typeof n === 'string') : [];
-  const safeMaleNames = Array.isArray(maleNames) ? maleNames.filter(n => typeof n === 'string') : [];
+  const safeFemaleNames = useMemo(
+    () => (Array.isArray(femaleNames) ? femaleNames.filter((n): n is string => typeof n === 'string') : []),
+    [femaleNames]
+  );
+  const safeMaleNames = useMemo(
+    () => (Array.isArray(maleNames) ? maleNames.filter((n): n is string => typeof n === 'string') : []),
+    [maleNames]
+  );
 
   const allNames = useMemo(() => {
     const names: NameInfo[] = [];

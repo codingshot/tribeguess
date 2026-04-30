@@ -50,7 +50,7 @@ export function VideoCard({ video, compact = false, showOrigin = true }: VideoCa
   const handleReportIssue = (e: React.MouseEvent) => {
     e.stopPropagation();
     const issueUrl = `https://github.com/TribeGuess/tribeguess/issues/new?template=data_video_issue.yml&title=[Video+Issue]:+${encodeURIComponent(video.title || 'Untitled')}&video_id=${video.youtubeId}&location=${encodeURIComponent(video.originLabel || '')}&url=${encodeURIComponent(window.location.origin + (video.originUrl || ''))}`;
-    window.open(issueUrl, '_blank');
+    window.open(issueUrl, '_blank', 'noopener,noreferrer');
     toast.success('Opening issue form', {
       description: 'Thank you for helping improve our content!',
     });

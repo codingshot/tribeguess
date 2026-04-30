@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { validateYoutubeVideo } from '@/lib/videoAggregation';
 
 interface VideoStatus {
@@ -69,6 +69,7 @@ export function useVideoValidation(youtubeId: string): VideoStatus {
 // Hook to validate multiple videos
 export function useMultipleVideoValidation(youtubeIds: string[]): Map<string, VideoStatus> {
   const [statuses, setStatuses] = useState<Map<string, VideoStatus>>(new Map());
+  const youtubeIdsDependency = useMemo(() => youtubeIds.join(','), [youtubeIds]);
 
   useEffect(() => {
     if (!youtubeIds.length) return;
@@ -114,7 +115,7 @@ export function useMultipleVideoValidation(youtubeIds: string[]): Map<string, Vi
         setStatuses(new Map(newStatuses));
       });
     }
-  }, [youtubeIds.join(',')]);
+  }, [youtubeIds, youtubeIdsDependency]);
 
   return statuses;
 }

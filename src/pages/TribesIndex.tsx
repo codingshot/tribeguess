@@ -32,8 +32,8 @@ export default function TribesIndex() {
 
   const uniqueLanguageFamilies = useMemo(() => {
     const families = new Set<string>();
-    allTribes.forEach(t => {
-      const family = (t as any).language?.family;
+    allTribes.forEach((t) => {
+      const family = t.language?.family;
       if (family) families.add(family);
     });
     return Array.from(families).sort();
@@ -42,8 +42,8 @@ export default function TribesIndex() {
   // Unique countries from tribes
   const tribeCountries = useMemo(() => {
     const codes = new Set<string>();
-    allTribes.forEach(t => {
-      ((t as any).countries || []).forEach((c: string) => codes.add(c));
+    allTribes.forEach((t) => {
+      (t.countries || []).forEach((c: string) => codes.add(c));
     });
     return countries.filter(c => codes.has(c.code)).sort((a, b) => a.name.localeCompare(b.name));
   }, [allTribes, countries]);
@@ -56,13 +56,13 @@ export default function TribesIndex() {
       result = result.filter(t => t.name.toLowerCase().includes(q) || t.region?.toLowerCase().includes(q));
     }
     if (filterCountry) {
-      result = result.filter(t => ((t as any).countries || []).includes(filterCountry));
+      result = result.filter((t) => (t.countries || []).includes(filterCountry));
     }
     if (filterRegion) {
       result = result.filter(t => t.region === filterRegion);
     }
     if (filterLanguage) {
-      result = result.filter(t => (t as any).language?.family === filterLanguage);
+      result = result.filter((t) => t.language?.family === filterLanguage);
     }
     return result.sort((a, b) => a.name.localeCompare(b.name));
   }, [allTribes, search, filterCountry, filterRegion, filterLanguage]);
@@ -256,7 +256,7 @@ export default function TribesIndex() {
                       </div>
                     </div>
                     <div className="flex items-center gap-1 shrink-0 ml-2">
-                      {((tribe as any).countries || []).slice(0, 2).map((code: string) => (
+                      {(tribe.countries || []).slice(0, 2).map((code: string) => (
                         <CountryFlag key={code} code={code} size={14} />
                       ))}
                       <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors" />

@@ -62,7 +62,7 @@ export default function RegionTribes() {
   // Countries represented
   const representedCountries = useMemo(() => {
     const codes = new Set<string>();
-    tribes.forEach(t => ((t as any).countries || []).forEach((c: string) => codes.add(c)));
+    tribes.forEach(t => (t.countries ?? []).forEach(c => codes.add(c)));
     return countries.filter(c => codes.has(c.code)).sort((a, b) => a.name.localeCompare(b.name));
   }, [tribes, countries]);
 
@@ -189,7 +189,7 @@ export default function RegionTribes() {
                   </div>
                 </div>
                 <div className="flex items-center gap-1 shrink-0 ml-2">
-                  {((tribe as any).countries || []).slice(0, 2).map((code: string) => (
+                  {(tribe.countries ?? []).slice(0, 2).map(code => (
                     <CountryFlag key={code} code={code} size={14} />
                   ))}
                   <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors" />

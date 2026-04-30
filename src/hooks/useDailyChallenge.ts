@@ -41,6 +41,19 @@ const defaultStats: DailyStats = {
   lastPlayedDate: null,
 };
 
+/** Reset streak when localStorage shows a gap of more than one day (load-time only). */
+function checkStreakContinuityOnLoad(currentStats: DailyStats): DailyStats {
+  if (!currentStats.lastPlayedDate) return currentStats;
+  const todayStr = new Date().toISOString().split('T')[0];
+  const today = new Date(todayStr);
+  const lastPlayed = new Date(currentStats.lastPlayedDate);
+  const diffDays = Math.floor((today.getTime() - lastPlayed.getTime()) / (1000 * 60 * 60 * 24));
+  if (diffDays > 1) {
+    return { ...currentStats, currentStreak: 0 };
+  }
+  return currentStats;
+}
+
 // Daily-specific achievements
 export const dailyAchievements: DailyAchievement[] = [
   { id: 'first-daily', name: 'First Steps', description: 'Complete your first daily challenge', icon: 'Calendar' },
@@ -78,7 +91,15 @@ export function useDailyChallenge() {
         if (Array.isArray(parsed)) {
           // Validate each result has required fields and cap at 365
           const validated = parsed
-            .filter((r: any) => r && typeof r.date === 'string' && typeof r.score === 'number' && typeof r.totalQuestions === 'number')
+            .filter((r: unknown) => {
+              if (r == null || typeof r !== 'object') return false;
+              const o = r as Record<string, unknown>;
+              return (
+                typeof o.date === 'string' &&
+                typeof o.score === 'number' &&
+                typeof o.totalQuestions === 'number'
+              );
+            })
             .slice(-365);
           setResults(validated);
         }
@@ -90,7 +111,7 @@ export function useDailyChallenge() {
           parsedStats.currentStreak = Math.max(0, Math.min(parsedStats.currentStreak || 0, 9999));
           parsedStats.longestStreak = Math.max(0, Math.min(parsedStats.longestStreak || 0, 9999));
           parsedStats.totalDaysPlayed = Math.max(0, Math.min(parsedStats.totalDaysPlayed || 0, 99999));
-          const updatedStats = checkStreakContinuity(parsedStats);
+          const updatedStats = checkStreakContinuityOnLoad(parsedStats);
           setStats(updatedStats);
           if (updatedStats !== parsedStats) {
             localStorage.setItem(DAILY_STATS_KEY, JSON.stringify(updatedStats));
@@ -111,25 +132,11 @@ export function useDailyChallenge() {
         localStorage.removeItem(DAILY_RESULTS_KEY);
         localStorage.removeItem(DAILY_STATS_KEY);
         localStorage.removeItem(DAILY_ACHIEVEMENTS_KEY);
-      } catch {}
+      } catch {
+        /* localStorage unavailable */
+      }
     }
   }, []);
-
-  // Check if streak should continue or reset
-  const checkStreakContinuity = (currentStats: DailyStats): DailyStats => {
-    if (!currentStats.lastPlayedDate) return currentStats;
-    
-    const today = new Date(getTodayString());
-    const lastPlayed = new Date(currentStats.lastPlayedDate);
-    const diffDays = Math.floor((today.getTime() - lastPlayed.getTime()) / (1000 * 60 * 60 * 24));
-    
-    // If more than 1 day has passed, reset current streak
-    if (diffDays > 1) {
-      return { ...currentStats, currentStreak: 0 };
-    }
-    
-    return currentStats;
-  };
 
   // Save results to localStorage
   const saveResults = useCallback((newResults: DailyChallengeResult[]) => {
@@ -201,20 +208,37 @@ export function useDailyChallenge() {
 
   // Add a new daily result
   const addDailyResult = useCallback((result: DailyChallengeResult) => {
-    // Don't add if already completed today
     if (hasCompletedToday()) return;
 
-    const newResults = [...results, result];
-    saveResults(newResults);
+    const prevLen = results.length;
+    const mergedHolder: { value: DailyChallengeResult[] } = { value: results };
 
-    // Update stats
+    setResults((prev) => {
+      const today = getTodayString();
+      if (prev.some((r) => r.date === today)) {
+        mergedHolder.value = prev;
+        return prev;
+      }
+      const next = [...prev, result];
+      mergedHolder.value = next;
+      try {
+        localStorage.setItem(DAILY_RESULTS_KEY, JSON.stringify(next));
+      } catch (error) {
+        console.error('Error saving daily results:', error);
+      }
+      return next;
+    });
+
+    if (mergedHolder.value.length === prevLen) return;
+
+    const newResults = mergedHolder.value;
+
     const newStats = { ...stats };
     const today = getTodayString();
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     const yesterdayString = yesterday.toISOString().split('T')[0];
 
-    // Check if this is a streak continuation
     const wasStreak = stats.lastPlayedDate === yesterdayString || stats.lastPlayedDate === today;
     const hadPreviousStreak = stats.currentStreak > 0 && !wasStreak;
 
@@ -238,15 +262,12 @@ export function useDailyChallenge() {
 
     saveStats(newStats);
 
-    // Check and unlock achievements
     const newAchievements = [...unlockedAchievements];
-    
-    // First daily
+
     if (newStats.totalDaysPlayed === 1 && !newAchievements.includes('first-daily')) {
       newAchievements.push('first-daily');
     }
-    
-    // Streak achievements
+
     if (newStats.currentStreak >= 3 && !newAchievements.includes('streak-3')) {
       newAchievements.push('streak-3');
     }
@@ -262,24 +283,20 @@ export function useDailyChallenge() {
     if (newStats.currentStreak >= 100 && !newAchievements.includes('streak-100')) {
       newAchievements.push('streak-100');
     }
-    
-    // Perfect day
+
     if (result.percentage === 100 && !newAchievements.includes('perfect-day')) {
       newAchievements.push('perfect-day');
     }
-    
-    // Perfect week (7 consecutive perfect days)
+
     const perfectStreak = checkPerfectStreak(newResults);
     if (perfectStreak >= 7 && !newAchievements.includes('perfect-week')) {
       newAchievements.push('perfect-week');
     }
-    
-    // Speed demon
+
     if (result.timeTaken < 30 && !newAchievements.includes('speed-demon')) {
       newAchievements.push('speed-demon');
     }
-    
-    // Total days achievements
+
     if (newStats.totalDaysPlayed >= 10 && !newAchievements.includes('ten-days')) {
       newAchievements.push('ten-days');
     }
@@ -289,8 +306,7 @@ export function useDailyChallenge() {
     if (newStats.totalDaysPlayed >= 100 && !newAchievements.includes('hundred-days')) {
       newAchievements.push('hundred-days');
     }
-    
-    // Comeback kid
+
     if (hadPreviousStreak && !newAchievements.includes('comeback-kid')) {
       newAchievements.push('comeback-kid');
     }
@@ -298,7 +314,7 @@ export function useDailyChallenge() {
     if (newAchievements.length > unlockedAchievements.length) {
       saveAchievements(newAchievements);
     }
-  }, [results, stats, unlockedAchievements, hasCompletedToday, saveResults, saveStats, saveAchievements, checkPerfectStreak]);
+  }, [results, stats, unlockedAchievements, hasCompletedToday, saveStats, saveAchievements, checkPerfectStreak]);
 
   // Get recent results (last 7 days)
   const getRecentResults = useCallback(() => {

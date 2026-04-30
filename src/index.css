@@ -122,13 +122,18 @@
   }
 
   .card-tribe {
-    @apply bg-card rounded-2xl border border-border shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300;
   }
 
   /* Dense marketing / carousel tiles — readable type + touch-friendly padding */
   .card-landing-tile {
-    @apply bg-card rounded-2xl border border-border shadow-sm transition-all duration-300;
+    @apply bg-card rounded-xl border border-border shadow-sm transition-all duration-300;
     @apply hover:shadow-md hover:border-primary/25;
+  }
+
+  /* Compact pills inside cards (stereotypes, tags) */
+  .badge-tribe-compact {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium leading-snug bg-secondary/90 text-secondary-foreground border border-border/60;
   }
 
   .btn-primary {
@@ -241,5 +246,12 @@
   }
   50% {
     transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-bounce-subtle {
+    animation: none !important;
   }
 }

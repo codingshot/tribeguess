@@ -225,8 +225,8 @@ export function GuessForm({
       {/* Name + Country on same row */}
       <div>
         <label htmlFor="name-input" className="block text-sm font-medium text-foreground mb-1.5">
-          <Globe className="w-4 h-4 inline mr-1" />
-          Where is she from?
+          <Globe className="w-4 h-4 inline mr-1" aria-hidden />
+          Where is this name from?
         </label>
         <p className="text-xs text-muted-foreground mb-2">
           First name works best - we'll analyze the naming patterns
@@ -242,7 +242,7 @@ export function GuessForm({
                 setCountry(e.target.value);
                 onCountryChange?.(e.target.value);
               }}
-              className="appearance-none cursor-pointer text-base pr-8 pl-3 py-3 sm:py-2.5 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary w-full truncate"
+              className="appearance-none cursor-pointer text-base pr-8 pl-3 py-3 sm:py-2.5 bg-background border-2 border-border rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors w-full truncate"
               aria-label="Select country"
             >
               <option value="ALL">🌍 All Africa</option>
@@ -273,7 +273,7 @@ export function GuessForm({
                   }
                 }}
                 placeholder={placeholderExamples[country] || `Enter a ${countryAdjective} name...`}
-                className="input-tribal text-base w-full py-3 sm:py-2.5 pr-3 pl-3"
+                className="input-tribal text-base w-full py-3 sm:py-2.5 pr-10 pl-3"
                 autoFocus
                 maxLength={50}
                 autoComplete="off"
@@ -295,10 +295,11 @@ export function GuessForm({
             <button
               type="submit"
               disabled={!name.trim()}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 sm:py-2.5 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 touch-manipulation flex items-center justify-center shrink-0 min-w-[48px]"
-              aria-label="Search for tribe"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-3 sm:px-4 py-3 sm:py-2.5 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-[0.98] touch-manipulation flex items-center justify-center gap-2 shrink-0 min-h-[48px] min-w-[48px] sm:min-w-0 font-medium text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label="Search for tribe match"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-5 h-5 shrink-0" aria-hidden />
+              <span className="hidden sm:inline">Search</span>
             </button>
           </div>
         </div>
@@ -355,8 +356,8 @@ export function GuessForm({
           <div>
             <div className="flex items-center justify-between mb-1.5">
               <label htmlFor="time-select" className="block text-sm font-medium text-foreground">
-                <Clock className="w-4 h-4 inline mr-1" />
-                When was she born?
+                <Clock className="w-4 h-4 inline mr-1" aria-hidden />
+                Birth time (optional)
               </label>
               <button
                 type="button"
@@ -397,8 +398,8 @@ export function GuessForm({
           {/* Region */}
           <div>
             <label htmlFor="region-select" className="block text-sm font-medium text-foreground mb-1.5">
-              <MapPin className="w-4 h-4 inline mr-1" />
-              Where is she from?
+              <MapPin className="w-4 h-4 inline mr-1" aria-hidden />
+              Kenya region clue
             </label>
             <div className="relative">
               <select

@@ -57,10 +57,6 @@ const BlogPost = () => {
     ]
   };
 
-  // Extract footnotes from content
-  const footnotes: { id: number; text: string }[] = [];
-  let footnoteIndex = 0;
-  
   const processTextWithFootnotes = (text: string) => {
     const raw = typeof text === 'string' ? text : String(text ?? '');
     // Match [^1] style footnote references

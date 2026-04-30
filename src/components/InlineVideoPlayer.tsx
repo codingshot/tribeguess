@@ -1,9 +1,14 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { Play, ListPlus, Maximize2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useGlobalVideoPlayer } from '@/contexts/GlobalVideoPlayerContext';
 import { VideoItem, getYoutubeThumbnail, isValidYoutubeId } from '@/lib/videoAggregation';
 import { cn } from '@/lib/utils';
+import type {
+  YoutubeIframeInstance,
+  YoutubePlayerReadyEvent,
+  YoutubePlayerStateChangeEvent,
+} from '@/types/youtubeIframe';
 
 interface InlineVideoPlayerProps {
   youtubeId: string;
@@ -15,14 +20,6 @@ interface InlineVideoPlayerProps {
   originLabel?: string;
   category?: string;
   className?: string;
-}
-
-// YouTube IFrame API loader
-declare global {
-  interface Window {
-    YT: any;
-    onYouTubeIframeAPIReady: () => void;
-  }
 }
 
 // Shared YouTube API state
@@ -95,27 +92,30 @@ export function InlineVideoPlayer({
 }: InlineVideoPlayerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const playerContainerRef = useRef<HTMLDivElement>(null);
-  const playerRef = useRef<any>(null);
+  const playerRef = useRef<YoutubeIframeInstance | null>(null);
   const [isInlinePlayback, setIsInlinePlayback] = useState(false);
   const [showThumbnail, setShowThumbnail] = useState(true);
   const [ytReady, setYtReady] = useState(false);
   const [hasError, setHasError] = useState(false);
   
   const { playNow, addToQueue, currentVideo } = useGlobalVideoPlayer();
-  
-  const video: VideoItem = {
-    id: `inline-${youtubeId}`,
-    youtube: youtubeId,
-    youtubeId,
-    title: title || 'Video',
-    thumbnailUrl: getYoutubeThumbnail(youtubeId),
-    sourceType,
-    tribeIds: tribeId ? [tribeId] : [],
-    tribeNames: tribeName ? [tribeName] : [],
-    originUrl,
-    originLabel,
-    category,
-  };
+
+  const video = useMemo(
+    (): VideoItem => ({
+      id: `inline-${youtubeId}`,
+      youtube: youtubeId,
+      youtubeId,
+      title: title || 'Video',
+      thumbnailUrl: getYoutubeThumbnail(youtubeId),
+      sourceType,
+      tribeIds: tribeId ? [tribeId] : [],
+      tribeNames: tribeName ? [tribeName] : [],
+      originUrl,
+      originLabel,
+      category,
+    }),
+    [youtubeId, title, sourceType, tribeId, tribeName, originUrl, originLabel, category]
+  );
   
   // Check if this video is currently playing in global player
   const isPlayingInGlobal = currentVideo?.youtubeId === youtubeId;
@@ -143,7 +143,9 @@ export function InlineVideoPlayer({
             // Clean up inline player
             try {
               playerRef.current?.destroy?.();
-            } catch {}
+            } catch {
+              /* YT player teardown */
+            }
             playerRef.current = null;
             setIsInlinePlayback(false);
             setShowThumbnail(true);
@@ -164,7 +166,9 @@ export function InlineVideoPlayer({
       if (playerRef.current) {
         try {
           playerRef.current.destroy?.();
-        } catch {}
+        } catch {
+          /* YT player teardown */
+        }
         playerRef.current = null;
       }
     };
@@ -210,12 +214,14 @@ export function InlineVideoPlayer({
           autoplay: 1,
         },
         events: {
-          onReady: (event: any) => {
+          onReady: (event: YoutubePlayerReadyEvent) => {
             try {
-              event.target.playVideo();
-            } catch {}
+              event.target.playVideo?.();
+            } catch {
+              /* YT API */
+            }
           },
-          onStateChange: (event: any) => {
+          onStateChange: (event: YoutubePlayerStateChangeEvent) => {
             try {
               const state = event.data;
               if (state === window.YT?.PlayerState?.PLAYING) {
@@ -224,7 +230,9 @@ export function InlineVideoPlayer({
                          state === window.YT?.PlayerState?.ENDED) {
                 setIsInlinePlayback(false);
               }
-            } catch {}
+            } catch {
+              /* YT API */
+            }
           },
           onError: () => {
             setShowThumbnail(true);
@@ -255,7 +263,9 @@ export function InlineVideoPlayer({
     if (playerRef.current) {
       try {
         playerRef.current.destroy?.();
-      } catch {}
+      } catch {
+        /* YT player teardown */
+      }
       playerRef.current = null;
     }
     setIsInlinePlayback(false);

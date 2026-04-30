@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -16,6 +16,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { shuffleArray } from '@/lib/shuffleArray';
 
 // Extended name database with tribe and language family metadata
 const NAME_DATABASE: Record<string, {
@@ -126,6 +127,7 @@ export function NameGenerator() {
   const { toggleFavorite, isFavorite } = useFavoriteNames();
   const [generatedNames, setGeneratedNames] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
+  const isGeneratingRef = useRef(false);
   const [copiedName, setCopiedName] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(true);
 
@@ -170,17 +172,18 @@ export function NameGenerator() {
   }, [filters]);
 
   const generateNames = useCallback(() => {
-    if (isGenerating) return; // Prevent rapid double-clicks
+    if (isGeneratingRef.current) return;
+    isGeneratingRef.current = true;
     setIsGenerating(true);
-    
-    // Simulate generation delay for effect
+
     setTimeout(() => {
-      const shuffled = [...availableNames].sort(() => Math.random() - 0.5);
+      const shuffled = shuffleArray(availableNames);
       const selected = shuffled.slice(0, Math.min(5, shuffled.length));
       setGeneratedNames(selected);
+      isGeneratingRef.current = false;
       setIsGenerating(false);
     }, 500);
-  }, [availableNames, isGenerating]);
+  }, [availableNames]);
 
   const copyToClipboard = async (name: string) => {
     try {

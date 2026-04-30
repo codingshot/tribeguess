@@ -164,7 +164,7 @@ export function NameExportButton({
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`,
     };
 
-    window.open(urls[platform], '_blank', 'width=600,height=400');
+    window.open(urls[platform], '_blank', 'noopener,noreferrer,width=600,height=400');
   };
 
   const nativeShare = async () => {

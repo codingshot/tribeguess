@@ -1,4 +1,5 @@
 import tribesData from '@/data/tribes.json';
+import type { TribeData } from '@/types/tribe';
 
 // Extract all tribe names and slugs for linking
 interface TribeInfo {
@@ -15,7 +16,7 @@ const getAllTribes = (): TribeInfo[] => {
   
   // Traverse the tribes.json structure
   if (tribesData.tribes) {
-    for (const tribe of tribesData.tribes as any[]) {
+    for (const tribe of (tribesData.tribes || []) as TribeData[]) {
       if (tribe.name && tribe.slug) {
         tribes.push({ name: tribe.name, slug: tribe.slug });
         tribeMap.set(tribe.name.toLowerCase(), tribe.slug);

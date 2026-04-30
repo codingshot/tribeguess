@@ -18,13 +18,15 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
   const recipes = useMemo(() => getRecipesByTribe(tribe.slug), [tribe.slug]);
   
   const religion = useMemo(() => {
-    const tradRel = (tribe as any).traditionalReligion;
-    if (tradRel?.name) return findReligionByName(tradRel.name);
+    const tr = tribe.traditionalReligion;
+    if (tr && typeof tr === 'object' && 'name' in tr && typeof (tr as { name: unknown }).name === 'string') {
+      return findReligionByName((tr as { name: string }).name);
+    }
     return findReligionByName(tribe.name);
   }, [tribe]);
 
   const languageFamily = useMemo(() => {
-    const family = (tribe as any).language?.family?.toLowerCase();
+    const family = tribe.language?.family?.toLowerCase();
     if (!family) return null;
     return languageFamiliesData.languageFamilies.find(f =>
       family.includes(f.id.toLowerCase()) || family.includes(f.name.toLowerCase())
@@ -33,54 +35,54 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
 
   // Same-country tribes (top 6, excluding self)
   const sameCountryTribes = useMemo(() => {
-    const countryCodes = ((tribe as any).countries || []) as string[];
+    const countryCodes = tribe.countries ?? [];
     if (countryCodes.length === 0) return [];
     const allTribes = getAllTribes();
     return allTribes
-      .filter(t => t.id !== tribe.id && ((t as any).countries || []).some((c: string) => countryCodes.includes(c)))
+      .filter(t => t.id !== tribe.id && (t.countries ?? []).some(c => countryCodes.includes(c)))
       .sort((a, b) => a.name.localeCompare(b.name))
       .slice(0, 6);
   }, [tribe]);
 
   // Same-language-family tribes (top 6, excluding self)
   const sameLangTribes = useMemo(() => {
-    const family = (tribe as any).language?.family;
+    const family = tribe.language?.family;
     if (!family) return [];
     const allTribes = getAllTribes();
     return allTribes
-      .filter(t => t.id !== tribe.id && (t as any).language?.family === family)
+      .filter(t => t.id !== tribe.id && t.language?.family === family)
       .sort((a, b) => a.name.localeCompare(b.name))
       .slice(0, 6);
   }, [tribe]);
 
   const countries = useMemo(() => getCountries(), []);
-  const countryCodes = ((tribe as any).countries || []) as string[];
+  const countryCodes = tribe.countries ?? [];
   const primaryCountry = countryCodes[0] ? countries.find(c => c.code === countryCodes[0]) : null;
 
   return (
-    <section className="border-t border-border pt-6">
-      <h2 className="font-display text-lg sm:text-xl font-semibold mb-4">
-        Explore More About the {tribe.name}
+    <section className="border-t border-border pt-5">
+      <h2 className="font-display text-base sm:text-lg font-semibold mb-3 text-foreground">
+        Explore · {tribe.name}
       </h2>
-      <div className="grid sm:grid-cols-2 gap-3">
+      <div className="grid sm:grid-cols-2 gap-2">
         {/* Famous People */}
         {people.length > 0 && (
           <Link
             to={`/people?tribe=${tribe.slug}`}
-            className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+            className="flex items-center gap-2.5 p-3 sm:p-3.5 bg-card rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
           >
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <Users className="w-5 h-5 text-primary" />
+            <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <Users className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+              <p className="font-medium text-sm leading-tight group-hover:text-primary transition-colors">
                 Famous {tribe.name} People
               </p>
-              <p className="text-xs text-muted-foreground">
-                {people.length}+ notable figures including {people[0]?.name}
+              <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">
+                {people.length}+ figures · {people[0]?.name}
               </p>
             </div>
-            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
           </Link>
         )}
 
@@ -88,20 +90,20 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
         {recipes.length > 0 && (
           <Link
             to={`/recipes?tribe=${tribe.slug}`}
-            className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+            className="flex items-center gap-2.5 p-3 sm:p-3.5 bg-card rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
           >
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <ChefHat className="w-5 h-5 text-primary" />
+            <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <ChefHat className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+              <p className="font-medium text-sm leading-tight group-hover:text-primary transition-colors">
                 {tribe.name} Traditional Recipes
               </p>
-              <p className="text-xs text-muted-foreground">
-                {recipes.length} dishes including {recipes[0]?.name}
+              <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">
+                {recipes.length} dishes · {recipes[0]?.name}
               </p>
             </div>
-            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
           </Link>
         )}
 
@@ -109,20 +111,20 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
         {religion && (
           <Link
             to={`/religion/${religion.id}`}
-            className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+            className="flex items-center gap-2.5 p-3 sm:p-3.5 bg-card rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
           >
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <Church className="w-5 h-5 text-primary" />
+            <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <Church className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+              <p className="font-medium text-sm leading-tight group-hover:text-primary transition-colors">
                 {tribe.name} Religion & Beliefs
               </p>
-              <p className="text-xs text-muted-foreground">
-                {religion.name} — spiritual practices & traditions
+              <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">
+                {religion.name}
               </p>
             </div>
-            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
           </Link>
         )}
 
@@ -130,20 +132,20 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
         {languageFamily && (
           <Link
             to={`/languages/${languageFamily.slug}`}
-            className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+            className="flex items-center gap-2.5 p-3 sm:p-3.5 bg-card rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
           >
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <Languages className="w-5 h-5 text-primary" />
+            <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <Languages className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+              <p className="font-medium text-sm leading-tight group-hover:text-primary transition-colors">
                 {languageFamily.name} Language Family
               </p>
-              <p className="text-xs text-muted-foreground">
-                {languageFamily.totalSpeakers} speakers across Africa
+              <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">
+                {languageFamily.totalSpeakers} speakers
               </p>
             </div>
-            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
           </Link>
         )}
 
@@ -151,63 +153,61 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
         {primaryCountry && sameCountryTribes.length > 0 && (
           <Link
             to={`/country/${countryCodeToSlug(primaryCountry.code)}`}
-            className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+            className="flex items-center gap-2.5 p-3 sm:p-3.5 bg-card rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
           >
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <Globe className="w-5 h-5 text-primary" />
+            <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <Globe className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+              <p className="font-medium text-sm leading-tight group-hover:text-primary transition-colors">
                 Other Tribes in {primaryCountry.name}
               </p>
-              <p className="text-xs text-muted-foreground">
-                {sameCountryTribes.length}+ including {sameCountryTribes[0]?.name}
+              <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">
+                {sameCountryTribes.length}+ · {sameCountryTribes[0]?.name}
               </p>
             </div>
-            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
           </Link>
         )}
 
         {/* Compare — opens compare tool with this tribe pre-filled */}
         <Link
           to={`/compare?tribes=${encodeURIComponent(tribe.slug)}`}
-          className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+          className="flex items-center gap-2.5 p-3 sm:p-3.5 bg-card rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
         >
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-            <ArrowLeftRight className="w-5 h-5 text-primary" />
+          <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+            <ArrowLeftRight className="w-4 h-4 text-primary" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="font-medium text-sm group-hover:text-primary transition-colors">Quick tribe compare</p>
-            <p className="text-xs text-muted-foreground">Add more tribes and compare side by side</p>
+            <p className="font-medium text-sm leading-tight group-hover:text-primary transition-colors">Compare tribes</p>
+            <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">Side by side</p>
           </div>
-          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+          <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
         </Link>
 
         {/* Quiz */}
         <Link
           to="/quiz"
-          className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+          className="flex items-center gap-2.5 p-3 sm:p-3.5 bg-card rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors group"
         >
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-            <BookOpen className="w-5 h-5 text-primary" />
+          <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+            <BookOpen className="w-4 h-4 text-primary" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="font-medium text-sm group-hover:text-primary transition-colors">
-              Test Your Knowledge
+            <p className="font-medium text-sm leading-tight group-hover:text-primary transition-colors">
+              Culture quiz
             </p>
-            <p className="text-xs text-muted-foreground">
-              Take a quiz about African tribes & culture
-            </p>
+            <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">Tribes & traditions</p>
           </div>
-          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
+          <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
         </Link>
       </div>
 
       {/* Same-language tribe chips */}
-      {sameLangTribes.length > 0 && (tribe as any).language?.family && (
-        <div className="mt-4">
-          <p className="text-xs font-semibold text-muted-foreground mb-2">
-            Other {(tribe as any).language.family} tribes:
+      {sameLangTribes.length > 0 && tribe.language?.family && (
+        <div className="mt-3">
+          <p className="text-[11px] font-semibold text-muted-foreground mb-1.5">
+            Other {tribe.language.family} tribes
           </p>
           <div className="flex flex-wrap gap-1.5">
             {sameLangTribes.map(t => (
@@ -225,9 +225,9 @@ export function TribeInternalLinks({ tribe }: TribeInternalLinksProps) {
 
       {/* Same-country tribe chips */}
       {sameCountryTribes.length > 0 && primaryCountry && (
-        <div className="mt-3">
-          <p className="text-xs font-semibold text-muted-foreground mb-2">
-            More tribes in {primaryCountry.name}:
+        <div className="mt-2.5">
+          <p className="text-[11px] font-semibold text-muted-foreground mb-1.5">
+            More in {primaryCountry.name}
           </p>
           <div className="flex flex-wrap gap-1.5">
             {sameCountryTribes.map(t => (

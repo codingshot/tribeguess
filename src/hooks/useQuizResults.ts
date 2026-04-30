@@ -82,81 +82,82 @@ export function useQuizResults() {
     setStats(newStats);
   }, []);
 
-  // Add a new quiz result
+  // Add a new quiz result (functional updates avoid dropped results on rapid completions)
   const addResult = useCallback((result: QuizResult) => {
-    const newResults = [...results, result];
-    saveResults(newResults);
-
-    // Update stats
-    const newStats = { ...stats };
-    newStats.totalQuizzesTaken += 1;
-    newStats.totalQuestionsAnswered += result.totalQuestions;
-    newStats.totalCorrectAnswers += result.score;
-    newStats.averageScore = Math.round(
-      (newStats.totalCorrectAnswers / newStats.totalQuestionsAnswered) * 100
-    );
-    newStats.lastPlayedAt = result.completedAt;
-
-    // Check for perfect score
-    if (result.percentage === 100) {
-      newStats.perfectScores += 1;
-    }
-
-    // Track categories completed
-    if (!newStats.categoriesCompleted.includes(result.categoryId)) {
-      newStats.categoriesCompleted.push(result.categoryId);
-    }
-
-    // Track fastest quiz
-    if (!newStats.fastestQuiz || result.timeTaken < newStats.fastestQuiz.time) {
-      newStats.fastestQuiz = { quizId: result.quizId, time: result.timeTaken };
-    }
-
-    // Calculate streak from answers
-    let currentStreak = 0;
-    let maxStreak = 0;
-    result.answers.forEach((answer) => {
-      if (answer.isCorrect) {
-        currentStreak++;
-        maxStreak = Math.max(maxStreak, currentStreak);
-      } else {
-        currentStreak = 0;
-      }
+    setResults((prev) => {
+      const newResults = [...prev, result];
+      const capped = newResults.slice(-200);
+      safeWriteStorage(STORAGE_KEY, capped);
+      return capped;
     });
-    newStats.bestStreak = Math.max(newStats.bestStreak, maxStreak);
-    newStats.currentStreak = currentStreak;
 
-    // Check achievements
-    const newAchievements = [...newStats.achievements];
-    
-    if (newStats.totalQuizzesTaken === 1 && !newAchievements.includes('first-quiz')) {
-      newAchievements.push('first-quiz');
-    }
-    if (result.percentage === 100 && !newAchievements.includes('perfect-score')) {
-      newAchievements.push('perfect-score');
-    }
-    if (newStats.totalQuizzesTaken >= 5 && !newAchievements.includes('five-quizzes')) {
-      newAchievements.push('five-quizzes');
-    }
-    if (newStats.categoriesCompleted.length >= 6 && !newAchievements.includes('all-categories')) {
-      newAchievements.push('all-categories');
-    }
-    if (maxStreak >= 3 && !newAchievements.includes('streak-3')) {
-      newAchievements.push('streak-3');
-    }
-    if (maxStreak >= 10 && !newAchievements.includes('streak-10')) {
-      newAchievements.push('streak-10');
-    }
-    if (result.timeTaken < 60 && !newAchievements.includes('speed-demon')) {
-      newAchievements.push('speed-demon');
-    }
-    if (result.quizId === 'tribe-names-beginner' && result.percentage === 100 && !newAchievements.includes('tribe-master')) {
-      newAchievements.push('tribe-master');
-    }
+    setStats((prev) => {
+      const newStats = { ...prev };
+      newStats.totalQuizzesTaken += 1;
+      newStats.totalQuestionsAnswered += result.totalQuestions;
+      newStats.totalCorrectAnswers += result.score;
+      newStats.averageScore = Math.round(
+        (newStats.totalCorrectAnswers / newStats.totalQuestionsAnswered) * 100
+      );
+      newStats.lastPlayedAt = result.completedAt;
 
-    newStats.achievements = newAchievements;
-    saveStats(newStats);
-  }, [results, stats, saveResults, saveStats]);
+      if (result.percentage === 100) {
+        newStats.perfectScores += 1;
+      }
+
+      if (!newStats.categoriesCompleted.includes(result.categoryId)) {
+        newStats.categoriesCompleted.push(result.categoryId);
+      }
+
+      if (!newStats.fastestQuiz || result.timeTaken < newStats.fastestQuiz.time) {
+        newStats.fastestQuiz = { quizId: result.quizId, time: result.timeTaken };
+      }
+
+      let currentStreak = 0;
+      let maxStreak = 0;
+      result.answers.forEach((answer) => {
+        if (answer.isCorrect) {
+          currentStreak++;
+          maxStreak = Math.max(maxStreak, currentStreak);
+        } else {
+          currentStreak = 0;
+        }
+      });
+      newStats.bestStreak = Math.max(newStats.bestStreak, maxStreak);
+      newStats.currentStreak = currentStreak;
+
+      const newAchievements = [...newStats.achievements];
+
+      if (newStats.totalQuizzesTaken === 1 && !newAchievements.includes('first-quiz')) {
+        newAchievements.push('first-quiz');
+      }
+      if (result.percentage === 100 && !newAchievements.includes('perfect-score')) {
+        newAchievements.push('perfect-score');
+      }
+      if (newStats.totalQuizzesTaken >= 5 && !newAchievements.includes('five-quizzes')) {
+        newAchievements.push('five-quizzes');
+      }
+      if (newStats.categoriesCompleted.length >= 6 && !newAchievements.includes('all-categories')) {
+        newAchievements.push('all-categories');
+      }
+      if (maxStreak >= 3 && !newAchievements.includes('streak-3')) {
+        newAchievements.push('streak-3');
+      }
+      if (maxStreak >= 10 && !newAchievements.includes('streak-10')) {
+        newAchievements.push('streak-10');
+      }
+      if (result.timeTaken < 60 && !newAchievements.includes('speed-demon')) {
+        newAchievements.push('speed-demon');
+      }
+      if (result.quizId === 'tribe-names-beginner' && result.percentage === 100 && !newAchievements.includes('tribe-master')) {
+        newAchievements.push('tribe-master');
+      }
+
+      newStats.achievements = newAchievements;
+      safeWriteStorage(STATS_KEY, newStats);
+      return newStats;
+    });
+  }, []);
 
   // Get results for a specific quiz
   const getQuizResults = useCallback((quizId: string) => {

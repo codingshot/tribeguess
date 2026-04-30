@@ -5,6 +5,11 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
+/** iOS Safari exposes standalone mode on Navigator */
+interface NavigatorStandalone extends Navigator {
+  standalone?: boolean;
+}
+
 interface PWAInstallState {
   isInstallable: boolean;
   isInstalled: boolean;
@@ -21,7 +26,7 @@ export function usePWAInstall(): PWAInstallState {
     // Check if already installed
     const checkInstalled = () => {
       const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-      const isIOSStandalone = (window.navigator as any).standalone === true;
+      const isIOSStandalone = (window.navigator as NavigatorStandalone).standalone === true;
       setIsInstalled(isStandalone || isIOSStandalone);
     };
 

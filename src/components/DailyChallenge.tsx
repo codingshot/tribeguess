@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -36,6 +36,8 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [answers, setAnswers] = useState<{ questionId: string; selectedAnswer: number; correctAnswer: number; isCorrect: boolean }[]>([]);
+  const answersRef = useRef(answers);
+  answersRef.current = answers;
   const [timeRemaining, setTimeRemaining] = useState(90);
   const [startTime, setStartTime] = useState<number>(0);
   const [showResults, setShowResults] = useState(false);
@@ -65,28 +67,15 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
 
   const todayResult = getTodayResult();
 
-  // Timer effect
-  useEffect(() => {
-    let interval: ReturnType<typeof setInterval>;
-    if (isPlaying && timeRemaining > 0 && !showExplanation && !showResults) {
-      interval = setInterval(() => {
-        setTimeRemaining((prev) => {
-          if (prev <= 1) {
-            handleTimeUp();
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-    return () => clearInterval(interval);
-  }, [isPlaying, timeRemaining, showExplanation, showResults]);
+  const selectedAnswerRef = useRef(selectedAnswer);
+  selectedAnswerRef.current = selectedAnswer;
+  const handleAnswerRef = useRef<(answerIndex: number) => void>(() => {});
 
-  const handleTimeUp = () => {
-    if (selectedAnswer === null) {
-      handleAnswer(-1);
+  const handleTimeUp = useCallback(() => {
+    if (selectedAnswerRef.current === null) {
+      handleAnswerRef.current(-1);
     }
-  };
+  }, []);
 
   const startChallenge = () => {
     setIsPlaying(true);
@@ -94,6 +83,7 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
     setSelectedAnswer(null);
     setShowExplanation(false);
     setAnswers([]);
+    answersRef.current = [];
     setTimeRemaining(90);
     setStartTime(Date.now());
     setShowResults(false);
@@ -109,13 +99,37 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
     
     setSelectedAnswer(answerIndex);
     setShowExplanation(true);
-    setAnswers(prev => [...prev, {
-      questionId: currentQ.id || `q-${currentQuestion}`,
-      selectedAnswer: answerIndex,
-      correctAnswer: currentQ.correctAnswer,
-      isCorrect,
-    }]);
+    setAnswers((prev) => {
+      const next = [
+        ...prev,
+        {
+          questionId: currentQ.id || `q-${currentQuestion}`,
+          selectedAnswer: answerIndex,
+          correctAnswer: currentQ.correctAnswer,
+          isCorrect,
+        },
+      ];
+      answersRef.current = next;
+      return next;
+    });
   };
+  handleAnswerRef.current = handleAnswer;
+
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    if (isPlaying && timeRemaining > 0 && !showExplanation && !showResults) {
+      interval = setInterval(() => {
+        setTimeRemaining((prev) => {
+          if (prev <= 1) {
+            handleTimeUp();
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying, timeRemaining, showExplanation, showResults, handleTimeUp]);
 
   const nextQuestion = () => {
     if (currentQuestion < dailyQuestions.length - 1) {
@@ -123,9 +137,9 @@ export function DailyChallenge({ onComplete }: DailyChallengeProps) {
       setSelectedAnswer(null);
       setShowExplanation(false);
     } else {
-      // Challenge complete - answers already includes all responses from handleAnswer
+      const finalAnswers = answersRef.current;
       const timeTaken = Math.round((Date.now() - startTime) / 1000);
-      const score = answers.filter((a) => a.isCorrect).length;
+      const score = finalAnswers.filter((a) => a.isCorrect).length;
       
       const result: DailyChallengeResult = {
         date: new Date().toISOString().split('T')[0],

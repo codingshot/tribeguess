@@ -188,7 +188,7 @@ export const TribeFamilyTree: React.FC<FamilyTreeProps> = ({ currentTribe, ethni
   
   // Find related tribes with the same language family
   const relatedByLanguage = allTribes.filter(t => {
-    const tLang = (t as any).language?.family;
+    const tLang = t.language?.family;
     return tLang && tLang === languageFamily && t.id !== currentTribe.id;
   }).slice(0, 6);
   

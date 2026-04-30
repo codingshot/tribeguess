@@ -32,9 +32,8 @@ export const ShareButton = ({ title, url, description = '' }: ShareButtonProps) 
           url: fullUrl,
         });
         setIsOpen(false);
-      } catch (err) {
-        // User cancelled or error
-        console.log('Share cancelled or failed');
+      } catch {
+        /* User cancelled share sheet or share failed — no action needed */
       }
     }
   };

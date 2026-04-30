@@ -80,13 +80,33 @@ class PageErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-background flex items-center justify-center p-4">
-          <div className="text-center max-w-md">
-            <h1 className="text-2xl font-bold text-foreground mb-2">Something went wrong</h1>
-            <p className="text-muted-foreground mb-4">This page encountered an error. Try going back or visiting another page.</p>
-            <div className="flex gap-2 justify-center">
-              <button onClick={() => window.history.back()} className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium">Go Back</button>
-              <button onClick={() => { this.setState({ hasError: false, error: null }); window.location.href = '/learn'; }} className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg text-sm font-medium">Browse Tribes</button>
+        <div className="min-h-screen bg-gradient-to-b from-muted/40 to-background flex items-center justify-center p-4 sm:p-6">
+          <div
+            role="alert"
+            className="w-full max-w-md rounded-2xl border border-border bg-card p-6 sm:p-8 text-center shadow-lg"
+          >
+            <h1 className="font-serif text-2xl font-bold text-foreground mb-2">Something went wrong</h1>
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
+              This page hit an unexpected error. You can go back, browse tribes, or try reloading.
+            </p>
+            <div className="flex flex-col-reverse sm:flex-row gap-2 sm:justify-center">
+              <button
+                type="button"
+                onClick={() => window.history.back()}
+                className="px-4 py-3 min-h-[44px] rounded-xl border border-border bg-background text-sm font-medium text-foreground hover:bg-muted/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+              >
+                Go back
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  this.setState({ hasError: false, error: null });
+                  window.location.href = '/learn';
+                }}
+                className="px-4 py-3 min-h-[44px] rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+              >
+                Browse tribes
+              </button>
             </div>
           </div>
         </div>

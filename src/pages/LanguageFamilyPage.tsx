@@ -136,7 +136,7 @@ export default function LanguageFamilyPage() {
 
   const relatedTribes = allTribes.filter(tribe => {
     if (seen.has(tribe.id)) return false;
-    const tribeFamily = (tribe as any).language?.family?.toLowerCase() || '';
+    const tribeFamily = tribe.language?.family?.toLowerCase() || '';
     if (!tribeFamily) return false;
     
     // Exact or substring match on family id/name
@@ -546,7 +546,7 @@ export default function LanguageFamilyPage() {
                           <div className="flex-1">
                             <p className="font-medium text-sm">{tribe.name}</p>
                             <p className="text-xs text-muted-foreground">
-                              {(tribe as any).language?.name || 'Language data pending'}
+                              {tribe.language?.name || 'Language data pending'}
                             </p>
                           </div>
                           <ArrowRight className="w-4 h-4 text-muted-foreground" />

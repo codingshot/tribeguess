@@ -30,14 +30,11 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-
-// YouTube IFrame API loader
-declare global {
-  interface Window {
-    YT: any;
-    onYouTubeIframeAPIReady: () => void;
-  }
-}
+import type {
+  YoutubePlayerReadyEvent,
+  YoutubePlayerStateChangeEvent,
+  YoutubePlayerErrorEvent,
+} from '@/types/youtubeIframe';
 
 let ytApiLoaded = false;
 let ytApiLoading = false;
@@ -178,7 +175,9 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
       if (playerRef.current) {
         try {
           playerRef.current.destroy?.();
-        } catch {}
+        } catch {
+          /* YT player teardown */
+        }
         playerRef.current = null;
       }
       
@@ -202,18 +201,20 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
               autoplay: 1,
             },
             events: {
-              onReady: (event: any) => {
+              onReady: (event: YoutubePlayerReadyEvent) => {
                 if (!isMounted) return;
                 try {
-                  event.target.setVolume(volume);
-                  if (isMuted) event.target.mute();
+                  event.target.setVolume?.(volume);
+                  if (isMuted) event.target.mute?.();
                   // Apply playback speed
                   event.target.setPlaybackRate?.(playbackSpeed);
-                  event.target.playVideo();
+                  event.target.playVideo?.();
                   setPlayerState({ isLoading: false });
-                } catch {}
+                } catch {
+                  /* YT API */
+                }
               },
-              onStateChange: (event: any) => {
+              onStateChange: (event: YoutubePlayerStateChangeEvent) => {
                 if (!isMounted) return;
                 try {
                   const state = event.data;
@@ -235,9 +236,11 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
                   } else if (state === window.YT?.PlayerState?.BUFFERING) {
                     setPlayerState({ isLoading: true });
                   }
-                } catch {}
+                } catch {
+                  /* YT API */
+                }
               },
-              onError: (event: any) => {
+              onError: (event: YoutubePlayerErrorEvent) => {
                 if (!isMounted) return;
                 const errorCode = event?.data;
                 const errorMessages: Record<number, { title: string; description: string }> = {
@@ -277,7 +280,7 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
                     label: 'Report',
                     onClick: () => {
                       const issueUrl = `https://github.com/TribeGuess/tribeguess/issues/new?template=data_video_issue.yml&title=[Video+Issue]:+${encodeURIComponent(currentVideo.title || 'Untitled')}&video_id=${currentVideo.youtubeId}&error=${encodeURIComponent(`Error ${errorCode}: ${error.title}`)}`;
-                      window.open(issueUrl, '_blank');
+                      window.open(issueUrl, '_blank', 'noopener,noreferrer');
                     }
                   } : undefined
                 });
@@ -314,7 +317,9 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
       if (playerRef.current) {
         try {
           playerRef.current.destroy?.();
-        } catch {}
+        } catch {
+          /* YT player teardown */
+        }
         playerRef.current = null;
       }
     };
@@ -332,7 +337,7 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
     }, 250);
     
     return () => clearInterval(interval);
-  }, [isPlaying, isDragging, setPlayerState]);
+  }, [isPlaying, isDragging, setPlayerState, playerRef]);
   
   // Sync slider
   useEffect(() => {

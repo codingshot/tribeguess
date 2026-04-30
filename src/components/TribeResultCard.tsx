@@ -37,25 +37,25 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
 
   return (
     <article 
-      className={`card-tribe p-5 sm:p-7 ${isPrimary ? 'ring-2 ring-primary animate-scale-in' : 'animate-fade-in'}`}
+      className={`card-tribe p-4 sm:p-5 ${isPrimary ? 'ring-2 ring-primary animate-scale-in' : 'animate-fade-in'}`}
       style={{ animationDelay: `${rank * 100}ms` }}
       aria-label={`${tribe.name} tribe prediction with ${confidence}% confidence`}
     >
-      <header className="flex items-start justify-between mb-4 sm:mb-5 gap-3">
-        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+      <header className="flex items-start justify-between gap-2 sm:gap-3 mb-3">
+        <div className="flex items-center gap-2 min-w-0">
           {isPrimary && (
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full gradient-gold flex items-center justify-center flex-shrink-0">
-              <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" aria-hidden="true" />
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full gradient-gold flex items-center justify-center flex-shrink-0">
+              <Star className="w-4 h-4 sm:w-4 sm:h-4 text-primary-foreground" aria-hidden="true" />
             </div>
           )}
           <div className="min-w-0">
             <Link 
               to={`/learn/${tribe.slug || tribe.id}`}
-              className="font-display text-lg sm:text-xl font-bold text-foreground hover:text-primary transition-colors truncate block"
+              className="font-display text-base sm:text-lg font-bold text-foreground hover:text-primary transition-colors truncate block leading-tight"
             >
               {tribe.name}
             </Link>
-            <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm mt-1 leading-relaxed">
+            <div className="flex items-center gap-1.5 text-muted-foreground text-xs mt-0.5 leading-snug">
               <MapPin className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
               <span className="truncate">{tribe.region}</span>
               {Array.isArray(tribe.countries) && tribe.countries.length > 0 && (
@@ -74,14 +74,14 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
       </header>
       
       {/* Reasoning Section */}
-      <div className="mb-4 sm:mb-5 p-4 bg-secondary/50 rounded-xl border border-border">
-        <div className="flex items-center gap-2 text-sm font-medium text-foreground mb-3">
-          <Brain className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+      <div className="mb-3 p-3 sm:p-3.5 bg-secondary/50 rounded-lg border border-border">
+        <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+          <Brain className="w-3.5 h-3.5 text-primary shrink-0" aria-hidden="true" />
           <span>Why we think this</span>
         </div>
-        <ul className="space-y-2.5">
+        <ul className="space-y-1.5">
           {(matchDetails || [matchReason]).map((reason, i) => (
-            <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed">
+            <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground leading-snug">
               <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
               <span>{reason}</span>
             </li>
@@ -90,49 +90,52 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
       </div>
       
       {nameMeaning && (
-        <div className="mb-4 sm:mb-5 p-4 bg-primary/5 rounded-xl border border-primary/20">
-          <div className="flex items-center gap-2 text-sm text-primary mb-2">
-            <Lightbulb className="w-4 h-4 shrink-0" aria-hidden="true" />
-            <span className="font-medium">Name meaning</span>
+        <div className="mb-3 p-3 sm:p-3.5 bg-primary/5 rounded-lg border border-primary/20">
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-primary mb-1.5">
+            <Lightbulb className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+            <span>Name meaning</span>
           </div>
-          <p className="text-foreground text-sm sm:text-base leading-relaxed">
-            <strong>"{inputName}"</strong> means: {nameMeaning}
+          <p className="text-foreground text-sm leading-snug">
+            <strong>"{inputName}"</strong> — {nameMeaning}
           </p>
         </div>
       )}
       
-      <p className="text-muted-foreground text-sm mb-4 sm:mb-5 line-clamp-3 leading-relaxed">{tribe.description}</p>
+      <p className="text-muted-foreground text-xs sm:text-sm mb-3 line-clamp-3 leading-snug">{tribe.description}</p>
       
       {/* Stereotypes */}
-      <div className="mb-4 sm:mb-5">
-        <div className="flex items-center gap-2 text-sm font-medium text-foreground mb-3">
-          <Users className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-          <span>Common stereotypes</span>
-        </div>
-        <ul className="flex flex-wrap gap-2" aria-label="Common stereotypes">
+      <div className="mb-3">
+        <div className="flex flex-wrap items-start gap-x-2 gap-y-1.5">
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-foreground shrink-0 pt-0.5" id={`stereotypes-label-${rank}`}>
+            <Users className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
+            Stereotypes
+          </span>
+          <ul className="flex flex-wrap gap-1.5 flex-1 min-w-0 list-none p-0 m-0" aria-labelledby={`stereotypes-label-${rank}`}>
           {(tribe.stereotypes || []).slice(0, 4).map((stereotype, i) => (
-            <li key={i} className="badge-tribe text-xs max-w-[min(100%,14rem)] whitespace-normal text-left leading-snug">
+            <li key={i} className="badge-tribe-compact max-w-[min(100%,14rem)] whitespace-normal text-left">
               {stereotype}
             </li>
           ))}
-        </ul>
+          </ul>
+        </div>
       </div>
       
       {/* Quick Facts (expandable) */}
       {quickFacts.length > 0 && (
-        <div className="mb-3">
+        <div className="mb-2">
           <button
+            type="button"
             onClick={() => setShowMore(!showMore)}
-            className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors touch-manipulation w-full"
+            className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors touch-manipulation w-full py-1"
           >
             <Globe className="w-3.5 h-3.5" />
             <span>Quick Facts</span>
             {showMore ? <ChevronUp className="w-3.5 h-3.5 ml-auto" /> : <ChevronDown className="w-3.5 h-3.5 ml-auto" />}
           </button>
           {showMore && (
-            <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-1.5 animate-fade-in">
+            <div className="mt-1.5 grid grid-cols-1 sm:grid-cols-2 gap-1 animate-fade-in">
               {quickFacts.map((fact, i) => (
-                <div key={i} className="text-xs text-muted-foreground px-2 py-1.5 bg-secondary/30 rounded">
+                <div key={i} className="text-[11px] sm:text-xs text-muted-foreground px-2 py-1 bg-secondary/30 rounded-md leading-snug">
                   {fact}
                 </div>
               ))}
@@ -143,39 +146,41 @@ export function TribeResultCard({ result, rank, inputName }: TribeResultCardProp
 
       {/* Famous People */}
       {isPrimary && tribe.famousPeople && tribe.famousPeople.length > 0 && (
-        <div className="pt-3 sm:pt-4 border-t border-border mb-3">
-          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-foreground mb-2">
-            <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" aria-hidden="true" />
-            <span>Famous {tribe.name} people</span>
-          </div>
-          <p className="text-xs sm:text-sm text-muted-foreground">
-            {tribe.famousPeople.slice(0, 3).map((p: any) => typeof p === 'string' ? p : p.name).join(' • ')}
+        <div className="pt-2 border-t border-border mb-2">
+          <p className="text-xs text-muted-foreground leading-snug">
+            <span className="inline-flex items-center gap-1 font-medium text-foreground mr-1">
+              <User className="w-3.5 h-3.5 text-primary shrink-0" aria-hidden="true" />
+              Notable people:
+            </span>
+            {tribe.famousPeople.slice(0, 3).map((p) => (typeof p === 'string' ? p : p.name)).join(' · ')}
           </p>
         </div>
       )}
 
       {/* Try More Names from This Tribe */}
       {allTribeNames.length > 0 && (
-        <div className="pt-3 border-t border-border mb-3">
-          <p className="text-xs text-muted-foreground mb-2">
-            Other {tribe.name} names to try:
+        <div className="pt-2 border-t border-border mb-2">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <p className="text-xs text-muted-foreground shrink-0">
+            More {tribe.name} names:
           </p>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1">
             {allTribeNames.map(name => (
               <a
                 key={name}
                 href={`/?name=${encodeURIComponent(name)}`}
-                className="px-2 py-1 text-xs bg-secondary/50 rounded hover:bg-primary/10 hover:text-primary border border-border hover:border-primary/30 transition-colors touch-manipulation"
+                className="px-2 py-0.5 text-[11px] sm:text-xs bg-secondary/50 rounded-md hover:bg-primary/10 hover:text-primary border border-border/80 hover:border-primary/30 transition-colors touch-manipulation"
               >
                 {name}
               </a>
             ))}
           </div>
+          </div>
         </div>
       )}
       
       {/* Bottom Actions */}
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 pt-1">
         <Link 
           to={`/learn/${tribe.slug || tribe.id}`}
           className="inline-flex items-center gap-1 text-primary hover:underline text-xs sm:text-sm font-medium touch-manipulation"

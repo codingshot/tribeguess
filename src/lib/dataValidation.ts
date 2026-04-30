@@ -23,15 +23,20 @@ export function normalizeForSearch(input: string): string {
 
 // ============= INPUT SANITIZATION =============
 
+/** Strip ASCII control chars (avoids no-control-regex on ranges like \x00-\x1f). */
+export function stripAsciiControlCharacters(input: string): string {
+  let out = '';
+  for (let i = 0; i < input.length; i++) {
+    const c = input.charCodeAt(i);
+    if (c >= 32 && c !== 127) out += input[i];
+  }
+  return out;
+}
+
 /** Sanitize a search/name string: trim, limit length, strip control chars */
 export function sanitizeTextInput(input: unknown, maxLength = 100): string {
   if (typeof input !== 'string') return '';
-  return input
-    .trim()
-    .slice(0, maxLength)
-    // Remove control characters but keep Unicode letters, spaces, hyphens, apostrophes
-    .replace(/[\x00-\x1F\x7F]/g, '')
-    .replace(/\s+/g, ' ');
+  return stripAsciiControlCharacters(input.trim().slice(0, maxLength)).replace(/\s+/g, ' ');
 }
 
 /** Validate a name input for the guess form */
@@ -47,7 +52,7 @@ export function validateNameInput(name: string): { valid: boolean; sanitized: st
   }
   
   // Allow Unicode letters, spaces, hyphens, apostrophes
-  const namePattern = /^[a-zA-ZÀ-ÿ\u0100-\u024F\u0300-\u036F\s\-']+$/;
+  const namePattern = /^[\p{L}\s\-']+$/u;
   if (!namePattern.test(sanitized)) {
     return { valid: false, sanitized, error: 'Name contains invalid characters' };
   }
@@ -120,7 +125,9 @@ export function safeReadStorage<T>(key: string, validator: (data: unknown) => T 
     return validated;
   } catch (e) {
     console.warn(`[Storage] Failed to read "${key}":`, e);
-    try { localStorage.removeItem(key); } catch { }
+    try { localStorage.removeItem(key); } catch {
+      /* localStorage unavailable */
+    }
     return fallback;
   }
 }
@@ -148,11 +155,11 @@ export function validateFavorites(data: unknown): { name: string; addedAt: numbe
   if (!Array.isArray(data)) return null;
   
   const validated = data
-    .filter((item): item is Record<string, unknown> => 
-      item !== null && typeof item === 'object' &&
-      typeof (item as any).name === 'string' &&
-      typeof (item as any).addedAt === 'number'
-    )
+    .filter((item): item is Record<string, unknown> => {
+      if (item === null || typeof item !== 'object') return false;
+      const rec = item as Record<string, unknown>;
+      return typeof rec.name === 'string' && typeof rec.addedAt === 'number';
+    })
     .map(item => ({
       name: sanitizeTextInput(item.name, 100),
       addedAt: safeNumber(item.addedAt, Date.now()),
@@ -185,12 +192,15 @@ export function validateQuizResults(data: unknown): unknown[] | null {
   if (!Array.isArray(data)) return null;
   
   return data
-    .filter((item): item is Record<string, unknown> =>
-      item !== null && typeof item === 'object' &&
-      typeof (item as any).quizId === 'string' &&
-      typeof (item as any).score === 'number' &&
-      typeof (item as any).totalQuestions === 'number'
-    )
+    .filter((item): item is Record<string, unknown> => {
+      if (item === null || typeof item !== 'object') return false;
+      const rec = item as Record<string, unknown>;
+      return (
+        typeof rec.quizId === 'string' &&
+        typeof rec.score === 'number' &&
+        typeof rec.totalQuestions === 'number'
+      );
+    })
     // Cap stored results at 200
     .slice(-200);
 }

@@ -1,4 +1,4 @@
-import { Trophy, Target, TrendingUp, Zap } from 'lucide-react';
+import { Trophy, Target, Zap } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ResultSummaryBannerProps {
@@ -21,17 +21,17 @@ export function ResultSummaryBanner({
 
   return (
     <div className={cn(
-      "p-4 sm:p-5 rounded-2xl border mb-5 sm:mb-6 animate-scale-in",
+      "p-3 sm:p-4 rounded-xl border mb-4 animate-scale-in",
       isStrong
         ? "bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border-green-200 dark:border-green-800"
         : isMedium
         ? "bg-gradient-to-r from-blue-50 to-sky-50 dark:from-blue-950/30 dark:to-sky-950/30 border-blue-200 dark:border-blue-800"
         : "bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border-amber-200 dark:border-amber-800"
     )}>
-      <div className="flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-3 sm:gap-4">
         {/* Confidence Gauge */}
-        <div className="relative w-14 h-14 flex-shrink-0">
-          <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
+        <div className="relative w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+          <svg className="w-12 h-12 sm:w-14 sm:h-14 -rotate-90" viewBox="0 0 56 56">
             <circle cx="28" cy="28" r="24" fill="none" stroke="currentColor" strokeWidth="4" className="text-secondary" />
             <circle
               cx="28" cy="28" r="24" fill="none"
@@ -45,7 +45,7 @@ export function ResultSummaryBanner({
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
             <span className={cn(
-              "text-sm font-bold",
+              "text-xs sm:text-sm font-bold",
               isStrong ? "text-green-700 dark:text-green-400" : isMedium ? "text-blue-700 dark:text-blue-400" : "text-amber-700 dark:text-amber-400"
             )}>
               {confidence}%
@@ -53,35 +53,39 @@ export function ResultSummaryBanner({
           </div>
         </div>
 
-        {/* Summary Text */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            {isStrong ? (
-              <Trophy className="w-4 h-4 text-green-600 dark:text-green-400" />
-            ) : isMedium ? (
-              <Target className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            ) : (
-              <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+        <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+          <div className="min-w-0 flex-1">
+            <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-sm text-muted-foreground leading-snug">
+              {isStrong ? (
+                <Trophy className="w-3.5 h-3.5 text-green-600 dark:text-green-400 shrink-0" aria-hidden />
+              ) : isMedium ? (
+                <Target className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" aria-hidden />
+              ) : (
+                <Zap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" aria-hidden />
+              )}
+              <span className={cn(
+                "font-semibold",
+                isStrong ? "text-green-800 dark:text-green-200" : isMedium ? "text-blue-800 dark:text-blue-200" : "text-amber-800 dark:text-amber-200"
+              )}>
+                {isStrong ? 'Strong match' : isMedium ? 'Likely match' : 'Possible match'}
+              </span>
+              <span className="text-muted-foreground/80">·</span>
+              <span>
+                <strong className="text-foreground">{inputName}</strong>
+                {' → '}
+                <strong className="text-foreground">{topTribeName}</strong>
+                {totalMatches > 1 && (
+                  <span className="text-muted-foreground"> ({totalMatches} picks)</span>
+                )}
+              </span>
+            </p>
+            {matchType && (
+              <p className="text-[11px] text-muted-foreground mt-0.5 truncate">{matchType}</p>
             )}
-            <span className={cn(
-              "text-sm font-bold",
-              isStrong ? "text-green-800 dark:text-green-200" : isMedium ? "text-blue-800 dark:text-blue-200" : "text-amber-800 dark:text-amber-200"
-            )}>
-              {isStrong ? 'Strong Match!' : isMedium ? 'Likely Match' : 'Possible Match'}
-            </span>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            For <strong className="text-foreground">{inputName}</strong>, the closest match is the{' '}
-            <strong className="text-foreground">{topTribeName}</strong> tribe
-            {totalMatches > 1 && ` (${totalMatches} possible matches)`}.
-          </p>
-        </div>
-
-        {/* Quick Stats */}
-        <div className="flex gap-3 text-center">
-          <div>
-            <div className="text-lg font-bold text-foreground">{totalMatches}</div>
-            <div className="text-[10px] text-muted-foreground">Matches</div>
+          <div className="flex sm:flex-col items-baseline sm:items-end gap-1 sm:gap-0 sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-border/50 pt-2 sm:pt-0 sm:pl-4">
+            <span className="text-xl sm:text-2xl font-bold text-foreground tabular-nums leading-none">{totalMatches}</span>
+            <span className="text-[10px] uppercase tracking-wide text-muted-foreground sm:block">Matches</span>
           </div>
         </div>
       </div>

@@ -11,7 +11,10 @@ import { CrossSectionSearchHints } from '@/components/CrossSectionSearchHints';
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
-  const selectedTags = searchParams.get('tags')?.split(',').filter(Boolean) || [];
+  const selectedTags = useMemo(
+    () => searchParams.get('tags')?.split(',').filter(Boolean) || [],
+    [searchParams]
+  );
   const selectedRegion = searchParams.get('region') || '';
   
   const [localSearch, setLocalSearch] = useState(searchQuery);

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -17,7 +17,8 @@ import {
 import { useQuizResults, QuizResult } from '@/hooks/useQuizResults';
 import { useDailyChallenge, dailyAchievements } from '@/hooks/useDailyChallenge';
 import { DailyChallenge } from '@/components/DailyChallenge';
-import quizData from '@/data/quizzes.json';
+import quizDataRaw from '@/data/quizzes.json';
+import { shuffleArray } from '@/lib/shuffleArray';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Users, Sparkles, ChefHat, MapPin, Languages, Moon, Trophy, Star, 
@@ -74,6 +75,29 @@ interface FlashCard {
   tribe: string;
 }
 
+interface FlashcardSet {
+  id: string;
+  title: string;
+  description: string;
+  category?: string;
+  region?: string;
+  cards: FlashCard[];
+}
+
+interface QuizDataRoot {
+  quizCategories: Array<{
+    id: string;
+    name: string;
+    description: string;
+    icon: string;
+    color: string;
+  }>;
+  quizzes: Quiz[];
+  flashcardSets: FlashcardSet[];
+}
+
+const quizData = quizDataRaw as QuizDataRoot;
+
 type GameMode = 'menu' | 'quiz' | 'flashcards' | 'results' | 'stats';
 
 export default function QuizPage() {
@@ -83,6 +107,8 @@ export default function QuizPage() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [answers, setAnswers] = useState<{ questionId: string; selectedAnswer: number; correctAnswer: number; isCorrect: boolean }[]>([]);
+  const answersRef = useRef(answers);
+  answersRef.current = answers;
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [quizStartTime, setQuizStartTime] = useState<number>(0);
   
@@ -96,7 +122,54 @@ export default function QuizPage() {
   const { stats, addResult, getBestResult, getCategoryStats } = useQuizResults();
   const { dailyStats, unlockedAchievements: dailyUnlockedAchievements } = useDailyChallenge();
 
-  // Timer effect
+  const selectedAnswerRef = useRef(selectedAnswer);
+  selectedAnswerRef.current = selectedAnswer;
+  const selectedQuizRef = useRef(selectedQuiz);
+  selectedQuizRef.current = selectedQuiz;
+  const handleAnswerRef = useRef<(answerIndex: number) => void>(() => {});
+
+  const handleTimeUp = useCallback(() => {
+    if (selectedAnswerRef.current === null && selectedQuizRef.current) {
+      handleAnswerRef.current(-1);
+    }
+  }, []);
+
+  const startQuiz = (quiz: Quiz) => {
+    setSelectedQuiz(quiz);
+    setCurrentQuestion(0);
+    setSelectedAnswer(null);
+    setShowExplanation(false);
+    setAnswers([]);
+    answersRef.current = [];
+    setTimeRemaining(quiz.timeLimit);
+    setQuizStartTime(Date.now());
+    setGameMode('quiz');
+  };
+
+  const handleAnswer = (answerIndex: number) => {
+    if (showExplanation || !selectedQuiz) return;
+    
+    const currentQ = selectedQuiz.questions[currentQuestion];
+    const isCorrect = answerIndex === currentQ.correctAnswer;
+    
+    setSelectedAnswer(answerIndex);
+    setShowExplanation(true);
+    setAnswers((prev) => {
+      const next = [
+        ...prev,
+        {
+          questionId: currentQ.id,
+          selectedAnswer: answerIndex,
+          correctAnswer: currentQ.correctAnswer,
+          isCorrect,
+        },
+      ];
+      answersRef.current = next;
+      return next;
+    });
+  };
+  handleAnswerRef.current = handleAnswer;
+
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     if (gameMode === 'quiz' && timeRemaining > 0 && !showExplanation) {
@@ -111,40 +184,7 @@ export default function QuizPage() {
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, [gameMode, timeRemaining, showExplanation]);
-
-  const handleTimeUp = () => {
-    if (selectedAnswer === null && selectedQuiz) {
-      handleAnswer(-1);
-    }
-  };
-
-  const startQuiz = (quiz: Quiz) => {
-    setSelectedQuiz(quiz);
-    setCurrentQuestion(0);
-    setSelectedAnswer(null);
-    setShowExplanation(false);
-    setAnswers([]);
-    setTimeRemaining(quiz.timeLimit);
-    setQuizStartTime(Date.now());
-    setGameMode('quiz');
-  };
-
-  const handleAnswer = (answerIndex: number) => {
-    if (showExplanation || !selectedQuiz) return;
-    
-    const currentQ = selectedQuiz.questions[currentQuestion];
-    const isCorrect = answerIndex === currentQ.correctAnswer;
-    
-    setSelectedAnswer(answerIndex);
-    setShowExplanation(true);
-    setAnswers([...answers, {
-      questionId: currentQ.id,
-      selectedAnswer: answerIndex,
-      correctAnswer: currentQ.correctAnswer,
-      isCorrect,
-    }]);
-  };
+  }, [gameMode, timeRemaining, showExplanation, handleTimeUp]);
 
   const nextQuestion = () => {
     if (!selectedQuiz) return;
@@ -154,11 +194,12 @@ export default function QuizPage() {
       setSelectedAnswer(null);
       setShowExplanation(false);
     } else {
-      // answers already includes all responses from handleAnswer - no need to push again
+      // Use ref so scoring matches the latest answers even if state updates are still batching
+      const finalAnswers = answersRef.current;
       const timeTaken = Math.round((Date.now() - quizStartTime) / 1000);
       const totalQ = selectedQuiz.questions.length;
-      const correctCount = answers.filter((a) => a.isCorrect).length;
-      
+      const correctCount = finalAnswers.filter((a) => a.isCorrect).length;
+
       const result: QuizResult = {
         quizId: selectedQuiz.id,
         quizTitle: selectedQuiz.title,
@@ -168,7 +209,7 @@ export default function QuizPage() {
         percentage: totalQ > 0 ? Math.round((correctCount / totalQ) * 100) : 0,
         timeTaken,
         completedAt: new Date().toISOString(),
-        answers,
+        answers: finalAnswers,
       };
       
       addResult(result);
@@ -180,7 +221,7 @@ export default function QuizPage() {
     const set = quizData.flashcardSets.find((s) => s.id === setId);
     if (set) {
       setSelectedFlashcardSet(setId);
-      const shuffled = [...set.cards].sort(() => Math.random() - 0.5);
+      const shuffled = shuffleArray(set.cards);
       setShuffledCards(shuffled);
       setCurrentCard(0);
       setIsFlipped(false);
@@ -195,9 +236,9 @@ export default function QuizPage() {
 
   // Group flashcard sets by category
   const flashcardGroups = useMemo(() => {
-    const groups: Record<string, typeof quizData.flashcardSets> = {};
+    const groups: Record<string, FlashcardSet[]> = {};
     quizData.flashcardSets.forEach((set) => {
-      const cat = (set as any).category || 'other';
+      const cat = set.category || 'other';
       if (!groups[cat]) groups[cat] = [];
       groups[cat].push(set);
     });
@@ -206,7 +247,9 @@ export default function QuizPage() {
 
   const filteredFlashcardSets = useMemo(() => {
     if (flashcardFilter === 'all') return quizData.flashcardSets;
-    return quizData.flashcardSets.filter((s) => (s as any).category === flashcardFilter);
+    return quizData.flashcardSets.filter(
+      (s) => (s.category || 'other') === flashcardFilter
+    );
   }, [flashcardFilter]);
 
   const formatTime = (seconds: number) => {
@@ -404,8 +447,8 @@ export default function QuizPage() {
                   {/* Flashcard sets grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                     {filteredFlashcardSets.map((set) => {
-                      const cat = (set as any).category || 'other';
-                      const region = (set as any).region || '';
+                      const cat = set.category || 'other';
+                      const region = set.region || '';
                       const CatIcon = categoryIcons[cat] || Shuffle;
                       const color = categoryColors[cat] || 'from-gray-500 to-gray-600';
                       
@@ -673,8 +716,8 @@ export default function QuizPage() {
                 </Button>
                 <div className="text-center">
                   <p className="font-semibold text-xs sm:text-sm">{currentFlashcardSet.title}</p>
-                  {(currentFlashcardSet as any).region && (
-                    <Badge variant="secondary" className="text-[10px]">{(currentFlashcardSet as any).region}</Badge>
+                  {currentFlashcardSet.region && (
+                    <Badge variant="secondary" className="text-[10px]">{currentFlashcardSet.region}</Badge>
                   )}
                 </div>
                 <Badge variant="outline" className="text-xs">

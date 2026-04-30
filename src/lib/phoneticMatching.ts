@@ -8,9 +8,9 @@
 import globalTribeNames from '@/data/globalTribeNames.json';
 
 // ============= CACHES FOR O(1) LOOKUPS =============
-let _soundexCache: Map<string, string> | null = null;
-let _metaphoneCache: Map<string, string> | null = null;
-let _africanPhoneticCache: Map<string, string> | null = null;
+const _soundexCache: Map<string, string> | null = null;
+const _metaphoneCache: Map<string, string> | null = null;
+const _africanPhoneticCache: Map<string, string> | null = null;
 let _trigramIndex: Map<string, Set<string>> | null = null;
 let _nameToPhoneticMap: Map<string, { soundex: string; metaphone: string; african: string }> | null = null;
 
@@ -110,7 +110,7 @@ const METAPHONE_RULES: Array<[RegExp, string, number]> = [
 export function metaphone(str: string): string {
   if (!str || str.length === 0) return '';
   
-  let normalized = str.toLowerCase().replace(/[^a-z]/g, '');
+  const normalized = str.toLowerCase().replace(/[^a-z]/g, '');
   if (normalized.length === 0) return '';
   
   let result = '';

@@ -1,7 +1,21 @@
 import tribesData from '@/data/tribes.json';
+import type { TribeData } from '@/types/tribe';
 import { tribeLandmarks, CulturalLandmark } from '@/data/tribeLandmarks';
 import { detectGlobalOrigin, getAfricanTribesByReligion, GlobalOrigin } from './globalOrigins';
 import { detectWesternName, WesternNameResult } from './westernNameDetection';
+
+type TribesJsonCountry = { code: string; name: string; flag: string; region: string };
+type TribesJsonRoot = {
+  countries?: TribesJsonCountry[];
+  tribes?: TribeData[];
+  countryFacts?: Record<string, string[]>;
+};
+
+const tribesJson = tribesData as TribesJsonRoot;
+
+function tribesJsonCountry(code: string): TribesJsonCountry | undefined {
+  return tribesJson.countries?.find(c => c.code === code);
+}
 
 export interface GlobalOriginInfo {
   isNonAfrican: boolean;
@@ -14,7 +28,7 @@ export interface GlobalOriginInfo {
 }
 
 export interface TribeResult {
-  tribe: import('@/types/tribe').TribeData;
+  tribe: TribeData;
   confidence: number;
   matchReason: string;
   matchDetails?: string[];
@@ -4489,7 +4503,7 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   // If no predictions found in selected country, search ALL tribes as fallback
   if (predictions.length === 0 && country && country !== 'ALL') {
     const allTribes = getAllTribes();
-    const countryName = (tribesData as any).countries?.find((c: any) => c.code === country)?.name || country;
+    const countryName = tribesJsonCountry(country)?.name || country;
     
     // Try detection across ALL tribes
     const globalPredictions: TribeResult[] = [];
@@ -4503,7 +4517,7 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
       if (matchingTribe) {
         const tribeCountries = (matchingTribe.countries as string[]) || [];
         const tribeCountryNames = tribeCountries.map(c => {
-          const countryData = (tribesData as any).countries?.find((ct: any) => ct.code === c);
+          const countryData = tribesJsonCountry(c);
           return countryData ? `${countryData.flag} ${countryData.name}` : c;
         }).join(', ');
         
@@ -4525,13 +4539,13 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
     // Check prefixes/suffixes across all tribes
     if (globalPredictions.length === 0) {
       for (const tribe of allTribes) {
-        const prefixes = (tribe as any).namePrefixes as string[] | undefined;
+        const prefixes = tribe.namePrefixes;
         if (prefixes) {
           for (const prefix of prefixes) {
             if (normalizedName.startsWith(prefix.toLowerCase()) && prefix.length >= 2) {
               const tribeCountries = (tribe.countries as string[]) || [];
               const tribeCountryNames = tribeCountries.map(c => {
-                const countryData = (tribesData as any).countries?.find((ct: any) => ct.code === c);
+                const countryData = tribesJsonCountry(c);
                 return countryData ? `${countryData.flag} ${countryData.name}` : c;
               }).join(', ');
               
@@ -4562,7 +4576,7 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
           if (normalizedName === tribeName) {
             const tribeCountries = (tribe.countries as string[]) || [];
             const tribeCountryNames = tribeCountries.map(c => {
-              const countryData = (tribesData as any).countries?.find((ct: any) => ct.code === c);
+              const countryData = tribesJsonCountry(c);
               return countryData ? `${countryData.flag} ${countryData.name}` : c;
             }).join(', ');
             
@@ -4593,7 +4607,7 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   if (predictions.length === 0) {
     const tribesPool = countryTribes.length > 0 ? countryTribes : getAllTribes().slice(0, 10);
     const topTribes = tribesPool.slice(0, 3);
-    const countryName = country ? (tribesData as any).countries?.find((c: any) => c.code === country)?.name || 'Africa' : 'Africa';
+    const countryName = country ? tribesJsonCountry(country)?.name || 'Africa' : 'Africa';
     
     for (const tribe of topTribes) {
       const matchDetails = [
@@ -4660,8 +4674,8 @@ export function detectTribe(name: string, options?: DetectionOptions | string): 
   };
 }
 
-export function getAllTribes(): import('@/types/tribe').TribeData[] {
-  const tribes = (tribesData as any).tribes || [];
+export function getAllTribes(): TribeData[] {
+  const tribes = tribesJson.tribes || [];
 
   const mergeArrays = <T,>(a: T[] = [], b: T[] = []) => {
     return Array.from(new Set([...a, ...b].filter(Boolean as unknown as (v: T) => v is T)));
@@ -4677,8 +4691,8 @@ export function getAllTribes(): import('@/types/tribe').TribeData[] {
     return Array.from(map.values());
   };
 
-  const mergeTribes = (a: any, b: any) => {
-    const merged: any = { ...b, ...a };
+  const mergeTribes = (a: TribeData, b: TribeData): TribeData => {
+    const merged: TribeData = { ...b, ...a };
 
     merged.countries = mergeArrays(a?.countries, b?.countries);
     merged.counties = mergeArrays(a?.counties, b?.counties);
@@ -4704,7 +4718,7 @@ export function getAllTribes(): import('@/types/tribe').TribeData[] {
     return merged;
   };
 
-  const byKey = new Map<string, any>();
+  const byKey = new Map<string, TribeData>();
   for (const tribe of tribes) {
     const keyRaw = tribe?.id || tribe?.slug || tribe?.name;
     const key = String(keyRaw || '').toLowerCase().trim();
@@ -4742,7 +4756,7 @@ export function getTribeBySlug(slug: string) {
   
   // Then try slug aliases (for tribes like Banyarwanda with hutu/tutsi/twa aliases)
   const aliasMatch = tribes.find(t => {
-    const aliases = (t as any).slugAliases as string[] | undefined;
+    const aliases = t.slugAliases;
     return aliases?.some(alias => alias.toLowerCase() === normalizedSlug);
   });
   if (aliasMatch) return aliasMatch;
@@ -4751,13 +4765,11 @@ export function getTribeBySlug(slug: string) {
 }
 
 export function getCountries(): Country[] {
-  return (tribesData as any).countries || [
-    { code: 'KE', name: 'Kenya', flag: '🇰🇪' }
-  ];
+  return tribesJson.countries || [{ code: 'KE', name: 'Kenya', flag: '🇰🇪', region: 'east' }];
 }
 
 export function getCountryFacts(countryCode: string): string[] {
-  const facts = (tribesData as any).countryFacts || {};
+  const facts = tribesJson.countryFacts || {};
   return facts[countryCode] || facts['ALL'] || [];
 }
 
@@ -4839,7 +4851,7 @@ export function getCountrySuggestions(name: string, currentCountry: string): Cou
       }
       
       // Check prefixes/suffixes unique to country
-      const prefixes = (tribe as any).namePrefixes as string[] | undefined;
+      const prefixes = tribe.namePrefixes;
       if (prefixes) {
         for (const prefix of prefixes) {
           if (normalizedName.startsWith(prefix.toLowerCase()) && prefix.length >= 2) {

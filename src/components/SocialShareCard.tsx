@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -26,36 +26,97 @@ interface SocialShareCardProps {
 const CARD_WIDTH = 1200;
 const CARD_HEIGHT = 630;
 
+function trendIconForDirection(direction: string): string {
+  switch (direction) {
+    case 'rising':
+      return '📈';
+    case 'declining':
+      return '📉';
+    default:
+      return '➡️';
+  }
+}
+
+function genderEmojiForLabel(gender: string): string {
+  switch (gender) {
+    case 'male':
+      return '♂️';
+    case 'female':
+      return '♀️';
+    default:
+      return '⚥';
+  }
+}
+
+function drawNameBox(
+  ctx: CanvasRenderingContext2D,
+  data: ComparisonData,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  accentColor: string
+) {
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+  ctx.beginPath();
+  ctx.roundRect(x, y, width, height, 20);
+  ctx.fill();
+
+  ctx.strokeStyle = accentColor;
+  ctx.lineWidth = 3;
+  ctx.stroke();
+
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = 'bold 42px system-ui, -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(data.name, x + width / 2, y + 60);
+
+  const statsY = y + 100;
+  const lineHeight = 45;
+  ctx.font = '24px system-ui, -apple-system, sans-serif';
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+
+  ctx.fillText(
+    `${genderEmojiForLabel(data.gender.detectedGender)} ${data.gender.detectedGender.charAt(0).toUpperCase() + data.gender.detectedGender.slice(1)}`,
+    x + width / 2,
+    statsY
+  );
+
+  ctx.fillText(
+    `${trendIconForDirection(data.trends.trendDirection)} ${data.trends.trendDirection.charAt(0).toUpperCase() + data.trends.trendDirection.slice(1)}`,
+    x + width / 2,
+    statsY + lineHeight
+  );
+
+  if (data.trends.peakDecade) {
+    ctx.fillText(
+      `🏆 Peak: ${data.trends.peakDecade}`,
+      x + width / 2,
+      statsY + lineHeight * 2
+    );
+  }
+
+  ctx.fillText(
+    `📊 Rank: #${data.trends.overallRank || 'N/A'}`,
+    x + width / 2,
+    statsY + lineHeight * 3
+  );
+
+  if (data.region) {
+    ctx.fillStyle = accentColor;
+    ctx.font = '20px system-ui, -apple-system, sans-serif';
+    ctx.fillText(`🌍 ${data.region}`, x + width / 2, statsY + lineHeight * 4);
+  }
+}
+
 export function SocialShareCard({ name1, name2, onClose }: SocialShareCardProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
-  const hasData = name1 || name2;
+  const hasData = Boolean(name1 || name2);
 
-  useEffect(() => {
-    if (hasData) {
-      generatePreview();
-    }
-  }, [name1, name2]);
-
-  const getTrendIcon = (direction: string) => {
-    switch (direction) {
-      case 'rising': return '📈';
-      case 'declining': return '📉';
-      default: return '➡️';
-    }
-  };
-
-  const getGenderEmoji = (gender: string) => {
-    switch (gender) {
-      case 'male': return '♂️';
-      case 'female': return '♀️';
-      default: return '⚥';
-    }
-  };
-
-  const generatePreview = async () => {
+  const generatePreview = useCallback(async () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -108,101 +169,29 @@ export function SocialShareCard({ name1, name2, onClose }: SocialShareCardProps)
     const gap = 80;
 
     if (name1 && name2) {
-      // Two names - side by side
       drawNameBox(ctx, name1, (CARD_WIDTH - boxWidth * 2 - gap) / 2, boxY, boxWidth, boxHeight, '#FFD700');
       drawNameBox(ctx, name2, (CARD_WIDTH + gap) / 2, boxY, boxWidth, boxHeight, '#87CEEB');
     } else if (name1 || name2) {
-      // Single name - centered
       const data = name1 || name2;
       if (data) {
         drawNameBox(ctx, data, (CARD_WIDTH - boxWidth) / 2, boxY, boxWidth, boxHeight, '#FFD700');
       }
     }
 
-    // Footer / Branding
     ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
     ctx.font = '20px system-ui, -apple-system, sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('TribeGuess • Discover Your African Heritage', CARD_WIDTH / 2, CARD_HEIGHT - 30);
 
-    // Generate preview URL
     const url = canvas.toDataURL('image/png');
     setPreviewUrl(url);
-  };
+  }, [name1, name2]);
 
-  const drawNameBox = (
-    ctx: CanvasRenderingContext2D, 
-    data: ComparisonData, 
-    x: number, 
-    y: number, 
-    width: number, 
-    height: number,
-    accentColor: string
-  ) => {
-    // Box background
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-    ctx.beginPath();
-    ctx.roundRect(x, y, width, height, 20);
-    ctx.fill();
-
-    // Border
-    ctx.strokeStyle = accentColor;
-    ctx.lineWidth = 3;
-    ctx.stroke();
-
-    // Name
-    ctx.fillStyle = '#FFFFFF';
-    ctx.font = 'bold 42px system-ui, -apple-system, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(data.name, x + width / 2, y + 60);
-
-    // Stats
-    const statsY = y + 100;
-    const lineHeight = 45;
-    ctx.font = '24px system-ui, -apple-system, sans-serif';
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-
-    // Gender
-    ctx.fillText(
-      `${getGenderEmoji(data.gender.detectedGender)} ${data.gender.detectedGender.charAt(0).toUpperCase() + data.gender.detectedGender.slice(1)}`,
-      x + width / 2,
-      statsY
-    );
-
-    // Trend
-    ctx.fillText(
-      `${getTrendIcon(data.trends.trendDirection)} ${data.trends.trendDirection.charAt(0).toUpperCase() + data.trends.trendDirection.slice(1)}`,
-      x + width / 2,
-      statsY + lineHeight
-    );
-
-    // Peak decade
-    if (data.trends.peakDecade) {
-      ctx.fillText(
-        `🏆 Peak: ${data.trends.peakDecade}`,
-        x + width / 2,
-        statsY + lineHeight * 2
-      );
+  useEffect(() => {
+    if (hasData) {
+      void generatePreview();
     }
-
-    // Popularity rank
-    ctx.fillText(
-      `📊 Rank: #${data.trends.overallRank || 'N/A'}`,
-      x + width / 2,
-      statsY + lineHeight * 3
-    );
-
-    // Region if available
-    if (data.region) {
-      ctx.fillStyle = accentColor;
-      ctx.font = '20px system-ui, -apple-system, sans-serif';
-      ctx.fillText(
-        `🌍 ${data.region}`,
-        x + width / 2,
-        statsY + lineHeight * 4
-      );
-    }
-  };
+  }, [hasData, generatePreview]);
 
   const downloadImage = async () => {
     if (!previewUrl) {

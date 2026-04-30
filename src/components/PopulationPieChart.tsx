@@ -70,12 +70,28 @@ const COLORS = [
   'hsl(330, 81%, 60%)', // Pink
 ];
 
+type PopulationPieDatum = {
+  name: string;
+  countryCode: string;
+  code: string;
+  value: number;
+  displayValue: string;
+  percent: string;
+  color: string;
+  cities?: string[];
+};
+
+type PieTooltipProps = {
+  active?: boolean;
+  payload?: Array<{ payload: PopulationPieDatum }>;
+};
+
 export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartProps>(function PopulationPieChart({ populationByCountry, diaspora, tribeName, type = 'country' }, ref) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const countries = getCountries();
   
   // Build chart data based on type
-  const chartData = type === 'country' && populationByCountry
+  const chartData: PopulationPieDatum[] = type === 'country' && populationByCountry
     ? populationByCountry.map((item, index) => {
         const countryObj = countries.find(c => c.code === item.country);
         const population = parsePopulation(item.population);
@@ -111,7 +127,7 @@ export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartP
 
   const totalPopulation = chartData.reduce((sum, item) => sum + item.value, 0);
 
-  const handleMouseEnter = (_: any, index: number) => {
+  const handleMouseEnter = (_: unknown, index: number) => {
     setActiveIndex(index);
   };
 
@@ -119,8 +135,8 @@ export const PopulationPieChart = forwardRef<HTMLDivElement, PopulationPieChartP
     setActiveIndex(null);
   };
 
-  const CustomTooltip = ({ active, payload }: any) => {
-    if (active && payload && payload.length) {
+  const CustomTooltip = ({ active, payload }: PieTooltipProps) => {
+    if (active && payload && payload.length > 0) {
       const data = payload[0].payload;
       return (
         <div className="bg-popover border border-border rounded-lg shadow-lg p-3 min-w-[180px] z-50">

@@ -23,21 +23,27 @@ export function useRecentSearches() {
           setSearches(parsed.slice(0, MAX_RECENT));
         }
       }
-    } catch {}
+    } catch {
+      /* localStorage unavailable or invalid JSON */
+    }
   }, []);
 
   const addSearch = useCallback((search: Omit<RecentSearch, 'timestamp'>) => {
     setSearches(prev => {
       const filtered = prev.filter(s => s.name.toLowerCase() !== search.name.toLowerCase());
       const updated = [{ ...search, timestamp: Date.now() }, ...filtered].slice(0, MAX_RECENT);
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(updated)); } catch {}
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(updated)); } catch {
+        /* localStorage unavailable */
+      }
       return updated;
     });
   }, []);
 
   const clearSearches = useCallback(() => {
     setSearches([]);
-    try { localStorage.removeItem(STORAGE_KEY); } catch {}
+    try { localStorage.removeItem(STORAGE_KEY); } catch {
+      /* localStorage unavailable */
+    }
   }, []);
 
   return { searches, addSearch, clearSearches };

@@ -66,7 +66,9 @@ export default function RandomTribe() {
     let pool = eligible.filter(t => !recentSlugs.has(t.slug));
     // If all eligible were recently shown, reset and use full pool
     if (pool.length === 0) {
-      try { sessionStorage.removeItem(RECENT_KEY); } catch {}
+      try { sessionStorage.removeItem(RECENT_KEY); } catch {
+        /* sessionStorage unavailable */
+      }
       pool = eligible;
     }
 

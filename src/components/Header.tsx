@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Shuffle, Sparkles, BookOpen, FileText, Menu, X, ChefHat, Globe, Users, HelpCircle, Video, BookMarked, Church, Languages, ArrowLeftRight } from 'lucide-react';
 import logo from '@/assets/logo.png';
@@ -31,6 +31,27 @@ export function Header() {
 
   const closeMobile = () => setMobileMenuOpen(false);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [mobileMenuOpen]);
+
+  const navLinkClass = (active: boolean) =>
+    `flex items-center gap-1.5 rounded-lg font-medium transition-all duration-200 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+      active
+        ? 'bg-primary text-primary-foreground'
+        : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+    }`;
+
   const navLinks = [
     { path: '/', label: 'Guess', icon: Sparkles, mobileOnly: false },
     { path: '/learn', label: 'Learn', icon: BookOpen, mobileOnly: false },
@@ -57,7 +78,7 @@ export function Header() {
         >
           <Link
             to="/"
-            className="order-1 flex shrink-0 items-center gap-2 sm:gap-3 group"
+            className="order-1 flex shrink-0 items-center gap-2 sm:gap-3 group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             aria-label="TribeGuess home"
           >
             <img 
@@ -82,21 +103,21 @@ export function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 touch-manipulation ${
-                  isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog')))
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                }`}
+                className={`${navLinkClass(
+                  !!(isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog'))))
+                )} gap-1 px-2.5 py-2 min-h-[44px] text-xs`}
               >
                 <link.icon className="w-3.5 h-3.5" />
                 <span>{link.label}</span>
               </Link>
             ))}
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex items-center justify-center w-9 h-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors touch-manipulation"
-              aria-label="Open menu"
+              className="flex items-center justify-center min-h-[44px] min-w-[44px] rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-nav-panel"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -108,19 +129,18 @@ export function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog')))
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                }`}
+                className={`${navLinkClass(
+                  !!(isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog'))))
+                )} px-3 sm:px-4 py-2 text-sm`}
               >
                 <link.icon className="w-4 h-4" />
                 {link.label}
               </Link>
             ))}
             <button
+              type="button"
               onClick={handleRandomTribe}
-              className="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-md hover:shadow-lg"
+              className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-md hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               aria-label="Discover a random tribe"
             >
               <Shuffle className="w-4 h-4" />
@@ -136,19 +156,20 @@ export function Header() {
 
       {/* Mobile dropdown menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
+        <div
+          id="mobile-nav-panel"
+          role="dialog"
+          aria-label="More navigation"
+          className="sm:hidden border-t border-border bg-background/95 backdrop-blur-md animate-fade-in shadow-[inset_0_1px_0_0_hsl(var(--border))]"
+        >
           <div className="container mx-auto px-3 py-3">
-            <div className="grid grid-cols-2 gap-1.5">
+            <div className="grid grid-cols-2 gap-2">
               {navLinks.filter(l => l.mobileOnly).map(link => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={closeMobile}
-                  className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors touch-manipulation ${
-                    isActive(link.path)
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                  }`}
+                  className={`${navLinkClass(isActive(link.path))} gap-2 px-3 py-3 min-h-[48px] text-sm`}
                 >
                   <link.icon className="w-4 h-4 shrink-0" />
                   {link.label}
@@ -157,8 +178,9 @@ export function Header() {
             </div>
             <div className="mt-2 pt-2 border-t border-border">
               <button
+                type="button"
                 onClick={handleRandomTribe}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-amber-500 to-orange-500 text-white touch-manipulation"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 min-h-[48px] rounded-lg text-sm font-semibold bg-gradient-to-r from-amber-500 to-orange-500 text-white touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <Shuffle className="w-4 h-4" />
                 Discover a Random Tribe

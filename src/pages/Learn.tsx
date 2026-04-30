@@ -7,7 +7,7 @@ import { TribeCard } from '@/components/TribeCard';
 import { DynamicMapView } from '@/components/DynamicMapView';
 import { CountryFlag } from '@/components/CountryFlag';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
-import { normalizeForSearch } from '@/lib/dataValidation';
+import { normalizeForSearch, stripAsciiControlCharacters } from '@/lib/dataValidation';
 import tribesData from '@/data/tribes.json';
 import {
   Select,
@@ -48,7 +48,7 @@ function safeEnumParam<T extends string>(raw: string | null, allowed: readonly T
 /** Sanitize a free-text query param: trim, limit length, strip control chars */
 function safeTextParam(raw: string | null, maxLength = 100): string {
   if (raw === null) return '';
-  return raw.trim().slice(0, maxLength).replace(/[\x00-\x1F\x7F]/g, '').replace(/\s+/g, ' ');
+  return stripAsciiControlCharacters(raw.trim().slice(0, maxLength)).replace(/\s+/g, ' ');
 }
 
 const Learn = () => {
@@ -57,7 +57,7 @@ const Learn = () => {
   // Pre-load stable data references
   const tribes = getAllTribes();
   const allCountries = getCountries();
-  const macroRegions = tribesData.regions || [];
+  const macroRegions = useMemo(() => tribesData.regions || [], []);
   
   // Build valid code sets once for validation
   const validCountryCodes = useMemo(() => new Set(allCountries.map(c => c.code)), [allCountries]);
@@ -77,7 +77,13 @@ const Learn = () => {
   const countryFilter = rawCountry === 'ALL' || validCountryCodes.has(rawCountry) ? rawCountry : 'ALL';
   
   const viewMode = safeEnumParam(searchParams.get('view'), VALID_VIEW_MODES, 'grid');
-  const sortOrder = safeEnumParam(searchParams.get('sort'), VALID_SORT_ORDERS, '' as 'pop-asc' | 'pop-desc' | 'name-asc' | 'name-desc') || '';
+  const sortParam = searchParams.get('sort') ?? '';
+  const sortOrder = useMemo((): '' | (typeof VALID_SORT_ORDERS)[number] => {
+    if ((VALID_SORT_ORDERS as readonly string[]).includes(sortParam)) {
+      return sortParam as (typeof VALID_SORT_ORDERS)[number];
+    }
+    return '';
+  }, [sortParam]);
   
   const rawLanguageFamily = safeTextParam(searchParams.get('languageFamily'), 100);
   const languageFamilyFilter = rawLanguageFamily;
@@ -101,13 +107,13 @@ const Learn = () => {
     setLocalSearch(searchQuery);
   }, [searchQuery]);
 
-  // Sync temp states when dialog opens
+  // When the advanced dialog is closed, keep draft filters aligned with the URL (cancel, browser back/forward)
   useEffect(() => {
-    if (advancedFiltersOpen) {
+    if (!advancedFiltersOpen) {
       setTempSort(sortOrder);
       setTempCountries(selectedCountries.length > 0 ? selectedCountries : []);
     }
-  }, [advancedFiltersOpen]);
+  }, [advancedFiltersOpen, sortOrder, selectedCountries]);
 
   // Parse population string to number
   const parsePopulation = (pop: string): number => {

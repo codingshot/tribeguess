@@ -68,27 +68,31 @@ const Index = () => {
     return (unique.length ? unique : ['Wanjiku', 'Odhiambo', 'Cheruiyot', 'Nafula', 'Mutua', 'Moraa', 'Kipchoge', 'Fatuma']).slice(0, 8);
   })();
 
-  let results = null;
-  let countrySuggestions: ReturnType<typeof getCountrySuggestions> = [];
-  
-  try {
-    results = nameQuery ? detectTribe(nameQuery, {
-      timeOfBirth: timeQuery || undefined,
-      region: regionQuery || undefined,
-      build: buildQuery || undefined,
-      personality: personalityQuery || undefined,
-      country: countryQuery || undefined
-    }) : null;
-    
-    if (nameQuery && results) {
-      const topConfidence = results.predictions[0]?.confidence || 0;
-      if (topConfidence < 70) {
-        countrySuggestions = getCountrySuggestions(nameQuery, countryQuery);
-      }
+  const { results, countrySuggestions } = useMemo(() => {
+    let res: ReturnType<typeof detectTribe> | null = null;
+    let suggestions: ReturnType<typeof getCountrySuggestions> = [];
+    if (!nameQuery) {
+      return { results: res, countrySuggestions: suggestions };
     }
-  } catch (e) {
-    console.error('Detection error:', e);
-  }
+    try {
+      res = detectTribe(nameQuery, {
+        timeOfBirth: timeQuery || undefined,
+        region: regionQuery || undefined,
+        build: buildQuery || undefined,
+        personality: personalityQuery || undefined,
+        country: countryQuery || undefined,
+      });
+      if (res) {
+        const topConfidence = res.predictions[0]?.confidence || 0;
+        if (topConfidence < 70) {
+          suggestions = getCountrySuggestions(nameQuery, countryQuery);
+        }
+      }
+    } catch (e) {
+      console.error('Detection error:', e);
+    }
+    return { results: res, countrySuggestions: suggestions };
+  }, [nameQuery, timeQuery, regionQuery, buildQuery, personalityQuery, countryQuery]);
 
   // Track recent searches
   useEffect(() => {
@@ -100,7 +104,7 @@ const Index = () => {
         confidence: results.predictions[0]?.confidence,
       });
     }
-  }, [nameQuery]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [nameQuery, results, countryQuery, addSearch]);
 
   // Compute name analysis data
   const nameAnalysis = useMemo(() => {
@@ -152,10 +156,14 @@ const Index = () => {
                 }
               }
               .glow-tribe { animation: glowPulse 2s ease-in-out infinite; }
+              @media (prefers-reduced-motion: reduce) {
+                .glow-tribe { animation: none; text-shadow: 0 0 12px hsl(38 92% 50% / 0.35); filter: none; }
+                .orbit-flags > span { animation: none !important; opacity: 0.2; }
+              }
             `}</style>
             <div className="mb-6 sm:mb-8">
               <div className="relative inline-block">
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="orbit-flags absolute inset-0 flex items-center justify-center pointer-events-none">
                   <style>{`
                     @keyframes orbit {
                       from { transform: rotate(0deg) translateX(70px) rotate(0deg); }
@@ -174,10 +182,10 @@ const Index = () => {
                 <img src={logo} alt="TribeGuess - Tribe Guesser Logo" className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 animate-bounce-subtle" width={128} height={128} loading="eager" fetchPriority="high" decoding="async" />
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
-                Guess Her <span className="gradient-gold-text glow-tribe">Tribe</span>
+                Guess the <span className="gradient-gold-text glow-tribe">Tribe</span>
               </h1>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto px-2 text-balance leading-relaxed">
-                Enter a name to discover the tribe it likely belongs to, along with cultural insights and stereotypes.
+              <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto px-2 text-balance leading-relaxed">
+                Enter a first name and country to explore likely tribal roots, naming patterns, and cultural context—built for curiosity, not stereotypes about any one person.
               </p>
             </div>
             
@@ -267,16 +275,16 @@ const Index = () => {
         ) : (
           // Results view
           <section className="max-w-2xl mx-auto animate-fade-in" aria-label="Tribe prediction results">
-            <header className="text-center mb-6 sm:mb-8">
-              <h1 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">
+            <header className="text-center mb-4 sm:mb-5">
+              <h1 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-1">
                 Results for "<span className="text-primary">{results.inputName}</span>"
               </h1>
               {results.timeOfBirth && (
-                <p className="text-muted-foreground text-sm">Born in the {results.timeOfBirth}</p>
+                <p className="text-muted-foreground text-xs sm:text-sm">Born in the {results.timeOfBirth}</p>
               )}
             </header>
             
-            <div className="mb-6 sm:mb-8">
+            <div className="mb-4 sm:mb-5">
               <GuessForm initialName={nameQuery} initialTime={timeQuery} initialRegion={regionQuery} initialBuild={buildQuery} initialPersonality={personalityQuery} initialCountry={countryQuery} />
             </div>
 
@@ -367,7 +375,7 @@ const Index = () => {
             
             {/* Tribe Result Cards */}
             {results.predictions.length > 0 ? (
-              <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-2.5 sm:space-y-3">
                 {results.predictions.map((prediction, index) => (
                   <TribeResultCard key={prediction.tribe.id} result={prediction} rank={index + 1} inputName={results.inputName} />
                 ))}

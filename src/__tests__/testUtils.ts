@@ -128,8 +128,15 @@ export function testDataIntegrity(): DataIntegrityResult[] {
   const missingFields: string[] = [];
   tribes.forEach(tribe => {
     const required = ['id', 'name', 'slug', 'region', 'countries', 'population', 'description'];
+    const rec = tribe as Record<string, unknown>;
     required.forEach(field => {
-      if (!(tribe as any)[field]) {
+      const v = rec[field];
+      const empty =
+        v === undefined ||
+        v === null ||
+        v === '' ||
+        (field === 'countries' && Array.isArray(v) && v.length === 0);
+      if (empty) {
         missingFields.push(`${tribe.name || tribe.id}: missing ${field}`);
       }
     });
@@ -228,7 +235,7 @@ export interface TestSuiteResult {
   suiteName: string;
   passed: number;
   failed: number;
-  results: any[];
+  results: unknown[];
 }
 
 export function runAllTests(): TestSuiteResult[] {
@@ -278,9 +285,11 @@ export function printTestReport(): void {
     const status = suite.failed === 0 ? '✅' : '❌';
     console.log(`${status} ${suite.suiteName}: ${suite.passed}/${suite.passed + suite.failed} passed`);
     
-    suite.results.filter((r: any) => !r.passed).forEach((r: any) => {
-      console.log(`   ❌ ${JSON.stringify(r)}`);
-    });
+    suite.results
+      .filter((r): r is { passed?: boolean } => typeof r === 'object' && r !== null && (r as { passed?: boolean }).passed === false)
+      .forEach(r => {
+        console.log(`   ❌ ${JSON.stringify(r)}`);
+      });
     
     totalPassed += suite.passed;
     totalFailed += suite.failed;
@@ -292,8 +301,18 @@ export function printTestReport(): void {
 }
 
 // Export for browser console access
+type RegressionWindow = Window & {
+  regressionTests: {
+    runAllTests: typeof runAllTests;
+    printTestReport: typeof printTestReport;
+    testSlugAliases: typeof testSlugAliases;
+    testTribeDetection: typeof testTribeDetection;
+    testDataIntegrity: typeof testDataIntegrity;
+  };
+};
+
 if (typeof window !== 'undefined') {
-  (window as any).regressionTests = {
+  (window as unknown as RegressionWindow).regressionTests = {
     runAllTests,
     printTestReport,
     testSlugAliases,

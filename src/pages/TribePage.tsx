@@ -25,6 +25,8 @@ import { TribeFAQSection, generateFAQStructuredData } from '@/components/TribeFA
 import { TribeInternalLinks } from '@/components/TribeInternalLinks';
 import { ViralCTAs } from '@/components/ViralCTAs';
 import { buildCompareVsPath } from '@/lib/tribeCompareUrl';
+import type { TribeData } from '@/types/tribe';
+import type { Country } from '@/lib/tribeDetection';
 const TribePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -54,7 +56,7 @@ const TribePage = () => {
         return s.includes(sanitizedSlug) || sanitizedSlug.includes(s) ||
                n.includes(sanitizedSlug) || sanitizedSlug.includes(n) ||
                // Check slug aliases
-               ((t as any).slugAliases || []).some((alias: string) => 
+               (t.slugAliases || []).some((alias: string) => 
                  alias.toLowerCase().includes(sanitizedSlug) || sanitizedSlug.includes(alias.toLowerCase())
                );
       })
@@ -115,14 +117,13 @@ const TribePage = () => {
     allTribes.find(t => t.id === id)
   ).filter(Boolean) || [];
   
-  // Type assertion for history and language
-  const history = (tribe as any).history;
-  const language = (tribe as any).language;
-  const tradeHistory = (tribe as any).tradeHistory;
-  const independenceHistory = (tribe as any).independenceHistory;
-  
+  const history = tribe.history;
+  const language = tribe.language;
+  const tradeHistory = tribe.tradeHistory;
+  const independenceHistory = tribe.independenceHistory;
+
   // SEO metadata - safe fallbacks for missing data
-  const countries = (tribe as any).countries as string[] | undefined;
+  const countries = tribe.countries;
   const countryNames = countries?.map(code => getCountries().find(c => c.code === code)?.name).filter(Boolean).join(', ') || 'Africa';
   const safePopulation = tribe.population || 'data unavailable';
   const seoTitle = tribeTitles.main(tribe.name);
@@ -186,8 +187,8 @@ const TribePage = () => {
               
               {/* Clickable Country & Region Tags */}
               <div className="flex flex-wrap gap-2 mb-3">
-                {(tribe as any).countries && (tribe as any).countries.length > 0 && (
-                  (tribe as any).countries.map((code: string) => {
+                {tribe.countries && tribe.countries.length > 0 && (
+                  tribe.countries.map((code: string) => {
                     const country = getCountries().find(c => c.code === code);
                     return country ? (
                       <Link 
@@ -222,10 +223,10 @@ const TribePage = () => {
                     <span>{language.name}</span>
                   </div>
                 )}
-                {(tribe as any).religion && (
+                {tribe.religion && (
                   <div className="flex items-center gap-1">
                     <Church className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
-                    <span className="truncate max-w-[120px]">{(tribe as any).religion.split(',')[0]}</span>
+                    <span className="truncate max-w-[120px]">{tribe.religion.split(',')[0]}</span>
                   </div>
                 )}
                 {tradeHistory && (
@@ -257,12 +258,12 @@ const TribePage = () => {
               {/* Quick Jump Links */}
               <TribeQuickLinks
                 tribe={tribe}
-                hasReligion={!!(tribe as any).religion || !!(tribe as any).traditionalReligion}
-                hasFood={!!(tribe as any).traditionalFood}
+                hasReligion={!!tribe.religion || !!tribe.traditionalReligion}
+                hasFood={!!tribe.traditionalFood}
                 hasPeople={!!(tribe.famousPeople && tribe.famousPeople.length > 0)}
               />
               {/* YouTube Culture Video Section */}
-              {(tribe as any).youtubeVideoId && (
+              {tribe.youtubeVideoId && (
                 <section className="bg-gradient-to-r from-red-500/10 to-red-600/5 dark:from-red-900/20 dark:to-red-950/10 rounded-xl p-4 border border-red-200 dark:border-red-800">
                   <h2 className="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     <Play className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" aria-hidden="true" />
@@ -272,7 +273,7 @@ const TribePage = () => {
                     Discover the rich cultural heritage of the {tribe.name} people through this documentary video.
                   </p>
                   <InlineVideoPlayer
-                    youtubeId={(tribe as any).youtubeVideoId}
+                    youtubeId={tribe.youtubeVideoId}
                     title={`${tribe.name} Culture & Traditions`}
                     sourceType="TRIBE_PAGE"
                     tribeId={tribe.id}
@@ -291,7 +292,7 @@ const TribePage = () => {
               {/* Map Section */}
               <section>
               {(() => {
-                  const countries = (tribe as any).countries as string[] | undefined;
+                  const countries = tribe.countries as string[] | undefined;
                   const isMultiCountry = countries && countries.length > 1;
                   const primaryCountry = countries?.[0] || 'KE';
                   const countryObj = getCountries().find(c => c.code === primaryCountry);
@@ -307,7 +308,7 @@ const TribePage = () => {
                           <span className="flex items-center gap-2 flex-wrap">
                             <span>Territory Across</span>
                             <span className="inline-flex items-center gap-1">
-                              {countryObjects.slice(0, 3).map((c: any) => (
+                              {countryObjects.slice(0, 3).map((c: Country) => (
                                 <span 
                                   key={c.code} 
                                   className="text-lg cursor-help" 
@@ -341,7 +342,7 @@ const TribePage = () => {
                         <div className="mb-4 p-3 bg-secondary/50 rounded-lg border border-border animate-fade-in">
                           <p className="text-sm text-muted-foreground mb-2">Countries where the {tribe.name} people live:</p>
                           <div className="flex flex-wrap gap-2">
-                            {countryObjects.map((c: any) => (
+                            {countryObjects.map((c: Country) => (
                               <Link
                                 key={c.code}
                                 to={`/learn?country=${c.code}`}
@@ -380,8 +381,8 @@ const TribePage = () => {
                   Population Statistics
                 </h2>
                 {(() => {
-                  const countries = (tribe as any).countries as string[] | undefined;
-                  const populationByCountry = (tribe as any).populationByCountry as { country: string; population: string; percent: string }[] | undefined;
+                  const countries = tribe.countries as string[] | undefined;
+                  const populationByCountry = tribe.populationByCountry as { country: string; population: string; percent: string }[] | undefined;
                   const isMultiCountry = countries && countries.length > 1;
                   
                   return (
@@ -481,7 +482,7 @@ const TribePage = () => {
               })()}
               
               {/* Tribe Family Tree / Ethnic Components - for tribes like Banyarwanda */}
-              {(language || (tribe as any).ethnicComponents) && (
+              {(language || tribe.ethnicComponents) && (
                 <TribeFamilyTree 
                   currentTribe={{
                     id: tribe.id,
@@ -489,7 +490,7 @@ const TribePage = () => {
                     slug: tribe.slug,
                     language: language
                   }}
-                  ethnicComponents={(tribe as any).ethnicComponents}
+                  ethnicComponents={tribe.ethnicComponents}
                 />
               )}
               
@@ -537,14 +538,14 @@ const TribePage = () => {
                   </div>
                   
                   {/* Language Learning Video */}
-                  {(tribe as any).languageVideoId && (
+                  {tribe.languageVideoId && (
                     <div className="mb-4 p-3 bg-background/50 rounded-lg border border-border">
                       <h3 className="text-sm font-medium text-foreground mb-2 flex items-center gap-2">
                         <Play className="w-4 h-4 text-red-500" />
                         Learn {language.name} Pronunciation
                       </h3>
                       <InlineVideoPlayer
-                        youtubeId={(tribe as any).languageVideoId}
+                        youtubeId={tribe.languageVideoId}
                         title={`Learn ${language.name} - ${tribe.name} Language Tutorial`}
                         sourceType="TRIBE_LANGUAGE"
                         tribeId={tribe.id}
@@ -650,7 +651,7 @@ const TribePage = () => {
               {/* Religion Section */}
               {(() => {
                 const religionInfo = getTribeReligiousInfo(tribe.id);
-                const tribeReligion = (tribe as any).religion as string | undefined;
+                const tribeReligion = tribe.religion as string | undefined;
                 
                 if (!religionInfo && !tribeReligion) return null;
                 
@@ -720,13 +721,13 @@ const TribePage = () => {
                     )}
                     
                     {/* Traditional Religion Link if available */}
-                    {(tribe as any).traditionalReligion && (
+                    {tribe.traditionalReligion && (
                       <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-800 mb-3">
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-2xl">🌍</span>
                           <div>
                             {(() => {
-                              const tradReligion = (tribe as any).traditionalReligion;
+                              const tradReligion = tribe.traditionalReligion;
                               const linkedReligion = findReligionByName(tradReligion.name || tribe.name);
                               
                               return linkedReligion ? (
@@ -744,20 +745,20 @@ const TribePage = () => {
                             })()}
                           </div>
                         </div>
-                        {(tribe as any).traditionalReligion.supremeDeity && (
+                        {tribe.traditionalReligion.supremeDeity && (
                           <p className="text-sm text-amber-800 dark:text-amber-200 mb-1">
-                            <strong>Supreme Deity:</strong> {(tribe as any).traditionalReligion.supremeDeity}
+                            <strong>Supreme Deity:</strong> {tribe.traditionalReligion.supremeDeity}
                           </p>
                         )}
-                        {(tribe as any).traditionalReligion.beliefs && (
+                        {tribe.traditionalReligion.beliefs && (
                           <p className="text-xs text-amber-700 dark:text-amber-300">
-                            {(tribe as any).traditionalReligion.beliefs}
+                            {tribe.traditionalReligion.beliefs}
                           </p>
                         )}
                       </div>
                     )}
                     
-                    {tribeReligion && !religionInfo && !(tribe as any).traditionalReligion && (
+                    {tribeReligion && !religionInfo && !tribe.traditionalReligion && (
                       <p className="text-sm text-muted-foreground leading-relaxed">{tribeReligion}</p>
                     )}
                     
@@ -795,7 +796,7 @@ const TribePage = () => {
               )}
               
               {/* Gender Stereotypes & Roles Section */}
-              {((tribe as any).genderStereotypes || (tribe as any).genderRoles) && (
+              {(tribe.genderStereotypes || tribe.genderRoles) && (
                 <section className="border-t border-border pt-6">
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
                     <UsersRound className="w-4 h-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
@@ -803,7 +804,7 @@ const TribePage = () => {
                   </h2>
                   
                   {/* Gender Stereotypes */}
-                  {(tribe as any).genderStereotypes && (
+                  {tribe.genderStereotypes && (
                     <div className="grid md:grid-cols-2 gap-4 mb-4">
                       <div className="p-4 bg-blue-50 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-800">
                         <div className="flex items-center gap-2 mb-3">
@@ -811,7 +812,7 @@ const TribePage = () => {
                           <h3 className="font-semibold text-blue-900 dark:text-blue-100">Male Stereotypes</h3>
                         </div>
                         <ul className="space-y-2">
-                          {(tribe as any).genderStereotypes.male?.map((stereotype: string, i: number) => (
+                          {tribe.genderStereotypes.male?.map((stereotype: string, i: number) => (
                             <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-blue-800 dark:text-blue-200">
                               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0" />
                               {stereotype}
@@ -826,7 +827,7 @@ const TribePage = () => {
                           <h3 className="font-semibold text-pink-900 dark:text-pink-100">Female Stereotypes</h3>
                         </div>
                         <ul className="space-y-2">
-                          {(tribe as any).genderStereotypes.female?.map((stereotype: string, i: number) => (
+                          {tribe.genderStereotypes.female?.map((stereotype: string, i: number) => (
                             <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-pink-800 dark:text-pink-200">
                               <span className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-1.5 flex-shrink-0" />
                               {stereotype}
@@ -838,35 +839,35 @@ const TribePage = () => {
                   )}
                   
                   {/* Gender Roles */}
-                  {(tribe as any).genderRoles && (
+                  {tribe.genderRoles && (
                     <div className="space-y-4">
-                      {(tribe as any).genderRoles.traditional && (
+                      {tribe.genderRoles.traditional && (
                         <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-800">
                           <h3 className="font-semibold text-amber-900 dark:text-amber-100 mb-3">Traditional Roles</h3>
                           <div className="grid md:grid-cols-2 gap-3">
                             <div>
                               <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-1">👨 Men</p>
-                              <p className="text-xs sm:text-sm text-amber-800 dark:text-amber-200">{(tribe as any).genderRoles.traditional.male}</p>
+                              <p className="text-xs sm:text-sm text-amber-800 dark:text-amber-200">{tribe.genderRoles.traditional.male}</p>
                             </div>
                             <div>
                               <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-1">👩 Women</p>
-                              <p className="text-xs sm:text-sm text-amber-800 dark:text-amber-200">{(tribe as any).genderRoles.traditional.female}</p>
+                              <p className="text-xs sm:text-sm text-amber-800 dark:text-amber-200">{tribe.genderRoles.traditional.female}</p>
                             </div>
                           </div>
                         </div>
                       )}
                       
-                      {(tribe as any).genderRoles.modern && (
+                      {tribe.genderRoles.modern && (
                         <div className="p-4 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800">
                           <h3 className="font-semibold text-emerald-900 dark:text-emerald-100 mb-3">Modern Roles</h3>
                           <div className="grid md:grid-cols-2 gap-3">
                             <div>
                               <p className="text-xs font-medium text-emerald-700 dark:text-emerald-300 mb-1">👨 Men</p>
-                              <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-200">{(tribe as any).genderRoles.modern.male}</p>
+                              <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-200">{tribe.genderRoles.modern.male}</p>
                             </div>
                             <div>
                               <p className="text-xs font-medium text-emerald-700 dark:text-emerald-300 mb-1">👩 Women</p>
-                              <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-200">{(tribe as any).genderRoles.modern.female}</p>
+                              <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-200">{tribe.genderRoles.modern.female}</p>
                             </div>
                           </div>
                         </div>
@@ -940,25 +941,25 @@ const TribePage = () => {
               )}
 
               {/* Tribe Gallery - only show if images exist */}
-              {(tribe as any).gallery && (tribe as any).gallery.length > 0 && (
+              {tribe.gallery && tribe.gallery.length > 0 && (
                 <ImageGallery 
-                  images={(tribe as any).gallery} 
+                  images={tribe.gallery} 
                   title={`${tribe.name} Culture & Heritage`}
                 />
               )}
               
               {/* Traditional Food Section */}
-              {(tribe as any).traditionalFood && typeof (tribe as any).traditionalFood === 'object' && (
+              {tribe.traditionalFood && typeof tribe.traditionalFood === 'object' && (
                 <section id="food" className="border-t border-border pt-6">
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     🍲 Traditional Cuisine
                   </h2>
-                  <p className="text-sm text-muted-foreground mb-4">{(tribe as any).traditionalFood.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{tribe.traditionalFood.description}</p>
                   <div className="grid sm:grid-cols-3 gap-4">
                     <div className="p-3 bg-secondary rounded-lg">
                       <h3 className="text-sm font-medium text-foreground mb-2">Staple Foods</h3>
                       <ul className="space-y-1">
-                        {(tribe as any).traditionalFood.staples?.map((food: string, i: number) => {
+                        {tribe.traditionalFood.staples?.map((food: string, i: number) => {
                           const foodName = food.split('(')[0].split('-')[0].trim();
                           const recipe = findRecipeByName(foodName, tribe.slug);
                           return (
@@ -977,7 +978,7 @@ const TribePage = () => {
                     <div className="p-3 bg-secondary rounded-lg">
                       <h3 className="text-sm font-medium text-foreground mb-2">Beverages</h3>
                       <ul className="space-y-1">
-                        {(tribe as any).traditionalFood.beverages?.map((drink: string, i: number) => {
+                        {tribe.traditionalFood.beverages?.map((drink: string, i: number) => {
                           const drinkName = drink.split('(')[0].split('-')[0].trim();
                           const recipe = findRecipeByName(drinkName, tribe.slug);
                           return (
@@ -996,7 +997,7 @@ const TribePage = () => {
                     <div className="p-3 bg-secondary rounded-lg">
                       <h3 className="text-sm font-medium text-foreground mb-2">Special Dishes</h3>
                       <ul className="space-y-1">
-                        {(tribe as any).traditionalFood.specialDishes?.map((dish: string, i: number) => {
+                        {tribe.traditionalFood.specialDishes?.map((dish: string, i: number) => {
                           const dishName = dish.split('(')[0].split('-')[0].trim();
                           const recipe = findRecipeByName(dishName, tribe.slug);
                           return (
@@ -1017,7 +1018,7 @@ const TribePage = () => {
               )}
               
               {/* Meal Traditions Section */}
-              {(tribe as any).eatingCustoms && (
+              {tribe.eatingCustoms && (
                 <section className="border-t border-border pt-6">
                   <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
                     🍽️ Meal Traditions
@@ -1028,28 +1029,28 @@ const TribePage = () => {
                   
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
                     {/* Meals Per Day */}
-                    {(tribe as any).eatingCustoms.mealsPerDay && (
+                    {tribe.eatingCustoms.mealsPerDay && (
                       <div className="p-3 bg-secondary rounded-lg text-center">
-                        <p className="text-2xl font-bold text-primary">{(tribe as any).eatingCustoms.mealsPerDay}</p>
+                        <p className="text-2xl font-bold text-primary">{tribe.eatingCustoms.mealsPerDay}</p>
                         <p className="text-xs text-muted-foreground">Meals per Day</p>
                       </div>
                     )}
                     
                     {/* Main Meal Time */}
-                    {(tribe as any).eatingCustoms.mainMealTime && (
+                    {tribe.eatingCustoms.mainMealTime && (
                       <div className="p-3 bg-secondary rounded-lg text-center">
-                        <p className="text-sm font-semibold text-foreground">{(tribe as any).eatingCustoms.mainMealTime}</p>
+                        <p className="text-sm font-semibold text-foreground">{tribe.eatingCustoms.mainMealTime}</p>
                         <p className="text-xs text-muted-foreground">Main Meal Time</p>
                       </div>
                     )}
                     
                     {/* Eating Style */}
-                    {(tribe as any).eatingCustoms.eatingStyle && (
+                    {tribe.eatingCustoms.eatingStyle && (
                       <div className="p-3 bg-secondary rounded-lg text-center">
-                        <p className="text-sm font-semibold text-foreground truncate" title={(tribe as any).eatingCustoms.eatingStyle}>
-                          {(tribe as any).eatingCustoms.eatingStyle.length > 50 
-                            ? (tribe as any).eatingCustoms.eatingStyle.substring(0, 50) + '...' 
-                            : (tribe as any).eatingCustoms.eatingStyle}
+                        <p className="text-sm font-semibold text-foreground truncate" title={tribe.eatingCustoms.eatingStyle}>
+                          {tribe.eatingCustoms.eatingStyle.length > 50 
+                            ? tribe.eatingCustoms.eatingStyle.substring(0, 50) + '...' 
+                            : tribe.eatingCustoms.eatingStyle}
                         </p>
                         <p className="text-xs text-muted-foreground">Eating Style</p>
                       </div>
@@ -1058,33 +1059,33 @@ const TribePage = () => {
                   
                   <div className="space-y-4">
                     {/* Meal Pattern */}
-                    {(tribe as any).eatingCustoms.mealPattern && (
+                    {tribe.eatingCustoms.mealPattern && (
                       <div className="p-4 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 rounded-lg border border-amber-200 dark:border-amber-800">
                         <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
                           <span>⏰</span> Daily Meal Pattern
                         </h3>
-                        <p className="text-sm text-muted-foreground">{(tribe as any).eatingCustoms.mealPattern}</p>
+                        <p className="text-sm text-muted-foreground">{tribe.eatingCustoms.mealPattern}</p>
                       </div>
                     )}
                     
                     {/* Gender & Age Rules */}
-                    {(tribe as any).eatingCustoms.genderRules && (
+                    {tribe.eatingCustoms.genderRules && (
                       <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
                         <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
                           <span>👥</span> Gender & Age Customs
                         </h3>
-                        <p className="text-sm text-muted-foreground">{(tribe as any).eatingCustoms.genderRules}</p>
+                        <p className="text-sm text-muted-foreground">{tribe.eatingCustoms.genderRules}</p>
                       </div>
                     )}
                     
                     {/* Food Taboos */}
-                    {Array.isArray((tribe as any).eatingCustoms.taboos) && (tribe as any).eatingCustoms.taboos.length > 0 && (
+                    {Array.isArray(tribe.eatingCustoms.taboos) && tribe.eatingCustoms.taboos.length > 0 && (
                       <div className="p-4 bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 rounded-lg border border-red-200 dark:border-red-800">
                         <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
                           <span>🚫</span> Food Taboos & Restrictions
                         </h3>
                         <ul className="space-y-1">
-                          {(tribe as any).eatingCustoms.taboos.map((taboo: string, i: number) => (
+                          {tribe.eatingCustoms.taboos.map((taboo: string, i: number) => (
                             <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
                               <span className="text-red-500 mt-0.5">•</span>
                               {taboo}
@@ -1095,22 +1096,22 @@ const TribePage = () => {
                     )}
                     
                     {/* Special Occasions */}
-                    {(tribe as any).eatingCustoms.specialOccasions && (
+                    {tribe.eatingCustoms.specialOccasions && (
                       <div className="p-4 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-lg border border-green-200 dark:border-green-800">
                         <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
                           <span>🎉</span> Celebratory Foods
                         </h3>
-                        <p className="text-sm text-muted-foreground">{(tribe as any).eatingCustoms.specialOccasions}</p>
+                        <p className="text-sm text-muted-foreground">{tribe.eatingCustoms.specialOccasions}</p>
                       </div>
                     )}
                     
                     {/* Hospitality */}
-                    {(tribe as any).eatingCustoms.hospitality && (
+                    {tribe.eatingCustoms.hospitality && (
                       <div className="p-4 bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 rounded-lg border border-yellow-200 dark:border-yellow-800">
                         <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
                           <span>🤝</span> Hospitality Traditions
                         </h3>
-                        <p className="text-sm text-muted-foreground italic">"{(tribe as any).eatingCustoms.hospitality}"</p>
+                        <p className="text-sm text-muted-foreground italic">"{tribe.eatingCustoms.hospitality}"</p>
                       </div>
                     )}
                   </div>
@@ -1209,23 +1210,23 @@ const TribePage = () => {
                       const similarities: string[] = [];
                       
                       // Check same country
-                      const currentCountries = (tribe as any).countries || [];
-                      const relatedCountries = (related as any).countries || [];
+                      const currentCountries = tribe.countries || [];
+                      const relatedCountries = related.countries || [];
                       const sharedCountries = currentCountries.filter((c: string) => relatedCountries.includes(c));
                       if (sharedCountries.length > 0) {
                         similarities.push('Same Region');
                       }
                       
                       // Check language family
-                      const currentLang = (tribe as any).language?.family;
-                      const relatedLang = (related as any).language?.family;
+                      const currentLang = tribe.language?.family;
+                      const relatedLang = related.language?.family;
                       if (currentLang && relatedLang && currentLang === relatedLang) {
                         similarities.push('Same Language Family');
                       }
                       
                       // Check religion
-                      const currentReligion = typeof (tribe as any).religion === 'string' ? (tribe as any).religion : '';
-                      const relatedReligion = typeof (related as any).religion === 'string' ? (related as any).religion : '';
+                      const currentReligion = typeof tribe.religion === 'string' ? tribe.religion : '';
+                      const relatedReligion = typeof related.religion === 'string' ? related.religion : '';
                       if (currentReligion && relatedReligion) {
                         const getReligionType = (r: string) => {
                           const rl = r.toLowerCase();
@@ -1398,9 +1399,9 @@ const TribePage = () => {
                     <ExternalLink className="w-3 h-3" />
                     Joshua Project (Demographics)
                   </a>
-                  {(tribe as any).youtubeVideoId && (
+                  {tribe.youtubeVideoId && (
                     <a 
-                      href={`https://www.youtube.com/watch?v=${(tribe as any).youtubeVideoId}`}
+                      href={`https://www.youtube.com/watch?v=${tribe.youtubeVideoId}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-50 dark:bg-red-950/30 hover:bg-red-100 dark:hover:bg-red-950/50 border border-red-200 dark:border-red-800 rounded-lg text-xs text-red-700 dark:text-red-300 transition-colors"

@@ -100,7 +100,7 @@ export default function ReligionTimeline() {
   const timelineEvents = useMemo(() => {
     const events: ReligionEvent[] = [];
 
-    tribesData.tribes.forEach((tribe: any) => {
+    (tribesData.tribes || []).forEach((tribe: { id?: string; name?: string; religion?: string }) => {
       if (tribe.traditionalReligion?.religiousHistory) {
         const history = tribe.traditionalReligion.religiousHistory;
         const coordinates = tribe.mapCoordinates;
@@ -799,7 +799,10 @@ export default function ReligionTimeline() {
   }, [filteredEvents]);
 
   // Fixed map bounds for Africa
-  const mapBounds = { minLng: -20, maxLng: 55, minLat: -35, maxLat: 38 };
+  const mapBounds = useMemo(
+    () => ({ minLng: -20, maxLng: 55, minLat: -35, maxLat: 38 }),
+    []
+  );
   const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${mapBounds.minLng},${mapBounds.minLat},${mapBounds.maxLng},${mapBounds.maxLat}&layer=mapnik`;
 
   // Filter events by timeline year for map animation

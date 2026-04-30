@@ -25,7 +25,7 @@ export default function CountryTribes() {
   const tribes = useMemo(() => {
     if (!countryCode) return [];
     return allTribes
-      .filter(t => ((t as any).countries || []).includes(countryCode))
+      .filter(t => (t.countries ?? []).includes(countryCode))
       .sort((a, b) => a.name.localeCompare(b.name));
   }, [allTribes, countryCode]);
 
@@ -39,7 +39,7 @@ export default function CountryTribes() {
   const languageFamilies = useMemo(() => {
     const set = new Set<string>();
     tribes.forEach(t => {
-      const f = (t as any).language?.family;
+      const f = t.language?.family;
       if (f) set.add(f);
     });
     return Array.from(set).sort();
@@ -48,7 +48,7 @@ export default function CountryTribes() {
   // Other countries for cross-linking
   const otherCountries = useMemo(() => {
     const codes = new Set<string>();
-    allTribes.forEach(t => ((t as any).countries || []).forEach((c: string) => codes.add(c)));
+    allTribes.forEach(t => (t.countries ?? []).forEach(c => codes.add(c)));
     return countries
       .filter(c => codes.has(c.code) && c.code !== countryCode)
       .sort((a, b) => a.name.localeCompare(b.name));
@@ -199,10 +199,10 @@ export default function CountryTribes() {
                         <Users className="w-3 h-3" />{tribe.population}
                       </span>
                     )}
-                    {(tribe as any).language?.name && (
+                    {tribe.language?.name && (
                       <>
                         <span>•</span>
-                        <span>{(tribe as any).language.name}</span>
+                        <span>{tribe.language.name}</span>
                       </>
                     )}
                   </div>

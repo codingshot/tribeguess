@@ -1,4 +1,13 @@
 import tribesData from '@/data/tribes.json';
+import type { TribeData, TribeFamousPerson } from '@/types/tribe';
+
+/** Famous people rows in tribes.json may include extra fields beyond TribeFamousPerson */
+type FamousPersonSource = TribeFamousPerson & {
+  role?: string;
+  birth?: number;
+  death?: number;
+  wikipedia?: string | null;
+};
 
 export interface Person {
   id: string;
@@ -103,11 +112,11 @@ export function getAllPeople(): Person[] {
   if (cachedPeople) return cachedPeople;
   
   const peopleMap = new Map<string, Person>();
-  const tribes = tribesData.tribes || [];
-  
-  tribes.forEach((tribe: any) => {
+  const tribes = (tribesData.tribes || []) as TribeData[];
+
+  tribes.forEach(tribe => {
     if (tribe.famousPeople && Array.isArray(tribe.famousPeople)) {
-      tribe.famousPeople.forEach((person: any) => {
+      tribe.famousPeople.forEach((person: FamousPersonSource) => {
         const id = generateSlug(person.name);
         
         // Only add if not already present (prevents duplicates)

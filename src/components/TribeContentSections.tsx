@@ -138,8 +138,23 @@ interface MarriageProps {
   tribe: TribeData;
 }
 
+interface TribeGenderRolesBlock {
+  male?: string;
+  female?: string;
+}
+
+interface TribeGenderRoles {
+  traditional?: TribeGenderRolesBlock;
+  modern?: TribeGenderRolesBlock;
+}
+
+function asGenderRoles(val: unknown): TribeGenderRoles | null {
+  if (val === null || typeof val !== 'object') return null;
+  return val as TribeGenderRoles;
+}
+
 export function TribeMarriageSection({ tribe }: MarriageProps) {
-  const genderRoles = tribe.genderRoles as any;
+  const genderRoles = asGenderRoles(tribe.genderRoles);
   if (!genderRoles) return null;
 
   return (

@@ -29,10 +29,10 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
   return (
     <Link
       to={`/learn/${tribe.slug}`}
-      className="card-tribe p-5 sm:p-6 group cursor-pointer block touch-manipulation"
+      className="card-tribe p-4 sm:p-5 group cursor-pointer block touch-manipulation"
       aria-label={`Learn about the ${tribe.name} tribe from ${tribe.region}`}
     >
-      <header className="flex items-start justify-between mb-3 sm:mb-4 gap-3">
+      <header className="flex items-start justify-between mb-2 sm:mb-3 gap-2 sm:gap-3">
         <div className="min-w-0">
           <div className="flex items-center gap-1.5 mb-1">
             {/* Country Flags */}
@@ -62,14 +62,14 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
       </header>
       
       {tribe.population && (
-      <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
+      <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3 leading-snug">
         <Users className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
         <span>{tribe.population}</span>
       </div>
       )}
       
       {tribe.description && (
-      <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 mb-3 sm:mb-4 leading-relaxed">
+      <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 mb-2 sm:mb-3 leading-snug">
         {tribe.description}
       </p>
       )}

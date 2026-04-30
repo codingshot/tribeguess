@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useCallback, useEffect, useState, useRef } from 'react';
 import { VideoItem, findUnplayedFallbackVideo, getYoutubeThumbnail } from '@/lib/videoAggregation';
 import { toast } from 'sonner';
+import type { YoutubeIframeInstance } from '@/types/youtubeIframe';
 
 // Storage keys
 const STORAGE_KEYS = {
@@ -97,7 +98,7 @@ interface GlobalVideoPlayerContextType {
   playedVideos: string[];
   
   // Player ref for internal use
-  playerRef: React.MutableRefObject<any>;
+  playerRef: React.MutableRefObject<YoutubeIframeInstance | null>;
   setPlayerState: (state: { duration?: number; currentTime?: number; isPlaying?: boolean; isLoading?: boolean }) => void;
   
   hasPlayer: boolean;
@@ -130,17 +131,25 @@ function safeJSONParse<T>(key: string, fallback: T): T {
       return fallback;
     }
     if (key === STORAGE_KEYS.queue && Array.isArray(parsed)) {
-      return parsed.filter((v: any) => v && v.youtubeId) as unknown as T;
+      return parsed.filter(
+        (v: unknown): v is { youtubeId: string } =>
+          typeof v === 'object' &&
+          v !== null &&
+          'youtubeId' in v &&
+          typeof (v as { youtubeId: unknown }).youtubeId === 'string'
+      ) as unknown as T;
     }
     return parsed;
   } catch {
-    try { localStorage.removeItem(key); } catch {}
+    try { localStorage.removeItem(key); } catch {
+      /* localStorage unavailable */
+    }
     return fallback;
   }
 }
 
 export function GlobalVideoPlayerProvider({ children }: { children: React.ReactNode }) {
-  const playerRef = useRef<any>(null);
+  const playerRef = useRef<YoutubeIframeInstance | null>(null);
   
   // State
   const [currentVideo, setCurrentVideo] = useState<VideoItem | null>(() => 
@@ -325,7 +334,9 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
       try {
         playerRef.current.stopVideo?.();
         playerRef.current.destroy?.();
-      } catch {}
+      } catch {
+        /* YT player teardown */
+      }
       playerRef.current = null;
     }
     setCurrentVideo(null);
@@ -445,7 +456,9 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
     if (playerRef.current?.setPlaybackRate) {
       try {
         playerRef.current.setPlaybackRate(speed);
-      } catch {}
+      } catch {
+        /* YT API */
+      }
     }
   }, []);
   
@@ -457,7 +470,9 @@ export function GlobalVideoPlayerProvider({ children }: { children: React.ReactN
       if (playerRef.current?.setPlaybackRate) {
         try {
           playerRef.current.setPlaybackRate(newSpeed);
-        } catch {}
+        } catch {
+          /* YT API */
+        }
       }
       return newSpeed;
     });

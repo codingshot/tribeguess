@@ -15,8 +15,8 @@ interface FAQ {
 function generateFAQs(tribe: TribeData, countryNames: string): FAQ[] {
   const faqs: FAQ[] = [];
   const name = tribe.name;
-  const lang = (tribe as any).language;
-  const religion = typeof (tribe as any).religion === 'string' ? (tribe as any).religion : '';
+  const lang = tribe.language;
+  const religion = typeof tribe.religion === 'string' ? tribe.religion : '';
   const pop = tribe.population || 'several million';
   const region = tribe.region || 'their traditional homeland';
   const desc = tribe.description || '';

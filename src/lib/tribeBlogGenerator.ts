@@ -1,6 +1,25 @@
 // Auto-generates blog posts from tribe data for tribes that don't have a dedicated blog post
 import tribesData from '@/data/tribes.json';
 import type { BlogPost, ContentSection } from '@/data/blogPosts';
+import type { TribeData, TribeFamousPerson } from '@/types/tribe';
+
+type TribeJsonCountry = { code: string; name?: string; region?: string };
+type TribeHistory = { origin?: string; colonialEra?: string; independence?: string; keyEvents?: string[] };
+type TribePhrase = { phrase: string; meaning: string };
+type TraditionalFoodShape = {
+  description?: string;
+  staples?: string[];
+  specialDishes?: string[];
+  beverages?: string[];
+};
+type TraditionalReligionShape = {
+  beliefs?: string;
+  supremeDeity?: string;
+  practices?: string[];
+};
+type FamousBlogPerson = TribeFamousPerson & { role?: string; birth?: string | number };
+
+const tribeJsonCountries = tribesData.countries as TribeJsonCountry[] | undefined;
 
 const regionGradients: Record<string, string> = {
   east: 'bg-gradient-to-br from-emerald-500 to-teal-600',
@@ -15,25 +34,27 @@ const regionEmojis: Record<string, string> = {
   east: '🌍', west: '🌏', southern: '🌎', central: '🌿', north: '🏜️', horn: '🐪',
 };
 
-function getRegionName(tribe: any): string {
-  const countries = tribe.countries as string[] | undefined;
+function getRegionName(tribe: TribeData): string {
+  const countries = tribe.countries;
   if (!countries?.length) return tribe.region || 'Africa';
-  const country = tribesData.countries.find(c => c.code === countries[0]);
+  const country = tribeJsonCountries?.find(c => c.code === countries[0]);
   return country?.name || tribe.region || 'Africa';
 }
 
-function getRegionKey(tribe: any): string {
-  const countries = tribe.countries as string[] | undefined;
+function getRegionKey(tribe: TribeData): string {
+  const countries = tribe.countries;
   if (!countries?.length) return 'east';
-  const country = tribesData.countries.find(c => c.code === countries[0]);
+  const country = tribeJsonCountries?.find(c => c.code === countries[0]);
   return country?.region || 'east';
 }
 
-function generateTribeBlogContent(tribe: any): ContentSection[] {
+function generateTribeBlogContent(tribe: TribeData): ContentSection[] {
   const sections: ContentSection[] = [];
-  const countryNames = (tribe.countries as string[])?.map(
-    code => tribesData.countries.find(c => c.code === code)?.name
-  ).filter(Boolean).join(', ') || 'Africa';
+  const countryNames =
+    tribe.countries
+      ?.map(code => tribeJsonCountries?.find(c => c.code === code)?.name)
+      .filter(Boolean)
+      .join(', ') || 'Africa';
 
   // Intro
   sections.push({
@@ -44,8 +65,8 @@ function generateTribeBlogContent(tribe: any): ContentSection[] {
   });
 
   // History
-  const history = tribe.history;
-  if (history) {
+  const history = tribe.history as TribeHistory | null | undefined;
+  if (history && typeof history === 'object') {
     const paras: string[] = [];
     if (history.origin) paras.push(history.origin);
     if (history.colonialEra) paras.push(history.colonialEra);
@@ -70,7 +91,8 @@ function generateTribeBlogContent(tribe: any): ContentSection[] {
         `The ${tribe.name} speak ${language.name || 'their own language'}, part of the ${language.family || 'African language'} family with approximately ${language.speakers || 'many'} speakers.`,
         language.greeting ? `A common greeting is "${language.greeting}" which means "${language.greetingMeaning || 'hello'}".` : '',
       ].filter(Boolean),
-      list: language.commonPhrases?.slice(0, 4).map((p: any) => `"${p.phrase}" — ${p.meaning}`) || [],
+      list:
+        language.commonPhrases?.slice(0, 4).map((p: TribePhrase) => `"${p.phrase}" — ${p.meaning}`) || [],
       highlight: language.greeting ? `Try greeting a ${tribe.name} person with "${language.greeting}" — it will be warmly appreciated!` : undefined,
     });
   }
@@ -86,8 +108,8 @@ function generateTribeBlogContent(tribe: any): ContentSection[] {
   }
 
   // Food
-  const food = tribe.traditionalFood;
-  if (food) {
+  const food = tribe.traditionalFood as TraditionalFoodShape | null | undefined;
+  if (food && typeof food === 'object') {
     sections.push({
       heading: 'Traditional Cuisine',
       icon: '🍲',
@@ -118,15 +140,15 @@ function generateTribeBlogContent(tribe: any): ContentSection[] {
       heading: `Notable ${tribe.name} People`,
       icon: '⭐',
       paragraphs: [`The ${tribe.name} have produced many influential figures across politics, arts, science, and sports.`],
-      list: tribe.famousPeople.slice(0, 5).map((p: any) =>
-        `${p.name} — ${p.role}${p.birth ? ` (b. ${p.birth})` : ''}`
+      list: tribe.famousPeople.slice(0, 5).map((p: FamousBlogPerson) =>
+        `${p.name} — ${p.role ?? p.title ?? ''}${p.birth ? ` (b. ${p.birth})` : ''}`
       ),
     });
   }
 
   // Traditional Religion
-  const religion = tribe.traditionalReligion;
-  if (religion) {
+  const religion = tribe.traditionalReligion as TraditionalReligionShape | null | undefined;
+  if (religion && typeof religion === 'object') {
     sections.push({
       heading: 'Spiritual Beliefs & Religion',
       icon: '🙏',
@@ -142,7 +164,7 @@ function generateTribeBlogContent(tribe: any): ContentSection[] {
 }
 
 export function generateTribeBlogs(existingSlugs: Set<string>): BlogPost[] {
-  const tribes = tribesData.tribes as any[];
+  const tribes = (tribesData.tribes || []) as TribeData[];
   const generated: BlogPost[] = [];
   const seenGeneratedSlugs = new Set<string>();
 
@@ -154,9 +176,11 @@ export function generateTribeBlogs(existingSlugs: Set<string>): BlogPost[] {
 
     const regionName = getRegionName(tribe);
     const regionKey = getRegionKey(tribe);
-    const countryNames = (tribe.countries as string[])?.map(
-      code => tribesData.countries.find(c => c.code === code)?.name
-    ).filter(Boolean).join(', ') || 'Africa';
+    const countryNames =
+      tribe.countries
+        ?.map(code => tribeJsonCountries?.find(c => c.code === code)?.name)
+        .filter(Boolean)
+        .join(', ') || 'Africa';
 
     const content = generateTribeBlogContent(tribe);
     if (content.length < 2) continue; // Skip tribes with too little data

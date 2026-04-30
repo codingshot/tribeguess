@@ -45,15 +45,16 @@ export default function RecipePage() {
     const tribe = allTribes.find(t => t.slug === recipe.tribeSlug);
     if (!tribe) return null;
     
-    const tribeFamily = (tribe as any).language?.family?.toLowerCase() || '';
+    const tribeFamily = tribe.language?.family?.toLowerCase() || '';
     
     // Find matching language family
     return languageFamiliesData.languageFamilies.find(family => {
       const familyId = family.id.toLowerCase();
       const familyName = family.name.toLowerCase();
       if (tribeFamily.includes(familyId) || tribeFamily.includes(familyName)) return true;
-      return family.subFamilies.some((sf: any) => 
-        tribeFamily.includes(sf.slug.toLowerCase()) || tribeFamily.includes(sf.name.toLowerCase())
+      return family.subFamilies.some(
+        (sf: { slug: string; name: string }) =>
+          tribeFamily.includes(sf.slug.toLowerCase()) || tribeFamily.includes(sf.name.toLowerCase())
       );
     });
   }, [recipe]);

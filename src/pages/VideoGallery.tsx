@@ -60,12 +60,13 @@ export default function VideoGallery() {
     languages: allVideos.filter(v => v.category === 'language').length,
   }), [allVideos]);
 
-  // Read initial page from URL
+  const pageParam = searchParams.get('page');
   useEffect(() => {
-    const urlPage = parseInt(searchParams.get('page') || '1', 10);
-    if (urlPage > 0 && urlPage !== page) setPage(urlPage);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    const urlPage = parseInt(pageParam || '1', 10);
+    if (Number.isFinite(urlPage) && urlPage > 0) {
+      setPage((p) => (p !== urlPage ? urlPage : p));
+    }
+  }, [pageParam]);
 
   return (
     <div className="min-h-screen bg-background">

@@ -189,7 +189,7 @@ export const crossCulturalPatterns: Record<string, {
 export function analyzeFullName(fullName: string): FullNameAnalysis {
   const parts = fullName.trim().split(/\s+/).filter(p => p.length > 0);
   
-  let firstName = parts[0] || '';
+  const firstName = parts[0] || '';
   let lastName = parts.length > 1 ? parts[parts.length - 1] : '';
   
   // If single name, treat it as first name
