@@ -75,15 +75,21 @@ export const TribeCard = memo(function TribeCard({ tribe }: TribeCardProps) {
       )}
       
       {tribe.stereotypes && tribe.stereotypes.length > 0 && (
-      <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Top stereotypes">
-        {tribe.stereotypes.slice(0, 2).map((stereotype, i) => (
-          <li key={`${tribe.id}-st-${i}-${String(stereotype).slice(0, 32)}`} className="badge-tribe text-xs">
+      <ul
+        className="flex flex-nowrap gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide -mx-0.5 px-0.5"
+        aria-label="Top stereotypes"
+      >
+        {tribe.stereotypes.slice(0, 4).map((stereotype, i) => (
+          <li
+            key={`${tribe.id}-st-${i}-${String(stereotype).slice(0, 32)}`}
+            className="badge-tribe text-xs whitespace-nowrap shrink-0"
+          >
             {stereotype}
           </li>
         ))}
-        {tribe.stereotypes.length > 2 && (
-          <li className="badge-tribe text-xs">
-            +{tribe.stereotypes.length - 2} more
+        {tribe.stereotypes.length > 4 && (
+          <li className="badge-tribe text-xs whitespace-nowrap shrink-0">
+            +{tribe.stereotypes.length - 4}
           </li>
         )}
       </ul>

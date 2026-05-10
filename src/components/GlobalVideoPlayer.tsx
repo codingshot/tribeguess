@@ -156,6 +156,54 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
   const playerContainerRef = useRef<HTMLDivElement>(null);
   const [ytReady, setYtReady] = useState(false);
   const [sliderValue, setSliderValue] = useState(0);
+
+  // Touch swipe handling (YouTube-style: swipe down to minimize, up to expand)
+  const swipeStartRef = useRef<{ x: number; y: number; t: number } | null>(null);
+  const [swipeOffsetY, setSwipeOffsetY] = useState(0);
+
+  const onPlayerTouchStart = useCallback((e: React.TouchEvent) => {
+    if (videoMode !== 'center') return;
+    const t = e.touches[0];
+    swipeStartRef.current = { x: t.clientX, y: t.clientY, t: Date.now() };
+  }, [videoMode]);
+
+  const onPlayerTouchMove = useCallback((e: React.TouchEvent) => {
+    if (!swipeStartRef.current || videoMode !== 'center') return;
+    const dy = e.touches[0].clientY - swipeStartRef.current.y;
+    const dx = e.touches[0].clientX - swipeStartRef.current.x;
+    if (dy > 10 && Math.abs(dy) > Math.abs(dx)) {
+      setSwipeOffsetY(Math.min(dy, 400));
+    }
+  }, [videoMode]);
+
+  const onPlayerTouchEnd = useCallback(() => {
+    const start = swipeStartRef.current;
+    swipeStartRef.current = null;
+    const dy = swipeOffsetY;
+    setSwipeOffsetY(0);
+    if (!start) return;
+    if (dy > 100) {
+      setVideoMode('mini');
+    }
+  }, [swipeOffsetY]);
+
+  const onBarTouchStart = useCallback((e: React.TouchEvent) => {
+    const t = e.touches[0];
+    swipeStartRef.current = { x: t.clientX, y: t.clientY, t: Date.now() };
+  }, []);
+
+  const onBarTouchEnd = useCallback((e: React.TouchEvent) => {
+    const start = swipeStartRef.current;
+    swipeStartRef.current = null;
+    if (!start) return;
+    const t = e.changedTouches[0];
+    const dy = t.clientY - start.y;
+    if (dy < -50 && currentVideo) {
+      // swipe up on bar -> expand video
+      setVideoMode('center');
+      if (!videoVisible) toggleVideoVisible();
+    }
+  }, [currentVideo, videoVisible, toggleVideoVisible]);
   
   // Load YouTube API
   useEffect(() => {
@@ -575,7 +623,19 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
             getVideoContainerClasses(),
             (videoMode === 'mini' || videoMode === 'pip') && "cursor-move"
           )}
-          style={getDragStyles()}
+          style={{
+            ...getDragStyles(),
+            ...(videoMode === 'center' && swipeOffsetY > 0
+              ? {
+                  transform: `translate(-50%, calc(-50% + ${swipeOffsetY}px))`,
+                  opacity: Math.max(0.4, 1 - swipeOffsetY / 400),
+                  transition: 'none',
+                }
+              : {}),
+          }}
+          onTouchStart={onPlayerTouchStart}
+          onTouchMove={onPlayerTouchMove}
+          onTouchEnd={onPlayerTouchEnd}
         >
           {/* Drag Handle for mini/pip modes */}
           {videoVisible && (videoMode === 'mini' || videoMode === 'pip') && (
@@ -719,6 +779,8 @@ function GlobalVideoPlayerInner({ ctx }: { ctx: NonNullable<ReturnType<typeof us
         ref={containerRef}
         className="fixed bottom-0 left-0 right-0 z-[60] bg-background border-t border-border shadow-lg h-12"
         style={{ pointerEvents: 'auto' }}
+        onTouchStart={onBarTouchStart}
+        onTouchEnd={onBarTouchEnd}
       >
         <div className="container mx-auto px-2 sm:px-4 h-full">
           <div className="flex items-center gap-2 h-full">
