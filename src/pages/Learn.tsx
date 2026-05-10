@@ -575,8 +575,8 @@ const Learn = () => {
             </div>
             </div>
             
-            {/* Geo filters: single scroll row on mobile (no wrap) */}
-            <div className="flex flex-nowrap items-center gap-2 mt-2 min-w-0 overflow-x-auto overflow-y-visible pb-1 -mx-1 px-1 scrollbar-hide touch-pan-x sm:flex-wrap sm:justify-center sm:overflow-x-visible sm:pb-0 sm:mx-0 sm:px-0 sm:touch-auto">
+            {/* Geo filters + stats: single horizontal row */}
+            <div className="flex flex-nowrap items-center gap-2 mt-2 min-w-0 overflow-x-auto overflow-y-visible pb-1 -mx-1 px-1 scrollbar-hide touch-pan-x sm:overflow-x-auto sm:pb-1">
               {/* Macro Region Dropdown */}
               <Select value={macroRegionFilter || 'all'} onValueChange={(value) => handleMacroRegionChange(value === 'all' ? '' : value)}>
                 <SelectTrigger className="h-9 min-h-[44px] sm:min-h-7 w-[7.75rem] sm:w-auto sm:min-w-[90px] shrink-0 text-xs bg-primary/10 border-primary/20 hover:bg-primary/20 px-2 [&>span]:max-w-[4.5rem] sm:[&>span]:max-w-none">
@@ -654,27 +654,32 @@ const Learn = () => {
                   )}
                 </TooltipProvider>
               </div>
-            </div>
-            
-            {/* Quick Stats - Ultra compact */}
-            <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-4 mt-1.5 sm:mt-2 text-[10px] sm:text-xs text-muted-foreground overflow-x-auto scrollbar-hide px-1">
-              <span className="flex items-center gap-0.5 shrink-0">
-                <Users className="w-3 h-3 text-primary" />
-                <strong className="text-foreground">{countryStats.tribeCount}</strong>
-                <span className="hidden sm:inline">tribes</span>
-              </span>
-              <span className="flex items-center gap-0.5 shrink-0">
-                <TrendingUp className="w-3 h-3 text-primary" />
-                <strong className="text-foreground">~{formatPopulation(countryStats.population)}</strong>
-              </span>
-              <span className="flex items-center gap-0.5 shrink-0 hidden min-[380px]:flex">
-                <MapPin className="w-3 h-3 text-primary" />
-                <strong className="text-foreground">{countryStats.regionCount}</strong>
-              </span>
-              <span className="flex items-center gap-0.5 shrink-0 hidden sm:flex">
-                <Languages className="w-3 h-3 text-primary" />
-                <strong className="text-foreground">{countryStats.languageCount || '?'}</strong>
-              </span>
+
+              {/* Vertical separator before stats */}
+              <span className="h-6 w-px bg-border shrink-0 mx-1" aria-hidden />
+
+              {/* Inline Quick Stats */}
+              <div className="flex flex-nowrap items-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-muted-foreground shrink-0">
+                <span className="inline-flex items-center gap-1 px-2 h-7 rounded-md bg-muted/60 shrink-0">
+                  <Users className="w-3 h-3 text-primary" />
+                  <strong className="text-foreground">{countryStats.tribeCount}</strong>
+                  <span className="hidden sm:inline">tribes</span>
+                </span>
+                <span className="inline-flex items-center gap-1 px-2 h-7 rounded-md bg-muted/60 shrink-0">
+                  <TrendingUp className="w-3 h-3 text-primary" />
+                  <strong className="text-foreground">~{formatPopulation(countryStats.population)}</strong>
+                </span>
+                <span className="inline-flex items-center gap-1 px-2 h-7 rounded-md bg-muted/60 shrink-0">
+                  <MapPin className="w-3 h-3 text-primary" />
+                  <strong className="text-foreground">{countryStats.regionCount}</strong>
+                  <span className="hidden sm:inline">regions</span>
+                </span>
+                <span className="inline-flex items-center gap-1 px-2 h-7 rounded-md bg-muted/60 shrink-0">
+                  <Languages className="w-3 h-3 text-primary" />
+                  <strong className="text-foreground">{countryStats.languageCount || '?'}</strong>
+                  <span className="hidden sm:inline">langs</span>
+                </span>
+              </div>
             </div>
             
             {/* Active Filters + Clear Filters Row */}
