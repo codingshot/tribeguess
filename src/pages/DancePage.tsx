@@ -82,9 +82,9 @@ export default function DancePage() {
       <main className="container mx-auto px-4 py-6">
         <div className="max-w-3xl mx-auto">
           <Button variant="ghost" size="sm" className="mb-4" asChild>
-            <Link to={isDance ? '/african-dances?type=dance' : '/african-dances?type=music'}>
+            <Link to={isDance ? '/dances' : '/african-dances?type=music'}>
               <ArrowLeft className="w-4 h-4 mr-1" />
-              {isDance ? 'All dances' : 'All music'}
+              {isDance ? 'Dance gallery' : 'All music'}
             </Link>
           </Button>
 

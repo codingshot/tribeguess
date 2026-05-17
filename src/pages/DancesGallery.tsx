@@ -27,6 +27,7 @@ export default function DancesGallery() {
   const [region, setRegion] = useState(searchParams.get('region') || 'all');
   const [tribe, setTribe] = useState(searchParams.get('tribe') || 'all');
   const [style, setStyle] = useState(searchParams.get('style') || 'all');
+  const [country, setCountry] = useState(searchParams.get('country') || 'all');
   const [view, setView] = useState<'grid' | 'list'>(
     searchParams.get('view') === 'list' ? 'list' : 'grid'
   );
@@ -61,14 +62,15 @@ export default function DancesGallery() {
           const matchesRegion = region === 'all' || p.region === region;
           const matchesTribe = tribe === 'all' || p.tribeSlug === tribe;
           const matchesStyle = style === 'all' || p.style === style;
-          return matchesSearch && matchesRegion && matchesTribe && matchesStyle;
+          const matchesCountry = country === 'all' || p.country === country;
+          return matchesSearch && matchesRegion && matchesTribe && matchesStyle && matchesCountry;
         })
         .map((p) => p.id)
     );
     return galleryVideos.filter((v) =>
       [...matchingIds].some((id) => v.id.startsWith(`dance-${id}-`))
     );
-  }, [allDances, galleryVideos, query, region, tribe, style]);
+  }, [allDances, galleryVideos, query, region, tribe, style, country]);
 
   const paginatedVideos = useMemo(() => {
     const start = (page - 1) * PAGE_SIZE;
@@ -83,24 +85,35 @@ export default function DancesGallery() {
     if (region !== 'all') params.set('region', region);
     if (tribe !== 'all') params.set('tribe', tribe);
     if (style !== 'all') params.set('style', style);
+    if (country !== 'all') params.set('country', country);
     if (view === 'list') params.set('view', 'list');
     if (page > 1) params.set('page', String(page));
     setSearchParams(params, { replace: true });
-  }, [query, region, tribe, style, view, page, setSearchParams]);
+  }, [query, region, tribe, style, country, view, page, setSearchParams]);
 
   useEffect(() => {
     setPage(1);
-  }, [query, region, tribe, style]);
+  }, [query, region, tribe, style, country]);
+
+  const pageParam = searchParams.get('page');
+  useEffect(() => {
+    const urlPage = parseInt(pageParam || '1', 10);
+    if (Number.isFinite(urlPage) && urlPage > 0) {
+      setPage((p) => (p !== urlPage ? urlPage : p));
+    }
+  }, [pageParam]);
 
   const clearFilters = () => {
     setQuery('');
     setRegion('all');
     setTribe('all');
     setStyle('all');
+    setCountry('all');
     setPage(1);
   };
 
-  const hasFilters = query || region !== 'all' || tribe !== 'all' || style !== 'all';
+  const hasFilters =
+    query || region !== 'all' || tribe !== 'all' || style !== 'all' || country !== 'all';
 
   return (
     <div className="min-h-screen bg-background">

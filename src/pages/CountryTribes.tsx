@@ -205,9 +205,9 @@ export default function CountryTribes() {
             )}
             {stats.danceCount > 0 && (
               <Button variant="outline" size="sm" asChild>
-                <Link to={`/african-dances?country=${countryCode}`}>
+                <Link to={`/dances?country=${countryCode}`}>
                   <Footprints className="w-3.5 h-3.5 mr-1" />
-                  Dances & music
+                  Dance gallery
                 </Link>
               </Button>
             )}

@@ -33,6 +33,7 @@ const staticPages: SitemapEntry[] = [
   { loc: '/countries', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/names', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/recipes', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
+  { loc: '/dances', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/african-dances', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/languages', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/religions', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
