@@ -30,8 +30,10 @@ const staticPages: SitemapEntry[] = [
   { loc: '/', lastmod: TODAY, changefreq: 'weekly', priority: 1.0 },
   { loc: '/learn', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/tribes', lastmod: TODAY, changefreq: 'weekly', priority: 0.95 },
+  { loc: '/countries', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/names', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/recipes', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
+  { loc: '/african-dances', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/languages', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/religions', lastmod: TODAY, changefreq: 'weekly', priority: 0.9 },
   { loc: '/religion-compare', lastmod: TODAY, changefreq: 'monthly', priority: 0.7 },
@@ -104,6 +106,30 @@ async function loadTribes(): Promise<SitemapEntry[]> {
     return entries;
   } catch (error) {
     console.error('Error loading tribes:', error);
+    return [];
+  }
+}
+
+async function loadDances(): Promise<SitemapEntry[]> {
+  try {
+    const dancesPath = path.join(process.cwd(), 'src/data/dances.ts');
+    const content = fs.readFileSync(dancesPath, 'utf-8');
+    const idMatches = content.matchAll(/id:\s*['"]([^'"]+)['"]/g);
+    const entries: SitemapEntry[] = [];
+    const skipIds = new Set(['east', 'west', 'southern', 'central', 'north', 'horn']);
+    for (const match of idMatches) {
+      if (skipIds.has(match[1])) continue;
+      entries.push({
+        loc: `/dance/${match[1]}`,
+        lastmod: TODAY,
+        changefreq: 'monthly',
+        priority: 0.75,
+      });
+    }
+    console.log(`✓ Loaded ${entries.length} dance/music pages`);
+    return entries;
+  } catch (error) {
+    console.error('Error loading dances:', error);
     return [];
   }
 }
@@ -249,9 +275,10 @@ async function main() {
   console.log('🗺️  Generating sitemap.xml...\n');
   
   // Load all data sources in parallel
-  const [tribes, recipes, blogPosts, languages, religions, ingredients] = await Promise.all([
+  const [tribes, recipes, dances, blogPosts, languages, religions, ingredients] = await Promise.all([
     loadTribes(),
     loadRecipes(),
+    loadDances(),
     loadBlogPosts(),
     loadLanguageFamilies(),
     loadReligions(),
@@ -266,6 +293,7 @@ async function main() {
     ...languages,
     ...religions,
     ...recipes,
+    ...dances,
     ...ingredients
   ];
   
@@ -290,6 +318,7 @@ async function main() {
   console.log(`   Static pages: ${staticPages.length}`);
   console.log(`   Tribe pages: ${tribes.length}`);
   console.log(`   Recipe pages: ${recipes.length}`);
+  console.log(`   Dance/music pages: ${dances.length}`);
   console.log(`   Blog posts: ${blogPosts.length}`);
   console.log(`   Language families: ${languages.length}`);
   console.log(`   Religion pages: ${religions.length}`);

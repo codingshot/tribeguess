@@ -8,7 +8,8 @@ import { findReligionByName } from '@/data/traditionalReligions';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TribeMap } from '@/components/TribeMap';
-import { TribeIntroSnippet, TribeQuickLinks } from '@/components/TribeContentSections';
+import { TribeIntroSnippet, TribeQuickLinks, TribeDanceSection } from '@/components/TribeContentSections';
+import { getPerformancesByTribe } from '@/data/dances';
 import { tribeTitles, tribeMetaDescriptions, buildTribeArticleLD, buildTribeBreadcrumbLD } from '@/lib/tribeSeoTemplates';
 import { canonical, SITE_NAME, SITE_DOMAIN } from '@/lib/seoConstants';
 import { ImageGallery } from '@/components/ImageGallery';
@@ -261,6 +262,10 @@ const TribePage = () => {
                 hasReligion={!!tribe.religion || !!tribe.traditionalReligion}
                 hasFood={!!tribe.traditionalFood}
                 hasPeople={!!(tribe.famousPeople && tribe.famousPeople.length > 0)}
+                hasDance={
+                  !!tribe.traditionalDance ||
+                  getPerformancesByTribe(tribe.slug).length > 0
+                }
               />
               {/* YouTube Culture Video Section */}
               {tribe.youtubeVideoId && (
@@ -952,6 +957,8 @@ const TribePage = () => {
                 />
               )}
               
+              <TribeDanceSection tribe={tribe} />
+
               {/* Traditional Food Section */}
               {tribe.traditionalFood && typeof tribe.traditionalFood === 'object' && (
                 <section id="food" className="border-t border-border pt-6">

@@ -2,8 +2,16 @@
 
 import tribesData from '@/data/tribes.json';
 import { recipes } from '@/data/recipes';
+import { culturalPerformances } from '@/data/dances';
 
-export type VideoSourceType = 'TRIBE_PAGE' | 'TRIBE_LANGUAGE' | 'RECIPE' | 'DOCUMENTARY' | 'YOUTUBE_GENERIC';
+export type VideoSourceType =
+  | 'TRIBE_PAGE'
+  | 'TRIBE_LANGUAGE'
+  | 'RECIPE'
+  | 'DANCE'
+  | 'MUSIC'
+  | 'DOCUMENTARY'
+  | 'YOUTUBE_GENERIC';
 
 export interface VideoItem {
   id: string;
@@ -264,6 +272,32 @@ export function getAllVideos(): VideoItem[] {
       });
     }
   });
+
+  // Collect dance & music performance videos
+  culturalPerformances.forEach((perf) => {
+    if (!perf.youtubeVideoId || !isValidYoutubeId(perf.youtubeVideoId)) return;
+    const dedupeKey = `${perf.contentType}-${perf.youtubeVideoId}`;
+    if (seenYoutubeIds.has(dedupeKey)) return;
+    seenYoutubeIds.add(dedupeKey);
+
+    const category = perf.contentType === 'dance' ? 'dance' : 'music';
+    videos.push({
+      id: `${category}-${perf.id}-${perf.youtubeVideoId}`,
+      youtube: perf.youtubeVideoId,
+      youtubeId: perf.youtubeVideoId,
+      title: perf.name,
+      description: perf.description?.substring(0, 200),
+      thumbnailUrl: getYoutubeThumbnail(perf.youtubeVideoId),
+      sourceType: perf.contentType === 'dance' ? 'DANCE' : 'MUSIC',
+      tribeIds: [perf.tribeSlug],
+      tribeNames: [perf.tribeName],
+      tags: [perf.contentType, perf.style, perf.musicEra || perf.style].filter(Boolean) as string[],
+      originUrl: `/dance/${perf.id}`,
+      originLabel: perf.contentType === 'dance' ? `${perf.name} Dance` : `${perf.name} Music`,
+      category,
+      region: perf.region,
+    });
+  });
   
   return videos;
 }
@@ -274,7 +308,9 @@ export function getVideosByTribe(tribeId: string): VideoItem[] {
 }
 
 // Get videos by category
-export function getVideosByCategory(category: 'recipe' | 'documentary' | 'language' | 'all'): VideoItem[] {
+export function getVideosByCategory(
+  category: 'recipe' | 'documentary' | 'language' | 'dance' | 'music' | 'all'
+): VideoItem[] {
   if (category === 'all') return getAllVideos();
   return getAllVideos().filter(v => v.category === category);
 }

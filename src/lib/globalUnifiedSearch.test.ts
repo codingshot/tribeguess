@@ -66,6 +66,14 @@ describe('searchGlobalUnified — blog and engine balance', () => {
     expect(hits.some(h => h.kind === 'blog')).toBe(true);
   });
 
+  it('returns country hits for country name queries', () => {
+    const hits = searchGlobalUnified('nigeria', { limit: 24 });
+    const country = hits.find((h) => h.kind === 'country');
+    expect(country).toBeDefined();
+    expect(country?.href).toBe('/country/nigeria');
+    expect(country?.flagCountryCode).toBe('NG');
+  });
+
   it('keeps total hits within limit under load', () => {
     const hits = searchGlobalUnified('africa', { limit: 12 });
     expect(hits.length).toBeLessThanOrEqual(12);

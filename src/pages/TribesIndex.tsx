@@ -165,7 +165,12 @@ export default function TribesIndex() {
                   </Link>
                 ))}
                 {tribeCountries.length > 20 && (
-                  <span className="text-xs text-muted-foreground self-center">+{tribeCountries.length - 20} more</span>
+                  <Link
+                    to="/countries"
+                    className="text-xs text-primary self-center hover:underline font-medium"
+                  >
+                    View all {tribeCountries.length} countries →
+                  </Link>
                 )}
               </div>
             </div>

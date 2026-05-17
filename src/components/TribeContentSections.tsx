@@ -4,9 +4,11 @@
  */
 
 import { Link } from 'react-router-dom';
-import { MapPin, Languages, History, Church, Users, Star, Book, UtensilsCrossed } from 'lucide-react';
+import { MapPin, Languages, History, Church, Users, Star, Book, UtensilsCrossed, Footprints } from 'lucide-react';
 import type { TribeData, TribeLanguage } from '@/types/tribe';
 import { generateTribeIntro } from '@/lib/tribeSeoTemplates';
+import { getPerformancesByTribe } from '@/data/dances';
+import { InlineVideoPlayer } from '@/components/InlineVideoPlayer';
 
 // ─── Intro / Featured Snippet ──────────────────────────────────────
 
@@ -214,9 +216,10 @@ interface QuickLinksProps {
   hasReligion: boolean;
   hasFood: boolean;
   hasPeople: boolean;
+  hasDance?: boolean;
 }
 
-export function TribeQuickLinks({ tribe, hasReligion, hasFood, hasPeople }: QuickLinksProps) {
+export function TribeQuickLinks({ tribe, hasReligion, hasFood, hasPeople, hasDance }: QuickLinksProps) {
   return (
     <nav aria-label="Page sections" className="flex flex-wrap gap-2 text-xs">
       <a href="#overview" className="px-2.5 py-1 bg-secondary rounded-full hover:bg-secondary/80 transition-colors">
@@ -241,6 +244,11 @@ export function TribeQuickLinks({ tribe, hasReligion, hasFood, hasPeople }: Quic
           Food
         </a>
       )}
+      {hasDance && (
+        <a href="#dances" className="px-2.5 py-1 bg-secondary rounded-full hover:bg-secondary/80 transition-colors">
+          Dance & Music
+        </a>
+      )}
       {hasPeople && (
         <a href="#people" className="px-2.5 py-1 bg-secondary rounded-full hover:bg-secondary/80 transition-colors">
           Famous People
@@ -250,5 +258,97 @@ export function TribeQuickLinks({ tribe, hasReligion, hasFood, hasPeople }: Quic
         FAQ
       </a>
     </nav>
+  );
+}
+
+// ─── Dance & Music Section ─────────────────────────────────────────
+
+export function TribeDanceSection({ tribe }: { tribe: TribeData }) {
+  const performances = getPerformancesByTribe(tribe.slug);
+  const dances = performances.filter((p) => p.contentType === 'dance');
+  const music = performances.filter((p) => p.contentType === 'music');
+  const traditionalDance =
+    typeof tribe.traditionalDance === 'string' ? tribe.traditionalDance : undefined;
+
+  if (performances.length === 0 && !traditionalDance) return null;
+
+  const primaryDance = dances[0];
+
+  return (
+    <section id="dances" className="border-t border-border pt-6">
+      <h2 className="font-display text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+        <Footprints className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600" aria-hidden="true" />
+        Dance & Music
+      </h2>
+      {traditionalDance && (
+        <p className="text-sm text-muted-foreground mb-4">
+          <strong>Traditional forms:</strong> {traditionalDance}
+        </p>
+      )}
+      {primaryDance && (
+        <div className="mb-6 rounded-xl border border-orange-200 dark:border-orange-900 bg-gradient-to-r from-orange-500/10 to-amber-500/5 p-4">
+          <h3 className="text-sm font-medium mb-2">{primaryDance.name}</h3>
+          <InlineVideoPlayer
+            youtubeId={primaryDance.youtubeVideoId}
+            title={primaryDance.name}
+            sourceType="DANCE"
+            tribeId={tribe.id}
+            tribeName={tribe.name}
+            originUrl={`/learn/${tribe.slug}#dances`}
+            originLabel={`${tribe.name} Dance`}
+            category="dance"
+            className="shadow-md"
+          />
+          <p className="text-xs text-muted-foreground mt-2">{primaryDance.description}</p>
+        </div>
+      )}
+      {(dances.length > 1 || music.length > 0) && (
+        <div className="grid sm:grid-cols-2 gap-4">
+          {dances.length > 1 && (
+            <div className="p-3 bg-secondary rounded-lg">
+              <h3 className="text-sm font-medium mb-2">Dances</h3>
+              <ul className="space-y-1">
+                {dances.map((d) => (
+                  <li key={d.id}>
+                    <Link to={`/dance/${d.id}`} className="text-xs text-primary hover:underline">
+                      {d.name}
+                      {d.style !== 'traditional' && (
+                        <span className="text-muted-foreground"> ({d.style})</span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {music.length > 0 && (
+            <div className="p-3 bg-secondary rounded-lg">
+              <h3 className="text-sm font-medium mb-2">Music (traditional & modern)</h3>
+              <ul className="space-y-1">
+                {music.map((m) => (
+                  <li key={m.id}>
+                    <Link to={`/dance/${m.id}`} className="text-xs text-primary hover:underline">
+                      {m.name}
+                      {m.musicEra && (
+                        <span className="text-muted-foreground">
+                          {' '}
+                          · {m.musicEra === 'traditional' ? 'Traditional' : 'Modern'}
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+      <Link
+        to={`/african-dances?tribe=${tribe.slug}`}
+        className="mt-4 inline-flex text-sm text-primary hover:underline"
+      >
+        View all {tribe.name} dances & music →
+      </Link>
+    </section>
   );
 }

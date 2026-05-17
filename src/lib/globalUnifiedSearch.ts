@@ -9,8 +9,9 @@ import { blogPosts } from '@/data/blogPosts';
 import { getAllRecipes, type Recipe } from '@/data/recipes';
 import { sanitizeSearchQuery, normalizeForSearch } from '@/lib/dataValidation';
 import { getAllTribes } from '@/lib/tribeDetection';
+import { searchCountries } from '@/lib/countryIndex';
 
-export type UnifiedHitKind = 'tribe' | 'name' | 'blog' | 'recipe';
+export type UnifiedHitKind = 'tribe' | 'name' | 'blog' | 'recipe' | 'country';
 
 export interface UnifiedSearchHit {
   id: string;
@@ -120,6 +121,27 @@ export function searchGlobalUnified(query: string, opts?: { limit?: number }): U
     return hits.length >= limit;
   };
 
+  // Country pages — high priority for geographic queries
+  let countryAdded = 0;
+  const countryCap = 4;
+  for (const { stats, score } of searchCountries(sanitized, countryCap)) {
+    if (countryAdded >= countryCap || hits.length >= limit) break;
+    const n = hits.length;
+    if (
+      push({
+        id: `country-${stats.code}`,
+        kind: 'country',
+        title: stats.name,
+        subtitle: `${stats.tribeCount} tribes · Country`,
+        href: `/country/${stats.slug}`,
+        score,
+        flagCountryCode: stats.code,
+      })
+    )
+      break;
+    if (hits.length > n) countryAdded++;
+  }
+
   // Name/tribe matches can crowd out blog and recipes; reserve slots for cross-type results.
   const engineSlotBudget = Math.min(12, Math.max(3, limit - 6));
   let engineUsed = 0;
@@ -219,7 +241,7 @@ export function searchGlobalUnified(query: string, opts?: { limit?: number }): U
   return hits.slice(0, limit);
 }
 
-const FALLBACK_KIND_ORDER: UnifiedHitKind[] = ['recipe', 'blog', 'tribe', 'name'];
+const FALLBACK_KIND_ORDER: UnifiedHitKind[] = ['country', 'recipe', 'blog', 'tribe', 'name'];
 
 /**
  * When a page-specific list is empty, surface a mix of tribes, names, blog, and recipes
@@ -230,6 +252,7 @@ export function getCrossSectionFallback(query: string, maxItems = 10): UnifiedSe
   if (pool.length === 0) return [];
 
   const buckets: Record<UnifiedHitKind, UnifiedSearchHit[]> = {
+    country: [],
     recipe: [],
     blog: [],
     tribe: [],

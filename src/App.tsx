@@ -146,6 +146,9 @@ const PersonPage = lazy(() => import("./pages/PersonPage"));
 const Docs = lazy(() => import("./pages/Docs"));
 const NamesGallery = lazy(() => import("./pages/NamesGallery"));
 const VideoGallery = lazy(() => import("./pages/VideoGallery"));
+const AfricanDances = lazy(() => import("./pages/AfricanDances"));
+const DancePage = lazy(() => import("./pages/DancePage"));
+const CountriesIndex = lazy(() => import("./pages/CountriesIndex"));
 const TribeCompare = lazy(() => import("./pages/TribeCompare"));
 const TribesIndex = lazy(() => import("./pages/TribesIndex"));
 const CountryTribes = lazy(() => import("./pages/CountryTribes"));
@@ -204,9 +207,12 @@ const App = () => {
                   <Route path="/docs" element={<Docs />} />
                   <Route path="/names" element={<NamesGallery />} />
                   <Route path="/video-gallery" element={<VideoGallery />} />
+                  <Route path="/african-dances" element={<AfricanDances />} />
+                  <Route path="/dance/:id" element={<DancePage />} />
                   <Route path="/compare/:slugA/vs/:slugB" element={<TribeCompare />} />
                   <Route path="/compare" element={<TribeCompare />} />
                   <Route path="/tribes" element={<TribesIndex />} />
+                  <Route path="/countries" element={<CountriesIndex />} />
                   <Route path="/country/:countrySlug" element={<CountryTribes />} />
                   <Route path="/region/:regionSlug" element={<RegionTribes />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

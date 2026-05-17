@@ -14,6 +14,8 @@ function kindLabel(kind: UnifiedSearchHit['kind']): string {
       return 'Tribe';
     case 'name':
       return 'Name';
+    case 'country':
+      return 'Country';
     default:
       return 'Result';
   }

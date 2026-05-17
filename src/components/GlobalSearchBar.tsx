@@ -101,7 +101,7 @@ export function GlobalSearchBar({ className }: { className?: string }) {
   return (
     <div ref={containerRef} className={cn('relative z-[60] overflow-visible', className)}>
       <label htmlFor="global-search" className="sr-only">
-        Search names, tribes, blog, and recipes
+        Search countries, tribes, names, food, and blog
       </label>
       <div className="relative">
         <Search
@@ -125,7 +125,7 @@ export function GlobalSearchBar({ className }: { className?: string }) {
           }}
           onFocus={() => setOpen(true)}
           onKeyDown={onKeyDown}
-          placeholder="Search names, tribes, food, blog…"
+          placeholder="Search countries, tribes, food…"
           className={cn(
             'input-tribal h-9 sm:h-10 w-full min-w-0 rounded-lg border border-border bg-background pl-9 sm:pl-10 pr-9 text-base sm:text-sm',
             'placeholder:text-muted-foreground/80 touch-manipulation'

@@ -58,6 +58,8 @@ export default function VideoGallery() {
     documentaries: allVideos.filter(v => v.category === 'documentary').length,
     recipes: allVideos.filter(v => v.category === 'recipe').length,
     languages: allVideos.filter(v => v.category === 'language').length,
+    dances: allVideos.filter(v => v.category === 'dance').length,
+    music: allVideos.filter(v => v.category === 'music').length,
   }), [allVideos]);
 
   const pageParam = searchParams.get('page');
@@ -71,8 +73,8 @@ export default function VideoGallery() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Video Gallery - African Culture Documentaries & Tutorials | TribeGuess</title>
-        <meta name="description" content="Browse our collection of African cultural documentaries, recipe tutorials, and language lessons. Watch videos about tribes across the continent." />
+        <title>Video Gallery - African Documentaries, Dances, Recipes & Music | TribeGuess</title>
+        <meta name="description" content="Browse African cultural documentaries, tribal dances, traditional and modern music, recipe tutorials, and language lessons from tribes across the continent." />
       </Helmet>
       
       <Header />
@@ -82,7 +84,7 @@ export default function VideoGallery() {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold font-tribal mb-2">Video Gallery</h1>
             <p className="text-muted-foreground">
-              Explore {stats.total} videos about African culture, recipes, and languages
+              Explore {stats.total} videos — documentaries, dances, music, recipes, and languages
             </p>
             <div className="flex justify-center gap-2 mt-4">
               <Button
@@ -118,6 +120,24 @@ export default function VideoGallery() {
               >
                 <span className="w-2 h-2 rounded-full bg-purple-500" />
                 Languages ({stats.languages})
+              </Button>
+              <Button
+                variant={category === 'dance' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategory('dance')}
+                className="gap-1"
+              >
+                <span className="w-2 h-2 rounded-full bg-orange-500" />
+                Dances ({stats.dances})
+              </Button>
+              <Button
+                variant={category === 'music' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategory('music')}
+                className="gap-1"
+              >
+                <span className="w-2 h-2 rounded-full bg-amber-500" />
+                Music ({stats.music})
               </Button>
             </div>
           </div>

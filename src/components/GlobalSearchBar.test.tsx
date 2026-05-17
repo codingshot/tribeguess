@@ -21,7 +21,7 @@ describe('GlobalSearchBar', () => {
 
   it('shows listbox suggestions after debounced query', async () => {
     renderBar('/');
-    const input = screen.getByPlaceholderText(/search names, tribes, food/i);
+    const input = screen.getByPlaceholderText(/search countries, tribes, food/i);
     fireEvent.change(input, { target: { value: 'yoruba' } });
     fireEvent.focus(input);
 
@@ -38,7 +38,7 @@ describe('GlobalSearchBar', () => {
 
   it('clears input when clear button is used', () => {
     renderBar('/');
-    const input = screen.getByPlaceholderText(/search names, tribes, food/i) as HTMLInputElement;
+    const input = screen.getByPlaceholderText(/search countries, tribes, food/i) as HTMLInputElement;
     fireEvent.change(input, { target: { value: 'test' } });
     fireEvent.click(screen.getByRole('button', { name: /clear search/i }));
     expect(input.value).toBe('');
@@ -46,7 +46,7 @@ describe('GlobalSearchBar', () => {
 
   it('closes dropdown on Escape', async () => {
     renderBar('/');
-    const input = screen.getByPlaceholderText(/search names, tribes, food/i);
+    const input = screen.getByPlaceholderText(/search countries, tribes, food/i);
     fireEvent.change(input, { target: { value: 'yoruba' } });
     fireEvent.focus(input);
 

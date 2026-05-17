@@ -36,6 +36,9 @@ export function Footer() {
               <Link to="/learn" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Browse Tribes
               </Link>
+              <Link to="/countries" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Countries
+              </Link>
               <Link to="/compare" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Compare Tribes
               </Link>
@@ -44,6 +47,9 @@ export function Footer() {
               </Link>
               <Link to="/recipes" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Traditional Recipes
+              </Link>
+              <Link to="/african-dances" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                African Tribal Dances
               </Link>
               <Link to={`/recipe/${randomRecipeId}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Random Recipe

@@ -10,6 +10,7 @@ import tribesData from '@/data/tribes.json';
 import blogPosts from '@/data/blogPosts.json';
 import languageFamilies from '@/data/languageFamilies.json';
 import { recipes } from '@/data/recipes';
+import { culturalPerformances } from '@/data/dances';
 import { traditionalReligions } from '@/data/traditionalReligions';
 import { ingredients } from '@/data/ingredients';
 
@@ -19,7 +20,7 @@ export interface SitemapUrl {
   changefreq: 'weekly' | 'monthly' | 'yearly';
   priority: number;
   title?: string;
-  section: 'static' | 'tribe' | 'recipe' | 'blog' | 'language' | 'religion' | 'ingredient';
+  section: 'static' | 'tribe' | 'recipe' | 'blog' | 'language' | 'religion' | 'ingredient' | 'dance';
 }
 
 const TODAY = new Date().toISOString().split('T')[0];
@@ -34,8 +35,11 @@ export function getAllSitemapUrls(): SitemapUrl[] {
   const staticPages = [
     { loc: '/', title: 'Home', priority: 1.0 },
     { loc: '/learn', title: 'Explore Tribes', priority: 0.9 },
+    { loc: '/countries', title: 'African Countries', priority: 0.9 },
     { loc: '/names', title: 'Names Gallery', priority: 0.9 },
     { loc: '/recipes', title: 'Traditional Recipes', priority: 0.9 },
+    { loc: '/african-dances', title: 'African Tribal Dances', priority: 0.9 },
+    { loc: '/video-gallery', title: 'Video Gallery', priority: 0.85 },
     { loc: '/languages', title: 'Language Families', priority: 0.9 },
     { loc: '/religions', title: 'Religions & Traditions', priority: 0.9 },
     { loc: '/people', title: 'Famous People', priority: 0.8 },
@@ -81,6 +85,18 @@ export function getAllSitemapUrls(): SitemapUrl[] {
       priority: 0.7,
       title: recipe.name,
       section: 'recipe'
+    });
+  }
+
+  // Dances & music performances
+  for (const perf of culturalPerformances) {
+    urls.push({
+      loc: `/dance/${perf.id}`,
+      lastmod: TODAY,
+      changefreq: 'monthly',
+      priority: 0.75,
+      title: perf.name,
+      section: 'dance',
     });
   }
   
