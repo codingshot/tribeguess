@@ -29,7 +29,10 @@ export interface CulturalPerformance {
   occasion?: string;
   description: string;
   culturalSignificance: string;
-  youtubeVideoId: string;
+  /** Primary embed ID — omit when sharedVideoFromId points at another entry's clip */
+  youtubeVideoId?: string;
+  /** Reuse another performance's video (same ceremony clip, music profile only) */
+  sharedVideoFromId?: string;
   region?: RecipeRegion;
   country?: string;
   /** Links to tribe traditionalDance field when applicable */
@@ -301,9 +304,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Drums', 'Whistles', 'Vocals'],
     videoContext: 'combined',
     relatedPerformanceId: 'kamba-kilumi-dance',
+    sharedVideoFromId: 'kamba-kilumi-dance',
     description: 'Traditional Kamba percussion and vocal music underpinning Kilumi and Mwali dances.',
     culturalSignificance: 'Kamba drumming traditions use whistles, drums, and call-and-response vocals at ceremonies across Ukambani.',
-    youtubeVideoId: 'EtaTySkv7rM',
     relatedForms: ['Kilumi music'],
   },
   {
@@ -318,9 +321,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Vocals', 'Drums', 'Ululations'],
     videoContext: 'performance',
     relatedPerformanceId: 'zulu-indlamu-dance',
+    sharedVideoFromId: 'zulu-indlamu-dance',
     description: 'Zulu musical traditions in live performance — choral harmony, drumming, and dance song.',
     culturalSignificance: 'Zulu music spans praise poetry (izibongo), wedding songs, and migrant-labor choral forms that influenced Ladysmith Black Mambazo.',
-    youtubeVideoId: 'gHzyv6yJcRo',
   },
   {
     id: 'luo-ohangla-traditional',
@@ -334,9 +337,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Nyatiti', 'Drums', 'Horns'],
     videoContext: 'performance',
     relatedPerformanceId: 'luo-traditional-dance',
-    description: 'Lake Victoria Luo ohangla performance — fast-paced rhythm that helped birth Benga across East Africa.',
+    sharedVideoFromId: 'luo-traditional-dance',
+    description: 'Ohangla and Benga rhythms in the same Kagan Traditional Dancers performance — music and movement together.',
     culturalSignificance: 'Luo musicians pioneered Benga, which spread across East Africa; ohangla remains a popular festival genre.',
-    youtubeVideoId: 'P0GAFqqexbM',
     relatedForms: ['Ohangla', 'Benga', 'Nyatiti'],
   },
   {
@@ -351,9 +354,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Bata drums', 'Talking drum', 'Choir'],
     videoContext: 'combined',
     relatedPerformanceId: 'yoruba-bata-dance',
+    sharedVideoFromId: 'yoruba-bata-dance',
     description: 'Sacred Yoruba bata talking-drum ensembles used in Sango and Orisha worship.',
     culturalSignificance: 'Bata drums "speak" Yoruba tones; master drummers (ayan) guard repertoires passed through guilds.',
-    youtubeVideoId: 'AI4IOKxGJiw',
     relatedForms: ['Bata'],
   },
   {
@@ -368,9 +371,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Krar', 'Masenqo', 'Kebero drums'],
     videoContext: 'combined',
     relatedPerformanceId: 'amhara-eskista-dance',
+    sharedVideoFromId: 'amhara-eskista-dance',
     description: 'Ethiopian pentatonic Kiñit music with eskista dance — krar, masenqo, and shoulder rhythm.',
     culturalSignificance: 'Amhara music uses unique Kiñit modes on krar and masenqo; azmari poets improvise social commentary.',
-    youtubeVideoId: '_Ix2d1_EZ70',
     relatedForms: ['Kiñit', 'Azmari', 'Eskista'],
   },
   {
@@ -385,9 +388,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Drums', 'Horns', 'Vocals'],
     videoContext: 'combined',
     relatedPerformanceId: 'oromo-cultural-dance',
+    sharedVideoFromId: 'oromo-cultural-dance',
     description: 'Oromo musical accompaniment for Dhichisaa and Irreecha celebrations.',
     culturalSignificance: 'Oromo music reinforces Gada governance cycles and seasonal thanksgiving at sacred lakes.',
-    youtubeVideoId: 'dV_-c0ZshcI',
     relatedForms: ['Dhichisaa'],
   },
   {
@@ -402,9 +405,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Oud', 'Drums', 'Vocals'],
     videoContext: 'performance',
     relatedPerformanceId: 'somali-museum-dance',
+    sharedVideoFromId: 'somali-museum-dance',
     description: 'Classical Somali poetic song and dance — heello and qaraami performed with oud and drums.',
     culturalSignificance: 'Somali oral poetry (gabay, heello) is among Africa\'s richest literary-musical traditions.',
-    youtubeVideoId: 'mQyBFtanRzM',
   },
   {
     id: 'shona-mbira-music',
@@ -418,9 +421,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Mbira', 'Hosho rattles', 'Drums'],
     videoContext: 'combined',
     relatedPerformanceId: 'shona-traditional-dance',
+    sharedVideoFromId: 'shona-traditional-dance',
     description: 'Shona mbira (thumb piano) music and dance for ancestor ceremonies (bira) and gatherings.',
     culturalSignificance: 'Mbira dzavadzimu mediates contact with ancestral spirits; Thomas Mapfumo popularized chimurenga from these roots.',
-    youtubeVideoId: 'bYddfIvs-UI',
     relatedForms: ['Mbira', 'Jerusarema'],
   },
   {
@@ -435,9 +438,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Kora', 'Balafon', 'Vocals'],
     videoContext: 'combined',
     relatedPerformanceId: 'mandinka-kombo-lengjong',
+    sharedVideoFromId: 'mandinka-kombo-lengjong',
     description: 'Mandinka jali (griot) kora and Kombo Lengjong dance music of the Senegambia.',
     culturalSignificance: 'Griots preserve genealogies and epics; the 21-string kora is iconic across West Africa.',
-    youtubeVideoId: '9q1zH-5ZyvU',
   },
   {
     id: 'kisii-ekerongo-music',
@@ -451,9 +454,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Obokano lyre', 'Drums', 'Vocals'],
     videoContext: 'combined',
     relatedPerformanceId: 'kisii-folk-dance',
+    sharedVideoFromId: 'kisii-folk-dance',
     description: 'Kisii folk music with the eight-string obokano lyre accompanying Ekerongo dance.',
     culturalSignificance: 'The obokano is central to Kisii storytelling and celebration alongside call-and-response singing.',
-    youtubeVideoId: 'ZXjtcWiKvOw',
     relatedForms: ['Ekerongo', 'Obokano'],
   },
   {
@@ -468,9 +471,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Drums', 'Vocals', 'String instruments'],
     videoContext: 'combined',
     relatedPerformanceId: 'tigre-traditional-dance',
+    sharedVideoFromId: 'tigre-traditional-dance',
     description: 'Tigre traditional song and dance music from Eritrea and Sudan.',
     culturalSignificance: 'Tigre musical style shares rhythmic features with highland eskista while retaining its own melodic patterns.',
-    youtubeVideoId: 'ghXxZFO2-Q8',
   },
   {
     id: 'bakongo-rhythm-music',
@@ -484,9 +487,9 @@ export const culturalPerformances: CulturalPerformance[] = [
     instruments: ['Drums', 'Ngoma', 'Vocals'],
     videoContext: 'combined',
     relatedPerformanceId: 'bakongo-dance',
+    sharedVideoFromId: 'bakongo-dance',
     description: 'Bakongo polyrhythmic drumming underpinning community dance in the Kongo cultural sphere.',
     culturalSignificance: 'Rhythm patterns from Kongo traditions influenced Caribbean and diaspora musical forms.',
-    youtubeVideoId: 'nPHReI0Kf1Q',
   },
 
   // ─── MODERN MUSIC (contemporary genres — cultural overview clips where noted) ──
@@ -500,10 +503,10 @@ export const culturalPerformances: CulturalPerformance[] = [
     musicEra: 'modern',
     musicGenre: 'Benga, Ohangla fusion',
     instruments: ['Electric guitar', 'Drum kit', 'Bass'],
-    videoContext: 'performance',
-    description: 'Contemporary Luo ohangla/Benga performance — the sound that shaped modern Kenyan dance floors.',
+    videoContext: 'documentary',
+    description: 'Cultural overview of Luo heritage and how Benga and ohangla evolved into contemporary Kenyan pop.',
     culturalSignificance: 'Artists like D.O. Misiani pioneered Benga; today\'s ohangla stars pack stadiums across East Africa.',
-    youtubeVideoId: 'P0GAFqqexbM',
+    youtubeVideoId: '8yN643vymPg',
     relatedForms: ['Benga', 'Ohangla'],
   },
   {
@@ -552,22 +555,6 @@ export const culturalPerformances: CulturalPerformance[] = [
     youtubeVideoId: 'Jh5VQYwJfNY',
   },
   {
-    id: 'amhara-pop-modern',
-    name: 'Modern Ethiopian Pop & Eskista Fusion',
-    contentType: 'music',
-    tribeSlug: 'amhara',
-    tribeName: 'Amhara',
-    style: 'modern',
-    musicEra: 'modern',
-    musicGenre: 'Ethiopian pop, Kiñit fusion',
-    instruments: ['Keyboard', 'Krar', 'Drums'],
-    videoContext: 'performance',
-    relatedPerformanceId: 'amhara-eskista-dance',
-    description: 'Contemporary Amhara pop performance blending Kiñit scales with modern production and eskista dance.',
-    culturalSignificance: 'Addis Ababa\'s music industry merges ancient pentatonic modes with jazz, soul, and electronic beats.',
-    youtubeVideoId: '_Ix2d1_EZ70',
-  },
-  {
     id: 'somali-pop-modern',
     name: 'Modern Somali Pop & Dhaanto',
     contentType: 'music',
@@ -577,11 +564,11 @@ export const culturalPerformances: CulturalPerformance[] = [
     musicEra: 'modern',
     musicGenre: 'Dhaanto, Qaraami revival',
     instruments: ['Keyboard', 'Drums', 'Vocals'],
-    videoContext: 'performance',
+    videoContext: 'combined',
     relatedPerformanceId: 'somali-dhaanto-dance',
-    description: 'Modern Somali dhaanto — upbeat pop-dance music popular at weddings and festivals across the Horn.',
+    sharedVideoFromId: 'somali-dhaanto-dance',
+    description: 'Dhaanto line-dance performance — the same festive style that became modern Somali wedding and festival pop.',
     culturalSignificance: 'Dhaanto crossed from traditional celebration to chart-topping Somali pop in Mogadishu and the diaspora.',
-    youtubeVideoId: 'ObS-u4XXYb0',
   },
   {
     id: 'maasai-adumu-music',
@@ -647,4 +634,19 @@ export const getPerformanceTribeSlugs = (): string[] =>
 
 export function isMusicDocumentary(perf: CulturalPerformance): boolean {
   return perf.contentType === 'music' && perf.videoContext === 'documentary';
+}
+
+/** Resolve embed ID from own field or shared source performance */
+export function getResolvedYoutubeId(perf: CulturalPerformance): string | undefined {
+  if (perf.youtubeVideoId) return perf.youtubeVideoId;
+  if (perf.sharedVideoFromId) {
+    const source = getPerformanceById(perf.sharedVideoFromId);
+    if (!source) return undefined;
+    return getResolvedYoutubeId(source);
+  }
+  return undefined;
+}
+
+export function usesSharedVideo(perf: CulturalPerformance): boolean {
+  return Boolean(perf.sharedVideoFromId);
 }

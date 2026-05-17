@@ -38,6 +38,7 @@ export function getAllSitemapUrls(): SitemapUrl[] {
     { loc: '/countries', title: 'African Countries', priority: 0.9 },
     { loc: '/names', title: 'Names Gallery', priority: 0.9 },
     { loc: '/recipes', title: 'Traditional Recipes', priority: 0.9 },
+    { loc: '/dances', title: 'African Dances Gallery', priority: 0.9 },
     { loc: '/african-dances', title: 'African Tribal Dances', priority: 0.9 },
     { loc: '/video-gallery', title: 'Video Gallery', priority: 0.85 },
     { loc: '/languages', title: 'Language Families', priority: 0.9 },

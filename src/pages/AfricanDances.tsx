@@ -118,7 +118,10 @@ export default function AfricanDances() {
             <h1 className="text-3xl font-bold font-tribal mb-2">African Tribal Dances & Music</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {dances.length} dances and {music.length} music profiles ({traditionalMusic.length}{' '}
-              traditional · {modernMusic.length} modern) from ethnic groups across Africa.
+              traditional · {modernMusic.length} modern) from ethnic groups across Africa.{' '}
+              <Link to="/dances" className="text-primary hover:underline">
+                Open dance gallery with global player →
+              </Link>
             </p>
             <div className="flex justify-center gap-2 mt-4 flex-wrap">
               <Button

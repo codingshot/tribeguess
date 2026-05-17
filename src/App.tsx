@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { GlobalVideoPlayerProvider } from "@/contexts/GlobalVideoPlayerContext";
 import { GlobalVideoPlayer } from "@/components/GlobalVideoPlayer";
@@ -148,6 +148,7 @@ const NamesGallery = lazy(() => import("./pages/NamesGallery"));
 const VideoGallery = lazy(() => import("./pages/VideoGallery"));
 const AfricanDances = lazy(() => import("./pages/AfricanDances"));
 const DancePage = lazy(() => import("./pages/DancePage"));
+const DancesGallery = lazy(() => import("./pages/DancesGallery"));
 const CountriesIndex = lazy(() => import("./pages/CountriesIndex"));
 const TribeCompare = lazy(() => import("./pages/TribeCompare"));
 const TribesIndex = lazy(() => import("./pages/TribesIndex"));
@@ -208,6 +209,8 @@ const App = () => {
                   <Route path="/names" element={<NamesGallery />} />
                   <Route path="/video-gallery" element={<VideoGallery />} />
                   <Route path="/african-dances" element={<AfricanDances />} />
+                  <Route path="/dances" element={<DancesGallery />} />
+                  <Route path="/dance" element={<Navigate to="/dances" replace />} />
                   <Route path="/dance/:id" element={<DancePage />} />
                   <Route path="/compare/:slugA/vs/:slugB" element={<TribeCompare />} />
                   <Route path="/compare" element={<TribeCompare />} />

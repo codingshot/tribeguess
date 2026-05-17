@@ -6,6 +6,7 @@ import {
   getPerformancesByTribe,
   getTraditionalMusic,
   getModernMusic,
+  getResolvedYoutubeId,
 } from '@/data/dances';
 import { validateAllPerformances } from '@/lib/danceValidation';
 import { isValidYoutubeId } from '@/lib/videoAggregation';
@@ -36,10 +37,25 @@ describe('culturalPerformances data', () => {
     expect(getModernMusic().length).toBeGreaterThanOrEqual(5);
   });
 
-  it('all YouTube IDs are valid format', () => {
+  it('all performances resolve to a valid YouTube ID', () => {
     for (const p of culturalPerformances) {
-      expect(isValidYoutubeId(p.youtubeVideoId), p.id).toBe(true);
+      const id = getResolvedYoutubeId(p);
+      expect(isValidYoutubeId(id), p.id).toBe(true);
     }
+  });
+
+  it('Luo modern music is not the same clip as traditional dance', () => {
+    const dance = culturalPerformances.find((p) => p.id === 'luo-traditional-dance');
+    const modern = culturalPerformances.find((p) => p.id === 'luo-benga-modern');
+    expect(getResolvedYoutubeId(dance)).toBe('P0GAFqqexbM');
+    expect(getResolvedYoutubeId(modern)).not.toBe(getResolvedYoutubeId(dance));
+  });
+
+  it('combined traditional music shares dance video via sharedVideoFromId', () => {
+    const music = culturalPerformances.find((p) => p.id === 'luo-ohangla-traditional');
+    expect(music?.sharedVideoFromId).toBe('luo-traditional-dance');
+    expect(music?.youtubeVideoId).toBeUndefined();
+    expect(getResolvedYoutubeId(music!)).toBe('P0GAFqqexbM');
   });
 
   it('includes user-curated Kamba, Zulu, and Wodaabe dances', () => {

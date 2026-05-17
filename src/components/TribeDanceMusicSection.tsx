@@ -5,6 +5,7 @@ import type { TribeData } from '@/types/tribe';
 import {
   getDancesByTribe,
   getMusicByTribe,
+  getResolvedYoutubeId,
   isMusicDocumentary,
   type CulturalPerformance,
 } from '@/data/dances';
@@ -12,6 +13,8 @@ import { InlineVideoPlayer } from '@/components/InlineVideoPlayer';
 
 function MusicEmbed({ perf, tribe }: { perf: CulturalPerformance; tribe: TribeData }) {
   const isDoc = isMusicDocumentary(perf);
+  const youtubeId = getResolvedYoutubeId(perf);
+  if (!youtubeId) return null;
 
   return (
     <div className="rounded-xl border border-violet-200 dark:border-violet-900 bg-gradient-to-r from-violet-500/10 to-indigo-500/5 p-4">
@@ -30,7 +33,7 @@ function MusicEmbed({ perf, tribe }: { perf: CulturalPerformance; tribe: TribeDa
         <p className="text-xs text-violet-700 dark:text-violet-300 mb-2">{perf.musicGenre}</p>
       )}
       <InlineVideoPlayer
-        youtubeId={perf.youtubeVideoId}
+        youtubeId={youtubeId}
         title={perf.name}
         sourceType="MUSIC"
         tribeId={tribe.id}
@@ -83,7 +86,7 @@ export function TribeDanceMusicSection({ tribe }: { tribe: TribeData }) {
           <div className="mb-4 rounded-xl border border-orange-200 dark:border-orange-900 bg-gradient-to-r from-orange-500/10 to-amber-500/5 p-4">
             <h3 className="text-sm font-medium mb-2">{primaryDance.name}</h3>
             <InlineVideoPlayer
-              youtubeId={primaryDance.youtubeVideoId}
+              youtubeId={getResolvedYoutubeId(primaryDance)!}
               title={primaryDance.name}
               sourceType="DANCE"
               tribeId={tribe.id}
@@ -186,7 +189,7 @@ export function TribeDanceMusicSection({ tribe }: { tribe: TribeData }) {
 
       {(dances.length > 0 || allMusic.length > 0) && (
         <Link
-          to={`/african-dances?tribe=${tribe.slug}`}
+          to={`/dances?tribe=${tribe.slug}`}
           className="mt-4 inline-flex text-sm text-primary hover:underline"
         >
           Browse all {tribe.name} dances & music →

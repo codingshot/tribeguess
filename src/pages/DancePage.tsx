@@ -9,7 +9,9 @@ import {
   getPerformanceById,
   getDancesByTribe,
   getMusicByTribe,
+  getResolvedYoutubeId,
   isMusicDocumentary,
+  usesSharedVideo,
 } from '@/data/dances';
 import { getTribeBySlug } from '@/lib/tribeDetection';
 import { InlineVideoPlayer } from '@/components/InlineVideoPlayer';
@@ -30,7 +32,7 @@ export default function DancePage() {
         <main className="container mx-auto px-4 py-12 text-center">
           <p className="text-muted-foreground mb-4">Dance or music performance not found.</p>
           <Button asChild>
-            <Link to="/african-dances">Browse all African dances & music</Link>
+            <Link to="/dances">Browse dance gallery</Link>
           </Button>
         </main>
         <Footer />
@@ -46,6 +48,10 @@ export default function DancePage() {
   const linkedPerf = perf.relatedPerformanceId
     ? getPerformanceById(perf.relatedPerformanceId)
     : undefined;
+  const youtubeId = getResolvedYoutubeId(perf);
+  const sharedSource = perf.sharedVideoFromId
+    ? getPerformanceById(perf.sharedVideoFromId)
+    : undefined;
 
   const pageTitle = `${perf.name} — ${perf.tribeName} ${isDance ? 'Dance' : 'Music'} | ${SITE_NAME}`;
 
@@ -54,8 +60,8 @@ export default function DancePage() {
     '@type': 'VideoObject',
     name: perf.name,
     description: perf.description,
-    contentUrl: `https://www.youtube.com/watch?v=${perf.youtubeVideoId}`,
-    embedUrl: `https://www.youtube.com/embed/${perf.youtubeVideoId}`,
+    contentUrl: youtubeId ? `https://www.youtube.com/watch?v=${youtubeId}` : undefined,
+    embedUrl: youtubeId ? `https://www.youtube.com/embed/${youtubeId}` : undefined,
   };
 
   const sectionBorder = isDance
@@ -124,9 +130,20 @@ export default function DancePage() {
             </p>
           )}
 
+          {usesSharedVideo(perf) && sharedSource && (
+            <p className="text-sm text-muted-foreground mb-4 p-3 rounded-lg bg-secondary/80 border border-border">
+              This music profile uses the same performance clip as{' '}
+              <Link to={`/dance/${sharedSource.id}`} className="text-primary hover:underline">
+                {sharedSource.name}
+              </Link>
+              — the video shows dance and music together.
+            </p>
+          )}
+
+          {youtubeId && (
           <section className={`rounded-xl border p-4 mb-6 ${sectionBorder}`}>
             <InlineVideoPlayer
-              youtubeId={perf.youtubeVideoId}
+              youtubeId={youtubeId}
               title={perf.name}
               sourceType={isDance ? 'DANCE' : 'MUSIC'}
               tribeId={perf.tribeSlug}
@@ -137,7 +154,7 @@ export default function DancePage() {
               className="shadow-lg"
             />
             <a
-              href={`https://www.youtube.com/watch?v=${perf.youtubeVideoId}`}
+              href={`https://www.youtube.com/watch?v=${youtubeId}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-xs text-muted-foreground mt-2 hover:text-primary"
@@ -145,6 +162,7 @@ export default function DancePage() {
               Watch on YouTube <ExternalLink className="w-3 h-3" />
             </a>
           </section>
+          )}
 
           <section className="space-y-3 mb-8 text-sm">
             <p>{perf.description}</p>

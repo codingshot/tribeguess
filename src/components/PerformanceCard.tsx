@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import type { CulturalPerformance, DanceStyle } from '@/data/dances';
+import { getResolvedYoutubeId, isMusicDocumentary, usesSharedVideo } from '@/data/dances';
 import { getYoutubeThumbnail } from '@/lib/videoAggregation';
-import { isMusicDocumentary } from '@/data/dances';
 import { Footprints, Music2, Film } from 'lucide-react';
 
 const styleLabels: Record<DanceStyle, string> = {
@@ -16,6 +16,8 @@ const styleLabels: Record<DanceStyle, string> = {
 export function PerformanceCard({ perf }: { perf: CulturalPerformance }) {
   const isMusic = perf.contentType === 'music';
   const isDoc = isMusic && isMusicDocumentary(perf);
+  const youtubeId = getResolvedYoutubeId(perf);
+  if (!youtubeId) return null;
 
   return (
     <Link
@@ -28,7 +30,7 @@ export function PerformanceCard({ perf }: { perf: CulturalPerformance }) {
     >
       <div className="aspect-video relative bg-muted overflow-hidden">
         <img
-          src={getYoutubeThumbnail(perf.youtubeVideoId)}
+          src={getYoutubeThumbnail(youtubeId)}
           alt=""
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
@@ -49,9 +51,15 @@ export function PerformanceCard({ perf }: { perf: CulturalPerformance }) {
             </>
           )}
         </Badge>
-        {isDoc && (
+        {(isDoc || usesSharedVideo(perf)) && (
           <Badge className="absolute top-2 right-2 text-[10px] gap-0.5" variant="outline">
-            <Film className="w-3 h-3" /> Overview
+            {isDoc ? (
+              <>
+                <Film className="w-3 h-3" /> Overview
+              </>
+            ) : (
+              'Same clip as dance'
+            )}
           </Badge>
         )}
       </div>

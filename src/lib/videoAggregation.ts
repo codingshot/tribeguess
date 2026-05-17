@@ -2,7 +2,11 @@
 
 import tribesData from '@/data/tribes.json';
 import { recipes } from '@/data/recipes';
-import { culturalPerformances } from '@/data/dances';
+import {
+  culturalPerformances,
+  getResolvedYoutubeId,
+  getDancesOnly,
+} from '@/data/dances';
 
 export type VideoSourceType =
   | 'TRIBE_PAGE'
@@ -273,33 +277,56 @@ export function getAllVideos(): VideoItem[] {
     }
   });
 
-  // Collect dance & music performance videos (one gallery entry per performance id)
+  // Collect dance & music performance videos (skip music that only shares a dance clip)
   culturalPerformances.forEach((perf) => {
-    if (!perf.youtubeVideoId || !isValidYoutubeId(perf.youtubeVideoId)) return;
+    if (perf.sharedVideoFromId) return;
+    const youtubeId = getResolvedYoutubeId(perf);
+    if (!youtubeId || !isValidYoutubeId(youtubeId)) return;
     const dedupeKey = `perf-${perf.id}`;
     if (seenIds.has(dedupeKey)) return;
     seenIds.add(dedupeKey);
 
     const category = perf.contentType === 'dance' ? 'dance' : 'music';
-    videos.push({
-      id: `${category}-${perf.id}-${perf.youtubeVideoId}`,
-      youtube: perf.youtubeVideoId,
-      youtubeId: perf.youtubeVideoId,
-      title: perf.name,
-      description: perf.description?.substring(0, 200),
-      thumbnailUrl: getYoutubeThumbnail(perf.youtubeVideoId),
-      sourceType: perf.contentType === 'dance' ? 'DANCE' : 'MUSIC',
-      tribeIds: [perf.tribeSlug],
-      tribeNames: [perf.tribeName],
-      tags: [perf.contentType, perf.style, perf.musicEra || perf.style].filter(Boolean) as string[],
-      originUrl: `/dance/${perf.id}`,
-      originLabel: perf.contentType === 'dance' ? `${perf.name} Dance` : `${perf.name} Music`,
-      category,
-      region: perf.region,
-    });
+    videos.push(performanceToVideoItem(perf, youtubeId));
   });
   
   return videos;
+}
+
+/** Build a gallery/global-player item from a cultural performance */
+export function performanceToVideoItem(
+  perf: (typeof culturalPerformances)[number],
+  youtubeId?: string
+): VideoItem {
+  const id = youtubeId ?? getResolvedYoutubeId(perf) ?? '';
+  const category = perf.contentType === 'dance' ? 'dance' : 'music';
+  return {
+    id: `${category}-${perf.id}-${id}`,
+    youtube: id,
+    youtubeId: id,
+    title: perf.name,
+    description: perf.description?.substring(0, 200),
+    thumbnailUrl: getYoutubeThumbnail(id),
+    sourceType: perf.contentType === 'dance' ? 'DANCE' : 'MUSIC',
+    tribeIds: [perf.tribeSlug],
+    tribeNames: [perf.tribeName],
+    tags: [perf.contentType, perf.style, perf.musicEra || perf.style].filter(Boolean) as string[],
+    originUrl: `/dance/${perf.id}`,
+    originLabel: perf.contentType === 'dance' ? `${perf.name} Dance` : `${perf.name} Music`,
+    category,
+    region: perf.region,
+  };
+}
+
+/** Dance-only videos for /dances gallery (global player compatible) */
+export function getDanceGalleryVideos(): VideoItem[] {
+  return getDancesOnly()
+    .map((perf) => {
+      const youtubeId = getResolvedYoutubeId(perf);
+      if (!youtubeId || !isValidYoutubeId(youtubeId)) return null;
+      return performanceToVideoItem(perf, youtubeId);
+    })
+    .filter((v): v is VideoItem => v != null);
 }
 
 // Get videos by tribe

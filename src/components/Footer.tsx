@@ -48,8 +48,11 @@ export function Footer() {
               <Link to="/recipes" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Traditional Recipes
               </Link>
+              <Link to="/dances" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Dance Gallery
+              </Link>
               <Link to="/african-dances" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                African Tribal Dances
+                Dances &amp; Music
               </Link>
               <Link to={`/recipe/${randomRecipeId}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Random Recipe

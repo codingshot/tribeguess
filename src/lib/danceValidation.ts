@@ -1,4 +1,9 @@
-import { culturalPerformances, type CulturalPerformance } from '@/data/dances';
+import {
+  culturalPerformances,
+  getPerformanceById,
+  getResolvedYoutubeId,
+  type CulturalPerformance,
+} from '@/data/dances';
 import { isValidYoutubeId } from '@/lib/videoAggregation';
 import { getAllTribes } from '@/lib/tribeDetection';
 
@@ -21,13 +26,41 @@ export function validatePerformanceEntry(entry: CulturalPerformance): DanceValid
   if (!entry.tribeSlug?.trim()) {
     issues.push({ id: entry.id, field: 'tribeSlug', message: 'Missing tribeSlug', severity: 'error' });
   }
-  if (!entry.youtubeVideoId || !isValidYoutubeId(entry.youtubeVideoId)) {
+  const resolvedId = getResolvedYoutubeId(entry);
+  if (!resolvedId || !isValidYoutubeId(resolvedId)) {
     issues.push({
       id: entry.id,
       field: 'youtubeVideoId',
-      message: `Invalid YouTube ID: ${entry.youtubeVideoId}`,
+      message: `Missing or invalid video (need youtubeVideoId or valid sharedVideoFromId)`,
       severity: 'error',
     });
+  }
+  if (entry.sharedVideoFromId && !getPerformanceById(entry.sharedVideoFromId)) {
+    issues.push({
+      id: entry.id,
+      field: 'sharedVideoFromId',
+      message: `Unknown sharedVideoFromId: ${entry.sharedVideoFromId}`,
+      severity: 'error',
+    });
+  }
+  if (
+    entry.contentType === 'music' &&
+    entry.musicEra === 'modern' &&
+    entry.youtubeVideoId &&
+    entry.relatedPerformanceId
+  ) {
+    const related = getPerformanceById(entry.relatedPerformanceId);
+    if (
+      related?.youtubeVideoId === entry.youtubeVideoId &&
+      entry.videoContext !== 'documentary'
+    ) {
+      issues.push({
+        id: entry.id,
+        field: 'musicEra',
+        message: 'Modern music reuses dance clip — use sharedVideoFromId or a documentary/performance video',
+        severity: 'warning',
+      });
+    }
   }
   if (!['dance', 'music'].includes(entry.contentType)) {
     issues.push({
