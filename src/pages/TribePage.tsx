@@ -8,8 +8,9 @@ import { findReligionByName } from '@/data/traditionalReligions';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TribeMap } from '@/components/TribeMap';
-import { TribeIntroSnippet, TribeQuickLinks, TribeDanceSection } from '@/components/TribeContentSections';
-import { getPerformancesByTribe } from '@/data/dances';
+import { TribeIntroSnippet, TribeQuickLinks } from '@/components/TribeContentSections';
+import { TribeDanceMusicSection } from '@/components/TribeDanceMusicSection';
+import { getDancesByTribe, getMusicByTribe } from '@/data/dances';
 import { tribeTitles, tribeMetaDescriptions, buildTribeArticleLD, buildTribeBreadcrumbLD } from '@/lib/tribeSeoTemplates';
 import { canonical, SITE_NAME, SITE_DOMAIN } from '@/lib/seoConstants';
 import { ImageGallery } from '@/components/ImageGallery';
@@ -264,8 +265,10 @@ const TribePage = () => {
                 hasPeople={!!(tribe.famousPeople && tribe.famousPeople.length > 0)}
                 hasDance={
                   !!tribe.traditionalDance ||
-                  getPerformancesByTribe(tribe.slug).length > 0
+                  getDancesByTribe(tribe.slug).length > 0 ||
+                  getMusicByTribe(tribe.slug).length > 0
                 }
+                hasMusic={getMusicByTribe(tribe.slug).length > 0}
               />
               {/* YouTube Culture Video Section */}
               {tribe.youtubeVideoId && (
@@ -957,7 +960,7 @@ const TribePage = () => {
                 />
               )}
               
-              <TribeDanceSection tribe={tribe} />
+              <TribeDanceMusicSection tribe={tribe} />
 
               {/* Traditional Food Section */}
               {tribe.traditionalFood && typeof tribe.traditionalFood === 'object' && (

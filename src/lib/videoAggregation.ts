@@ -273,12 +273,12 @@ export function getAllVideos(): VideoItem[] {
     }
   });
 
-  // Collect dance & music performance videos
+  // Collect dance & music performance videos (one gallery entry per performance id)
   culturalPerformances.forEach((perf) => {
     if (!perf.youtubeVideoId || !isValidYoutubeId(perf.youtubeVideoId)) return;
-    const dedupeKey = `${perf.contentType}-${perf.youtubeVideoId}`;
-    if (seenYoutubeIds.has(dedupeKey)) return;
-    seenYoutubeIds.add(dedupeKey);
+    const dedupeKey = `perf-${perf.id}`;
+    if (seenIds.has(dedupeKey)) return;
+    seenIds.add(dedupeKey);
 
     const category = perf.contentType === 'dance' ? 'dance' : 'music';
     videos.push({

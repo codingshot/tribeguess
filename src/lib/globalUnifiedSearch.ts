@@ -10,8 +10,9 @@ import { getAllRecipes, type Recipe } from '@/data/recipes';
 import { sanitizeSearchQuery, normalizeForSearch } from '@/lib/dataValidation';
 import { getAllTribes } from '@/lib/tribeDetection';
 import { searchCountries } from '@/lib/countryIndex';
+import { culturalPerformances } from '@/data/dances';
 
-export type UnifiedHitKind = 'tribe' | 'name' | 'blog' | 'recipe' | 'country';
+export type UnifiedHitKind = 'tribe' | 'name' | 'blog' | 'recipe' | 'country' | 'dance' | 'music';
 
 export interface UnifiedSearchHit {
   id: string;
@@ -208,6 +209,36 @@ export function searchGlobalUnified(query: string, opts?: { limit?: number }): U
     if (hits.length > n) blogAdded++;
   }
 
+  // Dance & music performances
+  let perfAdded = 0;
+  const perfCap = 6;
+  for (const perf of culturalPerformances) {
+    if (perfAdded >= perfCap || hits.length >= limit) break;
+    if (
+      !norm ||
+      normalizeForSearch(perf.name).includes(norm) ||
+      normalizeForSearch(perf.tribeName).includes(norm) ||
+      normalizeForSearch(perf.musicGenre || '').includes(norm) ||
+      normalizeForSearch(perf.description).includes(norm)
+    ) {
+      const n = hits.length;
+      const kind = perf.contentType === 'dance' ? 'dance' : 'music';
+      if (
+        push({
+          id: `${kind}-${perf.id}`,
+          kind,
+          title: perf.name,
+          subtitle: `${perf.tribeName} · ${perf.contentType === 'music' ? (perf.musicEra === 'traditional' ? 'Traditional music' : 'Modern music') : 'Dance'}`,
+          href: `/dance/${perf.id}`,
+          score: perf.contentType === 'music' ? 0.72 : 0.7,
+          flagCountryCode: perf.country,
+        })
+      )
+        break;
+      if (hits.length > n) perfAdded++;
+    }
+  }
+
   let recipeAdded = 0;
   const recipeCap = 8;
   for (const recipe of getAllRecipes()) {
@@ -241,7 +272,7 @@ export function searchGlobalUnified(query: string, opts?: { limit?: number }): U
   return hits.slice(0, limit);
 }
 
-const FALLBACK_KIND_ORDER: UnifiedHitKind[] = ['country', 'recipe', 'blog', 'tribe', 'name'];
+const FALLBACK_KIND_ORDER: UnifiedHitKind[] = ['country', 'dance', 'music', 'recipe', 'blog', 'tribe', 'name'];
 
 /**
  * When a page-specific list is empty, surface a mix of tribes, names, blog, and recipes
@@ -253,6 +284,8 @@ export function getCrossSectionFallback(query: string, maxItems = 10): UnifiedSe
 
   const buckets: Record<UnifiedHitKind, UnifiedSearchHit[]> = {
     country: [],
+    dance: [],
+    music: [],
     recipe: [],
     blog: [],
     tribe: [],

@@ -4,6 +4,8 @@ import {
   getDancesOnly,
   getMusicOnly,
   getPerformancesByTribe,
+  getTraditionalMusic,
+  getModernMusic,
 } from '@/data/dances';
 import { validateAllPerformances } from '@/lib/danceValidation';
 import { isValidYoutubeId } from '@/lib/videoAggregation';
@@ -19,7 +21,19 @@ describe('culturalPerformances data', () => {
 
   it('has dance and music entries', () => {
     expect(getDancesOnly().length).toBeGreaterThanOrEqual(17);
-    expect(getMusicOnly().length).toBeGreaterThanOrEqual(10);
+    expect(getMusicOnly().length).toBeGreaterThanOrEqual(14);
+  });
+
+  it('music entries have musicEra and genre metadata', () => {
+    for (const m of getMusicOnly()) {
+      expect(m.musicEra).toBeDefined();
+      expect(m.musicGenre).toBeTruthy();
+    }
+  });
+
+  it('traditional and modern music are both represented', () => {
+    expect(getTraditionalMusic().length).toBeGreaterThanOrEqual(8);
+    expect(getModernMusic().length).toBeGreaterThanOrEqual(5);
   });
 
   it('all YouTube IDs are valid format', () => {

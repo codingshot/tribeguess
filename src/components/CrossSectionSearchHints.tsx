@@ -16,6 +16,10 @@ function kindLabel(kind: UnifiedSearchHit['kind']): string {
       return 'Name';
     case 'country':
       return 'Country';
+    case 'dance':
+      return 'Dance';
+    case 'music':
+      return 'Music';
     default:
       return 'Result';
   }

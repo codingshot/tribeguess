@@ -5,68 +5,25 @@ import { Search, Music2, Footprints, X } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { PerformanceCard } from '@/components/PerformanceCard';
 import {
   getAllPerformances,
   getDancesOnly,
   getMusicOnly,
+  getTraditionalMusic,
+  getModernMusic,
   danceRegions,
   type CulturalPerformance,
-  type DanceStyle,
+  type MusicEra,
 } from '@/data/dances';
 import { canonical, SITE_NAME } from '@/lib/seoConstants';
-import { getYoutubeThumbnail } from '@/lib/videoAggregation';
-
-const styleLabels: Record<DanceStyle, string> = {
-  traditional: 'Traditional',
-  modern: 'Modern',
-  ceremonial: 'Ceremonial',
-  folk: 'Folk',
-  social: 'Social',
-};
-
-function PerformanceCard({ perf }: { perf: CulturalPerformance }) {
-  return (
-    <Link
-      to={`/dance/${perf.id}`}
-      className="group block rounded-xl border border-border bg-card overflow-hidden hover:border-primary/40 transition-colors"
-    >
-      <div className="aspect-video relative bg-muted overflow-hidden">
-        <img
-          src={getYoutubeThumbnail(perf.youtubeVideoId)}
-          alt=""
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          loading="lazy"
-        />
-        <Badge className="absolute top-2 left-2 text-xs" variant="secondary">
-          {perf.contentType === 'dance' ? '💃 Dance' : '🎵 Music'}
-        </Badge>
-      </div>
-      <div className="p-3">
-        <h2 className="font-semibold text-sm line-clamp-2 group-hover:text-primary transition-colors">
-          {perf.name}
-        </h2>
-        <p className="text-xs text-muted-foreground mt-1">{perf.tribeName}</p>
-        <div className="flex flex-wrap gap-1 mt-2">
-          <Badge variant="outline" className="text-[10px]">
-            {styleLabels[perf.style]}
-          </Badge>
-          {perf.musicEra && (
-            <Badge variant="outline" className="text-[10px]">
-              {perf.musicEra === 'traditional' ? 'Traditional music' : 'Modern music'}
-            </Badge>
-          )}
-        </div>
-      </div>
-    </Link>
-  );
-}
 
 export default function AfricanDances() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get('q') || '');
   const contentFilter = searchParams.get('type') || 'all';
+  const eraFilter = (searchParams.get('era') || '') as MusicEra | '';
   const regionFilter = searchParams.get('region') || '';
   const tribeFilter = searchParams.get('tribe') || '';
   const countryFilter = searchParams.get('country') || '';
@@ -74,6 +31,8 @@ export default function AfricanDances() {
   const all = getAllPerformances();
   const dances = getDancesOnly();
   const music = getMusicOnly();
+  const traditionalMusic = getTraditionalMusic();
+  const modernMusic = getModernMusic();
 
   const tribeOptions = useMemo(() => {
     const map = new Map<string, string>();
@@ -88,28 +47,56 @@ export default function AfricanDances() {
         !q ||
         p.name.toLowerCase().includes(q) ||
         p.tribeName.toLowerCase().includes(q) ||
-        p.description.toLowerCase().includes(q);
+        p.description.toLowerCase().includes(q) ||
+        (p.musicGenre?.toLowerCase().includes(q) ?? false);
       const matchesType =
         contentFilter === 'all' ||
         (contentFilter === 'dance' && p.contentType === 'dance') ||
         (contentFilter === 'music' && p.contentType === 'music');
+      const matchesEra =
+        !eraFilter || (p.contentType === 'music' && p.musicEra === eraFilter);
       const matchesRegion = !regionFilter || p.region === regionFilter;
       const matchesTribe = !tribeFilter || p.tribeSlug === tribeFilter;
       const matchesCountry = !countryFilter || p.country === countryFilter;
-      return matchesSearch && matchesType && matchesRegion && matchesTribe && matchesCountry;
+      return (
+        matchesSearch &&
+        matchesType &&
+        matchesEra &&
+        matchesRegion &&
+        matchesTribe &&
+        matchesCountry
+      );
     });
-  }, [all, search, contentFilter, regionFilter, tribeFilter, countryFilter]);
+  }, [all, search, contentFilter, eraFilter, regionFilter, tribeFilter, countryFilter]);
+
+  const showMusicGrouped =
+    contentFilter === 'music' && !eraFilter && !search.trim() && filtered.length > 0;
+
+  const setParam = (key: string, value: string) => {
+    const p = new URLSearchParams(searchParams);
+    if (value) p.set(key, value);
+    else p.delete(key);
+    setSearchParams(p);
+  };
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'African Tribal Dances & Traditional Music',
     description:
-      'Explore traditional and modern African dances and music by ethnic group — from Eskista and Indlamu to Dhaanto, Bata, and Gerewol.',
+      'Explore traditional and modern African dances and music by ethnic group.',
     url: canonical('/african-dances'),
     publisher: { '@type': 'Organization', name: SITE_NAME },
     numberOfItems: all.length,
   };
+
+  const renderGrid = (items: CulturalPerformance[]) => (
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      {items.map((perf) => (
+        <PerformanceCard key={perf.id} perf={perf} />
+      ))}
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -117,7 +104,7 @@ export default function AfricanDances() {
         <title>African Tribal Dances & Traditional Music by Tribe | {SITE_NAME}</title>
         <meta
           name="description"
-          content="Watch traditional and modern African dances and music by tribe: Kamba Kilumi, Zulu Indlamu, Oromo, Yoruba Bata, Somali Dhaanto, Amhara Eskista, Wodaabe Gerewol, and more."
+          content="Watch traditional and modern African dances and music by tribe. Filter by traditional vs modern music, region, and country."
         />
         <link rel="canonical" href={canonical('/african-dances')} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -130,9 +117,8 @@ export default function AfricanDances() {
           <header className="text-center mb-8">
             <h1 className="text-3xl font-bold font-tribal mb-2">African Tribal Dances & Music</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Discover {dances.length} traditional and ceremonial dances and {music.length} music
-              performances linked to ethnic groups across Africa — traditional, modern, and special
-              occasion forms.
+              {dances.length} dances and {music.length} music profiles ({traditionalMusic.length}{' '}
+              traditional · {modernMusic.length} modern) from ethnic groups across Africa.
             </p>
             <div className="flex justify-center gap-2 mt-4 flex-wrap">
               <Button
@@ -141,6 +127,7 @@ export default function AfricanDances() {
                 onClick={() => {
                   const p = new URLSearchParams(searchParams);
                   p.delete('type');
+                  p.delete('era');
                   setSearchParams(p);
                 }}
               >
@@ -152,6 +139,7 @@ export default function AfricanDances() {
                 onClick={() => {
                   const p = new URLSearchParams(searchParams);
                   p.set('type', 'dance');
+                  p.delete('era');
                   setSearchParams(p);
                 }}
               >
@@ -171,16 +159,42 @@ export default function AfricanDances() {
                 Music ({music.length})
               </Button>
               <Button variant="outline" size="sm" asChild>
-                <Link to="/video-gallery?category=dance">Video gallery →</Link>
+                <Link to="/video-gallery?category=music">Music in gallery →</Link>
               </Button>
             </div>
+
+            {contentFilter === 'music' && (
+              <div className="flex justify-center gap-2 mt-3 flex-wrap">
+                <Button
+                  variant={!eraFilter ? 'secondary' : 'outline'}
+                  size="sm"
+                  onClick={() => setParam('era', '')}
+                >
+                  All music
+                </Button>
+                <Button
+                  variant={eraFilter === 'traditional' ? 'secondary' : 'outline'}
+                  size="sm"
+                  onClick={() => setParam('era', 'traditional')}
+                >
+                  Traditional ({traditionalMusic.length})
+                </Button>
+                <Button
+                  variant={eraFilter === 'modern' ? 'secondary' : 'outline'}
+                  size="sm"
+                  onClick={() => setParam('era', 'modern')}
+                >
+                  Modern ({modernMusic.length})
+                </Button>
+              </div>
+            )}
           </header>
 
           <div className="flex flex-wrap gap-3 mb-6">
             <div className="relative flex-1 min-w-[200px]">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Search dances, tribes, music..."
+                placeholder="Search dances, music genres, tribes..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="pl-10"
@@ -189,12 +203,7 @@ export default function AfricanDances() {
             <select
               className="h-10 rounded-md border border-input bg-background px-3 text-sm"
               value={regionFilter}
-              onChange={(e) => {
-                const p = new URLSearchParams(searchParams);
-                if (e.target.value) p.set('region', e.target.value);
-                else p.delete('region');
-                setSearchParams(p);
-              }}
+              onChange={(e) => setParam('region', e.target.value)}
             >
               <option value="">All regions</option>
               {danceRegions.map((r) => (
@@ -206,12 +215,7 @@ export default function AfricanDances() {
             <select
               className="h-10 rounded-md border border-input bg-background px-3 text-sm max-w-[180px]"
               value={tribeFilter}
-              onChange={(e) => {
-                const p = new URLSearchParams(searchParams);
-                if (e.target.value) p.set('tribe', e.target.value);
-                else p.delete('tribe');
-                setSearchParams(p);
-              }}
+              onChange={(e) => setParam('tribe', e.target.value)}
             >
               <option value="">All tribes</option>
               {tribeOptions.map(([slug, name]) => (
@@ -220,7 +224,7 @@ export default function AfricanDances() {
                 </option>
               ))}
             </select>
-            {(regionFilter || tribeFilter || contentFilter !== 'all') && (
+            {(regionFilter || tribeFilter || countryFilter || contentFilter !== 'all' || eraFilter) && (
               <Button variant="ghost" size="sm" onClick={() => setSearchParams({})}>
                 <X className="w-4 h-4 mr-1" />
                 Clear
@@ -232,11 +236,24 @@ export default function AfricanDances() {
             Showing {filtered.length} of {all.length} performances
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {filtered.map((perf) => (
-              <PerformanceCard key={perf.id} perf={perf} />
-            ))}
-          </div>
+          {showMusicGrouped ? (
+            <div className="space-y-10">
+              <section>
+                <h2 className="text-lg font-bold mb-3 text-amber-800 dark:text-amber-200">
+                  Traditional music
+                </h2>
+                {renderGrid(filtered.filter((p) => p.musicEra === 'traditional'))}
+              </section>
+              <section>
+                <h2 className="text-lg font-bold mb-3 text-violet-800 dark:text-violet-200">
+                  Modern music
+                </h2>
+                {renderGrid(filtered.filter((p) => p.musicEra === 'modern'))}
+              </section>
+            </div>
+          ) : (
+            renderGrid(filtered)
+          )}
 
           {filtered.length === 0 && (
             <p className="text-center text-muted-foreground py-12">No dances or music match your filters.</p>
