@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { getAllRecipes, getRecipeTribeNames, recipeRegions, type Recipe, type RecipeRegion } from '@/data/recipes';
 import { getAllIngredients } from '@/data/ingredients';
 import { CrossSectionSearchHints } from '@/components/CrossSectionSearchHints';
+import { TribeInlineLink } from '@/components/TribeInlineLink';
 
 const categoryEmoji: Record<string, string> = {
   staple: '🍚',
@@ -61,10 +62,11 @@ export default function Recipes() {
 
   const filteredRecipes = useMemo(() => {
     return allRecipes.filter(recipe => {
-      const matchesSearch = !search || 
-        recipe.name.toLowerCase().includes(search.toLowerCase()) ||
-        recipe.description.toLowerCase().includes(search.toLowerCase()) ||
-        recipe.tribeName.toLowerCase().includes(search.toLowerCase());
+      const q = search.toLowerCase();
+      const matchesSearch = !search ||
+        recipe.name.toLowerCase().includes(q) ||
+        (recipe.description?.toLowerCase().includes(q) ?? false) ||
+        recipe.tribeName.toLowerCase().includes(q);
       
       const matchesTribe = !selectedTribe || recipe.tribeSlug === selectedTribe;
       const matchesRegion = !selectedRegion || recipe.region === selectedRegion;
@@ -382,13 +384,11 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
         {recipe.name}
       </h3>
 
-      <Link
-        to={`/learn/${recipe.tribeSlug}`}
-        onClick={(e) => e.stopPropagation()}
-        className="text-[10px] sm:text-xs text-primary hover:underline mb-1.5 sm:mb-2 inline-block"
-      >
-        {recipe.tribeName} Tribe
-      </Link>
+      <TribeInlineLink
+        tribeSlug={recipe.tribeSlug}
+        tribeName={recipe.tribeName}
+        className="text-[10px] sm:text-xs mb-1.5 sm:mb-2"
+      />
 
       <p className="text-[10px] sm:text-xs text-muted-foreground line-clamp-2 mb-2 sm:mb-3 flex-grow">
         {recipe.description}

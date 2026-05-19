@@ -11,6 +11,7 @@ import { ViralCTAs } from '@/components/ViralCTAs';
 import { getAllTribes } from '@/lib/tribeDetection';
 import languageFamiliesData from '@/data/languageFamilies.json';
 import { InlineVideoPlayer } from '@/components/InlineVideoPlayer';
+import { TribeInlineLink } from '@/components/TribeInlineLink';
 
 const categoryEmoji: Record<string, string> = {
   staple: '🍚',
@@ -109,13 +110,11 @@ export default function RecipePage() {
                     <span>{categoryEmoji[r.category]}</span>
                     <span className="font-medium">{r.name}</span>
                   </div>
-                  <Link
-                    to={`/learn/${r.tribeSlug}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="text-xs text-primary hover:underline"
-                  >
-                    {r.tribeName} Tribe
-                  </Link>
+                  <TribeInlineLink
+                    tribeSlug={r.tribeSlug}
+                    tribeName={r.tribeName}
+                    className="text-xs"
+                  />
                   <p className="text-xs text-muted-foreground line-clamp-2 mt-1">{r.description}</p>
                 </Link>
               ))}
@@ -516,13 +515,12 @@ export default function RecipePage() {
                     <span>{categoryEmoji[similar.category]}</span>
                     <span className="font-medium text-sm">{similar.name}</span>
                   </div>
-                  <Link
-                    to={`/learn/${similar.tribeSlug}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="text-xs text-primary hover:underline"
-                  >
-                    {similar.tribeName}
-                  </Link>
+                  <TribeInlineLink
+                    tribeSlug={similar.tribeSlug}
+                    tribeName={similar.tribeName}
+                    suffix=""
+                    className="text-xs"
+                  />
                   <p className="text-xs text-muted-foreground line-clamp-2 mt-1">{similar.description}</p>
                 </Link>
               ))}

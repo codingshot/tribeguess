@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, BookOpen, Clock, Globe, Tag } from 'lucide-react';
+import { ChevronRight, BookOpen, Clock, Tag } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -86,23 +86,14 @@ const BlogCardCarousel = memo(function BlogCardCarousel({ post, formatDate }: { 
       </div>
       
       <div className="p-4 sm:p-5 flex flex-col flex-1 min-h-0">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-3 text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-1.5">
-            <Globe className="w-3.5 h-3.5 shrink-0" aria-hidden />
-            <span className="line-clamp-1">{post.region}</span>
-          </span>
-          <span className="text-muted-foreground/50 hidden sm:inline" aria-hidden>
-            •
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5 shrink-0" aria-hidden />
-            {post.readTime}
-          </span>
-        </div>
-        
-        <h3 className="font-serif text-base sm:text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-3 line-clamp-2 leading-snug tracking-tight">
+        <h3 className="font-serif text-base sm:text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2 leading-snug tracking-tight">
           {post.title || 'Untitled Article'}
         </h3>
+
+        <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground mb-3 whitespace-nowrap">
+          <Clock className="w-3.5 h-3.5 shrink-0" aria-hidden />
+          <span>{post.readTime}</span>
+        </p>
         
         {post.excerpt && (
         <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed mb-4 flex-1">

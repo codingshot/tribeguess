@@ -1,6 +1,7 @@
 import { useState, useMemo, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllTribes, getCountries } from '@/lib/tribeDetection';
+import { parsePopulation } from '@/lib/parsePopulation';
 import { ChevronRight, Users, MapPin, Globe, ArrowUpDown } from 'lucide-react';
 import { CountryFlag } from '@/components/CountryFlag';
 import {
@@ -37,14 +38,6 @@ export const TopTribesCarousel = memo(function TopTribesCarousel() {
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>('population');
 
-  // Parse population for sorting
-  const parsePopulation = (pop: string): number => {
-    const match = pop.match(/~?([\d.]+)\s*(million|M)?/i);
-    if (!match) return 0;
-    const num = parseFloat(match[1]);
-    if (match[2]?.toLowerCase().startsWith('m')) return num * 1000000;
-    return num;
-  };
 
   // Filter and sort tribes
   const displayedTribes = useMemo(() => {

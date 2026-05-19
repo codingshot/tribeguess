@@ -9,15 +9,19 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   const isActive = (path: string) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
   };
 
+  const isNavLinkActive = (path: string) =>
+    isActive(path) &&
+    !(path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog')));
+
   const handleRandomTribe = () => {
-    const tribes = getAllTribes().filter(t => 
-      t.slug && t.name && t.region && t.description && t.description.length > 10
+    const tribes = getAllTribes().filter(
+      (t) => t.slug && t.name && t.region && t.description && t.description.length > 10
     );
     if (tribes.length > 0) {
       const randomIndex = Math.floor(Math.random() * tribes.length);
@@ -67,94 +71,103 @@ export function Header() {
     { path: '/global-origins', label: 'Global Origins', icon: Globe, mobileOnly: true },
     { path: '/compare', label: 'Compare', icon: ArrowLeftRight, mobileOnly: false },
   ];
-  
+
+  const primaryNavLinks = navLinks.filter((l) => !l.mobileOnly);
+
   return (
     <header className="sticky top-0 z-50 overflow-visible bg-background/80 backdrop-blur-md border-b border-border">
-      <a href="#main-content" className="skip-to-content">Skip to main content</a>
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
       <div className="container mx-auto px-3 sm:px-4 py-2.5 sm:py-3">
-        <nav
-          className="relative flex flex-wrap items-center gap-x-2 gap-y-2.5 overflow-visible sm:gap-x-3"
-          aria-label="Main navigation"
-        >
-          <Link
-            to="/"
-            className="order-1 flex shrink-0 items-center gap-2 sm:gap-3 group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            aria-label="TribeGuess home"
-          >
-            <img 
-              src={logo} 
-              alt="TribeGuess" 
-              className="w-8 h-8 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform duration-300"
-              width={40}
-              height={40}
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
-            <span className="hidden sm:inline text-lg sm:text-xl font-bold text-foreground font-tribal tracking-wide">
-              Tribe<span className="text-primary">Guess</span>
-            </span>
-          </Link>
-
-          <div className="order-2 ml-auto flex shrink-0 items-center gap-1 sm:order-3 sm:ml-0">
-          {/* Mobile nav row */}
-          <div className="flex sm:hidden items-center gap-1">
-            {navLinks.filter(l => !l.mobileOnly).map(link => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`${navLinkClass(
-                  !!(isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog'))))
-                )} gap-1 px-2.5 py-2 min-h-[44px] text-xs`}
-              >
-                <link.icon className="w-3.5 h-3.5" />
-                <span>{link.label}</span>
-              </Link>
-            ))}
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex items-center justify-center min-h-[44px] min-w-[44px] rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-nav-panel"
+        <nav className="flex flex-col gap-2" aria-label="Main navigation">
+          {/* Logo + search (desktop) + nav — one row */}
+          <div className="flex flex-nowrap items-center gap-1.5 sm:gap-2 min-w-0">
+            <Link
+              to="/"
+              className="flex shrink-0 items-center gap-2 sm:gap-3 group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label="TribeGuess home"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
+              <img
+                src={logo}
+                alt="TribeGuess"
+                className="w-8 h-8 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                width={40}
+                height={40}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
+              <span className="hidden sm:inline text-lg sm:text-xl font-bold text-foreground font-tribal tracking-wide whitespace-nowrap">
+                Tribe<span className="text-primary">Guess</span>
+              </span>
+            </Link>
 
-          {/* Desktop nav */}
-          <div className="hidden sm:flex items-center gap-1 sm:gap-2">
-            {navLinks.filter(l => !l.mobileOnly).map(link => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`${navLinkClass(
-                  !!(isActive(link.path) && !(link.path === '/' && (location.pathname.startsWith('/learn') || location.pathname.startsWith('/blog'))))
-                )} px-3 sm:px-4 py-2 text-sm`}
+            <GlobalSearchBar className="hidden sm:flex flex-1 min-w-0 max-w-md lg:max-w-xl mx-1 sm:mx-2" />
+
+            {/* Desktop nav */}
+            <div className="hidden sm:flex items-center gap-1 shrink-0 flex-nowrap ml-auto">
+              {primaryNavLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`${navLinkClass(isNavLinkActive(link.path))} px-3 py-2 text-sm whitespace-nowrap`}
+                >
+                  <link.icon className="w-4 h-4 shrink-0" />
+                  {link.label}
+                </Link>
+              ))}
+              <button
+                type="button"
+                onClick={handleRandomTribe}
+                className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap shrink-0 transition-all duration-200 bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-md hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                aria-label="Discover a random tribe"
               >
-                <link.icon className="w-4 h-4" />
-                {link.label}
-              </Link>
-            ))}
-            <button
-              type="button"
-              onClick={handleRandomTribe}
-              className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-md hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              aria-label="Discover a random tribe"
-            >
-              <Shuffle className="w-4 h-4" />
-              <span className="hidden md:inline">Random Tribe</span>
-              <span className="md:hidden">Random</span>
-            </button>
-          </div>
+                <Shuffle className="w-4 h-4 shrink-0" />
+                <span className="hidden md:inline">Random Tribe</span>
+                <span className="md:hidden">Random</span>
+              </button>
+            </div>
+
+            {/* Mobile nav — icons only + Random CTA */}
+            <div className="flex sm:hidden items-center gap-0.5 ml-auto shrink-0 flex-nowrap">
+              {primaryNavLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  aria-label={link.label}
+                  title={link.label}
+                  className={`${navLinkClass(isNavLinkActive(link.path))} justify-center p-2 min-h-[44px] min-w-[44px] shrink-0`}
+                >
+                  <link.icon className="w-4 h-4 shrink-0" aria-hidden />
+                </Link>
+              ))}
+              <button
+                type="button"
+                onClick={handleRandomTribe}
+                className="flex items-center gap-1 px-2.5 py-2 min-h-[44px] rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all duration-200 bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                aria-label="Random Tribe"
+              >
+                <Shuffle className="w-4 h-4 shrink-0" aria-hidden />
+                <span className="text-[11px] leading-none">Random Tribe</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="flex items-center justify-center min-h-[44px] min-w-[44px] rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors touch-manipulation shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-nav-panel"
+              >
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
           </div>
 
-          <GlobalSearchBar className="order-3 basis-full min-w-0 sm:order-2 sm:basis-0 sm:flex-1 sm:max-w-md lg:max-w-xl" />
+          <GlobalSearchBar className="sm:hidden w-full min-w-0" />
         </nav>
       </div>
 
-      {/* Mobile dropdown menu */}
       {mobileMenuOpen && (
         <div
           id="mobile-nav-panel"
@@ -164,7 +177,7 @@ export function Header() {
         >
           <div className="container mx-auto px-3 py-3">
             <div className="grid grid-cols-2 gap-2">
-              {navLinks.filter(l => l.mobileOnly).map(link => (
+              {navLinks.filter((l) => l.mobileOnly).map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}

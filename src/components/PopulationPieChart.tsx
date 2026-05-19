@@ -1,6 +1,7 @@
 import { useState, forwardRef } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { getCountries } from '@/lib/tribeDetection';
+import { parsePopulation } from '@/lib/parsePopulation';
 import { CountryFlag, getCodeFromName } from '@/components/CountryFlag';
 
 interface PopulationByCountry {
@@ -21,20 +22,6 @@ interface PopulationPieChartProps {
   tribeName: string;
   type?: 'country' | 'diaspora';
 }
-
-// Parse population string to number (handles "1.2 million", "500,000", etc.)
-const parsePopulation = (popStr: string): number => {
-  const cleaned = popStr.toLowerCase().replace(/[~,]/g, '');
-  const match = cleaned.match(/([\d.]+)\s*(million|m|thousand|k)?/);
-  if (!match) return 0;
-  
-  const num = parseFloat(match[1]);
-  const unit = match[2];
-  
-  if (unit === 'million' || unit === 'm') return num * 1000000;
-  if (unit === 'thousand' || unit === 'k') return num * 1000;
-  return num;
-};
 
 // Format number for display
 const formatPopulation = (value: number): string => {

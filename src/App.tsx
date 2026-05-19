@@ -3,7 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { RouteErrorFallback } from "@/components/RouteErrorFallback";
 import { HelmetProvider } from "react-helmet-async";
 import { GlobalVideoPlayerProvider } from "@/contexts/GlobalVideoPlayerContext";
 import { GlobalVideoPlayer } from "@/components/GlobalVideoPlayer";
@@ -80,40 +81,41 @@ class PageErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-gradient-to-b from-muted/40 to-background flex items-center justify-center p-4 sm:p-6">
-          <div
-            role="alert"
-            className="w-full max-w-md rounded-2xl border border-border bg-card p-6 sm:p-8 text-center shadow-lg"
-          >
-            <h1 className="font-serif text-2xl font-bold text-foreground mb-2">Something went wrong</h1>
-            <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
-              This page hit an unexpected error. You can go back, browse tribes, or try reloading.
-            </p>
-            <div className="flex flex-col-reverse sm:flex-row gap-2 sm:justify-center">
-              <button
-                type="button"
-                onClick={() => window.history.back()}
-                className="px-4 py-3 min-h-[44px] rounded-xl border border-border bg-background text-sm font-medium text-foreground hover:bg-muted/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
-              >
-                Go back
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  this.setState({ hasError: false, error: null });
-                  window.location.href = '/learn';
-                }}
-                className="px-4 py-3 min-h-[44px] rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
-              >
-                Browse tribes
-              </button>
-            </div>
-          </div>
-        </div>
+        <PageErrorRecovery
+          error={this.state.error}
+          onReset={() => this.setState({ hasError: false, error: null })}
+        />
       );
     }
     return this.props.children;
   }
+}
+
+function PageErrorRecovery({
+  error,
+  onReset,
+}: {
+  error: Error | null;
+  onReset: () => void;
+}) {
+  const location = useLocation();
+
+  return (
+    <div
+      role="alert"
+      className="min-h-screen bg-gradient-to-b from-muted/40 to-background flex items-center justify-center p-4 sm:p-6"
+    >
+      <div className="w-full max-w-2xl rounded-2xl border border-border bg-card p-6 sm:p-10 shadow-lg">
+        <RouteErrorFallback
+          variant="error"
+          pathname={location.pathname}
+          errorMessage={error?.message}
+          onRetry={onReset}
+          showStatusCode={false}
+        />
+      </div>
+    </div>
+  );
 }
 
 import { warmSearchIndexes } from "@/lib/searchEngine";

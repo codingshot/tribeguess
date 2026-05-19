@@ -8,6 +8,7 @@ import { DynamicMapView } from '@/components/DynamicMapView';
 import { CountryFlag } from '@/components/CountryFlag';
 import { getAllTribes, getCountries, getCountryFacts } from '@/lib/tribeDetection';
 import { normalizeForSearch, stripAsciiControlCharacters } from '@/lib/dataValidation';
+import { parsePopulation } from '@/lib/parsePopulation';
 import tribesData from '@/data/tribes.json';
 import {
   Select,
@@ -115,18 +116,6 @@ const Learn = () => {
     }
   }, [advancedFiltersOpen, sortOrder, selectedCountries]);
 
-  // Parse population string to number
-  const parsePopulation = (pop: string): number => {
-    const numMatch = pop.match(/[\d.]+/);
-    if (!numMatch) return 0;
-    const num = parseFloat(numMatch[0]);
-    if (pop.toLowerCase().includes('million')) {
-      return num * 1000000;
-    } else if (pop.toLowerCase().includes('thousand') || pop.toLowerCase().includes(',000')) {
-      return num * 1000;
-    }
-    return num;
-  };
 
   const formatPopulation = (pop: number) => {
     if (pop >= 1000000) {
@@ -143,45 +132,60 @@ const Learn = () => {
     return countries.filter(c => c.region === macroRegionFilter);
   }, [countries, macroRegionFilter]);
 
-  // Filter regions based on selected country's tribes
-  const regions = useMemo(() => {
-    const countryTribes = tribes.filter(t => {
-      const tribeCountries = t.countries || ['KE'];
-      return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
-    });
-    const uniqueRegions = [...new Set(countryTribes.map(t => t.region))];
-    return uniqueRegions.sort();
-  }, [tribes, countryFilter]);
-
-  // Country-specific stats
-  const countryStats = useMemo(() => {
-    const countryTribes = tribes.filter(t => {
-      const tribeCountries = t.countries || ['KE'];
-      return !countryFilter || countryFilter === 'ALL' || tribeCountries.includes(countryFilter);
-    });
-    
-    const population = countryTribes.reduce((acc, t) => {
-      const pop = t.population || '';
-      const numMatch = pop.match(/[\d.]+/);
-      if (!numMatch) return acc;
-      const num = parseFloat(numMatch[0]);
-      if (pop.toLowerCase().includes('million')) {
-        return acc + num * 1000000;
-      } else if (pop.toLowerCase().includes('thousand') || pop.toLowerCase().includes(',000')) {
-        return acc + num * 1000;
+  /** Tribes matching country / macro-region / multi-country scope (before sub-region & search) */
+  const geoScopedTribes = useMemo(() => {
+    return tribes.filter((tribe) => {
+      const tribeCountries = tribe.countries || ['KE'];
+      if (selectedCountries.length > 0) {
+        return tribeCountries.some((code: string) => selectedCountries.includes(code));
       }
-      return acc + num;
-    }, 0);
+      if (countryFilter && countryFilter !== 'ALL') {
+        return tribeCountries.includes(countryFilter);
+      }
+      if (macroRegionFilter) {
+        const macroCodes = countries
+          .filter((c) => c.region === macroRegionFilter)
+          .map((c) => c.code);
+        return tribeCountries.some((code: string) => macroCodes.includes(code));
+      }
+      return true;
+    });
+  }, [tribes, countryFilter, macroRegionFilter, selectedCountries, countries]);
 
-    const uniqueLanguages = new Set(countryTribes.map(t => t.language?.name).filter(Boolean));
-    
+  // Sub-regions only from the current geo scope (country or macro region)
+  const regions = useMemo(() => {
+    const uniqueRegions = [
+      ...new Set(geoScopedTribes.map((t) => t.region).filter(Boolean)),
+    ] as string[];
+    return uniqueRegions.sort((a, b) => a.localeCompare(b));
+  }, [geoScopedTribes]);
+
+  // Drop stale region query param when it is not valid for the current scope
+  useEffect(() => {
+    if (!regionFilter || regions.includes(regionFilter)) return;
+    const params = new URLSearchParams(searchParams);
+    params.delete('region');
+    setSearchParams(params, { replace: true });
+  }, [regionFilter, regions, searchParams, setSearchParams]);
+
+  // Stats aligned with geo scope (not only single-country filter)
+  const countryStats = useMemo(() => {
+    const population = geoScopedTribes.reduce(
+      (acc, t) => acc + parsePopulation(t.population),
+      0
+    );
+
+    const uniqueLanguages = new Set(
+      geoScopedTribes.map((t) => t.language?.name).filter(Boolean)
+    );
+
     return {
-      tribeCount: countryTribes.length,
+      tribeCount: geoScopedTribes.length,
       population,
-      regionCount: [...new Set(countryTribes.map(t => t.region))].length,
-      languageCount: uniqueLanguages.size
+      regionCount: [...new Set(geoScopedTribes.map((t) => t.region))].length,
+      languageCount: uniqueLanguages.size,
     };
-  }, [tribes, countryFilter]);
+  }, [geoScopedTribes]);
 
   // Get country-specific facts
   const countryFacts = useMemo(() => {
@@ -189,66 +193,60 @@ const Learn = () => {
   }, [countryFilter]);
   
   const filteredTribes = useMemo(() => {
-    // Validate regionFilter against actual available regions
     const validRegions = new Set(regions);
     const effectiveRegion = validRegions.has(regionFilter) ? regionFilter : '';
-    
+
     const seen = new Set<string>();
-    let result = tribes.filter(tribe => {
-      // Deduplicate by tribe id
+    let result = geoScopedTribes.filter((tribe) => {
       if (seen.has(tribe.id)) return false;
       seen.add(tribe.id);
-      
+
       const searchNorm = normalizeForSearch((searchQuery || '').slice(0, 100));
-      
-      // Enhanced search with diacritic-normalized matching
-      const matchesSearch = !searchQuery || 
+
+      const matchesSearch =
+        !searchQuery ||
         normalizeForSearch(tribe.name || '').includes(searchNorm) ||
         normalizeForSearch(tribe.description || '').includes(searchNorm) ||
         normalizeForSearch(tribe.region || '').includes(searchNorm) ||
-        (Array.isArray(tribe.stereotypes) && tribe.stereotypes.some(s => typeof s === 'string' && normalizeForSearch(s).includes(searchNorm))) ||
-        (Array.isArray(tribe.commonNames?.female) && tribe.commonNames.female.some(n => typeof n === 'string' && normalizeForSearch(n).includes(searchNorm))) ||
-        (Array.isArray(tribe.commonNames?.male) && tribe.commonNames.male.some(n => typeof n === 'string' && normalizeForSearch(n).includes(searchNorm))) ||
+        (Array.isArray(tribe.stereotypes) &&
+          tribe.stereotypes.some(
+            (s) => typeof s === 'string' && normalizeForSearch(s).includes(searchNorm)
+          )) ||
+        (Array.isArray(tribe.commonNames?.female) &&
+          tribe.commonNames.female.some(
+            (n) => typeof n === 'string' && normalizeForSearch(n).includes(searchNorm)
+          )) ||
+        (Array.isArray(tribe.commonNames?.male) &&
+          tribe.commonNames.male.some(
+            (n) => typeof n === 'string' && normalizeForSearch(n).includes(searchNorm)
+          )) ||
         (tribe.language?.name && normalizeForSearch(tribe.language.name).includes(searchNorm)) ||
-        (Array.isArray(tribe.funFacts) && tribe.funFacts.some(f => typeof f === 'string' && normalizeForSearch(f).includes(searchNorm))) ||
-        (Array.isArray(tribe.culturalTraits) && tribe.culturalTraits.some(t => typeof t === 'string' && normalizeForSearch(t).includes(searchNorm))) ||
-        (Array.isArray(tribe.famousPeople) && tribe.famousPeople.some(p => p && typeof p.name === 'string' && normalizeForSearch(p.name).includes(searchNorm)));
-      
+        (Array.isArray(tribe.funFacts) &&
+          tribe.funFacts.some(
+            (f) => typeof f === 'string' && normalizeForSearch(f).includes(searchNorm)
+          )) ||
+        (Array.isArray(tribe.culturalTraits) &&
+          tribe.culturalTraits.some(
+            (t) => typeof t === 'string' && normalizeForSearch(t).includes(searchNorm)
+          )) ||
+        (Array.isArray(tribe.famousPeople) &&
+          tribe.famousPeople.some(
+            (p) => p && typeof p.name === 'string' && normalizeForSearch(p.name).includes(searchNorm)
+          ));
+
       const matchesRegion = !effectiveRegion || tribe.region === effectiveRegion;
-      
-      // Filter by language family - case-insensitive
-      const matchesLanguageFamily = !languageFamilyFilter || 
-        (tribe.language?.family?.toLowerCase().includes(languageFamilyFilter.toLowerCase()));
-      
-      // Filter by country
-      const tribeCountries = tribe.countries || ['KE'];
-      
-      let matchesCountry = true;
-      if (selectedCountries.length > 0) {
-        matchesCountry = tribeCountries.some((code: string) => selectedCountries.includes(code));
-      } else if (countryFilter && countryFilter !== 'ALL') {
-        matchesCountry = tribeCountries.includes(countryFilter);
-      } else if (macroRegionFilter) {
-        const regionCountryCodes = countries.filter(c => c.region === macroRegionFilter).map(c => c.code);
-        matchesCountry = tribeCountries.some((code: string) => regionCountryCodes.includes(code));
-      }
-      
-      return matchesSearch && matchesRegion && matchesCountry && matchesLanguageFamily;
+
+      const matchesLanguageFamily =
+        !languageFamilyFilter ||
+        tribe.language?.family?.toLowerCase().includes(languageFamilyFilter.toLowerCase());
+
+      return matchesSearch && matchesRegion && matchesLanguageFamily;
     });
 
-    // Apply sorting
-    const isDefaultAllAfrica =
-      countryFilter === 'ALL' &&
-      !macroRegionFilter &&
-      selectedCountries.length === 0 &&
-      !effectiveRegion &&
-      !languageFamilyFilter &&
-      !searchQuery &&
-      !sortOrder;
-
+    // Apply sorting only when explicitly requested
     if (sortOrder === 'pop-asc') {
       result = [...result].sort((a, b) => parsePopulation(a.population) - parsePopulation(b.population));
-    } else if (sortOrder === 'pop-desc' || isDefaultAllAfrica) {
+    } else if (sortOrder === 'pop-desc') {
       result = [...result].sort((a, b) => parsePopulation(b.population) - parsePopulation(a.population));
     } else if (sortOrder === 'name-asc') {
       result = [...result].sort((a, b) => a.name.localeCompare(b.name));
@@ -257,7 +255,7 @@ const Learn = () => {
     }
 
     return result;
-  }, [tribes, searchQuery, regionFilter, regions, countryFilter, macroRegionFilter, countries, selectedCountries, sortOrder, languageFamilyFilter]);
+  }, [geoScopedTribes, searchQuery, regionFilter, regions, sortOrder, languageFamilyFilter]);
   // handleSearch removed - now using live search
   
   const handleRegionChange = (region: string) => {
@@ -284,11 +282,11 @@ const Learn = () => {
 
   const handleMacroRegionChange = (region: string) => {
     const params = new URLSearchParams(searchParams);
+    // Sub-region list changes with macro scope — always reset it
+    params.delete('region');
     if (region) {
       params.set('macroRegion', region);
-      // When selecting a macro region, clear country filter to show all countries in that region
       params.delete('country');
-      params.delete('region');
     } else {
       params.delete('macroRegion');
     }
@@ -303,6 +301,8 @@ const Learn = () => {
   
   const clearFilters = () => {
     setLocalSearch('');
+    setTempSort('');
+    setTempCountries([]);
     setSearchParams({});
   };
   
